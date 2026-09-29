@@ -135,9 +135,10 @@ test("rakam once: tusa basinca kilitlenir, dokunulan hucrelere yazilir", () => {
   const puzzle = e.generate(0);
   const g = new Game();
   g.start(puzzle, e.solution, 0);
-  const a = puzzle.indexOf(0), b = puzzle.indexOf(0, a + 1);
+  const a = puzzle.findIndex((v, i) => !v && g.remaining(e.solution[i]) >= 3);
+  const b = puzzle.findIndex((v, i) => !v && i !== a);
   const d = e.solution[a];
-  const other = d === 9 ? 1 : d + 1;
+  const other = [1, 2, 3, 4, 5, 6, 7, 8, 9].find(x => x !== d && g.remaining(x) >= 2);
   expect(g.key(d)).toBe(false);
   expect(g.sticky).toBe(d);
   expect(g.tap(a)).toBe(true);
