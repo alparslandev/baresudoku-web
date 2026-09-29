@@ -512,6 +512,7 @@ class Game {
     this.showErrors = true;
     this.level = 0;
     this.selected = NONE;
+    this.sticky = 0;
     this.elapsed = 0;
     this.running = false;
     this.runningSince = 0;
@@ -537,6 +538,7 @@ class Game {
     this.noteMode = false;
     this.level = level;
     this.selected = NONE;
+    this.sticky = 0;
     this.elapsed = 0;
     this.running = false;
     this.hintKind = HINT_NONE;
@@ -575,7 +577,24 @@ class Game {
     }
     this.commit();
     this.checkSolved();
+    if (this.sticky && (this.solved || this.remaining(this.sticky) <= 0)) this.sticky = 0;
     return true;
+  }
+
+  key(d) {
+    if (!this.sticky && this.canEdit() && (this.noteMode ? !this.value[this.selected] : this.value[this.selected] !== d)) return this.enter(d);
+    this.sticky = this.sticky === d || this.remaining(d) <= 0 ? 0 : d;
+    return false;
+  }
+
+  tap(cell) {
+    if (!this.active || this.solved) return false;
+    if (!this.sticky) {
+      this.selected = cell === this.selected ? NONE : cell;
+      return false;
+    }
+    this.selected = cell;
+    return this.enter(this.sticky);
   }
 
   erase() {
