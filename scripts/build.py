@@ -63,7 +63,8 @@ BOTS = [
     "MistralAI-User", "YouBot", "Bytespider", "PetalBot",
 ]
 CONTENT_SIGNAL = "Content-Signal: search=yes, ai-input=yes, ai-train=yes"
-CSP = "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+ROBOTS_DISALLOW = ["Disallow: /api/", "Disallow: /stats/"]
+CSP = "default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
 DISCOVERY_CACHE = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
 TEXT_TYPES = (".html", ".txt", ".xml", ".webmanifest")
 
@@ -274,9 +275,9 @@ def headers_file():
 
 
 def robots_file():
-    lines = ["User-agent: *", CONTENT_SIGNAL, "Allow: /", ""]
+    lines = ["User-agent: *", CONTENT_SIGNAL, "Allow: /"] + ROBOTS_DISALLOW + [""]
     lines += ["User-agent: " + bot for bot in BOTS]
-    lines += [CONTENT_SIGNAL, "Allow: /", "", "Sitemap: %s/sitemap.xml" % SITE]
+    lines += [CONTENT_SIGNAL, "Allow: /"] + ROBOTS_DISALLOW + ["", "Sitemap: %s/sitemap.xml" % SITE]
     return "\n".join(lines) + "\n"
 
 

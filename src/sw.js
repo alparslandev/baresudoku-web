@@ -9,6 +9,7 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
+  if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/stats')) return;
   if (e.request.mode !== 'navigate') {
     e.respondWith(caches.match(e.request, { ignoreSearch: true }).then(r => r || fetch(e.request)));
     return;
