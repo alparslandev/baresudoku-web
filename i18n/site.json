@@ -5207,6 +5207,26 @@
         [
           "آندروید تطبیقی وار؟",
           "بلی. آندروید اوچون Bare Sudoku آندروید 8 و داها یئنی اوچون {size} KB APK-دیر، ایجازه‌سیز و اینترنتسیز. GitHub Releases-دن یوکله."
+        ],
+        [
+          "سودوکو نئجه اوینانیر؟",
+          "9×9 جدولو ائله دولدورون کی هر سطیر، هر سوتون و هر 3×3 قوتودا 1-دن 9-ا قدر رقملر دوز بیر دفعه اولسون. بعضی رقملر باشلانغیجدا وئریلیر؛ قالانینی منطیقله تاپیرسینیز. Bare Sudoku-دا خانایا، سونرا رقمه توخونون، یا دا اوّل رقمه، سونرا اونون عاید اولدوغو هر خانایا."
+        ],
+        [
+          "هئچ واخت تخمین ائتمک لازیم گلیرمی؟",
+          "یوخ. هر تاپماجانین دوز بیر حلی وار و یالنیز منطیقله حل اولونور. ایلیشسه‌نیز، ایپوجو نؤوبتی خانانی گؤستریر و تکنیکین آدینی دئییر: single، کیلیدلی نامیزدلر، جوت و یا اوچلوک، X-Wing، Y-Wing، Swordfish و یا XYZ-Wing. رقمی یئرلشدیرمک اوچون ایپوجونا یئنیدن توخونون."
+        ],
+        [
+          "کامپیوتئرده کلاویاتورا ایله اوینایا بیله‌رم‌می؟",
+          "بلی. اوخ دویمه‌لری سئچیمی حرکت ائتدیریر، 1-دن 9-ا قدر رقم داخیل ائدیر، Backspace سیلیر، N قئیدلری دییشیر، U گئری آلیر، H ایپوجو وئریر، F قئیدلری دولدورور، Escape منونو آچیر. ترتیبات تئلئفونا، پلانشئته و ماساوستونه اویغونلاشیر."
+        ],
+        [
+          "Bare Sudoku آچیق منبعلی‌دیرمی؟",
+          "بلی. وئب اویون و Android تطبیقی GitHub-دا MIT لیسانسی ایله آچیق منبعلی‌دیر: alparslandev/baresudoku-web و alparslandev/baresudoku. کودو اوخویا و یا تطبیقی اؤزونوز قورا بیلرسینیز."
+        ],
+        [
+          "Bare Sudoku نئچه دیلده‌دیر؟",
+          "200 دیلده، هر بیری اؤز صحیفه‌سینده. اویونداکی دیل منوسو صحیفه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله کئچید وئریر. اویون سئچیمینیزی یاددا ساخلاییر."
         ]
       ],
       "madeBy": "یارادان: Alparslan Selçuk Develioğlu",
@@ -6335,6 +6355,26 @@
         [
           "Ingabe lukhona uhlelo lwe-Android?",
           "Yebo. I-Bare Sudoku ye-Android iyi-APK ye-{size} KB ye-Android 8 nentsha, ngaphandle kwezimvume nangaphandle kwe-inthanethi. Yilande ku-GitHub Releases."
+        ],
+        [
+          "Idlalwa kanjani i-Sudoku?",
+          "Gcwalisa igridi engu-9×9 ukuze wonke umugqa, lonke ikholomu nebhokisi ngalinye elingu-3×3 libe nezinombolo 1 kuya ku-9 kanye kuphela. Ezinye izinombolo zinikezwa ekuqaleni; ezinye uzithola ngokucabanga. Ku-Bare Sudoku, thepha iseli bese uthepha inombolo, noma inombolo kuqala bese uthepha iseli ngalinye lapho ingena khona."
+        ],
+        [
+          "Ingabe kufanele ngiqagele ngesinye isikhathi?",
+          "Cha. Iphazili ngayinye inesixazululo esisodwa kuphela futhi ixazululwa ngokucabanga kuphela. Uma ubambekile, isexwayiso sikhombisa iseli elilandelayo bese sibiza igama lendlela: single, abaqokiwe abavaliwe, ababili noma abathathu, X-Wing, Y-Wing, Swordfish noma XYZ-Wing. Thepha isexwayiso futhi ukuze ubeke inombolo."
+        ],
+        [
+          "Ngingadlala kukhompyutha ngekhibhodi?",
+          "Yebo. Okhiye bemicibisholo bahambisa ukukhetha, u-1 kuya ku-9 bafaka inombolo, i-Backspace iyasula, u-N ushintsha amanothi, u-U uyabuyisela, u-H unikeza isexwayiso, u-F ugcwalisa amanothi, i-Escape ivula imenyu. Isakhiwo sivumelana nefoni, ithebulethi nekhompyutha."
+        ],
+        [
+          "Ingabe i-Bare Sudoku iyi-open source?",
+          "Yebo. Umdlalo wewebhu ne-app ye-Android kuyi-open source ngaphansi kwelayisensi ye-MIT ku-GitHub: alparslandev/baresudoku-web kanye ne-alparslandev/baresudoku. Ungafunda ikhodi noma wakhe i-app ngokwakho."
+        ],
+        [
+          "I-Bare Sudoku ikuzilimi ezingaki?",
+          "Izilimi ezingu-200, ngalinye likhasini lalo. Imenyu yolimi emdlalweni ishintsha ikhasi, futhi uhlu olungaphansi komdlalo luxhumanisa ulimi ngalunye. Umdlalo ukhumbula okukhethile."
         ]
       ],
       "madeBy": "Yenziwe ngu-Alparslan Selçuk Develioğlu",
@@ -7098,6 +7138,26 @@
         [
           "Ingaba lukhona usetyenziso lwe-Android?",
           "Ewe. I-Bare Sudoku ye-Android yi-APK ye-{size} KB ye-Android 8 nentsha, ngaphandle kweemvume nangaphandle kwe-intanethi. Yikhuphele kwi-GitHub Releases."
+        ],
+        [
+          "Idlalwa njani i-Sudoku?",
+          "Zalisa igridi engu-9×9 ukuze wonke umqolo, wonke umhlathi nebhokisi ngalinye elingu-3×3 libe namanani u-1 ukuya ku-9 kube kanye kuphela. Amanye amanani anikwa ekuqaleni; amanye uwafumana ngengqiqo. Kwi-Bare Sudoku, cofa iseli uze ucofe inani, okanye inani kuqala uze ucofe iseli nganye apho lingena khona."
+        ],
+        [
+          "Ingaba kufuneka ndiqikelele ngamanye amaxesha?",
+          "Hayi. Iphazili nganye inesisombululo esinye kuphela kwaye isonjululwa ngengqiqo kuphela. Ukuba ubambekile, icebiso libonisa iseli elandelayo lize libize igama lobuchule: single, abagqatswa abavaliweyo, isibini okanye isithathu, X-Wing, Y-Wing, Swordfish okanye XYZ-Wing. Cofa icebiso kwakhona ukubeka inani."
+        ],
+        [
+          "Ndingadlala kwikhompyutha ngekhibhodi?",
+          "Ewe. Amaqhosha eentolo ahambisa ukhetho, u-1 ukuya ku-9 afaka inani, i-Backspace iyacima, u-N utshintsha amanqaku, u-U uyabuyisela, u-H unika icebiso, u-F uzalisa amanqaku, i-Escape ivula imenyu. Ubume buhambelana nefowuni, ithebhulethi nekhompyutha."
+        ],
+        [
+          "Ingaba i-Bare Sudoku yi-open source?",
+          "Ewe. Umdlalo wewebhu ne-app ye-Android yi-open source phantsi kwelayisensi ye-MIT kwi-GitHub: alparslandev/baresudoku-web kunye ne-alparslandev/baresudoku. Ungafunda ikhowudi okanye wakhe i-app ngokwakho."
+        ],
+        [
+          "I-Bare Sudoku ikwiilwimi ezingaphi?",
+          "Iilwimi ezingama-200, nganye ikwiphepha layo. Imenyu yolwimi emdlalweni itshintsha iphepha, kwaye uluhlu olungaphantsi komdlalo lunxulumanisa ulwimi ngalunye. Umdlalo ukhumbula ukhetho lwakho."
         ]
       ],
       "madeBy": "Yenziwe ngu-Alparslan Selçuk Develioğlu",
@@ -7350,6 +7410,26 @@
         [
           "איז דאָ אַן Android אַפּ?",
           "יאָ. Bare Sudoku פֿאַר Android איז אַ {size} KB APK פֿאַר Android 8 און נײַער, אָן דערלויבענישן און אָן אינטערנעט. לאָד אים אַראָפּ פֿון GitHub Releases."
+        ],
+        [
+          "ווי שפּילט מען סודאָקו?",
+          "פֿילט אָן די 9×9 נעץ אַזוי אַז יעדע רייע, יעדע זייַל און יעדער 3×3 קעסטל זאָל האָבן די ציפֿערן 1 ביז 9 פּונקט איין מאָל. עטלעכע ציפֿערן זײַנען געגעבן פֿון אָנהייב; די איבעריקע געפֿינט איר מיט לאָגיק. אין Bare Sudoku דריקט אויף אַ קעסטל און דערנאָך אויף אַ ציפֿער, אָדער ערשט אויף אַ ציפֿער און דערנאָך אויף יעדן קעסטל וווּ זי געהערט."
+        ],
+        [
+          "דאַרף מען אַמאָל טרעפֿן?",
+          "ניין. יעדער רעטעניש האָט פּונקט איין לייזונג און ווערט געלייזט נאָר מיט לאָגיק. אויב איר שטעקט, ווײַזט אַ ווינק דאָס קומענדיקע קעסטל און רופֿט די טעכניק: single, פֿאַרשלאָסענע קאַנדידאַטן, פּאָר אָדער דרײַ, X-Wing, Y-Wing, Swordfish אָדער XYZ-Wing. דריקט נאָך אַ מאָל אויפֿן ווינק כּדי אַרײַנצושטעלן די ציפֿער."
+        ],
+        [
+          "קען איך שפּילן אויף אַ קאָמפּיוטער מיט דער קלאַוויאַטור?",
+          "יאָ. די פֿײַל־קלאַווישן באַוועגן די אויסקלײַב, 1 ביז 9 שרײַבן אַרײַן אַ ציפֿער, Backspace מעקט אויס, N בײַט די נאָטיצן, U נעמט צוריק, H גיט אַ ווינק, F פֿילט אָן די נאָטיצן און Escape עפֿנט דעם מעניו. דער אויסלייג פּאַסט זיך צו צום טעלעפֿאָן, טאַבלעט און קאָמפּיוטער."
+        ],
+        [
+          "איז Bare Sudoku אָפֿענער קוואַל?",
+          "יאָ. די וועב־שפּיל און די Android־אַפּ זײַנען אָפֿענער קוואַל אונטער דער MIT־ליצענץ אויף GitHub: alparslandev/baresudoku-web און alparslandev/baresudoku. איר קענט לייענען דעם קאָד אָדער בויען די אַפּ אַליין."
+        ],
+        [
+          "אין וויפֿל שפּראַכן איז דאָ Bare Sudoku?",
+          "אין 200 שפּראַכן, יעדע אויף איר אייגענעם בלאַט. דער שפּראַך־מעניו אין דער שפּיל בײַט דעם בלאַט, און די רשימה אונטער דער שפּיל פֿאַרבינדט צו יעדער שפּראַך. די שפּיל געדענקט אײַער אויסקלײַב."
         ]
       ],
       "madeBy": "געמאַכט פֿון Alparslan Selçuk Develioğlu",
@@ -7403,6 +7483,26 @@
         [
           "د Android اپ شته؟",
           "هو. د Android لپاره Bare Sudoku د Android 8 او نوي لپاره {size} KB APK ده، بې اجازې او بې انټرنېټه. له GitHub Releases یې ډاونلوډ کړئ."
+        ],
+        [
+          "سوډوکو څنګه لوبېږي؟",
+          "د 9×9 جدول داسې ډک کړئ چې هر قطار، هر ستون او هر 3×3 بکس له 1 څخه تر 9 پورې شمېرې یوازې یو ځل ولري. ځینې شمېرې له پیله ورکړل شوې دي؛ پاتې یې په منطق پیدا کوئ. په Bare Sudoku کې یو خانه او بیا شمېره ولمسوئ، یا لومړی شمېره او بیا هره هغه خانه چې شمېره پکې ځي."
+        ],
+        [
+          "ایا کله ناکله اټکل ته اړتیا ده؟",
+          "نه. هره معما یوازې یو حل لري او یوازې په منطق حلېږي. که ودرېدئ، اشاره راتلونکې خانه ښیي او د تخنیک نوم وايي: single، تړل شوي کاندیدان، جوړه یا درې، X-Wing، Y-Wing، Swordfish یا XYZ-Wing. د شمېرې د ایښودلو لپاره اشاره بیا ولمسوئ."
+        ],
+        [
+          "ایا په کمپیوټر کې د کیبورډ سره لوبه کولی شم؟",
+          "هو. د غشي کیلۍ انتخاب خوځوي، 1 تر 9 شمېره داخلوي، Backspace پاکوي، N یادښتونه بدلوي، U بېرته راګرځوي، H اشاره ورکوي، F یادښتونه ډکوي او Escape مینو پرانیزي. ترتیب له ټیلیفون، ټابلیټ او کمپیوټر سره سمون خوري."
+        ],
+        [
+          "ایا Bare Sudoku خلاصه سرچینه ده؟",
+          "هو. ویب لوبه او د Android اپ په GitHub کې د MIT جواز لاندې خلاصه سرچینه دي: alparslandev/baresudoku-web او alparslandev/baresudoku. تاسو کوډ لوستلی شئ یا اپ پخپله جوړولی شئ."
+        ],
+        [
+          "Bare Sudoku په څو ژبو کې دی؟",
+          "په 200 ژبو کې، هره یوه په خپله پاڼه کې. په لوبه کې د ژبې مینو پاڼه بدلوي او د لوبې لاندې لیست هرې ژبې ته تړل کېږي. لوبه ستاسو انتخاب په یاد ساتي."
         ]
       ],
       "madeBy": "جوړونکی: Alparslan Selçuk Develioğlu",
@@ -7456,6 +7556,26 @@
         [
           "Sepana Android heye?",
           "Erê. Bare Sudoku ji bo Android APKyeke {size} KB ye ji bo Android 8 û nûtir, bê destûr û bê înternet. Ji GitHub Releases dakêşe."
+        ],
+        [
+          "Sudoku çawa tê lîstin?",
+          "Tora 9×9 wisa dagire ku her rêz, her stûn û her qutiya 3×3 reqemên 1 heta 9 tenê carekê hebin. Hin reqem di destpêkê de hatine dayîn; yên din tu bi mentiqê dibînî. Di Bare Sudoku de dest bide xaneyekê û paşê reqemekê, an pêşî reqemê û paşê her xaneya ku ew tê de ye."
+        ],
+        [
+          "Gelo carinan divê ez texmîn bikim?",
+          "Na. Her puzzle tenê çareseriyek heye û tenê bi mentiqê tê çareserkirin. Heke tu asê bibî, îşaret xaneya din nîşan dide û navê teknîkê dibêje: single, namzedên girtî, cot an sêyek, X-Wing, Y-Wing, Swordfish an XYZ-Wing. Ji bo danîna reqemê dîsa dest bide îşaretê."
+        ],
+        [
+          "Ez dikarim li ser komputerê bi klavyeyê bilîzim?",
+          "Erê. Bişkokên tîran hilbijartinê dilivînin, 1 heta 9 reqemê dinivîsin, Backspace jê dibe, N notan diguherîne, U vedigerîne, H îşaretê dide, F notan dagire û Escape menuyê vedike. Sêwiran li gorî telefon, tablet û komputerê tê guncandin."
+        ],
+        [
+          "Bare Sudoku çavkaniya vekirî ye?",
+          "Erê. Lîstika webê û sepana Android bi lîsansa MIT li ser GitHub çavkaniya vekirî ne: alparslandev/baresudoku-web û alparslandev/baresudoku. Tu dikarî kodê bixwînî an sepanê bi xwe ava bikî."
+        ],
+        [
+          "Bare Sudoku bi çend zimanan e?",
+          "Bi 200 zimanan, her yek li ser rûpela xwe. Menuya zimên di lîstikê de rûpelê diguherîne û lîsteya li binê lîstikê her zimanî girê dide. Lîstik hilbijartina te bi bîr tîne."
         ]
       ],
       "madeBy": "Çêker: Alparslan Selçuk Develioğlu",
@@ -7509,6 +7629,26 @@
         [
           "ئەپی Android هەیە؟",
           "بەڵێ. Bare Sudoku بۆ Android APK یەکی {size} KB یە بۆ Android 8 و نوێتر، بێ ڕێگەپێدان و بێ ئینتەرنێت. لە GitHub Releases دایبگرە."
+        ],
+        [
+          "سودۆکو چۆن دەکرێت؟",
+          "تۆڕی 9×9 بەجۆرێک پڕ بکەرەوە کە هەر ڕیز، هەر ستوون و هەر سندوقێکی 3×3 ژمارەکانی 1 تا 9 تەنها جارێک تێدابێت. هەندێک ژمارە لە سەرەتاوە دراون؛ ئەوانی دیکە بە لۆژیک دەدۆزیتەوە. لە Bare Sudoku خانەیەک و پاشان ژمارەیەک دەست لێبدە، یان سەرەتا ژمارەکە و پاشان هەر خانەیەک کە بۆی دەچێت."
+        ],
+        [
+          "ئایا هەندێک جار پێویستە بۆچوون بکەم؟",
+          "نەخێر. هەر مەتەڵێک تەنها یەک چارەسەری هەیە و تەنها بە لۆژیک چارەسەر دەکرێت. ئەگەر گیرت خوارد، ئاماژە خانەی داهاتوو نیشان دەدات و ناوی تەکنیکەکە دەڵێت: single، کاندیدە داخراوەکان، جووت یان سێ، X-Wing، Y-Wing، Swordfish یان XYZ-Wing. بۆ دانانی ژمارەکە دووبارە دەست لە ئاماژەکە بدە."
+        ],
+        [
+          "دەتوانم لەسەر کۆمپیوتەر بە تەختەکلیل یاری بکەم؟",
+          "بەڵێ. کلیلەکانی تیر هەڵبژاردن دەجوڵێنن، 1 تا 9 ژمارە دەنووسن، Backspace دەسڕێتەوە، N تێبینییەکان دەگۆڕێت، U دەگەڕێنێتەوە، H ئاماژە دەدات، F تێبینییەکان پڕ دەکاتەوە و Escape مێنیو دەکاتەوە. ڕێکخستن لەگەڵ مۆبایل، تابلێت و کۆمپیوتەر دەگونجێت."
+        ],
+        [
+          "ئایا Bare Sudoku سەرچاوە کراوەیە؟",
+          "بەڵێ. یارییە وێبەکە و ئەپی Android لەژێر مۆڵەتی MIT لە GitHub سەرچاوە کراوەن: alparslandev/baresudoku-web و alparslandev/baresudoku. دەتوانیت کۆدەکە بخوێنیتەوە یان ئەپەکە خۆت دروست بکەیت."
+        ],
+        [
+          "Bare Sudoku بە چەند زمانە؟",
+          "بە 200 زمان، هەر یەکێک لە پەڕەی خۆی. مێنیوی زمان لە یارییەکە پەڕە دەگۆڕێت و لیستی ژێر یارییەکە بۆ هەر زمانێک بەستراوە. یارییەکە هەڵبژاردنەکەت لەبیر دەمێنێت."
         ]
       ],
       "madeBy": "دروستکراوە لەلایەن Alparslan Selçuk Develioğlu",
@@ -7562,6 +7702,26 @@
         [
           "ڇا Android ايپ آهي؟",
           "ها. Android لاءِ Bare Sudoku Android 8 ۽ نئين لاءِ {size} KB جي APK آهي، بغير اجازت ۽ بغير انٽرنيٽ. GitHub Releases مان ڊائونلوڊ ڪريو."
+        ],
+        [
+          "سوڊوڪو ڪيئن کيڏجي؟",
+          "9×9 گرڊ کي اهڙيءَ طرح ڀريو جو هر قطار، هر ڪالم ۽ هر 3×3 دٻي ۾ 1 کان 9 تائين انگ بلڪل هڪ ڀيرو اچن. ڪجهه انگ شروع ۾ ڏنل هوندا آهن؛ باقي توهان منطق سان ڳوليندا آهيو. Bare Sudoku ۾ پهرين خانو پوءِ انگ ڇهو، يا پهرين انگ پوءِ اهي سڀ خانا جتي اهو انگ وڃي ٿو."
+        ],
+        [
+          "ڇا ڪڏهن اندازو لڳائڻو پوي ٿو؟",
+          "نه. هر پزل جو بلڪل هڪ حل آهي ۽ اهو صرف منطق سان حل ٿئي ٿو. جيڪڏهن ڦاسي پئو ته اشارو ايندڙ خانو ڏيکاري ٿو ۽ ٽيڪنڪ جو نالو ٻڌائي ٿو: single، بند اميدوار، جوڙو يا ٽي، X-Wing، Y-Wing، Swordfish يا XYZ-Wing. انگ رکڻ لاءِ اشارو ٻيهر ڇهو."
+        ],
+        [
+          "ڇا ڪمپيوٽر تي ڪيبورڊ سان کيڏي سگهجي ٿو؟",
+          "ها. تير واريون ڪنجيون چونڊ هلائين ٿيون، 1 کان 9 انگ داخل ڪن ٿيون، Backspace مٽائي ٿو، N نوٽ بدلائي ٿو، U واپس ڪري ٿو، H اشارو ڏئي ٿو، F نوٽ ڀري ٿو ۽ Escape مينيو کولي ٿو. ترتيب فون، ٽيبلٽ ۽ ڊيسڪ ٽاپ مطابق ٿئي ٿي."
+        ],
+        [
+          "ڇا Bare Sudoku اوپن سورس آهي؟",
+          "ها. ويب راند ۽ Android ايپ GitHub تي MIT لائسنس تحت اوپن سورس آهن: alparslandev/baresudoku-web ۽ alparslandev/baresudoku. توهان ڪوڊ پڙهي سگهو ٿا يا ايپ پاڻ ٺاهي سگهو ٿا."
+        ],
+        [
+          "Bare Sudoku ڪيترين ٻولين ۾ آهي؟",
+          "200 ٻولين ۾، هر هڪ پنهنجي صفحي تي. راند ۾ ٻوليءَ جو مينيو صفحو بدلائي ٿو ۽ راند هيٺان لسٽ هر ٻوليءَ سان ڳنڍي ٿي. راند توهان جي چونڊ ياد رکي ٿي."
         ]
       ],
       "madeBy": "ٺاهيندڙ: Alparslan Selçuk Develioğlu",
@@ -8059,6 +8219,26 @@
         [
           "Android އެޕެއް ހުރޭތަ؟",
           "އާން. Android އަށް Bare Sudoku އަކީ Android 8 އަދި އައު ވަރޝަންތަކަށް {size} KB APK އެއް، ހުއްދައެއް ނެތި އަދި އިންޓަނެޓެއް ނެތި. GitHub Releases އިން ޑައުންލޯޑުކުރޭ."
+        ],
+        [
+          "ސުޑޯކު ކުޅެނީ ކިހިނެއް؟",
+          "ކޮންމެ ބަރިއެއްގައި، ކޮންމެ ކޮލަމެއްގައި އަދި ކޮންމެ 3×3 ފޮށްޓެއްގައި 1 އިން 9 އަށް އަދަދުތައް ހަމަ އެންމެ ފަހަރަކު އަންނަ ގޮތަށް 9×9 ގްރިޑް ފުރާލާށެވެ. ބައެއް އަދަދުތައް ފެށުމުގައި ދީފައި ހުންނާނެއެވެ؛ ބާކީ ތިބާ ބުއްދިން ހޯދާނީއެވެ. Bare Sudoku ގައި ގޮޅިއަކަށް ފިތާފައި ދެން އަދަދަކަށް ފިތާށެވެ، ނުވަތަ ފުރަތަމަ އަދަދަށް ފިތާފައި ދެން އެ އަދަދު ދާ ކޮންމެ ގޮޅިއަކަށް ފިތާށެވެ."
+        ],
+        [
+          "ދުވަހަކުވެސް ލަފާކުރަން ޖެހޭތަ؟",
+          "ނޫން. ކޮންމެ ޕަޒުލެއްގައި ހަމަ އެންމެ ހައްލެއް އޮންނައިރު ހަމައެކަނި ބުއްދިން ހައްލުކުރެވޭނެއެވެ. ތާށިވެއްޖެނަމަ އިޝާރާތުން ދެން އަންނަ ގޮޅި ދައްކައި އުކުޅުގެ ނަން ބުނެދެއެވެ: single، ތަޅުލެވިފައިވާ ކެންޑިޑޭޓުން، ދޭއް ނުވަތަ ތިނެއް، X-Wing، Y-Wing، Swordfish ނުވަތަ XYZ-Wing. އަދަދު ބެހެއްޓުމަށް އިޝާރާތަށް އަނެއްކާ ފިތާށެވެ."
+        ],
+        [
+          "ކޮމްޕިއުޓަރުގައި ކީބޯޑުން ކުޅެވިދާނެތަ؟",
+          "އާން. ތީރު ފިތްތަކުން ހޮވުން ދަތުރުކުރެއެވެ، 1 އިން 9 އިން އަދަދު ލިޔެއެވެ، Backspace ފުހެއެވެ، N ނޯޓު ބަދަލުކުރެއެވެ، U އަނބުރާ ގެންދެއެވެ، H އިޝާރާތް ދެއެވެ، F ނޯޓުތައް ފުރައެވެ، Escape މެނޫ ހުޅުވައެވެ. ލޭއައުޓް ފޯނު، ޓެބްލެޓް އަދި ކޮމްޕިއުޓަރަށް ފެތެއެވެ."
+        ],
+        [
+          "Bare Sudoku އަކީ އޯޕަން ސޯސްއެއްތަ؟",
+          "އާން. ވެބް ގޭމާއި Android އެޕް GitHub ގައި MIT ލައިސަންސްގެ ދަށުން އޯޕަން ސޯސްއެވެ: alparslandev/baresudoku-web އަދި alparslandev/baresudoku. ކޯޑު ކިޔައިލެވޭނެ ނުވަތަ އެޕް އަމިއްލައަށް ބިލްޑްކުރެވޭނެއެވެ."
+        ],
+        [
+          "Bare Sudoku ކިތައް ބަހުން ލިބޭތަ؟",
+          "200 ބަހުން، ކޮންމެ ބަހަކަށް އަމިއްލަ ސަފުހާއެއް. ގޭމުގައިވާ ބަހުގެ މެނޫއިން ސަފުހާ ބަދަލުވެއެވެ، އަދި ގޭމުގެ ތިރީގައިވާ ލިސްޓުން ކޮންމެ ބަހަކަށް ލިންކުވެއެވެ. ގޭމު ތިބާގެ ހޮވުން ހަނދާން ބަހައްޓައެވެ."
         ]
       ],
       "madeBy": "ހެދީ: Alparslan Selçuk Develioğlu",
@@ -8477,6 +8657,26 @@
         [
           "Misy rindranasa Android ve?",
           "Eny. APK {size} KB ho an'ny Android 8 sy vaovao kokoa ny Bare Sudoku ho an'ny Android, tsy misy alalana ary tsy misy aterineto. Alao avy amin'ny GitHub Releases."
+        ],
+        [
+          "Ahoana no fomba filalaovana Sudoku?",
+          "Fenoy ny tsipika 9×9 mba hisy ny isa 1 ka hatramin'ny 9 indray mandeha ihany isaky ny laharana, isaky ny tsanganana ary isaky ny boaty 3×3. Misy isa sasany omena eny am-piandohana; ny sisa dia hitanao amin'ny lojika. Ao amin'ny Bare Sudoku, tsindrio ny efitra dia ny isa, na ny isa aloha dia ny efitra rehetra misy azy."
+        ],
+        [
+          "Mila maminavina ve indraindray?",
+          "Tsia. Ny ankamantatra tsirairay dia manana vahaolana iray ihany ary voavaha amin'ny lojika fotsiny. Raha tafahitsoka ianao, ny torohevitra dia mampiseho ny efitra manaraka sy milaza ny anaran'ny teknika: single, kandidà mihidy, roa na telo, X-Wing, Y-Wing, Swordfish na XYZ-Wing. Tsindrio indray ny torohevitra mba hametrahana ny isa."
+        ],
+        [
+          "Afaka milalao amin'ny solosaina amin'ny kitendry ve aho?",
+          "Eny. Ny kitendry zana-tsipìka no mamindra ny safidy, ny 1 ka hatramin'ny 9 no mampiditra isa, ny Backspace no mamafa, ny N no manova ny naoty, ny U no mamerina, ny H no manome torohevitra, ny F no mameno ny naoty, ary ny Escape no manokatra ny menio. Ny endrika dia mifanaraka amin'ny finday, tablette ary solosaina."
+        ],
+        [
+          "Open source ve ny Bare Sudoku?",
+          "Eny. Ny lalao web sy ny rindranasa Android dia open source eo ambanin'ny fahazoan-dàlana MIT ao amin'ny GitHub: alparslandev/baresudoku-web sy alparslandev/baresudoku. Afaka mamaky ny kaody ianao na manangana ny rindranasa samirery."
+        ],
+        [
+          "Fiteny firy no misy ny Bare Sudoku?",
+          "Fiteny 200, samy manana ny pejiny. Ny menion'ny fiteny ao amin'ny lalao no manova ny pejy, ary ny lisitra eo ambanin'ny lalao no mampifandray amin'ny fiteny tsirairay. Tadidin'ny lalao ny safidinao."
         ]
       ],
       "madeBy": "Nataon'i Alparslan Selçuk Develioğlu",
@@ -8676,6 +8876,26 @@
         [
           "Ndax am na aplikaasoŋ Android?",
           "Waaw. Bare Sudoku ngir Android APK la bu {size} KB ngir Android 8 ak bu gën a bees, amul ndigal te amul internet. Sotti ko ci GitHub Releases."
+        ],
+        [
+          "Naka lañuy fowe Sudoku?",
+          "Fees nataalu 9×9 bi ba mu am ci rangu ne, ci kolon bu ne ak ci boyet 3×3 bu ne limu 1 ba 9 benn yoon rekk. Am na ay lim yu ñu joxe ci ndoorte li; ya des dinga leen gis ak sa xel. Ci Bare Sudoku, laal benn kaas te laal lim, walla lim bu jëkk te laal kaas bu ne bu mu war a dugg."
+        ],
+        [
+          "Ndax fàww ma xalaat rekk ci ay yoon?",
+          "Déedéet. Bépp xeet am na benn tontu rekk te mën nañu ko jeexal ak xel rekk. Boo tëju, tegtal dina wone kaas bi ci topp te wax turu pexe mi: single, kandidaa yu tëju, ñaar walla ñett, X-Wing, Y-Wing, Swordfish walla XYZ-Wing. Laal tegtal bi yeneen yoon ngir teg lim bi."
+        ],
+        [
+          "Ndax mën naa fo ci ordinatëer ak klaawie?",
+          "Waaw. Butoŋ yu fett yi dañuy toxal tànneef bi, 1 ba 9 dañuy dugal lim, Backspace dafay far, N dafay soppi ay bind, U dafay delloo, H dafay jox tegtal, F dafay fees ay bind, Escape dafay ubbi menu bi. Taxawaay bi dafay yem ak telefon, tablet ak ordinatëer."
+        ],
+        [
+          "Ndax Bare Sudoku open source la?",
+          "Waaw. Po bi ci web ak app Android bi open source lañu ci lisaans MIT ci GitHub: alparslandev/baresudoku-web ak alparslandev/baresudoku. Mën nga jàng kod bi walla tabax app bi yaw ci sa bopp."
+        ],
+        [
+          "Ñaata làkk la Bare Sudoku am?",
+          "200 làkk, bu ne ci xëtam. Menu làkk bi ci po bi dafay soppi xët wi, te lisit bi ci suufu po bi dafay lëkkale làkk bu ne. Po bi dafay fàttaliku sa tànneef."
         ]
       ],
       "madeBy": "Ki ko defar: Alparslan Selçuk Develioğlu",
@@ -8875,6 +9095,26 @@
         [
           "Xana ku na xitirhisiwa xa Android?",
           "Ina. Bare Sudoku ya Android i APK ya {size} KB ya Android 8 na leyintshwa, handle ka mpfumelelo na handle ka inthanete. Yi koxe eka GitHub Releases."
+        ],
+        [
+          "Sudoku yi tlangiwa njhani?",
+          "Tata giridi ya 9×9 leswaku layini yin'wana ni yin'wana, kholomo yin'wana ni yin'wana ni bokisi rin'wana ni rin'wana ra 3×3 swi va ni tinomboro 1 ku ya eka 9 kan'we ntsena. Tinomboro tin'wana ti nyikiwa eku sunguleni; letin'wana u ti kuma hi ku anakanya. Eka Bare Sudoku, tikha xisele kutani nomboro, kumbe nomboro ku sungula kutani xisele xin'wana ni xin'wana lexi yi faneleke."
+        ],
+        [
+          "Xana ndzi fanele ku ringanyeta minkarhi yin'wana?",
+          "E-e. Xiphiqo xin'wana ni xin'wana xi ni nhlamulo yin'we ntsena naswona xi tlhantlhiwa hi ku anakanya ntsena. Loko u khomeka, xitsundzuxo xi kombisa xisele lexi landzelaka xi vula vito ra ndlela: single, vaxavi lava pfariweke, mbirhi kumbe tinharhu, X-Wing, Y-Wing, Swordfish kumbe XYZ-Wing. Tikha xitsundzuxo nakambe ku veka nomboro."
+        ],
+        [
+          "Xana ndzi nga tlanga eka khompyuta hi khiboto?",
+          "Ina. Makhiya ya misewe ma fambisa nhlawulo, 1 ku ya eka 9 ma nghenisa nomboro, Backspace yi sula, N yi cinca tinotsi, U yi tlherisa, H yi nyika xitsundzuxo, F yi tata tinotsi, Escape yi pfula menyu. Xivumbeko xi pfumelelana ni foni, thebulete ni khompyuta."
+        ],
+        [
+          "Xana Bare Sudoku i open source?",
+          "Ina. Ntlangu wa webu ni app ya Android i open source ehansi ka layisense ya MIT eka GitHub: alparslandev/baresudoku-web na alparslandev/baresudoku. U nga hlaya khodi kumbe u aka app hi wexe."
+        ],
+        [
+          "Bare Sudoku yi le ka tindzimi tingani?",
+          "Tindzimi ta 200, yin'wana ni yin'wana eka pheji ya yona. Menyu ya ririmi entlangwini yi cinca pheji, naswona nxaxamelo lowu nga ehansi ka ntlangu wu hlanganisa ririmi rin'wana ni rin'wana. Ntlangu wu tsundzuka nhlawulo wa wena."
         ]
       ],
       "madeBy": "Yi endliwe hi Alparslan Selçuk Develioğlu",
@@ -9001,6 +9241,26 @@
         [
           "Android dwumadie wɔ hɔ?",
           "Aane. Bare Sudoku ma Android yɛ APK a ɛyɛ {size} KB ma Android 8 ne foforo, kwan biara nni hɔ na intanɛt nni hɔ. Twe fi GitHub Releases."
+        ],
+        [
+          "Ɔkwan bɛn so na wodi Sudoku?",
+          "Hyɛ 9×9 grid no ma sɛnea ɛbɛyɛ a nkyerɛwde 1 kosi 9 bɛba pɛnkoro pɛ wɔ nsantee biara, kɔlɔm biara ne 3×3 adaka biara mu. Wɔde nɔma bi ama wɔ mfiase; wode adwene hwehwɛ nea aka no. Wɔ Bare Sudoku mu, mia dan bi na afei mia nɔma, anaa nɔma kan na afei dan biara a ɛfata."
+        ],
+        [
+          "Ɛsɛ sɛ mesusu bere bi?",
+          "Dabi. Ahintasɛm biara wɔ ano yiyi biako pɛ na wɔde adwene nko ara na ɛyiyi ano. Sɛ wokɔ ka a, nkyerɛkyerɛmu kyerɛ dan a edi hɔ na ɛbɔ ɔkwan no din: single, candidates a wɔato mu, abien anaa abiɛsa, X-Wing, Y-Wing, Swordfish anaa XYZ-Wing. Mia nkyerɛkyerɛmu no bio na fa nɔma no to hɔ."
+        ],
+        [
+          "Metumi de keyboard adi wɔ kɔmputa so?",
+          "Aane. Agyan nsɛnkyerɛnne tu paw, 1 kosi 9 de nɔma hyɛ mu, Backspace pepa, N sesa nkyerɛwee, U san n'akyi, H ma nkyerɛkyerɛmu, F hyɛ nkyerɛwee ma, Escape bue menu. Nhyehyɛe no fata fon, tablet ne kɔmputa."
+        ],
+        [
+          "Bare Sudoku yɛ open source?",
+          "Aane. Web agodie no ne Android app no yɛ open source wɔ MIT license ase wɔ GitHub so: alparslandev/baresudoku-web ne alparslandev/baresudoku. Wobetumi akenkan kood no anaa woasi app no w'ankasa."
+        ],
+        [
+          "Kasa ahe na Bare Sudoku wɔ?",
+          "Kasa 200, biara wɔ ne kratafa so. Kasa menu a ɛwɔ agodie no mu sesa kratafa, na nsɛm a ɛwɔ agodie no ase no de kasa biara bata ho. Agodie no kae nea wopaw."
         ]
       ],
       "madeBy": "Alparslan Selçuk Develioğlu na ɔyɛe",
@@ -9054,6 +9314,26 @@
         [
           "Android dɔwɔnu li?",
           "Ɛ̃. Bare Sudoku na Android nye APK si nye {size} KB na Android 8 kple yeyetɔwo, mɔɖeɖe manɔmee kple internet manɔmee. Ɖee tso GitHub Releases."
+        ],
+        [
+          "Aleke woƒoa Sudoku?",
+          "Yɔ 9×9 ƒe ɖoɖoa ale be fli ɖe sia ɖe, kɔlum ɖe sia ɖe kple 3×3 ƒe aɖaka ɖe sia ɖe naxɔ xexlẽdzesi 1 va se ɖe 9 zi ɖeka ko. Wona xexlẽdzesi aɖewo le gɔmedzedzea; èkpɔa mamlɛawo to nyameɖeɖe me. Le Bare Sudoku me, tɔ asi nɔƒe aɖe eye nàtɔ asi xexlẽdzesi, alo xexlẽdzesi gbã eye nàtɔ asi nɔƒe ɖe sia ɖe si wòdze."
+        ],
+        [
+          "Ɖe wòhiã be maɖo ayi ɣeaɖewoɣia?",
+          "Ao. Aɖaŋu ɖe sia ɖe si ŋuɖoɖo ɖeka ko le eye woɖea wo to nyameɖeɖe ko me. Ne èlé ɖe afi aɖe la, aɖaŋuɖoɖo fiaa nɔƒe si kplɔe ɖo eye wòyɔa mɔnua ƒe ŋkɔ: single, tiatiawo siwo woxe, eve alo etɔ̃, X-Wing, Y-Wing, Swordfish alo XYZ-Wing. Tɔ asi aɖaŋuɖoɖoa ake be nàtsɔ xexlẽdzesia ada ɖe eme."
+        ],
+        [
+          "Mate ŋu aƒoe le kɔmpiuta dzi kple nuŋlɔdzesiawoa?",
+          "Ẽ. Aŋutrɔ ƒe dzesiawo ʋua tiatia, 1 va se ɖe 9 dea xexlẽdzesi, Backspace tutunɛ, N trɔa ŋɔŋlɔawo, U gbugbɔnɛ, H naa aɖaŋuɖoɖo, F yɔa ŋɔŋlɔawo, Escape ʋua menu. Ɖoɖoa sɔna kple fone, tablet kple kɔmpiuta."
+        ],
+        [
+          "Ɖe Bare Sudoku nye open sourcea?",
+          "Ẽ. Web fefea kple Android app la nye open source le MIT ƒe mɔɖeɖe te le GitHub dzi: alparslandev/baresudoku-web kple alparslandev/baresudoku. Àte ŋu axlẽ kɔdea alo atu app la ɖokuiwò."
+        ],
+        [
+          "Gbe nenie le Bare Sudoku me?",
+          "Gbe 200, ɖe sia ɖe le eya ŋutɔ ƒe axa dzi. Gbe ƒe menu si le fefea me trɔa axa, eye xexlẽ si le fefea te kaa gbe ɖe sia ɖe. Fefea ɖoa ŋku wò tiatia dzi."
         ]
       ],
       "madeBy": "Alparslan Selçuk Develioğlu ye wɔe",
@@ -12367,6 +12647,26 @@
         [
           "کیا Android ایپ چھُ؟",
           "آ۔ Android خٲطرٕ Bare Sudoku چھُ Android 8 تہٕ نوٚوَس خٲطرٕ {size} KB APK، بغیر اجازت تہٕ بغیر انٹرنیٹ۔ GitHub Releases پیٹھٕ ڈاؤن لوڈ کریو۔"
+        ],
+        [
+          "سوڈوکو کِتھ پٲٹھۍ کھیلان چھِ؟",
+          "9×9 گرِڈ اَتھ پٲٹھۍ بھریو زِ ہر قطار، ہر کالم تہٕ ہر 3×3 ڈَبَس منٛز 1 پؠٹھٕ 9 تام ہندسٕ صرف اَکھ لَٹ یِن۔ کینٛہہ ہندسٕ چھِ شروعَس منٛز دِنہٕ آمٕتۍ؛ باقی چھِو توٚہۍ منطق سٟتۍ ژھانڈان۔ Bare Sudoku منٛز گوڈٕ خانہٕ تہٕ پتہٕ ہندسٕ دَبٲو، یا گوڈٕ ہندسٕ تہٕ پتہٕ سٲری خانہٕ یَتھ منٛز سُہ ہندسٕ گَژھان چھُ۔"
+        ],
+        [
+          "کیا کبھی اندازٕ لاگُن پیوان چھُ؟",
+          "نہٕ۔ ہر پزلَس چھُ صرف اَکھ حل تہٕ سُہ چھُ صرف منطقہٕ سٟتۍ حل گَژھان۔ اگر پھَسِو تہٕ اِشارٕ ہاوان چھُ بیاکھ خانہٕ تہٕ ونان چھُ تکنیکُک ناو: single، بند اُمیدوار، جوڑٕ یا ترٛے، X-Wing، Y-Wing، Swordfish یا XYZ-Wing۔ ہندسٕ تھاونہٕ خٲطرٕ اِشارٕ دوبارٕ دَبٲو۔"
+        ],
+        [
+          "کیا کمپیوٹرَس پؠٹھ کی بورڈ سٟتۍ کھیلِتھ ہیکَو؟",
+          "آ۔ تیر کلید چھِ اِنتخاب ہِلاوان، 1 پؠٹھٕ 9 تام چھِ ہندسٕ لیکھان، Backspace چھُ مِٹاوان، N چھُ نوٹ بدلاوان، U چھُ واپس کران، H چھُ اِشارٕ دِوان، F چھُ نوٹ بھران تہٕ Escape چھُ مینو کھولان۔ لے آؤٹ چھُ فون، ٹیبلیٹ تہٕ ڈیسک ٹاپ مطابق بنان۔"
+        ],
+        [
+          "کیا Bare Sudoku اوپن سورس چھُ؟",
+          "آ۔ ویب کھیل تہٕ Android ایپ چھِ GitHub پؠٹھ MIT لائسنسٕ تحت اوپن سورس: alparslandev/baresudoku-web تہٕ alparslandev/baresudoku۔ توٚہۍ ہیکِو کوڈ پَرِتھ یا ایپ پانٕ بنٲوِتھ۔"
+        ],
+        [
+          "Bare Sudoku چھُ کٔتؠن زبانَن منٛز؟",
+          "200 زبانَن منٛز، ہر اَکھ پنٕنِس صفحَس پؠٹھ۔ کھیلَس منٛز زبان مینو چھُ صفحہٕ بدلاوان تہٕ کھیلَس تَلہٕ فہرست چھِ ہر زبانہٕ سٟتۍ جوڑان۔ کھیل چھُ توٚہۍ اِنتخاب یاد تھاوان۔"
         ]
       ],
       "madeBy": "بناون وول: Alparslan Selçuk Develioğlu",
@@ -12473,6 +12773,26 @@
         [
           "Оё барномаи Android ҳаст?",
           "Бале. Bare Sudoku барои Android APK-и {size} КБ барои Android 8 ва навтар аст, бе иҷозатҳо ва бе интернет. Онро аз GitHub Releases боргирӣ кунед."
+        ],
+        [
+          "Судоку чӣ тавр бозӣ мешавад?",
+          "Шабакаи 9×9-ро тавре пур кунед, ки дар ҳар сатр, ҳар сутун ва ҳар қуттии 3×3 рақамҳои аз 1 то 9 танҳо як бор бошанд. Баъзе рақамҳо аз аввал дода шудаанд; боқимондаро бо мантиқ меёбед. Дар Bare Sudoku катакро, сипас рақамро пахш кунед, ё аввал рақамро, сипас ҳар катакеро, ки ба он тааллуқ дорад."
+        ],
+        [
+          "Оё баъзан тахмин кардан лозим аст?",
+          "Не. Ҳар муаммо танҳо як ҳал дорад ва танҳо бо мантиқ ҳал мешавад. Агар дармонед, ишора катаки навбатиро нишон медиҳад ва номи усулро мегӯяд: single, номзадҳои басташуда, ҷуфт ё сегона, X-Wing, Y-Wing, Swordfish ё XYZ-Wing. Барои гузоштани рақам ишораро боз пахш кунед."
+        ],
+        [
+          "Оё дар компютер бо клавиатура бозӣ кардан мумкин аст?",
+          "Бале. Тугмаҳои тир интихобро ҳаракат медиҳанд, 1 то 9 рақам ворид мекунанд, Backspace пок мекунад, N қайдҳоро иваз мекунад, U бекор мекунад, H ишора медиҳад, F қайдҳоро пур мекунад, Escape менюро мекушояд. Тарҳ ба телефон, планшет ва компютер мутобиқ мешавад."
+        ],
+        [
+          "Оё Bare Sudoku кушода аст?",
+          "Бале. Бозии веб ва барномаи Android бо иҷозатномаи MIT дар GitHub кушода мебошанд: alparslandev/baresudoku-web ва alparslandev/baresudoku. Шумо метавонед рамзро хонед ё барномаро худатон созед."
+        ],
+        [
+          "Bare Sudoku ба чанд забон аст?",
+          "Ба 200 забон, ҳар кадом дар саҳифаи худ. Менюи забон дар бозӣ саҳифаро иваз мекунад ва рӯйхати зери бозӣ ба ҳар забон пайванд медиҳад. Бозӣ интихоби шуморо дар хотир нигоҳ медорад."
         ]
       ],
       "madeBy": "Муаллиф: Alparslan Selçuk Develioğlu",
@@ -12652,6 +12972,26 @@
         [
           "فى تطبيق Android؟",
           "أيوه. Bare Sudoku for Android ملف APK حجمه {size} كيلوبايت لـ Android 8 وأحدث، من غير صلاحيات ولا نت. نزّله من GitHub Releases."
+        ],
+        [
+          "السودوكو بتتلعب إزاى؟",
+          "املى الشبكة 9×9 بحيث كل صف وكل عمود وكل مربع 3×3 يكون فيه الأرقام من 1 لـ 9 مرة واحدة بس. فى أرقام متدية من الأول؛ الباقى بتستنتجه بالمنطق. فى Bare Sudoku دوس على خانة وبعدين على رقم، أو على الرقم الأول وبعدين على كل خانة هو مكانه فيها."
+        ],
+        [
+          "هل لازم أخمّن ساعات؟",
+          "لأ. كل لغز ليه حل واحد بس وبيتحل بالمنطق لوحده. لو وقفت، التلميح بيوريك الخانة الجاية وبيقول اسم التقنية: single، مرشحين مقفولين، زوج أو تلاتة، X-Wing، Y-Wing، Swordfish أو XYZ-Wing. دوس على التلميح تانى عشان الرقم يتحط."
+        ],
+        [
+          "أقدر ألعب على الكمبيوتر بالكيبورد؟",
+          "أيوه. الأسهم بتحرك الاختيار، من 1 لـ 9 بيدخلوا رقم، Backspace بيمسح، N بيبدّل الملاحظات، U بيرجّع، H بيدى تلميح، F بيملى الملاحظات، وEscape بيفتح القايمة. التصميم بيتظبط على الموبايل والتابلت والكمبيوتر."
+        ],
+        [
+          "هل Bare Sudoku مفتوح المصدر؟",
+          "أيوه. لعبة الويب وتطبيق Android مفتوحين المصدر برخصة MIT على GitHub: alparslandev/baresudoku-web وalparslandev/baresudoku. تقدر تقرا الكود أو تبنى التطبيق بنفسك."
+        ],
+        [
+          "Bare Sudoku موجود بكام لغة؟",
+          "200 لغة، كل واحدة ليها صفحتها. قايمة اللغة جوه اللعبة بتغيّر الصفحة، والقايمة اللى تحت اللعبة بتوصّل لكل لغة. اللعبة بتفتكر اختيارك."
         ]
       ],
       "madeBy": "من صنع: Alparslan Selçuk Develioğlu",
@@ -12705,6 +13045,26 @@
         [
           "کیہ Android ایپ اے؟",
           "ہاں۔ Android لئی Bare Sudoku Android 8 تے نویں لئی {size} KB دی APK اے، بغیر اجازت تے بغیر انٹرنیٹ۔ GitHub Releases توں ڈاؤن لوڈ کرو۔"
+        ],
+        [
+          "سوڈوکو کیویں کھیڈی دی اے؟",
+          "9×9 گرڈ نوں ایس طرحاں بھرو کہ ہر قطار، ہر کالم تے ہر 3×3 ڈبے وچ 1 توں 9 تک ہندسے بالکل اک واری آؤن۔ کجھ ہندسے شروع وچ دتے ہوندے نیں؛ باقی تسی منطق نال لبھدے او۔ Bare Sudoku وچ پہلاں خانہ فیر ہندسہ چھوہو، یا پہلاں ہندسہ فیر اوہ سارے خانے جتھے اوہ ہندسہ جاندا اے۔"
+        ],
+        [
+          "کیہ کدی اندازہ لاؤنا پیندا اے؟",
+          "نئیں۔ ہر پزل دا بالکل اک حل اے تے اوہ صرف منطق نال حل ہوندا اے۔ جے پھس جاؤ تے اشارہ اگلا خانہ وکھاندا اے تے تکنیک دا ناں دسدا اے: single، بند امیدوار، جوڑا یا تِکڑی، X-Wing، Y-Wing، Swordfish یا XYZ-Wing۔ ہندسہ رکھن لئی اشارہ فیر چھوہو۔"
+        ],
+        [
+          "کیہ کمپیوٹر تے کی بورڈ نال کھیڈ سکدے آں؟",
+          "ہاں۔ تیر والیاں کنجیاں چوݨ ہلاندیاں نیں، 1 توں 9 ہندسہ پاندے نیں، Backspace مٹاندا اے، N نوٹ بدلدا اے، U واپس کردا اے، H اشارہ دیندا اے، F نوٹ بھردا اے تے Escape مینو کھولدا اے۔ لے آؤٹ فون، ٹیبلٹ تے ڈیسک ٹاپ مطابق ڈھلدا اے۔"
+        ],
+        [
+          "کیہ Bare Sudoku اوپن سورس اے؟",
+          "ہاں۔ ویب کھیڈ تے Android ایپ GitHub تے MIT لائسنس ہیٹھ اوپن سورس نیں: alparslandev/baresudoku-web تے alparslandev/baresudoku۔ تسی کوڈ پڑھ سکدے او یا ایپ آپ بنا سکدے او۔"
+        ],
+        [
+          "Bare Sudoku کنیاں زباناں وچ اے؟",
+          "200 زباناں وچ، ہر اک اپنے صفحے تے۔ کھیڈ وچلا زبان مینو صفحہ بدلدا اے تے کھیڈ ہیٹھلی لسٹ ہر زبان نال جوڑدی اے۔ کھیڈ تہاڈی چوݨ یاد رکھدی اے۔"
         ]
       ],
       "madeBy": "بناؤن والا: Alparslan Selçuk Develioğlu",
@@ -12758,6 +13118,26 @@
         [
           "Woodi jaaɓngal Android?",
           "Eey. Bare Sudoku wonande Android ko APK {size} KB wonande Android 8 e ɓurɗo hesɗude, alaa yamiroore, alaa enternet. Aawtu ɗum e GitHub Releases."
+        ],
+        [
+          "Hol no sudoku fijetee?",
+          "Hebbin laylol 9×9 ngol haa saakre kala, tiinde kala e bakkere 3×3 kala jogoo limooje 1 haa 9 laawol gootol tan. Limooje goɗɗe ina hokkaa e fuɗɗoode; keddiiɗe ɗee a heɓa ɗe e miijo. E Bare Sudoku, ɗoɓɓu kaasel, refti limoore, walla limoore ko adii, refti kala kaasel nde limoore nde wonata."
+        ],
+        [
+          "Mbela ina waɗɗii sikkude sahaa sahaa?",
+          "Alaa. Kala tiitol ina jogii peewal gootal tan, ina ɓoltee e miijo tan. So a haɓɓaama, tinndinol ina holla kaasel gaɗɗel, ina innda feere ndee: single, kandidaaji sokaaɗi, ɗiɗi walla tati, X-Wing, Y-Wing, Swordfish walla XYZ-Wing. Ɗoɓɓu tinndinol ngol kadi ngam waɗde limoore ndee."
+        ],
+        [
+          "Mbela mi waawi fijde e ordinatoor e tappirde?",
+          "Eey. Kuɓɓe kure ina dirtina suɓo ngoo, 1 haa 9 ina naatna limoore, Backspace ina momta, N ina waylira winndanɗe, U ina rutta, H ina hokka tinndinol, F ina hebbina winndanɗe, Escape ina uddita cuɓirgol. Lelngo ngoo ina yahdi e pellel, tablet e ordinatoor."
+        ],
+        [
+          "Mbela Bare Sudoku ko kood udditiiɗo?",
+          "Eey. Fijo enternet ngoo e jaaɓngal Android ngal ko kood udditiiɗo e kuulal MIT e GitHub: alparslandev/baresudoku-web e alparslandev/baresudoku. A waawi janngude kood oo walla mahde jaaɓngal ngal e hoore maa."
+        ],
+        [
+          "Ɗemɗe no foti Bare Sudoku jogii?",
+          "Ɗemɗe 200, kala e hello mum. Cuɓirgol ɗemngal e fijo ngoo ina waylira hello ngoo, doggol ngol les fijo ngoo ina jokki kala ɗemngal. Fijo ngoo ina siftora suɓo maa."
         ]
       ],
       "madeBy": "Mahɗo: Alparslan Selçuk Develioğlu",
@@ -12811,6 +13191,26 @@
         [
           "Android porogaramu bɛ yen wa?",
           "Ɔwɔ. Bare Sudoku Android ye APK {size} KB ye Android 8 ani kura ye, yamaruya tɛ, ɛntɛrinɛti tɛ. A jigin ka bɔ GitHub Releases la."
+        ],
+        [
+          "Sudoku bɛ tulon cogo di?",
+          "Kɛnɛ 9×9 fa ka layini kelen-kelen bɛɛ, kolɔn kelen-kelen bɛɛ ani kɛsu 3×3 kelen-kelen bɛɛ kɛ ni jate 1 fo 9 ye siɲɛ kelen dɔrɔn. Jate dɔw bɛ di daminɛ na; i bɛ tɔw sɔrɔ ni hakili ye. Bare Sudoku la, kɛnɛ digi ka sɔrɔ ka jate digi, walima jate fɔlɔ ka sɔrɔ ka kɛnɛ bɛɛ digi min bɛ a ta."
+        ],
+        [
+          "Yala ka jateminɛ ka kan tuma dɔw wa?",
+          "Ayi. Ɲininkali kelen-kelen bɛɛ ɲɛnabɔcogo kelen dɔrɔn de b'a la, a bɛ ɲɛnabɔ ni hakili dɔrɔn ye. N'i siranna, ladilikan bɛ kɛnɛ nata jira ka fɛɛrɛ tɔgɔ fɔ: single, sugandita datugulenw, fila walima saba, X-Wing, Y-Wing, Swordfish walima XYZ-Wing. Ladilikan digi tugun walasa ka jate bila."
+        ],
+        [
+          "Yala ne bɛ se ka tulon kɛ ɔridinatɛri la ni walanba ye wa?",
+          "Ɔwɔ. Biɲɛ butɔnw bɛ sugandili lamaga, 1 fo 9 bɛ jate don, Backspace bɛ jɔsi, N bɛ sɛbɛnw yɛlɛma, U bɛ kɔsegin, H bɛ ladilikan di, F bɛ sɛbɛnw fa, Escape bɛ menu dayɛlɛ. Cogoya bɛ bɛn telefɔni, tablɛti ani ɔridinatɛri ma."
+        ],
+        [
+          "Yala Bare Sudoku ye open source ye wa?",
+          "Ɔwɔ. Ɛntɛrinɛti tulon ani Android porogaramu ye open source ye MIT sariya kɔnɔ GitHub kan: alparslandev/baresudoku-web ani alparslandev/baresudoku. I bɛ se ka kɔdi kalan walima ka porogaramu jɔ i yɛrɛ ye."
+        ],
+        [
+          "Bare Sudoku bɛ kan joli la?",
+          "Kan 200, kelen-kelen bɛɛ n'a ka ɲɛ ye. Tulon kɔnɔ kan menu bɛ ɲɛ yɛlɛma, tulon jukɔrɔ lisi bɛ kan bɛɛ siri. Tulon bɛ i ka sugandili hakili to."
         ]
       ],
       "madeBy": "A dilanbaga: Alparslan Selçuk Develioğlu",
