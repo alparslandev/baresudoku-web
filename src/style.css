@@ -47,6 +47,8 @@ button:disabled{color:var(--muted);cursor:default}
 #app{max-width:none;display:grid;grid-template-columns:auto minmax(280px,420px);grid-template-rows:auto auto auto auto 1fr;justify-content:center;column-gap:24px;align-items:start;padding:8px 16px}
 #board{grid-row:1/6;--board:min(100dvh - 16px,100vw - 360px);align-self:center}
 #keys{grid-template-columns:repeat(3,1fr)}
-#keys button{height:52px}
-#foot{margin-top:0}
+#keys button{height:48px}
+#msg{min-height:2.2em;font-size:.9rem}
+#tools button{height:56px}
+#foot{margin-top:0;padding-top:4px}
 }
