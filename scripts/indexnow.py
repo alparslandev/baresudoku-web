@@ -16,6 +16,7 @@ ENDPOINT = "https://api.indexnow.org/indexnow"
 def url_list(languages):
     base = "https://" + HOST
     pages = [base + i18n.path(code) for code in languages]
+    pages += [base + i18n.path(code) + "privacy/" for code in languages]
     return pages + [base + "/sitemap.xml", base + "/llms.txt", base + "/llms-full.txt"]
 
 
@@ -33,4 +34,4 @@ def ping(languages):
 
 if __name__ == "__main__":
     keys, languages = i18n.load()
-    print("IndexNow: %s (%d URL)" % (ping(languages), len(languages) + 3))
+    print("IndexNow: %s (%d URL)" % (ping(languages), 2 * len(languages) + 3))
