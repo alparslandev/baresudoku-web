@@ -1257,6 +1257,26 @@
         [
           "Finns det en Android-app?",
           "Ja. Bare Sudoku för Android är en APK på {size} KB för Android 8 och senare, utan behörigheter och utan internetåtkomst. Ladda ner den från GitHub Releases."
+        ],
+        [
+          "Hur spelar man sudoku?",
+          "Fyll i rutnätet 9×9 så att varje rad, varje kolumn och varje 3×3-ruta innehåller siffrorna 1 till 9 exakt en gång. Några siffror är givna från början; resten resonerar du dig fram till. I Bare Sudoku trycker du på en ruta och sedan på en siffra, eller först på en siffra och sedan på varje ruta där den hör hemma."
+        ],
+        [
+          "Måste jag någonsin gissa?",
+          "Nej. Varje pussel har exakt en lösning och kan lösas med enbart logik. Om du fastnar visar en ledtråd nästa ruta och namnger tekniken: single, låsta kandidater, par eller trippel, X-Wing, Y-Wing, Swordfish eller XYZ-Wing. Tryck på ledtråden igen för att placera siffran."
+        ],
+        [
+          "Kan jag spela på datorn med tangentbordet?",
+          "Ja. Piltangenterna flyttar markeringen, 1 till 9 skriver in en siffra, Backsteg raderar, N växlar anteckningar, U ångrar, H ger en ledtråd, F fyller i anteckningarna och Escape öppnar menyn. Layouten anpassar sig till mobil, surfplatta och dator."
+        ],
+        [
+          "Är Bare Sudoku öppen källkod?",
+          "Ja. Webbspelet och Android-appen är öppen källkod under MIT-licensen på GitHub: alparslandev/baresudoku-web och alparslandev/baresudoku. Du kan läsa koden eller bygga appen själv."
+        ],
+        [
+          "På hur många språk finns Bare Sudoku?",
+          "200 språk, vart och ett på sin egen sida. Språkmenyn i spelet byter sida, och listan under spelet länkar till varje språk. Spelet kommer ihåg ditt val."
         ]
       ],
       "madeBy": "Skapad av Alparslan Selçuk Develioğlu",
@@ -1312,6 +1332,26 @@
         [
           "Findes der en Android-app?",
           "Ja. Bare Sudoku til Android er en APK på {size} KB til Android 8 og nyere, uden tilladelser og uden internetadgang. Hent den fra GitHub Releases."
+        ],
+        [
+          "Hvordan spiller man sudoku?",
+          "Udfyld gitteret på 9×9, så hver række, hver kolonne og hver 3×3-boks indeholder tallene 1 til 9 præcis én gang. Nogle tal er givet fra starten; resten udleder du med logik. I Bare Sudoku trykker du på et felt og derefter på et tal, eller først på et tal og derefter på hvert felt, hvor det hører hjemme."
+        ],
+        [
+          "Skal jeg nogensinde gætte?",
+          "Nej. Hver opgave har præcis én løsning og kan løses med logik alene. Hvis du sidder fast, viser et hint det næste felt og nævner teknikken: single, låste kandidater, par eller tripel, X-Wing, Y-Wing, Swordfish eller XYZ-Wing. Tryk på hintet igen for at placere tallet."
+        ],
+        [
+          "Kan jeg spille på computeren med tastaturet?",
+          "Ja. Piletasterne flytter markeringen, 1 til 9 indtaster et tal, Backspace sletter, N skifter noter, U fortryder, H giver et hint, F udfylder noterne, og Escape åbner menuen. Layoutet tilpasser sig telefon, tablet og computer."
+        ],
+        [
+          "Er Bare Sudoku open source?",
+          "Ja. Webspillet og Android-appen er open source under MIT-licensen på GitHub: alparslandev/baresudoku-web og alparslandev/baresudoku. Du kan læse koden eller selv bygge appen."
+        ],
+        [
+          "Hvor mange sprog findes Bare Sudoku på?",
+          "200 sprog, hvert på sin egen side. Sprogmenuen i spillet skifter side, og listen under spillet linker til hvert sprog. Spillet husker dit valg."
         ]
       ],
       "madeBy": "Lavet af Alparslan Selçuk Develioğlu",
@@ -1367,6 +1407,26 @@
         [
           "Finnes det en Android-app?",
           "Ja. Bare Sudoku for Android er en APK på {size} KB for Android 8 og nyere, uten tillatelser og uten internettilgang. Last den ned fra GitHub Releases."
+        ],
+        [
+          "Hvordan spiller man sudoku?",
+          "Fyll ut rutenettet på 9×9 slik at hver rad, hver kolonne og hver 3×3-boks inneholder sifrene 1 til 9 nøyaktig én gang. Noen sifre er gitt fra starten; resten resonnerer du deg fram til. I Bare Sudoku trykker du på en rute og deretter på et siffer, eller først på et siffer og deretter på hver rute der det hører hjemme."
+        ],
+        [
+          "Må jeg noen gang gjette?",
+          "Nei. Hvert puslespill har nøyaktig én løsning og kan løses med logikk alene. Står du fast, viser et hint neste rute og navngir teknikken: single, låste kandidater, par eller trippel, X-Wing, Y-Wing, Swordfish eller XYZ-Wing. Trykk på hintet igjen for å plassere sifferet."
+        ],
+        [
+          "Kan jeg spille på datamaskinen med tastaturet?",
+          "Ja. Piltastene flytter markeringen, 1 til 9 skriver inn et siffer, Backspace sletter, N bytter notater, U angrer, H gir et hint, F fyller ut notatene og Escape åpner menyen. Oppsettet tilpasser seg mobil, nettbrett og datamaskin."
+        ],
+        [
+          "Er Bare Sudoku åpen kildekode?",
+          "Ja. Nettspillet og Android-appen er åpen kildekode under MIT-lisensen på GitHub: alparslandev/baresudoku-web og alparslandev/baresudoku. Du kan lese koden eller bygge appen selv."
+        ],
+        [
+          "Hvor mange språk finnes Bare Sudoku på?",
+          "200 språk, hvert på sin egen side. Språkmenyen i spillet bytter side, og listen under spillet lenker til hvert språk. Spillet husker valget ditt."
         ]
       ],
       "madeBy": "Laget av Alparslan Selçuk Develioğlu",
@@ -1422,6 +1482,26 @@
         [
           "Onko Android-sovellusta?",
           "Kyllä. Bare Sudoku Androidille on {size} KB:n APK Android 8:lle ja uudemmille, ilman käyttöoikeuksia ja internetyhteyttä. Lataa se GitHub Releases -sivulta."
+        ],
+        [
+          "Miten sudokua pelataan?",
+          "Täytä 9×9-ruudukko niin, että jokaisella rivillä, jokaisessa sarakkeessa ja jokaisessa 3×3-laatikossa on numerot yhdestä yhdeksään täsmälleen kerran. Osa numeroista on annettu valmiiksi; loput päättelet. Bare Sudokussa napauta ruutua ja sitten numeroa, tai ensin numeroa ja sitten jokaista ruutua, johon se kuuluu."
+        ],
+        [
+          "Pitääkö koskaan arvata?",
+          "Ei. Jokaisella tehtävällä on täsmälleen yksi ratkaisu, ja se ratkeaa pelkällä logiikalla. Jos jäät jumiin, vihje näyttää seuraavan ruudun ja nimeää tekniikan: single, lukitut ehdokkaat, pari tai kolmikko, X-Wing, Y-Wing, Swordfish tai XYZ-Wing. Napauta vihjettä uudelleen, niin numero asetetaan."
+        ],
+        [
+          "Voinko pelata tietokoneella näppäimistöllä?",
+          "Kyllä. Nuolinäppäimet siirtävät valintaa, numeronäppäimet 1:stä 9:ään syöttävät numeron, askelpalautin pyyhkii, N vaihtaa muistiinpanotilan, U kumoaa, H antaa vihjeen, F täyttää muistiinpanot ja Escape avaa valikon. Asettelu mukautuu puhelimeen, tablettiin ja tietokoneeseen."
+        ],
+        [
+          "Onko Bare Sudoku avointa lähdekoodia?",
+          "Kyllä. Verkkopeli ja Android-sovellus ovat avointa lähdekoodia MIT-lisenssillä GitHubissa: alparslandev/baresudoku-web ja alparslandev/baresudoku. Voit lukea koodin tai rakentaa sovelluksen itse."
+        ],
+        [
+          "Kuinka monella kielellä Bare Sudoku on?",
+          "200 kielellä, jokainen omalla sivullaan. Pelin kielivalikko vaihtaa sivua, ja pelin alla oleva luettelo linkittää jokaiseen kieleen. Peli muistaa valintasi."
         ]
       ],
       "madeBy": "Tekijä: Alparslan Selçuk Develioğlu",
@@ -1627,6 +1707,26 @@
         [
           "Има ли приложение за Android?",
           "Да. Bare Sudoku за Android е APK от {size} КБ за Android 8 и по-нов, без разрешения и без достъп до интернет. Изтегли го от GitHub Releases."
+        ],
+        [
+          "Как се играе судоку?",
+          "Попълнете мрежата 9×9 така, че всеки ред, всяка колона и всяко квадратче 3×3 да съдържа цифрите от 1 до 9 точно по веднъж. Някои цифри са дадени в началото; останалите извеждате с логика. В Bare Sudoku докоснете клетка и после цифра, или първо цифра и после всяка клетка, където тя принадлежи."
+        ],
+        [
+          "Трябва ли някога да гадая?",
+          "Не. Всяка задача има точно едно решение и се решава само с логика. Ако закъсате, подсказката показва следващата клетка и назовава техниката: single, заключени кандидати, двойка или тройка, X-Wing, Y-Wing, Swordfish или XYZ-Wing. Докоснете подсказката отново, за да поставите цифрата."
+        ],
+        [
+          "Мога ли да играя на компютър с клавиатурата?",
+          "Да. Стрелките местят избора, 1 до 9 въвеждат цифра, Backspace изтрива, N превключва бележките, U отменя, H дава подсказка, F попълва бележките, а Escape отваря менюто. Оформлението се напасва към телефон, таблет и компютър."
+        ],
+        [
+          "Bare Sudoku с отворен код ли е?",
+          "Да. Уеб играта и приложението за Android са с отворен код под лиценз MIT в GitHub: alparslandev/baresudoku-web и alparslandev/baresudoku. Можете да прочетете кода или сами да изградите приложението."
+        ],
+        [
+          "На колко езика е Bare Sudoku?",
+          "На 200 езика, всеки на своя страница. Менюто за език в играта сменя страницата, а списъкът под играта води към всеки език. Играта помни избора ви."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -3567,6 +3667,26 @@
         [
           "Ar yra Android programėlė?",
           "Taip. Bare Sudoku Android sistemai yra {size} KB APK, skirtas Android 8 ir naujesnėms versijoms, be leidimų ir be interneto prieigos. Atsisiųsk iš GitHub Releases."
+        ],
+        [
+          "Kaip žaisti sudoku?",
+          "Užpildyk 9×9 tinklelį taip, kad kiekvienoje eilutėje, kiekviename stulpelyje ir kiekviename 3×3 kvadrate skaitmenys nuo 1 iki 9 būtų lygiai po vieną kartą. Dalis skaitmenų duota iš pradžių; likusius išvedi logiškai. Bare Sudoku palieskite langelį, tada skaitmenį, arba pirma skaitmenį, tada kiekvieną langelį, kuriam jis priklauso."
+        ],
+        [
+          "Ar kada nors reikia spėlioti?",
+          "Ne. Kiekvienas galvosūkis turi lygiai vieną sprendimą ir išsprendžiamas vien logika. Jei įstrigote, užuomina parodo kitą langelį ir įvardija techniką: single, užrakinti kandidatai, pora ar trejetas, X-Wing, Y-Wing, Swordfish arba XYZ-Wing. Palieskite užuominą dar kartą, kad skaitmuo būtų įrašytas."
+        ],
+        [
+          "Ar galiu žaisti kompiuteriu klaviatūra?",
+          "Taip. Rodyklių klavišai perkelia pasirinkimą, 1 iki 9 įveda skaitmenį, Backspace ištrina, N perjungia pastabas, U atšaukia, H duoda užuominą, F užpildo pastabas, o Escape atidaro meniu. Išdėstymas prisitaiko prie telefono, planšetės ir kompiuterio."
+        ],
+        [
+          "Ar Bare Sudoku yra atvirojo kodo?",
+          "Taip. Žaidimas naršyklėje ir Android programėlė yra atvirojo kodo pagal MIT licenciją GitHub: alparslandev/baresudoku-web ir alparslandev/baresudoku. Galite skaityti kodą arba patys sukurti programėlę."
+        ],
+        [
+          "Kiek kalbų turi Bare Sudoku?",
+          "200 kalbų, kiekviena savo puslapyje. Kalbos meniu žaidime perjungia puslapį, o sąrašas po žaidimu nuveda į kiekvieną kalbą. Žaidimas prisimena jūsų pasirinkimą."
         ]
       ],
       "madeBy": "Sukūrė Alparslan Selçuk Develioğlu",
@@ -3620,6 +3740,26 @@
         [
           "Vai ir Android lietotne?",
           "Jā. Bare Sudoku Android ierīcēm ir {size} KB APK priekš Android 8 un jaunākām versijām, bez atļaujām un bez interneta piekļuves. Lejupielādē no GitHub Releases."
+        ],
+        [
+          "Kā spēlē sudoku?",
+          "Aizpildi 9×9 režģi tā, lai katrā rindā, katrā kolonnā un katrā 3×3 kvadrātā cipari no 1 līdz 9 būtu tieši vienu reizi. Daži cipari ir doti jau sākumā; pārējos izsecini loģiski. Bare Sudoku pieskaries rūtiņai un tad ciparam, vai vispirms ciparam un tad katrai rūtiņai, kur tas pieder."
+        ],
+        [
+          "Vai kādreiz jāmin?",
+          "Nē. Katrai mīklai ir tieši viens atrisinājums, un to var atrisināt tikai ar loģiku. Ja iestrēgsti, padoms parāda nākamo rūtiņu un nosauc paņēmienu: single, bloķētie kandidāti, pāris vai trijnieks, X-Wing, Y-Wing, Swordfish vai XYZ-Wing. Pieskaries padomam vēlreiz, lai ievietotu ciparu."
+        ],
+        [
+          "Vai varu spēlēt datorā ar tastatūru?",
+          "Jā. Bultiņu taustiņi pārvieto izvēli, 1 līdz 9 ievada ciparu, Backspace dzēš, N pārslēdz piezīmes, U atsauc, H dod padomu, F aizpilda piezīmes un Escape atver izvēlni. Izkārtojums pielāgojas tālrunim, planšetei un datoram."
+        ],
+        [
+          "Vai Bare Sudoku ir atvērtā pirmkoda?",
+          "Jā. Tīmekļa spēle un Android lietotne ir atvērtā pirmkoda ar MIT licenci GitHub: alparslandev/baresudoku-web un alparslandev/baresudoku. Vari izlasīt kodu vai pats uzbūvēt lietotni."
+        ],
+        [
+          "Cik valodās ir Bare Sudoku?",
+          "200 valodās, katra savā lapā. Valodas izvēlne spēlē pārslēdz lapu, un saraksts zem spēles ved uz katru valodu. Spēle atceras tavu izvēli."
         ]
       ],
       "madeBy": "Izveidoja Alparslan Selçuk Develioğlu",
@@ -4733,6 +4873,26 @@
         [
           "Kas on olemas Androidi rakendus?",
           "Jah. Bare Sudoku Androidile on {size} KB APK Android 8 ja uuematele, ilma õigusteta ja internetita. Laadi see alla GitHub Releasesist."
+        ],
+        [
+          "Kuidas sudokut mängida?",
+          "Täida 9×9 ruudustik nii, et igas reas, igas veerus ja igas 3×3 kastis oleks numbrid 1 kuni 9 täpselt üks kord. Osa numbreid on alguses antud; ülejäänud tuletad loogikaga. Bare Sudokus puuduta ruutu ja siis numbrit, või kõigepealt numbrit ja siis iga ruutu, kuhu see kuulub."
+        ],
+        [
+          "Kas pean kunagi arvama?",
+          "Ei. Igal mõistatusel on täpselt üks lahendus ja see on lahendatav ainult loogikaga. Kui jääd toppama, näitab vihje järgmist ruutu ja nimetab tehnika: single, lukustatud kandidaadid, paar või kolmik, X-Wing, Y-Wing, Swordfish või XYZ-Wing. Puuduta vihjet uuesti, et number paigutada."
+        ],
+        [
+          "Kas saan arvutis klaviatuuriga mängida?",
+          "Jah. Nooleklahvid liigutavad valikut, 1 kuni 9 sisestavad numbri, Backspace kustutab, N lülitab märkmeid, U võtab tagasi, H annab vihje, F täidab märkmed ja Escape avab menüü. Paigutus kohandub telefoni, tahvelarvuti ja lauaarvutiga."
+        ],
+        [
+          "Kas Bare Sudoku on avatud lähtekoodiga?",
+          "Jah. Veebimäng ja Androidi rakendus on avatud lähtekoodiga MIT-litsentsi all GitHubis: alparslandev/baresudoku-web ja alparslandev/baresudoku. Võid koodi lugeda või rakenduse ise ehitada."
+        ],
+        [
+          "Mitmes keeles Bare Sudoku on?",
+          "200 keeles, igaüks oma lehel. Mängu keelemenüü vahetab lehte ja mängu all olev loend viib iga keeleni. Mäng jätab su valiku meelde."
         ]
       ],
       "madeBy": "Tegija: Alparslan Selçuk Develioğlu",
@@ -5581,6 +5741,26 @@
         [
           "Er til Android-forrit?",
           "Já. Bare Sudoku fyrir Android er {size} KB APK fyrir Android 8 og nýrra, án heimilda og án netaðgangs. Sæktu það frá GitHub Releases."
+        ],
+        [
+          "Hvernig spilar maður sudoku?",
+          "Fylltu 9×9 reitanetið þannig að hver röð, hver dálkur og hver 3×3 reitur innihaldi tölustafina 1 til 9 nákvæmlega einu sinni. Sumir tölustafir eru gefnir í byrjun; hina finnur þú með rökhugsun. Í Bare Sudoku ýtirðu á reit og svo á tölustaf, eða fyrst á tölustaf og svo á hvern reit sem hann á heima í."
+        ],
+        [
+          "Þarf ég einhvern tímann að giska?",
+          "Nei. Hver þraut hefur nákvæmlega eina lausn og er leysanleg með rökhugsun einni saman. Ef þú festist sýnir vísbending næsta reit og nefnir aðferðina: single, læstir möguleikar, par eða þrenna, X-Wing, Y-Wing, Swordfish eða XYZ-Wing. Ýttu aftur á vísbendinguna til að setja tölustafinn."
+        ],
+        [
+          "Get ég spilað í tölvu með lyklaborðinu?",
+          "Já. Örvatakkarnir færa valið, 1 til 9 slá inn tölustaf, Backspace eyðir, N skiptir um glósur, U afturkallar, H gefur vísbendingu, F fyllir glósurnar og Escape opnar valmyndina. Útlitið lagar sig að síma, spjaldtölvu og tölvu."
+        ],
+        [
+          "Er Bare Sudoku opinn hugbúnaður?",
+          "Já. Vefleikurinn og Android-forritið eru með opnum kóða undir MIT-leyfi á GitHub: alparslandev/baresudoku-web og alparslandev/baresudoku. Þú getur lesið kóðann eða byggt forritið sjálfur."
+        ],
+        [
+          "Á hversu mörgum tungumálum er Bare Sudoku?",
+          "200 tungumálum, hverju á sinni eigin síðu. Tungumálavalmyndin í leiknum skiptir um síðu og listinn undir leiknum tengir á hvert tungumál. Leikurinn man valið þitt."
         ]
       ],
       "madeBy": "Gert af Alparslan Selçuk Develioğlu",
@@ -8443,6 +8623,26 @@
         [
           "Finst det ein Android-app?",
           "Ja. Bare Sudoku for Android er ein APK på {size} KB for Android 8 og nyare, utan løyve og utan internettilgang. Last han ned frå GitHub Releases."
+        ],
+        [
+          "Korleis spelar ein sudoku?",
+          "Fyll ut rutenettet på 9×9 slik at kvar rad, kvar kolonne og kvar 3×3-boks inneheld sifra 1 til 9 nøyaktig éin gong. Nokre siffer er gjevne frå starten; resten resonnerer du deg fram til. I Bare Sudoku trykkjer du på ei rute og deretter på eit siffer, eller først på eit siffer og deretter på kvar rute der det høyrer heime."
+        ],
+        [
+          "Må eg nokon gong gjette?",
+          "Nei. Kvart puslespel har nøyaktig éi løysing og kan løysast med logikk åleine. Står du fast, viser eit hint neste rute og namngjev teknikken: single, låste kandidatar, par eller trippel, X-Wing, Y-Wing, Swordfish eller XYZ-Wing. Trykk på hintet igjen for å plassere sifferet."
+        ],
+        [
+          "Kan eg spele på datamaskina med tastaturet?",
+          "Ja. Piltastane flyttar markeringa, 1 til 9 skriv inn eit siffer, Backspace slettar, N byter notat, U angrar, H gjev eit hint, F fyller ut notata og Escape opnar menyen. Oppsettet tilpassar seg mobil, nettbrett og datamaskin."
+        ],
+        [
+          "Er Bare Sudoku open kjeldekode?",
+          "Ja. Nettspelet og Android-appen er open kjeldekode under MIT-lisensen på GitHub: alparslandev/baresudoku-web og alparslandev/baresudoku. Du kan lese koden eller byggje appen sjølv."
+        ],
+        [
+          "Kor mange språk finst Bare Sudoku på?",
+          "200 språk, kvart på si eiga side. Språkmenyen i spelet byter side, og lista under spelet lenkjer til kvart språk. Spelet hugsar valet ditt."
         ]
       ],
       "madeBy": "Laga av Alparslan Selçuk Develioğlu",
