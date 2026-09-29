@@ -23,7 +23,7 @@ Game strings for all languages are in `i18n/strings.json`; page texts (title, de
 
 The build also writes `robots.txt` (AI crawlers allowed, Content-Signal), `sitemap.xml` with hreflang, `llms.txt`, `llms-full.txt`, `humans.txt`, `.well-known/security.txt`, the IndexNow key file, `_headers` (security headers and the CSP; the game script is the external `/app.js`, and `connect-src 'self'` is what lets the beacons and the service worker work) and `404.html`. `art/render.sh` renders `static/og.png` from `art/og.svg` with rsvg-convert. `bun run deploy` ends with an IndexNow ping.
 
-Cloudflare dashboard settings the site expects: a redirect rule from www to the root domain, AI crawlers allowed in AI Crawl Control, managed robots.txt and Content Signals off, Email Address Obfuscation and Rocket Loader off (they inject scripts the CSP blocks), Crawler Hints on, Web Analytics off (its injected beacon is blocked by the CSP; the site has its own counters).
+Cloudflare dashboard settings the site expects: a redirect rule from www to the root domain, AI crawlers allowed in AI Crawl Control, managed robots.txt and Content Signals off, Email Address Obfuscation and Rocket Loader off (they inject scripts the CSP blocks), Crawler Hints on, Web Analytics RUM off for the zone (zone → Analytics → Web Analytics → Real User Measurements; it is not listed under the account's Web Analytics sites, its injected beacon is blocked by the CSP, and the site has its own counters).
 
 ## Analytics
 
