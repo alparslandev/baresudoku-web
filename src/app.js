@@ -12,9 +12,33 @@ const cells = [], noteSpans = [], keyButtons = [], toolButtons = [];
 const L = JSON.parse($('i18n').textContent);
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
+let meta = { t: 0, d: false };
 
 function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 function fetchStored(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+const today = () => new Date(Date.now() + 3 * 3600e3).toISOString().slice(0, 10);
+
+function beacon(ev) {
+  try { return !navigator.webdriver && !!navigator.sendBeacon && navigator.sendBeacon('/api/e', JSON.stringify(ev)); } catch (e) { return false; }
+}
+
+function refHost(raw) {
+  try {
+    const host = new URL(raw).hostname.toLowerCase().replace(/^www\./, '');
+    return host && host !== location.hostname.replace(/^www\./, '') && host.length <= 60 ? host : '';
+  } catch (e) { return ''; }
+}
+
+function openEvent(lang) {
+  let ref = '';
+  try { ref = sessionStorage.getItem(KEY + '.ref') || ''; sessionStorage.removeItem(KEY + '.ref'); } catch (e) {}
+  const ev = { e: 'open', l: lang, d: matchMedia('(pointer: coarse)').matches ? 'm' : 'd' };
+  const r = refHost(ref || document.referrer);
+  if (r) ev.r = r;
+  const day = today();
+  if (fetchStored(KEY + '.day') !== day) ev.v = 1;
+  if (beacon(ev) && ev.v) store(KEY + '.day', day);
+}
 
 function matchLang(tag) {
   tag = String(tag || '').replace('_', '-');
@@ -188,7 +212,7 @@ function render() {
 let pendingLevel = 0;
 
 function save() {
-  store(KEY, JSON.stringify(game.save(now())));
+  store(KEY, JSON.stringify(Object.assign(game.save(now()), { a: meta })));
 }
 
 function startTimer() {
@@ -232,6 +256,8 @@ function startGame(level) {
   setTimeout(() => {
     const puzzle = engine.generate(level);
     game.start(puzzle, engine.solution, level);
+    meta = { t: now(), d: false };
+    beacon({ e: 'start', k: level });
     generating = false;
     game.resume(now());
     save();
@@ -243,6 +269,10 @@ function startGame(level) {
 function restartGame() {
   if (generating || !game.active) return;
   menuOpen = false;
+  if (game.solved) {
+    meta = { t: now(), d: false };
+    beacon({ e: 'start', k: game.level });
+  }
   game.restart();
   game.resume(now());
   save();
@@ -266,6 +296,11 @@ function finish(changed) {
   if (game.solved) {
     game.pause(now());
     stopTimer();
+    if (!meta.d) {
+      meta.d = true;
+      beacon({ e: 'done', k: game.level, t: meta.t, s: Math.round(game.time(now()) / 1000) });
+      changed = true;
+    }
   }
   if (changed) save();
   render();
@@ -377,21 +412,25 @@ function init() {
   if (location.pathname === '/') {
     const target = pickLang();
     if (target !== 'en' && LANGS.includes(target)) {
+      try { if (document.referrer) sessionStorage.setItem(KEY + '.ref', document.referrer); } catch (e) {}
       location.replace(pathOf(target));
       return;
     }
   }
   buildBoard();
   bind();
-  applyLang(LANGS.includes(pageLang) ? pageLang : 'en');
+  const lang = LANGS.includes(pageLang) ? pageLang : 'en';
+  applyLang(lang);
   let saved = null;
   try { saved = JSON.parse(fetchStored(KEY)); } catch (e) {}
   game.load(saved);
+  meta = saved && saved.a ? { t: +saved.a.t || now(), d: !!saved.a.d } : { t: now(), d: game.solved };
   menuOpen = !game.active;
   if (game.active && !game.solved) game.resume(now());
   render();
   startTimer();
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js');
+  openEvent(lang);
 }
 
 init();
