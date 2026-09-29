@@ -4,4 +4,5 @@
 - Kaynak `src/` (engine.js, app.js, style.css, index.html şablonu, sw.js), diller `i18n/strings.json` (36 dil, yeni dil = tek satır), `scripts/build.py` hepsini `dist/`e tek dosya olarak birleştirir.
 - Test `bun test`, derleme `bun run build`, yayın `bun run deploy` (test + derleme + wrangler). Yerel deneme: `python3 -m http.server -d dist 3021`.
 - Metin sırası Android ile aynı: 0-3 seviye, 4 geri al ... 28 başlık, 29 dil, 30 Android, 31 kaynak. Yeni metin eklerken iki depoyu birlikte düşün.
+- Giriş kuralı Android ile aynı (Game.key/Game.tap): tuş seçili boş hücreye yazar; yazacak yer yoksa ya da aynı tuşa ikinci basışta rakam kilitlenir ve dokunulan hücrelere yazılır, tekrar basınca çözülür. Android deposundaki Game.java ile birlikte değiştir.
 - Kod yorumu yok, em-dash yok, Türkçe konuş, kısa yaz. Her adım ayrı küçük commit, tek satır Türkçe mesaj, amend yok, her commit sonrası push.
