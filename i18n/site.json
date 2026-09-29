@@ -9027,6 +9027,271 @@
       "updated": "Bygewerkt",
       "languagesLabel": "Toaln",
       "ogAlt": "Bare Sudoku-logo mee de woordn Gratis sudoku online, zonder reclame"
+    },
+    "smn": {
+      "title": "Bare Sudoku: nuuvtá sudoku viermist, almaa reklaamijd, almaa registeristmi",
+      "description": "Nuuvtá sudoku viermilohheest: ij reklaam, ij kontto, ij čuávvum. Nelji tääsi, muštâlusah, maccâđ já ravvuuh moh čielgejeh logiik. Toimâ almaa vieermi. Meid {size} KB Android-ovdâs.",
+      "h1": "Bare Sudoku: nuuvtá sudoku viermist, almaa reklaamijd, almaa registeristmi",
+      "intro": "Bare Sudoku lii nuuvtá sudoku-siärvu, mii toimâ tuu viermilohheest. Ij reklaam, ij kontto, ij čuávvum já ij mihheen asâttiđ: rabâ siijđo, valjii tääsi já sierâ. Jyehi ärvádâsâst lii tärhis ohtâ čuávdus já tot čuávdoo tuše logiikáin, já jyehi ravvuu čielgee jieijâs áážis. Siärvu toimâ almaa vieermi já lii rappum käldee MIT-liseens vuálá.",
+      "featuresHeading": "Maid tun finnih",
+      "features": [
+        "Nelji tääsi: älkkee, kooskâsâš, lossâd já äššitobdee",
+        "Jyehi ärvádâsâst lii ohtâ čuávdus já ij kuássin taarbâš árvâliđ",
+        "Muštâlusah, maccâđ, sihhoođ já tievdi puoh muštâlusâid oovtâ tohhoomáin",
+        "Ravvuuh moh čielgejeh teknik: ohtâ, lohkkum kandidaatah, páárruh já kulmâsah, X-Wing, Y-Wing, Swordfish já XYZ-Wing",
+        "Automaatlâš vuárhum, sevŋis vyehi, poolâpevdi já vellee hääbmi",
+        "Toimâ almaa vieermi vuossâmuu kolliittâm maŋa, ij taarbâš ovdâskaavpi"
+      ],
+      "androidHeading": "Android-ovdâs",
+      "android": "Bare Sudoku kávnoo meid Android-ovdâssân: verzio {version}, suullân {size} KB, ij lope, ij interneet, puhtis Java almaa kirjerááju. Tot ij lah Google Play:st; viežâ vuáláčalâm APK GitHub Releases:st já asât tom Android 8 teikkâ uđđâsub.",
+      "androidLink": "Viežâ APK",
+      "privacyHeading": "Priváátvuotâ",
+      "privacy": "Bare Sudoku ij nuurâ tiäđuid. Ij kontto, ij analyys, ij cookies; tuu tálááš siärvu vuárhoo tuše tuu viermilohhei. Android-ovdâsist ij lah interneetlope-uv.",
+      "faqHeading": "Tavan koččum koččomušah",
+      "faq": [
+        [
+          "Lii-uv Bare Sudoku nuuvtá?",
+          "Lii. Bare Sudoku lii ollásávt nuuvtá viermilohheest já Androidist. Ij reklaam, ij ostâm ovdâsist, ij premium-verzio."
+        ],
+        [
+          "Lii-uv Bare Sudokust reklaam?",
+          "Ij. Ij viermisiärvu ige Android-ovdâs čäiti reklaamijd, iäge lah čuávvuh teikkâ kuálmád peeli skriptah."
+        ],
+        [
+          "Taarbâšâm-uv kontto sierâdiđ?",
+          "Jieh. Rabâ baresudoku.com já sierâ. Siärvu vuárhoo automaatlávt viermilohhei; kiddii taab já juátkih maŋeláá."
+        ],
+        [
+          "Toimâ-uv Bare Sudoku almaa vieermi?",
+          "Toimâ. Vuossâmuu kolliittâm maŋa viermilohhee vuárhá siijđo já rabá tom almaa ohtâvuođâ. Android-ovdâs ij kuássin kevttii interneet."
+        ],
+        [
+          "Nuurâ-uv Bare Sudoku tiäđuid?",
+          "Ij. Ij analyys, ij kontto, ij cookies. Vuárhum siärvu lii tuše tuu viermilohhee páihálâš vuárhupääihist."
+        ],
+        [
+          "Lii-uv Android-ovdâs?",
+          "Lii. Bare Sudoku Androidân lii {size} KB APK Android 8 já uđđâsubbood, almaa lovij já almaa interneet. Viežâ tom GitHub Releases:st."
+        ]
+      ],
+      "madeBy": "Rähtim: Alparslan Selçuk Develioğlu",
+      "source": "Käldeekoodâ",
+      "androidSource": "Android-käldeekoodâ",
+      "updated": "Peivideijum",
+      "languagesLabel": "Kielah",
+      "ogAlt": "Bare Sudoku logo saanijguin Nuuvtá sudoku viermist, almaa reklaamijd"
+    },
+    "sms": {
+      "title": "Bare Sudoku: määusteʹmes sudoku neeʹttest, reklaamtää, rekisterõõvvmõõžžtää",
+      "description": "Määusteʹmes sudoku neʹttlookkjest: ij reklaam, ij konto, ij seuʹrrjummuš. Nellj tääʹss, mõõntõõzz, mäʹcced da vuäʹpstõõzz, kook čiõlǥte logiik. Tuåimm neeʹttatää. Še {size} KB Android-suåvldõs.",
+      "h1": "Bare Sudoku: määusteʹmes sudoku neeʹttest, reklaamtää, rekisterõõvvmõõžžtää",
+      "intro": "Bare Sudoku lij määusteʹmes sudoku-siõr, kåått tuåimm tuu neʹttlookkjest. Ij reklaam, ij konto, ij seuʹrrjummuš da ij ni mii âʹlǧǧed: ääʹved seeid, vaʹllji tääʹzz da siõr. Juõʹǩǩ mieʹrǩǩmõõžžâst lij tääʹrǩ õhtt räʹtǩǩõs da tõn vuäitt räʹtǩǩeed tåʹlǩ logiikin, da juõʹǩǩ vuäʹpstõs čiõlǥat jiiʹjjes måkkam. Siõr tuåimm neeʹttatää da lij äävai käʹldd MIT-liseeʹns vueʹlnn.",
+      "featuresHeading": "Mâid tuʹst lij",
+      "features": [
+        "Nellj tääʹss: hiâlpp, kõskklõs, lossâd da äʹšštobddi",
+        "Juõʹǩǩ mieʹrǩǩmõõžžâst lij õhtt räʹtǩǩõs da ij ni kuäss taarbâš äʹrvvled",
+        "Mõõntõõzz, mäʹcced, jaukkeed da teâudd pukid mõõntõõzzid õõut kuõskkmõõžžin",
+        "Vuäʹpstõõzz, kook čiõlǥte teknikk: õhttõõzz, loʹǩǩuum kandidaatt, pääʹr da koumm, X-Wing, Y-Wing, Swordfish da XYZ-Wing",
+        "Automaattlaž ruõkkmõš, seeʹunes vueʹǩǩ, naaʹrǩpeâmm da veellai hääʹmm",
+        "Tuåimm neeʹttatää vuõssmõs kõʹllʼjummuž mâŋŋa, ij taarbâš suåvldõskaupp"
+      ],
+      "androidHeading": "Android-suåvldõs",
+      "android": "Bare Sudoku kaaunât še Android-suåvldõssân: versio {version}, nuʹtt {size} KB, ij lååʹpp, ij interneʹtt, puhttâs Java ǩeʹrjjrääuʹji tää. Tõt ij leäkku Google Play:st; vieʹlǧǧ vuâllaǩeeʹrjtum APK GitHub Releases:st da âʹlǧǧed tõn Android 8 leʹbe ođđsab.",
+      "androidLink": "Vieʹlǧǧ APK",
+      "privacyHeading": "Privaattvuõtt",
+      "privacy": "Bare Sudoku ij noor teâđaid. Ij konto, ij analyys, ij cookies; tuu ânnʼjõž siõr ruõkkâd tåʹlǩ tuu neʹttlookkja. Android-suåvldõõzzâst ij leäkku ni interneʹttlååʹpp.",
+      "faqHeading": "Täujja kõõččum kõõččmõõžž",
+      "faq": [
+        [
+          "Lij-a Bare Sudoku määusteʹmes?",
+          "Lij. Bare Sudoku lij tiudd määusteʹmes neʹttlookkjest da Androidâst. Ij reklaam, ij vuäʹstem suåvldõõzzâst, ij premium-versio."
+        ],
+        [
+          "Lij-a Bare Sudokust reklaam?",
+          "Ij. Ni neʹttsiõr ni Android-suåvldõs jeäʹla čuäʹjet reklaamid, da jeäʹla seuʹrrjeei leʹbe kuälmad beäʹl skript."
+        ],
+        [
+          "Taarbšam-a konto siõrrâd?",
+          "Jiõk. Ääʹved baresudoku.com da siõr. Siõr ruõkkâd automaattlânji neʹttlookkja; kidd taab da juätkk mâʹŋŋlubust."
+        ],
+        [
+          "Tuåimm-a Bare Sudoku neeʹttatää?",
+          "Tuåimm. Vuõssmõs kõʹllʼjummuž mâŋŋa neʹttlookki ruõkk seeid da ääʹved tõn õhttvuõđtää. Android-suåvldõs ij ni kuäss ââʹn interneeʹtt."
+        ],
+        [
+          "Noor-a Bare Sudoku teâđaid?",
+          "Ij. Ij analyys, ij konto, ij cookies. Ruõkkâm siõr lij tåʹlǩ tuu neʹttlookki pääiklaž ruõkkâmpääiʹǩest."
+        ],
+        [
+          "Lij-a Android-suåvldõs?",
+          "Lij. Bare Sudoku Androidâst lij {size} KB APK Android 8 da ođđsab vääras, lååʹptää da interneʹtttää. Vieʹlǧǧ tõn GitHub Releases:st."
+        ]
+      ],
+      "madeBy": "Raajjâm: Alparslan Selçuk Develioğlu",
+      "source": "Käʹlddkoodd",
+      "androidSource": "Android-käʹlddkoodd",
+      "updated": "Peiʹvvuum",
+      "languagesLabel": "Ǩiõl",
+      "ogAlt": "Bare Sudoku logo saaʹnivuiʹm Määusteʹmes sudoku neeʹttest, reklaamtää"
+    },
+    "sma": {
+      "title": "Bare Sudoku: namhtah sudoku nedtesne, bielelen reklaamh, bielelen registreradimmie",
+      "description": "Namhtah sudoku nedtelohkijisnie: ij reklaame, ij konto, ij dåeriedimmie. Njieljie daltesh, meerhkh, bååstede jïh raerieh mah logihkem buerkiestieh. Barka nedten namhtah. Aaj {size} KB Android-programme.",
+      "h1": "Bare Sudoku: namhtah sudoku nedtesne, bielelen reklaamh, bielelen registreradimmie",
+      "intro": "Bare Sudoku lea namhtah sudoku-speele mij dov nedtelohkijisnie barka. Ij reklaame, ij konto, ij dåeriedimmie jïh ij mij bïejedh: rïhpesth sæjroem, veeljh daltesem jïh speelh. Fïerhten gaajhkesne lea rïektesligke akte loetehtimmie jïh dam maahta ajve logihkine loetehtidh, jïh fïerhte raerie buerkeste sov sjïekem. Speele barka nedten namhtah jïh lea rïhpes gaaltije MIT-liseensen nuelesne.",
+      "featuresHeading": "Maam datne åadtjoeh",
+      "features": [
+        "Njieljie daltesh: aelhkie, gaskem, geerve jïh åehpies",
+        "Fïerhten gaajhkesne lea akte loetehtimmie jïh ij gåessie daarpesjh guessedh",
+        "Meerhkh, bååstede, sjïehtedidh jïh dievhtedh gaajhkh meerhkh aktine deadtaldahkine",
+        "Raerieh mah teknihkem buerkiestieh: aktegh, loeketamme kandidaath, paarrh jïh golmh, X-Wing, Y-Wing, Swordfish jïh XYZ-Wing",
+        "Automatihkeles vöörhkeme, sevnies vuekie, tastatuvre jïh gæmhpoes hammoe",
+        "Barka nedten namhtah voestes guessiedimmien mænngan, ij programmebovre daarpesjh"
+      ],
+      "androidHeading": "Android-programme",
+      "android": "Bare Sudoku aaj Android-programmine gååvnese: versjovne {version}, medtie {size} KB, ij luhpie, ij internedte, geerjes Java bielelen gærjagåetieh. Ij leah Google Play:sne; veedtjh nuelietjaaleldh APK GitHub Releases:ste jïh bïejh dam Android 8 jallh orresåbpoe.",
+      "androidLink": "Veedtjh APK",
+      "privacyHeading": "Privaatevoete",
+      "privacy": "Bare Sudoku ij bïevnesh tjöönghkh. Ij konto, ij analyse, ij cookies; dov daaletje speele ajve dov nedtelohkijisnie vöörhkesåvva. Android-programmesne ij leah internedteluhpie gænnah.",
+      "faqHeading": "Daamtaj gihtjeme gyhtjelassh",
+      "faq": [
+        [
+          "Lea Bare Sudoku namhtah?",
+          "Jaavoe. Bare Sudoku lea ellies namhtah nedtelohkijisnie jïh Androidesne. Ij reklaame, ij åestemh programmesne, ij premium-versjovne."
+        ],
+        [
+          "Lea Bare Sudokusne reklaame?",
+          "Ijje. Ij nedtespeele ij Android-programme reklaamh vuesehth, jïh eah dåeriedæjjah jallh gåalmeden guejmien skripth gååvnesh."
+        ],
+        [
+          "Daarpesjem konto speeledh?",
+          "Ijje. Rïhpesth baresudoku.com jïh speelh. Speele automatihkeles nedtelohkijisnie vöörhkesåvva; dabth taabem jïh jåerhkh mænngan."
+        ],
+        [
+          "Barka Bare Sudoku nedten namhtah?",
+          "Jaavoe. Voestes guessiedimmien mænngan nedtelohkije sæjroem vöörhkie jïh dam rïhpeste bielelen gaskesadteme. Android-programme ij gåessie internedtem nuhtjh."
+        ],
+        [
+          "Tjöönghkie Bare Sudoku bïevnesh?",
+          "Ijje. Ij analyse, ij konto, ij cookies. Vöörhkeme speele ajve dov nedtelohkijen sijjieh vöörhkemisnie."
+        ],
+        [
+          "Gååvnese Android-programme?",
+          "Jaavoe. Bare Sudoku Androidese lea {size} KB APK Android 8 jïh orresåbpoe, bielelen luhpieh jïh bielelen internedte. Veedtjh dam GitHub Releases:ste."
+        ]
+      ],
+      "madeBy": "Dorjeme: Alparslan Selçuk Develioğlu",
+      "source": "Gaaltijekode",
+      "androidSource": "Android-gaaltijekode",
+      "updated": "Orrestamme",
+      "languagesLabel": "Gïelh",
+      "ogAlt": "Bare Sudoku logo baakojgujmie Namhtah sudoku nedtesne, bielelen reklaamh"
+    },
+    "vro": {
+      "title": "Bare Sudoku: ilma rahalda sudoku võrgun, ilma reklaamõlda, ilma registriirmisõlda",
+      "description": "Ilma rahalda sudoku brausõrin: reklaamõ ei olõq, kontot ei olõq, jälgimist ei olõq. Neli tasõt, märkmeq, tagasi ja vihjeq, miä loogikat seletäseq. Tüütäs võrguldaq. Ka {size} KB Androidi rakõndus.",
+      "h1": "Bare Sudoku: ilma rahalda sudoku võrgun, ilma reklaamõlda, ilma registriirmisõlda",
+      "intro": "Bare Sudoku om ilma rahalda sudoku mäng, miä tüütäs su brausõrin. Reklaamõ ei olõq, kontot ei olõq, jälgimist ei olõq ja midägi ei olõq vaia paika panda: tii leht vallalõ, vali tasõ ja mängi. Egäl mõistatusõl om täpsähe üts lahendus ja tuud saa lahendaq õnnõ loogikaga, ja egä vihjeq seletäs uma põhjõndusõ. Mäng tüütäs võrguldaq ja om vallalinõ läteq MIT-litsendsi all.",
+      "featuresHeading": "Midä sa saat",
+      "features": [
+        "Neli tasõt: kerge, keskmäne, rassõ ja asjatundja",
+        "Egäl mõistatusõl om üts lahendus ja arvamist ei olõq kunagi vaia",
+        "Märkmeq, tagasi, kistutaminõ ja kõiki märkmide täütmine üte putmisõga",
+        "Vihjeq, miä tehnikat seletäseq: üksiguq, lukun kandidaadiq, paariq ja kolmiguq, X-Wing, Y-Wing, Swordfish ja XYZ-Wing",
+        "Automaatnõ salvõstaminõ, pümme režiim, klaviatuur ja rõhtsa paigutus",
+        "Tüütäs võrguldaq päält edimäst külästüst, rakõndusõpuuti ei olõq vaia"
+      ],
+      "androidHeading": "Androidi rakõndus",
+      "android": "Bare Sudoku om olõman ka Androidi rakõndusõna: versioon {version}, umbõs {size} KB, ilma õigusilda, ilma internetildä, puhas Java ilma tiikõlda. Tuud ei olõq Google Playn; laadi allkirotõt APK alla GitHub Releasesist ja panõ tuu Android 8 vai vahtsõmba pääle.",
+      "androidLink": "Laadi APK alla",
+      "privacyHeading": "Privaatsus",
+      "privacy": "Bare Sudoku ei koraq andmit. Kontot, analüütikat ega küpsissit ei olõq; su parhillanõ mäng salvõstõdas õnnõ su brausõrihe. Androidi rakõndusõl ei olõq esiki interneti õigust.",
+      "faqHeading": "Kõrduma kipuvaq küsümiseq",
+      "faq": [
+        [
+          "Kas Bare Sudoku om ilma rahalda?",
+          "Jah. Bare Sudoku om brausõrin ja Androidin täüsäste ilma rahalda. Reklaamõ, rakõndusõ seen ostmist ega premium-versiooni ei olõq."
+        ],
+        [
+          "Kas Bare Sudokun om reklaamõ?",
+          "Ei. Ei võrgumäng ega Androidi rakõndus näütäq reklaamõ, ja jälgjit vai kolmandidõ skripte ei olõq."
+        ],
+        [
+          "Kas mängmises om kontot vaia?",
+          "Ei. Tii baresudoku.com vallalõ ja mängi. Mäng salvõstõdas automaatsõlt brausõrihe; panõ vahekaart kinni ja jakka ildampa."
+        ],
+        [
+          "Kas Bare Sudoku tüütäs võrguldaq?",
+          "Jah. Päält edimäst külästüst hoit brausõr lehe alalõ ja tege tuu ilma ütisüseldä vallalõ. Androidi rakõndus ei pruugiq kunagi internetti."
+        ],
+        [
+          "Kas Bare Sudoku korjas andmit?",
+          "Ei. Analüütikat, kontot ega küpsissit ei olõq. Salvõstõt mäng om õnnõ su brausõri kotusõpäälsen salvõstusõn."
+        ],
+        [
+          "Kas Androidi rakõndus om olõman?",
+          "Jah. Bare Sudoku Androidilõ om {size} KB APK Android 8 ja vahtsõmbidõ jaos, ilma õigusilda ja ilma internetildä. Laadi tuu alla GitHub Releasesist."
+        ]
+      ],
+      "madeBy": "Tekij: Alparslan Selçuk Develioğlu",
+      "source": "Lätekuud",
+      "androidSource": "Androidi lätekuud",
+      "updated": "Uuõndõt",
+      "languagesLabel": "Keeleq",
+      "ogAlt": "Bare Sudoku logo sõnnoga Ilma rahalda sudoku võrgun, ilma reklaamõlda"
+    },
+    "kv": {
+      "title": "Bare Sudoku: дон босьттӧм онлайн судоку, реклама абу, регистрация абу",
+      "description": "Браузерын дон босьттӧм судоку: реклама абу, аккаунт абу, видзӧдӧм абу. Нёль тшупӧд, пасйӧдъяс, бӧр вештӧм да логика гӧгӧрвоӧдана индӧдъяс. Оффлайн уджалӧ. {size} KB Android программа эм жӧ.",
+      "h1": "Bare Sudoku: дон босьттӧм онлайн судоку, реклама абу, регистрация абу",
+      "intro": "Bare Sudoku — браузерын уджалысь дон босьттӧм судоку ворсӧм. Реклама абу, аккаунт абу, видзӧдӧм абу да нинӧм оз ков сувтӧдны: восьт лист бок, бӧрйы тшупӧд да ворс. Быд загадкалӧн эм сӧмын ӧти решитӧм да сійӧ решитсьӧ сӧмын логика отсӧгӧн, а быд индӧд гӧгӧрвоӧдӧ ассьыс помка. Ворсӧм оффлайн уджалӧ да MIT лицензия улын восьса кодъя.",
+      "featuresHeading": "Мый тэ босьтан",
+      "features": [
+        "Нёль тшупӧд: кокни, шӧркодь, сьӧкыд да эксперт",
+        "Быд загадкалӧн ӧти решитӧм, некор оз ков гӧгӧрвоны",
+        "Пасйӧдъяс, бӧр вештӧм, бырӧдӧм да ӧти личкӧмӧн став пасйӧдъяс тыртӧм",
+        "Тэчас гӧгӧрвоӧдана индӧдъяс: ӧтка, игналӧм кандидатъяс, гозъяс да куимъяс, X-Wing, Y-Wing, Swordfish да XYZ-Wing",
+        "Асвидзӧм, пемыд режим, клавиатура да веськыд сувтӧдӧм",
+        "Медводдза волӧм бӧрын оффлайн уджалӧ, программа лавка оз ков"
+      ],
+      "androidHeading": "Android программа",
+      "android": "Bare Sudoku Android программа моз жӧ эм: версия {version}, {size} KB гӧгӧр, лӧсьӧдӧм абу, интернет абу, библиотекатӧм сӧстӧм Java. Google Play-ын абу; GitHub Releases-ысь кырымалӧм APK лэдз да Android 8 либӧ выльджык вылӧ сувтӧд.",
+      "androidLink": "APK лэдзны",
+      "privacyHeading": "Гуся олӧм",
+      "privacy": "Bare Sudoku некутшӧм юӧр оз чукӧрт. Аккаунт, аналитика да cookie абу; ӧнія ворсӧмыд сӧмын тэнад браузерын видзсьӧ. Android программалӧн интернет лӧсьӧдӧм весиг абу.",
+      "faqHeading": "Тшӧкыда сетан юалӧмъяс",
+      "faq": [
+        [
+          "Bare Sudoku дон босьттӧм-ӧ?",
+          "Да. Bare Sudoku браузерын да Android-ын дзик дон босьттӧм. Реклама, программа пытшкын ньӧбӧм да премиум версия абу."
+        ],
+        [
+          "Bare Sudoku-ын реклама эм-ӧ?",
+          "Абу. Веб ворсӧм ни Android программа реклама оз петкӧдлыны, видзӧдысьяс либӧ коймӧд лада скриптъяс абу."
+        ],
+        [
+          "Ворсны аккаунт колӧ-ӧ?",
+          "Оз. Восьт baresudoku.com да ворс. Ворсӧм ачыс браузерын видзсьӧ; пӧдлав вкладка да водзӧ нуӧд бӧрынджык."
+        ],
+        [
+          "Bare Sudoku оффлайн уджалӧ-ӧ?",
+          "Да. Медводдза волӧм бӧрын браузер лист бок видзӧ да йитӧдтӧг восьтӧ. Android программа интернет некор оз вӧдит."
+        ],
+        [
+          "Bare Sudoku юӧр чукӧртӧ-ӧ?",
+          "Оз. Аналитика, аккаунт, cookie абу. Видзӧм ворсӧм сӧмын тэнад браузерлӧн местаса видзанінын."
+        ],
+        [
+          "Android программа эм-ӧ?",
+          "Эм. Android вылӧ Bare Sudoku — Android 8 да выльджык вылӧ {size} KB APK, лӧсьӧдӧмтӧг да интернеттӧг. GitHub Releases-ысь лэдз."
+        ]
+      ],
+      "madeBy": "Вӧчис: Alparslan Selçuk Develioğlu",
+      "source": "Подув код",
+      "androidSource": "Android подув код",
+      "updated": "Выльмӧдӧма",
+      "languagesLabel": "Кывъяс",
+      "ogAlt": "Bare Sudoku логотип да Дон босьттӧм онлайн судоку, реклама абу кывъяс"
     }
   }
 }
