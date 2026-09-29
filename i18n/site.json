@@ -3462,6 +3462,271 @@
       "updated": "Yañılandı",
       "languagesLabel": "Tiller",
       "ogAlt": "Bare Sudoku logotipi ve Bedava onlayn sudoku, reklamsız sözleri"
+    },
+    "gag": {
+      "title": "Bare Sudoku: parasız online sudoku, reklamsız, kayıtsız",
+      "description": "Brauzerdä parasız sudoku: reklam yok, hesap yok, izlemäk yok. Dört uur, notlar, geeri almak hem mantıı açıklayan yardımnar. Oflayn işleer. {size} KB Android uygulaması da var.",
+      "h1": "Bare Sudoku: parasız online sudoku, reklamsız, kayıtsız",
+      "intro": "Bare Sudoku brauzerdä işleyän parasız bir sudoku oyunudur. Reklam yok, hesap yok, izlemäk yok hem hiç bişey kurmaa lääzım diil: sayfayı aç, uuru seç hem oyna. Her bir bilmecenin tam bir çözümü var hem o sade mantıklan çözüler, her bir yardım kendi sebebini açıklêêr. Oyun oflayn işleer hem MIT litsenziyasınnan açık kaynaklıdır.",
+      "featuresHeading": "Ne alêrsınız",
+      "features": [
+        "Dört uur: kolay, orta, zor hem ekspert",
+        "Her bir bilmecenin bir çözümü var, hiç bir vakıt tahmin etmää lääzım diil",
+        "Notlar, geeri almak, silmäk hem bir basmaklan hepsi notları doldurmak",
+        "Metodu açıklayan yardımnar: tek kandidat, kilitli kandidatlar, çiftlär hem üçlüklär, X-Wing, Y-Wing, Swordfish hem XYZ-Wing",
+        "Avtomat koruma, karannık rejim, klaviatura hem yatık yerleşim",
+        "İlk ziyarettän sora oflayn işleer, uygulama tükeni lääzım diil"
+      ],
+      "androidHeading": "Android uygulaması",
+      "android": "Bare Sudoku Android uygulaması olarak da var: versiya {version}, aşaa-yukarı {size} KB, izin yok, internet yok, bibliotekasız temiz Java. O Google Play'da yok; GitHub Releases'tän imzalı APK'yı indir hem Android 8 osa taa eniyä kur.",
+      "androidLink": "APK'yı indir",
+      "privacyHeading": "Gizlilik",
+      "privacy": "Bare Sudoku hiç bir bilgi toplamêêr. Hesap, analitika hem cookie yok; şindiki oyununuz sade brauzerinizdä korunêr. Android uygulamasının internet izini dä yok.",
+      "faqHeading": "Sık sorulan sorular",
+      "faq": [
+        [
+          "Bare Sudoku parasız mı?",
+          "Evet. Bare Sudoku brauzerdä dä, Android'tä dä tamamän parasız. Reklam, uygulama içindä satın almak hem premium versiya yok."
+        ],
+        [
+          "Bare Sudoku'da reklam var mı?",
+          "Yok. Ne veb oyunu, ne dä Android uygulaması reklam göstermeer, izleyici osa üçüncü taraf skriptleri yok."
+        ],
+        [
+          "Oynamaa deyni hesap lääzım mı?",
+          "Yok. baresudoku.com'u aç hem oyna. Oyun brauzerdä avtomat korunêr; sekmeyi kapat hem sora devam et."
+        ],
+        [
+          "Bare Sudoku oflayn işleer mi?",
+          "Evet. İlk ziyarettän sora brauzer sayfayı korêr hem baalantısız açêr. Android uygulaması hiç bir vakıt internet kullanmêêr."
+        ],
+        [
+          "Bare Sudoku bilgi toplêêr mı?",
+          "Yok. Analitika, hesap, cookie yok. Korunmuş oyun sade brauzerinizin erli deposunda durêr."
+        ],
+        [
+          "Android uygulaması var mı?",
+          "Evet. Android için Bare Sudoku Android 8 hem taa enisi için {size} KB APK'dır, izinsiz hem internetsiz. GitHub Releases'tän indir."
+        ]
+      ],
+      "madeBy": "Yapan: Alparslan Selçuk Develioğlu",
+      "source": "Kaynak kodu",
+      "androidSource": "Android kaynak kodu",
+      "updated": "Enilendi",
+      "languagesLabel": "Dillär",
+      "ogAlt": "Bare Sudoku logosu hem Parasız online sudoku, reklamsız sözleri"
+    },
+    "sah": {
+      "title": "Bare Sudoku: босхо онлайн судоку, реклама суох, регистрация суох",
+      "description": "Браузерга босхо судоку: реклама суох, аккаунт суох, кэтээһин суох. Түөрт таһым, бэлиэлэр, төттөрү төннөрүү уонна логиканы быһаарар сүбэлэр. Оффлайн үлэлиир. {size} KB Android сыһыарыы эмиэ баар.",
+      "h1": "Bare Sudoku: босхо онлайн судоку, реклама суох, регистрация суох",
+      "intro": "Bare Sudoku — браузерга үлэлиир босхо судоку оонньуу. Реклама суох, аккаунт суох, кэтээһин суох уонна туох да туруорар наадата суох: сирэйи ас, таһымы тал уонна оонньоо. Хас биирдии таабырын биир эрэ быһаарыылаах уонна логиканан эрэ быһаарыллар, хас биирдии сүбэ бэйэтин төрүөтүн быһаарар. Оонньуу оффлайн үлэлиир уонна MIT лицензиянан аһаҕас кодтаах.",
+      "featuresHeading": "Тугу ылаҕын",
+      "features": [
+        "Түөрт таһым: чэпчэки, орто, уустук уонна эксперт",
+        "Хас биирдии таабырын биир быһаарыылаах, хаһан да таайар наадата суох",
+        "Бэлиэлэр, төттөрү төннөрүү, сотуу уонна биир баттааһынынан бары бэлиэлэри толоруу",
+        "Ньыманы быһаарар сүбэлэр: биир кандидат, хатанан кандидаттар, паралар уонна үстэр, X-Wing, Y-Wing, Swordfish уонна XYZ-Wing",
+        "Аптамаатынан хараллыы, хараҥа режим, клавиатура уонна туора туруу",
+        "Бастакы киириэ кэннэ оффлайн үлэлиир, сыһыарыы маҕаһыына наадата суох"
+      ],
+      "androidHeading": "Android сыһыарыы",
+      "android": "Bare Sudoku Android сыһыарыы быһыытынан эмиэ баар: барыл {version}, кэриэтэ {size} KB, көҥүл суох, интернет суох, библиотека суох ыраас Java. Google Play-га суох; GitHub Releases-тан илии баттаммыт APK-ны хачайдаа уонна Android 8 эбэтэр саҥаҕа туруор.",
+      "androidLink": "APK хачайдаа",
+      "privacyHeading": "Кистэлэҥ",
+      "privacy": "Bare Sudoku ханнык да дааннайы хомуйбат. Аккаунт, аналитика уонна cookie суох; билиҥҥи оонньууҥ эн браузергар эрэ харалла сылдьар. Android сыһыарыы интернет көҥүлэ да суох.",
+      "faqHeading": "Элбэхтик ыйытыллар ыйытыылар",
+      "faq": [
+        [
+          "Bare Sudoku босхо дуо?",
+          "Босхо. Bare Sudoku браузерга да, Android-ка да толору босхо. Реклама, сыһыарыы иһинээҕи атыы уонна премиум барыл суох."
+        ],
+        [
+          "Bare Sudoku-га реклама баар дуо?",
+          "Суох. Веб оонньуу да, Android сыһыарыы да рекламаны көрдөрбөт, кэтээччилэр эбэтэр үһүс өрүт скриптэрэ суох."
+        ],
+        [
+          "Оонньуурга аккаунт наада дуо?",
+          "Суох. baresudoku.com-у ас уонна оонньоо. Оонньуу браузерга аптамаатынан хараллар; таабы сап уонна кэлин салҕаа."
+        ],
+        [
+          "Bare Sudoku оффлайн үлэлиир дуо?",
+          "Үлэлиир. Бастакы киириэ кэннэ браузер сирэйи харайар уонна холбоһуга суох арыйар. Android сыһыарыы интернеты хаһан да туһаммат."
+        ],
+        [
+          "Bare Sudoku дааннайы хомуйар дуо?",
+          "Суох. Аналитика, аккаунт, cookie суох. Хараллыбыт оонньуу эн браузергын сиргэ хараллыытыгар эрэ турар."
+        ],
+        [
+          "Android сыһыарыы баар дуо?",
+          "Баар. Android-ка Bare Sudoku — Android 8 уонна саҥаҕа {size} KB APK, көҥүлэ суох уонна интернетэ суох. GitHub Releases-тан хачайдаа."
+        ]
+      ],
+      "madeBy": "Оҥордо: Alparslan Selçuk Develioğlu",
+      "source": "Төрүт код",
+      "androidSource": "Android төрүт кода",
+      "updated": "Саҥардылынна",
+      "languagesLabel": "Тыллар",
+      "ogAlt": "Bare Sudoku логотиба уонна Босхо онлайн судоку, реклама суох диэн тыллар"
+    },
+    "tyv": {
+      "title": "Bare Sudoku: халас онлайн судоку, реклама чок, бүрүткел чок",
+      "description": "Браузерде халас судоку: реклама чок, аккаунт чок, хайгаарал чок. Дөрт деңнел, демдектер, дедир ээптер болгаш логиканы тайылбырлаар сүмелер. Оффлайн ажылдаар. {size} KB Android капсырылга база бар.",
+      "h1": "Bare Sudoku: халас онлайн судоку, реклама чок, бүрүткел чок",
+      "intro": "Bare Sudoku — браузерде ажылдаар халас судоку оюну. Реклама чок, аккаунт чок, хайгаарал чок болгаш чүнү-даа тургузар херээ чок: арынны ажыт, деңнелди шилип ал болгаш ойна. Кажан-даа тывызык бир шиитпирлиг болгаш чүгле логика-биле шиитпирлеттинер, кажан-даа сүме бодунуң чылдагаанын тайылбырлаар. Оюн оффлайн ажылдаар болгаш MIT лицензия-биле ажык кодтуг.",
+      "featuresHeading": "Чүнү алыр силер",
+      "features": [
+        "Дөрт деңнел: белен, ортумак, берге болгаш эксперт",
+        "Кажан-даа тывызык бир шиитпирлиг, кажан-даа даап бодаар херээ чок",
+        "Демдектер, дедир ээптер, балап каар болгаш бир базып бүгү демдектерни долдурар",
+        "Аргаңы тайылбырлаар сүмелер: чаңгыс кандидат, шоочалаан кандидаттар, эжештер болгаш үштер, X-Wing, Y-Wing, Swordfish болгаш XYZ-Wing",
+        "Автомат камгалал, караңгы режим, клавиатура болгаш дески тургузуг",
+        "Баштайгы кирген соонда оффлайн ажылдаар, капсырылга садыы херээ чок"
+      ],
+      "androidHeading": "Android капсырылга",
+      "android": "Bare Sudoku Android капсырылга болуп база бар: хевир {version}, барык {size} KB, чөпшээрел чок, интернет чок, библиотека чок арыг Java. Ол Google Play-де чок; GitHub Releases-тен ат салган APK-ны чүдүрүп ал болгаш Android 8 азы чаага тургус.",
+      "androidLink": "APK чүдүрер",
+      "privacyHeading": "Чажыт чорук",
+      "privacy": "Bare Sudoku кандыг-даа медээ чыгбас. Аккаунт, аналитика болгаш cookie чок; амгы оюнуңар чүгле браузериңерде камгалаттынар. Android капсырылгада интернет чөпшээрели безин чок.",
+      "faqHeading": "Хөй айтырар айтырыглар",
+      "faq": [
+        [
+          "Bare Sudoku халас бе?",
+          "Ийе. Bare Sudoku браузерде-даа, Android-та-даа долузу-биле халас. Реклама, капсырылга иштинде садып алыышкын болгаш премиум хевир чок."
+        ],
+        [
+          "Bare Sudoku-да реклама бар бе?",
+          "Чок. Веб оюн-даа, Android капсырылга-даа реклама көргүспес, хайгааракчылар азы үшкү тала скриптилери чок."
+        ],
+        [
+          "Ойнаар дээш аккаунт херек бе?",
+          "Чок. baresudoku.com-ну ажыт болгаш ойна. Оюн браузерде автомат камгалаттынар; вкладканы хааг болгаш соонда уламчыла."
+        ],
+        [
+          "Bare Sudoku оффлайн ажылдаар бе?",
+          "Ийе. Баштайгы кирген соонда браузер арынны камгалаар болгаш харылзаа чокка ажыдар. Android капсырылга интернетти кажан-даа ажыглавас."
+        ],
+        [
+          "Bare Sudoku медээ чыгар бе?",
+          "Чок. Аналитика, аккаунт, cookie чок. Камгалаттынган оюн чүгле браузериңерниң черлик шыгжамырында турар."
+        ],
+        [
+          "Android капсырылга бар бе?",
+          "Ийе. Android-ка Bare Sudoku — Android 8 болгаш чаага {size} KB APK, чөпшээрел чок болгаш интернет чок. GitHub Releases-тен чүдүрүп ал."
+        ]
+      ],
+      "madeBy": "Кылган: Alparslan Selçuk Develioğlu",
+      "source": "Үндезин код",
+      "androidSource": "Android үндезин коду",
+      "updated": "Чаартынган",
+      "languagesLabel": "Дылдар",
+      "ogAlt": "Bare Sudoku логотиви болгаш Халас онлайн судоку, реклама чок деп сөстер"
+    },
+    "krc": {
+      "title": "Bare Sudoku: хакъсыз онлайн судоку, рекламасыз, регистрациясыз",
+      "description": "Браузерде хакъсыз судоку: реклама джокъ, аккаунт джокъ, кёз туту джокъ. Тёрт дараджа, белгиле, артха къайтарыу эм логиканы ангылатхан оноула. Оффлайн ишлейди. {size} KB Android приложение да барды.",
+      "h1": "Bare Sudoku: хакъсыз онлайн судоку, рекламасыз, регистрациясыз",
+      "intro": "Bare Sudoku — браузерде ишлеген хакъсыз судоку оюн. Реклама джокъ, аккаунт джокъ, кёз туту джокъ эм бир зат да салыргъа керек тюлдю: бетни ач, дараджаны сайла эм ойна. Хар бир табышманы тюз бир чечими барды эм ол къуру логика бла чечиледи, хар бир оноу кесини чурумун ангылатады. Оюн оффлайн ишлейди эм MIT лицензия бла ачыкъ кодлуду.",
+      "featuresHeading": "Не аласыз",
+      "features": [
+        "Тёрт дараджа: тынч, орта, къыйын эм эксперт",
+        "Хар бир табышманы бир чечими барды, бир заманда да чама этерге керек тюлдю",
+        "Белгиле, артха къайтарыу, кетериу эм бир басыу бла бютеу белгилени толтуруу",
+        "Амалны ангылатхан оноула: джангыз кандидат, бегитилген кандидатла, экиле эм ючле, X-Wing, Y-Wing, Swordfish эм XYZ-Wing",
+        "Автомат сакълау, къарангы режим, клавиатура эм туура орналашыу",
+        "Биринчи кириуден сора оффлайн ишлейди, приложение тюкен керек тюлдю"
+      ],
+      "androidHeading": "Android приложение",
+      "android": "Bare Sudoku Android приложение халда да барды: версия {version}, {size} KB чакълы, эркинликле джокъ, интернет джокъ, библиотекасыз таза Java. Ол Google Play-де джокъду; GitHub Releases-ден къол салыннган APK-ны джюклеп ал эм Android 8 неда джангыракъгъа сал.",
+      "androidLink": "APK джюкле",
+      "privacyHeading": "Джашырынлыкъ",
+      "privacy": "Bare Sudoku бир тюрлю билги да джыймайды. Аккаунт, аналитика эм cookie джокъ; бусагъатдагъы оюнугъуз къуру браузеригизде сакъланады. Android приложениеде интернет эркинлик да джокъду.",
+      "faqHeading": "Кёб сорулгъан соруула",
+      "faq": [
+        [
+          "Bare Sudoku хакъсызмыды?",
+          "Хау. Bare Sudoku браузерде да, Android-да да толусу бла хакъсызды. Реклама, приложение ичинде сатыу-алыу эм премиум версия джокъду."
+        ],
+        [
+          "Bare Sudoku-да реклама бармыды?",
+          "Джокъ. Веб оюн да, Android приложение да реклама кёргюзмейди, кёз тутханла неда ючюнчю джаны скриптле джокъдула."
+        ],
+        [
+          "Ойнар ючюн аккаунт керекмиди?",
+          "Джокъ. baresudoku.com-ну ач эм ойна. Оюн браузерде автомат сакъланады; вкладканы джаб эм артда бардыр."
+        ],
+        [
+          "Bare Sudoku оффлайн ишлеймиди?",
+          "Хау. Биринчи кириуден сора браузер бетни сакълайды эм байламсыз ачады. Android приложение интернетни бир заманда да хайырланмайды."
+        ],
+        [
+          "Bare Sudoku билги джыяммыды?",
+          "Джокъ. Аналитика, аккаунт, cookie джокъ. Сакъланнган оюн къуру браузеригизни джерли сакълауунда турады."
+        ],
+        [
+          "Android приложение бармыды?",
+          "Хау. Android ючюн Bare Sudoku — Android 8 эм джангыракъ ючюн {size} KB APK, эркинликсиз эм интернетсиз. GitHub Releases-ден джюклеп ал."
+        ]
+      ],
+      "madeBy": "Этген: Alparslan Selçuk Develioğlu",
+      "source": "Башланнган код",
+      "androidSource": "Android башланнган код",
+      "updated": "Джангыртылды",
+      "languagesLabel": "Тилле",
+      "ogAlt": "Bare Sudoku логотиби эм Хакъсыз онлайн судоку, рекламасыз деген сёзле"
+    },
+    "kum": {
+      "title": "Bare Sudoku: гьакъсыз онлайн судоку, рекламасыз, регистрациясыз",
+      "description": "Браузерде гьакъсыз судоку: реклама ёкъ, аккаунт ёкъ, гёзетив ёкъ. Дёрт даража, белгилер, артгъа къайтарыв ва логиканы англатагъан насигьатлар. Оффлайн ишлей. {size} KB Android программа да бар.",
+      "h1": "Bare Sudoku: гьакъсыз онлайн судоку, рекламасыз, регистрациясыз",
+      "intro": "Bare Sudoku — браузерде ишлейген гьакъсыз судоку оюн. Реклама ёкъ, аккаунт ёкъ, гёзетив ёкъ ва бир зат да салмагъа тарыкъ тюгюл: бетни ач, даражаны сайла ва ойна. Гьар бир табышманы бир чечими бар ва ол логика булан чечиле, гьар бир насигьат оьзюню себебин англата. Оюн оффлайн ишлей ва MIT лицензия булан ачыкъ кодлу.",
+      "featuresHeading": "Не аласыз",
+      "features": [
+        "Дёрт даража: енгил, орта, къыйын ва эксперт",
+        "Гьар бир табышманы бир чечими бар, бир заманда да чама этмеге тарыкъ тюгюл",
+        "Белгилер, артгъа къайтарыв, оьчюрюв ва бир басыв булан бары да белгилени толтурув",
+        "Усулну англатагъан насигьатлар: ялгъыз кандидат, бегитилген кандидатлар, экилер ва уьчлер, X-Wing, Y-Wing, Swordfish ва XYZ-Wing",
+        "Автомат сакълав, къарангы режим, клавиатура ва туура ерлешив",
+        "Биринчи гиривден сонг оффлайн ишлей, программа тюкен тарыкъ тюгюл"
+      ],
+      "androidHeading": "Android программа",
+      "android": "Bare Sudoku Android программа гьисапда да бар: версия {version}, {size} KB чакъы, ихтиярлар ёкъ, интернет ёкъ, библиотекасыз таза Java. Ол Google Play-де ёкъ; GitHub Releases-ден къол салынгъан APK-ны юклеп ал ва Android 8 яда янгырагъа сал.",
+      "androidLink": "APK юкле",
+      "privacyHeading": "Яшырынлыкъ",
+      "privacy": "Bare Sudoku бир тюрлю маълумат да жыймай. Аккаунт, аналитика ва cookie ёкъ; бугюнгю оюнугъуз браузеригизде сакълана. Android программада интернет ихтияр да ёкъ.",
+      "faqHeading": "Кёп сораллагъан соравлар",
+      "faq": [
+        [
+          "Bare Sudoku гьакъсызмы?",
+          "Гьакъсыз. Bare Sudoku браузерде де, Android-де де толу кюйде гьакъсыз. Реклама, программаны ичинде сатыв-алыв ва премиум версия ёкъ."
+        ],
+        [
+          "Bare Sudoku-да реклама бармы?",
+          "Ёкъ. Веб оюн да, Android программа да реклама гёрсетмей, гёзетивчюлер яда уьчюнчю якъ скриптлер ёкъ."
+        ],
+        [
+          "Ойнамакъ учун аккаунт тарыкъмы?",
+          "Ёкъ. baresudoku.com-ну ач ва ойна. Оюн браузерде автомат сакълана; вкладканы яп ва сонг давам эт."
+        ],
+        [
+          "Bare Sudoku оффлайн ишлейми?",
+          "Ишлей. Биринчи гиривден сонг браузер бетни сакълай ва байлавсуз ача. Android программа интернетни бир заманда да къолламай."
+        ],
+        [
+          "Bare Sudoku маълумат жыяммы?",
+          "Ёкъ. Аналитика, аккаунт, cookie ёкъ. Сакълангъан оюн браузеригизни ерли сакълавунда тура."
+        ],
+        [
+          "Android программа бармы?",
+          "Бар. Android учун Bare Sudoku — Android 8 ва янгырагъы учун {size} KB APK, ихтиярсыз ва интернетсиз. GitHub Releases-ден юклеп ал."
+        ]
+      ],
+      "madeBy": "Этген: Alparslan Selçuk Develioğlu",
+      "source": "Башлангъыч код",
+      "androidSource": "Android башлангъыч коду",
+      "updated": "Янгыртылды",
+      "languagesLabel": "Тиллер",
+      "ogAlt": "Bare Sudoku логотиби ва Гьакъсыз онлайн судоку, рекламасыз деген сёзлер"
     }
   }
 }
