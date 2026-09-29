@@ -1,4 +1,3 @@
-import base64
 import datetime
 import hashlib
 import html
@@ -65,7 +64,7 @@ BOTS = [
     "MistralAI-User", "YouBot", "Bytespider", "PetalBot",
 ]
 CONTENT_SIGNAL = "Content-Signal: search=yes, ai-input=yes, ai-train=yes"
-CSP = "default-src 'none'; script-src 'sha256-%s'; style-src 'unsafe-inline'; img-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+CSP = "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
 DISCOVERY_CACHE = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
 TEXT_TYPES = (".html", ".txt", ".xml", ".webmanifest")
 
@@ -217,12 +216,13 @@ def jsonld(code, entry, languages, version, size, lastmod, web):
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
 
 
-def page(template, css, script, code, entry, languages, version, size, lastmod, web):
+def page(template, css, table, code, entry, languages, version, size, lastmod, web):
     def f(text):
         return esc(fill(text, version, size))
     alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, url_of(c)) for c in languages]
     alternates.append('<link rel="alternate" hreflang="x-default" href="%s/">' % SITE)
-    og_alternates = ['<meta property="og:locale:alternate" content="%s">' % og_locale(c) for c in languages if c != code]
+    options = "".join('<option value="%s">%s</option>' % (c, esc(languages[c][0])) for c in languages)
+    local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code]}
     values = {
         "{{LANG}}": code,
         "{{DIR}}": "rtl" if code in i18n.RTL else "ltr",
@@ -231,13 +231,13 @@ def page(template, css, script, code, entry, languages, version, size, lastmod, 
         "{{URL}}": url_of(code),
         "{{ALTERNATES}}": "\n".join(alternates),
         "{{OG_LOCALE}}": og_locale(code),
-        "{{OG_ALTERNATES}}": "\n".join(og_alternates),
         "{{OG_ALT}}": f(entry["ogAlt"]),
         "{{JSONLD}}": jsonld(code, entry, languages, version, size, lastmod, web),
         "{{CONTENT}}": content(code, entry, languages, version, size, lastmod, web),
         "{{WEB_VERSION}}": web,
         "{{CSS}}": css,
-        "{{SCRIPT}}": script,
+        "{{OPTIONS}}": options,
+        "{{L}}": json.dumps(local, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c"),
     }
     out = template
     for key, value in values.items():
@@ -245,13 +245,7 @@ def page(template, css, script, code, entry, languages, version, size, lastmod, 
     return out
 
 
-def script_hash(page_html):
-    start = page_html.index("<script>") + len("<script>")
-    end = page_html.index("</script>", start)
-    return base64.b64encode(hashlib.sha256(page_html[start:end].encode("utf-8")).digest()).decode("ascii")
-
-
-def headers_file(csp_hash):
+def headers_file():
     lines = [
         "/*",
         "  Strict-Transport-Security: max-age=31536000; includeSubDomains",
@@ -260,7 +254,7 @@ def headers_file(csp_hash):
         "  Referrer-Policy: strict-origin-when-cross-origin",
         "  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()",
         "  Cross-Origin-Opener-Policy: same-origin",
-        "  Content-Security-Policy: " + CSP % csp_hash,
+        "  Content-Security-Policy: " + CSP,
         "/404",
         "  X-Robots-Tag: noindex",
     ]
@@ -293,12 +287,10 @@ def alternate_links(languages, resolve, tag):
 
 
 def sitemap_file(languages, lastmod):
-    tag = '<xhtml:link rel="alternate" hreflang="%s" href="%s"/>'
     urls = ""
     for resolve in (url_of, privacy_url):
-        links = "".join(alternate_links(languages, resolve, tag))
-        urls += "".join("<url><loc>%s</loc><lastmod>%s</lastmod>%s</url>\n" % (resolve(c), lastmod, links) for c in languages)
-    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s</urlset>\n' % urls
+        urls += "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (resolve(c), lastmod) for c in languages)
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</urlset>\n' % urls
 
 
 def privacy_page(template, css, code, entry, languages, lastmod):
@@ -426,24 +418,21 @@ def main():
     version, apk_bytes = android_release()
     size = kilobytes(apk_bytes)
     web = web_version()
-    strings = json.dumps(i18n.web(keys, languages), ensure_ascii=False, separators=(",", ":"))
-    script = "const I18N = %s;\n%s\n%s" % (strings, read("src", "engine.js").strip(), read("src", "app.js").strip())
+    table = {code: i18n.table(keys, languages[code]) for code in languages}
+    script = "%s\n%s\n" % (read("src", "engine.js").strip(), read("src", "app.js").strip())
     css = read("src", "style.css").strip()
     template = read("src", "index.html")
     dist = os.path.join(ROOT, "dist")
     shutil.rmtree(dist, ignore_errors=True)
     os.makedirs(dist)
-    digest = hashlib.sha1()
-    hashes = set()
+    digest = hashlib.sha1(script.encode("utf-8"))
+    write(dist, "app.js", script)
     total = 0
     for code in languages:
-        out = page(template, css, script, code, site[code], languages, version, size, lastmod, web)
-        hashes.add(script_hash(out))
+        out = page(template, css, table, code, site[code], languages, version, size, lastmod, web)
         digest.update(out.encode("utf-8"))
         total += len(out.encode("utf-8"))
         write(dist, os.path.join(i18n.path(code).strip("/"), "index.html"), out)
-    if len(hashes) != 1:
-        raise SystemExit("script govdesi sayfalar arasinda farkli, CSP hash tek olmali")
     privacy_template = read("src", "privacy.html")
     for code in languages:
         write(dist, os.path.join(privacy_path(code).strip("/"), "index.html"), privacy_page(privacy_template, css, code, site[code], languages, lastmod))
@@ -452,7 +441,7 @@ def main():
     write(dist, "sw.js", read("src", "sw.js").replace("{{HASH}}", digest.hexdigest()[:10]))
     shutil.copytree(os.path.join(ROOT, "static"), dist, dirs_exist_ok=True)
     icons.write(dist)
-    write(dist, "_headers", headers_file(hashes.pop()))
+    write(dist, "_headers", headers_file())
     write(dist, "_redirects", "/security.txt /.well-known/security.txt 301\n")
     write(dist, "robots.txt", robots_file())
     write(dist, "sitemap.xml", sitemap_file(languages, lastmod))
