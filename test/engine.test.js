@@ -93,9 +93,7 @@ test("oyun durumu: hamle, not, geri al, not doldurma, ipucu, sure, kayit", () =>
   expect(g.history.length).toBe(0);
   expect(g.time(9999)).toBe(0);
   expect(g.solved).toBe(false);
-  g.select(cell);
-  expect(g.enter(right)).toBe(true);
-  expect(g.undo()).toBe(true);
+  expect(g.fillNotes()).toBe(true);
   expect(g.hint(e)).toBe(true);
   expect(g.hintActive()).toBe(true);
   expect(g.hintKind).toBe(HINT_PLACE);
