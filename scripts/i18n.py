@@ -7,6 +7,10 @@ TITLE = "Bare Sudoku"
 RTL = ("ar", "fa", "he")
 
 
+def path(code):
+    return "/" if code == "en" else "/" + code.lower() + "/"
+
+
 def load():
     with open(os.path.join(ROOT, "i18n", "strings.json"), encoding="utf-8") as f:
         data = json.load(f)

@@ -1,0 +1,36 @@
+import json
+import os
+import sys
+import urllib.error
+import urllib.request
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+import i18n
+
+KEY = "7f33bd9e0dc8c5e8bb6f0a533e5bf5be"
+HOST = "baresudoku.com"
+ENDPOINT = "https://api.indexnow.org/indexnow"
+
+
+def url_list(languages):
+    base = "https://" + HOST
+    pages = [base + i18n.path(code) for code in languages]
+    return pages + [base + "/sitemap.xml", base + "/llms.txt", base + "/llms-full.txt"]
+
+
+def ping(languages):
+    body = json.dumps({"host": HOST, "key": KEY, "keyLocation": "https://%s/%s.txt" % (HOST, KEY), "urlList": url_list(languages)}).encode("utf-8")
+    request = urllib.request.Request(ENDPOINT, data=body, headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            return response.status
+    except urllib.error.HTTPError as error:
+        return error.code
+    except Exception as error:
+        return str(error)
+
+
+if __name__ == "__main__":
+    keys, languages = i18n.load()
+    print("IndexNow: %s (%d URL)" % (ping(languages), len(languages) + 3))
