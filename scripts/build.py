@@ -100,6 +100,13 @@ def lastmod_date():
     return value or datetime.date.today().isoformat()
 
 
+def web_version():
+    try:
+        return "1." + run(["git", "rev-list", "--count", "HEAD"], 10)
+    except Exception:
+        return "1.0"
+
+
 def android_release():
     try:
         value = run(["gh", "api", "repos/alparslandev/baresudoku/releases/latest", "--jq", '.tag_name + " " + ([.assets[] | select(.name == "baresudoku.apk") | .size] | first | tostring)'], 15)
@@ -117,7 +124,7 @@ def language_links(languages):
     return "".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (i18n.path(code), code, code, esc(languages[code][0])) for code in languages)
 
 
-def content(code, entry, languages, version, size, lastmod):
+def content(code, entry, languages, version, size, lastmod, web):
     def f(text):
         return esc(fill(text, version, size))
     parts = ['<section id="about">', "<h1>%s</h1>" % f(entry["h1"]), "<p>%s</p>" % f(entry["intro"])]
@@ -130,8 +137,8 @@ def content(code, entry, languages, version, size, lastmod):
     parts.append("<h2>%s</h2>" % f(entry["faqHeading"]))
     for question, answer in entry["faq"]:
         parts.append("<details><summary>%s</summary><p>%s</p></details>" % (f(question), f(answer)))
-    parts.append('<p class="meta">%s · <a href="%s">%s</a> · <a href="%s">%s</a> · %s <time datetime="%s">%s</time></p>' % (
-        f(entry["madeBy"]), WEB_REPO, f(entry["source"]), ANDROID_REPO, f(entry["androidSource"]), f(entry["updated"]), lastmod, lastmod))
+    parts.append('<p class="meta">%s · Web %s · Android %s · <a href="%s">%s</a> · <a href="%s">%s</a> · %s <time datetime="%s">%s</time></p>' % (
+        f(entry["madeBy"]), web, version, WEB_REPO, f(entry["source"]), ANDROID_REPO, f(entry["androidSource"]), f(entry["updated"]), lastmod, lastmod))
     parts.append('<nav aria-label="%s">%s</nav>' % (f(entry["languagesLabel"]), language_links(languages)))
     parts.append("</section>")
     return "\n".join(parts)
@@ -141,7 +148,7 @@ def offer():
     return {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
 
 
-def jsonld(code, entry, languages, version, size, lastmod):
+def jsonld(code, entry, languages, version, size, lastmod, web):
     def f(text):
         return fill(text, version, size)
     codes = list(languages)
@@ -153,7 +160,7 @@ def jsonld(code, entry, languages, version, size, lastmod):
             "@type": ["WebApplication", "VideoGame"], "@id": GAME_ID, "name": NAME, "url": SITE + "/", "description": f(entry["description"]),
             "applicationCategory": "GameApplication", "genre": "Puzzle", "gamePlatform": "Web browser", "playMode": "SinglePlayer",
             "numberOfPlayers": {"@type": "QuantitativeValue", "value": 1}, "operatingSystem": "Any", "browserRequirements": "Requires JavaScript",
-            "isAccessibleForFree": True, "isFamilyFriendly": True, "offers": offer(), "inLanguage": codes,
+            "isAccessibleForFree": True, "isFamilyFriendly": True, "offers": offer(), "inLanguage": codes, "softwareVersion": web,
             "featureList": [f(item) for item in entry["features"]], "image": OG_IMAGE, "dateModified": lastmod, "license": LICENSE_URL,
             "sameAs": WEB_REPO, "author": {"@id": PERSON_ID}, "publisher": {"@id": PERSON_ID},
         },
@@ -185,7 +192,7 @@ def jsonld(code, entry, languages, version, size, lastmod):
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
 
 
-def page(template, css, script, code, entry, languages, version, size, lastmod):
+def page(template, css, script, code, entry, languages, version, size, lastmod, web):
     def f(text):
         return esc(fill(text, version, size))
     alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, url_of(c)) for c in languages]
@@ -201,8 +208,8 @@ def page(template, css, script, code, entry, languages, version, size, lastmod):
         "{{OG_LOCALE}}": og_locale(code),
         "{{OG_ALTERNATES}}": "\n".join(og_alternates),
         "{{OG_ALT}}": f(entry["ogAlt"]),
-        "{{JSONLD}}": jsonld(code, entry, languages, version, size, lastmod),
-        "{{CONTENT}}": content(code, entry, languages, version, size, lastmod),
+        "{{JSONLD}}": jsonld(code, entry, languages, version, size, lastmod, web),
+        "{{CONTENT}}": content(code, entry, languages, version, size, lastmod, web),
         "{{CSS}}": css,
         "{{SCRIPT}}": script,
     }
@@ -260,11 +267,12 @@ def sitemap_file(languages, lastmod):
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s</urlset>\n' % urls
 
 
-def llms_file(site, languages, version, size, lastmod):
+def llms_file(site, languages, version, size, lastmod, web):
     en = site["en"]
     lines = ["# " + NAME, "", "> " + fill(en["description"], version, size), "", fill(en["intro"], version, size), "", "## Facts"]
     lines += ["- " + fill(item, version, size) for item in en["features"]]
     lines += [
+        "- Web version: %s" % web,
         "- Android app: version %s, %d KB APK, no permissions, no internet access, Android 8 or newer" % (version, size),
         "- License: MIT, source on GitHub",
         "- Author: %s (alparslandev)" % AUTHOR,
@@ -311,7 +319,7 @@ def llms_full_file(site, languages, version, size, lastmod):
     return "\n".join(lines) + "\n"
 
 
-def humans_file(lastmod, count):
+def humans_file(lastmod, count, web, version):
     return "\n".join([
         "TEAM",
         "Developer: " + AUTHOR,
@@ -320,6 +328,8 @@ def humans_file(lastmod, count):
         "",
         "SITE",
         "Last update: " + lastmod,
+        "Web version: " + web,
+        "Android app version: " + version,
         "Languages: %d" % count,
         "Standards: HTML5, CSS, JSON-LD, sitemap, llms.txt, security.txt",
         "Software: plain JavaScript, no libraries, no tracking; the site is assembled by a Python script",
@@ -352,6 +362,7 @@ def main():
     expires = (datetime.date.today() + datetime.timedelta(days=365)).isoformat() + "T00:00:00.000Z"
     version, apk_bytes = android_release()
     size = kilobytes(apk_bytes)
+    web = web_version()
     strings = json.dumps(i18n.web(keys, languages), ensure_ascii=False, separators=(",", ":"))
     script = "const I18N = %s;\n%s\n%s" % (strings, read("src", "engine.js").strip(), read("src", "app.js").strip())
     css = read("src", "style.css").strip()
@@ -363,7 +374,7 @@ def main():
     hashes = set()
     total = 0
     for code in languages:
-        out = page(template, css, script, code, site[code], languages, version, size, lastmod)
+        out = page(template, css, script, code, site[code], languages, version, size, lastmod, web)
         hashes.add(script_hash(out))
         digest.update(out.encode("utf-8"))
         total += len(out.encode("utf-8"))
@@ -379,13 +390,13 @@ def main():
     write(dist, "_redirects", "/security.txt /.well-known/security.txt 301\n")
     write(dist, "robots.txt", robots_file())
     write(dist, "sitemap.xml", sitemap_file(languages, lastmod))
-    write(dist, "llms.txt", llms_file(site, languages, version, size, lastmod))
+    write(dist, "llms.txt", llms_file(site, languages, version, size, lastmod, web))
     write(dist, "llms-full.txt", llms_full_file(site, languages, version, size, lastmod))
-    write(dist, "humans.txt", humans_file(lastmod, len(languages)))
+    write(dist, "humans.txt", humans_file(lastmod, len(languages), web, version))
     write(dist, os.path.join(".well-known", "security.txt"), security_file(expires))
     write(dist, indexnow.KEY + ".txt", indexnow.KEY)
     check_placeholders(dist)
-    print("dist hazir: %d sayfa, sayfa basina ~%d bayt, Android %s (%d KB), guncelleme %s" % (len(languages), total // len(languages), version, size, lastmod))
+    print("dist hazir: %d sayfa, sayfa basina ~%d bayt, web %s, Android %s (%d KB), guncelleme %s" % (len(languages), total // len(languages), web, version, size, lastmod))
 
 
 if __name__ == "__main__":
