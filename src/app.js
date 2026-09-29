@@ -9,7 +9,7 @@ const now = () => Date.now();
 const engine = new Sudoku();
 const game = new Game();
 const cells = [], noteSpans = [], keyButtons = [], toolButtons = [];
-let strings = I18N.en.s, menuOpen = false, generating = false, timer = 0, dragging = false;
+let strings = I18N.en.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 
 function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 function fetchStored(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -122,7 +122,7 @@ function render() {
   $('level').textContent = generating ? strings[pendingLevel] : game.active ? strings[game.level] : '';
   renderTime();
   const sel = game.selected;
-  const selValue = sel >= 0 && game.active ? game.value[sel] : 0;
+  const selValue = (sel >= 0 && game.active ? game.value[sel] : 0) || game.sticky;
   const selBit = selValue ? bit(selValue) : 0;
   const hintOn = game.active && game.hintActive();
   for (let i = 0; i < 81; i++) {
@@ -169,6 +169,7 @@ function render() {
   keyButtons.forEach((b, i) => {
     const left = game.active && !generating ? Math.max(0, game.remaining(i + 1)) : 9;
     b.disabled = !playable || left === 0;
+    b.classList.toggle('on', i + 1 === game.sticky);
     b.lastChild.textContent = left > 0 ? left : '';
   });
   const overlay = menuOpen || (game.active && game.solved);
@@ -240,18 +241,27 @@ function startGame(level) {
 function act(kind, d) {
   if (!game.active || generating || menuOpen) return;
   let changed = false;
-  if (kind === 'digit') changed = game.enter(d);
+  if (kind === 'digit') changed = game.key(d);
   else if (kind === 'undo') changed = game.undo();
   else if (kind === 'erase') changed = game.erase();
   else if (kind === 'notes') { game.noteMode = !game.noteMode; changed = true; }
   else if (kind === 'fill') changed = game.fillNotes();
   else if (kind === 'hint') changed = game.hint(engine);
+  finish(changed);
+}
+
+function finish(changed) {
   if (game.solved) {
     game.pause(now());
     stopTimer();
   }
   if (changed) save();
   render();
+}
+
+function tapCell(i) {
+  if (!game.active || generating || menuOpen || game.solved) return;
+  finish(game.tap(i));
 }
 
 function selectCell(i) {
@@ -281,16 +291,19 @@ function bind() {
     if (e.button) return;
     const i = cellAt(e);
     if (i < 0) return;
-    dragging = true;
-    selectCell(i);
+    downCell = i;
+    tapCell(i);
     e.preventDefault();
   });
   board.addEventListener('pointermove', e => {
-    if (!dragging) return;
+    if (downCell < 0) return;
     const i = cellAt(e);
-    if (i >= 0) selectCell(i);
+    if (i >= 0 && i !== downCell) {
+      downCell = -1;
+      selectCell(i);
+    }
   });
-  const stopDrag = () => { dragging = false; };
+  const stopDrag = () => { downCell = -1; };
   window.addEventListener('pointerup', stopDrag);
   window.addEventListener('pointercancel', stopDrag);
   $('keys').addEventListener('click', e => {
@@ -325,7 +338,10 @@ function bind() {
     else if (k === 'u' || k === 'U') act('undo');
     else if (k === 'h' || k === 'H') act('hint');
     else if (k === 'f' || k === 'F') act('fill');
-    else if (k === 'Escape') openMenu();
+    else if (k === 'Escape') {
+      if (game.sticky) act('digit', game.sticky);
+      else openMenu();
+    }
     else return;
     e.preventDefault();
   });
