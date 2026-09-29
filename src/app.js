@@ -9,28 +9,31 @@ const now = () => Date.now();
 const engine = new Sudoku();
 const game = new Game();
 const cells = [], noteSpans = [], keyButtons = [], toolButtons = [];
-let strings = I18N.en.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
+const L = JSON.parse($('i18n').textContent);
+const LANGS = Array.from($('lang').options, o => o.value);
+let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 
 function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 function fetchStored(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 
 function matchLang(tag) {
   tag = String(tag || '').replace('_', '-');
-  if (I18N[tag]) return tag;
+  if (LANGS.includes(tag)) return tag;
   const lower = tag.toLowerCase();
-  for (const code in I18N) if (lower.startsWith(code.toLowerCase() + '-')) return code;
+  for (const code of LANGS) if (lower === code.toLowerCase() || lower.startsWith(code.toLowerCase() + '-')) return code;
   let base = lower.split('-')[0];
   if (base === 'zh') return /tw|hk|mo|hant/.test(lower) ? 'zh-Hant' : 'zh-Hans';
   if (base === 'no' || base === 'nn') base = 'nb';
   if (base === 'iw') base = 'he';
   if (base === 'in') base = 'id';
-  for (const code in I18N) if (code.split('-')[0] === base) return code;
+  if (base === 'fil') base = 'tl';
+  for (const code of LANGS) if (code.split('-')[0].toLowerCase() === base) return code;
   return null;
 }
 
 function pickLang() {
   const saved = fetchStored(KEY + '.lang');
-  if (saved && I18N[saved]) return saved;
+  if (saved && LANGS.includes(saved)) return saved;
   for (const tag of navigator.languages || [navigator.language]) {
     const code = matchLang(tag);
     if (code) return code;
@@ -43,7 +46,6 @@ function pathOf(code) {
 }
 
 function applyLang(code) {
-  strings = I18N[code].s;
   $('lang').value = code;
   renderLabels();
 }
@@ -94,13 +96,6 @@ function buildBoard() {
     keyButtons.push(b);
   }
   document.querySelectorAll('#tools button').forEach(b => toolButtons.push(b));
-  const select = $('lang');
-  for (const code in I18N) {
-    const o = document.createElement('option');
-    o.value = code;
-    o.textContent = I18N[code].name;
-    select.appendChild(o);
-  }
 }
 
 function clock(ms) {
@@ -381,14 +376,14 @@ function init() {
   const pageLang = document.documentElement.lang;
   if (location.pathname === '/') {
     const target = pickLang();
-    if (target !== 'en' && I18N[target]) {
+    if (target !== 'en' && LANGS.includes(target)) {
       location.replace(pathOf(target));
       return;
     }
   }
   buildBoard();
   bind();
-  applyLang(I18N[pageLang] ? pageLang : 'en');
+  applyLang(LANGS.includes(pageLang) ? pageLang : 'en');
   let saved = null;
   try { saved = JSON.parse(fetchStored(KEY)); } catch (e) {}
   game.load(saved);

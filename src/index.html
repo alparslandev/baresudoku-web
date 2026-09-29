@@ -22,7 +22,6 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bare Sudoku">
 <meta property="og:locale" content="{{OG_LOCALE}}">
-{{OG_ALTERNATES}}
 <meta property="og:url" content="{{URL}}">
 <meta property="og:title" content="{{TITLE}}">
 <meta property="og:description" content="{{DESCRIPTION}}">
@@ -71,13 +70,12 @@
 <button type="button" data-level="3"></button>
 <button type="button" id="errors-btn"></button>
 <button type="button" id="restart-btn"></button>
-<label><span id="lang-label"></span><select id="lang"></select></label>
+<label><span id="lang-label"></span><select id="lang">{{OPTIONS}}</select></label>
 <button type="button" id="cancel-btn"></button>
 </div>
 </div>
 <noscript><p style="text-align:center;padding:24px">Bare Sudoku needs JavaScript to run.</p></noscript>
-<script>
-{{SCRIPT}}
-</script>
+<script type="application/json" id="i18n">{{L}}</script>
+<script src="/app.js"></script>
 </body>
 </html>
