@@ -4,7 +4,7 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIXED = ["X-Wing", "Y-Wing", "Swordfish", "XYZ-Wing"]
 TITLE = "Bare Sudoku"
-RTL = ("ar", "fa", "he", "ur", "ps", "sd", "ug", "ckb", "yi", "dv", "azb", "ks")
+RTL = ("ar", "fa", "he", "ur", "ps", "sd", "ug", "ckb", "yi", "dv", "azb", "ks", "arz", "pnb")
 
 
 def path(code):
