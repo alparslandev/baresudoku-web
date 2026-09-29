@@ -40,7 +40,7 @@ def web(keys, languages):
 
 SITE_KEYS = ["title", "description", "h1", "intro", "featuresHeading", "features", "androidHeading", "android", "androidLink", "privacyHeading", "privacy", "faqHeading", "faq", "madeBy", "source", "androidSource", "updated", "languagesLabel", "ogAlt"]
 MIN_FEATURES = 6
-MIN_FAQ = 6
+MIN_FAQ = 11
 
 
 def load_site(languages):
