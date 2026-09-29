@@ -7172,6 +7172,271 @@
       "updated": "Air ùrachadh",
       "languagesLabel": "Cànanan",
       "ogAlt": "Suaicheantas Bare Sudoku leis na faclan Sudoku an-asgaidh air loidhne, gun sanasan"
+    },
+    "br": {
+      "title": "Bare Sudoku: sudoku digoust enlinenn, hep bruderezh, hep enskrivadur",
+      "description": "Sudoku digoust er merdeer: bruderezh ebet, kont ebet, heuliañ ebet. Pevar live, notennoù, dizober ha skoazelloù a zisplegit ar poell. Mont a ra en-dro hep internet. Un arload Android {size} KB ivez.",
+      "h1": "Bare Sudoku: sudoku digoust enlinenn, hep bruderezh, hep enskrivadur",
+      "intro": "Ur c'hoari sudoku digoust eo Bare Sudoku hag a ya en-dro en ho merdeer. Bruderezh ebet, kont ebet, heuliañ ebet ha netra da staliañ: digorit ar bajenn, dibabit ul live ha c'hoariit. Un diskoulm hepken en deus pep torkad, hag e c'hell bezañ diskoulmet gant ar poell hepken, ha pep skoazell a zispleg he abeg. Mont a ra ar c'hoari en-dro hep internet hag ur mammenn digor eo dindan al lañvaz MIT.",
+      "featuresHeading": "Ar pezh a vez roet deoc'h",
+      "features": [
+        "Pevar live: aes, etre, diaes ha mailh",
+        "Un diskoulm hepken en deus pep torkad ha n'eus ket ezhomm da zivinout biken",
+        "Notennoù, dizober, diverkañ ha leuniañ an holl notennoù gant ur pouez",
+        "Skoazelloù a zisplegit an teknik: unanoù, danvezioù prennet, koubladoù ha teiradoù, X-Wing, Y-Wing, Swordfish ha XYZ-Wing",
+        "Enrollañ emgefre, mod teñval, klavier ha framm a-blaen",
+        "Mont a ra en-dro hep internet goude ar gwelad kentañ, n'eus ket ezhomm eus ur stal arloadoù"
+      ],
+      "androidHeading": "Arload Android",
+      "android": "Bare Sudoku a zo ivez un arload Android: stumm {version}, war-dro {size} KB, aotre ebet, internet ebet, Java naet hep levraoueg. N'emañ ket war Google Play; pellgargit an APK sinet eus GitHub Releases ha staliit anezhañ war Android 8 pe nevesoc'h.",
+      "androidLink": "Pellgargañ an APK",
+      "privacyHeading": "Buhez prevez",
+      "privacy": "Ne zastum Bare Sudoku roadenn ebet. Kont ebet, dielfennañ ebet, toupinoù ebet; ho c'hoari a-vremañ a vez enrollet en ho merdeer hepken. N'en deus ket an arload Android aotre internet zoken.",
+      "faqHeading": "Goulennoù stank",
+      "faq": [
+        [
+          "Digoust eo Bare Sudoku?",
+          "Ya. Digoust penn-da-benn eo Bare Sudoku er merdeer ha war Android. Bruderezh ebet, prenadenn ebet en arload, stumm premium ebet."
+        ],
+        [
+          "Bruderezh a zo e Bare Sudoku?",
+          "N'eus ket. Na ar c'hoari web na an arload Android ne ziskouezont bruderezh, ha n'eus heulier na skript trede parti ebet."
+        ],
+        [
+          "Ezhomm am eus eus ur gont evit c'hoari?",
+          "N'eus ket. Digorit baresudoku.com ha c'hoariit. Enrollet e vez ar c'hoari en ho merdeer ent emgefre; serrit an ivinell ha kendalc'hit diwezhatoc'h."
+        ],
+        [
+          "Mont a ra Bare Sudoku en-dro hep internet?",
+          "Ya. Goude ar gwelad kentañ e vir ar merdeer ar bajenn hag he digor hep kevreadur. Ne implij morse an arload Android an internet."
+        ],
+        [
+          "Dastum a ra Bare Sudoku roadennoù?",
+          "N'eus ket. Dielfennañ ebet, kont ebet, toupinoù ebet. Ar c'hoari enrollet a chom er stokadur lec'hel eus ho merdeer hepken."
+        ],
+        [
+          "Un arload Android a zo?",
+          "Ya. Un APK {size} KB evit Android 8 ha nevesoc'h eo Bare Sudoku evit Android, hep aotre ha hep internet. Pellgargit anezhañ eus GitHub Releases."
+        ]
+      ],
+      "madeBy": "Graet gant Alparslan Selçuk Develioğlu",
+      "source": "Kod mammenn",
+      "androidSource": "Kod mammenn Android",
+      "updated": "Hizivaet",
+      "languagesLabel": "Yezhoù",
+      "ogAlt": "Logo Bare Sudoku gant ar gerioù Sudoku digoust enlinenn, hep bruderezh"
+    },
+    "oc": {
+      "title": "Bare Sudoku: sudoku gratuit en linha, sens publicitat, sens inscripcion",
+      "description": "Sudoku gratuit dins lo navegador: sens publicitat, sens compte, sens seguiment. Quatre nivèls, nòtas, anullar e indicis qu'explican la logica. Fonciona fòra linha. Tanben coma aplicacion Android de {size} Ko.",
+      "h1": "Bare Sudoku: sudoku gratuit en linha, sens publicitat, sens inscripcion",
+      "intro": "Bare Sudoku es un jòc de sudoku gratuit que fonciona dins vòstre navegador. Sens publicitat, sens compte, sens seguiment e res d'installar: dobrissètz la pagina, causissètz un nivèl e jogatz. Cada grasilha a exactament una solucion e se resòlv sonque amb la logica, e cada indici explica son rasonament. Lo jòc fonciona fòra linha e es de còdi dobèrt jos licéncia MIT.",
+      "featuresHeading": "Çò qu'avètz",
+      "features": [
+        "Quatre nivèls: aisit, mejan, dificil e expèrt",
+        "Cada grasilha a una sola solucion e demanda pas jamai de devinar",
+        "Nòtas, anullar, escafar e emplenar totas las nòtas amb un tòc",
+        "Indicis qu'explican la tecnica: singles, candidats verrolhats, parelhs e trios, X-Wing, Y-Wing, Swordfish e XYZ-Wing",
+        "Salvament automatic, mòde escur, clavièr e disposicion orizontala",
+        "Fonciona fòra linha aprèp la primièra visita, sens botiga d'aplicacions"
+      ],
+      "androidHeading": "Aplicacion Android",
+      "android": "Bare Sudoku existís tanben coma aplicacion Android nativa: version {version}, environ {size} Ko, sens permission, sens accès a Internet, Java pur sens bibliotècas. Es pas sus Google Play; telecargatz l'APK signat dempuèi GitHub Releases e installatz-lo sus Android 8 o mai recent.",
+      "androidLink": "Telecargar l'APK",
+      "privacyHeading": "Vida privada",
+      "privacy": "Bare Sudoku collècta pas cap de donada. Pas de compte, pas d'analisi, pas de cookies; vòstra partida actuala es salvada sonque dins vòstre navegador. L'aplicacion Android a pas quitament la permission Internet.",
+      "faqHeading": "Questions frequentas",
+      "faq": [
+        [
+          "Bare Sudoku es gratuit?",
+          "Òc. Bare Sudoku es entièrament gratuit dins lo navegador e sus Android. Pas de publicitat, pas de crompas dins l'aplicacion, pas de version premium."
+        ],
+        [
+          "Bare Sudoku a de publicitat?",
+          "Non. Ni lo jòc web ni l'aplicacion Android mòstran de publicitat, e i a pas de traçadors ni de scripts tèrces."
+        ],
+        [
+          "Me cal un compte per jogar?",
+          "Non. Dobrissètz baresudoku.com e jogatz. La partida es salvada automaticament dins lo navegador; tampatz l'onglet e contunhatz mai tard."
+        ],
+        [
+          "Bare Sudoku fonciona fòra linha?",
+          "Òc. Aprèp la primièra visita lo navegador garda la pagina e la dobrís sens connexion. L'aplicacion Android utiliza pas jamai Internet."
+        ],
+        [
+          "Bare Sudoku collècta de donadas?",
+          "Non. Pas d'analisi, pas de compte, pas de cookies. La partida salvada demòra sonque dins l'emmagazinatge local del navegador."
+        ],
+        [
+          "I a una aplicacion Android?",
+          "Òc. Bare Sudoku per Android es un APK de {size} Ko per Android 8 e mai recent, sens permission e sens Internet. Telecargatz-lo dempuèi GitHub Releases."
+        ]
+      ],
+      "madeBy": "Fach per Alparslan Selçuk Develioğlu",
+      "source": "Còdi font",
+      "androidSource": "Còdi font Android",
+      "updated": "Mes a jorn",
+      "languagesLabel": "Lengas",
+      "ogAlt": "Lògo de Bare Sudoku amb los mots Sudoku gratuit en linha, sens publicitat"
+    },
+    "fy": {
+      "title": "Bare Sudoku: fergees sudoku online, sûnder reklame, sûnder account",
+      "description": "Fergees sudoku yn de browser: gjin reklame, gjin account, gjin tracking. Fjouwer nivo's, notysjes, ûngedien meitsje en hints dy't de logika útlizze. Wurket offline. Ek as Android-app fan {size} KB.",
+      "h1": "Bare Sudoku: fergees sudoku online, sûnder reklame, sûnder account",
+      "intro": "Bare Sudoku is in fergees sudokuspul dat yn dyn browser draait. Gjin reklame, gjin account, gjin tracking en neat te ynstallearjen: iepenje de side, kies in nivo en spylje. Elke puzel hat krekt ien oplossing en is mei allinnich logika op te lossen, en elke hint leit syn redenearring út. It spul wurket offline en is iepen boarne ûnder de MIT-lisinsje.",
+      "featuresHeading": "Wat krijst",
+      "features": [
+        "Fjouwer nivo's: maklik, middel, dreech en ekspert",
+        "Elke puzel hat ien oplossing en freget nea om te rieden",
+        "Notysjes, ûngedien meitsje, wiskje en alle notysjes mei ien tik ynfolje",
+        "Hints dy't de technyk útlizze: singles, beskoattele kandidaten, pearen en trijetallen, X-Wing, Y-Wing, Swordfish en XYZ-Wing",
+        "Automatysk bewarje, tsjustere modus, toetseboerd en lizzende werjefte",
+        "Wurket offline nei it earste besyk, gjin app store nedich"
+      ],
+      "androidHeading": "Android-app",
+      "android": "Bare Sudoku is der ek as native Android-app: ferzje {version}, sa'n {size} KB, gjin machtigingen, gjin ynternet, suvere Java sûnder biblioteken. Net yn Google Play; download de ûndertekene APK fan GitHub Releases en ynstallearje him op Android 8 of nijer.",
+      "androidLink": "APK downloade",
+      "privacyHeading": "Privacy",
+      "privacy": "Bare Sudoku sammelet gjin gegevens. Gjin account, gjin analytics, gjin cookies; dyn aktuele spul wurdt allinnich yn dyn browser bewarre. De Android-app hat net iens ynternetmachtiging.",
+      "faqHeading": "Faak stelde fragen",
+      "faq": [
+        [
+          "Is Bare Sudoku fergees?",
+          "Ja. Bare Sudoku is hielendal fergees yn de browser en op Android. Gjin reklame, gjin oankeapen yn de app en gjin premiumferzje."
+        ],
+        [
+          "Hat Bare Sudoku reklame?",
+          "Nee. It webspul en de Android-app litte gjin reklame sjen, en der binne gjin trackers of skripts fan tredden."
+        ],
+        [
+          "Haw ik in account nedich om te spyljen?",
+          "Nee. Iepenje baresudoku.com en spylje. It spul wurdt automatysk yn de browser bewarre; slút it ljepblêd en gean letter fierder."
+        ],
+        [
+          "Wurket Bare Sudoku offline?",
+          "Ja. Nei it earste besyk bewarret de browser de side en iepenet him sûnder ferbining. De Android-app brûkt nea ynternet."
+        ],
+        [
+          "Sammelet Bare Sudoku gegevens?",
+          "Nee. Gjin analytics, gjin account, gjin cookies. It bewarre spul stiet allinnich yn de lokale opslach fan dyn browser."
+        ],
+        [
+          "Is der in Android-app?",
+          "Ja. Bare Sudoku foar Android is in APK fan {size} KB foar Android 8 en nijer, sûnder machtigingen en sûnder ynternet. Download him fan GitHub Releases."
+        ]
+      ],
+      "madeBy": "Makke troch Alparslan Selçuk Develioğlu",
+      "source": "Boarnekoade",
+      "androidSource": "Android-boarnekoade",
+      "updated": "Bywurke",
+      "languagesLabel": "Talen",
+      "ogAlt": "Bare Sudoku-logo mei de wurden Fergees sudoku online, sûnder reklame"
+    },
+    "qu": {
+      "title": "Bare Sudoku: mana qullqiyuq sudoku internetpi, mana willakuyniyuq, mana qillqakuyniyuq",
+      "description": "Mana qullqiyuq sudoku navegadorpi: mana willakuykuna, mana cuenta, mana qatipay. Tawa nivelkuna, qillqakuna, kutichiy hinaspa yuyayta sut'inchaq yanapakuna. Mana internetwan llamk'an. {size} KB Android aplikasiyunpas kan.",
+      "h1": "Bare Sudoku: mana qullqiyuq sudoku internetpi, mana willakuyniyuq, mana qillqakuyniyuq",
+      "intro": "Bare Sudoku huk mana qullqiyuq sudoku pukllaymi, navegadorniykipi purin. Mana willakuykuna, mana cuenta, mana qatipay, mana ima churanapas: paginata kichay, nivelta akllay, pukllay. Sapa puzzle huk paskayllayuqmi, yuyayllawan paskakun, sapa yanapataq imaraykuchus sut'inchan. Pukllayqa mana internetwan llamk'an, MIT lisinsiyawan kicharisqa qallariymi.",
+      "featuresHeading": "Imata chaskinki",
+      "features": [
+        "Tawa nivelkuna: facil, chawpi, sasa hinaspa yachaq",
+        "Sapa puzzle huk paskayllayuq, mana hayk'aqpas tanteay",
+        "Qillqakuna, kutichiy, pichay hinaspa huk ñit'iywan tukuy qillqakunata hunt'achiy",
+        "Tekniikata sut'inchaq yanapakuna: sapan, wichq'asqa sutichasqakuna, iskaykuna hinaspa kimsakuna, X-Wing, Y-Wing, Swordfish hinaspa XYZ-Wing",
+        "Kikinmanta waqaychay, tutayaq modo, teklado hinaspa kinray churay",
+        "Ñawpaq watukuymanta mana internetwan llamk'an, mana aplikasiyun tindata munanchu"
+      ],
+      "androidHeading": "Android aplikasiyun",
+      "android": "Bare Sudoku Android aplikasiyun hinapas kan: versiyun {version}, yaqa {size} KB, mana permisu, mana internet, ch'uya Java mana bibliotecayuq. Mana Google Playpi kanchu; GitHub Releasesmanta firmasqa APKta uraykachiy, Android 8 utaq musuqpi churay.",
+      "androidLink": "APKta uraykachiy",
+      "privacyHeading": "Pakasqa kawsay",
+      "privacy": "Bare Sudoku mana ima datukunata huñunchu. Mana cuenta, mana analitica, mana cookies; kunan pukllayniyki navegadorniykipilla waqaychakun. Android aplikasiyunqa mana internet permisuyuqpaschu.",
+      "faqHeading": "Sapa kuti tapukuykuna",
+      "faq": [
+        [
+          "Bare Sudoku mana qullqiyuqchu?",
+          "Arí. Bare Sudoku navegadorpi hinaspa Androidpi tukuy mana qullqiyuqmi. Mana willakuykuna, mana aplikasiyun ukhupi rantiy, mana premium versiyun."
+        ],
+        [
+          "Bare Sudoku willakuykunayuqchu?",
+          "Mana. Web pukllaypas Android aplikasiyunpas mana willakuykunata rikuchinchu, mana qatipaqkuna nitaq huk runakunap scriptninkuna."
+        ],
+        [
+          "Pukllanapaq cuentata munanichu?",
+          "Mana. baresudoku.com kichay, pukllay. Pukllayqa kikinmanta navegadorpi waqaychakun; tabta wichq'ay, qhipaman ruwakuy."
+        ],
+        [
+          "Bare Sudoku mana internetwan llamk'anchu?",
+          "Arí. Ñawpaq watukuymanta navegador paginata waqaychan, mana tinkuywan kichan. Android aplikasiyunqa mana hayk'aqpas internetta llamk'achinchu."
+        ],
+        [
+          "Bare Sudoku datukunata huñunchu?",
+          "Mana. Mana analitica, mana cuenta, mana cookies. Waqaychasqa pukllayqa navegadorniykip kikin waqaychananpilla kachkan."
+        ],
+        [
+          "Android aplikasiyun kanchu?",
+          "Arí. Android paq Bare Sudoku Android 8 hinaspa musuqpaq {size} KB APKmi, mana permisu, mana internet. GitHub Releasesmanta uraykachiy."
+        ]
+      ],
+      "madeBy": "Ruwaq: Alparslan Selçuk Develioğlu",
+      "source": "Qallariy kodi",
+      "androidSource": "Android qallariy kodi",
+      "updated": "Musuqyachisqa",
+      "languagesLabel": "Simikuna",
+      "ogAlt": "Bare Sudoku logo hinaspa Mana qullqiyuq sudoku internetpi, mana willakuyniyuq simikuna"
+    },
+    "gn": {
+      "title": "Bare Sudoku: sudoku rei ñandutípe, ñemomarandu'ỹre, jehai'ỹre",
+      "description": "Sudoku rei navegador-pe: ndaipóri ñemomarandu, ndaipóri cuenta, ndaipóri jehapykuehó. Irundy nivel, jehaipyre, mbojevy ha ñepytyvõ omyesakãva lógica. Omba'apo internet'ỹre. Oĩ avei Android aplicación {size} KB.",
+      "h1": "Bare Sudoku: sudoku rei ñandutípe, ñemomarandu'ỹre, jehai'ỹre",
+      "intro": "Bare Sudoku ha'e peteĩ ñembosarái sudoku rei omba'apóva nde navegador-pe. Ndaipóri ñemomarandu, ndaipóri cuenta, ndaipóri jehapykuehó ha mba'eve emoĩ hag̃ua: eipe'a pe kuatiarogue, eiporavo peteĩ nivel ha eñembosarái. Peteĩteĩ puzzle oguereko peteĩ ñemyesakã añónte ha oñemyesakã lógica rehe añónte, ha peteĩteĩ ñepytyvõ omyesakã mba'érepa. Pe ñembosarái omba'apo internet'ỹre ha ha'e código ijurujáva MIT licencia guýpe.",
+      "featuresHeading": "Mba'épa erekóta",
+      "features": [
+        "Irundy nivel: ndahasýi, mbytépe, hasy ha katupyry",
+        "Peteĩteĩ puzzle oguereko peteĩ ñemyesakã añónte ha araka'eve natekotevẽi eimo'ã",
+        "Jehaipyre, mbojevy, mboguete ha emyenyhẽ opa jehaipyre peteĩ jepokópe",
+        "Ñepytyvõ omyesakãva pe técnica: peteĩ, ojeporavóva oñemboty, mokõi ha mbohapy, X-Wing, Y-Wing, Swordfish ha XYZ-Wing",
+        "Ñeñongatu ijehegui, modo pytũ, teclado ha ñemohenda oñenóva",
+        "Omba'apo internet'ỹre pe jeike peteĩha rire, natekotevẽi tienda aplicación"
+      ],
+      "androidHeading": "Android aplicación",
+      "android": "Bare Sudoku oĩ avei Android aplicación ramo: versión {version}, {size} KB rupi, ndaipóri permiso, ndaipóri internet, Java potĩ biblioteca'ỹre. Ndaipóri Google Play-pe; emboguejy pe APK oñefirmáva GitHub Releases-gui ha emoĩ Android 8 térã pyahuvévape.",
+      "androidLink": "Emboguejy pe APK",
+      "privacyHeading": "Ñemigua",
+      "privacy": "Bare Sudoku nombyatýi mba'eveichagua datos. Ndaipóri cuenta, ndaipóri análisis, ndaipóri cookies; nde ñembosarái ko'ág̃agua oñeñongatu nde navegador-pe añónte. Android aplicación ndoguerekói jepe permiso internet.",
+      "faqHeading": "Porandu ojeporandujepíva",
+      "faq": [
+        [
+          "Bare Sudoku rei piko?",
+          "Heẽ. Bare Sudoku rei ete navegador-pe ha Android-pe. Ndaipóri ñemomarandu, ndaipóri jejogua aplicación ryepýpe, ndaipóri versión premium."
+        ],
+        [
+          "Bare Sudoku oguereko piko ñemomarandu?",
+          "Nahániri. Pe ñembosarái web ha Android aplicación nohechaukái ñemomarandu, ha ndaipóri jehapykuehóva térã script ambue tapichágui."
+        ],
+        [
+          "Aikotevẽ piko cuenta añembosarái hag̃ua?",
+          "Nahániri. Eipe'a baresudoku.com ha eñembosarái. Pe ñembosarái oñeñongatu ijehegui navegador-pe; emboty pe tab ha esegui upe rire."
+        ],
+        [
+          "Bare Sudoku omba'apo piko internet'ỹre?",
+          "Heẽ. Pe jeike peteĩha rire pe navegador oñongatu pe kuatiarogue ha oipe'a conexión'ỹre. Android aplicación ndoiporúi araka'eve internet."
+        ],
+        [
+          "Bare Sudoku ombyaty piko datos?",
+          "Nahániri. Ndaipóri análisis, ndaipóri cuenta, ndaipóri cookies. Pe ñembosarái oñeñongatúva oĩ nde navegador ñongatuha local-pe añónte."
+        ],
+        [
+          "Oĩ piko Android aplicación?",
+          "Heẽ. Bare Sudoku Android-pe g̃uarã ha'e peteĩ APK {size} KB Android 8 ha pyahuvévape g̃uarã, permiso'ỹre ha internet'ỹre. Emboguejy GitHub Releases-gui."
+        ]
+      ],
+      "madeBy": "Ojapo va'ekue Alparslan Selçuk Develioğlu",
+      "source": "Código ypykue",
+      "androidSource": "Android código ypykue",
+      "updated": "Oñembopyahu",
+      "languagesLabel": "Ñe'ẽnguéra",
+      "ogAlt": "Bare Sudoku logo ha ñe'ẽ Sudoku rei ñandutípe, ñemomarandu'ỹre"
     }
   }
 }
