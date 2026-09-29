@@ -5052,6 +5052,271 @@
       "updated": "Eguneratua",
       "languagesLabel": "Hizkuntzak",
       "ogAlt": "Bare Sudoku logoa eta Doako sudokua sarean, iragarkirik gabe hitzak"
+    },
+    "gl": {
+      "title": "Bare Sudoku: sudoku gratis en liña, sen anuncios, sen rexistro",
+      "description": "Sudoku gratis no navegador: sen anuncios, sen conta, sen seguimento. Catro niveis, notas, desfacer e pistas que explican a lóxica. Funciona sen conexión. Tamén como app para Android de {size} KB.",
+      "h1": "Bare Sudoku: sudoku gratis en liña, sen anuncios, sen rexistro",
+      "intro": "Bare Sudoku é un xogo de sudoku gratuíto que funciona no teu navegador. Sen anuncios, sen conta, sen seguimento e sen instalar nada: abre a páxina, escolle un nivel e xoga. Cada crebacabezas ten exactamente unha solución e resólvese só con lóxica, e cada pista explica o seu razoamento. O xogo funciona sen conexión e é de código aberto baixo licenza MIT.",
+      "featuresHeading": "Que inclúe",
+      "features": [
+        "Catro niveis: fácil, medio, difícil e experto",
+        "Cada crebacabezas ten unha soa solución e nunca hai que adiviñar",
+        "Notas, desfacer, borrar e encher todas as notas cun toque",
+        "Pistas que explican a técnica: singles, candidatos bloqueados, parellas e tríos, X-Wing, Y-Wing, Swordfish e XYZ-Wing",
+        "Gardado automático, modo escuro, teclado e disposición horizontal",
+        "Funciona sen conexión tras a primeira visita, sen tenda de apps"
+      ],
+      "androidHeading": "App para Android",
+      "android": "Bare Sudoku tamén é unha app nativa para Android: versión {version}, uns {size} KB, sen permisos, sen acceso a Internet, Java puro sen bibliotecas. Non está en Google Play; descarga o APK asinado desde GitHub Releases e instálao en Android 8 ou superior.",
+      "androidLink": "Descargar o APK",
+      "privacyHeading": "Privacidade",
+      "privacy": "Bare Sudoku non recolle ningún dato. Non hai conta, nin analítica, nin cookies; a partida actual só se garda no teu navegador. A app para Android nin sequera ten permiso de Internet.",
+      "faqHeading": "Preguntas frecuentes",
+      "faq": [
+        [
+          "Bare Sudoku é gratis?",
+          "Si. Bare Sudoku é totalmente gratuíto no navegador e en Android. Sen anuncios, sen compras na app e sen versión premium."
+        ],
+        [
+          "Bare Sudoku ten anuncios?",
+          "Non. Nin o xogo web nin a app para Android mostran anuncios, e non hai rastrexadores nin scripts de terceiros."
+        ],
+        [
+          "Necesito unha conta para xogar?",
+          "Non. Abre baresudoku.com e xoga. A partida gárdase soa no navegador; pecha a lapela e continúa máis tarde."
+        ],
+        [
+          "Bare Sudoku funciona sen conexión?",
+          "Si. Tras a primeira visita o navegador garda a páxina e ábrea sen conexión. A app para Android nunca usa Internet."
+        ],
+        [
+          "Bare Sudoku recolle datos?",
+          "Non. Sen analítica, sen conta, sen cookies. A partida gardada só está no almacenamento local do navegador."
+        ],
+        [
+          "Hai unha app para Android?",
+          "Si. Bare Sudoku para Android é un APK de {size} KB para Android 8 ou superior, sen permisos e sen acceso a Internet. Descárgao desde GitHub Releases."
+        ]
+      ],
+      "madeBy": "Feito por Alparslan Selçuk Develioğlu",
+      "source": "Código fonte",
+      "androidSource": "Código fonte de Android",
+      "updated": "Actualizado",
+      "languagesLabel": "Idiomas",
+      "ogAlt": "Logotipo de Bare Sudoku coas palabras Sudoku gratis en liña, sen anuncios"
+    },
+    "mt": {
+      "title": "Bare Sudoku: sudoku b'xejn online, mingħajr reklami, mingħajr reġistrazzjoni",
+      "description": "Sudoku b'xejn fil-browser: l-ebda reklami, l-ebda kont, l-ebda traċċar. Erba' livelli, noti, ħassar l-aħħar u ħjiel li jispjega l-loġika. Jaħdem offline. Anke bħala app Android ta' {size} KB.",
+      "h1": "Bare Sudoku: sudoku b'xejn online, mingħajr reklami, mingħajr reġistrazzjoni",
+      "intro": "Bare Sudoku huwa logħba tas-sudoku b'xejn li taħdem fil-browser tiegħek. L-ebda reklami, l-ebda kont, l-ebda traċċar u xejn x'tinstalla: iftaħ il-paġna, agħżel livell u ilgħab. Kull puzzle għandu eżattament soluzzjoni waħda u jissolva bil-loġika biss, u kull ħjiel jispjega r-raġunament tiegħu. Il-logħba taħdem offline u hija open source taħt il-liċenzja MIT.",
+      "featuresHeading": "X'tikseb",
+      "features": [
+        "Erba' livelli: faċli, medju, diffiċli u espert",
+        "Kull puzzle għandu soluzzjoni waħda u qatt ma jeħtieġ tbassir",
+        "Noti, ħassar l-aħħar, ħassar u imla n-noti kollha b'tokk wieħed",
+        "Ħjiel li jispjega t-teknika: singles, kandidati msakkra, pari u tlieta, X-Wing, Y-Wing, Swordfish u XYZ-Wing",
+        "Salvataġġ awtomatiku, modalità skura, tastiera u layout orizzontali",
+        "Jaħdem offline wara l-ewwel żjara, l-ebda app store meħtieġ"
+      ],
+      "androidHeading": "App Android",
+      "android": "Bare Sudoku jeżisti wkoll bħala app Android nattiva: verżjoni {version}, madwar {size} KB, l-ebda permessi, l-ebda aċċess għall-internet, Java pura mingħajr libreriji. Mhuwiex fuq Google Play; niżżel l-APK iffirmat minn GitHub Releases u installah fuq Android 8 jew aktar ġdid.",
+      "androidLink": "Niżżel l-APK",
+      "privacyHeading": "Privatezza",
+      "privacy": "Bare Sudoku ma jiġbor l-ebda data. M'hemm l-ebda kont, l-ebda analitika u l-ebda cookies; il-logħba attwali tiegħek tinżamm biss fil-browser tiegħek. L-app Android lanqas għandha permess tal-internet.",
+      "faqHeading": "Mistoqsijiet frekwenti",
+      "faq": [
+        [
+          "Bare Sudoku huwa b'xejn?",
+          "Iva. Bare Sudoku huwa kompletament b'xejn fil-browser u fuq Android. L-ebda reklami, l-ebda xiri fl-app u l-ebda verżjoni premium."
+        ],
+        [
+          "Bare Sudoku għandu reklami?",
+          "Le. La l-logħba tal-web u lanqas l-app Android ma juru reklami, u m'hemm l-ebda trackers jew scripts ta' terzi."
+        ],
+        [
+          "Għandi bżonn kont biex nilgħab?",
+          "Le. Iftaħ baresudoku.com u ilgħab. Il-logħba tinżamm awtomatikament fil-browser; agħlaq it-tab u kompli aktar tard."
+        ],
+        [
+          "Bare Sudoku jaħdem offline?",
+          "Iva. Wara l-ewwel żjara l-browser iżomm il-paġna u jiftaħha mingħajr konnessjoni. L-app Android qatt ma tuża l-internet."
+        ],
+        [
+          "Bare Sudoku jiġbor data?",
+          "Le. L-ebda analitika, l-ebda kont, l-ebda cookies. Il-logħba salvata tinsab biss fil-ħażna lokali tal-browser tiegħek."
+        ],
+        [
+          "Hemm app Android?",
+          "Iva. Bare Sudoku għal Android huwa APK ta' {size} KB għal Android 8 u aktar ġdid, mingħajr permessi u mingħajr aċċess għall-internet. Niżżlu minn GitHub Releases."
+        ]
+      ],
+      "madeBy": "Magħmul minn Alparslan Selçuk Develioğlu",
+      "source": "Kodiċi sors",
+      "androidSource": "Kodiċi sors Android",
+      "updated": "Aġġornat",
+      "languagesLabel": "Lingwi",
+      "ogAlt": "Logo ta' Bare Sudoku bil-kliem Sudoku b'xejn online, mingħajr reklami"
+    },
+    "lb": {
+      "title": "Bare Sudoku: gratis Sudoku online, ouni Reklamm, ouni Umeldung",
+      "description": "Gratis Sudoku am Browser: keng Reklamm, kee Kont, keen Tracking. Véier Niveauen, Notizen, Réckgängeg an Tipps, déi d'Logik erklären. Funktionéiert offline. Och als {size} KB Android-App.",
+      "h1": "Bare Sudoku: gratis Sudoku online, ouni Reklamm, ouni Umeldung",
+      "intro": "Bare Sudoku ass e gratis Sudoku-Spill, dat an Ärem Browser leeft. Keng Reklamm, kee Kont, keen Tracking an näischt z'installéieren: Säit opmaachen, Niveau wielen a spillen. All Rätsel huet genee eng Léisung a léisst sech nëmme mat Logik léisen, an all Tipp erkläert seng Begrënnung. D'Spill funktionéiert offline an ass Open Source ënner der MIT-Lizenz.",
+      "featuresHeading": "Wat Dir kritt",
+      "features": [
+        "Véier Niveauen: einfach, mëttel, schwéier an Expert",
+        "All Rätsel huet eng Léisung a brauch ni Roden",
+        "Notizen, Réckgängeg, Läschen an all Notizen mat engem Tipp ausfëllen",
+        "Tipps, déi d'Technik erklären: Singles, gespaart Kandidaten, Puer an Dräier, X-Wing, Y-Wing, Swordfish an XYZ-Wing",
+        "Automatesch Späicheren, donkelen Modus, Tastatur a Querformat",
+        "Funktionéiert no der éischter Visite offline, keen App Store néideg"
+      ],
+      "androidHeading": "Android-App",
+      "android": "Bare Sudoku gëtt et och als nativ Android-App: Versioun {version}, ongeféier {size} KB, keng Berechtegungen, keen Internetzougang, reng Java ouni Bibliothéiken. Et ass net op Google Play; luet den ënnerschriwwenen APK vu GitHub Releases erof an installéiert en op Android 8 oder méi nei.",
+      "androidLink": "APK eroflueden",
+      "privacyHeading": "Dateschutz",
+      "privacy": "Bare Sudoku sammelt keng Donnéeën. Et gëtt kee Kont, keng Analyse a keng Cookies; Äert aktuellt Spill gëtt nëmmen an Ärem Browser gespäichert. D'Android-App huet net emol eng Internetberechtegung.",
+      "faqHeading": "Heefeg Froen",
+      "faq": [
+        [
+          "Ass Bare Sudoku gratis?",
+          "Jo. Bare Sudoku ass am Browser an op Android komplett gratis. Keng Reklamm, keng In-App-Keef a keng Premium-Versioun."
+        ],
+        [
+          "Huet Bare Sudoku Reklamm?",
+          "Nee. Weder d'Web-Spill nach d'Android-App weisen Reklamm, an et gëtt keng Tracker oder Skripter vun Drëtten."
+        ],
+        [
+          "Brauch ech e Kont fir ze spillen?",
+          "Nee. Maacht baresudoku.com op a spillt. D'Spill gëtt automatesch am Browser gespäichert; maacht den Tab zou a fuert méi spéit weider."
+        ],
+        [
+          "Funktionéiert Bare Sudoku offline?",
+          "Jo. No der éischter Visite späichert de Browser d'Säit a mécht se ouni Verbindung op. D'Android-App benotzt ni den Internet."
+        ],
+        [
+          "Sammelt Bare Sudoku Donnéeën?",
+          "Nee. Keng Analyse, kee Kont, keng Cookies. Dat gespäichert Spill läit nëmmen am lokale Späicher vun Ärem Browser."
+        ],
+        [
+          "Gëtt et eng Android-App?",
+          "Jo. Bare Sudoku fir Android ass en {size} KB APK fir Android 8 a méi nei, ouni Berechtegungen an ouni Internetzougang. Luet en vu GitHub Releases erof."
+        ]
+      ],
+      "madeBy": "Gemaach vum Alparslan Selçuk Develioğlu",
+      "source": "Quellcode",
+      "androidSource": "Android-Quellcode",
+      "updated": "Aktualiséiert",
+      "languagesLabel": "Sproochen",
+      "ogAlt": "Bare Sudoku Logo mat de Wierder Gratis Sudoku online, ouni Reklamm"
+    },
+    "be": {
+      "title": "Bare Sudoku: бясплатны судоку анлайн, без рэкламы, без рэгістрацыі",
+      "description": "Бясплатны судоку ў браўзеры: без рэкламы, без акаўнта, без сачэння. Чатыры ўзроўні, нататкі, адмена і падказкі, якія тлумачаць логіку. Працуе афлайн. Ёсць і праграма для Android на {size} КБ.",
+      "h1": "Bare Sudoku: бясплатны судоку анлайн, без рэкламы, без рэгістрацыі",
+      "intro": "Bare Sudoku — бясплатная гульня судоку, якая працуе ў браўзеры. Без рэкламы, без акаўнта, без сачэння і без усталявання: адкрый старонку, выберы ўзровень і гуляй. Кожная галаваломка мае роўна адно рашэнне і вырашаецца толькі логікай, а кожная падказка тлумачыць свой ход разважанняў. Гульня працуе афлайн і мае адкрыты код па ліцэнзіі MIT.",
+      "featuresHeading": "Што ёсць",
+      "features": [
+        "Чатыры ўзроўні: лёгкі, сярэдні, цяжкі і эксперт",
+        "Кожная галаваломка мае адно рашэнне, адгадваць не трэба ніколі",
+        "Нататкі, адмена, сціранне і запаўненне ўсіх нататак адным дотыкам",
+        "Падказкі тлумачаць тэхніку: адзіночкі, замкнёныя кандыдаты, пары і тройкі, X-Wing, Y-Wing, Swordfish і XYZ-Wing",
+        "Аўтазахаванне, цёмная тэма, клавіятура і гарызантальная раскладка",
+        "Пасля першага візіту працуе афлайн, крама праграм не патрэбная"
+      ],
+      "androidHeading": "Праграма для Android",
+      "android": "Bare Sudoku ёсць і як натыўная праграма для Android: версія {version}, каля {size} КБ, без дазволаў, без доступу ў інтэрнэт, чыстая Java без бібліятэк. Яе няма ў Google Play; спампуй падпісаны APK са старонкі GitHub Releases і ўсталюй на Android 8 або навейшы.",
+      "androidLink": "Спампаваць APK",
+      "privacyHeading": "Прыватнасць",
+      "privacy": "Bare Sudoku не збірае даныя. Няма акаўнта, аналітыкі і cookie; бягучая гульня захоўваецца толькі ў тваім браўзеры. У праграмы для Android няма нават дазволу на інтэрнэт.",
+      "faqHeading": "Частыя пытанні",
+      "faq": [
+        [
+          "Bare Sudoku бясплатны?",
+          "Так. Bare Sudoku цалкам бясплатны ў браўзеры і на Android. Без рэкламы, без убудаваных пакупак і без прэміум-версіі."
+        ],
+        [
+          "У Bare Sudoku ёсць рэклама?",
+          "Не. Ні вэб-гульня, ні праграма для Android не паказваюць рэкламу, няма трэкераў і старонніх скрыптоў."
+        ],
+        [
+          "Ці патрэбны акаўнт, каб гуляць?",
+          "Не. Адкрый baresudoku.com і гуляй. Гульня аўтаматычна захоўваецца ў браўзеры; зачыні ўкладку і працягні пазней."
+        ],
+        [
+          "Bare Sudoku працуе афлайн?",
+          "Так. Пасля першага візіту браўзер захоўвае старонку і адкрывае яе без злучэння. Праграма для Android ніколі не выкарыстоўвае інтэрнэт."
+        ],
+        [
+          "Bare Sudoku збірае даныя?",
+          "Не. Ні аналітыкі, ні акаўнта, ні cookie. Захаваная гульня ляжыць толькі ў лакальным сховішчы браўзера."
+        ],
+        [
+          "Ёсць праграма для Android?",
+          "Так. Bare Sudoku для Android — гэта APK на {size} КБ для Android 8 і навейшых, без дазволаў і без доступу ў інтэрнэт. Спампуй яго на GitHub Releases."
+        ]
+      ],
+      "madeBy": "Аўтар: Alparslan Selçuk Develioğlu",
+      "source": "Зыходны код",
+      "androidSource": "Код Android",
+      "updated": "Абноўлена",
+      "languagesLabel": "Мовы",
+      "ogAlt": "Лагатып Bare Sudoku і надпіс Бясплатны судоку анлайн, без рэкламы"
+    },
+    "so": {
+      "title": "Bare Sudoku: sudoku bilaash ah oo online ah, xayeysiis la'aan, diiwaangelin la'aan",
+      "description": "Sudoku bilaash ah oo browserka ku jira: xayeysiis ma jiro, akoon ma jiro, dabagal ma jiro. Afar heer, qoraallo, noqosho iyo tilmaamo sharxaya caqliga. Wuxuu shaqeeyaa internet la'aan. Sidoo kale abka Android ee {size} KB.",
+      "h1": "Bare Sudoku: sudoku bilaash ah oo online ah, xayeysiis la'aan, diiwaangelin la'aan",
+      "intro": "Bare Sudoku waa ciyaar sudoku bilaash ah oo ku shaqeysa browserkaaga. Xayeysiis ma jiro, akoon ma jiro, dabagal ma jiro, waxna lama rakibayo: fur bogga, dooro heer, oo ciyaar. Halxiraale kasta wuxuu leeyahay hal xal oo keliya waxaana lagu xalliyaa caqli keliya, tilmaan kastana waxay sharaxdaa sababteeda. Ciyaartu waxay shaqeysaa internet la'aan waana il furan oo hoos timaada ruqsadda MIT.",
+      "featuresHeading": "Waxa aad helayso",
+      "features": [
+        "Afar heer: fudud, dhexdhexaad, adag iyo khabiir",
+        "Halxiraale kastaa hal xal buu leeyahay, marnaba uma baahna qiyaas",
+        "Qoraallo, noqosho, tirtirid iyo buuxinta dhammaan qoraallada hal taabasho",
+        "Tilmaamo sharxaya farsamada: kelinimo, musharraxiin xiran, laba iyo saddex, X-Wing, Y-Wing, Swordfish iyo XYZ-Wing",
+        "Kaydin otomaatig ah, qaab mugdi ah, kiiboodh iyo qaab jiifsan",
+        "Wuxuu shaqeeyaa internet la'aan booqashada koowaad kadib, dukaan abka looma baahna"
+      ],
+      "androidHeading": "Abka Android",
+      "android": "Bare Sudoku sidoo kale waa ab Android ah: nooca {version}, qiyaastii {size} KB, ogolaansho ma jiro, internet ma jiro, Java saafi ah oo aan maktabado lahayn. Kuma jiro Google Play; ka soo deji APK-ga la saxiixay GitHub Releases oo ku rakib Android 8 ama ka cusub.",
+      "androidLink": "Soo deji APK",
+      "privacyHeading": "Sirta",
+      "privacy": "Bare Sudoku ma ururiyo xog. Akoon ma jiro, falanqayn ma jirto, cookies ma jiraan; ciyaartaada hadda kaliya browserkaaga ayay ku kaydsan tahay. Abka Android xitaa ma laha ogolaanshaha internetka.",
+      "faqHeading": "Su'aalaha inta badan la weydiiyo",
+      "faq": [
+        [
+          "Bare Sudoku ma bilaash baa?",
+          "Haa. Bare Sudoku gebi ahaanba waa bilaash browserka iyo Android. Xayeysiis ma jiro, iibsi ab gudaha ah ma jiro, nooc premium ah ma jiro."
+        ],
+        [
+          "Bare Sudoku xayeysiis ma leeyahay?",
+          "Maya. Ciyaarta webka iyo abka Android midkoodna ma muujiyo xayeysiis, dabagalayaal ama qoraallo dhinac saddexaad ah ma jiraan."
+        ],
+        [
+          "Ma u baahanahay akoon si aan u ciyaaro?",
+          "Maya. Fur baresudoku.com oo ciyaar. Ciyaarta si otomaatig ah ayay browserka ugu kaydsantaa; xir tabka oo hadhow sii wad."
+        ],
+        [
+          "Bare Sudoku ma shaqeeyaa internet la'aan?",
+          "Haa. Booqashada koowaad kadib browserku wuu hayaa bogga wuxuuna furaa xiriir la'aan. Abka Android marnaba ma isticmaalo internetka."
+        ],
+        [
+          "Bare Sudoku xog ma ururiyaa?",
+          "Maya. Falanqayn ma jirto, akoon ma jiro, cookies ma jiraan. Ciyaarta la kaydiyay waxay ku jirtaa kaydka maxalliga ah ee browserkaaga oo keliya."
+        ],
+        [
+          "Ab Android ah ma jiraa?",
+          "Haa. Bare Sudoku ee Android waa APK {size} KB ah oo loogu talagalay Android 8 iyo ka cusub, ogolaansho la'aan iyo internet la'aan. Ka soo deji GitHub Releases."
+        ]
+      ],
+      "madeBy": "Waxaa sameeyay Alparslan Selçuk Develioğlu",
+      "source": "Koodhka isha",
+      "androidSource": "Koodhka isha ee Android",
+      "updated": "La cusboonaysiiyay",
+      "languagesLabel": "Luqadaha",
+      "ogAlt": "Astaanta Bare Sudoku iyo erayada Sudoku bilaash ah oo online ah, xayeysiis la'aan"
     }
   }
 }
