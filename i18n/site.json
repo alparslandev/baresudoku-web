@@ -11148,7 +11148,7 @@
       "android": "Bare Sudoku è pure n'app Android nativa: versione {version}, circa {size} KB, senza permesse, senza accesso a Internet, Java puro senza librerie. Nun sta ncopp'a Google Play: scarreca ll'APK firmato 'a GitHub Releases e installalo ncopp'a Android 8 o cchiù nuovo.",
       "androidLink": "Scarreca ll'APK",
       "privacyHeading": "Privacy",
-      "privacy": "Bare Sudoku nun accogli date. Nisciuno account, nisciuna analise, nisciuno cookie; 'a partita toja è sarvata sulo dint'ô browser tuojo. Ll'app Android nun tene manco 'o permesso 'e Internet.",
+      "privacy": "Bare Sudoku nun stipa nisciuno dato perzunale: nisciuno account, nisciuno cookie, nisciuno indirizzo IP. 'A partita toja 'e mo è sarvata sulo dint'ô browser tuojo. 'O sito tene cuntature anonime (aperture d''a paggena, partite accumminciate e fernute, livello, lengua, tipo 'e dispusitivo e sito 'e pruvenienza); 'e tutale so' pubblece ncopp'a baresudoku.com/stats/. Ll'app Android nun tene proprio nisciuno permesso 'e Internet.",
       "faqHeading": "Dimande frequente",
       "faq": [
         [
@@ -11169,7 +11169,7 @@
         ],
         [
           "Bare Sudoku accogli date?",
-          "No. Nisciuna analise, nisciuno account, nisciuno cookie. 'A partita sarvata sta sulo dint'â memoria locale d''o browser."
+          "Bare Sudoku tene sulo cuntature anonime: quanta vote 'a paggena è stata aperta e quanta partite so' state accumminciate e fernute, pe livello, lengua, tipo 'e dispusitivo e sito 'e pruvenienza. Nisciuno indirizzo IP, nisciuno cookie, nisciuno account; 'e tutale so' pubblece ncopp'a baresudoku.com/stats/. 'A partita sarvata sta sulo dint'â memoria locale d''o browser."
         ],
         [
           "Ce sta n'app Android?",
@@ -11221,7 +11221,7 @@
       "android": "Bare Sudoku el xe anca na app Android nativa: version {version}, sirca {size} KB, sensa permessi, sensa aceso a Internet, Java puro sensa łibrerie. No'l xe su Google Play: scàrega l'APK firmà da GitHub Releases e instàłało su Android 8 o pì novo.",
       "androidLink": "Scàrega l'APK",
       "privacyHeading": "Privacy",
-      "privacy": "Bare Sudoku no'l racoje dati. Nisun account, nisuna anàłixi, nisun cookie; ła to partìa ła xe salvà soło nel to browser. L'app Android no ła ga gnanca el permeso de Internet.",
+      "privacy": "Bare Sudoku no'l tien nisun dato personałe: nisun account, nisun cookie, nisun indiriso IP. Ła to partìa de deso ła xe salvà soło nel to browser. El sito el tien contadori anònimi (averture de ła pàjina, partìe scominsià e finìe, liveło, łengua, tipo de dispoxitivo e sito de provenensa); i totałi i xe pùblici su baresudoku.com/stats/. L'app Android no ła ga proprio nisun permeso de Internet.",
       "faqHeading": "Domande frequenti",
       "faq": [
         [
@@ -11242,7 +11242,7 @@
         ],
         [
           "Bare Sudoku el racoje dati?",
-          "No. Nisuna anàłixi, nisun account, nisun cookie. Ła partìa salvà ła xe soło nea memoria łocałe del browser."
+          "Bare Sudoku el tien soło contadori anònimi: quante volte ła pàjina ła xe stà verta e quante partìe łe xe stà scominsià e finìe, par liveło, łengua, tipo de dispoxitivo e sito de provenensa. Nisun indiriso IP, nisun cookie, nisun account; i totałi i xe pùblici su baresudoku.com/stats/. Ła partìa salvà ła xe soło nea memoria łocałe del browser."
         ],
         [
           "Ghe xe na app Android?",
