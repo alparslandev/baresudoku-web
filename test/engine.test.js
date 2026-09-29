@@ -130,7 +130,7 @@ test("oyun durumu: hamle, not, geri al, not doldurma, ipucu, sure, kayit", () =>
   expect(g.undo()).toBe(false);
 });
 
-test("rakam once: tusa basinca kilitlenir, dokunulan hucrelere yazilir", () => {
+test("rakam once: tusa basinca kilitlenir, dokunulan hucrelere yazilir, kilitliyken hucre secimi yoktur", () => {
   const e = new Sudoku();
   const puzzle = e.generate(0);
   const g = new Game();
@@ -143,15 +143,23 @@ test("rakam once: tusa basinca kilitlenir, dokunulan hucrelere yazilir", () => {
   expect(g.sticky).toBe(d);
   expect(g.tap(a)).toBe(true);
   expect(g.value[a]).toBe(d);
-  expect(g.selected).toBe(a);
+  expect(g.selected).toBe(NONE);
   expect(g.tap(a)).toBe(true);
   expect(g.value[a]).toBe(0);
   expect(g.tap(b)).toBe(true);
   expect(g.value[b]).toBe(d);
+  g.select(a);
+  expect(g.selected).toBe(NONE);
+  expect(g.undo()).toBe(true);
+  expect(g.value[b]).toBe(0);
+  expect(g.sticky).toBe(d);
+  expect(g.selected).toBe(NONE);
+  expect(g.tap(b)).toBe(true);
   expect(g.key(d)).toBe(false);
   expect(g.sticky).toBe(0);
   expect(g.undo()).toBe(true);
   expect(g.value[b]).toBe(0);
+  expect(g.selected).toBe(b);
   g.select(a);
   expect(g.key(d)).toBe(true);
   expect(g.value[a]).toBe(d);
@@ -159,11 +167,14 @@ test("rakam once: tusa basinca kilitlenir, dokunulan hucrelere yazilir", () => {
   expect(g.key(d)).toBe(false);
   expect(g.sticky).toBe(d);
   expect(g.value[a]).toBe(d);
+  expect(g.selected).toBe(NONE);
   expect(g.key(other)).toBe(false);
   expect(g.sticky).toBe(other);
   expect(g.value[a]).toBe(d);
   expect(g.key(other)).toBe(false);
   expect(g.sticky).toBe(0);
+  expect(g.tap(a)).toBe(false);
+  expect(g.selected).toBe(a);
   expect(g.tap(a)).toBe(false);
   expect(g.selected).toBe(NONE);
   const given = puzzle.findIndex(v => v);
@@ -171,8 +182,10 @@ test("rakam once: tusa basinca kilitlenir, dokunulan hucrelere yazilir", () => {
   expect(g.selected).toBe(given);
   expect(g.key(other)).toBe(false);
   expect(g.sticky).toBe(other);
+  expect(g.selected).toBe(NONE);
   expect(g.tap(given)).toBe(false);
   expect(g.value[given]).toBe(puzzle[given]);
+  expect(g.selected).toBe(NONE);
   g.noteMode = true;
   expect(g.tap(b)).toBe(true);
   expect(g.notes[b]).toBe(bit(other));
@@ -181,6 +194,11 @@ test("rakam once: tusa basinca kilitlenir, dokunulan hucrelere yazilir", () => {
   g.noteMode = false;
   expect(g.key(other)).toBe(false);
   expect(g.sticky).toBe(0);
+  expect(g.key(d)).toBe(false);
+  expect(g.sticky).toBe(d);
+  expect(g.hint(e)).toBe(true);
+  expect(g.sticky).toBe(0);
+  expect(g.selected).toBe(g.hintCell);
   g.select(NONE);
   expect(g.key(d)).toBe(false);
   expect(g.sticky).toBe(d);
