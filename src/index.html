@@ -1,17 +1,42 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{LANG}}" dir="{{DIR}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Bare Sudoku</title>
-<meta name="description" content="Ad-free Sudoku you can play right here: four levels, notes, hints that explain the logic. No tracking, no sign-up, works offline. Also a 25 KB Android app.">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Alparslan Selçuk Develioğlu">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
-<link rel="canonical" href="https://baresudoku.com/">
+<link rel="canonical" href="{{URL}}">
+{{ALTERNATES}}
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="license" href="https://github.com/alparslandev/baresudoku-web/blob/main/LICENSE">
+<link rel="author" href="https://devdiscipline.com/about">
+<link rel="me" href="https://github.com/alparslandev">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bare Sudoku">
+<meta property="og:locale" content="{{OG_LOCALE}}">
+{{OG_ALTERNATES}}
+<meta property="og:url" content="{{URL}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:image" content="https://baresudoku.com/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{OG_ALT}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="https://baresudoku.com/og.png">
+<meta name="twitter:image:alt" content="{{OG_ALT}}">
+<script type="application/ld+json">{{JSONLD}}</script>
 <style>
 {{CSS}}
 </style>
@@ -35,9 +60,10 @@
 <div id="keys"></div>
 <footer id="foot"><a id="android" href="https://github.com/alparslandev/baresudoku/releases/latest/download/baresudoku.apk"></a> · <a id="source" href="https://github.com/alparslandev/baresudoku-web"></a></footer>
 </main>
+{{CONTENT}}
 <div id="overlay" hidden>
 <div id="panel" role="dialog" aria-modal="true">
-<h1 id="panel-title"></h1>
+<h2 id="panel-title"></h2>
 <p id="panel-sub"></p>
 <button type="button" data-level="0"></button>
 <button type="button" data-level="1"></button>
@@ -50,9 +76,7 @@
 </div>
 <noscript><p style="text-align:center;padding:24px">Bare Sudoku needs JavaScript to run.</p></noscript>
 <script>
-const I18N = {{I18N}};
-{{ENGINE}}
-{{APP}}
+{{SCRIPT}}
 </script>
 </body>
 </html>
