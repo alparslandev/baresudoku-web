@@ -77,7 +77,8 @@
       "androidSource": "Android source",
       "updated": "Updated",
       "languagesLabel": "Languages",
-      "ogAlt": "Bare Sudoku logo with the words Free Sudoku online, no ads"
+      "ogAlt": "Bare Sudoku logo with the words Free Sudoku online, no ads",
+      "privacyExtra": "This policy covers the web game at baresudoku.com, the Android app and the iOS app. None of them connects to the internet for the game, shows ads, uses analytics or asks for personal data. Questions: open an issue on GitHub."
     },
     "tr": {
       "title": "Bare Sudoku: Ücretsiz Online Sudoku, Reklamsız, Üyeliksiz",
@@ -156,7 +157,8 @@
       "androidSource": "Android kaynağı",
       "updated": "Güncelleme",
       "languagesLabel": "Diller",
-      "ogAlt": "Bare Sudoku logosu ve Ücretsiz online sudoku, reklamsız yazısı"
+      "ogAlt": "Bare Sudoku logosu ve Ücretsiz online sudoku, reklamsız yazısı",
+      "privacyExtra": "Bu politika baresudoku.com'daki web oyununu, Android uygulamasını ve iOS uygulamasını kapsar. Hiçbiri oyun için internete bağlanmaz, reklam göstermez, analitik kullanmaz ve kişisel veri istemez. Sorular için GitHub'da bir konu açabilirsin."
     },
     "az": {
       "title": "Bare Sudoku: pulsuz onlayn sudoku, reklamsız, qeydiyyatsız",

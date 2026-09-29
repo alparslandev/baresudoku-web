@@ -30,6 +30,7 @@ OG_IMAGE = SITE + "/og.png"
 LICENSE_URL = WEB_REPO + "/blob/main/LICENSE"
 ANDROID_LICENSE_URL = ANDROID_REPO + "/blob/main/LICENSE"
 APK_FALLBACK = ("1.2", 24972)
+APP_STORE_URL = ""
 SAME_AS = [
     "https://github.com/alparslandev",
     "https://www.linkedin.com/in/alparslandev/",
@@ -71,6 +72,18 @@ def write(dist, rel, text):
 
 def url_of(code):
     return SITE + i18n.path(code)
+
+
+def privacy_path(code):
+    return i18n.path(code) + "privacy/"
+
+
+def privacy_url(code):
+    return SITE + privacy_path(code)
+
+
+def store_link():
+    return ' · <a href="%s">App Store</a>' % APP_STORE_URL if APP_STORE_URL else ""
 
 
 def og_locale(code):
@@ -137,8 +150,8 @@ def content(code, entry, languages, version, size, lastmod, web):
     parts.append("<h2>%s</h2>" % f(entry["faqHeading"]))
     for question, answer in entry["faq"]:
         parts.append("<details><summary>%s</summary><p>%s</p></details>" % (f(question), f(answer)))
-    parts.append('<p class="meta">%s · Web %s · Android %s · <a href="%s">%s</a> · <a href="%s">%s</a> · %s <time datetime="%s">%s</time></p>' % (
-        f(entry["madeBy"]), web, version, WEB_REPO, f(entry["source"]), ANDROID_REPO, f(entry["androidSource"]), f(entry["updated"]), lastmod, lastmod))
+    parts.append('<p class="meta">%s · Web %s · Android %s%s · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · %s <time datetime="%s">%s</time></p>' % (
+        f(entry["madeBy"]), web, version, store_link(), WEB_REPO, f(entry["source"]), ANDROID_REPO, f(entry["androidSource"]), privacy_path(code), f(entry["privacyHeading"]), f(entry["updated"]), lastmod, lastmod))
     parts.append('<nav aria-label="%s">%s</nav>' % (f(entry["languagesLabel"]), language_links(languages)))
     parts.append("</section>")
     return "\n".join(parts)
@@ -260,11 +273,47 @@ def robots_file():
     return "\n".join(lines) + "\n"
 
 
+def alternate_links(languages, resolve, tag):
+    links = [tag % (c, resolve(c)) for c in languages]
+    links.append(tag % ("x-default", resolve("en")))
+    return links
+
+
 def sitemap_file(languages, lastmod):
-    links = "".join('<xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (c, url_of(c)) for c in languages)
-    links += '<xhtml:link rel="alternate" hreflang="x-default" href="%s/"/>' % SITE
-    urls = "".join("<url><loc>%s</loc><lastmod>%s</lastmod>%s</url>\n" % (url_of(c), lastmod, links) for c in languages)
+    tag = '<xhtml:link rel="alternate" hreflang="%s" href="%s"/>'
+    urls = ""
+    for resolve in (url_of, privacy_url):
+        links = "".join(alternate_links(languages, resolve, tag))
+        urls += "".join("<url><loc>%s</loc><lastmod>%s</lastmod>%s</url>\n" % (resolve(c), lastmod, links) for c in languages)
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s</urlset>\n' % urls
+
+
+def privacy_page(template, css, code, entry, languages, lastmod):
+    def f(text):
+        return esc(text)
+    body = ["<p>%s</p>" % f(entry["privacy"])]
+    if entry.get("privacyExtra"):
+        body.append("<p>%s</p>" % f(entry["privacyExtra"]))
+    body.append('<p><a href="%s/issues">GitHub</a></p>' % WEB_REPO)
+    values = {
+        "{{LANG}}": code,
+        "{{DIR}}": "rtl" if code in i18n.RTL else "ltr",
+        "{{TITLE}}": f(entry["privacyHeading"]) + " · " + NAME,
+        "{{DESCRIPTION}}": f(entry["privacy"]),
+        "{{URL}}": privacy_url(code),
+        "{{ALTERNATES}}": "\n".join(alternate_links(languages, privacy_url, '<link rel="alternate" hreflang="%s" href="%s">')),
+        "{{CSS}}": css,
+        "{{HEADING}}": f(entry["privacyHeading"]),
+        "{{BODY}}": "\n".join(body),
+        "{{HOME}}": i18n.path(code),
+        "{{LASTMOD}}": lastmod,
+        "{{LANGUAGES_LABEL}}": f(entry["languagesLabel"]),
+        "{{LANGUAGE_LINKS}}": "".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (privacy_path(c), c, c, esc(languages[c][0])) for c in languages),
+    }
+    out = template
+    for key, value in values.items():
+        out = out.replace(key, value)
+    return out
 
 
 def llms_file(site, languages, version, size, lastmod, web):
@@ -294,6 +343,7 @@ def llms_file(site, languages, version, size, lastmod, web):
         "## Optional",
         "- [Full text](%s/llms-full.txt): the complete page text in English and Turkish, plus a one-line summary in every language" % SITE,
         "- [Author](%s): %s" % (AUTHOR_URL, AUTHOR),
+        "- [Privacy policy](%s): no data collected, no account, no analytics" % privacy_url("en"),
     ]
     return "\n".join(lines) + "\n"
 
@@ -381,6 +431,9 @@ def main():
         write(dist, os.path.join(i18n.path(code).strip("/"), "index.html"), out)
     if len(hashes) != 1:
         raise SystemExit("script govdesi sayfalar arasinda farkli, CSP hash tek olmali")
+    privacy_template = read("src", "privacy.html")
+    for code in languages:
+        write(dist, os.path.join(privacy_path(code).strip("/"), "index.html"), privacy_page(privacy_template, css, code, site[code], languages, lastmod))
     not_found = read("src", "404.html").replace("{{CSS}}", css).replace("{{LANGUAGE_LINKS}}", language_links(languages))
     write(dist, "404.html", not_found)
     write(dist, "sw.js", read("src", "sw.js").replace("{{HASH}}", digest.hexdigest()[:10]))
@@ -396,7 +449,7 @@ def main():
     write(dist, os.path.join(".well-known", "security.txt"), security_file(expires))
     write(dist, indexnow.KEY + ".txt", indexnow.KEY)
     check_placeholders(dist)
-    print("dist hazir: %d sayfa, sayfa basina ~%d bayt, web %s, Android %s (%d KB), guncelleme %s" % (len(languages), total // len(languages), web, version, size, lastmod))
+    print("dist hazir: %d dil sayfasi + gizlilik sayfalari, sayfa basina ~%d bayt, web %s, Android %s (%d KB), guncelleme %s" % (len(languages), total // len(languages), web, version, size, lastmod))
 
 
 if __name__ == "__main__":
