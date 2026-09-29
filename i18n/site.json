@@ -7498,7 +7498,7 @@
       "android": "Bare Sudoku ekzistas ankaŭ kiel indiĝena Android-aplikaĵo: versio {version}, ĉirkaŭ {size} KB, neniuj permesoj, neniu retaliro, pura Java sen bibliotekoj. Ĝi ne estas en Google Play; elŝutu la subskribitan APK el GitHub Releases kaj instalu ĝin en Android 8 aŭ pli nova.",
       "androidLink": "Elŝuti la APK",
       "privacyHeading": "Privateco",
-      "privacy": "Bare Sudoku kolektas neniujn datumojn. Estas nek konto, nek analizo, nek kuketoj; via nuna ludo konserviĝas nur en via retumilo. La Android-aplikaĵo eĉ ne havas interretan permeson.",
+      "privacy": "Bare Sudoku konservas neniujn personajn datumojn: nek konton, nek kuketojn, nek IP-adresojn. Via nuna ludo konserviĝas nur en via retumilo. La retejo tenas anonimajn nombrilojn (malfermoj de la paĝo, komencitaj kaj finitaj ludoj, nivelo, lingvo, tipo de aparato kaj la retejo, de kiu vi venis); la sumoj estas publikaj ĉe baresudoku.com/stats/. La Android-aplikaĵo eĉ ne havas interretan permeson.",
       "faqHeading": "Oftaj demandoj",
       "faq": [
         [
@@ -7519,7 +7519,7 @@
         ],
         [
           "Ĉu Bare Sudoku kolektas datumojn?",
-          "Ne. Neniu analizo, neniu konto, neniuj kuketoj. La konservita ludo estas nur en la loka memoro de via retumilo."
+          "Bare Sudoku tenas nur anonimajn nombrilojn: kiom da fojoj la paĝo estis malfermita kaj kiom da ludoj estis komencitaj kaj finitaj, laŭ nivelo, lingvo, tipo de aparato kaj la retejo, de kiu vi venis. Neniu IP-adreso, neniuj kuketoj, neniu konto; la sumoj estas publikaj ĉe baresudoku.com/stats/. La konservita ludo estas nur en la loka memoro de via retumilo."
         ],
         [
           "Ĉu ekzistas Android-aplikaĵo?",
@@ -7571,7 +7571,7 @@
       "android": "Bare Sudoku etiam ut applicatio Android nativa exstat: versio {version}, circa {size} KB, nullae permissiones, nullus aditus retis, Java pura sine bibliothecis. In Google Play non est; APK subscriptum e GitHub Releases depone et in Android 8 vel recentiore institue.",
       "androidLink": "APK depone",
       "privacyHeading": "Secretum",
-      "privacy": "Bare Sudoku nulla data colligit. Nulla ratio, nulla analysis, nulla crustula; ludus tuus praesens tantum in navigatro tuo servatur. Applicatio Android ne permissionem quidem retis habet.",
+      "privacy": "Bare Sudoku nulla data personalia servat: nulla ratio, nulla crustula, nullae inscriptiones IP. Ludus tuus praesens tantum in navigatro tuo servatur. Situs numeratores anonymos tenet (quotiens pagina aperta sit, ludi incepti et confecti, gradus, lingua, genus instrumenti et situs unde venisti); summae publicae sunt apud baresudoku.com/stats/. Applicatio Android ne permissionem quidem retis habet.",
       "faqHeading": "Quaestiones frequentes",
       "faq": [
         [
@@ -7592,7 +7592,7 @@
         ],
         [
           "Colligitne Bare Sudoku data?",
-          "Non. Nulla analysis, nulla ratio, nulla crustula. Ludus servatus tantum in repositorio locali navigatri tui est."
+          "Bare Sudoku tantum numeratores anonymos tenet: quotiens pagina aperta sit et quot ludi incepti et confecti sint, per gradum, linguam, genus instrumenti et situm unde venisti. Nulla inscriptio IP, nulla crustula, nulla ratio; summae publicae sunt apud baresudoku.com/stats/. Ludus servatus tantum in repositorio locali navigatri tui est."
         ],
         [
           "Estne applicatio Android?",
@@ -7644,7 +7644,7 @@
       "android": "Bare Sudoku איז אויך דאָ ווי אַ געבוירענע Android אַפּ: ווערסיע {version}, אַרום {size} KB, קיין דערלויבענישן, קיין אינטערנעט, ריינע Java אָן ביבליאָטעקן. עס איז נישט אויף Google Play; לאָד אַראָפּ דעם אונטערגעשריבענעם APK פֿון GitHub Releases און אינסטאַליר אים אויף Android 8 אָדער נײַער.",
       "androidLink": "אַראָפּלאָדן APK",
       "privacyHeading": "פּריוואַטקייט",
-      "privacy": "Bare Sudoku זאַמלט קיין דאַטן. עס איז נישטאָ קיין קאָנטע, קיין אַנאַליטיק, קיין קיכעלעך; דײַן איצטיקע שפּיל ווערט אָפּגעהיט נאָר אין דײַן בלעטערער. די Android אַפּ האָט אַפֿילו נישט קיין אינטערנעט דערלויבעניש.",
+      "privacy": "Bare Sudoku היט נישט אָפּ קיין פּערזענלעכע דאַטן: קיין קאָנטע, קיין קיכעלעך, קיין IP־אַדרעסן. דײַן איצטיקע שפּיל ווערט אָפּגעהיט נאָר אין דײַן בלעטערער. די וועבזײַט האַלט אַנאָנימע ציילערס (בלאַט־עפֿענונגען, אָנגעהויבענע און פֿאַרענדיקטע שפּילן, ניוואָ, שפּראַך, סאָרט מכשיר און די וועבזײַט פֿון וואַנען מען איז געקומען); די סך־הכּלען זײַנען עפֿנטלעך אויף baresudoku.com/stats/. די Android אַפּ האָט בכלל נישט קיין אינטערנעט דערלויבעניש.",
       "faqHeading": "אָפֿט געפֿרעגטע פֿראַגעס",
       "faq": [
         [
@@ -7665,7 +7665,7 @@
         ],
         [
           "זאַמלט Bare Sudoku דאַטן?",
-          "ניין. קיין אַנאַליטיק, קיין קאָנטע, קיין קיכעלעך. די אָפּגעהיטע שפּיל איז נאָר אין דעם לאָקאַלן זכּרון פֿון דײַן בלעטערער."
+          "Bare Sudoku האַלט נאָר אַנאָנימע ציילערס: ווי פֿיל מאָל דער בלאַט איז געעפֿנט געוואָרן און ווי פֿיל שפּילן זײַנען אָנגעהויבן און פֿאַרענדיקט געוואָרן, לויט ניוואָ, שפּראַך, סאָרט מכשיר און דער וועבזײַט פֿון וואַנען מען איז געקומען. קיין IP־אַדרעס, קיין קיכעלעך, קיין קאָנטע; די סך־הכּלען זײַנען עפֿנטלעך אויף baresudoku.com/stats/. די אָפּגעהיטע שפּיל איז נאָר אין דעם לאָקאַלן זכּרון פֿון דײַן בלעטערער."
         ],
         [
           "איז דאָ אַן Android אַפּ?",
@@ -7717,7 +7717,7 @@
       "android": "Bare Sudoku د اصلي Android اپ په توګه هم شته: نسخه {version}، شاوخوا {size} KB، اجازه نشته، انټرنېټ نشته، خالص Java بې کتابتونونو. دا په Google Play کې نشته؛ لاسلیک شوی APK له GitHub Releases ډاونلوډ کړئ او په Android 8 یا نوي کې نصب کړئ.",
       "androidLink": "APK ډاونلوډ",
       "privacyHeading": "محرمیت",
-      "privacy": "Bare Sudoku هېڅ معلومات نه راټولوي. حساب، شننه او کوکي نشته؛ ستاسو اوسنۍ لوبه یوازې ستاسو په براوزر کې خوندي کېږي. د Android اپ حتی د انټرنېټ اجازه هم نه لري.",
+      "privacy": "Bare Sudoku هېڅ شخصي معلومات نه ساتي: حساب، کوکي او IP پتې نشته. ستاسو اوسنۍ لوبه یوازې ستاسو په براوزر کې خوندي کېږي. ویبپاڼه بې نومه شمېرونکي ساتي (د پاڼې پرانیستل، پیل شوې او بشپړې شوې لوبې، کچه، ژبه، د وسیلې ډول او هغه سایټ چې ترې راغلي یاست)؛ مجموعې په baresudoku.com/stats/ کې د هر چا لپاره ښکاره دي. د Android اپ هېڅ د انټرنېټ اجازه نه لري.",
       "faqHeading": "ډېر پوښتل شوې پوښتنې",
       "faq": [
         [
@@ -7738,7 +7738,7 @@
         ],
         [
           "Bare Sudoku معلومات راټولوي؟",
-          "نه. شننه، حساب، کوکي نشته. خوندي شوې لوبه یوازې ستاسو د براوزر په ځایي ذخیره کې ده."
+          "Bare Sudoku یوازې بې نومه شمېرونکي ساتي: پاڼه څو ځله پرانیستل شوې او څومره لوبې پیل او بشپړې شوې، د کچې، ژبې، د وسیلې ډول او هغه سایټ له مخې چې ترې راغلي یاست. IP پته، کوکي او حساب نشته؛ مجموعې په baresudoku.com/stats/ کې د هر چا لپاره ښکاره دي. خوندي شوې لوبه یوازې ستاسو د براوزر په ځایي ذخیره کې ده."
         ],
         [
           "د Android اپ شته؟",
@@ -7790,7 +7790,7 @@
       "android": "Bare Sudoku wekî sepaneke Android jî heye: guhertoya {version}, nêzîkî {size} KB, bê destûr, bê înternet, Javaya paqij bê pirtûkxane. Li Google Play tune; APKya îmzekirî ji GitHub Releases dakêşe û li ser Android 8 an nûtir saz bike.",
       "androidLink": "APK dakêşe",
       "privacyHeading": "Nepenîtî",
-      "privacy": "Bare Sudoku tu daneyan berhev nake. Hesab, analîtîk û cookie tune; lîstika te ya niha tenê di geroka te de tê tomarkirin. Sepana Android destûra înternetê jî nîne.",
+      "privacy": "Bare Sudoku tu daneyên kesane hilnagire: hesab, cookie û navnîşanên IP tune. Lîstika te ya niha tenê di geroka te de tê tomarkirin. Malper jimêrkerên anonîm digire (vekirina rûpelê, lîstikên destpêkirî û qedandî, ast, ziman, cureyê amûrê û malpera ku tu jê hatiyî); hejmarên giştî li baresudoku.com/stats/ ji her kesî re vekirî ne. Sepana Android qet destûra înternetê nîne.",
       "faqHeading": "Pirsên pir tên pirsîn",
       "faq": [
         [
@@ -7811,7 +7811,7 @@
         ],
         [
           "Bare Sudoku daneyan berhev dike?",
-          "Na. Analîtîk, hesab, cookie tune. Lîstika tomarkirî tenê di bîra herêmî ya geroka te de ye."
+          "Bare Sudoku tenê jimêrkerên anonîm digire: rûpel çend caran hatiye vekirin û çend lîstik hatine destpêkirin û qedandin, li gorî ast, ziman, cureyê amûrê û malpera ku tu jê hatiyî. Navnîşana IP, cookie û hesab tune; hejmarên giştî li baresudoku.com/stats/ ji her kesî re vekirî ne. Lîstika tomarkirî tenê di bîra herêmî ya geroka te de ye."
         ],
         [
           "Sepana Android heye?",
@@ -7863,7 +7863,7 @@
       "android": "Bare Sudoku وەک ئەپێکی Android یش هەیە: وەشانی {version}، نزیکەی {size} KB، بێ ڕێگەپێدان، بێ ئینتەرنێت، Java ی پاک بێ کتێبخانە. لە Google Play دا نییە؛ APK ی واژووکراو لە GitHub Releases دابگرە و لەسەر Android 8 یان نوێتر دایبمەزرێنە.",
       "androidLink": "داگرتنی APK",
       "privacyHeading": "تایبەتێتی",
-      "privacy": "Bare Sudoku هیچ داتایەک کۆناکاتەوە. هەژمار، شیکاری و کووکی نییە؛ یاریی ئێستات تەنها لە وێبگەڕەکەتدا پاشەکەوت دەکرێت. ئەپی Android تەنانەت ڕێگەپێدانی ئینتەرنێتیشی نییە.",
+      "privacy": "Bare Sudoku هیچ داتایەکی کەسی هەڵناگرێت: هەژمار، کووکی و ناونیشانی IP نییە. یاریی ئێستات تەنها لە وێبگەڕەکەتدا پاشەکەوت دەکرێت. ماڵپەڕەکە ژمێرەری نەناسراو هەڵدەگرێت (کردنەوەی پەڕە، یاریی دەستپێکراو و تەواوکراو، ئاست، زمان، جۆری ئامێر و ئەو ماڵپەڕەی لێوەی هاتوویت)؛ کۆی گشتییەکان لە baresudoku.com/stats/ بۆ هەمووان ئاشکرایە. ئەپی Android هەر ڕێگەپێدانی ئینتەرنێتی نییە.",
       "faqHeading": "پرسیارە باوەکان",
       "faq": [
         [
@@ -7884,7 +7884,7 @@
         ],
         [
           "Bare Sudoku داتا کۆدەکاتەوە؟",
-          "نەخێر. شیکاری، هەژمار، کووکی نییە. یاریی پاشەکەوتکراو تەنها لە بیرگەی ناوخۆیی وێبگەڕەکەتدایە."
+          "Bare Sudoku تەنها ژمێرەری نەناسراو هەڵدەگرێت: پەڕەکە چەند جار کراوەتەوە و چەند یاری دەستپێکراوە و تەواو کراوە، بەپێی ئاست، زمان، جۆری ئامێر و ئەو ماڵپەڕەی لێوەی هاتوویت. ناونیشانی IP، کووکی و هەژمار نییە؛ کۆی گشتییەکان لە baresudoku.com/stats/ بۆ هەمووان ئاشکرایە. یاریی پاشەکەوتکراو تەنها لە بیرگەی ناوخۆیی وێبگەڕەکەتدایە."
         ],
         [
           "ئەپی Android هەیە؟",
@@ -7936,7 +7936,7 @@
       "android": "Bare Sudoku هڪ نيٽو Android ايپ طور پڻ موجود آهي: ورزن {version}، لڳ ڀڳ {size} KB، ڪا اجازت ناهي، انٽرنيٽ ناهي، بغير لائبريري خالص Java. اهو Google Play تي ناهي؛ GitHub Releases مان دستخط ٿيل APK ڊائونلوڊ ڪريو ۽ Android 8 يا نئين تي انسٽال ڪريو.",
       "androidLink": "APK ڊائونلوڊ ڪريو",
       "privacyHeading": "رازداري",
-      "privacy": "Bare Sudoku ڪوبه ڊيٽا گڏ نٿو ڪري. نه اڪائونٽ، نه تجزيو، نه ڪوڪيز؛ توهان جي موجوده راند رڳو توهان جي برائوزر ۾ محفوظ ٿئي ٿي. Android ايپ کي انٽرنيٽ جي اجازت به ناهي.",
+      "privacy": "Bare Sudoku ڪابه ذاتي ڊيٽا محفوظ نٿو ڪري: نه اڪائونٽ، نه ڪوڪيز، نه IP ايڊريس. توهان جي موجوده راند رڳو توهان جي برائوزر ۾ محفوظ ٿئي ٿي. سائيٽ گمنام ڪائونٽر رکي ٿي (صفحو کلڻ، شروع ٿيل ۽ پوريون ٿيل رانديون، ليول، ٻولي، ڊوائيس جو قسم ۽ اها سائيٽ جتان توهان آيا آهيو)؛ ڪل انگ baresudoku.com/stats/ تي سڀني لاءِ عام آهن. Android ايپ کي انٽرنيٽ جي اجازت بلڪل ناهي.",
       "faqHeading": "اڪثر پڇيا ويندڙ سوال",
       "faq": [
         [
@@ -7957,7 +7957,7 @@
         ],
         [
           "ڇا Bare Sudoku ڊيٽا گڏ ڪري ٿو؟",
-          "نه. نه تجزيو، نه اڪائونٽ، نه ڪوڪيز. محفوظ ٿيل راند رڳو توهان جي برائوزر جي لوڪل اسٽوريج ۾ رهي ٿي."
+          "Bare Sudoku رڳو گمنام ڪائونٽر رکي ٿو: صفحو ڪيترا ڀيرا کليو ۽ ڪيتريون رانديون شروع ۽ پوريون ٿيون، ليول، ٻولي، ڊوائيس جي قسم ۽ اچڻ واري سائيٽ موجب. نه IP ايڊريس، نه ڪوڪيز، نه اڪائونٽ؛ ڪل انگ baresudoku.com/stats/ تي سڀني لاءِ عام آهن. محفوظ ٿيل راند رڳو توهان جي برائوزر جي لوڪل اسٽوريج ۾ رهي ٿي."
         ],
         [
           "ڇا Android ايپ آهي؟",
@@ -8009,7 +8009,7 @@
       "android": "Bare Sudoku Android апп хэлбэрээр ч бий: хувилбар {version}, ойролцоогоор {size} KB, зөвшөөрөлгүй, интернетгүй, номын сангүй цэвэр Java. Google Play дээр байхгүй; GitHub Releases-ээс гарын үсэгтэй APK татаж Android 8 буюу түүнээс шинэ дээр суулгана уу.",
       "androidLink": "APK татах",
       "privacyHeading": "Нууцлал",
-      "privacy": "Bare Sudoku ямар ч өгөгдөл цуглуулдаггүй. Бүртгэл, аналитик, күүки байхгүй; таны одоогийн тоглоом зөвхөн таны хөтөч дээр хадгалагдана. Android апп нь интернетийн зөвшөөрөл ч байхгүй.",
+      "privacy": "Bare Sudoku хувийн мэдээлэл хадгалдаггүй: бүртгэл, күүки, IP хаяг байхгүй. Таны одоогийн тоглоом зөвхөн таны хөтөч дээр хадгалагдана. Сайт нэргүй тоолуур хөтөлдөг (хуудас нээсэн тоо, эхэлсэн болон дуусгасан тоглоом, түвшин, хэл, төхөөрөмжийн төрөл, аль сайтаас ирсэн); нийт дүн нь baresudoku.com/stats/ хаягт нийтэд нээлттэй. Android апп нь интернетийн зөвшөөрөл огт байхгүй.",
       "faqHeading": "Түгээмэл асуултууд",
       "faq": [
         [
@@ -8030,7 +8030,7 @@
         ],
         [
           "Bare Sudoku өгөгдөл цуглуулдаг уу?",
-          "Үгүй. Аналитик, бүртгэл, күүки байхгүй. Хадгалсан тоглоом зөвхөн хөтчийн локал санд байна."
+          "Bare Sudoku зөвхөн нэргүй тоолуур хөтөлдөг: хуудсыг хэдэн удаа нээсэн, хэдэн тоглоом эхэлж дууссан, түвшин, хэл, төхөөрөмжийн төрөл, аль сайтаас ирснээр. IP хаяг, күүки, бүртгэл байхгүй; нийт дүн нь baresudoku.com/stats/ хаягт нийтэд нээлттэй. Хадгалсан тоглоом зөвхөн хөтчийн локал санд байна."
         ],
         [
           "Android апп байгаа юу?",
@@ -8082,7 +8082,7 @@
       "android": "He taupānga Android hoki a Bare Sudoku: putanga {version}, tata ki te {size} KB, kāore he whakaaetanga, kāore he ipurangi, Java parakore kāore he whare pukapuka. Kāore i Google Play; tikiakea te APK kua hainatia mai i GitHub Releases, ka tāuta ki Android 8, ki tētahi hou ake rānei.",
       "androidLink": "Tikiake APK",
       "privacyHeading": "Tūmataiti",
-      "privacy": "Kāore a Bare Sudoku e kohi raraunga. Kāore he pūkete, kāore he tātari, kāore he pihikete; ka tiakina tō kēmu o nāianei i tō pūtirotiro anake. Kāore he whakaaetanga ipurangi o te taupānga Android.",
+      "privacy": "Kāore a Bare Sudoku e pupuri raraunga whaiaro: kāore he pūkete, kāore he pihikete, kāore he wāhitau IP. Ka tiakina tō kēmu o nāianei i tō pūtirotiro anake. Ka pupuri te pae tukutuku i ngā tatau ingoakore (ngā whakatuwheratanga whārangi, ngā kēmu i tīmata, i oti hoki, te taumata, te reo, te momo pūrere me te pae i ahu mai ai koe); kei baresudoku.com/stats/ ngā tapeke, e wātea ana ki te katoa. Kāore rawa he whakaaetanga ipurangi o te taupānga Android.",
       "faqHeading": "Pātai auau",
       "faq": [
         [
@@ -8103,7 +8103,7 @@
         ],
         [
           "Ka kohi raraunga a Bare Sudoku?",
-          "Kāo. Kāore he tātari, kāore he pūkete, kāore he pihikete. Kei te rokiroki ā-rohe o tō pūtirotiro anake te kēmu kua tiakina."
+          "Ko ngā tatau ingoakore anake tā Bare Sudoku e pupuri ai: e hia ngā wā i whakatuwheratia ai te whārangi, e hia ngā kēmu i tīmata, i oti hoki, i runga i te taumata, te reo, te momo pūrere me te pae i ahu mai ai koe. Kāore he wāhitau IP, kāore he pihikete, kāore he pūkete; kei baresudoku.com/stats/ ngā tapeke, e wātea ana ki te katoa. Kei te rokiroki ā-rohe o tō pūtirotiro anake te kēmu kua tiakina."
         ],
         [
           "He taupānga Android?",
@@ -8155,7 +8155,7 @@
       "android": "E iai fo'i Bare Sudoku o se polokalama Android: fa'aliliuga {version}, pe tusa o le {size} KB, leai ni fa'atagaga, leai se initaneti, Java mamā e aunoa ma faletusi. E lē o iai i le Google Play; la'u mai le APK ua sainia mai le GitHub Releases ma fa'apipi'i i le Android 8 po'o se fou.",
       "androidLink": "La'u mai le APK",
       "privacyHeading": "Le puipuiga o fa'amatalaga",
-      "privacy": "E lē aoina e Bare Sudoku ni fa'amatalaga. Leai se teugatupe, leai se au'ili'iliga, leai ni kuki; e fa'asao lau ta'aloga o loo iai nei i lau su'esu'ega na'o ia. E leai fo'i se fa'atagaga initaneti a le polokalama Android.",
+      "privacy": "E lē teuina e Bare Sudoku ni fa'amatalaga patino: leai se teugatupe, leai ni kuki, leai ni tuatusi IP. E fa'asao lau ta'aloga o loo iai nei i lau su'esu'ega na'o ia. E tausia e le saite ni faitauga e leai ni igoa (le tatalaina o le itulau, ta'aloga na amata ma mae'a, le tulaga, le gagana, le ituaiga masini ma le saite na e sau mai ai); o aofa'iga e mafai ona va'ai i ai tagata uma i le baresudoku.com/stats/. E matuā leai lava se fa'atagaga initaneti a le polokalama Android.",
       "faqHeading": "Fesili e masani ona fesiligia",
       "faq": [
         [
@@ -8176,7 +8176,7 @@
         ],
         [
           "E aoina e Bare Sudoku ni fa'amatalaga?",
-          "Leai. Leai se au'ili'iliga, leai se teugatupe, leai ni kuki. O le ta'aloga ua fa'asao e na'o le teuina fa'alotoifale o lau su'esu'ega."
+          "Na'o faitauga e leai ni igoa e tausia e Bare Sudoku: pe fa'afia ona tatala le itulau ma pe fia ta'aloga na amata ma mae'a, e tusa ai ma le tulaga, le gagana, le ituaiga masini ma le saite na e sau mai ai. Leai se tuatusi IP, leai ni kuki, leai se teugatupe; o aofa'iga e mafai ona va'ai i ai tagata uma i le baresudoku.com/stats/. O le ta'aloga ua fa'asao e na'o le teuina fa'alotoifale o lau su'esu'ega."
         ],
         [
           "E iai se polokalama Android?",
@@ -8228,7 +8228,7 @@
       "android": "ʻOku ʻi ai foki ʻa Bare Sudoku ko ha polokalama Android: paaki {version}, ofi ki he {size} KB, ʻikai ha ngofua, ʻikai ha ʻinitaneti, Java maʻa taʻe ha laipeli. ʻOku ʻikai ʻi he Google Play; ʻomi e APK kuo fakamoʻoniʻi mei he GitHub Releases pea fokotuʻu ʻi he Android 8 pe foʻou ange.",
       "androidLink": "ʻOmi e APK",
       "privacyHeading": "Fakapulipuli",
-      "privacy": "ʻOku ʻikai tānaki ʻe Bare Sudoku ha fakamatala. ʻIkai ha ʻakauni, ʻikai ha ʻanalaiso, ʻikai ha kuki; ʻoku tauhi pē hoʻo vaʻinga lolotonga ʻi hoʻo polokalama kumi. ʻOku ʻikai foki ha ngofua ʻinitaneti ʻa e polokalama Android.",
+      "privacy": "ʻOku ʻikai tauhi ʻe Bare Sudoku ha fakamatala fakafoʻituitui: ʻikai ha ʻakauni, ʻikai ha kuki, ʻikai ha tuʻasila IP. ʻOku tauhi pē hoʻo vaʻinga lolotonga ʻi hoʻo polokalama kumi. ʻOku tauhi ʻe he saiti ha ngaahi lau taʻehingoa (fakaava ʻo e peesi, ngaahi vaʻinga naʻe kamata mo ʻosi, tuʻunga, lea, faʻahinga meʻangāue mo e saiti naʻa ke haʻu mei ai); ʻoku ʻatā ki he kakai kotoa ʻa e ngaahi fakakātoa ʻi he baresudoku.com/stats/. ʻOku ʻikai ʻaupito ha ngofua ʻinitaneti ʻa e polokalama Android.",
       "faqHeading": "Ngaahi fehuʻi ʻoku faʻa ʻeke",
       "faq": [
         [
@@ -8249,7 +8249,7 @@
         ],
         [
           "ʻOku tānaki ʻe Bare Sudoku ha fakamatala?",
-          "ʻIkai. ʻIkai ha ʻanalaiso, ʻikai ha ʻakauni, ʻikai ha kuki. ʻOku ʻi he tauhiʻanga fakalotofonua pē ʻo hoʻo polokalama kumi e vaʻinga kuo tauhi."
+          "Ko e ngaahi lau taʻehingoa pē ʻoku tauhi ʻe Bare Sudoku: naʻe fakaava tuʻo fiha ʻa e peesi pea fiha ʻa e ngaahi vaʻinga naʻe kamata mo ʻosi, fakatatau ki he tuʻunga, lea, faʻahinga meʻangāue mo e saiti naʻa ke haʻu mei ai. ʻIkai ha tuʻasila IP, ʻikai ha kuki, ʻikai ha ʻakauni; ʻoku ʻatā ki he kakai kotoa ʻa e ngaahi fakakātoa ʻi he baresudoku.com/stats/. ʻOku ʻi he tauhiʻanga fakalotofonua pē ʻo hoʻo polokalama kumi e vaʻinga kuo tauhi."
         ],
         [
           "ʻOku ʻi ai ha polokalama Android?",
@@ -8301,7 +8301,7 @@
       "android": "He polokalamu Android kekahi ʻo Bare Sudoku: mana {version}, ma kahi o {size} KB, ʻaʻohe ʻae, ʻaʻohe pūnaewele, Java maʻemaʻe me ka waihona ʻole. ʻAʻole ma Google Play; e hoʻoiho i ka APK i kau inoa ʻia mai GitHub Releases a hoʻokomo ma Android 8 a i ʻole hou aʻe.",
       "androidLink": "Hoʻoiho i ka APK",
       "privacyHeading": "Pilikino",
-      "privacy": "ʻAʻole hōʻiliʻili ʻo Bare Sudoku i ka ʻikepili. ʻAʻohe moʻokāki, ʻaʻohe loiloi, ʻaʻohe kuki; mālama ʻia kāu pāʻani o kēia manawa ma kāu polokalamu kele wale nō. ʻAʻohe ʻae pūnaewele o ka polokalamu Android.",
+      "privacy": "ʻAʻole mālama ʻo Bare Sudoku i ka ʻikepili pilikino: ʻaʻohe moʻokāki, ʻaʻohe kuki, ʻaʻohe helu wahi IP. Mālama ʻia kāu pāʻani o kēia manawa ma kāu polokalamu kele wale nō. Mālama ka pūnaewele i nā helu inoa ʻole (ka wehe ʻana i ka ʻaoʻao, nā pāʻani i hoʻomaka a i pau, ka pae, ka ʻōlelo, ke ʻano hāmeʻa a me ka pūnaewele āu i hele mai ai); ʻike ʻia nā huina e ka lehulehu ma baresudoku.com/stats/. ʻAʻohe loa ʻae pūnaewele o ka polokalamu Android.",
       "faqHeading": "Nā nīnau pinepine",
       "faq": [
         [
@@ -8322,7 +8322,7 @@
         ],
         [
           "Hōʻiliʻili anei ʻo Bare Sudoku i ka ʻikepili?",
-          "ʻAʻole. ʻAʻohe loiloi, ʻaʻohe moʻokāki, ʻaʻohe kuki. Aia ka pāʻani i mālama ʻia ma ka waihona kūloko o kāu polokalamu kele wale nō."
+          "Nā helu inoa ʻole wale nō kā Bare Sudoku e mālama ai: ʻehia manawa i wehe ʻia ai ka ʻaoʻao a ʻehia pāʻani i hoʻomaka a i pau, ma ka pae, ka ʻōlelo, ke ʻano hāmeʻa a me ka pūnaewele āu i hele mai ai. ʻAʻohe helu wahi IP, ʻaʻohe kuki, ʻaʻohe moʻokāki; ʻike ʻia nā huina e ka lehulehu ma baresudoku.com/stats/. Aia ka pāʻani i mālama ʻia ma ka waihona kūloko o kāu polokalamu kele wale nō."
         ],
         [
           "He polokalamu Android anei?",
@@ -8374,7 +8374,7 @@
       "android": "Bare Sudoku e tiko tale ga me iyaya Android: itukutuku {version}, rauta ni {size} KB, sega na veivakadonui, sega na walesi, Java savasava ka sega na vale ni vola. E sega ena Google Play; lavetaka na APK sa sainitaki mai na GitHub Releases ka vakatuvatuvai ena Android 8 se vou cake.",
       "androidLink": "Lavetaka na APK",
       "privacyHeading": "Vakatabui",
-      "privacy": "Bare Sudoku e sega ni kumuna e dua na itukutuku. Sega na akaude, sega na dikevi, sega na kuki; na nomu qito ni gauna oqo e maroroi ga ena nomu browser. Na iyaya Android e sega tale ga ni tiko kina na veivakadonui ni walesi.",
+      "privacy": "Bare Sudoku e sega ni maroroya e dua na itukutuku vakataki iko: sega na akaude, sega na kuki, sega na IP address. Na nomu qito ni gauna oqo e maroroi ga ena nomu browser. Na saiti e maroroya na iwiliwili tawayaca (na kena dolavi na tabana, na qito e tekivu ka vakaotii, na ivakatagedegede, na vosa, na mataqali misini kei na saiti o lako mai kina); na iwiliwili taucoko e rawa ni raica na tamata kece ena baresudoku.com/stats/. Na iyaya Android e sega sara ga ni tiko kina na veivakadonui ni walesi.",
       "faqHeading": "Taro e dau tarogi wasoma",
       "faq": [
         [
@@ -8395,7 +8395,7 @@
         ],
         [
           "E kumuna na itukutuku na Bare Sudoku?",
-          "Sega. Sega na dikevi, sega na akaude, sega na kuki. Na qito sa maroroi e tiko ga ena imaroroi ni nomu browser."
+          "Na iwiliwili tawayaca ga e maroroya na Bare Sudoku: e vica na gauna e dolavi kina na tabana kei na vica na qito e tekivu ka vakaotii, me vaka na ivakatagedegede, na vosa, na mataqali misini kei na saiti o lako mai kina. Sega na IP address, sega na kuki, sega na akaude; na iwiliwili taucoko e rawa ni raica na tamata kece ena baresudoku.com/stats/. Na qito sa maroroi e tiko ga ena imaroroi ni nomu browser."
         ],
         [
           "E tiko na iyaya Android?",
@@ -8447,7 +8447,7 @@
       "android": "Bare Sudoku ନେଟିଭ୍ Android ଆପ୍ ଭାବରେ ମଧ୍ୟ ଅଛି: ସଂସ୍କରଣ {version}, ପ୍ରାୟ {size} KB, ଅନୁମତି ନାହିଁ, ଇଣ୍ଟରନେଟ୍ ନାହିଁ, ଲାଇବ୍ରେରୀ ବିନା ଶୁଦ୍ଧ Java। ଏହା Google Play ରେ ନାହିଁ; GitHub Releases ରୁ ସ୍ୱାକ୍ଷରିତ APK ଡାଉନଲୋଡ୍ କରି Android 8 କିମ୍ବା ନୂଆରେ ଇନଷ୍ଟଲ୍ କରନ୍ତୁ।",
       "androidLink": "APK ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
       "privacyHeading": "ଗୋପନୀୟତା",
-      "privacy": "Bare Sudoku କୌଣସି ଡାଟା ସଂଗ୍ରହ କରେ ନାହିଁ। ଆକାଉଣ୍ଟ, ଆନାଲିଟିକ୍ସ, କୁକି ନାହିଁ; ଆପଣଙ୍କ ବର୍ତ୍ତମାନ ଖେଳ କେବଳ ଆପଣଙ୍କ ବ୍ରାଉଜରରେ ସେଭ୍ ହୁଏ। Android ଆପ୍‌ର ଇଣ୍ଟରନେଟ୍ ଅନୁମତି ମଧ୍ୟ ନାହିଁ।",
+      "privacy": "Bare Sudoku କୌଣସି ବ୍ୟକ୍ତିଗତ ଡାଟା ରଖେ ନାହିଁ: ଆକାଉଣ୍ଟ, କୁକି, IP ଠିକଣା ନାହିଁ। ଆପଣଙ୍କ ବର୍ତ୍ତମାନ ଖେଳ କେବଳ ଆପଣଙ୍କ ବ୍ରାଉଜରରେ ସେଭ୍ ହୁଏ। ସାଇଟ୍ ବେନାମୀ କାଉଣ୍ଟର ରଖେ (ପୃଷ୍ଠା ଖୋଲିବା, ଆରମ୍ଭ ଓ ଶେଷ ହୋଇଥିବା ଖେଳ, ସ୍ତର, ଭାଷା, ଡିଭାଇସ୍ ପ୍ରକାର ଏବଂ କେଉଁ ସାଇଟରୁ ଆସିଛନ୍ତି); ମୋଟ ସଂଖ୍ୟା baresudoku.com/stats/ ରେ ସମସ୍ତଙ୍କ ପାଇଁ ଖୋଲା ଅଛି। Android ଆପ୍‌ର ଆଦୌ ଇଣ୍ଟରନେଟ୍ ଅନୁମତି ନାହିଁ।",
       "faqHeading": "ବାରମ୍ବାର ପଚରାଯାଉଥିବା ପ୍ରଶ୍ନ",
       "faq": [
         [
@@ -8468,7 +8468,7 @@
         ],
         [
           "Bare Sudoku ଡାଟା ସଂଗ୍ରହ କରେ କି?",
-          "ନାହିଁ। ଆନାଲିଟିକ୍ସ, ଆକାଉଣ୍ଟ, କୁକି ନାହିଁ। ସେଭ୍ ହୋଇଥିବା ଖେଳ କେବଳ ଆପଣଙ୍କ ବ୍ରାଉଜରର ଲୋକାଲ୍ ଷ୍ଟୋରେଜରେ ରହେ।"
+          "Bare Sudoku କେବଳ ବେନାମୀ କାଉଣ୍ଟର ରଖେ: ପୃଷ୍ଠା କେତେ ଥର ଖୋଲା ହୋଇଛି ଏବଂ କେତେ ଖେଳ ଆରମ୍ଭ ଓ ଶେଷ ହୋଇଛି, ସ୍ତର, ଭାଷା, ଡିଭାଇସ୍ ପ୍ରକାର ଏବଂ କେଉଁ ସାଇଟରୁ ଆସିଛନ୍ତି ଅନୁସାରେ। IP ଠିକଣା, କୁକି, ଆକାଉଣ୍ଟ ନାହିଁ; ମୋଟ ସଂଖ୍ୟା baresudoku.com/stats/ ରେ ସମସ୍ତଙ୍କ ପାଇଁ ଖୋଲା ଅଛି। ସେଭ୍ ହୋଇଥିବା ଖେଳ କେବଳ ଆପଣଙ୍କ ବ୍ରାଉଜରର ଲୋକାଲ୍ ଷ୍ଟୋରେଜରେ ରହେ।"
         ],
         [
           "Android ଆପ୍ ଅଛି କି?",
@@ -8520,7 +8520,7 @@
       "android": "Bare Sudoku নেটিভ Android এপ হিচাপেও আছে: সংস্কৰণ {version}, প্ৰায় {size} KB, অনুমতি নাই, ইণ্টাৰনেট নাই, লাইব্ৰেৰীবিহীন শুদ্ধ Java। ই Google Play ত নাই; GitHub Releases ৰ পৰা স্বাক্ষৰিত APK ডাউনল'ড কৰি Android 8 বা নতুনত ইনষ্টল কৰক।",
       "androidLink": "APK ডাউনল'ড কৰক",
       "privacyHeading": "গোপনীয়তা",
-      "privacy": "Bare Sudoku য়ে কোনো তথ্য সংগ্ৰহ নকৰে। একাউণ্ট, বিশ্লেষণ, কুকি নাই; আপোনাৰ বৰ্তমান খেল কেৱল আপোনাৰ ব্ৰাউজাৰত ছেভ হয়। Android এপৰ ইণ্টাৰনেট অনুমতিও নাই।",
+      "privacy": "Bare Sudoku য়ে কোনো ব্যক্তিগত তথ্য নাৰাখে: একাউণ্ট, কুকি, IP ঠিকনা নাই। আপোনাৰ বৰ্তমান খেল কেৱল আপোনাৰ ব্ৰাউজাৰত ছেভ হয়। ছাইটটোৱে বেনামী কাউণ্টাৰ ৰাখে (পৃষ্ঠা খোলা, আৰম্ভ আৰু শেষ হোৱা খেল, স্তৰ, ভাষা, ডিভাইচৰ ধৰণ আৰু কোনটো ছাইটৰ পৰা অহা); মুঠ সংখ্যা baresudoku.com/stats/ ত সকলোৰে বাবে মুকলি। Android এপৰ ইণ্টাৰনেট অনুমতি একেবাৰেই নাই।",
       "faqHeading": "সঘনাই সোধা প্ৰশ্ন",
       "faq": [
         [
@@ -8541,7 +8541,7 @@
         ],
         [
           "Bare Sudoku য়ে তথ্য সংগ্ৰহ কৰে নে?",
-          "নকৰে। বিশ্লেষণ, একাউণ্ট, কুকি নাই। ছেভ কৰা খেল কেৱল আপোনাৰ ব্ৰাউজাৰৰ স্থানীয় ষ্ট'ৰেজত থাকে।"
+          "Bare Sudoku য়ে কেৱল বেনামী কাউণ্টাৰ ৰাখে: পৃষ্ঠাটো কিমানবাৰ খোলা হৈছে আৰু কিমান খেল আৰম্ভ আৰু শেষ হৈছে, স্তৰ, ভাষা, ডিভাইচৰ ধৰণ আৰু কোনটো ছাইটৰ পৰা অহা অনুসৰি। IP ঠিকনা, কুকি, একাউণ্ট নাই; মুঠ সংখ্যা baresudoku.com/stats/ ত সকলোৰে বাবে মুকলি। ছেভ কৰা খেল কেৱল আপোনাৰ ব্ৰাউজাৰৰ স্থানীয় ষ্ট'ৰেজত থাকে।"
         ],
         [
           "Android এপ আছে নে?",
@@ -8593,7 +8593,7 @@
       "android": "Bare Sudoku ނޭޓިވް Android އެޕެއްގެ ގޮތުގައިވެސް ހުރޭ: ވަރޝަން {version}، ގާތްގަނޑަކަށް {size} KB، ހުއްދައެއް ނެތް، އިންޓަނެޓެއް ނެތް، ލައިބްރަރީއެއް ނެތް ސާފު Java. Google Play ގައި ނެތް؛ GitHub Releases އިން ސޮއިކުރެވިފައިވާ APK ޑައުންލޯޑުކޮށް Android 8 ނުވަތަ އައު ވަރޝަނަކަށް އިންސްޓޯލްކުރޭ.",
       "androidLink": "APK ޑައުންލޯޑުކުރޭ",
       "privacyHeading": "ޕްރައިވަސީ",
-      "privacy": "Bare Sudoku އެއްވެސް ޑޭޓާއެއް އެއްނުކުރޭ. އެކައުންޓެއް، އެނަލިޓިކްސްއެއް، ކުކީއެއް ނެތް؛ ތިބާގެ މިހާރުގެ ކުޅުން ހަމައެކަނި ތިބާގެ ބްރައުޒަރުގައި ސޭވްވޭ. Android އެޕަށް އިންޓަނެޓް ހުއްދަވެސް ނެތް.",
+      "privacy": "Bare Sudoku އެއްވެސް ޒާތީ ޑޭޓާއެއް ރައްކާނުކުރޭ: އެކައުންޓެއް، ކުކީއެއް، IP އެޑްރެހެއް ނެތް. ތިބާގެ މިހާރުގެ ކުޅުން ހަމައެކަނި ތިބާގެ ބްރައުޒަރުގައި ސޭވްވޭ. ސައިޓުން ބަލަހައްޓަނީ ނަން ނޭނގޭ ގުނުންތަކެއް (ސަފުހާ ހުޅުވުނު އަދަދު، ފެށި އަދި ނިންމި ކުޅުންތައް، ލެވެލް، ބަސް، ޑިވައިސްގެ ބާވަތް އަދި ކޮން ސައިޓަކުން އައިކަން)؛ ޖުމްލަތައް baresudoku.com/stats/ ގައި އެންމެންނަށް ފެންނާނެ. Android އެޕަށް އިންޓަނެޓް ހުއްދަ އެއްގޮތަކަށްވެސް ނެތް.",
       "faqHeading": "އާންމުކޮށް ކުރެވޭ ސުވާލުތައް",
       "faq": [
         [
@@ -8614,7 +8614,7 @@
         ],
         [
           "Bare Sudoku ޑޭޓާ އެއްކުރޭތަ؟",
-          "ނޫން. އެނަލިޓިކްސްއެއް، އެކައުންޓެއް، ކުކީއެއް ނެތް. ސޭވްކުރި ކުޅުން ހަމައެކަނި ތިބާގެ ބްރައުޒަރުގެ ލޯކަލް ސްޓޯރޭޖުގައި ހުރޭ."
+          "Bare Sudoku ބަލަހައްޓަނީ ހަމައެކަނި ނަން ނޭނގޭ ގުނުންތަކެއް: ސަފުހާ ހުޅުވުނީ ކިތައް ފަހަރުކަން އަދި ފެށި އަދި ނިންމީ ކިތައް ކުޅުންކަން، ލެވެލް، ބަސް، ޑިވައިސްގެ ބާވަތް އަދި އައި ސައިޓަށް ބަލައިގެން. IP އެޑްރެހެއް، ކުކީއެއް، އެކައުންޓެއް ނެތް؛ ޖުމްލަތައް baresudoku.com/stats/ ގައި އެންމެންނަށް ފެންނާނެ. ސޭވްކުރި ކުޅުން ހަމައެކަނި ތިބާގެ ބްރައުޒަރުގެ ލޯކަލް ސްޓޯރޭޖުގައި ހުރޭ."
         ],
         [
           "Android އެޕެއް ހުރޭތަ؟",
@@ -8666,7 +8666,7 @@
       "android": "Ang Bare Sudoku usa usab ka native nga Android app: bersyon {version}, mga {size} KB, walay permiso, walay internet, puro nga Java nga walay library. Wala kini sa Google Play; i-download ang pinirmahan nga APK gikan sa GitHub Releases ug i-install sa Android 8 o mas bag-o.",
       "androidLink": "I-download ang APK",
       "privacyHeading": "Privacy",
-      "privacy": "Ang Bare Sudoku wala magkolekta og data. Walay account, walay analytics, walay cookies; ang imong kasamtangang dula gi-save lamang sa imong browser. Ang Android app wala gani permiso sa internet.",
+      "privacy": "Ang Bare Sudoku wala magtipig og personal nga data: walay account, walay cookies, walay IP address. Ang imong kasamtangang dula gi-save lamang sa imong browser. Nagtipig ang site og anonymous nga mga counter (pag-abli sa page, mga dula nga gisugdan ug nahuman, level, pinulongan, matang sa device ug ang site nga gigikanan); ang mga total makita sa tanan sa baresudoku.com/stats/. Ang Android app wala gayoy permiso sa internet.",
       "faqHeading": "Kanunay nga gipangutana",
       "faq": [
         [
@@ -8687,7 +8687,7 @@
         ],
         [
           "Nagkolekta ba og data ang Bare Sudoku?",
-          "Wala. Walay analytics, walay account, walay cookies. Ang gi-save nga dula anaa lamang sa local storage sa imong browser."
+          "Anonymous nga mga counter lamang ang gitipigan sa Bare Sudoku: pila ka beses giablihan ang page ug pila ka dula ang gisugdan ug nahuman, sumala sa level, pinulongan, matang sa device ug sa site nga gigikanan. Walay IP address, walay cookies, walay account; ang mga total makita sa tanan sa baresudoku.com/stats/. Ang gi-save nga dula anaa lamang sa local storage sa imong browser."
         ],
         [
           "Aduna bay Android app?",
@@ -8739,7 +8739,7 @@
       "android": "Bare Sudoku ogé aya salaku aplikasi Android asli: vérsi {version}, kira-kira {size} KB, tanpa idin, tanpa internét, Java murni tanpa pustaka. Teu aya di Google Play; undeur APK nu geus ditandatanganan ti GitHub Releases jeung pasang dina Android 8 atawa nu leuwih anyar.",
       "androidLink": "Undeur APK",
       "privacyHeading": "Privasi",
-      "privacy": "Bare Sudoku teu ngumpulkeun data naon waé. Taya akun, analitik, atawa cookie; kaulinan anjeun ayeuna ngan disimpen dina browser anjeun. Aplikasi Android malah teu boga idin internét.",
+      "privacy": "Bare Sudoku teu nyimpen data pribadi: taya akun, taya cookie, taya alamat IP. Kaulinan anjeun ayeuna ngan disimpen dina browser anjeun. Situs nyimpen itungan anonim (bukaan kaca, kaulinan nu dimimitian jeung réngsé, tingkat, basa, jinis alat, jeung situs asal); jumlahna bisa ditingali ku saha waé di baresudoku.com/stats/. Aplikasi Android sama sakali teu boga idin internét.",
       "faqHeading": "Patarosan nu sering ditaroskeun",
       "faq": [
         [
@@ -8760,7 +8760,7 @@
         ],
         [
           "Bare Sudoku ngumpulkeun data?",
-          "Henteu. Taya analitik, akun, atawa cookie. Kaulinan nu disimpen ngan aya dina panyimpenan lokal browser anjeun."
+          "Bare Sudoku ngan nyimpen itungan anonim: sabaraha kali kaca dibuka jeung sabaraha kaulinan nu dimimitian jeung réngsé, dumasar tingkat, basa, jinis alat, jeung situs asal. Taya alamat IP, taya cookie, taya akun; jumlahna bisa ditingali ku saha waé di baresudoku.com/stats/. Kaulinan nu disimpen ngan aya dina panyimpenan lokal browser anjeun."
         ],
         [
           "Aya aplikasi Android?",
@@ -8812,7 +8812,7 @@
       "android": "Bare Sudoku e boetse e teng e le sesebelisoa sa Android: mofuta {version}, hoo e ka bang {size} KB, ha ho litumello, ha ho inthanete, Java e hloekileng ntle le lilaebrari. Ha e eo ho Google Play; khoasolla APK e saenneng ho GitHub Releases 'me u e kenye ho Android 8 kapa e ncha.",
       "androidLink": "Khoasolla APK",
       "privacyHeading": "Lekunutu",
-      "privacy": "Bare Sudoku ha e bokelle data. Ha ho akhaonto, ha ho tlhahlobo, ha ho li-cookie; papali ea hau ea hona joale e bolokoa sebatling sa hau feela. Sesebelisoa sa Android ha se na le tumello ea inthanete.",
+      "privacy": "Bare Sudoku ha e boloke data ea botho: ha ho akhaonto, ha ho li-cookie, ha ho liaterese tsa IP. Papali ea hau ea hona joale e bolokoa sebatling sa hau feela. Webosaete e boloka lipalo tse se nang mabitso (ho buloa ha leqephe, lipapali tse qalileng le tse felileng, boemo, puo, mofuta oa mochine le webosaete eo u tsoang ho eona); likakaretso li bulehetse bohle ho baresudoku.com/stats/. Sesebelisoa sa Android ha se na tumello ea inthanete ho hang.",
       "faqHeading": "Lipotso tse botsoang hangata",
       "faq": [
         [
@@ -8833,7 +8833,7 @@
         ],
         [
           "Na Bare Sudoku e bokella data?",
-          "Che. Ha ho tlhahlobo, ha ho akhaonto, ha ho li-cookie. Papali e bolokiloeng e polokelong ea lehae ea sebatli sa hau feela."
+          "Bare Sudoku e boloka lipalo tse se nang mabitso feela: leqephe le butsoe hakae le hore na lipapali tse kae li qalile le ho fela, ho ea ka boemo, puo, mofuta oa mochine le webosaete eo u tsoang ho eona. Ha ho aterese ea IP, ha ho li-cookie, ha ho akhaonto; likakaretso li bulehetse bohle ho baresudoku.com/stats/. Papali e bolokiloeng e polokelong ea lehae ea sebatli sa hau feela."
         ],
         [
           "Na ho na le sesebelisoa sa Android?",
@@ -8885,7 +8885,7 @@
       "android": "Bare Sudoku iripowo seAndroid app: vhezheni {version}, ingangoita {size} KB, hapana mvumo, hapana internet, Java chaiyo isina maraibhurari. Haipo paGoogle Play; tora APK yakasainwa kubva kuGitHub Releases woisa paAndroid 8 kana itsva.",
       "androidLink": "Tora APK",
       "privacyHeading": "Kuvanzika",
-      "privacy": "Bare Sudoku haiunganidzi data. Hapana akaundi, hapana ongororo, hapana makuki; mutambo wako wazvino unochengetwa mubrowser yako chete. Android app haina kana mvumo yeinternet.",
+      "privacy": "Bare Sudoku haichengeti data yemunhu: hapana akaundi, hapana makuki, hapana kero dzeIP. Mutambo wako wazvino unochengetwa mubrowser yako chete. Saiti inochengeta zviverengo zvisina mazita (kuvhurwa kwepeji, mitambo yakatangwa neyakapedzwa, danho, mutauro, rudzi rwemudziyo nesaiti yawabva); huwandu hwacho hwose hunoonekwa nevose pa baresudoku.com/stats/. Android app haina zvachose mvumo yeinternet.",
       "faqHeading": "Mibvunzo inowanzobvunzwa",
       "faq": [
         [
@@ -8906,7 +8906,7 @@
         ],
         [
           "Bare Sudoku inounganidza data here?",
-          "Kwete. Hapana ongororo, hapana akaundi, hapana makuki. Mutambo wakachengetwa uri muchengetedzo yemunharaunda yebrowser yako chete."
+          "Bare Sudoku inochengeta zviverengo zvisina mazita chete: peji yakavhurwa kangani uye mitambo mingani yakatangwa ikapedzwa, zvichienderana nedanho, mutauro, rudzi rwemudziyo nesaiti yawabva. Hapana kero yeIP, hapana makuki, hapana akaundi; huwandu hwacho hwose hunoonekwa nevose pa baresudoku.com/stats/. Mutambo wakachengetwa uri muchengetedzo yemunharaunda yebrowser yako chete."
         ],
         [
           "Pane Android app here?",
@@ -8958,7 +8958,7 @@
       "android": "Bare Sudoku iboneka kandi nka porogaramu ya Android: verisiyo {version}, hafi {size} KB, nta ruhushya, nta interineti, Java isukuye nta bubiko. Ntiri kuri Google Play; kuramo APK yashyizweho umukono kuri GitHub Releases maze uyishyire kuri Android 8 cyangwa nshya.",
       "androidLink": "Kuramo APK",
       "privacyHeading": "Ubuzima bwite",
-      "privacy": "Bare Sudoku ntikusanya amakuru. Nta konti, nta isesengura, nta cookies; umukino wawe w'ubu ubikwa muri mushakisha yawe gusa. Porogaramu ya Android ntifite n'uruhushya rwa interineti.",
+      "privacy": "Bare Sudoku ntibika amakuru bwite: nta konti, nta cookies, nta aderesi ya IP. Umukino wawe w'ubu ubikwa muri mushakisha yawe gusa. Urubuga rubika imibare itagira amazina (inshuro urupapuro rwafunguwe, imikino yatangiye n'iyarangiye, urwego, ururimi, ubwoko bw'igikoresho n'urubuga wavuyeho); ibiteranyo bigaragarira bose kuri baresudoku.com/stats/. Porogaramu ya Android nta ruhushya rwa interineti na ruto ifite.",
       "faqHeading": "Ibibazo bikunze kubazwa",
       "faq": [
         [
@@ -8979,7 +8979,7 @@
         ],
         [
           "Bare Sudoku ikusanya amakuru?",
-          "Oya. Nta isesengura, nta konti, nta cookies. Umukino wabitswe uri mu bubiko bwa mushakisha yawe gusa."
+          "Bare Sudoku ibika imibare itagira amazina gusa: inshuro urupapuro rwafunguwe n'umubare w'imikino yatangiye ikarangira, hakurikijwe urwego, ururimi, ubwoko bw'igikoresho n'urubuga wavuyeho. Nta aderesi ya IP, nta cookies, nta konti; ibiteranyo bigaragarira bose kuri baresudoku.com/stats/. Umukino wabitswe uri mu bubiko bwa mushakisha yawe gusa."
         ],
         [
           "Hari porogaramu ya Android?",
@@ -9031,7 +9031,7 @@
       "android": "Misy koa Bare Sudoku ho rindranasa Android: kinova {version}, manodidina ny {size} KB, tsy misy alalana, tsy misy aterineto, Java madio tsy misy tranomboky. Tsy ao amin'ny Google Play izy; alao ny APK voasonia avy amin'ny GitHub Releases ary apetraho amin'ny Android 8 na vaovao kokoa.",
       "androidLink": "Alao ny APK",
       "privacyHeading": "Fiainana manokana",
-      "privacy": "Tsy manangona angona ny Bare Sudoku. Tsy misy kaonty, tsy misy famakafakana, tsy misy cookies; ao amin'ny mpitety tranonkalanao ihany no voatahiry ny lalaonao ankehitriny. Tsy manana alalana aterineto akory ny rindranasa Android.",
+      "privacy": "Tsy mitahiry angona manokana ny Bare Sudoku: tsy misy kaonty, tsy misy cookies, tsy misy adiresy IP. Ao amin'ny mpitety tranonkalanao ihany no voatahiry ny lalaonao ankehitriny. Mitana isa tsy misy anarana ny tranonkala (ny fanokafana ny pejy, ny lalao natomboka sy vita, ny ambaratonga, ny fiteny, ny karazana fitaovana ary ny tranonkala niaviana); azon'ny rehetra jerena ao amin'ny baresudoku.com/stats/ ny fitambarany. Tsy manana alalana aterineto mihitsy ny rindranasa Android.",
       "faqHeading": "Fanontaniana matetika",
       "faq": [
         [
@@ -9052,7 +9052,7 @@
         ],
         [
           "Manangona angona ve ny Bare Sudoku?",
-          "Tsia. Tsy misy famakafakana, tsy misy kaonty, tsy misy cookies. Ao amin'ny fitahirizana eo an-toerana ao amin'ny mpitety tranonkalanao ihany ny lalao voatahiry."
+          "Isa tsy misy anarana ihany no tanan'ny Bare Sudoku: impiry no nosokafana ny pejy ary firy ny lalao natomboka sy vita, araka ny ambaratonga, ny fiteny, ny karazana fitaovana ary ny tranonkala niaviana. Tsy misy adiresy IP, tsy misy cookies, tsy misy kaonty; azon'ny rehetra jerena ao amin'ny baresudoku.com/stats/ ny fitambarany. Ao amin'ny fitahirizana eo an-toerana ao amin'ny mpitety tranonkalanao ihany ny lalao voatahiry."
         ],
         [
           "Misy rindranasa Android ve?",
@@ -9104,7 +9104,7 @@
       "android": "Bare Sudoku ilinso ngati pulogalamu ya Android: mtundu {version}, pafupifupi {size} KB, palibe zilolezo, palibe intaneti, Java yoyera yopanda malaibulale. Palibe pa Google Play; tsitsani APK yosainidwa kuchokera ku GitHub Releases ndikuyika pa Android 8 kapena yatsopano.",
       "androidLink": "Tsitsani APK",
       "privacyHeading": "Zachinsinsi",
-      "privacy": "Bare Sudoku sisonkhanitsa deta. Palibe akaunti, palibe kusanthula, palibe makeke; masewera anu apano amasungidwa mu msakatuli wanu wokha. Pulogalamu ya Android ilibe ngakhale chilolezo cha intaneti.",
+      "privacy": "Bare Sudoku sisunga deta yaumwini: palibe akaunti, palibe makeke, palibe ma-adilesi a IP. Masewera anu apano amasungidwa mu msakatuli wanu wokha. Webusaitiyi imasunga ziwerengero zopanda mayina (kutsegulidwa kwa tsamba, masewera oyambidwa ndi omalizidwa, mulingo, chilankhulo, mtundu wa chipangizo ndi webusaiti yomwe mwachokera); ziwerengero zonse pamodzi zimaonekera kwa aliyense pa baresudoku.com/stats/. Pulogalamu ya Android ilibe chilolezo cha intaneti konse.",
       "faqHeading": "Mafunso omwe amafunsidwa kawirikawiri",
       "faq": [
         [
@@ -9125,7 +9125,7 @@
         ],
         [
           "Kodi Bare Sudoku imasonkhanitsa deta?",
-          "Ayi. Palibe kusanthula, palibe akaunti, palibe makeke. Masewera osungidwa ali mu malo osungira a msakatuli wanu okha."
+          "Bare Sudoku imasunga ziwerengero zopanda mayina zokha: kangati tsamba linatsegulidwa ndi masewera angati anayambidwa ndi kumalizidwa, malinga ndi mulingo, chilankhulo, mtundu wa chipangizo ndi webusaiti yomwe mwachokera. Palibe adilesi ya IP, palibe makeke, palibe akaunti; ziwerengero zonse pamodzi zimaonekera kwa aliyense pa baresudoku.com/stats/. Masewera osungidwa ali mu malo osungira a msakatuli wanu okha."
         ],
         [
           "Kodi pali pulogalamu ya Android?",
@@ -9177,7 +9177,7 @@
       "android": "Bare Sudoku appii Android ta'ees jira: fooyya'iinsa {version}, gara {size} KB, hayyama hin qabu, interneetii hin qabu, Java qulqulluu mana kitaabaa malee. Google Play irra hin jiru; APK mallatteeffame GitHub Releases irraa buufadhuutii Android 8 yookaan haaraa irratti fe'i.",
       "androidLink": "APK buufadhu",
       "privacyHeading": "Iccitii",
-      "privacy": "Bare Sudoku daataa hin walitti qabu. Herrega, xiinxala, kukii hin jiru; taphni kee ammaa biraawzarii kee keessatti qofa olkaa'ama. Appiin Android hayyama interneetii illee hin qabu.",
+      "privacy": "Bare Sudoku daataa dhuunfaa hin olkaa'u: herrega, kukii, teessoo IP hin jiru. Taphni kee ammaa biraawzarii kee keessatti qofa olkaa'ama. Saayitichi lakkoofsota maqaa hin qabne qabata (banamuu fuulaa, taphoota jalqabaman fi xumuraman, sadarkaa, afaan, gosa meeshaa fi saayitii irraa dhufte); ida'amni waliigalaa baresudoku.com/stats/ irratti nama hundaaf ifa dha. Appiin Android hayyama interneetii gonkumaa hin qabu.",
       "faqHeading": "Gaaffilee yeroo baay'ee gaafataman",
       "faq": [
         [
@@ -9198,7 +9198,7 @@
         ],
         [
           "Bare Sudoku daataa walitti qabaa?",
-          "Lakki. Xiinxala, herrega, kukii hin jiru. Taphni olkaa'ame kuusaa naannoo biraawzarii keetii qofa keessa jira."
+          "Bare Sudoku lakkoofsota maqaa hin qabne qofa qabata: fuulli si'a meeqa akka baname fi taphoonni meeqa akka jalqabamanii xumuraman, akkaataa sadarkaa, afaanii, gosa meeshaa fi saayitii irraa dhufteen. Teessoon IP, kukiin, herregni hin jiru; ida'amni waliigalaa baresudoku.com/stats/ irratti nama hundaaf ifa dha. Taphni olkaa'ame kuusaa naannoo biraawzarii keetii qofa keessa jira."
         ],
         [
           "Appiin Android jiraa?",
@@ -9250,7 +9250,7 @@
       "android": "Bare Sudoku am na it aplikaasoŋ Android: versioŋ {version}, lu tollu ci {size} KB, amul ndigal, amul internet, Java bu set bu amul bibliyotek. Nekkul ci Google Play; sotti APK bu ñu siñe ci GitHub Releases te samp ko ci Android 8 walla bu gën a bees.",
       "androidLink": "Sotti APK bi",
       "privacyHeading": "Sutura",
-      "privacy": "Bare Sudoku du dajale dara. Amul kont, amul analitik, amul cookies; sa po bu léegi dañu koy denc ci sa navigatër rekk. Aplikaasoŋ Android bi sax amul ndigal internet.",
+      "privacy": "Bare Sudoku du denc benn xibaar bu aju ci sa bopp: amul kont, amul cookies, amul adrees IP. Sa po bu léegi dañu koy denc ci sa navigatër rekk. Sit bi dafay denc ay waññi yu amul tur (ñaata yoon lañu ubbi xët wi, po yi ñu tàmbali te jeexal, tolluwaay, làkk, xeetu jumtukaay ak sit bi nga jóge); mboolem waññi yi ñépp mën nañu ko gis ci baresudoku.com/stats/. Aplikaasoŋ Android bi amul benn ndigal internet.",
       "faqHeading": "Laaj yu ñuy faral di laaj",
       "faq": [
         [
@@ -9271,7 +9271,7 @@
         ],
         [
           "Ndax Bare Sudoku dafay dajale dara?",
-          "Déedéet. Amul analitik, amul kont, amul cookies. Po bu ñu denc nekk na ci denc bu sa navigatër rekk."
+          "Bare Sudoku ay waññi yu amul tur rekk lay denc: ñaata yoon lañu ubbi xët wi ak ñaata po lañu tàmbali te jeexal, ci tolluwaay, làkk, xeetu jumtukaay ak sit bi nga jóge. Amul adrees IP, amul cookies, amul kont; mboolem waññi yi ñépp mën nañu ko gis ci baresudoku.com/stats/. Po bu ñu denc nekk na ci denc bu sa navigatër rekk."
         ],
         [
           "Ndax am na aplikaasoŋ Android?",
