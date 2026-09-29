@@ -6377,6 +6377,271 @@
       "updated": "Dianyarkeun",
       "languagesLabel": "Basa",
       "ogAlt": "Logo Bare Sudoku jeung tulisan Sudoku online gratis, tanpa iklan"
+    },
+    "st": {
+      "title": "Bare Sudoku: sudoku ea mahala inthaneteng, ha ho lipapatso, ha ho ngoliso",
+      "description": "Sudoku ea mahala ka har'a sebatli: ha ho lipapatso, ha ho akhaonto, ha ho ho lateloa. Maemo a mane, lintlha, khutlisa le litlhahiso tse hlalosang mabaka. E sebetsa ntle le inthanete. Hape sesebelisoa sa Android sa {size} KB.",
+      "h1": "Bare Sudoku: sudoku ea mahala inthaneteng, ha ho lipapatso, ha ho ngoliso",
+      "intro": "Bare Sudoku ke papali ea sudoku ea mahala e sebetsang sebatling sa hau. Ha ho lipapatso, ha ho akhaonto, ha ho ho lateloa 'me ha ho letho le kenngoang: bula leqephe, khetha boemo 'me u bapale. Papali e 'ngoe le e 'ngoe e na le tharollo e le 'ngoe feela 'me e rarolloa ka mabaka feela, 'me tlhahiso e 'ngoe le e 'ngoe e hlalosa lebaka la eona. Papali e sebetsa ntle le inthanete 'me ke mohloli o bulehileng tlas'a laesense ea MIT.",
+      "featuresHeading": "Seo u se fumanang",
+      "features": [
+        "Maemo a mane: bonolo, mahareng, thata le setsebi",
+        "Papali e 'ngoe le e 'ngoe e na le tharollo e le 'ngoe 'me ha ho hlokahale ho hakanya",
+        "Lintlha, khutlisa, hlakola le ho tlatsa lintlha tsohle ka ho tobetsa hang",
+        "Litlhahiso tse hlalosang mokhoa: e le 'ngoe, baemeli ba notletsoeng, lipeo le litharo, X-Wing, Y-Wing, Swordfish le XYZ-Wing",
+        "Poloko e iketsang, mokhoa o lefifi, keyboard le moralo o rapameng",
+        "E sebetsa ntle le inthanete ka mor'a ketelo ea pele, ha ho hlokahale lebenkele la lisebelisoa"
+      ],
+      "androidHeading": "Sesebelisoa sa Android",
+      "android": "Bare Sudoku e boetse e teng e le sesebelisoa sa Android: mofuta {version}, hoo e ka bang {size} KB, ha ho litumello, ha ho inthanete, Java e hloekileng ntle le lilaebrari. Ha e eo ho Google Play; khoasolla APK e saenneng ho GitHub Releases 'me u e kenye ho Android 8 kapa e ncha.",
+      "androidLink": "Khoasolla APK",
+      "privacyHeading": "Lekunutu",
+      "privacy": "Bare Sudoku ha e bokelle data. Ha ho akhaonto, ha ho tlhahlobo, ha ho li-cookie; papali ea hau ea hona joale e bolokoa sebatling sa hau feela. Sesebelisoa sa Android ha se na le tumello ea inthanete.",
+      "faqHeading": "Lipotso tse botsoang hangata",
+      "faq": [
+        [
+          "Na Bare Sudoku ke ea mahala?",
+          "E. Bare Sudoku ke ea mahala ka ho feletseng sebatling le ho Android. Ha ho lipapatso, ha ho ho reka ka har'a sesebelisoa, ha ho mofuta oa premium."
+        ],
+        [
+          "Na Bare Sudoku e na le lipapatso?",
+          "Che. Papali ea webo le sesebelisoa sa Android ha li bontše lipapatso, 'me ha ho balateli kapa li-script tsa batho ba bang."
+        ],
+        [
+          "Na ke hloka akhaonto ho bapala?",
+          "Che. Bula baresudoku.com 'me u bapale. Papali e bolokoa ka boeona sebatling; koala tab 'me u tsoele pele hamorao."
+        ],
+        [
+          "Na Bare Sudoku e sebetsa ntle le inthanete?",
+          "E. Ka mor'a ketelo ea pele sebatli se boloka leqephe 'me se le bula ntle le khokahano. Sesebelisoa sa Android ha se sebelise inthanete le ka mohla."
+        ],
+        [
+          "Na Bare Sudoku e bokella data?",
+          "Che. Ha ho tlhahlobo, ha ho akhaonto, ha ho li-cookie. Papali e bolokiloeng e polokelong ea lehae ea sebatli sa hau feela."
+        ],
+        [
+          "Na ho na le sesebelisoa sa Android?",
+          "E. Bare Sudoku bakeng sa Android ke APK ea {size} KB bakeng sa Android 8 le e ncha, ntle le litumello le ntle le inthanete. E khoasolle ho GitHub Releases."
+        ]
+      ],
+      "madeBy": "E entsoe ke Alparslan Selçuk Develioğlu",
+      "source": "Khoutu ea mohloli",
+      "androidSource": "Khoutu ea mohloli ea Android",
+      "updated": "E nchafalitsoe",
+      "languagesLabel": "Lipuo",
+      "ogAlt": "Logo ea Bare Sudoku e nang le mantsoe Sudoku ea mahala inthaneteng, ha ho lipapatso"
+    },
+    "sn": {
+      "title": "Bare Sudoku: sudoku yemahara pamhepo, hapana zvishambadzo, hapana kunyoresa",
+      "description": "Sudoku yemahara mubrowser: hapana zvishambadzo, hapana akaundi, hapana kuteverwa. Mazinga mana, manotsi, dzokera nezvinongedzo zvinotsanangura pfungwa. Inoshanda pasina internet. Iripo zvakare Android app ye{size} KB.",
+      "h1": "Bare Sudoku: sudoku yemahara pamhepo, hapana zvishambadzo, hapana kunyoresa",
+      "intro": "Bare Sudoku mutambo wesudoku wemahara unoshanda mubrowser yako. Hapana zvishambadzo, hapana akaundi, hapana kuteverwa uye hapana chekuisa: vhura peji, sarudza zinga wotamba. Chirahwe chimwe nechimwe chine mhinduro imwe chete uye chinogadziriswa nepfungwa chete, uye chinongedzo chimwe nechimwe chinotsanangura chikonzero chacho. Mutambo unoshanda pasina internet uye wakavhurika pasi perezinesi yeMIT.",
+      "featuresHeading": "Zvaunowana",
+      "features": [
+        "Mazinga mana: nyore, pakati, kuoma nenyanzvi",
+        "Chirahwe chimwe nechimwe chine mhinduro imwe chete uye hazvidi kufungidzira",
+        "Manotsi, dzokera, dzima uye zadza manotsi ese nekubaya kamwe",
+        "Zvinongedzo zvinotsanangura nzira: mumwe chete, vanokwanisa vakakiiwa, vaviri nevatatu, X-Wing, Y-Wing, Swordfish neXYZ-Wing",
+        "Kuchengetedza zvoga, mamiriro erima, kiibhodhi nemarongero akarara",
+        "Inoshanda pasina internet mushure mekushanya kwekutanga, hapana chitoro cheapp chinodiwa"
+      ],
+      "androidHeading": "Android app",
+      "android": "Bare Sudoku iripowo seAndroid app: vhezheni {version}, ingangoita {size} KB, hapana mvumo, hapana internet, Java chaiyo isina maraibhurari. Haipo paGoogle Play; tora APK yakasainwa kubva kuGitHub Releases woisa paAndroid 8 kana itsva.",
+      "androidLink": "Tora APK",
+      "privacyHeading": "Kuvanzika",
+      "privacy": "Bare Sudoku haiunganidzi data. Hapana akaundi, hapana ongororo, hapana makuki; mutambo wako wazvino unochengetwa mubrowser yako chete. Android app haina kana mvumo yeinternet.",
+      "faqHeading": "Mibvunzo inowanzobvunzwa",
+      "faq": [
+        [
+          "Bare Sudoku yemahara here?",
+          "Hongu. Bare Sudoku yemahara zvachose mubrowser nepaAndroid. Hapana zvishambadzo, hapana kutenga mukati meapp, hapana vhezheni yepremium."
+        ],
+        [
+          "Bare Sudoku ine zvishambadzo here?",
+          "Kwete. Mutambo wewebhu neAndroid app hazviratidzi zvishambadzo, uye hapana vateveri kana zvinyorwa zvevamwe."
+        ],
+        [
+          "Ndinoda akaundi kuti nditambe here?",
+          "Kwete. Vhura baresudoku.com wotamba. Mutambo unochengetwa zvoga mubrowser; vhara tab woenderera mberi gare gare."
+        ],
+        [
+          "Bare Sudoku inoshanda pasina internet here?",
+          "Hongu. Mushure mekushanya kwekutanga browser inochengeta peji uye inoivhura pasina kubatana. Android app haimboshandisi internet."
+        ],
+        [
+          "Bare Sudoku inounganidza data here?",
+          "Kwete. Hapana ongororo, hapana akaundi, hapana makuki. Mutambo wakachengetwa uri muchengetedzo yemunharaunda yebrowser yako chete."
+        ],
+        [
+          "Pane Android app here?",
+          "Hongu. Bare Sudoku yeAndroid iAPK ye{size} KB yeAndroid 8 neitsva, pasina mvumo uye pasina internet. Itore kubva kuGitHub Releases."
+        ]
+      ],
+      "madeBy": "Yakagadzirwa naAlparslan Selçuk Develioğlu",
+      "source": "Kodhi yekutanga",
+      "androidSource": "Kodhi yekutanga yeAndroid",
+      "updated": "Yagadziridzwa",
+      "languagesLabel": "Mitauro",
+      "ogAlt": "Logo yeBare Sudoku nemazwi Sudoku yemahara pamhepo, hapana zvishambadzo"
+    },
+    "rw": {
+      "title": "Bare Sudoku: sudoku y'ubuntu kuri interineti, nta matangazo, nta kwiyandikisha",
+      "description": "Sudoku y'ubuntu muri mushakisha: nta matangazo, nta konti, nta gukurikirana. Inzego enye, inyandiko, gusubiza inyuma n'inama zisobanura ubwenge. Ikora nta interineti. Hari na porogaramu ya Android ya {size} KB.",
+      "h1": "Bare Sudoku: sudoku y'ubuntu kuri interineti, nta matangazo, nta kwiyandikisha",
+      "intro": "Bare Sudoku ni umukino wa sudoku w'ubuntu ukorera muri mushakisha yawe. Nta matangazo, nta konti, nta gukurikirana kandi nta kintu cyo gushyiraho: fungura urupapuro, hitamo urwego maze ukine. Buri kibazo gifite igisubizo kimwe gusa kandi gikemurwa n'ubwenge gusa, kandi buri nama isobanura impamvu yayo. Umukino ukora nta interineti kandi ni open source munsi y'uruhushya rwa MIT.",
+      "featuresHeading": "Icyo ubona",
+      "features": [
+        "Inzego enye: byoroshye, hagati, bigoye n'inzobere",
+        "Buri kibazo gifite igisubizo kimwe kandi ntabwo bisaba gukeka",
+        "Inyandiko, gusubiza inyuma, gusiba no kuzuza inyandiko zose ukanze rimwe",
+        "Inama zisobanura uburyo: umwe, abakandida bafunze, babiri na batatu, X-Wing, Y-Wing, Swordfish na XYZ-Wing",
+        "Kubika byikora, uburyo bw'umwijima, mudasobwa n'imiterere itambitse",
+        "Ikora nta interineti nyuma yo gusura bwa mbere, nta iduka rya porogaramu rikenewe"
+      ],
+      "androidHeading": "Porogaramu ya Android",
+      "android": "Bare Sudoku iboneka kandi nka porogaramu ya Android: verisiyo {version}, hafi {size} KB, nta ruhushya, nta interineti, Java isukuye nta bubiko. Ntiri kuri Google Play; kuramo APK yashyizweho umukono kuri GitHub Releases maze uyishyire kuri Android 8 cyangwa nshya.",
+      "androidLink": "Kuramo APK",
+      "privacyHeading": "Ubuzima bwite",
+      "privacy": "Bare Sudoku ntikusanya amakuru. Nta konti, nta isesengura, nta cookies; umukino wawe w'ubu ubikwa muri mushakisha yawe gusa. Porogaramu ya Android ntifite n'uruhushya rwa interineti.",
+      "faqHeading": "Ibibazo bikunze kubazwa",
+      "faq": [
+        [
+          "Bare Sudoku ni ubuntu?",
+          "Yego. Bare Sudoku ni ubuntu rwose muri mushakisha no kuri Android. Nta matangazo, nta kugura muri porogaramu, nta verisiyo ya premium."
+        ],
+        [
+          "Bare Sudoku ifite amatangazo?",
+          "Oya. Umukino wa web na porogaramu ya Android ntibyerekana amatangazo, kandi nta bakurikirana cyangwa script z'abandi."
+        ],
+        [
+          "Nkeneye konti kugira ngo nkine?",
+          "Oya. Fungura baresudoku.com maze ukine. Umukino ubikwa muri mushakisha wenyine; funga tab maze ukomeze nyuma."
+        ],
+        [
+          "Bare Sudoku ikora nta interineti?",
+          "Yego. Nyuma yo gusura bwa mbere mushakisha ibika urupapuro maze irufungura nta muhuza. Porogaramu ya Android ntikoresha interineti na rimwe."
+        ],
+        [
+          "Bare Sudoku ikusanya amakuru?",
+          "Oya. Nta isesengura, nta konti, nta cookies. Umukino wabitswe uri mu bubiko bwa mushakisha yawe gusa."
+        ],
+        [
+          "Hari porogaramu ya Android?",
+          "Yego. Bare Sudoku ya Android ni APK ya {size} KB ya Android 8 n'inshya, nta ruhushya kandi nta interineti. Yikuremo kuri GitHub Releases."
+        ]
+      ],
+      "madeBy": "Yakozwe na Alparslan Selçuk Develioğlu",
+      "source": "Kode y'inkomoko",
+      "androidSource": "Kode y'inkomoko ya Android",
+      "updated": "Byavuguruwe",
+      "languagesLabel": "Indimi",
+      "ogAlt": "Ikirango cya Bare Sudoku n'amagambo Sudoku y'ubuntu kuri interineti, nta matangazo"
+    },
+    "mg": {
+      "title": "Bare Sudoku: sudoku maimaim-poana an-tserasera, tsy misy dokam-barotra, tsy misy fisoratana anarana",
+      "description": "Sudoku maimaim-poana ao amin'ny mpitety tranonkala: tsy misy dokam-barotra, tsy misy kaonty, tsy misy fanarahana. Ambaratonga efatra, fanamarihana, avereno ary torohevitra manazava ny lojika. Mandeha tsy misy aterineto. Misy koa rindranasa Android {size} KB.",
+      "h1": "Bare Sudoku: sudoku maimaim-poana an-tserasera, tsy misy dokam-barotra, tsy misy fisoratana anarana",
+      "intro": "Bare Sudoku dia lalao sudoku maimaim-poana mandeha ao amin'ny mpitety tranonkalanao. Tsy misy dokam-barotra, tsy misy kaonty, tsy misy fanarahana ary tsy misy apetraka: sokafy ny pejy, fidio ny ambaratonga ary milalao. Manana vahaolana iray ihany ny ankamantatra tsirairay ary voavaha amin'ny lojika fotsiny, ary manazava ny antony ny torohevitra tsirairay. Mandeha tsy misy aterineto ny lalao ary loharano misokatra eo ambanin'ny fahazoan-dàlana MIT.",
+      "featuresHeading": "Izay azonao",
+      "features": [
+        "Ambaratonga efatra: mora, antonony, sarotra ary manam-pahaizana",
+        "Manana vahaolana iray ny ankamantatra tsirairay ary tsy mila vinavina mihitsy",
+        "Fanamarihana, avereno, fafao ary fenoy ny fanamarihana rehetra amin'ny fitsindrona iray",
+        "Torohevitra manazava ny teknika: tokana, kandidà voahidy, roa sy telo, X-Wing, Y-Wing, Swordfish ary XYZ-Wing",
+        "Fitahirizana mandeha ho azy, fomba maizina, fitendry ary fandaharana mitsivalana",
+        "Mandeha tsy misy aterineto aorian'ny fitsidihana voalohany, tsy mila fivarotana rindranasa"
+      ],
+      "androidHeading": "Rindranasa Android",
+      "android": "Misy koa Bare Sudoku ho rindranasa Android: kinova {version}, manodidina ny {size} KB, tsy misy alalana, tsy misy aterineto, Java madio tsy misy tranomboky. Tsy ao amin'ny Google Play izy; alao ny APK voasonia avy amin'ny GitHub Releases ary apetraho amin'ny Android 8 na vaovao kokoa.",
+      "androidLink": "Alao ny APK",
+      "privacyHeading": "Fiainana manokana",
+      "privacy": "Tsy manangona angona ny Bare Sudoku. Tsy misy kaonty, tsy misy famakafakana, tsy misy cookies; ao amin'ny mpitety tranonkalanao ihany no voatahiry ny lalaonao ankehitriny. Tsy manana alalana aterineto akory ny rindranasa Android.",
+      "faqHeading": "Fanontaniana matetika",
+      "faq": [
+        [
+          "Maimaim-poana ve ny Bare Sudoku?",
+          "Eny. Maimaim-poana tanteraka ny Bare Sudoku ao amin'ny mpitety tranonkala sy amin'ny Android. Tsy misy dokam-barotra, tsy misy fividianana ao anaty rindranasa, tsy misy kinova premium."
+        ],
+        [
+          "Misy dokam-barotra ve ny Bare Sudoku?",
+          "Tsia. Tsy mampiseho dokam-barotra ny lalao tranonkala sy ny rindranasa Android, ary tsy misy mpanaraka na script an'olon-kafa."
+        ],
+        [
+          "Mila kaonty ve aho mba hilalao?",
+          "Tsia. Sokafy ny baresudoku.com ary milalao. Voatahiry ho azy ao amin'ny mpitety tranonkala ny lalao; akatony ny tab ary tohizo any aoriana."
+        ],
+        [
+          "Mandeha tsy misy aterineto ve ny Bare Sudoku?",
+          "Eny. Aorian'ny fitsidihana voalohany dia tahirizin'ny mpitety tranonkala ny pejy ary sokafany tsy misy fifandraisana. Tsy mampiasa aterineto mihitsy ny rindranasa Android."
+        ],
+        [
+          "Manangona angona ve ny Bare Sudoku?",
+          "Tsia. Tsy misy famakafakana, tsy misy kaonty, tsy misy cookies. Ao amin'ny fitahirizana eo an-toerana ao amin'ny mpitety tranonkalanao ihany ny lalao voatahiry."
+        ],
+        [
+          "Misy rindranasa Android ve?",
+          "Eny. APK {size} KB ho an'ny Android 8 sy vaovao kokoa ny Bare Sudoku ho an'ny Android, tsy misy alalana ary tsy misy aterineto. Alao avy amin'ny GitHub Releases."
+        ]
+      ],
+      "madeBy": "Nataon'i Alparslan Selçuk Develioğlu",
+      "source": "Kaody loharano",
+      "androidSource": "Kaody loharano Android",
+      "updated": "Nohavaozina",
+      "languagesLabel": "Fiteny",
+      "ogAlt": "Sarin'ny Bare Sudoku miaraka amin'ny teny Sudoku maimaim-poana an-tserasera, tsy misy dokam-barotra"
+    },
+    "ny": {
+      "title": "Bare Sudoku: sudoku yaulere pa intaneti, palibe zotsatsa, palibe kulembetsa",
+      "description": "Sudoku yaulere mu msakatuli: palibe zotsatsa, palibe akaunti, palibe kutsata. Magawo anayi, zolemba, kubwezera ndi zithandizo zomwe zimafotokoza malingaliro. Imagwira popanda intaneti. Palinso pulogalamu ya Android ya {size} KB.",
+      "h1": "Bare Sudoku: sudoku yaulere pa intaneti, palibe zotsatsa, palibe kulembetsa",
+      "intro": "Bare Sudoku ndi masewera a sudoku aulere omwe amagwira mu msakatuli wanu. Palibe zotsatsa, palibe akaunti, palibe kutsata ndipo palibe choyika: tsegulani tsamba, sankhani gawo ndipo seweranani. Puzzle iliyonse ili ndi yankho limodzi lokha ndipo imathetsedwa ndi malingaliro okha, ndipo chithandizo chilichonse chimafotokoza chifukwa chake. Masewerawa amagwira popanda intaneti ndipo ndi open source pansi pa layisensi ya MIT.",
+      "featuresHeading": "Zomwe mumapeza",
+      "features": [
+        "Magawo anayi: zosavuta, zapakati, zovuta ndi katswiri",
+        "Puzzle iliyonse ili ndi yankho limodzi ndipo sikufunika kuganizira",
+        "Zolemba, kubwezera, kufufuta ndi kulemba zolemba zonse ndi kudina kamodzi",
+        "Zithandizo zomwe zimafotokoza njira: imodzi, opikisana otsekedwa, awiri ndi atatu, X-Wing, Y-Wing, Swordfish ndi XYZ-Wing",
+        "Kusunga kokha, mtundu wakuda, kiyibodi ndi kapangidwe kagona",
+        "Imagwira popanda intaneti mutayendera koyamba, palibe sitolo ya mapulogalamu yofunikira"
+      ],
+      "androidHeading": "Pulogalamu ya Android",
+      "android": "Bare Sudoku ilinso ngati pulogalamu ya Android: mtundu {version}, pafupifupi {size} KB, palibe zilolezo, palibe intaneti, Java yoyera yopanda malaibulale. Palibe pa Google Play; tsitsani APK yosainidwa kuchokera ku GitHub Releases ndikuyika pa Android 8 kapena yatsopano.",
+      "androidLink": "Tsitsani APK",
+      "privacyHeading": "Zachinsinsi",
+      "privacy": "Bare Sudoku sisonkhanitsa deta. Palibe akaunti, palibe kusanthula, palibe makeke; masewera anu apano amasungidwa mu msakatuli wanu wokha. Pulogalamu ya Android ilibe ngakhale chilolezo cha intaneti.",
+      "faqHeading": "Mafunso omwe amafunsidwa kawirikawiri",
+      "faq": [
+        [
+          "Kodi Bare Sudoku ndi yaulere?",
+          "Inde. Bare Sudoku ndi yaulere kwathunthu mu msakatuli ndi pa Android. Palibe zotsatsa, palibe kugula mkati mwa pulogalamu, palibe mtundu wa premium."
+        ],
+        [
+          "Kodi Bare Sudoku ili ndi zotsatsa?",
+          "Ayi. Masewera a pa intaneti ndi pulogalamu ya Android sizionetsa zotsatsa, ndipo palibe otsata kapena ma script a anthu ena."
+        ],
+        [
+          "Kodi ndikufuna akaunti kuti ndisewere?",
+          "Ayi. Tsegulani baresudoku.com ndikusewera. Masewera amasungidwa okha mu msakatuli; tsekani tab ndikupitiriza pambuyo pake."
+        ],
+        [
+          "Kodi Bare Sudoku imagwira popanda intaneti?",
+          "Inde. Mutayendera koyamba msakatuli umasunga tsamba ndikulitsegula popanda kulumikizana. Pulogalamu ya Android sigwiritsa ntchito intaneti konse."
+        ],
+        [
+          "Kodi Bare Sudoku imasonkhanitsa deta?",
+          "Ayi. Palibe kusanthula, palibe akaunti, palibe makeke. Masewera osungidwa ali mu malo osungira a msakatuli wanu okha."
+        ],
+        [
+          "Kodi pali pulogalamu ya Android?",
+          "Inde. Bare Sudoku ya Android ndi APK ya {size} KB ya Android 8 ndi yatsopano, popanda zilolezo ndi popanda intaneti. Tsitsani kuchokera ku GitHub Releases."
+        ]
+      ],
+      "madeBy": "Yopangidwa ndi Alparslan Selçuk Develioğlu",
+      "source": "Khodi yoyambira",
+      "androidSource": "Khodi yoyambira ya Android",
+      "updated": "Yasinthidwa",
+      "languagesLabel": "Zinenero",
+      "ogAlt": "Logo ya Bare Sudoku ndi mawu akuti Sudoku yaulere pa intaneti, palibe zotsatsa"
     }
   }
 }
