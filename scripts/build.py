@@ -17,6 +17,12 @@ SITE = "https://baresudoku.com"
 NAME = "Bare Sudoku"
 AUTHOR = "Alparslan Selçuk Develioğlu"
 AUTHOR_URL = "https://devdiscipline.com/about"
+AUTHOR_LINKS = [
+    ("LinkedIn", "https://www.linkedin.com/in/alparslandev/"),
+    ("Instagram", "https://www.instagram.com/alparslandev"),
+    ("DevDiscipline", "https://devdiscipline.com"),
+    ("Yarış Radarı", "https://yarisradari.com"),
+]
 PERSON_ID = SITE + "/#person"
 WEBSITE_ID = SITE + "/#website"
 GAME_ID = SITE + "/#game"
@@ -30,14 +36,7 @@ LICENSE_URL = WEB_REPO + "/blob/main/LICENSE"
 ANDROID_LICENSE_URL = ANDROID_REPO + "/blob/main/LICENSE"
 APK_FALLBACK = ("1.2", 24972)
 APP_STORE_URL = ""
-SAME_AS = [
-    "https://github.com/alparslandev",
-    "https://www.linkedin.com/in/alparslandev/",
-    "https://www.instagram.com/alparslandev",
-    "https://www.youtube.com/@alparslandev",
-    "https://devdiscipline.com",
-    "https://yarisradari.com",
-]
+SAME_AS = ["https://github.com/alparslandev"] + [url for _, url in AUTHOR_LINKS] + ["https://www.youtube.com/@alparslandev"]
 OG_LOCALES = {
     "en": "en_US", "tr": "tr_TR", "az": "az_AZ", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "pt": "pt_PT", "it": "it_IT",
     "nl": "nl_NL", "pl": "pl_PL", "cs": "cs_CZ", "sk": "sk_SK", "hu": "hu_HU", "ro": "ro_RO", "el": "el_GR", "sv": "sv_SE",
@@ -161,8 +160,9 @@ def content(code, entry, languages, version, size, lastmod, web):
     parts.append("<h2>%s</h2>" % f(entry["faqHeading"]))
     for question, answer in entry["faq"]:
         parts.append("<details><summary>%s</summary><p>%s</p></details>" % (f(question), f(answer)))
-    parts.append('<p class="meta">%s · Web %s · Android %s%s · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · %s <time datetime="%s">%s</time></p>' % (
-        f(entry["madeBy"]), web, version, store_link(), WEB_REPO, f(entry["source"]), ANDROID_REPO, f(entry["androidSource"]), privacy_path(code), f(entry["privacyHeading"]), f(entry["updated"]), lastmod, lastmod))
+    author_links = "".join(' · <a href="%s" rel="me">%s</a>' % (url, esc(label)) for label, url in AUTHOR_LINKS)
+    parts.append('<p class="meta">%s%s · Web %s · Android %s%s · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · %s <time datetime="%s">%s</time></p>' % (
+        f(entry["madeBy"]), author_links, web, version, store_link(), WEB_REPO, f(entry["source"]), ANDROID_REPO, f(entry["androidSource"]), privacy_path(code), f(entry["privacyHeading"]), f(entry["updated"]), lastmod, lastmod))
     parts.append('<nav aria-label="%s">%s</nav>' % (f(entry["languagesLabel"]), language_links(languages)))
     parts.append("</section>")
     return "\n".join(parts)
