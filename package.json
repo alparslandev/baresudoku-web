@@ -4,7 +4,8 @@
   "scripts": {
     "build": "python3 scripts/build.py",
     "test": "bun test",
-    "deploy": "bun test && python3 scripts/build.py && wrangler deploy"
+    "deploy": "bun test && python3 scripts/build.py && wrangler deploy && python3 scripts/indexnow.py",
+    "indexnow": "python3 scripts/indexnow.py"
   },
   "devDependencies": {
     "wrangler": "^4.112.0"
