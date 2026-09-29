@@ -15,8 +15,8 @@ def inside_rounded(x, y, size, radius):
     return (x - cx) ** 2 + (y - cy) ** 2 <= radius ** 2
 
 
-def pixel(x, y, size):
-    if not inside_rounded(x + 0.5, y + 0.5, size, size * 0.2):
+def pixel(x, y, size, rounded=True):
+    if rounded and not inside_rounded(x + 0.5, y + 0.5, size, size * 0.2):
         return NONE
     left = size * 0.28
     span = size * 0.44
@@ -35,12 +35,12 @@ def pixel(x, y, size):
     return WHITE
 
 
-def png(size):
+def png(size, rounded=True):
     rows = []
     for y in range(size):
         row = bytearray(b"\x00")
         for x in range(size):
-            row += bytes(pixel(x, y, size))
+            row += bytes(pixel(x, y, size, rounded))
         rows.append(bytes(row))
     raw = b"".join(rows)
 
@@ -50,10 +50,24 @@ def png(size):
     return b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", struct.pack(">IIBBBBB", size, size, 8, 6, 0, 0, 0)) + chunk(b"IDAT", zlib.compress(raw, 9)) + chunk(b"IEND", b"")
 
 
+def ico(sizes):
+    images = [png(size) for size in sizes]
+    entries = b""
+    offset = 6 + 16 * len(images)
+    for size, data in zip(sizes, images):
+        entries += struct.pack("<BBBBHHII", size % 256, size % 256, 0, 0, 1, 32, len(data), offset)
+        offset += len(data)
+    return struct.pack("<HHH", 0, 1, len(images)) + entries + b"".join(images)
+
+
 def write(out_dir):
     for size in (192, 512):
         with open(os.path.join(out_dir, "icon-%d.png" % size), "wb") as f:
             f.write(png(size))
+    with open(os.path.join(out_dir, "icon-maskable-512.png"), "wb") as f:
+        f.write(png(512, False))
+    with open(os.path.join(out_dir, "favicon.ico"), "wb") as f:
+        f.write(ico((16, 32, 48)))
 
 
 if __name__ == "__main__":
