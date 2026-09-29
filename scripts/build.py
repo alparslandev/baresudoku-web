@@ -349,7 +349,8 @@ def llms_file(site, languages, version, size, lastmod, web):
         "## Optional",
         "- [Full text](%s/llms-full.txt): the complete page text in English and Turkish, plus a one-line summary in every language" % SITE,
         "- [Author](%s): %s" % (AUTHOR_URL, AUTHOR),
-        "- [Privacy policy](%s): no data collected, no account, no analytics" % privacy_url("en"),
+        "- [Privacy policy](%s): no personal data, no account, no cookies; anonymous play counters" % privacy_url("en"),
+        "- [Stats](%s/stats/): the anonymous counters, public" % SITE,
     ]
     return "\n".join(lines) + "\n"
 
