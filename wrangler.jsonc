@@ -1,7 +1,7 @@
 {
   "name": "baresudoku",
   "compatibility_date": "2026-09-01",
-  "assets": { "directory": "./dist" },
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
   "routes": [
     { "pattern": "baresudoku.com", "custom_domain": true },
     { "pattern": "www.baresudoku.com", "custom_domain": true }
