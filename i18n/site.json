@@ -10352,6 +10352,377 @@
       "updated": "অপদেত",
       "languagesLabel": "লোনশিং",
       "ogAlt": "Bare Sudoku গী লোগো অমসুং ফ্রী ওনলাইন সুদোকু, বিজ্ঞাপন লৈতে হায়বা ৱাহৈশিং"
+    },
+    "tg": {
+      "title": "Bare Sudoku: судокуи ройгони онлайн, бе реклама, бе бақайдгирӣ",
+      "description": "Судокуи ройгон дар браузер: бе реклама, бе ҳисоб, бе пайгирӣ. Чор сатҳ, қайдҳо, бекоркунӣ ва ишораҳое, ки мантиқро мефаҳмонанд. Офлайн кор мекунад. Инчунин барномаи Android бо {size} КБ.",
+      "h1": "Bare Sudoku: судокуи ройгони онлайн, бе реклама, бе бақайдгирӣ",
+      "intro": "Bare Sudoku бозии ройгони судоку аст, ки дар браузери шумо кор мекунад. Бе реклама, бе ҳисоб, бе пайгирӣ ва бе насб: саҳифаро кушоед, сатҳро интихоб кунед ва бозӣ кунед. Ҳар муаммо танҳо як ҳал дорад ва танҳо бо мантиқ ҳал мешавад, ва ҳар ишора сабаби худро мефаҳмонад. Бозӣ офлайн кор мекунад ва бо иҷозатномаи MIT кушода аст.",
+      "featuresHeading": "Чӣ мегиред",
+      "features": [
+        "Чор сатҳ: осон, миёна, душвор ва коршинос",
+        "Ҳар муаммо як ҳал дорад ва ҳеҷ гоҳ тахмин намехоҳад",
+        "Қайдҳо, бекоркунӣ, поккунӣ ва пур кардани ҳамаи қайдҳо бо як пахш",
+        "Ишораҳое, ки усулро мефаҳмонанд: ягонаҳо, номзадҳои басташуда, ҷуфту сегона, X-Wing, Y-Wing, Swordfish ва XYZ-Wing",
+        "Захираи худкор, ҳолати торик, клавиатура ва тарҳи уфуқӣ",
+        "Пас аз боздиди аввал офлайн кор мекунад, мағозаи барномаҳо лозим нест"
+      ],
+      "androidHeading": "Барномаи Android",
+      "android": "Bare Sudoku инчунин ҳамчун барномаи аслии Android мавҷуд аст: версияи {version}, тақрибан {size} КБ, бе иҷозатҳо, бе интернет, Java-и тоза бе китобхонаҳо. Он дар Google Play нест; APK-и имзошударо аз GitHub Releases боргирӣ кунед ва дар Android 8 ё навтар насб кунед.",
+      "androidLink": "Боргирии APK",
+      "privacyHeading": "Махфият",
+      "privacy": "Bare Sudoku ҳеҷ маълумот ҷамъ намекунад. Ҳисоб, таҳлил ва кукиҳо нестанд; бозии ҷории шумо танҳо дар браузери шумо захира мешавад. Барномаи Android ҳатто иҷозати интернет надорад.",
+      "faqHeading": "Саволҳои маъмул",
+      "faq": [
+        [
+          "Оё Bare Sudoku ройгон аст?",
+          "Бале. Bare Sudoku ҳам дар браузер ва ҳам дар Android комилан ройгон аст. Реклама, харидҳои дохилӣ ва версияи пулакӣ нест."
+        ],
+        [
+          "Оё дар Bare Sudoku реклама ҳаст?",
+          "Не. На бозии веб ва на барномаи Android реклама нишон намедиҳанд, ва ҳеҷ пайгирӣ ё скрипти тарафи сеюм нест."
+        ],
+        [
+          "Оё барои бозӣ ҳисоб лозим аст?",
+          "Не. baresudoku.com-ро кушоед ва бозӣ кунед. Бозӣ худкор дар браузер захира мешавад; варақаро пӯшед ва баъдтар идома диҳед."
+        ],
+        [
+          "Оё Bare Sudoku офлайн кор мекунад?",
+          "Бале. Пас аз боздиди аввал браузер саҳифаро нигоҳ медорад ва бе пайвастшавӣ мекушояд. Барномаи Android ҳеҷ гоҳ интернетро истифода намебарад."
+        ],
+        [
+          "Оё Bare Sudoku маълумот ҷамъ мекунад?",
+          "Не. Таҳлил, ҳисоб ва кукиҳо нестанд. Бозии захирашуда танҳо дар анбори маҳаллии браузери шумо аст."
+        ],
+        [
+          "Оё барномаи Android ҳаст?",
+          "Бале. Bare Sudoku барои Android APK-и {size} КБ барои Android 8 ва навтар аст, бе иҷозатҳо ва бе интернет. Онро аз GitHub Releases боргирӣ кунед."
+        ]
+      ],
+      "madeBy": "Муаллиф: Alparslan Selçuk Develioğlu",
+      "source": "Рамзи манбаъ",
+      "androidSource": "Рамзи манбаи Android",
+      "updated": "Навсозӣ",
+      "languagesLabel": "Забонҳо",
+      "ogAlt": "Логотипи Bare Sudoku бо калимаҳои судокуи ройгони онлайн, бе реклама"
+    },
+    "ti": {
+      "title": "Bare Sudoku: ናጻ ሱዶኩ ኦንላይን፡ ብዘይ ምልክታ፡ ብዘይ ምዝገባ",
+      "description": "ኣብ ብራውዘር ናጻ ሱዶኩ፡ ምልክታ የለን፡ ሕሳብ የለን፡ ምክትታል የለን። ኣርባዕተ ደረጃታት፡ መዘኻኸሪ፡ ምምላስን ነቲ ሎጂክ ዝገልጹ ምልክታትን። ብዘይ ኢንተርነት ይሰርሕ። ብተወሳኺ {size} KB መተግበሪ Android።",
+      "h1": "Bare Sudoku: ናጻ ሱዶኩ ኦንላይን፡ ብዘይ ምልክታ፡ ብዘይ ምዝገባ",
+      "intro": "Bare Sudoku ኣብ ብራውዘርካ ዝሰርሕ ናጻ ጸወታ ሱዶኩ እዩ። ምልክታ የለን፡ ሕሳብ የለን፡ ምክትታል የለን፡ ዝጽዓን ነገር ድማ የለን፡ ገጽ ክፈት፡ ደረጃ ምረጽ፡ ተጻወት። ነፍሲ ወከፍ ሕንቅልሕንቅሊተይ ሓደ መፍትሒ ጥራይ ኣለዎ ብሎጂክ ጥራይ ድማ ይፍታሕ፡ ነፍሲ ወከፍ ምልክት ድማ ምኽንያቱ ይገልጽ። እቲ ጸወታ ብዘይ ኢንተርነት ይሰርሕ፡ ብፍቓድ MIT ድማ ክፉት ምንጪ እዩ።",
+      "featuresHeading": "እንታይ ትረክብ",
+      "features": [
+        "ኣርባዕተ ደረጃታት፡ ቀሊል፡ ማእከላይ፡ ከቢድን ክኢላን",
+        "ነፍሲ ወከፍ ሕንቅልሕንቅሊተይ ሓደ መፍትሒ ኣለዎ፡ ግምት ፈጺሙ ኣየድልን",
+        "መዘኻኸሪ፡ ምምላስ፡ ምድምሳስን ኩሉ መዘኻኸሪ ብሓደ ምጥዋቕ ምምላእን",
+        "ቴክኒክ ዝገልጹ ምልክታት፡ ንጽል፡ ዝተዓጽዉ ተወዳደርቲ፡ ጽምድን ሰለስተን፡ X-Wing፡ Y-Wing፡ Swordfish፡ XYZ-Wing",
+        "ባዕላዊ ምዕቃብ፡ ጸሊም ኣገባብ፡ ኪቦርድን ጎናዊ ኣቀማምጣን",
+        "ድሕሪ መጀመርታ ምብጻሕ ብዘይ ኢንተርነት ይሰርሕ፡ መኽዘን መተግበሪ ኣየድልን"
+      ],
+      "androidHeading": "መተግበሪ Android",
+      "android": "Bare Sudoku ከም ባህርያዊ መተግበሪ Android ውን ኣሎ፡ ሕታም {version}፡ ኣስታት {size} KB፡ ፍቓድ የለን፡ ኢንተርነት የለን፡ ንጹህ Java ብዘይ ላይብረሪ። ኣብ Google Play የለን፡ ካብ GitHub Releases እቲ ዝተፈረመ APK ኣውርድ ኣብ Android 8 ወይ ሓድሽ ድማ ጽዓን።",
+      "androidLink": "APK ኣውርድ",
+      "privacyHeading": "ብሕትውና",
+      "privacy": "Bare Sudoku ዝኾነ ዳታ ኣይእክብን። ሕሳብ፡ ትንተናን ኩኪን የለን፡ ናይ ሕጂ ጸወታኻ ኣብ ብራውዘርካ ጥራይ ይዕቀብ። መተግበሪ Android ፍቓድ ኢንተርነት እውን የብሉን።",
+      "faqHeading": "ብተደጋጋሚ ዝሕተቱ ሕቶታት",
+      "faq": [
+        [
+          "Bare Sudoku ናጻ ድዩ?",
+          "እወ። Bare Sudoku ኣብ ብራውዘርን ኣብ Androidን ምሉእ ብምሉእ ናጻ እዩ። ምልክታ፡ ውሽጣዊ ዕድጊን ፕሪሚየም ሕታምን የለን።"
+        ],
+        [
+          "ኣብ Bare Sudoku ምልክታ ኣሎ ድዩ?",
+          "የለን። ጸወታ ዌብ ኮነ መተግበሪ Android ምልክታ ኣየርእዩን፡ መከታተልቲ ወይ ናይ ሳልሳይ ወገን ስክሪፕት ድማ የለን።"
+        ],
+        [
+          "ንምጽዋት ሕሳብ የድሊ ድዩ?",
+          "ኣየድልን። baresudoku.com ክፈት እሞ ተጻወት። ጸወታ ባዕሉ ኣብ ብራውዘር ይዕቀብ፡ ታብ ዓጽዮ ጸኒሕካ ቀጽል።"
+        ],
+        [
+          "Bare Sudoku ብዘይ ኢንተርነት ይሰርሕ ድዩ?",
+          "እወ። ድሕሪ መጀመርታ ምብጻሕ ብራውዘር ነቲ ገጽ ይዕቅቦ ብዘይ ምትእስሳር ድማ ይኸፍቶ። መተግበሪ Android ፈጺሙ ኢንተርነት ኣይጥቀምን።"
+        ],
+        [
+          "Bare Sudoku ዳታ ይእክብ ድዩ?",
+          "ኣይእክብን። ትንተና፡ ሕሳብን ኩኪን የለን። እቲ ዝተዓቀበ ጸወታ ኣብ ናይ ብራውዘርካ ናይ ከባቢ መኽዘን ጥራይ እዩ።"
+        ],
+        [
+          "መተግበሪ Android ኣሎ ድዩ?",
+          "እወ። Bare Sudoku ን Android ን Android 8 ን ሓድሽን {size} KB APK እዩ፡ ብዘይ ፍቓድን ብዘይ ኢንተርነትን። ካብ GitHub Releases ኣውርዶ።"
+        ]
+      ],
+      "madeBy": "ዝሰርሖ: Alparslan Selçuk Develioğlu",
+      "source": "ምንጪ ኮድ",
+      "androidSource": "ምንጪ ኮድ Android",
+      "updated": "ዝተሓደሰ",
+      "languagesLabel": "ቋንቋታት",
+      "ogAlt": "ሎጎ Bare Sudoku ምስ ቃላት ናጻ ሱዶኩ ኦንላይን፡ ብዘይ ምልክታ"
+    },
+    "yue": {
+      "title": "Bare Sudoku：免費線上數獨，冇廣告，唔使註冊",
+      "description": "喺瀏覽器玩免費數獨：冇廣告、冇帳戶、冇追蹤。四個難度、筆記、復原，仲有會解釋邏輯嘅提示。離線都玩到。另有 {size} KB 嘅 Android 應用程式。",
+      "h1": "Bare Sudoku：免費線上數獨，冇廣告，唔使註冊",
+      "intro": "Bare Sudoku 係一個喺你瀏覽器入面運行嘅免費數獨遊戲。冇廣告、冇帳戶、冇追蹤，亦都唔使安裝任何嘢：打開網頁，揀個難度就可以玩。每一題都只有一個解，而且淨係用邏輯就解到，每個提示都會解釋原因。遊戲可以離線玩，並以 MIT 授權開放原始碼。",
+      "featuresHeading": "你會得到乜嘢",
+      "features": [
+        "四個難度：容易、中等、困難同專家",
+        "每題都只有一個解，永遠唔使靠估",
+        "筆記、復原、刪除，同埋一撳就填晒所有筆記",
+        "會解釋技巧嘅提示：唯一數、鎖定候選數、數對同三數組、X-Wing、Y-Wing、Swordfish 同 XYZ-Wing",
+        "自動儲存、深色模式、鍵盤操作同橫向版面",
+        "第一次打開之後離線都玩到，唔使去應用程式商店"
+      ],
+      "androidHeading": "Android 應用程式",
+      "android": "Bare Sudoku 亦有原生 Android 應用程式：版本 {version}，大約 {size} KB，唔使任何權限，唔連互聯網，純 Java，零函式庫。佢唔喺 Google Play 上架；請由 GitHub Releases 下載已簽署嘅 APK，安裝喺 Android 8 或以上。",
+      "androidLink": "下載 APK",
+      "privacyHeading": "私隱",
+      "privacy": "Bare Sudoku 唔會收集任何資料。冇帳戶、冇分析、冇 Cookie；你而家嘅遊戲淨係儲存喺你嘅瀏覽器入面。Android 應用程式連互聯網權限都冇。",
+      "faqHeading": "常見問題",
+      "faq": [
+        [
+          "Bare Sudoku 係咪免費？",
+          "係。Bare Sudoku 喺瀏覽器同 Android 都係完全免費。冇廣告、冇應用程式內購買、冇付費版本。"
+        ],
+        [
+          "Bare Sudoku 有冇廣告？",
+          "冇。網頁遊戲同 Android 應用程式都唔會顯示廣告，亦都冇追蹤器或者第三方腳本。"
+        ],
+        [
+          "玩嘅時候使唔使帳戶？",
+          "唔使。打開 baresudoku.com 就可以玩。遊戲會自動儲存喺瀏覽器；閂咗個分頁之後可以再繼續。"
+        ],
+        [
+          "Bare Sudoku 離線玩唔玩到？",
+          "玩到。第一次打開之後，瀏覽器會保存個網頁，冇網絡都打得開。Android 應用程式從來唔會用互聯網。"
+        ],
+        [
+          "Bare Sudoku 會唔會收集資料？",
+          "唔會。冇分析、冇帳戶、冇 Cookie。儲存咗嘅遊戲淨係放喺你瀏覽器嘅本機儲存空間。"
+        ],
+        [
+          "有冇 Android 應用程式？",
+          "有。Bare Sudoku for Android 係一個 {size} KB 嘅 APK，支援 Android 8 或以上，唔使權限，唔連互聯網。可以由 GitHub Releases 下載。"
+        ]
+      ],
+      "madeBy": "製作：Alparslan Selçuk Develioğlu",
+      "source": "原始碼",
+      "androidSource": "Android 原始碼",
+      "updated": "更新",
+      "languagesLabel": "語言",
+      "ogAlt": "Bare Sudoku 標誌，寫住免費線上數獨，冇廣告"
+    },
+    "arz": {
+      "title": "Bare Sudoku: سودوكو مجانى أونلاين، من غير إعلانات، من غير تسجيل",
+      "description": "سودوكو مجانى فى المتصفح: من غير إعلانات ولا حساب ولا تتبع. أربع مستويات وملاحظات ورجوع وتلميحات بتشرح المنطق. بيشتغل من غير نت. وكمان تطبيق Android حجمه {size} كيلوبايت.",
+      "h1": "Bare Sudoku: سودوكو مجانى أونلاين، من غير إعلانات، من غير تسجيل",
+      "intro": "Bare Sudoku لعبة سودوكو مجانية بتشتغل فى المتصفح بتاعك. مفيش إعلانات ولا حساب ولا تتبع ولا حاجة تتسطب: افتح الصفحة واختار المستوى والعب. كل لغز ليه حل واحد بس وبيتحل بالمنطق لوحده، وكل تلميح بيشرح سببه. اللعبة بتشتغل من غير نت ومفتوحة المصدر برخصة MIT.",
+      "featuresHeading": "هتلاقى إيه",
+      "features": [
+        "أربع مستويات: سهل ومتوسط وصعب وخبير",
+        "كل لغز ليه حل واحد ومش محتاج تخمين أبدًا",
+        "ملاحظات ورجوع ومسح وملى كل الملاحظات بضغطة واحدة",
+        "تلميحات بتشرح التقنية: المفرد والمرشحين المقفولين والأزواج والتلاتيات وX-Wing وY-Wing وSwordfish وXYZ-Wing",
+        "حفظ تلقائى ووضع ليلى وكيبورد وتخطيط عرضى",
+        "بيشتغل من غير نت بعد أول زيارة، من غير متجر تطبيقات"
+      ],
+      "androidHeading": "تطبيق Android",
+      "android": "Bare Sudoku موجود كمان كتطبيق Android أصلى: إصدار {version}، حوالى {size} كيلوبايت، من غير أى صلاحيات ولا نت، Java صافى من غير مكتبات. مش موجود على Google Play؛ نزّل ملف APK الموقّع من GitHub Releases وسطّبه على Android 8 أو أحدث.",
+      "androidLink": "نزّل APK",
+      "privacyHeading": "الخصوصية",
+      "privacy": "Bare Sudoku مبيجمعش أى بيانات. مفيش حساب ولا تحليلات ولا كوكيز؛ اللعبة الحالية بتتحفظ فى المتصفح بتاعك بس. تطبيق Android مش حتى عنده صلاحية النت.",
+      "faqHeading": "أسئلة متكررة",
+      "faq": [
+        [
+          "هل Bare Sudoku مجانى؟",
+          "أيوه. Bare Sudoku مجانى بالكامل فى المتصفح وعلى Android. مفيش إعلانات ولا مشتريات داخل التطبيق ولا نسخة مدفوعة."
+        ],
+        [
+          "هل فى إعلانات فى Bare Sudoku؟",
+          "لأ. لا لعبة الويب ولا تطبيق Android بيعرضوا إعلانات، ومفيش متتبعات ولا سكريبتات من طرف تالت."
+        ],
+        [
+          "محتاج حساب عشان ألعب؟",
+          "لأ. افتح baresudoku.com والعب. اللعبة بتتحفظ فى المتصفح تلقائى؛ اقفل التاب وكمّل بعدين."
+        ],
+        [
+          "هل Bare Sudoku بيشتغل من غير نت؟",
+          "أيوه. بعد أول زيارة المتصفح بيحفظ الصفحة وبيفتحها من غير اتصال. تطبيق Android عمره ما بيستخدم النت."
+        ],
+        [
+          "هل Bare Sudoku بيجمع بيانات؟",
+          "لأ. مفيش تحليلات ولا حساب ولا كوكيز. اللعبة المحفوظة موجودة فى التخزين المحلى للمتصفح بتاعك بس."
+        ],
+        [
+          "فى تطبيق Android؟",
+          "أيوه. Bare Sudoku for Android ملف APK حجمه {size} كيلوبايت لـ Android 8 وأحدث، من غير صلاحيات ولا نت. نزّله من GitHub Releases."
+        ]
+      ],
+      "madeBy": "من صنع: Alparslan Selçuk Develioğlu",
+      "source": "الكود المصدرى",
+      "androidSource": "كود Android المصدرى",
+      "updated": "آخر تحديث",
+      "languagesLabel": "اللغات",
+      "ogAlt": "شعار Bare Sudoku مع كلمات سودوكو مجانى أونلاين، من غير إعلانات"
+    },
+    "pnb": {
+      "title": "Bare Sudoku: مفت آن لائن سوڈوکو، بغیر اشتہار، بغیر رجسٹریشن",
+      "description": "براؤزر وچ مفت سوڈوکو: نہ اشتہار، نہ اکاؤنٹ، نہ ٹریکنگ۔ چار درجے، نوٹ، واپس تے منطق سمجھاؤن والے اشارے۔ آف لائن چلدی اے۔ {size} KB دی Android ایپ وی۔",
+      "h1": "Bare Sudoku: مفت آن لائن سوڈوکو، بغیر اشتہار، بغیر رجسٹریشن",
+      "intro": "Bare Sudoku اک مفت سوڈوکو کھیڈ اے جیہڑی تہاڈے براؤزر وچ چلدی اے۔ نہ اشتہار، نہ اکاؤنٹ، نہ ٹریکنگ تے نہ کجھ انسٹال کرن دی لوڑ: صفحہ کھولو، درجہ چنو تے کھیڈو۔ ہر پزل دا صرف اک حل اے تے اوہ صرف منطق نال حل ہوندا اے، تے ہر اشارہ اپنی وجہ سمجھاندا اے۔ کھیڈ آف لائن چلدی اے تے MIT لائسنس ہیٹھ اوپن سورس اے۔",
+      "featuresHeading": "کیہ ملدا اے",
+      "features": [
+        "چار درجے: سوکھا، درمیانہ، اوکھا تے ماہر",
+        "ہر پزل دا اک حل، کدی اندازہ لاؤن دی لوڑ نئیں",
+        "نوٹ، واپس، مٹاؤنا تے اک ٹیپ نال سارے نوٹ بھرنا",
+        "تکنیک سمجھاؤن والے اشارے: سنگل، بند امیدوار، جوڑے تے تِکڑیاں، X-Wing، Y-Wing، Swordfish تے XYZ-Wing",
+        "خودکار سیو، ڈارک موڈ، کی بورڈ تے لینڈ سکیپ لے آؤٹ",
+        "پہلی واری کھولن مگروں آف لائن چلدی اے، ایپ سٹور دی لوڑ نئیں"
+      ],
+      "androidHeading": "Android ایپ",
+      "android": "Bare Sudoku نیٹو Android ایپ دے طور تے وی موجود اے: ورژن {version}، تقریباً {size} KB، کوئی اجازت نئیں، انٹرنیٹ نئیں، بغیر لائبریری خالص Java۔ ایہ Google Play تے نئیں؛ GitHub Releases توں دستخط شدہ APK ڈاؤن لوڈ کرو تے Android 8 یا نویں تے انسٹال کرو۔",
+      "androidLink": "APK ڈاؤن لوڈ کرو",
+      "privacyHeading": "رازداری",
+      "privacy": "Bare Sudoku کوئی ڈیٹا اکٹھا نئیں کردی۔ اکاؤنٹ، تجزیہ تے کوکیز نئیں؛ تہاڈی موجودہ کھیڈ صرف تہاڈے براؤزر وچ محفوظ ہوندی اے۔ Android ایپ کول انٹرنیٹ دی اجازت وی نئیں۔",
+      "faqHeading": "اکثر پچھے جاندے سوال",
+      "faq": [
+        [
+          "کیہ Bare Sudoku مفت اے؟",
+          "ہاں۔ Bare Sudoku براؤزر تے Android دوواں تے پوری طرحاں مفت اے۔ اشتہار، اِن ایپ خریداری تے پریمیم ورژن نئیں۔"
+        ],
+        [
+          "کیہ Bare Sudoku وچ اشتہار نیں؟",
+          "نئیں۔ نہ ویب کھیڈ تے نہ Android ایپ اشتہار وکھاندی اے، تے کوئی ٹریکر یا تھرڈ پارٹی سکرپٹ نئیں۔"
+        ],
+        [
+          "کیہ کھیڈن لئی اکاؤنٹ چاہیدا اے؟",
+          "نئیں۔ baresudoku.com کھولو تے کھیڈو۔ کھیڈ خودکار براؤزر وچ محفوظ ہوندی اے؛ ٹیب بند کرو تے بعد وچ جاری رکھو۔"
+        ],
+        [
+          "کیہ Bare Sudoku آف لائن چلدی اے؟",
+          "ہاں۔ پہلی واری کھولن مگروں براؤزر صفحہ محفوظ رکھدا اے تے بغیر کنکشن کھولدا اے۔ Android ایپ کدی انٹرنیٹ نئیں ورتدی۔"
+        ],
+        [
+          "کیہ Bare Sudoku ڈیٹا اکٹھا کردی اے؟",
+          "نئیں۔ تجزیہ، اکاؤنٹ تے کوکیز نئیں۔ محفوظ کھیڈ صرف تہاڈے براؤزر دی لوکل سٹوریج وچ رہندی اے۔"
+        ],
+        [
+          "کیہ Android ایپ اے؟",
+          "ہاں۔ Android لئی Bare Sudoku Android 8 تے نویں لئی {size} KB دی APK اے، بغیر اجازت تے بغیر انٹرنیٹ۔ GitHub Releases توں ڈاؤن لوڈ کرو۔"
+        ]
+      ],
+      "madeBy": "بناؤن والا: Alparslan Selçuk Develioğlu",
+      "source": "سورس کوڈ",
+      "androidSource": "Android سورس کوڈ",
+      "updated": "اپ ڈیٹ",
+      "languagesLabel": "زباناں",
+      "ogAlt": "Bare Sudoku لوگو تے لفظ مفت آن لائن سوڈوکو، بغیر اشتہار"
+    },
+    "ff": {
+      "title": "Bare Sudoku: sudoku mehum e enternet, alaa jaaynde, alaa winndito",
+      "description": "Sudoku mehum e wanngorde maa: alaa jaaynde, alaa konte, alaa rewindo. Tolnoji nayi, winndanɗe, ruttagol e tinndinɗe faccirooje miijo. Ina golla ɓaawo enternet. Jaaɓngal Android {size} KB ina woodi kadi.",
+      "h1": "Bare Sudoku: sudoku mehum e enternet, alaa jaaynde, alaa winndito",
+      "intro": "Bare Sudoku ko fijo sudoku mehum gollowo e wanngorde maa. Alaa jaaynde, alaa konte, alaa rewindo, alaa ko aafetee: udditu hello ngoo, suɓo tolno, fij. Kala tiitol woodi peewal gootal tan, ina ɓoltee e miijo tan, kala tinndinol ina faccira sabaabu mum. Fijo ngoo ina golla ɓaawo enternet, ko kood udditiiɗo e kuulal MIT.",
+      "featuresHeading": "Ko heɓataa",
+      "features": [
+        "Tolnoji nayi: newiɗum, hakkunde, saɗtiɗum e ganndo",
+        "Kala tiitol woodi peewal gootal, alaa sikke abadaa",
+        "Winndanɗe, ruttagol, momtugol e hebbinde winndanɗe fof e ɗoɓɓannde wootere",
+        "Tinndinɗe faccirooje feere ndee: gooto, kandidaaji sokaaɗi, ɗiɗi e tati, X-Wing, Y-Wing, Swordfish e XYZ-Wing",
+        "Danndugol hoore mum, mbaadi niɓɓere, tappirde e feccere lelnde",
+        "Ina golla ɓaawo enternet caggal jillol gadanol, alaa ko jaaɓnirde jaaɓɗe"
+      ],
+      "androidHeading": "Jaaɓngal Android",
+      "android": "Bare Sudoku ina woodi kadi ko jaaɓngal Android: yamre {version}, ina ɓadii {size} KB, alaa yamiroore, alaa enternet, Java laaɓɗo alaa defte. Alaa e Google Play; aawtu APK siifaaɗo e GitHub Releases, aaf ɗum e Android 8 walla ɓurɗo hesɗude.",
+      "androidLink": "Aawtu APK",
+      "privacyHeading": "Suturo",
+      "privacy": "Bare Sudoku rendaani hay keɓe. Alaa konte, alaa ƴeewndo, alaa kuki; fijo maa jooni danndete e wanngorde maa tan. Jaaɓngal Android alaa hay yamiroore enternet.",
+      "faqHeading": "Naamnde ɓurɗe heewde",
+      "faq": [
+        [
+          "Bare Sudoku ko mehum?",
+          "Eey. Bare Sudoku ko mehum e wanngorde e Android fof. Alaa jaaynde, alaa coodgol nder jaaɓngal, alaa yamre yoɓeteende."
+        ],
+        [
+          "Bare Sudoku woodi jaaynde?",
+          "Alaa. Fijo enternet ngoo e jaaɓngal Android ngal hollataa jaaynde, alaa rewindo walla kood tataɓo."
+        ],
+        [
+          "Mi hatojini konte ngam fijde?",
+          "Alaa. Udditu baresudoku.com, fij. Fijo ngoo ina danndee e wanngorde ndee hoore mum; uddu tabo ngoo, jokku caggal."
+        ],
+        [
+          "Bare Sudoku ina golla ɓaawo enternet?",
+          "Eey. Caggal jillol gadanol wanngorde ndee ina moofta hello ngoo, ina udditi ɗum tawa alaa ceŋgol. Jaaɓngal Android huutortaake enternet abadaa."
+        ],
+        [
+          "Bare Sudoku ina renndina keɓe?",
+          "Alaa. Alaa ƴeewndo, alaa konte, alaa kuki. Fijo danndaango wonata tan e mooftirde wanngorde maa."
+        ],
+        [
+          "Woodi jaaɓngal Android?",
+          "Eey. Bare Sudoku wonande Android ko APK {size} KB wonande Android 8 e ɓurɗo hesɗude, alaa yamiroore, alaa enternet. Aawtu ɗum e GitHub Releases."
+        ]
+      ],
+      "madeBy": "Mahɗo: Alparslan Selçuk Develioğlu",
+      "source": "Kood iwdi",
+      "androidSource": "Kood iwdi Android",
+      "updated": "Hesɗitinaa",
+      "languagesLabel": "Ɗemɗe",
+      "ogAlt": "Maale Bare Sudoku e konngol sudoku mehum e enternet, alaa jaaynde"
+    },
+    "bm": {
+      "title": "Bare Sudoku: sudoku fu ɛntɛrinɛti kan, kanjɛrɛ tɛ, tɔgɔsɛbɛn tɛ",
+      "description": "Sudoku fu i ka navigatɛri kɔnɔ: kanjɛrɛ tɛ, jatebɔ tɛ, nɔfɛtaama tɛ. Hakɛ naani, sɛbɛnw, kɔsegin ani ladilikanw minnu bɛ hakili ɲɛfɔ. A bɛ baara kɛ ɛntɛrinɛti kɔ. Android porogaramu {size} KB fana bɛ yen.",
+      "h1": "Bare Sudoku: sudoku fu ɛntɛrinɛti kan, kanjɛrɛ tɛ, tɔgɔsɛbɛn tɛ",
+      "intro": "Bare Sudoku ye sudoku tulon fu ye min bɛ baara kɛ i ka navigatɛri kɔnɔ. Kanjɛrɛ tɛ, jatebɔ tɛ, nɔfɛtaama tɛ, foyi tɛ bila: ɲɛ dayɛlɛ, hakɛ sugandi, tulon kɛ. Ɲininkali kelen-kelen bɛɛ ɲɛnabɔcogo kelen dɔrɔn de b'a la, a bɛ ɲɛnabɔ hakili dɔrɔn fɛ, ladilikan kelen-kelen bɛɛ b'a kun ɲɛfɔ. Tulon bɛ baara kɛ ɛntɛrinɛti kɔ, a kɔdi dayɛlɛlen don MIT sariya kɔnɔ.",
+      "featuresHeading": "I bɛ min sɔrɔ",
+      "features": [
+        "Hakɛ naani: nɔgɔn, cɛmancɛ, gɛlɛn ani dɔnnikɛla",
+        "Ɲininkali bɛɛ ɲɛnabɔcogo kelen dɔrɔn, jateminɛ tɛ wajibi abada",
+        "Sɛbɛnw, kɔsegin, jɔsi ani sɛbɛnw bɛɛ fa digi kelen na",
+        "Ladilikanw minnu bɛ fɛɛrɛ ɲɛfɔ: kelenw, sugandita datugulenw, filaw ani sabaw, X-Wing, Y-Wing, Swordfish ani XYZ-Wing",
+        "Yɛrɛmaramara, dibi cogo, walanba ani tilennen ɲɛ",
+        "A bɛ baara kɛ ɛntɛrinɛti kɔ taama fɔlɔ kɔfɛ, porogaramu sugu tɛ wajibi"
+      ],
+      "androidHeading": "Android porogaramu",
+      "android": "Bare Sudoku bɛ yen fana i n'a fɔ Android porogaramu yɛrɛ: bɔko {version}, {size} KB ɲɔgɔn, yamaruya si tɛ, ɛntɛrinɛti tɛ, Java jɛlen gafe si tɛ. A tɛ Google Play kan; APK taamasiyɛnnen jigin ka bɔ GitHub Releases la, k'a bila Android 8 walima kura kan.",
+      "androidLink": "APK jigin",
+      "privacyHeading": "Gundo mara",
+      "privacy": "Bare Sudoku tɛ kunnafoni si lajɛ. Jatebɔ, sɛgɛsɛgɛli ani kuki tɛ; i ka tulon min bɛ sen na, o bɛ mara i ka navigatɛri dɔrɔn kɔnɔ. Android porogaramu yɛrɛ tɛ ɛntɛrinɛti yamaruya sɔrɔ.",
+      "faqHeading": "Ɲininkali minnu bɛ kɛ tuma caman",
+      "faq": [
+        [
+          "Bare Sudoku ye fu ye wa?",
+          "Ɔwɔ. Bare Sudoku ye fu ye pewu navigatɛri kɔnɔ ani Android kan. Kanjɛrɛ tɛ, sanni tɛ porogaramu kɔnɔ, bɔko sarata tɛ."
+        ],
+        [
+          "Kanjɛrɛ bɛ Bare Sudoku la wa?",
+          "Ayi. Ɛntɛrinɛti tulon ani Android porogaramu si tɛ kanjɛrɛ jira, nɔfɛtaamalan walima mɔgɔ wɛrɛ ka kɔdi si tɛ."
+        ],
+        [
+          "Jatebɔ ka kan ka kɛ walasa ka tulon kɛ wa?",
+          "Ayi. baresudoku.com dayɛlɛ ka tulon kɛ. Tulon bɛ mara navigatɛri kɔnɔ a yɛrɛ ma; tabu datugu ka tugu a la kɔfɛ."
+        ],
+        [
+          "Bare Sudoku bɛ baara kɛ ɛntɛrinɛti kɔ wa?",
+          "Ɔwɔ. Taama fɔlɔ kɔfɛ, navigatɛri bɛ ɲɛ mara k'a dayɛlɛ ɛntɛrinɛti kɔ. Android porogaramu tɛ ɛntɛrinɛti kɛ abada."
+        ],
+        [
+          "Bare Sudoku bɛ kunnafoni lajɛ wa?",
+          "Ayi. Sɛgɛsɛgɛli, jatebɔ, kuki tɛ. Tulon maralen bɛ i ka navigatɛri ka yɔrɔ maralan dɔrɔn kɔnɔ."
+        ],
+        [
+          "Android porogaramu bɛ yen wa?",
+          "Ɔwɔ. Bare Sudoku Android ye APK {size} KB ye Android 8 ani kura ye, yamaruya tɛ, ɛntɛrinɛti tɛ. A jigin ka bɔ GitHub Releases la."
+        ]
+      ],
+      "madeBy": "A dilanbaga: Alparslan Selçuk Develioğlu",
+      "source": "Kɔdi sunba",
+      "androidSource": "Android kɔdi sunba",
+      "updated": "Kuraya",
+      "languagesLabel": "Kanw",
+      "ogAlt": "Bare Sudoku taamasiyɛn ni kumaw sudoku fu ɛntɛrinɛti kan, kanjɛrɛ tɛ"
     }
   }
 }
