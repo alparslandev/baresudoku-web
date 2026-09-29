@@ -557,7 +557,7 @@ class Game {
   }
 
   select(cell) {
-    this.selected = cell;
+    if (!this.sticky) this.selected = cell;
   }
 
   enter(d) {
@@ -592,6 +592,7 @@ class Game {
   key(d) {
     if (!this.sticky && this.canEdit() && (this.noteMode ? !this.value[this.selected] : this.value[this.selected] !== d)) return this.enter(d);
     this.sticky = this.sticky === d || this.remaining(d) <= 0 ? 0 : d;
+    if (this.sticky) this.selected = NONE;
     return false;
   }
 
@@ -602,7 +603,9 @@ class Game {
       return false;
     }
     this.selected = cell;
-    return this.enter(this.sticky);
+    const changed = this.enter(this.sticky);
+    this.selected = NONE;
+    return changed;
   }
 
   erase() {
@@ -673,7 +676,7 @@ class Game {
       this.value[r[i]] = r[i + 1];
       this.notes[r[i]] = r[i + 2];
     }
-    this.selected = r[0];
+    if (!this.sticky) this.selected = r[0];
     return true;
   }
 
@@ -703,6 +706,7 @@ class Game {
 
   hint(engine) {
     if (!this.active || this.solved) return false;
+    this.sticky = 0;
     if (this.hintActive() && this.hintKind === HINT_PLACE && !this.value[this.hintCell]) {
       this.noteMode = false;
       this.hintKind = HINT_NONE;
