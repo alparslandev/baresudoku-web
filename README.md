@@ -1,6 +1,6 @@
 # Bare Sudoku Web
 
-The browser version of [Bare Sudoku](https://baresudoku.com): ad-free Sudoku with four levels, notes, undo, hints that explain the logic, 36 languages, dark mode, keyboard support and offline play. One HTML file, no libraries, no tracking.
+The browser version of [Bare Sudoku](https://baresudoku.com): ad-free Sudoku with four levels, notes, undo, hints that explain the logic, digit-first entry (tap a digit, then the cells), 36 languages, dark mode, keyboard support and offline play. One HTML file, no libraries, no tracking.
 
 The Android app lives in [alparslandev/baresudoku](https://github.com/alparslandev/baresudoku).
 
