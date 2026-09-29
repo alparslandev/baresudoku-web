@@ -1,0 +1,807 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - button "Yeni oyun" [ref=e4] [cursor=pointer]
+    - grid "Sudoku" [ref=e7]:
+      - generic [ref=e8] [cursor=pointer]
+      - generic [ref=e19] [cursor=pointer]
+      - generic [ref=e30] [cursor=pointer]
+      - generic [ref=e41] [cursor=pointer]
+      - generic [ref=e52] [cursor=pointer]
+      - generic [ref=e63] [cursor=pointer]
+      - generic [ref=e74] [cursor=pointer]
+      - generic [ref=e85] [cursor=pointer]
+      - generic [ref=e96] [cursor=pointer]
+      - generic [ref=e107] [cursor=pointer]
+      - generic [ref=e118] [cursor=pointer]
+      - generic [ref=e129] [cursor=pointer]
+      - generic [ref=e140] [cursor=pointer]
+      - generic [ref=e151] [cursor=pointer]
+      - generic [ref=e162] [cursor=pointer]
+      - generic [ref=e173] [cursor=pointer]
+      - generic [ref=e184] [cursor=pointer]
+      - generic [ref=e195] [cursor=pointer]
+      - generic [ref=e206] [cursor=pointer]
+      - generic [ref=e217] [cursor=pointer]
+      - generic [ref=e228] [cursor=pointer]
+      - generic [ref=e239] [cursor=pointer]
+      - generic [ref=e250] [cursor=pointer]
+      - generic [ref=e261] [cursor=pointer]
+      - generic [ref=e272] [cursor=pointer]
+      - generic [ref=e283] [cursor=pointer]
+      - generic [ref=e294] [cursor=pointer]
+      - generic [ref=e305] [cursor=pointer]
+      - generic [ref=e316] [cursor=pointer]
+      - generic [ref=e327] [cursor=pointer]
+      - generic [ref=e338] [cursor=pointer]
+      - generic [ref=e349] [cursor=pointer]
+      - generic [ref=e360] [cursor=pointer]
+      - generic [ref=e371] [cursor=pointer]
+      - generic [ref=e382] [cursor=pointer]
+      - generic [ref=e393] [cursor=pointer]
+      - generic [ref=e404] [cursor=pointer]
+      - generic [ref=e415] [cursor=pointer]
+      - generic [ref=e426] [cursor=pointer]
+      - generic [ref=e437] [cursor=pointer]
+      - generic [ref=e448] [cursor=pointer]
+      - generic [ref=e459] [cursor=pointer]
+      - generic [ref=e470] [cursor=pointer]
+      - generic [ref=e481] [cursor=pointer]
+      - generic [ref=e492] [cursor=pointer]
+      - generic [ref=e503] [cursor=pointer]
+      - generic [ref=e514] [cursor=pointer]
+      - generic [ref=e525] [cursor=pointer]
+      - generic [ref=e536] [cursor=pointer]
+      - generic [ref=e547] [cursor=pointer]
+      - generic [ref=e558] [cursor=pointer]
+      - generic [ref=e569] [cursor=pointer]
+      - generic [ref=e580] [cursor=pointer]
+      - generic [ref=e591] [cursor=pointer]
+      - generic [ref=e602] [cursor=pointer]
+      - generic [ref=e613] [cursor=pointer]
+      - generic [ref=e624] [cursor=pointer]
+      - generic [ref=e635] [cursor=pointer]
+      - generic [ref=e646] [cursor=pointer]
+      - generic [ref=e657] [cursor=pointer]
+      - generic [ref=e668] [cursor=pointer]
+      - generic [ref=e679] [cursor=pointer]
+      - generic [ref=e690] [cursor=pointer]
+      - generic [ref=e701] [cursor=pointer]
+      - generic [ref=e712] [cursor=pointer]
+      - generic [ref=e723] [cursor=pointer]
+      - generic [ref=e734] [cursor=pointer]
+      - generic [ref=e745] [cursor=pointer]
+      - generic [ref=e756] [cursor=pointer]
+      - generic [ref=e767] [cursor=pointer]
+      - generic [ref=e778] [cursor=pointer]
+      - generic [ref=e789] [cursor=pointer]
+      - generic [ref=e800] [cursor=pointer]
+      - generic [ref=e811] [cursor=pointer]
+      - generic [ref=e822] [cursor=pointer]
+      - generic [ref=e833] [cursor=pointer]
+      - generic [ref=e844] [cursor=pointer]
+      - generic [ref=e855] [cursor=pointer]
+      - generic [ref=e866] [cursor=pointer]
+      - generic [ref=e877] [cursor=pointer]
+      - generic [ref=e888] [cursor=pointer]
+    - generic [ref=e900]:
+      - button "Geri al" [disabled] [ref=e901]
+      - button "Sil" [disabled] [ref=e905]
+      - button "Not" [disabled] [ref=e909]
+      - button "Notları doldur" [disabled] [ref=e913]
+      - button "İpucu" [disabled] [ref=e917]
+    - generic [ref=e921]:
+      - button "1 9" [disabled] [ref=e922]:
+        - text: "1"
+        - generic [ref=e923]: "9"
+      - button "2 9" [disabled] [ref=e924]:
+        - text: "2"
+        - generic [ref=e925]: "9"
+      - button "3 9" [disabled] [ref=e926]:
+        - text: "3"
+        - generic [ref=e927]: "9"
+      - button "4 9" [disabled] [ref=e928]:
+        - text: "4"
+        - generic [ref=e929]: "9"
+      - button "5 9" [disabled] [ref=e930]:
+        - text: "5"
+        - generic [ref=e931]: "9"
+      - button "6 9" [disabled] [ref=e932]:
+        - text: "6"
+        - generic [ref=e933]: "9"
+      - button "7 9" [disabled] [ref=e934]:
+        - text: "7"
+        - generic [ref=e935]: "9"
+      - button "8 9" [disabled] [ref=e936]:
+        - text: "8"
+        - generic [ref=e937]: "9"
+      - button "9 9" [disabled] [ref=e938]:
+        - text: "9"
+        - generic [ref=e939]: "9"
+    - generic [ref=e940]:
+      - link "Android uygulaması" [ref=e941] [cursor=pointer]:
+        - /url: https://github.com/alparslandev/baresudoku/releases/latest/download/baresudoku.apk
+      - text: ·
+      - link "Kaynak kod" [ref=e942] [cursor=pointer]:
+        - /url: https://github.com/alparslandev/baresudoku-web
+      - text: · v1.62
+  - generic [ref=e943]:
+    - 'heading "Bare Sudoku: ücretsiz online sudoku, reklamsız, üyeliksiz" [level=1] [ref=e944]'
+    - paragraph [ref=e945]: "Bare Sudoku tarayıcıda çalışan ücretsiz bir sudoku oyunudur. Reklam yok, hesap yok, takip yok, kurulum yok: sayfayı aç, seviye seç, oyna. Her bulmacanın tek çözümü vardır ve yalnızca mantıkla çözülür; her ipucu gerekçesini açıklar. Oyun internetsiz çalışır ve MIT lisansıyla açık kaynaktır."
+    - heading "Neler var" [level=2] [ref=e946]
+    - list [ref=e947]:
+      - listitem [ref=e948]: "Dört seviye: Kolay, Orta, Zor ve Uzman"
+      - listitem [ref=e949]: Her bulmacanın tek çözümü var, tahmin gerekmez
+      - listitem [ref=e950]: Not, geri al, sil ve tek dokunuşla tüm notları doldur
+      - listitem [ref=e951]: "Tekniği açıklayan ipucu: tek aday, kilitli adaylar, çift ve üçlü, X-Wing, Y-Wing, Swordfish ve XYZ-Wing"
+      - listitem [ref=e952]: Satır, sütun, kutu ve aynı rakam vurgusu; kapatılabilir hata işareti
+      - listitem [ref=e953]: Otomatik kayıt, koyu tema, klavye desteği ve yatay düzen
+      - listitem [ref=e954]: İlk ziyaretten sonra internetsiz çalışır, mağaza gerekmez
+      - listitem [ref=e955]: 37 dil, her biri kendi sayfasında
+    - heading "Android uygulaması" [level=2] [ref=e956]
+    - paragraph [ref=e957]:
+      - text: "Bare Sudoku'nun yerel bir Android uygulaması da var: sürüm 1.4, yaklaşık 25 KB, izin yok, internet erişimi yok, sıfır kütüphaneyle düz Java. Google Play'de değil; imzalı APK'yı GitHub Releases'ten indirip Android 8 ve üstüne kurabilirsin."
+      - link "APK'yı indir" [ref=e958] [cursor=pointer]:
+        - /url: https://github.com/alparslandev/baresudoku/releases/latest/download/baresudoku.apk
+    - heading "Gizlilik" [level=2] [ref=e959]
+    - paragraph [ref=e960]: Bare Sudoku hiç veri toplamaz. Hesap, analitik ve çerez yoktur; mevcut oyunun yalnızca tarayıcında saklanır. Android uygulamasının internet izni bile yoktur.
+    - heading "Sık sorulan sorular" [level=2] [ref=e961]
+    - group [ref=e962]:
+      - generic "Bare Sudoku ücretsiz mi?" [ref=e963] [cursor=pointer]
+    - group [ref=e964]:
+      - generic "Bare Sudoku'da reklam var mı?" [ref=e965] [cursor=pointer]
+    - group [ref=e966]:
+      - generic "Oynamak için hesap gerekir mi?" [ref=e967] [cursor=pointer]
+    - group [ref=e968]:
+      - generic "Bare Sudoku internetsiz çalışır mı?" [ref=e969] [cursor=pointer]
+    - group [ref=e970]:
+      - generic "Bulmacalar tahmin gerektirmeden çözülür mü?" [ref=e971] [cursor=pointer]
+    - group [ref=e972]:
+      - generic "İpucu ne açıklar?" [ref=e973] [cursor=pointer]
+    - group [ref=e974]:
+      - generic "Bare Sudoku veri topluyor mu?" [ref=e975] [cursor=pointer]
+    - group [ref=e976]:
+      - generic "Android uygulaması var mı?" [ref=e977] [cursor=pointer]
+    - group [ref=e978]:
+      - generic "Android uygulaması neden Google Play'de değil?" [ref=e979] [cursor=pointer]
+    - group [ref=e980]:
+      - generic "Bare Sudoku hangi dilleri destekler?" [ref=e981] [cursor=pointer]
+    - group [ref=e982]:
+      - generic "Klavyeyle oynayabilir miyim?" [ref=e983] [cursor=pointer]
+    - group [ref=e984]:
+      - generic "Kaynak kodu nerede?" [ref=e985] [cursor=pointer]
+    - paragraph [ref=e986]:
+      - text: "Yapan: Alparslan Selçuk Develioğlu ·"
+      - link "LinkedIn" [ref=e987] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/alparslandev/
+      - text: ·
+      - link "Instagram" [ref=e988] [cursor=pointer]:
+        - /url: https://www.instagram.com/alparslandev
+      - text: ·
+      - link "DevDiscipline" [ref=e989] [cursor=pointer]:
+        - /url: https://devdiscipline.com
+      - text: ·
+      - link "Yarış Radarı" [ref=e990] [cursor=pointer]:
+        - /url: https://yarisradari.com
+      - text: · Web 1.62 · Android 1.4 ·
+      - link "Kaynak kod" [ref=e991] [cursor=pointer]:
+        - /url: https://github.com/alparslandev/baresudoku-web
+      - text: ·
+      - link "Android kaynağı" [ref=e992] [cursor=pointer]:
+        - /url: https://github.com/alparslandev/baresudoku
+      - text: ·
+      - link "Gizlilik" [ref=e993] [cursor=pointer]:
+        - /url: /tr/privacy/
+      - text: · Güncelleme
+      - time [ref=e994]: 2026-09-29
+    - navigation "Diller" [ref=e995]:
+      - link "English" [ref=e996] [cursor=pointer]:
+        - /url: /
+      - link "Türkçe" [ref=e997] [cursor=pointer]:
+        - /url: /tr/
+      - link "Azərbaycanca" [ref=e998] [cursor=pointer]:
+        - /url: /az/
+      - link "Deutsch" [ref=e999] [cursor=pointer]:
+        - /url: /de/
+      - link "Français" [ref=e1000] [cursor=pointer]:
+        - /url: /fr/
+      - link "Español" [ref=e1001] [cursor=pointer]:
+        - /url: /es/
+      - link "Português" [ref=e1002] [cursor=pointer]:
+        - /url: /pt/
+      - link "Italiano" [ref=e1003] [cursor=pointer]:
+        - /url: /it/
+      - link "Nederlands" [ref=e1004] [cursor=pointer]:
+        - /url: /nl/
+      - link "Polski" [ref=e1005] [cursor=pointer]:
+        - /url: /pl/
+      - link "Čeština" [ref=e1006] [cursor=pointer]:
+        - /url: /cs/
+      - link "Slovenčina" [ref=e1007] [cursor=pointer]:
+        - /url: /sk/
+      - link "Magyar" [ref=e1008] [cursor=pointer]:
+        - /url: /hu/
+      - link "Română" [ref=e1009] [cursor=pointer]:
+        - /url: /ro/
+      - link "Ελληνικά" [ref=e1010] [cursor=pointer]:
+        - /url: /el/
+      - link "Svenska" [ref=e1011] [cursor=pointer]:
+        - /url: /sv/
+      - link "Dansk" [ref=e1012] [cursor=pointer]:
+        - /url: /da/
+      - link "Norsk" [ref=e1013] [cursor=pointer]:
+        - /url: /nb/
+      - link "Suomi" [ref=e1014] [cursor=pointer]:
+        - /url: /fi/
+      - link "Русский" [ref=e1015] [cursor=pointer]:
+        - /url: /ru/
+      - link "Українська" [ref=e1016] [cursor=pointer]:
+        - /url: /uk/
+      - link "Български" [ref=e1017] [cursor=pointer]:
+        - /url: /bg/
+      - link "Srpski" [ref=e1018] [cursor=pointer]:
+        - /url: /sr/
+      - link "Hrvatski" [ref=e1019] [cursor=pointer]:
+        - /url: /hr/
+      - link "العربية" [ref=e1020] [cursor=pointer]:
+        - /url: /ar/
+      - link "فارسی" [ref=e1021] [cursor=pointer]:
+        - /url: /fa/
+      - link "עברית" [ref=e1022] [cursor=pointer]:
+        - /url: /he/
+      - link "हिन्दी" [ref=e1023] [cursor=pointer]:
+        - /url: /hi/
+      - link "বাংলা" [ref=e1024] [cursor=pointer]:
+        - /url: /bn/
+      - link "Bahasa Indonesia" [ref=e1025] [cursor=pointer]:
+        - /url: /id/
+      - link "Bahasa Melayu" [ref=e1026] [cursor=pointer]:
+        - /url: /ms/
+      - link "Tiếng Việt" [ref=e1027] [cursor=pointer]:
+        - /url: /vi/
+      - link "ไทย" [ref=e1028] [cursor=pointer]:
+        - /url: /th/
+      - link "日本語" [ref=e1029] [cursor=pointer]:
+        - /url: /ja/
+      - link "한국어" [ref=e1030] [cursor=pointer]:
+        - /url: /ko/
+      - link "简体中文" [ref=e1031] [cursor=pointer]:
+        - /url: /zh-hans/
+      - link "繁體中文" [ref=e1032] [cursor=pointer]:
+        - /url: /zh-hant/
+      - link "اردو" [ref=e1033] [cursor=pointer]:
+        - /url: /ur/
+      - link "ਪੰਜਾਬੀ" [ref=e1034] [cursor=pointer]:
+        - /url: /pa/
+      - link "தமிழ்" [ref=e1035] [cursor=pointer]:
+        - /url: /ta/
+      - link "తెలుగు" [ref=e1036] [cursor=pointer]:
+        - /url: /te/
+      - link "मराठी" [ref=e1037] [cursor=pointer]:
+        - /url: /mr/
+      - link "ગુજરાતી" [ref=e1038] [cursor=pointer]:
+        - /url: /gu/
+      - link "ಕನ್ನಡ" [ref=e1039] [cursor=pointer]:
+        - /url: /kn/
+      - link "മലയാളം" [ref=e1040] [cursor=pointer]:
+        - /url: /ml/
+      - link "Filipino" [ref=e1041] [cursor=pointer]:
+        - /url: /tl/
+      - link "Basa Jawa" [ref=e1042] [cursor=pointer]:
+        - /url: /jv/
+      - link "Kiswahili" [ref=e1043] [cursor=pointer]:
+        - /url: /sw/
+      - link "မြန်မာ" [ref=e1044] [cursor=pointer]:
+        - /url: /my/
+      - link "Català" [ref=e1045] [cursor=pointer]:
+        - /url: /ca/
+      - link "Slovenščina" [ref=e1046] [cursor=pointer]:
+        - /url: /sl/
+      - link "Lietuvių" [ref=e1047] [cursor=pointer]:
+        - /url: /lt/
+      - link "Latviešu" [ref=e1048] [cursor=pointer]:
+        - /url: /lv/
+      - link "Кыргызча" [ref=e1049] [cursor=pointer]:
+        - /url: /ky/
+      - link "Қазақша" [ref=e1050] [cursor=pointer]:
+        - /url: /kk/
+      - link "Oʻzbekcha" [ref=e1051] [cursor=pointer]:
+        - /url: /uz/
+      - link "Türkmençe" [ref=e1052] [cursor=pointer]:
+        - /url: /tk/
+      - link "Татарча" [ref=e1053] [cursor=pointer]:
+        - /url: /tt/
+      - link "Башҡортса" [ref=e1054] [cursor=pointer]:
+        - /url: /ba/
+      - link "Чӑвашла" [ref=e1055] [cursor=pointer]:
+        - /url: /cv/
+      - link "ئۇيغۇرچە" [ref=e1056] [cursor=pointer]:
+        - /url: /ug/
+      - link "Qaraqalpaqsha" [ref=e1057] [cursor=pointer]:
+        - /url: /kaa/
+      - link "Qırımtatarca" [ref=e1058] [cursor=pointer]:
+        - /url: /crh/
+      - link "Gagauzça" [ref=e1059] [cursor=pointer]:
+        - /url: /gag/
+      - link "Сахалыы" [ref=e1060] [cursor=pointer]:
+        - /url: /sah/
+      - link "Тыва дыл" [ref=e1061] [cursor=pointer]:
+        - /url: /tyv/
+      - link "Къарачай-малкъар" [ref=e1062] [cursor=pointer]:
+        - /url: /krc/
+      - link "Къумукъча" [ref=e1063] [cursor=pointer]:
+        - /url: /kum/
+      - link "Ногайша" [ref=e1064] [cursor=pointer]:
+        - /url: /nog/
+      - link "Хакас тілі" [ref=e1065] [cursor=pointer]:
+        - /url: /kjh/
+      - link "Алтай тил" [ref=e1066] [cursor=pointer]:
+        - /url: /alt/
+      - link "تۆرکجه" [ref=e1067] [cursor=pointer]:
+        - /url: /azb/
+      - link "Ирон" [ref=e1068] [cursor=pointer]:
+        - /url: /os/
+      - link "Eesti" [ref=e1069] [cursor=pointer]:
+        - /url: /et/
+      - link "Shqip" [ref=e1070] [cursor=pointer]:
+        - /url: /sq/
+      - link "Македонски" [ref=e1071] [cursor=pointer]:
+        - /url: /mk/
+      - link "Bosanski" [ref=e1072] [cursor=pointer]:
+        - /url: /bs/
+      - link "ქართული" [ref=e1073] [cursor=pointer]:
+        - /url: /ka/
+      - link "Հայերեն" [ref=e1074] [cursor=pointer]:
+        - /url: /hy/
+      - link "नेपाली" [ref=e1075] [cursor=pointer]:
+        - /url: /ne/
+      - link "සිංහල" [ref=e1076] [cursor=pointer]:
+        - /url: /si/
+      - link "ខ្មែរ" [ref=e1077] [cursor=pointer]:
+        - /url: /km/
+      - link "ລາວ" [ref=e1078] [cursor=pointer]:
+        - /url: /lo/
+      - link "አማርኛ" [ref=e1079] [cursor=pointer]:
+        - /url: /am/
+      - link "Hausa" [ref=e1080] [cursor=pointer]:
+        - /url: /ha/
+      - link "Yorùbá" [ref=e1081] [cursor=pointer]:
+        - /url: /yo/
+      - link "Igbo" [ref=e1082] [cursor=pointer]:
+        - /url: /ig/
+      - link "isiZulu" [ref=e1083] [cursor=pointer]:
+        - /url: /zu/
+      - link "Afrikaans" [ref=e1084] [cursor=pointer]:
+        - /url: /af/
+      - link "Íslenska" [ref=e1085] [cursor=pointer]:
+        - /url: /is/
+      - link "Gaeilge" [ref=e1086] [cursor=pointer]:
+        - /url: /ga/
+      - link "Cymraeg" [ref=e1087] [cursor=pointer]:
+        - /url: /cy/
+      - link "Euskara" [ref=e1088] [cursor=pointer]:
+        - /url: /eu/
+      - link "Galego" [ref=e1089] [cursor=pointer]:
+        - /url: /gl/
+      - link "Malti" [ref=e1090] [cursor=pointer]:
+        - /url: /mt/
+      - link "Lëtzebuergesch" [ref=e1091] [cursor=pointer]:
+        - /url: /lb/
+      - link "Беларуская" [ref=e1092] [cursor=pointer]:
+        - /url: /be/
+      - link "Soomaali" [ref=e1093] [cursor=pointer]:
+        - /url: /so/
+      - link "isiXhosa" [ref=e1094] [cursor=pointer]:
+        - /url: /xh/
+      - link "Kreyòl ayisyen" [ref=e1095] [cursor=pointer]:
+        - /url: /ht/
+      - link "Esperanto" [ref=e1096] [cursor=pointer]:
+        - /url: /eo/
+      - link "Latina" [ref=e1097] [cursor=pointer]:
+        - /url: /la/
+      - link "ייִדיש" [ref=e1098] [cursor=pointer]:
+        - /url: /yi/
+      - link "پښتو" [ref=e1099] [cursor=pointer]:
+        - /url: /ps/
+      - link "Kurdî" [ref=e1100] [cursor=pointer]:
+        - /url: /ku/
+      - link "کوردیی ناوەندی" [ref=e1101] [cursor=pointer]:
+        - /url: /ckb/
+      - link "سنڌي" [ref=e1102] [cursor=pointer]:
+        - /url: /sd/
+      - link "Монгол" [ref=e1103] [cursor=pointer]:
+        - /url: /mn/
+      - link "Māori" [ref=e1104] [cursor=pointer]:
+        - /url: /mi/
+      - link "Gagana Sāmoa" [ref=e1105] [cursor=pointer]:
+        - /url: /sm/
+      - link "Lea faka-Tonga" [ref=e1106] [cursor=pointer]:
+        - /url: /to/
+      - link "ʻŌlelo Hawaiʻi" [ref=e1107] [cursor=pointer]:
+        - /url: /haw/
+      - link "Na vosa vakaviti" [ref=e1108] [cursor=pointer]:
+        - /url: /fj/
+      - link "ଓଡ଼ିଆ" [ref=e1109] [cursor=pointer]:
+        - /url: /or/
+      - link "অসমীয়া" [ref=e1110] [cursor=pointer]:
+        - /url: /as/
+      - link "ދިވެހި" [ref=e1111] [cursor=pointer]:
+        - /url: /dv/
+      - link "Binisaya" [ref=e1112] [cursor=pointer]:
+        - /url: /ceb/
+      - link "Basa Sunda" [ref=e1113] [cursor=pointer]:
+        - /url: /su/
+      - link "Sesotho" [ref=e1114] [cursor=pointer]:
+        - /url: /st/
+      - link "chiShona" [ref=e1115] [cursor=pointer]:
+        - /url: /sn/
+      - link "Ikinyarwanda" [ref=e1116] [cursor=pointer]:
+        - /url: /rw/
+      - link "Malagasy" [ref=e1117] [cursor=pointer]:
+        - /url: /mg/
+      - link "Chichewa" [ref=e1118] [cursor=pointer]:
+        - /url: /ny/
+      - link "Afaan Oromoo" [ref=e1119] [cursor=pointer]:
+        - /url: /om/
+      - link "Wolof" [ref=e1120] [cursor=pointer]:
+        - /url: /wo/
+      - link "Lingála" [ref=e1121] [cursor=pointer]:
+        - /url: /ln/
+      - link "Setswana" [ref=e1122] [cursor=pointer]:
+        - /url: /tn/
+      - link "Xitsonga" [ref=e1123] [cursor=pointer]:
+        - /url: /ts/
+      - link "Luganda" [ref=e1124] [cursor=pointer]:
+        - /url: /lg/
+      - link "Akan" [ref=e1125] [cursor=pointer]:
+        - /url: /ak/
+      - link "Eʋegbe" [ref=e1126] [cursor=pointer]:
+        - /url: /ee/
+      - link "Føroyskt" [ref=e1127] [cursor=pointer]:
+        - /url: /fo/
+      - link "Gàidhlig" [ref=e1128] [cursor=pointer]:
+        - /url: /gd/
+      - link "Brezhoneg" [ref=e1129] [cursor=pointer]:
+        - /url: /br/
+      - link "Occitan" [ref=e1130] [cursor=pointer]:
+        - /url: /oc/
+      - link "Frysk" [ref=e1131] [cursor=pointer]:
+        - /url: /fy/
+      - link "Runasimi" [ref=e1132] [cursor=pointer]:
+        - /url: /qu/
+      - link "Avañe'ẽ" [ref=e1133] [cursor=pointer]:
+        - /url: /gn/
+      - link "Aymar aru" [ref=e1134] [cursor=pointer]:
+        - /url: /ay/
+      - link "Hmoob" [ref=e1135] [cursor=pointer]:
+        - /url: /hmn/
+      - link "Нохчийн" [ref=e1136] [cursor=pointer]:
+        - /url: /ce/
+      - link "Аԥсшәа" [ref=e1137] [cursor=pointer]:
+        - /url: /ab/
+      - link "Адыгэбзэ" [ref=e1138] [cursor=pointer]:
+        - /url: /kbd/
+      - link "Nynorsk" [ref=e1139] [cursor=pointer]:
+        - /url: /nn/
+      - link "Davvisámegiella" [ref=e1140] [cursor=pointer]:
+        - /url: /se/
+      - link "Hornjoserbšćina" [ref=e1141] [cursor=pointer]:
+        - /url: /hsb/
+      - link "Dolnoserbšćina" [ref=e1142] [cursor=pointer]:
+        - /url: /dsb/
+      - link "Ślōnskŏ gŏdka" [ref=e1143] [cursor=pointer]:
+        - /url: /szl/
+      - link "Sardu" [ref=e1144] [cursor=pointer]:
+        - /url: /sc/
+      - link "Sicilianu" [ref=e1145] [cursor=pointer]:
+        - /url: /scn/
+      - link "Napulitano" [ref=e1146] [cursor=pointer]:
+        - /url: /nap/
+      - link "Vèneto" [ref=e1147] [cursor=pointer]:
+        - /url: /vec/
+      - link "Corsu" [ref=e1148] [cursor=pointer]:
+        - /url: /co/
+      - link "Asturianu" [ref=e1149] [cursor=pointer]:
+        - /url: /ast/
+      - link "Aragonés" [ref=e1150] [cursor=pointer]:
+        - /url: /an/
+      - link "Walon" [ref=e1151] [cursor=pointer]:
+        - /url: /wa/
+      - link "Rumantsch" [ref=e1152] [cursor=pointer]:
+        - /url: /rm/
+      - link "Furlan" [ref=e1153] [cursor=pointer]:
+        - /url: /fur/
+      - link "Lombard" [ref=e1154] [cursor=pointer]:
+        - /url: /lmo/
+      - link "Piemontèis" [ref=e1155] [cursor=pointer]:
+        - /url: /pms/
+      - link "Ligure" [ref=e1156] [cursor=pointer]:
+        - /url: /lij/
+      - link "Ladin" [ref=e1157] [cursor=pointer]:
+        - /url: /lld/
+      - link "Schwiizerdütsch" [ref=e1158] [cursor=pointer]:
+        - /url: /gsw/
+      - link "Boarisch" [ref=e1159] [cursor=pointer]:
+        - /url: /bar/
+      - link "Plattdüütsch" [ref=e1160] [cursor=pointer]:
+        - /url: /nds/
+      - link "Limburgs" [ref=e1161] [cursor=pointer]:
+        - /url: /li/
+      - link "Zeêuws" [ref=e1162] [cursor=pointer]:
+        - /url: /zea/
+      - link "West-Vlams" [ref=e1163] [cursor=pointer]:
+        - /url: /vls/
+      - link "Anarâškielâ" [ref=e1164] [cursor=pointer]:
+        - /url: /smn/
+      - link "Nuõrttsääʹmǩiõll" [ref=e1165] [cursor=pointer]:
+        - /url: /sms/
+      - link "Åarjelsaemien" [ref=e1166] [cursor=pointer]:
+        - /url: /sma/
+      - link "Võro" [ref=e1167] [cursor=pointer]:
+        - /url: /vro/
+      - link "Коми" [ref=e1168] [cursor=pointer]:
+        - /url: /kv/
+      - link "Удмурт" [ref=e1169] [cursor=pointer]:
+        - /url: /udm/
+      - link "Олык марий" [ref=e1170] [cursor=pointer]:
+        - /url: /mhr/
+      - link "Кырык мары" [ref=e1171] [cursor=pointer]:
+        - /url: /mrj/
+      - link "Эрзянь" [ref=e1172] [cursor=pointer]:
+        - /url: /myv/
+      - link "Мокшень" [ref=e1173] [cursor=pointer]:
+        - /url: /mdf/
+      - link "Авар мацӏ" [ref=e1174] [cursor=pointer]:
+        - /url: /av/
+      - link "Лезги чӏал" [ref=e1175] [cursor=pointer]:
+        - /url: /lez/
+      - link "Дарган мез" [ref=e1176] [cursor=pointer]:
+        - /url: /dar/
+      - link "ГӀалгӀай" [ref=e1177] [cursor=pointer]:
+        - /url: /inh/
+      - link "Адыгабзэ" [ref=e1178] [cursor=pointer]:
+        - /url: /ady/
+      - link "Хальмг" [ref=e1179] [cursor=pointer]:
+        - /url: /xal/
+      - link "Буряад" [ref=e1180] [cursor=pointer]:
+        - /url: /bua/
+      - link "བོད་སྐད།" [ref=e1181] [cursor=pointer]:
+        - /url: /bo/
+      - link "རྫོང་ཁ" [ref=e1182] [cursor=pointer]:
+        - /url: /dz/
+      - link "Zazaki" [ref=e1183] [cursor=pointer]:
+        - /url: /diq/
+      - link "भोजपुरी" [ref=e1184] [cursor=pointer]:
+        - /url: /bho/
+      - link "मैथिली" [ref=e1185] [cursor=pointer]:
+        - /url: /mai/
+      - link "संस्कृतम्" [ref=e1186] [cursor=pointer]:
+        - /url: /sa/
+      - link "کٲشُر" [ref=e1187] [cursor=pointer]:
+        - /url: /ks/
+      - link "মৈতৈলোন্" [ref=e1188] [cursor=pointer]:
+        - /url: /mni/
+      - link "Тоҷикӣ" [ref=e1189] [cursor=pointer]:
+        - /url: /tg/
+      - link "ትግርኛ" [ref=e1190] [cursor=pointer]:
+        - /url: /ti/
+      - link "粵語" [ref=e1191] [cursor=pointer]:
+        - /url: /yue/
+      - link "مصرى" [ref=e1192] [cursor=pointer]:
+        - /url: /arz/
+      - link "پنجابی" [ref=e1193] [cursor=pointer]:
+        - /url: /pnb/
+      - link "Fulfulde" [ref=e1194] [cursor=pointer]:
+        - /url: /ff/
+      - link "Bamanankan" [ref=e1195] [cursor=pointer]:
+        - /url: /bm/
+  - dialog [ref=e1197]:
+    - heading "Bare Sudoku" [level=2] [ref=e1198]
+    - paragraph [ref=e1199]: Yeni oyun
+    - button "Kolay" [ref=e1200] [cursor=pointer]
+    - button "Orta" [ref=e1201] [cursor=pointer]
+    - button "Zor" [ref=e1202] [cursor=pointer]
+    - button "Uzman" [ref=e1203] [cursor=pointer]
+    - 'button "Yanlışları göster: Açık" [ref=e1204] [cursor=pointer]'
+    - generic [ref=e1205]:
+      - generic [ref=e1206]: Dil
+      - combobox "Dil" [ref=e1207]:
+        - option "English"
+        - option "Türkçe" [selected]
+        - option "Azərbaycanca"
+        - option "Deutsch"
+        - option "Français"
+        - option "Español"
+        - option "Português"
+        - option "Italiano"
+        - option "Nederlands"
+        - option "Polski"
+        - option "Čeština"
+        - option "Slovenčina"
+        - option "Magyar"
+        - option "Română"
+        - option "Ελληνικά"
+        - option "Svenska"
+        - option "Dansk"
+        - option "Norsk"
+        - option "Suomi"
+        - option "Русский"
+        - option "Українська"
+        - option "Български"
+        - option "Srpski"
+        - option "Hrvatski"
+        - option "العربية"
+        - option "فارسی"
+        - option "עברית"
+        - option "हिन्दी"
+        - option "বাংলা"
+        - option "Bahasa Indonesia"
+        - option "Bahasa Melayu"
+        - option "Tiếng Việt"
+        - option "ไทย"
+        - option "日本語"
+        - option "한국어"
+        - option "简体中文"
+        - option "繁體中文"
+        - option "اردو"
+        - option "ਪੰਜਾਬੀ"
+        - option "தமிழ்"
+        - option "తెలుగు"
+        - option "मराठी"
+        - option "ગુજરાતી"
+        - option "ಕನ್ನಡ"
+        - option "മലയാളം"
+        - option "Filipino"
+        - option "Basa Jawa"
+        - option "Kiswahili"
+        - option "မြန်မာ"
+        - option "Català"
+        - option "Slovenščina"
+        - option "Lietuvių"
+        - option "Latviešu"
+        - option "Кыргызча"
+        - option "Қазақша"
+        - option "Oʻzbekcha"
+        - option "Türkmençe"
+        - option "Татарча"
+        - option "Башҡортса"
+        - option "Чӑвашла"
+        - option "ئۇيغۇرچە"
+        - option "Qaraqalpaqsha"
+        - option "Qırımtatarca"
+        - option "Gagauzça"
+        - option "Сахалыы"
+        - option "Тыва дыл"
+        - option "Къарачай-малкъар"
+        - option "Къумукъча"
+        - option "Ногайша"
+        - option "Хакас тілі"
+        - option "Алтай тил"
+        - option "تۆرکجه"
+        - option "Ирон"
+        - option "Eesti"
+        - option "Shqip"
+        - option "Македонски"
+        - option "Bosanski"
+        - option "ქართული"
+        - option "Հայերեն"
+        - option "नेपाली"
+        - option "සිංහල"
+        - option "ខ្មែរ"
+        - option "ລາວ"
+        - option "አማርኛ"
+        - option "Hausa"
+        - option "Yorùbá"
+        - option "Igbo"
+        - option "isiZulu"
+        - option "Afrikaans"
+        - option "Íslenska"
+        - option "Gaeilge"
+        - option "Cymraeg"
+        - option "Euskara"
+        - option "Galego"
+        - option "Malti"
+        - option "Lëtzebuergesch"
+        - option "Беларуская"
+        - option "Soomaali"
+        - option "isiXhosa"
+        - option "Kreyòl ayisyen"
+        - option "Esperanto"
+        - option "Latina"
+        - option "ייִדיש"
+        - option "پښتو"
+        - option "Kurdî"
+        - option "کوردیی ناوەندی"
+        - option "سنڌي"
+        - option "Монгол"
+        - option "Māori"
+        - option "Gagana Sāmoa"
+        - option "Lea faka-Tonga"
+        - option "ʻŌlelo Hawaiʻi"
+        - option "Na vosa vakaviti"
+        - option "ଓଡ଼ିଆ"
+        - option "অসমীয়া"
+        - option "ދިވެހި"
+        - option "Binisaya"
+        - option "Basa Sunda"
+        - option "Sesotho"
+        - option "chiShona"
+        - option "Ikinyarwanda"
+        - option "Malagasy"
+        - option "Chichewa"
+        - option "Afaan Oromoo"
+        - option "Wolof"
+        - option "Lingála"
+        - option "Setswana"
+        - option "Xitsonga"
+        - option "Luganda"
+        - option "Akan"
+        - option "Eʋegbe"
+        - option "Føroyskt"
+        - option "Gàidhlig"
+        - option "Brezhoneg"
+        - option "Occitan"
+        - option "Frysk"
+        - option "Runasimi"
+        - option "Avañe'ẽ"
+        - option "Aymar aru"
+        - option "Hmoob"
+        - option "Нохчийн"
+        - option "Аԥсшәа"
+        - option "Адыгэбзэ"
+        - option "Nynorsk"
+        - option "Davvisámegiella"
+        - option "Hornjoserbšćina"
+        - option "Dolnoserbšćina"
+        - option "Ślōnskŏ gŏdka"
+        - option "Sardu"
+        - option "Sicilianu"
+        - option "Napulitano"
+        - option "Vèneto"
+        - option "Corsu"
+        - option "Asturianu"
+        - option "Aragonés"
+        - option "Walon"
+        - option "Rumantsch"
+        - option "Furlan"
+        - option "Lombard"
+        - option "Piemontèis"
+        - option "Ligure"
+        - option "Ladin"
+        - option "Schwiizerdütsch"
+        - option "Boarisch"
+        - option "Plattdüütsch"
+        - option "Limburgs"
+        - option "Zeêuws"
+        - option "West-Vlams"
+        - option "Anarâškielâ"
+        - option "Nuõrttsääʹmǩiõll"
+        - option "Åarjelsaemien"
+        - option "Võro"
+        - option "Коми"
+        - option "Удмурт"
+        - option "Олык марий"
+        - option "Кырык мары"
+        - option "Эрзянь"
+        - option "Мокшень"
+        - option "Авар мацӏ"
+        - option "Лезги чӏал"
+        - option "Дарган мез"
+        - option "ГӀалгӀай"
+        - option "Адыгабзэ"
+        - option "Хальмг"
+        - option "Буряад"
+        - option "བོད་སྐད།"
+        - option "རྫོང་ཁ"
+        - option "Zazaki"
+        - option "भोजपुरी"
+        - option "मैथिली"
+        - option "संस्कृतम्"
+        - option "کٲشُر"
+        - option "মৈতৈলোন্"
+        - option "Тоҷикӣ"
+        - option "ትግርኛ"
+        - option "粵語"
+        - option "مصرى"
+        - option "پنجابی"
+        - option "Fulfulde"
+        - option "Bamanankan"
