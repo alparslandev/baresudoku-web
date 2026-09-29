@@ -223,6 +223,7 @@ def page(template, css, script, code, entry, languages, version, size, lastmod, 
         "{{OG_ALT}}": f(entry["ogAlt"]),
         "{{JSONLD}}": jsonld(code, entry, languages, version, size, lastmod, web),
         "{{CONTENT}}": content(code, entry, languages, version, size, lastmod, web),
+        "{{WEB_VERSION}}": web,
         "{{CSS}}": css,
         "{{SCRIPT}}": script,
     }
