@@ -528,20 +528,28 @@ class Game {
     for (let i = 0; i < 81; i++) {
       this.given[i] = puzzle[i];
       this.solution[i] = full[i];
-      this.value[i] = puzzle[i];
+    }
+    this.level = level;
+    this.active = true;
+    this.restart();
+  }
+
+  restart() {
+    if (!this.active) return false;
+    for (let i = 0; i < 81; i++) {
+      this.value[i] = this.given[i];
       this.notes[i] = 0;
     }
     this.history = [];
     this.record = [];
-    this.active = true;
     this.solved = false;
     this.noteMode = false;
-    this.level = level;
     this.selected = NONE;
     this.sticky = 0;
     this.elapsed = 0;
     this.running = false;
     this.hintKind = HINT_NONE;
+    return true;
   }
 
   canEdit() {
@@ -677,6 +685,13 @@ class Game {
       if (this.notes[i] !== m) {
         this.touch(i);
         this.notes[i] = m;
+      }
+    }
+    if (this.record.length) return this.commit();
+    for (let i = 0; i < 81; i++) {
+      if (this.notes[i]) {
+        this.touch(i);
+        this.notes[i] = 0;
       }
     }
     return this.commit();

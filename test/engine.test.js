@@ -77,7 +77,25 @@ test("oyun durumu: hamle, not, geri al, not doldurma, ipucu, sure, kayit", () =>
   g.noteMode = false;
   expect(g.fillNotes()).toBe(true);
   for (let i = 0; i < 81; i++) if (!g.value[i]) expect(g.notes[i]).toBe(candidates(g.value, i));
-  expect(g.fillNotes()).toBe(false);
+  expect(g.fillNotes()).toBe(true);
+  for (let i = 0; i < 81; i++) expect(g.notes[i]).toBe(0);
+  expect(g.undo()).toBe(true);
+  for (let i = 0; i < 81; i++) if (!g.value[i]) expect(g.notes[i]).toBe(candidates(g.value, i));
+  expect(g.fillNotes()).toBe(true);
+  expect(g.fillNotes()).toBe(true);
+  const restartHistory = g.history.length;
+  expect(restartHistory).toBeGreaterThan(0);
+  expect(g.restart()).toBe(true);
+  for (let i = 0; i < 81; i++) {
+    expect(g.value[i]).toBe(g.given[i]);
+    expect(g.notes[i]).toBe(0);
+  }
+  expect(g.history.length).toBe(0);
+  expect(g.time(9999)).toBe(0);
+  expect(g.solved).toBe(false);
+  g.select(cell);
+  expect(g.enter(right)).toBe(true);
+  expect(g.undo()).toBe(true);
   expect(g.hint(e)).toBe(true);
   expect(g.hintActive()).toBe(true);
   expect(g.hintKind).toBe(HINT_PLACE);
