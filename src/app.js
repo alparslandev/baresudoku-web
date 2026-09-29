@@ -2,7 +2,7 @@
 'use strict';
 const S_UNDO = 4, S_NEW = 9, S_ERRORS = 10, S_ON = 11, S_OFF = 12, S_CANCEL = 13, S_SOLVED = 14, S_PREPARING = 15;
 const S_WRONG = 16, S_NAKED = 17, S_ROW = 18, S_COL = 19, S_BOX = 20, S_AGAIN = 21, S_TECH = 22, S_TITLE = 28;
-const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31;
+const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31, S_RESTART = 32;
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
 const now = () => Date.now();
@@ -57,6 +57,7 @@ function renderLabels() {
   toolButtons.forEach((b, i) => { b.querySelector('span').textContent = strings[S_UNDO + i]; });
   document.querySelectorAll('#panel [data-level]').forEach(b => { b.textContent = strings[+b.dataset.level]; });
   $('cancel-btn').textContent = strings[S_CANCEL];
+  $('restart-btn').textContent = strings[S_RESTART];
   $('lang-label').textContent = strings[S_LANGUAGE];
   $('android').textContent = strings[S_ANDROID];
   $('source').textContent = strings[S_SOURCE];
@@ -185,6 +186,7 @@ function render() {
     $('panel-sub').textContent = solved ? strings[game.level] + '  ' + clock(game.time(now())) + '\n' + strings[S_NEW] : strings[S_NEW];
     $('errors-btn').textContent = strings[S_ERRORS] + ': ' + strings[game.showErrors ? S_ON : S_OFF];
     $('cancel-btn').hidden = !cancellable();
+    $('restart-btn').hidden = !game.active;
   }
 }
 
@@ -241,6 +243,16 @@ function startGame(level) {
     render();
     startTimer();
   }, 30);
+}
+
+function restartGame() {
+  if (generating || !game.active) return;
+  menuOpen = false;
+  game.restart();
+  game.resume(now());
+  save();
+  render();
+  startTimer();
 }
 
 function act(kind, d) {
@@ -324,6 +336,7 @@ function bind() {
   document.querySelectorAll('#panel [data-level]').forEach(b => b.addEventListener('click', () => startGame(+b.dataset.level)));
   $('errors-btn').addEventListener('click', () => { game.showErrors = !game.showErrors; save(); render(); });
   $('cancel-btn').addEventListener('click', closeMenu);
+  $('restart-btn').addEventListener('click', restartGame);
   $('lang').addEventListener('change', e => switchLang(e.target.value));
   document.addEventListener('keydown', e => {
     if (e.target && e.target.tagName === 'SELECT') return;
