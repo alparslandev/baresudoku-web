@@ -9,6 +9,15 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
-  const key = e.request.mode === 'navigate' ? '/' : e.request;
-  e.respondWith(caches.match(key, { ignoreSearch: true }).then(r => r || fetch(e.request)));
+  if (e.request.mode !== 'navigate') {
+    e.respondWith(caches.match(e.request, { ignoreSearch: true }).then(r => r || fetch(e.request)));
+    return;
+  }
+  e.respondWith(caches.match(url.pathname).then(hit => hit || fetch(e.request).then(res => {
+    if (res.ok) {
+      const copy = res.clone();
+      caches.open(CACHE).then(c => c.put(url.pathname, copy));
+    }
+    return res;
+  }).catch(() => caches.match('/'))));
 });

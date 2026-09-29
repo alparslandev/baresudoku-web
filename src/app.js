@@ -38,14 +38,19 @@ function pickLang() {
   return 'en';
 }
 
-function applyLang(code, remember) {
-  const L = I18N[code];
-  strings = L.s;
-  document.documentElement.lang = code;
-  document.documentElement.dir = L.rtl ? 'rtl' : 'ltr';
+function pathOf(code) {
+  return code === 'en' ? '/' : '/' + code.toLowerCase() + '/';
+}
+
+function applyLang(code) {
+  strings = I18N[code].s;
   $('lang').value = code;
-  if (remember) store(KEY + '.lang', code);
   renderLabels();
+}
+
+function switchLang(code) {
+  store(KEY + '.lang', code);
+  location.href = pathOf(code);
 }
 
 function renderLabels() {
@@ -319,7 +324,7 @@ function bind() {
   document.querySelectorAll('#panel [data-level]').forEach(b => b.addEventListener('click', () => startGame(+b.dataset.level)));
   $('errors-btn').addEventListener('click', () => { game.showErrors = !game.showErrors; save(); render(); });
   $('cancel-btn').addEventListener('click', closeMenu);
-  $('lang').addEventListener('change', e => { applyLang(e.target.value, true); render(); });
+  $('lang').addEventListener('change', e => switchLang(e.target.value));
   document.addEventListener('keydown', e => {
     if (e.target && e.target.tagName === 'SELECT') return;
     const k = e.key;
@@ -360,9 +365,17 @@ function bind() {
 }
 
 function init() {
+  const pageLang = document.documentElement.lang;
+  if (location.pathname === '/') {
+    const target = pickLang();
+    if (target !== 'en' && I18N[target]) {
+      location.replace(pathOf(target));
+      return;
+    }
+  }
   buildBoard();
   bind();
-  applyLang(pickLang(), false);
+  applyLang(I18N[pageLang] ? pageLang : 'en');
   let saved = null;
   try { saved = JSON.parse(fetchStored(KEY)); } catch (e) {}
   game.load(saved);
