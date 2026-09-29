@@ -5847,6 +5847,271 @@
       "updated": "Шинэчлэгдсэн",
       "languagesLabel": "Хэлүүд",
       "ogAlt": "Bare Sudoku лого болон Үнэгүй онлайн судоку, зар сурталчилгаагүй гэсэн үгс"
+    },
+    "mi": {
+      "title": "Bare Sudoku: sudoku koreutu tuihono, kāore he pānui, kāore he rēhita",
+      "description": "Sudoku koreutu i te pūtirotiro: kāore he pānui, kāore he pūkete, kāore he aroturuki. E whā ngā taumata, tuhipoka, wetekina me ngā tīwhiri e whakamārama ana i te arorau. Ka mahi tuimotu. He taupānga Android {size} KB hoki.",
+      "h1": "Bare Sudoku: sudoku koreutu tuihono, kāore he pānui, kāore he rēhita",
+      "intro": "He kēmu sudoku koreutu a Bare Sudoku e mahi ana i tō pūtirotiro. Kāore he pānui, kāore he pūkete, kāore he aroturuki, kāore he mea hei tāuta: huakina te whārangi, kōwhiria he taumata, ka tākaro. Kotahi noa te otinga o ia panga, ka oti mā te arorau anake, ā, ka whakamārama ia tīwhiri i tōna take. Ka mahi tuimotu te kēmu, he pūtake tuwhera i raro i te raihana MIT.",
+      "featuresHeading": "Ka whiwhi koe",
+      "features": [
+        "E whā ngā taumata: māmā, waenga, uaua, tohunga",
+        "Kotahi noa te otinga o ia panga, kāore e hiahiatia te matapae",
+        "Tuhipoka, wetekina, muku, me te whakakī i ngā tuhipoka katoa mā te pā kotahi",
+        "Ngā tīwhiri e whakamārama ana i te tikanga: takitahi, kaitono kua rakaina, takirua me takitoru, X-Wing, Y-Wing, Swordfish, XYZ-Wing",
+        "Tiaki aunoa, aratau pōuri, papapātuhi, whakatakotoranga whakapae",
+        "Ka mahi tuimotu i muri i te toronga tuatahi, kāore e hiahiatia he toa taupānga"
+      ],
+      "androidHeading": "Taupānga Android",
+      "android": "He taupānga Android hoki a Bare Sudoku: putanga {version}, tata ki te {size} KB, kāore he whakaaetanga, kāore he ipurangi, Java parakore kāore he whare pukapuka. Kāore i Google Play; tikiakea te APK kua hainatia mai i GitHub Releases, ka tāuta ki Android 8, ki tētahi hou ake rānei.",
+      "androidLink": "Tikiake APK",
+      "privacyHeading": "Tūmataiti",
+      "privacy": "Kāore a Bare Sudoku e kohi raraunga. Kāore he pūkete, kāore he tātari, kāore he pihikete; ka tiakina tō kēmu o nāianei i tō pūtirotiro anake. Kāore he whakaaetanga ipurangi o te taupānga Android.",
+      "faqHeading": "Pātai auau",
+      "faq": [
+        [
+          "He koreutu a Bare Sudoku?",
+          "Āe. He koreutu katoa a Bare Sudoku i te pūtirotiro me Android. Kāore he pānui, kāore he hoko i roto i te taupānga, kāore he putanga utu."
+        ],
+        [
+          "He pānui tō Bare Sudoku?",
+          "Kāo. Kāore te kēmu tukutuku me te taupānga Android e whakaatu pānui, kāore he kaiaroturuki, he tuhinga tuatoru rānei."
+        ],
+        [
+          "Me whai pūkete ahau hei tākaro?",
+          "Kāo. Huakina a baresudoku.com ka tākaro. Ka tiakina aunoa te kēmu i te pūtirotiro; katia te ripa, ka haere tonu ā muri."
+        ],
+        [
+          "Ka mahi tuimotu a Bare Sudoku?",
+          "Āe. I muri i te toronga tuatahi ka pupuri te pūtirotiro i te whārangi, ka huaki kāore he hononga. Kāore te taupānga Android e whakamahi i te ipurangi."
+        ],
+        [
+          "Ka kohi raraunga a Bare Sudoku?",
+          "Kāo. Kāore he tātari, kāore he pūkete, kāore he pihikete. Kei te rokiroki ā-rohe o tō pūtirotiro anake te kēmu kua tiakina."
+        ],
+        [
+          "He taupānga Android?",
+          "Āe. He APK {size} KB a Bare Sudoku mō Android 8 me ngā mea hou ake, kāore he whakaaetanga, kāore he ipurangi. Tikiakea mai i GitHub Releases."
+        ]
+      ],
+      "madeBy": "Nā Alparslan Selçuk Develioğlu i hanga",
+      "source": "Waehere pūtake",
+      "androidSource": "Waehere pūtake Android",
+      "updated": "Whakahōu",
+      "languagesLabel": "Ngā reo",
+      "ogAlt": "Te moko Bare Sudoku me ngā kupu Sudoku koreutu tuihono, kāore he pānui"
+    },
+    "sm": {
+      "title": "Bare Sudoku: sudoku e leai se totogi i luga o le initaneti, leai ni fa'asalalauga, leai se lesitala",
+      "description": "Sudoku e leai se totogi i le su'esu'ega: leai ni fa'asalalauga, leai se teugatupe, leai se siakiina. Fā tulaga, fa'amaumauga, toe fo'i ma fa'ailoga e fa'amatala ai le manatu. E galue e aunoa ma le initaneti. E iai fo'i le polokalama Android e {size} KB.",
+      "h1": "Bare Sudoku: sudoku e leai se totogi i luga o le initaneti, leai ni fa'asalalauga, leai se lesitala",
+      "intro": "O Bare Sudoku o se ta'aloga sudoku e leai se totogi e galue i lau su'esu'ega. Leai ni fa'asalalauga, leai se teugatupe, leai se siakiina ma leai se mea e fa'apipi'i: tatala le itulau, filifili se tulaga ma ta'alo. E tasi lava le tali o pa'ipa'iga ta'itasi ma e fo'ia i le manatu, ma e fa'amatala e fa'ailoga ta'itasi lona mafua'aga. E galue le ta'aloga e aunoa ma le initaneti ma o se puna tatala i lalo o le laisene MIT.",
+      "featuresHeading": "Mea e te maua",
+      "features": [
+        "Fā tulaga: faigofie, feololo, faigatā ma tomai",
+        "E tasi le tali o pa'ipa'iga ta'itasi ma e lē mana'omia le mate",
+        "Fa'amaumauga, toe fo'i, tapē ma fa'atumu uma fa'amaumauga i le tomi e tasi",
+        "Fa'ailoga e fa'amatala ai le auala: tasi, sui ua loka, pea ma tolu, X-Wing, Y-Wing, Swordfish ma XYZ-Wing",
+        "Fa'asao otometi, faiga pogisa, kiipoti ma fa'atulagaga fa'alava",
+        "E galue e aunoa ma le initaneti pe a mae'a le asiasiga muamua, e lē mana'omia se faleoloa polokalama"
+      ],
+      "androidHeading": "Polokalama Android",
+      "android": "E iai fo'i Bare Sudoku o se polokalama Android: fa'aliliuga {version}, pe tusa o le {size} KB, leai ni fa'atagaga, leai se initaneti, Java mamā e aunoa ma faletusi. E lē o iai i le Google Play; la'u mai le APK ua sainia mai le GitHub Releases ma fa'apipi'i i le Android 8 po'o se fou.",
+      "androidLink": "La'u mai le APK",
+      "privacyHeading": "Le puipuiga o fa'amatalaga",
+      "privacy": "E lē aoina e Bare Sudoku ni fa'amatalaga. Leai se teugatupe, leai se au'ili'iliga, leai ni kuki; e fa'asao lau ta'aloga o loo iai nei i lau su'esu'ega na'o ia. E leai fo'i se fa'atagaga initaneti a le polokalama Android.",
+      "faqHeading": "Fesili e masani ona fesiligia",
+      "faq": [
+        [
+          "E leai se totogi o Bare Sudoku?",
+          "Ioe. E leai atoa se totogi o Bare Sudoku i le su'esu'ega ma le Android. Leai ni fa'asalalauga, leai ni fa'atauga i totonu o le polokalama ma leai se fa'aliliuga totogi."
+        ],
+        [
+          "E iai ni fa'asalalauga a Bare Sudoku?",
+          "Leai. E lē fa'aalia ni fa'asalalauga e le ta'aloga i luga o le upega ma le polokalama Android, ma leai ni siakiina po'o ni tusitusiga a isi."
+        ],
+        [
+          "E mana'omia se teugatupe e ta'alo ai?",
+          "Leai. Tatala le baresudoku.com ma ta'alo. E fa'asao otometi le ta'aloga i le su'esu'ega; tapuni le tab ma fa'aauau mulimuli ane."
+        ],
+        [
+          "E galue Bare Sudoku e aunoa ma le initaneti?",
+          "Ioe. Pe a mae'a le asiasiga muamua e teu e le su'esu'ega le itulau ma tatala e aunoa ma se feso'ota'iga. E lē fa'aaogāina lava e le polokalama Android le initaneti."
+        ],
+        [
+          "E aoina e Bare Sudoku ni fa'amatalaga?",
+          "Leai. Leai se au'ili'iliga, leai se teugatupe, leai ni kuki. O le ta'aloga ua fa'asao e na'o le teuina fa'alotoifale o lau su'esu'ega."
+        ],
+        [
+          "E iai se polokalama Android?",
+          "Ioe. O Bare Sudoku mo Android o se APK e {size} KB mo Android 8 ma fou atu, e leai ni fa'atagaga ma leai se initaneti. La'u mai i le GitHub Releases."
+        ]
+      ],
+      "madeBy": "Na faia e Alparslan Selçuk Develioğlu",
+      "source": "Kōtusi puna",
+      "androidSource": "Kōtusi puna Android",
+      "updated": "Fa'afou",
+      "languagesLabel": "Gagana",
+      "ogAlt": "Le fa'ailoga Bare Sudoku ma upu Sudoku e leai se totogi i luga o le initaneti, leai ni fa'asalalauga"
+    },
+    "to": {
+      "title": "Bare Sudoku: sudoku taʻetotongi ʻi he ʻinitanetí, ʻikai ha tuʻuaki, ʻikai ha lēsisita",
+      "description": "Sudoku taʻetotongi ʻi he polokalama kumi: ʻikai ha tuʻuaki, ʻikai ha ʻakauni, ʻikai ha muimuiʻi. Levolo ʻe fā, ngaahi nouti, fakafoki mo e ngaahi fokotuʻu ʻoku fakamatalaʻi e fakakaukau. ʻOku ngāue taʻe ʻinitaneti. ʻOku ʻi ai foki ha polokalama Android {size} KB.",
+      "h1": "Bare Sudoku: sudoku taʻetotongi ʻi he ʻinitanetí, ʻikai ha tuʻuaki, ʻikai ha lēsisita",
+      "intro": "Ko Bare Sudoku ko ha vaʻinga sudoku taʻetotongi ʻoku ngāue ʻi hoʻo polokalama kumi. ʻIkai ha tuʻuaki, ʻikai ha ʻakauni, ʻikai ha muimuiʻi pea ʻikai ha meʻa ke fokotuʻu: fakaava e peesi, fili ha levolo pea vaʻinga. ʻOku taha pē e tali ʻo e puleʻi kotoa pē pea ʻoku solova ʻaki pē e fakakaukau, pea ʻoku fakamatalaʻi ʻe he fokotuʻu kotoa pē hono ʻuhinga. ʻOku ngāue e vaʻinga taʻe ʻinitaneti pea ko ha tupuʻanga ava ia ʻi he laiseni MIT.",
+      "featuresHeading": "Meʻa te ke maʻu",
+      "features": [
+        "Levolo ʻe fā: faingofua, lotoloto, faingataʻa mo mataotao",
+        "ʻOku taha pē e tali ʻo e puleʻi kotoa pē pea ʻikai fiemaʻu ke fakafuofua",
+        "Ngaahi nouti, fakafoki, tāmateʻi mo e fakafonu ʻo e ngaahi nouti kotoa ʻi he lomi pē taha",
+        "Ngaahi fokotuʻu ʻoku fakamatalaʻi e founga: taha, ngaahi fili kuo loka, hoa mo tolu, X-Wing, Y-Wing, Swordfish mo XYZ-Wing",
+        "Tauhi fakaʻotomētiki, sipinga fakapoʻuli, kiipoti mo e fokotuʻutuʻu fakalava",
+        "ʻOku ngāue taʻe ʻinitaneti hili e ʻuluaki ʻaʻahi, ʻikai fiemaʻu ha falekoloa polokalama"
+      ],
+      "androidHeading": "Polokalama Android",
+      "android": "ʻOku ʻi ai foki ʻa Bare Sudoku ko ha polokalama Android: paaki {version}, ofi ki he {size} KB, ʻikai ha ngofua, ʻikai ha ʻinitaneti, Java maʻa taʻe ha laipeli. ʻOku ʻikai ʻi he Google Play; ʻomi e APK kuo fakamoʻoniʻi mei he GitHub Releases pea fokotuʻu ʻi he Android 8 pe foʻou ange.",
+      "androidLink": "ʻOmi e APK",
+      "privacyHeading": "Fakapulipuli",
+      "privacy": "ʻOku ʻikai tānaki ʻe Bare Sudoku ha fakamatala. ʻIkai ha ʻakauni, ʻikai ha ʻanalaiso, ʻikai ha kuki; ʻoku tauhi pē hoʻo vaʻinga lolotonga ʻi hoʻo polokalama kumi. ʻOku ʻikai foki ha ngofua ʻinitaneti ʻa e polokalama Android.",
+      "faqHeading": "Ngaahi fehuʻi ʻoku faʻa ʻeke",
+      "faq": [
+        [
+          "ʻOku taʻetotongi ʻa Bare Sudoku?",
+          "ʻIo. ʻOku taʻetotongi kakato ʻa Bare Sudoku ʻi he polokalama kumi mo e Android. ʻIkai ha tuʻuaki, ʻikai ha fakatau ʻi loto, ʻikai ha paaki totongi."
+        ],
+        [
+          "ʻOku ʻi ai ha tuʻuaki ʻa Bare Sudoku?",
+          "ʻIkai. ʻOku ʻikai fakahā ha tuʻuaki ʻe he vaʻinga uepi pe polokalama Android, pea ʻikai ha muimuiʻi pe ngaahi tohi ʻa ha tokotaha kehe."
+        ],
+        [
+          "ʻOku fiemaʻu ha ʻakauni ke vaʻinga?",
+          "ʻIkai. Fakaava ʻa baresudoku.com pea vaʻinga. ʻOku tauhi fakaʻotomētiki e vaʻinga ʻi he polokalama kumi; tāpuni e tab pea hoko atu ʻamui."
+        ],
+        [
+          "ʻOku ngāue ʻa Bare Sudoku taʻe ʻinitaneti?",
+          "ʻIo. Hili e ʻuluaki ʻaʻahi ʻoku tauhi ʻe he polokalama kumi e peesi pea fakaava taʻe ha fehokotaki. ʻOku ʻikai ʻaupito ngāueʻaki ʻe he polokalama Android e ʻinitaneti."
+        ],
+        [
+          "ʻOku tānaki ʻe Bare Sudoku ha fakamatala?",
+          "ʻIkai. ʻIkai ha ʻanalaiso, ʻikai ha ʻakauni, ʻikai ha kuki. ʻOku ʻi he tauhiʻanga fakalotofonua pē ʻo hoʻo polokalama kumi e vaʻinga kuo tauhi."
+        ],
+        [
+          "ʻOku ʻi ai ha polokalama Android?",
+          "ʻIo. Ko Bare Sudoku ki he Android ko ha APK {size} KB ki he Android 8 mo foʻou ange, taʻe ha ngofua mo taʻe ʻinitaneti. ʻOmi mei he GitHub Releases."
+        ]
+      ],
+      "madeBy": "Naʻe ngaohi ʻe Alparslan Selçuk Develioğlu",
+      "source": "Kōtī tupuʻanga",
+      "androidSource": "Kōtī tupuʻanga Android",
+      "updated": "Fakafoʻou",
+      "languagesLabel": "Ngaahi lea",
+      "ogAlt": "Ko e fakaʻilonga Bare Sudoku mo e ngaahi lea Sudoku taʻetotongi ʻi he ʻinitanetí, ʻikai ha tuʻuaki"
+    },
+    "haw": {
+      "title": "Bare Sudoku: sudoku manuahi ma ka pūnaewele, ʻaʻohe hoʻolaha, ʻaʻohe kākau inoa",
+      "description": "Sudoku manuahi ma ka polokalamu kele: ʻaʻohe hoʻolaha, ʻaʻohe moʻokāki, ʻaʻohe hahai. ʻEhā pae, nā memo, hoʻihoʻi a me nā hōʻailona e wehewehe ana i ka noʻonoʻo. Hana ʻole i ka pūnaewele. He polokalamu Android {size} KB kekahi.",
+      "h1": "Bare Sudoku: sudoku manuahi ma ka pūnaewele, ʻaʻohe hoʻolaha, ʻaʻohe kākau inoa",
+      "intro": "He pāʻani sudoku manuahi ʻo Bare Sudoku e holo ana ma kāu polokalamu kele. ʻAʻohe hoʻolaha, ʻaʻohe moʻokāki, ʻaʻohe hahai, ʻaʻohe mea e hoʻokomo ai: e wehe i ka ʻaoʻao, e koho i ka pae, a e pāʻani. Hoʻokahi wale nō hāʻina o kēlā me kēia nane a hiki ke hoʻoholo ʻia me ka noʻonoʻo wale nō, a wehewehe kēlā me kēia hōʻailona i kona kumu. Hana ka pāʻani me ka pūnaewele ʻole a he kumu waihona hāmama ma lalo o ka laikini MIT.",
+      "featuresHeading": "Ka mea āu e loaʻa ai",
+      "features": [
+        "ʻEhā pae: maʻalahi, waena, paʻakikī a me loea",
+        "Hoʻokahi hāʻina o kēlā me kēia nane, ʻaʻole pono ke koho wale",
+        "Nā memo, hoʻihoʻi, holoi a me ka hoʻopiha ʻana i nā memo a pau me ke kaomi hoʻokahi",
+        "Nā hōʻailona e wehewehe ana i ke ʻano: hoʻokahi, nā moho i laka ʻia, pālua a me pākolu, X-Wing, Y-Wing, Swordfish a me XYZ-Wing",
+        "Mālama ʻakomi, ʻano pōʻeleʻele, papa kīkoʻī a me ka hoʻonohonoho moe",
+        "Hana ʻole i ka pūnaewele ma hope o ka kipa mua, ʻaʻole pono ka hale kūʻai polokalamu"
+      ],
+      "androidHeading": "Polokalamu Android",
+      "android": "He polokalamu Android kekahi ʻo Bare Sudoku: mana {version}, ma kahi o {size} KB, ʻaʻohe ʻae, ʻaʻohe pūnaewele, Java maʻemaʻe me ka waihona ʻole. ʻAʻole ma Google Play; e hoʻoiho i ka APK i kau inoa ʻia mai GitHub Releases a hoʻokomo ma Android 8 a i ʻole hou aʻe.",
+      "androidLink": "Hoʻoiho i ka APK",
+      "privacyHeading": "Pilikino",
+      "privacy": "ʻAʻole hōʻiliʻili ʻo Bare Sudoku i ka ʻikepili. ʻAʻohe moʻokāki, ʻaʻohe loiloi, ʻaʻohe kuki; mālama ʻia kāu pāʻani o kēia manawa ma kāu polokalamu kele wale nō. ʻAʻohe ʻae pūnaewele o ka polokalamu Android.",
+      "faqHeading": "Nā nīnau pinepine",
+      "faq": [
+        [
+          "He manuahi anei ʻo Bare Sudoku?",
+          "ʻAe. Manuahi loa ʻo Bare Sudoku ma ka polokalamu kele a ma Android. ʻAʻohe hoʻolaha, ʻaʻohe kūʻai i loko, ʻaʻohe mana uku."
+        ],
+        [
+          "He hoʻolaha anei ko Bare Sudoku?",
+          "ʻAʻole. ʻAʻole hōʻike ka pāʻani pūnaewele a me ka polokalamu Android i nā hoʻolaha, ʻaʻohe hahai a i ʻole palapala ʻaoʻao ʻekolu."
+        ],
+        [
+          "Pono anei he moʻokāki e pāʻani ai?",
+          "ʻAʻole. E wehe i baresudoku.com a e pāʻani. Mālama ʻakomi ʻia ka pāʻani ma ka polokalamu kele; e pani i ka ʻāpana a hoʻomau ma hope."
+        ],
+        [
+          "Hana anei ʻo Bare Sudoku me ka pūnaewele ʻole?",
+          "ʻAe. Ma hope o ka kipa mua mālama ka polokalamu kele i ka ʻaoʻao a wehe me ka pili ʻole. ʻAʻole hoʻohana ka polokalamu Android i ka pūnaewele."
+        ],
+        [
+          "Hōʻiliʻili anei ʻo Bare Sudoku i ka ʻikepili?",
+          "ʻAʻole. ʻAʻohe loiloi, ʻaʻohe moʻokāki, ʻaʻohe kuki. Aia ka pāʻani i mālama ʻia ma ka waihona kūloko o kāu polokalamu kele wale nō."
+        ],
+        [
+          "He polokalamu Android anei?",
+          "ʻAe. He APK {size} KB ʻo Bare Sudoku no Android 8 a hou aʻe, me ka ʻae ʻole a me ka pūnaewele ʻole. E hoʻoiho mai GitHub Releases."
+        ]
+      ],
+      "madeBy": "Na Alparslan Selçuk Develioğlu i hana",
+      "source": "Kumu waihona",
+      "androidSource": "Kumu waihona Android",
+      "updated": "Hōʻano hou ʻia",
+      "languagesLabel": "Nā ʻōlelo",
+      "ogAlt": "Ka hōʻailona Bare Sudoku me nā huaʻōlelo Sudoku manuahi ma ka pūnaewele, ʻaʻohe hoʻolaha"
+    },
+    "fj": {
+      "title": "Bare Sudoku: sudoku sega ni saumi ena walesi, sega na volatukutuku, sega na volaivola",
+      "description": "Sudoku sega ni saumi ena browser: sega na volatukutuku, sega na akaude, sega na vakadikevi. Va na levu, ivola, vakalesuya kei na idusidusi e vakamacalataka na vakasama. E cakacaka ena sega na walesi. E tiko tale ga na iyaya Android {size} KB.",
+      "h1": "Bare Sudoku: sudoku sega ni saumi ena walesi, sega na volatukutuku, sega na volaivola",
+      "intro": "Bare Sudoku e dua na qito sudoku sega ni saumi e cakacaka ena nomu browser. Sega na volatukutuku, sega na akaude, sega na vakadikevi ka sega e dua na ka me vakatuvatuvai: dolava na tabana, digia na levu ka qito. E dua ga na isau ni veika e vakatarogi ka rawa ni vakasaqarai ena vakasama ga, ka vakamacalataka na idusidusi kece na kena vuna. Na qito e cakacaka ena sega na walesi ka e ivurevure dolavi ena laiseni MIT.",
+      "featuresHeading": "Na ka o na rawata",
+      "features": [
+        "Va na levu: rawarawa, veimama, dredre kei na matai",
+        "E dua ga na isau ni veika kece ka sega ni gadrevi na vakatolotolo",
+        "Ivola, vakalesuya, bokoca ka vakalewena na ivola kece ena dua ga na tabaki",
+        "Idusidusi e vakamacalataka na iwalewale: dua, vakatawa sa sogolati, ruarua kei na tolu, X-Wing, Y-Wing, Swordfish kei na XYZ-Wing",
+        "Maroroi vakaidina, ituvaki butobuto, kiibodi kei na ituvaki davo",
+        "E cakacaka ena sega na walesi ni oti na imatai ni veisiko, sega ni gadrevi na sitoa iyaya"
+      ],
+      "androidHeading": "iYaya Android",
+      "android": "Bare Sudoku e tiko tale ga me iyaya Android: itukutuku {version}, rauta ni {size} KB, sega na veivakadonui, sega na walesi, Java savasava ka sega na vale ni vola. E sega ena Google Play; lavetaka na APK sa sainitaki mai na GitHub Releases ka vakatuvatuvai ena Android 8 se vou cake.",
+      "androidLink": "Lavetaka na APK",
+      "privacyHeading": "Vakatabui",
+      "privacy": "Bare Sudoku e sega ni kumuna e dua na itukutuku. Sega na akaude, sega na dikevi, sega na kuki; na nomu qito ni gauna oqo e maroroi ga ena nomu browser. Na iyaya Android e sega tale ga ni tiko kina na veivakadonui ni walesi.",
+      "faqHeading": "Taro e dau tarogi wasoma",
+      "faq": [
+        [
+          "E sega ni saumi na Bare Sudoku?",
+          "Io. Bare Sudoku e sega sara ni saumi ena browser kei na Android. Sega na volatukutuku, sega na volivoli e loma, sega na itukutuku premium."
+        ],
+        [
+          "E tiko na volatukutuku ena Bare Sudoku?",
+          "Sega. Na qito walesi kei na iyaya Android e sega ni vakaraitaka na volatukutuku, ka sega na dauvakadikevi se ivola ni tani."
+        ],
+        [
+          "E gadrevi na akaude me qito?",
+          "Sega. Dolava na baresudoku.com ka qito. Na qito e maroroi vakaidina ena browser; sogota na tab ka tomana e muri."
+        ],
+        [
+          "E cakacaka na Bare Sudoku ena sega na walesi?",
+          "Io. Ni oti na imatai ni veisiko na browser e maroroya na tabana ka dolava ena sega na semati. Na iyaya Android e sega ni vakayagataka na walesi."
+        ],
+        [
+          "E kumuna na itukutuku na Bare Sudoku?",
+          "Sega. Sega na dikevi, sega na akaude, sega na kuki. Na qito sa maroroi e tiko ga ena imaroroi ni nomu browser."
+        ],
+        [
+          "E tiko na iyaya Android?",
+          "Io. Bare Sudoku ni Android e dua na APK {size} KB ni Android 8 kei na vou cake, sega na veivakadonui ka sega na walesi. Lavetaka mai na GitHub Releases."
+        ]
+      ],
+      "madeBy": "Cakava o Alparslan Selçuk Develioğlu",
+      "source": "Kodi ivurevure",
+      "androidSource": "Kodi ivurevure Android",
+      "updated": "Vakavoui",
+      "languagesLabel": "Vosa",
+      "ogAlt": "Na ivakatakilakila Bare Sudoku kei na vosa Sudoku sega ni saumi ena walesi, sega na volatukutuku"
     }
   }
 }
