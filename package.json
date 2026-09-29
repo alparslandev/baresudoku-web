@@ -1,0 +1,12 @@
+{
+  "name": "baresudoku-web",
+  "private": true,
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "test": "bun test",
+    "deploy": "bun test && python3 scripts/build.py && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.112.0"
+  }
+}
