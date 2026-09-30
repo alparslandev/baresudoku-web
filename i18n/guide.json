@@ -36083,6 +36083,2334 @@
           ]
         }
       }
+    },
+    "ig": {
+      "learnHeading": "Mụta Sudoku",
+      "learnText": "Ị bụ onye ọhụrụ na Sudoku, ka ọ bụ na i rapara n'otu mgbagwoju anya siri ike? Nduzi abụọ na-akọwa iwu ya na usoro idozi niile ntụziaka na-eji, nke ọ bụla nwere ezigbo ihe atụ.",
+      "howToLink": "Otu esi egwu Sudoku",
+      "techniquesLink": "Usoro idozi Sudoku",
+      "labels": {
+        "howTo": "Otu esi egwu ya",
+        "techniques": "Usoro",
+        "play": "Gwuo Sudoku",
+        "prev": "Usoro gara aga",
+        "next": "Usoro na-esote",
+        "all": "Usoro niile",
+        "example": "Ihe atụ",
+        "steps": "Nzọụkwụ n'otu n'otu",
+        "when": "Mgbe a ga-eji ya",
+        "spot": "Otu esi ahụ ya",
+        "mistakes": "Mmejọ a na-emekarị",
+        "inGame": "Na Bare Sudoku",
+        "level": "Achọrọ ya site n'ọkwa: {level}",
+        "hint": "N'egwuregwu ahụ, ntụziaka na-ekwu: {text}",
+        "legend": "Ọnụọgụ gbara ọkpụrụkpụ bụ ndị e nyere, ọnụọgụ na-acha anụnụ anụnụ bụ ndị etinyere mgbe a na-edozi ya, ọnụọgụ ndị nta bụkwa nhọrọ. Cell ndị pụtara ìhè na-etolite ụkpụrụ ahụ, a na-ewepụ nhọrọ ndị e sepụrụ akara, nhọrọ nwere okirikiri gburugburu ya bụkwa ọnụọgụ a ga-etinye.",
+        "notation": "E na-ede cell dị ka r3c7: ahịrị 3, kọlụm 7. A na-agụ ahịrị site n'elu, kọlụm site n'aka ekpe, na igbe 1 ruo 9 site n'elu aka ekpe, ahịrị n'ahịrị.",
+        "row": "ahịrị {n}",
+        "column": "kọlụm {n}",
+        "box": "igbe {n}",
+        "elimItem": "{d} site na {cell}",
+        "regions": "Ahịrị 5, kọlụm 5 na igbe 5 na mmalite mgbagwoju anya",
+        "firstMove": "Otu gba ọtọ: {cell} nwere ike ịbụ naanị {d}",
+        "breadcrumb": "Ụzọ ibe"
+      },
+      "howTo": {
+        "title": "Otu esi egwu Sudoku: iwu, bọọdụ na mmegharị mbụ",
+        "description": "Mụta otu esi egwu Sudoku: iwu ya, otu ahịrị, kọlụm na igbe si arụ ọrụ, ihe mere mgbagwoju anya ọ bụla ji nwee otu azịza, ndetu na mmegharị mbụ gị.",
+        "h1": "Otu esi egwu Sudoku",
+        "summary": "Sudoku bụ mgbagwoju anya echiche n'elu grid 9×9. Jupụta cell efu ọ bụla n'ọnụọgụ site na 1 ruo 9 ka ahịrị ọ bụla, kọlụm ọ bụla na igbe 3×3 ọ bụla nwee ọnụọgụ ọ bụla naanị otu ugboro. E nyere ụfọdụ ọnụọgụ na mmalite; ndị fọdụrụ ka ị na-achọpụta site n'echiche, otu cell doro anya n'otu oge, ọ dịghịkwa mgbe ị ga-akọ nkọ. Nduzi a na-akọwa bọọdụ, iwu, ụkpụrụ otu azịza, ndetu na atụmatụ dị mfe maka mmegharị mbụ gị. Ị nwere ike ịnwale ha niile na [Bare Sudoku](play), nke bụ n'efu ma nwee ntụziaka na-akọwa echiche dị n'azụ ya.",
+        "sections": [
+          {
+            "h": "Gịnị bụ iwu Sudoku?",
+            "p": [
+              "Iwu dị naanị atọ, ma ha bụ otu iwu ahụ a na-ele anya site n'akụkụ atọ: ahịrị ọ bụla ga-enwerịrị ọnụọgụ 1 ruo 9, kọlụm ọ bụla ga-enwerịrị ọnụọgụ 1 ruo 9, igbe 3×3 ọ bụla ga-enwekwarịrị ọnụọgụ 1 ruo 9. Ya mere, otu ọnụọgụ enweghị ike ịpụta ugboro abụọ n'otu ahịrị, n'otu kọlụm ma ọ bụ n'otu igbe.",
+              "Ọnụọgụ ndị e nyere, ndị e dere n'ụdị gbara ọkpụrụkpụ, anaghị agbanwe. Ọrụ gị bụ ijupụta cell ndị efu. Enweghị mgbakọ na mwepụ, enweghịkwa usoro ha ga-eso: ọnụọgụ ndị ahụ bụ naanị akara itoolu dị iche iche. Ị nwere ike iji mkpụrụedemede ma ọ bụ ọdịdị gwuo ya, ọ dịghịkwa ihe ga-agbanwe."
+            ]
+          },
+          {
+            "h": "Kedu ka e si hazie bọọdụ?",
+            "p": [
+              "Bọọdụ nwere cell 81 n'ahịrị 9 na kọlụm 9. Akara ndị gbara ọkpụrụkpụ na-ekewa ya n'igbe itoolu nke 3×3. Cell ọ bụla dị kpọmkwem n'otu ahịrị, otu kọlụm na otu igbe, ìgwè atọ ndị a bụkwa ngalaba ya. A na-akpọ cell 20 ndị ọzọ na-ekerịta otu ngalaba na cell ndị agbata obi ya; ọnụọgụ etinyere n'otu cell na-ewepụ ọnụọgụ ahụ n'ime ndị agbata obi ya 20 niile.",
+              "E na-ede cell dị ka r3c7: ahịrị 3, kọlụm 7. A na-agụ ahịrị site n'elu, kọlụm site n'aka ekpe, na igbe 1 ruo 9 site n'elu aka ekpe, ahịrị n'ahịrị. A na-eji usoro ide a na nduzi ọ bụla gbasara usoro, ọ bakwara uru ịmụta ya: r5c5 bụ etiti bọọdụ."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Gịnị mere Sudoku ọ bụla ji nwee naanị otu azịza?",
+            "p": [
+              "Sudoku ziri ezi nwere otu azịza, ọ bụkwa nke ahụ na-eme ka echiche rụọ ọrụ. Mgbe ọ bụla ị nwere ike igosi na ọnụọgụ enweghị ike ịba ebe ọzọ n'otu ngalaba, ọ ga-abanyerịrị n'otu cell fọdụrụ, n'ihi na azịza ahụ dị, ọ bụkwa naanị otu. Ọ bụrụ na mgbagwoju anya nwere azịza abụọ, ọ dịghị echiche ọ bụla ga-enwe ike ịmata ọdịiche dị n'etiti ha, ị ga-emecha kọọ nkọ n'oge ụfọdụ.",
+              "Bare Sudoku na-emepụta mgbagwoju anya ọ bụla na ngwaọrụ gị ma lelee na o nwere naanị otu azịza nakwa na ngwa ndozi ya nke na-eji echiche nwere ike imecha ya site n'usoro nke ọkwa ị họọrọ. Ya mere, ọ bụrụ na i rapara, a na-enwe nzọụkwụ ọzọ ị ga-achọta mgbe niile, ntụziaka na-egosikwa ya."
+            ]
+          },
+          {
+            "h": "Kedu ka ị si amalite mgbagwoju anya Sudoku?",
+            "p": [
+              "Malite n'ebe nwere mmachi kacha. Usoro a na-arụ ọrụ n'ọkwa ọ bụla:"
+            ],
+            "list": [
+              "Họrọ ọnụọgụ pụtaworo ọtụtụ ugboro, dịka ugboro isii ma ọ bụ asaa, wee chọta igbe ndị na-enwebeghị ya. Ọtụtụ mgbe, ọ bụ naanị otu cell fọdụrụ maka ya n'otu igbe: nke ahụ bụ [otu zoro ezo](hidden-single).",
+              "Chọọ cell ndị jupụtara gburugburu. Cell nke ahịrị ya, kọlụm ya na igbe ya ọnụ nwere ọnụọgụ asatọ dị iche iche nwere naanị otu nhọrọ fọdụrụ: [otu gba ọtọ](naked-single). Cell ndị dị n'ahịrị ma ọ bụ igbe fọrọ obere ka ha jupụta bụ ebe kachasị mma ịchọ.",
+              "Ọnụọgụ ọ bụla i tinyere na-ewepụ otu nhọrọ n'aka ndị agbata obi 20, ya mere lelee ndị agbata obi ahụ ozugbo. Otu na-abịakarị n'agbụ.",
+              "Mgbe ntinye ndị dị mfe kwụsịrị, dee ndetu: nhọrọ nke cell efu ọ bụla. Wee chọọ ọnụọgụ a machibidoro n'otu ahịrị ma ọ bụ otu kọlụm n'ime igbe ([ndị a kpọchiri](locked-candidates)) ma ọ bụ cell abụọ nwere otu nhọrọ abụọ ahụ ([abụọ gba ọtọ](naked-pairs)).",
+              "Laghachi n'otu mgbe ọ bụla i wepụrụ nhọrọ. Ọbụna mgbagwoju anya Ọkachamara na-abụkarị nke a na-edozi site n'otu; usoro dị elu na-emeghe naanị ụzọ maka nke na-esote."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Gịnị bụ ndetu, oleekwa mgbe i kwesịrị iji ha?",
+            "p": [
+              "Ndetu, nke a na-akpọkwa akara pensụl ma ọ bụ nhọrọ, bụ ọnụọgụ ndị nta ị na-ede n'ime cell efu iji debe ọnụọgụ ndị ka nwere ike ịba ebe ahụ. Na mgbagwoju anya dị mfe, ị naghị achọkarị ha; site n'ọkwa Siri ike gawa n'elu, ha dị oke mkpa, n'ihi na usoro dịka abụọ, X-Wing na Y-Wing gbasara nhọrọ, ọ bụghị ọnụọgụ etinyelarị.",
+              "Mee ka ndetu gị bụrụ eziokwu: mgbe i tinyere ọnụọgụ, wepụ ya na ndetu nke ndị agbata obi ya 20 niile. Na Bare Sudoku nke a na-eme onwe ya, bọtịnụ Jupụta ndetu na-edekwa nhọrọ ọ bụla n'ime cell efu ọ bụla site n'otu mpịa, ka i wee malite na nhọrọ zuru oke ma ziri ezi. Ndetu bụ eziokwu, ọ bụghị nkọ: ọ pụtara na ọ dịbeghị ihe na-ewepụ ọnụọgụ a."
+            ]
+          },
+          {
+            "h": "Gịnị ka ị ga-eme mgbe i rapara?",
+            "p": [
+              "Buru ụzọ lelee ihe ndị bụ isi ọzọ: ahịrị, kọlụm na igbe ọ bụla fọrọ obere ka ọ jupụta bụ isi iyi nke otu. Wee jide n'aka na ndetu gị zuru oke, n'ihi na nhọrọ na-adịghị ya na-ezo ụkpụrụ, nhọrọ ochie na-emepụtakwa ụkpụrụ ụgha. Wee gbalịa [usoro](techniques) ndị ahụ n'usoro ịdị ike ha: ndị a kpọchiri, abụọ na atọ, X-Wing, Y-Wing, Swordfish na XYZ-Wing. Nke ọ bụla nwere ibe nke ya nwere ezigbo ihe atụ.",
+              "Ọ bụrụ na ọ dịghị ihe na-arụ ọrụ, were ntụziaka. Na Bare Sudoku, ntụziaka na-ebu ụzọ lelee ma ọnụọgụ etinyere ọ bụla ezighi ezi, wee chọta cell na-esote a pụrụ iji echiche jupụta ma kpọọ aha usoro ahụ, ka i wee mụta ihe ọbụna mgbe ị na-eji ya. Pịa ntụziaka ọzọ iji tinye ọnụọgụ ahụ."
+            ]
+          },
+          {
+            "h": "Kedu ka ị si etinye ọnụọgụ na Bare Sudoku?",
+            "p": [
+              "Pịa cell, wee pịa ọnụọgụ. Ma ọ bụ buru ụzọ pịa ọnụọgụ: ọ na-akpọchi, cell ọ bụla ị pịrị na-anatakwa ya, nke bụ ụzọ kachasị ọsọ isi tinye nke isii, nke asaa na nke asatọ nke otu ọnụọgụ. Pịa ọnụọgụ ahụ ọzọ iji hapụ ya. Bọtịnụ Ndetu na-atụgharị gaa n'akara pensụl, Hichapụ na-ehicha cell, Weghachi na-eweghachi mmegharị ọ bụla, a na-akakwa mmejọ akara na-acha ọbara ọbara ma ọ bụrụ na ịgbanyụọghị ya na menu.",
+              "Na keyboard, jiri igodo akụ gagharịa, 1 ruo 9 iji tinye ọnụọgụ, Backspace iji hichapụ, N maka ndetu, U iji weghachi, H maka ntụziaka, F iji jupụta ndetu na Escape maka menu. Egwuregwu ahụ na-echekwa onwe ya, na-arụ ọrụ na-enweghị ịntanetị, enweghịkwa mgbasa ozi ma ọ bụ akaụntụ."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ọ dị mgbe ị ga-akọ nkọ na Sudoku?",
+            "Mba, ọ bụghị na mgbagwoju anya ziri ezi. Mgbagwoju anya Bare Sudoku ọ bụla nwere naanị otu azịza, a lelekwara ya na a ga-edozi ya naanị site n'echiche, ruo n'usoro nke ọkwa ya. Ọ bụrụ na ọ dị gị ka ị ga-akọ nkọ, nhọrọ na-adịghị na ndetu gị ma ọ bụ usoro na-eche ka ịchọta ya."
+          ],
+          [
+            "Ọnụọgụ ọ nwere ike ịpụta ugboro abụọ n'ahịrị, kọlụm ma ọ bụ igbe?",
+            "Mba. Nke ahụ bụ iwu ahụ dum: n'ime ahịrị itoolu, kọlụm itoolu na igbe itoolu, ọnụọgụ ọ bụla site na 1 ruo 9 na-apụta naanị otu ugboro. Ọ bụrụ na ọnụọgụ abụọ yiri onwe ha nọ n'otu ngalaba, ma ọ dịkarịa ala otu n'ime ha ezighi ezi."
+          ],
+          [
+            "Gịnị bụ ọdịiche dị n'etiti Mfe, Etiti, Siri ike na Ọkachamara?",
+            "Usoro mgbagwoju anya ahụ chọrọ na-ekpebi ọkwa ya. A na-edozi Mfe na Etiti naanị site n'otu, Mfe na-amalitekwa na ọ dịkarịa ala ọnụọgụ 38 e nyere. Siri ike chọrọ ndị a kpọchiri ma ọ bụ abụọ na atọ. Ọkachamara chọrọ X-Wing, Y-Wing, Swordfish ma ọ bụ XYZ-Wing."
+          ],
+          [
+            "Ọ ka mma ijupụta ndetu maka cell niile ka ọ bụ maka ụfọdụ?",
+            "Maka mgbagwoju anya Siri ike na Ọkachamara, jupụta ha niile: ụkpụrụ dịka abụọ, X-Wing na Y-Wing na-apụta naanị mgbe e dere nhọrọ niile. Na Mfe na Etiti, ndetu abụghị iwu, ọtụtụ ndị egwuregwu na-achọkwa naanị otu."
+          ],
+          [
+            "Ogologo oge ole ka Sudoku na-ewe?",
+            "Mgbagwoju anya Mfe na-ewe nkeji ole na ole; mgbagwoju anya Ọkachamara nwere ike iwe nkeji iri abụọ ma ọ bụ karịa, dabere n'otu ọsọ ị si ahụ ụkpụrụ dị elu ahụ. Bare Sudoku na-egosi elekere, na-akwụsịtụ ya mgbe menu ghere oghe, anaghịkwa edebe ndepụta ndị ndu, ya mere gwuo ya n'ọsọ nke gị."
+          ],
+          [
+            "Sudoku ọ chọrọ mgbakọ na mwepụ?",
+            "Mba. Ọnụọgụ ndị ahụ bụ naanị akara njirimara; ọ dịghị mgbakọ ma ọ bụ ịgụ ọnụ gụnyere. Akara itoolu ọ bụla ga-arụ ọrụ, ọ bụkwa ya mere Sudoku ji bụrụ mgbagwoju anya echiche kama mgbagwoju anya ọnụọgụ."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Usoro idozi Sudoku a kọwara site n'ihe atụ",
+        "description": "Usoro itoolu niile e ji edozi Sudoku, site n'otu gba ọtọ ruo Swordfish na XYZ-Wing, n'usoro ntụziaka Bare Sudoku na-eji ha, nke ọ bụla nwere ezigbo ihe atụ.",
+        "h1": "Usoro idozi Sudoku",
+        "intro": [
+          "Enwere ike idozi Sudoku ọ bụla site n'obere ìgwè usoro echiche. Ndepụta a na-egosi usoro itoolu ngwa ndozi Bare Sudoku na ntụziaka ya na-eji, n'usoro ngwa ndozi ahụ si anwale ha: otu na-ebu ụzọ, emesịa mwepụ n'ime otu ngalaba, mgbe ahụ ụkpụrụ ndị na-agafe ọtụtụ ahịrị na kọlụm. Usoro ọ bụla nwere ibe nke ya nwere nkọwa, otu esi ahụ ya, ezigbo ihe atụ sitere na mgbagwoju anya e mepụtara na mmejọ a na-emekarị.",
+          "Usoro kachasị ike mgbagwoju anya chọrọ na-ekpebi ọkwa ya. Mgbagwoju anya Mfe na Etiti chọrọ naanị otu, mgbagwoju anya Siri ike chọrọ ndị a kpọchiri ma ọ bụ abụọ na atọ, mgbagwoju anya Ọkachamara chọkwara ma ọ dịkarịa ala otu azụ ma ọ bụ otu nku. N'agbanyeghị ọkwa ya, otu na-arụ ọtụtụ n'ime ọrụ ahụ; usoro dị elu na-ewepụ otu nhọrọ ma ọ bụ abụọ, otu wee gaa n'ihu site n'ebe ahụ."
+        ],
+        "faq": [
+          [
+            "N'usoro dị aṅaa ka m ga-anwale usoro Sudoku?",
+            "Ndị kacha dị mfe buru ụzọ: otu gba ọtọ, otu zoro ezo, ndị a kpọchiri, abụọ na atọ gba ọtọ, abụọ na atọ zoro ezo, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku na-anwale ha kpọmkwem n'usoro a, ntụziaka na-akpọkwa aha usoro kachasị mfe na-eme ka ọganihu mee mgbe niile."
+          ],
+          [
+            "Achọrọ m usoro ndị a niile iji dozie Sudoku?",
+            "Maka mgbagwoju anya Mfe na Etiti, otu ezuola. Mgbagwoju anya Siri ike na-agbakwụnye ndị a kpọchiri na abụọ na atọ. Mgbagwoju anya Ọkachamara chọrọ ma ọ dịkarịa ala otu azụ ma ọ bụ otu nku, mana ọ na-abụkarị naanị otu ugboro ma ọ bụ ugboro abụọ na mgbagwoju anya ọ bụla."
+          ],
+          [
+            "Enwere usoro siri ike karịa XYZ-Wing?",
+            "Ee, dịka ọmụmaatụ agbụ, ule ịdị otu na ụgbụ mmanye. Bare Sudoku anaghị emepụta mgbagwoju anya chọrọ ha, ya mere enwere ike imecha mgbagwoju anya ọ bụla dị n'egwuregwu ahụ site n'usoro itoolu dị na ibe a."
+          ],
+          [
+            "Gịnị bụ nhọrọ?",
+            "Ọnụọgụ ka nwere ike ịba n'ime cell efu n'ihi na ọ dịbeghị ihe dị n'ahịrị ya, kọlụm ya ma ọ bụ igbe ya na-ewepụ ya. Ndetu dị n'egwuregwu ahụ bụ nhọrọ. Usoro ọ bụla karịrị otu na-eji nhọrọ eche echiche, ya mere mee ka ha zuo oke ma zie ezi."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Otu gba ọtọ",
+          "title": "Otu gba ọtọ na Sudoku: cell nwere naanị otu nhọrọ",
+          "description": "Otu gba ọtọ bụ cell efu nwere naanị otu ọnụọgụ nwere ike ịba ya. Mụta ịchọta ha ngwa ngwa, site n'ezigbo ihe atụ nzọụkwụ n'otu n'otu na mmejọ a na-emekarị.",
+          "h1": "Otu gba ọtọ (naked single)",
+          "summary": "Otu gba ọtọ bụ cell efu nwere kpọmkwem otu nhọrọ: ọnụọgụ asatọ ndị ọzọ adịlarị n'ahịrị ya, kọlụm ya ma ọ bụ igbe ya. Ọnụọgụ fọdụrụ ga-abanyerịrị ebe ahụ. Ọ bụ usoro Sudoku kachasị mfe, nke ị na-eji karịa, nke ntụziaka Bare Sudoku na-akọ dịka “Naanị otu onye ebe a”.",
+          "when": [
+            "Mgbe niile. Otu gba ọtọ na-apụta site na mmegharị mbụ ruo na nke ikpeazụ, n'ọkwa ọ bụla. Na mgbagwoju anya Mfe na Etiti, ha na otu zoro ezo bụ naanị usoro ị chọrọ. Na mgbagwoju anya ndị siri ike karị, mwepụ ọ bụla usoro dị elu mere na-ahapụkarị otu gba ọtọ, ya mere chọọ ha mgbe nzọụkwụ ọ bụla gasịrị."
+          ],
+          "spot": [
+            "Lee cell ndị nwere ọtụtụ ndị agbata obi e tinyelarị ọnụọgụ: cell dị n'ahịrị nwere ọnụọgụ asaa, ma ọ bụ cell nke ahịrị ya, kọlụm ya na igbe ya ọnụ nwere ọnụọgụ asatọ dị iche iche. Na-enweghị ndetu, gụọ ọnụọgụ ị na-ahụ site na cell ahụ. Site na ndetu, otu gba ọtọ bụ naanị cell na-egosi otu nhọrọ, ọ bụ ya mere Jupụta ndetu ji eme ka ọ dị mfe ịchọta ha."
+          ],
+          "examples": [
+            {
+              "h": "Ihe atụ",
+              "steps": [
+                "Lee {cell}. Ọ bụ efu, ya mere depụta ọnụọgụ ọ bụla etinyelarị n'ahịrị ya, kọlụm ya na igbe ya.",
+                "Ahịrị {row} nwere {rowDigits}. Kọlụm {col} nwere {colDigits}. Igbe {box} nwere {boxDigits}.",
+                "Ọnụ, ha na-ewepụ ọnụọgụ niile ma e wezụga {d}, ya mere {d} bụ naanị nhọrọ fọdụrụ na {cell}.",
+                "Dee {d} na {cell}. Wee lelee ma ọnụọgụ ọhụrụ ahụ ọ na-emepụta otu ọzọ n'otu ahịrị ahụ, kọlụm ahụ ma ọ bụ igbe ahụ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ịgụ naanị ahịrị ma ọ bụ naanị igbe. Ọnụọgụ asatọ e wepụrụ na-esikarị na ngalaba atọ ahụ niile ọnụ.",
+            "Ichefu na ọnụọgụ i tinyere obere oge gara aga na-ewepụkwa nhọrọ n'aka ndị agbata obi ya 20; otu gba ọtọ ọhụrụ na-apụta ozugbo mgbe ntinye ọ bụla gasịrị.",
+            "Ịgwakọta otu gba ọtọ na otu zoro ezo: otu gba ọtọ nwere otu nhọrọ fọdụrụ na cell, otu zoro ezo nwere otu cell fọdụrụ maka ọnụọgụ n'otu ngalaba."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ otu gba ọtọ na Sudoku?",
+              "Cell efu nwere kpọmkwem otu nhọrọ. Ọnụọgụ asatọ dị iche iche adịlarị n'ahịrị ya, kọlụm ya na igbe ya, ya mere ọnụọgụ nke itoolu bụ naanị nke dabara."
+            ],
+            [
+              "Gịnị mere a na-akpọ ya gba ọtọ?",
+              "N'ihi na a na-ahụ otu nhọrọ ahụ ozugbo na cell ahụ mgbe e dere ndetu; ọ dịghị ihe na-ezo ya. Otu zoro ezo n'aka nke ọzọ nọ n'etiti nhọrọ ndị ọzọ, a na-achọtakwa ya site n'ile ọnụọgụ anya kama cell."
+            ],
+            [
+              "Enwere ike idozi mgbagwoju anya naanị site n'otu gba ọtọ?",
+              "Ọtụtụ mgbagwoju anya Mfe nwere ike, mana ọtụtụ chọkwara otu zoro ezo. Bare Sudoku na-atụle mgbagwoju anya Mfe na Etiti dịka ndị a pụrụ idozi site n'ụdị otu abụọ ahụ; mgbagwoju anya Siri ike na Ọkachamara chọrọ ma ọ dịkarịa ala otu usoro ọzọ."
+            ],
+            [
+              "Ntụziaka ọ na-egosi otu gba ọtọ?",
+              "Ee. Mgbe ntinye na-esote bụ otu gba ọtọ, ntụziaka na-ahọrọ cell ahụ ma kwuo “Naanị otu onye ebe a” ya na ọnụọgụ ahụ. Pịa ntụziaka ọzọ iji tinye ya."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Otu zoro ezo",
+          "title": "Otu zoro ezo na Sudoku: naanị ebe maka ọnụọgụ",
+          "description": "Otu zoro ezo bụ naanị cell dị n'ahịrị, kọlụm ma ọ bụ igbe ebe ọnụọgụ ka nwere ike ịba. Mụta ịhụ otu zoro ezo site n'ile otu ọnụọgụ n'otu oge.",
+          "h1": "Otu zoro ezo (hidden single)",
+          "summary": "Otu zoro ezo bụ ọnụọgụ nwere naanị otu cell fọdụrụ ọ ga-aba n'ahịrị, kọlụm ma ọ bụ igbe, ọbụna ma cell ahụ na-egosi nhọrọ ndị ọzọ. Ebe ọ bụ na ngalaba ahụ ga-enwerịrị ọnụọgụ ahụ, ọ na-aba ebe ahụ. Ntụziaka Bare Sudoku na-akọ ya dịka “Naanị otu ebe maka 5 n'ahịrị a”, na kọlụm a ma ọ bụ n'igbe a.",
+          "when": [
+            "Mgbe ọnụọgụ gara n'ihu nke ukwuu: ozugbo ọnụọgụ pụtara ugboro ise ma ọ bụ isii, igbe ndị fọdụrụ nwere mmachi dị ukwuu, otu zoro ezo na-abụkarịkwa mmegharị na-esote. Otu zoro ezo bụ usoro bụ isi nke mgbagwoju anya Mfe na Etiti, ọ ka bụkwa usoro a na-ejikarị n'ọkwa ọ bụla."
+          ],
+          "spot": [
+            "Lelee otu ọnụọgụ n'otu oge. Were otu ọnụọgụ, chọta igbe na-enweghị ya, wee sepụ cell ọ bụla nke igbe ahụ na-ekerịta ahịrị ma ọ bụ kọlụm na ọnụọgụ ahụ etinyelarị. Ọ bụrụ na otu cell fọdụrụ, ị chọtala otu zoro ezo. Otu nlele ahụ na-arụkwa ọrụ n'ahịrị na kọlụm. N'egwuregwu ahụ, pịa ọnụọgụ etinyere: a na-eme ka ọnụọgụ ahụ niile pụta ìhè, ya mere cell ndị efu na-apụta nke ọma."
+          ],
+          "examples": [
+            {
+              "h": "Ihe atụ",
+              "steps": [
+                "Igbe {box} enwebeghị {d}, ya mere otu n'ime cell efu ya ga-ejiderịrị ya. Cell efu ndị ahụ bụ {empties}.",
+                "N'ime ha niile ma e wezụga {cell}, a na-egbochi {d} site na {d} etinyelarị n'otu ahịrị ma ọ bụ otu kọlụm, ya mere {d} abụghị nhọrọ n'ebe ahụ.",
+                "Nke ahụ na-ahapụ {cell} dịka naanị ebe maka {d} n'igbe {box}. Dee {d} ebe ahụ, ọbụna ma {cell} ka na-egosi nhọrọ ndị ọzọ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Itinye ọnụọgụ ahụ n'ime cell nke eleghị anya bụ nke ziri ezi: lelee cell efu ọ bụla ọzọ nke ngalaba ahụ, ọ bụghị naanị ndị pụtara ìhè.",
+            "Ịgafe otu zoro ezo n'ihi na cell ahụ na-egosi ọtụtụ nhọrọ. Nhọrọ ndị ọzọ adịghị mkpa; ihe dị mkpa bụ na ọnụọgụ ahụ enweghị ebe ọzọ n'ime ngalaba ahụ.",
+            "Ilele naanị igbe. Ahịrị na kọlụm na-enyekwa otu zoro ezo ugboro ugboro dịka igbe, karịsịa ka ọ na-eru na njedebe."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ otu zoro ezo na Sudoku?",
+              "Ọnụọgụ nwere ike ịba naanị n'otu cell nke ahịrị, kọlụm ma ọ bụ igbe. Ngalaba ahụ ga-enwerịrị ọnụọgụ ahụ, ya mere e kpebiela cell ahụ ọbụna ma ọ ka nwere nhọrọ ndị ọzọ."
+            ],
+            [
+              "Gịnị bụ ọdịiche dị n'etiti otu zoro ezo na otu gba ọtọ?",
+              "Otu gba ọtọ gbasara cell: otu nhọrọ fọdụrụ. Otu zoro ezo gbasara ọnụọgụ: otu cell fọdụrụ n'otu ngalaba. Ha abụọ na-etinye ọnụọgụ n'enweghị obi abụọ."
+            ],
+            [
+              "Nke ole ka ọ dị mfe ịchọta?",
+              "Na-enweghị ndetu, otu zoro ezo na-adịkarị mfe n'ihi na ị nwere ike ilele bọọdụ maka otu ọnụọgụ n'otu oge. Site na ndetu zuru oke, otu gba ọtọ kacha mfe, n'ihi na cell nwere naanị otu nhọrọ na-apụta nke ọma."
+            ],
+            [
+              "Kedu ka ntụziaka si akọwa otu zoro ezo?",
+              "Dịka “Naanị otu ebe maka” ọnụọgụ ahụ n'ahịrị a, na kọlụm a ma ọ bụ n'igbe a, ya na cell ahụ a họọrọ. Pịa ntụziaka ọzọ iji tinye ya."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Ndị a kpọchiri",
+          "title": "Ndị a kpọchiri na Sudoku: ịtụ aka na ịzọrọ",
+          "description": "Ndị a kpọchiri: mgbe nhọrọ niile nke ọnụọgụ n'igbe dị n'otu ahịrị ma ọ bụ kọlụm, ma ọ bụ nke ọzọ, a na-ewepụ ọnụọgụ ahụ n'ebe ọzọ. Ezigbo ihe atụ abụọ.",
+          "h1": "Ndị a kpọchiri (locked candidates)",
+          "summary": "Ndị a kpọchiri bụ usoro mbụ na-ewepụ nhọrọ kama itinye ọnụọgụ. O nwere ụdị abụọ. Ịtụ aka: n'otu igbe, nhọrọ niile maka ọnụọgụ dị n'otu ahịrị ma ọ bụ otu kọlụm, ya mere a na-ewepụ ọnụọgụ ahụ n'akụkụ ahịrị ma ọ bụ kọlụm ahụ fọdụrụ. Ịzọrọ: n'otu ahịrị ma ọ bụ kọlụm, nhọrọ niile maka ọnụọgụ dị n'otu igbe, ya mere a na-ewepụ ọnụọgụ ahụ n'akụkụ igbe ahụ fọdụrụ. Ntụziaka Bare Sudoku na-akpọ ntinye nke ọ na-emeghe “Ndị a kpọchiri”.",
+          "when": [
+            "Mgbe otu gwụrụ na mgbagwoju anya Siri ike, nke a bụ ihe mbụ ị ga-anwale. Ọ chọrọ ndetu zuru oke ma ọ dịkarịa ala maka ọnụọgụ ị na-enyocha. Ndị a kpọchiri na-apụtakarị: ọtụtụ mgbagwoju anya Siri ike chọrọ ha, mgbagwoju anya Ọkachamara na-ejikwa ha n'etiti ụkpụrụ ndị ka ukwuu."
+          ],
+          "spot": [
+            "Maka ịtụ aka, lee igbe ọ bụla na ọnụọgụ ọ bụla na-adịghị n'ime ya: ọ bụrụ na cell nhọrọ maka ọnụọgụ ahụ dị n'otu ahịrị ma ọ bụ otu kọlụm, lelee ma otu ọnụọgụ ahụ ọ na-apụta dịka nhọrọ n'ihu n'ahịrị ma ọ bụ kọlụm ahụ n'èzí igbe ahụ. Maka ịzọrọ, lee n'ogologo ahịrị ma ọ bụ kọlụm: ọ bụrụ na nhọrọ niile maka ọnụọgụ dị n'ime otu igbe, enwere ike ihicha akụkụ igbe ahụ fọdụrụ. N'egwuregwu ahụ, pịa igodo ọnụọgụ iji mee ka nhọrọ ya niile pụta ìhè; ndetu abụọ ma ọ bụ atọ pụtara ìhè n'otu ahịrị ma ọ bụ kọlụm n'ime otu igbe bụ ụkpụrụ ahụ."
+          ],
+          "examples": [
+            {
+              "h": "Ịtụ aka",
+              "steps": [
+                "N'igbe {box}, ọnụọgụ {d} nwere naanị cell nhọrọ ndị a: {cells}. Ha niile dị n'ahịrị {row}.",
+                "Igbe {box} chọrọ {d}, ya mere {d} nke ahịrị {row} dị n'ime igbe {box}, n'agbanyeghị cell nke ọ ga-aba.",
+                "Ahịrị {row} enweghị ike inwe {d} nke abụọ, ya mere wepụ {d} na cell nke ahịrị {row} dị n'èzí igbe ahụ: {elim}."
+              ]
+            },
+            {
+              "h": "Ịzọrọ",
+              "steps": [
+                "N'ahịrị {row}, ọnụọgụ {d} nwere ike ịba naanị na {cells}, ha niile dịkwa n'ime igbe {box}.",
+                "Ahịrị {row} ga-enwerịrị {d}, ya mere ahịrị {row} na-azọrọ {d} nke igbe {box}. Cell ndị ọzọ nke igbe {box} enweghị ike inwe {d}.",
+                "Wepụ {d} na {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Iwepụ ọnụọgụ ahụ n'ime igbe kama n'èzí ya n'ụdị ịtụ aka, ma ọ bụ nke ọzọ n'ụdị ịzọrọ. Mwepụ na-aga mgbe niile na cell ndị dị n'ahịrị ma ọ bụ kọlụm ahụ mana ọ bụghị n'igbe, ma ọ bụ n'igbe mana ọ bụghị n'ahịrị ma ọ bụ kọlụm ahụ.",
+            "Itinye iwu a mgbe nhọrọ ndị ahụ gbasapụrụ n'ahịrị abụọ nke igbe ahụ. Cell nhọrọ niile maka ọnụọgụ ahụ n'igbe ga-adịrịrị n'otu ahịrị ma ọ bụ otu kọlụm.",
+            "Ichefu ịchọ otu nke mwepụ ahụ mepụtara. Ndị a kpọchiri anaghị etinyekarị ọnụọgụ n'onwe ha; ha na-akwado otu."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ ndị a kpọchiri na Sudoku?",
+              "Nhọrọ maka ọnụọgụ nke a machibidoro n'ebe igbe na ahịrị ma ọ bụ kọlụm zutere. Ebe ọ bụ na igbe ahụ, ma ọ bụ ahịrị ma ọ bụ kọlụm ahụ, ga-enwerịrị ọnụọgụ ahụ n'ime ebe nzute ahụ, enwere ike iwepụ ọnụọgụ ahụ n'akụkụ ahịrị ma ọ bụ kọlụm ahụ fọdụrụ, ma ọ bụ n'akụkụ igbe ahụ fọdụrụ."
+            ],
+            [
+              "Gịnị bụ ọdịiche dị n'etiti ịtụ aka na ịzọrọ?",
+              "Ịtụ aka na-amalite n'igbe: nhọrọ ọnụọgụ ahụ n'igbe na-atụ aka n'ogologo otu ahịrị ma ọ bụ otu kọlụm, ya mere a na-ewepụ ọnụọgụ ahụ n'akụkụ ya fọdụrụ. Ịzọrọ na-amalite n'ahịrị ma ọ bụ kọlụm: nhọrọ niile nke ahịrị ma ọ bụ kọlụm ahụ maka ọnụọgụ ahụ dị n'otu igbe, ya mere ahịrị ma ọ bụ kọlụm ahụ na-azọrọ ọnụọgụ ahụ, a na-ewepụkwa ya n'akụkụ igbe ahụ fọdụrụ."
+            ],
+            [
+              "A na-akpọkwa ndị a kpọchiri intersection removal?",
+              "Ee. Aha ndị ọzọ bụ box-line reduction maka ụdị ịzọrọ na pointing pairs ma ọ bụ pointing triples maka ụdị ịtụ aka. Bare Sudoku na-eji otu aha maka ha abụọ."
+            ],
+            [
+              "Ọkwa ole chọrọ ndị a kpọchiri?",
+              "Siri ike. A na-agụ mgbagwoju anya chọrọ ndị a kpọchiri ma ọ bụ abụọ na atọ, mana ọ dịghị ihe siri ike karịa, dịka Siri ike; mgbagwoju anya Ọkachamara chọkwara azụ ma ọ bụ nku."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Abụọ na atọ gba ọtọ",
+          "title": "Abụọ na atọ gba ọtọ na Sudoku: otu ha si arụ ọrụ",
+          "description": "Abụọ na atọ gba ọtọ: cell abụọ ma ọ bụ atọ n'otu ngalaba nwere otu nhọrọ abụọ ma ọ bụ atọ ahụ. Mụta ịhụ ha na ihe ị ga-ewepụ, site n'ezigbo ihe atụ.",
+          "h1": "Abụọ na atọ gba ọtọ (naked pairs, naked triples)",
+          "summary": "Abụọ gba ọtọ bụ cell abụọ n'otu ahịrị, otu kọlụm ma ọ bụ otu igbe nwere kpọmkwem otu nhọrọ abụọ ahụ. Ọnụọgụ abụọ ahụ ga-abanyerịrị n'ime cell abụọ ahụ, ya mere enwere ike iwepụ ha na cell ọ bụla ọzọ nke ngalaba ahụ. Atọ gba ọtọ bụ otu echiche ahụ site na cell atọ na ọnụọgụ atọ; cell ọ bụla nwere ike igosi abụọ ma ọ bụ atọ n'ime ha. Ntụziaka Bare Sudoku na-akpọ ntinye na-esi na ya apụta “Abụọ ma ọ bụ atọ”.",
+          "when": [
+            "Mgbe ndetu zuru oke, otu na ndị a kpọchiri agwụla. Abụọ gba ọtọ na-apụtakarị na mgbagwoju anya Siri ike, atọ gba ọtọ anaghị apụtakarị. Ọ bara uru ịchọ ha abụọ na ngalaba ọ bụla ka nwere cell efu ise ma ọ bụ karịa."
+          ],
+          "spot": [
+            "Chọọ cell nwere naanị nhọrọ abụọ wee chọta cell ọzọ n'otu ngalaba ahụ nwere otu abụọ ahụ. Maka atọ, lee ngalaba nwere ọtụtụ cell nwere nhọrọ abụọ ma ọ bụ atọ wee lelee ma atọ n'ime ha ọnụ ọ na-eji naanị ọnụọgụ atọ dị iche iche. Cell nwere kpọmkwem otu nhọrọ ahụ dị mfe ịhụ ozugbo e dere ndetu; Jupụta ndetu n'egwuregwu ahụ na-eme nke ahụ site n'otu mpịa."
+          ],
+          "examples": [
+            {
+              "h": "Abụọ gba ọtọ",
+              "steps": [
+                "{cellA} na {cellB} na {unit} nwere kpọmkwem otu nhọrọ abụọ ahụ: {d1} na {d2}.",
+                "Otu n'ime ha ga-abụrịrị {d1}, nke ọzọ {d2}. Anyị amaghị nke bụ nke, mana cell abụọ a ejiriwo ọnụọgụ abụọ ahụ.",
+                "Ya mere, ọ dịghị cell ọzọ na {unit} nwere ike inwe {d1} ma ọ bụ {d2}. Wepụ {elim}."
+              ]
+            },
+            {
+              "h": "Atọ gba ọtọ",
+              "steps": [
+                "Cell atọ na {unit} na-enweta nhọrọ ha niile site n'otu ọnụọgụ atọ ahụ, {digits}: {cells}.",
+                "Ọnụọgụ atọ ahụ ga-ejupụtarịrị cell atọ a n'usoro ụfọdụ. Cell adịghị mkpa igosi nhọrọ atọ ahụ niile; ihe dị mkpa bụ na ọ dịghị n'ime cell atọ ahụ nwere nhọrọ dị n'èzí ìgwè ahụ.",
+                "Wepụ {digits} na cell ọ bụla ọzọ na {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Iwere cell abụọ na-ekerịta nhọrọ abụọ mana nwekwara nke atọ. Maka abụọ gba ọtọ, cell ọ bụla ga-enwerịrị kpọmkwem nhọrọ abụọ ahụ, ọ dịghị ihe ọzọ.",
+            "Iwepụ ọnụọgụ ndị ahụ na cell abụọ ahụ n'onwe ha. Abụọ ahụ na-ejide nhọrọ ha; mwepụ na-aga na cell ndị ọzọ nke ngalaba ahụ.",
+            "Ịchọ ka cell ọ bụla nke atọ gosi ọnụọgụ atọ ahụ niile. Cell nwere abụọ n'ime atọ ahụ dị mma, ma ọ bụrụhaala na ọ dịghị cell nwere nhọrọ dị n'èzí ìgwè ahụ."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ abụọ gba ọtọ na Sudoku?",
+              "Cell abụọ n'otu ngalaba ndị nwere kpọmkwem otu nhọrọ abụọ ahụ. A kpọchiri ọnụọgụ abụọ ahụ n'ime cell abụọ ahụ, ya mere enwere ike iwepụ ha n'akụkụ ngalaba ahụ fọdụrụ."
+            ],
+            [
+              "Gịnị bụ atọ gba ọtọ?",
+              "Cell atọ n'otu ngalaba nke nhọrọ ha ọnụ bụ naanị ọnụọgụ atọ. Cell ọ bụla nwere ike inwe abụọ ma ọ bụ atọ n'ime ha. Ọnụọgụ atọ ahụ na-ejupụta cell atọ ahụ, ya mere enwere ike iwepụ ha na cell ndị ọzọ nke ngalaba ahụ."
+            ],
+            [
+              "Abụọ gba ọtọ ọ na-etinye ọnụọgụ?",
+              "Ọ bụghị n'onwe ya. Ọ na-ewepụ nhọrọ, mwepụ ahụ na-ahapụkarị otu gba ọtọ ma ọ bụ otu zoro ezo. Ntụziaka dị na Bare Sudoku na-egosi otu ahụ ma kpọọ aha usoro mere ka o kwe omume."
+            ],
+            [
+              "Abụọ gba ọtọ ọ nwere ike ịnọ n'igbe na n'ahịrị n'otu oge?",
+              "Ee. Ọ bụrụ na cell abụọ ahụ na-ekerịta ahịrị na igbe, abụọ ahụ na-ewepụ n'ime ngalaba abụọ ahụ. Bare Sudoku na-edozi ha otu ngalaba n'otu oge."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Abụọ na atọ zoro ezo",
+          "title": "Abụọ na atọ zoro ezo na Sudoku: otu esi ahụ ha",
+          "description": "Abụọ zoro ezo bụ ọnụọgụ abụọ nwere ike ịba naanị n'otu cell abụọ ahụ nke ngalaba, ya mere nhọrọ ndị ọzọ dị ebe ahụ na-apụ. Mụta ịchọta ha n'otu n'otu.",
+          "h1": "Abụọ na atọ zoro ezo (hidden pairs, hidden triples)",
+          "summary": "Abụọ zoro ezo bụ ọnụọgụ abụọ ndị, n'ime otu ahịrị, otu kọlụm ma ọ bụ otu igbe, bụ nhọrọ naanị n'otu cell abụọ ahụ, ọ bụghị ebe ọzọ. Cell abụọ ahụ ga-ejiderịrị ọnụọgụ abụọ ahụ, ya mere enwere ike iwepụ nhọrọ ọ bụla ọzọ dị n'ime ha. Atọ zoro ezo na-arụ ọrụ n'otu ụzọ ahụ site n'ọnụọgụ atọ a machibidoro na cell atọ. Mgbe mwepụ ahụ gasịrị, cell ndị ahụ na-egosi abụọ ma ọ bụ atọ gba ọtọ. Ntụziaka Bare Sudoku na-akpọ ntinye na-esi na ya apụta “Abụọ ma ọ bụ atọ”.",
+          "when": [
+            "Mgbe ngalaba nwere cell nwere ọtụtụ nhọrọ, otu agwụlakwa. Abụọ zoro ezo na-ezo n'ime cell jupụtara na nhọrọ, ọ bụ ya mere o ji bara uru ịchọ ha kpọmkwem ebe a na-adịghị ahụ abụọ gba ọtọ. Atọ zoro ezo adịghị ahụkarị; Bare Sudoku na-achọ ha, mana a na-edozi ọtụtụ mgbagwoju anya Siri ike na-enweghị ha."
+          ],
+          "spot": [
+            "Rụọ ọrụ site n'ọnụọgụ, ọ bụghị site na cell. N'otu ngalaba, dee cell ndị ọnụọgụ ọ bụla na-adịghị nwere ike ịba. Ọ bụrụ na ọnụọgụ abụọ nwere naanị cell abụọ ha nwere ike ịba, ma ha bụrụ otu cell abụọ ahụ, ị chọtala abụọ zoro ezo. N'egwuregwu ahụ, pịa igodo ọnụọgụ iji mee ka nhọrọ ya pụta ìhè; ọ bụrụ na ọnụọgụ abụọ mere ka otu cell abụọ ahụ nke ngalaba pụta ìhè, ọ dịghịkwa ihe ọzọ n'ime ya, nke ahụ bụ ụkpụrụ ahụ."
+          ],
+          "examples": [
+            {
+              "h": "Abụọ zoro ezo",
+              "steps": [
+                "Na {unit}, ọnụọgụ {d1} na {d2} nwere naanị cell abụọ ha nwere ike ịba, ha bụkwa otu cell abụọ ahụ: {cells}.",
+                "Cell abụọ ahụ ga-ejiderịrị {d1} na {d2}, ya mere nhọrọ ndị ọzọ ha nwere agaghị ekwe omume.",
+                "Wepụ {elim}. Ugbu a cell abụọ ahụ na-egosi abụọ gba ọtọ, nke nwere ike imeghe ihe ndị ọzọ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Iwepụ ọnụọgụ abụọ ahụ na cell abụọ ahụ. Ọ bụ nhọrọ ndị ọzọ nke cell ndị ahụ ka a na-ewepụ; ọnụọgụ abụọ ahụ na-anọgide.",
+            "Ịnabata ọnụọgụ nwere cell nke atọ ọ nwere ike ịba n'ime ngalaba ahụ. Ọnụọgụ abụọ ahụ ga-abụrịrị ndị a machibidoro kpọmkwem na cell abụọ ahụ.",
+            "Ilele naanị n'igbe. Abụọ zoro ezo na-apụtakwa ugboro ugboro n'ahịrị na kọlụm dịka n'igbe."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ abụọ zoro ezo na Sudoku?",
+              "Ọnụọgụ abụọ nwere ike ịba naanị n'otu cell abụọ ahụ nke ngalaba. Cell ndị ahụ ga-anarịrị ọnụọgụ ndị ahụ, ya mere a na-ewepụ nhọrọ ndị ọzọ ha nwere."
+            ],
+            [
+              "Kedu ka abụọ zoro ezo si dị iche na abụọ gba ọtọ?",
+              "Abụọ gba ọtọ na-apụta ìhè: cell abụọ na-egosi naanị otu nhọrọ abụọ ahụ. Nhọrọ ndị ọzọ dị na cell abụọ ahụ na-ekpuchi abụọ zoro ezo. Iwepụ nhọrọ ndị ọzọ ahụ na-eme ka abụọ zoro ezo ghọọ abụọ gba ọtọ."
+            ],
+            [
+              "Gịnị bụ atọ zoro ezo?",
+              "Ọnụọgụ atọ a machibidoro na cell atọ nke ngalaba. Ọnụọgụ ọ bụla adịghị mkpa ịpụta na cell atọ ahụ niile; ihe dị mkpa bụ na ọ dịghị n'ime ọnụọgụ atọ ahụ nwere nhọrọ n'èzí cell ndị ahụ."
+            ],
+            [
+              "Ntụziaka ọ na-ekewa abụọ zoro ezo na abụọ gba ọtọ?",
+              "Mba. Bare Sudoku na-achọta ha abụọ ma kpọọ ntinye na-esi na ya apụta “Abụọ ma ọ bụ atọ”. Ibe ndị a na-ekewa ha n'ihi na a na-achọta ha n'ụzọ dị iche iche."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing na Sudoku: otu usoro a si arụ ọrụ",
+          "description": "X-Wing: ọnụọgụ nwere kpọmkwem cell nhọrọ abụọ n'ahịrị abụọ, n'otu kọlụm abụọ ahụ, a na-ewepụ ya n'akụkụ kọlụm ndị ahụ fọdụrụ. Ezigbo ihe atụ.",
+          "h1": "X-Wing",
+          "summary": "X-Wing bụ ụkpụrụ nke otu ọnụọgụ na cell anọ dị na nkuku anọ nke rektangul. Ọ bụrụ na ọnụọgụ ahụ nwere kpọmkwem cell nhọrọ abụọ n'ime nke ọ bụla n'ime ahịrị abụọ, cell ndị ahụ dịkwa n'otu kọlụm abụọ ahụ, ọnụọgụ ahụ ga-anọrịrị na nkuku abụọ chere ibe ha ihu nke rektangul ahụ. Ya mere enwere ike iwepụ ya na cell ọ bụla ọzọ nke kọlụm abụọ ahụ. Otu ihe ahụ na-arụ ọrụ ma a gbanwee ahịrị na kọlụm. Ọ bụ usoro Ọkachamara mbụ na Bare Sudoku.",
+          "when": [
+            "Mgbe otu, ndị a kpọchiri na abụọ na atọ gwụrụ. X-Wing bụ ụkpụrụ Ọkachamara a na-ahụkarị, ọ na-apụtakarị mgbe ọnụọgụ nwere nhọrọ ole na ole fọdụrụ, n'ozuzu mgbe e tinyelarị ya ugboro anọ ruo isii. Ọ chọrọ ndetu zuru oke maka ọnụọgụ ị na-enyocha."
+          ],
+          "spot": [
+            "Họrọ ọnụọgụ wee chọọ ahịrị ebe o nwere kpọmkwem cell nhọrọ abụọ. Ọ bụrụ na ahịrị abụọ dị otu a na-ekerịta otu kọlụm abụọ ahụ, lelee kọlụm ndị ahụ maka nhọrọ ndị ọzọ nke ọnụọgụ ahụ: ndị ahụ bụ mwepụ. Wee megharịa ya site n'iji kọlụm dịka ntọala. N'egwuregwu ahụ, pịa igodo ọnụọgụ ahụ: a na-eme ka nhọrọ ya niile pụta ìhè, rektangul nke ndetu anọ pụtara ìhè dịkwa mfe ịhụ."
+          ],
+          "examples": [
+            {
+              "h": "Ihe atụ",
+              "steps": [
+                "Ọnụọgụ {d} nwere kpọmkwem cell nhọrọ abụọ n'ahịrị {r1} na kpọmkwem abụọ n'ahịrị {r2}, ha dịkwa n'otu kọlụm abụọ ahụ, {c1} na {c2}: {cells}.",
+                "Ahịrị {r1} na-etinye {d} ya na kọlụm {c1} ma ọ bụ {c2}, ahịrị {r2} na-etinyekwa {d} ya na nke ọzọ. N'ụzọ ọ bụla, kọlụm {c1} na {c2} na-enweta {d} nke ọ bụla site n'ahịrị abụọ a.",
+                "Ya mere {d} enweghị ike ịpụta ebe ọzọ na kọlụm {c1} na {c2}. Wepụ {d} na {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Iji ahịrị nwere cell nhọrọ atọ maka ọnụọgụ ahụ. Ahịrị ntọala ọ bụla ga-enwerịrị kpọmkwem abụọ, ha abụọ ga-adịkwa na kọlụm abụọ ha na-ekerịta.",
+            "Iwepụ ọnụọgụ ahụ n'ahịrị kama na kọlụm. Mgbe ahịrị bụ ntọala, mwepụ dị na kọlụm, nke ọzọ bụkwa otu a.",
+            "Ichefu ụdị nke a gbanwere. X-Wing e wuru na kọlụm na-ewepụ n'ahịrị."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ X-Wing na Sudoku?",
+              "Ọnụọgụ nwere kpọmkwem cell nhọrọ abụọ n'ime nke ọ bụla n'ime ahịrị abụọ, n'otu kọlụm abụọ ahụ. Ọnụọgụ ahụ na-anọ na nkuku abụọ chere ibe ha ihu nke rektangul ahụ, ya mere a na-ewepụ ya n'akụkụ kọlụm abụọ ahụ fọdụrụ. Enwere ike ịgbanwe ahịrị na kọlụm."
+            ],
+            [
+              "Gịnị mere X-Wing ji arụ ọrụ?",
+              "Nke ọ bụla n'ime ahịrị abụọ ahụ ga-etinyerịrị ọnụọgụ ahụ n'otu n'ime kọlụm abụọ ahụ, ahịrị abụọ ahụ enweghịkwa ike iji otu kọlụm ahụ. Ya mere kọlụm abụọ ahụ na-enweta nke ọ bụla ọnụọgụ ya site n'ahịrị ndị a, nhọrọ ọ bụla ọzọ dị na kọlụm ndị ahụ agaghị ekwe omume."
+            ],
+            [
+              "X-Wing ọ bụ azụ?",
+              "Ee. X-Wing bụ azụ nke nha abụọ; Swordfish bụ azụ nke nha atọ. Bare Sudoku na-achọta ha abụọ."
+            ],
+            [
+              "Ọkwa ole nwere X-Wing?",
+              "Ọkachamara. A na-agụ mgbagwoju anya chọrọ X-Wing, Y-Wing, Swordfish ma ọ bụ XYZ-Wing dịka Ọkachamara."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing na Sudoku: otu usoro a si arụ ọrụ",
+          "description": "Y-Wing (XY-Wing): isi nwere nhọrọ abụọ na nku abụọ, nke ọ bụla na-ekerịta otu n'ime ha, na-achụpụ ọnụọgụ na cell ọ bụla na-ahụ nku abụọ ahụ. Ihe atụ.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, nke a na-akpọkwa XY-Wing, na-eji cell atọ, nke ọ bụla nwere nhọrọ abụọ. Isi nwere nhọrọ X na Y. Otu nku na-ahụ isi ma nwee X na Z; nku nke ọzọ na-ahụ isi ma nwee Y na Z. Ihe ọ bụla isi ahụ ga-abụ, otu n'ime nku ndị ahụ ga-abụrịrị Z, ya mere enwere ike iwepụ Z na cell ọ bụla na-ahụ nku abụọ ahụ. Ọ bụ usoro Ọkachamara na Bare Sudoku.",
+          "when": [
+            "Mgbe mgbagwoju anya nwere ọtụtụ cell nwere kpọmkwem nhọrọ abụọ, ọ dịghịkwa azụ dị. Y-Wing na-apụtakarị na mgbagwoju anya Ọkachamara, a na-achọtakwa ha site n'iso cell nwere nhọrọ abụọ: nke ọ bụla nwere ike ịbụ isi ma ọ bụ nku."
+          ],
+          "spot": [
+            "Depụta cell nwere kpọmkwem nhọrọ abụọ. Were nke ọ bụla dịka isi nwere nhọrọ X na Y, wee chọọ n'etiti ndị agbata obi ya cell nwere X na ọnụọgụ ọzọ Z, na cell nwere Y na otu Z ahụ. Ha abụọ bụ nku. Wee chọta cell na-ahụ nku abụọ ahụ ma nwee Z. Mara na nku abụọ ahụ adịghị mkpa ịhụ ibe ha."
+          ],
+          "examples": [
+            {
+              "h": "Ihe atụ",
+              "steps": [
+                "Isi {pivot} nwere nhọrọ {x} na {y}. Ọ na-ahụ {wingA}, nke nwere {x} na {z}, na {wingB}, nke nwere {y} na {z}.",
+                "Ọ bụrụ na {pivot} bụ {x}, {wingA} na-atụfu {x} wee bụrụ {z}. Ọ bụrụ na {pivot} bụ {y}, {wingB} na-abụ {z}. N'ọnọdụ ọ bụla, otu n'ime nku abụọ ahụ bụ {z}.",
+                "Cell na-ahụ nku abụọ ahụ enweghị ike ịbụ {z} ma ọlị. Wepụ {z} na {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ịhọrọ nku na-adịghị ahụ isi. Nku ọ bụla ga-ekerịrị ahịrị, kọlụm ma ọ bụ igbe na isi.",
+            "Iwepụ Z na cell na-ahụ naanị otu nku. Cell a na-ewepụ na ya ga-ahụrịrị nku abụọ ahụ.",
+            "Iwepụ Z n'isi. N'ime Y-Wing, isi enweghị Z; ọ bụrụ na o nwere ya, ụkpụrụ ahụ bụ XYZ-Wing nwere iwu dị iche."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ Y-Wing na Sudoku?",
+              "Cell atọ nwere nhọrọ abụọ: isi nwere X na Y, nku nwere X na Z na-ahụ isi, na nku nwere Y na Z na-ahụ isi. Otu nku bụ Z mgbe niile, ya mere a na-ewepụ Z na cell na-ahụ nku abụọ ahụ."
+            ],
+            [
+              "Y-Wing ọ bụ otu ihe ahụ dịka XY-Wing?",
+              "Ee. Aha abụọ ahụ na-akọwa otu ụkpụrụ ahụ. Bare Sudoku na-akpọ ya Y-Wing."
+            ],
+            [
+              "Gịnị mere otu nku ga-eji bụrụ Z?",
+              "Ọ bụrụ na isi bụ X, nku mbụ na-atụfu X wee bụrụ Z. Ọ bụrụ na isi bụ Y, nku nke abụọ na-abụ Z. Isi bụ otu n'ime ha abụọ, ya mere otu nku bụ Z."
+            ],
+            [
+              "Cell ole ka Y-Wing na-ewepụ na ya?",
+              "Ọ na-abụkarị otu ma ọ bụ abụọ: naanị cell na-ahụ nku abụọ ahụ ma ka nwere Z. Nke ahụ ezuola iji mepụta otu."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish na Sudoku: otu usoro a si arụ ọrụ",
+          "description": "Swordfish: ọnụọgụ a machibidoro na kọlụm atọ n'ahịrị atọ, a na-ewepụ ya n'akụkụ kọlụm ndị ahụ fọdụrụ. Azụ nke nha atọ, a kọwara site n'ezigbo ihe atụ.",
+          "h1": "Swordfish",
+          "summary": "Swordfish bụ X-Wing nwere ahịrị atọ na kọlụm atọ. Ọ bụrụ na ọnụọgụ nwere cell nhọrọ na-erughị anọ n'ime nke ọ bụla n'ime ahịrị atọ, cell ndị ahụ niile dịkwa n'otu kọlụm atọ ahụ, ahịrị atọ ahụ na-ewere ọnụọgụ ahụ niile nke kọlụm ndị ahụ, enwere ike iwepụ ọnụọgụ ahụ na cell ọ bụla ọzọ nke kọlụm atọ ahụ. Enwere ike ịgbanwe ahịrị na kọlụm. Bare Sudoku na-achọ Swordfish mgbe Y-Wing gasịrị, na mgbagwoju anya Ọkachamara.",
+          "when": [
+            "Mgbe X-Wing na Y-Wing achọtaghị ihe ọ bụla. Swordfish anaghị apụtakarị dịka X-Wing, ọ chọkwara ọnụọgụ nke nhọrọ ya gbasapụrụ ntakịrị n'ahịrị atọ. Ọ chọrọ ndetu zuru oke ma ziri ezi maka ọnụọgụ ahụ."
+          ],
+          "spot": [
+            "Họrọ ọnụọgụ wee chọọ ahịrị nwere cell nhọrọ abụọ ma ọ bụ atọ maka ya. Ọ bụrụ na ahịrị atọ dị otu a ọnụ na-emetụ naanị kọlụm atọ, lelee kọlụm ndị ahụ maka nhọrọ ndị ọzọ nke ọnụọgụ ahụ. Ọ bụghị ahịrị ọ bụla ga-enwe nhọrọ na kọlụm ọ bụla: Swordfish nwere ike inwe cell isii, asaa, asatọ ma ọ bụ itoolu. N'egwuregwu ahụ, mee ka ọnụọgụ ahụ pụta ìhè site n'igodo ya wee chọọ ahịrị atọ nke nhọrọ ha dabara na kọlụm atọ."
+          ],
+          "examples": [
+            {
+              "h": "Ihe atụ",
+              "steps": [
+                "Ọnụọgụ {d} nwere cell nhọrọ na-erughị anọ n'ime nke ọ bụla n'ime ahịrị {rows}, cell ndị ahụ niile dịkwa na kọlụm {cols}: {cells}.",
+                "Nke ọ bụla n'ime ahịrị atọ ahụ ga-etinyerịrị {d} ya n'otu n'ime kọlụm atọ ahụ, ọ dịghịkwa ahịrị abụọ nwere ike iji otu kọlụm ahụ. Ya mere kọlụm atọ ahụ na-enweta {d} ha site n'ahịrị atọ a.",
+                "Nhọrọ {d} ọ bụla ọzọ na kọlụm {cols} agaghị ekwe omume. Wepụ {d} na {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ịchọ cell itoolu niile. Swordfish nwere nhọrọ abụọ n'ahịrị ụfọdụ ka dị irè, ma ọ bụrụhaala na ahịrị atọ ahụ na-emetụ naanị kọlụm atọ.",
+            "Itinye ahịrị nwere cell nhọrọ anọ. Ahịrị ntọala ọ bụla ga-enwe cell na-erughị anọ, ha niile n'ime kọlụm atọ ahụ.",
+            "Iwepụ n'ahịrị ntọala. Mgbe ahịrị bụ ntọala, mwepụ dị na kọlụm atọ ahụ, n'èzí ahịrị ntọala."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ Swordfish na Sudoku?",
+              "Ọnụọgụ nke nhọrọ ya n'ahịrị atọ a machibidoro na kọlụm atọ. Ahịrị atọ ahụ ga-etinyerịrị ọnụọgụ ahụ na kọlụm atọ ndị ahụ, otu n'ime nke ọ bụla, ya mere a na-ewepụ ọnụọgụ ahụ na cell ndị ọzọ nke kọlụm ndị ahụ."
+            ],
+            [
+              "Kedu ka Swordfish si dị iche na X-Wing?",
+              "Naanị n'ịdị ukwuu: X-Wing na-eji ahịrị abụọ na kọlụm abụọ, Swordfish na-eji atọ na atọ. Echiche ahụ bụ otu."
+            ],
+            [
+              "Swordfish ọ chọrọ kpọmkwem cell itoolu?",
+              "Mba. Ahịrị ọ bụla nwere ike inwe nhọrọ abụọ ma ọ bụ atọ; ụkpụrụ ahụ chọrọ naanị ka ahịrị atọ ahụ ọnụ ghara iji ihe karịrị kọlụm atọ."
+            ],
+            [
+              "Enwere azụ nke nha anọ?",
+              "Ee, Jellyfish. Bare Sudoku anaghị eji ya, n'ihi na mgbagwoju anya ya anaghị achọ ya ma ọlị."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing na Sudoku: otu usoro a si arụ ọrụ",
+          "description": "XYZ-Wing: isi nwere nhọrọ atọ na nku abụọ na-ekerịta otu n'ime ha na-achụpụ ọnụọgụ ahụ na cell ọ bụla na-ahụ ha atọ. Ezigbo ihe atụ, nzọụkwụ n'otu n'otu.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing bụ Y-Wing nke isi ya nwere nhọrọ atọ. Isi nwere X, Y na Z; otu nku na-ahụ isi ma nwee X na Z, nke ọzọ na-ahụ isi ma nwee Y na Z. Otu n'ime cell atọ ahụ ga-abụrịrị Z, ya mere enwere ike iwepụ Z na cell ọ bụla na-ahụ ha atọ. Ebe ọ bụ na isi n'onwe ya nwere ike ịbụ Z, cell a na-ewepụ na ya ga-ahụrịrị isi na nku abụọ ahụ, nke na-egbochi ya n'igbe ma ọ bụ ahịrị ma ọ bụ kọlụm cell ndị ahụ na-ekerịta. Ọ bụ usoro kachasị ike Bare Sudoku na-eji.",
+          "when": [
+            "Naanị mgbe ihe ọ bụla ọzọ dara. XYZ-Wing bụ ụkpụrụ a na-ahụchaghị anya na Bare Sudoku, ọ na-apụtakwa naanị na mgbagwoju anya Ọkachamara. Chọọ ya mgbe cell nwere nhọrọ atọ nọ n'otu igbe na cell nwere nhọrọ abụọ na-ekerịta abụọ n'ime ọnụọgụ ya."
+          ],
+          "spot": [
+            "Malite na cell nwere kpọmkwem nhọrọ atọ; nke ọ bụla nwere ike ịbụ isi. N'etiti ndị agbata obi ya, chọọ cell abụọ nwere nhọrọ abụọ nke ọ bụla, ha niile sitere na nhọrọ atọ nke isi, na-ekerịta kpọmkwem otu ọnụọgụ Z. Wee chọọ cell na-ahụ isi na nku abụọ ahụ ma nwee Z. N'omume, otu nku dị n'igbe isi, nke ọzọ dịkwa n'ahịrị ya ma ọ bụ kọlụm ya, cell a na-ewepụ na ha bụkwa cell fọdụrụ nke igbe ahụ n'ahịrị ma ọ bụ kọlụm ahụ."
+          ],
+          "examples": [
+            {
+              "h": "Ihe atụ",
+              "steps": [
+                "Isi {pivot} nwere nhọrọ atọ: {x}, {y} na {z}. Ọ na-ahụ {wingA} nwere {x} na {z}, na {wingB} nwere {y} na {z}.",
+                "Ọ bụrụ na {pivot} bụ {z}, ọ gwụla. Ọ bụrụ na ọ bụ {x}, {wingA} ga-abụrịrị {z}. Ọ bụrụ na ọ bụ {y}, {wingB} ga-abụrịrị {z}. N'ọnọdụ ọ bụla, otu n'ime cell atọ ahụ bụ {z}.",
+                "Cell na-ahụ ha atọ enweghị ike ịbụ {z}. Wepụ {z} na {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Iwepụ na cell na-ahụ naanị nku abụọ ahụ. N'adịghị ka Y-Wing, isi nwere ike ịbụ Z, ya mere cell ahụ ga-ahụkwarịrị isi.",
+            "Iji nku nke nhọrọ ha abụọ adịghị n'ime nhọrọ atọ nke isi.",
+            "Ịgwakọta ya na Y-Wing: ọdịiche ya bụ nhọrọ nke atọ dị n'isi, ọ na-agbanwekwa cell ndị a pụrụ ihicha."
+          ],
+          "faq": [
+            [
+              "Gịnị bụ XYZ-Wing na Sudoku?",
+              "Isi nwere nhọrọ X, Y na Z na nku abụọ, otu nwere X na Z, nke ọzọ nwere Y na Z, ha abụọ na-ahụ isi. Otu n'ime cell atọ ahụ bụ Z, ya mere a na-ewepụ Z na cell na-ahụ ha atọ."
+            ],
+            [
+              "Kedu ka XYZ-Wing si dị iche na Y-Wing?",
+              "Isi nwere nhọrọ atọ kama abụọ, gụnyere Z. Nke ahụ na-eme ka isi bụrụ ebe Z nwere ike ịnọ, ya mere naanị cell na-ahụ isi na nku abụọ ahụ nwere ike ịtụfu Z."
+            ],
+            [
+              "Ugboro ole ka XYZ-Wing na-apụta?",
+              "Ọ dịghị ahụkarị. Na Bare Sudoku, naanị mgbagwoju anya Ọkachamara nwere ike ịchọ ya, ọtụtụ n'ime ha achọghịkwa ya. Bare Sudoku na-elele ya n'ikpeazụ, mgbe X-Wing, Y-Wing na Swordfish gasịrị."
+            ],
+            [
+              "Enwere WXYZ-Wing?",
+              "Ee, nwere isi nwere nhọrọ anọ, mana Bare Sudoku anaghị eji ya. Enwere ike imecha mgbagwoju anya ọ bụla dị n'egwuregwu ahụ site n'usoro itoolu nke nduzi a."
+            ]
+          ]
+        }
+      }
+    },
+    "zu": {
+      "learnHeading": "Funda i-Sudoku",
+      "learnText": "Umusha ku-Sudoku, noma ubambekile emfumbeni enzima? Imihlahlandlela emibili ichaza imithetho nazo zonke izindlela zokuxazulula ezisetshenziswa yizexwayiso, ngamunye unesibonelo sangempela.",
+      "howToLink": "Indlela yokudlala i-Sudoku",
+      "techniquesLink": "Izindlela zokuxazulula i-Sudoku",
+      "labels": {
+        "howTo": "Indlela yokudlala",
+        "techniques": "Izindlela",
+        "play": "Dlala i-Sudoku",
+        "prev": "Indlela edlule",
+        "next": "Indlela elandelayo",
+        "all": "Zonke izindlela",
+        "example": "Isibonelo",
+        "steps": "Isinyathelo ngesinyathelo",
+        "when": "Isetshenziswa nini",
+        "spot": "Ungayibona kanjani",
+        "mistakes": "Amaphutha ajwayelekile",
+        "inGame": "Ku-Bare Sudoku",
+        "level": "Iyadingeka kusukela ezingeni: {level}",
+        "hint": "Emdlalweni, isexwayiso sithi: {text}",
+        "legend": "Izinombolo ezigqamile zinikeziwe, izinombolo eziluhlaza okwesibhakabhaka zifakwe ngesikhathi sokuxazulula, kanti izinombolo ezincane zingabalingani. Amaseli agqanyisiwe akha iphethini, abalingani abanomugqa phezu kwabo bayasuswa, futhi umlingani ozungezwe yindilinga uyinombolo okufanele ifakwe.",
+        "notation": "Amaseli abhalwa njenge-r3c7: umugqa 3, ikholomu 7. Imigqa ibalwa kusukela phezulu, amakholomu kusukela kwesobunxele, bese amabhokisi 1 kuya ku-9 kusukela phezulu kwesobunxele, umugqa ngomugqa.",
+        "row": "emugqeni {n}",
+        "column": "ekholomu {n}",
+        "box": "ebhokisini {n}",
+        "elimItem": "{d} ku-{cell}",
+        "regions": "Umugqa 5, ikholomu 5 nebhokisi 5 ekuqaleni kwemfumbe",
+        "firstMove": "Oyedwa osobala: {cell} lingaba ngu-{d} kuphela",
+        "breadcrumb": "Indlela yamakhasi"
+      },
+      "howTo": {
+        "title": "Ukudlala i-Sudoku: imithetho, ibhodi nezinyathelo zokuqala",
+        "description": "Funda ukudlala i-Sudoku: imithetho, indlela imigqa, amakholomu namabhokisi asebenza ngayo, isixazululo esisodwa, amanothi nezinyathelo zakho zokuqala.",
+        "h1": "Indlela yokudlala i-Sudoku",
+        "summary": "I-Sudoku iyimfumbe yokucabanga egridini engu-9×9. Gcwalisa iseli ngalinye elingenalutho ngenombolo esuka ku-1 kuya ku-9 ukuze umugqa ngamunye, ikholomu ngalinye nebhokisi ngalinye elingu-3×3 kube nenombolo ngayinye kanye kuphela. Ezinye izinombolo zinikezwa ekuqaleni; ezinye uzithola ngokucabanga, iseli elilodwa eliqinisekile ngesikhathi, futhi awudingi ukuqagela nanini. Lo mhlahlandlela uchaza ibhodi, imithetho, umgomo wesixazululo esisodwa, amanothi necebo elilula lezinyathelo zakho zokuqala. Konke lokhu ungakuzama ku-[Bare Sudoku](play), eyamahhala futhi enezexwayiso ezichaza ukucabanga.",
+        "sections": [
+          {
+            "h": "Iyini imithetho ye-Sudoku?",
+            "p": [
+              "Kunemithetho emithathu kuphela, futhi empeleni ingumthetho owodwa obukwa ngezinhlangothi ezintathu: umugqa ngamunye kufanele ube nezinombolo 1 kuya ku-9, ikholomu ngalinye kufanele libe nezinombolo 1 kuya ku-9, nebhokisi ngalinye elingu-3×3 kufanele libe nezinombolo 1 kuya ku-9. Ngakho inombolo ayisoze yavela kabili emugqeni owodwa, ekholomu elilodwa noma ebhokisini elilodwa.",
+              "Izinombolo ezinikeziwe, eziphrintwe ngokugqamile, azishintshi. Umsebenzi wakho ukugcwalisa amaseli angenalutho. Akukho zibalo futhi akukho kulandelana: izinombolo zimane nje ziyizimpawu eziyisishiyagalolunye ezahlukene. Ungadlala ngezinhlamvu noma ngezimo, futhi akukho okwakungashintsha."
+            ]
+          },
+          {
+            "h": "Ibhodi lihlelwe kanjani?",
+            "p": [
+              "Ibhodi linamaseli angu-81 emigqeni engu-9 namakholomu angu-9. Imidwebo ewugqinsi ilihlukanisa libe amabhokisi ayisishiyagalolunye angu-3×3. Iseli ngalinye lisemugqeni owodwa, ekholomu elilodwa nasebhokisini elilodwa ncamashi, futhi lawa maqembu amathathu angamayunithi alo. Amanye amaseli angu-20 ahlanganyela iyunithi neseli abizwa ngokuthi omakhelwane balo; inombolo efakwe eselini ivimbela leyo nombolo kubo bonke omakhelwane abangu-20.",
+              "Amaseli abhalwa njenge-r3c7: umugqa 3, ikholomu 7. Imigqa ibalwa kusukela phezulu, amakholomu kusukela kwesobunxele, bese amabhokisi 1 kuya ku-9 kusukela phezulu kwesobunxele, umugqa ngomugqa. Lolu hlelo lokubhala lusetshenziswa kuwo wonke umhlahlandlela wezindlela futhi kufanelekile ukulufunda: i-r5c5 iphakathi nendawo yebhodi."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Kungani yonke i-Sudoku inesixazululo esisodwa ncamashi?",
+            "p": [
+              "I-Sudoku efanele inesixazululo esisodwa, futhi yilokho okwenza ukucabanga kusebenze. Noma nini lapho ungakhombisa ukuthi inombolo ayikwazi ukungena kwenye indawo eyunithini, kufanele ingene eselini elisele, ngoba isixazululo sikhona futhi siyingqayizivele. Uma imfumbe ibinezixazululo ezimbili, akukho kucabanga okwakungazihlukanisa, futhi ngesinye isikhathi bekuzofanele uqagele.",
+              "I-Bare Sudoku idala yonke imfumbe kudivayisi yakho futhi ihlole ukuthi inesixazululo esisodwa ncamashi nokuthi isixazululi sayo esisebenzisa ukucabanga singayiqeda ngezindlela zezinga olikhethile. Ngakho uma ubambekile, kuhlale kunesinyathelo esilandelayo okufanele usithole, futhi isexwayiso siyasikhombisa."
+            ]
+          },
+          {
+            "h": "Uyiqala kanjani imfumbe ye-Sudoku?",
+            "p": [
+              "Qala ngalokho okuvinjelwe kakhulu. Lolu hlelo lusebenza kuwo wonke amazinga:"
+            ],
+            "list": [
+              "Khetha inombolo esevele kaningi, isibonelo izikhathi eziyisithupha noma eziyisikhombisa, bese uthola amabhokisi angakabi nayo. Kaningi kusala iseli elilodwa kuphela ebhokisini: lokhu kubizwa ngokuthi [oyedwa ofihlekile](hidden-single).",
+              "Funa amaseli aminyene. Iseli elinezinombolo eziyisishiyagalombili ezahlukene sezizonke emugqeni walo, ekholomu lalo nasebhokisini lalo lisele nomlingani oyedwa kuphela: lokhu kubizwa ngokuthi [oyedwa osobala](naked-single). Indawo engcono kakhulu yokubheka ngamaseli asemigqeni noma emabhokisini acishe agcwele.",
+              "Yonke inombolo oyifakayo isusa umlingani komakhelwane abangu-20, ngakho hlola labo makhelwane ngokushesha. Ababodwa bavame ukuza ngochungechunge.",
+              "Uma ukufaka okulula sekuphelile, bhala amanothi: abalingani beseli ngalinye elingenalutho. Bese ufuna inombolo evalelwe emugqeni owodwa noma ekholomu elilodwa ngaphakathi kwebhokisi ([abalingani abakhiyiwe](locked-candidates)) noma amaseli amabili anabalingani ababili abafanayo ([ababili abasobala](naked-pairs)).",
+              "Buyela kwababodwa ngemva kokususa ngakunye. Ngisho nezimfumbe zochwepheshe zixazululwa kakhulu ngababodwa; indlela ethuthukile ivula nje olandelayo."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Ayini amanothi futhi kufanele uwasebenzise nini?",
+            "p": [
+              "Amanothi, abizwa nangokuthi amamaki epensela noma abalingani, yizinombolo ezincane ozibhala eselini elingenalutho ukuze uqophe ukuthi yiziphi izinombolo ezisenokwenzeka lapho. Ezimfumbeni ezilula awuvamile ukuwadinga; kusukela ezingeni elithi Kunzima kuya phezulu abalulekile, ngoba izindlela ezifana nababili, i-X-Wing ne-Y-Wing zimayelana nabalingani, hhayi nezinombolo ezifakiwe.",
+              "Gcina amanothi enembile: uma ufaka inombolo, yisuse emanothini abo bonke omakhelwane abangu-20. Ku-Bare Sudoku lokhu kwenzeka ngokuzenzakalelayo, futhi inkinobho ethi Gcwalisa amanothi ibhala wonke umlingani kuwo wonke amaseli angenalutho ngokuthinta okukodwa, ukuze uqale ngeqoqo eliphelele nelilungile labalingani. Inothi liyiqiniso, hhayi ukuqagela: lisho ukuthi akukho okuvimbela le nombolo okwamanje."
+            ]
+          },
+          {
+            "h": "Kufanele wenzeni uma ubambekile?",
+            "p": [
+              "Okokuqala phinda uhlole izisekelo: umugqa ngamunye, ikholomu ngalinye nebhokisi ngalinye elicishe ligcwale kungumthombo wababodwa. Bese uqinisekisa ukuthi amanothi aphelele, ngoba umlingani ongekho ufihla amaphethini, kanti umlingani ongasasebenzi udala amaphethini angamanga. Bese uzama [izindlela](techniques) ngokulandelana kobunzima: abalingani abakhiyiwe, ababili nabathathu, i-X-Wing, i-Y-Wing, i-Swordfish ne-XYZ-Wing. Ngayinye inekhasi layo elinesibonelo sangempela.",
+              "Uma kungekho okusebenzayo, thatha isexwayiso. Ku-Bare Sudoku isexwayiso siqala ngokuhlola ukuthi ikhona yini inombolo efakiwe engalungile, bese sithola iseli elilandelayo elingagcwaliswa ngokucabanga futhi sisho igama lendlela, ukuze ufunde okuthile ngisho noma usisebenzisa. Thinta isexwayiso futhi ukuze ufake inombolo."
+            ]
+          },
+          {
+            "h": "Uzifaka kanjani izinombolo ku-Bare Sudoku?",
+            "p": [
+              "Thinta iseli, bese uthinta inombolo. Noma thinta inombolo kuqala: iyakhiywa, futhi wonke amaseli owathintayo ayayithola, okuyindlela eshesha kakhulu yokufaka ikhophi yesithupha, yesikhombisa neyesishiyagalombili yenombolo. Thinta inombolo futhi ukuze uyikhulule. Inkinobho ethi Amanothi ishintshela kumamaki epensela, ethi Sula isula iseli, ethi Buyisela ihlehlisa noma yisiphi isinyathelo, futhi amaphutha amakwa ngokubomvu ngaphandle uma ukuvala lokho kumenyu.",
+              "Kwikhibhodi, sebenzisa izinkinobho zemicibisholo ukuze uhambe, 1 kuya ku-9 ukufaka inombolo, Backspace ukusula, N yamanothi, U ukubuyisela, H yesexwayiso, F ukugcwalisa amanothi kanye ne-Escape yemenyu. Umdlalo uzilondoloza wona, usebenza ngaphandle kwe-inthanethi, awunazo izikhangiso futhi awudingi i-akhawunti."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ingabe kuyadingeka ukuqagela ku-Sudoku?",
+            "Cha, uma imfumbe ifanele. Yonke imfumbe ye-Bare Sudoku inesixazululo esisodwa ncamashi futhi ihlolwe ukuthi ingaxazululwa ngokucabanga kuphela, kuze kufike ezindleleni zezinga layo. Uma uzwa sengathi kufanele uqagele, kukhona umlingani ongekho emanothini akho noma kukhona indlela esalindile ukutholwa."
+          ],
+          [
+            "Ingabe inombolo ingavela kabili emugqeni, ekholomu noma ebhokisini?",
+            "Cha. Lowo ungumthetho wonke: kuyo yonke imigqa eyisishiyagalolunye, amakholomu ayisishiyagalolunye namabhokisi ayisishiyagalolunye, inombolo ngayinye kusuka ku-1 kuya ku-9 ivela kanye kuphela. Uma izinombolo ezimbili ezifanayo zikuyunithi eyodwa, okungenani eyodwa yazo ayilungile."
+          ],
+          [
+            "Uyini umehluko phakathi kwamazinga athi Kulula, Maphakathi, Kunzima no-Uchwepheshe?",
+            "Izinga linqunywa yizindlela imfumbe ezidingayo. Izimfumbe ezithi Kulula nezithi Maphakathi zixazululwa ngababodwa kuphela, futhi ezithi Kulula ziqala nezinombolo ezinikeziwe okungenani ezingu-38. Ezithi Kunzima zidinga abalingani abakhiyiwe noma ababili nabathathu. Ezithi Uchwepheshe zidinga i-X-Wing, i-Y-Wing, i-Swordfish noma i-XYZ-Wing."
+          ],
+          [
+            "Kungcono ukugcwalisa amanothi kuwo wonke amaseli noma kwamanye kuphela?",
+            "Ezimfumbeni ezinzima nezochwepheshe, wagcwalise wonke: amaphethini afana nababili, i-X-Wing ne-Y-Wing avela kuphela lapho wonke umlingani ebhaliwe. Ezimfumbeni ezilula nezimaphakathi, amanothi awaphoqelekile futhi abadlali abaningi bamane bafune ababodwa."
+          ],
+          [
+            "I-Sudoku ithatha isikhathi esingakanani?",
+            "Imfumbe elula ithatha imizuzu embalwa; izimfumbe zochwepheshe zingathatha imizuzu engamashumi amabili noma ngaphezulu, kuye ngokuthi uyibona ngokushesha kangakanani iphethini ethuthukile. I-Bare Sudoku ibonisa isibalisikhathi, isimisa lapho imenyu ivuliwe futhi ayigcini uhlu lwabaphambili, ngakho dlala ngejubane lakho."
+          ],
+          [
+            "Ingabe i-Sudoku idinga izibalo?",
+            "Cha. Izinombolo zimane ziyizimpawu nje; akukho ukuhlanganisa noma ukubala. Noma yiziphi izimpawu eziyisishiyagalolunye bezingasebenza, yingakho i-Sudoku iyimfumbe yokucabanga kunokuba ibe yimfumbe yezinombolo."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Izindlela zokuxazulula i-Sudoku zichazwe ngezibonelo",
+        "description": "Zonke izindlela eziyisishiyagalolunye zokuxazulula i-Sudoku, kusukela koyedwa osobala kuya ku-Swordfish ne-XYZ-Wing, ngokulandelana kwezexwayiso ze-Bare Sudoku.",
+        "h1": "Izindlela zokuxazulula i-Sudoku",
+        "intro": [
+          "Yonke i-Sudoku ingaxazululwa ngeqoqo elincane lezindlela zokucabanga. Lolu hlu lubala izindlela eziyisishiyagalolunye ezisetshenziswa yisixazululi se-Bare Sudoku nezexwayiso zaso, ngokulandelana isixazululi esizizama ngakho: ababodwa kuqala, bese ukususa ngaphakathi kweyunithi eyodwa, bese amaphethini adlula emigqeni nasemakholomu amaningana. Indlela ngayinye inekhasi layo elinencazelo, indlela yokuyibona, isibonelo sangempela esivela emfumbeni edaliwe namaphutha ajwayelekile.",
+          "Izinga lemfumbe linqunywa yindlela enzima kakhulu eyidingayo. Izimfumbe ezilula nezimaphakathi zidinga ababodwa kuphela, izimfumbe ezinzima zidinga abalingani abakhiyiwe noma ababili nabathathu, kanti izimfumbe zochwepheshe zidinga okungenani inhlanzi eyodwa noma iphiko elilodwa. Noma ngabe yiliphi izinga, ababodwa benza umsebenzi omningi; indlela ethuthukile isusa umlingani oyedwa noma ababili, bese ababodwa beqhubeka ukusuka lapho."
+        ],
+        "faq": [
+          [
+            "Kufanele ngizizame ngaluphi uhlelo izindlela ze-Sudoku?",
+            "Ezishibhile kuqala: oyedwa osobala, oyedwa ofihlekile, abalingani abakhiyiwe, ababili nabathathu abasobala, ababili nabathathu abafihlekile, i-X-Wing, i-Y-Wing, i-Swordfish, i-XYZ-Wing. I-Bare Sudoku izizama ngalolu hlelo ncamashi, futhi isexwayiso sihlale sisho igama lendlela elula kakhulu eqhubekisela phambili."
+          ],
+          [
+            "Ingabe ngidinga zonke lezi zindlela ukuze ngixazulule i-Sudoku?",
+            "Ezimfumbeni ezilula nezimaphakathi, ababodwa banele. Izimfumbe ezinzima zengeza abalingani abakhiyiwe namaqoqo amancane. Izimfumbe zochwepheshe zidinga okungenani inhlanzi eyodwa noma iphiko elilodwa, kodwa ngokuvamile kanye noma kabili kuphela emfumbeni ngayinye."
+          ],
+          [
+            "Zikhona yini izindlela ezinzima kune-XYZ-Wing?",
+            "Yebo, isibonelo amaketango, izivivinyo zobungqayizivele namanetha okuphoqa. I-Bare Sudoku ayidali izimfumbe ezizidingayo, ngakho yonke imfumbe emdlalweni ingaqedwa ngezindlela eziyisishiyagalolunye ezikuleli khasi."
+          ],
+          [
+            "Uyini umlingani?",
+            "Inombolo esengangena eselini elingenalutho ngoba akukho okusemugqeni walo, ekholomu lalo noma ebhokisini lalo okuyivimbelayo okwamanje. Amanothi emdlalweni angabalingani. Yonke indlela engaphezu kwababodwa icabanga ngabalingani, ngakho bagcine bephelele futhi benembile."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Oyedwa osobala",
+          "title": "Oyedwa osobala ku-Sudoku: iseli elinomlingani oyedwa",
+          "description": "Oyedwa osobala yiseli elingenalutho elinenombolo eyodwa kuphela engangena. Funda ukubathola ngokushesha, ngesibonelo sangempela namaphutha avamile.",
+          "h1": "Oyedwa osobala (naked single)",
+          "summary": "Oyedwa osobala yiseli elingenalutho elinomlingani oyedwa ncamashi: ezinye izinombolo eziyisishiyagalombili sezivele zikhona emugqeni walo, ekholomu lalo noma ebhokisini lalo. Inombolo esele kufanele ingene lapho. Yindlela elula kakhulu ye-Sudoku, oyisebenzisa kakhulu, futhi isexwayiso se-Bare Sudoku siyibika ngokuthi “Mlingani oyedwa kuphela lapha”.",
+          "when": [
+            "Njalo. Oyedwa osobala uvela kusukela esinyathelweni sokuqala kuya kwesokugcina, kuwo wonke amazinga. Ezimfumbeni ezilula nezimaphakathi, kanye noyedwa ofihlekile, uyindlela okuwukuphela kwayo oyidingayo. Ezimfumbeni ezinzima, ukususa ngakunye okwenziwe yindlela ethuthukile ngokuvamile kushiya oyedwa osobala, ngakho mfune ngemva kwesinyathelo ngasinye."
+          ],
+          "spot": [
+            "Bheka amaseli anomakhelwane abaningi asebefakelwe izinombolo: iseli emugqeni osunezinombolo eziyisikhombisa, noma iseli umugqa walo, ikholomu lalo nebhokisi lalo okuhlanganisa izinombolo eziyisishiyagalombili ezahlukene. Ngaphandle kwamanothi, bala izinombolo ongazibona usuka eselini. Ngamanothi, oyedwa osobala umane abe yiseli elibonisa umlingani oyedwa, yingakho inkinobho ethi Gcwalisa amanothi yenza kube lula ukubathola."
+          ],
+          "examples": [
+            {
+              "h": "Isibonelo",
+              "steps": [
+                "Bheka iseli {cell}. Alinalutho, ngakho bhala zonke izinombolo esezifakiwe emugqeni walo, ekholomu lalo nasebhokisini lalo.",
+                "Umugqa {row} unezinombolo {rowDigits}. Ikholomu {col} linezinombolo {colDigits}. Ibhokisi {box} linezinombolo {boxDigits}.",
+                "Ndawonye zikhipha zonke izinombolo ngaphandle kuka-{d}, ngakho inombolo {d} iyona kuphela umlingani osele eselini {cell}.",
+                "Bhala inombolo {d} eselini {cell}. Bese uhlola ukuthi inombolo entsha idala yini omunye oyedwa emugqeni ofanayo, ekholomu elifanayo noma ebhokisini elifanayo."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukubala umugqa kuphela noma ibhokisi kuphela. Izinombolo eziyisishiyagalombili ezikhishiwe ngokuvamile zivela kuwo womathathu amayunithi ndawonye.",
+            "Ukukhohlwa ukuthi inombolo osanda kuyifaka nayo ikhipha abalingani komakhelwane bayo abangu-20; ngemva kokufaka ngakunye kuvela ngokushesha abasha abayedwa abasobala.",
+            "Ukudida oyedwa osobala noyedwa ofihlekile: oyedwa osobala unomlingani oyedwa osele eselini, oyedwa ofihlekile unendawo eyodwa esele yenombolo eyunithini."
+          ],
+          "faq": [
+            [
+              "Uyini oyedwa osobala ku-Sudoku?",
+              "Iseli elingenalutho elinomlingani oyedwa ncamashi. Izinombolo eziyisishiyagalombili ezahlukene sezivele zifakiwe emugqeni walo, ekholomu lalo nasebhokisini lalo, ngakho inombolo yesishiyagalolunye iyona kuphela engena."
+            ],
+            [
+              "Kungani kuthiwa osobala?",
+              "Ngoba umlingani oyedwa ubonakala ngqo eselini uma amanothi esebhaliwe; akukho okumfihlayo. Oyedwa ofihlekile yena uhlala phakathi kwabanye abalingani futhi utholakala ngokubheka inombolo kunokubheka iseli."
+            ],
+            [
+              "Ingabe imfumbe ingaxazululwa ngoyedwa osobala kuphela?",
+              "Izimfumbe eziningi ezilula zingakwazi, kodwa eziningi zidinga noyedwa ofihlekile. I-Bare Sudoku ilinganisa izimfumbe ezilula nezimaphakathi njengezixazululeka ngazo zombili izinhlobo zababodwa; izimfumbe ezinzima nezochwepheshe zidinga okungenani enye indlela."
+            ],
+            [
+              "Ingabe isexwayiso sibonisa oyedwa osobala?",
+              "Yebo. Uma ukufaka okulandelayo kungoyedwa osobala, isexwayiso sikhetha iseli futhi sithi “Mlingani oyedwa kuphela lapha” kanye nenombolo. Thinta isexwayiso futhi ukuze uyifake."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Oyedwa ofihlekile",
+          "title": "Oyedwa ofihlekile ku-Sudoku: indawo eyodwa yenombolo",
+          "description": "Oyedwa ofihlekile yiseli okuwukuphela kwalo emugqeni, ekholomu noma ebhokisini lapho inombolo isengangena khona. Funda ukubabona ngokuhlola inombolo eyodwa.",
+          "h1": "Oyedwa ofihlekile (hidden single)",
+          "summary": "Oyedwa ofihlekile yinombolo enendawo eyodwa kuphela esele emugqeni, ekholomu noma ebhokisini, ngisho noma lelo seli libonisa abanye abalingani. Njengoba iyunithi kufanele ibe nale nombolo, ingena lapho. Isexwayiso se-Bare Sudoku siyibika ngokuthi “Indawo eyodwa kuphela ye-5 kulo mugqa”, noma kuleli kholomu noma kuleli bhokisi.",
+          "when": [
+            "Lapho inombolo isiqhubeke kakhulu: uma inombolo isivele kahlanu noma kasithupha, amabhokisi asele avinjelwe kakhulu, futhi oyedwa ofihlekile uvame ukuba yisinyathelo esilandelayo. Oyedwa ofihlekile uyindlela eyinhloko yezimfumbe ezilula nezimaphakathi futhi uhlala eyindlela esetshenziswa kakhulu kuwo wonke amazinga."
+          ],
+          "spot": [
+            "Hlola inombolo eyodwa ngesikhathi. Thatha inombolo, uthole ibhokisi elingenayo, bese ucisha wonke amaseli aleli bhokisi ahlanganyela umugqa noma ikholomu nekhophi efakiwe yaleyo nombolo. Uma kusala iseli elilodwa, usumtholile oyedwa ofihlekile. Ukuhlola okufanayo kusebenza nasemigqeni nasemakholomu. Emdlalweni, thinta inombolo efakiwe: wonke amakhophi ayo ayagqanyiswa, ngakho amaseli angenalutho ayagqama."
+          ],
+          "examples": [
+            {
+              "h": "Isibonelo",
+              "steps": [
+                "Ibhokisi {box} alikabi nayo inombolo {d}, ngakho elinye lamaseli alo angenalutho kufanele libe nayo. Amaseli angenalutho yilawa: {empties}.",
+                "Kuwo wonke ngaphandle kweseli {cell}, inombolo {d} ivinjwe yinombolo {d} esivele ifakiwe emugqeni ofanayo noma ekholomu elifanayo, ngakho inombolo {d} ayikho phakathi kwabalingani lapho.",
+                "Lokho kushiya iseli {cell} njengendawo eyodwa kuphela yenombolo {d} ebhokisini {box}. Bhala inombolo {d} lapho, ngisho noma iseli {cell} lisabonisa abanye abalingani."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukufaka inombolo eselini okungenzeka nje ukuthi yilo elifanele: hlola wonke amanye amaseli angenalutho aleyo yunithi, hhayi nje lawo asobala.",
+            "Ukugeja oyedwa ofihlekile ngoba iseli libonisa abalingani abaningana. Abanye abalingani abanandaba; okubalulekile ukuthi inombolo ayinayo enye indawo eyunithini.",
+            "Ukuhlola amabhokisi kuphela. Imigqa namakholomu kuveza oyedwa ofihlekile kaningi ngokufanayo, ikakhulukazi ngasekupheleni."
+          ],
+          "faq": [
+            [
+              "Uyini oyedwa ofihlekile ku-Sudoku?",
+              "Inombolo engangena eselini elilodwa kuphela lomugqa, lekholomu noma lebhokisi. Iyunithi kufanele ibe nale nombolo, ngakho iseli linqumekile ngisho noma lisenabanye abalingani."
+            ],
+            [
+              "Uyini umehluko phakathi koyedwa ofihlekile noyedwa osobala?",
+              "Oyedwa osobala umayelana neseli: kusele umlingani oyedwa. Oyedwa ofihlekile umayelana nenombolo: kusele iseli elilodwa eyunithini. Bobabili bafaka inombolo ngokuqiniseka."
+            ],
+            [
+              "Yimuphi okulula ukumthola?",
+              "Ngaphandle kwamanothi, oyedwa ofihlekile uvame ukuba lula ngoba ungahlola ibhodi inombolo eyodwa ngesikhathi. Ngamanothi aphelele, oyedwa osobala ulula kakhulu, ngoba iseli elinomlingani oyedwa liyagqama."
+            ],
+            [
+              "Isexwayiso simchaza kanjani oyedwa ofihlekile?",
+              "Isexwayiso sithi “Indawo eyodwa kuphela” yenombolo kulo mugqa, kuleli kholomu noma kuleli bhokisi, futhi sikhethe iseli. Thinta isexwayiso futhi ukuze uyifake."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Abalingani abakhiyiwe",
+          "title": "Abalingani abakhiyiwe ku-Sudoku: ukukhomba nokubanga",
+          "description": "Abalingani abakhiyiwe: uma abalingani benombolo ebhokisini bonke besemugqeni owodwa noma ekholomu elilodwa, noma okuphambene, inombolo isuswa kwenye indawo.",
+          "h1": "Abalingani abakhiyiwe (locked candidates)",
+          "summary": "Abalingani abakhiyiwe yindlela yokuqala esusa abalingani esikhundleni sokufaka inombolo. Inezinhlobo ezimbili. Ukukhomba: ebhokisini, bonke abalingani benombolo basemugqeni owodwa noma ekholomu elilodwa, ngakho inombolo isuswa kuyo yonke enye ingxenye yalowo mugqa noma lelo kholomu. Ukubanga: emugqeni noma ekholomu, bonke abalingani benombolo basebhokisini elilodwa, ngakho inombolo isuswa kuyo yonke enye ingxenye yalelo bhokisi. Isexwayiso se-Bare Sudoku sibiza ukufaka esikuvulayo ngokuthi “Abalingani abakhiyiwe”.",
+          "when": [
+            "Uma ababodwa bephela emfumbeni enzima, lokhu kuyinto yokuqala okufanele uyizame. Kudinga amanothi aphelele okungenani enombolo oyihlolayo. Abalingani abakhiyiwe bavamile: izimfumbe eziningi ezinzima ziyabadinga, futhi izimfumbe zochwepheshe zibasebenzisa phakathi kwamaphethini amakhulu."
+          ],
+          "spot": [
+            "Ukuze uthole ukukhomba, bheka ibhokisi ngalinye nenombolo ngayinye engekho kulo: uma amaseli abalingani baleyo nombolo esemugqeni owodwa noma ekholomu elilodwa, hlola ukuthi inombolo efanayo ivela yini njengomlingani phambili kulowo mugqa noma kulelo kholomu ngaphandle kwebhokisi. Ukuze uthole ukubanga, bheka ngobude bomugqa noma bekholomu: uma bonke abalingani benombolo bengaphakathi kwebhokisi elilodwa, amanye amaseli alelo bhokisi angahlanzwa. Emdlalweni, thinta inkinobho yenombolo ukuze ugqamise bonke abalingani bayo; amanothi amabili noma amathathu agqanyisiwe asemugqeni owodwa noma ekholomu elilodwa ngaphakathi kwebhokisi elilodwa ayiphethini."
+          ],
+          "examples": [
+            {
+              "h": "Ukukhomba",
+              "steps": [
+                "Ebhokisini {box}, inombolo {d} inalawa maseli abalingani kuphela: {cells}. Onke asemugqeni {row}.",
+                "Ibhokisi {box} lidinga inombolo {d}, ngakho inombolo {d} yomugqa {row} ingaphakathi kwebhokisi {box}, noma ngabe ingena kuliphi kulawo maseli.",
+                "Umugqa {row} awukwazi ukuba nenombolo {d} yesibili, ngakho susa inombolo {d} emaselini omugqa {row} angaphandle kwebhokisi: {elim}."
+              ]
+            },
+            {
+              "h": "Ukubanga",
+              "steps": [
+                "Emugqeni {row}, inombolo {d} ingangena emaselini {cells} kuphela, futhi onke angaphakathi kwebhokisi {box}.",
+                "Umugqa {row} kufanele ube nenombolo {d}, ngakho inombolo {d} yebhokisi {box} ibangwa ngumugqa {row}. Amanye amaseli ebhokisi {box} awakwazi ukuba nenombolo {d}.",
+                "Susa inombolo {d} emaselini {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukususa inombolo ngaphakathi kwebhokisi esikhundleni sangaphandle kwalo esimweni sokukhomba, noma okuphambene esimweni sokubanga. Ukususa kuhlale kuya emaselini asemugqeni noma ekholomu kodwa angekho ebhokisini, noma asebhokisini kodwa angekho kulowo mugqa noma kulelo kholomu.",
+            "Ukusebenzisa umthetho lapho abalingani besemigqeni emibili yebhokisi. Wonke amaseli abalingani benombolo ebhokisini kufanele abe semugqeni owodwa noma ekholomu elilodwa.",
+            "Ukukhohlwa ukufuna oyedwa odalwa ukususa. Abalingani abakhiyiwe abavamile ukufaka inombolo bebodwa; balungiselela oyedwa."
+          ],
+          "faq": [
+            [
+              "Yini abalingani abakhiyiwe ku-Sudoku?",
+              "Abalingani benombolo abavalelwe endaweni lapho ibhokisi nomugqa noma ikholomu kuhlangana khona. Njengoba ibhokisi, noma umugqa noma ikholomu, kufanele kube nale nombolo kuleyo ndawo, inombolo ingasuswa kuyo yonke enye ingxenye yomugqa noma yekholomu, noma kuyo yonke enye ingxenye yebhokisi."
+            ],
+            [
+              "Uyini umehluko phakathi kokukhomba nokubanga?",
+              "Ukukhomba kuqala ebhokisini: abalingani benombolo ebhokisini bakhomba ngobude bomugqa owodwa noma bekholomu elilodwa, ngakho inombolo isuswa kuyo yonke enye ingxenye yawo. Ukubanga kuqala emugqeni noma ekholomu: abalingani balowo mugqa noma lelo kholomu benombolo bonke basebhokisini elilodwa, ngakho umugqa noma ikholomu libanga inombolo futhi isuswa kuyo yonke enye ingxenye yebhokisi."
+            ],
+            [
+              "Ingabe abalingani abakhiyiwe babizwa nangokuthi intersection removal?",
+              "Yebo. Amanye amagama yi-box-line reduction yohlobo lokubanga kanye ne-pointing pairs noma i-pointing triples yohlobo lokukhomba. I-Bare Sudoku isebenzisa igama elilodwa kukho kokubili."
+            ],
+            [
+              "Yiliphi izinga elidinga abalingani abakhiyiwe?",
+              "Kunzima. Imfumbe edinga abalingani abakhiyiwe noma amaqoqo amancane kodwa ingadingi lutho olunzima kakhulu ifakwa ezingeni elithi Kunzima; izimfumbe zochwepheshe zidinga nenhlanzi noma iphiko."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Ababili nabathathu abasobala",
+          "title": "Ababili nabathathu abasobala ku-Sudoku: basebenza kanjani",
+          "description": "Ababili nabathathu abasobala: amaseli amabili noma amathathu eyunithini anabalingani ababili noma abathathu abafanayo. Funda ukubabona nokuthi yini oyisusayo.",
+          "h1": "Ababili nabathathu abasobala (naked pairs, naked triples)",
+          "summary": "Ababili abasobala ngamaseli amabili emugqeni ofanayo, ekholomu elifanayo noma ebhokisini elifanayo anabalingani ababili abafanayo ncamashi. Lezi zinombolo ezimbili kufanele zingene kulawo maseli amabili, ngakho zingasuswa kuwo wonke amanye amaseli eyunithi. Abathathu abasobala ngumqondo ofanayo ngamaseli amathathu nezinombolo ezintathu; iseli ngalinye lingabonisa ezimbili noma zontathu. Isexwayiso se-Bare Sudoku sibiza ukufaka okulandelayo ngokuthi “Ababili noma abathathu”.",
+          "when": [
+            "Ngemva kokuba amanothi esephelele futhi ababodwa nabalingani abakhiyiwe sebephelile. Ababili abasobala bavame kakhulu ezimfumbeni ezinzima, abathathu abasobala kancane. Kufanelekile ukubafuna bobabili kuyo yonke iyunithi esenamaseli angenalutho amahlanu noma ngaphezulu."
+          ],
+          "spot": [
+            "Funa amaseli anabalingani ababili kuphela, bese uthola elinye iseli kuyunithi efanayo elinabo labo ababili. Kwabathathu, bheka amayunithi anamaseli amaningana anabalingani ababili noma abathathu, bese uhlola ukuthi amathathu awo ndawonye asebenzisa izinombolo ezintathu ezahlukene kuphela yini. Amaseli anabalingani abafanayo ncamashi kulula ukuwabona uma amanothi esebhaliwe; inkinobho ethi Gcwalisa amanothi emdlalweni ikwenza lokho ngokuthinta okukodwa."
+          ],
+          "examples": [
+            {
+              "h": "Ababili abasobala",
+              "steps": [
+                "{cellA} ne-{cellB} {unit} anabalingani ababili abafanayo ncamashi: {d1} no-{d2}.",
+                "Elinye lawo kufanele libe ngu-{d1} bese elinye liba ngu-{d2}. Asazi ukuthi yiliphi, kodwa zombili izinombolo zisetshenziswa yilawa maseli amabili.",
+                "Ngakho alikho elinye iseli {unit} elingaba nenombolo {d1} noma {d2}. Susa {elim}."
+              ]
+            },
+            {
+              "h": "Abathathu abasobala",
+              "steps": [
+                "Amaseli amathathu {unit} athola bonke abalingani bawo ezinombolweni ezintathu ezifanayo, {digits}: {cells}.",
+                "Lezi zinombolo ezintathu kufanele zigcwalise lawa maseli amathathu ngohlelo oluthile. Iseli alidingi ukubonisa bonke abalingani abathathu; okubalulekile ukuthi alikho kulawa maseli amathathu elinomlingani ongaphandle kweqoqo.",
+                "Susa izinombolo {digits} kuwo wonke amanye amaseli {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukuthatha amaseli amabili ahlanganyela abalingani ababili kodwa abuye abe nowesithathu. Kwababili abasobala, iseli ngalinye kufanele libe nalabo balingani ababili ncamashi, lingabi nomunye.",
+            "Ukususa izinombolo emaselini ababili ngokwawo. Ababili bagcina abalingani babo; ukususa kuya kwamanye amaseli eyunithi.",
+            "Ukufuna ukuthi iseli ngalinye labathathu libonise zontathu izinombolo. Iseli elinezimbili kwezintathu lilungile, inqobo nje uma kungekho seli elinomlingani ongaphandle kweqoqo."
+          ],
+          "faq": [
+            [
+              "Yini ababili abasobala ku-Sudoku?",
+              "Amaseli amabili eyunithini eyodwa, womabili anabalingani ababili abafanayo ncamashi. Lezo zinombolo ezimbili zikhiyiwe kulawo maseli amabili, ngakho zingasuswa kuyo yonke enye ingxenye yeyunithi."
+            ],
+            [
+              "Yini abathathu abasobala?",
+              "Amaseli amathathu eyunithini eyodwa abalingani bawo ndawonye bayizinombolo ezintathu kuphela. Iseli ngalinye lingaba nezimbili noma ezintathu zazo. Izinombolo ezintathu zigcwalisa amaseli amathathu, ngakho zingasuswa kwamanye amaseli eyunithi."
+            ],
+            [
+              "Ingabe ababili abasobala bayayifaka inombolo?",
+              "Hhayi bebodwa. Basusa abalingani, futhi ukususa ngokuvamile kushiya oyedwa osobala noma ofihlekile. Isexwayiso ku-Bare Sudoku sibonisa lowo oyedwa futhi sisho igama lendlela eyenze kwenzeka."
+            ],
+            [
+              "Ingabe ababili abasobala bangaba sebhokisini nasemugqeni ngesikhathi esisodwa?",
+              "Yebo. Uma amaseli amabili ehlanganyela umugqa nebhokisi, ababili basusa kuwo womabili amayunithi. I-Bare Sudoku iwasingatha iyunithi eyodwa ngesikhathi."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Ababili nabathathu abafihlekile",
+          "title": "Ababili nabathathu abafihlekile ku-Sudoku: ukubabona",
+          "description": "Ababili abafihlekile yizinombolo ezimbili ezingangena emaselini amabili afanayo eyunithini kuphela, ngakho abanye abalingani bawo bayasuswa. Funda ukubathola.",
+          "h1": "Ababili nabathathu abafihlekile (hidden pairs, hidden triples)",
+          "summary": "Ababili abafihlekile yizinombolo ezimbili okuthi, ngaphakathi komugqa owodwa, ikholomu elilodwa noma ibhokisi elilodwa, zibe ngabalingani emaselini amabili afanayo kuphela hhayi kwenye indawo. Lawo maseli amabili kufanele abe nalezo zinombolo ezimbili, ngakho bonke abanye abalingani kuwo bangasuswa. Abathathu abafihlekile basebenza ngendlela efanayo ngezinombolo ezintathu ezivalelwe emaselini amathathu. Ngemva kokususa, amaseli abonisa ababili noma abathathu abasobala. Isexwayiso se-Bare Sudoku sibiza ukufaka okulandelayo ngokuthi “Ababili noma abathathu”.",
+          "when": [
+            "Uma iyunithi inamaseli anabalingani abaningi futhi ababodwa sebephelile. Ababili abafihlekile bacasha emaselini aminyene, yingakho kufanelekile ukubafuna khona kanye lapho ababili abasobala bengabonakali khona. Abathathu abafihlekile bayivelakancane; i-Bare Sudoku iyabafuna, kodwa izimfumbe eziningi ezinzima ziyaxazululwa ngaphandle kwabo."
+          ],
+          "spot": [
+            "Sebenza ngenombolo, hhayi ngeseli. Eyunithini, qaphela amaseli lapho inombolo ngayinye engekho ingangena khona. Uma izinombolo ezimbili ngayinye inamaseli amabili kuphela angaba khona futhi kungamaseli amabili afanayo, usubatholile ababili abafihlekile. Emdlalweni, thinta inkinobho yenombolo ukuze ugqamise abalingani bayo; uma izinombolo ezimbili zikhanyisa amaseli amabili afanayo eyunithi futhi zingakhanyisi lutho olunye kuyo, leyo yiphethini."
+          ],
+          "examples": [
+            {
+              "h": "Ababili abafihlekile",
+              "steps": [
+                "Izinombolo {d1} no-{d2} {unit} ngayinye inamaseli amabili kuphela angaba khona, futhi angamaseli amabili afanayo: {cells}.",
+                "Lawo maseli amabili kufanele abe nezinombolo {d1} no-{d2}, ngakho abanye abalingani bawo abakwazi ukuba khona.",
+                "Susa {elim}. Manje amaseli amabili abonisa ababili abasobala, okungavula okunye."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukususa izinombolo ezimbili zababili emaselini abo. Kususwa abanye abalingani balawo maseli; izinombolo zababili ziyasala.",
+            "Ukwamukela inombolo enendawo yesithathu engaba khona eyunithini. Zombili izinombolo kufanele zivalelwe emaselini amabili ncamashi.",
+            "Ukubheka emabhokisini kuphela. Ababili abafihlekile bavela kaningi ngokufanayo emigqeni nasemakholomu."
+          ],
+          "faq": [
+            [
+              "Yini ababili abafihlekile ku-Sudoku?",
+              "Izinombolo ezimbili ezingangena emaselini amabili afanayo eyunithi kuphela. Lawo maseli kufanele athathe lezo zinombolo, ngakho abanye abalingani bawo bayasuswa."
+            ],
+            [
+              "Ababili abafihlekile bahluke kanjani kwababili abasobala?",
+              "Ababili abasobala bayabonakala: amaseli amabili abonisa abalingani ababili abafanayo kuphela. Ababili abafihlekile bambozwe ngabalingani abengeziwe emaselini amabili. Uma labo abengeziwe besusiwe, ababili abafihlekile baba ngababili abasobala."
+            ],
+            [
+              "Yini abathathu abafihlekile?",
+              "Izinombolo ezintathu ezivalelwe emaselini amathathu eyunithi. Inombolo ngayinye akudingeki ivele kuwo womathathu amaseli; okubalulekile ukuthi ayikho kulezi zinombolo ezintathu enomlingani ngaphandle kwalawo maseli."
+            ],
+            [
+              "Ingabe isexwayiso siyabahlukanisa ababili abafihlekile nabasobala?",
+              "Cha. I-Bare Sudoku ithola bobabili futhi ibiza ukufaka okulandelayo ngokuthi “Ababili noma abathathu”. Amakhasi lapha ayabahlukanisa ngoba batholakala ngezindlela ezahlukene."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "I-X-Wing ku-Sudoku: indlela esebenza ngayo",
+          "description": "I-X-Wing: inombolo enamaseli abalingani amabili ncamashi emigqeni emibili, kumakholomu amabili afanayo, isuswa kwamanye amaseli alawo makholomu. Nesibonelo.",
+          "h1": "X-Wing",
+          "summary": "I-X-Wing iyiphethini yenombolo eyodwa namaseli amane asemakhoneni onxande. Uma inombolo inamaseli abalingani amabili ncamashi emigqeni emibili ngayinye, futhi lawo maseli esemakholomu amabili afanayo, inombolo kufanele ihlale emakhoneni amabili abhekene onxande. Ngakho ingasuswa kuwo wonke amanye amaseli alawo makholomu amabili. Kusebenza ngendlela efanayo uma imigqa namakholomu kushintshaniswa. Yindlela yokuqala yochwepheshe ku-Bare Sudoku.",
+          "when": [
+            "Uma ababodwa, abalingani abakhiyiwe namaqoqo amancane sebephelile. I-X-Wing iyiphethini evame kakhulu yochwepheshe futhi ivame ukuvela lapho inombolo isele nabalingani abambalwa, ngokuvamile lapho amakhophi ayo amane kuya kwayisithupha esefakiwe. Idinga amanothi aphelele enombolo oyihlolayo."
+          ],
+          "spot": [
+            "Khetha inombolo bese ufuna imigqa lapho inamaseli abalingani amabili ncamashi. Uma imigqa emibili enjalo ihlanganyela amakholomu amabili afanayo, hlola kulawo makholomu abanye abalingani baleyo nombolo: yibo abazosuswa. Bese uphinda usebenzisa amakholomu njengesisekelo. Emdlalweni, thinta inkinobho yenombolo: bonke abalingani bayo bayagqanyiswa, futhi unxande wamanothi amane agqanyisiwe kulula ukuwubona."
+          ],
+          "examples": [
+            {
+              "h": "Isibonelo",
+              "steps": [
+                "Inombolo {d} inamaseli abalingani amabili ncamashi emugqeni {r1} namabili ncamashi emugqeni {r2}, futhi ahlelekile kumakholomu amabili afanayo, {c1} no-{c2}: {cells}.",
+                "Umugqa {r1} ufaka inombolo {d} yawo ekholomu {c1} noma {c2}, kanti umugqa {r2} uyifaka kwelinye. Noma kunjani, amakholomu {c1} no-{c2} ngalinye lithola inombolo {d} kule migqa emibili.",
+                "Ngakho inombolo {d} ayikwazi ukuvela kwenye indawo emakholomu {c1} no-{c2}. Susa inombolo {d} emaselini {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukusebenzisa umugqa onamaseli abalingani amathathu enombolo. Umugqa ngamunye wesisekelo kufanele ube namabili ncamashi, futhi womabili kufanele abe semakholomu amabili ahlanganyelwayo.",
+            "Ukususa inombolo emigqeni esikhundleni sokuyisusa emakholomu. Uma imigqa iyisisekelo, ukususa kwenzeka emakholomu, futhi okuphambene nalokho.",
+            "Ukukhohlwa inguqulo eshintshanisiwe. I-X-Wing eyakhelwe emakholomu isusa emigqeni."
+          ],
+          "faq": [
+            [
+              "Iyini i-X-Wing ku-Sudoku?",
+              "Inombolo enamaseli abalingani amabili ncamashi emigqeni emibili ngayinye, kumakholomu amabili afanayo. Inombolo ihlala emakhoneni amabili abhekene alowo nxande, ngakho isuswa kuyo yonke enye ingxenye yamakholomu amabili. Imigqa namakholomu kungashintshaniswa."
+            ],
+            [
+              "Kungani i-X-Wing isebenza?",
+              "Umugqa ngamunye kule mibili kufanele ufake inombolo kwelinye lamakholomu amabili, futhi imigqa emibili ayikwazi ukusebenzisa ikholomu elifanayo. Ngakho amakholomu amabili ngalinye lithola ikhophi yalo yenombolo kule migqa, futhi bonke abanye abalingani kulawo makholomu abanakwenzeka."
+            ],
+            [
+              "Ingabe i-X-Wing iyinhlanzi?",
+              "Yebo. I-X-Wing iyinhlanzi enosayizi 2; i-Swordfish iyinhlanzi enosayizi 3. I-Bare Sudoku ithola zombili."
+            ],
+            [
+              "Yiliphi izinga elinama-X-Wing?",
+              "Uchwepheshe. Imfumbe edinga i-X-Wing, i-Y-Wing, i-Swordfish noma i-XYZ-Wing ifakwa ezingeni elithi Uchwepheshe."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "I-Y-Wing ku-Sudoku: indlela esebenza ngayo",
+          "description": "I-Y-Wing (XY-Wing): insika enabalingani ababili namaphiko amabili, ngalinye lihlanganyela oyedwa wabo, isusa inombolo emaselini abona womabili amaphiko.",
+          "h1": "Y-Wing",
+          "summary": "I-Y-Wing, ebizwa nangokuthi i-XY-Wing, isebenzisa amaseli amathathu, ngalinye linabalingani ababili. Insika inabalingani X no-Y. Iphiko elilodwa libona insika futhi lino-X no-Z; elinye iphiko libona insika futhi lino-Y no-Z. Noma ngabe insika iba yini, elinye lamaphiko kufanele libe ngu-Z, ngakho umlingani Z angasuswa kuwo wonke amaseli abona womabili amaphiko. Yindlela yochwepheshe ku-Bare Sudoku.",
+          "when": [
+            "Uma imfumbe inamaseli amaningana anabalingani ababili ncamashi futhi ingekho inhlanzi etholakalayo. Ama-Y-Wing avamile ezimfumbeni zochwepheshe futhi atholakala ngokulandela amaseli anabalingani ababili: ngalinye lingaba yinsika noma iphiko."
+          ],
+          "spot": [
+            "Bhala phansi amaseli anabalingani ababili ncamashi. Kulelo nalelo, lithathe njengensika enabalingani X no-Y, bese ufuna phakathi komakhelwane balo iseli elino-X nenye inombolo Z, neseli elino-Y no-Z ofanayo. Lawo amabili angamaphiko. Bese uthola amaseli abona womabili amaphiko futhi ano-Z. Qaphela ukuthi amaphiko akudingeki abonane."
+          ],
+          "examples": [
+            {
+              "h": "Isibonelo",
+              "steps": [
+                "Insika {pivot} inabalingani {x} no-{y}. Ibona iseli {wingA}, elino-{x} no-{z}, neseli {wingB}, elino-{y} no-{z}.",
+                "Uma insika {pivot} ingu-{x}, iseli {wingA} lilahlekelwa ngu-{x} bese liba ngu-{z}. Uma insika {pivot} ingu-{y}, iseli {wingB} liba ngu-{z}. Kuzo zonke izimo elinye lamaphiko amabili lingu-{z}.",
+                "Iseli elibona womabili amaphiko alisoze laba ngu-{z}. Susa inombolo {z} emaselini {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukukhetha amaphiko angayiboni insika womabili. Iphiko ngalinye kufanele lihlanganyele umugqa, ikholomu noma ibhokisi nensika.",
+            "Ukususa u-Z emaselini abona iphiko elilodwa kuphela. Iseli okususwa kulo kufanele libone womabili amaphiko.",
+            "Ukususa u-Z ensikeni. Ku-Y-Wing insika ayinayo i-Z; uma inayo, iphethini iyi-XYZ-Wing enemithetho ehlukile."
+          ],
+          "faq": [
+            [
+              "Iyini i-Y-Wing ku-Sudoku?",
+              "Amaseli amathathu anabalingani ababili: insika eno-X no-Y, iphiko elino-X no-Z elibona insika, nephiko elino-Y no-Z elibona insika. Elinye iphiko lihlale lingu-Z, ngakho u-Z uyasuswa emaselini abona womabili amaphiko."
+            ],
+            [
+              "Ingabe i-Y-Wing iyafana ne-XY-Wing?",
+              "Yebo. La magama amabili achaza iphethini efanayo. I-Bare Sudoku iyibiza ngokuthi i-Y-Wing."
+            ],
+            [
+              "Kungani elinye iphiko kufanele libe ngu-Z?",
+              "Uma insika ingu-X, iphiko lokuqala lilahlekelwa ngu-X bese liba ngu-Z. Uma insika ingu-Y, iphiko lesibili liba ngu-Z. Insika ingenye yalokhu okubili, ngakho elinye iphiko lingu-Z."
+            ],
+            [
+              "I-Y-Wing isusa emaselini amangaki?",
+              "Ngokuvamile elilodwa noma amabili: amaseli abona womabili amaphiko futhi asenomlingani Z kuphela. Lokho kwanele ukudala oyedwa."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "I-Swordfish ku-Sudoku: indlela esebenza ngayo",
+          "description": "I-Swordfish: inombolo evalelwe kumakholomu amathathu emigqeni emithathu isuswa kwamanye amaseli alawo makholomu. Inhlanzi enosayizi 3, nesibonelo sangempela.",
+          "h1": "Swordfish",
+          "summary": "I-Swordfish iyi-X-Wing enemigqa emithathu namakholomu amathathu. Uma inombolo inamaseli abalingani angafika kwamathathu emigqeni emithathu ngayinye, futhi wonke lawo maseli esemakholomu amathathu afanayo, imigqa emithathu iyiqeda inombolo kulawo makholomu, futhi inombolo ingasuswa kuwo wonke amanye amaseli amakholomu amathathu. Imigqa namakholomu kungashintshaniswa. I-Bare Sudoku ifuna i-Swordfish ngemva kwe-Y-Wing, ezimfumbeni zochwepheshe.",
+          "when": [
+            "Uma i-X-Wing ne-Y-Wing zingatholi lutho. Ama-Swordfish awavamile njengama-X-Wing futhi adinga inombolo abalingani bayo abasabalele kancane emigqeni emithathu. Adinga amanothi aphelele nanembile aleyo nombolo."
+          ],
+          "spot": [
+            "Khetha inombolo bese ufuna imigqa enamaseli abalingani ayo amabili noma amathathu. Uma imigqa emithathu enjalo ihlanganisa amakholomu amathathu kuphela sekukonke, hlola kulawo makholomu abanye abalingani baleyo nombolo. Akudingeki ukuthi umugqa ngamunye ube nomlingani kulo lonke ikholomu: i-Swordfish ingaba namaseli ayisithupha, ayisikhombisa, ayisishiyagalombili noma ayisishiyagalolunye. Emdlalweni, gqamisa inombolo ngenkinobho yayo bese ufuna imigqa emithathu abalingani bayo abahlelekile emakholomu amathathu."
+          ],
+          "examples": [
+            {
+              "h": "Isibonelo",
+              "steps": [
+                "Inombolo {d} inamaseli abalingani angafika kwamathathu kumugqa ngamunye wemigqa {rows}, futhi wonke lawo maseli asemakholomu {cols}: {cells}.",
+                "Umugqa ngamunye kwemithathu kufanele ufake inombolo {d} yawo kwelinye lamakholomu amathathu, futhi ayikho imigqa emibili engasebenzisa ikholomu elifanayo. Ngakho amakholomu amathathu athola inombolo {d} yawo kule migqa emithathu.",
+                "Noma yimuphi omunye umlingani {d} emakholomu {cols} akanakwenzeka. Susa inombolo {d} emaselini {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukufuna wonke amaseli ayisishiyagalolunye. I-Swordfish enabalingani ababili kweminye imigqa isasebenza, inqobo nje uma imigqa emithathu ihlanganisa amakholomu amathathu kuphela.",
+            "Ukufaka umugqa onamaseli abalingani amane. Umugqa ngamunye wesisekelo kufanele ube namathathu noma ngaphansi, onke engaphakathi kwamakholomu amathathu.",
+            "Ukususa emigqeni yesisekelo. Uma imigqa iyisisekelo, ukususa kwenzeka emakholomu amathathu, ngaphandle kwemigqa yesisekelo."
+          ],
+          "faq": [
+            [
+              "Iyini i-Swordfish ku-Sudoku?",
+              "Inombolo abalingani bayo emigqeni emithathu bavalelwe kumakholomu amathathu. Imigqa emithathu kufanele ifake inombolo kulawo makholomu amathathu, eyodwa kulinye nalinye, ngakho inombolo isuswa kwamanye amaseli alawo makholomu."
+            ],
+            [
+              "I-Swordfish ihluke kanjani ku-X-Wing?",
+              "Ngosayizi kuphela: i-X-Wing isebenzisa imigqa emibili namakholomu amabili, i-Swordfish emithathu namathathu. Ukucabanga kuyafana."
+            ],
+            [
+              "Ingabe i-Swordfish idinga amaseli ayisishiyagalolunye ncamashi?",
+              "Cha. Umugqa ngamunye ungaba nabalingani ababili noma abathathu; iphethini idinga kuphela ukuthi imigqa emithathu ndawonye ingasebenzisi amakholomu angaphezu kwamathathu."
+            ],
+            [
+              "Ikhona yini inhlanzi enosayizi 4?",
+              "Yebo, i-Jellyfish. I-Bare Sudoku ayiyisebenzisi, ngoba izimfumbe zayo azisoze zayidinga."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "I-XYZ-Wing ku-Sudoku: indlela esebenza ngayo",
+          "description": "I-XYZ-Wing: insika enabalingani abathathu namaphiko amabili ahlanganyela oyedwa wabo isusa leyo nombolo emaselini abona womathathu. Nesibonelo sangempela.",
+          "h1": "XYZ-Wing",
+          "summary": "I-XYZ-Wing iyi-Y-Wing enensika enabalingani abathathu. Insika ino-X, Y no-Z; iphiko elilodwa libona insika futhi lino-X no-Z, elinye libona insika futhi lino-Y no-Z. Elinye lalawa maseli amathathu kufanele libe ngu-Z, ngakho u-Z angasuswa kuwo wonke amaseli abona womathathu. Ngoba insika ngokwayo ingaba ngu-Z, iseli okususwa kulo kufanele libone insika kanye nawo womabili amaphiko, okulikhawulela ebhokisini, emugqeni noma ekholomu amaseli ahlanganyela kukho. Yindlela enzima kakhulu esetshenziswa yi-Bare Sudoku.",
+          "when": [
+            "Kuphela uma konke okunye kwehluleka. Ama-XYZ-Wing ayiphethini eyivelakancane kakhulu ku-Bare Sudoku futhi avela ezimfumbeni zochwepheshe kuphela. Wafune lapho iseli elinabalingani abathathu likhona ebhokisini kanye neseli elinabalingani ababili elihlanganyela izinombolo zalo ezimbili."
+          ],
+          "spot": [
+            "Qala ngamaseli anabalingani abathathu ncamashi; ngalinye lingaba yinsika. Phakathi komakhelwane balo, funa amaseli amabili anabalingani ababili ngalinye, bonke bethathwe kwabathathu bensika, ahlanganyela inombolo eyodwa ncamashi, Z. Bese ufuna amaseli abona insika nawo womabili amaphiko futhi ano-Z. Empeleni iphiko elilodwa lisebhokisini lensika kanti elinye lisemugqeni wayo noma ekholomu layo, futhi amaseli okususwa kuwo ngamaseli asele alelo bhokisi kulowo mugqa noma kulelo kholomu."
+          ],
+          "examples": [
+            {
+              "h": "Isibonelo",
+              "steps": [
+                "Insika {pivot} inabalingani abathathu: {x}, {y} no-{z}. Ibona iseli {wingA} elino-{x} no-{z}, neseli {wingB} elino-{y} no-{z}.",
+                "Uma insika {pivot} ingu-{z}, sekuphelile. Uma ingu-{x}, iseli {wingA} kufanele libe ngu-{z}. Uma ingu-{y}, iseli {wingB} kufanele libe ngu-{z}. Kuzo zonke izimo elinye lalawa maseli amathathu lingu-{z}.",
+                "Iseli elibona womathathu alikwazi ukuba ngu-{z}. Susa inombolo {z} emaselini {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukususa emaselini abona amaphiko amabili kuphela. Ngokungafani ne-Y-Wing, insika ingaba ngu-Z, ngakho iseli kufanele libone nensika.",
+            "Ukusebenzisa amaphiko abalingani bawo bengatholakali bonke phakathi kwabalingani abathathu bensika.",
+            "Ukuyididanisa ne-Y-Wing: umehluko ngumlingani wesithathu ensikeni, futhi uyashintsha ukuthi yimaphi amaseli angahlanzwa."
+          ],
+          "faq": [
+            [
+              "Iyini i-XYZ-Wing ku-Sudoku?",
+              "Insika enabalingani X, Y no-Z namaphiko amabili, elilodwa lino-X no-Z elinye lino-Y no-Z, womabili abona insika. Elinye lalawa maseli amathathu lingu-Z, ngakho u-Z uyasuswa emaselini abona womathathu."
+            ],
+            [
+              "I-XYZ-Wing ihluke kanjani ku-Y-Wing?",
+              "Insika inabalingani abathathu esikhundleni sababili, kuhlanganise no-Z. Lokho kwenza insika ibe yindawo engaba khona ka-Z, ngakho amaseli abona insika nawo womabili amaphiko kuphela angalahlekelwa ngu-Z."
+            ],
+            [
+              "I-XYZ-Wing ivela kangaki?",
+              "Kuyivelakancane. Ku-Bare Sudoku izimfumbe zochwepheshe kuphela ezingayidinga, futhi eziningi azidingi. I-Bare Sudoku iyihlola ekugcineni, ngemva kwe-X-Wing, i-Y-Wing ne-Swordfish."
+            ],
+            [
+              "Ikhona yini i-WXYZ-Wing?",
+              "Yebo, enensika enabalingani abane, kodwa i-Bare Sudoku ayiyisebenzisi. Yonke imfumbe emdlalweni ingaqedwa ngezindlela eziyisishiyagalolunye zalo mhlahlandlela."
+            ]
+          ]
+        }
+      }
+    },
+    "af": {
+      "learnHeading": "Leer Sudoku",
+      "learnText": "Nuut met Sudoku, of vas by 'n moeilike raaisel? Twee gidse verduidelik die reëls en elke oplostegniek wat die wenke gebruik, elkeen met 'n regte voorbeeld.",
+      "howToLink": "Hoe om Sudoku te speel",
+      "techniquesLink": "Sudoku-oplostegnieke",
+      "labels": {
+        "howTo": "Hoe om te speel",
+        "techniques": "Tegnieke",
+        "play": "Speel Sudoku",
+        "prev": "Vorige tegniek",
+        "next": "Volgende tegniek",
+        "all": "Alle tegnieke",
+        "example": "Voorbeeld",
+        "steps": "Stap vir stap",
+        "when": "Wanneer om dit te gebruik",
+        "spot": "Hoe om dit raak te sien",
+        "mistakes": "Algemene foute",
+        "inGame": "In Bare Sudoku",
+        "level": "Nodig vanaf vlak: {level}",
+        "hint": "In die spel sê die wenk: {text}",
+        "legend": "Vet syfers is gegee, blou syfers is tydens die oplos geplaas en klein syfers is kandidate. Gemerkte selle vorm die patroon, deurgehaalde kandidate word verwyder, en 'n omsirkelde kandidaat is die syfer wat geplaas word.",
+        "notation": "Selle word as r3c7 geskryf: ry 3, kolom 7. Rye word van bo af getel, kolomme van links af, en blokke van 1 tot 9 van links bo af, ry vir ry.",
+        "row": "ry {n}",
+        "column": "kolom {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} uit {cell}",
+        "regions": "Ry 5, kolom 5 en blok 5 aan die begin van 'n raaisel",
+        "firstMove": "'n Naakte enkeling: {cell} kan net {d} wees",
+        "breadcrumb": "Broodkrummels"
+      },
+      "howTo": {
+        "title": "Hoe om Sudoku te speel: reëls, bord en eerste skuiwe",
+        "description": "Leer hoe om Sudoku te speel: die reëls, hoe rye, kolomme en blokke werk, waarom elke raaisel een oplossing het, hoe om notas te gebruik en jou eerste skuiwe.",
+        "h1": "Hoe om Sudoku te speel",
+        "summary": "Sudoku is 'n logikaraaisel op 'n 9×9-rooster. Vul elke leë sel met 'n syfer van 1 tot 9 sodat elke ry, elke kolom en elke 3×3-blok elke syfer presies een keer bevat. Sommige syfers word aan die begin gegee; die res lei jy af, een sekere sel op 'n slag, en jy hoef nooit te raai nie. Hierdie gids verduidelik die bord, die reëls, die beginsel van een oplossing, notas en 'n eenvoudige strategie vir jou eerste skuiwe. Jy kan alles oefen in [Bare Sudoku](play), wat gratis is en wenke het wat die logika verduidelik.",
+        "sections": [
+          {
+            "h": "Wat is die reëls van Sudoku?",
+            "p": [
+              "Daar is net drie reëls, en dit is eintlik dieselfde reël uit drie rigtings gesien: elke ry moet die syfers 1 tot 9 bevat, elke kolom moet die syfers 1 tot 9 bevat, en elke 3×3-blok moet die syfers 1 tot 9 bevat. 'n Syfer kan dus nooit twee keer in dieselfde ry, kolom of blok voorkom nie.",
+              "Die gegewe syfers, in vet gedruk, is vas. Jou taak is om die leë selle te vul. Daar is geen rekenkunde en geen volgorde nie: die syfers is bloot nege verskillende simbole. Jy kon net sowel met letters of vorms speel, en niks sou verander nie."
+            ]
+          },
+          {
+            "h": "Hoe is die bord ingedeel?",
+            "p": [
+              "Die bord het 81 selle in 9 rye en 9 kolomme. Dik lyne verdeel dit in nege 3×3-blokke. Elke sel behoort aan presies een ry, een kolom en een blok, en hierdie drie groepe is sy eenhede. Die 20 ander selle wat 'n eenheid met 'n sel deel, word sy bure genoem; 'n syfer wat in 'n sel geplaas word, sluit daardie syfer in al 20 bure uit.",
+              "Selle word as r3c7 geskryf: ry 3, kolom 7. Rye word van bo af getel, kolomme van links af, en blokke van 1 tot 9 van links bo af, ry vir ry. Hierdie notasie word in elke tegniekgids gebruik en is die moeite werd om te leer: r5c5 is die middel van die bord."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Waarom het elke Sudoku presies een oplossing?",
+            "p": [
+              "'n Behoorlike Sudoku het een oplossing, en dit is wat logika laat werk. Wanneer jy kan wys dat 'n syfer nêrens anders in 'n eenheid kan gaan nie, moet dit in die oorblywende sel gaan, want die oplossing bestaan en is uniek. As 'n raaisel twee oplossings gehad het, sou geen hoeveelheid redenering hulle van mekaar kon onderskei nie, en sou jy op 'n stadium moes raai.",
+              "Bare Sudoku genereer elke raaisel op jou toestel en kontroleer dat dit presies een oplossing het en dat sy logiese oplosser dit met die tegnieke van die gekose vlak kan klaarmaak. As jy dus vasval, is daar altyd 'n volgende stap om te vind, en die wenk wys dit."
+            ]
+          },
+          {
+            "h": "Hoe begin jy 'n Sudoku-raaisel?",
+            "p": [
+              "Begin by dit wat die meeste beperk is. Hierdie volgorde werk op elke vlak:"
+            ],
+            "list": [
+              "Kies 'n syfer wat reeds baie keer voorkom, sê ses of sewe keer, en soek die blokke waarin dit nog ontbreek. Dikwels bly net een sel in 'n blok daarvoor oor: dit is 'n [verborge enkeling](hidden-single).",
+              "Soek vol selle. 'n Sel waarvan die ry, kolom en blok saam agt verskillende syfers bevat, het net een kandidaat oor: 'n [naakte enkeling](naked-single). Selle in amper vol rye of blokke is die beste plek om te soek.",
+              "Elke syfer wat jy plaas, verwyder 'n kandidaat uit 20 bure, so kyk dadelik na daardie bure. Enkelinge kom gewoonlik in kettings.",
+              "Wanneer die maklike plasings opdroog, skryf notas: die kandidate vir elke leë sel. Soek dan 'n syfer wat binne 'n blok tot een lyn beperk is ([geslote kandidate](locked-candidates)) of twee selle met dieselfde twee kandidate ('n [naakte paar](naked-pairs)).",
+              "Keer ná elke eliminasie terug na enkelinge. Selfs Kenner-raaisels word meestal met enkelinge opgelos; die gevorderde tegniek ontsluit net die volgende een."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Wat is notas en wanneer moet jy dit gebruik?",
+            "p": [
+              "Notas, ook potloodmerke of kandidate genoem, is die klein syfers wat jy in 'n leë sel skryf om aan te teken watter syfers daar nog moontlik is. In maklike raaisels het jy dit selde nodig; vanaf Moeilik is dit onmisbaar, want tegnieke soos pare, X-Wing en Y-Wing gaan oor kandidate, nie oor geplaasde syfers nie.",
+              "Hou notas akkuraat: wanneer jy 'n syfer plaas, verwyder dit uit die notas van al 20 bure. In Bare Sudoku gebeur dit outomaties, en Vul notas in skryf met een tik elke kandidaat in elke leë sel, sodat jy van 'n volledige, korrekte stel kandidate kan begin. 'n Nota is 'n feit, nie 'n raaiskoot nie: dit beteken dat niks hierdie syfer nog uitsluit nie."
+            ]
+          },
+          {
+            "h": "Wat moet jy doen as jy vasval?",
+            "p": [
+              "Kontroleer eers weer die basiese dinge: elke amper vol ry, kolom en blok is 'n bron van enkelinge. Maak dan seker dat die notas volledig is, want 'n ontbrekende kandidaat verberg patrone en 'n verouderde een skep valse patrone. Werk dan deur die [tegnieke](techniques) in volgorde van moeilikheid: geslote kandidate, pare en drietalle, X-Wing, Y-Wing, Swordfish en XYZ-Wing. Elkeen het sy eie bladsy met 'n regte voorbeeld.",
+              "As niks werk nie, vra 'n wenk. In Bare Sudoku kyk die wenk eers of 'n geplaasde syfer verkeerd is, vind dan die volgende sel wat met logika gevul kan word en noem die tegniek, sodat jy iets leer selfs wanneer jy dit gebruik. Tik weer op die wenk om die syfer te plaas."
+            ]
+          },
+          {
+            "h": "Hoe voer jy syfers in Bare Sudoku in?",
+            "p": [
+              "Tik op 'n sel en dan op 'n syfer. Of tik eers op 'n syfer: dit word gesluit, en elke sel waarop jy tik, kry dit. Dit is die vinnigste manier om die sesde, sewende en agtste kopie van 'n syfer te plaas. Tik weer op die syfer om dit los te maak. Die Notas-knoppie skakel oor na potloodmerke, Vee uit maak 'n sel skoon, Ontdoen neem enige skuif terug, en foute word in rooi gemerk tensy jy dit in die kieslys afskakel.",
+              "Op 'n sleutelbord gebruik jy die pyltjiesleutels om te beweeg, 1 tot 9 om 'n syfer in te voer, Backspace om uit te vee, N vir notas, U vir ontdoen, H vir 'n wenk, F om notas in te vul en Escape vir die kieslys. Die spel stoor homself, werk vanlyn en het geen advertensies en geen rekening nie."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Moet jy ooit raai in Sudoku?",
+            "Nie in 'n behoorlike raaisel nie. Elke Bare Sudoku-raaisel het presies een oplossing en is nagegaan dat dit met logika alleen oplosbaar is, tot by die tegnieke van sy vlak. As jy voel jy moet raai, ontbreek 'n kandidaat in jou notas of wag 'n tegniek om gevind te word."
+          ],
+          [
+            "Kan 'n syfer twee keer in 'n ry, kolom of blok voorkom?",
+            "Nee. Dit is die hele reël: elk van die nege rye, nege kolomme en nege blokke bevat elke syfer van 1 tot 9 presies een keer. As twee identiese syfers 'n eenheid deel, is minstens een van hulle verkeerd."
+          ],
+          [
+            "Wat is die verskil tussen Maklik, Gemiddeld, Moeilik en Kenner?",
+            "Die vlak word bepaal deur die tegnieke wat die raaisel nodig het. Maklik en Gemiddeld word net met enkelinge opgelos, en Maklik begin met minstens 38 gegewe syfers. Moeilik vereis geslote kandidate of pare en drietalle. Kenner vereis X-Wing, Y-Wing, Swordfish of XYZ-Wing."
+          ],
+          [
+            "Is dit beter om notas vir elke sel in te vul of net vir sommige?",
+            "Vul hulle almal in vir Moeilik- en Kenner-raaisels: patrone soos pare, X-Wing en Y-Wing verskyn eers wanneer elke kandidaat geskryf is. In Maklik en Gemiddeld is notas opsioneel, en die meeste spelers soek net na enkelinge."
+          ],
+          [
+            "Hoe lank neem 'n Sudoku?",
+            "'n Maklike raaisel neem 'n paar minute; Kenner-raaisels kan twintig minute of langer neem, afhangend van hoe vinnig jy die gevorderde patroon raaksien. Bare Sudoku wys 'n tydhouer, laat dit wag terwyl die kieslys oop is en hou geen ranglys nie, so speel teen jou eie pas."
+          ],
+          [
+            "Het jy rekenkunde nodig vir Sudoku?",
+            "Nee. Die syfers is net etikette; daar is geen optel of tellery by betrokke nie. Enige nege simbole sou werk, en daarom is Sudoku 'n logikaraaisel eerder as 'n syferraaisel."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku-oplostegnieke verduidelik met voorbeelde",
+        "description": "Al nege Sudoku-oplostegnieke, van naakte enkelinge tot Swordfish en XYZ-Wing, in die volgorde wat die Bare Sudoku-wenke gebruik, elk met 'n regte voorbeeld.",
+        "h1": "Sudoku-oplostegnieke",
+        "intro": [
+          "Elke Sudoku kan met 'n klein stel logiese tegnieke opgelos word. Hierdie indeks lys die nege tegnieke wat die Bare Sudoku-oplosser en sy wenke gebruik, in die volgorde waarin die oplosser hulle probeer: eers enkelinge, dan eliminasies binne een eenheid, dan patrone wat oor verskeie rye en kolomme strek. Elke tegniek het sy eie bladsy met 'n definisie, hoe om dit raak te sien, 'n regte voorbeeld uit 'n gegenereerde raaisel en die algemene foute.",
+          "Die vlak van 'n raaisel word bepaal deur die moeilikste tegniek wat dit nodig het. Maklik- en Gemiddeld-raaisels het net enkelinge nodig, Moeilik-raaisels het geslote kandidate of pare en drietalle nodig, en Kenner-raaisels het minstens een vis of vlerk nodig. Wat die vlak ook al is, enkelinge doen die meeste werk; die gevorderde tegniek verwyder 'n kandidaat of twee en die enkelinge gaan van daar af voort."
+        ],
+        "faq": [
+          [
+            "In watter volgorde moet ek Sudoku-tegnieke probeer?",
+            "Die goedkoopste eerste: naakte enkelinge, verborge enkelinge, geslote kandidate, naakte pare en drietalle, verborge pare en drietalle, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku probeer hulle in presies hierdie volgorde, en 'n wenk noem altyd die eenvoudigste tegniek wat vordering maak."
+          ],
+          [
+            "Het ek al hierdie tegnieke nodig om Sudoku op te los?",
+            "Vir Maklik- en Gemiddeld-raaisels is enkelinge genoeg. Moeilik-raaisels voeg geslote kandidate en deelversamelings by. Kenner-raaisels het minstens een vis of vlerk nodig, maar gewoonlik net een of twee keer per raaisel."
+          ],
+          [
+            "Is daar moeiliker tegnieke as XYZ-Wing?",
+            "Ja, byvoorbeeld kettings, uniekheidstoetse en dwingende nette. Bare Sudoku genereer nie raaisels wat dit nodig het nie, so elke raaisel in die spel kan met die nege tegnieke op hierdie bladsy klaargemaak word."
+          ],
+          [
+            "Wat is 'n kandidaat?",
+            "'n Syfer wat nog in 'n leë sel kan gaan omdat niks in sy ry, kolom of blok dit nog uitsluit nie. Notas in die spel is kandidate. Elke tegniek verder as enkelinge redeneer oor kandidate, so hou hulle volledig en akkuraat."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Naakte enkeling",
+          "title": "Naakte enkeling in Sudoku: die sel met een kandidaat",
+          "description": "'n Naakte enkeling is 'n leë sel met net een moontlike syfer. Leer om naakte enkelinge vinnig te vind, met 'n regte voorbeeld stap vir stap en die gewone foute.",
+          "h1": "Naakte enkeling (naked single)",
+          "summary": "'n Naakte enkeling is 'n leë sel wat presies een kandidaat het: die ander agt syfers kom reeds in sy ry, kolom of blok voor. Die oorblywende syfer moet daar gaan. Dit is die eenvoudigste Sudoku-tegniek, die een wat jy die meeste gebruik, en die een wat die Bare Sudoku-wenk aandui as “Net een kandidaat hier”.",
+          "when": [
+            "Altyd. Naakte enkelinge verskyn van die eerste skuif tot die laaste, op elke vlak. In Maklik- en Gemiddeld-raaisels is hulle, saam met verborge enkelinge, die enigste tegniek wat jy nodig het. In moeiliker raaisels laat elke eliminasie deur 'n gevorderde tegniek gewoonlik 'n naakte enkeling agter, so kyk ná elke stap daarvoor."
+          ],
+          "spot": [
+            "Kyk na selle met baie geplaasde bure: 'n sel in 'n ry wat reeds sewe syfers het, of 'n sel waarvan die ry, kolom en blok saam agt verskillende syfers dek. Sonder notas tel jy die syfers wat jy vanuit die sel kan sien. Met notas is 'n naakte enkeling eenvoudig 'n sel wat een kandidaat wys, en daarom maak Vul notas in hulle maklik om te vind."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Kyk na {cell}. Dit is leeg, so lys elke syfer wat reeds in sy ry, sy kolom en sy blok geplaas is.",
+                "Ry {row} bevat {rowDigits}. Kolom {col} bevat {colDigits}. Blok {box} bevat {boxDigits}.",
+                "Saam sluit hulle elke syfer behalwe {d} uit, so {d} is die enigste kandidaat wat in {cell} oorbly.",
+                "Skryf {d} in {cell}. Kyk dan of die nuwe syfer nog 'n enkeling in dieselfde ry, kolom of blok skep."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om net die ry of net die blok te tel. Die agt uitgeslote syfers kom gewoonlik uit al drie eenhede saam.",
+            "Om te vergeet dat 'n syfer wat jy 'n oomblik gelede geplaas het, ook kandidate uit sy 20 bure uitsluit; nuwe naakte enkelinge verskyn direk ná elke plasing.",
+            "Om 'n naakte enkeling met 'n verborge enkeling te verwar: 'n naakte enkeling het een kandidaat oor in die sel, 'n verborge enkeling het een sel oor vir die syfer in 'n eenheid."
+          ],
+          "faq": [
+            [
+              "Wat is 'n naakte enkeling in Sudoku?",
+              "'n Leë sel met presies een kandidaat. Agt verskillende syfers is reeds in sy ry, kolom en blok geplaas, so die negende syfer is die enigste een wat pas."
+            ],
+            [
+              "Waarom word dit naak genoem?",
+              "Omdat die enkele kandidaat direk in die sel sigbaar is sodra die notas geskryf is; niks verberg dit nie. 'n Verborge enkeling daarenteen staan tussen ander kandidate en word gevind deur na die syfer eerder as na die sel te kyk."
+            ],
+            [
+              "Kan 'n raaisel met net naakte enkelinge opgelos word?",
+              "Baie Maklik-raaisels kan, maar die meeste het ook verborge enkelinge nodig. Bare Sudoku gradeer Maklik- en Gemiddeld-raaisels as oplosbaar met albei soorte enkelinge; Moeilik- en Kenner-raaisels het minstens een verdere tegniek nodig."
+            ],
+            [
+              "Wys die wenk naakte enkelinge?",
+              "Ja. Wanneer die volgende plasing 'n naakte enkeling is, kies die wenk die sel en sê “Net een kandidaat hier” met die syfer. Tik weer op die wenk om dit te plaas."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Verborge enkeling",
+          "title": "Verborge enkeling in Sudoku: die enigste plek vir 'n syfer",
+          "description": "'n Verborge enkeling is die enigste sel in 'n ry, kolom of blok waar 'n syfer nog kan gaan. Leer om hulle raak te sien deur een syfer op 'n slag te skandeer.",
+          "h1": "Verborge enkeling (hidden single)",
+          "summary": "'n Verborge enkeling is 'n syfer wat net een moontlike sel oor het in 'n ry, kolom of blok, al wys daardie sel dalk ander kandidate. Omdat die eenheid die syfer moet bevat, gaan dit daar. Die Bare Sudoku-wenk dui dit aan as “Enigste plek vir 5 in hierdie ry”, kolom of blok.",
+          "when": [
+            "Wanneer 'n syfer al ver gevorder is: sodra 'n syfer vyf of ses keer voorkom, is die oorblywende blokke baie beperk, en is 'n verborge enkeling dikwels die volgende skuif. Verborge enkelinge is die hooftegniek van Maklik- en Gemiddeld-raaisels en bly op elke vlak die werkesel."
+          ],
+          "spot": [
+            "Skandeer een syfer op 'n slag. Neem 'n syfer, vind 'n blok wat dit nie bevat nie, en streep elke sel van daardie blok deur wat 'n ry of kolom deel met 'n geplaasde kopie van die syfer. As een sel oorbly, het jy 'n verborge enkeling gevind. Dieselfde skandering werk op rye en kolomme. Tik in die spel op 'n geplaasde syfer: elke kopie daarvan word uitgelig, sodat die vrye selle uitstaan."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Blok {box} bevat nog nie {d} nie, so een van sy leë selle moet dit hou. Die leë selle is {empties}.",
+                "In elkeen van hulle behalwe {cell} word {d} geblokkeer deur 'n {d} wat reeds in dieselfde ry of kolom geplaas is, so {d} is nie daar 'n kandidaat nie.",
+                "Dit laat {cell} oor as die enigste plek vir {d} in blok {box}. Skryf {d} daar, al wys {cell} dalk nog ander kandidate."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om die syfer te plaas in 'n sel wat net waarskynlik die regte een is: kontroleer elke ander leë sel van die eenheid, nie net die ooglopende nie.",
+            "Om 'n verborge enkeling mis te kyk omdat die sel verskeie kandidate wys. Die ander kandidate maak nie saak nie; wat saak maak, is dat die syfer geen ander plek in die eenheid het nie.",
+            "Om net blokke te skandeer. Rye en kolomme lewer net so dikwels verborge enkelinge op, veral naby die einde."
+          ],
+          "faq": [
+            [
+              "Wat is 'n verborge enkeling in Sudoku?",
+              "'n Syfer wat in net een sel van 'n ry, kolom of blok kan gaan. Die eenheid moet die syfer bevat, so die sel is beslis, selfs al het dit nog ander kandidate."
+            ],
+            [
+              "Wat is die verskil tussen 'n verborge enkeling en 'n naakte enkeling?",
+              "'n Naakte enkeling gaan oor 'n sel: een kandidaat oor. 'n Verborge enkeling gaan oor 'n syfer: een sel oor in 'n eenheid. Albei plaas 'n syfer met sekerheid."
+            ],
+            [
+              "Watter een is makliker om te vind?",
+              "Sonder notas is verborge enkelinge gewoonlik makliker, omdat jy die bord vir een syfer op 'n slag kan skandeer. Met volledige notas is naakte enkelinge die maklikste, aangesien 'n sel met 'n enkele kandidaat uitstaan."
+            ],
+            [
+              "Hoe beskryf die wenk 'n verborge enkeling?",
+              "As “Enigste plek vir” die syfer in hierdie ry, hierdie kolom of hierdie blok, met die sel gekies. Tik weer op die wenk om dit te plaas."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Geslote kandidate",
+          "title": "Geslote kandidate in Sudoku: wysend en opeisend",
+          "description": "Geslote kandidate: as 'n syfer se kandidate in 'n blok almal in een ry of kolom lê, of andersom, word die syfer elders verwyder. Twee regte voorbeelde.",
+          "h1": "Geslote kandidate (locked candidates)",
+          "summary": "Geslote kandidate is die eerste tegniek wat kandidate verwyder in plaas van om 'n syfer te plaas. Dit het twee vorme. Wysend: in 'n blok lê al die kandidate vir 'n syfer in een ry of kolom, so die syfer word uit die res van daardie lyn verwyder. Opeisend: in 'n ry of kolom lê al die kandidate vir 'n syfer in een blok, so die syfer word uit die res van daardie blok verwyder. Die Bare Sudoku-wenk merk die plasing wat dit ontsluit met “Geslote kandidate”.",
+          "when": [
+            "Wanneer die enkelinge in 'n Moeilik-raaisel opraak, is dit die eerste ding om te probeer. Dit vereis volledige notas vir minstens die syfer wat jy ondersoek. Geslote kandidate kom algemeen voor: die meeste Moeilik-raaisels het dit nodig, en Kenner-raaisels gebruik dit tussen die groter patrone."
+          ],
+          "spot": [
+            "Vir die wysende vorm kyk jy na elke blok en elke syfer wat daarin ontbreek: as die kandidaatselle vir daardie syfer in 'n enkele ry of kolom lê, kyk of dieselfde syfer verder langs daardie lyn buite die blok as kandidaat voorkom. Vir die opeisende vorm kyk jy langs 'n ry of kolom: as die kandidate vir 'n syfer almal binne een blok lê, kan die res van daardie blok skoongemaak word. Tik in die spel op 'n syfersleutel om elke kandidaat daarvoor uit te lig; 'n lyn van twee of drie uitgeligte notas binne een blok is die patroon."
+          ],
+          "examples": [
+            {
+              "h": "Wysend",
+              "steps": [
+                "In blok {box} het syfer {d} net hierdie kandidaatselle: {cells}. Hulle lê almal in ry {row}.",
+                "Blok {box} het 'n {d} nodig, so die {d} van ry {row} is binne blok {box}, in watter van daardie selle dit ook al beland.",
+                "Ry {row} kan nie 'n tweede {d} hou nie, so verwyder {d} uit die selle van ry {row} buite die blok: {elim}."
+              ]
+            },
+            {
+              "h": "Opeisend",
+              "steps": [
+                "In ry {row} kan syfer {d} net in {cells} gaan, en hulle lê almal binne blok {box}.",
+                "Ry {row} moet {d} bevat, so die {d} van blok {box} word deur ry {row} opgeëis. Die ander selle van blok {box} kan nie {d} hou nie.",
+                "Verwyder {d} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om die syfer in die wysende geval binne die blok te verwyder in plaas van daarbuite, of andersom in die opeisende geval. Die eliminasies gaan altyd na die selle wat in die lyn maar nie in die blok is nie, of in die blok maar nie in die lyn nie.",
+            "Om die reël toe te pas wanneer die kandidate oor twee rye van die blok strek. Al die kandidaatselle vir die syfer in die blok moet in een lyn lê.",
+            "Om te vergeet om na die enkeling te soek wat die eliminasie skep. Geslote kandidate plaas selde self 'n syfer; hulle berei 'n enkeling voor."
+          ],
+          "faq": [
+            [
+              "Wat is geslote kandidate in Sudoku?",
+              "Kandidate vir 'n syfer wat beperk is tot die snyding van 'n blok en 'n lyn. Aangesien die blok, of die lyn, die syfer binne daardie snyding moet bevat, kan die syfer uit die res van die lyn, of die res van die blok, verwyder word."
+            ],
+            [
+              "Wat is die verskil tussen wysend en opeisend?",
+              "Wysend begin by 'n blok: die syfer se kandidate in die blok wys langs een ry of kolom, so die syfer word uit die res van daardie lyn verwyder. Opeisend begin by 'n ry of kolom: die lyn se kandidate vir die syfer is almal in een blok, so die lyn eis die syfer op en dit word uit die res van die blok verwyder."
+            ],
+            [
+              "Staan geslote kandidate ook bekend as snydingsverwydering?",
+              "Ja. Ander name is blok-lyn-reduksie vir die opeisende vorm en wysende pare of wysende drietalle vir die wysende vorm. Bare Sudoku gebruik een naam vir albei."
+            ],
+            [
+              "Watter vlak het geslote kandidate nodig?",
+              "Moeilik. 'n Raaisel wat geslote kandidate of deelversamelings nodig het, maar niks moeiliker nie, word as Moeilik gegradeer; Kenner-raaisels het ook 'n vis of 'n vlerk nodig."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Naakte pare en drietalle",
+          "title": "Naakte pare en drietalle in Sudoku: hoe dit werk",
+          "description": "Naakte pare en drietalle: twee of drie selle in 'n eenheid met dieselfde twee of drie kandidate. Leer om hulle te herken en wat om te verwyder, met voorbeelde.",
+          "h1": "Naakte pare en drietalle (naked pairs, naked triples)",
+          "summary": "'n Naakte paar is twee selle in dieselfde ry, kolom of blok wat presies dieselfde twee kandidate het. Die twee syfers moet in daardie twee selle gaan, so hulle kan uit elke ander sel van die eenheid verwyder word. 'n Naakte drietal is dieselfde idee met drie selle en drie syfers; elke sel kan twee of al drie daarvan wys. Die Bare Sudoku-wenk merk die plasing wat daaruit volg as “Paar of drietal”.",
+          "when": [
+            "Nadat die notas volledig is en enkelinge en geslote kandidate uitgeput is. Naakte pare is baie algemeen in Moeilik-raaisels, naakte drietalle minder. Albei is die moeite werd om na te gaan in elke eenheid wat nog vyf of meer leë selle het."
+          ],
+          "spot": [
+            "Soek selle met net twee kandidate en vind nog 'n sel in dieselfde eenheid met dieselfde twee. Vir drietalle kyk jy na eenhede met verskeie selle met twee en drie kandidate en kontroleer of drie daarvan saam net drie verskillende syfers gebruik. Selle met presies dieselfde kandidate is maklik om te sien sodra die notas geskryf is; Vul notas in doen dit in die spel met een tik."
+          ],
+          "examples": [
+            {
+              "h": "Naakte paar",
+              "steps": [
+                "{cellA} en {cellB} in {unit} het presies dieselfde twee kandidate: {d1} en {d2}.",
+                "Een van hulle moet {d1} wees en die ander {d2}. Ons weet nie watter nie, maar albei syfers word deur hierdie twee selle opgebruik.",
+                "Geen ander sel van {unit} kan dus {d1} of {d2} hou nie. Verwyder {elim}."
+              ]
+            },
+            {
+              "h": "Naakte drietal",
+              "steps": [
+                "Drie selle van {unit} kry al hulle kandidate uit dieselfde drie syfers, {digits}: {cells}.",
+                "Die drie syfers moet hierdie drie selle in een of ander volgorde vul. 'n Sel hoef nie al drie kandidate te wys nie; wat saak maak, is dat geen van die drie selle 'n kandidaat buite die stel het nie.",
+                "Verwyder {digits} uit elke ander sel van {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om twee selle te neem wat twee kandidate deel, maar ook 'n derde een het. Vir 'n naakte paar moet elke sel presies die twee kandidate hê en niks anders nie.",
+            "Om die syfers uit die paarselle self te verwyder. Die paar behou sy kandidate; die eliminasies gaan na die ander selle van die eenheid.",
+            "Om te vereis dat elke sel van 'n drietal al drie syfers wys. 'n Sel met twee van die drie is reg, solank geen sel 'n kandidaat buite die stel het nie."
+          ],
+          "faq": [
+            [
+              "Wat is 'n naakte paar in Sudoku?",
+              "Twee selle in een eenheid wat albei presies dieselfde twee kandidate het. Daardie twee syfers is in daardie twee selle vasgevang, so hulle kan uit die res van die eenheid verwyder word."
+            ],
+            [
+              "Wat is 'n naakte drietal?",
+              "Drie selle in een eenheid waarvan die kandidate saam net drie syfers is. Elke sel kan twee of drie daarvan hê. Die drie syfers vul die drie selle, so hulle kan uit die ander selle van die eenheid verwyder word."
+            ],
+            [
+              "Plaas 'n naakte paar 'n syfer?",
+              "Nie op sy eie nie. Dit verwyder kandidate, en die verwydering laat gewoonlik 'n naakte of verborge enkeling agter. Die wenk in Bare Sudoku wys daardie enkeling en noem die tegniek wat dit moontlik gemaak het."
+            ],
+            [
+              "Kan 'n naakte paar terselfdertyd in 'n blok en 'n ry wees?",
+              "Ja. As die twee selle 'n ry en 'n blok deel, elimineer die paar in albei eenhede. Bare Sudoku hanteer hulle een eenheid op 'n slag."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Verborge pare en drietalle",
+          "title": "Verborge pare en drietalle in Sudoku: hoe om hulle te vind",
+          "description": "'n Verborge paar is twee syfers wat net in dieselfde twee selle van 'n eenheid pas, so hul ander kandidate val weg. Leer om verborge pare en drietalle te vind.",
+          "h1": "Verborge pare en drietalle (hidden pairs, hidden triples)",
+          "summary": "'n Verborge paar is twee syfers wat binne een ry, kolom of blok kandidate in dieselfde twee selle is en nêrens anders nie. Daardie twee selle moet daardie twee syfers hou, so elke ander kandidaat daarin kan verwyder word. 'n Verborge drietal werk op dieselfde manier met drie syfers wat tot drie selle beperk is. Ná die verwydering wys die selle 'n naakte paar of drietal. Die Bare Sudoku-wenk merk die plasing wat daaruit volg as “Paar of drietal”.",
+          "when": [
+            "Wanneer 'n eenheid selle met baie kandidate het en die enkelinge op is. Verborge pare skuil in besige selle, en daarom is dit die moeite werd om hulle juis te soek waar naakte pare nie sigbaar is nie. Verborge drietalle is skaars; Bare Sudoku soek daarna, maar die meeste Moeilik-raaisels word sonder hulle opgelos."
+          ],
+          "spot": [
+            "Werk per syfer, nie per sel nie. Teken in 'n eenheid aan in watter selle elke ontbrekende syfer kan gaan. As twee syfers elk net twee moontlike selle het en dit dieselfde twee selle is, het jy 'n verborge paar. Tik in die spel op 'n syfersleutel om sy kandidate uit te lig; as twee syfers dieselfde twee selle van 'n eenheid laat oplig en niks anders daarin nie, is dit die patroon."
+          ],
+          "examples": [
+            {
+              "h": "Verborge paar",
+              "steps": [
+                "In {unit} het syfers {d1} en {d2} elk net twee moontlike selle, en dit is dieselfde twee: {cells}.",
+                "Daardie twee selle moet {d1} en {d2} hou, so hul ander kandidate is onmoontlik.",
+                "Verwyder {elim}. Nou wys die twee selle 'n naakte paar, wat moontlik meer ontsluit."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om die twee paarsyfers uit die paarselle te verwyder. Dit is die ander kandidate van daardie selle wat weggaan; die paarsyfers bly.",
+            "Om 'n syfer te aanvaar wat 'n derde moontlike sel in die eenheid het. Albei syfers moet tot presies die twee selle beperk wees.",
+            "Om net in blokke te kyk. Verborge pare kom net so dikwels in rye en kolomme voor."
+          ],
+          "faq": [
+            [
+              "Wat is 'n verborge paar in Sudoku?",
+              "Twee syfers wat net in dieselfde twee selle van 'n eenheid kan gaan. Daardie selle moet daardie syfers kry, so hul ander kandidate word verwyder."
+            ],
+            [
+              "Hoe verskil 'n verborge paar van 'n naakte paar?",
+              "'n Naakte paar is sigbaar: twee selle wat net dieselfde twee kandidate wys. 'n Verborge paar word deur ekstra kandidate in die twee selle bedek. As jy daardie ekstras verwyder, word 'n verborge paar 'n naakte paar."
+            ],
+            [
+              "Wat is 'n verborge drietal?",
+              "Drie syfers wat tot drie selle van 'n eenheid beperk is. Elke syfer hoef nie in al drie selle voor te kom nie; wat saak maak, is dat geen van die drie syfers 'n kandidaat buite daardie selle het nie."
+            ],
+            [
+              "Onderskei die wenk tussen verborge en naakte pare?",
+              "Nee. Bare Sudoku vind albei en merk die plasing wat daaruit volg as “Paar of drietal”. Die bladsye hier hou hulle apart omdat hulle op verskillende maniere gevind word."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing in Sudoku: hoe die tegniek werk",
+          "description": "X-Wing: 'n syfer met presies twee kandidaatselle in twee rye, in dieselfde twee kolomme, word uit die res van daardie kolomme verwyder. Met 'n regte voorbeeld.",
+          "h1": "X-Wing",
+          "summary": "'n X-Wing is 'n patroon van een syfer en vier selle op die hoeke van 'n reghoek. As die syfer presies twee kandidaatselle in elk van twee rye het, en daardie selle in dieselfde twee kolomme lê, moet die syfer twee teenoorstaande hoeke van die reghoek beset. Dit kan dus uit elke ander sel van daardie twee kolomme verwyder word. Dieselfde werk met rye en kolomme omgeruil. Dit is die eerste Kenner-tegniek in Bare Sudoku.",
+          "when": [
+            "Wanneer enkelinge, geslote kandidate en deelversamelings uitgeput is. X-Wings is die algemeenste Kenner-patroon en verskyn dikwels wanneer 'n syfer min kandidate oor het, gewoonlik met vier tot ses kopieë reeds geplaas. Hulle vereis volledige notas vir die syfer wat jy ondersoek."
+          ],
+          "spot": [
+            "Kies 'n syfer en soek rye waarin dit presies twee kandidaatselle het. As twee sulke rye dieselfde twee kolomme deel, kyk in daardie kolomme na ander kandidate van die syfer: dit is die eliminasies. Herhaal dan met kolomme as basis. Tik in die spel op die syfersleutel: elke kandidaat daarvoor word uitgelig, en 'n reghoek van vier uitgeligte notas is maklik om te sien."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Syfer {d} het presies twee kandidaatselle in ry {r1} en presies twee in ry {r2}, en hulle lê in dieselfde twee kolomme, {c1} en {c2}: {cells}.",
+                "Ry {r1} plaas sy {d} in kolom {c1} of {c2}, en ry {r2} plaas sy {d} in die ander een. In elk geval kry kolomme {c1} en {c2} elk 'n {d} uit hierdie twee rye.",
+                "Dus kan {d} nêrens anders in kolomme {c1} en {c2} voorkom nie. Verwyder {d} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om 'n ry te gebruik wat drie kandidaatselle vir die syfer het. Elke basisry moet presies twee hê, en albei moet in die twee gedeelde kolomme wees.",
+            "Om die syfer uit die rye te verwyder in plaas van uit die kolomme. Met rye as basis is die eliminasies in die kolomme, en omgekeerd.",
+            "Om die omgeruilde weergawe te vergeet. 'n X-Wing wat op kolomme gebou is, elimineer in rye."
+          ],
+          "faq": [
+            [
+              "Wat is 'n X-Wing in Sudoku?",
+              "'n Syfer wat presies twee kandidaatselle in elk van twee rye het, in dieselfde twee kolomme. Die syfer beset twee teenoorstaande hoeke van daardie reghoek, so dit word uit die res van die twee kolomme verwyder. Rye en kolomme kan omgeruil word."
+            ],
+            [
+              "Waarom werk 'n X-Wing?",
+              "Elk van die twee rye moet die syfer in een van die twee kolomme plaas, en die twee rye kan nie dieselfde kolom gebruik nie. Die twee kolomme kry dus elk hul kopie van die syfer uit hierdie rye, en elke ander kandidaat in daardie kolomme is onmoontlik."
+            ],
+            [
+              "Is 'n X-Wing 'n vis?",
+              "Ja. Die X-Wing is die vis van grootte twee; Swordfish is die vis van grootte drie. Bare Sudoku vind albei."
+            ],
+            [
+              "Watter vlak het X-Wings?",
+              "Kenner. 'n Raaisel wat 'n X-Wing, Y-Wing, Swordfish of XYZ-Wing nodig het, word as Kenner gegradeer."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: hoe die tegniek werk",
+          "description": "Y-Wing (XY-Wing): 'n spil met twee kandidate en twee vlerke wat elk een daarvan deel, dwing 'n syfer uit elke sel wat albei vlerke sien. Met 'n voorbeeld.",
+          "h1": "Y-Wing",
+          "summary": "'n Y-Wing, ook XY-Wing genoem, gebruik drie selle met elk twee kandidate. Die spil het kandidate X en Y. Een vlerk sien die spil en het X en Z; die ander vlerk sien die spil en het Y en Z. Wat die spil ook al is, een van die vlerke moet Z wees, so Z kan uit elke sel verwyder word wat albei vlerke sien. Dit is 'n Kenner-tegniek in Bare Sudoku.",
+          "when": [
+            "Wanneer 'n raaisel verskeie selle met presies twee kandidate het en geen vis beskikbaar is nie. Y-Wings is algemeen in Kenner-raaisels en word gevind deur die selle met twee kandidate te volg: elkeen is 'n moontlike spil of vlerk."
+          ],
+          "spot": [
+            "Lys die selle met presies twee kandidate. Behandel elkeen as die spil met kandidate X en Y, en soek onder sy bure 'n sel met X en 'n ander syfer Z, en 'n sel met Y en dieselfde Z. Daardie twee is die vlerke. Vind dan selle wat albei vlerke sien en Z bevat. Let daarop dat die vlerke mekaar nie hoef te sien nie."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Die spil {pivot} het kandidate {x} en {y}. Dit sien {wingA}, wat {x} en {z} het, en {wingB}, wat {y} en {z} het.",
+                "As {pivot} {x} is, verloor {wingA} {x} en word {z}. As {pivot} {y} is, word {wingB} {z}. Een van die twee vlerke is in elke geval {z}.",
+                "'n Sel wat albei vlerke sien, kan nooit {z} wees nie. Verwyder {z} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om vlerke te kies wat nie albei die spil sien nie. Elke vlerk moet 'n ry, kolom of blok met die spil deel.",
+            "Om Z te verwyder uit selle wat net een vlerk sien. Die geëlimineerde sel moet albei vlerke sien.",
+            "Om Z uit die spil te verwyder. Die spil bevat nie Z in 'n Y-Wing nie; as dit wel Z bevat, is die patroon 'n XYZ-Wing met ander reëls."
+          ],
+          "faq": [
+            [
+              "Wat is 'n Y-Wing in Sudoku?",
+              "Drie selle met elk twee kandidate: 'n spil met X en Y, 'n vlerk met X en Z wat die spil sien, en 'n vlerk met Y en Z wat die spil sien. Een vlerk is altyd Z, so Z word verwyder uit selle wat albei vlerke sien."
+            ],
+            [
+              "Is Y-Wing dieselfde as XY-Wing?",
+              "Ja. Die twee name beskryf dieselfde patroon. Bare Sudoku noem dit Y-Wing."
+            ],
+            [
+              "Waarom moet een vlerk Z wees?",
+              "As die spil X is, verloor die eerste vlerk X en word Z. As die spil Y is, word die tweede vlerk Z. Die spil is een van die twee, so een vlerk is Z."
+            ],
+            [
+              "Hoeveel selle elimineer 'n Y-Wing?",
+              "Gewoonlik een of twee: net die selle wat albei vlerke sien en nog Z bevat. Dit is genoeg om 'n enkeling te skep."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish in Sudoku: hoe die tegniek werk",
+          "description": "Swordfish: 'n syfer wat oor drie rye tot drie kolomme beperk is, word uit die res van daardie kolomme verwyder. Die vis van grootte drie, met 'n voorbeeld.",
+          "h1": "Swordfish",
+          "summary": "'n Swordfish is 'n X-Wing met drie rye en drie kolomme. As 'n syfer hoogstens drie kandidaatselle in elk van drie rye het, en al daardie selle in dieselfde drie kolomme val, gebruik die drie rye die syfer in daardie kolomme op, en kan die syfer uit elke ander sel van die drie kolomme verwyder word. Rye en kolomme kan omgeruil word. Bare Sudoku soek ná Y-Wing na 'n Swordfish, in Kenner-raaisels.",
+          "when": [
+            "Wanneer X-Wing en Y-Wing niks vind nie. 'n Swordfish kom minder voor as 'n X-Wing en vereis 'n syfer waarvan die kandidate dun oor drie lyne versprei is. Dit vereis volledige en akkurate notas vir daardie syfer."
+          ],
+          "spot": [
+            "Kies 'n syfer en soek rye met twee of drie kandidaatselle daarvoor. As drie sulke rye altesaam net drie kolomme dek, kyk in daardie kolomme na verdere kandidate van die syfer. Nie elke ry het 'n kandidaat in elke kolom nodig nie: 'n Swordfish kan ses, sewe, agt of nege selle hê. Lig in die spel die syfer met sy sleutel uit en soek drie rye waarvan die kandidate in drie kolomme lê."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Syfer {d} het hoogstens drie kandidaatselle in elk van rye {rows}, en al daardie selle val in kolomme {cols}: {cells}.",
+                "Elk van die drie rye moet sy {d} in een van die drie kolomme plaas, en geen twee rye kan dieselfde kolom gebruik nie. Die drie kolomme kry dus hul {d} uit hierdie drie rye.",
+                "Enige ander {d}-kandidaat in kolomme {cols} is onmoontlik. Verwyder {d} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om al nege selle te vereis. 'n Swordfish met twee kandidate in sommige rye is steeds geldig, solank die drie rye net drie kolomme dek.",
+            "Om 'n ry met vier kandidaatselle in te sluit. Elke basisry moet hoogstens drie hê, almal binne die drie kolomme.",
+            "Om in die basisrye te elimineer. Met rye as basis is die eliminasies in die drie kolomme, buite die basisrye."
+          ],
+          "faq": [
+            [
+              "Wat is 'n Swordfish in Sudoku?",
+              "'n Syfer waarvan die kandidate in drie rye tot drie kolomme beperk is. Die drie rye moet die syfer in daardie drie kolomme plaas, een elk, so die syfer word uit die ander selle van daardie kolomme verwyder."
+            ],
+            [
+              "Hoe verskil 'n Swordfish van 'n X-Wing?",
+              "Net in grootte: 'n X-Wing gebruik twee rye en twee kolomme, 'n Swordfish drie en drie. Die redenering is dieselfde."
+            ],
+            [
+              "Het 'n Swordfish presies nege selle nodig?",
+              "Nee. Elke ry kan twee of drie kandidate hê; die patroon vereis net dat die drie rye saam nie meer as drie kolomme gebruik nie."
+            ],
+            [
+              "Is daar 'n vis van grootte vier?",
+              "Ja, die Jellyfish. Bare Sudoku gebruik dit nie, want sy raaisels het dit nooit nodig nie."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: hoe die tegniek werk",
+          "description": "XYZ-Wing: 'n spil met drie kandidate en twee vlerke wat een daarvan deel, dwing daardie syfer uit elke sel wat al drie sien. Regte voorbeeld, stap vir stap.",
+          "h1": "XYZ-Wing",
+          "summary": "'n XYZ-Wing is 'n Y-Wing waarvan die spil drie kandidate het. Die spil het X, Y en Z; een vlerk sien die spil en het X en Z, die ander sien die spil en het Y en Z. Een van die drie selle moet Z wees, so Z kan uit elke sel verwyder word wat al drie sien. Omdat die spil self Z kan wees, moet die geëlimineerde sel die spil sowel as albei vlerke sien, wat dit beperk tot die blok of lyn wat die selle deel. Dit is die moeilikste tegniek wat Bare Sudoku gebruik.",
+          "when": [
+            "Net wanneer alles anders misluk. XYZ-Wings is die skaarsste patroon in Bare Sudoku en verskyn net in Kenner-raaisels. Soek daarna wanneer 'n sel met drie kandidate in 'n blok staan saam met 'n sel met twee kandidate wat twee van sy syfers deel."
+          ],
+          "spot": [
+            "Begin by selle met presies drie kandidate; elkeen is 'n moontlike spil. Soek onder sy bure twee selle met elk twee kandidate, albei uit die spil se drie geneem, wat presies een syfer Z deel. Soek dan selle wat die spil en albei vlerke sien en Z bevat. In die praktyk is een vlerk in die spil se blok en die ander in sy ry of kolom, en die geëlimineerde selle is die oorblywende selle van daardie blok in daardie ry of kolom."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Die spil {pivot} het drie kandidate: {x}, {y} en {z}. Dit sien {wingA} met {x} en {z}, en {wingB} met {y} en {z}.",
+                "As {pivot} {z} is, is ons klaar. As dit {x} is, moet {wingA} {z} wees. As dit {y} is, moet {wingB} {z} wees. In elke geval is een van die drie selle {z}.",
+                "'n Sel wat al drie sien, kan nie {z} wees nie. Verwyder {z} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Om te elimineer uit selle wat net die twee vlerke sien. Anders as by 'n Y-Wing kan die spil Z wees, so die sel moet ook die spil sien.",
+            "Om vlerke te gebruik waarvan die kandidate nie albei in die spil se drie kandidate vervat is nie.",
+            "Om dit met 'n Y-Wing te verwar: die verskil is die derde kandidaat in die spil, en dit verander watter selle skoongemaak kan word."
+          ],
+          "faq": [
+            [
+              "Wat is 'n XYZ-Wing in Sudoku?",
+              "'n Spil met kandidate X, Y en Z en twee vlerke, een met X en Z en een met Y en Z, wat albei die spil sien. Een van die drie selle is Z, so Z word verwyder uit selle wat al drie sien."
+            ],
+            [
+              "Hoe verskil 'n XYZ-Wing van 'n Y-Wing?",
+              "Die spil het drie kandidate in plaas van twee, insluitend Z. Dit maak die spil 'n moontlike tuiste vir Z, so net selle wat die spil en albei vlerke sien, kan Z verloor."
+            ],
+            [
+              "Hoe dikwels verskyn 'n XYZ-Wing?",
+              "Selde. In Bare Sudoku kan net Kenner-raaisels een nodig hê, en die meeste het nie. Bare Sudoku kyk laaste daarna, ná X-Wing, Y-Wing en Swordfish."
+            ],
+            [
+              "Is daar 'n WXYZ-Wing?",
+              "Ja, met 'n spil met vier kandidate, maar Bare Sudoku gebruik dit nie. Elke raaisel in die spel kan met die nege tegnieke van hierdie gids klaargemaak word."
+            ]
+          ]
+        }
+      }
+    },
+    "is": {
+      "learnHeading": "Lærðu sudoku",
+      "learnText": "Ertu að byrja í sudoku, eða strandar þú á erfiðri þraut? Tveir leiðarvísar útskýra reglurnar og allar lausnaraðferðirnar sem vísbendingarnar nota, hvor með raunverulegu dæmi.",
+      "howToLink": "Hvernig á að spila sudoku",
+      "techniquesLink": "Lausnaraðferðir í sudoku",
+      "labels": {
+        "howTo": "Hvernig á að spila",
+        "techniques": "Aðferðir",
+        "play": "Spila sudoku",
+        "prev": "Fyrri aðferð",
+        "next": "Næsta aðferð",
+        "all": "Allar aðferðir",
+        "example": "Dæmi",
+        "steps": "Skref fyrir skref",
+        "when": "Hvenær á að nota hana",
+        "spot": "Hvernig á að koma auga á hana",
+        "mistakes": "Algeng mistök",
+        "inGame": "Í Bare Sudoku",
+        "level": "Þarf frá stiginu: {level}",
+        "hint": "Í leiknum segir vísbendingin: {text}",
+        "legend": "Feitletraðar tölur eru gefnar, bláar tölur voru settar inn við lausnina og litlar tölur eru möguleikar. Auðkennd hólf mynda mynstrið, yfirstrikaðir möguleikar eru fjarlægðir og möguleiki með hring utan um sig er talan sem á að setja inn.",
+        "notation": "Hólf eru skrifuð sem r3c7: röð 3, dálkur 7. Raðir eru taldar að ofan, dálkar frá vinstri og reitir frá 1 til 9 frá efra vinstra horni, röð fyrir röð.",
+        "row": "röð {n}",
+        "column": "dálki {n}",
+        "box": "reit {n}",
+        "elimItem": "{d} úr {cell}",
+        "regions": "Röð 5, dálkur 5 og reitur 5 í upphafi þrautar",
+        "firstMove": "Nakinn stakur: {cell} getur aðeins verið {d}",
+        "breadcrumb": "Brauðmolar"
+      },
+      "howTo": {
+        "title": "Hvernig á að spila sudoku: reglur, borð og fyrstu leikir",
+        "description": "Lærðu að spila sudoku: reglurnar, hvernig raðir, dálkar og reitir virka, af hverju hver þraut hefur eina lausn, hvernig glósur nýtast og hvernig þú byrjar.",
+        "h1": "Hvernig á að spila sudoku",
+        "summary": "Sudoku er rökþraut á 9×9 reitaneti. Fylltu hvert autt hólf með tölu frá 1 til 9 þannig að hver röð, hver dálkur og hver 3×3 reitur innihaldi hverja tölu nákvæmlega einu sinni. Sumar tölur eru gefnar í byrjun; hinar leiðir þú út, eitt öruggt hólf í einu, og þú þarft aldrei að giska. Þessi leiðarvísir útskýrir borðið, reglurnar, meginregluna um eina lausn, glósur og einfalda aðferð fyrir fyrstu leikina. Þú getur æft allt saman í [Bare Sudoku](play), sem er ókeypis og hefur vísbendingar sem útskýra rökin.",
+        "sections": [
+          {
+            "h": "Hverjar eru reglur sudoku?",
+            "p": [
+              "Reglurnar eru aðeins þrjár, og í raun er þetta sama reglan séð úr þremur áttum: hver röð verður að innihalda tölurnar 1 til 9, hver dálkur verður að innihalda tölurnar 1 til 9 og hver 3×3 reitur verður að innihalda tölurnar 1 til 9. Sama talan getur því aldrei komið tvisvar fyrir í sömu röð, sama dálki eða sama reit.",
+              "Gefnu tölurnar, sem eru feitletraðar, eru fastar. Þitt verk er að fylla auðu hólfin. Hér er enginn reikningur og engin röðun: tölurnar eru bara níu ólík tákn. Þú gætir spilað með bókstöfum eða formum og ekkert myndi breytast."
+            ]
+          },
+          {
+            "h": "Hvernig er borðið byggt upp?",
+            "p": [
+              "Borðið hefur 81 hólf í 9 röðum og 9 dálkum. Þykkar línur skipta því í níu 3×3 reiti. Hvert hólf tilheyrir nákvæmlega einni röð, einum dálki og einum reit, og þessir þrír hópar eru einingar þess. Hin 20 hólfin sem deila einingu með hólfi kallast nágrannar þess; tala sem sett er í hólf útilokar sömu tölu í öllum 20 nágrönnunum.",
+              "Hólf eru skrifuð sem r3c7: röð 3, dálkur 7. Raðir eru taldar að ofan, dálkar frá vinstri og reitir frá 1 til 9 frá efra vinstra horni, röð fyrir röð. Þessi ritháttur er notaður í öllum leiðarvísum um aðferðir og það borgar sig að læra hann: r5c5 er miðja borðsins."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Af hverju hefur hvert sudoku nákvæmlega eina lausn?",
+            "p": [
+              "Rétt sudoku hefur eina lausn, og það er það sem lætur rökhugsunina virka. Þegar þú getur sýnt að tala geti hvergi annars staðar farið í einingu verður hún að fara í hólfið sem eftir er, því lausnin er til og hún er einstök. Ef þraut hefði tvær lausnir gæti engin rökhugsun greint þær í sundur og þú neyddist til að giska á einhverjum tímapunkti.",
+              "Bare Sudoku býr til hverja þraut í tækinu þínu og gengur úr skugga um að hún hafi nákvæmlega eina lausn og að rökrænn leysir leiksins geti klárað hana með aðferðum valins stigs. Ef þú strandar er því alltaf næsta skref að finna, og vísbendingin sýnir það."
+            ]
+          },
+          {
+            "h": "Hvernig byrjar þú á sudoku-þraut?",
+            "p": [
+              "Byrjaðu á því sem er mest takmarkað. Þessi röð virkar á öllum stigum:"
+            ],
+            "list": [
+              "Veldu tölu sem kemur þegar oft fyrir, segjum sex eða sjö sinnum, og finndu reitina sem vantar hana enn. Oft er aðeins eitt hólf eftir fyrir hana í reit: það er [falinn stakur](hidden-single).",
+              "Leitaðu að þéttsetnum hólfum. Hólf þar sem röðin, dálkurinn og reiturinn innihalda samanlagt átta ólíkar tölur hefur aðeins einn möguleika eftir: [nakinn stakur](naked-single). Hólf í nær fullum röðum eða reitum eru besti staðurinn til að leita.",
+              "Hver tala sem þú setur inn fjarlægir möguleika úr 20 nágrönnum, svo athugaðu þá nágranna strax. Stakir koma gjarnan í keðjum.",
+              "Þegar auðveldu innsetningarnar þrjóta skaltu skrifa glósur: möguleikana fyrir hvert autt hólf. Leitaðu svo að tölu sem er bundin við eina línu innan reits ([læstir möguleikar](locked-candidates)) eða tveimur hólfum sem hafa sömu tvo möguleika ([nakið par](naked-pairs)).",
+              "Farðu aftur í staka eftir hverja útilokun. Jafnvel þrautir á stiginu Sérfræðingur eru að mestu leystar með stökum; flókna aðferðin opnar bara leiðina að þeim næsta."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Hvað eru glósur og hvenær á að nota þær?",
+            "p": [
+              "Glósur, einnig kallaðar blýantsmerki eða möguleikar, eru litlu tölurnar sem þú skrifar í autt hólf til að halda utan um hvaða tölur koma þar enn til greina. Í auðveldum þrautum þarftu sjaldan á þeim að halda; frá stiginu Erfitt og upp eru þær ómissandi, því aðferðir eins og pör, X-Wing og Y-Wing snúast um möguleika, ekki um tölur sem búið er að setja inn.",
+              "Haltu glósunum réttum: þegar þú setur inn tölu skaltu fjarlægja hana úr glósum allra 20 nágrannanna. Í Bare Sudoku gerist það sjálfkrafa, og Fylla glósur skrifar alla möguleika í öll auð hólf með einni snertingu, svo þú getur byrjað með fullkomið og rétt safn möguleika. Glósa er staðreynd, ekki ágiskun: hún þýðir að ekkert útilokar þessa tölu enn."
+            ]
+          },
+          {
+            "h": "Hvað gerir þú þegar þú strandar?",
+            "p": [
+              "Athugaðu fyrst grunnatriðin aftur: hver nær full röð, dálkur og reitur er uppspretta stakra. Gakktu svo úr skugga um að glósurnar séu fullkomnar, því möguleiki sem vantar felur mynstur og úreltur möguleiki býr til fölsk mynstur. Farðu síðan í gegnum [aðferðirnar](techniques) eftir erfiðleikastigi: læstir möguleikar, pör og þrenndir, X-Wing, Y-Wing, Swordfish og XYZ-Wing. Hver þeirra hefur sína eigin síðu með raunverulegu dæmi.",
+              "Ef ekkert virkar skaltu fá vísbendingu. Í Bare Sudoku athugar vísbendingin fyrst hvort einhver innsett tala sé röng, finnur síðan næsta hólf sem hægt er að fylla með rökum og nefnir aðferðina, svo þú lærir eitthvað jafnvel þegar þú notar hana. Ýttu aftur á vísbendinguna til að setja töluna inn."
+            ]
+          },
+          {
+            "h": "Hvernig slærðu inn tölur í Bare Sudoku?",
+            "p": [
+              "Ýttu á hólf og síðan á tölu. Eða ýttu fyrst á tölu: hún læsist, og hvert hólf sem þú ýtir á fær hana, sem er fljótlegasta leiðin til að setja inn sjötta, sjöunda og áttunda eintak tölu. Ýttu aftur á töluna til að losa hana. Glósuhnappurinn skiptir yfir í blýantsmerki, Eyða hreinsar hólf, Afturkalla tekur hvaða leik sem er til baka, og villur eru merktar með rauðu nema þú slökkvir á því í valmyndinni.",
+              "Á lyklaborði notar þú örvatakkana til að færa þig, 1 til 9 til að slá inn tölu, Backspace til að eyða, N fyrir glósur, U til að afturkalla, H fyrir vísbendingu, F til að fylla glósur og Escape fyrir valmyndina. Leikurinn vistar sig sjálfur, virkar án nettengingar og hefur hvorki auglýsingar né notandaaðgang."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Þarf nokkurn tíma að giska í sudoku?",
+            "Ekki í réttri þraut. Hver þraut í Bare Sudoku hefur nákvæmlega eina lausn og er prófuð þannig að hún sé leysanleg með rökum einum saman, upp að aðferðum stigsins. Ef þér finnst þú þurfa að giska vantar möguleika í glósurnar eða aðferð bíður þess að finnast."
+          ],
+          [
+            "Getur tala komið tvisvar fyrir í röð, dálki eða reit?",
+            "Nei. Það er öll reglan: hver af níu röðum, níu dálkum og níu reitum inniheldur hverja tölu frá 1 til 9 nákvæmlega einu sinni. Ef tvær eins tölur deila einingu er að minnsta kosti önnur þeirra röng."
+          ],
+          [
+            "Hver er munurinn á Auðvelt, Miðlungs, Erfitt og Sérfræðingur?",
+            "Stigið ræðst af aðferðunum sem þrautin krefst. Auðvelt og Miðlungs eru leyst með stökum eingöngu, og Auðvelt byrjar með að minnsta kosti 38 gefnum tölum. Erfitt krefst læstra möguleika eða para og þrennda. Sérfræðingur krefst X-Wing, Y-Wing, Swordfish eða XYZ-Wing."
+          ],
+          [
+            "Er betra að fylla glósur í öll hólf eða bara sum?",
+            "Í þrautum á stigunum Erfitt og Sérfræðingur skaltu fylla þær allar: mynstur eins og pör, X-Wing og Y-Wing koma aðeins í ljós þegar allir möguleikar eru skrifaðir. Á Auðvelt og Miðlungs eru glósur valfrjálsar og flestir spilarar leita bara að stökum."
+          ],
+          [
+            "Hvað tekur sudoku langan tíma?",
+            "Auðveld þraut tekur nokkrar mínútur; þrautir á stiginu Sérfræðingur geta tekið tuttugu mínútur eða lengur, eftir því hve fljótt þú kemur auga á flókna mynstrið. Bare Sudoku sýnir klukku, stöðvar hana meðan valmyndin er opin og heldur engan stigalista, svo spilaðu á þínum eigin hraða."
+          ],
+          [
+            "Þarf reikning í sudoku?",
+            "Nei. Tölurnar eru bara merkimiðar; það þarf hvorki að leggja saman né telja. Hvaða níu tákn sem er myndu virka, og þess vegna er sudoku rökþraut frekar en talnaþraut."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Lausnaraðferðir í sudoku útskýrðar með dæmum",
+        "description": "Allar níu lausnaraðferðirnar í sudoku, frá nöktum stökum til Swordfish og XYZ-Wing, í þeirri röð sem vísbendingar Bare Sudoku nota þær, hver með dæmi.",
+        "h1": "Lausnaraðferðir í sudoku",
+        "intro": [
+          "Hvert sudoku er hægt að leysa með litlu safni rökrænna aðferða. Þessi yfirlitssíða sýnir þær níu aðferðir sem leysir Bare Sudoku og vísbendingar hans nota, í þeirri röð sem leysirinn prófar þær: fyrst staka, svo útilokanir innan einnar einingar, síðan mynstur sem ná yfir margar raðir og dálka. Hver aðferð hefur sína eigin síðu með skilgreiningu, leiðbeiningum um hvernig á að koma auga á hana, raunverulegu dæmi úr tilbúinni þraut og algengum mistökum.",
+          "Stig þrautar ræðst af erfiðustu aðferðinni sem hún krefst. Þrautir á stigunum Auðvelt og Miðlungs þurfa aðeins staka, þrautir á stiginu Erfitt þurfa læsta möguleika eða pör og þrenndir, og þrautir á stiginu Sérfræðingur þurfa að minnsta kosti einn fisk eða væng. Hvert sem stigið er vinna stakir mestu vinnuna; flókna aðferðin fjarlægir einn eða tvo möguleika og stakirnir taka svo við."
+        ],
+        "faq": [
+          [
+            "Í hvaða röð á ég að prófa aðferðirnar í sudoku?",
+            "Þær ódýrustu fyrst: naktir stakir, faldir stakir, læstir möguleikar, nakin pör og þrenndir, falin pör og þrenndir, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku prófar þær nákvæmlega í þessari röð, og vísbending nefnir alltaf einföldustu aðferðina sem skilar árangri."
+          ],
+          [
+            "Þarf ég allar þessar aðferðir til að leysa sudoku?",
+            "Í þrautum á stigunum Auðvelt og Miðlungs duga stakir. Á stiginu Erfitt bætast læstir möguleikar og hlutmengi við. Þrautir á stiginu Sérfræðingur þurfa að minnsta kosti einn fisk eða væng, en yfirleitt bara einu sinni eða tvisvar í hverri þraut."
+          ],
+          [
+            "Eru til erfiðari aðferðir en XYZ-Wing?",
+            "Já, til dæmis keðjur, einkvæmnipróf og þvingunarnet. Bare Sudoku býr ekki til þrautir sem krefjast þeirra, svo hverja þraut í leiknum er hægt að klára með aðferðunum níu á þessari síðu."
+          ],
+          [
+            "Hvað er möguleiki?",
+            "Tala sem gæti enn farið í autt hólf af því að ekkert í röð þess, dálki eða reit útilokar hana enn. Glósur í leiknum eru möguleikar. Allar aðferðir aðrar en stakir byggja á möguleikum, svo haltu þeim fullkomnum og réttum."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Nakinn stakur",
+          "title": "Nakinn stakur í sudoku: hólfið með einum möguleika",
+          "description": "Nakinn stakur er autt hólf sem hefur aðeins eina mögulega tölu. Lærðu að finna nakta staka hratt, með raunverulegu dæmi skref fyrir skref og algengum mistökum.",
+          "h1": "Nakinn stakur (naked single)",
+          "summary": "Nakinn stakur er autt hólf sem hefur nákvæmlega einn möguleika: hinar átta tölurnar koma þegar fyrir í röð þess, dálki eða reit. Talan sem eftir er verður að fara þangað. Þetta er einfaldasta aðferðin í sudoku, sú sem þú notar mest, og sú sem vísbendingin í Bare Sudoku lýsir sem „Aðeins einn möguleiki hér“.",
+          "when": [
+            "Alltaf. Naktir stakir birtast frá fyrsta leik til þess síðasta, á öllum stigum. Í þrautum á stigunum Auðvelt og Miðlungs eru þeir, ásamt földum stökum, eina aðferðin sem þú þarft. Í erfiðari þrautum skilur hver útilokun flókinnar aðferðar yfirleitt eftir nakinn stakan, svo leitaðu að þeim eftir hvert skref."
+          ],
+          "spot": [
+            "Skoðaðu hólf þar sem margir nágrannar eru þegar útfylltir: hólf í röð sem hefur þegar sjö tölur, eða hólf þar sem röðin, dálkurinn og reiturinn ná samanlagt yfir átta ólíkar tölur. Án glósa telur þú tölurnar sem þú sérð frá hólfinu. Með glósum er nakinn stakur einfaldlega hólf sem sýnir einn möguleika, og þess vegna gerir Fylla glósur auðvelt að finna þá."
+          ],
+          "examples": [
+            {
+              "h": "Dæmi",
+              "steps": [
+                "Skoðaðu hólfið {cell}. Það er autt, svo skráðu allar tölur sem þegar eru í röð þess, dálki þess og reit þess.",
+                "Röð {row} inniheldur {rowDigits}. Dálkur {col} inniheldur {colDigits}. Reitur {box} inniheldur {boxDigits}.",
+                "Saman útiloka þær allar tölur nema {d}, svo {d} er eini möguleikinn sem eftir er í {cell}.",
+                "Skrifaðu {d} í {cell}. Athugaðu svo hvort nýja talan býr til annan stakan í sömu röð, sama dálki eða sama reit."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að telja bara röðina eða bara reitinn. Tölurnar átta sem eru útilokaðar koma yfirleitt úr öllum þremur einingunum saman.",
+            "Að gleyma því að tala sem þú settir inn rétt áðan útilokar líka möguleika í 20 nágrönnum sínum; nýir naktir stakir birtast strax eftir hverja innsetningu.",
+            "Að rugla saman nöktum stökum og földum stökum: nakinn stakur hefur einn möguleika eftir í hólfinu, falinn stakur hefur eitt hólf eftir fyrir töluna í einingu."
+          ],
+          "faq": [
+            [
+              "Hvað er nakinn stakur í sudoku?",
+              "Autt hólf með nákvæmlega einum möguleika. Átta ólíkar tölur eru þegar í röð þess, dálki og reit, svo níunda talan er sú eina sem passar."
+            ],
+            [
+              "Af hverju er hann kallaður nakinn?",
+              "Af því að eini möguleikinn sést beint í hólfinu þegar glósurnar hafa verið skrifaðar; ekkert felur hann. Falinn stakur er hins vegar innan um aðra möguleika og finnst með því að skoða töluna frekar en hólfið."
+            ],
+            [
+              "Er hægt að leysa þraut eingöngu með nöktum stökum?",
+              "Það á við um margar auðveldar þrautir, en flestar þurfa líka falda staka. Bare Sudoku metur þrautir á stigunum Auðvelt og Miðlungs leysanlegar með báðum gerðum stakra; þrautir á stigunum Erfitt og Sérfræðingur þurfa að minnsta kosti eina aðferð í viðbót."
+            ],
+            [
+              "Sýnir vísbendingin nakta staka?",
+              "Já. Þegar næsta innsetning er nakinn stakur velur vísbendingin hólfið og segir „Aðeins einn möguleiki hér“ ásamt tölunni. Ýttu aftur á vísbendinguna til að setja hana inn."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Falinn stakur",
+          "title": "Falinn stakur í sudoku: eini staðurinn fyrir tölu",
+          "description": "Falinn stakur er eina hólfið í röð, dálki eða reit þar sem tala getur enn farið. Lærðu að koma auga á falda staka með því að skoða eina tölu í einu.",
+          "h1": "Falinn stakur (hidden single)",
+          "summary": "Falinn stakur er tala sem á aðeins eitt mögulegt hólf eftir í röð, dálki eða reit, jafnvel þótt það hólf sýni aðra möguleika. Þar sem einingin verður að innihalda töluna fer hún þangað. Vísbendingin í Bare Sudoku lýsir þessu sem „Eini staðurinn fyrir 5 í þessari röð“, dálki eða reit.",
+          "when": [
+            "Þegar tala er langt komin: um leið og tala kemur fyrir fimm eða sex sinnum eru reitirnir sem eftir eru mjög takmarkaðir, og falinn stakur er oft næsti leikur. Faldir stakir eru aðalaðferðin í þrautum á stigunum Auðvelt og Miðlungs og eru áfram vinnuhesturinn á öllum stigum."
+          ],
+          "spot": [
+            "Skoðaðu eina tölu í einu. Taktu tölu, finndu reit sem inniheldur hana ekki og strikaðu yfir hvert hólf í þeim reit sem deilir röð eða dálki með innsettu eintaki af tölunni. Ef eitt hólf stendur eftir hefur þú fundið falinn stakan. Sama skönnun virkar á raðir og dálka. Í leiknum geturðu ýtt á innsetta tölu: öll eintök hennar eru auðkennd, svo lausu hólfin skera sig úr."
+          ],
+          "examples": [
+            {
+              "h": "Dæmi",
+              "steps": [
+                "Reitur {box} inniheldur ekki enn {d}, svo eitt af auðu hólfunum hans verður að geyma hana. Auðu hólfin eru {empties}.",
+                "Í þeim öllum nema {cell} er {d} útilokuð af {d} sem þegar er í sömu röð eða sama dálki, svo {d} er ekki möguleiki þar.",
+                "Þá er {cell} eini staðurinn fyrir {d} í reit {box}. Skrifaðu {d} þar, jafnvel þótt {cell} sýni enn aðra möguleika."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að setja töluna í hólf sem er aðeins líklega það rétta: athugaðu öll önnur auð hólf einingarinnar, ekki bara þau augljósu.",
+            "Að missa af földum stökum af því að hólfið sýnir nokkra möguleika. Hinir möguleikarnir skipta ekki máli; það sem skiptir máli er að talan á engan annan stað í einingunni.",
+            "Að skoða bara reiti. Raðir og dálkar gefa falda staka jafn oft, sérstaklega undir lokin."
+          ],
+          "faq": [
+            [
+              "Hvað er falinn stakur í sudoku?",
+              "Tala sem getur aðeins farið í eitt hólf í röð, dálki eða reit. Einingin verður að innihalda töluna, svo hólfið er ákveðið jafnvel þótt það hafi enn aðra möguleika."
+            ],
+            [
+              "Hver er munurinn á földum stökum og nöktum stökum?",
+              "Nakinn stakur snýst um hólf: einn möguleiki eftir. Falinn stakur snýst um tölu: eitt hólf eftir í einingu. Báðir setja inn tölu með vissu."
+            ],
+            [
+              "Hvor er auðveldari að finna?",
+              "Án glósa eru faldir stakir yfirleitt auðveldari, því þú getur skannað borðið fyrir eina tölu í einu. Með fullkomnum glósum eru naktir stakir auðveldastir, þar sem hólf með einum möguleika sker sig úr."
+            ],
+            [
+              "Hvernig lýsir vísbendingin földum stökum?",
+              "Sem „Eini staðurinn fyrir“ töluna í þessari röð, þessum dálki eða þessum reit, með hólfið valið. Ýttu aftur á vísbendinguna til að setja hana inn."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Læstir möguleikar",
+          "title": "Læstir möguleikar í sudoku: bending og tilkall",
+          "description": "Læstir möguleikar: þegar möguleikar tölu í reit liggja allir í einni röð eða dálki, eða öfugt, er talan fjarlægð annars staðar. Tvö raunveruleg dæmi.",
+          "h1": "Læstir möguleikar (locked candidates)",
+          "summary": "Læstir möguleikar eru fyrsta aðferðin sem fjarlægir möguleika í stað þess að setja inn tölu. Hún hefur tvær myndir. Bending: í reit liggja allir möguleikar tölu í einni röð eða einum dálki, svo talan er fjarlægð úr restinni af þeirri línu. Tilkall: í röð eða dálki liggja allir möguleikar tölu í einum reit, svo talan er fjarlægð úr restinni af þeim reit. Vísbendingin í Bare Sudoku merkir innsetninguna sem aðferðin opnar með „Læstir möguleikar“.",
+          "when": [
+            "Þegar stakirnir klárast í þraut á stiginu Erfitt er þetta það fyrsta sem þú prófar. Aðferðin krefst fullkominna glósa að minnsta kosti fyrir töluna sem þú skoðar. Læstir möguleikar eru algengir: flestar þrautir á stiginu Erfitt þurfa þá, og þrautir á stiginu Sérfræðingur nota þá á milli stærri mynstranna."
+          ],
+          "spot": [
+            "Fyrir bendingu skoðar þú hvern reit og hverja tölu sem vantar í hann: ef möguleg hólf fyrir þá tölu eru öll í einni röð eða einum dálki, athugaðu hvort sama tala kemur fyrir sem möguleiki lengra eftir þeirri línu utan reitsins. Fyrir tilkall skoðar þú röð eða dálk: ef möguleikar tölu eru allir innan eins reits má hreinsa restina af þeim reit. Í leiknum geturðu ýtt á tölutakka til að auðkenna alla möguleika tölunnar; lína með tveimur eða þremur auðkenndum glósum innan eins reits er mynstrið."
+          ],
+          "examples": [
+            {
+              "h": "Bending",
+              "steps": [
+                "Í reit {box} hefur talan {d} aðeins þessi möguleg hólf: {cells}. Þau liggja öll í röð {row}.",
+                "Reitur {box} þarf {d}, svo {d} raðar {row} er innan reits {box}, hvaða hólf af þessum sem hún lendir í.",
+                "Röð {row} getur ekki geymt aðra {d}, svo fjarlægðu {d} úr hólfum raðar {row} utan reitsins: {elim}."
+              ]
+            },
+            {
+              "h": "Tilkall",
+              "steps": [
+                "Í röð {row} getur talan {d} aðeins farið í {cells}, og þau eru öll innan reits {box}.",
+                "Röð {row} verður að innihalda {d}, svo röð {row} gerir tilkall til {d} reits {box}. Hin hólfin í reit {box} geta ekki geymt {d}.",
+                "Fjarlægðu {d} úr {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að fjarlægja töluna innan reitsins í stað þess að fjarlægja hana utan hans í bendingu, eða öfugt í tilkalli. Útilokanirnar fara alltaf í hólfin sem eru í línunni en ekki í reitnum, eða í reitnum en ekki í línunni.",
+            "Að beita reglunni þegar möguleikarnir ná yfir tvær raðir reitsins. Öll möguleg hólf tölunnar í reitnum verða að liggja í einni línu.",
+            "Að gleyma að leita að stakanum sem útilokunin býr til. Læstir möguleikar setja sjaldan tölu inn einir og sér; þeir undirbúa stakan."
+          ],
+          "faq": [
+            [
+              "Hvað eru læstir möguleikar í sudoku?",
+              "Möguleikar tölu sem eru bundnir við skurðmengi reits og línu. Þar sem reiturinn, eða línan, verður að innihalda töluna innan þess skurðmengis má fjarlægja töluna úr restinni af línunni, eða restinni af reitnum."
+            ],
+            [
+              "Hver er munurinn á bendingu og tilkalli?",
+              "Bending byrjar í reit: möguleikar tölunnar í reitnum benda eftir einni röð eða einum dálki, svo talan er fjarlægð úr restinni af þeirri línu. Tilkall byrjar í röð eða dálki: möguleikar línunnar fyrir töluna eru allir í einum reit, svo línan gerir tilkall til tölunnar og hún er fjarlægð úr restinni af reitnum."
+            ],
+            [
+              "Eru læstir möguleikar líka kallaðir intersection removal?",
+              "Já. Önnur heiti eru box-line reduction fyrir tilkall og pointing pairs eða pointing triples fyrir bendingu. Bare Sudoku notar eitt heiti yfir hvort tveggja."
+            ],
+            [
+              "Hvaða stig krefst læstra möguleika?",
+              "Erfitt. Þraut sem krefst læstra möguleika eða hlutmengja en einskis erfiðara er metin Erfitt; þrautir á stiginu Sérfræðingur þurfa líka fisk eða væng."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Nakin pör og þrenndir",
+          "title": "Nakin pör og þrenndir í sudoku: hvernig þau virka",
+          "description": "Nakin pör og þrenndir: tvö eða þrjú hólf í einingu sem hafa sömu tvo eða þrjá möguleika. Lærðu að finna þau og hvað á að fjarlægja, með raunverulegum dæmum.",
+          "h1": "Nakin pör og þrenndir (naked pairs, naked triples)",
+          "summary": "Nakið par er tvö hólf í sömu röð, sama dálki eða sama reit sem hafa nákvæmlega sömu tvo möguleikana. Tölurnar tvær verða að fara í þessi tvö hólf, svo það má fjarlægja þær úr öllum öðrum hólfum einingarinnar. Nakin þrennd er sama hugmynd með þremur hólfum og þremur tölum; hvert hólf getur sýnt tvær eða allar þrjár þeirra. Vísbendingin í Bare Sudoku merkir innsetninguna sem af þessu leiðir „Par eða þrennd“.",
+          "when": [
+            "Þegar glósurnar eru fullkomnar og stakir og læstir möguleikar eru uppurnir. Nakin pör eru mjög algeng í þrautum á stiginu Erfitt, naktar þrenndir síður. Það borgar sig að leita að hvoru tveggja í hverri einingu sem hefur enn fimm eða fleiri auð hólf."
+          ],
+          "spot": [
+            "Leitaðu að hólfum með aðeins tveimur möguleikum og finndu annað hólf í sömu einingu með sömu tvo. Fyrir þrenndir skaltu skoða einingar með nokkrum hólfum sem hafa tvo eða þrjá möguleika og athuga hvort þrjú þeirra nota samanlagt aðeins þrjár ólíkar tölur. Hólf með nákvæmlega sömu möguleikana eru auðséð þegar glósurnar hafa verið skrifaðar; Fylla glósur í leiknum gerir það með einni snertingu."
+          ],
+          "examples": [
+            {
+              "h": "Nakið par",
+              "steps": [
+                "{cellA} og {cellB} í {unit} hafa nákvæmlega sömu tvo möguleikana: {d1} og {d2}.",
+                "Annað þeirra verður að vera {d1} og hitt {d2}. Við vitum ekki hvort er hvað, en þessi tvö hólf nota báðar tölurnar.",
+                "Ekkert annað hólf í {unit} getur því geymt {d1} eða {d2}. Fjarlægðu {elim}."
+              ]
+            },
+            {
+              "h": "Nakin þrennd",
+              "steps": [
+                "Þrjú hólf í {unit} fá alla möguleika sína úr sömu þremur tölunum, {digits}: {cells}.",
+                "Tölurnar þrjár verða að skipta þessum þremur hólfum á milli sín á einhvern hátt. Hólf þarf ekki að sýna alla þrjá möguleikana; það sem skiptir máli er að ekkert hólfanna þriggja hefur möguleika utan mengisins.",
+                "Fjarlægðu {digits} úr öllum öðrum hólfum í {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að taka tvö hólf sem deila tveimur möguleikum en hafa líka þann þriðja. Í nöktu pari verður hvort hólf að hafa nákvæmlega þessa tvo möguleika og ekkert annað.",
+            "Að fjarlægja tölurnar úr sjálfum parhólfunum. Parið heldur möguleikum sínum; útilokanirnar fara í hin hólf einingarinnar.",
+            "Að krefjast þess að hvert hólf í þrennd sýni allar þrjár tölurnar. Hólf með tveimur af þremur er í lagi, svo framarlega sem ekkert hólf hefur möguleika utan mengisins."
+          ],
+          "faq": [
+            [
+              "Hvað er nakið par í sudoku?",
+              "Tvö hólf í einni einingu sem hafa bæði nákvæmlega sömu tvo möguleikana. Þessar tvær tölur eru læstar í þessum tveimur hólfum, svo það má fjarlægja þær úr restinni af einingunni."
+            ],
+            [
+              "Hvað er nakin þrennd?",
+              "Þrjú hólf í einni einingu þar sem möguleikarnir eru samanlagt aðeins þrjár tölur. Hvert hólf getur haft tvær eða þrjár þeirra. Tölurnar þrjár fylla hólfin þrjú, svo það má fjarlægja þær úr hinum hólfum einingarinnar."
+            ],
+            [
+              "Setur nakið par inn tölu?",
+              "Ekki eitt og sér. Það fjarlægir möguleika, og fjarlægingin skilur yfirleitt eftir nakinn eða falinn stakan. Vísbendingin í Bare Sudoku sýnir þennan staka og nefnir aðferðina sem gerði hann mögulegan."
+            ],
+            [
+              "Getur nakið par verið í reit og röð á sama tíma?",
+              "Já. Ef hólfin tvö deila röð og reit útilokar parið í báðum einingum. Bare Sudoku tekur þær fyrir eina einingu í einu."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Falin pör og þrenndir",
+          "title": "Falin pör og þrenndir í sudoku: hvernig á að finna þau",
+          "description": "Falið par er tvær tölur sem geta aðeins farið í sömu tvö hólf einingar, svo aðrir möguleikar þar hverfa. Lærðu að finna falin pör og þrenndir skref fyrir skref.",
+          "h1": "Falin pör og þrenndir (hidden pairs, hidden triples)",
+          "summary": "Falið par er tvær tölur sem, innan einnar raðar, eins dálks eða eins reits, eru möguleikar í sömu tveimur hólfunum og hvergi annars staðar. Þessi tvö hólf verða að geyma þessar tvær tölur, svo það má fjarlægja alla aðra möguleika úr þeim. Falin þrennd virkar á sama hátt með þremur tölum sem eru bundnar við þrjú hólf. Eftir fjarlæginguna sýna hólfin nakið par eða nakta þrennd. Vísbendingin í Bare Sudoku merkir innsetninguna sem af þessu leiðir „Par eða þrennd“.",
+          "when": [
+            "Þegar eining hefur hólf með mörgum möguleikum og stakirnir eru búnir. Falin pör leynast í þéttskipuðum hólfum, og þess vegna borgar sig að leita að þeim einmitt þar sem nakin pör sjást ekki. Faldar þrenndir eru sjaldgæfar; Bare Sudoku leitar að þeim, en flestar þrautir á stiginu Erfitt leysast án þeirra."
+          ],
+          "spot": [
+            "Vinndu eftir tölum, ekki hólfum. Skráðu í einingu hvaða hólf hver tala sem vantar getur farið í. Ef tvær tölur hafa hvor um sig aðeins tvö möguleg hólf og það eru sömu tvö hólfin hefur þú fundið falið par. Í leiknum geturðu ýtt á tölutakka til að auðkenna möguleika tölunnar; ef tvær tölur lýsa upp sömu tvö hólf einingar og ekkert annað í henni er það mynstrið."
+          ],
+          "examples": [
+            {
+              "h": "Falið par",
+              "steps": [
+                "Í {unit} hafa tölurnar {d1} og {d2} hvor um sig aðeins tvö möguleg hólf, og það eru sömu tvö: {cells}.",
+                "Þessi tvö hólf verða að geyma {d1} og {d2}, svo aðrir möguleikar þeirra eru ómögulegir.",
+                "Fjarlægðu {elim}. Nú sýna hólfin tvö nakið par, sem gæti opnað fyrir meira."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að fjarlægja tölur parsins úr parhólfunum. Það eru hinir möguleikar þessara hólfa sem hverfa; tölur parsins standa.",
+            "Að samþykkja tölu sem á þriðja mögulega hólfið í einingunni. Báðar tölurnar verða að vera bundnar við nákvæmlega hólfin tvö.",
+            "Að leita bara í reitum. Falin pör koma jafn oft fyrir í röðum og dálkum."
+          ],
+          "faq": [
+            [
+              "Hvað er falið par í sudoku?",
+              "Tvær tölur sem geta aðeins farið í sömu tvö hólf einingar. Þessi hólf verða að taka við þessum tölum, svo aðrir möguleikar þeirra eru fjarlægðir."
+            ],
+            [
+              "Hvernig er falið par frábrugðið nöktu pari?",
+              "Nakið par er sýnilegt: tvö hólf sem sýna aðeins sömu tvo möguleikana. Falið par er hulið aukamöguleikum í hólfunum tveimur. Ef þessir aukamöguleikar eru fjarlægðir verður falið par að nöktu pari."
+            ],
+            [
+              "Hvað er falin þrennd?",
+              "Þrjár tölur sem eru bundnar við þrjú hólf einingar. Hver tala þarf ekki að koma fyrir í öllum þremur hólfunum; það sem skiptir máli er að engin talnanna þriggja hefur möguleika utan þessara hólfa."
+            ],
+            [
+              "Gerir vísbendingin greinarmun á földum og nöktum pörum?",
+              "Nei. Bare Sudoku finnur hvort tveggja og merkir innsetninguna sem af því leiðir „Par eða þrennd“. Síðurnar hér halda þeim aðskildum af því að þau finnast á ólíkan hátt."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing í sudoku: hvernig aðferðin virkar",
+          "description": "X-Wing: tala með nákvæmlega tvö möguleg hólf í tveimur röðum, í sömu tveimur dálkum, er fjarlægð úr restinni af þeim dálkum. Raunverulegt dæmi.",
+          "h1": "X-Wing",
+          "summary": "X-Wing er mynstur einnar tölu og fjögurra hólfa á hornum rétthyrnings. Ef talan hefur nákvæmlega tvö möguleg hólf í hvorri af tveimur röðum, og þau hólf eru í sömu tveimur dálkunum, verður talan að vera í tveimur gagnstæðum hornum rétthyrningsins. Því má fjarlægja hana úr öllum öðrum hólfum þessara tveggja dálka. Það sama gildir ef skipt er á röðum og dálkum. Þetta er fyrsta aðferðin á stiginu Sérfræðingur í Bare Sudoku.",
+          "when": [
+            "Þegar stakir, læstir möguleikar og hlutmengi eru uppurin. X-Wing er algengasta mynstrið á stiginu Sérfræðingur og birtist oft þegar tala á fáa möguleika eftir, yfirleitt þegar fjögur til sex eintök hennar eru þegar komin. Það krefst fullkominna glósa fyrir töluna sem þú skoðar."
+          ],
+          "spot": [
+            "Veldu tölu og leitaðu að röðum þar sem hún hefur nákvæmlega tvö möguleg hólf. Ef tvær slíkar raðir deila sömu tveimur dálkum skaltu athuga hvort talan er möguleiki annars staðar í þeim dálkum: það eru útilokanirnar. Endurtaktu svo með dálka sem grunn. Í leiknum geturðu ýtt á tölutakkann: allir möguleikar tölunnar eru auðkenndir, og rétthyrningur úr fjórum auðkenndum glósum er auðséður."
+          ],
+          "examples": [
+            {
+              "h": "Dæmi",
+              "steps": [
+                "Talan {d} hefur nákvæmlega tvö möguleg hólf í röð {r1} og nákvæmlega tvö í röð {r2}, og þau eru í sömu tveimur dálkunum, {c1} og {c2}: {cells}.",
+                "Röð {r1} setur {d} sína í dálk {c1} eða {c2}, og röð {r2} setur {d} sína í hinn. Hvort sem er fá dálkar {c1} og {c2} hvor sína {d} úr þessum tveimur röðum.",
+                "Því getur {d} hvergi annars staðar verið í dálkum {c1} og {c2}. Fjarlægðu {d} úr {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að nota röð sem hefur þrjú möguleg hólf fyrir töluna. Hver grunnröð verður að hafa nákvæmlega tvö, og bæði verða að vera í dálkunum tveimur sem raðirnar deila.",
+            "Að fjarlægja töluna úr röðunum í stað dálkanna. Með raðir sem grunn eru útilokanirnar í dálkunum, og öfugt.",
+            "Að gleyma öfugu útgáfunni. X-Wing sem byggir á dálkum útilokar í röðum."
+          ],
+          "faq": [
+            [
+              "Hvað er X-Wing í sudoku?",
+              "Tala sem hefur nákvæmlega tvö möguleg hólf í hvorri af tveimur röðum, í sömu tveimur dálkunum. Talan er í tveimur gagnstæðum hornum þessa rétthyrnings, svo hún er fjarlægð úr restinni af dálkunum tveimur. Það má skipta á röðum og dálkum."
+            ],
+            [
+              "Af hverju virkar X-Wing?",
+              "Hvor röðin um sig verður að setja töluna í annan af dálkunum tveimur, og raðirnar tvær geta ekki notað sama dálkinn. Dálkarnir tveir fá því hvor sitt eintak af tölunni úr þessum röðum, og allir aðrir möguleikar hennar í þeim dálkum eru ómögulegir."
+            ],
+            [
+              "Er X-Wing fiskur?",
+              "Já. X-Wing er fiskur af stærð tvö; Swordfish er fiskur af stærð þrjú. Bare Sudoku finnur báða."
+            ],
+            [
+              "Á hvaða stigi koma X-Wing fyrir?",
+              "Sérfræðingur. Þraut sem krefst X-Wing, Y-Wing, Swordfish eða XYZ-Wing er metin á stiginu Sérfræðingur."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing í sudoku: hvernig aðferðin virkar",
+          "description": "Y-Wing (XY-Wing): lykilhólf með tveimur möguleikum og tveir vængir sem deila hvor einum þeirra útiloka tölu úr hverju hólfi sem sér báða vængina. Dæmi.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, einnig kallað XY-Wing, notar þrjú hólf með tveimur möguleikum hvert. Lykilhólfið hefur möguleikana X og Y. Annar vængurinn sér lykilhólfið og hefur X og Z; hinn vængurinn sér lykilhólfið og hefur Y og Z. Hvað sem lykilhólfið verður þarf annar vængurinn að vera Z, svo það má fjarlægja Z úr hverju hólfi sem sér báða vængina. Þetta er aðferð á stiginu Sérfræðingur í Bare Sudoku.",
+          "when": [
+            "Þegar þraut hefur nokkur hólf með nákvæmlega tveimur möguleikum og enginn fiskur er í boði. Y-Wing er algengt í þrautum á stiginu Sérfræðingur og finnst með því að fylgja hólfunum með tveimur möguleikum: hvert þeirra er mögulegt lykilhólf eða vængur."
+          ],
+          "spot": [
+            "Skráðu hólfin sem hafa nákvæmlega tvo möguleika. Líttu á hvert þeirra sem lykilhólf með möguleikana X og Y, og leitaðu meðal nágranna þess að hólfi með X og annarri tölu Z, og hólfi með Y og sömu Z. Þessi tvö eru vængirnir. Finndu svo hólf sem sjá báða vængina og innihalda Z. Athugaðu að vængirnir þurfa ekki að sjá hvor annan."
+          ],
+          "examples": [
+            {
+              "h": "Dæmi",
+              "steps": [
+                "Lykilhólfið {pivot} hefur möguleikana {x} og {y}. Það sér {wingA}, sem hefur {x} og {z}, og {wingB}, sem hefur {y} og {z}.",
+                "Ef {pivot} er {x} missir {wingA} {x} og verður {z}. Ef {pivot} er {y} verður {wingB} {z}. Annar vængurinn er {z} í öllum tilvikum.",
+                "Hólf sem sér báða vængina getur aldrei verið {z}. Fjarlægðu {z} úr {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að velja vængi sem sjá ekki báðir lykilhólfið. Hvor vængur verður að deila röð, dálki eða reit með lykilhólfinu.",
+            "Að fjarlægja Z úr hólfum sem sjá aðeins annan vænginn. Hólfið sem útilokað er úr verður að sjá báða vængina.",
+            "Að fjarlægja Z úr lykilhólfinu. Í Y-Wing inniheldur lykilhólfið ekki Z; ef það gerir það er mynstrið XYZ-Wing með aðrar reglur."
+          ],
+          "faq": [
+            [
+              "Hvað er Y-Wing í sudoku?",
+              "Þrjú hólf með tveimur möguleikum hvert: lykilhólf með X og Y, vængur með X og Z sem sér lykilhólfið, og vængur með Y og Z sem sér lykilhólfið. Annar vængurinn er alltaf Z, svo Z er fjarlægt úr hólfum sem sjá báða vængina."
+            ],
+            [
+              "Er Y-Wing það sama og XY-Wing?",
+              "Já. Heitin tvö lýsa sama mynstrinu. Bare Sudoku kallar það Y-Wing."
+            ],
+            [
+              "Af hverju verður annar vængurinn að vera Z?",
+              "Ef lykilhólfið er X missir fyrri vængurinn X og verður Z. Ef lykilhólfið er Y verður seinni vængurinn Z. Lykilhólfið er annað hvort, svo annar vængurinn er Z."
+            ],
+            [
+              "Úr hve mörgum hólfum útilokar Y-Wing?",
+              "Yfirleitt einu eða tveimur: aðeins þeim hólfum sem sjá báða vængina og innihalda enn Z. Það nægir til að búa til stakan."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish í sudoku: hvernig aðferðin virkar",
+          "description": "Swordfish: tala sem er bundin við þrjá dálka í þremur röðum er fjarlægð úr restinni af þeim dálkum. Fiskur af stærð þrjú, útskýrður með raunverulegu dæmi.",
+          "h1": "Swordfish",
+          "summary": "Swordfish er X-Wing með þremur röðum og þremur dálkum. Ef tala hefur mest þrjú möguleg hólf í hverri af þremur röðum, og öll þau hólf lenda í sömu þremur dálkunum, fullnýta raðirnar þrjár töluna í þeim dálkum, og það má fjarlægja hana úr öllum öðrum hólfum dálkanna þriggja. Það má skipta á röðum og dálkum. Bare Sudoku leitar að Swordfish á eftir Y-Wing, í þrautum á stiginu Sérfræðingur.",
+          "when": [
+            "Þegar X-Wing og Y-Wing finna ekkert. Swordfish er sjaldgæfara en X-Wing og krefst tölu sem hefur möguleika sína dreifða strjált yfir þrjár línur. Það krefst fullkominna og réttra glósa fyrir þá tölu."
+          ],
+          "spot": [
+            "Veldu tölu og leitaðu að röðum með tvö eða þrjú möguleg hólf fyrir hana. Ef þrjár slíkar raðir ná samtals aðeins yfir þrjá dálka skaltu athuga hvort talan er möguleiki víðar í þeim dálkum. Ekki þarf hver röð að hafa möguleika í hverjum dálki: Swordfish getur haft sex, sjö, átta eða níu hólf. Í leiknum geturðu auðkennt töluna með takkanum hennar og leitað að þremur röðum þar sem möguleikarnir raðast í þrjá dálka."
+          ],
+          "examples": [
+            {
+              "h": "Dæmi",
+              "steps": [
+                "Talan {d} hefur mest þrjú möguleg hólf í hverri af röðum {rows}, og öll þau hólf eru í dálkum {cols}: {cells}.",
+                "Hver raðanna þriggja verður að setja {d} sína í einn af dálkunum þremur, og engar tvær raðir geta notað sama dálkinn. Dálkarnir þrír fá því {d} sína úr þessum þremur röðum.",
+                "Allir aðrir möguleikar á {d} í dálkum {cols} eru ómögulegir. Fjarlægðu {d} úr {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að krefjast allra níu hólfanna. Swordfish með tveimur möguleikum í sumum röðum er samt gilt, svo framarlega sem raðirnar þrjár ná aðeins yfir þrjá dálka.",
+            "Að taka með röð sem hefur fjögur möguleg hólf. Hver grunnröð má hafa mest þrjú, öll innan dálkanna þriggja.",
+            "Að útiloka í grunnröðunum. Með raðir sem grunn eru útilokanirnar í dálkunum þremur, utan grunnraðanna."
+          ],
+          "faq": [
+            [
+              "Hvað er Swordfish í sudoku?",
+              "Tala þar sem möguleikarnir í þremur röðum eru bundnir við þrjá dálka. Raðirnar þrjár verða að setja töluna í þessa þrjá dálka, eina í hvern, svo talan er fjarlægð úr hinum hólfum þessara dálka."
+            ],
+            [
+              "Hvernig er Swordfish frábrugðið X-Wing?",
+              "Aðeins að stærð: X-Wing notar tvær raðir og tvo dálka, Swordfish þrjár og þrjá. Rökin eru þau sömu."
+            ],
+            [
+              "Þarf Swordfish nákvæmlega níu hólf?",
+              "Nei. Hver röð getur haft tvo eða þrjá möguleika; mynstrið krefst aðeins þess að raðirnar þrjár noti samanlagt ekki fleiri en þrjá dálka."
+            ],
+            [
+              "Er til fiskur af stærð fjögur?",
+              "Já, Jellyfish. Bare Sudoku notar hann ekki, því þrautir leiksins þurfa hann aldrei."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing í sudoku: hvernig aðferðin virkar",
+          "description": "XYZ-Wing: lykilhólf með þremur möguleikum og tveir vængir sem deila einum þeirra útiloka þá tölu úr hólfum sem sjá öll þrjú. Dæmi skref fyrir skref.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing er Y-Wing þar sem lykilhólfið hefur þrjá möguleika. Lykilhólfið hefur X, Y og Z; annar vængurinn sér lykilhólfið og hefur X og Z, hinn sér lykilhólfið og hefur Y og Z. Eitt hólfanna þriggja verður að vera Z, svo það má fjarlægja Z úr hverju hólfi sem sér öll þrjú. Þar sem lykilhólfið sjálft getur verið Z verður hólfið sem útilokað er úr að sjá lykilhólfið jafnt sem báða vængina, sem takmarkar það við reitinn eða línuna sem hólfin deila. Þetta er erfiðasta aðferðin sem Bare Sudoku notar.",
+          "when": [
+            "Aðeins þegar allt annað bregst. XYZ-Wing er sjaldgæfasta mynstrið í Bare Sudoku og birtist aðeins í þrautum á stiginu Sérfræðingur. Leitaðu að því þegar hólf með þremur möguleikum er í reit með hólfi með tveimur möguleikum sem deilir tveimur af tölum þess."
+          ],
+          "spot": [
+            "Byrjaðu á hólfum með nákvæmlega þremur möguleikum; hvert þeirra er mögulegt lykilhólf. Leitaðu meðal nágranna þess að tveimur hólfum með tveimur möguleikum hvort, þar sem allir möguleikarnir eru úr þremur möguleikum lykilhólfsins og hólfin deila nákvæmlega einni tölu Z. Leitaðu svo að hólfum sem sjá lykilhólfið og báða vængina og innihalda Z. Í reynd er annar vængurinn í reit lykilhólfsins og hinn í röð þess eða dálki, og hólfin sem útilokað er úr eru hin hólf þess reits í þeirri röð eða þeim dálki."
+          ],
+          "examples": [
+            {
+              "h": "Dæmi",
+              "steps": [
+                "Lykilhólfið {pivot} hefur þrjá möguleika: {x}, {y} og {z}. Það sér {wingA} með {x} og {z}, og {wingB} með {y} og {z}.",
+                "Ef {pivot} er {z} er málið leyst. Ef það er {x} verður {wingA} að vera {z}. Ef það er {y} verður {wingB} að vera {z}. Í öllum tilvikum er eitt hólfanna þriggja {z}.",
+                "Hólf sem sér öll þrjú getur ekki verið {z}. Fjarlægðu {z} úr {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Að útiloka úr hólfum sem sjá aðeins vængina tvo. Ólíkt Y-Wing getur lykilhólfið verið Z, svo hólfið verður líka að sjá lykilhólfið.",
+            "Að nota vængi þar sem möguleikarnir eru ekki báðir meðal þriggja möguleika lykilhólfsins.",
+            "Að rugla því saman við Y-Wing: munurinn er þriðji möguleikinn í lykilhólfinu, og hann breytir því hvaða hólf má hreinsa."
+          ],
+          "faq": [
+            [
+              "Hvað er XYZ-Wing í sudoku?",
+              "Lykilhólf með möguleikana X, Y og Z og tveir vængir, annar með X og Z og hinn með Y og Z, sem báðir sjá lykilhólfið. Eitt hólfanna þriggja er Z, svo Z er fjarlægt úr hólfum sem sjá öll þrjú."
+            ],
+            [
+              "Hvernig er XYZ-Wing frábrugðið Y-Wing?",
+              "Lykilhólfið hefur þrjá möguleika í stað tveggja, þar á meðal Z. Það gerir lykilhólfið að mögulegum stað fyrir Z, svo aðeins hólf sem sjá lykilhólfið og báða vængina geta misst Z."
+            ],
+            [
+              "Hversu oft kemur XYZ-Wing fyrir?",
+              "Sjaldan. Í Bare Sudoku geta aðeins þrautir á stiginu Sérfræðingur þurft það, og flestar gera það ekki. Bare Sudoku athugar það síðast, á eftir X-Wing, Y-Wing og Swordfish."
+            ],
+            [
+              "Er til WXYZ-Wing?",
+              "Já, með lykilhólfi sem hefur fjóra möguleika, en Bare Sudoku notar það ekki. Hverja þraut í leiknum er hægt að klára með aðferðunum níu í þessum leiðarvísi."
+            ]
+          ]
+        }
+      }
     }
   }
 }
