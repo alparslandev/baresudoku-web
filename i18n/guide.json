@@ -47724,6 +47724,2334 @@
         }
       }
     },
+    "mt": {
+      "learnHeading": "Tgħallem is-Sudoku",
+      "learnText": "Għadek ġdid fis-Sudoku, jew weħilt f'puzzle diffiċli? Żewġ gwidi jispjegaw ir-regoli u kull teknika ta' soluzzjoni li juża l-ħjiel, kull waħda b'eżempju reali.",
+      "howToLink": "Kif tilgħab Sudoku",
+      "techniquesLink": "Tekniki biex issolvi s-Sudoku",
+      "labels": {
+        "howTo": "Kif tilgħab",
+        "techniques": "Tekniki",
+        "play": "Ilgħab Sudoku",
+        "prev": "It-teknika ta' qabel",
+        "next": "It-teknika li jmiss",
+        "all": "It-tekniki kollha",
+        "example": "Eżempju",
+        "steps": "Pass pass",
+        "when": "Meta tużaha",
+        "spot": "Kif tagħrafha",
+        "mistakes": "Żbalji komuni",
+        "inGame": "F'Bare Sudoku",
+        "level": "Meħtieġa mil-livell: {level}",
+        "hint": "Fil-logħba, il-ħjiel jgħid: {text}",
+        "legend": "Iċ-ċifri b'tipa grassa huma mogħtija, iċ-ċifri blu tqiegħdu waqt is-soluzzjoni, u ċ-ċifri żgħar huma kandidati. Iċ-ċelloli enfasizzati jiffurmaw il-mudell, il-kandidati maqtugħa jitneħħew, u kandidat b'ċirku madwaru huwa ċ-ċifra li trid titpoġġa.",
+        "notation": "Iċ-ċelloli jinkitbu bħal r3c7: ringiela 3, kolonna 7. Ir-ringieli jingħaddu minn fuq, il-kolonni mix-xellug, u l-kaxxi minn 1 sa 9 minn fuq ix-xellug, ringiela b'ringiela.",
+        "row": "ringiela {n}",
+        "column": "kolonna {n}",
+        "box": "kaxxa {n}",
+        "elimItem": "{d} minn {cell}",
+        "regions": "Ringiela 5, kolonna 5 u kaxxa 5 fil-bidu ta' puzzle",
+        "firstMove": "Single mikxuf: {cell} tista' tkun biss {d}",
+        "breadcrumb": "Navigazzjoni"
+      },
+      "howTo": {
+        "title": "Kif Tilgħab Sudoku: Regoli, Gradilja u l-Ewwel Mossi",
+        "description": "Tgħallem kif tilgħab Sudoku: ir-regoli, ir-ringieli, il-kolonni u l-kaxxi, għaliex kull puzzle għandu soluzzjoni waħda, in-noti u l-ewwel mossi tiegħek.",
+        "h1": "Kif tilgħab Sudoku",
+        "summary": "Is-Sudoku huwa puzzle tal-loġika fuq gradilja 9×9. Imla kull ċellola vojta b'ċifra minn 1 sa 9 b'mod li kull ringiela, kull kolonna u kull kaxxa 3×3 ikun fiha kull ċifra eżatt darba. Xi ċifri jingħataw fil-bidu; il-bqija tiddeduċihom int, ċellola ċerta waħda wara l-oħra, u qatt ma jkollok għalfejn tbassar. Din il-gwida tispjega l-gradilja, ir-regoli, il-prinċipju tas-soluzzjoni unika, in-noti u strateġija sempliċi għall-ewwel mossi tiegħek. Tista' tipprattika kollox f'[Bare Sudoku](play), li huwa b'xejn u għandu ħjiel li jispjega l-loġika.",
+        "sections": [
+          {
+            "h": "X'inhuma r-regoli tas-Sudoku?",
+            "p": [
+              "Hemm tliet regoli biss, u huma l-istess regola meqjusa minn tliet direzzjonijiet: kull ringiela trid ikun fiha ċ-ċifri minn 1 sa 9, kull kolonna trid ikun fiha ċ-ċifri minn 1 sa 9, u kull kaxxa 3×3 trid ikun fiha ċ-ċifri minn 1 sa 9. Għalhekk ċifra qatt ma tista' tidher darbtejn fl-istess ringiela, kolonna jew kaxxa.",
+              "Iċ-ċifri mogħtija, stampati b'tipa grassa, huma fissi. Ix-xogħol tiegħek hu li timla ċ-ċelloli vojta. M'hemmx aritmetika u m'hemmx ordni: iċ-ċifri huma sempliċement disa' simboli differenti. Tista' tilgħab b'ittri jew b'forom u xejn ma jinbidel."
+            ]
+          },
+          {
+            "h": "Kif inhi organizzata l-gradilja?",
+            "p": [
+              "Il-gradilja għandha 81 ċellola f'9 ringieli u 9 kolonni. Linji ħoxnin jaqsmuha f'disa' kaxxi ta' 3×3. Kull ċellola tappartjeni eżatt għal ringiela waħda, kolonna waħda u kaxxa waħda, u dawn it-tliet gruppi huma l-unitajiet tagħha. L-20 ċellola l-oħra li jaqsmu unità ma' ċellola jissejħu l-ġirien tagħha; ċifra mqiegħda f'ċellola teskludi dik iċ-ċifra mill-20 ġar kollha.",
+              "Iċ-ċelloli jinkitbu bħal r3c7: ringiela 3, kolonna 7. Ir-ringieli jingħaddu minn fuq, il-kolonni mix-xellug, u l-kaxxi minn 1 sa 9 minn fuq ix-xellug, ringiela b'ringiela. Din in-notazzjoni tintuża f'kull gwida tat-tekniki u tiswa titgħallimha: r5c5 hija ċ-ċentru tal-gradilja."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Għaliex kull Sudoku għandu soluzzjoni waħda biss?",
+            "p": [
+              "Sudoku xieraq għandu soluzzjoni waħda, u dan hu li jġiegħel il-loġika taħdem. Kull darba li turi li ċifra ma tistax tmur imkien ieħor f'unità, trid tmur fiċ-ċellola li fadal, għax is-soluzzjoni teżisti u hija unika. Kieku puzzle kellu żewġ soluzzjonijiet, l-ebda raġunament ma jkun jista' jagħżel bejniethom u f'xi punt tkun kostrett tbassar.",
+              "Bare Sudoku joħloq kull puzzle fuq l-apparat tiegħek u jiċċekkja li għandu soluzzjoni waħda biss u li s-solver loġiku tiegħu jista' jlestih bit-tekniki tal-livell magħżul. Allura jekk teħel, dejjem hemm pass li jmiss x'issib, u l-ħjiel jurih."
+            ]
+          },
+          {
+            "h": "Kif tibda puzzle tas-Sudoku?",
+            "p": [
+              "Ibda minn dak li hu l-aktar ristrett. Din l-ordni taħdem f'kull livell:"
+            ],
+            "list": [
+              "Agħżel ċifra li diġà tidher ħafna drabi, ngħidu aħna sitta jew seba', u sib il-kaxxi li għadhom neqsinha. Spiss tibqa' ċellola waħda biss għaliha f'kaxxa: dak hu [single moħbi](hidden-single).",
+              "Fittex ċelloli mdawra b'ħafna ċifri. Ċellola li r-ringiela, il-kolonna u l-kaxxa tagħha flimkien fihom tmien ċifri differenti għandha kandidat wieħed biss fadal: [single mikxuf](naked-single). Iċ-ċelloli f'ringieli jew kaxxi kważi mimlija huma l-aqwa post fejn tfittex.",
+              "Kull ċifra li tpoġġi tneħħi kandidat minn 20 ġar, allura iċċekkja dawk il-ġirien minnufih. Is-singles għandhom it-tendenza jiġu f'katina.",
+              "Meta t-tqegħid faċli jispiċċa, ikteb in-noti: il-kandidati ta' kull ċellola vojta. Imbagħad fittex ċifra li hija magħluqa f'linja waħda ġo kaxxa ([kandidati msakkra](locked-candidates)) jew żewġ ċelloli li għandhom l-istess żewġ kandidati ([par mikxuf](naked-pairs)).",
+              "Erġa' lura għas-singles wara kull eliminazzjoni. Anki l-puzzles Espert jiġu solvuti l-aktar b'singles; it-teknika avvanzata sempliċement tiftaħ il-pass li jmiss."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "X'inhuma n-noti u meta għandek tużahom?",
+            "p": [
+              "In-noti, imsejħa wkoll marki tal-lapes jew kandidati, huma ċ-ċifri żgħar li tikteb f'ċellola vojta biex tniżżel liema ċifri għadhom possibbli hemm. F'puzzles faċli rari jkollok bżonnhom; minn Diffiċli 'l fuq huma essenzjali, għax tekniki bħall-pari, X-Wing u Y-Wing jitkellmu dwar kandidati, mhux dwar ċifri mqiegħda.",
+              "Żomm in-noti preċiżi: meta tpoġġi ċifra, neħħiha min-noti tal-20 ġar kollha. F'Bare Sudoku dan isir awtomatikament, u Imla n-noti jikteb kull kandidat f'kull ċellola vojta b'tokk wieħed, biex tkun tista' tibda minn sett sħiħ u korrett ta' kandidati. Nota hija fatt, mhux tbassir: tfisser li s'issa xejn ma jeskludi din iċ-ċifra."
+            ]
+          },
+          {
+            "h": "X'għandek tagħmel meta teħel?",
+            "p": [
+              "L-ewwel iċċekkja mill-ġdid il-bażi: kull ringiela, kolonna u kaxxa kważi mimlija hija sors ta' singles. Imbagħad kun żgur li n-noti huma kompluti, għax kandidat nieqes jaħbi l-mudelli u wieħed skadut joħloq mudelli foloz. Imbagħad għaddi mit-[tekniki](techniques) skont id-diffikultà: kandidati msakkra, pari u tlieta, X-Wing, Y-Wing, Swordfish u XYZ-Wing. Kull waħda għandha l-paġna tagħha b'eżempju reali.",
+              "Jekk xejn ma jaħdem, ħu ħjiel. F'Bare Sudoku l-ħjiel l-ewwel jiċċekkja jekk xi ċifra mqiegħda hijiex ħażina, imbagħad isib iċ-ċellola li jmiss li tista' timtela bil-loġika u jsemmi t-teknika, biex titgħallem xi ħaġa anki meta tużah. Agħfas il-ħjiel għal darb'oħra biex tpoġġi ċ-ċifra."
+            ]
+          },
+          {
+            "h": "Kif iddaħħal iċ-ċifri f'Bare Sudoku?",
+            "p": [
+              "Mess ċellola, imbagħad ċifra. Jew mess ċifra l-ewwel: din tissakkar, u kull ċellola li tmiss tirċeviha, li huwa l-aktar mod mgħaġġel biex tpoġġi s-sitt, is-seba' u t-tmien kopja ta' ċifra. Mess iċ-ċifra għal darb'oħra biex tiftaħha. Il-buttuna Noti taqleb għall-marki tal-lapes, Ħassar ibattal ċellola, Ħassar l-aħħar jerġa' lura minn kwalunkwe mossa, u l-iżbalji jiġu mmarkati bl-aħmar sakemm ma titfix dan mill-menu.",
+              "Fuq tastiera, uża l-vleġeġ biex tiċċaqlaq, 1 sa 9 biex iddaħħal ċifra, Backspace biex tħassar, N għan-noti, U biex tħassar l-aħħar mossa, H għal ħjiel, F biex timla n-noti u Escape għall-menu. Il-logħba tissejvja waħedha, taħdem offline u m'għandhiex reklami u lanqas kont."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Qatt ikollok bżonn tbassar fis-Sudoku?",
+            "Mhux f'puzzle xieraq. Kull puzzle ta' Bare Sudoku għandu soluzzjoni waħda biss u huwa ċċekkjat li jista' jiġi solvut bil-loġika biss, sat-tekniki tal-livell tiegħu. Jekk tħoss li trid tbassar, jew hemm kandidat nieqes min-noti tiegħek jew hemm teknika li qed tistenna li ssibha."
+          ],
+          [
+            "Tista' ċifra tidher darbtejn f'ringiela, kolonna jew kaxxa?",
+            "Le. Dik hija r-regola kollha: kull waħda mid-disa' ringieli, id-disa' kolonni u d-disa' kaxxi fiha kull ċifra minn 1 sa 9 eżatt darba. Jekk żewġ ċifri identiċi jaqsmu unità, mill-inqas waħda minnhom hija ħażina."
+          ],
+          [
+            "X'inhi d-differenza bejn Faċli, Medju, Diffiċli u Espert?",
+            "Il-livell jiġi deċiż mit-tekniki li l-puzzle jeħtieġ. Faċli u Medju jiġu solvuti b'singles biss, u Faċli jibda b'mill-inqas 38 ċifra mogħtija. Diffiċli jeħtieġ kandidati msakkra jew pari u tlieta. Espert jeħtieġ X-Wing, Y-Wing, Swordfish jew XYZ-Wing."
+          ],
+          [
+            "Aħjar timla n-noti f'kull ċellola jew f'uħud biss?",
+            "Għal puzzles Diffiċli u Espert, imlihom kollha: mudelli bħall-pari, X-Wing u Y-Wing jidhru biss meta kull kandidat ikun miktub. F'Faċli u Medju, in-noti huma fakultattivi u ħafna plejers sempliċement ifittxu s-singles."
+          ],
+          [
+            "Kemm idum Sudoku?",
+            "Puzzle Faċli jieħu ftit minuti; puzzles Espert jistgħu jieħdu għoxrin minuta jew aktar, skont kemm malajr tinnota l-mudell avvanzat. Bare Sudoku juri kronometru, iwaqqfu waqt li l-menu jkun miftuħ u ma jżommx klassifika, allura ilgħab bil-pass tiegħek."
+          ],
+          [
+            "Is-Sudoku jeħtieġ l-aritmetika?",
+            "Le. Iċ-ċifri huma biss tikketti; m'hemm l-ebda żieda jew għadd. Kwalunkwe disa' simboli jaħdmu, u għalhekk is-Sudoku huwa puzzle tal-loġika u mhux puzzle tan-numri."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tekniki ta' Soluzzjoni tas-Sudoku Spjegati b'Eżempji",
+        "description": "Id-disa' tekniki kollha tas-Sudoku, minn singles mikxufa sa Swordfish u XYZ-Wing, fl-ordni li jużahom il-ħjiel ta' Bare Sudoku, kull waħda b'eżempju reali.",
+        "h1": "Tekniki ta' soluzzjoni tas-Sudoku",
+        "intro": [
+          "Kull Sudoku jista' jiġi solvut b'sett żgħir ta' tekniki loġiċi. Dan l-indiċi jelenka d-disa' tekniki li jużaw is-solver ta' Bare Sudoku u l-ħjiel tiegħu, fl-ordni li s-solver jippruvahom: l-ewwel is-singles, imbagħad l-eliminazzjonijiet f'unità waħda, imbagħad mudelli li jinfirxu fuq diversi ringieli u kolonni. Kull teknika għandha l-paġna tagħha b'definizzjoni, kif tagħrafha, eżempju reali minn puzzle ġenerat u l-iżbalji komuni.",
+          "Il-livell ta' puzzle jiġi deċiż mill-aktar teknika diffiċli li jeħtieġ. Il-puzzles Faċli u Medju jeħtieġu singles biss, il-puzzles Diffiċli jeħtieġu kandidati msakkra jew pari u tlieta, u l-puzzles Espert jeħtieġu mill-inqas mudell wieħed tat-tip fish jew wing. Ikun x'ikun il-livell, is-singles jagħmlu l-biċċa l-kbira tax-xogħol; it-teknika avvanzata tneħħi kandidat jew tnejn u s-singles ikomplu minn hemm."
+        ],
+        "faq": [
+          [
+            "F'liema ordni għandi nipprova t-tekniki tas-Sudoku?",
+            "L-eħfef l-ewwel: singles mikxufa, singles moħbija, kandidati msakkra, pari u tlieta mikxufa, pari u tlieta moħbija, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku jippruvahom eżatt f'din l-ordni, u ħjiel dejjem isemmi l-aktar teknika sempliċi li tagħmel progress."
+          ],
+          [
+            "Għandi bżonn dawn it-tekniki kollha biex insolvi s-Sudoku?",
+            "Għal puzzles Faċli u Medju, is-singles huma biżżejjed. Il-puzzles Diffiċli jżidu l-kandidati msakkra u s-sottosettijiet. Il-puzzles Espert jeħtieġu mill-inqas fish jew wing wieħed, iżda ġeneralment darba jew darbtejn biss f'kull puzzle."
+          ],
+          [
+            "Hemm tekniki aktar diffiċli minn XYZ-Wing?",
+            "Iva, pereżempju l-ktajjen, it-testijiet tal-uniċità u l-forcing nets. Bare Sudoku ma joħloqx puzzles li jeħtiġuhom, allura kull puzzle fil-logħba jista' jitlesta bid-disa' tekniki ta' din il-paġna."
+          ],
+          [
+            "X'inhu kandidat?",
+            "Ċifra li għadha tista' tmur f'ċellola vojta għax xejn fir-ringiela, fil-kolonna jew fil-kaxxa tagħha ma jeskludiha s'issa. In-noti fil-logħba huma kandidati. Kull teknika lil hinn mis-singles tirraġuna fuq il-kandidati, allura żommhom kompluti u preċiżi."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Single mikxuf",
+          "title": "Single Mikxuf fis-Sudoku: Iċ-Ċellola b'Kandidat Wieħed",
+          "description": "Single mikxuf huwa ċellola vojta b'ċifra possibbli waħda biss. Tgħallem issib singles mikxufa malajr, b'eżempju reali pass pass u l-iżbalji tas-soltu.",
+          "h1": "Single mikxuf (naked single)",
+          "summary": "Single mikxuf huwa ċellola vojta li għandha eżatt kandidat wieħed: it-tmien ċifri l-oħra diġà jidhru fir-ringiela, fil-kolonna jew fil-kaxxa tagħha. Iċ-ċifra li fadal trid tmur hemm. Hija l-aktar teknika sempliċi tas-Sudoku, dik li tuża l-aktar, u dik li l-ħjiel ta' Bare Sudoku jirrapporta bħala \"Kandidat wieħed biss hawn\".",
+          "when": [
+            "Dejjem. Is-singles mikxufa jidhru mill-ewwel mossa sal-aħħar, f'kull livell. F'puzzles Faċli u Medju huma, flimkien mas-singles moħbija, l-unika teknika li għandek bżonn. F'puzzles aktar diffiċli kull eliminazzjoni li tagħmel teknika avvanzata normalment tħalli single mikxuf warajha, allura fittex għalihom wara kull pass."
+          ],
+          "spot": [
+            "Ħares lejn ċelloli b'ħafna ġirien mimlija: ċellola f'ringiela li diġà għandha seba' ċifri, jew ċellola li r-ringiela, il-kolonna u l-kaxxa tagħha flimkien ikopru tmien ċifri differenti. Mingħajr noti, għodd iċ-ċifri li tara miċ-ċellola. Bin-noti, single mikxuf huwa sempliċement ċellola li turi kandidat wieħed, u għalhekk Imla n-noti jagħmilhom faċli biex issibhom."
+          ],
+          "examples": [
+            {
+              "h": "Eżempju",
+              "steps": [
+                "Ħares lejn {cell}. Hija vojta, allura elenka kull ċifra li diġà tqiegħdet fir-ringiela, fil-kolonna u fil-kaxxa tagħha.",
+                "Ringiela {row} fiha {rowDigits}. Kolonna {col} fiha {colDigits}. Kaxxa {box} fiha {boxDigits}.",
+                "Flimkien jeskludu kull ċifra ħlief {d}, allura {d} huwa l-uniku kandidat li fadal f'{cell}.",
+                "Ikteb {d} f'{cell}. Imbagħad iċċekkja jekk iċ-ċifra l-ġdida toħloqx single ieħor fl-istess ringiela, kolonna jew kaxxa."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tgħodd ir-ringiela biss jew il-kaxxa biss. It-tmien ċifri esklużi normalment jiġu mit-tliet unitajiet flimkien.",
+            "Tinsa li ċifra li għadek kif poġġejt teskludi wkoll kandidati mill-20 ġar tagħha; singles mikxufa ġodda jidhru eżatt wara kull tqegħid.",
+            "Tħawwad single mikxuf ma' single moħbi: single mikxuf għandu kandidat wieħed fadal fiċ-ċellola, single moħbi għandu ċellola waħda fadla għaċ-ċifra f'unità."
+          ],
+          "faq": [
+            [
+              "X'inhu single mikxuf fis-Sudoku?",
+              "Ċellola vojta b'eżatt kandidat wieħed. Tmien ċifri differenti diġà tqiegħdu fir-ringiela, fil-kolonna u fil-kaxxa tagħha, allura d-disa' ċifra hija l-unika li tidħol."
+            ],
+            [
+              "Għaliex jissejjaħ mikxuf?",
+              "Għax il-kandidat waħdieni jidher direttament fiċ-ċellola ladarba n-noti jkunu miktuba; xejn ma jaħbih. Single moħbi, għall-kuntrarju, jinsab fost kandidati oħra u jinstab billi tħares lejn iċ-ċifra minflok iċ-ċellola."
+            ],
+            [
+              "Jista' puzzle jiġi solvut b'singles mikxufa biss?",
+              "Ħafna puzzles Faċli jistgħu, iżda l-biċċa l-kbira jeħtieġu wkoll singles moħbija. Bare Sudoku jikklassifika l-puzzles Faċli u Medju bħala solvibbli b'singles taż-żewġ tipi; il-puzzles Diffiċli u Espert jeħtieġu mill-inqas teknika oħra."
+            ],
+            [
+              "Il-ħjiel juri s-singles mikxufa?",
+              "Iva. Meta t-tqegħid li jmiss ikun single mikxuf, il-ħjiel jagħżel iċ-ċellola u jgħid \"Kandidat wieħed biss hawn\" maċ-ċifra. Agħfas il-ħjiel għal darb'oħra biex tpoġġiha."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Single moħbi",
+          "title": "Single Moħbi fis-Sudoku: L-Uniku Post għal Ċifra",
+          "description": "Single moħbi huwa l-unika ċellola f'ringiela, kolonna jew kaxxa fejn ċifra għadha tista' tmur. Tgħallem issibhom billi tiskennja ċifra waħda kull darba.",
+          "h1": "Single moħbi (hidden single)",
+          "summary": "Single moħbi huwa ċifra li fadlilha ċellola possibbli waħda biss f'ringiela, kolonna jew kaxxa, anki jekk dik iċ-ċellola turi kandidati oħra. Peress li l-unità trid ikun fiha ċ-ċifra, din tmur hemm. Il-ħjiel ta' Bare Sudoku jirrapportah bħala \"L-uniku post għal 5 f'din ir-ringiela\", kolonna jew kaxxa.",
+          "when": [
+            "Kull meta ċifra tkun avvanzata sew: ladarba ċifra tidher ħames jew sitt darbiet, il-kaxxi li fadal ikunu ristretti ħafna, u single moħbi spiss ikun il-mossa li jmiss. Is-singles moħbija huma t-teknika ewlenija tal-puzzles Faċli u Medju u jibqgħu s-sinsla tax-xogħol f'kull livell."
+          ],
+          "spot": [
+            "Iskennja ċifra waħda kull darba. Ħu ċifra, sib kaxxa li m'għandhiex fiha, u aqta' kull ċellola ta' dik il-kaxxa li taqsam ringiela jew kolonna ma' kopja mqiegħda taċ-ċifra. Jekk tibqa' ċellola waħda, sibt single moħbi. L-istess skennjar jaħdem fuq ir-ringieli u l-kolonni. Fil-logħba, mess ċifra mqiegħda: kull kopja tagħha tiġi enfasizzata, u ċ-ċelloli ħielsa jispikkaw."
+          ],
+          "examples": [
+            {
+              "h": "Eżempju",
+              "steps": [
+                "Kaxxa {box} għad m'għandhiex {d}, allura waħda miċ-ċelloli vojta tagħha trid iżżommha. Iċ-ċelloli vojta huma {empties}.",
+                "F'kull waħda minnhom ħlief {cell}, {d} hija mblukkata minn {d} diġà mqiegħda fl-istess ringiela jew kolonna, allura {d} mhix kandidat hemm.",
+                "Dan iħalli {cell} bħala l-uniku post għal {d} f'kaxxa {box}. Ikteb {d} hemm, anki jekk {cell} għad turi kandidati oħra."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tpoġġi ċ-ċifra f'ċellola li probabbilment biss hija t-tajba: iċċekkja kull ċellola vojta oħra tal-unità, mhux biss dawk ovvji.",
+            "Taqbeż single moħbi għax iċ-ċellola turi diversi kandidati. Il-kandidati l-oħra ma jgħoddux; li jgħodd hu li ċ-ċifra m'għandha l-ebda post ieħor fl-unità.",
+            "Tiskennja l-kaxxi biss. Ir-ringieli u l-kolonni jagħtu singles moħbija daqstant spiss, speċjalment lejn it-tmiem."
+          ],
+          "faq": [
+            [
+              "X'inhu single moħbi fis-Sudoku?",
+              "Ċifra li tista' tmur f'ċellola waħda biss ta' ringiela, kolonna jew kaxxa. L-unità trid ikun fiha ċ-ċifra, allura ċ-ċellola hija deċiża anki jekk għad għandha kandidati oħra."
+            ],
+            [
+              "X'inhi d-differenza bejn single moħbi u single mikxuf?",
+              "Single mikxuf jirrigwarda ċellola: kandidat wieħed fadal. Single moħbi jirrigwarda ċifra: ċellola waħda fadla f'unità. It-tnejn ipoġġu ċifra b'ċertezza."
+            ],
+            [
+              "Liema wieħed hu l-eħfef biex issibu?",
+              "Mingħajr noti, is-singles moħbija ġeneralment huma l-eħfef għax tista' tiskennja l-gradilja għal ċifra waħda kull darba. B'noti kompluti, is-singles mikxufa huma l-eħfef, peress li ċellola b'kandidat wieħed tispikka."
+            ],
+            [
+              "Kif jiddeskrivi l-ħjiel single moħbi?",
+              "Bħala \"L-uniku post għal\" iċ-ċifra f'din ir-ringiela, f'din il-kolonna jew f'din il-kaxxa, biċ-ċellola magħżula. Agħfas il-ħjiel għal darb'oħra biex tpoġġiha."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Kandidati msakkra",
+          "title": "Kandidati Msakkra fis-Sudoku: Pointing u Claiming",
+          "description": "Kandidati msakkra: meta l-kandidati ta' ċifra f'kaxxa huma kollha f'linja waħda, jew bil-maqlub, iċ-ċifra titneħħa minn postijiet oħra. Żewġ eżempji reali.",
+          "h1": "Kandidati msakkra (locked candidates)",
+          "summary": "Il-kandidati msakkra huma l-ewwel teknika li tneħħi kandidati minflok tpoġġi ċifra. Għandha żewġ forom. Pointing: f'kaxxa, il-kandidati kollha għal ċifra jinsabu f'ringiela jew kolonna waħda, allura ċ-ċifra titneħħa mill-bqija ta' dik il-linja. Claiming: f'ringiela jew kolonna, il-kandidati kollha għal ċifra jinsabu f'kaxxa waħda, allura ċ-ċifra titneħħa mill-bqija ta' dik il-kaxxa. Il-ħjiel ta' Bare Sudoku jimmarka t-tqegħid li tiftaħ b'\"Kandidati msakkra\".",
+          "when": [
+            "Meta s-singles jispiċċaw f'puzzle Diffiċli, din hija l-ewwel ħaġa li tipprova. Teħtieġ noti kompluti mill-inqas għaċ-ċifra li qed teżamina. Il-kandidati msakkra huma komuni: il-biċċa l-kbira tal-puzzles Diffiċli jeħtiġuhom, u l-puzzles Espert jużawhom bejn il-mudelli l-kbar."
+          ],
+          "spot": [
+            "Għal pointing, ħares lejn kull kaxxa u kull ċifra nieqsa minnha: jekk iċ-ċelloli kandidati għal dik iċ-ċifra jinsabu f'ringiela jew kolonna waħda, iċċekkja jekk l-istess ċifra tidhirx bħala kandidat aktar 'il bogħod tul dik il-linja, barra l-kaxxa. Għal claiming, ħares tul ringiela jew kolonna: jekk il-kandidati għal ċifra huma kollha ġo kaxxa waħda, il-bqija ta' dik il-kaxxa tista' titnaddaf. Fil-logħba, mess il-buttuna ta' ċifra biex tenfasizza kull kandidat tagħha; linja ta' żewġ jew tliet noti enfasizzati ġo kaxxa waħda hija l-mudell."
+          ],
+          "examples": [
+            {
+              "h": "Pointing",
+              "steps": [
+                "F'kaxxa {box}, iċ-ċifra {d} għandha biss dawn iċ-ċelloli kandidati: {cells}. Kollha jinsabu f'ringiela {row}.",
+                "Kaxxa {box} teħtieġ {d}, allura ċ-ċifra {d} ta' ringiela {row} tinsab ġo kaxxa {box}, irrispettivament minn liema waħda minn dawk iċ-ċelloli tispiċċa fiha.",
+                "Ringiela {row} ma tistax iżżomm {d} oħra, allura neħħi {d} miċ-ċelloli ta' ringiela {row} barra l-kaxxa: {elim}."
+              ]
+            },
+            {
+              "h": "Claiming",
+              "steps": [
+                "F'ringiela {row}, iċ-ċifra {d} tista' tmur biss f'{cells}, u kollha jinsabu ġo kaxxa {box}.",
+                "Ringiela {row} trid ikun fiha {d}, allura ċ-ċifra {d} ta' kaxxa {box} tieħodha ringiela {row}. Iċ-ċelloli l-oħra ta' kaxxa {box} ma jistgħux iżommu {d}.",
+                "Neħħi {d} minn {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tneħħi ċ-ċifra ġewwa l-kaxxa minflok barra minnha fil-każ ta' pointing, jew bil-maqlub fil-każ ta' claiming. L-eliminazzjonijiet dejjem imorru fiċ-ċelloli li huma fil-linja iżda mhux fil-kaxxa, jew fil-kaxxa iżda mhux fil-linja.",
+            "Tapplika r-regola meta l-kandidati jinfirxu fuq żewġ ringieli tal-kaxxa. Iċ-ċelloli kandidati kollha taċ-ċifra fil-kaxxa għandhom ikunu f'linja waħda.",
+            "Tinsa tfittex is-single li toħloq l-eliminazzjoni. Il-kandidati msakkra rari jpoġġu ċifra waħedhom; iħejju single."
+          ],
+          "faq": [
+            [
+              "X'inhuma l-kandidati msakkra fis-Sudoku?",
+              "Kandidati għal ċifra li huma magħluqa fl-intersezzjoni ta' kaxxa u linja. Peress li l-kaxxa, jew il-linja, trid ikollha ċ-ċifra f'dik l-intersezzjoni, iċ-ċifra tista' titneħħa mill-bqija tal-linja, jew mill-bqija tal-kaxxa."
+            ],
+            [
+              "X'inhi d-differenza bejn pointing u claiming?",
+              "Pointing jibda minn kaxxa: il-kandidati taċ-ċifra fil-kaxxa jippuntaw tul ringiela jew kolonna waħda, allura ċ-ċifra titneħħa mill-bqija ta' dik il-linja. Claiming jibda minn ringiela jew kolonna: il-kandidati tal-linja għaċ-ċifra huma kollha f'kaxxa waħda, allura l-linja titlob iċ-ċifra għaliha u din titneħħa mill-bqija tal-kaxxa."
+            ],
+            [
+              "Il-kandidati msakkra jissejħu wkoll intersection removal?",
+              "Iva. Ismijiet oħra huma box-line reduction għall-forma claiming u pointing pairs jew pointing triples għall-forma pointing. Bare Sudoku juża isem wieħed għat-tnejn."
+            ],
+            [
+              "Liema livell jeħtieġ il-kandidati msakkra?",
+              "Diffiċli. Puzzle li jeħtieġ kandidati msakkra jew sottosettijiet iżda xejn aktar diffiċli jiġi kklassifikat Diffiċli; il-puzzles Espert jeħtieġu wkoll fish jew wing."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Pari u tlieta mikxufa",
+          "title": "Pari u Tlieta Mikxufa fis-Sudoku: Kif Jaħdmu",
+          "description": "Pari u tlieta mikxufa: żewġ jew tliet ċelloli f'unità li jaqsmu l-istess żewġ jew tliet kandidati. Tgħallem issibhom u x'għandek tneħħi, b'eżempji reali.",
+          "h1": "Pari u tlieta mikxufa (naked pairs)",
+          "summary": "Par mikxuf huwa żewġ ċelloli fl-istess ringiela, kolonna jew kaxxa li għandhom eżatt l-istess żewġ kandidati. Iż-żewġ ċifri jridu jmorru f'dawk iż-żewġ ċelloli, allura jistgħu jitneħħew minn kull ċellola oħra tal-unità. Tlieta mikxufa hija l-istess idea bi tliet ċelloli u tliet ċifri; kull ċellola tista' turi tnejn minnhom jew it-tlieta. Il-ħjiel ta' Bare Sudoku jimmarka t-tqegħid li jirriżulta \"Par jew tlieta\".",
+          "when": [
+            "Wara li n-noti jkunu kompluti u s-singles u l-kandidati msakkra jkunu spiċċaw. Il-pari mikxufa huma komuni ħafna f'puzzles Diffiċli, it-tlieta mikxufa inqas. It-tnejn jiswew li tiċċekkjahom f'kull unità li għad għandha ħames ċelloli vojta jew aktar."
+          ],
+          "spot": [
+            "Fittex ċelloli b'żewġ kandidati biss u sib ċellola oħra fl-istess unità bl-istess tnejn. Għat-tlieta, ħares lejn unitajiet b'diversi ċelloli ta' żewġ u tliet kandidati u ċċekkja jekk tlieta minnhom flimkien jużawx tliet ċifri differenti biss. Ċelloli b'eżatt l-istess kandidati huma faċli biex tarahom ladarba n-noti jkunu miktuba; Imla n-noti fil-logħba jagħmel dan b'tokk wieħed."
+          ],
+          "examples": [
+            {
+              "h": "Par mikxuf",
+              "steps": [
+                "{cellA} u {cellB} f'{unit} għandhom eżatt l-istess żewġ kandidati: {d1} u {d2}.",
+                "Waħda minnhom trid tkun {d1} u l-oħra {d2}. Ma nafux liema, iżda ż-żewġ ċifri jintużaw minn dawn iż-żewġ ċelloli.",
+                "Għalhekk l-ebda ċellola oħra ta' {unit} ma tista' żżomm {d1} jew {d2}. Neħħi {elim}."
+              ]
+            },
+            {
+              "h": "Tlieta mikxufa",
+              "steps": [
+                "Tliet ċelloli ta' {unit} jieħdu l-kandidati kollha tagħhom mill-istess tliet ċifri, {digits}: {cells}.",
+                "It-tliet ċifri jridu jimlew dawn it-tliet ċelloli f'xi ordni. Ċellola m'għandhiex bżonn turi t-tliet kandidati kollha; li jgħodd hu li l-ebda waħda mit-tliet ċelloli m'għandha kandidat barra s-sett.",
+                "Neħħi {digits} minn kull ċellola oħra ta' {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tieħu żewġ ċelloli li jaqsmu żewġ kandidati iżda għandhom ukoll it-tielet wieħed. Għal par mikxuf, kull ċellola trid ikollha eżatt iż-żewġ kandidati u xejn aktar.",
+            "Tneħħi ċ-ċifri miċ-ċelloli tal-par infushom. Il-par iżomm il-kandidati tiegħu; l-eliminazzjonijiet imorru fiċ-ċelloli l-oħra tal-unità.",
+            "Titlob li kull ċellola ta' tlieta turi t-tliet ċifri kollha. Ċellola b'tnejn mit-tlieta hija tajba, sakemm l-ebda ċellola m'għandha kandidat barra s-sett."
+          ],
+          "faq": [
+            [
+              "X'inhu par mikxuf fis-Sudoku?",
+              "Żewġ ċelloli f'unità waħda li t-tnejn għandhom eżatt l-istess żewġ kandidati. Dawk iż-żewġ ċifri huma msakkra f'dawk iż-żewġ ċelloli, allura jistgħu jitneħħew mill-bqija tal-unità."
+            ],
+            [
+              "X'inhi tlieta mikxufa?",
+              "Tliet ċelloli f'unità waħda li l-kandidati tagħhom flimkien huma tliet ċifri biss. Kull ċellola jista' jkollha tnejn jew tlieta minnhom. It-tliet ċifri jimlew it-tliet ċelloli, allura jistgħu jitneħħew miċ-ċelloli l-oħra tal-unità."
+            ],
+            [
+              "Par mikxuf ipoġġi ċifra?",
+              "Mhux waħdu. Ineħħi kandidati, u t-tneħħija normalment tħalli single mikxuf jew moħbi. Il-ħjiel f'Bare Sudoku juri dak is-single u jsemmi t-teknika li għamlitu possibbli."
+            ],
+            [
+              "Jista' par mikxuf ikun f'kaxxa u f'ringiela fl-istess ħin?",
+              "Iva. Jekk iż-żewġ ċelloli jaqsmu ringiela u kaxxa, il-par jelimina fiż-żewġ unitajiet. Bare Sudoku jittrattahom unità waħda kull darba."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Pari u tlieta moħbija",
+          "title": "Pari u Tlieta Moħbija fis-Sudoku: Kif Issibhom",
+          "description": "Par moħbi huwa żewġ ċifri li jistgħu jmorru biss fl-istess żewġ ċelloli ta' unità, allura l-kandidati l-oħra tagħhom jitneħħew. Tgħallem issibhom pass pass.",
+          "h1": "Pari u tlieta moħbija (hidden pairs)",
+          "summary": "Par moħbi huwa żewġ ċifri li, f'ringiela, kolonna jew kaxxa waħda, huma kandidati fl-istess żewġ ċelloli u mkien ieħor. Dawk iż-żewġ ċelloli jridu jżommu dawk iż-żewġ ċifri, allura kull kandidat ieħor fihom jista' jitneħħa. Tlieta moħbija taħdem bl-istess mod bi tliet ċifri magħluqa fi tliet ċelloli. Wara t-tneħħija ċ-ċelloli juru par jew tlieta mikxufa. Il-ħjiel ta' Bare Sudoku jimmarka t-tqegħid li jirriżulta \"Par jew tlieta\".",
+          "when": [
+            "Meta unità jkollha ċelloli b'ħafna kandidati u s-singles ikunu spiċċaw. Il-pari moħbija jistkennu ġo ċelloli mimlija, u għalhekk jiswa tfittixhom eżatt fejn il-pari mikxufa ma jidhrux. It-tlieta moħbija huma rari; Bare Sudoku jfittex għalihom, iżda l-biċċa l-kbira tal-puzzles Diffiċli jiġu solvuti mingħajrhom."
+          ],
+          "spot": [
+            "Aħdem skont iċ-ċifra, mhux skont iċ-ċellola. F'unità, innota ċ-ċelloli fejn tista' tmur kull ċifra nieqsa. Jekk żewġ ċifri għandhom kull waħda żewġ ċelloli possibbli biss u huma l-istess żewġ ċelloli, sibt par moħbi. Fil-logħba, mess il-buttuna ta' ċifra biex tenfasizza l-kandidati tagħha; jekk żewġ ċifri jixegħlu l-istess żewġ ċelloli ta' unità u xejn aktar fiha, dak hu l-mudell."
+          ],
+          "examples": [
+            {
+              "h": "Par moħbi",
+              "steps": [
+                "F'{unit}, iċ-ċifri {d1} u {d2} għandhom kull waħda żewġ ċelloli possibbli biss, u huma l-istess tnejn: {cells}.",
+                "Dawk iż-żewġ ċelloli jridu jżommu {d1} u {d2}, allura l-kandidati l-oħra tagħhom huma impossibbli.",
+                "Neħħi {elim}. Issa ż-żewġ ċelloli juru par mikxuf, li jista' jiftaħ aktar."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tneħħi ż-żewġ ċifri tal-par miċ-ċelloli tal-par. Huma l-kandidati l-oħra ta' dawk iċ-ċelloli li jitneħħew; iċ-ċifri tal-par jibqgħu.",
+            "Taċċetta ċifra li għandha t-tielet ċellola possibbli fl-unità. Iż-żewġ ċifri jridu jkunu limitati għal eżatt iż-żewġ ċelloli.",
+            "Tfittex fil-kaxxi biss. Il-pari moħbija jidhru daqstant spiss fir-ringieli u fil-kolonni."
+          ],
+          "faq": [
+            [
+              "X'inhu par moħbi fis-Sudoku?",
+              "Żewġ ċifri li jistgħu jmorru biss fl-istess żewġ ċelloli ta' unità. Dawk iċ-ċelloli jridu jieħdu dawk iċ-ċifri, allura l-kandidati l-oħra tagħhom jitneħħew."
+            ],
+            [
+              "Kif inhu differenti par moħbi minn par mikxuf?",
+              "Par mikxuf jidher: żewġ ċelloli li juru biss l-istess żewġ kandidati. Par moħbi huwa mgħotti minn kandidati żejda fiż-żewġ ċelloli. Meta tneħħi dawk iż-żejda, par moħbi jsir par mikxuf."
+            ],
+            [
+              "X'inhi tlieta moħbija?",
+              "Tliet ċifri magħluqa fi tliet ċelloli ta' unità. Kull ċifra m'għandhiex għalfejn tidher fit-tliet ċelloli kollha; li jgħodd hu li l-ebda waħda mit-tliet ċifri m'għandha kandidat barra dawk iċ-ċelloli."
+            ],
+            [
+              "Il-ħjiel jagħmel distinzjoni bejn pari moħbija u mikxufa?",
+              "Le. Bare Sudoku jsib it-tnejn u jimmarka t-tqegħid li jirriżulta \"Par jew tlieta\". Il-paġni hawn jifirduhom għax jinstabu b'modi differenti."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing fis-Sudoku: Kif Taħdem it-Teknika",
+          "description": "X-Wing: ċifra b'eżatt żewġ ċelloli kandidati f'żewġ ringieli, allinjati fl-istess żewġ kolonni, titneħħa mill-bqija ta' dawk il-kolonni. Eżempju reali.",
+          "h1": "X-Wing",
+          "summary": "X-Wing huwa mudell ta' ċifra waħda u erba' ċelloli fil-kantunieri ta' rettangolu. Jekk iċ-ċifra għandha eżatt żewġ ċelloli kandidati f'kull waħda minn żewġ ringieli, u dawk iċ-ċelloli jinsabu fl-istess żewġ kolonni, iċ-ċifra trid tokkupa żewġ kantunieri opposti tar-rettangolu. Għalhekk tista' titneħħa minn kull ċellola oħra ta' dawk iż-żewġ kolonni. L-istess jaħdem jekk taqleb ir-ringieli mal-kolonni. Hija l-ewwel teknika Espert f'Bare Sudoku.",
+          "when": [
+            "Meta s-singles, il-kandidati msakkra u s-sottosettijiet ikunu spiċċaw. L-X-Wings huma l-aktar mudell Espert komuni u spiss jidhru meta ċifra jkollha ftit kandidati fadal, tipikament b'erba' sa sitt kopji diġà mqiegħda. Jeħtieġu noti kompluti għaċ-ċifra li qed teżamina."
+          ],
+          "spot": [
+            "Agħżel ċifra u fittex ringieli li fihom għandha eżatt żewġ ċelloli kandidati. Jekk żewġ ringieli bħal dawn jaqsmu l-istess żewġ kolonni, iċċekkja dawk il-kolonni għal kandidati oħra taċ-ċifra: dawk huma l-eliminazzjonijiet. Imbagħad irrepeti bil-kolonni bħala bażi. Fil-logħba, mess il-buttuna taċ-ċifra: kull kandidat tagħha jiġi enfasizzat, u rettangolu ta' erba' noti enfasizzati huwa faċli biex tarah."
+          ],
+          "examples": [
+            {
+              "h": "Eżempju",
+              "steps": [
+                "Iċ-ċifra {d} għandha eżatt żewġ ċelloli kandidati f'ringiela {r1} u eżatt tnejn f'ringiela {r2}, u huma allinjati fl-istess żewġ kolonni, {c1} u {c2}: {cells}.",
+                "Ringiela {r1} tpoġġi ċ-ċifra {d} tagħha f'kolonna {c1} jew {c2}, u ringiela {r2} tpoġġi tagħha fl-oħra. Fi kwalunkwe każ, kolonni {c1} u {c2} jirċievu kull waħda {d} minn dawn iż-żewġ ringieli.",
+                "Għalhekk {d} ma tistax tidher imkien ieħor f'kolonni {c1} u {c2}. Neħħi {d} minn {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tuża ringiela li għandha tliet ċelloli kandidati għaċ-ċifra. Kull ringiela bażi trid ikollha eżatt tnejn, u t-tnejn iridu jkunu fiż-żewġ kolonni komuni.",
+            "Tneħħi ċ-ċifra mir-ringieli minflok mill-kolonni. Bir-ringieli bħala bażi, l-eliminazzjonijiet huma fil-kolonni, u bil-maqlub.",
+            "Tinsa l-verżjoni maqluba. X-Wing mibni fuq kolonni jelimina fir-ringieli."
+          ],
+          "faq": [
+            [
+              "X'inhu X-Wing fis-Sudoku?",
+              "Ċifra li għandha eżatt żewġ ċelloli kandidati f'kull waħda minn żewġ ringieli, fl-istess żewġ kolonni. Iċ-ċifra tokkupa żewġ kantunieri opposti ta' dak ir-rettangolu, allura titneħħa mill-bqija taż-żewġ kolonni. Ir-ringieli u l-kolonni jistgħu jinqalbu."
+            ],
+            [
+              "Għaliex jaħdem X-Wing?",
+              "Kull waħda miż-żewġ ringieli trid tpoġġi ċ-ċifra f'waħda miż-żewġ kolonni, u ż-żewġ ringieli ma jistgħux jużaw l-istess kolonna. Għalhekk iż-żewġ kolonni kull waħda tirċievi l-kopja tagħha taċ-ċifra minn dawn ir-ringieli, u kull kandidat ieħor f'dawk il-kolonni huwa impossibbli."
+            ],
+            [
+              "X-Wing huwa fish?",
+              "Iva. L-X-Wing huwa l-fish ta' daqs tnejn; Swordfish huwa l-fish ta' daqs tlieta. Bare Sudoku jsib it-tnejn."
+            ],
+            [
+              "Liema livell għandu X-Wings?",
+              "Espert. Puzzle li jeħtieġ X-Wing, Y-Wing, Swordfish jew XYZ-Wing jiġi kklassifikat Espert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing fis-Sudoku: Kif Taħdem it-Teknika",
+          "description": "Y-Wing (XY-Wing): pern b'żewġ kandidati u żewġ ġwienaħ li kull wieħed jaqsam wieħed minnhom ikeċċu ċifra minn kull ċellola li tara ż-żewġ ġwienaħ. Eżempju.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, imsejjaħ ukoll XY-Wing, juża tliet ċelloli b'żewġ kandidati kull waħda. Il-pern għandu l-kandidati X u Y. Ġewnaħ wieħed jara l-pern u għandu X u Z; il-ġewnaħ l-ieħor jara l-pern u għandu Y u Z. Ikun x'ikun il-pern, wieħed mill-ġwienaħ irid ikun Z, allura Z jista' jitneħħa minn kull ċellola li tara ż-żewġ ġwienaħ. Hija teknika Espert f'Bare Sudoku.",
+          "when": [
+            "Meta puzzle ikollu diversi ċelloli b'eżatt żewġ kandidati u l-ebda fish ma jkun disponibbli. Il-Y-Wings huma komuni fil-puzzles Espert u jinstabu billi ssegwi ċ-ċelloli b'żewġ kandidati: kull waħda hija pern jew ġewnaħ potenzjali."
+          ],
+          "spot": [
+            "Elenka ċ-ċelloli b'eżatt żewġ kandidati. Għal kull waħda, ittrattaha bħala l-pern bil-kandidati X u Y, u fittex fost il-ġirien tagħha ċellola b'X u ċifra oħra Z, u ċellola b'Y u l-istess Z. Dawk it-tnejn huma l-ġwienaħ. Imbagħad sib iċ-ċelloli li jaraw iż-żewġ ġwienaħ u fihom Z. Innota li l-ġwienaħ m'għandhomx bżonn jaraw lil xulxin."
+          ],
+          "examples": [
+            {
+              "h": "Eżempju",
+              "steps": [
+                "Il-pern {pivot} għandu l-kandidati {x} u {y}. Jara {wingA}, li għandha {x} u {z}, u {wingB}, li għandha {y} u {z}.",
+                "Jekk {pivot} huwa {x}, {wingA} titlef {x} u ssir {z}. Jekk {pivot} huwa {y}, {wingB} issir {z}. F'kull każ wieħed miż-żewġ ġwienaħ huwa {z}.",
+                "Ċellola li tara ż-żewġ ġwienaħ qatt ma tista' tkun {z}. Neħħi {z} minn {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tagħżel ġwienaħ li mhux it-tnejn jaraw il-pern. Kull ġewnaħ irid jaqsam ringiela, kolonna jew kaxxa mal-pern.",
+            "Tneħħi Z minn ċelloli li jaraw ġewnaħ wieħed biss. Iċ-ċellola eliminata trid tara ż-żewġ ġwienaħ.",
+            "Tneħħi Z mill-pern. F'Y-Wing il-pern m'għandux Z; jekk ikollu, il-mudell huwa XYZ-Wing b'regoli differenti."
+          ],
+          "faq": [
+            [
+              "X'inhu Y-Wing fis-Sudoku?",
+              "Tliet ċelloli b'żewġ kandidati: pern b'X u Y, ġewnaħ b'X u Z li jara l-pern, u ġewnaħ b'Y u Z li jara l-pern. Ġewnaħ wieħed dejjem huwa Z, allura Z jitneħħa miċ-ċelloli li jaraw iż-żewġ ġwienaħ."
+            ],
+            [
+              "Y-Wing huwa l-istess bħal XY-Wing?",
+              "Iva. Iż-żewġ ismijiet jiddeskrivu l-istess mudell. Bare Sudoku jsejjaħlu Y-Wing."
+            ],
+            [
+              "Għaliex ġewnaħ wieħed irid ikun Z?",
+              "Jekk il-pern huwa X, l-ewwel ġewnaħ jitlef X u jsir Z. Jekk il-pern huwa Y, it-tieni ġewnaħ isir Z. Il-pern huwa wieħed mit-tnejn, allura ġewnaħ wieħed huwa Z."
+            ],
+            [
+              "Kemm-il ċellola jelimina Y-Wing?",
+              "Normalment waħda jew tnejn: iċ-ċelloli biss li jaraw iż-żewġ ġwienaħ u għad fihom Z. Dan biżżejjed biex joħloq single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish fis-Sudoku: Kif Taħdem it-Teknika",
+          "description": "Swordfish: ċifra magħluqa fi tliet kolonni tul tliet ringieli titneħħa mill-bqija ta' dawk il-kolonni. Il-fish ta' daqs tlieta, spjegat b'eżempju reali.",
+          "h1": "Swordfish",
+          "summary": "Swordfish huwa X-Wing bi tliet ringieli u tliet kolonni. Jekk ċifra għandha mhux aktar minn tliet ċelloli kandidati f'kull waħda minn tliet ringieli, u dawk iċ-ċelloli kollha jaqgħu fl-istess tliet kolonni, it-tliet ringieli jużaw iċ-ċifra f'dawk il-kolonni, u ċ-ċifra tista' titneħħa minn kull ċellola oħra tat-tliet kolonni. Ir-ringieli u l-kolonni jistgħu jinqalbu. Bare Sudoku jfittex Swordfish wara Y-Wing, f'puzzles Espert.",
+          "when": [
+            "Meta X-Wing u Y-Wing ma jsibu xejn. Is-Swordfish huma inqas komuni mill-X-Wings u jeħtieġu ċifra li l-kandidati tagħha huma mxerrda ftit ftit fuq tliet linji. Jeħtieġu noti kompluti u preċiżi għal dik iċ-ċifra."
+          ],
+          "spot": [
+            "Agħżel ċifra u fittex ringieli b'żewġ jew tliet ċelloli kandidati għaliha. Jekk tliet ringieli bħal dawn ikopru tliet kolonni biss b'kollox, iċċekkja dawk il-kolonni għal aktar kandidati taċ-ċifra. Mhux kull ringiela teħtieġ kandidat f'kull kolonna: Swordfish jista' jkollu sitt, seba', tmien jew disa' ċelloli. Fil-logħba, enfasizza ċ-ċifra bil-buttuna tagħha u fittex tliet ringieli li l-kandidati tagħhom jallinjaw fi tliet kolonni."
+          ],
+          "examples": [
+            {
+              "h": "Eżempju",
+              "steps": [
+                "Iċ-ċifra {d} għandha mhux aktar minn tliet ċelloli kandidati f'kull waħda mir-ringieli {rows}, u dawk iċ-ċelloli kollha jaqgħu fil-kolonni {cols}: {cells}.",
+                "Kull waħda mit-tliet ringieli trid tpoġġi ċ-ċifra {d} tagħha f'waħda mit-tliet kolonni, u l-ebda żewġ ringieli ma jistgħu jużaw l-istess kolonna. Għalhekk it-tliet kolonni jieħdu ċ-ċifra {d} tagħhom minn dawn it-tliet ringieli.",
+                "Kull kandidat {d} ieħor fil-kolonni {cols} huwa impossibbli. Neħħi {d} minn {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Titlob id-disa' ċelloli kollha. Swordfish b'żewġ kandidati f'xi ringieli xorta huwa validu, sakemm it-tliet ringieli jkopru tliet kolonni biss.",
+            "Tinkludi ringiela b'erba' ċelloli kandidati. Kull ringiela bażi trid ikollha mhux aktar minn tlieta, kollha fit-tliet kolonni.",
+            "Telimina fir-ringieli bażi. Bir-ringieli bħala bażi, l-eliminazzjonijiet huma fit-tliet kolonni, barra r-ringieli bażi."
+          ],
+          "faq": [
+            [
+              "X'inhu Swordfish fis-Sudoku?",
+              "Ċifra li l-kandidati tagħha fi tliet ringieli huma magħluqa fi tliet kolonni. It-tliet ringieli jridu jpoġġu ċ-ċifra f'dawk it-tliet kolonni, waħda f'kull waħda, allura ċ-ċifra titneħħa miċ-ċelloli l-oħra ta' dawk il-kolonni."
+            ],
+            [
+              "Kif inhu differenti Swordfish minn X-Wing?",
+              "Fid-daqs biss: X-Wing juża żewġ ringieli u żewġ kolonni, Swordfish tlieta u tlieta. Ir-raġunament huwa l-istess."
+            ],
+            [
+              "Swordfish jeħtieġ eżatt disa' ċelloli?",
+              "Le. Kull ringiela jista' jkollha żewġ jew tliet kandidati; il-mudell jeħtieġ biss li t-tliet ringieli flimkien ma jużawx aktar minn tliet kolonni."
+            ],
+            [
+              "Hemm fish ta' daqs erbgħa?",
+              "Iva, il-Jellyfish. Bare Sudoku ma jużahx, għax il-puzzles tiegħu qatt ma jeħtiġuh."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing fis-Sudoku: Kif Taħdem it-Teknika",
+          "description": "XYZ-Wing: pern bi tliet kandidati u żewġ ġwienaħ li jaqsmu wieħed minnhom ikeċċu dik iċ-ċifra minn kull ċellola li tara t-tlieta. Eżempju reali, pass pass.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing huwa Y-Wing li l-pern tiegħu għandu tliet kandidati. Il-pern għandu X, Y u Z; ġewnaħ wieħed jara l-pern u għandu X u Z, l-ieħor jara l-pern u għandu Y u Z. Waħda mit-tliet ċelloli trid tkun Z, allura Z jista' jitneħħa minn kull ċellola li tara t-tlieta. Peress li l-pern innifsu jista' jkun Z, iċ-ċellola eliminata trid tara l-pern kif ukoll iż-żewġ ġwienaħ, u dan jillimitaha għall-kaxxa jew il-linja li jaqsmu ċ-ċelloli. Hija l-aktar teknika diffiċli li juża Bare Sudoku.",
+          "when": [
+            "Biss meta kull ħaġa oħra tfalli. L-XYZ-Wings huma l-aktar mudell rari f'Bare Sudoku u jidhru biss f'puzzles Espert. Fittex għalihom meta ċellola bi tliet kandidati tinsab f'kaxxa ma' ċellola b'żewġ kandidati li taqsam tnejn miċ-ċifri tagħha."
+          ],
+          "spot": [
+            "Ibda minn ċelloli b'eżatt tliet kandidati; kull waħda hija pern possibbli. Fost il-ġirien tagħha, fittex żewġ ċelloli b'żewġ kandidati kull waħda, it-tnejn meħuda mit-tlieta tal-pern, li jaqsmu eżatt ċifra waħda Z. Imbagħad fittex ċelloli li jaraw il-pern u ż-żewġ ġwienaħ u fihom Z. Fil-prattika ġewnaħ wieħed ikun fil-kaxxa tal-pern u l-ieħor fir-ringiela jew fil-kolonna tiegħu, u ċ-ċelloli eliminati huma ċ-ċelloli li fadal ta' dik il-kaxxa f'dik ir-ringiela jew kolonna."
+          ],
+          "examples": [
+            {
+              "h": "Eżempju",
+              "steps": [
+                "Il-pern {pivot} għandu tliet kandidati: {x}, {y} u {z}. Jara {wingA} b'{x} u {z}, u {wingB} b'{y} u {z}.",
+                "Jekk {pivot} huwa {z}, lest. Jekk huwa {x}, {wingA} trid tkun {z}. Jekk huwa {y}, {wingB} trid tkun {z}. F'kull każ waħda mit-tliet ċelloli hija {z}.",
+                "Ċellola li tara t-tlieta ma tistax tkun {z}. Neħħi {z} minn {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Telimina minn ċelloli li jaraw iż-żewġ ġwienaħ biss. B'differenza minn Y-Wing, il-pern jista' jkun Z, allura ċ-ċellola trid tara l-pern ukoll.",
+            "Tuża ġwienaħ li l-kandidati tagħhom mhumiex it-tnejn inklużi fit-tliet kandidati tal-pern.",
+            "Tħawwadha ma' Y-Wing: id-differenza hija t-tielet kandidat fil-pern, u din tbiddel liema ċelloli jistgħu jitnaddfu."
+          ],
+          "faq": [
+            [
+              "X'inhu XYZ-Wing fis-Sudoku?",
+              "Pern bil-kandidati X, Y u Z u żewġ ġwienaħ, wieħed b'X u Z u wieħed b'Y u Z, it-tnejn jaraw il-pern. Waħda mit-tliet ċelloli hija Z, allura Z jitneħħa miċ-ċelloli li jaraw it-tlieta."
+            ],
+            [
+              "Kif inhu differenti XYZ-Wing minn Y-Wing?",
+              "Il-pern għandu tliet kandidati minflok tnejn, inkluż Z. Dan jagħmel il-pern post possibbli għal Z, allura ċ-ċelloli biss li jaraw il-pern u ż-żewġ ġwienaħ jistgħu jitilfu Z."
+            ],
+            [
+              "Kemm-il darba jidher XYZ-Wing?",
+              "Rari. F'Bare Sudoku puzzles Espert biss jistgħu jeħtiġuh, u l-biċċa l-kbira ma jeħtiġuhx. Bare Sudoku jiċċekkjah l-aħħar, wara X-Wing, Y-Wing u Swordfish."
+            ],
+            [
+              "Hemm WXYZ-Wing?",
+              "Iva, b'pern ta' erba' kandidati, iżda Bare Sudoku ma jużahx. Kull puzzle fil-logħba jista' jitlesta bid-disa' tekniki ta' din il-gwida."
+            ]
+          ]
+        }
+      }
+    },
+    "lb": {
+      "learnHeading": "Sudoku léieren",
+      "learnText": "Nei beim Sudoku, oder hänks du bei engem schwéiere Rätsel? Zwee Guiden erklären d'Reegelen an all Léisungstechnik, déi d'Tippen notzen, jiddwereen mat engem richtege Beispill.",
+      "howToLink": "Wéi spillt een Sudoku",
+      "techniquesLink": "Techniken fir Sudoku ze léisen",
+      "labels": {
+        "howTo": "Wéi spillt een",
+        "techniques": "Techniken",
+        "play": "Sudoku spillen",
+        "prev": "Viregt Technik",
+        "next": "Nächst Technik",
+        "all": "All Techniken",
+        "example": "Beispill",
+        "steps": "Schrëtt fir Schrëtt",
+        "when": "Wéini se notzen",
+        "spot": "Wéi een se erkennt",
+        "mistakes": "Heefeg Feeler",
+        "inGame": "A Bare Sudoku",
+        "level": "Néideg ab Niveau: {level}",
+        "hint": "Am Spill seet den Tipp: {text}",
+        "legend": "Fett Ziffere si virginn, blo Ziffere goufe beim Léise gesat, kleng Ziffere si Kandidaten. Markéiert Zellen bilden d'Muster, duerchgestrache Kandidate ginn ewechgeholl, an e Kandidat an engem Krees ass d'Ziffer, déi gesat gëtt.",
+        "notation": "Zelle ginn als r3c7 geschriwwen: Rei 3, Kolonn 7. D'Reie gi vun uewe gezielt, d'Kolonne vu lénks, an d'Blocke vun 1 bis 9 vun uewe lénks, Rei fir Rei.",
+        "row": "Rei {n}",
+        "column": "Kolonn {n}",
+        "box": "Block {n}",
+        "elimItem": "{d} aus {cell}",
+        "regions": "Rei 5, Kolonn 5 a Block 5 am Ufank vun engem Rätsel",
+        "firstMove": "E plakege Single: an {cell} kann nëmmen {d} stoen",
+        "breadcrumb": "Navigatiounspad"
+      },
+      "howTo": {
+        "title": "Wéi spillt een Sudoku: Reegelen, Gitter an éischt Zich",
+        "description": "Léier Sudoku spillen: d'Reegelen, wéi Reien, Kolonnen a Blocken zesummenhänken, firwat all Rätsel nëmmen eng Léisung huet, Notizen an déi éischt Zich.",
+        "h1": "Wéi spillt een Sudoku",
+        "summary": "Sudoku ass e Logikrätsel op engem Gitter vun 9×9. Fëll all eidel Zell mat enger Ziffer vun 1 bis 9, sou datt all Rei, all Kolonn an all 3×3-Block all Ziffer genee eemol enthält. E puer Ziffere si vun Ufank u ginn; de Rescht leets du of, eng sécher Zell no der anerer, an du muss ni roden. Dëse Guide erkläert d'Gitter, d'Reegelen, de Prinzip vun der eenzeger Léisung, d'Notizen an eng einfach Strategie fir deng éischt Zich. Du kanns alles a [Bare Sudoku](play) üben, dat gratis ass an Tippen huet, déi d'Logik erklären.",
+        "sections": [
+          {
+            "h": "Wat sinn d'Reegele vum Sudoku?",
+            "p": [
+              "Et gëtt nëmmen dräi Reegelen, an et ass déi selwecht Reegel, aus dräi Richtunge gekuckt: all Rei muss d'Zifferen 1 bis 9 enthalen, all Kolonn muss d'Zifferen 1 bis 9 enthalen, an all 3×3-Block muss d'Zifferen 1 bis 9 enthalen. Eng Ziffer kann dofir ni zweemol an derselwechter Rei, Kolonn oder am selwechte Block stoen.",
+              "Déi virginnen Zifferen, déi fett gedréckt sinn, si fix. Deng Aufgab ass et, déi eidel Zellen auszefëllen. Et gëtt keng Rechnerei a keng Reiefolleg: d'Zifferen sinn einfach néng verschidde Symboler. Du kéins och mat Buschtawen oder Forme spillen, an näischt géif sech änneren."
+            ]
+          },
+          {
+            "h": "Wéi ass d'Gitter opgebaut?",
+            "p": [
+              "D'Gitter huet 81 Zellen an 9 Reien an 9 Kolonnen. Déck Linnen deelen et an néng 3×3-Blocken. All Zell gehéiert zu genee enger Rei, enger Kolonn an engem Block, an dës dräi Gruppe sinn hir Eenheeten. Déi 20 aner Zellen, déi eng Eenheet mat enger Zell deelen, heeschen hir Noperen; eng Ziffer, déi an eng Zell gesat gëtt, schléisst déi Ziffer an allen 20 Noperen aus.",
+              "Zelle ginn als r3c7 geschriwwen: Rei 3, Kolonn 7. D'Reie gi vun uewe gezielt, d'Kolonne vu lénks, an d'Blocke vun 1 bis 9 vun uewe lénks, Rei fir Rei. Dës Notatioun gëtt an all Techniksguide benotzt, an et lount sech, se ze léieren: r5c5 ass d'Mëtt vum Gitter."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Firwat huet all Sudoku genee eng Léisung?",
+            "p": [
+              "E richtegt Sudoku huet eng eenzeg Léisung, an dat ass et, wat d'Logik funktionéiere léisst. All Kéier, wanns du weise kanns, datt eng Ziffer an enger Eenheet néierens anescht hi kann, muss se an déi lescht Zell, well d'Léisung existéiert an eenzeg ass. Hätt e Rätsel zwou Léisungen, kéint keng Iwwerleeung se ënnerscheeden, an iergendwann misst du roden.",
+              "Bare Sudoku generéiert all Rätsel op dengem Apparat a kontrolléiert, datt et genee eng Léisung huet an datt säi logesche Léiser et mat den Technike vum gewielten Niveau fäerdeg léise kann. Wanns du also hänks, gëtt et ëmmer en nächste Schrëtt ze fannen, an den Tipp weist en."
+            ]
+          },
+          {
+            "h": "Wéi fänks du e Sudoku un?",
+            "p": [
+              "Fänk do un, wou et am engsten ass. Dës Reiefolleg funktionéiert op all Niveau:"
+            ],
+            "list": [
+              "Huel eng Ziffer, déi schonn dacks do ass, zum Beispill sechs- oder siwemol, a sich d'Blocken, an deenen se nach feelt. Dacks bleift an engem Block nëmmen eng Zell fir se iwwreg: dat ass e [verstoppte Single](hidden-single).",
+              "Sich Zellen, ronderëm déi scho vill Ziffere stinn. Eng Zell, där hir Rei, Kolonn a Block zesummen aacht verschidden Zifferen enthalen, huet nëmmen nach ee Kandidat: e [plakege Single](naked-single). Zellen a bal volle Reien oder Blocke sinn déi bescht Plaz fir ze sichen.",
+              "All Ziffer, déi s du setz, hëlt 20 Noperen e Kandidat ewech, also kontrolléier déi Noperen direkt. Singles kommen dacks a Ketten.",
+              "Wann déi einfach Plazéierunge fäerdeg sinn, schreif Notizen: d'Kandidate fir all eidel Zell. Sich dann eng Ziffer, déi an engem Block op eng Linn beschränkt ass ([gespaart Kandidaten](locked-candidates)), oder zwou Zelle mat deene selwechten zwee Kandidaten (e [plakegt Puer](naked-pairs)).",
+              "Géi no all Eliminatioun zréck bei d'Singles. Och Expert-Rätsele ginn haaptsächlech mat Singles geléist; déi fortgeschratt Technik mécht just den nächste Schrëtt fräi."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Wat sinn Notizen a wéini solls du se benotzen?",
+            "p": [
+              "Notizen, och Bläistëftmarkéierungen oder Kandidate genannt, sinn déi kleng Zifferen, déi s du an eng eidel Zell schreifs, fir festzehalen, wéi eng Zifferen do nach méiglech sinn. A liichte Rätsele brauchs du se seelen; vu Schwéier un si se onverzichtbar, well Technike wéi Puer, X-Wing an Y-Wing sech ëm Kandidaten dréinen, net ëm gesat Zifferen.",
+              "Hal d'Notizen exakt: wanns du eng Ziffer setz, läsch se aus den Notizen vun allen 20 Noperen. A Bare Sudoku geschitt dat automatesch, an Notizen ausfëllen schreift mat engem Drock all Kandidat an all eidel Zell, sou datt s du vun engem kompletten a korrekte Set vu Kandidaten ufänke kanns. Eng Notiz ass e Fakt, keng Vermutung: si heescht, datt bis elo näischt dës Ziffer ausschléisst."
+            ]
+          },
+          {
+            "h": "Wat méchs du, wanns du hänks?",
+            "p": [
+              "Kontrolléier fir d'éischt nach eng Kéier d'Basis: all bal voll Rei, Kolonn a Block ass eng Quell vu Singles. Kuck dann, datt d'Notize komplett sinn, well e feelende Kandidat Mustere verstoppt an en iwwerholle Kandidat falsch Mustere virtäuscht. Géi dann d'[Techniken](techniques) no Schwieregkeet duerch: gespaart Kandidaten, Puer an Dräier, X-Wing, Y-Wing, Swordfish an XYZ-Wing. All Technik huet hir eege Säit mat engem richtege Beispill.",
+              "Wann näischt hëlleft, huel en Tipp. A Bare Sudoku kontrolléiert den Tipp fir d'éischt, ob eng gesat Ziffer falsch ass, fënnt dann déi nächst Zell, déi sech logesch ausfëlle léisst, a nennt d'Technik, sou datt s du och eppes léiers, wanns du en notz. Dréck nach eng Kéier op den Tipp, fir d'Ziffer ze setzen."
+            ]
+          },
+          {
+            "h": "Wéi gëss du Zifferen a Bare Sudoku an?",
+            "p": [
+              "Tipp op eng Zell, dann op eng Ziffer. Oder tipp fir d'éischt op eng Ziffer: si gëtt gespaart, an all Zell, op déi s du tipps, kritt se. Dat ass de séierste Wee, fir déi sechst, siwent an aacht Kopie vun enger Ziffer ze setzen. Tipp nach eng Kéier op d'Ziffer, fir se fräizeginn. Mam Knäppchen Notizen wiessels du op Bläistëftnotizen, Läschen eidelt eng Zell, Réckgängeg hëlt all Zuch zréck, a Feeler gi rout markéiert, ausser du schalts dat am Menü aus.",
+              "Op enger Tastatur benotz d'Feiltaste fir ze beweegen, 1 bis 9 fir eng Ziffer anzeginn, Backspace fir ze läschen, N fir Notizen, U fir réckgängeg, H fir en Tipp, F fir d'Notizen auszefëllen an Escape fir de Menü. D'Spill späichert sech selwer, funktionéiert offline an huet keng Reklamm a kee Kont."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Muss een am Sudoku iergendwann roden?",
+            "Net an engem richtege Rätsel. All Rätsel vu Bare Sudoku huet genee eng Léisung a gëtt kontrolléiert, datt et eleng mat Logik ze léisen ass, bis zu den Technike vu sengem Niveau. Wanns du mengs, du misst roden, da feelt e Kandidat an dengen Notizen oder eng Technik waart drop, fonnt ze ginn."
+          ],
+          [
+            "Kann eng Ziffer zweemol an enger Rei, Kolonn oder engem Block stoen?",
+            "Nee. Dat ass déi ganz Reegel: jiddereng vun den néng Reien, néng Kolonnen an néng Blocken enthält all Ziffer vun 1 bis 9 genee eemol. Wann zwou identesch Zifferen eng Eenheet deelen, ass mindestens eng dovu falsch."
+          ],
+          [
+            "Wat ass den Ënnerscheed tëscht Einfach, Mëttel, Schwéier an Expert?",
+            "Den Niveau hänkt vun den Techniken of, déi d'Rätsel brauch. Einfach a Mëttel ginn nëmme mat Singles geléist, an Einfach fänkt mat mindestens 38 virginnen Zifferen un. Schwéier brauch gespaart Kandidaten oder Puer an Dräier. Expert brauch X-Wing, Y-Wing, Swordfish oder XYZ-Wing."
+          ],
+          [
+            "Solls du d'Notizen an all Zell ausfëllen oder nëmmen an e puer?",
+            "Bei Schwéier- an Expert-Rätselen fëll se all aus: Mustere wéi Puer, X-Wing an Y-Wing weise sech eréischt, wann all Kandidat geschriwwen ass. Bei Einfach a Mëttel sinn Notizen optional, an déi meescht Spiller sichen einfach no Singles."
+          ],
+          [
+            "Wéi laang dauert e Sudoku?",
+            "En einfacht Rätsel dauert e puer Minutten; Expert-Rätsele kënnen zwanzeg Minutten oder méi daueren, jee nodeem wéi séier s du dat fortgeschratt Muster erkenns. Bare Sudoku weist en Timer, stoppt en, soulaang de Menü op ass, an huet keng Ranglëscht, also spill an dengem eegenen Tempo."
+          ],
+          [
+            "Muss een fir Sudoku rechnen?",
+            "Nee. D'Zifferen sinn nëmmen Etiketten; et gëtt näischt ze addéieren oder ze zielen. All néng Symboler géifen et doen, an dofir ass Sudoku e Logikrätsel an net en Zuelerätsel."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku-Léisungstechniken mat Beispiller erkläert",
+        "description": "All néng Sudoku-Léisungstechniken, vum plakege Single bis Swordfish an XYZ-Wing, an der Reiefolleg vun de Bare-Sudoku-Tippen, jiddwereng mat engem Beispill.",
+        "h1": "Sudoku-Léisungstechniken",
+        "intro": [
+          "All Sudoku léisst sech mat enger klenger Zuel u logeschen Technike léisen. Dësen Index weist déi néng Techniken, déi de Léiser vu Bare Sudoku a seng Tippen notzen, an der Reiefolleg, an där de Léiser se probéiert: fir d'éischt Singles, dann Eliminatiounen an enger eenzeger Eenheet, da Mustere, déi sech iwwer méi Reien a Kolonnen erstrecken. All Technik huet hir eege Säit mat enger Definitioun, wéi een se erkennt, engem richtege Beispill aus engem generéierte Rätsel an den heefegste Feeler.",
+          "Den Niveau vun engem Rätsel hänkt vun der schwéierster Technik of, déi et brauch. Einfach- a Mëttel-Rätsele brauche nëmme Singles, Schwéier-Rätsele brauche gespaart Kandidaten oder Puer an Dräier, an Expert-Rätselen brauchen op d'mannst ee Fësch oder ee Wing. Egal op wéi engem Niveau, d'Singles maachen de gréissten Deel vun der Aarbecht; déi fortgeschratt Technik hëlt ee Kandidat oder zwee ewech, an d'Singles maachen do weider."
+        ],
+        "faq": [
+          [
+            "A wéi enger Reiefolleg soll ech d'Sudoku-Technike probéieren?",
+            "Déi einfachst fir d'éischt: plakeg Singles, verstoppt Singles, gespaart Kandidaten, plakeg Puer an Dräier, verstoppt Puer an Dräier, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku probéiert se genee an där Reiefolleg, an en Tipp nennt ëmmer déi einfachst Technik, déi weiderhëlleft."
+          ],
+          [
+            "Brauch ech all dës Technike fir Sudoku ze léisen?",
+            "Fir Einfach- a Mëttel-Rätsele reechen d'Singles. Schwéier-Rätsele brauchen zousätzlech gespaart Kandidaten an Ënnermengen. Expert-Rätselen brauchen op d'mannst ee Fësch oder ee Wing, mee meeschtens nëmmen eemol oder zweemol pro Rätsel."
+          ],
+          [
+            "Gëtt et méi schwéier Technike wéi XYZ-Wing?",
+            "Jo, zum Beispill Ketten, Eenzegaartegkeetstester a Forcing Nets. Bare Sudoku generéiert keng Rätsel, déi se brauchen, also ka all Rätsel am Spill mat den néng Technike vun dëser Säit fäerdeg geléist ginn."
+          ],
+          [
+            "Wat ass e Kandidat?",
+            "Eng Ziffer, déi nach an eng eidel Zell kéint, well näischt an hirer Rei, hirer Kolonn oder hirem Block se bis elo ausschléisst. D'Notizen am Spill si Kandidaten. All Technik iwwer d'Singles eraus schafft mat Kandidaten, also hal se komplett an exakt."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Plakege Single",
+          "title": "Plakege Single am Sudoku: d'Zell mat engem Kandidat",
+          "description": "E plakege Single ass eng eidel Zell mat nëmmen enger méiglecher Ziffer. Léier, wéi s du se séier fënns, mat engem richtege Beispill an den heefegste Feeler.",
+          "h1": "Plakege Single (Naked Single)",
+          "summary": "E plakege Single ass eng eidel Zell mat genee engem Kandidat: déi aner aacht Zifferen dauche schonn an hirer Rei, hirer Kolonn oder hirem Block op. Déi lescht Ziffer muss dohinner. Et ass déi einfachst Sudoku-Technik, déi, déi s du am meeschte benotz, an déi, déi den Tipp vu Bare Sudoku als \"Nëmmen ee Kandidat hei\" mellt.",
+          "when": [
+            "Ëmmer. Plakeg Singles dauche vum éischte bis zum leschten Zuch op, op all Niveau. An Einfach- a Mëttel-Rätsele sinn si, zesumme mat de verstoppte Singles, déi eenzeg Technik, déi s du brauchs. A méi schwéiere Rätsele léisst all Eliminatioun vun enger fortgeschratter Technik meeschtens e plakege Single hannendrun, also kuck no all Schrëtt, ob et der gëtt."
+          ],
+          "spot": [
+            "Kuck op Zelle mat vill gefëllten Noperen: eng Zell an enger Rei, déi scho siwen Zifferen huet, oder eng Zell, där hir Rei, Kolonn a Block zesummen aacht verschidden Zifferen ofdecken. Ouni Notizen ziels du d'Zifferen, déi s du vun der Zell aus gesäis. Mat Notizen ass e plakege Single einfach eng Zell mat engem eenzege Kandidat, an dofir mécht Notizen ausfëllen se esou einfach ze fannen."
+          ],
+          "examples": [
+            {
+              "h": "Beispill",
+              "steps": [
+                "Kuck op {cell}. D'Zell ass eidel, also schreif all Ziffer op, déi schonn an hirer Rei, hirer Kolonn an hirem Block steet.",
+                "Rei {row} enthält {rowDigits}. Kolonn {col} enthält {colDigits}. Block {box} enthält {boxDigits}.",
+                "Zesumme schléissen se all Ziffer ausser {d} aus, also ass {d} deen eenzege Kandidat, deen an {cell} iwwreg bleift.",
+                "Schreif {d} an {cell}. Kuck dann, ob déi nei Ziffer an derselwechter Rei, Kolonn oder am selwechte Block en neie Single mécht."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Nëmmen d'Rei oder nëmmen de Block zielen. Déi aacht ausgeschloss Ziffere kommen normalerweis aus allen dräi Eenheeten zesummen.",
+            "Vergiessen, datt eng Ziffer, déi s du grad gesat hues, och Kandidaten aus hiren 20 Noperen ausschléisst; nei plakeg Singles dauchen direkt no all Setzen op.",
+            "E plakege Single mat engem verstoppte Single verwiesselen: e plakege Single huet nach ee Kandidat an der Zell, e verstoppte Single huet nach eng Zell fir d'Ziffer an enger Eenheet."
+          ],
+          "faq": [
+            [
+              "Wat ass e plakege Single am Sudoku?",
+              "Eng eidel Zell mat genee engem Kandidat. Aacht verschidden Ziffere si schonn an hirer Rei, Kolonn a Block gesat, also ass déi néngt Ziffer déi eenzeg, déi passt."
+            ],
+            [
+              "Firwat heescht en plakeg?",
+              "Well deen eenzege Kandidat direkt an der Zell ze gesinn ass, soubal d'Notize geschriwwe sinn; näischt verstoppt en. E verstoppte Single dogéint stécht tëscht anere Kandidaten a gëtt fonnt, andeems s du op d'Ziffer kucks amplaz op d'Zell."
+            ],
+            [
+              "Kann een e Rätsel nëmme mat plakege Singles léisen?",
+              "Vill Einfach-Rätsele jo, mee déi meescht brauchen och verstoppt Singles. Bare Sudoku stuft Einfach- a Mëttel-Rätsele als léisbar mat Singles vu béide Sorten an; Schwéier- an Expert-Rätsele brauchen op d'mannst eng weider Technik."
+            ],
+            [
+              "Weist den Tipp plakeg Singles?",
+              "Jo. Wann déi nächst Plazéierung e plakege Single ass, wielt den Tipp d'Zell aus a seet \"Nëmmen ee Kandidat hei\" mat der Ziffer. Dréck nach eng Kéier op den Tipp, fir se ze setzen."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Verstoppte Single",
+          "title": "Verstoppte Single am Sudoku: déi eenzeg Plaz fir eng Ziffer",
+          "description": "E verstoppte Single ass déi eenzeg Zell an enger Rei, Kolonn oder engem Block, wou eng Ziffer nach hikann. Léier se ze fannen, Ziffer fir Ziffer.",
+          "h1": "Verstoppte Single (Hidden Single)",
+          "summary": "E verstoppte Single ass eng Ziffer, déi an enger Rei, Kolonn oder engem Block nëmmen nach eng méiglech Zell huet, och wann déi Zell aner Kandidate weist. Well d'Eenheet d'Ziffer enthale muss, kënnt se dohinner. Den Tipp vu Bare Sudoku mellt dat als \"Eenzeg Plaz fir 5 an dëser Rei\", Kolonn oder Block.",
+          "when": [
+            "Ëmmer wann eng Ziffer scho wäit ass: soubal eng Ziffer fënnef- oder sechsmol do ass, sinn déi reschtlech Blocke ganz ageschränkt, an e verstoppte Single ass dacks den nächsten Zuch. Verstoppt Singles sinn d'Haapttechnik vun Einfach- a Mëttel-Rätselen a bleiwen op all Niveau d'Aarbechtspäerd."
+          ],
+          "spot": [
+            "Sich d'Gitter Ziffer fir Ziffer of. Huel eng Ziffer, fann e Block, deen se net enthält, a sträich all Zell vun deem Block, déi eng Rei oder Kolonn mat enger gesater Kopie vun der Ziffer deelt. Wann eng Zell iwwreg bleift, hues du e verstoppte Single fonnt. Déi selwecht Method funktionéiert och fir Reien a Kolonnen. Am Spill tipp op eng gesat Ziffer: all Kopie dovu gëtt markéiert, an déi fräi Zelle stiechen eraus."
+          ],
+          "examples": [
+            {
+              "h": "Beispill",
+              "steps": [
+                "Block {box} enthält nach keng {d}, also muss eng vu sengen eidelen Zellen se kréien. Seng eidel Zelle sinn dës: {empties}.",
+                "An allen dësen Zellen ausser {cell} ass {d} duerch eng {d} blockéiert, déi schonn an derselwechter Rei oder Kolonn steet, also ass {d} do kee Kandidat.",
+                "Domat bleift {cell} als eenzeg Plaz fir {d} am Block {box}. Schreif {d} dohinner, och wann an {cell} nach aner Kandidate stinn."
+              ]
+            }
+          ],
+          "mistakes": [
+            "D'Ziffer an eng Zell setzen, déi just wahrscheinlech déi richteg ass: kontrolléier all aner eidel Zell vun der Eenheet, net nëmmen déi offensichtlech.",
+            "E verstoppte Single iwwersinn, well d'Zell e puer Kandidate weist. Déi aner Kandidate spille keng Roll; wat zielt, ass datt d'Ziffer keng aner Plaz an der Eenheet huet.",
+            "Nëmme Blocken ofsichen. Reien a Kolonne gi grad esou dacks verstoppt Singles, virun allem géint Enn."
+          ],
+          "faq": [
+            [
+              "Wat ass e verstoppte Single am Sudoku?",
+              "Eng Ziffer, déi an enger Rei, Kolonn oder engem Block nëmmen an eng eenzeg Zell ka goen. D'Eenheet muss d'Ziffer enthalen, also ass d'Zell entschidden, och wa se nach aner Kandidaten huet."
+            ],
+            [
+              "Wat ass den Ënnerscheed tëscht engem verstoppten an engem plakege Single?",
+              "E plakege Single geet ëm eng Zell: ee Kandidat bleift. E verstoppte Single geet ëm eng Ziffer: eng Zell bleift an enger Eenheet. Béid setzen eng Ziffer mat Sécherheet."
+            ],
+            [
+              "Wat ass méi einfach ze fannen?",
+              "Ouni Notize si verstoppt Singles meeschtens méi einfach, well s du d'Gitter Ziffer fir Ziffer ofsiche kanns. Mat kompletten Notize si plakeg Singles am einfachsten, well eng Zell mat engem eenzege Kandidat direkt opfält."
+            ],
+            [
+              "Wéi beschreift den Tipp e verstoppte Single?",
+              "Als \"Eenzeg Plaz fir\" d'Ziffer an dëser Rei, dëser Kolonn oder dësem Block, mat der Zell ausgewielt. Dréck nach eng Kéier op den Tipp, fir se ze setzen."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Gespaart Kandidaten",
+          "title": "Gespaart Kandidaten am Sudoku: Pointing a Claiming",
+          "description": "Gespaart Kandidaten: leien all Kandidate vun enger Ziffer an engem Block op enger Linn, oder ëmgedréint, fält d'Ziffer soss ewech. Zwee richteg Beispiller.",
+          "h1": "Gespaart Kandidaten (Locked Candidates)",
+          "summary": "Gespaart Kandidaten sinn déi éischt Technik, déi Kandidaten ewechhëlt, amplaz eng Ziffer ze setzen. Et gëtt se an zwou Formen. Pointing: an engem Block leien all Kandidate fir eng Ziffer an enger Rei oder Kolonn, also gëtt d'Ziffer aus dem Rescht vun där Linn ewechgeholl. Claiming: an enger Rei oder Kolonn leien all Kandidate fir eng Ziffer an engem Block, also gëtt d'Ziffer aus dem Rescht vun deem Block ewechgeholl. Den Tipp vu Bare Sudoku markéiert d'Plazéierung, déi dodurch méiglech gëtt, mat \"Gespaart Kandidaten\".",
+          "when": [
+            "Wann d'Singles an engem Schwéier-Rätsel ausginn, ass dat dat Éischt, wat s du probéiers. Et brauch komplett Notizen, op d'mannst fir d'Ziffer, déi s du ënnersichs. Gespaart Kandidate si heefeg: déi meescht Schwéier-Rätsele brauche se, an Expert-Rätselen notze se tëscht de gréissere Musteren."
+          ],
+          "spot": [
+            "Fir Pointing kuck all Block an all Ziffer, déi him feelt: wann d'Kandidatezelle fir déi Ziffer an enger eenzeger Rei oder Kolonn leien, kuck, ob déi selwecht Ziffer méi wäit laanscht déi Linn ausserhalb vum Block als Kandidat steet. Fir Claiming kuck laanscht eng Rei oder Kolonn: wann d'Kandidate fir eng Ziffer all an engem Block leien, kann de Rescht vun deem Block geraumt ginn. Am Spill tipp op eng Ziffertast, fir all Kandidat dovun ze markéieren; eng Linn vun zwou oder dräi markéierten Notizen an engem Block ass d'Muster."
+          ],
+          "examples": [
+            {
+              "h": "Pointing",
+              "steps": [
+                "Am Block {box} huet d'Ziffer {d} nëmmen dës Kandidatezellen: {cells}. All leien se an der Rei {row}.",
+                "Block {box} brauch eng {d}, also läit d'Ziffer {d} vun der Rei {row} am Block {box}, egal a wéi enger vun dësen Zellen se landt.",
+                "Rei {row} kann keng zweet {d} hunn, also läsch {d} aus den Zelle vun der Rei {row} ausserhalb vum Block: {elim}."
+              ]
+            },
+            {
+              "h": "Claiming",
+              "steps": [
+                "An der Rei {row} ka d'Ziffer {d} nëmmen an {cells} stoen, an déi leien all am Block {box}.",
+                "Rei {row} muss eng {d} enthalen, also hëlt d'Rei {row} d'Ziffer {d} vum Block {box} fir sech. Déi aner Zelle vum Block {box} kënne keng {d} hunn.",
+                "Läsch {d} aus {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Beim Pointing d'Ziffer bannent dem Block amplaz ausserhalb läschen, oder ëmgedréint beim Claiming. D'Eliminatioune ginn ëmmer an d'Zellen, déi an der Linn awer net am Block sinn, oder am Block awer net an der Linn.",
+            "D'Reegel uwenden, wann d'Kandidaten iwwer zwou Reie vum Block verdeelt sinn. All Kandidatezelle fir d'Ziffer am Block mussen op enger Linn leien.",
+            "Vergiessen, no dem Single ze sichen, deen d'Eliminatioun schaaft. Gespaart Kandidate setzen eleng seelen eng Ziffer; si bereeden e Single vir."
+          ],
+          "faq": [
+            [
+              "Wat si gespaart Kandidaten am Sudoku?",
+              "Kandidate fir eng Ziffer, déi op d'Schnëttmeng vun engem Block an enger Linn beschränkt sinn. Well de Block, oder d'Linn, d'Ziffer an där Schnëttmeng muss hunn, kann d'Ziffer aus dem Rescht vun der Linn, oder aus dem Rescht vum Block, ewechgeholl ginn."
+            ],
+            [
+              "Wat ass den Ënnerscheed tëscht Pointing a Claiming?",
+              "Pointing fänkt bei engem Block un: d'Kandidate vun der Ziffer am Block weise laanscht eng Rei oder Kolonn, also gëtt d'Ziffer aus dem Rescht vun där Linn geläscht. Claiming fänkt bei enger Rei oder Kolonn un: d'Kandidate vun der Linn fir d'Ziffer sinn all an engem Block, also fuerdert d'Linn d'Ziffer fir sech, an si gëtt aus dem Rescht vum Block geläscht."
+            ],
+            [
+              "Heesche gespaart Kandidaten och Intersection Removal?",
+              "Jo. Aner Nimm si Box-Line Reduction fir d'Claiming-Form a Pointing Pairs oder Pointing Triples fir d'Pointing-Form. Bare Sudoku benotzt een Numm fir béid."
+            ],
+            [
+              "Wéi en Niveau brauch gespaart Kandidaten?",
+              "Schwéier. E Rätsel, dat gespaart Kandidaten oder Ënnermenge brauch, awer näischt méi Schwéieres, gëtt als Schwéier agestuft; Expert-Rätselen brauchen zousätzlech e Fësch oder e Wing."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Plakeg Puer an Dräier",
+          "title": "Plakeg Puer an Dräier am Sudoku: Wéi se funktionéieren",
+          "description": "Plakeg Puer an Dräier: zwou oder dräi Zellen an enger Eenheet mat deene selwechten zwee oder dräi Kandidaten. Léier se ze erkennen a wat s du läsche kanns.",
+          "h1": "Plakeg Puer an Dräier (Naked Pairs)",
+          "summary": "E plakegt Puer sinn zwou Zellen an derselwechter Rei, Kolonn oder am selwechte Block, déi genee déi selwecht zwee Kandidaten hunn. Déi zwou Ziffere mussen an déi zwou Zellen, also kënne se aus all anerer Zell vun der Eenheet ewechgeholl ginn. E plakegen Dräier ass déi selwecht Iddi mat dräi Zellen an dräi Zifferen; all Zell ka zwou oder all dräi dovu weisen. Den Tipp vu Bare Sudoku markéiert d'Plazéierung, déi doraus entsteet, mat \"Puer oder Dräier\".",
+          "when": [
+            "Wann d'Notize komplett sinn an d'Singles an déi gespaart Kandidaten ausgeschöpft sinn. Plakeg Puer si ganz heefeg a Schwéier-Rätselen, plakeg Dräier manner. Et lount sech, béid an all Eenheet ze kontrolléieren, déi nach fënnef oder méi eidel Zellen huet."
+          ],
+          "spot": [
+            "Sich Zelle mat nëmmen zwee Kandidaten a fann eng aner Zell an derselwechter Eenheet mat deene selwechten zwee. Fir Dräier kuck Eenheete mat e puer Zelle mat zwee an dräi Kandidaten a préif, ob dräi dovun zesummen nëmmen dräi verschidden Zifferen notzen. Zelle mat genee deene selwechte Kandidaten gesäit een einfach, soubal d'Notize geschriwwe sinn; Notizen ausfëllen am Spill mécht dat mat engem Drock."
+          ],
+          "examples": [
+            {
+              "h": "Plakegt Puer",
+              "steps": [
+                "{cellA} an {cellB} ({unit}) hunn genee déi selwecht zwee Kandidaten: {d1} an {d2}.",
+                "Eng vun hinne muss {d1} sinn an déi aner {d2}. Mir wëssen net, wéi eng, mee béid Ziffere si vun dësen zwou Zellen verbraucht.",
+                "Also ka keng aner Zell an dëser Eenheet ({unit}) {d1} oder {d2} hunn. Läsch {elim}."
+              ]
+            },
+            {
+              "h": "Plakegen Dräier",
+              "steps": [
+                "Dräi Zellen an dëser Eenheet ({unit}) huelen all hir Kandidaten aus deene selwechten dräi Zifferen, {digits}: {cells}.",
+                "Déi dräi Ziffere mussen dës dräi Zellen an iergendenger Reiefolleg fëllen. Eng Zell muss net all dräi Kandidate weisen; wichteg ass, datt keng vun den dräi Zellen e Kandidat ausserhalb vun der Grupp huet.",
+                "Läsch {digits} aus all anerer Zell vun dëser Eenheet ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Zwou Zellen huelen, déi zwee Kandidaten deelen, awer och en drëtten hunn. Fir e plakegt Puer muss all Zell genee déi zwee Kandidaten hunn an näischt anescht.",
+            "D'Zifferen aus de Puerzellen selwer läschen. D'Puer behält seng Kandidaten; d'Eliminatioune ginn an déi aner Zelle vun der Eenheet.",
+            "Verlaangen, datt all Zell vun engem Dräier all dräi Zifferen weist. Eng Zell mat zwou vun den dräi ass kee Problem, soulaang keng Zell e Kandidat ausserhalb vun der Grupp huet."
+          ],
+          "faq": [
+            [
+              "Wat ass e plakegt Puer am Sudoku?",
+              "Zwou Zellen an enger Eenheet, déi allebéid genee déi selwecht zwee Kandidaten hunn. Déi zwou Ziffere si fest an dësen zwou Zellen gespaart, also kënne se aus dem Rescht vun der Eenheet ewechgeholl ginn."
+            ],
+            [
+              "Wat ass e plakegen Dräier?",
+              "Dräi Zellen an enger Eenheet, där hir Kandidaten zesummen nëmmen dräi Ziffere sinn. All Zell ka zwou oder dräi dovun hunn. Déi dräi Ziffere fëllen déi dräi Zellen, also kënne se aus den aneren Zelle vun der Eenheet ewechgeholl ginn."
+            ],
+            [
+              "Setzt e plakegt Puer eng Ziffer?",
+              "Net eleng. Et läscht Kandidaten, an dat léisst meeschtens e plakegen oder verstoppte Single zréck. Den Tipp a Bare Sudoku weist dee Single a nennt d'Technik, déi e méiglech gemaach huet."
+            ],
+            [
+              "Kann e plakegt Puer gläichzäiteg an engem Block an enger Rei sinn?",
+              "Jo. Wann déi zwou Zellen eng Rei an e Block deelen, eliminéiert d'Puer an deenen zwou Eenheeten. Bare Sudoku behandelt se eng Eenheet no där anerer."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Verstoppt Puer an Dräier",
+          "title": "Verstoppt Puer an Dräier am Sudoku: Wéi s du se fënns",
+          "description": "E verstoppt Puer sinn zwou Zifferen, déi nëmmen an déi selwecht zwou Zelle vun enger Eenheet kënnen, also falen hir aner Kandidaten ewech. Schrëtt fir Schrëtt.",
+          "h1": "Verstoppt Puer an Dräier (Hidden Pairs)",
+          "summary": "E verstoppt Puer sinn zwou Zifferen, déi an enger Rei, Kolonn oder engem Block an deene selwechten zwou Zellen Kandidate sinn an néierens soss. Déi zwou Zelle mussen déi zwou Ziffere kréien, also kann all anere Kandidat an hinnen ewechgeholl ginn. E verstoppten Dräier funktionéiert d'selwecht mat dräi Zifferen, déi op dräi Zelle beschränkt sinn. No der Läschung weisen d'Zellen e plakegt Puer oder e plakegen Dräier. Den Tipp vu Bare Sudoku markéiert d'Plazéierung, déi doraus entsteet, mat \"Puer oder Dräier\".",
+          "when": [
+            "Wann eng Eenheet Zelle mat vill Kandidaten huet an d'Singles fort sinn. Verstoppt Puer verstoppe sech a vollen Zellen, an dofir lount et sech, genee do no hinnen ze sichen, wou keng plakeg Puer ze gesinn sinn. Verstoppt Dräier si seelen; Bare Sudoku sicht no hinnen, mee déi meescht Schwéier-Rätsele ginn ouni se geléist."
+          ],
+          "spot": [
+            "Schaff no Ziffer, net no Zell. Notéier an enger Eenheet d'Zellen, wou all feelend Ziffer hikann. Wann zwou Zifferen all eenzel nëmmen zwou méiglech Zellen hunn an et déi selwecht zwou Zelle sinn, hues du e verstoppt Puer. Am Spill tipp op eng Ziffertast, fir hir Kandidaten ze markéieren; wann zwou Zifferen déi selwecht zwou Zelle vun enger Eenheet opliichte loossen an soss näischt dran, ass dat d'Muster."
+          ],
+          "examples": [
+            {
+              "h": "Verstoppt Puer",
+              "steps": [
+                "An dëser Eenheet ({unit}) hunn d'Zifferen {d1} an {d2} all nëmmen zwou méiglech Zellen, an et sinn déi selwecht zwou: {cells}.",
+                "Déi zwou Zelle mussen {d1} an {d2} kréien, also sinn hir aner Kandidaten onméiglech.",
+                "Läsch {elim}. Elo weisen déi zwou Zellen e plakegt Puer, dat nach méi fräimaache kann."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Déi zwou Puerziffere aus de Puerzellen läschen. Et sinn déi aner Kandidate vun dësen Zellen, déi ewechfalen; d'Puerziffere bleiwen.",
+            "Eng Ziffer akzeptéieren, déi eng drëtt méiglech Zell an der Eenheet huet. Béid Ziffere mussen op genee déi zwou Zelle beschränkt sinn.",
+            "Nëmmen a Blocke sichen. Verstoppt Puer komme grad esou dacks a Reien a Kolonnen vir."
+          ],
+          "faq": [
+            [
+              "Wat ass e verstoppt Puer am Sudoku?",
+              "Zwou Zifferen, déi nëmmen an déi selwecht zwou Zelle vun enger Eenheet kënnen. Dës Zelle mussen déi Ziffere kréien, also ginn hir aner Kandidaten ewechgeholl."
+            ],
+            [
+              "Wéi ënnerscheet sech e verstoppt Puer vun engem plakege Puer?",
+              "E plakegt Puer ass siichtbar: zwou Zellen, déi nëmmen déi selwecht zwee Kandidate weisen. E verstoppt Puer ass vun zousätzleche Kandidaten an deenen zwou Zellen zougedeckt. Wanns du déi zousätzlech Kandidaten ewechhëls, gëtt aus engem verstoppte Puer e plakegt Puer."
+            ],
+            [
+              "Wat ass e verstoppten Dräier?",
+              "Dräi Zifferen, déi op dräi Zelle vun enger Eenheet beschränkt sinn. Net all Ziffer muss an allen dräi Zellen optauchen; wichteg ass, datt keng vun den dräi Zifferen e Kandidat ausserhalb vun dësen Zellen huet."
+            ],
+            [
+              "Mécht den Tipp en Ënnerscheed tëscht verstoppten a plakege Pueren?",
+              "Nee. Bare Sudoku fënnt béid a markéiert d'Plazéierung, déi doraus entsteet, mat \"Puer oder Dräier\". D'Säiten hei trennen se, well een se op ënnerschiddlech Aart a Weis fënnt."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing am Sudoku: Wéi d'Technik funktionéiert",
+          "description": "X-Wing: eng Ziffer mat genee zwou Kandidatezellen an zwou Reien, déi an deene selwechten zwou Kolonne leien, fält am Rescht vun dëse Kolonnen ewech. Beispill.",
+          "h1": "X-Wing",
+          "summary": "En X-Wing ass e Muster aus enger Ziffer a véier Zellen an den Ecke vun engem Rechteck. Wann d'Ziffer an zwou Reie jeeweils genee zwou Kandidatezellen huet an dës Zellen an deene selwechten zwou Kolonne leien, da muss d'Ziffer zwou géigeniwwerleiend Ecke vum Rechteck besetzen. Dofir kann se aus all anerer Zell vun dësen zwou Kolonnen ewechgeholl ginn. Dat selwecht geet mat vertauschte Reien a Kolonnen. Et ass déi éischt Expert-Technik a Bare Sudoku.",
+          "when": [
+            "Wann Singles, gespaart Kandidaten an Ënnermengen ausgeschöpft sinn. X-Wings sinn dat heefegst Expert-Muster a weise sech dacks, wann eng Ziffer nach wéineg Kandidaten huet, typescherweis wann scho véier bis sechs Kopie gesat sinn. Si brauche komplett Notize fir d'Ziffer, déi s du ënnersichs."
+          ],
+          "spot": [
+            "Wiel eng Ziffer a sich Reien, an deenen se genee zwou Kandidatezellen huet. Wann zwou esou Reien déi selwecht zwou Kolonnen deelen, kontrolléier dës Kolonnen op aner Kandidate vun der Ziffer: dat sinn d'Eliminatiounen. Widderhuel dat da mat Kolonnen als Basis. Am Spill tipp op d'Ziffertast: all Kandidat dovu gëtt markéiert, an e Rechteck aus véier markéierten Notizen fält direkt op."
+          ],
+          "examples": [
+            {
+              "h": "Beispill",
+              "steps": [
+                "D'Ziffer {d} huet genee zwou Kandidatezellen an der Rei {r1} a genee zwou an der Rei {r2}, a si leien an deene selwechten zwou Kolonnen, {c1} an {c2}: {cells}.",
+                "Rei {r1} setzt hir {d} an d'Kolonn {c1} oder {c2}, a Rei {r2} setzt hir {d} an déi aner. Esou oder esou kréien d'Kolonnen {c1} an {c2} jeeweils eng {d} vun dësen zwou Reien.",
+                "Dofir kann {d} néierens soss an de Kolonnen {c1} an {c2} stoen. Läsch {d} aus {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eng Rei benotzen, déi dräi Kandidatezelle fir d'Ziffer huet. All Basisrei muss genee zwou hunn, a béid mussen an deenen zwou gemeinsame Kolonne leien.",
+            "D'Ziffer aus de Reien amplaz aus de Kolonne läschen. Mat Reien als Basis sinn d'Eliminatiounen an de Kolonnen, an ëmgedréint.",
+            "Déi ëmgedréint Versioun vergiessen. En X-Wing, deen op Kolonne gebaut ass, eliminéiert an de Reien."
+          ],
+          "faq": [
+            [
+              "Wat ass en X-Wing am Sudoku?",
+              "Eng Ziffer, déi an zwou Reie jeeweils genee zwou Kandidatezellen huet, an deene selwechten zwou Kolonnen. D'Ziffer besetzt zwou géigeniwwerleiend Ecke vun dësem Rechteck, also gëtt se aus dem Rescht vun deenen zwou Kolonnen ewechgeholl. Reien a Kolonne kënnen och vertauscht ginn."
+            ],
+            [
+              "Firwat funktionéiert en X-Wing?",
+              "Jiddereng vun deenen zwou Reien muss d'Ziffer an eng vun deenen zwou Kolonne setzen, an déi zwou Reie kënnen net déi selwecht Kolonn benotzen. Dofir kritt all vun deenen zwou Kolonnen hir Kopie vun der Ziffer vun dëse Reien, an all anere Kandidat an dëse Kolonnen ass onméiglech."
+            ],
+            [
+              "Ass en X-Wing e Fësch?",
+              "Jo. Den X-Wing ass de Fësch vun der Gréisst zwee; Swordfish ass de Fësch vun der Gréisst dräi. Bare Sudoku fënnt béid."
+            ],
+            [
+              "Op wéi engem Niveau gëtt et X-Wings?",
+              "Expert. E Rätsel, dat en X-Wing, Y-Wing, Swordfish oder XYZ-Wing brauch, gëtt als Expert agestuft."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing am Sudoku: Wéi d'Technik funktionéiert",
+          "description": "Y-Wing (XY-Wing): e Pivot mat zwee Kandidaten an zwee Flilleken, déi all ee mat him deelen, zwéngen eng Ziffer aus all Zell, déi béid Flilleke gesäit.",
+          "h1": "Y-Wing",
+          "summary": "En Y-Wing, och XY-Wing genannt, benotzt dräi Zelle mat jeeweils zwee Kandidaten. De Pivot huet d'Kandidaten X an Y. Ee Flillek gesäit de Pivot an huet X an Z; deen anere Flillek gesäit de Pivot an huet Y an Z. Egal wat de Pivot ass, ee vun de Flilleke muss Z sinn, also kann Z aus all Zell ewechgeholl ginn, déi béid Flilleke gesäit. Et ass eng Expert-Technik a Bare Sudoku.",
+          "when": [
+            "Wann e Rätsel e puer Zelle mat genee zwee Kandidaten huet a kee Fësch ze fannen ass. Y-Wings si heefeg an Expert-Rätselen a gi fonnt, andeems s du den Zelle mat zwee Kandidaten nogees: all eenzel ass e méigleche Pivot oder Flillek."
+          ],
+          "spot": [
+            "Maach eng Lëscht vun den Zelle mat genee zwee Kandidaten. Behandel all eenzel als Pivot mat de Kandidaten X an Y, a sich ënner hiren Noperen eng Zell mat X an enger anerer Ziffer Z an eng Zell mat Y an deem selwechten Z. Déi zwou sinn d'Flilleken. Sich dann d'Zellen, déi béid Flilleke gesinn an Z enthalen. Pass op: d'Flilleke brauchen sech net géigesäiteg ze gesinn."
+          ],
+          "examples": [
+            {
+              "h": "Beispill",
+              "steps": [
+                "De Pivot {pivot} huet d'Kandidaten {x} an {y}. Hie gesäit {wingA} mat {x} an {z} an {wingB} mat {y} an {z}.",
+                "Steet an {pivot} {x}, verléiert {wingA} de Kandidat {x}, an do bleift {z}. Steet an {pivot} {y}, bleift an {wingB} {z}. An all Fall steet an engem vun deenen zwee Flilleken {z}.",
+                "An enger Zell, déi béid Flilleke gesäit, ka ni {z} stoen. Läsch {z} aus {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Flilleke wielen, déi net allebéid de Pivot gesinn. All Flillek muss eng Rei, eng Kolonn oder e Block mam Pivot deelen.",
+            "Z aus Zelle läschen, déi nëmmen ee Flillek gesinn. D'eliminéiert Zell muss béid Flilleke gesinn.",
+            "Z aus dem Pivot läschen. Bei engem Y-Wing huet de Pivot keen Z; wann en eent huet, ass d'Muster en XYZ-Wing mat anere Reegelen."
+          ],
+          "faq": [
+            [
+              "Wat ass en Y-Wing am Sudoku?",
+              "Dräi Zelle mat zwee Kandidaten: e Pivot mat X an Y, ee Flillek mat X an Z, deen de Pivot gesäit, an ee Flillek mat Y an Z, deen de Pivot gesäit. Ee Flillek ass ëmmer Z, also gëtt Z aus den Zellen ewechgeholl, déi béid Flilleke gesinn."
+            ],
+            [
+              "Ass Y-Wing datselwecht wéi XY-Wing?",
+              "Jo. Déi zwee Nimm beschreiwen datselwecht Muster. Bare Sudoku nennt et Y-Wing."
+            ],
+            [
+              "Firwat muss ee Flillek Z sinn?",
+              "Wann de Pivot X ass, verléiert den éischte Flillek X a gëtt Z. Wann de Pivot Y ass, gëtt den zweete Flillek Z. De Pivot ass eent vun deenen zwee, also ass ee Flillek Z."
+            ],
+            [
+              "Wéi vill Zellen eliminéiert en Y-Wing?",
+              "Meeschtens eng oder zwou: nëmmen d'Zellen, déi béid Flilleke gesinn an nach Z enthalen. Dat geet duer, fir e Single ze schafen."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish am Sudoku: Wéi d'Technik funktionéiert",
+          "description": "Swordfish: eng Ziffer, déi an dräi Reien op dräi Kolonne beschränkt ass, fält am Rescht vun dëse Kolonnen ewech. De Fësch vun der Gréisst dräi, mat Beispill.",
+          "h1": "Swordfish",
+          "summary": "E Swordfish ass en X-Wing mat dräi Reien an dräi Kolonnen. Wann eng Ziffer an dräi Reie jeeweils héchstens dräi Kandidatezellen huet an all dës Zellen an deene selwechten dräi Kolonne leien, da verbrauchen déi dräi Reien d'Ziffer an dëse Kolonnen, an d'Ziffer kann aus all anerer Zell vun den dräi Kolonnen ewechgeholl ginn. Reien a Kolonne kënnen och vertauscht ginn. Bare Sudoku sicht an Expert-Rätselen no engem Swordfish, nom Y-Wing.",
+          "when": [
+            "Wann X-Wing an Y-Wing näischt fannen. E Swordfish ass manner heefeg wéi en X-Wing a brauch eng Ziffer, där hir Kandidaten dënn iwwer dräi Linne verdeelt sinn. Hie brauch komplett a korrekt Notize fir déi Ziffer."
+          ],
+          "spot": [
+            "Wiel eng Ziffer a sich Reie mat zwou oder dräi Kandidatezelle fir se. Wann dräi esou Reien zesummen nëmmen dräi Kolonnen ofdecken, kontrolléier dës Kolonnen op weider Kandidate vun der Ziffer. Net all Rei brauch e Kandidat an all Kolonn: e Swordfish ka sechs, siwen, aacht oder néng Zellen hunn. Am Spill markéier d'Ziffer mat hirer Tast a sich dräi Reien, där hir Kandidate sech an dräi Kolonnen ausriichten."
+          ],
+          "examples": [
+            {
+              "h": "Beispill",
+              "steps": [
+                "D'Ziffer {d} huet an all eenzeler vun de Reien {rows} héchstens dräi Kandidatezellen, an all dës Zelle leien an de Kolonnen {cols}: {cells}.",
+                "Jiddereng vun den dräi Reien muss hir {d} an eng vun den dräi Kolonne setzen, an zwou Reie kënnen net déi selwecht Kolonn benotzen. Dofir kréien déi dräi Kolonnen hir {d} vun dësen dräi Reien.",
+                "All anere Kandidat {d} an de Kolonnen {cols} ass onméiglech. Läsch {d} aus {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "All néng Zelle verlaangen. E Swordfish mat zwee Kandidaten an e puer Reien ass trotzdeem gëlteg, soulaang déi dräi Reien nëmmen dräi Kolonnen ofdecken.",
+            "Eng Rei mat véier Kandidatezellen dobäihuelen. All Basisrei dierf héchstens dräi hunn, all an den dräi Kolonnen.",
+            "An de Basisreien eliminéieren. Mat Reien als Basis sinn d'Eliminatiounen an den dräi Kolonnen, ausserhalb vun de Basisreien."
+          ],
+          "faq": [
+            [
+              "Wat ass e Swordfish am Sudoku?",
+              "Eng Ziffer, där hir Kandidaten an dräi Reien op dräi Kolonne beschränkt sinn. Déi dräi Reie mussen d'Ziffer an dësen dräi Kolonne setzen, eng pro Kolonn, also gëtt d'Ziffer aus den aneren Zelle vun dëse Kolonnen ewechgeholl."
+            ],
+            [
+              "Wéi ënnerscheet sech e Swordfish vun engem X-Wing?",
+              "Nëmmen an der Gréisst: en X-Wing benotzt zwou Reien an zwou Kolonnen, e Swordfish dräi an dräi. D'Iwwerleeung ass déi selwecht."
+            ],
+            [
+              "Brauch e Swordfish genee néng Zellen?",
+              "Nee. All Rei ka zwee oder dräi Kandidaten hunn; d'Muster verlaangt just, datt déi dräi Reien zesummen net méi wéi dräi Kolonne benotzen."
+            ],
+            [
+              "Gëtt et e Fësch vun der Gréisst véier?",
+              "Jo, de Jellyfish. Bare Sudoku benotzt en net, well seng Rätsele ni ee brauchen."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing am Sudoku: Wéi d'Technik funktionéiert",
+          "description": "XYZ-Wing: e Pivot mat dräi Kandidaten an zwee Flilleken, déi een deelen, zwéngen déi Ziffer aus all Zell, déi all dräi gesäit. Beispill Schrëtt fir Schrëtt.",
+          "h1": "XYZ-Wing",
+          "summary": "En XYZ-Wing ass en Y-Wing, deem säi Pivot dräi Kandidaten huet. De Pivot huet X, Y an Z; ee Flillek gesäit de Pivot an huet X an Z, deen anere gesäit de Pivot an huet Y an Z. Eng vun den dräi Zelle muss Z sinn, also kann Z aus all Zell ewechgeholl ginn, déi all dräi gesäit. Well de Pivot selwer Z ka sinn, muss déi eliminéiert Zell de Pivot an och béid Flilleke gesinn, wat se op de Block oder d'Linn beschränkt, déi d'Zellen deelen. Et ass déi schwéierst Technik, déi Bare Sudoku benotzt.",
+          "when": [
+            "Nëmmen, wann alles anescht versot. XYZ-Wings sinn dat rarst Muster a Bare Sudoku a kommen nëmmen an Expert-Rätselen vir. Sich no hinnen, wann eng Zell mat dräi Kandidaten an engem Block mat enger Zell mat zwee Kandidate steet, déi zwou vun hiren Zifferen deelt."
+          ],
+          "spot": [
+            "Fänk bei Zelle mat genee dräi Kandidaten un; all eenzel ass e méigleche Pivot. Sich ënner sengen Noperen zwou Zelle mat jeeweils zwee Kandidaten, allebéid aus den dräi vum Pivot, déi genee eng Ziffer Z gemeinsam hunn. Sich dann Zellen, déi de Pivot an allebéid Flilleke gesinn an Z enthalen. An der Praxis ass ee Flillek am Block vum Pivot an deen aneren a senger Rei oder Kolonn, an déi eliminéiert Zelle sinn déi reschtlech Zelle vun deem Block an där Rei oder Kolonn."
+          ],
+          "examples": [
+            {
+              "h": "Beispill",
+              "steps": [
+                "De Pivot {pivot} huet dräi Kandidaten: {x}, {y} an {z}. Hie gesäit {wingA} mat {x} an {z} an {wingB} mat {y} an {z}.",
+                "Steet an {pivot} {z}, ass alles kloer. Steet do {x}, muss an {wingA} {z} stoen. Steet do {y}, muss an {wingB} {z} stoen. An all Fall steet an enger vun den dräi Zellen {z}.",
+                "An enger Zell, déi all dräi gesäit, ka keng {z} stoen. Läsch {z} aus {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Aus Zellen eliminéieren, déi nëmmen déi zwee Flilleke gesinn. Anescht wéi beim Y-Wing kann de Pivot Z sinn, also muss d'Zell och de Pivot gesinn.",
+            "Flilleke benotzen, där hir Kandidaten net allebéid an den dräi Kandidate vum Pivot enthale sinn.",
+            "Et mat engem Y-Wing verwiesselen: den Ënnerscheed ass den drëtte Kandidat am Pivot, an deen ännert, wéi eng Zelle geraumt kënne ginn."
+          ],
+          "faq": [
+            [
+              "Wat ass en XYZ-Wing am Sudoku?",
+              "E Pivot mat de Kandidaten X, Y an Z an zwee Flilleken, ee mat X an Z an ee mat Y an Z, déi allebéid de Pivot gesinn. Eng vun den dräi Zellen ass Z, also gëtt Z aus den Zellen ewechgeholl, déi all dräi gesinn."
+            ],
+            [
+              "Wéi ënnerscheet sech en XYZ-Wing vun engem Y-Wing?",
+              "De Pivot huet dräi Kandidaten amplaz zwee, Z abegraff. Dat mécht de Pivot zu enger méiglecher Plaz fir Z, also kënnen nëmmen d'Zellen Z verléieren, déi de Pivot an allebéid Flilleke gesinn."
+            ],
+            [
+              "Wéi dacks kënnt en XYZ-Wing vir?",
+              "Seelen. A Bare Sudoku kënnen nëmmen Expert-Rätselen ee brauchen, an déi meescht brauche keen. Bare Sudoku préift en als Leschten, no X-Wing, Y-Wing a Swordfish."
+            ],
+            [
+              "Gëtt et e WXYZ-Wing?",
+              "Jo, mat engem Pivot mat véier Kandidaten, mee Bare Sudoku benotzt en net. All Rätsel am Spill ka mat den néng Technike vun dësem Guide fäerdeg geléist ginn."
+            ]
+          ]
+        }
+      }
+    },
+    "be": {
+      "learnHeading": "Навучанне судоку",
+      "learnText": "Толькі пачынаеце гуляць у судоку ці затрымаліся на цяжкай галаваломцы? Два дапаможнікі тлумачаць правілы і кожную тэхніку рашэння, якой карыстаюцца падказкі, і кожную на рэальным прыкладзе.",
+      "howToLink": "Як гуляць у судоку",
+      "techniquesLink": "Тэхнікі рашэння судоку",
+      "labels": {
+        "howTo": "Як гуляць",
+        "techniques": "Тэхнікі",
+        "play": "Гуляць у судоку",
+        "prev": "Папярэдняя тэхніка",
+        "next": "Наступная тэхніка",
+        "all": "Усе тэхнікі",
+        "example": "Прыклад",
+        "steps": "Крок за крокам",
+        "when": "Калі ўжываць",
+        "spot": "Як заўважыць",
+        "mistakes": "Частыя памылкі",
+        "inGame": "У Bare Sudoku",
+        "level": "Патрэбна з узроўню: {level}",
+        "hint": "У гульні падказка кажа: {text}",
+        "legend": "Тлустыя лічбы дадзены з пачатку, сінія пастаўлены падчас рашэння, дробныя лічбы абазначаюць кандыдатаў. Вылучаныя клеткі ўтвараюць фігуру, закрэсленыя кандыдаты выдаляюцца, а кандыдат у кружку паказвае лічбу, якую трэба паставіць.",
+        "notation": "Клеткі запісваюцца як r3c7: радок 3, слупок 7. Радкі лічацца зверху, слупкі злева, а блокі ад 1 да 9 з левага верхняга вугла, радок за радком.",
+        "row": "радок {n}",
+        "column": "слупок {n}",
+        "box": "блок {n}",
+        "elimItem": "{d} з {cell}",
+        "regions": "Радок 5, слупок 5 і блок 5 на пачатку галаваломкі",
+        "firstMove": "Адкрытая адзіночка: у {cell} можа стаяць толькі {d}",
+        "breadcrumb": "Навігацыйны ланцужок"
+      },
+      "howTo": {
+        "title": "Як гуляць у судоку: правілы, поле і першыя хады",
+        "description": "Даведайцеся, як гуляць у судоку: правілы, радкі, слупкі і блокі, чаму ў кожнай галаваломкі адно рашэнне, як карыстацца нататкамі і як зрабіць першыя хады.",
+        "h1": "Як гуляць у судоку",
+        "summary": "Судоку ўяўляе сабой лагічную галаваломку на сетцы 9×9. Запоўніце кожную пустую клетку лічбай ад 1 да 9 так, каб у кожным радку, кожным слупку і кожным блоку 3×3 кожная лічба сустракалася роўна адзін раз. Частка лічбаў дадзена з самага пачатку; астатнія вы выводзіце самі, адну дакладную клетку за другой, і адгадваць не трэба ніколі. Гэты дапаможнік тлумачыць поле, правілы, прынцып адзінага рашэння, нататкі і простую стратэгію для першых хадоў. Усё гэта можна патрэніраваць у [Bare Sudoku](play): гульня бясплатная і мае падказкі, якія тлумачаць логіку.",
+        "sections": [
+          {
+            "h": "Якія правілы ў судоку?",
+            "p": [
+              "Правілаў усяго тры, і гэта адно і тое ж правіла, убачанае з трох бакоў: кожны радок павінен змяшчаць лічбы ад 1 да 9, кожны слупок павінен змяшчаць лічбы ад 1 да 9, і кожны блок 3×3 павінен змяшчаць лічбы ад 1 да 9. Таму адна лічба ніколі не можа сустрэцца двойчы ў адным радку, слупку ці блоку.",
+              "Дадзеныя лічбы, надрукаваныя тлустым шрыфтам, нязменныя. Ваша задача: запоўніць пустыя клеткі. Тут няма ні арыфметыкі, ні парадку: лічбы проста дзевяць розных знакаў. Можна было б гуляць з літарамі ці фігурамі, і нічога б не змянілася."
+            ]
+          },
+          {
+            "h": "Як уладкавана поле?",
+            "p": [
+              "Поле мае 81 клетку ў 9 радках і 9 слупках. Тоўстыя лініі дзеляць яго на дзевяць блокаў 3×3. Кожная клетка належыць роўна аднаму радку, аднаму слупку і аднаму блоку, і гэтыя тры групы называюць яе групамі. Астатнія 20 клетак, якія маюць з клеткай хаця б адну агульную групу, называюць яе суседзямі; лічба, пастаўленая ў клетку, выключае гэтую лічбу ва ўсіх 20 суседзях.",
+              "Клеткі запісваюцца як r3c7: радок 3, слупок 7. Радкі лічацца зверху, слупкі злева, а блокі ад 1 да 9 з левага верхняга вугла, радок за радком. Гэты запіс выкарыстоўваецца ва ўсіх дапаможніках па тэхніках, і яго варта засвоіць: r5c5 знаходзіцца ў цэнтры поля."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Чаму ў кожнага судоку роўна адно рашэнне?",
+            "p": [
+              "Правільны судоку мае адно рашэнне, і менавіта дзякуючы гэтаму працуе логіка. Кожны раз, калі вы можаце паказаць, што лічба не можа трапіць нікуды больш у групе, яна павінна стаць у апошнюю вольную клетку, бо рашэнне існуе і яно адзінае. Калі б у галаваломкі было два рашэнні, ніякія развагі не адрознілі б іх, і ў нейкі момант давялося б адгадваць.",
+              "Bare Sudoku стварае кожную галаваломку на вашай прыладзе і правярае, што ў яе роўна адно рашэнне і што яго лагічны рашальнік можа дайсці да канца з тэхнікамі выбранага ўзроўню. Таму, калі вы затрымаліся, заўсёды ёсць наступны крок, які можна знайсці, і падказка яго пакажа."
+            ]
+          },
+          {
+            "h": "Як пачаць рашаць судоку?",
+            "p": [
+              "Пачынайце з таго, што найбольш абмежавана. Гэты парадак працуе на любым узроўні:"
+            ],
+            "list": [
+              "Вазьміце лічбу, якая ўжо сустракаецца шмат разоў, скажам шэсць ці сем, і знайдзіце блокі, дзе яе яшчэ няма. Часта ў блоку для яе застаецца толькі адна клетка: гэта [схаваная адзіночка](hidden-single).",
+              "Шукайце шчыльна акружаныя клеткі. Клетка, у радку, слупку і блоку якой разам ёсць восем розных лічбаў, мае толькі аднаго кандыдата: гэта [адкрытая адзіночка](naked-single). Лепш за ўсё шукаць у амаль запоўненых радках і блоках.",
+              "Кожная пастаўленая лічба выдаляе кандыдата ў 20 суседзях, таму адразу правярайце гэтых суседзяў. Адзіночкі звычайна ідуць ланцужком.",
+              "Калі простыя хады скончыліся, запішыце нататкі: кандыдатаў для кожнай пустой клеткі. Потым шукайце лічбу, якая ў блоку абмежаваная адной лініяй ([замкнёныя кандыдаты](locked-candidates)), або дзве клеткі з аднолькавымі двума кандыдатамі ([адкрытая пара](naked-pairs)).",
+              "Пасля кожнага выключэння вяртайцеся да адзіночак. Нават галаваломкі ўзроўню Эксперт рашаюцца пераважна адзіночкамі; складаная тэхніка толькі адмыкае наступную."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Што такое нататкі і калі імі карыстацца?",
+            "p": [
+              "Нататкі, іх яшчэ называюць паметкамі алоўкам або кандыдатамі, гэта дробныя лічбы, якія вы пішаце ў пустой клетцы, каб адзначыць, якія лічбы там яшчэ магчымыя. У лёгкіх галаваломках яны патрэбныя рэдка; пачынаючы з узроўню Цяжка яны неабходныя, бо такія тэхнікі, як пары, X-Wing і Y-Wing, працуюць з кандыдатамі, а не з пастаўленымі лічбамі.",
+              "Сачыце, каб нататкі былі дакладнымі: калі ставіце лічбу, выдаліце яе з нататак усіх 20 суседзяў. У Bare Sudoku гэта адбываецца аўтаматычна, а «Запоўніць нататкі» адным дотыкам запісвае кожнага кандыдата ў кожную пустую клетку, так што можна пачаць з поўнага і правільнага набору кандыдатаў. Нататка гэта факт, а не здагадка: яна азначае, што пакуль нішто не выключае гэтую лічбу."
+            ]
+          },
+          {
+            "h": "Што рабіць, калі вы затрымаліся?",
+            "p": [
+              "Спачатку яшчэ раз праверце асновы: кожны амаль запоўнены радок, слупок і блок можа даць адзіночку. Потым пераканайцеся, што нататкі поўныя, бо прапушчаны кандыдат хавае фігуры, а састарэлы стварае ілжывыя. Потым прайдзіце па [тэхніках](techniques) у парадку складанасці: замкнёныя кандыдаты, пары і тройкі, X-Wing, Y-Wing, Swordfish і XYZ-Wing. Для кожнай ёсць асобная старонка з рэальным прыкладам.",
+              "Калі нічога не дапамагае, вазьміце падказку. У Bare Sudoku падказка спачатку правярае, ці няма памылкі сярод пастаўленых лічбаў, потым знаходзіць наступную клетку, якую можна запоўніць логікай, і называе тэхніку, так што вы нечаму вучыцеся, нават калі карыстаецеся ёю. Націсніце падказку яшчэ раз, каб паставіць лічбу."
+            ]
+          },
+          {
+            "h": "Як уводзіць лічбы ў Bare Sudoku?",
+            "p": [
+              "Дакраніцеся да клеткі, потым да лічбы. Або спачатку да лічбы: яна замыкаецца, і кожная клетка, да якой вы дакранаецеся, атрымлівае яе; так найхутчэй паставіць шостую, сёмую і восьмую копію лічбы. Дакраніцеся да лічбы яшчэ раз, каб яе адпусціць. Кнопка «Нататкі» пераключае на паметкі алоўкам, «Сцерці» ачышчае клетку, «Адмяніць» адмяняе любы ход, а памылкі пазначаюцца чырвоным, калі вы не выключылі гэта ў меню.",
+              "На клавіятуры карыстайцеся стрэлкамі, каб перамяшчацца, клавішамі ад 1 да 9, каб увесці лічбу, Backspace, каб сцерці, N для нататак, U для адмены, H для падказкі, F, каб запоўніць нататкі, і Escape для меню. Гульня захоўваецца сама, працуе афлайн, не мае рэкламы і не патрабуе акаўнта."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ці трэба калі-небудзь адгадваць у судоку?",
+            "Не ў правільнай галаваломцы. Кожная галаваломка Bare Sudoku мае роўна адно рашэнне і правераная на тое, што яе можна рашыць адной логікай у межах тэхнік свайго ўзроўню. Калі вам здаецца, што без адгадвання не абысціся, значыць, у нататках не хапае кандыдата або вас чакае яшчэ не знойдзеная тэхніка."
+          ],
+          [
+            "Ці можа лічба сустрэцца двойчы ў радку, слупку ці блоку?",
+            "Не. У гэтым і заключаецца ўсё правіла: кожны з дзевяці радкоў, дзевяці слупкоў і дзевяці блокаў змяшчае кожную лічбу ад 1 да 9 роўна адзін раз. Калі дзве аднолькавыя лічбы стаяць у адной групе, прынамсі адна з іх памылковая."
+          ],
+          [
+            "Чым адрозніваюцца Лёгка, Сярэдне, Цяжка і Эксперт?",
+            "Узровень вызначаецца тэхнікамі, якія патрэбныя галаваломцы. Лёгка і Сярэдне рашаюцца толькі адзіночкамі, прычым на ўзроўні Лёгка з самага пачатку дадзена не менш за 38 лічбаў. Для ўзроўню Цяжка патрэбныя замкнёныя кандыдаты або пары і тройкі. Для ўзроўню Эксперт патрэбныя X-Wing, Y-Wing, Swordfish або XYZ-Wing."
+          ],
+          [
+            "Ці лепш запаўняць нататкі ва ўсіх клетках ці толькі ў некаторых?",
+            "Для галаваломак узроўняў Цяжка і Эксперт запаўняйце ўсе: такія фігуры, як пары, X-Wing і Y-Wing, праяўляюцца толькі тады, калі запісаны кожны кандыдат. На ўзроўнях Лёгка і Сярэдне нататкі неабавязковыя, і большасць гульцоў проста шукае адзіночкі."
+          ],
+          [
+            "Колькі часу займае судоку?",
+            "Лёгкая галаваломка займае некалькі хвілін; галаваломкі ўзроўню Эксперт могуць заняць дваццаць хвілін і больш, у залежнасці ад таго, як хутка вы заўважыце складаную фігуру. Bare Sudoku паказвае таймер, спыняе яго, пакуль адкрыта меню, і не вядзе табліцы рэкордаў, так што гуляйце ў сваім тэмпе."
+          ],
+          [
+            "Ці патрэбна ў судоку арыфметыка?",
+            "Не. Лічбы тут толькі меткі; нічога не трэба ні складаць, ні лічыць. Падышлі б любыя дзевяць знакаў, таму судоку і лічыцца галаваломкай на логіку, а не на лікі."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Тэхнікі рашэння судоку: тлумачэнні з прыкладамі",
+        "description": "Усе дзевяць тэхнік рашэння судоку, ад адкрытых адзіночак да Swordfish і XYZ-Wing, у парадку, у якім іх ужываюць падказкі Bare Sudoku, з рэальнымі прыкладамі.",
+        "h1": "Тэхнікі рашэння судоку",
+        "intro": [
+          "Любы судоку можна рашыць з дапамогай невялікага набору лагічных тэхнік. Гэты спіс змяшчае дзевяць тэхнік, якімі карыстаюцца рашальнік Bare Sudoku і яго падказкі, у тым парадку, у якім рашальнік іх спрабуе: спачатку адзіночкі, потым выключэнні ўнутры адной групы, потым фігуры, што ахопліваюць некалькі радкоў і слупкоў. Для кожнай тэхнікі ёсць асобная старонка з азначэннем, спосабам яе заўважыць, рэальным прыкладам са згенераванай галаваломкі і частымі памылкамі.",
+          "Узровень галаваломкі вызначаецца самай складанай тэхнікай, якая ёй патрэбная. Галаваломкам Лёгка і Сярэдне дастаткова адзіночак, галаваломкам Цяжка патрэбныя замкнёныя кандыдаты або пары і тройкі, а галаваломкам Эксперт патрэбная хаця б адна «рыба» або «крыло». Незалежна ад узроўню, асноўную працу робяць адзіночкі; складаная тэхніка выдаляе аднаго-двух кандыдатаў, а далей зноў працуюць адзіночкі."
+        ],
+        "faq": [
+          [
+            "У якім парадку спрабаваць тэхнікі судоку?",
+            "Ад самых простых: адкрытыя адзіночкі, схаваныя адзіночкі, замкнёныя кандыдаты, адкрытыя пары і тройкі, схаваныя пары і тройкі, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku спрабуе іх роўна ў такім парадку, а падказка заўсёды называе самую простую тэхніку, якая дае прасоўванне."
+          ],
+          [
+            "Ці патрэбныя ўсе гэтыя тэхнікі, каб рашаць судоку?",
+            "Для галаваломак Лёгка і Сярэдне дастаткова адзіночак. Галаваломкі Цяжка дадаюць замкнёных кандыдатаў і падмноствы. Галаваломкам Эксперт патрэбная хаця б адна «рыба» або «крыло», але звычайна толькі адзін-два разы за галаваломку."
+          ],
+          [
+            "Ці ёсць тэхнікі, складанейшыя за XYZ-Wing?",
+            "Так, напрыклад ланцужкі, тэсты на адзінасць рашэння і forcing nets. Bare Sudoku не стварае галаваломак, якім яны патрэбныя, таму кожную галаваломку ў гульні можна дарашыць дзевяццю тэхнікамі з гэтай старонкі."
+          ],
+          [
+            "Што такое кандыдат?",
+            "Лічба, якая яшчэ можа стаць у пустую клетку, бо пакуль нішто ў яе радку, слупку ці блоку яе не выключае. Нататкі ў гульні і ёсць кандыдаты. Кожная тэхніка, складанейшая за адзіночкі, разважае пра кандыдатаў, таму трымайце іх поўнымі і дакладнымі."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Адкрытая адзіночка",
+          "title": "Адкрытая адзіночка ў судоку: клетка з адным кандыдатам",
+          "description": "Адкрытая адзіночка гэта пустая клетка, у якую можна паставіць толькі адну лічбу. Як хутка знаходзіць іх: рэальны прыклад крок за крокам і частыя памылкі.",
+          "h1": "Адкрытая адзіночка (naked single)",
+          "summary": "Адкрытая адзіночка гэта пустая клетка, у якой роўна адзін кандыдат: астатнія восем лічбаў ужо ёсць у яе радку, слупку ці блоку. Лічба, што засталася, павінна стаць туды. Гэта самая простая тэхніка судоку, якой вы будзеце карыстацца часцей за ўсё, і менавіта пра яе падказка Bare Sudoku паведамляе словамі «Тут толькі адзін кандыдат».",
+          "when": [
+            "Заўсёды. Адкрытыя адзіночкі сустракаюцца ад першага хаду да апошняга на любым узроўні. У галаваломках Лёгка і Сярэдне яны разам са схаванымі адзіночкамі адзіная патрэбная тэхніка. У больш складаных галаваломках кожнае выключэнне, зробленае складанай тэхнікай, звычайна пакідае пасля сябе адкрытую адзіночку, таму шукайце іх пасля кожнага кроку."
+          ],
+          "spot": [
+            "Глядзіце на клеткі з вялікай колькасцю запоўненых суседзяў: клетку ў радку, дзе ўжо стаіць сем лічбаў, або клетку, у радку, слупку і блоку якой разам ёсць восем розных лічбаў. Без нататак падлічыце лічбы, якія відаць з клеткі. З нататкамі адкрытая адзіночка гэта проста клетка з адным кандыдатам, таму «Запоўніць нататкі» робіць іх пошук вельмі лёгкім."
+          ],
+          "examples": [
+            {
+              "h": "Прыклад",
+              "steps": [
+                "Паглядзіце на {cell}. Клетка пустая, таму выпішыце ўсе лічбы, што ўжо стаяць у яе радку, слупку і блоку.",
+                "У радку {row} стаяць {rowDigits}. У слупку {col} стаяць {colDigits}. У блоку {box} стаяць {boxDigits}.",
+                "Разам яны выключаюць усе лічбы, акрамя {d}, таму {d} застаецца адзіным кандыдатам у {cell}.",
+                "Пастаўце {d} у {cell}. Потым праверце, ці не стварыла новая лічба яшчэ адну адзіночку ў тым жа радку, слупку ці блоку."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Лічыць толькі радок або толькі блок. Восем выключаных лічбаў звычайна бяруцца з усіх трох груп разам.",
+            "Забываць, што толькі што пастаўленая лічба таксама выключае кандыдатаў у сваіх 20 суседзях; новыя адкрытыя адзіночкі з'яўляюцца адразу пасля кожнага хаду.",
+            "Блытаць адкрытую адзіночку са схаванай: у адкрытай адзіночкі ў клетцы застаўся адзін кандыдат, у схаванай для лічбы ў групе засталася адна клетка."
+          ],
+          "faq": [
+            [
+              "Што такое адкрытая адзіночка ў судоку?",
+              "Пустая клетка з роўна адным кандыдатам. Восем розных лічбаў ужо стаяць у яе радку, слупку і блоку, таму падыходзіць толькі дзявятая."
+            ],
+            [
+              "Чаму яна называецца адкрытай?",
+              "Таму што адзіны кандыдат бачны ў клетцы адразу, як толькі запісаны нататкі; нішто яго не хавае. Схаваная адзіночка, наадварот, сядзіць сярод іншых кандыдатаў, і знаходзяць яе, гледзячы на лічбу, а не на клетку."
+            ],
+            [
+              "Ці можна рашыць галаваломку толькі адкрытымі адзіночкамі?",
+              "Многія галаваломкі Лёгка можна, але большасці патрэбныя і схаваныя адзіночкі. Bare Sudoku адносіць галаваломкі Лёгка і Сярэдне да тых, што рашаюцца адзіночкамі абодвух відаў; галаваломкам Цяжка і Эксперт патрэбная хаця б яшчэ адна тэхніка."
+            ],
+            [
+              "Ці паказвае падказка адкрытыя адзіночкі?",
+              "Так. Калі наступны ход гэта адкрытая адзіночка, падказка вылучае клетку і кажа «Тут толькі адзін кандыдат» разам з лічбай. Націсніце падказку яшчэ раз, каб паставіць яе."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Схаваная адзіночка",
+          "title": "Схаваная адзіночка ў судоку: адзінае месца для лічбы",
+          "description": "Схаваная адзіночка гэта адзіная клетка ў радку, слупку ці блоку, куды яшчэ можа стаць лічба. Навучыцеся знаходзіць іх, праглядаючы поле па адной лічбе.",
+          "h1": "Схаваная адзіночка (hidden single)",
+          "summary": "Схаваная адзіночка гэта лічба, у якой у радку, слупку ці блоку засталася толькі адна магчымая клетка, нават калі ў гэтай клетцы відаць іншыя кандыдаты. Паколькі група павінна змяшчаць гэтую лічбу, яна становіцца туды. Падказка Bare Sudoku паведамляе пра яе словамі «Адзінае месца для 5 у гэтым радку», слупку ці блоку.",
+          "when": [
+            "Кожны раз, калі лічба ўжо шмат дзе расстаўлена: як толькі лічба сустракаецца пяць ці шэсць разоў, астатнія блокі моцна абмежаваныя, і наступным ходам часта аказваецца схаваная адзіночка. Схаваныя адзіночкі гэта галоўная тэхніка галаваломак Лёгка і Сярэдне, і на любым узроўні яны застаюцца рабочым конікам."
+          ],
+          "spot": [
+            "Праглядайце поле па адной лічбе. Вазьміце лічбу, знайдзіце блок, дзе яе няма, і закрэсліце кожную клетку гэтага блока, якая мае агульны радок або слупок з ужо пастаўленай копіяй лічбы. Калі засталася адна клетка, вы знайшлі схаваную адзіночку. Той жа прагляд працуе для радкоў і слупкоў. У гульні дакраніцеся да пастаўленай лічбы: усе яе копіі вылучацца, і вольныя клеткі стануць добра прыкметнымі."
+          ],
+          "examples": [
+            {
+              "h": "Прыклад",
+              "steps": [
+                "У блоку {box} яшчэ няма лічбы {d}, таму адна з яго пустых клетак павінна яе змяшчаць. Пустыя клеткі: {empties}.",
+                "Ва ўсіх з іх, акрамя {cell}, лічбе {d} перашкаджае ўжо пастаўленая {d} у тым жа радку ці слупку, таму там {d} не з'яўляецца кандыдатам.",
+                "Застаецца {cell} як адзінае месца для {d} у блоку {box}. Пастаўце туды {d}, нават калі ў {cell} яшчэ відаць іншыя кандыдаты."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ставіць лічбу ў клетку, якая толькі здаецца правільнай: праверце кожную іншую пустую клетку групы, а не толькі відавочныя.",
+            "Прапускаць схаваную адзіночку, таму што ў клетцы відаць некалькі кандыдатаў. Іншыя кандыдаты не маюць значэння; важна тое, што ў лічбы няма іншага месца ў групе.",
+            "Праглядаць толькі блокі. Радкі і слупкі даюць схаваныя адзіночкі гэтак жа часта, асабліва бліжэй да канца."
+          ],
+          "faq": [
+            [
+              "Што такое схаваная адзіночка ў судоку?",
+              "Лічба, якая можа стаць толькі ў адну клетку радка, слупка ці блока. Група павінна змяшчаць гэтую лічбу, таму клетка вызначана, нават калі ў ёй яшчэ ёсць іншыя кандыдаты."
+            ],
+            [
+              "Чым схаваная адзіночка адрозніваецца ад адкрытай?",
+              "Адкрытая адзіночка тычыцца клеткі: у ёй застаўся адзін кандыдат. Схаваная адзіночка тычыцца лічбы: для яе ў групе засталася адна клетка. Абедзве дазваляюць паставіць лічбу напэўна."
+            ],
+            [
+              "Якую лягчэй знайсці?",
+              "Без нататак схаваныя адзіночкі звычайна лягчэй, бо можна праглядаць поле па адной лічбе. З поўнымі нататкамі прасцей за ўсё адкрытыя адзіночкі, бо клетка з адным кандыдатам адразу кідаецца ў вочы."
+            ],
+            [
+              "Як падказка апісвае схаваную адзіночку?",
+              "Словамі «Адзінае месца для» лічбы ў гэтым радку, гэтым слупку ці гэтым блоку, пры гэтым клетка вылучана. Націсніце падказку яшчэ раз, каб паставіць лічбу."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Замкнёныя кандыдаты",
+          "title": "Замкнёныя кандыдаты ў судоку: указанне і захоп",
+          "description": "Замкнёныя кандыдаты: калі ўсе кандыдаты лічбы ў блоку ляжаць у адным радку ці слупку, або наадварот, лічба выдаляецца ў іншых месцах. Два рэальныя прыклады.",
+          "h1": "Замкнёныя кандыдаты (locked candidates)",
+          "summary": "Замкнёныя кандыдаты гэта першая тэхніка, якая не ставіць лічбу, а выдаляе кандыдатаў. У яе дзве формы. Указанне (pointing): у блоку ўсе кандыдаты лічбы ляжаць у адным радку ці слупку, таму лічбу выдаляюць з астатняй часткі гэтай лініі. Захоп (claiming): у радку ці слупку ўсе кандыдаты лічбы ляжаць у адным блоку, таму лічбу выдаляюць з астатняй часткі гэтага блока. Падказка Bare Sudoku пазначае ход, які адкрывае гэтая тэхніка, словамі «Замкнёныя кандыдаты».",
+          "when": [
+            "Калі ў галаваломцы Цяжка скончыліся адзіночкі, гэта першае, што варта паспрабаваць. Патрэбныя поўныя нататкі хаця б для той лічбы, якую вы разглядаеце. Замкнёныя кандыдаты сустракаюцца часта: яны патрэбныя большасці галаваломак Цяжка, а галаваломкі Эксперт выкарыстоўваюць іх паміж буйнейшымі фігурамі."
+          ],
+          "spot": [
+            "Для ўказання разгледзьце кожны блок і кожную лічбу, якой у ім няма: калі клеткі-кандыдаты гэтай лічбы ляжаць у адным радку ці слупку, праверце, ці ёсць тая ж лічба кандыдатам далей на гэтай лініі за межамі блока. Для захопу ідзіце ўздоўж радка ці слупка: калі ўсе кандыдаты лічбы знаходзяцца ўнутры аднаго блока, астатнюю частку гэтага блока можна ачысціць. У гульні дакраніцеся да клавішы лічбы, каб вылучыць усіх яе кандыдатаў; лінія з двух ці трох вылучаных нататак унутры аднаго блока і ёсць фігура."
+          ],
+          "examples": [
+            {
+              "h": "Указанне",
+              "steps": [
+                "У блоку {box} у лічбы {d} толькі такія клеткі-кандыдаты: {cells}. Усе яны ляжаць у радку {row}.",
+                "Блоку {box} патрэбная лічба {d}, таму лічба {d} радка {row} апынецца ўнутры блока {box}, у якую б з гэтых клетак яна ні трапіла.",
+                "Другой лічбы {d} у радку {row} быць не можа, таму выдаліце {d} з клетак радка {row} за межамі блока: {elim}."
+              ]
+            },
+            {
+              "h": "Захоп",
+              "steps": [
+                "У радку {row} лічба {d} можа стаяць толькі ў {cells}, і ўсе яны ляжаць унутры блока {box}.",
+                "Радок {row} павінен змяшчаць {d}, таму лічбу {d} блока {box} забірае радок {row}. Астатнія клеткі блока {box} не могуць змяшчаць {d}.",
+                "Выдаліце {d} з клетак {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Пры ўказанні выдаляць лічбу ўнутры блока замест таго, каб выдаляць яе звонку, або наадварот пры захопе. Выключэнні заўсёды адбываюцца ў клетках, якія ляжаць на лініі, але не ў блоку, або ў блоку, але не на лініі.",
+            "Ужываць правіла, калі кандыдаты займаюць два радкі блока. Усе клеткі-кандыдаты лічбы ў блоку павінны ляжаць на адной лініі.",
+            "Забываць шукаць адзіночку, якую стварае выключэнне. Замкнёныя кандыдаты рэдка самі ставяць лічбу; яны падрыхтоўваюць адзіночку."
+          ],
+          "faq": [
+            [
+              "Што такое замкнёныя кандыдаты ў судоку?",
+              "Кандыдаты лічбы, абмежаваныя перасячэннем блока і лініі. Паколькі блок, або лінія, павінен змяшчаць лічбу ўнутры гэтага перасячэння, лічбу можна выдаліць з астатняй часткі лініі або з астатняй часткі блока."
+            ],
+            [
+              "Чым указанне адрозніваецца ад захопу?",
+              "Указанне пачынаецца з блока: кандыдаты лічбы ў блоку паказваюць уздоўж аднаго радка ці слупка, таму лічбу выдаляюць з астатняй часткі гэтай лініі. Захоп пачынаецца з радка ці слупка: усе кандыдаты лічбы ў лініі знаходзяцца ў адным блоку, таму лінія забірае лічбу сабе, і яе выдаляюць з астатняй часткі блока."
+            ],
+            [
+              "Ці называюць замкнёных кандыдатаў таксама intersection removal?",
+              "Так. Іншыя назвы: box-line reduction для формы захопу і pointing pairs або pointing triples для формы ўказання. Bare Sudoku выкарыстоўвае адну назву для абедзвюх."
+            ],
+            [
+              "На якім узроўні патрэбныя замкнёныя кандыдаты?",
+              "На ўзроўні Цяжка. Галаваломка, якой патрэбныя замкнёныя кандыдаты або падмноствы, але нічога больш складанага, атрымлівае ўзровень Цяжка; галаваломкам Эксперт патрэбная яшчэ і «рыба» або «крыло»."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Адкрытыя пары і тройкі",
+          "title": "Адкрытыя пары і тройкі ў судоку: як яны працуюць",
+          "description": "Адкрытыя пары і тройкі: дзве ці тры клеткі ў групе з аднымі і тымі ж двума ці трыма кандыдатамі. Навучыцеся іх заўважаць і разумець, што выдаляць. Прыклады.",
+          "h1": "Адкрытыя пары і тройкі (naked pair, naked triple)",
+          "summary": "Адкрытая пара гэта дзве клеткі ў адным радку, слупку ці блоку з роўна аднолькавымі двума кандыдатамі. Гэтыя дзве лічбы павінны стаць у гэтыя дзве клеткі, таму іх можна выдаліць з усіх астатніх клетак групы. Адкрытая тройка працуе гэтак жа з трыма клеткамі і трыма лічбамі; у кожнай клетцы могуць быць відаць дзве ці ўсе тры з іх. Падказка Bare Sudoku пазначае ход, які з гэтага вынікае, словамі «Пара ці тройка».",
+          "when": [
+            "Калі нататкі поўныя, а адзіночкі і замкнёныя кандыдаты вычарпаныя. Адкрытыя пары вельмі часта сустракаюцца ў галаваломках Цяжка, адкрытыя тройкі радзей. Абедзве варта правяраць у кожнай групе, дзе яшчэ ёсць пяць і больш пустых клетак."
+          ],
+          "spot": [
+            "Шукайце клеткі толькі з двума кандыдатамі і знайдзіце ў той жа групе іншую клетку з тымі ж двума. Для троек глядзіце на групы з некалькімі клеткамі з двума і трыма кандыдатамі і правярайце, ці не выкарыстоўваюць тры з іх разам толькі тры розныя лічбы. Клеткі з аднолькавымі кандыдатамі лёгка ўбачыць, калі нататкі запісаны; «Запоўніць нататкі» ў гульні робіць гэта адным дотыкам."
+          ],
+          "examples": [
+            {
+              "h": "Адкрытая пара",
+              "steps": [
+                "Клеткі {cellA} і {cellB} ({unit}) маюць роўна аднолькавых двух кандыдатаў: {d1} і {d2}.",
+                "У адной з іх павінна стаяць {d1}, у другой {d2}. Мы не ведаем, у якой што, але абедзве лічбы занятыя гэтымі дзвюма клеткамі.",
+                "Значыць, ніводная іншая клетка ({unit}) не можа змяшчаць {d1} ці {d2}. Выдаліце {elim}."
+              ]
+            },
+            {
+              "h": "Адкрытая тройка",
+              "steps": [
+                "Тры клеткі ({unit}) бяруць усіх сваіх кандыдатаў з адных і тых жа трох лічбаў, {digits}: {cells}.",
+                "Тры лічбы павінны запоўніць гэтыя тры клеткі ў нейкім парадку. Клетцы не абавязкова паказваць усіх трох кандыдатаў; важна, каб ніводная з трох клетак не мела кандыдата па-за гэтым наборам.",
+                "Выдаліце {digits} з усіх астатніх клетак ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Браць дзве клеткі, у якіх агульныя два кандыдаты, але ёсць і трэці. Для адкрытай пары ў кожнай клетцы павінны быць роўна гэтыя два кандыдаты і больш нічога.",
+            "Выдаляць лічбы з саміх клетак пары. Пара захоўвае сваіх кандыдатаў; выключэнні адбываюцца ў іншых клетках групы.",
+            "Патрабаваць, каб кожная клетка тройкі паказвала ўсе тры лічбы. Клетка з двума з трох падыходзіць, калі ніводная клетка не мае кандыдата па-за наборам."
+          ],
+          "faq": [
+            [
+              "Што такое адкрытая пара ў судоку?",
+              "Дзве клеткі ў адной групе, у кожнай з якіх роўна аднолькавыя два кандыдаты. Гэтыя дзве лічбы замкнёныя ў гэтых дзвюх клетках, таму іх можна выдаліць з астатняй часткі групы."
+            ],
+            [
+              "Што такое адкрытая тройка?",
+              "Тры клеткі ў адной групе, кандыдаты якіх разам складаюць толькі тры лічбы. У кожнай клетцы можа быць дзве ці тры з іх. Тры лічбы запаўняюць тры клеткі, таму іх можна выдаліць з іншых клетак групы."
+            ],
+            [
+              "Ці ставіць адкрытая пара лічбу?",
+              "Сама па сабе не. Яна выдаляе кандыдатаў, і пасля гэтага звычайна застаецца адкрытая ці схаваная адзіночка. Падказка ў Bare Sudoku паказвае гэтую адзіночку і называе тэхніку, якая зрабіла яе магчымай."
+            ],
+            [
+              "Ці можа адкрытая пара быць адначасова ў блоку і ў радку?",
+              "Так. Калі дзве клеткі маюць агульныя радок і блок, пара выключае ў абедзвюх групах. Bare Sudoku апрацоўвае іх па адной групе за раз."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Схаваныя пары і тройкі",
+          "title": "Схаваныя пары і тройкі ў судоку: як іх заўважыць",
+          "description": "Схаваная пара гэта дзве лічбы, якія ў групе могуць стаць толькі ў адны і тыя ж дзве клеткі, таму іх іншыя кандыдаты выдаляюцца. Навучыцеся знаходзіць іх.",
+          "h1": "Схаваныя пары і тройкі (hidden pair, hidden triple)",
+          "summary": "Схаваная пара гэта дзве лічбы, якія ў адным радку, слупку ці блоку з'яўляюцца кандыдатамі ў адных і тых жа дзвюх клетках і больш нідзе. Гэтыя дзве клеткі павінны змяшчаць гэтыя дзве лічбы, таму ўсе астатнія кандыдаты ў іх можна выдаліць. Схаваная тройка працуе гэтак жа з трыма лічбамі, абмежаванымі трыма клеткамі. Пасля выдалення ў клетках відаць адкрытую пару ці тройку. Падказка Bare Sudoku пазначае ход, які з гэтага вынікае, словамі «Пара ці тройка».",
+          "when": [
+            "Калі ў групе ёсць клеткі з вялікай колькасцю кандыдатаў, а адзіночкі скончыліся. Схаваныя пары хаваюцца ў перапоўненых клетках, таму іх варта шукаць менавіта там, дзе адкрытых пар не відаць. Схаваныя тройкі рэдкія; Bare Sudoku правярае іх, але большасць галаваломак Цяжка рашаецца без іх."
+          ],
+          "spot": [
+            "Працуйце па лічбах, а не па клетках. У групе адзначце, у якія клеткі можа стаць кожная лічба, якой не хапае. Калі ў дзвюх лічбаў толькі па дзве магчымыя клеткі і гэта адны і тыя ж дзве клеткі, вы знайшлі схаваную пару. У гульні дакраніцеся да клавішы лічбы, каб вылучыць яе кандыдатаў; калі дзве лічбы падсвечваюць адны і тыя ж дзве клеткі групы і больш нічога ў ёй, гэта і ёсць фігура."
+          ],
+          "examples": [
+            {
+              "h": "Схаваная пара",
+              "steps": [
+                "У лічбаў {d1} і {d2} толькі па дзве магчымыя клеткі ({unit}), і гэта адны і тыя ж дзве клеткі: {cells}.",
+                "Гэтыя дзве клеткі павінны змяшчаць {d1} і {d2}, таму іх астатнія кандыдаты немагчымыя.",
+                "Выдаліце {elim}. Цяпер у дзвюх клетках відаць адкрытую пару, і гэта можа адкрыць новыя хады."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Выдаляць дзве лічбы пары з клетак пары. Выдаляюцца іншыя кандыдаты гэтых клетак; лічбы пары застаюцца.",
+            "Прымаць лічбу, у якой у групе ёсць трэцяя магчымая клетка. Абедзве лічбы павінны быць абмежаваныя роўна дзвюма клеткамі.",
+            "Шукаць толькі ў блоках. Схаваныя пары гэтак жа часта сустракаюцца ў радках і слупках."
+          ],
+          "faq": [
+            [
+              "Што такое схаваная пара ў судоку?",
+              "Дзве лічбы, якія могуць стаць толькі ў адны і тыя ж дзве клеткі групы. Гэтыя клеткі павінны заняць гэтыя лічбы, таму іх астатнія кандыдаты выдаляюцца."
+            ],
+            [
+              "Чым схаваная пара адрозніваецца ад адкрытай?",
+              "Адкрытую пару відаць адразу: дзве клеткі, у якіх толькі аднолькавыя два кандыдаты. Схаваную пару закрываюць лішнія кандыдаты ў гэтых дзвюх клетках. Калі выдаліць гэтых лішніх кандыдатаў, схаваная пара ператвараецца ў адкрытую."
+            ],
+            [
+              "Што такое схаваная тройка?",
+              "Тры лічбы, абмежаваныя трыма клеткамі групы. Кожнай лічбе не абавязкова быць ва ўсіх трох клетках; важна, каб ніводная з трох лічбаў не мела кандыдата па-за гэтымі клеткамі."
+            ],
+            [
+              "Ці адрознівае падказка схаваныя і адкрытыя пары?",
+              "Не. Bare Sudoku знаходзіць і тыя, і другія і пазначае ход, які з гэтага вынікае, словамі «Пара ці тройка». Тут яны апісаны на асобных старонках, бо шукаюць іх па-рознаму."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing у судоку: як працуе тэхніка",
+          "description": "X-Wing: калі ў лічбы роўна дзве клеткі-кандыдаты ў двух радках і яны стаяць у тых жа двух слупках, лічбу выдаляюць з астатніх клетак гэтых слупкоў. Прыклад.",
+          "h1": "X-Wing",
+          "summary": "X-Wing гэта фігура з адной лічбы і чатырох клетак у вуглах прамавугольніка. Калі ў лічбы роўна дзве клеткі-кандыдаты ў кожным з двух радкоў і гэтыя клеткі ляжаць у адных і тых жа двух слупках, то лічба павінна заняць два процілеглыя вуглы прамавугольніка. Таму яе можна выдаліць з усіх астатніх клетак гэтых двух слупкоў. Тое ж самае працуе, калі памяняць радкі і слупкі месцамі. Гэта першая тэхніка ўзроўню Эксперт у Bare Sudoku.",
+          "when": [
+            "Калі адзіночкі, замкнёныя кандыдаты і падмноствы вычарпаныя. X-Wing гэта самая частая фігура ўзроўню Эксперт, і яна часта з'яўляецца, калі ў лічбы засталося мала кандыдатаў, звычайна калі ўжо пастаўлена ад чатырох да шасці яе копій. Патрэбныя поўныя нататкі для лічбы, якую вы разглядаеце."
+          ],
+          "spot": [
+            "Выберыце лічбу і знайдзіце радкі, у якіх у яе роўна дзве клеткі-кандыдаты. Калі два такія радкі маюць адны і тыя ж два слупкі, праверце гэтыя слупкі на іншых кандыдатаў гэтай лічбы: іх і трэба выдаліць. Потым паўтарыце, узяўшы за аснову слупкі. У гульні дакраніцеся да клавішы лічбы: усе яе кандыдаты вылучацца, і прамавугольнік з чатырох вылучаных нататак лёгка заўважыць."
+          ],
+          "examples": [
+            {
+              "h": "Прыклад",
+              "steps": [
+                "Лічба {d} мае роўна дзве клеткі-кандыдаты ў радку {r1} і роўна дзве ў радку {r2}, і яны стаяць у адных і тых жа двух слупках, {c1} і {c2}: {cells}.",
+                "Радок {r1} ставіць сваю лічбу {d} у слупок {c1} або {c2}, а радок {r2} ставіць сваю ў другі. У любым выпадку слупкі {c1} і {c2} атрымліваюць па адной лічбе {d} з гэтых двух радкоў.",
+                "Значыць, больш нідзе ў слупках {c1} і {c2} лічбы {d} быць не можа. Выдаліце {d} з клетак {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Браць радок, у якім у лічбы тры клеткі-кандыдаты. У кожным базавым радку павінна быць роўна дзве, і абедзве ў двух агульных слупках.",
+            "Выдаляць лічбу з радкоў замест слупкоў. Калі аснова радкі, выключэнні робяцца ў слупках, і наадварот.",
+            "Забываць пра адваротны варыянт. X-Wing, пабудаваны на слупках, выключае ў радках."
+          ],
+          "faq": [
+            [
+              "Што такое X-Wing у судоку?",
+              "Лічба, у якой у кожным з двух радкоў роўна дзве клеткі-кандыдаты, і яны ў адных і тых жа двух слупках. Лічба займае два процілеглыя вуглы гэтага прамавугольніка, таму яе выдаляюць з астатніх клетак двух слупкоў. Радкі і слупкі можна памяняць месцамі."
+            ],
+            [
+              "Чаму X-Wing працуе?",
+              "Кожны з двух радкоў павінен паставіць лічбу ў адзін з двух слупкоў, і два радкі не могуць выкарыстаць адзін і той жа слупок. Таму кожны з двух слупкоў атрымлівае сваю копію лічбы з гэтых радкоў, і любы іншы кандыдат у гэтых слупках немагчымы."
+            ],
+            [
+              "Ці з'яўляецца X-Wing «рыбай»?",
+              "Так. X-Wing гэта «рыба» памеру два; Swordfish гэта «рыба» памеру тры. Bare Sudoku знаходзіць абедзве."
+            ],
+            [
+              "На якім узроўні сустракаецца X-Wing?",
+              "На ўзроўні Эксперт. Галаваломка, якой патрэбны X-Wing, Y-Wing, Swordfish або XYZ-Wing, атрымлівае ўзровень Эксперт."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing у судоку: як працуе тэхніка",
+          "description": "Y-Wing (XY-Wing): апорная клетка з двума кандыдатамі і два крылы, кожнае з адным з іх, выключаюць лічбу з кожнай клеткі, што бачыць абодва крылы. Прыклад.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, які таксама называюць XY-Wing, выкарыстоўвае тры клеткі з двума кандыдатамі ў кожнай. Апорная клетка мае кандыдатаў X і Y. Адно крыло бачыць апорную клетку і мае X і Z; другое крыло бачыць апорную клетку і мае Y і Z. Якой бы ні аказалася апорная клетка, адно з крылаў павінна быць Z, таму Z можна выдаліць з кожнай клеткі, якая бачыць абодва крылы. У Bare Sudoku гэта тэхніка ўзроўню Эксперт.",
+          "when": [
+            "Калі ў галаваломцы некалькі клетак з роўна двума кандыдатамі і ніякай «рыбы» няма. Y-Wing часта сустракаецца ў галаваломках Эксперт, і шукаюць яго, ідучы па клетках з двума кандыдатамі: кожная з іх можа быць апорнай клеткай або крылом."
+          ],
+          "spot": [
+            "Выпішыце клеткі з роўна двума кандыдатамі. Кожную з іх разгледзьце як апорную клетку з кандыдатамі X і Y і шукайце сярод яе суседзяў клетку з X і іншай лічбай Z і клетку з Y і той жа Z. Гэтыя дзве клеткі і ёсць крылы. Потым знайдзіце клеткі, якія бачаць абодва крылы і змяшчаюць Z. Звярніце ўвагу: крылам не абавязкова бачыць адно аднаго."
+          ],
+          "examples": [
+            {
+              "h": "Прыклад",
+              "steps": [
+                "Апорная клетка {pivot} мае кандыдатаў {x} і {y}. Яна бачыць {wingA} з кандыдатамі {x} і {z} і {wingB} з кандыдатамі {y} і {z}.",
+                "Калі ў {pivot} стаіць {x}, то {wingA} губляе {x}, і ў ёй застаецца {z}. Калі ў {pivot} стаіць {y}, то ў {wingB} застаецца {z}. У любым выпадку ў адным з двух крылаў стаіць {z}.",
+                "Клетка, якая бачыць абодва крылы, ніколі не можа змяшчаць {z}. Выдаліце {z} з клетак {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Выбіраць крылы, якія не абодва бачаць апорную клетку. Кожнае крыло павінна мець з апорнай клеткай агульны радок, слупок ці блок.",
+            "Выдаляць Z з клетак, якія бачаць толькі адно крыло. Клетка, з якой выдаляюць, павінна бачыць абодва крылы.",
+            "Выдаляць Z з апорнай клеткі. У Y-Wing апорная клетка не змяшчае Z; калі змяшчае, гэта XYZ-Wing з іншымі правіламі."
+          ],
+          "faq": [
+            [
+              "Што такое Y-Wing у судоку?",
+              "Тры клеткі з двума кандыдатамі: апорная клетка з X і Y, крыло з X і Z, якое бачыць апорную клетку, і крыло з Y і Z, якое таксама бачыць апорную клетку. Адно крыло заўсёды Z, таму Z выдаляюць з клетак, якія бачаць абодва крылы."
+            ],
+            [
+              "Ці Y-Wing тое ж самае, што XY-Wing?",
+              "Так. Дзве назвы апісваюць адну і тую ж фігуру. Bare Sudoku называе яе Y-Wing."
+            ],
+            [
+              "Чаму адно крыло павінна быць Z?",
+              "Калі апорная клетка X, першае крыло губляе X і становіцца Z. Калі апорная клетка Y, другое крыло становіцца Z. Апорная клетка абавязкова адно з двух, таму адно крыло будзе Z."
+            ],
+            [
+              "Колькі клетак выключае Y-Wing?",
+              "Звычайна адну ці дзве: толькі клеткі, якія бачаць абодва крылы і яшчэ змяшчаюць Z. Гэтага дастаткова, каб з'явілася адзіночка."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish у судоку: як працуе тэхніка",
+          "description": "Swordfish: лічба, абмежаваная трыма слупкамі ў трох радках, выдаляецца з астатніх клетак гэтых слупкоў. «Рыба» памеру тры з рэальным прыкладам крок за крокам.",
+          "h1": "Swordfish",
+          "summary": "Swordfish гэта X-Wing з трыма радкамі і трыма слупкамі. Калі ў лічбы не больш за тры клеткі-кандыдаты ў кожным з трох радкоў і ўсе гэтыя клеткі ляжаць у адных і тых жа трох слупках, то тры радкі выкарыстоўваюць лічбу ў гэтых слупках, і лічбу можна выдаліць з усіх астатніх клетак трох слупкоў. Радкі і слупкі можна памяняць месцамі. Bare Sudoku шукае Swordfish пасля Y-Wing, у галаваломках Эксперт.",
+          "when": [
+            "Калі X-Wing і Y-Wing нічога не знаходзяць. Swordfish сустракаецца радзей за X-Wing, і для яго патрэбная лічба, кандыдаты якой рэдка раскіданыя па трох лініях. Патрэбныя поўныя і дакладныя нататкі для гэтай лічбы."
+          ],
+          "spot": [
+            "Выберыце лічбу і шукайце радкі з двума ці трыма клеткамі-кандыдатамі для яе. Калі тры такія радкі разам займаюць толькі тры слупкі, праверце гэтыя слупкі на іншых кандыдатаў лічбы. Не кожны радок павінен мець кандыдата ў кожным слупку: у Swordfish можа быць шэсць, сем, восем ці дзевяць клетак. У гульні вылучыце лічбу яе клавішай і шукайце тры радкі, кандыдаты якіх выстройваюцца ў тры слупкі."
+          ],
+          "examples": [
+            {
+              "h": "Прыклад",
+              "steps": [
+                "Лічба {d} мае не больш за тры клеткі-кандыдаты ў кожным з радкоў {rows}, і ўсе гэтыя клеткі ляжаць у слупках {cols}: {cells}.",
+                "Кожны з трох радкоў павінен паставіць сваю лічбу {d} у адзін з трох слупкоў, і ніякія два радкі не могуць выкарыстаць адзін і той жа слупок. Таму тры слупкі атрымліваюць свае лічбы {d} з гэтых трох радкоў.",
+                "Любы іншы кандыдат {d} у слупках {cols} немагчымы. Выдаліце {d} з клетак {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Патрабаваць усе дзевяць клетак. Swordfish з двума кандыдатамі ў некаторых радках усё роўна правільны, калі тры радкі займаюць толькі тры слупкі.",
+            "Уключаць радок з чатырма клеткамі-кандыдатамі. У кожным базавым радку можа быць не больш за тры, і ўсе ў трох слупках.",
+            "Выключаць у базавых радках. Калі аснова радкі, выключэнні робяцца ў трох слупках, па-за базавымі радкамі."
+          ],
+          "faq": [
+            [
+              "Што такое Swordfish у судоку?",
+              "Лічба, кандыдаты якой у трох радках абмежаваныя трыма слупкамі. Тры радкі павінны паставіць лічбу ў гэтыя тры слупкі, па адной у кожны, таму лічбу выдаляюць з астатніх клетак гэтых слупкоў."
+            ],
+            [
+              "Чым Swordfish адрозніваецца ад X-Wing?",
+              "Толькі памерам: X-Wing выкарыстоўвае два радкі і два слупкі, Swordfish тры і тры. Развагі тыя ж самыя."
+            ],
+            [
+              "Ці патрэбна Swordfish роўна дзевяць клетак?",
+              "Не. У кожным радку можа быць два ці тры кандыдаты; фігура патрабуе толькі, каб тры радкі разам займалі не больш за тры слупкі."
+            ],
+            [
+              "Ці ёсць «рыба» памеру чатыры?",
+              "Так, Jellyfish. Bare Sudoku яе не выкарыстоўвае, бо яго галаваломкам яна ніколі не патрэбная."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing у судоку: як працуе тэхніка",
+          "description": "XYZ-Wing: апорная клетка з трыма кандыдатамі і два крылы з адной агульнай лічбай выключаюць яе з кожнай клеткі, што бачыць усе тры. Прыклад крок за крокам.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing гэта Y-Wing, у якога апорная клетка мае трох кандыдатаў. Апорная клетка мае X, Y і Z; адно крыло бачыць апорную клетку і мае X і Z, другое бачыць апорную клетку і мае Y і Z. Адна з трох клетак павінна быць Z, таму Z можна выдаліць з кожнай клеткі, якая бачыць усе тры. Паколькі сама апорная клетка можа быць Z, клетка, з якой выдаляюць, павінна бачыць і апорную клетку, і абодва крылы, а гэта абмяжоўвае яе блокам або лініяй, агульнымі для гэтых клетак. Гэта самая складаная тэхніка, якой карыстаецца Bare Sudoku.",
+          "when": [
+            "Толькі калі нічога іншага не дапамагае. XYZ-Wing гэта самая рэдкая фігура ў Bare Sudoku, і яна трапляецца толькі ў галаваломках Эксперт. Шукайце яе, калі клетка з трыма кандыдатамі стаіць у блоку разам з клеткай з двума кандыдатамі, у якой дзве агульныя з ёю лічбы."
+          ],
+          "spot": [
+            "Пачынайце з клетак з роўна трыма кандыдатамі; кожная з іх можа быць апорнай. Сярод яе суседзяў шукайце дзве клеткі з двума кандыдатамі кожная, абодва ўзятыя з трох кандыдатаў апорнай клеткі, з роўна адной агульнай лічбай Z. Потым шукайце клеткі, якія бачаць апорную клетку і абодва крылы і змяшчаюць Z. На практыцы адно крыло знаходзіцца ў блоку апорнай клеткі, а другое ў яе радку ці слупку, і выдаляць можна з астатніх клетак гэтага блока ў гэтым радку ці слупку."
+          ],
+          "examples": [
+            {
+              "h": "Прыклад",
+              "steps": [
+                "Апорная клетка {pivot} мае трох кандыдатаў: {x}, {y} і {z}. Яна бачыць {wingA} з {x} і {z} і {wingB} з {y} і {z}.",
+                "Калі ў {pivot} стаіць {z}, усё ясна. Калі там {x}, то ў {wingA} павінна стаяць {z}. Калі {y}, то ў {wingB} павінна стаяць {z}. У любым выпадку ў адной з трох клетак стаіць {z}.",
+                "Клетка, якая бачыць усе тры, не можа змяшчаць {z}. Выдаліце {z} з клетак {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Выключаць з клетак, якія бачаць толькі два крылы. У адрозненне ад Y-Wing, апорная клетка можа быць Z, таму клетка павінна бачыць і яе.",
+            "Браць крылы, кандыдаты якіх не цалкам уваходзяць у тры кандыдаты апорнай клеткі.",
+            "Блытаць з Y-Wing: розніца ў трэцім кандыдаце апорнай клеткі, і ён мяняе тое, з якіх клетак можна выдаляць."
+          ],
+          "faq": [
+            [
+              "Што такое XYZ-Wing у судоку?",
+              "Апорная клетка з кандыдатамі X, Y і Z і два крылы, адно з X і Z, другое з Y і Z, і абодва бачаць апорную клетку. Адна з трох клетак будзе Z, таму Z выдаляюць з клетак, якія бачаць усе тры."
+            ],
+            [
+              "Чым XYZ-Wing адрозніваецца ад Y-Wing?",
+              "У апорнай клеткі тры кандыдаты замест двух, і сярод іх Z. Таму Z можа апынуцца і ў самой апорнай клетцы, і страціць Z могуць толькі клеткі, якія бачаць апорную клетку і абодва крылы."
+            ],
+            [
+              "Як часта сустракаецца XYZ-Wing?",
+              "Рэдка. У Bare Sudoku ён можа спатрэбіцца толькі ў галаваломках Эксперт, і большасці з іх ён не патрэбны. Bare Sudoku правярае яго апошнім, пасля X-Wing, Y-Wing і Swordfish."
+            ],
+            [
+              "Ці існуе WXYZ-Wing?",
+              "Так, з апорнай клеткай на чатыры кандыдаты, але Bare Sudoku яго не выкарыстоўвае. Кожную галаваломку ў гульні можна дарашыць дзевяццю тэхнікамі з гэтага дапаможніка."
+            ]
+          ]
+        }
+      }
+    },
+    "so": {
+      "learnHeading": "Baro Sudoku",
+      "learnText": "Ma ku cusub tahay Sudoku, mise waxaad ku xayiran tahay halxiraale adag? Laba hage ayaa sharxaya xeerarka iyo farsamo kasta oo xalka ah oo tilmaamuhu isticmaalaan, mid kastana tusaale dhab ah ayuu leeyahay.",
+      "howToLink": "Sida loo ciyaaro Sudoku",
+      "techniquesLink": "Farsamooyinka xalinta Sudoku",
+      "labels": {
+        "howTo": "Sida loo ciyaaro",
+        "techniques": "Farsamooyin",
+        "play": "Ciyaar Sudoku",
+        "prev": "Farsamadii hore",
+        "next": "Farsamada xigta",
+        "all": "Dhammaan farsamooyinka",
+        "example": "Tusaale",
+        "steps": "Tallaabo tallaabo",
+        "when": "Goorta la isticmaalo",
+        "spot": "Sida loo ogaado",
+        "mistakes": "Khaladaadka caadiga ah",
+        "inGame": "Bare Sudoku gudihiisa",
+        "level": "Laga bilaabo heerka: {level}",
+        "hint": "Ciyaarta, tilmaantu waxay leedahay: {text}",
+        "legend": "Lambarrada farta adag ku qoran waa kuwa la bixiyay, lambarrada buluugga ah waxaa la dhigay intii xalku socday, lambarrada yaryarna waa musharraxiin. Unugyada iftiimaya ayaa sameeya qaabka, musharraxiinta la xarriiqay waa la saaraa, musharraxa goobo lagu wareejiyayna waa lambarka la dhigayo.",
+        "notation": "Unugyada waxaa loo qoraa sida r3c7: safka 3, tiirka 7. Safafka waxaa laga tiriyaa xagga sare, tiirarka xagga bidix, sanduuqyadana 1 ilaa 9 laga bilaabo geeska sare ee bidix, saf saf.",
+        "row": "safka {n}",
+        "column": "tiirka {n}",
+        "box": "sanduuqa {n}",
+        "elimItem": "{d} ee {cell}",
+        "regions": "Safka 5, tiirka 5 iyo sanduuqa 5 bilowga halxiraalaha",
+        "firstMove": "Keli muuqda: {cell} wuxuu noqon karaa {d} oo keliya",
+        "breadcrumb": "Jidka bogga"
+      },
+      "howTo": {
+        "title": "Sida loo ciyaaro Sudoku: xeerarka, shabakadda iyo bilowga",
+        "description": "Baro sida loo ciyaaro Sudoku: xeerarka, safafka, tiirarka iyo sanduuqyada, sababta halxiraale kastaa hal xal u leeyahay, qoraallada iyo dhaqaaqyada hore.",
+        "h1": "Sida loo ciyaaro Sudoku",
+        "summary": "Sudoku waa halxiraale caqli oo lagu ciyaaro shabakad 9×9 ah. Unug kasta oo bannaan ku buuxi lambar 1 ilaa 9 ah si saf kasta, tiir kasta iyo sanduuq kasta oo 3×3 ah ay u yeeshaan lambar kasta hal mar oo keliya. Lambarro qaar ayaa bilowga la bixiyaa; inta kalena adigaa caqli ku soo saaraya, hal unug oo la hubo mar kasta, weligaana uma baahnid inaad qiyaasto. Hagahan wuxuu sharxayaa shabakadda, xeerarka, mabda'a xalka keliya, qoraallada iyo xeelad fudud oo loogu talagalay dhaqaaqyadaada ugu horreeya. Wax walba waxaad ku tababaran kartaa [Bare Sudoku](play), oo bilaash ah oo leh tilmaamo sharxaya caqliga.",
+        "sections": [
+          {
+            "h": "Waa maxay xeerarka Sudoku?",
+            "p": [
+              "Saddex xeer oo keliya ayaa jira, dhammaantoodna waa isla xeer laga eegay saddex dhinac: saf kasta waa inuu yeeshaa lambarrada 1 ilaa 9, tiir kasta waa inuu yeeshaa lambarrada 1 ilaa 9, sanduuq kasta oo 3×3 ahna waa inuu yeeshaa lambarrada 1 ilaa 9. Sidaa darteed lambar marnaba laba jeer kuma jiri karo isla saf, tiir ama sanduuq.",
+              "Lambarrada la bixiyay, ee farta adag ku qoran, waa kuwo go'an. Shaqadaadu waa inaad buuxiso unugyada bannaan. Xisaab ma jirto, kala horreyn ma jirto: lambarradu waa sagaal calaamadood oo kala duwan oo keliya. Haddii aad xarfo ama qaabab ku ciyaarto, waxba isma beddeleen."
+            ]
+          },
+          {
+            "h": "Sidee bay u habaysan tahay shabakaddu?",
+            "p": [
+              "Shabakaddu waxay leedahay 81 unug oo ku yaal 9 saf iyo 9 tiir. Xarriijimo waaweyn ayaa u kala qaybiya sagaal sanduuq oo 3×3 ah. Unug kastaa wuxuu ka tirsan yahay hal saf, hal tiir iyo hal sanduuq oo keliya, saddexdaas kooxoodna waa kooxihiisa. 20-ka unug ee kale ee koox la wadaaga unug waxaa loo yaqaan derisyadiisa; lambar la dhigo unug wuxuu lambarkaas ka saaraa dhammaan 20-ka deris.",
+              "Unugyada waxaa loo qoraa sida r3c7: safka 3, tiirka 7. Safafka waxaa laga tiriyaa xagga sare, tiirarka xagga bidix, sanduuqyadana 1 ilaa 9 laga bilaabo geeska sare ee bidix, saf saf. Qoraalkan waxaa lagu isticmaalaa hage kasta oo farsamo, waana mid mudan in la barto: r5c5 waa bartamaha shabakadda."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Muxuu Sudoku kastaa u leeyahay hal xal oo keliya?",
+            "p": [
+              "Sudoku sax ah wuxuu leeyahay hal xal, taasina waa waxa caqliga ka dhigaya mid shaqeeya. Mar kasta oo aad muujin karto in lambar uusan meel kale ka geli karin koox, waa inuu galaa unugga haray, maxaa yeelay xalku wuu jiraa waana mid keliya. Haddii halxiraale laba xal lahaan lahaa, sababayn kastaa ma kala saari kareen, waxaadna meel uun ku qasbanaan lahayd inaad qiyaasto.",
+              "Bare Sudoku wuxuu halxiraale kasta ku sameeyaa qalabkaaga, wuxuuna hubiyaa inuu leeyahay hal xal oo keliya iyo in xalliyihiisa caqliga ahi ku dhammayn karo farsamooyinka heerka la doortay. Markaa haddii aad xayirato, had iyo jeer waxaa jira tallaabo xigta oo la heli karo, tilmaantuna way ku tusinaysaa."
+            ]
+          },
+          {
+            "h": "Sidee loo bilaabaa halxiraale Sudoku?",
+            "p": [
+              "Ka bilow meesha ugu cidhiidhiga badan. Kala horreyntan waxay shaqaysaa heer kasta:"
+            ],
+            "list": [
+              "Dooro lambar hore u soo muuqday marar badan, tusaale ahaan lix ama toddoba jeer, oo raadi sanduuqyada weli uu ka maqan yahay. Inta badan sanduuq hal unug oo keliya ayaa u haray: taasi waa [keli qarsoon](hidden-single).",
+              "Raadi unugyo ay lambarro badan ku hareeraysan yihiin. Unug uu safkiisa, tiirkiisa iyo sanduuqiisu wadajir u leeyihiin siddeed lambar oo kala duwan wuxuu leeyahay hal musharrax oo keliya: [keli muuqda](naked-single). Unugyada ku jira safaf ama sanduuqyo ku dhow buuxsamid ayaa ah meesha ugu fiican ee la eego.",
+              "Lambar kasta oo aad dhigto wuxuu musharrax ka saaraa 20 deris, markaa isla markiiba hubi derisyadaas. Kelinimadu badanaa si silsilad ah ayay isugu xigtaa.",
+              "Marka dhigista fudud ay dhammaato, qor qoraallada: musharraxiinta unug kasta oo bannaan. Kadib raadi lambar sanduuq dhexdiisa ku xiran hal xariiq ([musharraxiin xiran](locked-candidates)) ama laba unug oo leh isla labada musharrax ([lammaane muuqda](naked-pairs)).",
+              "Ku noqo kelinimada ka dib saarid kasta. Xitaa halxiraalayaasha Khabiir inta badan waxaa lagu xalliyaa kelinimo; farsamada horumarsan waxay kaliya furtaa tallaabada xigta."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Waa maxay qoraallada, goormaadse isticmaashaa?",
+            "p": [
+              "Qoraallada, oo sidoo kale loo yaqaan calaamadaha qalinka ama musharraxiinta, waa lambarrada yaryar ee aad ku qorto unug bannaan si aad u diiwaangeliso lambarrada weli halkaas suurtagalka ka ah. Halxiraalayaasha fudud dhif ayaad u baahan tahay; laga bilaabo Adag iyo wixii ka sarreeya waa lagama maarmaan, maxaa yeelay farsamooyinka sida laba iyo saddex, X-Wing iyo Y-Wing waxay ku saabsan yihiin musharraxiinta, ee kuma saabsana lambarrada la dhigay.",
+              "Qoraallada ha ahaadaan kuwo sax ah: marka aad lambar dhigto, ka tirtir qoraallada dhammaan 20-ka deris. Bare Sudoku gudihiisa tani si otomaatig ah ayay u dhacdaa, Buuxi qoraalladuna waxay hal taabasho ku qortaa musharrax kasta unug kasta oo bannaan, si aad uga bilaabato musharraxiin dhammaystiran oo sax ah. Qoraalku waa xaqiiq, ma aha qiyaas: wuxuu ka dhigan yahay in aan wax weli meesha ka saarin lambarkan."
+            ]
+          },
+          {
+            "h": "Maxaad samaysaa marka aad xayirato?",
+            "p": [
+              "Marka hore mar kale hubi aasaaska: saf, tiir iyo sanduuq kasta oo ku dhow buuxsamid waa il kelinimo. Kadib hubi in qoraalladu dhammaystiran yihiin, maxaa yeelay musharrax maqan wuxuu qariyaa qaababka, mid duugoobayna wuxuu abuuraa qaabab been ah. Kadib u mar [farsamooyinka](techniques) sida ay u kala adag yihiin: musharraxiin xiran, laba iyo saddex, X-Wing, Y-Wing, Swordfish iyo XYZ-Wing. Mid kastaa bog u gaar ah oo tusaale dhab ah leh ayuu leeyahay.",
+              "Haddii aysan waxba shaqayn, qaado tilmaan. Bare Sudoku gudihiisa tilmaantu marka hore waxay hubisaa in lambar la dhigay uu khalad yahay, kadib waxay helaysaa unugga xiga ee caqli lagu buuxin karo waxayna sheegtaa farsamada, si aad wax u barato xitaa marka aad isticmaasho. Mar kale taabo tilmaanta si aad lambarka u dhigto."
+            ]
+          },
+          {
+            "h": "Sidee lambarrada loogu geliyaa Bare Sudoku?",
+            "p": [
+              "Taabo unug, kadibna lambar. Ama marka hore taabo lambar: wuu xirmaa, unug kasta oo aad taabtana wuu helaa, taasoo ah habka ugu dhakhsaha badan ee lagu dhigo nuqulka lixaad, toddobaad iyo siddeedaad ee lambar. Mar kale taabo lambarka si aad u furto. Badhanka Qoraallo wuxuu u beddelaa calaamadaha qalinka, Tirtir wuxuu nadiifiyaa unug, Noqo wuxuu celiyaa dhaqaaq kasta, khaladaadkana waxaa lagu calaamadiyaa casaan haddii aadan taas ka damin menu-ga.",
+              "Kiiboodhka, isticmaal furayaasha fallaadha si aad u dhaqaaqdo, 1 ilaa 9 si aad lambar u geliso, Backspace si aad u tirtirto, N qoraallada, U si aad u noqoto, H tilmaan, F si aad qoraallada u buuxiso iyo Escape menu-ga. Ciyaartu iskeed ayay u kaydsataa, internet la'aan ayay shaqaysaa, xayeysiis iyo akoon midna ma laha."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ma u baahan tahay inaad qiyaasto Sudoku?",
+            "Halxiraale sax ah uma baahna. Halxiraale kasta oo Bare Sudoku ah wuxuu leeyahay hal xal oo keliya, waxaana la hubiyay in caqli keliya lagu xallin karo, ilaa farsamooyinka heerkiisa. Haddii aad dareento inaad qiyaasi doonto, musharrax ayaa ka maqan qoraalladaada ama farsamo ayaa sugaysa in la helo."
+          ],
+          [
+            "Lambar ma laba jeer ku jiri karaa saf, tiir ama sanduuq?",
+            "Maya. Taasi waa xeerka oo dhan: sagaalka saf, sagaalka tiir iyo sagaalka sanduuq mid kastaa wuxuu leeyahay lambar kasta oo 1 ilaa 9 ah hal mar oo keliya. Haddii laba lambar oo isku mid ah ay wadaagaan koox, ugu yaraan mid ka mid ah waa khalad."
+          ],
+          [
+            "Waa maxay farqiga u dhexeeya Fudud, Dhexdhexaad, Adag iyo Khabiir?",
+            "Heerka waxaa go'aamiya farsamooyinka uu halxiraaluhu u baahan yahay. Fudud iyo Dhexdhexaad waxaa lagu xalliyaa kelinimo oo keliya, Fududna wuxuu ku bilaabmaa ugu yaraan 38 lambar oo la bixiyay. Adag wuxuu u baahan yahay musharraxiin xiran ama laba iyo saddex. Khabiir wuxuu u baahan yahay X-Wing, Y-Wing, Swordfish ama XYZ-Wing."
+          ],
+          [
+            "Ma fiican tahay in qoraallo la buuxiyo unug kasta mise qaar keliya?",
+            "Halxiraalayaasha Adag iyo Khabiir, buuxi dhammaan: qaababka sida laba iyo saddex, X-Wing iyo Y-Wing waxay soo baxaan oo keliya marka musharrax kasta la qoro. Fudud iyo Dhexdhexaad, qoraalladu waa ikhtiyaari, ciyaartoyda badankoodna waxay kaliya raadiyaan kelinimo."
+          ],
+          [
+            "Intee in le'eg ayuu qaataa Sudoku?",
+            "Halxiraale Fudud wuxuu qaataa dhawr daqiiqo; halxiraalayaasha Khabiir waxay qaadan karaan labaatan daqiiqo ama ka badan, iyadoo ku xiran sida degdegga ah ee aad u aragto qaabka horumarsan. Bare Sudoku wuxuu muujiyaa saacad, wuu joojiyaa inta menu-gu furan yahay, mana hayo liis tartan, markaa ku ciyaar xawaarahaaga."
+          ],
+          [
+            "Sudoku ma u baahan yahay xisaab?",
+            "Maya. Lambarradu waa calaamado oo keliya; isku darid iyo tirin midna kuma jiro. Sagaal calaamadood oo kasta way shaqayn lahaayeen, taasina waa sababta Sudoku uu u yahay halxiraale caqli ee uusan u ahayn halxiraale tiro."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Farsamooyinka xalinta Sudoku oo tusaalayaal lagu sharxay",
+        "description": "Dhammaan sagaalka farsamo ee xalinta Sudoku, keli muuqda ilaa Swordfish iyo XYZ-Wing, sida tilmaamaha Bare Sudoku u isticmaalaan, mid kastaa tusaale dhab ah.",
+        "h1": "Farsamooyinka xalinta Sudoku",
+        "intro": [
+          "Sudoku kasta waxaa lagu xallin karaa farsamooyin caqli oo tiro yar. Tusmadan waxay taxaysaa sagaalka farsamo ee uu isticmaalo xalliyaha Bare Sudoku iyo tilmaamihiisu, sida uu xalliyuhu isugu xigxigo: marka hore kelinimada, kadib saaridda hal koox gudaheed, kadib qaabab ku fidsan dhawr saf iyo tiir. Farsamo kastaa waxay leedahay bog u gaar ah oo leh qeexid, sida loo ogaado, tusaale dhab ah oo laga soo qaaday halxiraale la sameeyay iyo khaladaadka caadiga ah.",
+          "Heerka halxiraale waxaa go'aamiya farsamada ugu adag ee uu u baahan yahay. Halxiraalayaasha Fudud iyo Dhexdhexaad waxay u baahan yihiin kelinimo oo keliya, kuwa Adag waxay u baahan yihiin musharraxiin xiran ama laba iyo saddex, kuwa Khabiirna waxay u baahan yihiin ugu yaraan hal qaab oo ah kalluun (fish) ama baal (wing). Heerku ha ahaado kuu doono, kelinimada ayaa qabata inta badan shaqada; farsamada horumarsan waxay saartaa hal ama laba musharrax, kelinimaduna halkaas ayay ka sii wadaan."
+        ],
+        "faq": [
+          [
+            "Farsamooyinka Sudoku kala horreyntee ayaan u tijaabiyaa?",
+            "Kuwa ugu fudud marka hore: keli muuqda, keli qarsoon, musharraxiin xiran, laba iyo saddex muuqda, laba iyo saddex qarsoon, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku isla kala horreyntan ayuu u tijaabiyaa, tilmaantuna had iyo jeer waxay magacawdaa farsamada ugu fudud ee horumar keenta."
+          ],
+          [
+            "Ma u baahanahay dhammaan farsamooyinkan si aan Sudoku u xalliyo?",
+            "Halxiraalayaasha Fudud iyo Dhexdhexaad, kelinimadu way ku filan tahay. Halxiraalayaasha Adag waxay ku daraan musharraxiin xiran iyo laba iyo saddex. Halxiraalayaasha Khabiir waxay u baahan yihiin ugu yaraan hal kalluun ama hal baal, laakiin badanaa hal ama laba jeer oo keliya halxiraalihiiba."
+          ],
+          [
+            "Ma jiraan farsamooyin ka adag XYZ-Wing?",
+            "Haa, tusaale ahaan silsilado, tijaabooyinka xalka keliya ah iyo forcing nets. Bare Sudoku ma sameeyo halxiraalayaal u baahan, markaa halxiraale kasta oo ciyaarta ku jira waxaa lagu dhammayn karaa sagaalka farsamo ee boggan."
+          ],
+          [
+            "Waa maxay musharrax?",
+            "Lambar weli geli kara unug bannaan, maxaa yeelay safkiisa, tiirkiisa iyo sanduuqiisa midna weli ma diidin. Qoraallada ciyaarta waa musharraxiin. Farsamo kasta oo ka dambeysa kelinimada waxay ku dhisan tahay musharraxiinta, markaa ha ahaadaan kuwo dhammaystiran oo sax ah."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Keli muuqda",
+          "title": "Keli muuqda ee Sudoku: unugga leh hal musharrax",
+          "description": "Keli muuqda waa unug bannaan oo leh hal lambar oo suurtagal ah oo keliya. Baro sida si dhakhso ah loo helo, tusaale dhab ah iyo khaladaadka caadiga ah.",
+          "h1": "Keli muuqda (naked single)",
+          "summary": "Keli muuqda waa unug bannaan oo leh hal musharrax oo keliya: siddeedda lambar ee kale waxay horeba ugu jiraan safkiisa, tiirkiisa ama sanduuqiisa. Lambarka haray waa inuu halkaas galaa. Waa farsamada ugu fudud ee Sudoku, tan aad ugu badan isticmaashid, iyo tan tilmaanta Bare Sudoku ay ku sheegto \"Hal musharrax oo keliya halkan\".",
+          "when": [
+            "Had iyo jeer. Keli muuqda wuxuu soo muuqdaa laga bilaabo dhaqaaqa ugu horreeya ilaa kan ugu dambeeya, heer kasta. Halxiraalayaasha Fudud iyo Dhexdhexaad, isaga iyo keli qarsoon ayaa ah farsamada keliya ee aad u baahan tahay. Halxiraalayaasha ka adag, saarid kasta oo farsamo horumarsan samayso badanaa waxay ka tagtaa keli muuqda, markaa raadi ka dib tallaabo kasta."
+          ],
+          "spot": [
+            "Eeg unugyada leh derisyo badan oo buuxa: unug ku jira saf horeba u leh toddoba lambar, ama unug uu safkiisa, tiirkiisa iyo sanduuqiisu wadajir u daboolaan siddeed lambar oo kala duwan. Qoraal la'aan, tiri lambarrada aad ka aragto unugga. Qoraallo leh, keli muuqda waa unug muujinaya hal musharrax oo keliya, taasina waa sababta Buuxi qoraallada ay u fududeyso helitaankooda."
+          ],
+          "examples": [
+            {
+              "h": "Tusaale",
+              "steps": [
+                "Eeg {cell}. Waa bannaan yahay, markaa qor lambar kasta oo horeba loogu dhigay safkiisa, tiirkiisa iyo sanduuqiisa.",
+                "Safka {row} waxaa ku jira {rowDigits}. Tiirka {col} waxaa ku jira {colDigits}. Sanduuqa {box} waxaa ku jira {boxDigits}.",
+                "Wadajir waxay meesha ka saaraan lambar kasta marka laga reebo {d}, markaa {d} waa musharraxa keliya ee ku haray {cell}.",
+                "Lambarka {d} ku qor {cell}. Kadib hubi in lambarka cusubi uu keli kale ka abuurayo isla safka, tiirka ama sanduuqa."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tirinta safka oo keliya ama sanduuqa oo keliya. Siddeedda lambar ee la diiday badanaa waxay ka yimaadaan saddexda koox oo wadajir ah.",
+            "Illaawidda in lambar aad hadda dhigtay uu sidoo kale musharraxiin ka saaro 20-kiisa deris; keli muuqda cusub ayaa soo baxa isla marka dhigid kasta ka dib.",
+            "Isku qaldidda keli muuqda iyo keli qarsoon: keli muuqda wuxuu leeyahay hal musharrax oo unugga ku haray, keli qarsoonna wuxuu leeyahay hal unug oo lambarka ugu haray koox dhexdeed."
+          ],
+          "faq": [
+            [
+              "Waa maxay keli muuqda ee Sudoku?",
+              "Unug bannaan oo leh hal musharrax oo keliya. Siddeed lambar oo kala duwan ayaa horeba loogu dhigay safkiisa, tiirkiisa iyo sanduuqiisa, markaa lambarka sagaalaad ayaa ah kan keliya ee ku habboon."
+            ],
+            [
+              "Maxaa loogu yeeraa muuqda?",
+              "Sababtoo ah musharraxa keliya si toos ah ayuu unugga ugu muuqdaa marka qoraallada la qoro; waxba ma qariyaan. Keli qarsoon, dhanka kale, wuxuu ku dhex jiraa musharraxiin kale, waxaana la helaa iyadoo la eegayo lambarka halkii laga eegi lahaa unugga."
+            ],
+            [
+              "Halxiraale ma lagu xallin karaa keli muuqda oo keliya?",
+              "Halxiraalayaal Fudud oo badan waa haa, laakiin badankood waxay sidoo kale u baahan yihiin keli qarsoon. Bare Sudoku wuxuu halxiraalayaasha Fudud iyo Dhexdhexaad u qiimeeyaa kuwo lagu xallin karo labada nooc ee kelinimo; halxiraalayaasha Adag iyo Khabiir waxay u baahan yihiin ugu yaraan farsamo kale."
+            ],
+            [
+              "Tilmaantu ma muujisaa keli muuqda?",
+              "Haa. Marka dhigista xigta ay tahay keli muuqda, tilmaantu waxay doorataa unugga waxayna tidhaa \"Hal musharrax oo keliya halkan\" iyo lambarka. Mar kale taabo tilmaanta si aad u dhigto."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Keli qarsoon",
+          "title": "Keli qarsoon ee Sudoku: meesha keliya ee lambar",
+          "description": "Keli qarsoon waa unugga keliya ee saf, tiir ama sanduuq uu lambar weli geli karo. Baro sida loo helo adigoo shabakadda baaraya hal lambar mar kasta.",
+          "h1": "Keli qarsoon (hidden single)",
+          "summary": "Keli qarsoon waa lambar ay saf, tiir ama sanduuq ugu hartay hal unug oo suurtagal ah oo keliya, xitaa haddii unuggaas uu muujinayo musharraxiin kale. Maadaama kooxdu ay tahay inay lambarka yeelato, halkaas ayuu galaa. Tilmaanta Bare Sudoku waxay ku sheegtaa \"Meesha keliya ee 5 safkan\", tiirkan ama sanduuqan.",
+          "when": [
+            "Mar kasta oo lambar si fiican u horumaray: marka lambar uu shan ama lix jeer soo muuqdo, sanduuqyada haray aad bay u cidhiidhi yihiin, keli qarsoonna badanaa waa dhaqaaqa xiga. Keli qarsoon waa farsamada ugu muhiimsan ee halxiraalayaasha Fudud iyo Dhexdhexaad, heer kastana wuxuu ahaanayaa farsamada shaqada ugu badan qabata."
+          ],
+          "spot": [
+            "Baar hal lambar mar kasta. Qaado lambar, hel sanduuq aan lahayn, oo ka xarriiq unug kasta oo sanduuqaas ah oo saf ama tiir la wadaaga nuqul la dhigay oo lambarkaas ah. Haddii hal unug uu haro, waxaad heshay keli qarsoon. Isla baaritaankaas wuxuu u shaqeeyaa safafka iyo tiirarka. Ciyaarta, taabo lambar la dhigay: nuqul kasta oo ka mid ah waa la iftiiminayaa, unugyada bannaanna si cad ayay u soo baxayaan."
+          ],
+          "examples": [
+            {
+              "h": "Tusaale",
+              "steps": [
+                "Sanduuqa {box} weli ma laha {d}, markaa mid ka mid ah unugyadiisa bannaan waa inuu qaataa. Unugyada bannaan waa {empties}.",
+                "Mid kasta oo iyaga ka mid ah marka laga reebo {cell}, {d} waxaa xiraya {d} horeba loogu dhigay isla safka ama tiirka, markaa {d} halkaas musharrax kama aha.",
+                "Taasi waxay {cell} ka dhigaysaa meesha keliya ee {d} ku jiri karto sanduuqa {box}. Halkaas ku qor {d}, xitaa haddii {cell} uu weli muujinayo musharraxiin kale."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Lambarka oo la dhigo unug laga yaabo inuu sax yahay oo keliya: hubi unug kasta oo bannaan oo kale ee kooxda, ma aha kuwa si cad u muuqda oo keliya.",
+            "Keli qarsoon oo laga dhaafo sababtoo ah unuggu wuxuu muujinayaa dhawr musharrax. Musharraxiinta kale muhiim ma aha; waxa muhiimka ah waa in lambarku uusan meel kale ku lahayn kooxda.",
+            "Baarista sanduuqyada oo keliya. Safafka iyo tiirarku si la mid ah ayay u bixiyaan keli qarsoon, gaar ahaan dhammaadka."
+          ],
+          "faq": [
+            [
+              "Waa maxay keli qarsoon ee Sudoku?",
+              "Lambar geli kara hal unug oo keliya oo saf, tiir ama sanduuq ah. Kooxdu waa inay lambarka yeelato, markaa unugga waa la go'aamiyay xitaa haddii uu weli leeyahay musharraxiin kale."
+            ],
+            [
+              "Waa maxay farqiga u dhexeeya keli qarsoon iyo keli muuqda?",
+              "Keli muuqda wuxuu ku saabsan yahay unug: hal musharrax ayaa ku haray. Keli qarsoon wuxuu ku saabsan yahay lambar: hal unug ayaa ugu haray koox dhexdeed. Labaduba waxay dhigaan lambar si hubaal ah."
+            ],
+            [
+              "Kee baa fudud in la helo?",
+              "Qoraal la'aan, keli qarsoon ayaa badanaa fudud maxaa yeelay waxaad shabakadda u baari kartaa hal lambar mar kasta. Qoraallo dhammaystiran leh, keli muuqda ayaa ugu fudud, maadaama unug leh hal musharrax uu si cad u muuqdo."
+            ],
+            [
+              "Sidee tilmaantu u sharaxdaa keli qarsoon?",
+              "Sida \"Meesha keliya ee\" lambarka safkan, tiirkan ama sanduuqan, iyadoo unugga la doortay. Mar kale taabo tilmaanta si aad u dhigto."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Musharraxiin xiran",
+          "title": "Musharraxiin xiran ee Sudoku: jihayn iyo sheegasho",
+          "description": "Musharraxiin xiran: marka musharraxiinta lambar ee sanduuq ay ku jiraan hal saf ama tiir, ama lidkeeda, lambarka meelo kale ayaa laga saaraa. Laba tusaale.",
+          "h1": "Musharraxiin xiran (locked candidates)",
+          "summary": "Musharraxiinta xiran waa farsamada ugu horreysa ee musharraxiin saarta halkii ay lambar dhigi lahayd. Waxay leedahay laba qaab. Jihayn (pointing): sanduuq dhexdiisa, dhammaan musharraxiinta lambar waxay ku jiraan hal saf ama tiir, markaa lambarka waxaa laga saaraa inta ka hartay xariiqdaas. Sheegasho (claiming): saf ama tiir dhexdiisa, dhammaan musharraxiinta lambar waxay ku jiraan hal sanduuq, markaa lambarka waxaa laga saaraa inta ka hartay sanduuqaas. Tilmaanta Bare Sudoku waxay dhigista ay furto ku calaamadisaa \"Musharraxiin xiran\".",
+          "when": [
+            "Marka kelinimadu ka dhammaato halxiraale Adag, tani waa waxa ugu horreeya ee la isku dayo. Waxay u baahan tahay qoraallo dhammaystiran, ugu yaraan lambarka aad baarayso. Musharraxiinta xiran waa caadi: halxiraalayaasha Adag badankood way u baahan yihiin, halxiraalayaasha Khabiirna waxay isticmaalaan inta u dhexeysa qaababka waaweyn."
+          ],
+          "spot": [
+            "Jihaynta, eeg sanduuq kasta iyo lambar kasta oo ka maqan: haddii unugyada musharraxa u ah lambarkaas ay ku jiraan hal saf ama tiir, hubi in isla lambarku uu musharrax ahaan uga muuqdo xariiqdaas meel ka baxsan sanduuqa. Sheegashada, eeg saf ama tiir dhererkiisa: haddii musharraxiinta lambar ay dhammaan ku jiraan hal sanduuq, inta ka hartay sanduuqaas waa la nadiifin karaa. Ciyaarta, taabo furaha lambar si aad u iftiimiso musharrax kasta oo uu leeyahay; xariiq ka kooban laba ama saddex qoraal oo iftiimaya oo hal sanduuq ku jira ayaa ah qaabka."
+          ],
+          "examples": [
+            {
+              "h": "Jihayn",
+              "steps": [
+                "Sanduuqa {box}, lambarka {d} wuxuu leeyahay unugyadan musharraxa ah oo keliya: {cells}. Dhammaantood waxay ku jiraan safka {row}.",
+                "Sanduuqa {box} wuxuu u baahan yahay {d}, markaa lambarka {d} ee safka {row} wuxuu ku jiraa sanduuqa {box}, unugyadaas kii uu doono ha galee.",
+                "Safka {row} ma yeelan karo {d} labaad, markaa {d} ka saar unugyada safka {row} ee ka baxsan sanduuqa: {elim}."
+              ]
+            },
+            {
+              "h": "Sheegasho",
+              "steps": [
+                "Safka {row}, lambarka {d} wuxuu geli karaa {cells} oo keliya, dhammaantoodna waxay ku jiraan sanduuqa {box}.",
+                "Safka {row} waa inuu yeeshaa {d}, markaa lambarka {d} ee sanduuqa {box} waxaa sheegta safka {row}. Unugyada kale ee sanduuqa {box} ma yeelan karaan {d}.",
+                "Unugyada {elim} ka saar {d}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Jihaynta, lambarka oo laga saaro gudaha sanduuqa halkii laga saari lahaa dibaddiisa, ama lidkeeda sheegashada. Saaridduhu had iyo jeer waxay ku dhacaan unugyada xariiqda ku jira laakiin aan sanduuqa ku jirin, ama sanduuqa ku jira laakiin aan xariiqda ku jirin.",
+            "Xeerka oo la adeegsado marka musharraxiintu ay ku kala firirsan yihiin laba saf oo sanduuqa ah. Dhammaan unugyada musharraxa u ah lambarka ee sanduuqa waa inay ku jiraan hal xariiq.",
+            "Illaawidda in la raadiyo keliga ay saariddu abuurto. Musharraxiinta xiran dhif ayay keligood lambar u dhigaan; waxay diyaariyaan keli."
+          ],
+          "faq": [
+            [
+              "Waa maxay musharraxiinta xiran ee Sudoku?",
+              "Musharraxiinta lambar ee ku koobnaaday isgoyska sanduuq iyo xariiq. Maadaama sanduuqa, ama xariiqda, ay tahay inay lambarka ku yeeshaan isgoyskaas, lambarka waa laga saari karaa inta ka hartay xariiqda, ama inta ka hartay sanduuqa."
+            ],
+            [
+              "Waa maxay farqiga u dhexeeya jihaynta iyo sheegashada?",
+              "Jihayntu waxay ka bilaabataa sanduuq: musharraxiinta lambarka ee sanduuqa waxay u jeedaan hal saf ama tiir, markaa lambarka waxaa laga saaraa inta ka hartay xariiqdaas. Sheegashadu waxay ka bilaabataa saf ama tiir: musharraxiinta xariiqda ee lambarka dhammaan waxay ku jiraan hal sanduuq, markaa xariiqdu waxay lambarka u sheegataa nafteeda, waxaana laga saaraa inta ka hartay sanduuqa."
+            ],
+            [
+              "Musharraxiinta xiran ma sidoo kale waxaa loo yaqaan intersection removal?",
+              "Haa. Magacyada kale waa box-line reduction qaabka sheegashada, iyo pointing pairs ama pointing triples qaabka jihaynta. Bare Sudoku wuxuu labadaba u isticmaalaa hal magac."
+            ],
+            [
+              "Heerkee ayaa u baahan musharraxiin xiran?",
+              "Adag. Halxiraale u baahan musharraxiin xiran ama laba iyo saddex, laakiin aan u baahnayn wax ka adag, waxaa lagu qiimeeyaa Adag; halxiraalayaasha Khabiir waxay sidoo kale u baahan yihiin kalluun ama baal."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Laba iyo saddex muuqda",
+          "title": "Laba iyo saddex muuqda ee Sudoku: sida ay u shaqeeyaan",
+          "description": "Laba iyo saddex muuqda: laba ama saddex unug oo koox ah oo wadaaga isla laba ama saddex musharrax. Baro sida loo arko iyo waxa la saaro, tusaalayaal dhab ah.",
+          "h1": "Laba iyo saddex muuqda (naked pairs)",
+          "summary": "Lammaane muuqda waa laba unug oo ku jira isla saf, tiir ama sanduuq oo leh isla labada musharrax oo keliya. Labada lambar waa inay galaan labadaas unug, markaa waa laga saari karaa unug kasta oo kale oo kooxda ah. Saddex muuqda waa isla fikradda oo leh saddex unug iyo saddex lambar; unug kastaa wuxuu muujin karaa laba ama dhammaan saddexda. Tilmaanta Bare Sudoku waxay dhigista ka dhalata ku calaamadisaa \"Laba ama saddex\".",
+          "when": [
+            "Marka qoraalladu dhammaystiran yihiin, kelinimada iyo musharraxiinta xiranna ay dhammaadeen. Lammaanayaasha muuqda aad bay ugu badan yihiin halxiraalayaasha Adag, saddexda muuqdana way ka yar yihiin. Labadaba waa mudan tahay in lagu hubiyo koox kasta oo weli leh shan unug oo bannaan ama ka badan."
+          ],
+          "spot": [
+            "Raadi unugyo leh laba musharrax oo keliya oo hel unug kale oo isla kooxda ku jira oo leh isla labadaas. Saddexda, eeg kooxaha leh dhawr unug oo leh laba iyo saddex musharrax oo hubi in saddex ka mid ah ay wadajir u isticmaalaan saddex lambar oo kala duwan oo keliya. Unugyada leh isla musharraxiinta way fududdahay in la arko marka qoraallada la qoro; Buuxi qoraallada ee ciyaarta waxay taas ku samaysaa hal taabasho."
+          ],
+          "examples": [
+            {
+              "h": "Lammaane muuqda",
+              "steps": [
+                "{cellA} iyo {cellB} ({unit}) waxay leeyihiin isla labada musharrax oo keliya: {d1} iyo {d2}.",
+                "Mid ka mid ah waa inuu noqdaa {d1}, kan kalena {d2}. Ma ogin kee yahay kee, laakiin labada lambarba waxaa qaatay labadan unug.",
+                "Sidaa darteed unug kale oo kooxdan ({unit}) ah ma yeelan karo {d1} ama {d2}. Ka saar {elim}."
+              ]
+            },
+            {
+              "h": "Saddex muuqda",
+              "steps": [
+                "Saddex unug oo kooxdan ({unit}) ah ayaa dhammaan musharraxiintooda ka qaata isla saddexda lambar, {digits}: {cells}.",
+                "Saddexda lambar waa inay buuxiyaan saddexdan unug si uun. Unuggu uma baahna inuu muujiyo dhammaan saddexda musharrax; waxa muhiimka ah waa in saddexda unug midkoodna uusan lahayn musharrax ka baxsan kooxdaas lambar.",
+                "Ka saar {digits} unug kasta oo kale oo kooxdan ({unit}) ah: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Qaadashada laba unug oo wadaaga laba musharrax laakiin sidoo kale leh mid saddexaad. Lammaane muuqda, unug kastaa waa inuu leeyahay labadaas musharrax oo keliya, waxba kale.",
+            "Lambarrada oo laga saaro unugyada lammaanaha laftooda. Lammaanuhu wuxuu haystaa musharraxiintiisa; saaridduhu waxay ku dhacaan unugyada kale ee kooxda.",
+            "In la shardiyo in unug kasta oo saddexda ah uu muujiyo dhammaan saddexda lambar. Unug leh laba ka mid ah saddexda waa caadi, inta aan unugna lahayn musharrax ka baxsan kooxdaas lambar."
+          ],
+          "faq": [
+            [
+              "Waa maxay lammaane muuqda ee Sudoku?",
+              "Laba unug oo hal koox ku jira oo labaduba leeyihiin isla labada musharrax oo keliya. Labadaas lambar waxay ku xiran yihiin labadaas unug, markaa waa laga saari karaa inta ka hartay kooxda."
+            ],
+            [
+              "Waa maxay saddex muuqda?",
+              "Saddex unug oo hal koox ku jira oo musharraxiintoodu wadajir ay yihiin saddex lambar oo keliya. Unug kastaa wuxuu yeelan karaa laba ama saddex ka mid ah. Saddexda lambar waxay buuxiyaan saddexda unug, markaa waa laga saari karaa unugyada kale ee kooxda."
+            ],
+            [
+              "Lammaane muuqda ma dhigaa lambar?",
+              "Keligiis ma dhigo. Wuxuu saaraa musharraxiin, saariddaasina badanaa waxay ka tagtaa keli muuqda ama qarsoon. Tilmaanta Bare Sudoku waxay muujisaa keligaas waxayna magacawdaa farsamada suurtagelisay."
+            ],
+            [
+              "Lammaane muuqda ma ku jiri karaa sanduuq iyo saf isku mar?",
+              "Haa. Haddii labada unug ay wadaagaan saf iyo sanduuq, lammaanuhu wuxuu wax ka saaraa labada koox. Bare Sudoku wuxuu u maareeyaa hal koox mar kasta."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Laba iyo saddex qarsoon",
+          "title": "Laba iyo saddex qarsoon ee Sudoku: sida loo helo",
+          "description": "Lammaane qarsoon: laba lambar oo koox ku jira oo geli kara isla laba unug oo keliya; musharraxiintooda kale waa la saaraa. Baro sida loo helo tallaabo tallaabo.",
+          "h1": "Laba iyo saddex qarsoon (hidden pairs)",
+          "summary": "Lammaane qarsoon waa laba lambar oo, hal saf, tiir ama sanduuq dhexdiisa, musharrax ku ah isla laba unug oo aan meel kale ku jirin. Labadaas unug waa inay qaataan labadaas lambar, markaa musharrax kasta oo kale oo ku jira waa la saari karaa. Saddex qarsoon si la mid ah ayay u shaqaysaa iyadoo saddex lambar ay ku koobnaadaan saddex unug. Saaridda ka dib unugyadu waxay muujiyaan lammaane ama saddex muuqda. Tilmaanta Bare Sudoku waxay dhigista ka dhalata ku calaamadisaa \"Laba ama saddex\".",
+          "when": [
+            "Marka koox ay leedahay unugyo leh musharraxiin badan, kelinimaduna ay dhammaatay. Lammaanayaasha qarsoon waxay ku dhuuntaan unugyo buuxa, waana sababta ay mudan tahay in lagu raadiyo meelaha aan lammaanayaasha muuqda laga arkin. Saddexda qarsoon waa dhif; Bare Sudoku wuu hubiyaa, laakiin halxiraalayaasha Adag badankood iyaga la'aan ayaa lagu xalliyaa."
+          ],
+          "spot": [
+            "Ku shaqee lambar, ha ku shaqeyn unug. Koox dhexdeed, qor unugyada uu geli karo lambar kasta oo maqan. Haddii laba lambar mid kastaa uu leeyahay laba unug oo suurtagal ah oo keliya, oo ay yihiin isla labada unug, waxaad heshay lammaane qarsoon. Ciyaarta, taabo furaha lambar si aad u iftiimiso musharraxiintiisa; haddii laba lambar ay iftiimiyaan isla laba unug oo koox ah oo aan waxba kale oo kooxdaas ah iftiimin, taasi waa qaabka."
+          ],
+          "examples": [
+            {
+              "h": "Lammaane qarsoon",
+              "steps": [
+                "Kooxda ({unit}) gudaheeda, lambarrada {d1} iyo {d2} mid kastaa wuxuu leeyahay laba unug oo suurtagal ah oo keliya, waana isla labada: {cells}.",
+                "Labadaas unug waa inay qaataan {d1} iyo {d2}, markaa musharraxiintooda kale waa wax aan suurtagal ahayn.",
+                "Ka saar {elim}. Hadda labada unug waxay muujinayaan lammaane muuqda, kaas oo furi kara wax kale."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Labada lambar ee lammaanaha oo laga saaro unugyada lammaanaha. Waa musharraxiinta kale ee unugyadaas kuwa la saarayo; lambarrada lammaanahu way haraan.",
+            "Aqbalidda lambar leh unug saddexaad oo suurtagal ah oo kooxda ku jira. Labada lambar waa inay ku koobnaadaan labada unug oo keliya.",
+            "Raadinta sanduuqyada oo keliya. Lammaanayaasha qarsoon si la mid ah ayay ugu badan yihiin safafka iyo tiirarka."
+          ],
+          "faq": [
+            [
+              "Waa maxay lammaane qarsoon ee Sudoku?",
+              "Laba lambar oo geli kara isla laba unug oo keliya oo koox ah. Unugyadaas waa inay qaataan lambarradaas, markaa musharraxiintooda kale waa la saaraa."
+            ],
+            [
+              "Sidee buu lammaane qarsoon uga duwan yahay lammaane muuqda?",
+              "Lammaane muuqda waa la arkaa: laba unug oo muujinaya isla labada musharrax oo keliya. Lammaane qarsoon waxaa daboolaya musharraxiin dheeraad ah oo ku jira labada unug. Marka la saaro kuwaas dheeraadka ah, lammaanaha qarsoon wuxuu noqdaa lammaane muuqda."
+            ],
+            [
+              "Waa maxay saddex qarsoon?",
+              "Saddex lambar oo ku koobnaaday saddex unug oo koox ah. Lambar kastaa uma baahna inuu ka muuqdo dhammaan saddexda unug; waxa muhiimka ah waa in saddexda lambar midkoodna uusan lahayn musharrax ka baxsan unugyadaas."
+            ],
+            [
+              "Tilmaantu ma kala saartaa lammaanayaasha qarsoon iyo kuwa muuqda?",
+              "Maya. Bare Sudoku wuxuu helaa labadaba wuxuuna dhigista ka dhalata ku calaamadiyaa \"Laba ama saddex\". Boggagan ayaa kala saara maxaa yeelay siyaabo kala duwan ayaa loo helaa."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing ee Sudoku: sida farsamadu u shaqeyso",
+          "description": "X-Wing: lambar leh laba unug oo musharrax ah oo keliya laba saf mid kasta, oo isla laba tiir ku jira, waxaa laga saaraa inta ka hartay tiirarkaas. Tusaale.",
+          "h1": "X-Wing",
+          "summary": "X-Wing waa qaab ka kooban hal lambar iyo afar unug oo ku yaal geesaha laydi. Haddii lambarku uu leeyahay laba unug oo musharrax ah oo keliya laba saf mid kasta, unugyadaasina ay ku jiraan isla laba tiir, lambarku waa inuu qabsadaa laba gees oo iska soo horjeeda oo laydiga ah. Sidaa darteed waa laga saari karaa unug kasta oo kale oo labadaas tiir ah. Isla sidaas ayay u shaqaysaa haddii safafka iyo tiirarka la isku beddelo. Waa farsamada ugu horreysa ee heerka Khabiir ee Bare Sudoku.",
+          "when": [
+            "Marka kelinimada, musharraxiinta xiran iyo laba iyo saddexduba dhammaadaan. X-Wing waa qaabka Khabiir ee ugu badan, wuxuuna inta badan soo muuqdaa marka lambar uu leeyahay musharraxiin yar oo haray, caadiyan marka afar ilaa lix nuqul oo ka mid ah horeba la dhigay. Wuxuu u baahan yahay qoraallo dhammaystiran oo lambarka aad baarayso ah."
+          ],
+          "spot": [
+            "Dooro lambar oo raadi safaf uu ku leeyahay laba unug oo musharrax ah oo keliya. Haddii laba saf oo caynkaas ah ay wadaagaan isla labada tiir, ka hubi tiirarkaas musharraxiin kale oo lambarkaas ah: kuwaasi waa saaridda. Kadib ku celi adoo tiirarka ka dhigaya saldhig. Ciyaarta, taabo furaha lambarka: musharrax kasta oo uu leeyahay waa la iftiiminayaa, laydi ka kooban afar qoraal oo iftiimayana si fudud ayaa loo arkaa."
+          ],
+          "examples": [
+            {
+              "h": "Tusaale",
+              "steps": [
+                "Lambarka {d} wuxuu leeyahay laba unug oo musharrax ah oo keliya safka {r1} iyo laba oo keliya safka {r2}, waxayna ku jiraan isla labada tiir, {c1} iyo {c2}: {cells}.",
+                "Safka {r1} wuxuu lambarkiisa {d} dhigaa tiirka {c1} ama {c2}, halka safka {r2} uu kiisa dhigo tiirka kale. Si kastaba ha ahaatee, tiirarka {c1} iyo {c2} mid kastaa wuxuu labadan saf ka helaa hal {d}.",
+                "Sidaa darteed {d} meel kale kama muuqan karo tiirarka {c1} iyo {c2}. Unugyada {elim} ka saar {d}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Isticmaalka saf lambarka u leh saddex unug oo musharrax ah. Saf kasta oo saldhig ah waa inuu leeyahay laba oo keliya, labaduba waa inay ku jiraan labada tiir ee la wadaago.",
+            "Lambarka oo laga saaro safafka halkii laga saari lahaa tiirarka. Marka safafku saldhig yihiin, saaridduhu waxay ku dhacaan tiirarka, lidkeeduna sidoo kale waa run.",
+            "Illaawidda nooca la rogay. X-Wing ku dhisan tiirar wuxuu wax ka saaraa safafka."
+          ],
+          "faq": [
+            [
+              "Waa maxay X-Wing ee Sudoku?",
+              "Lambar leh laba unug oo musharrax ah oo keliya laba saf mid kasta, oo ku jira isla labada tiir. Lambarku wuxuu qabsadaa laba gees oo iska soo horjeeda oo laydigaas ah, markaa waxaa laga saaraa inta ka hartay labada tiir. Safafka iyo tiirarka waa la isku beddeli karaa."
+            ],
+            [
+              "Muxuu X-Wing u shaqeeyaa?",
+              "Labada saf mid kastaa waa inuu lambarka dhigaa mid ka mid ah labada tiir, labada safna ma isticmaali karaan isla tiirka. Sidaa darteed labada tiir mid kastaa wuxuu nuqulkiisa lambarka ka helaa safafkan, musharrax kasta oo kale oo tiirarkaas ku jirana waa wax aan suurtagal ahayn."
+            ],
+            [
+              "X-Wing ma kalluun baa?",
+              "Haa. X-Wing waa kalluunka cabbirkiisu yahay laba; Swordfish waa kalluunka cabbirkiisu yahay saddex. Bare Sudoku wuu helaa labadaba."
+            ],
+            [
+              "Heerkee ayaa leh X-Wing?",
+              "Khabiir. Halxiraale u baahan X-Wing, Y-Wing, Swordfish ama XYZ-Wing waxaa lagu qiimeeyaa Khabiir."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing ee Sudoku: sida farsamadu u shaqeyso",
+          "description": "Y-Wing (XY-Wing): udub leh laba musharrax iyo laba baal oo mid kastaa la wadaago mid ka mid ah waxay lambar ka saaraan unug kasta oo arka labada baal. Tusaale.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, oo sidoo kale loo yaqaan XY-Wing, wuxuu isticmaalaa saddex unug oo mid kastaa leeyahay laba musharrax. Udubku wuxuu leeyahay musharraxiinta X iyo Y. Hal baal ayaa arka udubka wuxuuna leeyahay X iyo Z; baalka kale wuxuu arkaa udubka wuxuuna leeyahay Y iyo Z. Udubku wuxuu doono ha noqdee, mid ka mid ah baalasha waa inuu noqdaa Z, markaa Z waa laga saari karaa unug kasta oo arka labada baal. Waa farsamo heerka Khabiir ah oo Bare Sudoku ku jirta.",
+          "when": [
+            "Marka halxiraale uu leeyahay dhawr unug oo leh laba musharrax oo keliya, kalluunna aan la helin. Y-Wing wuxuu ku badan yahay halxiraalayaasha Khabiir, waxaana lagu helaa iyadoo la raacayo unugyada leh laba musharrax: mid kastaa wuxuu noqon karaa udub ama baal."
+          ],
+          "spot": [
+            "Qor unugyada leh laba musharrax oo keliya. Mid kasta u qaado inuu yahay udubka oo leh musharraxiinta X iyo Y, kuna raadi derisyadiisa unug leh X iyo lambar kale oo Z ah, iyo unug leh Y iyo isla Z. Labadaasi waa baalasha. Kadib hel unugyada arka labada baal oo leh Z. Ogow in baalashu aysan u baahnayn inay is arkaan."
+          ],
+          "examples": [
+            {
+              "h": "Tusaale",
+              "steps": [
+                "Udubka {pivot} wuxuu leeyahay musharraxiinta {x} iyo {y}. Wuxuu arkaa {wingA}, oo leh {x} iyo {z}, iyo {wingB}, oo leh {y} iyo {z}.",
+                "Haddii {pivot} uu yahay {x}, {wingA} wuxuu lumiyaa {x} wuxuuna noqdaa {z}. Haddii {pivot} uu yahay {y}, {wingB} ayaa noqda {z}. Si kastaba ha ahaatee mid ka mid ah labada baal waa {z}.",
+                "Unug arka labada baal marnaba ma noqon karo {z}. Unugyada {elim} ka saar {z}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Doorashada baalal aan labaduba arkin udubka. Baal kastaa waa inuu udubka la wadaagaa saf, tiir ama sanduuq.",
+            "Z oo laga saaro unugyo arka hal baal oo keliya. Unugga laga saarayo waa inuu arkaa labada baal.",
+            "Z oo laga saaro udubka. Y-Wing gudihiisa udubku ma laha Z; haddii uu leeyahay, qaabku waa XYZ-Wing oo leh xeerar kale."
+          ],
+          "faq": [
+            [
+              "Waa maxay Y-Wing ee Sudoku?",
+              "Saddex unug oo leh laba musharrax: udub leh X iyo Y, baal leh X iyo Z oo arka udubka, iyo baal leh Y iyo Z oo arka udubka. Hal baal had iyo jeer waa Z, markaa Z waxaa laga saaraa unugyada arka labada baal."
+            ],
+            [
+              "Y-Wing ma la mid baa XY-Wing?",
+              "Haa. Labada magac waxay sharxaan isla qaabka. Bare Sudoku wuxuu u yaqaan Y-Wing."
+            ],
+            [
+              "Maxay tahay in hal baal uu noqdo Z?",
+              "Haddii udubku yahay X, baalka koowaad wuxuu lumiyaa X wuxuuna noqdaa Z. Haddii udubku yahay Y, baalka labaad ayaa noqda Z. Udubku waa mid ka mid ah labadaas, markaa hal baal waa Z."
+            ],
+            [
+              "Immisa unug ayuu Y-Wing wax ka saaraa?",
+              "Badanaa hal ama laba: kaliya unugyada arka labada baal oo weli leh Z. Taasi way ku filan tahay in keli la abuuro."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish ee Sudoku: sida farsamadu u shaqeyso",
+          "description": "Swordfish: lambar ku koobnaaday saddex tiir oo saddex saf ah waa laga saaraa inta ka hartay tiirarkaas. Kalluun cabbirkiisu saddex yahay, tusaale lagu sharxay.",
+          "h1": "Swordfish",
+          "summary": "Swordfish waa X-Wing leh saddex saf iyo saddex tiir. Haddii lambar uu leeyahay ugu badnaan saddex unug oo musharrax ah saddex saf mid kasta, unugyadaas oo dhammina ay ku jiraan isla saddex tiir, saddexda saf waxay lambarka ku isticmaalaan tiirarkaas, lambarkana waa laga saari karaa unug kasta oo kale oo saddexda tiir ah. Safafka iyo tiirarka waa la isku beddeli karaa. Bare Sudoku wuxuu raadiyaa Swordfish Y-Wing ka dib, halxiraalayaasha Khabiir.",
+          "when": [
+            "Marka X-Wing iyo Y-Wing aysan waxba helin. Swordfish wuu ka yar yahay X-Wing wuxuuna u baahan yahay lambar musharraxiintiisu si khafiif ah ugu kala firirsan yihiin saddex xariiq. Wuxuu u baahan yahay qoraallo dhammaystiran oo sax ah oo lambarkaas ah."
+          ],
+          "spot": [
+            "Dooro lambar oo raadi safaf uu ku leeyahay laba ama saddex unug oo musharrax ah. Haddii saddex saf oo caynkaas ah ay wadajir u daboolaan saddex tiir oo keliya, ka hubi tiirarkaas musharraxiin kale oo lambarka ah. Saf kastaa uma baahna musharrax tiir kasta: Swordfish wuxuu yeelan karaa lix, toddoba, siddeed ama sagaal unug. Ciyaarta, lambarka ku iftiimi furihiisa oo raadi saddex saf oo musharraxiintoodu ku safan yihiin saddex tiir."
+          ],
+          "examples": [
+            {
+              "h": "Tusaale",
+              "steps": [
+                "Lambarka {d} wuxuu leeyahay ugu badnaan saddex unug oo musharrax ah safafka {rows} mid kasta, unugyadaas oo dhammina waxay ku jiraan tiirarka {cols}: {cells}.",
+                "Saddexda saf mid kastaa waa inuu lambarkiisa {d} dhigaa mid ka mid ah saddexda tiir, labo saf oo isla tiir isticmaalana ma jiraan. Sidaa darteed saddexda tiir waxay lambarkooda {d} ka helaan saddexdan saf.",
+                "Musharrax kasta oo kale oo {d} ah oo tiirarka {cols} ku jira waa wax aan suurtagal ahayn. Unugyada {elim} ka saar {d}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "In la shardiyo dhammaan sagaalka unug. Swordfish leh laba musharrax safaf qaarkood weli waa sax, inta saddexda saf ay daboolaan saddex tiir oo keliya.",
+            "Ku darista saf leh afar unug oo musharrax ah. Saf kasta oo saldhig ah waa inuu leeyahay ugu badnaan saddex, dhammaantood saddexda tiir gudahooda.",
+            "Saaridda safafka saldhigga ah. Marka safafku saldhig yihiin, saaridduhu waxay ku dhacaan saddexda tiir, meel ka baxsan safafka saldhigga."
+          ],
+          "faq": [
+            [
+              "Waa maxay Swordfish ee Sudoku?",
+              "Lambar musharraxiintiisa saddex saf ay ku koobnaadeen saddex tiir. Saddexda saf waa inay lambarka dhigaan saddexdaas tiir, tiir kasta mid, markaa lambarka waxaa laga saaraa unugyada kale ee tiirarkaas."
+            ],
+            [
+              "Sidee buu Swordfish uga duwan yahay X-Wing?",
+              "Cabbirka oo keliya: X-Wing wuxuu isticmaalaa laba saf iyo laba tiir, Swordfish saddex iyo saddex. Sababayntu waa isku mid."
+            ],
+            [
+              "Swordfish ma u baahan yahay sagaal unug oo dhammaystiran?",
+              "Maya. Saf kastaa wuxuu yeelan karaa laba ama saddex musharrax; qaabku wuxuu kaliya u baahan yahay in saddexda saf wadajir aysan isticmaalin wax ka badan saddex tiir."
+            ],
+            [
+              "Ma jiraa kalluun cabbirkiisu afar yahay?",
+              "Haa, Jellyfish. Bare Sudoku ma isticmaalo, maxaa yeelay halxiraalayaashiisu marnaba uma baahna."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing ee Sudoku: sida farsamadu u shaqeyso",
+          "description": "XYZ-Wing: udub leh saddex musharrax iyo laba baal oo wadaaga mid ka mid ah waxay lambarkaas ka saaraan unugyada arka saddexdaba. Tusaale, tallaabo tallaabo.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing waa Y-Wing uu udubkiisu leeyahay saddex musharrax. Udubku wuxuu leeyahay X, Y iyo Z; hal baal ayaa arka udubka wuxuuna leeyahay X iyo Z, kan kalena wuxuu arkaa udubka wuxuuna leeyahay Y iyo Z. Saddexda unug mid ka mid ah waa inuu noqdaa Z, markaa Z waa laga saari karaa unug kasta oo arka saddexdaba. Maadaama udubka laftiisu uu noqon karo Z, unugga laga saarayo waa inuu arkaa udubka iyo labada baalba, taasoo ku koobaysa sanduuqa ama xariiqda ay unugyadu wadaagaan. Waa farsamada ugu adag ee Bare Sudoku isticmaalo.",
+          "when": [
+            "Kaliya marka wax kasta oo kale ay fashilmaan. XYZ-Wing waa qaabka ugu dhifka badan Bare Sudoku, wuxuuna ka muuqdaa halxiraalayaasha Khabiir oo keliya. Raadi marka unug leh saddex musharrax uu sanduuq kula jiro unug leh laba musharrax oo la wadaaga laba ka mid ah lambarradiisa."
+          ],
+          "spot": [
+            "Ka bilow unugyada leh saddex musharrax oo keliya; mid kastaa wuxuu noqon karaa udub. Derisyadiisa ka raadi laba unug oo mid kastaa leeyahay laba musharrax, labaduba laga soo qaaday saddexda udubka, oo wadaaga hal lambar oo keliya oo Z ah. Kadib raadi unugyo arka udubka iyo labada baal oo leh Z. Dhab ahaan hal baal wuxuu ku jiraa sanduuqa udubka, kan kalena safkiisa ama tiirkiisa, unugyada laga saarayona waa unugyada ka haray sanduuqaas ee ku jira safkaas ama tiirkaas."
+          ],
+          "examples": [
+            {
+              "h": "Tusaale",
+              "steps": [
+                "Udubka {pivot} wuxuu leeyahay saddex musharrax: {x}, {y} iyo {z}. Wuxuu arkaa {wingA} oo leh {x} iyo {z}, iyo {wingB} oo leh {y} iyo {z}.",
+                "Haddii {pivot} uu yahay {z}, waa dhammaatay. Haddii uu yahay {x}, {wingA} waa inuu noqdaa {z}. Haddii uu yahay {y}, {wingB} waa inuu noqdaa {z}. Si kastaba ha ahaatee saddexda unug mid ka mid ah waa {z}.",
+                "Unug arka saddexdaba ma noqon karo {z}. Unugyada {elim} ka saar {z}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ka saarid unugyo arka labada baal oo keliya. Si ka duwan Y-Wing, udubku wuxuu noqon karaa Z, markaa unuggu waa inuu sidoo kale arkaa udubka.",
+            "Isticmaalka baalal aan musharraxiintoodu labaduba ku jirin saddexda musharrax ee udubka.",
+            "Lagu qaldo Y-Wing: farqigu waa musharraxa saddexaad ee udubka, wuxuuna beddelaa unugyada la nadiifin karo."
+          ],
+          "faq": [
+            [
+              "Waa maxay XYZ-Wing ee Sudoku?",
+              "Udub leh musharraxiinta X, Y iyo Z iyo laba baal, mid leh X iyo Z iyo mid leh Y iyo Z, oo labaduba arkaan udubka. Saddexda unug mid ka mid ah waa Z, markaa Z waxaa laga saaraa unugyada arka saddexdaba."
+            ],
+            [
+              "Sidee buu XYZ-Wing uga duwan yahay Y-Wing?",
+              "Udubku wuxuu leeyahay saddex musharrax halkii uu laba ka lahaan lahaa, oo uu Z ku jiro. Taasi waxay udubka ka dhigaysaa meel Z geli karo, markaa kaliya unugyada arka udubka iyo labada baal ayaa lumin kara Z."
+            ],
+            [
+              "Intee jeer ayuu XYZ-Wing soo muuqdaa?",
+              "Dhif. Bare Sudoku gudihiisa, halxiraalayaasha Khabiir oo keliya ayaa u baahan kara, badankoodna uma baahna. Bare Sudoku wuxuu hubiyaa ugu dambeyn, X-Wing, Y-Wing iyo Swordfish ka dib."
+            ],
+            [
+              "Ma jiraa WXYZ-Wing?",
+              "Haa, oo leh udub afar musharrax leh, laakiin Bare Sudoku ma isticmaalo. Halxiraale kasta oo ciyaarta ku jira waxaa lagu dhammayn karaa sagaalka farsamo ee hagahan."
+            ]
+          ]
+        }
+      }
+    },
     "xh": {
       "learnHeading": "Funda i-Sudoku",
       "learnText": "Umtsha kwi-Sudoku, okanye ubambekile kwimfumba enzima? Izikhokelo ezimbini zichaza imithetho nendlela nganye yokusombulula esetyenziswa ngamacebiso, zombini zinemizekelo yokwenyani.",
