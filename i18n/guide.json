@@ -22115,6 +22115,2334 @@
           ]
         }
       }
+    },
+    "sl": {
+      "learnHeading": "Nauči se sudoku",
+      "learnText": "Si nov v sudokuju ali se ti je zataknilo pri težki uganki? Dva vodnika razložita pravila in vse tehnike reševanja, ki jih uporabljajo namigi, vsako z resničnim primerom.",
+      "howToLink": "Kako igrati sudoku",
+      "techniquesLink": "Tehnike reševanja sudokuja",
+      "labels": {
+        "howTo": "Kako igrati",
+        "techniques": "Tehnike",
+        "play": "Igraj sudoku",
+        "prev": "Prejšnja tehnika",
+        "next": "Naslednja tehnika",
+        "all": "Vse tehnike",
+        "example": "Primer",
+        "steps": "Korak za korakom",
+        "when": "Kdaj jo uporabiti",
+        "spot": "Kako jo opaziti",
+        "mistakes": "Pogoste napake",
+        "inGame": "V Bare Sudokuju",
+        "level": "Potrebno od težavnosti: {level}",
+        "hint": "V igri namig pravi: {text}",
+        "legend": "Krepke števke so podane, modre so bile vpisane med reševanjem, majhne števke so kandidati. Označena polja tvorijo vzorec, prečrtani kandidati se odstranijo, obkroženi kandidat pa je števka, ki jo vpišeš.",
+        "notation": "Polja zapisujemo kot r3c7: vrstica 3, stolpec 7. Vrstice štejemo od zgoraj, stolpce od leve, kvadrate od 1 do 9 pa od zgornjega levega naprej, vrsto za vrsto.",
+        "row": "v vrstici {n}",
+        "column": "v stolpcu {n}",
+        "box": "v kvadratu {n}",
+        "elimItem": "{d} iz {cell}",
+        "regions": "Vrstica 5, stolpec 5 in kvadrat 5 na začetku uganke",
+        "firstMove": "Edini kandidat: {cell} je lahko le {d}",
+        "breadcrumb": "Drobtinice"
+      },
+      "howTo": {
+        "title": "Kako igrati sudoku: pravila, mreža in prve poteze",
+        "description": "Nauči se igrati sudoku: pravila, kako delujejo vrstice, stolpci in kvadrati, zakaj ima vsaka uganka eno rešitev, kako uporabljati zapiske in prve poteze.",
+        "h1": "Kako igrati sudoku",
+        "summary": "Sudoku je logična uganka na mreži 9×9. Vsako prazno polje izpolni s števko od 1 do 9 tako, da vsaka vrstica, vsak stolpec in vsak kvadrat 3×3 vsebuje vsako števko natanko enkrat. Nekatere števke so podane že na začetku; ostale izpelješ sam, eno zanesljivo polje za drugim, in nikoli ti ni treba ugibati. Ta vodnik razloži mrežo, pravila, načelo ene same rešitve, zapiske in preprosto strategijo za prve poteze. Vse lahko vadiš v [Bare Sudokuju](play), ki je brezplačen in ima namige, ki razložijo logiko.",
+        "sections": [
+          {
+            "h": "Kakšna so pravila sudokuja?",
+            "p": [
+              "Pravila so samo tri in pravzaprav so eno samo pravilo, gledano iz treh smeri: vsaka vrstica mora vsebovati števke od 1 do 9, vsak stolpec mora vsebovati števke od 1 do 9 in vsak kvadrat 3×3 mora vsebovati števke od 1 do 9. Števka se zato nikoli ne sme pojaviti dvakrat v isti vrstici, stolpcu ali kvadratu.",
+              "Podane števke, izpisane krepko, so nespremenljive. Tvoja naloga je izpolniti prazna polja. Ni računanja in števke nimajo vrstnega reda: so le devet različnih simbolov. Lahko bi igral s črkami ali liki in nič se ne bi spremenilo."
+            ]
+          },
+          {
+            "h": "Kako je mreža urejena?",
+            "p": [
+              "Mreža ima 81 polj v 9 vrsticah in 9 stolpcih. Debele črte jo delijo na devet kvadratov 3×3. Vsako polje pripada natanko eni vrstici, enemu stolpcu in enemu kvadratu; te tri skupine so njegove enote. 20 drugih polj, ki si s poljem delijo enoto, imenujemo njegovi sosedi; števka, vpisana v polje, to števko izključi v vseh 20 sosedih.",
+              "Polja zapisujemo kot r3c7: vrstica 3, stolpec 7. Vrstice štejemo od zgoraj, stolpce od leve, kvadrate od 1 do 9 pa od zgornjega levega naprej, vrsto za vrsto. Ta zapis se uporablja v vseh vodnikih po tehnikah in ga je vredno osvojiti: r5c5 je središče mreže."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Zakaj ima vsak sudoku natanko eno rešitev?",
+            "p": [
+              "Pravi sudoku ima eno rešitev in prav zato logika deluje. Kadar lahko pokažeš, da števka v enoti ne more nikamor drugam, mora iti v preostalo polje, ker rešitev obstaja in je ena sama. Če bi imela uganka dve rešitvi, ju nobeno sklepanje ne bi moglo ločiti in v nekem trenutku bi moral ugibati.",
+              "Bare Sudoku vsako uganko ustvari na tvoji napravi in preveri, da ima natanko eno rešitev in da jo njegov logični reševalec lahko dokonča s tehnikami izbrane težavnosti. Če se ti zatakne, torej vedno obstaja naslednji korak, ki ga lahko najdeš, in namig ti ga pokaže."
+            ]
+          },
+          {
+            "h": "Kako začeti reševati sudoku?",
+            "p": [
+              "Začni tam, kjer je največ omejitev. Ta vrstni red deluje na vseh težavnostih:"
+            ],
+            "list": [
+              "Izberi števko, ki se že večkrat pojavi, recimo šestkrat ali sedemkrat, in poišči kvadrate, v katerih še manjka. Pogosto ji v kvadratu ostane le eno polje: to je [edino mesto](hidden-single).",
+              "Poišči natrpana polja. Polje, katerega vrstica, stolpec in kvadrat skupaj vsebujejo osem različnih števk, ima le še enega kandidata: to je [edini kandidat](naked-single). Najbolje je iskati v skoraj polnih vrsticah ali kvadratih.",
+              "Vsaka vpisana števka odstrani kandidata iz 20 sosedov, zato te sosede takoj preveri. Singli se pogosto vrstijo kot v verigi.",
+              "Ko zmanjka lahkih vpisov, piši zapiske: kandidate za vsako prazno polje. Nato poišči števko, ki je v kvadratu omejena na eno samo vrstico ali stolpec ([zaklenjeni kandidati](locked-candidates)), ali dve polji z istima dvema kandidatoma ([goli par](naked-pairs)).",
+              "Po vsaki izločitvi se vrni k singlom. Tudi uganke težavnosti Strokovnjak se večinoma rešijo s singli; napredna tehnika le odklene naslednjega."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Kaj so zapiski in kdaj jih uporabljati?",
+            "p": [
+              "Zapiski, imenovani tudi kandidati ali oznake s svinčnikom, so majhne števke, ki jih zapišeš v prazno polje, da si zabeležiš, katere števke so tam še mogoče. Pri lahkih ugankah jih redko potrebuješ; od težavnosti Težko naprej so nujni, ker tehnike, kot so pari, X-Wing in Y-Wing, delujejo na kandidatih, ne na vpisanih števkah.",
+              "Zapiski morajo biti točni: ko vpišeš števko, jo odstrani iz zapiskov vseh 20 sosedov. V Bare Sudokuju se to zgodi samodejno, Izpolni zapiske pa z enim dotikom vpiše vse kandidate v vsa prazna polja, tako da lahko začneš s popolnim in pravilnim naborom kandidatov. Zapisek je dejstvo, ne ugibanje: pomeni, da te števke še nič ne izključuje."
+            ]
+          },
+          {
+            "h": "Kaj narediti, ko se ti zatakne?",
+            "p": [
+              "Najprej še enkrat preveri osnove: vsaka skoraj polna vrstica, stolpec in kvadrat je vir singlov. Nato poskrbi, da so zapiski popolni, saj manjkajoči kandidat skrije vzorce, zastarel pa ustvari lažne. Potem pojdi skozi [tehnike](techniques) po težavnosti: zaklenjeni kandidati, pari in trojice, X-Wing, Y-Wing, Swordfish in XYZ-Wing. Vsaka ima svojo stran z resničnim primerom.",
+              "Če nič ne pomaga, vzemi namig. V Bare Sudokuju namig najprej preveri, ali je kakšna vpisana števka napačna, nato poišče naslednje polje, ki ga je mogoče izpolniti z logiko, in poimenuje tehniko, tako da se nekaj naučiš, tudi ko ga uporabiš. Znova tapni namig, da vpišeš števko."
+            ]
+          },
+          {
+            "h": "Kako vpisuješ števke v Bare Sudokuju?",
+            "p": [
+              "Tapni polje in nato števko. Lahko pa najprej tapneš števko: ta se zaklene in dobi jo vsako polje, ki ga tapneš, kar je najhitrejši način za vpis šeste, sedme in osme kopije števke. Za sprostitev števko tapni še enkrat. Gumb Zapiski preklopi na oznake s svinčnikom, Izbriši počisti polje, Razveljavi vrne katero koli potezo, napake pa so označene z rdečo, razen če to izklopiš v meniju.",
+              "Na tipkovnici se premikaš s puščicami, števko vpišeš s tipkami od 1 do 9, Backspace briše, N preklopi zapiske, U razveljavi, H da namig, F izpolni zapiske, Escape pa odpre meni. Igra se shranjuje sama, deluje brez povezave ter nima oglasov in ne zahteva računa."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ali je treba v sudokuju kdaj ugibati?",
+            "Pri pravi uganki ne. Vsaka uganka v Bare Sudokuju ima natanko eno rešitev in je preverjeno rešljiva samo z logiko, s tehnikami do svoje težavnosti. Če se ti zdi, da moraš ugibati, v zapiskih manjka kandidat ali pa te čaka tehnika, ki je še nisi opazil."
+          ],
+          [
+            "Se lahko števka pojavi dvakrat v vrstici, stolpcu ali kvadratu?",
+            "Ne. To je celotno pravilo: vsaka od devetih vrstic, devetih stolpcev in devetih kvadratov vsebuje vsako števko od 1 do 9 natanko enkrat. Če si dve enaki števki delita enoto, je vsaj ena od njiju napačna."
+          ],
+          [
+            "Kakšna je razlika med težavnostmi Lahko, Srednje, Težko in Strokovnjak?",
+            "Težavnost določajo tehnike, ki jih uganka potrebuje. Lahko in Srednje se rešita samo s singli, Lahko pa se začne z vsaj 38 podanimi števkami. Težko zahteva zaklenjene kandidate ali pare in trojice. Strokovnjak zahteva X-Wing, Y-Wing, Swordfish ali XYZ-Wing."
+          ],
+          [
+            "Je bolje izpolniti zapiske za vsa polja ali le za nekatera?",
+            "Pri ugankah Težko in Strokovnjak izpolni vse: vzorci, kot so pari, X-Wing in Y-Wing, se pokažejo šele, ko so zapisani vsi kandidati. Pri Lahko in Srednje so zapiski neobvezni in večina igralcev le išče single."
+          ],
+          [
+            "Koliko časa traja en sudoku?",
+            "Uganka Lahko vzame nekaj minut; uganke Strokovnjak lahko trajajo dvajset minut ali več, odvisno od tega, kako hitro opaziš napredni vzorec. Bare Sudoku prikazuje štoparico, jo ustavi, ko je meni odprt, in nima lestvice najboljših, zato igraj v svojem tempu."
+          ],
+          [
+            "Ali sudoku zahteva računanje?",
+            "Ne. Števke so le oznake; ni seštevanja ne štetja. Delovalo bi katerih koli devet simbolov, in zato je sudoku logična uganka, ne številska."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tehnike reševanja sudokuja, razložene s primeri",
+        "description": "Vseh devet tehnik reševanja sudokuja, od edinega kandidata do Swordfish in XYZ-Wing, v vrstnem redu namigov Bare Sudokuja, vsaka z resničnim primerom.",
+        "h1": "Tehnike reševanja sudokuja",
+        "intro": [
+          "Vsak sudoku je mogoče rešiti z majhnim naborom logičnih tehnik. To kazalo navaja devet tehnik, ki jih uporabljata reševalec Bare Sudokuja in njegovi namigi, v vrstnem redu, v katerem jih reševalec preizkuša: najprej singli, nato izločanja znotraj ene enote, nato vzorci, ki se raztezajo čez več vrstic in stolpcev. Vsaka tehnika ima svojo stran z definicijo, navodili, kako jo opaziti, resničnim primerom iz ustvarjene uganke in pogostimi napakami.",
+          "Težavnost uganke določa najtežja tehnika, ki jo potrebuje. Uganke Lahko in Srednje potrebujejo le single, uganke Težko zaklenjene kandidate ali pare in trojice, uganke Strokovnjak pa vsaj eno ribo ali krilo. Ne glede na težavnost večino dela opravijo singli; napredna tehnika odstrani kandidata ali dva, singli pa nadaljujejo od tam."
+        ],
+        "faq": [
+          [
+            "V kakšnem vrstnem redu naj preizkušam tehnike sudokuja?",
+            "Najcenejše najprej: edini kandidati, edina mesta, zaklenjeni kandidati, goli pari in trojice, skriti pari in trojice, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku jih preizkuša natanko v tem vrstnem redu in namig vedno poimenuje najpreprostejšo tehniko, ki omogoči napredek."
+          ],
+          [
+            "Ali za reševanje sudokuja potrebujem vse te tehnike?",
+            "Za uganke Lahko in Srednje zadostujejo singli. Uganke Težko dodajo zaklenjene kandidate in podmnožice. Uganke Strokovnjak potrebujejo vsaj eno ribo ali krilo, a običajno le enkrat ali dvakrat na uganko."
+          ],
+          [
+            "Ali obstajajo težje tehnike od XYZ-Wing?",
+            "Da, na primer verige, testi enoličnosti in prisilne mreže. Bare Sudoku ne ustvarja ugank, ki bi jih potrebovale, zato je vsako uganko v igri mogoče dokončati z devetimi tehnikami s te strani."
+          ],
+          [
+            "Kaj je kandidat?",
+            "Števka, ki bi še lahko šla v prazno polje, ker je nič v njegovi vrstici, stolpcu ali kvadratu še ne izključuje. Zapiski v igri so kandidati. Vsaka tehnika onkraj singlov sklepa o kandidatih, zato naj bodo popolni in točni."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Edini kandidat",
+          "title": "Edini kandidat v sudokuju: polje s samo enim kandidatom",
+          "description": "Edini kandidat (naked single) je prazno polje, v katero gre le ena števka. Nauči se ga hitro najti, z resničnim primerom po korakih in pogostimi napakami.",
+          "h1": "Edini kandidat (naked single)",
+          "summary": "Edini kandidat je prazno polje, ki ima natanko enega kandidata: ostalih osem števk se že pojavi v njegovi vrstici, stolpcu ali kvadratu. Preostala števka mora iti tja. To je najpreprostejša tehnika sudokuja, tista, ki jo uporabljaš najpogosteje, in tista, ki jo namig v Bare Sudokuju sporoči kot »Tukaj je le en kandidat«.",
+          "when": [
+            "Vedno. Edini kandidati se pojavljajo od prve do zadnje poteze, na vseh težavnostih. Pri ugankah Lahko in Srednje so skupaj z edinimi mesti edina tehnika, ki jo potrebuješ. Pri težjih ugankah vsaka izločitev z napredno tehniko navadno pusti za sabo edinega kandidata, zato ga išči po vsakem koraku."
+          ],
+          "spot": [
+            "Glej polja z veliko zapolnjenimi sosedi: polje v vrstici, ki že ima sedem števk, ali polje, katerega vrstica, stolpec in kvadrat skupaj pokrivajo osem različnih števk. Brez zapiskov preštej števke, ki jih vidiš iz polja. Z zapiski je edini kandidat preprosto polje, ki kaže enega kandidata, zato jih z Izpolni zapiske zlahka najdeš."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Poglej {cell}. Polje je prazno, zato naštej vse števke, ki so že vpisane v njegovi vrstici, stolpcu in kvadratu.",
+                "Vrstica {row} vsebuje {rowDigits}. Stolpec {col} vsebuje {colDigits}. Kvadrat {box} vsebuje {boxDigits}.",
+                "Skupaj izključijo vse števke razen {d}, zato je {d} edini kandidat, ki ostane v {cell}.",
+                "Vpiši {d} v {cell}. Nato preveri, ali nova števka ustvari še en single v isti vrstici, stolpcu ali kvadratu."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Štetje le vrstice ali le kvadrata. Osem izključenih števk navadno prihaja iz vseh treh enot skupaj.",
+            "Pozabljanje, da tudi števka, ki si jo pravkar vpisal, izključi kandidate iz svojih 20 sosedov; novi edini kandidati se pojavijo takoj po vsakem vpisu.",
+            "Zamenjava edinega kandidata z edinim mestom: pri edinem kandidatu v polju ostane en kandidat, pri edinem mestu v enoti za števko ostane eno polje."
+          ],
+          "faq": [
+            [
+              "Kaj je edini kandidat (naked single) v sudokuju?",
+              "Prazno polje z natanko enim kandidatom. V njegovi vrstici, stolpcu in kvadratu je že vpisanih osem različnih števk, zato je deveta števka edina, ki ustreza."
+            ],
+            [
+              "Zakaj mu v angleščini pravijo naked, torej gol?",
+              "Ker je edini kandidat, ko so zapiski napisani, neposredno viden v polju; nič ga ne skriva. Edino mesto (hidden single) pa se skriva med drugimi kandidati in ga najdeš tako, da gledaš števko, ne polja."
+            ],
+            [
+              "Ali je mogoče uganko rešiti samo z edinimi kandidati?",
+              "Mnoge uganke Lahko je mogoče, večina pa potrebuje tudi edina mesta. Bare Sudoku oceni uganke Lahko in Srednje kot rešljive s singli obeh vrst; uganke Težko in Strokovnjak potrebujejo vsaj še eno tehniko."
+            ],
+            [
+              "Ali namig pokaže edine kandidate?",
+              "Da. Ko je naslednji vpis edini kandidat, namig izbere polje in s števko izpiše »Tukaj je le en kandidat«. Znova tapni namig, da jo vpišeš."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Edino mesto",
+          "title": "Edino mesto v sudokuju: edino polje za števko",
+          "description": "Edino mesto (hidden single) je edino polje v vrstici, stolpcu ali kvadratu, kamor števka še lahko gre. Nauči se ga opaziti s pregledovanjem po eni števki.",
+          "h1": "Edino mesto (hidden single)",
+          "summary": "Edino mesto je števka, ki ima v vrstici, stolpcu ali kvadratu le še eno možno polje, čeprav to polje morda kaže tudi druge kandidate. Ker mora enota vsebovati to števko, gre števka tja. Namig v Bare Sudokuju ga sporoči kot »Edino mesto za 5 v tej vrstici«, v tem stolpcu ali v tem kvadratu.",
+          "when": [
+            "Kadar je števka že dobro razporejena: ko se pojavi petkrat ali šestkrat, so preostali kvadrati zelo omejeni in edino mesto je pogosto naslednja poteza. Edina mesta so glavna tehnika ugank Lahko in Srednje in ostanejo delovni konj na vseh težavnostih."
+          ],
+          "spot": [
+            "Pregleduj po eno števko naenkrat. Vzemi števko, poišči kvadrat, ki je ne vsebuje, in prečrtaj vsa polja tega kvadrata, ki si delijo vrstico ali stolpec z že vpisano kopijo te števke. Če ostane eno polje, si našel edino mesto. Enako pregledovanje deluje na vrsticah in stolpcih. V igri tapni vpisano števko: vse njene kopije se označijo, zato prosta polja izstopajo."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Kvadrat {box} še nima števke {d}, zato mora biti ta v enem od njegovih praznih polj. Prazna polja so {empties}.",
+                "V vseh razen v {cell} števko {d} blokira {d}, ki je že vpisana v isti vrstici ali stolpcu, zato {d} tam ni kandidat.",
+                "Tako ostane {cell} edino mesto za {d} v kvadratu {box}. Vpiši {d} tja, čeprav {cell} morda še kaže druge kandidate."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vpis števke v polje, ki je le verjetno pravo: preveri vsa druga prazna polja enote, ne le očitnih.",
+            "Spregledano edino mesto, ker polje kaže več kandidatov. Drugi kandidati niso pomembni; pomembno je, da števka v enoti nima drugega mesta.",
+            "Pregledovanje samo kvadratov. Vrstice in stolpci dajo edina mesta enako pogosto, zlasti proti koncu."
+          ],
+          "faq": [
+            [
+              "Kaj je edino mesto (hidden single) v sudokuju?",
+              "Števka, ki lahko gre le v eno polje vrstice, stolpca ali kvadrata. Enota mora vsebovati to števko, zato je polje določeno, četudi ima še druge kandidate."
+            ],
+            [
+              "Kakšna je razlika med edinim mestom in edinim kandidatom?",
+              "Edini kandidat se nanaša na polje: v njem je ostal en kandidat. Edino mesto se nanaša na števko: v enoti ji je ostalo eno polje. Oba zanesljivo vpišeta števko."
+            ],
+            [
+              "Katerega je lažje najti?",
+              "Brez zapiskov so edina mesta navadno lažja, ker lahko mrežo pregleduješ po eno števko naenkrat. S popolnimi zapiski so najlažji edini kandidati, saj polje z enim samim kandidatom izstopa."
+            ],
+            [
+              "Kako namig opiše edino mesto?",
+              "Kot »Edino mesto za« števko v tej vrstici, tem stolpcu ali tem kvadratu, z izbranim poljem. Znova tapni namig, da jo vpišeš."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Zaklenjeni kandidati",
+          "title": "Zaklenjeni kandidati v sudokuju: kazanje in prisvajanje",
+          "description": "Zaklenjeni kandidati: ko vsi kandidati števke v kvadratu ležijo v eni vrstici ali stolpcu, ali obratno, se števka drugod odstrani. Dva resnična primera.",
+          "h1": "Zaklenjeni kandidati",
+          "summary": "Zaklenjeni kandidati so prva tehnika, ki kandidate odstranjuje, namesto da bi vpisala števko. Ima dve obliki. Kazanje: v kvadratu vsi kandidati za števko ležijo v eni vrstici ali stolpcu, zato se števka odstrani iz preostanka te vrstice ali stolpca. Prisvajanje: v vrstici ali stolpcu vsi kandidati za števko ležijo v enem kvadratu, zato se števka odstrani iz preostanka tega kvadrata. Namig v Bare Sudokuju vpis, ki ga tehnika omogoči, označi z »Zaklenjeni kandidati«.",
+          "when": [
+            "Ko pri uganki Težko zmanjka singlov, najprej poskusi to. Potrebuješ popolne zapiske vsaj za števko, ki jo preučuješ. Zaklenjeni kandidati so pogosti: večina ugank Težko jih potrebuje, uganke Strokovnjak pa jih uporabljajo med večjimi vzorci."
+          ],
+          "spot": [
+            "Pri kazanju glej vsak kvadrat in vsako števko, ki mu manjka: če kandidatna polja te števke ležijo v eni sami vrstici ali stolpcu, preveri, ali se ista števka kot kandidat pojavi še naprej po tej vrstici ali stolpcu zunaj kvadrata. Pri prisvajanju glej vzdolž vrstice ali stolpca: če so vsi kandidati za števko znotraj enega kvadrata, lahko preostanek tega kvadrata počistiš. V igri tapni tipko števke, da označiš vse njene kandidate; dva ali trije označeni zapiski v isti vrstici ali stolpcu znotraj enega kvadrata so vzorec."
+          ],
+          "examples": [
+            {
+              "h": "Kazanje",
+              "steps": [
+                "V kvadratu {box} ima števka {d} le ta kandidatna polja: {cells}. Vsa ležijo v vrstici {row}.",
+                "Kvadrat {box} potrebuje {d}, zato je {d} vrstice {row} znotraj kvadrata {box}, ne glede na to, v katero od teh polj pade.",
+                "Vrstica {row} ne more imeti še ene števke {d}, zato odstrani {d} iz polj vrstice {row} zunaj kvadrata: {elim}."
+              ]
+            },
+            {
+              "h": "Prisvajanje",
+              "steps": [
+                "V vrstici {row} lahko števka {d} gre le v {cells}, vsa ta polja pa ležijo znotraj kvadrata {box}.",
+                "Vrstica {row} mora vsebovati {d}, zato si {d} kvadrata {box} prisvoji vrstica {row}. Druga polja kvadrata {box} ne morejo imeti {d}.",
+                "Odstrani {d} iz polj {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Odstranjevanje števke znotraj kvadrata namesto zunaj njega pri kazanju ali obratno pri prisvajanju. Izločitve vedno veljajo za polja, ki so v vrstici ali stolpcu, a ne v kvadratu, ali v kvadratu, a ne v tej vrstici ali stolpcu.",
+            "Uporaba pravila, ko se kandidati raztezajo čez dve vrstici kvadrata. Vsa kandidatna polja števke v kvadratu morajo ležati v eni vrstici ali stolpcu.",
+            "Pozabljanje na single, ki ga izločitev ustvari. Zaklenjeni kandidati redko sami vpišejo števko; pripravijo single."
+          ],
+          "faq": [
+            [
+              "Kaj so zaklenjeni kandidati v sudokuju?",
+              "Kandidati za števko, omejeni na presek kvadrata in linije, torej vrstice ali stolpca. Ker mora kvadrat ali linija vsebovati števko znotraj tega preseka, se števka lahko odstrani iz preostanka linije ali iz preostanka kvadrata."
+            ],
+            [
+              "Kakšna je razlika med kazanjem in prisvajanjem?",
+              "Kazanje izhaja iz kvadrata: kandidati števke v kvadratu kažejo vzdolž ene vrstice ali stolpca, zato se števka odstrani iz preostanka te linije. Prisvajanje izhaja iz vrstice ali stolpca: kandidati linije za števko so vsi v enem kvadratu, zato si linija prisvoji števko in ta se odstrani iz preostanka kvadrata."
+            ],
+            [
+              "Ali zaklenjenim kandidatom pravijo tudi odstranjevanje s presekom?",
+              "Da. Druga imena so redukcija kvadrat-linija za obliko prisvajanja ter kazalni pari ali kazalne trojice za obliko kazanja. Bare Sudoku za obe uporablja eno ime."
+            ],
+            [
+              "Katera težavnost potrebuje zaklenjene kandidate?",
+              "Težko. Uganka, ki potrebuje zaklenjene kandidate ali podmnožice, nič težjega pa ne, je ocenjena kot Težko; uganke Strokovnjak potrebujejo še ribo ali krilo."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Goli pari in trojice",
+          "title": "Goli pari in trojice v sudokuju: kako delujejo",
+          "description": "Goli pari in trojice: dve ali tri polja v enoti z istima dvema ali istimi tremi kandidati. Nauči se jih opaziti in kaj odstraniti, z resničnimi primeri.",
+          "h1": "Goli pari in trojice (naked pair, naked triple)",
+          "summary": "Goli par sta dve polji v isti vrstici, stolpcu ali kvadratu, ki imata natanko ista dva kandidata. Obe števki morata iti v ti dve polji, zato ju lahko odstraniš iz vseh drugih polj enote. Gola trojica je ista zamisel s tremi polji in tremi števkami; vsako polje lahko kaže dve ali vse tri. Namig v Bare Sudokuju vpis, ki iz tega sledi, označi z »Par ali trojica«.",
+          "when": [
+            "Ko so zapiski popolni ter so singli in zaklenjeni kandidati izčrpani. Goli pari so v ugankah Težko zelo pogosti, gole trojice manj. Oboje se splača preveriti v vsaki enoti, ki ima še pet ali več praznih polj."
+          ],
+          "spot": [
+            "Poišči polja s samo dvema kandidatoma in v isti enoti najdi drugo polje z istima dvema. Pri trojicah glej enote z več polji z dvema ali tremi kandidati in preveri, ali tri od njih skupaj uporabljajo le tri različne števke. Polja z natanko enakimi kandidati je lahko opaziti, ko so zapiski napisani; Izpolni zapiske v igri to naredi z enim dotikom."
+          ],
+          "examples": [
+            {
+              "h": "Goli par",
+              "steps": [
+                "{cellA} in {cellB} {unit} imata natanko ista dva kandidata: {d1} in {d2}.",
+                "Eno od njiju mora biti {d1}, drugo {d2}. Ne vemo, katero je katero, a obe števki sta porabljeni v teh dveh poljih.",
+                "Zato nobeno drugo polje {unit} ne more imeti {d1} ali {d2}. Odstrani {elim}."
+              ]
+            },
+            {
+              "h": "Gola trojica",
+              "steps": [
+                "Tri polja {unit} jemljejo vse svoje kandidate iz istih treh števk, {digits}: {cells}.",
+                "Tri števke morajo v nekem vrstnem redu zapolniti ta tri polja. Polju ni treba kazati vseh treh kandidatov; pomembno je, da nobeno od treh polj nima kandidata zunaj te množice.",
+                "Odstrani {digits} iz vseh drugih polj {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Izbira dveh polj, ki si delita dva kandidata, a imata še tretjega. Pri golem paru mora imeti vsako polje natanko ta dva kandidata in nič drugega.",
+            "Odstranjevanje števk iz samih polj para. Par obdrži svoje kandidate; izločitve veljajo za druga polja enote.",
+            "Zahteva, da vsako polje trojice kaže vse tri števke. Polje z dvema od treh je v redu, dokler nobeno polje nima kandidata zunaj množice."
+          ],
+          "faq": [
+            [
+              "Kaj je goli par v sudokuju?",
+              "Dve polji v eni enoti, ki imata obe natanko ista dva kandidata. Ti dve števki sta zaklenjeni v ti dve polji, zato ju lahko odstraniš iz preostanka enote."
+            ],
+            [
+              "Kaj je gola trojica?",
+              "Tri polja v eni enoti, katerih kandidati so skupaj le tri števke. Vsako polje ima lahko dve ali tri od njih. Tri števke zapolnijo tri polja, zato jih lahko odstraniš iz drugih polj enote."
+            ],
+            [
+              "Ali goli par vpiše števko?",
+              "Sam po sebi ne. Odstrani kandidate, odstranitev pa navadno pusti edinega kandidata ali edino mesto. Namig v Bare Sudokuju pokaže ta single in poimenuje tehniko, ki ga je omogočila."
+            ],
+            [
+              "Ali je goli par lahko hkrati v kvadratu in vrstici?",
+              "Da. Če si polji delita vrstico in kvadrat, par izloča v obeh enotah. Bare Sudoku jih obravnava po eno enoto naenkrat."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Skriti pari in trojice",
+          "title": "Skriti pari in trojice v sudokuju: kako jih opaziti",
+          "description": "Skriti par sta dve števki, ki lahko gresta le v isti dve polji enote, zato drugi kandidati odpadejo. Nauči se najti skrite pare in trojice po korakih.",
+          "h1": "Skriti pari in trojice (hidden pair, hidden triple)",
+          "summary": "Skriti par sta dve števki, ki sta v vrstici, stolpcu ali kvadratu kandidata v istih dveh poljih in nikjer drugje. Ti dve polji morata imeti ti dve števki, zato lahko iz njiju odstraniš vse druge kandidate. Skrita trojica deluje enako s tremi števkami, omejenimi na tri polja. Po odstranitvi polja pokažejo gol par ali golo trojico. Namig v Bare Sudokuju vpis, ki iz tega sledi, označi z »Par ali trojica«.",
+          "when": [
+            "Ko ima enota polja z veliko kandidati in singlov ni več. Skriti pari se skrivajo v polnih poljih, zato jih je vredno iskati prav tam, kjer golih parov ni videti. Skrite trojice so redke; Bare Sudoku jih preverja, a večina ugank Težko se reši brez njih."
+          ],
+          "spot": [
+            "Delaj po števkah, ne po poljih. V enoti si zabeleži, v katera polja lahko gre vsaka manjkajoča števka. Če imata dve števki vsaka le dve možni polji in sta to isti dve polji, imaš skriti par. V igri tapni tipko števke, da označiš njene kandidate; če dve števki osvetlita isti dve polji enote in nič drugega v njej, je to vzorec."
+          ],
+          "examples": [
+            {
+              "h": "Skriti par",
+              "steps": [
+                "Števki {d1} in {d2} imata {unit} vsaka le dve možni polji, in to isti dve: {cells}.",
+                "Ti dve polji morata imeti {d1} in {d2}, zato so njuni drugi kandidati nemogoči.",
+                "Odstrani {elim}. Zdaj polji kažeta goli par, kar lahko odklene še več."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Odstranjevanje števk para iz polj para. Odpadejo drugi kandidati teh polj; števki para ostaneta.",
+            "Sprejetje števke, ki ima v enoti tretje možno polje. Obe števki morata biti omejeni na natanko ti dve polji.",
+            "Iskanje samo v kvadratih. Skriti pari se enako pogosto pojavljajo v vrsticah in stolpcih."
+          ],
+          "faq": [
+            [
+              "Kaj je skriti par v sudokuju?",
+              "Dve števki, ki lahko gresta le v isti dve polji enote. Ti polji morata dobiti ti števki, zato se njuni drugi kandidati odstranijo."
+            ],
+            [
+              "Kako se skriti par razlikuje od golega para?",
+              "Goli par je viden: dve polji, ki kažeta le ista dva kandidata. Skriti par prekrivajo dodatni kandidati v obeh poljih. Ko te dodatne kandidate odstraniš, skriti par postane goli par."
+            ],
+            [
+              "Kaj je skrita trojica?",
+              "Tri števke, omejene na tri polja enote. Ni nujno, da se vsaka števka pojavi v vseh treh poljih; pomembno je, da nobena od treh števk nima kandidata zunaj teh polj."
+            ],
+            [
+              "Ali namig loči skrite in gole pare?",
+              "Ne. Bare Sudoku najde oboje in vpis, ki iz tega sledi, označi z »Par ali trojica«. Strani tukaj ju ločujeta, ker ju iščemo na različna načina."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing v sudokuju: kako tehnika deluje",
+          "description": "X-Wing: števka z natanko dvema kandidatnima poljema v dveh vrsticah, v istih dveh stolpcih, se odstrani iz preostanka teh stolpcev. Resničen primer.",
+          "h1": "X-Wing",
+          "summary": "X-Wing je vzorec ene števke in štirih polj v ogliščih pravokotnika. Če ima števka v vsaki od dveh vrstic natanko dve kandidatni polji in ta polja ležijo v istih dveh stolpcih, mora števka zasesti dve nasprotni oglišči pravokotnika. Zato jo lahko odstraniš iz vseh drugih polj teh dveh stolpcev. Enako deluje z zamenjanimi vrsticami in stolpci. To je prva tehnika težavnosti Strokovnjak v Bare Sudokuju.",
+          "when": [
+            "Ko so singli, zaklenjeni kandidati in podmnožice izčrpani. X-Wing je najpogostejši vzorec težavnosti Strokovnjak in se pogosto pojavi, ko ima števka le malo kandidatov, navadno ko so vpisane že štiri do šest njenih kopij. Potrebuje popolne zapiske za števko, ki jo preučuješ."
+          ],
+          "spot": [
+            "Izberi števko in poišči vrstice, v katerih ima natanko dve kandidatni polji. Če si dve taki vrstici delita ista dva stolpca, v teh stolpcih preveri druge kandidate te števke: to so izločitve. Nato ponovi s stolpci kot osnovo. V igri tapni tipko števke: vsi njeni kandidati se označijo in pravokotnik štirih označenih zapiskov je lahko opaziti."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Števka {d} ima natanko dve kandidatni polji v vrstici {r1} in natanko dve v vrstici {r2}, ta pa ležijo v istih dveh stolpcih, {c1} in {c2}: {cells}.",
+                "Vrstica {r1} postavi svojo {d} v stolpec {c1} ali {c2}, vrstica {r2} pa v drugega. Tako ali tako vsak od stolpcev {c1} in {c2} dobi {d} iz teh dveh vrstic.",
+                "Zato se {d} ne more pojaviti nikjer drugje v stolpcih {c1} in {c2}. Odstrani {d} iz {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uporaba vrstice, ki ima za števko tri kandidatna polja. Vsaka osnovna vrstica jih mora imeti natanko dve in obe morata biti v skupnih dveh stolpcih.",
+            "Odstranjevanje števke iz vrstic namesto iz stolpcev. Pri vrsticah kot osnovi so izločitve v stolpcih in obratno.",
+            "Pozabljanje zamenjane različice. X-Wing, zgrajen na stolpcih, izloča v vrsticah."
+          ],
+          "faq": [
+            [
+              "Kaj je X-Wing v sudokuju?",
+              "Števka, ki ima v vsaki od dveh vrstic natanko dve kandidatni polji, v istih dveh stolpcih. Števka zasede dve nasprotni oglišči tega pravokotnika, zato se odstrani iz preostanka obeh stolpcev. Vrstice in stolpce lahko zamenjaš."
+            ],
+            [
+              "Zakaj X-Wing deluje?",
+              "Vsaka od dveh vrstic mora števko postaviti v enega od dveh stolpcev, obe vrstici pa ne moreta uporabiti istega stolpca. Tako vsak od stolpcev dobi svojo kopijo števke iz teh vrstic in vsak drug kandidat v teh stolpcih je nemogoč."
+            ],
+            [
+              "Ali je X-Wing riba?",
+              "Da. X-Wing je riba velikosti dve, Swordfish pa riba velikosti tri. Bare Sudoku najde obe."
+            ],
+            [
+              "Na kateri težavnosti se pojavi X-Wing?",
+              "Strokovnjak. Uganka, ki potrebuje X-Wing, Y-Wing, Swordfish ali XYZ-Wing, je ocenjena kot Strokovnjak."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing v sudokuju: kako tehnika deluje",
+          "description": "Y-Wing (XY-Wing): stožer z dvema kandidatoma in dve krili, ki imata vsako enega od njiju, izrineta števko iz vseh polj, ki vidijo obe krili. Primer.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, imenovan tudi XY-Wing, uporablja tri polja s po dvema kandidatoma. Stožer ima kandidata X in Y. Eno krilo vidi stožer in ima X in Z; drugo krilo vidi stožer in ima Y in Z. Karkoli je stožer, eno od kril mora biti Z, zato lahko Z odstraniš iz vseh polj, ki vidijo obe krili. V Bare Sudokuju je to tehnika težavnosti Strokovnjak.",
+          "when": [
+            "Ko ima uganka več polj z natanko dvema kandidatoma in nobena riba ni na voljo. Y-Wing je pogost v ugankah Strokovnjak in ga najdeš tako, da slediš poljem z dvema kandidatoma: vsako je mogoč stožer ali krilo."
+          ],
+          "spot": [
+            "Naštej polja z natanko dvema kandidatoma. Vsako obravnavaj kot stožer s kandidatoma X in Y in med njegovimi sosedi poišči polje z X in neko drugo števko Z ter polje z Y in istim Z. Ti dve polji sta krili. Nato poišči polja, ki vidijo obe krili in vsebujejo Z. Krilama se ni treba videti med seboj."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Stožer {pivot} ima kandidata {x} in {y}. Vidi {wingA}, ki ima {x} in {z}, ter {wingB}, ki ima {y} in {z}.",
+                "Če je {pivot} {x}, {wingA} izgubi {x} in postane {z}. Če je {pivot} {y}, postane {wingB} {z}. V vsakem primeru je eno od kril {z}.",
+                "Polje, ki vidi obe krili, nikoli ne more biti {z}. Odstrani {z} iz {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Izbira kril, od katerih vsaj eno ne vidi stožerja. Vsako krilo si mora s stožerjem deliti vrstico, stolpec ali kvadrat.",
+            "Odstranjevanje Z iz polj, ki vidijo le eno krilo. Polje, iz katerega odstranjuješ, mora videti obe krili.",
+            "Odstranjevanje Z iz stožerja. Pri Y-Wingu stožer ne vsebuje Z; če ga vsebuje, je vzorec XYZ-Wing z drugačnimi pravili."
+          ],
+          "faq": [
+            [
+              "Kaj je Y-Wing v sudokuju?",
+              "Tri polja z dvema kandidatoma: stožer z X in Y, krilo z X in Z, ki vidi stožer, in krilo z Y in Z, ki vidi stožer. Eno krilo je vedno Z, zato se Z odstrani iz polj, ki vidijo obe krili."
+            ],
+            [
+              "Ali je Y-Wing isto kot XY-Wing?",
+              "Da. Imeni opisujeta isti vzorec. Bare Sudoku mu pravi Y-Wing."
+            ],
+            [
+              "Zakaj mora biti eno krilo Z?",
+              "Če je stožer X, prvo krilo izgubi X in postane Z. Če je stožer Y, drugo krilo postane Z. Stožer je eno ali drugo, zato je eno krilo Z."
+            ],
+            [
+              "Koliko polj počisti Y-Wing?",
+              "Navadno eno ali dve: samo polja, ki vidijo obe krili in še vsebujejo Z. To zadostuje, da nastane single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish v sudokuju: kako tehnika deluje",
+          "description": "Swordfish: števka, omejena na tri stolpce v treh vrsticah, se odstrani iz preostanka teh stolpcev. Riba velikosti tri, razložena z resničnim primerom.",
+          "h1": "Swordfish",
+          "summary": "Swordfish je X-Wing s tremi vrsticami in tremi stolpci. Če ima števka v vsaki od treh vrstic največ tri kandidatna polja in vsa ta polja ležijo v istih treh stolpcih, tri vrstice porabijo števko v teh stolpcih in števko lahko odstraniš iz vseh drugih polj treh stolpcev. Vrstice in stolpce lahko zamenjaš. Bare Sudoku Swordfish išče po Y-Wingu, v ugankah Strokovnjak.",
+          "when": [
+            "Ko X-Wing in Y-Wing ne najdeta ničesar. Swordfish je redkejši od X-Winga in potrebuje števko, katere kandidati so redko razporejeni po treh linijah. Potrebuje popolne in točne zapiske za to števko."
+          ],
+          "spot": [
+            "Izberi števko in poišči vrstice z dvema ali tremi kandidatnimi polji zanjo. Če tri take vrstice skupaj pokrivajo le tri stolpce, v teh stolpcih preveri nadaljnje kandidate števke. Ni nujno, da ima vsaka vrstica kandidata v vsakem stolpcu: Swordfish ima lahko šest, sedem, osem ali devet polj. V igri označi števko z njeno tipko in poišči tri vrstice, katerih kandidati se poravnajo v treh stolpcih."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Števka {d} ima v vsaki od vrstic {rows} največ tri kandidatna polja in vsa ta polja ležijo v stolpcih {cols}: {cells}.",
+                "Vsaka od treh vrstic mora svojo {d} postaviti v enega od treh stolpcev in nobeni dve vrstici ne moreta uporabiti istega stolpca. Tako trije stolpci dobijo svojo {d} iz teh treh vrstic.",
+                "Vsak drug kandidat {d} v stolpcih {cols} je nemogoč. Odstrani {d} iz {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Zahteva vseh devetih polj. Swordfish z dvema kandidatoma v nekaterih vrsticah je še vedno veljaven, dokler tri vrstice pokrivajo le tri stolpce.",
+            "Vključitev vrstice s štirimi kandidatnimi polji. Vsaka osnovna vrstica jih sme imeti največ tri, vsa znotraj treh stolpcev.",
+            "Izločanje v osnovnih vrsticah. Pri vrsticah kot osnovi so izločitve v treh stolpcih, zunaj osnovnih vrstic."
+          ],
+          "faq": [
+            [
+              "Kaj je Swordfish v sudokuju?",
+              "Števka, katere kandidati so v treh vrsticah omejeni na tri stolpce. Tri vrstice morajo števko postaviti v te tri stolpce, po eno v vsakega, zato se števka odstrani iz drugih polj teh stolpcev."
+            ],
+            [
+              "Kako se Swordfish razlikuje od X-Winga?",
+              "Le po velikosti: X-Wing uporablja dve vrstici in dva stolpca, Swordfish tri in tri. Sklepanje je enako."
+            ],
+            [
+              "Ali Swordfish potrebuje natanko devet polj?",
+              "Ne. Vsaka vrstica ima lahko dva ali tri kandidate; vzorec zahteva le, da tri vrstice skupaj ne uporabijo več kot treh stolpcev."
+            ],
+            [
+              "Ali obstaja riba velikosti štiri?",
+              "Da, Jellyfish. Bare Sudoku je ne uporablja, ker je njegove uganke nikoli ne potrebujejo."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing v sudokuju: kako tehnika deluje",
+          "description": "XYZ-Wing: stožer s tremi kandidati in dve krili, ki si z njim delita enega, izrinejo to števko iz polj, ki vidijo vsa tri. Resničen primer po korakih.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing je Y-Wing, katerega stožer ima tri kandidate. Stožer ima X, Y in Z; eno krilo vidi stožer in ima X in Z, drugo vidi stožer in ima Y in Z. Eno od treh polj mora biti Z, zato lahko Z odstraniš iz vseh polj, ki vidijo vsa tri. Ker je Z lahko tudi sam stožer, mora polje, iz katerega odstranjuješ, videti stožer in obe krili, kar ga omeji na kvadrat ali linijo, ki si jo polja delijo. To je najtežja tehnika, ki jo uporablja Bare Sudoku.",
+          "when": [
+            "Le ko vse drugo odpove. XYZ-Wing je najredkejši vzorec v Bare Sudokuju in se pojavi le v ugankah Strokovnjak. Išči ga, ko je polje s tremi kandidati v kvadratu s poljem z dvema kandidatoma, ki si z njim deli dve števki."
+          ],
+          "spot": [
+            "Začni pri poljih z natanko tremi kandidati; vsako je mogoč stožer. Med njegovimi sosedi poišči dve polji s po dvema kandidatoma, obema vzetima iz treh kandidatov stožerja, ki si delita natanko eno števko Z. Nato poišči polja, ki vidijo stožer in obe krili ter vsebujejo Z. V praksi je eno krilo v kvadratu stožerja, drugo v njegovi vrstici ali stolpcu, polja z izločitvijo pa so preostala polja tega kvadrata v tej vrstici ali stolpcu."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Stožer {pivot} ima tri kandidate: {x}, {y} in {z}. Vidi {wingA}, ki ima {x} in {z}, ter {wingB}, ki ima {y} in {z}.",
+                "Če je {pivot} {z}, je stvar jasna. Če je {x}, mora biti {wingA} {z}. Če je {y}, mora biti {wingB} {z}. V vsakem primeru je eno od treh polj {z}.",
+                "Polje, ki vidi vsa tri, ne more biti {z}. Odstrani {z} iz {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Izločanje iz polj, ki vidijo le obe krili. Za razliko od Y-Winga je stožer lahko Z, zato mora polje videti tudi stožer.",
+            "Uporaba kril, katerih kandidati niso oba med tremi kandidati stožerja.",
+            "Zamenjava z Y-Wingom: razlika je tretji kandidat v stožerju, ta pa spremeni, katera polja lahko počistiš."
+          ],
+          "faq": [
+            [
+              "Kaj je XYZ-Wing v sudokuju?",
+              "Stožer s kandidati X, Y in Z ter dve krili, eno z X in Z in drugo z Y in Z, ki obe vidita stožer. Eno od treh polj je Z, zato se Z odstrani iz polj, ki vidijo vsa tri."
+            ],
+            [
+              "Kako se XYZ-Wing razlikuje od Y-Winga?",
+              "Stožer ima tri kandidate namesto dveh, med njimi Z. Zaradi tega je tudi stožer mogoče mesto za Z, zato lahko Z izgubijo le polja, ki vidijo stožer in obe krili."
+            ],
+            [
+              "Kako pogosto se pojavi XYZ-Wing?",
+              "Redko. V Bare Sudokuju ga lahko potrebujejo le uganke Strokovnjak, večina pa ga ne. Bare Sudoku ga preverja zadnjega, po tehnikah X-Wing, Y-Wing in Swordfish."
+            ],
+            [
+              "Ali obstaja WXYZ-Wing?",
+              "Da, s stožerjem s štirimi kandidati, vendar ga Bare Sudoku ne uporablja. Vsako uganko v igri je mogoče dokončati z devetimi tehnikami iz tega vodnika."
+            ]
+          ]
+        }
+      }
+    },
+    "lt": {
+      "learnHeading": "Išmokite sudoku",
+      "learnText": "Sudoku jums naujiena ar įstrigote prie sunkaus galvosūkio? Du vadovai paaiškina taisykles ir visas sprendimo technikas, kurias naudoja užuominos, kiekvieną su tikru pavyzdžiu.",
+      "howToLink": "Kaip žaisti sudoku",
+      "techniquesLink": "Sudoku sprendimo technikos",
+      "labels": {
+        "howTo": "Kaip žaisti",
+        "techniques": "Technikos",
+        "play": "Žaisti sudoku",
+        "prev": "Ankstesnė technika",
+        "next": "Kita technika",
+        "all": "Visos technikos",
+        "example": "Pavyzdys",
+        "steps": "Žingsnis po žingsnio",
+        "when": "Kada naudoti",
+        "spot": "Kaip pastebėti",
+        "mistakes": "Dažnos klaidos",
+        "inGame": "Bare Sudoku žaidime",
+        "level": "Reikia nuo lygio: {level}",
+        "hint": "Žaidime užuomina sako: {text}",
+        "legend": "Paryškinti skaitmenys duoti, mėlyni įrašyti sprendžiant, maži skaitmenys yra kandidatai. Pažymėti langeliai sudaro raštą, perbraukti kandidatai pašalinami, o apibrauktas kandidatas yra skaitmuo, kurį reikia įrašyti.",
+        "notation": "Langeliai žymimi kaip r3c7: 3 eilutė, 7 stulpelis. Eilutės skaičiuojamos iš viršaus, stulpeliai iš kairės, o kvadratai nuo 1 iki 9 nuo viršutinio kairiojo, eilė po eilės.",
+        "row": "{n} eilutėje",
+        "column": "{n} stulpelyje",
+        "box": "{n} kvadrate",
+        "elimItem": "{d} iš {cell}",
+        "regions": "5 eilutė, 5 stulpelis ir 5 kvadratas galvosūkio pradžioje",
+        "firstMove": "Vienintelis kandidatas: {cell} gali būti tik {d}",
+        "breadcrumb": "Naršymo kelias"
+      },
+      "howTo": {
+        "title": "Kaip žaisti sudoku: taisyklės, tinklelis ir pirmi ėjimai",
+        "description": "Sužinokite, kaip žaisti sudoku: taisyklės, eilutės, stulpeliai ir kvadratai, kodėl kiekvienas galvosūkis turi vieną sprendimą, užrašai ir pirmi ėjimai.",
+        "h1": "Kaip žaisti sudoku",
+        "summary": "Sudoku yra loginis galvosūkis 9×9 tinklelyje. Kiekvieną tuščią langelį užpildykite skaitmeniu nuo 1 iki 9 taip, kad kiekvienoje eilutėje, kiekviename stulpelyje ir kiekviename 3×3 kvadrate kiekvienas skaitmuo būtų lygiai vieną kartą. Dalis skaitmenų duota pradžioje; likusius išvedate patys, po vieną tikrą langelį, ir niekada nereikia spėlioti. Šis vadovas paaiškina tinklelį, taisykles, vieno sprendimo principą, užrašus ir paprastą pirmųjų ėjimų strategiją. Visa tai galite išbandyti [Bare Sudoku](play), kuris yra nemokamas ir turi logiką paaiškinančias užuominas.",
+        "sections": [
+          {
+            "h": "Kokios yra sudoku taisyklės?",
+            "p": [
+              "Taisyklės tik trys, ir tai ta pati taisyklė, žiūrint iš trijų pusių: kiekvienoje eilutėje turi būti skaitmenys nuo 1 iki 9, kiekviename stulpelyje turi būti skaitmenys nuo 1 iki 9 ir kiekviename 3×3 kvadrate turi būti skaitmenys nuo 1 iki 9. Todėl skaitmuo niekada negali pasikartoti toje pačioje eilutėje, stulpelyje ar kvadrate.",
+              "Duoti skaitmenys, išspausdinti paryškintai, yra nekeičiami. Jūsų užduotis yra užpildyti tuščius langelius. Nereikia jokios aritmetikos, o skaitmenų tvarka nesvarbi: tai tik devyni skirtingi simboliai. Galėtumėte žaisti su raidėmis ar figūromis, ir niekas nepasikeistų."
+            ]
+          },
+          {
+            "h": "Kaip sudarytas tinklelis?",
+            "p": [
+              "Tinklelis turi 81 langelį, išdėstytą 9 eilutėse ir 9 stulpeliuose. Storos linijos jį dalija į devynis 3×3 kvadratus. Kiekvienas langelis priklauso lygiai vienai eilutei, vienam stulpeliui ir vienam kvadratui; šios trys grupės yra jo sritys. 20 kitų langelių, kurie su juo dalijasi sritimi, vadinami jo kaimynais; į langelį įrašytas skaitmuo tą skaitmenį atmeta visuose 20 kaimynų.",
+              "Langeliai žymimi kaip r3c7: 3 eilutė, 7 stulpelis. Eilutės skaičiuojamos iš viršaus, stulpeliai iš kairės, o kvadratai nuo 1 iki 9 nuo viršutinio kairiojo, eilė po eilės. Šis žymėjimas naudojamas visuose technikų vadovuose, tad verta jį išmokti: r5c5 yra tinklelio centras."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Kodėl kiekvienas sudoku turi lygiai vieną sprendimą?",
+            "p": [
+              "Tikras sudoku turi vieną sprendimą, ir būtent dėl to veikia logika. Kai galite parodyti, kad skaitmuo srityje negali atsidurti niekur kitur, jis turi būti likusiame langelyje, nes sprendimas egzistuoja ir yra vienintelis. Jei galvosūkis turėtų du sprendimus, jokie samprotavimai jų neatskirtų ir kažkuriuo metu tektų spėlioti.",
+              "Bare Sudoku kiekvieną galvosūkį sukuria jūsų įrenginyje ir patikrina, kad jis turi lygiai vieną sprendimą ir kad loginis sprendiklis gali jį užbaigti pasirinkto lygio technikomis. Tad jei įstrigote, visada yra kitas žingsnis, kurį galima rasti, ir užuomina jį parodo."
+            ]
+          },
+          {
+            "h": "Kaip pradėti spręsti sudoku?",
+            "p": [
+              "Pradėkite nuo labiausiai apribotų vietų. Ši tvarka tinka bet kuriam lygiui:"
+            ],
+            "list": [
+              "Pasirinkite skaitmenį, kuris jau pasirodo daug kartų, tarkim, šešis ar septynis, ir raskite kvadratus, kuriuose jo dar trūksta. Dažnai kvadrate jam lieka tik vienas langelis: tai [vienintelė vieta](hidden-single).",
+              "Ieškokite langelių, apsuptų daugybės skaitmenų. Langelis, kurio eilutėje, stulpelyje ir kvadrate kartu yra aštuoni skirtingi skaitmenys, turi tik vieną kandidatą: tai [vienintelis kandidatas](naked-single). Geriausia ieškoti beveik pilnose eilutėse ar kvadratuose.",
+              "Kiekvienas įrašytas skaitmuo pašalina kandidatą iš 20 kaimynų, todėl tuos kaimynus patikrinkite iškart. Vieniši kandidatai dažnai eina grandinėmis.",
+              "Kai lengvi įrašymai baigiasi, rašykite užrašus: kiekvieno tuščio langelio kandidatus. Tada ieškokite skaitmens, kuris kvadrate apribotas viena eilute ar stulpeliu ([užrakinti kandidatai](locked-candidates)), arba dviejų langelių su tais pačiais dviem kandidatais ([atvira pora](naked-pairs)).",
+              "Po kiekvieno pašalinimo grįžkite prie vienišų kandidatų. Net „Ekspertas“ lygio galvosūkiai daugiausia išsprendžiami vienišais kandidatais; pažangi technika tik atrakina kitą."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Kas yra užrašai ir kada juos naudoti?",
+            "p": [
+              "Užrašai, dar vadinami pieštuko žymėmis arba kandidatais, yra maži skaitmenys, kuriuos rašote tuščiame langelyje, kad pažymėtumėte, kurie skaitmenys ten dar galimi. Lengvuose galvosūkiuose jų retai prireikia; nuo „Sunku“ lygio jie būtini, nes tokios technikos kaip poros, X-Wing ir Y-Wing remiasi kandidatais, o ne įrašytais skaitmenimis.",
+              "Užrašai turi būti tikslūs: įrašę skaitmenį, pašalinkite jį iš visų 20 kaimynų užrašų. Bare Sudoku tai daro automatiškai, o „Užpildyti užrašus“ vienu palietimu įrašo visus kandidatus į visus tuščius langelius, tad galite pradėti nuo pilno ir teisingo kandidatų rinkinio. Užrašas yra faktas, ne spėjimas: jis reiškia, kad šio skaitmens dar niekas neatmeta."
+            ]
+          },
+          {
+            "h": "Ką daryti įstrigus?",
+            "p": [
+              "Pirmiausia dar kartą patikrinkite pagrindus: kiekviena beveik pilna eilutė, stulpelis ir kvadratas yra vienišų kandidatų šaltinis. Tada įsitikinkite, kad užrašai pilni, nes trūkstamas kandidatas paslepia raštus, o pasenęs sukuria klaidingus. Paskui eikite per [technikas](techniques) sudėtingumo tvarka: užrakinti kandidatai, poros ir trejetai, X-Wing, Y-Wing, Swordfish ir XYZ-Wing. Kiekviena turi savo puslapį su tikru pavyzdžiu.",
+              "Jei niekas nepadeda, pasinaudokite užuomina. Bare Sudoku užuomina pirmiausia patikrina, ar kuris nors įrašytas skaitmuo nėra neteisingas, tada randa kitą langelį, kurį galima užpildyti logiškai, ir įvardija techniką, tad ką nors išmokstate net ja naudodamiesi. Palieskite užuominą dar kartą, kad skaitmuo būtų įrašytas."
+            ]
+          },
+          {
+            "h": "Kaip įvesti skaitmenis Bare Sudoku?",
+            "p": [
+              "Palieskite langelį, tada skaitmenį. Arba pirma palieskite skaitmenį: jis užsirakina ir įrašomas į kiekvieną paliestą langelį, tai greičiausias būdas įrašyti šeštą, septintą ir aštuntą to paties skaitmens kopiją. Palieskite skaitmenį dar kartą, kad jį atlaisvintumėte. Mygtukas „Užrašai“ perjungia į pieštuko žymes, „Ištrinti“ išvalo langelį, „Atšaukti“ atšaukia bet kurį ėjimą, o klaidos žymimos raudonai, nebent tai išjungsite meniu.",
+              "Klaviatūroje judėkite rodyklių klavišais, skaitmenį įveskite klavišais nuo 1 iki 9, Backspace ištrina, N perjungia užrašus, U atšaukia, H duoda užuominą, F užpildo užrašus, o Escape atveria meniu. Žaidimas išsisaugo pats, veikia neprisijungus, neturi reklamų ir nereikalauja paskyros."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ar sudoku kada nors reikia spėlioti?",
+            "Tikrame galvosūkyje ne. Kiekvienas Bare Sudoku galvosūkis turi lygiai vieną sprendimą ir yra patikrintas, kad išsprendžiamas vien logika, naudojant jo lygio technikas. Jei atrodo, kad turite spėti, užrašuose trūksta kandidato arba laukia dar nerasta technika."
+          ],
+          [
+            "Ar skaitmuo gali pasikartoti eilutėje, stulpelyje ar kvadrate?",
+            "Ne. Tai ir yra visa taisyklė: kiekvienoje iš devynių eilučių, devynių stulpelių ir devynių kvadratų kiekvienas skaitmuo nuo 1 iki 9 yra lygiai vieną kartą. Jei du vienodi skaitmenys yra toje pačioje srityje, bent vienas jų neteisingas."
+          ],
+          [
+            "Kuo skiriasi lygiai „Lengva“, „Vidutinė“, „Sunku“ ir „Ekspertas“?",
+            "Lygį lemia technikos, kurių reikia galvosūkiui. „Lengva“ ir „Vidutinė“ išsprendžiami vien vienišais kandidatais, o „Lengva“ prasideda bent su 38 duotais skaitmenimis. „Sunku“ lygiui reikia užrakintų kandidatų arba porų ir trejetų. „Ekspertas“ lygiui reikia X-Wing, Y-Wing, Swordfish arba XYZ-Wing."
+          ],
+          [
+            "Ar geriau užpildyti užrašus visiems langeliams, ar tik kai kuriems?",
+            "„Sunku“ ir „Ekspertas“ galvosūkiuose užpildykite visus: tokie raštai kaip poros, X-Wing ir Y-Wing išryškėja tik tada, kai surašyti visi kandidatai. „Lengva“ ir „Vidutinė“ lygiuose užrašai nebūtini, ir dauguma žaidėjų tiesiog ieško vienišų kandidatų."
+          ],
+          [
+            "Kiek laiko trunka sudoku?",
+            "„Lengva“ galvosūkis užtrunka kelias minutes; „Ekspertas“ galvosūkiai gali trukti dvidešimt minučių ar ilgiau, priklausomai nuo to, kaip greitai pastebite pažangų raštą. Bare Sudoku rodo laikmatį, sustabdo jį, kol atvertas meniu, ir neturi lyderių lentelės, tad žaiskite savo tempu."
+          ],
+          [
+            "Ar sudoku reikia aritmetikos?",
+            "Ne. Skaitmenys tėra žymės; nereikia nei sudėti, nei skaičiuoti. Tiktų bet kokie devyni simboliai, todėl sudoku yra loginis, o ne skaičių galvosūkis."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku sprendimo technikos, paaiškintos su pavyzdžiais",
+        "description": "Visos devynios sudoku sprendimo technikos, nuo vienintelio kandidato iki Swordfish ir XYZ-Wing, Bare Sudoku užuominų tvarka, kiekviena su tikru pavyzdžiu.",
+        "h1": "Sudoku sprendimo technikos",
+        "intro": [
+          "Kiekvieną sudoku galima išspręsti nedideliu loginių technikų rinkiniu. Šiame sąraše pateiktos devynios technikos, kurias naudoja Bare Sudoku sprendiklis ir jo užuominos, ta tvarka, kuria sprendiklis jas bando: pirmiausia vieniši kandidatai, tada pašalinimai vienoje srityje, tada raštai, apimantys kelias eilutes ir stulpelius. Kiekviena technika turi savo puslapį su apibrėžimu, patarimais, kaip ją pastebėti, tikru pavyzdžiu iš sugeneruoto galvosūkio ir dažnomis klaidomis.",
+          "Galvosūkio lygį lemia sunkiausia technika, kurios jam reikia. „Lengva“ ir „Vidutinė“ galvosūkiams užtenka vienišų kandidatų, „Sunku“ galvosūkiams reikia užrakintų kandidatų arba porų ir trejetų, o „Ekspertas“ galvosūkiams reikia bent vienos žuvies ar sparno. Kad ir koks lygis, didžiąją darbo dalį atlieka vieniši kandidatai; pažangi technika pašalina vieną ar du kandidatus, o toliau vėl dirba vieniši kandidatai."
+        ],
+        "faq": [
+          [
+            "Kokia tvarka bandyti sudoku technikas?",
+            "Pradėkite nuo pigiausių: vienintelis kandidatas, vienintelė vieta, užrakinti kandidatai, atviros poros ir trejetai, paslėptos poros ir trejetai, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku jas bando būtent šia tvarka, o užuomina visada įvardija paprasčiausią techniką, kuri leidžia pasistūmėti."
+          ],
+          [
+            "Ar sudoku spręsti reikia visų šių technikų?",
+            "„Lengva“ ir „Vidutinė“ galvosūkiams užtenka vienišų kandidatų. „Sunku“ galvosūkiai prideda užrakintus kandidatus ir poaibius. „Ekspertas“ galvosūkiams reikia bent vienos žuvies ar sparno, bet dažniausiai tik kartą ar du per galvosūkį."
+          ],
+          [
+            "Ar yra sunkesnių technikų nei XYZ-Wing?",
+            "Taip, pavyzdžiui, grandinės, unikalumo testai ir priverstinių išvadų tinklai. Bare Sudoku nekuria galvosūkių, kuriems jų reikia, todėl kiekvieną žaidimo galvosūkį galima užbaigti devyniomis šio puslapio technikomis."
+          ],
+          [
+            "Kas yra kandidatas?",
+            "Skaitmuo, kuris dar gali būti tuščiame langelyje, nes jo eilutėje, stulpelyje ar kvadrate niekas jo dar neatmeta. Žaidimo užrašai yra kandidatai. Kiekviena technika, sudėtingesnė už vienišus kandidatus, samprotauja apie kandidatus, todėl jie turi būti pilni ir tikslūs."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Vienintelis kandidatas",
+          "title": "Vienintelis kandidatas sudoku: langelis su vienu kandidatu",
+          "description": "Vienintelis kandidatas (naked single) yra tuščias langelis, kuriam tinka tik vienas skaitmuo. Išmokite jį greitai rasti, su pavyzdžiu ir dažnomis klaidomis.",
+          "h1": "Vienintelis kandidatas (naked single)",
+          "summary": "Vienintelis kandidatas yra tuščias langelis, turintis lygiai vieną kandidatą: kiti aštuoni skaitmenys jau yra jo eilutėje, stulpelyje ar kvadrate. Likęs skaitmuo turi būti ten. Tai paprasčiausia ir dažniausiai naudojama sudoku technika, kurią Bare Sudoku užuomina praneša kaip „Čia tik vienas kandidatas“.",
+          "when": [
+            "Visada. Vieninteliai kandidatai pasitaiko nuo pirmo iki paskutinio ėjimo, bet kuriame lygyje. „Lengva“ ir „Vidutinė“ galvosūkiuose kartu su vienintelėmis vietomis tai vienintelė reikalinga technika. Sunkesniuose galvosūkiuose kiekvienas pažangios technikos pašalinimas paprastai palieka vienintelį kandidatą, todėl ieškokite jų po kiekvieno žingsnio."
+          ],
+          "spot": [
+            "Žiūrėkite į langelius, kurių kaimynuose daug įrašytų skaitmenų: langelį eilutėje, kurioje jau septyni skaitmenys, arba langelį, kurio eilutė, stulpelis ir kvadratas kartu apima aštuonis skirtingus skaitmenis. Be užrašų suskaičiuokite skaitmenis, kuriuos matote iš langelio. Su užrašais vienintelis kandidatas yra tiesiog langelis, rodantis vieną kandidatą, todėl „Užpildyti užrašus“ padeda juos lengvai rasti."
+          ],
+          "examples": [
+            {
+              "h": "Pavyzdys",
+              "steps": [
+                "Pažiūrėkite į langelį {cell}. Jis tuščias, tad išvardykite visus skaitmenis, jau įrašytus jo eilutėje, stulpelyje ir kvadrate.",
+                "{row} eilutėje yra {rowDigits}. {col} stulpelyje yra {colDigits}. {box} kvadrate yra {boxDigits}.",
+                "Kartu jie atmeta visus skaitmenis, išskyrus {d}, todėl {d} yra vienintelis kandidatas, likęs langelyje {cell}.",
+                "Įrašykite {d} į {cell}. Tada patikrinkite, ar naujas skaitmuo nesukuria kito vienišo kandidato toje pačioje eilutėje, stulpelyje ar kvadrate."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Skaičiavimas tik eilutėje arba tik kvadrate. Aštuoni atmesti skaitmenys paprastai ateina iš visų trijų sričių kartu.",
+            "Pamiršimas, kad ką tik įrašytas skaitmuo irgi atmeta kandidatus iš savo 20 kaimynų; nauji vieninteliai kandidatai atsiranda iškart po kiekvieno įrašymo.",
+            "Vienintelio kandidato painiojimas su vienintele vieta: pirmu atveju langelyje lieka vienas kandidatas, antru atveju skaitmeniui srityje lieka vienas langelis."
+          ],
+          "faq": [
+            [
+              "Kas yra vienintelis kandidatas (naked single) sudoku?",
+              "Tuščias langelis su lygiai vienu kandidatu. Jo eilutėje, stulpelyje ir kvadrate jau įrašyti aštuoni skirtingi skaitmenys, todėl tinka tik devintasis."
+            ],
+            [
+              "Kodėl angliškai jis vadinamas naked, tai yra nuogu?",
+              "Nes surašius užrašus vienintelis kandidatas matomas tiesiai langelyje; niekas jo neslepia. Vienintelė vieta (hidden single) tuo tarpu slepiasi tarp kitų kandidatų ir randama žiūrint į skaitmenį, o ne į langelį."
+            ],
+            [
+              "Ar galvosūkį galima išspręsti vien vienintelio kandidato technika?",
+              "Daugelį „Lengva“ galvosūkių galima, bet daugumai reikia ir vienintelių vietų. Bare Sudoku „Lengva“ ir „Vidutinė“ galvosūkius vertina kaip išsprendžiamus abiejų rūšių vienišais kandidatais; „Sunku“ ir „Ekspertas“ galvosūkiams reikia bent vienos papildomos technikos."
+            ],
+            [
+              "Ar užuomina rodo vienintelius kandidatus?",
+              "Taip. Kai kitas įrašymas yra vienintelis kandidatas, užuomina pažymi langelį ir kartu su skaitmeniu parašo „Čia tik vienas kandidatas“. Palieskite užuominą dar kartą, kad skaitmuo būtų įrašytas."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Vienintelė vieta",
+          "title": "Vienintelė vieta sudoku: vienintelis langelis skaitmeniui",
+          "description": "Vienintelė vieta (hidden single) yra vienintelis eilutės, stulpelio ar kvadrato langelis, kur dar tinka skaitmuo. Išmokite ją rasti tikrindami po skaitmenį.",
+          "h1": "Vienintelė vieta (hidden single)",
+          "summary": "Vienintelė vieta yra skaitmuo, kuriam eilutėje, stulpelyje ar kvadrate liko tik vienas galimas langelis, net jei tas langelis rodo ir kitus kandidatus. Kadangi sritis privalo turėti šį skaitmenį, jis įrašomas ten. Bare Sudoku užuomina ją praneša kaip „Vienintelė vieta 5 šioje eilutėje“, stulpelyje ar kvadrate.",
+          "when": [
+            "Kai skaitmuo jau gerokai pažengęs: kai jis pasirodo penkis ar šešis kartus, likę kvadratai labai apriboti, ir vienintelė vieta dažnai būna kitas ėjimas. Vienintelės vietos yra pagrindinė „Lengva“ ir „Vidutinė“ galvosūkių technika ir lieka darbinis arkliukas bet kuriame lygyje."
+          ],
+          "spot": [
+            "Tikrinkite po vieną skaitmenį. Paimkite skaitmenį, raskite kvadratą, kuriame jo nėra, ir išbraukite kiekvieną to kvadrato langelį, kuris dalijasi eilute ar stulpeliu su jau įrašyta to skaitmens kopija. Jei lieka vienas langelis, radote vienintelę vietą. Taip pat galima tikrinti eilutes ir stulpelius. Žaidime palieskite įrašytą skaitmenį: visos jo kopijos paryškinamos, tad laisvi langeliai išsiskiria."
+          ],
+          "examples": [
+            {
+              "h": "Pavyzdys",
+              "steps": [
+                "{box} kvadrate dar nėra {d}, todėl viename iš jo tuščių langelių jis turi būti. Tušti langeliai: {empties}.",
+                "Visuose, išskyrus {cell}, {d} blokuoja toje pačioje eilutėje ar stulpelyje jau įrašytas {d}, todėl ten {d} nėra kandidatas.",
+                "Lieka {cell} kaip vienintelė vieta skaitmeniui {d} {box} kvadrate. Įrašykite ten {d}, net jei {cell} dar rodo kitus kandidatus."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Skaitmens įrašymas į langelį, kuris tik tikriausiai teisingas: patikrinkite kiekvieną kitą tuščią srities langelį, ne tik akivaizdžius.",
+            "Praleista vienintelė vieta, nes langelis rodo kelis kandidatus. Kiti kandidatai nesvarbu; svarbu, kad skaitmuo srityje neturi kitos vietos.",
+            "Tik kvadratų tikrinimas. Eilutės ir stulpeliai vienintelių vietų duoda ne rečiau, ypač pabaigoje."
+          ],
+          "faq": [
+            [
+              "Kas yra vienintelė vieta (hidden single) sudoku?",
+              "Skaitmuo, kuris gali būti tik viename eilutės, stulpelio ar kvadrato langelyje. Sritis privalo turėti šį skaitmenį, todėl langelis nulemtas, net jei jame dar yra kitų kandidatų."
+            ],
+            [
+              "Kuo vienintelė vieta skiriasi nuo vienintelio kandidato?",
+              "Vienintelis kandidatas susijęs su langeliu: jame liko vienas kandidatas. Vienintelė vieta susijusi su skaitmeniu: srityje jam liko vienas langelis. Abu užtikrintai įrašo skaitmenį."
+            ],
+            [
+              "Kurį lengviau rasti?",
+              "Be užrašų vienintelės vietos paprastai lengvesnės, nes tinklelį galite tikrinti po vieną skaitmenį. Su pilnais užrašais lengviausi vieninteliai kandidatai, nes langelis su vieninteliu kandidatu išsiskiria."
+            ],
+            [
+              "Kaip užuomina aprašo vienintelę vietą?",
+              "Kaip „Vienintelė vieta“ skaitmeniui šioje eilutėje, šiame stulpelyje ar šiame kvadrate, pažymėjus langelį. Palieskite užuominą dar kartą, kad skaitmuo būtų įrašytas."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Užrakinti kandidatai",
+          "title": "Užrakinti kandidatai sudoku: rodymas ir pasisavinimas",
+          "description": "Užrakinti kandidatai: kai visi skaitmens kandidatai kvadrate yra vienoje eilutėje ar stulpelyje, arba atvirkščiai, skaitmuo šalinamas kitur. Du pavyzdžiai.",
+          "h1": "Užrakinti kandidatai",
+          "summary": "Užrakinti kandidatai yra pirmoji technika, kuri ne įrašo skaitmenį, o pašalina kandidatus. Ji turi dvi formas. Rodymas: kvadrate visi skaitmens kandidatai yra vienoje eilutėje ar stulpelyje, todėl skaitmuo pašalinamas iš likusios tos linijos dalies. Pasisavinimas: eilutėje ar stulpelyje visi skaitmens kandidatai yra viename kvadrate, todėl skaitmuo pašalinamas iš likusios to kvadrato dalies. Bare Sudoku užuomina įrašymą, kurį ši technika atveria, pažymi „Užrakinti kandidatai“.",
+          "when": [
+            "Kai „Sunku“ galvosūkyje baigiasi vieniši kandidatai, tai pirmas dalykas, kurį verta išbandyti. Reikia pilnų užrašų bent nagrinėjamam skaitmeniui. Užrakinti kandidatai dažni: jų reikia daugumai „Sunku“ galvosūkių, o „Ekspertas“ galvosūkiai juos naudoja tarp didesnių raštų."
+          ],
+          "spot": [
+            "Rodymui žiūrėkite į kiekvieną kvadratą ir kiekvieną jame trūkstamą skaitmenį: jei to skaitmens kandidatų langeliai yra vienoje eilutėje ar stulpelyje, patikrinkite, ar tas pats skaitmuo kaip kandidatas yra toliau toje linijoje už kvadrato ribų. Pasisavinimui žiūrėkite išilgai eilutės ar stulpelio: jei visi skaitmens kandidatai yra viename kvadrate, likusią to kvadrato dalį galima išvalyti. Žaidime palieskite skaitmens klavišą, kad paryškintumėte visus jo kandidatus; dvi ar trys paryškintos žymės vienoje linijoje viename kvadrate ir yra raštas."
+          ],
+          "examples": [
+            {
+              "h": "Rodymas",
+              "steps": [
+                "{box} kvadrate skaitmuo {d} turi tik šiuos kandidatų langelius: {cells}. Visi jie yra {row} eilutėje.",
+                "{box} kvadratui reikia {d}, todėl {row} eilutės {d} yra {box} kvadrate, kad ir į kurį iš šių langelių jis patektų.",
+                "{row} eilutėje negali būti antro {d}, todėl pašalinkite {d} iš {row} eilutės langelių už kvadrato ribų: {elim}."
+              ]
+            },
+            {
+              "h": "Pasisavinimas",
+              "steps": [
+                "{row} eilutėje skaitmuo {d} gali būti tik langeliuose {cells}, ir visi jie yra {box} kvadrate.",
+                "{row} eilutėje privalo būti {d}, todėl {box} kvadrato {d} pasisavina {row} eilutė. Kiti {box} kvadrato langeliai negali turėti {d}.",
+                "Pašalinkite {d} iš langelių {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Skaitmens šalinimas kvadrato viduje, o ne už jo ribų rodymo atveju, arba atvirkščiai pasisavinimo atveju. Pašalinimai visada taikomi langeliams, kurie yra linijoje, bet ne kvadrate, arba kvadrate, bet ne linijoje.",
+            "Taisyklės taikymas, kai kandidatai išsidėstę dviejose kvadrato eilutėse. Visi skaitmens kandidatų langeliai kvadrate turi būti vienoje linijoje.",
+            "Pamiršimas ieškoti vienišo kandidato, kurį sukuria pašalinimas. Užrakinti kandidatai retai patys įrašo skaitmenį; jie paruošia vienišą kandidatą."
+          ],
+          "faq": [
+            [
+              "Kas yra užrakinti kandidatai sudoku?",
+              "Skaitmens kandidatai, kurie yra tik kvadrato ir linijos, tai yra eilutės ar stulpelio, sankirtoje. Kadangi kvadratas arba linija privalo turėti skaitmenį šioje sankirtoje, skaitmenį galima pašalinti iš likusios linijos dalies arba iš likusios kvadrato dalies."
+            ],
+            [
+              "Kuo skiriasi rodymas ir pasisavinimas?",
+              "Rodymas prasideda nuo kvadrato: skaitmens kandidatai kvadrate rodo išilgai vienos eilutės ar stulpelio, todėl skaitmuo pašalinamas iš likusios tos linijos. Pasisavinimas prasideda nuo eilutės ar stulpelio: visi linijos kandidatai tam skaitmeniui yra viename kvadrate, todėl linija pasisavina skaitmenį ir jis pašalinamas iš likusio kvadrato."
+            ],
+            [
+              "Ar užrakinti kandidatai dar vadinami sankirtos pašalinimu?",
+              "Taip. Kiti pavadinimai: kvadrato ir linijos redukcija pasisavinimo formai bei rodančios poros ar rodantys trejetai rodymo formai. Bare Sudoku abiem naudoja vieną pavadinimą."
+            ],
+            [
+              "Kuriam lygiui reikia užrakintų kandidatų?",
+              "„Sunku“. Galvosūkis, kuriam reikia užrakintų kandidatų ar poaibių, bet nieko sunkesnio, vertinamas kaip „Sunku“; „Ekspertas“ galvosūkiams dar reikia žuvies ar sparno."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Atviros poros ir trejetai",
+          "title": "Atviros poros ir trejetai sudoku: kaip jie veikia",
+          "description": "Atviros poros ir trejetai: du ar trys srities langeliai su tais pačiais dviem ar trimis kandidatais. Kaip juos pastebėti ir ką pašalinti, su pavyzdžiais.",
+          "h1": "Atviros poros ir trejetai (naked pair, naked triple)",
+          "summary": "Atvira pora yra du langeliai toje pačioje eilutėje, stulpelyje ar kvadrate, turintys lygiai tuos pačius du kandidatus. Abu skaitmenys turi atsidurti šiuose dviejuose langeliuose, todėl juos galima pašalinti iš visų kitų srities langelių. Atviras trejetas yra ta pati idėja su trimis langeliais ir trimis skaitmenimis; kiekvienas langelis gali rodyti du arba visus tris. Bare Sudoku užuomina iš to kylantį įrašymą pažymi „Pora arba trejetas“.",
+          "when": [
+            "Kai užrašai pilni, o vieniši kandidatai ir užrakinti kandidatai išnaudoti. Atviros poros „Sunku“ galvosūkiuose labai dažnos, atviri trejetai rečiau. Abu verta patikrinti kiekvienoje srityje, kurioje dar yra penki ar daugiau tuščių langelių."
+          ],
+          "spot": [
+            "Ieškokite langelių, turinčių tik du kandidatus, ir toje pačioje srityje raskite kitą langelį su tais pačiais dviem. Trejetams žiūrėkite į sritis su keliais dviejų ir trijų kandidatų langeliais ir patikrinkite, ar trys iš jų kartu naudoja tik tris skirtingus skaitmenis. Langelius su visiškai vienodais kandidatais lengva pamatyti, kai užrašai surašyti; žaidime „Užpildyti užrašus“ tai padaro vienu palietimu."
+          ],
+          "examples": [
+            {
+              "h": "Atvira pora",
+              "steps": [
+                "{cellA} ir {cellB} {unit} turi lygiai tuos pačius du kandidatus: {d1} ir {d2}.",
+                "Vienas iš jų turi būti {d1}, kitas {d2}. Nežinome, kuris kuris, bet abu skaitmenys sunaudojami šiuose dviejuose langeliuose.",
+                "Todėl joks kitas langelis {unit} negali turėti {d1} ar {d2}. Pašalinkite {elim}."
+              ]
+            },
+            {
+              "h": "Atviras trejetas",
+              "steps": [
+                "Trys langeliai {unit} visus savo kandidatus ima iš tų pačių trijų skaitmenų, {digits}: {cells}.",
+                "Trys skaitmenys turi kokia nors tvarka užpildyti šiuos tris langelius. Langeliui nebūtina rodyti visų trijų kandidatų; svarbu, kad nė vienas iš trijų langelių neturėtų kandidato už šio rinkinio ribų.",
+                "Pašalinkite {digits} iš visų kitų langelių {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Dviejų langelių, turinčių du bendrus kandidatus, bet ir trečią, pasirinkimas. Atviroje poroje kiekvienas langelis turi turėti lygiai tuos du kandidatus ir nieko daugiau.",
+            "Skaitmenų šalinimas iš pačių poros langelių. Pora savo kandidatus pasilieka; pašalinimai taikomi kitiems srities langeliams.",
+            "Reikalavimas, kad kiekvienas trejeto langelis rodytų visus tris skaitmenis. Langelis su dviem iš trijų tinka, jei nė vienas langelis neturi kandidato už rinkinio ribų."
+          ],
+          "faq": [
+            [
+              "Kas yra atvira pora sudoku?",
+              "Du vienos srities langeliai, kurie abu turi lygiai tuos pačius du kandidatus. Tie du skaitmenys užrakinti šiuose dviejuose langeliuose, todėl juos galima pašalinti iš likusios srities."
+            ],
+            [
+              "Kas yra atviras trejetas?",
+              "Trys vienos srities langeliai, kurių kandidatai kartu sudaro tik tris skaitmenis. Kiekvienas langelis gali turėti du arba tris iš jų. Trys skaitmenys užpildo tris langelius, todėl juos galima pašalinti iš kitų srities langelių."
+            ],
+            [
+              "Ar atvira pora įrašo skaitmenį?",
+              "Pati savaime ne. Ji pašalina kandidatus, o pašalinimas paprastai palieka vienintelį kandidatą ar vienintelę vietą. Bare Sudoku užuomina parodo tą vienišą kandidatą ir įvardija techniką, kuri jį įgalino."
+            ],
+            [
+              "Ar atvira pora gali būti kartu kvadrate ir eilutėje?",
+              "Taip. Jei du langeliai dalijasi eilute ir kvadratu, pora pašalina kandidatus abiejose srityse. Bare Sudoku jas nagrinėja po vieną sritį."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Paslėptos poros ir trejetai",
+          "title": "Paslėptos poros ir trejetai sudoku: kaip juos pastebėti",
+          "description": "Paslėpta pora: du skaitmenys, tinkantys tik tiems patiems dviem srities langeliams, todėl kiti jų kandidatai šalinami. Kaip rasti paslėptas poras ir trejetus.",
+          "h1": "Paslėptos poros ir trejetai (hidden pair, hidden triple)",
+          "summary": "Paslėpta pora yra du skaitmenys, kurie vienoje eilutėje, stulpelyje ar kvadrate yra kandidatai tuose pačiuose dviejuose langeliuose ir niekur kitur. Tie du langeliai privalo turėti tuos du skaitmenis, todėl visus kitus jų kandidatus galima pašalinti. Paslėptas trejetas veikia taip pat, tik su trimis skaitmenimis, apribotais trimis langeliais. Po pašalinimo langeliai rodo atvirą porą ar trejetą. Bare Sudoku užuomina iš to kylantį įrašymą pažymi „Pora arba trejetas“.",
+          "when": [
+            "Kai srityje yra langelių su daugybe kandidatų, o vienišų kandidatų nebeliko. Paslėptos poros slepiasi perkrautuose langeliuose, todėl jų verta ieškoti būtent ten, kur atvirų porų nesimato. Paslėpti trejetai reti; Bare Sudoku juos tikrina, bet dauguma „Sunku“ galvosūkių išsprendžiami be jų."
+          ],
+          "spot": [
+            "Dirbkite pagal skaitmenis, ne pagal langelius. Srityje pasižymėkite, į kuriuos langelius gali patekti kiekvienas trūkstamas skaitmuo. Jei du skaitmenys turi tik po du galimus langelius ir tai tie patys du langeliai, radote paslėptą porą. Žaidime palieskite skaitmens klavišą, kad paryškintumėte jo kandidatus; jei du skaitmenys paryškina tuos pačius du srities langelius ir nieko daugiau joje, tai ir yra raštas."
+          ],
+          "examples": [
+            {
+              "h": "Paslėpta pora",
+              "steps": [
+                "{unit} skaitmenys {d1} ir {d2} turi tik po du galimus langelius, ir tai tie patys du: {cells}.",
+                "Tie du langeliai privalo turėti {d1} ir {d2}, todėl kiti jų kandidatai neįmanomi.",
+                "Pašalinkite {elim}. Dabar du langeliai rodo atvirą porą, kuri gali atverti daugiau."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Poros skaitmenų šalinimas iš poros langelių. Šalinami kiti tų langelių kandidatai; poros skaitmenys lieka.",
+            "Skaitmens, turinčio srityje trečią galimą langelį, priėmimas. Abu skaitmenys turi būti apriboti lygiai tais dviem langeliais.",
+            "Ieškojimas tik kvadratuose. Paslėptos poros eilutėse ir stulpeliuose pasitaiko ne rečiau."
+          ],
+          "faq": [
+            [
+              "Kas yra paslėpta pora sudoku?",
+              "Du skaitmenys, galintys būti tik tuose pačiuose dviejuose srities langeliuose. Tie langeliai privalo gauti tuos skaitmenis, todėl kiti jų kandidatai pašalinami."
+            ],
+            [
+              "Kuo paslėpta pora skiriasi nuo atviros poros?",
+              "Atvira pora matoma: du langeliai, rodantys tik tuos pačius du kandidatus. Paslėptą porą dengia papildomi kandidatai tuose dviejuose langeliuose. Pašalinus tuos papildomus kandidatus, paslėpta pora tampa atvira pora."
+            ],
+            [
+              "Kas yra paslėptas trejetas?",
+              "Trys skaitmenys, apriboti trimis srities langeliais. Nebūtina, kad kiekvienas skaitmuo būtų visuose trijuose langeliuose; svarbu, kad nė vienas iš trijų skaitmenų neturėtų kandidato už tų langelių ribų."
+            ],
+            [
+              "Ar užuomina skiria paslėptas ir atviras poras?",
+              "Ne. Bare Sudoku randa abi ir iš to kylantį įrašymą pažymi „Pora arba trejetas“. Šie puslapiai jas atskiria, nes jos randamos skirtingais būdais."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing sudoku: kaip veikia ši technika",
+          "description": "X-Wing: skaitmuo, turintis lygiai du kandidatų langelius dviejose eilutėse tuose pačiuose dviejuose stulpeliuose, pašalinamas iš likusių stulpelių. Pavyzdys.",
+          "h1": "X-Wing",
+          "summary": "X-Wing yra vieno skaitmens ir keturių langelių stačiakampio kampuose raštas. Jei skaitmuo kiekvienoje iš dviejų eilučių turi lygiai du kandidatų langelius ir tie langeliai yra tuose pačiuose dviejuose stulpeliuose, skaitmuo turi užimti du priešingus stačiakampio kampus. Todėl jį galima pašalinti iš visų kitų tų dviejų stulpelių langelių. Tas pats veikia sukeitus eilutes ir stulpelius. Tai pirmoji „Ekspertas“ lygio technika Bare Sudoku.",
+          "when": [
+            "Kai vieniši kandidatai, užrakinti kandidatai ir poaibiai išnaudoti. X-Wing yra dažniausias „Ekspertas“ lygio raštas ir dažnai pasirodo, kai skaitmeniui liko nedaug kandidatų, paprastai kai jau įrašytos nuo keturių iki šešių jo kopijų. Reikia pilnų užrašų nagrinėjamam skaitmeniui."
+          ],
+          "spot": [
+            "Pasirinkite skaitmenį ir ieškokite eilučių, kuriose jis turi lygiai du kandidatų langelius. Jei dvi tokios eilutės dalijasi tais pačiais dviem stulpeliais, patikrinkite, ar tuose stulpeliuose yra kitų to skaitmens kandidatų: tai ir yra pašalinimai. Tada pakartokite, pagrindu imdami stulpelius. Žaidime palieskite skaitmens klavišą: visi jo kandidatai paryškinami, ir keturių paryškintų žymių stačiakampį lengva pamatyti."
+          ],
+          "examples": [
+            {
+              "h": "Pavyzdys",
+              "steps": [
+                "Skaitmuo {d} turi lygiai du kandidatų langelius {r1} eilutėje ir lygiai du {r2} eilutėje, ir jie išsidėstę tuose pačiuose dviejuose stulpeliuose, {c1} ir {c2}: {cells}.",
+                "{r1} eilutė savo {d} įrašo į {c1} arba {c2} stulpelį, o {r2} eilutė į kitą. Bet kuriuo atveju {c1} ir {c2} stulpeliai kiekvienas gauna {d} iš šių dviejų eilučių.",
+                "Todėl {d} negali būti niekur kitur {c1} ir {c2} stulpeliuose. Pašalinkite {d} iš langelių {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eilutės, kurioje skaitmuo turi tris kandidatų langelius, naudojimas. Kiekviena bazinė eilutė turi turėti lygiai du, ir abu turi būti dviejuose bendruose stulpeliuose.",
+            "Skaitmens šalinimas iš eilučių, o ne iš stulpelių. Kai bazė yra eilutės, pašalinimai yra stulpeliuose, ir atvirkščiai.",
+            "Sukeistos versijos pamiršimas. X-Wing, sudarytas stulpeliuose, šalina eilutėse."
+          ],
+          "faq": [
+            [
+              "Kas yra X-Wing sudoku?",
+              "Skaitmuo, kuris kiekvienoje iš dviejų eilučių turi lygiai du kandidatų langelius, tuose pačiuose dviejuose stulpeliuose. Skaitmuo užima du priešingus to stačiakampio kampus, todėl pašalinamas iš likusių abiejų stulpelių langelių. Eilutes ir stulpelius galima sukeisti."
+            ],
+            [
+              "Kodėl X-Wing veikia?",
+              "Kiekviena iš dviejų eilučių turi įrašyti skaitmenį į vieną iš dviejų stulpelių, o abi eilutės negali naudoti to paties stulpelio. Taigi abu stulpeliai savo skaitmens kopiją gauna iš šių eilučių, ir bet koks kitas kandidatas tuose stulpeliuose neįmanomas."
+            ],
+            [
+              "Ar X-Wing yra žuvis?",
+              "Taip. X-Wing yra dviejų dydžio žuvis, Swordfish yra trijų dydžio žuvis. Bare Sudoku randa abi."
+            ],
+            [
+              "Kuriame lygyje pasitaiko X-Wing?",
+              "„Ekspertas“. Galvosūkis, kuriam reikia X-Wing, Y-Wing, Swordfish ar XYZ-Wing, vertinamas kaip „Ekspertas“."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing sudoku: kaip veikia ši technika",
+          "description": "Y-Wing (XY-Wing): ašis su dviem kandidatais ir du sparnai, turintys po vieną iš jų, išstumia skaitmenį iš kiekvieno langelio, matančio abu sparnus. Pavyzdys.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, dar vadinamas XY-Wing, naudoja tris langelius, kurių kiekvienas turi du kandidatus. Ašis turi kandidatus X ir Y. Vienas sparnas mato ašį ir turi X ir Z; kitas sparnas mato ašį ir turi Y ir Z. Kad ir kas būtų ašis, vienas iš sparnų turi būti Z, todėl Z galima pašalinti iš kiekvieno langelio, kuris mato abu sparnus. Bare Sudoku tai „Ekspertas“ lygio technika.",
+          "when": [
+            "Kai galvosūkyje yra keli langeliai su lygiai dviem kandidatais ir nėra jokios žuvies. Y-Wing dažnas „Ekspertas“ galvosūkiuose ir randamas sekant dviejų kandidatų langelius: kiekvienas gali būti ašis ar sparnas."
+          ],
+          "spot": [
+            "Surašykite langelius su lygiai dviem kandidatais. Kiekvieną laikykite ašimi su kandidatais X ir Y ir tarp jo kaimynų ieškokite langelio su X ir kitu skaitmeniu Z bei langelio su Y ir tuo pačiu Z. Tie du ir yra sparnai. Tada raskite langelius, kurie mato abu sparnus ir turi Z. Atkreipkite dėmesį, kad sparnai neprivalo matyti vienas kito."
+          ],
+          "examples": [
+            {
+              "h": "Pavyzdys",
+              "steps": [
+                "Ašis {pivot} turi kandidatus {x} ir {y}. Ji mato {wingA}, kuris turi {x} ir {z}, ir {wingB}, kuris turi {y} ir {z}.",
+                "Jei {pivot} yra {x}, tada {wingA} netenka {x} ir tampa {z}. Jei {pivot} yra {y}, tada {wingB} tampa {z}. Bet kuriuo atveju vienas iš sparnų yra {z}.",
+                "Langelis, kuris mato abu sparnus, niekada negali būti {z}. Pašalinkite {z} iš langelių {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sparnų, kurie ne abu mato ašį, pasirinkimas. Kiekvienas sparnas turi dalytis eilute, stulpeliu ar kvadratu su ašimi.",
+            "Z šalinimas iš langelių, kurie mato tik vieną sparną. Langelis, iš kurio šalinama, turi matyti abu sparnus.",
+            "Z šalinimas iš ašies. Y-Wing ašis neturi Z; jei turi, tai XYZ-Wing raštas su kitomis taisyklėmis."
+          ],
+          "faq": [
+            [
+              "Kas yra Y-Wing sudoku?",
+              "Trys dviejų kandidatų langeliai: ašis su X ir Y, ašį matantis sparnas su X ir Z ir ašį matantis sparnas su Y ir Z. Vienas sparnas visada yra Z, todėl Z pašalinamas iš langelių, kurie mato abu sparnus."
+            ],
+            [
+              "Ar Y-Wing yra tas pats kaip XY-Wing?",
+              "Taip. Abu pavadinimai apibūdina tą patį raštą. Bare Sudoku jį vadina Y-Wing."
+            ],
+            [
+              "Kodėl vienas sparnas turi būti Z?",
+              "Jei ašis yra X, pirmasis sparnas netenka X ir tampa Z. Jei ašis yra Y, antrasis sparnas tampa Z. Ašis yra vienas iš šių dviejų, todėl vienas sparnas yra Z."
+            ],
+            [
+              "Kiek langelių išvalo Y-Wing?",
+              "Paprastai vieną ar du: tik tuos langelius, kurie mato abu sparnus ir dar turi Z. To pakanka, kad atsirastų vienišas kandidatas."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish sudoku: kaip veikia ši technika",
+          "description": "Swordfish: skaitmuo, apribotas trimis stulpeliais trijose eilutėse, pašalinamas iš likusių tų stulpelių langelių. Trijų dydžio žuvis, paaiškinta su pavyzdžiu.",
+          "h1": "Swordfish",
+          "summary": "Swordfish yra X-Wing su trimis eilutėmis ir trimis stulpeliais. Jei skaitmuo kiekvienoje iš trijų eilučių turi ne daugiau kaip tris kandidatų langelius ir visi tie langeliai yra tuose pačiuose trijuose stulpeliuose, trys eilutės sunaudoja skaitmenį tuose stulpeliuose, ir skaitmenį galima pašalinti iš visų kitų trijų stulpelių langelių. Eilutes ir stulpelius galima sukeisti. Bare Sudoku Swordfish tikrina po Y-Wing, „Ekspertas“ galvosūkiuose.",
+          "when": [
+            "Kai X-Wing ir Y-Wing nieko neranda. Swordfish retesnis už X-Wing ir reikalauja skaitmens, kurio kandidatai negausiai išsibarstę trijose linijose. Reikia pilnų ir tikslių užrašų tam skaitmeniui."
+          ],
+          "spot": [
+            "Pasirinkite skaitmenį ir ieškokite eilučių, kuriose jis turi du ar tris kandidatų langelius. Jei trys tokios eilutės kartu apima tik tris stulpelius, patikrinkite, ar tuose stulpeliuose yra daugiau to skaitmens kandidatų. Nebūtina, kad kiekviena eilutė turėtų kandidatą kiekviename stulpelyje: Swordfish gali turėti šešis, septynis, aštuonis ar devynis langelius. Žaidime paryškinkite skaitmenį jo klavišu ir ieškokite trijų eilučių, kurių kandidatai išsirikiuoja trijuose stulpeliuose."
+          ],
+          "examples": [
+            {
+              "h": "Pavyzdys",
+              "steps": [
+                "Skaitmuo {d} kiekvienoje iš {rows} eilučių turi ne daugiau kaip tris kandidatų langelius, ir visi jie yra {cols} stulpeliuose: {cells}.",
+                "Kiekviena iš trijų eilučių turi įrašyti savo {d} į vieną iš trijų stulpelių, ir jokios dvi eilutės negali naudoti to paties stulpelio. Taigi trys stulpeliai savo {d} gauna iš šių trijų eilučių.",
+                "Bet koks kitas {d} kandidatas {cols} stulpeliuose neįmanomas. Pašalinkite {d} iš langelių {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Reikalavimas, kad būtų visi devyni langeliai. Swordfish su dviem kandidatais kai kuriose eilutėse vis tiek galioja, jei trys eilutės apima tik tris stulpelius.",
+            "Eilutės su keturiais kandidatų langeliais įtraukimas. Kiekviena bazinė eilutė gali turėti ne daugiau kaip tris, visus trijuose stulpeliuose.",
+            "Šalinimas bazinėse eilutėse. Kai bazė yra eilutės, pašalinimai yra trijuose stulpeliuose, už bazinių eilučių ribų."
+          ],
+          "faq": [
+            [
+              "Kas yra Swordfish sudoku?",
+              "Skaitmuo, kurio kandidatai trijose eilutėse apriboti trimis stulpeliais. Trys eilutės turi įrašyti skaitmenį į šiuos tris stulpelius, po vieną į kiekvieną, todėl skaitmuo pašalinamas iš kitų tų stulpelių langelių."
+            ],
+            [
+              "Kuo Swordfish skiriasi nuo X-Wing?",
+              "Tik dydžiu: X-Wing naudoja dvi eilutes ir du stulpelius, Swordfish tris ir tris. Samprotavimas tas pats."
+            ],
+            [
+              "Ar Swordfish reikia lygiai devynių langelių?",
+              "Ne. Kiekviena eilutė gali turėti du ar tris kandidatus; raštas reikalauja tik, kad trys eilutės kartu naudotų ne daugiau kaip tris stulpelius."
+            ],
+            [
+              "Ar yra keturių dydžio žuvis?",
+              "Taip, Jellyfish. Bare Sudoku jos nenaudoja, nes jo galvosūkiams jos niekada neprireikia."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing sudoku: kaip veikia ši technika",
+          "description": "XYZ-Wing: ašis su trimis kandidatais ir du sparnai, turintys vieną bendrą, išstumia tą skaitmenį iš langelių, matančių visus tris. Tikras pavyzdys.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing yra Y-Wing, kurio ašis turi tris kandidatus. Ašis turi X, Y ir Z; vienas sparnas mato ašį ir turi X ir Z, kitas mato ašį ir turi Y ir Z. Vienas iš trijų langelių turi būti Z, todėl Z galima pašalinti iš kiekvieno langelio, kuris mato visus tris. Kadangi pati ašis gali būti Z, langelis, iš kurio šalinama, turi matyti ir ašį, ir abu sparnus, todėl jis gali būti tik tame kvadrate ar linijoje, kuria langeliai dalijasi. Tai sunkiausia Bare Sudoku naudojama technika.",
+          "when": [
+            "Tik tada, kai visa kita nepavyksta. XYZ-Wing yra rečiausias raštas Bare Sudoku ir pasitaiko tik „Ekspertas“ galvosūkiuose. Ieškokite jo, kai trijų kandidatų langelis yra kvadrate kartu su dviejų kandidatų langeliu, kuris turi du iš jo skaitmenų."
+          ],
+          "spot": [
+            "Pradėkite nuo langelių su lygiai trimis kandidatais; kiekvienas gali būti ašis. Tarp jo kaimynų ieškokite dviejų langelių, turinčių po du kandidatus iš trijų ašies kandidatų ir lygiai vieną bendrą skaitmenį Z. Tada ieškokite langelių, kurie mato ašį ir abu sparnus bei turi Z. Praktiškai vienas sparnas yra ašies kvadrate, kitas jos eilutėje ar stulpelyje, o šalinami langeliai yra likę to kvadrato langeliai toje eilutėje ar stulpelyje."
+          ],
+          "examples": [
+            {
+              "h": "Pavyzdys",
+              "steps": [
+                "Ašis {pivot} turi tris kandidatus: {x}, {y} ir {z}. Ji mato {wingA} su {x} ir {z} bei {wingB} su {y} ir {z}.",
+                "Jei {pivot} yra {z}, viskas aišku. Jei ji yra {x}, {wingA} turi būti {z}. Jei ji yra {y}, {wingB} turi būti {z}. Bet kuriuo atveju vienas iš trijų langelių yra {z}.",
+                "Langelis, kuris mato visus tris, negali būti {z}. Pašalinkite {z} iš langelių {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Šalinimas iš langelių, kurie mato tik abu sparnus. Skirtingai nei Y-Wing, ašis gali būti Z, todėl langelis turi matyti ir ašį.",
+            "Sparnų, kurių kandidatai ne abu yra tarp trijų ašies kandidatų, naudojimas.",
+            "Painiojimas su Y-Wing: skirtumas yra trečias ašies kandidatas, ir jis pakeičia, kuriuos langelius galima išvalyti."
+          ],
+          "faq": [
+            [
+              "Kas yra XYZ-Wing sudoku?",
+              "Ašis su kandidatais X, Y ir Z ir du sparnai, vienas su X ir Z, kitas su Y ir Z, abu matantys ašį. Vienas iš trijų langelių yra Z, todėl Z pašalinamas iš langelių, kurie mato visus tris."
+            ],
+            [
+              "Kuo XYZ-Wing skiriasi nuo Y-Wing?",
+              "Ašis turi tris kandidatus vietoj dviejų, tarp jų Z. Dėl to ir ašis gali būti Z vieta, todėl Z netekti gali tik langeliai, kurie mato ašį ir abu sparnus."
+            ],
+            [
+              "Kaip dažnai pasitaiko XYZ-Wing?",
+              "Retai. Bare Sudoku jo gali prireikti tik „Ekspertas“ galvosūkiams, ir daugumai jų neprireikia. Bare Sudoku jį tikrina paskutinį, po X-Wing, Y-Wing ir Swordfish."
+            ],
+            [
+              "Ar yra WXYZ-Wing?",
+              "Taip, su keturių kandidatų ašimi, bet Bare Sudoku jo nenaudoja. Kiekvieną žaidimo galvosūkį galima užbaigti devyniomis šio vadovo technikomis."
+            ]
+          ]
+        }
+      }
+    },
+    "lv": {
+      "learnHeading": "Iemācies sudoku",
+      "learnText": "Sudoku tev ir jaunums vai esi iestrēdzis grūtā mīklā? Divi ceļveži izskaidro noteikumus un visas risināšanas tehnikas, ko izmanto mājieni, katru ar īstu piemēru.",
+      "howToLink": "Kā spēlēt sudoku",
+      "techniquesLink": "Sudoku risināšanas tehnikas",
+      "labels": {
+        "howTo": "Kā spēlēt",
+        "techniques": "Tehnikas",
+        "play": "Spēlēt sudoku",
+        "prev": "Iepriekšējā tehnika",
+        "next": "Nākamā tehnika",
+        "all": "Visas tehnikas",
+        "example": "Piemērs",
+        "steps": "Soli pa solim",
+        "when": "Kad to izmantot",
+        "spot": "Kā to pamanīt",
+        "mistakes": "Biežākās kļūdas",
+        "inGame": "Bare Sudoku spēlē",
+        "level": "Vajadzīga no līmeņa: {level}",
+        "hint": "Spēlē mājiens saka: {text}",
+        "legend": "Treknie cipari ir doti, zilie ierakstīti risināšanas laikā, mazie cipari ir kandidāti. Izceltās rūtiņas veido figūru, pārsvītrotie kandidāti tiek dzēsti, bet apvilktais kandidāts ir cipars, kas jāieraksta.",
+        "notation": "Rūtiņas apzīmē kā r3c7: 3. rinda, 7. kolonna. Rindas skaita no augšas, kolonnas no kreisās puses, bet kvadrātus no 1 līdz 9 no augšējā kreisā, rindu pa rindai.",
+        "row": "{n}. rindā",
+        "column": "{n}. kolonnā",
+        "box": "{n}. kvadrātā",
+        "elimItem": "{d} no {cell}",
+        "regions": "5. rinda, 5. kolonna un 5. kvadrāts mīklas sākumā",
+        "firstMove": "Vienīgais kandidāts: {cell} var būt tikai {d}",
+        "breadcrumb": "Navigācijas ceļš"
+      },
+      "howTo": {
+        "title": "Kā spēlēt sudoku: noteikumi, režģis un pirmie gājieni",
+        "description": "Uzzini, kā spēlēt sudoku: noteikumi, kā darbojas rindas, kolonnas un kvadrāti, kāpēc katrai mīklai ir viens atrisinājums, piezīmes un pirmie gājieni.",
+        "h1": "Kā spēlēt sudoku",
+        "summary": "Sudoku ir loģikas mīkla 9×9 režģī. Aizpildi katru tukšo rūtiņu ar ciparu no 1 līdz 9 tā, lai katrā rindā, katrā kolonnā un katrā 3×3 kvadrātā katrs cipars būtu tieši vienu reizi. Daži cipari ir doti jau sākumā; pārējos tu izsecini pats, pa vienai drošai rūtiņai, un nekad nav jāmin. Šis ceļvedis izskaidro režģi, noteikumus, viena atrisinājuma principu, piezīmes un vienkāršu stratēģiju pirmajiem gājieniem. Visu vari izmēģināt [Bare Sudoku](play), kas ir bezmaksas un kam ir mājieni, kuri izskaidro loģiku.",
+        "sections": [
+          {
+            "h": "Kādi ir sudoku noteikumi?",
+            "p": [
+              "Noteikumi ir tikai trīs, un tas ir viens un tas pats noteikums, skatīts no trim pusēm: katrā rindā jābūt cipariem no 1 līdz 9, katrā kolonnā jābūt cipariem no 1 līdz 9 un katrā 3×3 kvadrātā jābūt cipariem no 1 līdz 9. Tāpēc cipars nekad nedrīkst atkārtoties vienā rindā, kolonnā vai kvadrātā.",
+              "Dotie cipari, kas izdrukāti treknrakstā, ir nemainīgi. Tavs uzdevums ir aizpildīt tukšās rūtiņas. Nav nekādas aritmētikas, un ciparu secībai nav nozīmes: tie ir tikai deviņi dažādi simboli. Tu varētu spēlēt ar burtiem vai figūrām, un nekas nemainītos."
+            ]
+          },
+          {
+            "h": "Kā ir veidots režģis?",
+            "p": [
+              "Režģī ir 81 rūtiņa 9 rindās un 9 kolonnās. Treknas līnijas to sadala deviņos 3×3 kvadrātos. Katra rūtiņa pieder tieši vienai rindai, vienai kolonnai un vienam kvadrātam; šīs trīs grupas ir tās vienības. Pārējās 20 rūtiņas, ar kurām tai ir kopīga vienība, sauc par tās kaimiņiem; rūtiņā ierakstīts cipars izslēdz šo ciparu visos 20 kaimiņos.",
+              "Rūtiņas apzīmē kā r3c7: 3. rinda, 7. kolonna. Rindas skaita no augšas, kolonnas no kreisās puses, bet kvadrātus no 1 līdz 9 no augšējā kreisā, rindu pa rindai. Šo apzīmējumu izmanto visos tehniku ceļvežos, un to vērts apgūt: r5c5 ir režģa centrs."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Kāpēc katram sudoku ir tieši viens atrisinājums?",
+            "p": [
+              "Īstam sudoku ir viens atrisinājums, un tieši tāpēc loģika darbojas. Kad vari parādīt, ka cipars vienībā nevar atrasties nekur citur, tam jābūt atlikušajā rūtiņā, jo atrisinājums pastāv un ir vienīgais. Ja mīklai būtu divi atrisinājumi, nekāda spriešana tos nespētu atšķirt, un kādā brīdī tev nāktos minēt.",
+              "Bare Sudoku katru mīklu izveido tavā ierīcē un pārbauda, ka tai ir tieši viens atrisinājums un ka tā loģiskais risinātājs to var pabeigt ar izvēlētā līmeņa tehnikām. Tātad, ja esi iestrēdzis, vienmēr ir nākamais solis, ko atrast, un mājiens to parāda."
+            ]
+          },
+          {
+            "h": "Kā sākt risināt sudoku?",
+            "p": [
+              "Sāc ar visvairāk ierobežoto. Šī secība der jebkurā līmenī:"
+            ],
+            "list": [
+              "Izvēlies ciparu, kas jau parādās daudzas reizes, teiksim, sešas vai septiņas, un atrodi kvadrātus, kuros tā vēl trūkst. Bieži kvadrātā tam paliek tikai viena rūtiņa: tā ir [vienīgā vieta](hidden-single).",
+              "Meklē pārpildītas vietas. Rūtiņai, kuras rindā, kolonnā un kvadrātā kopā ir astoņi dažādi cipari, palicis tikai viens kandidāts: tas ir [vienīgais kandidāts](naked-single). Vislabāk meklēt gandrīz pilnās rindās vai kvadrātos.",
+              "Katrs ierakstītais cipars noņem kandidātu no 20 kaimiņiem, tāpēc pārbaudi šos kaimiņus uzreiz. Vientuļie kandidāti mēdz nākt ķēdēs.",
+              "Kad vieglie ieraksti beidzas, raksti piezīmes: katras tukšās rūtiņas kandidātus. Tad meklē ciparu, kas kvadrātā ierobežots ar vienu rindu vai kolonnu ([bloķētie kandidāti](locked-candidates)), vai divas rūtiņas ar vieniem un tiem pašiem diviem kandidātiem ([atklātais pāris](naked-pairs)).",
+              "Pēc katras izslēgšanas atgriezies pie vientuļajiem kandidātiem. Pat līmeņa „Eksperts” mīklas lielākoties atrisina ar vientuļajiem kandidātiem; sarežģītā tehnika tikai atslēdz nākamo."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Kas ir piezīmes un kad tās izmantot?",
+            "p": [
+              "Piezīmes, sauktas arī par zīmuļa atzīmēm vai kandidātiem, ir mazie cipari, ko raksti tukšā rūtiņā, lai atzīmētu, kuri cipari tur vēl ir iespējami. Vieglās mīklās tās vajag reti; sākot ar līmeni „Grūti”, tās ir būtiskas, jo tādas tehnikas kā pāri, X-Wing un Y-Wing darbojas ar kandidātiem, nevis ar ierakstītiem cipariem.",
+              "Piezīmēm jābūt precīzām: kad ieraksti ciparu, izdzēs to no visu 20 kaimiņu piezīmēm. Bare Sudoku to dara automātiski, bet „Aizpildīt piezīmes” ar vienu pieskārienu ieraksta visus kandidātus visās tukšajās rūtiņās, tāpēc vari sākt ar pilnu un pareizu kandidātu kopu. Piezīme ir fakts, nevis minējums: tā nozīmē, ka šo ciparu vēl nekas neizslēdz."
+            ]
+          },
+          {
+            "h": "Ko darīt, ja esi iestrēdzis?",
+            "p": [
+              "Vispirms vēlreiz pārbaudi pamatus: katra gandrīz pilna rinda, kolonna un kvadrāts ir vientuļo kandidātu avots. Tad pārliecinies, ka piezīmes ir pilnīgas, jo trūkstošs kandidāts paslēpj figūras, bet novecojis rada viltus figūras. Tad izej cauri [tehnikām](techniques) grūtības secībā: bloķētie kandidāti, pāri un trijnieki, X-Wing, Y-Wing, Swordfish un XYZ-Wing. Katrai ir sava lapa ar īstu piemēru.",
+              "Ja nekas nelīdz, ņem mājienu. Bare Sudoku mājiens vispirms pārbauda, vai kāds ierakstītais cipars nav nepareizs, tad atrod nākamo rūtiņu, ko var aizpildīt ar loģiku, un nosauc tehniku, tāpēc tu kaut ko iemācies, pat to izmantojot. Pieskaries mājienam vēlreiz, lai ierakstītu ciparu."
+            ]
+          },
+          {
+            "h": "Kā ievadīt ciparus Bare Sudoku?",
+            "p": [
+              "Pieskaries rūtiņai un tad ciparam. Vai arī vispirms pieskaries ciparam: tas nofiksējas, un katra rūtiņa, kurai pieskaries, to saņem; tas ir ātrākais veids, kā ierakstīt sesto, septīto un astoto cipara eksemplāru. Pieskaries ciparam vēlreiz, lai to atbrīvotu. Poga „Piezīmes” pārslēdz uz zīmuļa atzīmēm, „Dzēst” notīra rūtiņu, „Atsaukt” atsauc jebkuru gājienu, bet kļūdas tiek iezīmētas sarkanā krāsā, ja vien to neizslēdz izvēlnē.",
+              "Uz tastatūras pārvietojies ar bultiņu taustiņiem, ievadi ciparu ar taustiņiem no 1 līdz 9, Backspace dzēš, N pārslēdz piezīmes, U atsauc, H dod mājienu, F aizpilda piezīmes, bet Escape atver izvēlni. Spēle saglabājas pati, darbojas bezsaistē, tajā nav reklāmu un nav vajadzīgs konts."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Vai sudoku kādreiz ir jāmin?",
+            "Īstā mīklā nē. Katrai Bare Sudoku mīklai ir tieši viens atrisinājums, un ir pārbaudīts, ka to var atrisināt tikai ar loģiku, izmantojot tās līmeņa tehnikas. Ja šķiet, ka jāmin, piezīmēs trūkst kandidāta vai arī kāda tehnika vēl gaida, kad to atradīsi."
+          ],
+          [
+            "Vai cipars var atkārtoties rindā, kolonnā vai kvadrātā?",
+            "Nē. Tas arī ir viss noteikums: katrā no deviņām rindām, deviņām kolonnām un deviņiem kvadrātiem katrs cipars no 1 līdz 9 ir tieši vienu reizi. Ja vienā vienībā ir divi vienādi cipari, vismaz viens no tiem ir nepareizs."
+          ],
+          [
+            "Kāda ir atšķirība starp līmeņiem „Viegli”, „Vidēji”, „Grūti” un „Eksperts”?",
+            "Līmeni nosaka tehnikas, kas mīklai vajadzīgas. „Viegli” un „Vidēji” atrisina tikai ar vientuļajiem kandidātiem, turklāt „Viegli” sākas ar vismaz 38 dotiem cipariem. Līmenim „Grūti” vajag bloķētos kandidātus vai pārus un trijniekus. Līmenim „Eksperts” vajag X-Wing, Y-Wing, Swordfish vai XYZ-Wing."
+          ],
+          [
+            "Vai labāk aizpildīt piezīmes visām rūtiņām vai tikai dažām?",
+            "Līmeņa „Grūti” un „Eksperts” mīklās aizpildi visas: tādas figūras kā pāri, X-Wing un Y-Wing parādās tikai tad, kad ir ierakstīti visi kandidāti. Līmeņos „Viegli” un „Vidēji” piezīmes nav obligātas, un lielākā daļa spēlētāju vienkārši meklē vientuļos kandidātus."
+          ],
+          [
+            "Cik ilgi jārisina viens sudoku?",
+            "Līmeņa „Viegli” mīkla aizņem dažas minūtes; līmeņa „Eksperts” mīklas var aizņemt divdesmit minūtes vai vairāk, atkarībā no tā, cik ātri pamani sarežģīto figūru. Bare Sudoku rāda taimeri, aptur to, kamēr atvērta izvēlne, un tam nav līderu tabulas, tāpēc spēlē savā tempā."
+          ],
+          [
+            "Vai sudoku vajag aritmētiku?",
+            "Nē. Cipari ir tikai apzīmējumi; nekas nav jāsaskaita vai jāskaita. Derētu jebkuri deviņi simboli, un tāpēc sudoku ir loģikas mīkla, nevis skaitļu mīkla."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku risināšanas tehnikas, izskaidrotas ar piemēriem",
+        "description": "Visas deviņas sudoku risināšanas tehnikas, no vienīgā kandidāta līdz Swordfish un XYZ-Wing, Bare Sudoku mājienu secībā, katra ar īstu piemēru.",
+        "h1": "Sudoku risināšanas tehnikas",
+        "intro": [
+          "Katru sudoku var atrisināt ar nelielu loģisko tehniku kopu. Šajā sarakstā ir deviņas tehnikas, ko izmanto Bare Sudoku risinātājs un tā mājieni, tādā secībā, kādā risinātājs tās mēģina: vispirms vientuļie kandidāti, tad izslēgšana vienas vienības ietvaros, tad figūras, kas aptver vairākas rindas un kolonnas. Katrai tehnikai ir sava lapa ar definīciju, padomiem, kā to pamanīt, īstu piemēru no ģenerētas mīklas un biežākajām kļūdām.",
+          "Mīklas līmeni nosaka grūtākā tehnika, kas tai vajadzīga. Līmeņa „Viegli” un „Vidēji” mīklām pietiek ar vientuļajiem kandidātiem, līmeņa „Grūti” mīklām vajag bloķētos kandidātus vai pārus un trijniekus, bet līmeņa „Eksperts” mīklām vajag vismaz vienu zivi vai spārnu. Lai kāds būtu līmenis, lielāko darbu padara vientuļie kandidāti; sarežģītā tehnika noņem vienu vai divus kandidātus, un tālāk turpina vientuļie kandidāti."
+        ],
+        "faq": [
+          [
+            "Kādā secībā izmēģināt sudoku tehnikas?",
+            "Vislētākās vispirms: vienīgie kandidāti, vienīgās vietas, bloķētie kandidāti, atklātie pāri un trijnieki, slēptie pāri un trijnieki, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku tās mēģina tieši šādā secībā, un mājiens vienmēr nosauc vienkāršāko tehniku, kas ļauj virzīties uz priekšu."
+          ],
+          [
+            "Vai sudoku risināšanai vajag visas šīs tehnikas?",
+            "Līmeņa „Viegli” un „Vidēji” mīklām pietiek ar vientuļajiem kandidātiem. Līmeņa „Grūti” mīklām nāk klāt bloķētie kandidāti un apakškopas. Līmeņa „Eksperts” mīklām vajag vismaz vienu zivi vai spārnu, bet parasti tikai vienu vai divas reizes mīklā."
+          ],
+          [
+            "Vai ir grūtākas tehnikas par XYZ-Wing?",
+            "Jā, piemēram, ķēdes, unikalitātes testi un piespiedu tīkli. Bare Sudoku neveido mīklas, kurām tās vajadzīgas, tāpēc katru spēles mīklu var pabeigt ar deviņām šīs lapas tehnikām."
+          ],
+          [
+            "Kas ir kandidāts?",
+            "Cipars, kas vēl var atrasties tukšā rūtiņā, jo nekas tās rindā, kolonnā vai kvadrātā to vēl neizslēdz. Piezīmes spēlē ir kandidāti. Katra tehnika aiz vientuļajiem kandidātiem spriež par kandidātiem, tāpēc turi tos pilnīgus un precīzus."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Vienīgais kandidāts",
+          "title": "Vienīgais kandidāts sudoku: rūtiņa ar vienu kandidātu",
+          "description": "Vienīgais kandidāts (naked single) ir tukša rūtiņa, kurā der tikai viens cipars. Iemācies tos ātri atrast, ar īstu piemēru soli pa solim un biežākajām kļūdām.",
+          "h1": "Vienīgais kandidāts (naked single)",
+          "summary": "Vienīgais kandidāts ir tukša rūtiņa, kurai ir tieši viens kandidāts: pārējie astoņi cipari jau ir tās rindā, kolonnā vai kvadrātā. Atlikušajam ciparam jābūt tur. Tā ir vienkāršākā sudoku tehnika, ko izmanto visbiežāk, un Bare Sudoku mājiens to paziņo kā „Šeit tikai viens kandidāts”.",
+          "when": [
+            "Vienmēr. Vienīgie kandidāti parādās no pirmā līdz pēdējam gājienam, jebkurā līmenī. Līmeņa „Viegli” un „Vidēji” mīklās kopā ar vienīgajām vietām tā ir vienīgā vajadzīgā tehnika. Grūtākās mīklās katra sarežģītas tehnikas izslēgšana parasti atstāj aiz sevis vienīgo kandidātu, tāpēc meklē tos pēc katra soļa."
+          ],
+          "spot": [
+            "Skaties uz rūtiņām, kuru kaimiņos ir daudz ierakstītu ciparu: rūtiņu rindā, kurā jau ir septiņi cipari, vai rūtiņu, kuras rinda, kolonna un kvadrāts kopā aptver astoņus dažādus ciparus. Bez piezīmēm saskaiti ciparus, ko redzi no rūtiņas. Ar piezīmēm vienīgais kandidāts ir vienkārši rūtiņa, kurā redzams viens kandidāts, tāpēc ar „Aizpildīt piezīmes” tos ir viegli atrast."
+          ],
+          "examples": [
+            {
+              "h": "Piemērs",
+              "steps": [
+                "Aplūko rūtiņu {cell}. Tā ir tukša, tāpēc uzskaiti visus ciparus, kas jau ierakstīti tās rindā, kolonnā un kvadrātā.",
+                "{row}. rindā ir {rowDigits}. {col}. kolonnā ir {colDigits}. {box}. kvadrātā ir {boxDigits}.",
+                "Kopā tie izslēdz visus ciparus, izņemot {d}, tāpēc {d} ir vienīgais kandidāts, kas palicis rūtiņā {cell}.",
+                "Ieraksti {d} rūtiņā {cell}. Tad pārbaudi, vai jaunais cipars nerada vēl vienu vientuļo kandidātu tajā pašā rindā, kolonnā vai kvadrātā."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Skaitīt tikai rindu vai tikai kvadrātu. Astoņi izslēgtie cipari parasti nāk no visām trim vienībām kopā.",
+            "Aizmirst, ka arī tikko ierakstīts cipars izslēdz kandidātus no saviem 20 kaimiņiem; jauni vienīgie kandidāti parādās uzreiz pēc katra ieraksta.",
+            "Jaukt vienīgo kandidātu ar vienīgo vietu: vienīgajam kandidātam rūtiņā paliek viens kandidāts, vienīgajai vietai ciparam vienībā paliek viena rūtiņa."
+          ],
+          "faq": [
+            [
+              "Kas ir vienīgais kandidāts (naked single) sudoku?",
+              "Tukša rūtiņa ar tieši vienu kandidātu. Tās rindā, kolonnā un kvadrātā jau ir ierakstīti astoņi dažādi cipari, tāpēc der tikai devītais."
+            ],
+            [
+              "Kāpēc angliski to sauc par naked, tas ir, kailu?",
+              "Tāpēc, ka pēc piezīmju ierakstīšanas vienīgais kandidāts ir redzams tieši rūtiņā; nekas to neslēpj. Vienīgā vieta (hidden single) turpretī slēpjas starp citiem kandidātiem, un to atrod, skatoties uz ciparu, nevis rūtiņu."
+            ],
+            [
+              "Vai mīklu var atrisināt tikai ar vienīgajiem kandidātiem?",
+              "Daudzas līmeņa „Viegli” mīklas var, bet lielākajai daļai vajag arī vienīgās vietas. Bare Sudoku līmeņa „Viegli” un „Vidēji” mīklas vērtē kā atrisināmas ar abu veidu vientuļajiem kandidātiem; līmeņa „Grūti” un „Eksperts” mīklām vajag vismaz vēl vienu tehniku."
+            ],
+            [
+              "Vai mājiens rāda vienīgos kandidātus?",
+              "Jā. Kad nākamais ieraksts ir vienīgais kandidāts, mājiens atlasa rūtiņu un kopā ar ciparu parāda „Šeit tikai viens kandidāts”. Pieskaries mājienam vēlreiz, lai to ierakstītu."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Vienīgā vieta",
+          "title": "Vienīgā vieta sudoku: vienīgā rūtiņa ciparam",
+          "description": "Vienīgā vieta (hidden single) ir vienīgā rūtiņa rindā, kolonnā vai kvadrātā, kur cipars vēl var atrasties. Iemācies to pamanīt, pārskatot pa vienam ciparam.",
+          "h1": "Vienīgā vieta (hidden single)",
+          "summary": "Vienīgā vieta ir cipars, kuram rindā, kolonnā vai kvadrātā palikusi tikai viena iespējamā rūtiņa, pat ja šajā rūtiņā redzami arī citi kandidāti. Tā kā vienībā šim ciparam jābūt, tas nonāk tur. Bare Sudoku mājiens to paziņo kā „Vienīgā vieta 5 šajā rindā”, kolonnā vai kvadrātā.",
+          "when": [
+            "Kad cipars jau labi izvietots: kad tas parādās piecas vai sešas reizes, atlikušie kvadrāti ir ļoti ierobežoti, un vienīgā vieta bieži ir nākamais gājiens. Vienīgās vietas ir līmeņa „Viegli” un „Vidēji” mīklu galvenā tehnika un paliek darba zirgs jebkurā līmenī."
+          ],
+          "spot": [
+            "Pārskati pa vienam ciparam. Paņem ciparu, atrodi kvadrātu, kurā tā nav, un izsvītro katru šī kvadrāta rūtiņu, kurai ir kopīga rinda vai kolonna ar jau ierakstītu šā cipara eksemplāru. Ja paliek viena rūtiņa, esi atradis vienīgo vietu. Tāpat var pārskatīt rindas un kolonnas. Spēlē pieskaries ierakstītam ciparam: visi tā eksemplāri tiek izcelti, tāpēc brīvās rūtiņas labi redzamas."
+          ],
+          "examples": [
+            {
+              "h": "Piemērs",
+              "steps": [
+                "{box}. kvadrātā vēl nav {d}, tāpēc tam jābūt vienā no tukšajām rūtiņām. Tukšās rūtiņas ir {empties}.",
+                "Visās, izņemot {cell}, ciparu {d} bloķē {d}, kas jau ierakstīts tajā pašā rindā vai kolonnā, tāpēc tur {d} nav kandidāts.",
+                "Tātad {cell} ir vienīgā vieta ciparam {d} {box}. kvadrātā. Ieraksti tur {d}, pat ja {cell} vēl rāda citus kandidātus."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ierakstīt ciparu rūtiņā, kas tikai varētu būt pareizā: pārbaudi katru citu vienības tukšo rūtiņu, ne tikai acīmredzamās.",
+            "Palaist garām vienīgo vietu, jo rūtiņā redzami vairāki kandidāti. Citiem kandidātiem nav nozīmes; svarīgi ir tas, ka ciparam vienībā nav citas vietas.",
+            "Pārskatīt tikai kvadrātus. Rindas un kolonnas dod vienīgās vietas tikpat bieži, īpaši beigās."
+          ],
+          "faq": [
+            [
+              "Kas ir vienīgā vieta (hidden single) sudoku?",
+              "Cipars, kas var atrasties tikai vienā rindas, kolonnas vai kvadrāta rūtiņā. Vienībā šim ciparam jābūt, tāpēc rūtiņa ir noteikta, pat ja tajā vēl ir citi kandidāti."
+            ],
+            [
+              "Kāda ir atšķirība starp vienīgo vietu un vienīgo kandidātu?",
+              "Vienīgais kandidāts attiecas uz rūtiņu: tajā palicis viens kandidāts. Vienīgā vieta attiecas uz ciparu: vienībā tam palikusi viena rūtiņa. Abi droši ieraksta ciparu."
+            ],
+            [
+              "Kuru ir vieglāk atrast?",
+              "Bez piezīmēm vienīgās vietas parasti ir vieglākas, jo režģi var pārskatīt pa vienam ciparam. Ar pilnām piezīmēm visvieglāk atrast vienīgos kandidātus, jo rūtiņa ar vienu kandidātu izceļas."
+            ],
+            [
+              "Kā mājiens apraksta vienīgo vietu?",
+              "Kā „Vienīgā vieta” ciparam šajā rindā, šajā kolonnā vai šajā kvadrātā, ar atlasītu rūtiņu. Pieskaries mājienam vēlreiz, lai to ierakstītu."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Bloķētie kandidāti",
+          "title": "Bloķētie kandidāti sudoku: norādīšana un piesavināšanās",
+          "description": "Bloķētie kandidāti: ja visi cipara kandidāti kvadrātā ir vienā rindā vai kolonnā, vai otrādi, ciparu dzēš citur. Divi īsti piemēri ar skaidrojumu soli pa solim.",
+          "h1": "Bloķētie kandidāti",
+          "summary": "Bloķētie kandidāti ir pirmā tehnika, kas nevis ieraksta ciparu, bet dzēš kandidātus. Tai ir divas formas. Norādīšana: kvadrātā visi cipara kandidāti ir vienā rindā vai kolonnā, tāpēc ciparu dzēš no pārējās šīs līnijas daļas. Piesavināšanās: rindā vai kolonnā visi cipara kandidāti ir vienā kvadrātā, tāpēc ciparu dzēš no pārējās šī kvadrāta daļas. Bare Sudoku mājiens ierakstu, ko šī tehnika atver, apzīmē ar „Bloķētie kandidāti”.",
+          "when": [
+            "Kad līmeņa „Grūti” mīklā beidzas vientuļie kandidāti, šis ir pirmais, ko izmēģināt. Vajag pilnas piezīmes vismaz pētāmajam ciparam. Bloķētie kandidāti ir bieži: tie vajadzīgi lielākajai daļai līmeņa „Grūti” mīklu, un līmeņa „Eksperts” mīklas tos izmanto starp lielākām figūrām."
+          ],
+          "spot": [
+            "Norādīšanai aplūko katru kvadrātu un katru ciparu, kas tajā trūkst: ja šī cipara kandidātu rūtiņas ir vienā rindā vai kolonnā, pārbaudi, vai tas pats cipars kā kandidāts ir arī tālāk šajā līnijā ārpus kvadrāta. Piesavināšanās gadījumā skaties gar rindu vai kolonnu: ja visi cipara kandidāti ir viena kvadrāta iekšpusē, pārējo šī kvadrāta daļu var notīrīt. Spēlē pieskaries cipara taustiņam, lai izceltu visus tā kandidātus; divas vai trīs izceltas piezīmes vienā līnijā viena kvadrāta iekšpusē ir šī figūra."
+          ],
+          "examples": [
+            {
+              "h": "Norādīšana",
+              "steps": [
+                "{box}. kvadrātā ciparam {d} ir tikai šīs kandidātu rūtiņas: {cells}. Tās visas ir {row}. rindā.",
+                "{box}. kvadrātam vajag {d}, tāpēc {row}. rindas {d} ir {box}. kvadrātā, lai kurā no šīm rūtiņām tas nonāktu.",
+                "{row}. rindā nevar būt otrs {d}, tāpēc dzēs {d} no {row}. rindas rūtiņām ārpus kvadrāta: {elim}."
+              ]
+            },
+            {
+              "h": "Piesavināšanās",
+              "steps": [
+                "{row}. rindā cipars {d} var būt tikai rūtiņās {cells}, un tās visas ir {box}. kvadrātā.",
+                "{row}. rindā jābūt {d}, tāpēc {box}. kvadrāta {d} piesavinās {row}. rinda. Pārējās {box}. kvadrāta rūtiņās nevar būt {d}.",
+                "Dzēs {d} no rūtiņām {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Dzēst ciparu kvadrāta iekšpusē, nevis ārpus tā norādīšanas gadījumā, vai otrādi piesavināšanās gadījumā. Izslēgšana vienmēr attiecas uz rūtiņām, kas ir līnijā, bet ne kvadrātā, vai kvadrātā, bet ne līnijā.",
+            "Piemērot likumu, kad kandidāti aizņem divas kvadrāta rindas. Visām cipara kandidātu rūtiņām kvadrātā jābūt vienā līnijā.",
+            "Aizmirst meklēt vientuļo kandidātu, ko izslēgšana rada. Bloķētie kandidāti reti paši ieraksta ciparu; tie sagatavo vientuļo kandidātu."
+          ],
+          "faq": [
+            [
+              "Kas ir bloķētie kandidāti sudoku?",
+              "Cipara kandidāti, kas atrodas tikai kvadrāta un līnijas, tas ir, rindas vai kolonnas, krustojumā. Tā kā kvadrātā vai līnijā šim ciparam jābūt tieši šajā krustojumā, ciparu var dzēst no pārējās līnijas daļas vai no pārējās kvadrāta daļas."
+            ],
+            [
+              "Kāda ir atšķirība starp norādīšanu un piesavināšanos?",
+              "Norādīšana sākas no kvadrāta: cipara kandidāti kvadrātā norāda gar vienu rindu vai kolonnu, tāpēc ciparu dzēš no pārējās šīs līnijas. Piesavināšanās sākas no rindas vai kolonnas: līnijas kandidāti šim ciparam visi ir vienā kvadrātā, tāpēc līnija piesavinās ciparu, un to dzēš no pārējā kvadrāta."
+            ],
+            [
+              "Vai bloķētos kandidātus sauc arī par krustojuma izslēgšanu?",
+              "Jā. Citi nosaukumi ir kvadrāta un līnijas redukcija piesavināšanās formai un norādošie pāri vai norādošie trijnieki norādīšanas formai. Bare Sudoku abām izmanto vienu nosaukumu."
+            ],
+            [
+              "Kuram līmenim vajag bloķētos kandidātus?",
+              "„Grūti”. Mīklu, kurai vajag bloķētos kandidātus vai apakškopas, bet neko grūtāku, vērtē kā „Grūti”; līmeņa „Eksperts” mīklām vajag arī zivi vai spārnu."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Atklātie pāri un trijnieki",
+          "title": "Atklātie pāri un trijnieki sudoku: kā tie darbojas",
+          "description": "Atklātie pāri un trijnieki: divas vai trīs vienības rūtiņas ar vieniem un tiem pašiem diviem vai trim kandidātiem. Kā tos pamanīt un ko dzēst, ar piemēriem.",
+          "h1": "Atklātie pāri un trijnieki (naked pair, naked triple)",
+          "summary": "Atklātais pāris ir divas rūtiņas vienā rindā, kolonnā vai kvadrātā, kurām ir tieši vieni un tie paši divi kandidāti. Abiem cipariem jābūt šajās divās rūtiņās, tāpēc tos var dzēst no visām pārējām vienības rūtiņām. Atklātais trijnieks ir tā pati ideja ar trim rūtiņām un trim cipariem; katrā rūtiņā var būt redzami divi vai visi trīs. Bare Sudoku mājiens ierakstu, kas no tā izriet, apzīmē ar „Pāris vai trijnieks”.",
+          "when": [
+            "Kad piezīmes ir pilnīgas un vientuļie kandidāti un bloķētie kandidāti ir izsmelti. Atklātie pāri līmeņa „Grūti” mīklās ir ļoti bieži, atklātie trijnieki retāk. Abus vērts pārbaudīt katrā vienībā, kurā vēl ir piecas vai vairāk tukšas rūtiņas."
+          ],
+          "spot": [
+            "Meklē rūtiņas ar tikai diviem kandidātiem un atrodi tajā pašā vienībā citu rūtiņu ar tiem pašiem diviem. Trijniekiem aplūko vienības ar vairākām divu un trīs kandidātu rūtiņām un pārbaudi, vai trīs no tām kopā izmanto tikai trīs dažādus ciparus. Rūtiņas ar pilnīgi vienādiem kandidātiem ir viegli pamanīt, kad piezīmes ir ierakstītas; spēlē „Aizpildīt piezīmes” to izdara ar vienu pieskārienu."
+          ],
+          "examples": [
+            {
+              "h": "Atklātais pāris",
+              "steps": [
+                "Rūtiņām {cellA} un {cellB} {unit} ir tieši vieni un tie paši divi kandidāti: {d1} un {d2}.",
+                "Vienai no tām jābūt {d1}, otrai {d2}. Mēs nezinām, kurai kurš, bet abus ciparus izlieto šīs divas rūtiņas.",
+                "Tāpēc neviena cita rūtiņa {unit} nevar saturēt {d1} vai {d2}. Dzēs {elim}."
+              ]
+            },
+            {
+              "h": "Atklātais trijnieks",
+              "steps": [
+                "Trīs rūtiņas {unit} visus savus kandidātus ņem no tiem pašiem trim cipariem, {digits}: {cells}.",
+                "Trim cipariem kaut kādā secībā jāaizpilda šīs trīs rūtiņas. Rūtiņai nav jārāda visi trīs kandidāti; svarīgi ir tas, ka nevienai no trim rūtiņām nav kandidāta ārpus šīs kopas.",
+                "Dzēs {digits} no visām pārējām rūtiņām {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ņemt divas rūtiņas, kurām ir divi kopīgi kandidāti, bet arī trešais. Atklātajā pārī katrai rūtiņai jābūt tieši šiem diviem kandidātiem un nekam citam.",
+            "Dzēst ciparus no pašām pāra rūtiņām. Pāris savus kandidātus patur; izslēgšana attiecas uz pārējām vienības rūtiņām.",
+            "Prasīt, lai katrā trijnieka rūtiņā būtu redzami visi trīs cipari. Rūtiņa ar diviem no trim ir derīga, ja nevienai rūtiņai nav kandidāta ārpus kopas."
+          ],
+          "faq": [
+            [
+              "Kas ir atklātais pāris sudoku?",
+              "Divas vienas vienības rūtiņas, kurām abām ir tieši vieni un tie paši divi kandidāti. Šie divi cipari ir bloķēti šajās divās rūtiņās, tāpēc tos var dzēst no pārējās vienības."
+            ],
+            [
+              "Kas ir atklātais trijnieks?",
+              "Trīs vienas vienības rūtiņas, kuru kandidāti kopā ir tikai trīs cipari. Katrā rūtiņā var būt divi vai trīs no tiem. Trīs cipari aizpilda trīs rūtiņas, tāpēc tos var dzēst no pārējām vienības rūtiņām."
+            ],
+            [
+              "Vai atklātais pāris ieraksta ciparu?",
+              "Pats par sevi nē. Tas dzēš kandidātus, un dzēšana parasti atstāj vienīgo kandidātu vai vienīgo vietu. Bare Sudoku mājiens parāda šo vientuļo kandidātu un nosauc tehniku, kas to padarīja iespējamu."
+            ],
+            [
+              "Vai atklātais pāris var vienlaikus būt kvadrātā un rindā?",
+              "Jā. Ja abām rūtiņām ir kopīga rinda un kvadrāts, pāris izslēdz abās vienībās. Bare Sudoku tās apstrādā pa vienai vienībai."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Slēptie pāri un trijnieki",
+          "title": "Slēptie pāri un trijnieki sudoku: kā tos pamanīt",
+          "description": "Slēptais pāris ir divi cipari, kas vienībā var būt tikai tajās pašās divās rūtiņās, tāpēc citi to kandidāti tiek dzēsti. Kā atrast slēptos pārus un trijniekus.",
+          "h1": "Slēptie pāri un trijnieki (hidden pair, hidden triple)",
+          "summary": "Slēptais pāris ir divi cipari, kas vienā rindā, kolonnā vai kvadrātā ir kandidāti tajās pašās divās rūtiņās un nekur citur. Šajās divās rūtiņās jābūt šiem diviem cipariem, tāpēc visus pārējos to kandidātus var dzēst. Slēptais trijnieks darbojas tāpat ar trim cipariem, kas ierobežoti trīs rūtiņās. Pēc dzēšanas rūtiņās redzams atklātais pāris vai trijnieks. Bare Sudoku mājiens ierakstu, kas no tā izriet, apzīmē ar „Pāris vai trijnieks”.",
+          "when": [
+            "Kad vienībā ir rūtiņas ar daudziem kandidātiem un vientuļo kandidātu vairs nav. Slēptie pāri slēpjas pārpildītās rūtiņās, tāpēc tos vērts meklēt tieši tur, kur atklātie pāri nav redzami. Slēptie trijnieki ir reti; Bare Sudoku tos pārbauda, bet lielāko daļu līmeņa „Grūti” mīklu atrisina bez tiem."
+          ],
+          "spot": [
+            "Strādā pēc cipariem, nevis pēc rūtiņām. Vienībā atzīmē, kurās rūtiņās var nonākt katrs trūkstošais cipars. Ja diviem cipariem katram ir tikai divas iespējamās rūtiņas un tās ir tās pašas divas, esi atradis slēpto pāri. Spēlē pieskaries cipara taustiņam, lai izceltu tā kandidātus; ja divi cipari izgaismo tās pašas divas vienības rūtiņas un neko citu tajā, tā ir šī figūra."
+          ],
+          "examples": [
+            {
+              "h": "Slēptais pāris",
+              "steps": [
+                "{unit} cipariem {d1} un {d2} katram ir tikai divas iespējamās rūtiņas, un tās ir tās pašas divas: {cells}.",
+                "Šajās divās rūtiņās jābūt {d1} un {d2}, tāpēc pārējie to kandidāti nav iespējami.",
+                "Dzēs {elim}. Tagad abās rūtiņās redzams atklātais pāris, kas var atvērt vēl vairāk."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Dzēst pāra ciparus no pāra rūtiņām. Tiek dzēsti šo rūtiņu pārējie kandidāti; pāra cipari paliek.",
+            "Pieņemt ciparu, kuram vienībā ir trešā iespējamā rūtiņa. Abiem cipariem jābūt ierobežotiem tieši ar šīm divām rūtiņām.",
+            "Meklēt tikai kvadrātos. Slēptie pāri rindās un kolonnās sastopami tikpat bieži."
+          ],
+          "faq": [
+            [
+              "Kas ir slēptais pāris sudoku?",
+              "Divi cipari, kas vienībā var būt tikai tajās pašās divās rūtiņās. Šīm rūtiņām jāsaņem šie cipari, tāpēc pārējie to kandidāti tiek dzēsti."
+            ],
+            [
+              "Ar ko slēptais pāris atšķiras no atklātā pāra?",
+              "Atklātais pāris ir redzams: divas rūtiņas, kurās redzami tikai tie paši divi kandidāti. Slēpto pāri aizsedz papildu kandidāti abās rūtiņās. Kad šos papildu kandidātus izdzēš, slēptais pāris kļūst par atklāto pāri."
+            ],
+            [
+              "Kas ir slēptais trijnieks?",
+              "Trīs cipari, kas ierobežoti trīs vienības rūtiņās. Katram ciparam nav jābūt visās trijās rūtiņās; svarīgi ir tas, ka nevienam no trim cipariem nav kandidāta ārpus šīm rūtiņām."
+            ],
+            [
+              "Vai mājiens atšķir slēptos un atklātos pārus?",
+              "Nē. Bare Sudoku atrod abus un ierakstu, kas no tā izriet, apzīmē ar „Pāris vai trijnieks”. Šeit lapas tos nodala, jo tos atrod dažādos veidos."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing sudoku: kā darbojas šī tehnika",
+          "description": "X-Wing: cipars ar tieši divām kandidātu rūtiņām divās rindās, kas izkārtotas tajās pašās divās kolonnās, tiek dzēsts no pārējām šo kolonnu rūtiņām. Piemērs.",
+          "h1": "X-Wing",
+          "summary": "X-Wing ir viena cipara un četru rūtiņu figūra taisnstūra stūros. Ja ciparam katrā no divām rindām ir tieši divas kandidātu rūtiņas un šīs rūtiņas atrodas tajās pašās divās kolonnās, ciparam jāaizņem divi pretēji taisnstūra stūri. Tāpēc to var dzēst no visām pārējām šo divu kolonnu rūtiņām. Tas pats darbojas, samainot rindas un kolonnas. Tā ir pirmā līmeņa „Eksperts” tehnika Bare Sudoku.",
+          "when": [
+            "Kad vientuļie kandidāti, bloķētie kandidāti un apakškopas ir izsmelti. X-Wing ir biežākā līmeņa „Eksperts” figūra un bieži parādās, kad ciparam palikuši nedaudzi kandidāti, parasti kad jau ierakstīti četri līdz seši tā eksemplāri. Vajag pilnas piezīmes pētāmajam ciparam."
+          ],
+          "spot": [
+            "Izvēlies ciparu un meklē rindas, kurās tam ir tieši divas kandidātu rūtiņas. Ja divām šādām rindām ir tās pašas divas kolonnas, pārbaudi šajās kolonnās citus šī cipara kandidātus: tie ir dzēšamie. Tad atkārto, par pamatu ņemot kolonnas. Spēlē pieskaries cipara taustiņam: visi tā kandidāti tiek izcelti, un četru izceltu piezīmju taisnstūri ir viegli pamanīt."
+          ],
+          "examples": [
+            {
+              "h": "Piemērs",
+              "steps": [
+                "Ciparam {d} ir tieši divas kandidātu rūtiņas {r1}. rindā un tieši divas {r2}. rindā, un tās ir vienās un tajās pašās kolonnās, {c1}. un {c2}. kolonnā: {cells}.",
+                "{r1}. rinda savu {d} ieliek {c1}. vai {c2}. kolonnā, bet {r2}. rinda otrā. Jebkurā gadījumā gan {c1}., gan {c2}. kolonna saņem pa {d} no šīm divām rindām.",
+                "Tāpēc {d} nevar atrasties nekur citur {c1}. un {c2}. kolonnā. Dzēs {d} no rūtiņām {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Izmantot rindu, kurā ciparam ir trīs kandidātu rūtiņas. Katrā bāzes rindā jābūt tieši divām, un abām jābūt kopīgajās divās kolonnās.",
+            "Dzēst ciparu no rindām, nevis kolonnām. Ja bāze ir rindas, izslēgšana notiek kolonnās, un otrādi.",
+            "Aizmirst samainīto variantu. X-Wing, kas veidots uz kolonnām, izslēdz rindās."
+          ],
+          "faq": [
+            [
+              "Kas ir X-Wing sudoku?",
+              "Cipars, kuram katrā no divām rindām ir tieši divas kandidātu rūtiņas, tajās pašās divās kolonnās. Cipars aizņem divus pretējus šī taisnstūra stūrus, tāpēc to dzēš no pārējām abu kolonnu rūtiņām. Rindas un kolonnas var samainīt."
+            ],
+            [
+              "Kāpēc X-Wing darbojas?",
+              "Katrai no divām rindām cipars jāieliek vienā no divām kolonnām, un abas rindas nevar izmantot vienu un to pašu kolonnu. Tātad abas kolonnas savu cipara eksemplāru saņem no šīm rindām, un jebkurš cits kandidāts šajās kolonnās nav iespējams."
+            ],
+            [
+              "Vai X-Wing ir zivs?",
+              "Jā. X-Wing ir zivs ar izmēru divi, Swordfish ir zivs ar izmēru trīs. Bare Sudoku atrod abas."
+            ],
+            [
+              "Kurā līmenī sastopams X-Wing?",
+              "„Eksperts”. Mīklu, kurai vajag X-Wing, Y-Wing, Swordfish vai XYZ-Wing, vērtē kā „Eksperts”."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing sudoku: kā darbojas šī tehnika",
+          "description": "Y-Wing (XY-Wing): ass ar diviem kandidātiem un divi spārni, kam katram ir viens no tiem, izspiež ciparu no katras rūtiņas, kas redz abus spārnus. Piemērs.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, saukts arī par XY-Wing, izmanto trīs rūtiņas, katrā pa diviem kandidātiem. Asij ir kandidāti X un Y. Viens spārns redz asi, un tam ir X un Z; otrs spārns redz asi, un tam ir Y un Z. Lai kas būtu ass, vienam no spārniem jābūt Z, tāpēc Z var dzēst no katras rūtiņas, kas redz abus spārnus. Bare Sudoku tā ir līmeņa „Eksperts” tehnika.",
+          "when": [
+            "Kad mīklā ir vairākas rūtiņas ar tieši diviem kandidātiem un nav pieejama neviena zivs. Y-Wing ir bieži sastopams līmeņa „Eksperts” mīklās, un to atrod, sekojot divu kandidātu rūtiņām: katra var būt ass vai spārns."
+          ],
+          "spot": [
+            "Uzskaiti rūtiņas ar tieši diviem kandidātiem. Katru uzskati par asi ar kandidātiem X un Y un meklē starp tās kaimiņiem rūtiņu ar X un kādu citu ciparu Z un rūtiņu ar Y un to pašu Z. Šīs divas ir spārni. Tad atrodi rūtiņas, kas redz abus spārnus un satur Z. Ievēro, ka spārniem nav jāredz vienam otru."
+          ],
+          "examples": [
+            {
+              "h": "Piemērs",
+              "steps": [
+                "Asij {pivot} ir kandidāti {x} un {y}. Tā redz rūtiņu {wingA}, kurai ir {x} un {z}, un rūtiņu {wingB}, kurai ir {y} un {z}.",
+                "Ja {pivot} ir {x}, tad {wingA} zaudē {x} un kļūst par {z}. Ja {pivot} ir {y}, tad {wingB} kļūst par {z}. Jebkurā gadījumā viens no spārniem ir {z}.",
+                "Rūtiņa, kas redz abus spārnus, nekad nevar būt {z}. Dzēs {z} no rūtiņām {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Izvēlēties spārnus, no kuriem kāds neredz asi. Katram spārnam ar asi jābūt kopīgai rindai, kolonnai vai kvadrātam.",
+            "Dzēst Z no rūtiņām, kas redz tikai vienu spārnu. Rūtiņai, no kuras dzēš, jāredz abi spārni.",
+            "Dzēst Z no ass. Y-Wing asī nav Z; ja ir, tā ir XYZ-Wing figūra ar citiem noteikumiem."
+          ],
+          "faq": [
+            [
+              "Kas ir Y-Wing sudoku?",
+              "Trīs divu kandidātu rūtiņas: ass ar X un Y, spārns ar X un Z, kas redz asi, un spārns ar Y un Z, kas redz asi. Viens spārns vienmēr ir Z, tāpēc Z dzēš no rūtiņām, kas redz abus spārnus."
+            ],
+            [
+              "Vai Y-Wing ir tas pats, kas XY-Wing?",
+              "Jā. Abi nosaukumi apzīmē vienu un to pašu figūru. Bare Sudoku to sauc par Y-Wing."
+            ],
+            [
+              "Kāpēc vienam spārnam jābūt Z?",
+              "Ja ass ir X, pirmais spārns zaudē X un kļūst par Z. Ja ass ir Y, otrais spārns kļūst par Z. Ass ir viens no abiem, tāpēc viens spārns ir Z."
+            ],
+            [
+              "Cik rūtiņas notīra Y-Wing?",
+              "Parasti vienu vai divas: tikai rūtiņas, kas redz abus spārnus un joprojām satur Z. Ar to pietiek, lai rastos vientuļais kandidāts."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish sudoku: kā darbojas šī tehnika",
+          "description": "Swordfish: cipars, kas trīs rindās ierobežots ar trim kolonnām, tiek dzēsts no pārējām šo kolonnu rūtiņām. Zivs ar izmēru trīs, izskaidrota ar īstu piemēru.",
+          "h1": "Swordfish",
+          "summary": "Swordfish ir X-Wing ar trim rindām un trim kolonnām. Ja ciparam katrā no trim rindām ir ne vairāk kā trīs kandidātu rūtiņas un visas šīs rūtiņas ir tajās pašās trīs kolonnās, trīs rindas izlieto ciparu šajās kolonnās, un ciparu var dzēst no visām pārējām trīs kolonnu rūtiņām. Rindas un kolonnas var samainīt. Bare Sudoku Swordfish pārbauda pēc Y-Wing, līmeņa „Eksperts” mīklās.",
+          "when": [
+            "Kad X-Wing un Y-Wing neko neatrod. Swordfish ir retāks par X-Wing, un tam vajag ciparu, kura kandidāti ir plāni izkaisīti pa trim līnijām. Vajag pilnas un precīzas piezīmes šim ciparam."
+          ],
+          "spot": [
+            "Izvēlies ciparu un meklē rindas ar divām vai trim tā kandidātu rūtiņām. Ja trīs šādas rindas kopā aptver tikai trīs kolonnas, pārbaudi šajās kolonnās citus šī cipara kandidātus. Nav nepieciešams, lai katrā rindā būtu kandidāts katrā kolonnā: Swordfish var būt sešas, septiņas, astoņas vai deviņas rūtiņas. Spēlē izcel ciparu ar tā taustiņu un meklē trīs rindas, kuru kandidāti sakārtojas trīs kolonnās."
+          ],
+          "examples": [
+            {
+              "h": "Piemērs",
+              "steps": [
+                "Ciparam {d} katrā no rindām {rows} ir ne vairāk kā trīs kandidātu rūtiņas, un tās visas ir kolonnās {cols}: {cells}.",
+                "Katrai no trim rindām savs {d} jāieliek vienā no trim kolonnām, un nekādas divas rindas nevar izmantot vienu un to pašu kolonnu. Tātad trīs kolonnas savu {d} saņem no šīm trim rindām.",
+                "Jebkurš cits {d} kandidāts kolonnās {cols} nav iespējams. Dzēs {d} no rūtiņām {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Prasīt visas deviņas rūtiņas. Swordfish ar diviem kandidātiem dažās rindās joprojām ir derīgs, ja trīs rindas aptver tikai trīs kolonnas.",
+            "Iekļaut rindu ar četrām kandidātu rūtiņām. Katrā bāzes rindā drīkst būt ne vairāk kā trīs, visas trīs kolonnu robežās.",
+            "Izslēgt bāzes rindās. Ja bāze ir rindas, izslēgšana notiek trīs kolonnās, ārpus bāzes rindām."
+          ],
+          "faq": [
+            [
+              "Kas ir Swordfish sudoku?",
+              "Cipars, kura kandidāti trīs rindās ir ierobežoti ar trim kolonnām. Trim rindām cipars jāieliek šajās trīs kolonnās, pa vienam katrā, tāpēc ciparu dzēš no pārējām šo kolonnu rūtiņām."
+            ],
+            [
+              "Ar ko Swordfish atšķiras no X-Wing?",
+              "Tikai ar izmēru: X-Wing izmanto divas rindas un divas kolonnas, Swordfish trīs un trīs. Spriedums ir tāds pats."
+            ],
+            [
+              "Vai Swordfish vajag tieši deviņas rūtiņas?",
+              "Nē. Katrā rindā var būt divi vai trīs kandidāti; figūra prasa tikai, lai trīs rindas kopā neizmantotu vairāk par trim kolonnām."
+            ],
+            [
+              "Vai ir zivs ar izmēru četri?",
+              "Jā, Jellyfish. Bare Sudoku to neizmanto, jo tā mīklām tā nekad nav vajadzīga."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing sudoku: kā darbojas šī tehnika",
+          "description": "XYZ-Wing: ass ar trim kandidātiem un divi spārni, kam ar to ir viens kopīgs cipars, izspiež šo ciparu no rūtiņām, kas redz visas trīs. Piemērs soli pa solim.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing ir Y-Wing, kura asij ir trīs kandidāti. Asij ir X, Y un Z; viens spārns redz asi, un tam ir X un Z, otrs redz asi, un tam ir Y un Z. Vienai no trim rūtiņām jābūt Z, tāpēc Z var dzēst no katras rūtiņas, kas redz visas trīs. Tā kā arī pati ass var būt Z, rūtiņai, no kuras dzēš, jāredz gan ass, gan abi spārni, un tas to ierobežo ar kvadrātu vai līniju, kas rūtiņām ir kopīga. Tā ir grūtākā tehnika, ko izmanto Bare Sudoku.",
+          "when": [
+            "Tikai tad, kad viss pārējais neizdodas. XYZ-Wing ir retākā figūra Bare Sudoku un parādās tikai līmeņa „Eksperts” mīklās. Meklē to, kad trīs kandidātu rūtiņa atrodas kvadrātā kopā ar divu kandidātu rūtiņu, kurai ir divi no tās cipariem."
+          ],
+          "spot": [
+            "Sāc ar rūtiņām, kurās ir tieši trīs kandidāti; katra var būt ass. Starp tās kaimiņiem meklē divas rūtiņas ar diviem kandidātiem katrā, kas abi ņemti no ass trim kandidātiem, un kurām ir tieši viens kopīgs cipars Z. Tad meklē rūtiņas, kas redz asi un abus spārnus un satur Z. Praksē viens spārns ir ass kvadrātā, otrs tās rindā vai kolonnā, un dzēšamās rūtiņas ir pārējās šī kvadrāta rūtiņas šajā rindā vai kolonnā."
+          ],
+          "examples": [
+            {
+              "h": "Piemērs",
+              "steps": [
+                "Asij {pivot} ir trīs kandidāti: {x}, {y} un {z}. Tā redz rūtiņu {wingA} ar {x} un {z} un rūtiņu {wingB} ar {y} un {z}.",
+                "Ja {pivot} ir {z}, viss skaidrs. Ja tā ir {x}, rūtiņai {wingA} jābūt {z}. Ja tā ir {y}, rūtiņai {wingB} jābūt {z}. Jebkurā gadījumā viena no trim rūtiņām ir {z}.",
+                "Rūtiņa, kas redz visas trīs, nevar būt {z}. Dzēs {z} no rūtiņām {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Dzēst no rūtiņām, kas redz tikai abus spārnus. Atšķirībā no Y-Wing ass var būt Z, tāpēc rūtiņai jāredz arī ass.",
+            "Izmantot spārnus, kuru kandidāti nav abi ietverti ass trīs kandidātos.",
+            "Jaukt to ar Y-Wing: atšķirība ir trešais kandidāts asī, un tas maina, kuras rūtiņas var notīrīt."
+          ],
+          "faq": [
+            [
+              "Kas ir XYZ-Wing sudoku?",
+              "Ass ar kandidātiem X, Y un Z un divi spārni, viens ar X un Z, otrs ar Y un Z, kas abi redz asi. Viena no trim rūtiņām ir Z, tāpēc Z dzēš no rūtiņām, kas redz visas trīs."
+            ],
+            [
+              "Ar ko XYZ-Wing atšķiras no Y-Wing?",
+              "Asij ir trīs kandidāti divu vietā, starp tiem Z. Tāpēc arī ass var būt Z vieta, un Z var zaudēt tikai rūtiņas, kas redz asi un abus spārnus."
+            ],
+            [
+              "Cik bieži parādās XYZ-Wing?",
+              "Reti. Bare Sudoku to var vajadzēt tikai līmeņa „Eksperts” mīklām, un lielākajai daļai to nevajag. Bare Sudoku to pārbauda pēdējo, pēc X-Wing, Y-Wing un Swordfish."
+            ],
+            [
+              "Vai ir WXYZ-Wing?",
+              "Jā, ar četru kandidātu asi, bet Bare Sudoku to neizmanto. Katru spēles mīklu var pabeigt ar deviņām šī ceļveža tehnikām."
+            ]
+          ]
+        }
+      }
+    },
+    "ky": {
+      "learnHeading": "Судокуну үйрөнүңүз",
+      "learnText": "Судокуга жаңысызбы же кыйын табышмакта тыгылып калдыңызбы? Эки нускама эрежелерди жана кеңештер колдонгон ар бир чечүү ыкмасын чыныгы мисалдар менен түшүндүрөт.",
+      "howToLink": "Судокуну кантип ойноо керек",
+      "techniquesLink": "Судоку чечүү ыкмалары",
+      "labels": {
+        "howTo": "Кантип ойнолот",
+        "techniques": "Ыкмалар",
+        "play": "Судоку ойноо",
+        "prev": "Мурунку ыкма",
+        "next": "Кийинки ыкма",
+        "all": "Бардык ыкмалар",
+        "example": "Мисал",
+        "steps": "Кадам сайын",
+        "when": "Качан колдонуу керек",
+        "spot": "Кантип байкоо керек",
+        "mistakes": "Көп кездешкен каталар",
+        "inGame": "Bare Sudoku оюнунда",
+        "level": "Керек болгон деңгээл: {level}",
+        "hint": "Оюнда кеңеш мындай дейт: {text}",
+        "legend": "Калың цифралар берилген, көк цифралар чечүү учурунда коюлган, кичинекей цифралар талапкерлер. Белгиленген уячалар үлгүнү түзөт, сызылган талапкерлер өчүрүлөт, ал эми тегеректелген талапкер коюла турган цифра.",
+        "notation": "Уячалар r3c7 түрүндө жазылат: 3-сап, 7-мамыча. Саптар жогортон, мамычалар солдон саналат, ал эми кутулар сол жогорку бурчтан баштап, сап боюнча 1ден 9га чейин номерленет.",
+        "row": "{n}-сапта",
+        "column": "{n}-мамычада",
+        "box": "{n}-кутуда",
+        "elimItem": "{cell} уячасынан {d}",
+        "regions": "Табышмактын башында 5-сап, 5-мамыча жана 5-куту",
+        "firstMove": "Жалгыз талапкер: {cell} уячасы {d} гана боло алат",
+        "breadcrumb": "Навигация жолу"
+      },
+      "howTo": {
+        "title": "Судоку кантип ойнолот: эрежелер, торчо жана алгачкы жүрүштөр",
+        "description": "Судокуну кантип ойноону үйрөнүңүз: эрежелер, саптар, мамычалар жана кутулар, эмне үчүн ар бир табышмактын бир чечими бар, белгилер жана алгачкы жүрүштөр.",
+        "h1": "Судокуну кантип ойноо керек",
+        "summary": "Судоку 9×9 торчодогу логикалык табышмак. Ар бир бош уячаны 1ден 9га чейинки цифра менен толтуруңуз: ар бир сапта, ар бир мамычада жана ар бир 3×3 кутуда ар бир цифра так бир жолу болушу керек. Айрым цифралар башында берилет; калгандарын бир-бирден так уячаларды таап, өзүңүз чыгарасыз жана эч качан божомолдоонун кереги жок. Бул нускама торчону, эрежелерди, жалгыз чечим принцибин, белгилерди жана алгачкы жүрүштөр үчүн жөнөкөй стратегияны түшүндүрөт. Мунун баарын акысыз жана логиканы түшүндүргөн кеңештери бар [Bare Sudoku](play) оюнунда машыгып көрсөңүз болот.",
+        "sections": [
+          {
+            "h": "Судокунун эрежелери кандай?",
+            "p": [
+              "Эрежелер болгону үчөө, жана алар үч тараптан караган бир эле эреже: ар бир сапта 1ден 9га чейинки цифралар болушу керек, ар бир мамычада 1ден 9га чейинки цифралар болушу керек жана ар бир 3×3 кутуда 1ден 9га чейинки цифралар болушу керек. Ошондуктан бир цифра бир эле сапта, мамычада же кутуда эч качан эки жолу кездешпейт.",
+              "Калың шрифт менен басылган берилген цифралар өзгөрбөйт. Сиздин милдетиңиз бош уячаларды толтуруу. Эч кандай арифметика жок, цифралардын тартиби да маанилүү эмес: алар жөн гана тогуз түрдүү белги. Тамгалар же фигуралар менен ойносоңуз да, эч нерсе өзгөрмөк эмес."
+            ]
+          },
+          {
+            "h": "Торчо кандай түзүлгөн?",
+            "p": [
+              "Торчодо 9 сап жана 9 мамычага жайгашкан 81 уяча бар. Калың сызыктар аны тогуз 3×3 кутуга бөлөт. Ар бир уяча так бир сапка, бир мамычага жана бир кутуга таандык; бул үч топ анын аймактары болуп саналат. Аны менен аймагы жалпы болгон башка 20 уяча анын коңшулары деп аталат; уячага коюлган цифра ошол цифраны бардык 20 коңшудан чыгарып салат.",
+              "Уячалар r3c7 түрүндө жазылат: 3-сап, 7-мамыча. Саптар жогортон, мамычалар солдон саналат, ал эми кутулар сол жогорку бурчтан баштап, сап боюнча 1ден 9га чейин номерленет. Бул белгилөө бардык ыкма нускамаларында колдонулат, аны үйрөнүп алган жакшы: r5c5 торчонун борбору."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Эмне үчүн ар бир судокунун так бир чечими бар?",
+            "p": [
+              "Туура түзүлгөн судокунун бир чечими бар, логиканын иштеши да ушуга байланыштуу. Бир цифра аймакта башка эч жакка бара албасын көрсөтө алсаңыз, ал калган уячага барышы керек, анткени чечим бар жана ал жалгыз. Эгер табышмактын эки чечими болсо, эч бир ой жүгүртүү аларды айырмалай алмак эмес жана кайсы бир учурда божомолдоого туура келмек.",
+              "Bare Sudoku ар бир табышмакты сиздин түзмөгүңүздө түзөт жана анын так бир чечими бар экенин, логикалык чечүүчүсү аны тандалган деңгээлдин ыкмалары менен аягына чыгара аларын текшерет. Ошондуктан тыгылып калсаңыз, дайыма табыла турган кийинки кадам бар, аны кеңеш көрсөтөт."
+            ]
+          },
+          {
+            "h": "Судокуну кантип баштоо керек?",
+            "p": [
+              "Эң көп чектелген жерден баштаңыз. Бул тартип бардык деңгээлде иштейт:"
+            ],
+            "list": [
+              "Буга чейин көп жолу, мисалы, алты же жети жолу кездешкен цифраны тандап, ал дагы эле жок кутуларды табыңыз. Көбүнчө кутуда ага бир гана уяча калат: бул [жалгыз орун](hidden-single).",
+              "Цифраларга курчалган уячаларды издеңиз. Сабында, мамычасында жана кутусунда жалпысынан сегиз түрдүү цифра бар уячанын бир гана талапкери калат: бул [жалгыз талапкер](naked-single). Дээрлик толгон саптарда же кутуларда издеген эң жакшы.",
+              "Коюлган ар бир цифра 20 коңшудан бир талапкерди алып салат, ошондуктан ошол коңшуларды дароо текшериңиз. Жалгыздар көбүнчө чынжыр болуп келет.",
+              "Жеңил жүрүштөр түгөнгөндө белгилерди жазыңыз: ар бир бош уячанын талапкерлерин. Андан кийин кутунун ичинде бир эле сапка же мамычага чектелген цифраны ([бекитилген талапкерлер](locked-candidates)) же бирдей эки талапкери бар эки уячаны ([ачык жуп](naked-pairs)) издеңиз.",
+              "Ар бир чыгаруудан кийин жалгыздарга кайтыңыз. Эксперт табышмактары да негизинен жалгыздар менен чечилет; татаал ыкма кийинкисинин гана кулпусун ачат."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Белгилер деген эмне жана аларды качан колдонуу керек?",
+            "p": [
+              "Белгилер, аларды карандаш белгилери же талапкерлер деп да аташат, бош уячага ал жерде дагы кайсы цифралар мүмкүн экенин жазып коюу үчүн жазылган кичинекей цифралар. Жеңил табышмактарда алар сейрек керек болот; Кыйын деңгээлден тартып алар абдан зарыл, анткени жуптар, X-Wing жана Y-Wing сыяктуу ыкмалар коюлган цифраларга эмес, талапкерлерге негизделет.",
+              "Белгилерди так кармаңыз: цифра койгондо аны бардык 20 коңшунун белгилеринен өчүрүңүз. Bare Sudoku муну автоматтык түрдө жасайт, ал эми «Белгилерди толтуруу» бир басуу менен бардык талапкерлерди бардык бош уячаларга жазат, ошентип толук жана туура талапкерлер топтомунан баштай аласыз. Белги божомол эмес, факт: ал бул цифраны азырынча эч нерсе чыгарып салбайт дегенди билдирет."
+            ]
+          },
+          {
+            "h": "Тыгылып калсаңыз эмне кылуу керек?",
+            "p": [
+              "Адегенде негиздерди кайра текшериңиз: дээрлик толгон ар бир сап, мамыча жана куту жалгыздардын булагы. Андан кийин белгилердин толук экенине ынаныңыз, анткени жетишпеген талапкер үлгүлөрдү жашырат, ал эми эскирген талапкер жалган үлгүлөрдү жаратат. Андан соң [ыкмаларды](techniques) татаалдык тартиби боюнча карап чыгыңыз: бекитилген талапкерлер, жуптар жана үчтүктөр, X-Wing, Y-Wing, Swordfish жана XYZ-Wing. Алардын ар биринин чыныгы мисалы бар өз барагы бар.",
+              "Эч нерсе жардам бербесе, кеңеш алыңыз. Bare Sudoku оюнунда кеңеш адегенде коюлган цифралардын бири туура эмес эмеспи, ошону текшерет, андан кийин логика менен толтурула турган кийинки уячаны таап, ыкманын атын айтат, ошентип аны колдонгондо да бир нерсе үйрөнөсүз. Цифраны коюу үчүн кеңешти кайра басыңыз."
+            ]
+          },
+          {
+            "h": "Bare Sudoku оюнунда цифраларды кантип киргизесиз?",
+            "p": [
+              "Уячаны, анан цифраны басыңыз. Же адегенде цифраны басыңыз: ал бекитилет жана сиз баскан ар бир уячага жазылат, бул бир цифранын алтынчы, жетинчи жана сегизинчи нускасын коюунун эң тез жолу. Цифраны бошотуу үчүн аны кайра басыңыз. «Белгилер» баскычы карандаш белгилерине которот, «Өчүрүү» уячаны тазалайт, «Артка» каалаган жүрүштү кайтарат, ал эми каталар кызыл түс менен белгиленет, эгер муну менюдан өчүрбөсөңүз.",
+              "Клавиатурада жебе баскычтары менен жылыңыз, цифраны 1ден 9га чейинки баскычтар менен киргизиңиз, Backspace өчүрөт, N белгилерди которот, U артка кайтарат, H кеңеш берет, F белгилерди толтурат, Escape менюну ачат. Оюн өзүн өзү сактайт, интернетсиз иштейт, жарнамасы жок жана аккаунт талап кылбайт."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Судокуда качандыр бир божомолдоо керекпи?",
+            "Туура түзүлгөн табышмакта жок. Ар бир Bare Sudoku табышмагынын так бир чечими бар жана ал өз деңгээлинин ыкмалары менен, логика аркылуу гана чечиле тургандыгы текшерилген. Божомолдошуңуз керек сыяктуу сезилсе, белгилериңизде бир талапкер жетишпейт же табыла элек ыкма күтүп турат."
+          ],
+          [
+            "Бир цифра сапта, мамычада же кутуда эки жолу болушу мүмкүнбү?",
+            "Жок. Бүт эреже ушунда: тогуз саптын, тогуз мамычанын жана тогуз кутунун ар биринде 1ден 9га чейинки ар бир цифра так бир жолу болот. Эгер бир аймакта эки бирдей цифра болсо, алардын жок дегенде бирөө туура эмес."
+          ],
+          [
+            "Жеңил, Орточо, Кыйын жана Эксперт деңгээлдеринин айырмасы эмнеде?",
+            "Деңгээлди табышмакка керек болгон ыкмалар аныктайт. Жеңил жана Орточо жалгыздар менен гана чечилет, мында Жеңил жок дегенде 38 берилген цифра менен башталат. Кыйын деңгээлге бекитилген талапкерлер же жуптар жана үчтүктөр керек. Эксперт деңгээлге X-Wing, Y-Wing, Swordfish же XYZ-Wing керек."
+          ],
+          [
+            "Белгилерди бардык уячаларга толтурган жакшыбы же айрымдарына гана?",
+            "Кыйын жана Эксперт табышмактарында баарын толтуруңуз: жуптар, X-Wing жана Y-Wing сыяктуу үлгүлөр бардык талапкерлер жазылганда гана көрүнөт. Жеңил жана Орточо деңгээлде белгилер милдеттүү эмес, оюнчулардын көбү жалгыздарды гана издейт."
+          ],
+          [
+            "Бир судоку канча убакыт алат?",
+            "Жеңил табышмак бир нече мүнөт алат; Эксперт табышмактары татаал үлгүнү канчалык тез байкаганыңызга жараша жыйырма мүнөт же андан көп убакыт алышы мүмкүн. Bare Sudoku таймерди көрсөтөт, меню ачык турганда аны токтотот жана рейтинг таблицасын жүргүзбөйт, ошондуктан өз темпиңизде ойноңуз."
+          ],
+          [
+            "Судокуга арифметика керекпи?",
+            "Жок. Цифралар жөн гана белгилер; кошуу да, эсептөө да жок. Каалаган тогуз белги иштей берет, ошондуктан судоку сан табышмагы эмес, логикалык табышмак."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судоку чечүү ыкмалары: мисалдар менен түшүндүрмө",
+        "description": "Жалгыз талапкерден Swordfish жана XYZ-Wing ыкмаларына чейин тогуз судоку чечүү ыкмасынын баары, Bare Sudoku кеңештеринин тартибинде, ар бири чыныгы мисал менен.",
+        "h1": "Судоку чечүү ыкмалары",
+        "intro": [
+          "Ар бир судокуну логикалык ыкмалардын чакан топтому менен чечүүгө болот. Бул тизмеде Bare Sudoku чечүүчүсү жана анын кеңештери колдонгон тогуз ыкма чечүүчү аларды сынаган тартипте берилген: адегенде жалгыздар, андан кийин бир аймактын ичиндеги чыгаруулар, андан соң бир нече сап жана мамычаны камтыган үлгүлөр. Ар бир ыкманын аныктамасы, аны кантип байкоо керектиги, түзүлгөн табышмактан алынган чыныгы мисалы жана көп кездешкен каталары бар өз барагы бар.",
+          "Табышмактын деңгээлин ага керек болгон эң татаал ыкма аныктайт. Жеңил жана Орточо табышмактарга жалгыздар гана керек, Кыйын табышмактарга бекитилген талапкерлер же жуптар жана үчтүктөр керек, ал эми Эксперт табышмактарга жок дегенде бир балык же канат керек. Деңгээл кандай болбосун, иштин көбүн жалгыздар аткарат; татаал ыкма бир же эки талапкерди алып салат да, андан ары жалгыздар улантат."
+        ],
+        "faq": [
+          [
+            "Судоку ыкмаларын кайсы тартипте колдонуу керек?",
+            "Эң жеңилинен баштаңыз: жалгыз талапкер, жалгыз орун, бекитилген талапкерлер, ачык жуптар жана үчтүктөр, жашыруун жуптар жана үчтүктөр, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku аларды дал ушул тартипте сынайт, ал эми кеңеш дайыма алдыга жылдырган эң жөнөкөй ыкманын атын айтат."
+          ],
+          [
+            "Судокуну чечүү үчүн бул ыкмалардын баары керекпи?",
+            "Жеңил жана Орточо табышмактарга жалгыздар жетиштүү. Кыйын табышмактарга бекитилген талапкерлер жана жуптар менен үчтүктөр кошулат. Эксперт табышмактарга жок дегенде бир балык же канат керек, бирок адатта бир табышмакта бир же эки жолу гана."
+          ],
+          [
+            "XYZ-Wing ыкмасынан да татаал ыкмалар барбы?",
+            "Ооба, мисалы, чынжырлар, уникалдуулук тесттери жана мажбурлоочу тармактар. Bare Sudoku аларды талап кылган табышмактарды түзбөйт, ошондуктан оюндагы ар бир табышмакты ушул барактагы тогуз ыкма менен аягына чыгарууга болот."
+          ],
+          [
+            "Талапкер деген эмне?",
+            "Бош уячага дагы эле бара ала турган цифра, анткени анын сабындагы, мамычасындагы же кутусундагы эч нерсе аны азырынча чыгарып салбайт. Оюндагы белгилер талапкерлер болуп саналат. Жалгыздардан татаалыраак ар бир ыкма талапкерлер жөнүндө ой жүгүртөт, ошондуктан аларды толук жана так кармаңыз."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Жалгыз талапкер",
+          "title": "Судокудагы жалгыз талапкер: бир гана талапкери бар уяча",
+          "description": "Жалгыз талапкер (naked single) бир гана цифра бара ала турган бош уяча. Аларды тез табууну чыныгы мисал менен кадам сайын үйрөнүңүз, көп кездешкен каталарды да.",
+          "h1": "Жалгыз талапкер (naked single)",
+          "summary": "Жалгыз талапкер так бир талапкери бар бош уяча: калган сегиз цифра анын сабында, мамычасында же кутусунда мурунтан эле бар. Калган цифра ошол жерге барышы керек. Бул судокунун эң жөнөкөй жана эң көп колдонулган ыкмасы, аны Bare Sudoku кеңеши «Бул жерде бир гана талапкер» деп билдирет.",
+          "when": [
+            "Дайыма. Жалгыз талапкерлер биринчи жүрүштөн акыркысына чейин, бардык деңгээлде кездешет. Жеңил жана Орточо табышмактарда алар жалгыз орундар менен бирге сизге керек болгон бирден-бир ыкма. Кыйыныраак табышмактарда татаал ыкма жасаган ар бир чыгаруу адатта артында жалгыз талапкер калтырат, ошондуктан ар бир кадамдан кийин аларды издеңиз."
+          ],
+          "spot": [
+            "Коңшуларында көп цифра коюлган уячаларды караңыз: жети цифрасы бар саптагы уяча же сабы, мамычасы жана кутусу биригип сегиз түрдүү цифраны камтыган уяча. Белгилерсиз уячадан көрүнгөн цифраларды санаңыз. Белгилер менен жалгыз талапкер жөн гана бир талапкерди көрсөткөн уяча, ошондуктан «Белгилерди толтуруу» аларды табууну жеңилдетет."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{cell} уячасын караңыз. Ал бош, ошондуктан анын сабында, мамычасында жана кутусунда коюлган бардык цифраларды тизмектеңиз.",
+                "{row}-сапта {rowDigits} бар. {col}-мамычада {colDigits} бар. {box}-кутуда {boxDigits} бар.",
+                "Алар биригип {d} цифрасынан башка бардык цифраларды чыгарып салат, ошондуктан {cell} уячасында калган жалгыз талапкер {d}.",
+                "{cell} уячасына {d} жазыңыз. Андан кийин жаңы цифра ошол эле сапта, мамычада же кутуда дагы бир жалгызды жаратабы, текшериңиз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Сапты гана же кутуну гана саноо. Чыгарылган сегиз цифра көбүнчө үч аймактын баарынан чогуу келет.",
+            "Жаңы эле коюлган цифра да өзүнүн 20 коңшусунан талапкерлерди чыгарып салаарын унутуу; жаңы жалгыз талапкерлер ар бир коюудан кийин дароо пайда болот.",
+            "Жалгыз талапкерди жалгыз орун менен чаташтыруу: жалгыз талапкерде уячада бир талапкер калат, жалгыз орунда аймакта цифра үчүн бир уяча калат."
+          ],
+          "faq": [
+            [
+              "Судокуда жалгыз талапкер (naked single) деген эмне?",
+              "Так бир талапкери бар бош уяча. Анын сабында, мамычасында жана кутусунда сегиз түрдүү цифра мурунтан эле коюлган, ошондуктан туура келген жалгыз цифра тогузунчусу."
+            ],
+            [
+              "Эмне үчүн англисче ал naked, башкача айтканда жылаңач деп аталат?",
+              "Анткени белгилер жазылганда жалгыз талапкер түздөн-түз уячада көрүнөт; аны эч нерсе жашырбайт. Ал эми жалгыз орун (hidden single) башка талапкерлердин арасында жашынып турат жана уячага эмес, цифрага карап табылат."
+            ],
+            [
+              "Табышмакты жалгыз талапкерлер менен гана чечсе болобу?",
+              "Көптөгөн Жеңил табышмактарды чечсе болот, бирок алардын көбүнө жалгыз орундар да керек. Bare Sudoku Жеңил жана Орточо табышмактарды эки түрдөгү жалгыздар менен чечилүүчү деп баалайт; Кыйын жана Эксперт табышмактарга жок дегенде дагы бир ыкма керек."
+            ],
+            [
+              "Кеңеш жалгыз талапкерлерди көрсөтөбү?",
+              "Ооба. Кийинки коюу жалгыз талапкер болсо, кеңеш уячаны тандап, цифра менен бирге «Бул жерде бир гана талапкер» деп жазат. Коюу үчүн кеңешти кайра басыңыз."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Жалгыз орун",
+          "title": "Судокудагы жалгыз орун: цифра үчүн бирден-бир уяча",
+          "description": "Жалгыз орун (hidden single) бир цифра дагы эле бара ала турган саптагы, мамычадагы же кутудагы бирден-бир уяча. Цифраларды бирден карап, аны байкоону үйрөнүңүз.",
+          "h1": "Жалгыз орун (hidden single)",
+          "summary": "Жалгыз орун бул сапта, мамычада же кутуда бир гана мүмкүн болгон уячасы калган цифра, ал уяча башка талапкерлерди көрсөтсө да. Аймакта бул цифра болушу керек болгондуктан, ал ошол жерге барат. Bare Sudoku кеңеши аны «Бул сапта 5 үчүн жалгыз орун» деп, ошондой эле мамыча же куту үчүн билдирет.",
+          "when": [
+            "Бир цифра алдыга кыйла жылганда: ал беш же алты жолу кездешкенде, калган кутулар абдан чектелет жана жалгыз орун көбүнчө кийинки жүрүш болот. Жалгыз орундар Жеңил жана Орточо табышмактардын негизги ыкмасы жана бардык деңгээлде эң көп иштеген курал бойдон калат."
+          ],
+          "spot": [
+            "Бир убакта бир цифраны караңыз. Цифраны алып, ал жок кутуну таап, ошол цифранын коюлган нускасы менен сабы же мамычасы жалпы болгон кутунун ар бир уячасын сызып салыңыз. Бир уяча калса, жалгыз орунду таптыңыз. Ушундай эле карап чыгуу саптарда жана мамычаларда да иштейт. Оюнда коюлган цифраны басыңыз: анын бардык нускалары белгиленет, ошондуктан бош уячалар даана көрүнөт."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{box}-кутуда азырынча {d} жок, ошондуктан анын бош уячаларынын бири аны алышы керек. Бош уячалар: {empties}.",
+                "{cell} уячасынан башкаларынын баарында {d} цифрасын ошол эле сапка же мамычага мурунтан коюлган {d} бөгөттөйт, ошондуктан ал жерлерде {d} талапкер эмес.",
+                "Ошентип {box}-кутуда {d} үчүн жалгыз орун катары {cell} калат. {cell} уячасы дагы башка талапкерлерди көрсөтсө да, ага {d} жазыңыз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Цифраны туура болушу ыктымал гана болгон уячага коюу: аймактын айкын гана эмес, башка бардык бош уячаларын текшериңиз.",
+            "Уяча бир нече талапкерди көрсөткөнү үчүн жалгыз орунду байкабай калуу. Башка талапкерлердин мааниси жок; маанилүүсү, цифранын аймакта башка орду жок.",
+            "Кутуларды гана карап чыгуу. Саптар жана мамычалар да жалгыз орундарды ошончолук көп берет, айрыкча аягында."
+          ],
+          "faq": [
+            [
+              "Судокуда жалгыз орун (hidden single) деген эмне?",
+              "Сапта, мамычада же кутуда бир гана уячага бара ала турган цифра. Аймакта бул цифра болушу керек, ошондуктан уячада башка талапкерлер болсо да, ал аныкталган."
+            ],
+            [
+              "Жалгыз орун менен жалгыз талапкердин айырмасы эмнеде?",
+              "Жалгыз талапкер уячага тиешелүү: анда бир талапкер калган. Жалгыз орун цифрага тиешелүү: аймакта ага бир уяча калган. Экөө тең цифраны так коёт."
+            ],
+            [
+              "Кайсынысын табуу оңой?",
+              "Белгилерсиз жалгыз орундарды табуу адатта оңой, анткени торчону бир убакта бир цифра боюнча карап чыксаңыз болот. Толук белгилер менен жалгыз талапкерлерди табуу эң оңой, анткени бир гана талапкери бар уяча көзгө урунат."
+            ],
+            [
+              "Кеңеш жалгыз орунду кантип сүрөттөйт?",
+              "Уячаны тандап, цифра үчүн бул сапта, бул мамычада же бул кутуда «жалгыз орун» деп. Коюу үчүн кеңешти кайра басыңыз."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Бекитилген талапкерлер",
+          "title": "Судокудагы бекитилген талапкерлер: көрсөтүү жана ээлөө",
+          "description": "Бекитилген талапкерлер: кутудагы цифранын бардык талапкерлери бир сапта же мамычада турса, же тескерисинче, цифра башка жерден өчүрүлөт. Эки чыныгы мисал.",
+          "h1": "Бекитилген талапкерлер",
+          "summary": "Бекитилген талапкерлер цифра коюунун ордуна талапкерлерди алып салган биринчи ыкма. Анын эки формасы бар. Көрсөтүү: кутуда цифранын бардык талапкерлери бир сапта же мамычада жатат, ошондуктан цифра ошол сызыктын калган бөлүгүнөн өчүрүлөт. Ээлөө: сапта же мамычада цифранын бардык талапкерлери бир кутуда жатат, ошондуктан цифра ошол кутунун калган бөлүгүнөн өчүрүлөт. Bare Sudoku кеңеши бул ыкма ачкан коюуну «Бекитилген талапкерлер» деп белгилейт.",
+          "when": [
+            "Кыйын табышмакта жалгыздар түгөнгөндө биринчи ушуну сынап көрүңүз. Жок дегенде каралып жаткан цифра үчүн толук белгилер керек. Бекитилген талапкерлер көп кездешет: Кыйын табышмактардын көбүнө алар керек, ал эми Эксперт табышмактар аларды чоңураак үлгүлөрдүн ортосунда колдонот."
+          ],
+          "spot": [
+            "Көрсөтүү үчүн ар бир кутуну жана анда жок ар бир цифраны караңыз: эгер ошол цифранын талапкер уячалары бир сапта же мамычада жатса, ошол эле цифра кутудан тышкары ошол сызыкта талапкер катары бар-жогун текшериңиз. Ээлөө үчүн сапты же мамычаны бойлой караңыз: эгер цифранын бардык талапкерлери бир кутунун ичинде болсо, ошол кутунун калган бөлүгүн тазалоого болот. Оюнда цифранын баскычын басып, анын бардык талапкерлерин белгилеңиз; бир кутунун ичинде бир сызыкта турган эки же үч белгиленген талапкер ушул үлгү."
+          ],
+          "examples": [
+            {
+              "h": "Көрсөтүү",
+              "steps": [
+                "{box}-кутуда {d} цифрасынын талапкер уячалары гана бул: {cells}. Алардын баары {row}-сапта жатат.",
+                "{box}-кутуга {d} керек, ошондуктан {row}-саптын {d} цифрасы кайсы уячага түшпөсүн, {box}-кутунун ичинде болот.",
+                "{row}-сапта экинчи {d} боло албайт, ошондуктан {row}-саптын кутудан тышкаркы уячаларынан {d} цифрасын өчүрүңүз: {elim}."
+              ]
+            },
+            {
+              "h": "Ээлөө",
+              "steps": [
+                "{row}-сапта {d} цифрасы {cells} уячаларына гана бара алат жана алардын баары {box}-кутунун ичинде.",
+                "{row}-сапта {d} болушу керек, ошондуктан {box}-кутунун {d} цифрасын {row}-сап ээлеп алат. {box}-кутунун башка уячаларында {d} боло албайт.",
+                "{elim} уячаларынан {d} цифрасын өчүрүңүз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Көрсөтүүдө цифраны кутудан тышкары эмес, кутунун ичинен өчүрүү, же ээлөөдө тескерисинче. Чыгаруулар дайыма сызыкта бар, бирок кутуда жок уячаларга, же кутуда бар, бирок сызыкта жок уячаларга тиешелүү.",
+            "Талапкерлер кутунун эки сабына жайылганда эрежени колдонуу. Кутудагы цифранын бардык талапкер уячалары бир сызыкта жатышы керек.",
+            "Чыгаруу жараткан жалгызды издөөнү унутуу. Бекитилген талапкерлер өздөрү сейрек цифра коёт; алар жалгызды даярдайт."
+          ],
+          "faq": [
+            [
+              "Судокуда бекитилген талапкерлер деген эмне?",
+              "Кутунун жана сызыктын, башкача айтканда саптын же мамычанын кесилишине гана чектелген цифранын талапкерлери. Куту же сызык бул цифраны ошол кесилиштин ичинде камтышы керек болгондуктан, цифраны сызыктын калган бөлүгүнөн же кутунун калган бөлүгүнөн өчүрүүгө болот."
+            ],
+            [
+              "Көрсөтүү менен ээлөөнүн айырмасы эмнеде?",
+              "Көрсөтүү кутудан башталат: цифранын кутудагы талапкерлери бир сапты же мамычаны бойлой көрсөтөт, ошондуктан цифра ошол сызыктын калган бөлүгүнөн өчүрүлөт. Ээлөө саптан же мамычадан башталат: сызыктын бул цифра үчүн бардык талапкерлери бир кутуда, ошондуктан сызык цифраны ээлеп алат жана ал кутунун калган бөлүгүнөн өчүрүлөт."
+            ],
+            [
+              "Бекитилген талапкерлерди кесилиш аркылуу чыгаруу деп да аташабы?",
+              "Ооба. Башка аталыштары: ээлөө формасы үчүн куту-сызык кыскартуусу, көрсөтүү формасы үчүн көрсөткүч жуптар же көрсөткүч үчтүктөр. Bare Sudoku экөөнө тең бир аталышты колдонот."
+            ],
+            [
+              "Бекитилген талапкерлер кайсы деңгээлге керек?",
+              "Кыйын. Бекитилген талапкерлерди же жуптарды жана үчтүктөрдү талап кылган, бирок андан татаалыраак эч нерсени талап кылбаган табышмак Кыйын деп бааланат; Эксперт табышмактарга мындан тышкары балык же канат керек."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Ачык жуптар жана үчтүктөр",
+          "title": "Судокудагы ачык жуптар жана үчтүктөр: кантип иштейт",
+          "description": "Ачык жуптар жана үчтүктөр: бир аймактагы бирдей эки же үч талапкери бар эки же үч уяча. Аларды кантип байкоону жана эмнени өчүрүүнү мисалдардан үйрөнүңүз.",
+          "h1": "Ачык жуптар жана үчтүктөр (naked pair, naked triple)",
+          "summary": "Ачык жуп бул бир эле сапта, мамычада же кутуда так бирдей эки талапкери бар эки уяча. Эки цифра тең ушул эки уячага барышы керек, ошондуктан аларды аймактын башка бардык уячаларынан өчүрүүгө болот. Ачык үчтүк ушул эле ой, бирок үч уяча жана үч цифра менен; ар бир уяча алардын экөөнү же үчөөнү тең көрсөтүшү мүмкүн. Bare Sudoku кеңеши андан келип чыккан коюуну «Жуп же үчтүк» деп белгилейт.",
+          "when": [
+            "Белгилер толук болуп, жалгыздар жана бекитилген талапкерлер түгөнгөндөн кийин. Ачык жуптар Кыйын табышмактарда абдан көп кездешет, ачык үчтүктөр азыраак. Экөөнү тең дагы беш же андан көп бош уячасы бар ар бир аймакта текшерип көрүү пайдалуу."
+          ],
+          "spot": [
+            "Эки гана талапкери бар уячаларды издеп, ошол эле аймактан ошол эле эки талапкери бар башка уячаны табыңыз. Үчтүктөр үчүн эки жана үч талапкерлүү бир нече уячасы бар аймактарды карап, алардын үчөө чогуу үч гана түрдүү цифраны колдонобу, текшериңиз. Белгилер жазылганда так бирдей талапкерлери бар уячаларды байкоо оңой; оюндагы «Белгилерди толтуруу» муну бир басуу менен жасайт."
+          ],
+          "examples": [
+            {
+              "h": "Ачык жуп",
+              "steps": [
+                "{unit} {cellA} жана {cellB} уячаларынын так бирдей эки талапкери бар: {d1} жана {d2}.",
+                "Алардын бири {d1}, экинчиси {d2} болушу керек. Кайсынысы кайсы экенин билбейбиз, бирок эки цифраны тең ушул эки уяча ээлейт.",
+                "Ошондуктан {unit} башка эч бир уячада {d1} же {d2} боло албайт. Өчүрүңүз: {elim}."
+              ]
+            },
+            {
+              "h": "Ачык үчтүк",
+              "steps": [
+                "{unit} үч уяча бардык талапкерлерин бир эле үч цифрадан, {digits}, алат: {cells}.",
+                "Үч цифра бул үч уячаны кандайдыр бир тартипте толтурушу керек. Уяча үч талапкердин баарын көрсөтүшү шарт эмес; маанилүүсү, үч уячанын эч биринде топтомдон тышкары талапкер жок.",
+                "{unit} калган бардык уячалардан {digits} цифраларын өчүрүңүз: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Эки жалпы талапкери бар, бирок үчүнчү талапкери да бар эки уячаны алуу. Ачык жупта ар бир уячада так ушул эки талапкер болушу керек жана башка эч нерсе.",
+            "Цифраларды жуптун өз уячаларынан өчүрүү. Жуп өз талапкерлерин сактайт; чыгаруулар аймактын башка уячаларына тиешелүү.",
+            "Үчтүктүн ар бир уячасы үч цифранын баарын көрсөтүшүн талап кылуу. Үчөөнүн экөөсү бар уяча да туура, эгер эч бир уячада топтомдон тышкары талапкер жок болсо."
+          ],
+          "faq": [
+            [
+              "Судокуда ачык жуп деген эмне?",
+              "Бир аймактагы экөө тең так бирдей эки талапкерге ээ болгон эки уяча. Бул эки цифра ушул эки уячага бекитилген, ошондуктан аларды аймактын калган бөлүгүнөн өчүрүүгө болот."
+            ],
+            [
+              "Ачык үчтүк деген эмне?",
+              "Талапкерлери чогуу үч гана цифраны түзгөн бир аймактагы үч уяча. Ар бир уячада алардын экөө же үчөө болушу мүмкүн. Үч цифра үч уячаны толтурат, ошондуктан аларды аймактын башка уячаларынан өчүрүүгө болот."
+            ],
+            [
+              "Ачык жуп цифра коёбу?",
+              "Өз алдынча эмес. Ал талапкерлерди алып салат, ал эми бул көбүнчө жалгыз талапкерди же жалгыз орунду калтырат. Bare Sudoku кеңеши ошол жалгызды көрсөтүп, аны мүмкүн кылган ыкманын атын айтат."
+            ],
+            [
+              "Ачык жуп бир убакта кутуда да, сапта да болушу мүмкүнбү?",
+              "Ооба. Эки уячанын сабы да, кутусу да жалпы болсо, жуп эки аймакта тең чыгарат. Bare Sudoku аларды бирден аймак боюнча карайт."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Жашыруун жуптар жана үчтүктөр",
+          "title": "Судокудагы жашыруун жуптар жана үчтүктөр: аларды табуу",
+          "description": "Жашыруун жуп аймактын бир эле эки уячасына гана бара алган эки цифра, ошондуктан ал уячалардын башка талапкерлери өчөт. Жуп менен үчтүктү кадам сайын табыңыз.",
+          "h1": "Жашыруун жуптар жана үчтүктөр (hidden pair, hidden triple)",
+          "summary": "Жашыруун жуп бул бир сапта, мамычада же кутуда бир эле эки уячада гана талапкер болгон эки цифра. Ошол эки уячада ушул эки цифра болушу керек, ошондуктан алардагы башка бардык талапкерлерди өчүрүүгө болот. Жашыруун үчтүк үч уячага чектелген үч цифра менен ушундай эле иштейт. Өчүрүүдөн кийин уячалар ачык жупту же үчтүктү көрсөтөт. Bare Sudoku кеңеши андан келип чыккан коюуну «Жуп же үчтүк» деп белгилейт.",
+          "when": [
+            "Аймакта талапкерлери көп уячалар болуп, жалгыздар калбаганда. Жашыруун жуптар толуп турган уячалардын ичинде жашынат, ошондуктан аларды дал ачык жуптар көрүнбөгөн жерден издөө пайдалуу. Жашыруун үчтүктөр сейрек; Bare Sudoku аларды текшерет, бирок Кыйын табышмактардын көбү аларсыз чечилет."
+          ],
+          "spot": [
+            "Уячалар боюнча эмес, цифралар боюнча иштеңиз. Аймакта жетишпеген ар бир цифра кайсы уячаларга бара аларын белгилеп алыңыз. Эгер эки цифранын ар биринин эки гана мүмкүн уячасы болсо жана алар бир эле эки уяча болсо, жашыруун жупту таптыңыз. Оюнда цифранын баскычын басып, анын талапкерлерин белгилеңиз; эгер эки цифра аймактын бир эле эки уячасын жарытып, андан башка эч жерди жарытпаса, бул ошол үлгү."
+          ],
+          "examples": [
+            {
+              "h": "Жашыруун жуп",
+              "steps": [
+                "{unit} {d1} жана {d2} цифраларынын ар биринин эки гана мүмкүн уячасы бар жана алар бир эле эки уяча: {cells}.",
+                "Ал эки уячада {d1} жана {d2} болушу керек, ошондуктан алардагы башка талапкерлер мүмкүн эмес.",
+                "Өчүрүңүз: {elim}. Эми эки уяча ачык жупту көрсөтөт, бул дагы көп нерсенин кулпусун ачышы мүмкүн."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Жуптун эки цифрасын жуптун уячаларынан өчүрүү. Ал уячалардын башка талапкерлери өчүрүлөт; жуптун цифралары калат.",
+            "Аймакта үчүнчү мүмкүн уячасы бар цифраны кабыл алуу. Эки цифра тең так ушул эки уячага чектелиши керек.",
+            "Кутулардан гана издөө. Жашыруун жуптар саптарда жана мамычаларда да ошончолук көп кездешет."
+          ],
+          "faq": [
+            [
+              "Судокуда жашыруун жуп деген эмне?",
+              "Аймактын бир эле эки уячасына гана бара алган эки цифра. Ал уячалар ушул цифраларды алышы керек, ошондуктан алардагы башка талапкерлер өчүрүлөт."
+            ],
+            [
+              "Жашыруун жуп ачык жуптан эмнеси менен айырмаланат?",
+              "Ачык жуп көрүнүп турат: бир эле эки талапкерди гана көрсөткөн эки уяча. Жашыруун жупту эки уячадагы кошумча талапкерлер жаап турат. Ошол кошумча талапкерлерди өчүргөндө жашыруун жуп ачык жупка айланат."
+            ],
+            [
+              "Жашыруун үчтүк деген эмне?",
+              "Аймактын үч уячасына чектелген үч цифра. Ар бир цифра үч уячанын баарында болушу шарт эмес; маанилүүсү, үч цифранын эч биринин ошол уячалардан тышкары талапкери жок."
+            ],
+            [
+              "Кеңеш жашыруун жана ачык жуптарды айырмалайбы?",
+              "Жок. Bare Sudoku экөөнү тең табат жана андан келип чыккан коюуну «Жуп же үчтүк» деп белгилейт. Бул барактар аларды бөлүп карайт, анткени алар ар башка жолдор менен табылат."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Судокудагы X-Wing: ыкма кантип иштейт",
+          "description": "X-Wing: эки сапта так экиден талапкер уячасы бар жана алар бир эле эки мамычада турган цифра ошол мамычалардын калган бөлүгүнөн өчүрүлөт. Чыныгы мисал.",
+          "h1": "X-Wing",
+          "summary": "X-Wing бул бир цифра жана тик бурчтуктун бурчтарындагы төрт уячадан турган үлгү. Эгер цифранын эки саптын ар биринде так экиден талапкер уячасы болсо жана ал уячалар бир эле эки мамычада жатса, цифра тик бурчтуктун карама-каршы эки бурчун ээлеши керек. Ошондуктан аны ошол эки мамычанын башка бардык уячаларынан өчүрүүгө болот. Саптар менен мамычалардын ордун алмаштырганда да ушундай иштейт. Бул Bare Sudoku оюнундагы биринчи Эксперт деңгээлиндеги ыкма.",
+          "when": [
+            "Жалгыздар, бекитилген талапкерлер, жуптар жана үчтүктөр түгөнгөндө. X-Wing Эксперт деңгээлиндеги эң көп кездешкен үлгү жана цифранын талапкерлери аз калганда, адатта анын төрттөн алтыга чейинки нускасы коюлуп бүткөндө пайда болот. Каралып жаткан цифра үчүн толук белгилер керек."
+          ],
+          "spot": [
+            "Цифраны тандап, анын так эки талапкер уячасы бар саптарын издеңиз. Эгер ушундай эки саптын мамычалары бир эле эки мамыча болсо, ошол мамычалардан цифранын башка талапкерлерин текшериңиз: алар өчүрүлө турган талапкерлер. Андан кийин мамычаларды негиз катары алып кайталаңыз. Оюнда цифранын баскычын басыңыз: анын бардык талапкерлери белгиленет, жана төрт белгиленген талапкерден турган тик бурчтукту байкоо оңой."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{d} цифрасынын {r1}-сапта так эки жана {r2}-сапта так эки талапкер уячасы бар, алар бир эле эки мамычада, {c1}- жана {c2}-мамычаларда, тизилет: {cells}.",
+                "{r1}-сап өзүнүн {d} цифрасын {c1}- же {c2}-мамычага коёт, ал эми {r2}-сап экинчисине. Кандай болгон күндө да {c1}- жана {c2}-мамычалардын ар бири бул эки саптан бирден {d} алат.",
+                "Ошондуктан {d} цифрасы {c1}- жана {c2}-мамычалардын башка эч бир жеринде боло албайт. {elim} уячаларынан {d} цифрасын өчүрүңүз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Цифранын үч талапкер уячасы бар сапты колдонуу. Ар бир негизги сапта так эки болушу керек жана экөө тең жалпы эки мамычада турушу керек.",
+            "Цифраны мамычалардан эмес, саптардан өчүрүү. Негиз саптар болсо, чыгаруулар мамычаларда болот, жана тескерисинче.",
+            "Алмашкан вариантты унутуу. Мамычаларга курулган X-Wing саптарда чыгарат."
+          ],
+          "faq": [
+            [
+              "Судокуда X-Wing деген эмне?",
+              "Эки саптын ар биринде бир эле эки мамычада так экиден талапкер уячасы бар цифра. Цифра ошол тик бурчтуктун карама-каршы эки бурчун ээлейт, ошондуктан ал эки мамычанын калган бөлүгүнөн өчүрүлөт. Саптар менен мамычалардын ордун алмаштырууга болот."
+            ],
+            [
+              "X-Wing эмне үчүн иштейт?",
+              "Эки саптын ар бири цифраны эки мамычанын бирине коюшу керек, ал эми эки сап бир эле мамычаны колдоно албайт. Ошентип эки мамыча тең цифранын өз нускасын ушул саптардан алат, жана ал мамычалардагы башка ар кандай талапкер мүмкүн эмес."
+            ],
+            [
+              "X-Wing балыкпы?",
+              "Ооба. X-Wing өлчөмү экиге барабар балык, Swordfish өлчөмү үчкө барабар балык. Bare Sudoku экөөнү тең табат."
+            ],
+            [
+              "X-Wing кайсы деңгээлде кездешет?",
+              "Эксперт. X-Wing, Y-Wing, Swordfish же XYZ-Wing талап кылган табышмак Эксперт деп бааланат."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Судокудагы Y-Wing: ыкма кантип иштейт",
+          "description": "Y-Wing (XY-Wing): эки талапкери бар өзөк жана ар бири алардын бирин камтыган эки канат эки канатты тең көргөн ар бир уячадан бир цифраны сүрүп чыгарат. Мисал.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, аны XY-Wing деп да аташат, ар биринде экиден талапкер бар үч уячаны колдонот. Өзөктүн талапкерлери X жана Y. Бир канат өзөктү көрөт жана анда X жана Z бар; экинчи канат өзөктү көрөт жана анда Y жана Z бар. Өзөк эмне болбосун, канаттардын бири Z болушу керек, ошондуктан Z эки канатты тең көргөн ар бир уячадан өчүрүлөт. Bare Sudoku оюнунда бул Эксперт деңгээлиндеги ыкма.",
+          "when": [
+            "Табышмакта так эки талапкери бар бир нече уяча болуп, эч бир балык жок болгондо. Y-Wing Эксперт табышмактарында көп кездешет жана эки талапкерлүү уячаларды ээрчүү менен табылат: ар бири өзөк же канат болушу мүмкүн."
+          ],
+          "spot": [
+            "Так эки талапкери бар уячаларды тизмектеңиз. Ар бирин X жана Y талапкерлери бар өзөк катары карап, анын коңшуларынын арасынан X жана башка бир Z цифрасы бар уячаны, ошондой эле Y жана ошол эле Z бар уячаны издеңиз. Ошол экөө канаттар. Андан кийин эки канатты тең көргөн жана Z камтыган уячаларды табыңыз. Канаттар бири-бирин көрүшү шарт эмес экенин эске алыңыз."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{pivot} өзөгүнүн талапкерлери {x} жана {y}. Ал {x} жана {z} бар {wingA} уячасын жана {y} жана {z} бар {wingB} уячасын көрөт.",
+                "Эгер {pivot} {x} болсо, {wingA} {x} талапкерин жоготуп, {z} болот. Эгер {pivot} {y} болсо, {wingB} {z} болот. Кандай болгон күндө да канаттардын бири {z}.",
+                "Эки канатты тең көргөн уяча эч качан {z} боло албайт. {elim} уячаларынан {z} цифрасын өчүрүңүз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Экөө тең өзөктү көрбөгөн канаттарды тандоо. Ар бир канаттын өзөк менен жалпы сабы, мамычасы же кутусу болушу керек.",
+            "Z цифрасын бир гана канатты көргөн уячалардан өчүрүү. Өчүрүлүүчү уяча эки канатты тең көрүшү керек.",
+            "Z цифрасын өзөктөн өчүрүү. Y-Wing өзөгүндө Z жок; эгер бар болсо, бул башка эрежелери бар XYZ-Wing үлгүсү."
+          ],
+          "faq": [
+            [
+              "Судокуда Y-Wing деген эмне?",
+              "Эки талапкерлүү үч уяча: X жана Y бар өзөк, өзөктү көргөн X жана Z бар канат, жана өзөктү көргөн Y жана Z бар канат. Бир канат дайыма Z болот, ошондуктан Z эки канатты тең көргөн уячалардан өчүрүлөт."
+            ],
+            [
+              "Y-Wing менен XY-Wing бир эле нерсеби?",
+              "Ооба. Эки аталыш бир эле үлгүнү сүрөттөйт. Bare Sudoku аны Y-Wing деп атайт."
+            ],
+            [
+              "Эмне үчүн бир канат Z болушу керек?",
+              "Эгер өзөк X болсо, биринчи канат X талапкерин жоготуп, Z болот. Эгер өзөк Y болсо, экинчи канат Z болот. Өзөк ушул экөөнүн бири, ошондуктан бир канат Z."
+            ],
+            [
+              "Y-Wing канча уячаны тазалайт?",
+              "Адатта бир же экини: эки канатты тең көргөн жана дагы эле Z камтыган уячаларды гана. Бул жалгызды жаратууга жетиштүү."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Судокудагы Swordfish: ыкма кантип иштейт",
+          "description": "Swordfish: үч сапта үч мамычага чектелген цифра ошол мамычалардын калган бөлүгүнөн өчүрүлөт. Өлчөмү үчкө барабар балык, чыныгы мисал менен түшүндүрүлгөн.",
+          "h1": "Swordfish",
+          "summary": "Swordfish бул үч сап жана үч мамычасы бар X-Wing. Эгер цифранын үч саптын ар биринде үчтөн ашпаган талапкер уячасы болсо жана ал уячалардын баары бир эле үч мамычага туура келсе, үч сап ал мамычалардагы цифраны толугу менен ээлейт, жана цифраны үч мамычанын башка бардык уячаларынан өчүрүүгө болот. Саптар менен мамычалардын ордун алмаштырууга болот. Bare Sudoku Эксперт табышмактарында Swordfish ыкмасын Y-Wing ыкмасынан кийин текшерет.",
+          "when": [
+            "X-Wing жана Y-Wing эч нерсе таппаганда. Swordfish X-Wing ыкмасына караганда сейрек кездешет жана талапкерлери үч сызыкка сейрек чачылган цифраны талап кылат. Ал цифра үчүн толук жана так белгилер керек."
+          ],
+          "spot": [
+            "Цифраны тандап, анын эки же үч талапкер уячасы бар саптарын издеңиз. Эгер ушундай үч сап жалпысынан үч гана мамычаны камтыса, ошол мамычалардан цифранын башка талапкерлерин текшериңиз. Ар бир сапта ар бир мамычада талапкер болушу шарт эмес: Swordfish алты, жети, сегиз же тогуз уячадан турушу мүмкүн. Оюнда цифраны өз баскычы менен белгилеп, талапкерлери үч мамычага тизилген үч сапты издеңиз."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{d} цифрасынын {rows}-саптардын ар биринде үчтөн ашпаган талапкер уячасы бар, жана алардын баары {cols}-мамычаларга туура келет: {cells}.",
+                "Үч саптын ар бири өзүнүн {d} цифрасын үч мамычанын бирине коюшу керек, жана эч бир эки сап бир эле мамычаны колдоно албайт. Ошентип үч мамыча өз {d} цифрасын ушул үч саптан алат.",
+                "{cols}-мамычалардагы башка ар кандай {d} талапкери мүмкүн эмес. {elim} уячаларынан {d} цифрасын өчүрүңүз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тогуз уячанын баарын талап кылуу. Айрым саптарында эки талапкери бар Swordfish да туура, эгер үч сап үч гана мамычаны камтыса.",
+            "Төрт талапкер уячасы бар сапты кошуу. Ар бир негизги сапта үчтөн ашык болбошу керек жана алардын баары үч мамычанын ичинде болушу керек.",
+            "Негизги саптарда чыгаруу. Негиз саптар болсо, чыгаруулар үч мамычада, негизги саптардан тышкары болот."
+          ],
+          "faq": [
+            [
+              "Судокуда Swordfish деген эмне?",
+              "Үч саптагы талапкерлери үч мамычага чектелген цифра. Үч сап цифраны ушул үч мамычага, ар бирине бирден коюшу керек, ошондуктан цифра ошол мамычалардын башка уячаларынан өчүрүлөт."
+            ],
+            [
+              "Swordfish X-Wing ыкмасынан эмнеси менен айырмаланат?",
+              "Өлчөмү менен гана: X-Wing эки сап жана эки мамычаны колдонот, Swordfish үч жана үчтү. Ой жүгүртүү бирдей."
+            ],
+            [
+              "Swordfish үчүн так тогуз уяча керекпи?",
+              "Жок. Ар бир сапта эки же үч талапкер болушу мүмкүн; үлгү үч саптын чогуу үчтөн ашык мамычаны колдонбоосун гана талап кылат."
+            ],
+            [
+              "Өлчөмү төрткө барабар балык барбы?",
+              "Ооба, Jellyfish. Bare Sudoku аны колдонбойт, анткени анын табышмактарына ал эч качан керек болбойт."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Судокудагы XYZ-Wing: ыкма кантип иштейт",
+          "description": "XYZ-Wing: үч талапкери бар өзөк жана аны менен бир цифрасы жалпы эки канат ошол цифраны үчөөнү тең көргөн уячалардан сүрүп чыгарат. Чыныгы мисал кадам сайын.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing бул өзөгүнүн үч талапкери бар Y-Wing. Өзөктө X, Y жана Z бар; бир канат өзөктү көрөт жана анда X жана Z бар, экинчиси өзөктү көрөт жана анда Y жана Z бар. Үч уячанын бири Z болушу керек, ошондуктан Z үчөөнү тең көргөн ар бир уячадан өчүрүлөт. Өзөктүн өзү да Z болушу мүмкүн болгондуктан, өчүрүлүүчү уяча өзөктү да, эки канатты да көрүшү керек, бул аны уячалар бөлүшкөн кутуга же сызыкка чектейт. Бул Bare Sudoku колдонгон эң татаал ыкма.",
+          "when": [
+            "Башка баары иштебей калганда гана. XYZ-Wing Bare Sudoku оюнундагы эң сейрек үлгү жана Эксперт табышмактарында гана кездешет. Үч талапкерлүү уяча анын цифраларынын экөөнү камтыган эки талапкерлүү уяча менен бир кутуда турганда аны издеңиз."
+          ],
+          "spot": [
+            "Так үч талапкери бар уячалардан баштаңыз; ар бири өзөк болушу мүмкүн. Анын коңшуларынын арасынан экиден талапкери бар, экөө тең өзөктүн үч талапкеринен алынган жана так бир Z цифрасы жалпы болгон эки уячаны издеңиз. Андан кийин өзөктү жана эки канатты тең көргөн жана Z камтыган уячаларды издеңиз. Иш жүзүндө бир канат өзөктүн кутусунда, экинчиси анын сабында же мамычасында болот, ал эми өчүрүлүүчү уячалар ошол кутунун ошол саптагы же мамычадагы калган уячалары."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{pivot} өзөгүнүн үч талапкери бар: {x}, {y} жана {z}. Ал {x} жана {z} бар {wingA} уячасын жана {y} жана {z} бар {wingB} уячасын көрөт.",
+                "Эгер {pivot} {z} болсо, иш бүттү. Эгер ал {x} болсо, {wingA} {z} болушу керек. Эгер ал {y} болсо, {wingB} {z} болушу керек. Кандай болгон күндө да үч уячанын бири {z}.",
+                "Үчөөнү тең көргөн уяча {z} боло албайт. {elim} уячаларынан {z} цифрасын өчүрүңүз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Эки канатты гана көргөн уячалардан өчүрүү. Y-Wing ыкмасынан айырмаланып, өзөк Z болушу мүмкүн, ошондуктан уяча өзөктү да көрүшү керек.",
+            "Талапкерлеринин экөө тең өзөктүн үч талапкеринин ичинде болбогон канаттарды колдонуу.",
+            "Аны Y-Wing менен чаташтыруу: айырма өзөктөгү үчүнчү талапкерде, жана ал кайсы уячаларды тазалоого болорун өзгөртөт."
+          ],
+          "faq": [
+            [
+              "Судокуда XYZ-Wing деген эмне?",
+              "X, Y жана Z талапкерлери бар өзөк жана экөө тең өзөктү көргөн эки канат: бирөөндө X жана Z, экинчисинде Y жана Z. Үч уячанын бири Z, ошондуктан Z үчөөнү тең көргөн уячалардан өчүрүлөт."
+            ],
+            [
+              "XYZ-Wing Y-Wing ыкмасынан эмнеси менен айырмаланат?",
+              "Өзөктө экинин ордуна үч талапкер бар, алардын бири Z. Бул өзөктү да Z үчүн мүмкүн болгон орун кылат, ошондуктан өзөктү жана эки канатты тең көргөн уячалар гана Z талапкеринен ажырашы мүмкүн."
+            ],
+            [
+              "XYZ-Wing канчалык көп кездешет?",
+              "Сейрек. Bare Sudoku оюнунда ал Эксперт табышмактарына гана керек болушу мүмкүн, бирок алардын көбүнө керек эмес. Bare Sudoku аны акырында, X-Wing, Y-Wing жана Swordfish ыкмаларынан кийин текшерет."
+            ],
+            [
+              "WXYZ-Wing барбы?",
+              "Ооба, төрт талапкерлүү өзөк менен, бирок Bare Sudoku аны колдонбойт. Оюндагы ар бир табышмакты бул нускаманын тогуз ыкмасы менен аягына чыгарууга болот."
+            ]
+          ]
+        }
+      }
     }
   }
 }
