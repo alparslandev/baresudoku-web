@@ -12803,6 +12803,2334 @@
           ]
         }
       }
+    },
+    "ms": {
+      "learnHeading": "Belajar Sudoku",
+      "learnText": "Baru bermain Sudoku, atau tersekat pada teka-teki yang sukar? Dua panduan menerangkan peraturan dan setiap teknik penyelesaian yang digunakan oleh petunjuk, masing-masing dengan contoh sebenar.",
+      "howToLink": "Cara bermain Sudoku",
+      "techniquesLink": "Teknik menyelesaikan Sudoku",
+      "labels": {
+        "howTo": "Cara bermain",
+        "techniques": "Teknik",
+        "play": "Main Sudoku",
+        "prev": "Teknik sebelumnya",
+        "next": "Teknik seterusnya",
+        "all": "Semua teknik",
+        "example": "Contoh",
+        "steps": "Langkah demi langkah",
+        "when": "Bila menggunakannya",
+        "spot": "Cara mengesannya",
+        "mistakes": "Kesilapan lazim",
+        "inGame": "Dalam Bare Sudoku",
+        "level": "Diperlukan mulai tahap: {level}",
+        "hint": "Dalam permainan, petunjuk berbunyi: {text}",
+        "legend": "Digit tebal ialah digit yang diberi, digit biru diletakkan semasa menyelesaikan, digit kecil ialah calon. Sel yang diserlahkan membentuk corak, calon yang dipangkah dibuang, dan calon yang dibulatkan ialah digit yang perlu diletakkan.",
+        "notation": "Sel ditulis sebagai r3c7: baris 3, lajur 7. Baris dikira dari atas, lajur dari kiri, dan kotak 1 hingga 9 dari kiri atas, baris demi baris.",
+        "row": "baris {n}",
+        "column": "lajur {n}",
+        "box": "kotak {n}",
+        "elimItem": "{d} daripada {cell}",
+        "regions": "Baris 5, lajur 5 dan kotak 5 pada permulaan teka-teki",
+        "firstMove": "Tunggal terdedah: {cell} hanya boleh jadi {d}",
+        "breadcrumb": "Jejak navigasi"
+      },
+      "howTo": {
+        "title": "Cara Bermain Sudoku: Peraturan, Papan dan Langkah Pertama",
+        "description": "Belajar cara bermain Sudoku: peraturan, fungsi baris, lajur dan kotak, sebab setiap teka-teki ada satu penyelesaian, cara guna nota dan langkah pertama anda.",
+        "h1": "Cara bermain Sudoku",
+        "summary": "Sudoku ialah teka-teki logik pada grid 9×9. Isi setiap sel kosong dengan digit 1 hingga 9 supaya setiap baris, setiap lajur dan setiap kotak 3×3 mengandungi setiap digit tepat sekali. Sesetengah digit diberi pada permulaan; selebihnya anda simpulkan, satu sel yang pasti pada satu masa, dan anda tidak pernah perlu meneka. Panduan ini menerangkan papan, peraturan, prinsip satu penyelesaian, nota dan strategi mudah untuk langkah pertama anda. Anda boleh berlatih semuanya dalam [Bare Sudoku](play), yang percuma dan mempunyai petunjuk yang menerangkan logiknya.",
+        "sections": [
+          {
+            "h": "Apakah peraturan Sudoku?",
+            "p": [
+              "Hanya ada tiga peraturan, dan ketiga-tiganya ialah peraturan yang sama dilihat dari tiga arah: setiap baris mesti mengandungi digit 1 hingga 9, setiap lajur mesti mengandungi digit 1 hingga 9, dan setiap kotak 3×3 mesti mengandungi digit 1 hingga 9. Oleh itu, sesuatu digit tidak boleh muncul dua kali dalam baris, lajur atau kotak yang sama.",
+              "Digit yang diberi, yang dicetak tebal, adalah tetap. Tugas anda ialah mengisi sel yang kosong. Tiada aritmetik dan tiada susunan: digit hanyalah sembilan simbol yang berbeza. Anda boleh bermain dengan huruf atau bentuk dan tiada apa yang akan berubah."
+            ]
+          },
+          {
+            "h": "Bagaimanakah papan disusun?",
+            "p": [
+              "Papan mempunyai 81 sel dalam 9 baris dan 9 lajur. Garisan tebal membahagikannya kepada sembilan kotak 3×3. Setiap sel tergolong dalam tepat satu baris, satu lajur dan satu kotak, dan tiga kumpulan ini ialah unitnya. 20 sel lain yang berkongsi unit dengan sesuatu sel dipanggil jirannya; digit yang diletakkan dalam sel menyingkirkan digit itu daripada kesemua 20 jiran.",
+              "Sel ditulis sebagai r3c7: baris 3, lajur 7. Baris dikira dari atas, lajur dari kiri, dan kotak 1 hingga 9 dari kiri atas, baris demi baris. Tatatanda ini digunakan dalam setiap panduan teknik dan berbaloi dipelajari: r5c5 ialah pusat papan."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Mengapakah setiap Sudoku mempunyai tepat satu penyelesaian?",
+            "p": [
+              "Sudoku yang betul mempunyai satu penyelesaian, dan itulah yang membolehkan logik berfungsi. Setiap kali anda dapat menunjukkan bahawa sesuatu digit tidak boleh pergi ke tempat lain dalam sesuatu unit, digit itu mesti pergi ke sel yang tinggal, kerana penyelesaiannya wujud dan unik. Jika teka-teki mempunyai dua penyelesaian, tiada penaakulan yang dapat membezakan keduanya dan anda terpaksa meneka pada satu ketika.",
+              "Bare Sudoku menjana setiap teka-teki pada peranti anda dan memeriksa bahawa teka-teki itu mempunyai tepat satu penyelesaian dan bahawa penyelesai logiknya dapat menamatkannya dengan teknik tahap yang dipilih. Jadi jika anda tersekat, sentiasa ada langkah seterusnya untuk ditemui, dan petunjuk menunjukkannya."
+            ]
+          },
+          {
+            "h": "Bagaimanakah anda memulakan teka-teki Sudoku?",
+            "p": [
+              "Mulakan dengan bahagian yang paling terhad. Urutan ini berkesan pada setiap tahap:"
+            ],
+            "list": [
+              "Pilih digit yang sudah muncul banyak kali, katakan enam atau tujuh kali, dan cari kotak yang masih belum mempunyainya. Selalunya hanya satu sel dalam kotak itu yang tinggal untuknya: itulah [tunggal tersembunyi](hidden-single).",
+              "Cari sel yang sesak. Sel yang baris, lajur dan kotaknya bersama-sama mengandungi lapan digit berbeza hanya mempunyai satu calon yang tinggal: [tunggal terdedah](naked-single). Sel dalam baris atau kotak yang hampir penuh ialah tempat terbaik untuk dicari.",
+              "Setiap digit yang anda letakkan membuang satu calon daripada 20 jiran, jadi semak jiran itu dengan segera. Tunggal cenderung muncul secara berantai.",
+              "Apabila peletakan mudah sudah habis, tulis nota: calon bagi setiap sel kosong. Kemudian cari digit yang terkurung pada satu garisan di dalam kotak ([calon terkunci](locked-candidates)) atau dua sel yang berkongsi dua calon yang sama ([pasangan terdedah](naked-pairs)).",
+              "Kembali kepada tunggal selepas setiap penyingkiran. Malah teka-teki Pakar kebanyakannya diselesaikan dengan tunggal; teknik lanjutan hanya membuka jalan kepada tunggal yang seterusnya."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Apakah nota dan bilakah anda patut menggunakannya?",
+            "p": [
+              "Nota, juga dipanggil tanda pensel atau calon, ialah digit kecil yang anda tulis dalam sel kosong untuk merekodkan digit yang masih mungkin di situ. Dalam teka-teki mudah anda jarang memerlukannya; dari tahap Sukar ke atas nota amat penting, kerana teknik seperti pasangan, X-Wing dan Y-Wing berkisar tentang calon, bukan digit yang telah diletakkan.",
+              "Pastikan nota tepat: apabila anda meletakkan digit, buang digit itu daripada nota kesemua 20 jiran. Dalam Bare Sudoku ini berlaku secara automatik, dan Isi nota menulis setiap calon ke dalam setiap sel kosong dengan satu ketikan, jadi anda boleh bermula dengan set calon yang lengkap dan betul. Nota ialah fakta, bukan tekaan: maksudnya belum ada apa-apa yang menyingkirkan digit ini."
+            ]
+          },
+          {
+            "h": "Apakah yang patut anda lakukan apabila tersekat?",
+            "p": [
+              "Mula-mula semak semula perkara asas: setiap baris, lajur dan kotak yang hampir penuh ialah sumber tunggal. Kemudian pastikan nota lengkap, kerana calon yang hilang menyembunyikan corak dan calon yang lapuk mencipta corak palsu. Seterusnya, cuba [teknik](techniques) mengikut susunan kesukaran: calon terkunci, pasangan dan tiga serangkai, X-Wing, Y-Wing, Swordfish dan XYZ-Wing. Setiap satu mempunyai halamannya sendiri dengan contoh sebenar.",
+              "Jika tiada yang berkesan, gunakan petunjuk. Dalam Bare Sudoku, petunjuk mula-mula memeriksa sama ada digit yang diletakkan salah, kemudian mencari sel seterusnya yang boleh diisi dengan logik dan menamakan tekniknya, jadi anda tetap belajar sesuatu walaupun menggunakannya. Ketik petunjuk sekali lagi untuk meletakkan digit."
+            ]
+          },
+          {
+            "h": "Bagaimanakah anda memasukkan digit dalam Bare Sudoku?",
+            "p": [
+              "Ketik sel, kemudian digit. Atau ketik digit dahulu: digit itu terkunci, dan setiap sel yang anda ketik menerimanya, iaitu cara terpantas untuk meletakkan salinan keenam, ketujuh dan kelapan sesuatu digit. Ketik digit itu sekali lagi untuk melepaskannya. Butang Nota bertukar kepada tanda pensel, Padam mengosongkan sel, Buat asal membatalkan sebarang langkah, dan kesilapan ditanda merah melainkan anda mematikannya dalam menu.",
+              "Pada papan kekunci, gunakan kekunci anak panah untuk bergerak, 1 hingga 9 untuk memasukkan digit, Backspace untuk memadam, N untuk nota, U untuk buat asal, H untuk petunjuk, F untuk mengisi nota dan Escape untuk menu. Permainan ini menyimpan dirinya sendiri, berfungsi luar talian dan tiada iklan serta tiada akaun."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Adakah anda perlu meneka dalam Sudoku?",
+            "Tidak dalam teka-teki yang betul. Setiap teka-teki Bare Sudoku mempunyai tepat satu penyelesaian dan diperiksa supaya boleh diselesaikan dengan logik semata-mata, sehingga teknik tahapnya. Jika anda rasa perlu meneka, ada calon yang tertinggal dalam nota anda atau ada teknik yang menunggu untuk ditemui."
+          ],
+          [
+            "Bolehkah sesuatu digit muncul dua kali dalam baris, lajur atau kotak?",
+            "Tidak. Itulah keseluruhan peraturannya: setiap satu daripada sembilan baris, sembilan lajur dan sembilan kotak mengandungi setiap digit 1 hingga 9 tepat sekali. Jika dua digit yang sama berkongsi satu unit, sekurang-kurangnya satu daripadanya salah."
+          ],
+          [
+            "Apakah perbezaan antara Mudah, Sederhana, Sukar dan Pakar?",
+            "Tahap ditentukan oleh teknik yang diperlukan oleh teka-teki. Mudah dan Sederhana diselesaikan dengan tunggal sahaja, dan Mudah bermula dengan sekurang-kurangnya 38 digit yang diberi. Sukar memerlukan calon terkunci atau pasangan dan tiga serangkai. Pakar memerlukan X-Wing, Y-Wing, Swordfish atau XYZ-Wing."
+          ],
+          [
+            "Lebih baik isi nota untuk setiap sel atau hanya untuk sesetengah sel?",
+            "Untuk teka-teki Sukar dan Pakar, isi semuanya: corak seperti pasangan, X-Wing dan Y-Wing hanya kelihatan apabila setiap calon ditulis. Dalam Mudah dan Sederhana, nota adalah pilihan dan kebanyakan pemain hanya mengimbas untuk mencari tunggal."
+          ],
+          [
+            "Berapa lamakah masa untuk menyelesaikan Sudoku?",
+            "Teka-teki Mudah mengambil beberapa minit; teka-teki Pakar boleh mengambil dua puluh minit atau lebih, bergantung pada seberapa cepat anda mengesan corak lanjutan. Bare Sudoku memaparkan pemasa, menjedanya semasa menu dibuka dan tidak menyimpan papan pendahulu, jadi bermainlah mengikut rentak anda sendiri."
+          ],
+          [
+            "Adakah Sudoku memerlukan aritmetik?",
+            "Tidak. Digit hanyalah label; tiada penambahan atau pengiraan terlibat. Mana-mana sembilan simbol boleh digunakan, dan sebab itulah Sudoku ialah teka-teki logik dan bukan teka-teki nombor."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Teknik Menyelesaikan Sudoku Diterangkan dengan Contoh",
+        "description": "Kesemua sembilan teknik menyelesaikan Sudoku, daripada tunggal terdedah hingga Swordfish dan XYZ-Wing, mengikut susunan petunjuk Bare Sudoku, dengan contoh.",
+        "h1": "Teknik menyelesaikan Sudoku",
+        "intro": [
+          "Setiap Sudoku boleh diselesaikan dengan set kecil teknik logik. Indeks ini menyenaraikan sembilan teknik yang digunakan oleh penyelesai Bare Sudoku dan petunjuknya, mengikut susunan penyelesai mencubanya: tunggal dahulu, kemudian penyingkiran dalam satu unit, kemudian corak yang merentasi beberapa baris dan lajur. Setiap teknik mempunyai halamannya sendiri dengan definisi, cara mengesannya, contoh sebenar daripada teka-teki yang dijana dan kesilapan lazim.",
+          "Tahap sesuatu teka-teki ditentukan oleh teknik paling sukar yang diperlukannya. Teka-teki Mudah dan Sederhana hanya memerlukan tunggal, teka-teki Sukar memerlukan calon terkunci atau pasangan dan tiga serangkai, dan teka-teki Pakar memerlukan sekurang-kurangnya satu corak fish atau wing. Walau apa pun tahapnya, tunggal melakukan kebanyakan kerja; teknik lanjutan membuang satu atau dua calon dan tunggal meneruskannya dari situ."
+        ],
+        "faq": [
+          [
+            "Dalam susunan apakah saya patut mencuba teknik Sudoku?",
+            "Yang paling mudah dahulu: tunggal terdedah, tunggal tersembunyi, calon terkunci, pasangan dan tiga serangkai terdedah, pasangan dan tiga serangkai tersembunyi, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku mencubanya tepat mengikut susunan ini, dan petunjuk sentiasa menamakan teknik paling mudah yang membawa kemajuan."
+          ],
+          [
+            "Adakah saya memerlukan kesemua teknik ini untuk menyelesaikan Sudoku?",
+            "Untuk teka-teki Mudah dan Sederhana, tunggal sudah memadai. Teka-teki Sukar menambah calon terkunci dan subset. Teka-teki Pakar memerlukan sekurang-kurangnya satu fish atau wing, tetapi biasanya hanya sekali atau dua kali bagi setiap teka-teki."
+          ],
+          [
+            "Adakah terdapat teknik yang lebih sukar daripada XYZ-Wing?",
+            "Ya, contohnya rantai, ujian keunikan dan jaring paksaan. Bare Sudoku tidak menjana teka-teki yang memerlukannya, jadi setiap teka-teki dalam permainan boleh ditamatkan dengan sembilan teknik di halaman ini."
+          ],
+          [
+            "Apakah itu calon?",
+            "Digit yang masih boleh dimasukkan ke dalam sel kosong kerana belum ada apa-apa dalam baris, lajur atau kotaknya yang menyingkirkannya. Nota dalam permainan ialah calon. Setiap teknik selain tunggal membuat penaakulan tentang calon, jadi pastikan nota lengkap dan tepat."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Tunggal terdedah",
+          "title": "Tunggal Terdedah dalam Sudoku: Sel dengan Satu Calon",
+          "description": "Tunggal terdedah ialah sel kosong dengan hanya satu digit yang mungkin. Ketahui cara mencarinya dengan pantas, dengan contoh sebenar dan kesilapan lazim.",
+          "h1": "Tunggal terdedah",
+          "summary": "Tunggal terdedah (naked single) ialah sel kosong yang mempunyai tepat satu calon: lapan digit lain sudah ada dalam baris, lajur atau kotaknya. Digit yang tinggal mesti diletakkan di situ. Ini teknik Sudoku yang paling mudah, yang paling kerap anda gunakan, dan yang dilaporkan oleh petunjuk Bare Sudoku sebagai \"Hanya satu calon di sini\".",
+          "when": [
+            "Sentiasa. Tunggal terdedah muncul dari langkah pertama hingga terakhir, pada setiap tahap. Dalam teka-teki Mudah dan Sederhana, bersama tunggal tersembunyi, ia satu-satunya teknik yang anda perlukan. Dalam teka-teki yang lebih sukar, setiap penyingkiran oleh teknik lanjutan biasanya meninggalkan tunggal terdedah, jadi semaklah selepas setiap langkah."
+          ],
+          "spot": [
+            "Lihat sel yang banyak jirannya sudah terisi: sel dalam baris yang sudah ada tujuh digit, atau sel yang baris, lajur dan kotaknya bersama-sama meliputi lapan digit berbeza. Tanpa nota, kira digit yang boleh anda lihat dari sel itu. Dengan nota, tunggal terdedah hanyalah sel yang menunjukkan satu calon, sebab itulah Isi nota memudahkan anda menemuinya."
+          ],
+          "examples": [
+            {
+              "h": "Contoh",
+              "steps": [
+                "Lihat {cell}. Sel ini kosong, jadi senaraikan setiap digit yang sudah diletakkan dalam barisnya, lajurnya dan kotaknya.",
+                "Baris {row} mengandungi {rowDigits}. Lajur {col} mengandungi {colDigits}. Kotak {box} mengandungi {boxDigits}.",
+                "Bersama-sama, ketiga-tiganya menyingkirkan setiap digit kecuali {d}, jadi {d} ialah satu-satunya calon yang tinggal dalam {cell}.",
+                "Tulis {d} dalam {cell}. Kemudian semak sama ada digit baharu itu mencipta tunggal lain dalam baris, lajur atau kotak yang sama."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mengira baris sahaja atau kotak sahaja. Lapan digit yang tersingkir biasanya datang daripada ketiga-tiga unit bersama-sama.",
+            "Terlupa bahawa digit yang baru anda letakkan juga menyingkirkan calon daripada 20 jirannya; tunggal terdedah baharu muncul sejurus selepas setiap peletakan.",
+            "Mengelirukan tunggal terdedah dengan tunggal tersembunyi: tunggal terdedah mempunyai satu calon yang tinggal dalam sel, tunggal tersembunyi mempunyai satu sel yang tinggal untuk digit dalam satu unit."
+          ],
+          "faq": [
+            [
+              "Apakah tunggal terdedah dalam Sudoku?",
+              "Sel kosong dengan tepat satu calon. Lapan digit berbeza sudah diletakkan dalam baris, lajur dan kotaknya, jadi digit kesembilan ialah satu-satunya yang muat."
+            ],
+            [
+              "Mengapa ia dipanggil terdedah?",
+              "Kerana calon tunggal itu kelihatan terus dalam sel sebaik sahaja nota ditulis; tiada apa yang menyembunyikannya. Tunggal tersembunyi pula terletak di antara calon lain dan ditemui dengan melihat digit, bukan sel."
+            ],
+            [
+              "Bolehkah teka-teki diselesaikan dengan tunggal terdedah sahaja?",
+              "Banyak teka-teki Mudah boleh, tetapi kebanyakannya juga memerlukan tunggal tersembunyi. Bare Sudoku menilai teka-teki Mudah dan Sederhana sebagai boleh diselesaikan dengan kedua-dua jenis tunggal; teka-teki Sukar dan Pakar memerlukan sekurang-kurangnya satu teknik tambahan."
+            ],
+            [
+              "Adakah petunjuk menunjukkan tunggal terdedah?",
+              "Ya. Apabila peletakan seterusnya ialah tunggal terdedah, petunjuk memilih sel itu dan berkata \"Hanya satu calon di sini\" bersama digitnya. Ketik petunjuk sekali lagi untuk meletakkannya."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Tunggal tersembunyi",
+          "title": "Tunggal Tersembunyi dalam Sudoku: Satu-satunya Tempat Digit",
+          "description": "Tunggal tersembunyi ialah satu-satunya sel dalam baris, lajur atau kotak yang masih boleh diisi sesuatu digit. Kesannya dengan mengimbas satu digit demi satu.",
+          "h1": "Tunggal tersembunyi",
+          "summary": "Tunggal tersembunyi (hidden single) ialah digit yang hanya mempunyai satu sel yang mungkin dalam baris, lajur atau kotak, walaupun sel itu mungkin menunjukkan calon lain. Oleh sebab unit itu mesti mengandungi digit tersebut, digit itu diletakkan di situ. Petunjuk Bare Sudoku melaporkannya sebagai \"Satu-satunya tempat untuk 5 dalam baris ini\", lajur ini atau kotak ini.",
+          "when": [
+            "Setiap kali sesuatu digit sudah jauh maju: apabila digit muncul lima atau enam kali, kotak yang tinggal sangat terhad, dan tunggal tersembunyi selalunya langkah seterusnya. Tunggal tersembunyi ialah teknik utama teka-teki Mudah dan Sederhana dan kekal sebagai tulang belakang pada setiap tahap."
+          ],
+          "spot": [
+            "Imbas satu digit demi satu. Ambil satu digit, cari kotak yang tidak mengandunginya, dan pangkah setiap sel dalam kotak itu yang berkongsi baris atau lajur dengan salinan digit yang sudah diletakkan. Jika hanya satu sel yang tinggal, anda telah menemui tunggal tersembunyi. Imbasan yang sama berkesan pada baris dan lajur. Dalam permainan, ketik digit yang sudah diletakkan: setiap salinannya diserlahkan, jadi sel yang masih bebas jelas kelihatan."
+          ],
+          "examples": [
+            {
+              "h": "Contoh",
+              "steps": [
+                "Kotak {box} belum mengandungi {d}, jadi salah satu sel kosongnya mesti memegangnya. Sel kosong itu ialah {empties}.",
+                "Dalam setiap sel itu kecuali {cell}, {d} disekat oleh {d} yang sudah diletakkan dalam baris atau lajur yang sama, jadi {d} bukan calon di situ.",
+                "Oleh itu {cell} ialah satu-satunya tempat untuk {d} dalam kotak {box}. Tulis {d} di situ, walaupun {cell} mungkin masih menunjukkan calon lain."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Meletakkan digit dalam sel yang hanya mungkin betul: semak setiap sel kosong lain dalam unit itu, bukan hanya yang jelas.",
+            "Terlepas tunggal tersembunyi kerana sel itu menunjukkan beberapa calon. Calon lain tidak penting; yang penting ialah digit itu tiada tempat lain dalam unit.",
+            "Mengimbas kotak sahaja. Baris dan lajur menghasilkan tunggal tersembunyi sama kerap, terutamanya menjelang penghujung."
+          ],
+          "faq": [
+            [
+              "Apakah tunggal tersembunyi dalam Sudoku?",
+              "Digit yang hanya boleh dimasukkan ke dalam satu sel dalam baris, lajur atau kotak. Unit itu mesti mengandungi digit tersebut, jadi sel itu sudah ditentukan walaupun masih ada calon lain."
+            ],
+            [
+              "Apakah perbezaan antara tunggal tersembunyi dan tunggal terdedah?",
+              "Tunggal terdedah berkisar tentang sel: tinggal satu calon. Tunggal tersembunyi berkisar tentang digit: tinggal satu sel dalam unit. Kedua-duanya meletakkan digit dengan pasti."
+            ],
+            [
+              "Yang mana lebih mudah ditemui?",
+              "Tanpa nota, tunggal tersembunyi biasanya lebih mudah kerana anda boleh mengimbas papan untuk satu digit demi satu. Dengan nota yang lengkap, tunggal terdedah paling mudah, kerana sel dengan satu calon sahaja jelas menonjol."
+            ],
+            [
+              "Bagaimanakah petunjuk menerangkan tunggal tersembunyi?",
+              "Sebagai \"Satu-satunya tempat untuk\" digit itu dalam baris ini, lajur ini atau kotak ini, dengan sel itu dipilih. Ketik petunjuk sekali lagi untuk meletakkannya."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Calon terkunci",
+          "title": "Calon Terkunci dalam Sudoku: Menunjuk dan Menuntut",
+          "description": "Calon terkunci: apabila calon sesuatu digit dalam kotak semuanya pada satu baris atau lajur, atau sebaliknya, digit itu dibuang di tempat lain. Dua contoh.",
+          "h1": "Calon terkunci",
+          "summary": "Calon terkunci (locked candidates) ialah teknik pertama yang membuang calon dan bukannya meletakkan digit. Ia mempunyai dua bentuk. Menunjuk: dalam sesuatu kotak, semua calon bagi sesuatu digit terletak pada satu baris atau lajur, jadi digit itu dibuang daripada bahagian lain garisan tersebut. Menuntut: dalam sesuatu baris atau lajur, semua calon bagi sesuatu digit terletak dalam satu kotak, jadi digit itu dibuang daripada bahagian lain kotak tersebut. Petunjuk Bare Sudoku melabelkan peletakan yang dibukanya sebagai \"Calon terkunci\".",
+          "when": [
+            "Apabila tunggal sudah habis dalam teka-teki Sukar, inilah perkara pertama untuk dicuba. Ia memerlukan nota yang lengkap sekurang-kurangnya untuk digit yang anda periksa. Calon terkunci adalah lazim: kebanyakan teka-teki Sukar memerlukannya, dan teka-teki Pakar menggunakannya di antara corak yang lebih besar."
+          ],
+          "spot": [
+            "Untuk menunjuk, lihat setiap kotak dan setiap digit yang tiada di dalamnya: jika sel calon bagi digit itu terletak pada satu baris atau lajur, semak sama ada digit yang sama muncul sebagai calon di sepanjang garisan itu di luar kotak. Untuk menuntut, lihat di sepanjang baris atau lajur: jika calon bagi sesuatu digit semuanya berada dalam satu kotak, bahagian lain kotak itu boleh dikosongkan. Dalam permainan, ketik kekunci digit untuk menyerlahkan setiap calonnya; satu barisan dua atau tiga nota yang diserlahkan di dalam satu kotak ialah coraknya."
+          ],
+          "examples": [
+            {
+              "h": "Menunjuk",
+              "steps": [
+                "Dalam kotak {box}, digit {d} hanya mempunyai sel calon ini: {cells}. Kesemuanya terletak dalam baris {row}.",
+                "Kotak {box} memerlukan {d}, jadi {d} bagi baris {row} berada di dalam kotak {box}, di mana-mana sel itu pun ia jatuh.",
+                "Baris {row} tidak boleh memegang {d} kedua, jadi buang {d} daripada sel baris {row} di luar kotak: {elim}."
+              ]
+            },
+            {
+              "h": "Menuntut",
+              "steps": [
+                "Dalam baris {row}, digit {d} hanya boleh masuk ke {cells}, dan kesemuanya berada di dalam kotak {box}.",
+                "Baris {row} mesti mengandungi {d}, jadi {d} bagi kotak {box} dituntut oleh baris {row}. Sel lain dalam kotak {box} tidak boleh memegang {d}.",
+                "Buang {d} daripada {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Membuang digit di dalam kotak dan bukannya di luarnya dalam kes menunjuk, atau sebaliknya dalam kes menuntut. Penyingkiran sentiasa berlaku pada sel yang berada dalam garisan tetapi bukan dalam kotak, atau dalam kotak tetapi bukan dalam garisan.",
+            "Menggunakan peraturan ini apabila calon merentasi dua baris kotak itu. Kesemua sel calon bagi digit itu dalam kotak mesti terletak pada satu garisan.",
+            "Terlupa mencari tunggal yang dicipta oleh penyingkiran. Calon terkunci jarang meletakkan digit dengan sendirinya; ia menyediakan tunggal."
+          ],
+          "faq": [
+            [
+              "Apakah calon terkunci dalam Sudoku?",
+              "Calon bagi sesuatu digit yang terkurung pada persilangan kotak dan garisan. Oleh sebab kotak itu, atau garisan itu, mesti mengandungi digit tersebut dalam persilangan itu, digit itu boleh dibuang daripada bahagian lain garisan, atau bahagian lain kotak."
+            ],
+            [
+              "Apakah perbezaan antara menunjuk dan menuntut?",
+              "Menunjuk bermula dari kotak: calon digit dalam kotak menunjuk di sepanjang satu baris atau lajur, jadi digit itu dibuang daripada bahagian lain garisan tersebut. Menuntut bermula dari baris atau lajur: calon garisan bagi digit itu semuanya dalam satu kotak, jadi garisan itu menuntut digit tersebut dan ia dibuang daripada bahagian lain kotak."
+            ],
+            [
+              "Adakah calon terkunci juga dipanggil intersection removal?",
+              "Ya. Nama lain ialah box-line reduction untuk bentuk menuntut dan pointing pair atau pointing triple untuk bentuk menunjuk. Bare Sudoku menggunakan satu nama untuk kedua-duanya."
+            ],
+            [
+              "Tahap manakah yang memerlukan calon terkunci?",
+              "Sukar. Teka-teki yang memerlukan calon terkunci atau subset tetapi tiada yang lebih sukar dinilai Sukar; teka-teki Pakar juga memerlukan fish atau wing."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Pasangan dan tiga serangkai terdedah",
+          "title": "Pasangan dan Tiga Serangkai Terdedah dalam Sudoku",
+          "description": "Pasangan dan tiga serangkai terdedah: dua atau tiga sel dalam unit yang berkongsi dua atau tiga calon yang sama. Ketahui cara mengesannya dan apa yang dibuang.",
+          "h1": "Pasangan dan tiga serangkai terdedah",
+          "summary": "Pasangan terdedah (naked pair) ialah dua sel dalam baris, lajur atau kotak yang sama yang mempunyai dua calon yang betul-betul sama. Dua digit itu mesti masuk ke dua sel tersebut, jadi kedua-duanya boleh dibuang daripada setiap sel lain dalam unit itu. Tiga serangkai terdedah ialah idea yang sama dengan tiga sel dan tiga digit; setiap sel boleh menunjukkan dua atau ketiga-tiga digit itu. Petunjuk Bare Sudoku melabelkan peletakan yang terhasil sebagai \"Pasangan atau tiga\".",
+          "when": [
+            "Selepas nota lengkap dan tunggal serta calon terkunci sudah habis. Pasangan terdedah sangat lazim dalam teka-teki Sukar, tiga serangkai terdedah kurang lazim. Kedua-duanya berbaloi disemak dalam setiap unit yang masih mempunyai lima atau lebih sel kosong."
+          ],
+          "spot": [
+            "Cari sel yang hanya mempunyai dua calon, kemudian cari sel lain dalam unit yang sama dengan dua calon yang sama. Untuk tiga serangkai, lihat unit yang mempunyai beberapa sel dengan dua dan tiga calon, dan semak sama ada tiga daripadanya bersama-sama hanya menggunakan tiga digit berbeza. Sel dengan calon yang betul-betul sama mudah dilihat apabila nota sudah ditulis; Isi nota dalam permainan melakukannya dengan satu ketikan."
+          ],
+          "examples": [
+            {
+              "h": "Pasangan terdedah",
+              "steps": [
+                "{cellA} dan {cellB} dalam {unit} mempunyai dua calon yang betul-betul sama: {d1} dan {d2}.",
+                "Satu daripadanya mesti {d1} dan satu lagi {d2}. Kita tidak tahu yang mana, tetapi kedua-dua digit sudah digunakan oleh dua sel ini.",
+                "Jadi tiada sel lain dalam {unit} boleh memegang {d1} atau {d2}. Buang {elim}."
+              ]
+            },
+            {
+              "h": "Tiga serangkai terdedah",
+              "steps": [
+                "Tiga sel dalam {unit} mengambil semua calonnya daripada tiga digit yang sama, {digits}: {cells}.",
+                "Tiga digit itu mesti mengisi tiga sel ini dalam sesuatu susunan. Sel tidak perlu menunjukkan ketiga-tiga calon; yang penting ialah tiada satu pun daripada tiga sel itu mempunyai calon di luar set tersebut.",
+                "Buang {digits} daripada setiap sel lain dalam {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mengambil dua sel yang berkongsi dua calon tetapi juga mempunyai calon ketiga. Untuk pasangan terdedah, setiap sel mesti mempunyai tepat dua calon itu dan tiada yang lain.",
+            "Membuang digit daripada sel pasangan itu sendiri. Pasangan itu mengekalkan calonnya; penyingkiran berlaku pada sel lain dalam unit.",
+            "Mensyaratkan setiap sel tiga serangkai menunjukkan ketiga-tiga digit. Sel dengan dua daripada tiga digit itu tidak mengapa, asalkan tiada sel mempunyai calon di luar set."
+          ],
+          "faq": [
+            [
+              "Apakah pasangan terdedah dalam Sudoku?",
+              "Dua sel dalam satu unit yang kedua-duanya mempunyai dua calon yang betul-betul sama. Dua digit itu terkunci pada dua sel tersebut, jadi ia boleh dibuang daripada bahagian lain unit."
+            ],
+            [
+              "Apakah tiga serangkai terdedah?",
+              "Tiga sel dalam satu unit yang calonnya bersama-sama hanya tiga digit. Setiap sel boleh memegang dua atau tiga daripadanya. Tiga digit itu mengisi tiga sel tersebut, jadi ia boleh dibuang daripada sel lain dalam unit."
+            ],
+            [
+              "Adakah pasangan terdedah meletakkan digit?",
+              "Tidak dengan sendirinya. Ia membuang calon, dan penyingkiran itu biasanya meninggalkan tunggal terdedah atau tersembunyi. Petunjuk dalam Bare Sudoku menunjukkan tunggal itu dan menamakan teknik yang membolehkannya."
+            ],
+            [
+              "Bolehkah pasangan terdedah berada dalam kotak dan baris pada masa yang sama?",
+              "Ya. Jika dua sel itu berkongsi baris dan kotak, pasangan itu menyingkirkan calon dalam kedua-dua unit. Bare Sudoku mengendalikannya satu unit demi satu."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Pasangan dan tiga serangkai tersembunyi",
+          "title": "Pasangan dan Tiga Serangkai Tersembunyi dalam Sudoku",
+          "description": "Pasangan tersembunyi ialah dua digit yang hanya boleh masuk ke dua sel yang sama dalam unit, jadi calon lain dibuang. Cara mencarinya langkah demi langkah.",
+          "h1": "Pasangan dan tiga serangkai tersembunyi",
+          "summary": "Pasangan tersembunyi (hidden pair) ialah dua digit yang, dalam satu baris, lajur atau kotak, menjadi calon dalam dua sel yang sama dan tidak di tempat lain. Dua sel itu mesti memegang dua digit tersebut, jadi setiap calon lain di dalamnya boleh dibuang. Tiga serangkai tersembunyi berfungsi dengan cara yang sama, dengan tiga digit yang terkurung dalam tiga sel. Selepas penyingkiran, sel-sel itu menunjukkan pasangan atau tiga serangkai terdedah. Petunjuk Bare Sudoku melabelkan peletakan yang terhasil sebagai \"Pasangan atau tiga\".",
+          "when": [
+            "Apabila sesuatu unit mempunyai sel dengan banyak calon dan tunggal sudah habis. Pasangan tersembunyi bersembunyi di dalam sel yang sesak, sebab itulah ia berbaloi dicari tepat di tempat pasangan terdedah tidak kelihatan. Tiga serangkai tersembunyi jarang berlaku; Bare Sudoku menyemaknya, tetapi kebanyakan teka-teki Sukar diselesaikan tanpanya."
+          ],
+          "spot": [
+            "Bekerja mengikut digit, bukan mengikut sel. Dalam sesuatu unit, catat sel tempat setiap digit yang belum ada boleh dimasukkan. Jika dua digit masing-masing hanya mempunyai dua sel yang mungkin dan sel itu adalah dua sel yang sama, anda mempunyai pasangan tersembunyi. Dalam permainan, ketik kekunci digit untuk menyerlahkan calonnya; jika dua digit menyerlahkan dua sel yang sama dalam unit dan tiada yang lain di dalamnya, itulah coraknya."
+          ],
+          "examples": [
+            {
+              "h": "Pasangan tersembunyi",
+              "steps": [
+                "Dalam {unit}, digit {d1} dan {d2} masing-masing hanya mempunyai dua sel yang mungkin, dan kedua-duanya sel yang sama: {cells}.",
+                "Dua sel itu mesti memegang {d1} dan {d2}, jadi calon lain di dalamnya mustahil.",
+                "Buang {elim}. Kini dua sel itu menunjukkan pasangan terdedah, yang mungkin membuka lebih banyak langkah."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Membuang dua digit pasangan daripada sel pasangan. Calon lain dalam sel itulah yang dibuang; digit pasangan kekal.",
+            "Menerima digit yang mempunyai sel ketiga yang mungkin dalam unit. Kedua-dua digit mesti terhad kepada tepat dua sel itu.",
+            "Mencari dalam kotak sahaja. Pasangan tersembunyi berlaku sama kerap dalam baris dan lajur."
+          ],
+          "faq": [
+            [
+              "Apakah pasangan tersembunyi dalam Sudoku?",
+              "Dua digit yang hanya boleh masuk ke dua sel yang sama dalam satu unit. Sel itu mesti mengambil digit tersebut, jadi calon lainnya dibuang."
+            ],
+            [
+              "Apakah beza pasangan tersembunyi dengan pasangan terdedah?",
+              "Pasangan terdedah kelihatan: dua sel yang hanya menunjukkan dua calon yang sama. Pasangan tersembunyi dilitupi oleh calon tambahan dalam dua sel itu. Membuang calon tambahan itu menukar pasangan tersembunyi menjadi pasangan terdedah."
+            ],
+            [
+              "Apakah tiga serangkai tersembunyi?",
+              "Tiga digit yang terkurung dalam tiga sel sesuatu unit. Setiap digit tidak perlu muncul dalam ketiga-tiga sel; yang penting ialah tiada satu pun daripada tiga digit itu mempunyai calon di luar sel tersebut."
+            ],
+            [
+              "Adakah petunjuk membezakan pasangan tersembunyi dan terdedah?",
+              "Tidak. Bare Sudoku menemui kedua-duanya dan melabelkan peletakan yang terhasil sebagai \"Pasangan atau tiga\". Halaman di sini memisahkannya kerana ia ditemui dengan cara yang berbeza."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing dalam Sudoku: Cara Teknik Ini Berfungsi",
+          "description": "X-Wing: digit dengan tepat dua sel calon dalam dua baris, sejajar dalam dua lajur yang sama, dibuang daripada bahagian lain lajur itu. Contoh sebenar.",
+          "h1": "X-Wing",
+          "summary": "X-Wing ialah corak satu digit dan empat sel di bucu sebuah segi empat tepat. Jika digit itu mempunyai tepat dua sel calon dalam setiap satu daripada dua baris, dan sel itu terletak dalam dua lajur yang sama, maka digit itu mesti menduduki dua bucu bertentangan segi empat tepat tersebut. Oleh itu, ia boleh dibuang daripada setiap sel lain dalam dua lajur itu. Perkara yang sama berlaku jika baris dan lajur ditukar. Ini teknik Pakar yang pertama dalam Bare Sudoku.",
+          "when": [
+            "Apabila tunggal, calon terkunci dan subset sudah habis. X-Wing ialah corak Pakar yang paling lazim dan sering muncul apabila sesuatu digit tinggal sedikit calon, biasanya apabila empat hingga enam salinannya sudah diletakkan. Ia memerlukan nota yang lengkap untuk digit yang anda periksa."
+          ],
+          "spot": [
+            "Pilih satu digit dan cari baris yang mempunyai tepat dua sel calon untuknya. Jika dua baris sebegitu berkongsi dua lajur yang sama, semak lajur itu untuk calon lain bagi digit tersebut: itulah penyingkirannya. Kemudian ulang dengan lajur sebagai asas. Dalam permainan, ketik kekunci digit: setiap calonnya diserlahkan, dan segi empat tepat empat nota yang diserlahkan mudah dilihat."
+          ],
+          "examples": [
+            {
+              "h": "Contoh",
+              "steps": [
+                "Digit {d} mempunyai tepat dua sel calon dalam baris {r1} dan tepat dua dalam baris {r2}, dan sel-sel itu sejajar dalam dua lajur yang sama, {c1} dan {c2}: {cells}.",
+                "Baris {r1} meletakkan {d} dalam lajur {c1} atau {c2}, dan baris {r2} meletakkan {d} dalam lajur yang satu lagi. Dalam kedua-dua kes, lajur {c1} dan {c2} masing-masing menerima satu {d} daripada dua baris ini.",
+                "Jadi {d} tidak boleh muncul di tempat lain dalam lajur {c1} dan {c2}. Buang {d} daripada {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Menggunakan baris yang mempunyai tiga sel calon untuk digit itu. Setiap baris asas mesti mempunyai tepat dua, dan kedua-duanya mesti dalam dua lajur yang dikongsi.",
+            "Membuang digit daripada baris dan bukannya lajur. Dengan baris sebagai asas, penyingkiran berlaku dalam lajur, dan sebaliknya.",
+            "Terlupa versi yang ditukar. X-Wing yang dibina pada lajur menyingkirkan calon dalam baris."
+          ],
+          "faq": [
+            [
+              "Apakah X-Wing dalam Sudoku?",
+              "Digit yang mempunyai tepat dua sel calon dalam setiap satu daripada dua baris, dalam dua lajur yang sama. Digit itu menduduki dua bucu bertentangan segi empat tepat tersebut, jadi ia dibuang daripada bahagian lain dua lajur itu. Baris dan lajur boleh ditukar."
+            ],
+            [
+              "Mengapakah X-Wing berfungsi?",
+              "Setiap satu daripada dua baris mesti meletakkan digit itu dalam salah satu daripada dua lajur, dan kedua-dua baris tidak boleh menggunakan lajur yang sama. Jadi kedua-dua lajur masing-masing menerima salinan digit itu daripada baris ini, dan setiap calon lain dalam lajur tersebut mustahil."
+            ],
+            [
+              "Adakah X-Wing sejenis fish?",
+              "Ya. X-Wing ialah fish bersaiz dua; Swordfish ialah fish bersaiz tiga. Bare Sudoku menemui kedua-duanya."
+            ],
+            [
+              "Tahap manakah yang mempunyai X-Wing?",
+              "Pakar. Teka-teki yang memerlukan X-Wing, Y-Wing, Swordfish atau XYZ-Wing dinilai Pakar."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing dalam Sudoku: Cara Teknik Ini Berfungsi",
+          "description": "Y-Wing (XY-Wing): paksi dengan dua calon dan dua sayap yang masing-masing berkongsi satu calon menyingkirkan digit daripada sel yang melihat kedua-dua sayap.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, juga dipanggil XY-Wing, menggunakan tiga sel dengan dua calon setiap satu. Paksi mempunyai calon X dan Y. Satu sayap melihat paksi dan mempunyai X dan Z; sayap yang satu lagi melihat paksi dan mempunyai Y dan Z. Walau apa pun nilai paksi, salah satu sayap mesti Z, jadi Z boleh dibuang daripada setiap sel yang melihat kedua-dua sayap. Ini teknik Pakar dalam Bare Sudoku.",
+          "when": [
+            "Apabila teka-teki mempunyai beberapa sel dengan tepat dua calon dan tiada fish yang tersedia. Y-Wing lazim dalam teka-teki Pakar dan ditemui dengan menjejaki sel dua calon: setiap satu berpotensi menjadi paksi atau sayap."
+          ],
+          "spot": [
+            "Senaraikan sel yang mempunyai tepat dua calon. Bagi setiap satu, anggap ia sebagai paksi dengan calon X dan Y, dan cari di antara jirannya sel dengan X dan digit lain Z, serta sel dengan Y dan Z yang sama. Dua sel itu ialah sayap. Kemudian cari sel yang melihat kedua-dua sayap dan mengandungi Z. Perhatikan bahawa sayap tidak perlu melihat satu sama lain."
+          ],
+          "examples": [
+            {
+              "h": "Contoh",
+              "steps": [
+                "Paksi {pivot} mempunyai calon {x} dan {y}. Ia melihat {wingA}, yang mempunyai {x} dan {z}, dan {wingB}, yang mempunyai {y} dan {z}.",
+                "Jika {pivot} ialah {x}, maka {wingA} kehilangan {x} dan menjadi {z}. Jika {pivot} ialah {y}, maka {wingB} menjadi {z}. Dalam setiap kes, salah satu daripada dua sayap ialah {z}.",
+                "Sel yang melihat kedua-dua sayap tidak mungkin {z}. Buang {z} daripada {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Memilih sayap yang tidak kedua-duanya melihat paksi. Setiap sayap mesti berkongsi baris, lajur atau kotak dengan paksi.",
+            "Membuang Z daripada sel yang hanya melihat satu sayap. Sel yang disingkirkan mesti melihat kedua-dua sayap.",
+            "Membuang Z daripada paksi. Paksi tidak mengandungi Z dalam Y-Wing; jika ia mengandunginya, corak itu ialah XYZ-Wing dengan peraturan yang berbeza."
+          ],
+          "faq": [
+            [
+              "Apakah Y-Wing dalam Sudoku?",
+              "Tiga sel dua calon: paksi dengan X dan Y, sayap dengan X dan Z yang melihat paksi, dan sayap dengan Y dan Z yang melihat paksi. Salah satu sayap sentiasa Z, jadi Z dibuang daripada sel yang melihat kedua-dua sayap."
+            ],
+            [
+              "Adakah Y-Wing sama dengan XY-Wing?",
+              "Ya. Kedua-dua nama menerangkan corak yang sama. Bare Sudoku memanggilnya Y-Wing."
+            ],
+            [
+              "Mengapakah salah satu sayap mesti Z?",
+              "Jika paksi ialah X, sayap pertama kehilangan X dan menjadi Z. Jika paksi ialah Y, sayap kedua menjadi Z. Paksi ialah salah satu daripada keduanya, jadi salah satu sayap ialah Z."
+            ],
+            [
+              "Berapa banyak sel yang disingkirkan oleh Y-Wing?",
+              "Biasanya satu atau dua: hanya sel yang melihat kedua-dua sayap dan masih mengandungi Z. Itu sudah cukup untuk mencipta tunggal."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish dalam Sudoku: Cara Teknik Ini Berfungsi",
+          "description": "Swordfish: digit yang terkurung dalam tiga lajur merentasi tiga baris dibuang daripada bahagian lain lajur itu. Fish bersaiz tiga, dengan contoh sebenar.",
+          "h1": "Swordfish",
+          "summary": "Swordfish ialah X-Wing dengan tiga baris dan tiga lajur. Jika sesuatu digit mempunyai paling banyak tiga sel calon dalam setiap satu daripada tiga baris, dan kesemua sel itu terletak dalam tiga lajur yang sama, maka tiga baris itu menggunakan digit tersebut dalam lajur-lajur itu, dan digit itu boleh dibuang daripada setiap sel lain dalam tiga lajur tersebut. Baris dan lajur boleh ditukar. Bare Sudoku menyemak Swordfish selepas Y-Wing, dalam teka-teki Pakar.",
+          "when": [
+            "Apabila X-Wing dan Y-Wing tidak menemui apa-apa. Swordfish kurang lazim berbanding X-Wing dan memerlukan digit yang calonnya tersebar nipis pada tiga garisan. Ia memerlukan nota yang lengkap dan tepat untuk digit itu."
+          ],
+          "spot": [
+            "Pilih satu digit dan cari baris yang mempunyai dua atau tiga sel calon untuknya. Jika tiga baris sebegitu hanya meliputi tiga lajur secara keseluruhan, semak lajur itu untuk calon lain bagi digit tersebut. Tidak setiap baris memerlukan calon dalam setiap lajur: Swordfish boleh mempunyai enam, tujuh, lapan atau sembilan sel. Dalam permainan, serlahkan digit dengan kekuncinya dan cari tiga baris yang calonnya sejajar dalam tiga lajur."
+          ],
+          "examples": [
+            {
+              "h": "Contoh",
+              "steps": [
+                "Digit {d} mempunyai paling banyak tiga sel calon dalam setiap baris {rows}, dan kesemua sel itu terletak dalam lajur {cols}: {cells}.",
+                "Setiap satu daripada tiga baris mesti meletakkan {d} dalam salah satu daripada tiga lajur, dan tiada dua baris boleh menggunakan lajur yang sama. Jadi tiga lajur itu mendapat {d} masing-masing daripada tiga baris ini.",
+                "Sebarang calon {d} lain dalam lajur {cols} adalah mustahil. Buang {d} daripada {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mensyaratkan kesemua sembilan sel. Swordfish dengan dua calon dalam sesetengah baris tetap sah, asalkan tiga baris itu hanya meliputi tiga lajur.",
+            "Memasukkan baris dengan empat sel calon. Setiap baris asas mesti mempunyai paling banyak tiga, kesemuanya dalam tiga lajur itu.",
+            "Menyingkirkan calon dalam baris asas. Dengan baris sebagai asas, penyingkiran berlaku dalam tiga lajur, di luar baris asas."
+          ],
+          "faq": [
+            [
+              "Apakah Swordfish dalam Sudoku?",
+              "Digit yang calonnya dalam tiga baris terkurung dalam tiga lajur. Tiga baris itu mesti meletakkan digit tersebut dalam tiga lajur itu, satu bagi setiap lajur, jadi digit itu dibuang daripada sel lain dalam lajur tersebut."
+            ],
+            [
+              "Apakah beza Swordfish dengan X-Wing?",
+              "Hanya saiznya: X-Wing menggunakan dua baris dan dua lajur, Swordfish tiga dan tiga. Penaakulannya sama."
+            ],
+            [
+              "Adakah Swordfish memerlukan tepat sembilan sel?",
+              "Tidak. Setiap baris boleh mempunyai dua atau tiga calon; corak ini hanya mensyaratkan tiga baris itu bersama-sama menggunakan tidak lebih daripada tiga lajur."
+            ],
+            [
+              "Adakah fish bersaiz empat?",
+              "Ya, Jellyfish. Bare Sudoku tidak menggunakannya, kerana teka-tekinya tidak pernah memerlukannya."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing dalam Sudoku: Cara Teknik Ini Berfungsi",
+          "description": "XYZ-Wing: paksi dengan tiga calon dan dua sayap yang berkongsi satu daripadanya menyingkirkan digit daripada sel yang melihat ketiga-tiganya. Contoh sebenar.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing ialah Y-Wing yang paksinya mempunyai tiga calon. Paksi mempunyai X, Y dan Z; satu sayap melihat paksi dan mempunyai X dan Z, sayap yang satu lagi melihat paksi dan mempunyai Y dan Z. Salah satu daripada tiga sel itu mesti Z, jadi Z boleh dibuang daripada setiap sel yang melihat ketiga-tiganya. Oleh sebab paksi itu sendiri mungkin Z, sel yang disingkirkan mesti melihat paksi serta kedua-dua sayap, dan ini mengehadkannya kepada kotak atau garisan yang dikongsi oleh sel-sel itu. Ini teknik paling sukar yang digunakan oleh Bare Sudoku.",
+          "when": [
+            "Hanya apabila segala yang lain gagal. XYZ-Wing ialah corak paling jarang dalam Bare Sudoku dan hanya muncul dalam teka-teki Pakar. Carilah apabila sel tiga calon berada dalam kotak bersama sel dua calon yang berkongsi dua daripada digitnya."
+          ],
+          "spot": [
+            "Mulakan dari sel yang mempunyai tepat tiga calon; setiap satu berpotensi menjadi paksi. Di antara jirannya, cari dua sel dengan dua calon setiap satu, kedua-duanya diambil daripada tiga calon paksi, yang berkongsi tepat satu digit Z. Kemudian cari sel yang melihat paksi dan kedua-dua sayap serta mengandungi Z. Dalam praktiknya, satu sayap berada dalam kotak paksi dan satu lagi dalam baris atau lajurnya, dan sel yang disingkirkan ialah sel yang tinggal dalam kotak itu pada baris atau lajur tersebut."
+          ],
+          "examples": [
+            {
+              "h": "Contoh",
+              "steps": [
+                "Paksi {pivot} mempunyai tiga calon: {x}, {y} dan {z}. Ia melihat {wingA} dengan {x} dan {z}, dan {wingB} dengan {y} dan {z}.",
+                "Jika {pivot} ialah {z}, selesai. Jika ia {x}, {wingA} mesti {z}. Jika ia {y}, {wingB} mesti {z}. Dalam setiap kes, salah satu daripada tiga sel itu ialah {z}.",
+                "Sel yang melihat ketiga-tiganya tidak boleh menjadi {z}. Buang {z} daripada {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Menyingkirkan calon daripada sel yang hanya melihat dua sayap. Tidak seperti Y-Wing, paksi boleh menjadi Z, jadi sel itu mesti melihat paksi juga.",
+            "Menggunakan sayap yang calonnya tidak kedua-duanya terkandung dalam tiga calon paksi.",
+            "Mengelirukannya dengan Y-Wing: perbezaannya ialah calon ketiga dalam paksi, dan ia mengubah sel mana yang boleh dikosongkan."
+          ],
+          "faq": [
+            [
+              "Apakah XYZ-Wing dalam Sudoku?",
+              "Paksi dengan calon X, Y dan Z serta dua sayap, satu dengan X dan Z dan satu lagi dengan Y dan Z, kedua-duanya melihat paksi. Salah satu daripada tiga sel itu ialah Z, jadi Z dibuang daripada sel yang melihat ketiga-tiganya."
+            ],
+            [
+              "Apakah beza XYZ-Wing dengan Y-Wing?",
+              "Paksi mempunyai tiga calon dan bukannya dua, termasuk Z. Ini menjadikan paksi tempat yang mungkin bagi Z, jadi hanya sel yang melihat paksi dan kedua-dua sayap boleh kehilangan Z."
+            ],
+            [
+              "Berapa kerap XYZ-Wing muncul?",
+              "Jarang. Dalam Bare Sudoku hanya teka-teki Pakar yang mungkin memerlukannya, dan kebanyakannya tidak. Bare Sudoku menyemaknya paling akhir, selepas X-Wing, Y-Wing dan Swordfish."
+            ],
+            [
+              "Adakah WXYZ-Wing wujud?",
+              "Ya, dengan paksi empat calon, tetapi Bare Sudoku tidak menggunakannya. Setiap teka-teki dalam permainan boleh ditamatkan dengan sembilan teknik dalam panduan ini."
+            ]
+          ]
+        }
+      }
+    },
+    "vi": {
+      "learnHeading": "Học Sudoku",
+      "learnText": "Mới chơi Sudoku, hay đang bí ở một câu đố khó? Hai hướng dẫn giải thích luật chơi và mọi kỹ thuật giải mà gợi ý sử dụng, mỗi kỹ thuật kèm một ví dụ thực tế.",
+      "howToLink": "Cách chơi Sudoku",
+      "techniquesLink": "Kỹ thuật giải Sudoku",
+      "labels": {
+        "howTo": "Cách chơi",
+        "techniques": "Kỹ thuật",
+        "play": "Chơi Sudoku",
+        "prev": "Kỹ thuật trước",
+        "next": "Kỹ thuật tiếp theo",
+        "all": "Tất cả kỹ thuật",
+        "example": "Ví dụ",
+        "steps": "Từng bước",
+        "when": "Khi nào dùng",
+        "spot": "Cách nhận ra",
+        "mistakes": "Lỗi thường gặp",
+        "inGame": "Trong Bare Sudoku",
+        "level": "Cần từ cấp độ: {level}",
+        "hint": "Trong trò chơi, gợi ý hiển thị: {text}",
+        "legend": "Chữ số in đậm là số cho sẵn, chữ số màu xanh được điền trong lúc giải, chữ số nhỏ là ứng viên. Các ô được tô sáng tạo thành mẫu hình, ứng viên bị gạch chéo sẽ bị loại, và ứng viên được khoanh tròn là chữ số cần điền.",
+        "notation": "Ô được viết dạng r3c7: hàng 3, cột 7. Hàng được đếm từ trên xuống, cột từ trái sang, còn các ô vuông được đánh số 1 đến 9 từ góc trên bên trái, lần lượt theo từng hàng.",
+        "row": "hàng {n}",
+        "column": "cột {n}",
+        "box": "ô vuông {n}",
+        "elimItem": "{d} khỏi {cell}",
+        "regions": "Hàng 5, cột 5 và ô vuông 5 khi bắt đầu câu đố",
+        "firstMove": "Ứng viên duy nhất: {cell} chỉ có thể là {d}",
+        "breadcrumb": "Đường dẫn"
+      },
+      "howTo": {
+        "title": "Cách chơi Sudoku: luật chơi, bảng và những nước đi đầu tiên",
+        "description": "Học cách chơi Sudoku: luật chơi, cách hàng, cột và ô vuông vận hành, vì sao mỗi câu đố chỉ có một lời giải, cách dùng ghi chú và những nước đi đầu tiên.",
+        "h1": "Cách chơi Sudoku",
+        "summary": "Sudoku là trò chơi giải đố logic trên lưới 9×9. Hãy điền vào mỗi ô trống một chữ số từ 1 đến 9 sao cho mỗi hàng, mỗi cột và mỗi ô vuông 3×3 chứa mỗi chữ số đúng một lần. Một số chữ số được cho sẵn từ đầu; phần còn lại bạn tự suy luận ra, lần lượt từng ô chắc chắn, và không bao giờ phải đoán. Hướng dẫn này giải thích bảng chơi, luật chơi, nguyên tắc lời giải duy nhất, ghi chú và một chiến lược đơn giản cho những nước đi đầu tiên. Bạn có thể luyện tập tất cả trong [Bare Sudoku](play), trò chơi miễn phí có gợi ý giải thích logic.",
+        "sections": [
+          {
+            "h": "Luật chơi Sudoku là gì?",
+            "p": [
+              "Chỉ có ba luật, và thực ra đó là cùng một luật nhìn từ ba hướng: mỗi hàng phải chứa các chữ số từ 1 đến 9, mỗi cột phải chứa các chữ số từ 1 đến 9, và mỗi ô vuông 3×3 phải chứa các chữ số từ 1 đến 9. Vì vậy một chữ số không bao giờ được xuất hiện hai lần trong cùng một hàng, cột hay ô vuông.",
+              "Các chữ số cho sẵn, in đậm, là cố định. Nhiệm vụ của bạn là điền vào các ô trống. Không có phép tính và không có thứ tự: các chữ số chỉ là chín ký hiệu khác nhau. Bạn có thể chơi bằng chữ cái hay hình vẽ mà không có gì thay đổi."
+            ]
+          },
+          {
+            "h": "Bảng chơi được tổ chức thế nào?",
+            "p": [
+              "Bảng có 81 ô, xếp thành 9 hàng và 9 cột. Các đường kẻ đậm chia bảng thành chín ô vuông 3×3. Mỗi ô thuộc đúng một hàng, một cột và một ô vuông, và ba nhóm này là các đơn vị của ô đó. 20 ô khác có chung một đơn vị với một ô được gọi là các ô liên quan của nó; một chữ số đặt vào một ô sẽ loại chữ số đó khỏi cả 20 ô liên quan.",
+              "Ô được viết dạng r3c7: hàng 3, cột 7. Hàng được đếm từ trên xuống, cột từ trái sang, còn các ô vuông được đánh số 1 đến 9 từ góc trên bên trái, lần lượt theo từng hàng. Cách ký hiệu này được dùng trong mọi hướng dẫn kỹ thuật và rất đáng học: r5c5 là ô chính giữa bảng."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Vì sao mỗi câu đố Sudoku có đúng một lời giải?",
+            "p": [
+              "Một câu đố Sudoku chuẩn có một lời giải duy nhất, và đó là điều khiến logic phát huy tác dụng. Mỗi khi bạn chứng minh được rằng một chữ số không thể nằm ở chỗ nào khác trong một đơn vị, nó phải nằm ở ô còn lại, vì lời giải tồn tại và là duy nhất. Nếu một câu đố có hai lời giải, không suy luận nào phân biệt được chúng và đến một lúc nào đó bạn buộc phải đoán.",
+              "Bare Sudoku tạo mọi câu đố ngay trên thiết bị của bạn và kiểm tra rằng câu đố có đúng một lời giải và bộ giải logic của nó có thể giải xong bằng các kỹ thuật của cấp độ đã chọn. Vì vậy khi bạn bí, luôn có một bước tiếp theo để tìm, và gợi ý sẽ chỉ ra bước đó."
+            ]
+          },
+          {
+            "h": "Bắt đầu một câu đố Sudoku như thế nào?",
+            "p": [
+              "Hãy bắt đầu từ chỗ bị ràng buộc nhiều nhất. Thứ tự sau đây hiệu quả ở mọi cấp độ:"
+            ],
+            "list": [
+              "Chọn một chữ số đã xuất hiện nhiều lần, chẳng hạn sáu hay bảy lần, rồi tìm các ô vuông vẫn còn thiếu nó. Thường chỉ còn một ô trong ô vuông đó dành cho nó: đó là một [vị trí duy nhất](hidden-single).",
+              "Tìm những ô bị vây kín. Một ô mà hàng, cột và ô vuông của nó cộng lại chứa tám chữ số khác nhau chỉ còn một ứng viên: một [ứng viên duy nhất](naked-single). Các ô trong hàng hoặc ô vuông gần đầy là nơi tốt nhất để tìm.",
+              "Mỗi chữ số bạn điền loại bỏ một ứng viên khỏi 20 ô liên quan, vì vậy hãy kiểm tra ngay các ô đó. Các single thường nối tiếp nhau thành chuỗi.",
+              "Khi hết các nước điền dễ, hãy ghi chú: các ứng viên cho từng ô trống. Sau đó tìm một chữ số bị giới hạn trên một đường bên trong một ô vuông ([ứng viên bị khóa](locked-candidates)) hoặc hai ô có chung đúng hai ứng viên (một [cặp lộ](naked-pairs)).",
+              "Quay lại tìm single sau mỗi lần loại trừ. Ngay cả câu đố Chuyên gia cũng chủ yếu được giải bằng single; kỹ thuật nâng cao chỉ mở khóa single tiếp theo."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Ghi chú là gì và khi nào nên dùng?",
+            "p": [
+              "Ghi chú, còn gọi là đánh dấu bút chì hay ứng viên, là những chữ số nhỏ bạn viết vào ô trống để ghi lại những chữ số còn có thể đặt ở đó. Ở câu đố dễ bạn hiếm khi cần đến; từ cấp Khó trở lên chúng là thiết yếu, vì các kỹ thuật như cặp, X-Wing và Y-Wing làm việc với ứng viên chứ không phải với chữ số đã điền.",
+              "Hãy giữ ghi chú chính xác: khi điền một chữ số, hãy xóa nó khỏi ghi chú của cả 20 ô liên quan. Trong Bare Sudoku việc này diễn ra tự động, và Điền ghi chú viết mọi ứng viên vào mọi ô trống chỉ bằng một chạm, nên bạn có thể bắt đầu từ một bộ ứng viên đầy đủ và chính xác. Một ghi chú là một sự thật, không phải một phỏng đoán: nó có nghĩa là chưa có gì loại chữ số này."
+            ]
+          },
+          {
+            "h": "Nên làm gì khi bị bí?",
+            "p": [
+              "Trước tiên hãy kiểm tra lại những điều cơ bản: mỗi hàng, cột và ô vuông gần đầy đều là nguồn single. Sau đó bảo đảm ghi chú đầy đủ, vì một ứng viên bị thiếu sẽ che giấu mẫu hình còn một ứng viên lỗi thời sẽ tạo ra mẫu hình giả. Rồi lần lượt thử các [kỹ thuật](techniques) theo độ khó: ứng viên bị khóa, cặp và bộ ba, X-Wing, Y-Wing, Swordfish và XYZ-Wing. Mỗi kỹ thuật có trang riêng với một ví dụ thực tế.",
+              "Nếu không cách nào hiệu quả, hãy dùng gợi ý. Trong Bare Sudoku, gợi ý trước hết kiểm tra xem có chữ số nào đã điền sai không, sau đó tìm ô tiếp theo có thể điền bằng logic và nêu tên kỹ thuật, nên bạn vẫn học được điều gì đó ngay cả khi dùng gợi ý. Nhấn Gợi ý lần nữa để điền chữ số."
+            ]
+          },
+          {
+            "h": "Nhập chữ số trong Bare Sudoku như thế nào?",
+            "p": [
+              "Chạm vào một ô, rồi chạm một chữ số. Hoặc chạm chữ số trước: chữ số đó được khóa, và mọi ô bạn chạm vào đều nhận nó, đây là cách nhanh nhất để điền bản thứ sáu, thứ bảy và thứ tám của một chữ số. Chạm lại chữ số đó để nhả khóa. Nút Ghi chú chuyển sang chế độ đánh dấu bút chì, Xóa làm trống một ô, Hoàn tác rút lại bất kỳ nước đi nào, và lỗi sai được đánh dấu màu đỏ trừ khi bạn tắt tính năng này trong menu.",
+              "Trên bàn phím, dùng các phím mũi tên để di chuyển, 1 đến 9 để nhập chữ số, Backspace để xóa, N cho ghi chú, U để hoàn tác, H để xem gợi ý, F để điền ghi chú và Escape để mở menu. Trò chơi tự lưu, hoạt động offline, không có quảng cáo và không cần tài khoản."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Có bao giờ phải đoán trong Sudoku không?",
+            "Không, với một câu đố chuẩn. Mọi câu đố Bare Sudoku đều có đúng một lời giải và được kiểm tra là giải được chỉ bằng logic, trong phạm vi các kỹ thuật của cấp độ đó. Nếu bạn thấy mình phải đoán, thì ghi chú của bạn đang thiếu một ứng viên hoặc có một kỹ thuật đang chờ được phát hiện."
+          ],
+          [
+            "Một chữ số có thể xuất hiện hai lần trong một hàng, cột hay ô vuông không?",
+            "Không. Đó chính là toàn bộ luật chơi: mỗi hàng trong chín hàng, mỗi cột trong chín cột và mỗi ô vuông trong chín ô vuông chứa mỗi chữ số từ 1 đến 9 đúng một lần. Nếu hai chữ số giống nhau cùng nằm trong một đơn vị, ít nhất một trong hai là sai."
+          ],
+          [
+            "Dễ, Trung bình, Khó và Chuyên gia khác nhau thế nào?",
+            "Cấp độ được quyết định bởi các kỹ thuật mà câu đố cần. Dễ và Trung bình chỉ cần single, và Dễ bắt đầu với ít nhất 38 chữ số cho sẵn. Khó cần ứng viên bị khóa hoặc cặp và bộ ba. Chuyên gia cần X-Wing, Y-Wing, Swordfish hoặc XYZ-Wing."
+          ],
+          [
+            "Nên ghi chú cho mọi ô hay chỉ một số ô?",
+            "Với câu đố Khó và Chuyên gia, hãy ghi chú hết: các mẫu hình như cặp, X-Wing và Y-Wing chỉ hiện ra khi mọi ứng viên đều được ghi. Ở Dễ và Trung bình, ghi chú là tùy chọn và hầu hết người chơi chỉ dò tìm single."
+          ],
+          [
+            "Giải một câu Sudoku mất bao lâu?",
+            "Một câu đố Dễ mất vài phút; câu đố Chuyên gia có thể mất hai mươi phút hoặc hơn, tùy vào việc bạn phát hiện mẫu hình nâng cao nhanh đến đâu. Bare Sudoku có đồng hồ bấm giờ, tạm dừng khi menu đang mở và không có bảng xếp hạng, vì vậy hãy chơi theo nhịp của riêng bạn."
+          ],
+          [
+            "Sudoku có cần tính toán không?",
+            "Không. Các chữ số chỉ là nhãn; không hề có phép cộng hay đếm nào. Chín ký hiệu bất kỳ đều dùng được, và đó là lý do Sudoku là trò chơi logic chứ không phải trò chơi con số."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Các kỹ thuật giải Sudoku, giải thích kèm ví dụ",
+        "description": "Cả chín kỹ thuật giải Sudoku, từ ứng viên duy nhất đến Swordfish và XYZ-Wing, theo đúng thứ tự gợi ý của Bare Sudoku sử dụng, mỗi kỹ thuật kèm một ví dụ.",
+        "h1": "Các kỹ thuật giải Sudoku",
+        "intro": [
+          "Mọi câu đố Sudoku đều có thể giải bằng một nhóm nhỏ các kỹ thuật logic. Trang tổng hợp này liệt kê chín kỹ thuật mà bộ giải và gợi ý của Bare Sudoku sử dụng, theo thứ tự bộ giải thử chúng: single trước, sau đó là loại trừ trong một đơn vị, rồi đến các mẫu hình trải trên nhiều hàng và cột. Mỗi kỹ thuật có trang riêng với định nghĩa, cách nhận ra, một ví dụ thực tế từ câu đố được tạo và các lỗi thường gặp.",
+          "Cấp độ của một câu đố được quyết định bởi kỹ thuật khó nhất mà nó cần. Câu đố Dễ và Trung bình chỉ cần single, câu đố Khó cần ứng viên bị khóa hoặc cặp và bộ ba, còn câu đố Chuyên gia cần ít nhất một mẫu fish hoặc wing. Dù ở cấp độ nào, single vẫn làm phần lớn công việc; kỹ thuật nâng cao loại bỏ một hai ứng viên và single tiếp tục từ đó."
+        ],
+        "faq": [
+          [
+            "Nên thử các kỹ thuật Sudoku theo thứ tự nào?",
+            "Dễ nhất trước: ứng viên duy nhất, vị trí duy nhất, ứng viên bị khóa, cặp lộ và bộ ba lộ, cặp ẩn và bộ ba ẩn, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku thử chúng đúng theo thứ tự này, và gợi ý luôn nêu tên kỹ thuật đơn giản nhất giúp tiến thêm."
+          ],
+          [
+            "Có cần tất cả các kỹ thuật này để giải Sudoku không?",
+            "Với câu đố Dễ và Trung bình, single là đủ. Câu đố Khó cần thêm ứng viên bị khóa và các tập con. Câu đố Chuyên gia cần ít nhất một fish hoặc wing, nhưng thường chỉ một hai lần mỗi câu."
+          ],
+          [
+            "Có kỹ thuật nào khó hơn XYZ-Wing không?",
+            "Có, ví dụ chuỗi, kiểm tra tính duy nhất và lưới cưỡng bức. Bare Sudoku không tạo câu đố cần đến chúng, nên mọi câu đố trong trò chơi đều có thể giải xong bằng chín kỹ thuật trên trang này."
+          ],
+          [
+            "Ứng viên là gì?",
+            "Một chữ số vẫn còn có thể đặt vào một ô trống vì chưa có gì trong hàng, cột hay ô vuông của nó loại trừ nó. Ghi chú trong trò chơi chính là ứng viên. Mọi kỹ thuật ngoài single đều suy luận dựa trên ứng viên, vì vậy hãy giữ chúng đầy đủ và chính xác."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Ứng viên duy nhất",
+          "title": "Ứng viên duy nhất trong Sudoku: ô chỉ còn một ứng viên",
+          "description": "Ứng viên duy nhất là ô trống chỉ còn một chữ số có thể điền. Học cách tìm nhanh loại ô này, với ví dụ thực tế từng bước và những lỗi thường gặp.",
+          "h1": "Ứng viên duy nhất",
+          "summary": "Ứng viên duy nhất (naked single) là một ô trống chỉ còn đúng một ứng viên: tám chữ số còn lại đã có mặt trong hàng, cột hoặc ô vuông của nó. Chữ số còn lại phải được điền vào đó. Đây là kỹ thuật Sudoku đơn giản nhất, được dùng nhiều nhất, và là kỹ thuật mà gợi ý của Bare Sudoku báo là \"Chỉ có một ứng viên ở đây\".",
+          "when": [
+            "Luôn luôn. Ứng viên duy nhất xuất hiện từ nước đi đầu tiên đến nước cuối cùng, ở mọi cấp độ. Trong câu đố Dễ và Trung bình, cùng với vị trí duy nhất, đây là kỹ thuật duy nhất bạn cần. Trong câu đố khó hơn, mỗi lần loại trừ bằng kỹ thuật nâng cao thường để lại một ứng viên duy nhất, vì vậy hãy kiểm tra sau mỗi bước."
+          ],
+          "spot": [
+            "Hãy nhìn vào những ô có nhiều ô liên quan đã được điền: một ô trong hàng đã có bảy chữ số, hoặc một ô mà hàng, cột và ô vuông của nó cộng lại có tám chữ số khác nhau. Không có ghi chú, hãy đếm các chữ số bạn nhìn thấy từ ô đó. Có ghi chú, ứng viên duy nhất đơn giản là một ô chỉ hiển thị một ứng viên, đó là lý do Điền ghi chú giúp tìm chúng dễ dàng."
+          ],
+          "examples": [
+            {
+              "h": "Ví dụ",
+              "steps": [
+                "Xét ô {cell}. Ô này đang trống, vậy hãy liệt kê mọi chữ số đã được điền trong hàng, cột và ô vuông của nó.",
+                "Hàng {row} chứa {rowDigits}. Cột {col} chứa {colDigits}. Ô vuông {box} chứa {boxDigits}.",
+                "Gộp lại, chúng loại trừ mọi chữ số trừ {d}, vậy {d} là ứng viên duy nhất còn lại trong {cell}.",
+                "Điền {d} vào {cell}. Sau đó kiểm tra xem chữ số mới có tạo ra một single khác trong cùng hàng, cột hoặc ô vuông không."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Chỉ đếm hàng hoặc chỉ đếm ô vuông. Tám chữ số bị loại thường đến từ cả ba đơn vị cộng lại.",
+            "Quên rằng chữ số vừa điền cũng loại ứng viên khỏi 20 ô liên quan của nó; các ứng viên duy nhất mới xuất hiện ngay sau mỗi lần điền.",
+            "Nhầm ứng viên duy nhất với vị trí duy nhất: ứng viên duy nhất là ô chỉ còn một ứng viên, vị trí duy nhất là chữ số chỉ còn một ô trong một đơn vị."
+          ],
+          "faq": [
+            [
+              "Ứng viên duy nhất trong Sudoku là gì?",
+              "Một ô trống chỉ còn đúng một ứng viên. Tám chữ số khác nhau đã được điền trong hàng, cột và ô vuông của nó, nên chữ số thứ chín là chữ số duy nhất phù hợp."
+            ],
+            [
+              "Vì sao nó được gọi là naked (lộ)?",
+              "Vì ứng viên duy nhất hiện ra ngay trong ô khi đã có ghi chú; không có gì che giấu nó. Ngược lại, vị trí duy nhất nằm lẫn giữa các ứng viên khác và được tìm bằng cách nhìn vào chữ số thay vì nhìn vào ô."
+            ],
+            [
+              "Có thể giải một câu đố chỉ bằng ứng viên duy nhất không?",
+              "Nhiều câu đố Dễ thì được, nhưng phần lớn cũng cần đến vị trí duy nhất. Bare Sudoku xếp câu đố Dễ và Trung bình là giải được bằng cả hai loại single; câu đố Khó và Chuyên gia cần ít nhất một kỹ thuật nữa."
+            ],
+            [
+              "Gợi ý có chỉ ra ứng viên duy nhất không?",
+              "Có. Khi nước điền tiếp theo là một ứng viên duy nhất, gợi ý sẽ chọn ô đó và hiển thị \"Chỉ có một ứng viên ở đây\" cùng chữ số. Nhấn Gợi ý lần nữa để điền."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Vị trí duy nhất",
+          "title": "Vị trí duy nhất trong Sudoku: chỗ duy nhất cho một chữ số",
+          "description": "Vị trí duy nhất là ô duy nhất trong một hàng, cột hoặc ô vuông mà một chữ số còn có thể điền vào. Học cách nhận ra bằng cách dò từng chữ số một.",
+          "h1": "Vị trí duy nhất",
+          "summary": "Vị trí duy nhất (hidden single) là khi một chữ số chỉ còn đúng một ô có thể đặt trong một hàng, cột hoặc ô vuông, dù ô đó có thể còn hiển thị các ứng viên khác. Vì đơn vị đó bắt buộc phải chứa chữ số này, nó phải nằm ở đó. Gợi ý của Bare Sudoku báo là \"Vị trí duy nhất cho 5 trong hàng này\", cột này hoặc ô này.",
+          "when": [
+            "Bất cứ khi nào một chữ số đã xuất hiện nhiều: khi một chữ số có mặt năm hay sáu lần, các ô vuông còn lại bị ràng buộc rất chặt, và vị trí duy nhất thường là nước đi tiếp theo. Vị trí duy nhất là kỹ thuật chính của câu đố Dễ và Trung bình và vẫn là công cụ chủ lực ở mọi cấp độ."
+          ],
+          "spot": [
+            "Dò từng chữ số một. Chọn một chữ số, tìm một ô vuông chưa có nó, rồi gạch mọi ô trong ô vuông đó nằm chung hàng hoặc cột với một bản của chữ số đã được điền. Nếu chỉ còn sót lại một ô, bạn đã tìm được một vị trí duy nhất. Cách dò tương tự áp dụng cho hàng và cột. Trong trò chơi, hãy chạm vào một chữ số đã điền: mọi bản của nó được tô sáng, nên các ô còn trống sẽ nổi bật."
+          ],
+          "examples": [
+            {
+              "h": "Ví dụ",
+              "steps": [
+                "Ô vuông {box} chưa có {d}, nên một trong các ô trống của nó phải chứa {d}. Các ô trống là {empties}.",
+                "Ở mọi ô trong số đó trừ {cell}, {d} bị chặn bởi một chữ số {d} đã điền trong cùng hàng hoặc cột, nên {d} không phải là ứng viên ở đó.",
+                "Vậy {cell} là vị trí duy nhất cho {d} trong ô vuông {box}. Hãy điền {d} vào đó, dù {cell} có thể vẫn hiển thị các ứng viên khác."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Điền chữ số vào một ô chỉ có vẻ là đúng: hãy kiểm tra mọi ô trống khác của đơn vị, không chỉ những ô dễ thấy.",
+            "Bỏ sót vị trí duy nhất vì ô đó hiển thị nhiều ứng viên. Các ứng viên khác không quan trọng; điều quan trọng là chữ số không còn chỗ nào khác trong đơn vị.",
+            "Chỉ dò trong ô vuông. Hàng và cột cũng tạo ra vị trí duy nhất thường xuyên không kém, nhất là về cuối ván."
+          ],
+          "faq": [
+            [
+              "Vị trí duy nhất trong Sudoku là gì?",
+              "Một chữ số chỉ có thể nằm ở một ô trong một hàng, cột hoặc ô vuông. Đơn vị đó phải chứa chữ số này, nên ô đó đã được xác định dù vẫn còn các ứng viên khác."
+            ],
+            [
+              "Vị trí duy nhất khác ứng viên duy nhất thế nào?",
+              "Ứng viên duy nhất nói về một ô: chỉ còn một ứng viên. Vị trí duy nhất nói về một chữ số: chỉ còn một ô trong một đơn vị. Cả hai đều cho phép điền một chữ số một cách chắc chắn."
+            ],
+            [
+              "Loại nào dễ tìm hơn?",
+              "Khi không có ghi chú, vị trí duy nhất thường dễ tìm hơn vì bạn có thể dò bảng theo từng chữ số một. Khi ghi chú đầy đủ, ứng viên duy nhất dễ tìm nhất, vì một ô chỉ có một ứng viên rất nổi bật."
+            ],
+            [
+              "Gợi ý mô tả vị trí duy nhất như thế nào?",
+              "Là \"Vị trí duy nhất cho\" chữ số đó trong hàng này, cột này hoặc ô này, kèm theo ô được chọn. Nhấn Gợi ý lần nữa để điền."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Ứng viên bị khóa",
+          "title": "Ứng viên bị khóa trong Sudoku: chỉ hướng và chiếm giữ",
+          "description": "Ứng viên bị khóa: khi các ứng viên của một chữ số trong ô vuông đều nằm trên một hàng hoặc cột, hay ngược lại, chữ số đó bị loại ở nơi khác. Hai ví dụ.",
+          "h1": "Ứng viên bị khóa",
+          "summary": "Ứng viên bị khóa (locked candidates) là kỹ thuật đầu tiên loại bỏ ứng viên thay vì điền một chữ số. Nó có hai dạng. Chỉ hướng: trong một ô vuông, mọi ứng viên của một chữ số đều nằm trên một hàng hoặc một cột, nên chữ số đó bị loại khỏi phần còn lại của đường đó. Chiếm giữ: trong một hàng hoặc cột, mọi ứng viên của một chữ số đều nằm trong một ô vuông, nên chữ số đó bị loại khỏi phần còn lại của ô vuông đó. Gợi ý của Bare Sudoku gắn nhãn nước điền mà nó mở ra là \"Ứng viên bị khóa\".",
+          "when": [
+            "Khi hết single trong một câu đố Khó, đây là điều đầu tiên nên thử. Nó cần ghi chú đầy đủ, ít nhất là cho chữ số bạn đang xét. Ứng viên bị khóa rất phổ biến: hầu hết câu đố Khó đều cần đến, và câu đố Chuyên gia dùng nó xen giữa các mẫu hình lớn hơn."
+          ],
+          "spot": [
+            "Với dạng chỉ hướng, hãy xét từng ô vuông và từng chữ số còn thiếu trong đó: nếu các ô ứng viên của chữ số đó nằm trên cùng một hàng hoặc cột, hãy kiểm tra xem chữ số đó có còn là ứng viên ở phần tiếp theo của đường đó bên ngoài ô vuông không. Với dạng chiếm giữ, hãy nhìn dọc theo một hàng hoặc cột: nếu các ứng viên của một chữ số đều nằm trong một ô vuông, phần còn lại của ô vuông đó có thể được dọn sạch. Trong trò chơi, chạm vào phím chữ số để tô sáng mọi ứng viên của nó; hai hoặc ba ghi chú được tô sáng thẳng hàng trong một ô vuông chính là mẫu hình."
+          ],
+          "examples": [
+            {
+              "h": "Chỉ hướng",
+              "steps": [
+                "Trong ô vuông {box}, chữ số {d} chỉ có các ô ứng viên sau: {cells}. Tất cả đều nằm trên hàng {row}.",
+                "Ô vuông {box} cần một chữ số {d}, nên {d} của hàng {row} nằm bên trong ô vuông {box}, dù nó rơi vào ô nào trong số đó.",
+                "Hàng {row} không thể chứa {d} thứ hai, vậy hãy loại {d} khỏi các ô của hàng {row} nằm ngoài ô vuông: {elim}."
+              ]
+            },
+            {
+              "h": "Chiếm giữ",
+              "steps": [
+                "Trong hàng {row}, chữ số {d} chỉ có thể nằm ở {cells}, và tất cả đều nằm trong ô vuông {box}.",
+                "Hàng {row} phải chứa {d}, nên {d} của ô vuông {box} bị hàng {row} chiếm giữ. Các ô khác của ô vuông {box} không thể chứa {d}.",
+                "Loại {d} khỏi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Loại chữ số bên trong ô vuông thay vì bên ngoài trong dạng chỉ hướng, hoặc ngược lại trong dạng chiếm giữ. Phép loại trừ luôn áp dụng cho các ô nằm trên đường nhưng không thuộc ô vuông, hoặc thuộc ô vuông nhưng không nằm trên đường.",
+            "Áp dụng quy tắc khi các ứng viên trải trên hai hàng của ô vuông. Mọi ô ứng viên của chữ số trong ô vuông phải nằm trên cùng một đường.",
+            "Quên tìm single mà phép loại trừ tạo ra. Ứng viên bị khóa hiếm khi tự điền được chữ số; nó dọn đường cho một single."
+          ],
+          "faq": [
+            [
+              "Ứng viên bị khóa trong Sudoku là gì?",
+              "Các ứng viên của một chữ số bị giới hạn trong phần giao nhau giữa một ô vuông và một đường. Vì ô vuông, hoặc đường, phải chứa chữ số đó trong phần giao nhau ấy, chữ số đó có thể bị loại khỏi phần còn lại của đường, hoặc phần còn lại của ô vuông."
+            ],
+            [
+              "Chỉ hướng và chiếm giữ khác nhau thế nào?",
+              "Chỉ hướng bắt đầu từ một ô vuông: các ứng viên của chữ số trong ô vuông chỉ dọc theo một hàng hoặc cột, nên chữ số bị loại khỏi phần còn lại của đường đó. Chiếm giữ bắt đầu từ một hàng hoặc cột: các ứng viên của chữ số trên đường đều nằm trong một ô vuông, nên đường đó chiếm giữ chữ số và nó bị loại khỏi phần còn lại của ô vuông."
+            ],
+            [
+              "Ứng viên bị khóa còn được gọi là intersection removal phải không?",
+              "Đúng vậy. Các tên khác là box-line reduction cho dạng chiếm giữ và pointing pair hoặc pointing triple cho dạng chỉ hướng. Bare Sudoku dùng một tên chung cho cả hai."
+            ],
+            [
+              "Cấp độ nào cần ứng viên bị khóa?",
+              "Khó. Câu đố cần ứng viên bị khóa hoặc tập con nhưng không cần gì khó hơn được xếp loại Khó; câu đố Chuyên gia còn cần thêm một fish hoặc wing."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Cặp lộ và bộ ba lộ",
+          "title": "Cặp lộ và bộ ba lộ trong Sudoku: cách hoạt động",
+          "description": "Cặp lộ và bộ ba lộ: hai hoặc ba ô trong một đơn vị có chung đúng hai hoặc ba ứng viên. Học cách nhận ra chúng và biết cần loại gì, kèm ví dụ thực tế.",
+          "h1": "Cặp lộ và bộ ba lộ",
+          "summary": "Cặp lộ (naked pair) là hai ô trong cùng một hàng, cột hoặc ô vuông có đúng hai ứng viên giống hệt nhau. Hai chữ số đó phải nằm trong hai ô này, nên có thể loại chúng khỏi mọi ô khác của đơn vị. Bộ ba lộ là cùng ý tưởng đó với ba ô và ba chữ số; mỗi ô có thể hiển thị hai hoặc cả ba chữ số. Gợi ý của Bare Sudoku gắn nhãn nước điền có được là \"Cặp hoặc bộ ba\".",
+          "when": [
+            "Sau khi ghi chú đã đầy đủ và đã hết single cũng như ứng viên bị khóa. Cặp lộ rất phổ biến trong câu đố Khó, bộ ba lộ thì ít hơn. Cả hai đều đáng kiểm tra ở mọi đơn vị còn từ năm ô trống trở lên."
+          ],
+          "spot": [
+            "Tìm các ô chỉ có hai ứng viên, rồi tìm một ô khác trong cùng đơn vị có đúng hai ứng viên đó. Với bộ ba, hãy xét các đơn vị có nhiều ô hai và ba ứng viên, và kiểm tra xem có ba ô nào cộng lại chỉ dùng ba chữ số khác nhau không. Các ô có ứng viên giống hệt nhau rất dễ thấy khi đã ghi chú; Điền ghi chú trong trò chơi làm việc đó chỉ bằng một chạm."
+          ],
+          "examples": [
+            {
+              "h": "Cặp lộ",
+              "steps": [
+                "{cellA} và {cellB} trong {unit} có đúng hai ứng viên giống nhau: {d1} và {d2}.",
+                "Một ô phải là {d1} và ô kia là {d2}. Ta không biết ô nào là số nào, nhưng cả hai chữ số đều đã được hai ô này dùng hết.",
+                "Vì vậy không ô nào khác trong {unit} có thể chứa {d1} hoặc {d2}. Loại {elim}."
+              ]
+            },
+            {
+              "h": "Bộ ba lộ",
+              "steps": [
+                "Ba ô của {unit} lấy toàn bộ ứng viên từ cùng ba chữ số {digits}: {cells}.",
+                "Ba chữ số này phải lấp đầy ba ô theo một thứ tự nào đó. Một ô không cần hiển thị đủ cả ba ứng viên; điều quan trọng là không ô nào trong ba ô có ứng viên nằm ngoài bộ ba này.",
+                "Loại {digits} khỏi mọi ô khác của {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Chọn hai ô có chung hai ứng viên nhưng còn có thêm ứng viên thứ ba. Với cặp lộ, mỗi ô phải có đúng hai ứng viên đó và không gì khác.",
+            "Loại các chữ số khỏi chính hai ô của cặp. Cặp giữ nguyên ứng viên của mình; phép loại trừ áp dụng cho các ô khác của đơn vị.",
+            "Đòi hỏi mọi ô của bộ ba đều hiển thị cả ba chữ số. Một ô có hai trong ba chữ số vẫn hợp lệ, miễn là không ô nào có ứng viên ngoài bộ."
+          ],
+          "faq": [
+            [
+              "Cặp lộ trong Sudoku là gì?",
+              "Hai ô trong một đơn vị cùng có đúng hai ứng viên giống nhau. Hai chữ số đó bị khóa vào hai ô này, nên có thể loại chúng khỏi phần còn lại của đơn vị."
+            ],
+            [
+              "Bộ ba lộ là gì?",
+              "Ba ô trong một đơn vị mà ứng viên của chúng gộp lại chỉ gồm ba chữ số. Mỗi ô có thể chứa hai hoặc ba chữ số trong số đó. Ba chữ số lấp đầy ba ô, nên có thể loại chúng khỏi các ô khác của đơn vị."
+            ],
+            [
+              "Cặp lộ có tự điền được chữ số không?",
+              "Không tự điền được. Nó loại bỏ ứng viên, và việc loại bỏ đó thường để lại một ứng viên duy nhất hoặc một vị trí duy nhất. Gợi ý trong Bare Sudoku chỉ ra single đó và nêu tên kỹ thuật đã giúp tìm ra nó."
+            ],
+            [
+              "Một cặp lộ có thể nằm trong một ô vuông và một hàng cùng lúc không?",
+              "Có. Nếu hai ô cùng chung một hàng và một ô vuông, cặp đó loại trừ trong cả hai đơn vị. Bare Sudoku xử lý từng đơn vị một."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Cặp ẩn và bộ ba ẩn",
+          "title": "Cặp ẩn và bộ ba ẩn trong Sudoku: cách nhận ra",
+          "description": "Cặp ẩn là hai chữ số chỉ có thể nằm ở cùng hai ô của một đơn vị, nên các ứng viên khác của hai ô đó bị loại. Học cách tìm cặp ẩn và bộ ba ẩn từng bước.",
+          "h1": "Cặp ẩn và bộ ba ẩn",
+          "summary": "Cặp ẩn (hidden pair) là hai chữ số mà trong một hàng, cột hoặc ô vuông chỉ là ứng viên ở cùng hai ô và không ở đâu khác. Hai ô đó phải chứa hai chữ số này, nên mọi ứng viên khác trong chúng có thể bị loại. Bộ ba ẩn hoạt động tương tự với ba chữ số bị giới hạn trong ba ô. Sau khi loại, các ô đó hiện ra thành một cặp lộ hoặc bộ ba lộ. Gợi ý của Bare Sudoku gắn nhãn nước điền có được là \"Cặp hoặc bộ ba\".",
+          "when": [
+            "Khi một đơn vị có những ô nhiều ứng viên và đã hết single. Cặp ẩn nấp trong những ô chật kín ứng viên, vì thế đáng tìm chúng đúng ở những chỗ không thấy cặp lộ. Bộ ba ẩn rất hiếm; Bare Sudoku có kiểm tra, nhưng hầu hết câu đố Khó được giải mà không cần đến."
+          ],
+          "spot": [
+            "Làm việc theo chữ số, không theo ô. Trong một đơn vị, ghi lại các ô mà mỗi chữ số còn thiếu có thể nằm vào. Nếu hai chữ số mỗi số chỉ có hai ô khả dĩ và đó là cùng hai ô, bạn đã có một cặp ẩn. Trong trò chơi, chạm vào phím chữ số để tô sáng các ứng viên của nó; nếu hai chữ số cùng làm sáng đúng hai ô giống nhau của một đơn vị và không ô nào khác trong đó, đó chính là mẫu hình."
+          ],
+          "examples": [
+            {
+              "h": "Cặp ẩn",
+              "steps": [
+                "Trong {unit}, hai chữ số {d1} và {d2} mỗi số chỉ có hai ô khả dĩ, và đó là cùng hai ô: {cells}.",
+                "Hai ô này phải chứa {d1} và {d2}, nên các ứng viên khác của chúng là không thể.",
+                "Loại {elim}. Giờ hai ô hiện ra thành một cặp lộ, có thể mở khóa thêm nước đi."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Loại hai chữ số của cặp khỏi các ô của cặp. Thứ bị loại là các ứng viên khác của hai ô đó; hai chữ số của cặp được giữ lại.",
+            "Chấp nhận một chữ số còn có ô khả dĩ thứ ba trong đơn vị. Cả hai chữ số phải bị giới hạn trong đúng hai ô đó.",
+            "Chỉ tìm trong ô vuông. Cặp ẩn xuất hiện trong hàng và cột thường xuyên không kém."
+          ],
+          "faq": [
+            [
+              "Cặp ẩn trong Sudoku là gì?",
+              "Hai chữ số chỉ có thể nằm ở cùng hai ô của một đơn vị. Hai ô đó phải nhận hai chữ số này, nên các ứng viên khác của chúng bị loại."
+            ],
+            [
+              "Cặp ẩn khác cặp lộ như thế nào?",
+              "Cặp lộ thì nhìn thấy được: hai ô chỉ hiển thị cùng hai ứng viên. Cặp ẩn bị che bởi các ứng viên thừa trong hai ô. Loại bỏ các ứng viên thừa đó sẽ biến cặp ẩn thành cặp lộ."
+            ],
+            [
+              "Bộ ba ẩn là gì?",
+              "Ba chữ số bị giới hạn trong ba ô của một đơn vị. Mỗi chữ số không nhất thiết xuất hiện ở cả ba ô; điều quan trọng là không chữ số nào trong ba chữ số có ứng viên bên ngoài ba ô đó."
+            ],
+            [
+              "Gợi ý có phân biệt cặp ẩn và cặp lộ không?",
+              "Không. Bare Sudoku tìm cả hai và gắn nhãn nước điền có được là \"Cặp hoặc bộ ba\". Các trang ở đây tách riêng chúng vì cách tìm chúng khác nhau."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing trong Sudoku: kỹ thuật này hoạt động thế nào",
+          "description": "X-Wing: một chữ số có đúng hai ô ứng viên ở mỗi hàng trong hai hàng, thẳng hàng trên cùng hai cột, sẽ bị loại khỏi phần còn lại của hai cột đó. Ví dụ.",
+          "h1": "X-Wing",
+          "summary": "X-Wing là một mẫu hình gồm một chữ số và bốn ô ở bốn góc của một hình chữ nhật. Nếu chữ số đó có đúng hai ô ứng viên ở mỗi hàng trong hai hàng, và các ô đó nằm trên cùng hai cột, thì chữ số phải chiếm hai góc đối diện của hình chữ nhật. Do đó có thể loại nó khỏi mọi ô khác của hai cột đó. Điều tương tự cũng đúng khi đổi vai trò hàng và cột. Đây là kỹ thuật Chuyên gia đầu tiên trong Bare Sudoku.",
+          "when": [
+            "Khi đã hết single, ứng viên bị khóa và tập con. X-Wing là mẫu hình Chuyên gia phổ biến nhất và hay xuất hiện khi một chữ số chỉ còn ít ứng viên, thường là khi đã điền bốn đến sáu bản của nó. Kỹ thuật này cần ghi chú đầy đủ cho chữ số bạn đang xét."
+          ],
+          "spot": [
+            "Chọn một chữ số và tìm các hàng mà nó có đúng hai ô ứng viên. Nếu hai hàng như vậy có chung đúng hai cột, hãy kiểm tra các cột đó xem còn ứng viên nào khác của chữ số không: đó là các ứng viên cần loại. Sau đó lặp lại với cột làm cơ sở. Trong trò chơi, chạm vào phím chữ số: mọi ứng viên của nó được tô sáng, và một hình chữ nhật gồm bốn ghi chú được tô sáng rất dễ nhận ra."
+          ],
+          "examples": [
+            {
+              "h": "Ví dụ",
+              "steps": [
+                "Chữ số {d} có đúng hai ô ứng viên ở hàng {r1} và đúng hai ô ở hàng {r2}, và chúng thẳng hàng trên cùng hai cột {c1} và {c2}: {cells}.",
+                "Hàng {r1} đặt {d} của nó vào cột {c1} hoặc {c2}, và hàng {r2} đặt {d} vào cột còn lại. Dù thế nào, mỗi cột {c1} và {c2} đều nhận một {d} từ hai hàng này.",
+                "Vì vậy {d} không thể xuất hiện ở chỗ nào khác trong cột {c1} và {c2}. Loại {d} khỏi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Dùng một hàng có ba ô ứng viên cho chữ số đó. Mỗi hàng cơ sở phải có đúng hai, và cả hai phải nằm trên hai cột chung.",
+            "Loại chữ số khỏi các hàng thay vì các cột. Khi lấy hàng làm cơ sở, phép loại trừ nằm trên các cột, và ngược lại.",
+            "Quên phiên bản đảo ngược. Một X-Wing dựng trên cột sẽ loại trừ trên hàng."
+          ],
+          "faq": [
+            [
+              "X-Wing trong Sudoku là gì?",
+              "Một chữ số có đúng hai ô ứng viên ở mỗi hàng trong hai hàng, trên cùng hai cột. Chữ số chiếm hai góc đối diện của hình chữ nhật đó, nên bị loại khỏi phần còn lại của hai cột. Có thể đổi vai trò hàng và cột."
+            ],
+            [
+              "Vì sao X-Wing hiệu quả?",
+              "Mỗi hàng trong hai hàng phải đặt chữ số vào một trong hai cột, và hai hàng không thể dùng cùng một cột. Vì vậy mỗi cột đều nhận bản chữ số của mình từ hai hàng này, và mọi ứng viên khác trong các cột đó đều không thể."
+            ],
+            [
+              "X-Wing có phải là một fish không?",
+              "Đúng. X-Wing là fish cỡ hai; Swordfish là fish cỡ ba. Bare Sudoku tìm được cả hai."
+            ],
+            [
+              "Cấp độ nào có X-Wing?",
+              "Chuyên gia. Câu đố cần X-Wing, Y-Wing, Swordfish hoặc XYZ-Wing được xếp loại Chuyên gia."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing trong Sudoku: kỹ thuật này hoạt động thế nào",
+          "description": "Y-Wing (XY-Wing): một ô trục có hai ứng viên và hai ô cánh, mỗi ô chung một ứng viên với trục, loại một chữ số khỏi mọi ô nhìn thấy cả hai cánh.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, còn gọi là XY-Wing, dùng ba ô, mỗi ô có hai ứng viên. Ô trục có ứng viên X và Y. Một ô cánh nhìn thấy ô trục và có X và Z; ô cánh kia nhìn thấy ô trục và có Y và Z. Dù ô trục là số nào, một trong hai cánh phải là Z, nên có thể loại Z khỏi mọi ô nhìn thấy cả hai cánh. Đây là kỹ thuật Chuyên gia trong Bare Sudoku.",
+          "when": [
+            "Khi câu đố có nhiều ô chỉ có đúng hai ứng viên và không tìm được fish nào. Y-Wing phổ biến trong câu đố Chuyên gia và được tìm bằng cách lần theo các ô hai ứng viên: mỗi ô đều có thể là ô trục hoặc ô cánh."
+          ],
+          "spot": [
+            "Liệt kê các ô có đúng hai ứng viên. Với mỗi ô, hãy coi nó là ô trục với ứng viên X và Y, rồi tìm trong các ô liên quan của nó một ô có X và một chữ số khác Z, và một ô có Y và cùng chữ số Z đó. Hai ô này là hai cánh. Sau đó tìm các ô nhìn thấy cả hai cánh và có chứa Z. Lưu ý rằng hai cánh không cần nhìn thấy nhau."
+          ],
+          "examples": [
+            {
+              "h": "Ví dụ",
+              "steps": [
+                "Ô trục {pivot} có ứng viên {x} và {y}. Nó nhìn thấy {wingA}, có {x} và {z}, và {wingB}, có {y} và {z}.",
+                "Nếu {pivot} là {x}, thì {wingA} mất {x} và trở thành {z}. Nếu {pivot} là {y}, thì {wingB} trở thành {z}. Trong mọi trường hợp, một trong hai cánh là {z}.",
+                "Một ô nhìn thấy cả hai cánh không bao giờ có thể là {z}. Loại {z} khỏi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Chọn các cánh không cùng nhìn thấy ô trục. Mỗi cánh phải chung một hàng, cột hoặc ô vuông với ô trục.",
+            "Loại Z khỏi các ô chỉ nhìn thấy một cánh. Ô bị loại phải nhìn thấy cả hai cánh.",
+            "Loại Z khỏi ô trục. Trong Y-Wing, ô trục không chứa Z; nếu có, mẫu hình đó là XYZ-Wing với quy tắc khác."
+          ],
+          "faq": [
+            [
+              "Y-Wing trong Sudoku là gì?",
+              "Ba ô hai ứng viên: một ô trục có X và Y, một cánh có X và Z nhìn thấy ô trục, và một cánh có Y và Z nhìn thấy ô trục. Một cánh luôn là Z, nên Z bị loại khỏi các ô nhìn thấy cả hai cánh."
+            ],
+            [
+              "Y-Wing có giống XY-Wing không?",
+              "Có. Hai tên gọi mô tả cùng một mẫu hình. Bare Sudoku gọi nó là Y-Wing."
+            ],
+            [
+              "Vì sao một cánh phải là Z?",
+              "Nếu ô trục là X, cánh thứ nhất mất X và trở thành Z. Nếu ô trục là Y, cánh thứ hai trở thành Z. Ô trục là một trong hai số đó, nên một cánh là Z."
+            ],
+            [
+              "Y-Wing loại được bao nhiêu ô?",
+              "Thường là một hoặc hai: chỉ những ô nhìn thấy cả hai cánh và vẫn còn chứa Z. Như vậy đủ để tạo ra một single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish trong Sudoku: kỹ thuật này hoạt động thế nào",
+          "description": "Swordfish: một chữ số bị giới hạn trong ba cột trên ba hàng sẽ bị loại khỏi phần còn lại của các cột đó. Fish cỡ ba, giải thích bằng một ví dụ thực tế.",
+          "h1": "Swordfish",
+          "summary": "Swordfish là một X-Wing với ba hàng và ba cột. Nếu một chữ số có nhiều nhất ba ô ứng viên ở mỗi hàng trong ba hàng, và tất cả các ô đó nằm trên cùng ba cột, thì ba hàng đó dùng hết chữ số này trong các cột ấy, và có thể loại chữ số khỏi mọi ô khác của ba cột. Có thể đổi vai trò hàng và cột. Bare Sudoku kiểm tra Swordfish sau Y-Wing, trong câu đố Chuyên gia.",
+          "when": [
+            "Khi X-Wing và Y-Wing không tìm được gì. Swordfish ít gặp hơn X-Wing và cần một chữ số có ứng viên rải thưa trên ba đường. Kỹ thuật này cần ghi chú đầy đủ và chính xác cho chữ số đó."
+          ],
+          "spot": [
+            "Chọn một chữ số và tìm các hàng có hai hoặc ba ô ứng viên cho nó. Nếu ba hàng như vậy tổng cộng chỉ phủ ba cột, hãy kiểm tra các cột đó xem còn ứng viên nào khác của chữ số không. Không phải hàng nào cũng cần có ứng viên ở mọi cột: một Swordfish có thể gồm sáu, bảy, tám hoặc chín ô. Trong trò chơi, tô sáng chữ số bằng phím của nó và tìm ba hàng có ứng viên thẳng hàng trên ba cột."
+          ],
+          "examples": [
+            {
+              "h": "Ví dụ",
+              "steps": [
+                "Chữ số {d} có nhiều nhất ba ô ứng viên ở mỗi hàng {rows}, và tất cả các ô đó nằm trong các cột {cols}: {cells}.",
+                "Mỗi hàng trong ba hàng phải đặt {d} của mình vào một trong ba cột, và không có hai hàng nào dùng chung một cột. Vì vậy ba cột nhận {d} của chúng từ ba hàng này.",
+                "Mọi ứng viên {d} khác trong các cột {cols} đều không thể. Loại {d} khỏi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Đòi hỏi đủ cả chín ô. Một Swordfish có hai ứng viên ở một số hàng vẫn hợp lệ, miễn là ba hàng chỉ phủ ba cột.",
+            "Đưa vào một hàng có bốn ô ứng viên. Mỗi hàng cơ sở phải có nhiều nhất ba ô, tất cả nằm trong ba cột.",
+            "Loại trừ trong các hàng cơ sở. Khi lấy hàng làm cơ sở, phép loại trừ nằm trong ba cột, bên ngoài các hàng cơ sở."
+          ],
+          "faq": [
+            [
+              "Swordfish trong Sudoku là gì?",
+              "Một chữ số có các ứng viên trong ba hàng bị giới hạn trong ba cột. Ba hàng phải đặt chữ số vào ba cột đó, mỗi cột một lần, nên chữ số bị loại khỏi các ô khác của những cột này."
+            ],
+            [
+              "Swordfish khác X-Wing thế nào?",
+              "Chỉ khác về kích thước: X-Wing dùng hai hàng và hai cột, Swordfish dùng ba hàng và ba cột. Cách suy luận là như nhau."
+            ],
+            [
+              "Swordfish có cần đúng chín ô không?",
+              "Không. Mỗi hàng có thể có hai hoặc ba ứng viên; mẫu hình chỉ yêu cầu ba hàng cộng lại dùng không quá ba cột."
+            ],
+            [
+              "Có fish cỡ bốn không?",
+              "Có, đó là Jellyfish. Bare Sudoku không dùng nó, vì các câu đố của trò chơi không bao giờ cần đến."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing trong Sudoku: kỹ thuật này hoạt động thế nào",
+          "description": "XYZ-Wing: ô trục có ba ứng viên và hai cánh chung một trong số đó loại chữ số này khỏi mọi ô nhìn thấy cả ba ô. Ví dụ thực tế, từng bước một.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing là một Y-Wing có ô trục mang ba ứng viên. Ô trục có X, Y và Z; một cánh nhìn thấy ô trục và có X và Z, cánh kia nhìn thấy ô trục và có Y và Z. Một trong ba ô phải là Z, nên có thể loại Z khỏi mọi ô nhìn thấy cả ba. Vì bản thân ô trục cũng có thể là Z, ô bị loại phải nhìn thấy ô trục lẫn cả hai cánh, điều này giới hạn nó trong ô vuông hoặc đường mà các ô cùng chung. Đây là kỹ thuật khó nhất mà Bare Sudoku sử dụng.",
+          "when": [
+            "Chỉ khi mọi cách khác đều thất bại. XYZ-Wing là mẫu hình hiếm nhất trong Bare Sudoku và chỉ xuất hiện trong câu đố Chuyên gia. Hãy tìm nó khi một ô ba ứng viên nằm trong cùng ô vuông với một ô hai ứng viên có chung hai chữ số của nó."
+          ],
+          "spot": [
+            "Bắt đầu từ các ô có đúng ba ứng viên; mỗi ô đều có thể là ô trục. Trong các ô liên quan của nó, tìm hai ô mỗi ô có hai ứng viên, đều lấy từ ba ứng viên của ô trục, và chung nhau đúng một chữ số Z. Sau đó tìm các ô nhìn thấy ô trục và cả hai cánh, có chứa Z. Trên thực tế, một cánh nằm trong ô vuông của ô trục và cánh kia nằm trên hàng hoặc cột của nó, và các ô bị loại là những ô còn lại của ô vuông đó trên hàng hoặc cột ấy."
+          ],
+          "examples": [
+            {
+              "h": "Ví dụ",
+              "steps": [
+                "Ô trục {pivot} có ba ứng viên: {x}, {y} và {z}. Nó nhìn thấy {wingA} có {x} và {z}, và {wingB} có {y} và {z}.",
+                "Nếu {pivot} là {z}, xong. Nếu nó là {x}, {wingA} phải là {z}. Nếu nó là {y}, {wingB} phải là {z}. Trong mọi trường hợp, một trong ba ô là {z}.",
+                "Một ô nhìn thấy cả ba ô không thể là {z}. Loại {z} khỏi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Loại trừ ở các ô chỉ nhìn thấy hai cánh. Khác với Y-Wing, ô trục có thể là Z, nên ô bị loại cũng phải nhìn thấy ô trục.",
+            "Dùng các cánh có ứng viên không nằm trọn trong ba ứng viên của ô trục.",
+            "Nhầm với Y-Wing: điểm khác biệt là ứng viên thứ ba trong ô trục, và nó làm thay đổi những ô có thể dọn sạch."
+          ],
+          "faq": [
+            [
+              "XYZ-Wing trong Sudoku là gì?",
+              "Một ô trục có ứng viên X, Y và Z cùng hai cánh, một cánh có X và Z, cánh kia có Y và Z, cả hai đều nhìn thấy ô trục. Một trong ba ô là Z, nên Z bị loại khỏi các ô nhìn thấy cả ba."
+            ],
+            [
+              "XYZ-Wing khác Y-Wing thế nào?",
+              "Ô trục có ba ứng viên thay vì hai, trong đó có Z. Điều đó khiến ô trục cũng có thể chứa Z, nên chỉ những ô nhìn thấy ô trục và cả hai cánh mới có thể mất Z."
+            ],
+            [
+              "XYZ-Wing có xuất hiện thường xuyên không?",
+              "Hiếm. Trong Bare Sudoku chỉ câu đố Chuyên gia mới có thể cần đến nó, và phần lớn không cần. Bare Sudoku kiểm tra nó cuối cùng, sau X-Wing, Y-Wing và Swordfish."
+            ],
+            [
+              "Có WXYZ-Wing không?",
+              "Có, với ô trục bốn ứng viên, nhưng Bare Sudoku không dùng nó. Mọi câu đố trong trò chơi đều có thể giải xong bằng chín kỹ thuật trong hướng dẫn này."
+            ]
+          ]
+        }
+      }
+    },
+    "th": {
+      "learnHeading": "เรียนซูโดกุ",
+      "learnText": "เพิ่งเริ่มเล่นซูโดกุ หรือติดอยู่กับโจทย์ยาก? คู่มือสองชุดอธิบายกติกาและทุกเทคนิคการแก้ที่คำใบ้ใช้ แต่ละเทคนิคมีตัวอย่างจริงประกอบ",
+      "howToLink": "วิธีเล่นซูโดกุ",
+      "techniquesLink": "เทคนิคการแก้ซูโดกุ",
+      "labels": {
+        "howTo": "วิธีเล่น",
+        "techniques": "เทคนิค",
+        "play": "เล่นซูโดกุ",
+        "prev": "เทคนิคก่อนหน้า",
+        "next": "เทคนิคถัดไป",
+        "all": "เทคนิคทั้งหมด",
+        "example": "ตัวอย่าง",
+        "steps": "ทีละขั้นตอน",
+        "when": "ใช้เมื่อไร",
+        "spot": "วิธีสังเกต",
+        "mistakes": "ข้อผิดพลาดที่พบบ่อย",
+        "inGame": "ใน Bare Sudoku",
+        "level": "ต้องใช้ตั้งแต่ระดับ: {level}",
+        "hint": "ในเกม คำใบ้จะบอกว่า: {text}",
+        "legend": "ตัวเลขตัวหนาคือตัวเลขที่ให้มา ตัวเลขสีน้ำเงินคือตัวเลขที่ใส่ระหว่างแก้ ตัวเลขเล็กคือตัวเลือก ช่องที่ไฮไลต์ประกอบกันเป็นรูปแบบ ตัวเลือกที่ถูกขีดฆ่าจะถูกลบออก และตัวเลือกที่มีวงกลมล้อมคือตัวเลขที่ต้องใส่",
+        "notation": "ช่องเขียนในรูป r3c7: แถว 3 คอลัมน์ 7 แถวนับจากบนลงล่าง คอลัมน์นับจากซ้ายไปขวา และกล่อง 1 ถึง 9 นับจากมุมซ้ายบนไล่ไปทีละแถว",
+        "row": "แถว {n}",
+        "column": "คอลัมน์ {n}",
+        "box": "กล่อง {n}",
+        "elimItem": "{d} ออกจาก {cell}",
+        "regions": "แถว 5 คอลัมน์ 5 และกล่อง 5 ตอนเริ่มโจทย์",
+        "firstMove": "ตัวเลือกเดียว: {cell} เป็นได้แค่ {d}",
+        "breadcrumb": "เส้นทางนำทาง"
+      },
+      "howTo": {
+        "title": "วิธีเล่นซูโดกุ: กติกา กระดาน และการเดินตาแรก",
+        "description": "เรียนรู้วิธีเล่นซูโดกุ: กติกา แถว คอลัมน์ และกล่องทำงานอย่างไร ทำไมทุกโจทย์มีคำตอบเดียว วิธีใช้โน้ต และวิธีเริ่มเดินตาแรก",
+        "h1": "วิธีเล่นซูโดกุ",
+        "summary": "ซูโดกุคือปริศนาตรรกะบนตาราง 9×9 เติมตัวเลข 1 ถึง 9 ลงในทุกช่องว่าง ให้ทุกแถว ทุกคอลัมน์ และทุกกล่อง 3×3 มีตัวเลขแต่ละตัวครบพอดีตัวละหนึ่งครั้ง ตอนเริ่มจะมีตัวเลขบางส่วนให้มา ที่เหลือคุณหาเองด้วยเหตุผล ทีละช่องที่แน่ใจ และไม่ต้องเดาเลย คู่มือนี้อธิบายกระดาน กติกา หลักคำตอบเดียว โน้ต และกลยุทธ์ง่าย ๆ สำหรับการเดินตาแรก คุณฝึกทั้งหมดนี้ได้ใน [Bare Sudoku](play) ซึ่งเล่นฟรีและมีคำใบ้ที่อธิบายเหตุผล",
+        "sections": [
+          {
+            "h": "กติกาของซูโดกุคืออะไร?",
+            "p": [
+              "มีกติกาเพียงสามข้อ และทั้งสามข้อคือกติกาเดียวกันที่มองจากสามทิศทาง: ทุกแถวต้องมีตัวเลข 1 ถึง 9 ทุกคอลัมน์ต้องมีตัวเลข 1 ถึง 9 และทุกกล่อง 3×3 ต้องมีตัวเลข 1 ถึง 9 ดังนั้นตัวเลขหนึ่งจะปรากฏซ้ำสองครั้งในแถว คอลัมน์ หรือกล่องเดียวกันไม่ได้เลย",
+              "ตัวเลขที่ให้มาซึ่งพิมพ์เป็นตัวหนานั้นตายตัว หน้าที่ของคุณคือเติมช่องว่าง ไม่มีการคำนวณและไม่มีลำดับ: ตัวเลขเป็นเพียงสัญลักษณ์เก้าแบบที่ต่างกัน ถ้าเล่นด้วยตัวอักษรหรือรูปทรงก็ไม่มีอะไรเปลี่ยน"
+            ]
+          },
+          {
+            "h": "กระดานจัดวางอย่างไร?",
+            "p": [
+              "กระดานมี 81 ช่อง เรียงเป็น 9 แถวและ 9 คอลัมน์ เส้นหนาแบ่งกระดานออกเป็นกล่อง 3×3 เก้ากล่อง แต่ละช่องอยู่ในแถวเดียว คอลัมน์เดียว และกล่องเดียวพอดี และสามกลุ่มนี้คือหน่วยของช่องนั้น ช่องอื่นอีก 20 ช่องที่อยู่ในหน่วยเดียวกันกับช่องหนึ่งเรียกว่าช่องเพื่อนบ้านของช่องนั้น ตัวเลขที่ใส่ลงในช่องหนึ่งจะตัดตัวเลขนั้นออกจากช่องเพื่อนบ้านทั้ง 20 ช่อง",
+              "ช่องเขียนในรูป r3c7: แถว 3 คอลัมน์ 7 แถวนับจากบนลงล่าง คอลัมน์นับจากซ้ายไปขวา และกล่อง 1 ถึง 9 นับจากมุมซ้ายบนไล่ไปทีละแถว สัญลักษณ์นี้ใช้ในคู่มือเทคนิคทุกหน้าและคุ้มค่าที่จะจำ: r5c5 คือช่องกลางกระดาน"
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "ทำไมซูโดกุทุกข้อจึงมีคำตอบเดียวพอดี?",
+            "p": [
+              "ซูโดกุที่ถูกต้องมีคำตอบเดียว และนั่นคือสิ่งที่ทำให้ตรรกะใช้ได้ผล ทุกครั้งที่คุณแสดงได้ว่าตัวเลขหนึ่งไปอยู่ที่อื่นในหน่วยไม่ได้ ตัวเลขนั้นต้องอยู่ในช่องที่เหลือ เพราะคำตอบมีอยู่และมีเพียงหนึ่งเดียว ถ้าโจทย์มีสองคำตอบ ไม่มีการใช้เหตุผลใดแยกทั้งสองออกจากกันได้ และถึงจุดหนึ่งคุณจะต้องเดา",
+              "Bare Sudoku สร้างทุกโจทย์บนอุปกรณ์ของคุณ และตรวจว่าโจทย์มีคำตอบเดียวพอดี และตัวแก้เชิงตรรกะของเกมแก้จนจบได้ด้วยเทคนิคของระดับที่เลือก ดังนั้นเมื่อคุณติด จะมีขั้นต่อไปให้หาเสมอ และคำใบ้จะชี้ให้เห็น"
+            ]
+          },
+          {
+            "h": "เริ่มเล่นโจทย์ซูโดกุอย่างไร?",
+            "p": [
+              "เริ่มจากส่วนที่ถูกจำกัดมากที่สุด ลำดับนี้ใช้ได้ทุกระดับ:"
+            ],
+            "list": [
+              "เลือกตัวเลขที่ปรากฏแล้วหลายครั้ง เช่น หกหรือเจ็ดครั้ง แล้วหากล่องที่ยังไม่มีตัวเลขนั้น บ่อยครั้งจะเหลือช่องเดียวในกล่องสำหรับมัน: นั่นคือ [ตำแหน่งเดียว](hidden-single)",
+              "มองหาช่องที่แออัด ช่องที่แถว คอลัมน์ และกล่องของมันรวมกันมีตัวเลขต่างกันแปดตัว จะเหลือตัวเลือกเพียงตัวเดียว: [ตัวเลือกเดียว](naked-single) ช่องในแถวหรือกล่องที่เกือบเต็มคือที่ที่ดีที่สุดในการมองหา",
+              "ตัวเลขทุกตัวที่คุณใส่จะตัดตัวเลือกออกจากช่องเพื่อนบ้าน 20 ช่อง จึงควรตรวจช่องเหล่านั้นทันที ซิงเกิลมักเกิดต่อกันเป็นทอด ๆ",
+              "เมื่อการใส่ตัวเลขแบบง่ายหมดลง ให้จดโน้ต: ตัวเลือกของแต่ละช่องว่าง แล้วมองหาตัวเลขที่ถูกจำกัดอยู่บนเส้นเดียวภายในกล่อง ([ตัวเลือกที่ถูกล็อก](locked-candidates)) หรือสองช่องที่มีตัวเลือกสองตัวเหมือนกัน ([คู่แบบเปิด](naked-pairs))",
+              "กลับไปหาซิงเกิลหลังการตัดตัวเลือกทุกครั้ง แม้แต่โจทย์ระดับผู้เชี่ยวชาญก็แก้ด้วยซิงเกิลเป็นส่วนใหญ่ เทคนิคขั้นสูงเพียงปลดล็อกซิงเกิลตัวถัดไป"
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "โน้ตคืออะไร และควรใช้เมื่อไร?",
+            "p": [
+              "โน้ต หรือที่เรียกว่ารอยดินสอหรือตัวเลือก คือตัวเลขเล็ก ๆ ที่คุณเขียนในช่องว่างเพื่อบันทึกว่าตัวเลขใดยังเป็นไปได้ในช่องนั้น ในโจทย์ง่ายแทบไม่ต้องใช้ แต่ตั้งแต่ระดับยากขึ้นไปโน้ตจำเป็นมาก เพราะเทคนิคอย่างคู่ X-Wing และ Y-Wing อาศัยตัวเลือก ไม่ใช่ตัวเลขที่ใส่แล้ว",
+              "รักษาโน้ตให้ถูกต้อง: เมื่อใส่ตัวเลข ให้ลบตัวเลขนั้นออกจากโน้ตของช่องเพื่อนบ้านทั้ง 20 ช่อง ใน Bare Sudoku ขั้นตอนนี้เกิดขึ้นอัตโนมัติ และปุ่มเติมโน้ตจะเขียนตัวเลือกทุกตัวลงในทุกช่องว่างด้วยการแตะครั้งเดียว คุณจึงเริ่มจากชุดตัวเลือกที่ครบและถูกต้องได้ โน้ตคือข้อเท็จจริง ไม่ใช่การเดา: หมายความว่ายังไม่มีอะไรตัดตัวเลขนี้ออก"
+            ]
+          },
+          {
+            "h": "ติดแล้วควรทำอย่างไร?",
+            "p": [
+              "ก่อนอื่นให้ตรวจพื้นฐานอีกครั้ง: ทุกแถว คอลัมน์ และกล่องที่เกือบเต็มคือแหล่งของซิงเกิล จากนั้นตรวจให้แน่ใจว่าโน้ตครบ เพราะตัวเลือกที่ขาดหายจะซ่อนรูปแบบ และตัวเลือกที่ล้าสมัยจะสร้างรูปแบบปลอม แล้วไล่ลอง [เทคนิค](techniques) ตามลำดับความยาก: ตัวเลือกที่ถูกล็อก คู่และสามตัว X-Wing, Y-Wing, Swordfish และ XYZ-Wing แต่ละเทคนิคมีหน้าของตัวเองพร้อมตัวอย่างจริง",
+              "ถ้าไม่มีอะไรได้ผล ให้ใช้คำใบ้ ใน Bare Sudoku คำใบ้จะตรวจก่อนว่ามีตัวเลขที่ใส่ผิดหรือไม่ จากนั้นหาช่องถัดไปที่เติมได้ด้วยตรรกะและบอกชื่อเทคนิค คุณจึงได้เรียนรู้บางอย่างแม้ตอนใช้คำใบ้ แตะคำใบ้อีกครั้งเพื่อใส่ตัวเลข"
+            ]
+          },
+          {
+            "h": "ใส่ตัวเลขใน Bare Sudoku อย่างไร?",
+            "p": [
+              "แตะช่อง แล้วแตะตัวเลข หรือแตะตัวเลขก่อน: ตัวเลขนั้นจะถูกล็อก และทุกช่องที่คุณแตะจะได้ตัวเลขนั้น ซึ่งเป็นวิธีที่เร็วที่สุดในการใส่ตัวที่หก เจ็ด และแปดของเลขเดียวกัน แตะตัวเลขนั้นอีกครั้งเพื่อปลดล็อก ปุ่มโน้ตสลับไปโหมดรอยดินสอ ปุ่มลบล้างช่อง ปุ่มเลิกทำย้อนการเดินใดก็ได้ และข้อผิดพลาดจะแสดงเป็นสีแดง เว้นแต่คุณปิดไว้ในเมนู",
+              "บนคีย์บอร์ด ใช้ปุ่มลูกศรเพื่อเลื่อน 1 ถึง 9 เพื่อใส่ตัวเลข Backspace เพื่อลบ N สำหรับโน้ต U สำหรับเลิกทำ H สำหรับคำใบ้ F สำหรับเติมโน้ต และ Escape สำหรับเมนู เกมบันทึกเองอัตโนมัติ เล่นออฟไลน์ได้ ไม่มีโฆษณาและไม่ต้องมีบัญชี"
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "ต้องเดาในซูโดกุหรือไม่?",
+            "ไม่ต้อง ถ้าเป็นโจทย์ที่ถูกต้อง ทุกโจทย์ของ Bare Sudoku มีคำตอบเดียวพอดี และผ่านการตรวจว่าแก้ได้ด้วยตรรกะล้วน ๆ ภายในเทคนิคของระดับนั้น ถ้าคุณรู้สึกว่าต้องเดา แสดงว่าโน้ตขาดตัวเลือกไปบางตัว หรือมีเทคนิคหนึ่งรอให้คุณค้นพบอยู่"
+          ],
+          [
+            "ตัวเลขซ้ำกันในแถว คอลัมน์ หรือกล่องเดียวกันได้ไหม?",
+            "ไม่ได้ นั่นคือกติกาทั้งหมด: แถวทั้งเก้า คอลัมน์ทั้งเก้า และกล่องทั้งเก้า ต่างมีตัวเลข 1 ถึง 9 ครบตัวละหนึ่งครั้งพอดี ถ้าตัวเลขเหมือนกันสองตัวอยู่ในหน่วยเดียวกัน อย่างน้อยหนึ่งตัวผิด"
+          ],
+          [
+            "ระดับง่าย ปานกลาง ยาก และผู้เชี่ยวชาญต่างกันอย่างไร?",
+            "ระดับกำหนดจากเทคนิคที่โจทย์ต้องใช้ ง่ายและปานกลางแก้ได้ด้วยซิงเกิลเท่านั้น และระดับง่ายเริ่มด้วยตัวเลขที่ให้มาอย่างน้อย 38 ตัว ระดับยากต้องใช้ตัวเลือกที่ถูกล็อก หรือคู่และสามตัว ระดับผู้เชี่ยวชาญต้องใช้ X-Wing, Y-Wing, Swordfish หรือ XYZ-Wing"
+          ],
+          [
+            "ควรเติมโน้ตทุกช่องหรือแค่บางช่อง?",
+            "สำหรับโจทย์ระดับยากและผู้เชี่ยวชาญ ให้เติมทั้งหมด: รูปแบบอย่างคู่ X-Wing และ Y-Wing จะปรากฏก็ต่อเมื่อเขียนตัวเลือกครบทุกตัว ในระดับง่ายและปานกลาง โน้ตเป็นทางเลือก และผู้เล่นส่วนใหญ่แค่กวาดตาหาซิงเกิล"
+          ],
+          [
+            "ซูโดกุหนึ่งข้อใช้เวลานานเท่าไร?",
+            "โจทย์ระดับง่ายใช้เวลาไม่กี่นาที โจทย์ระดับผู้เชี่ยวชาญอาจใช้ยี่สิบนาทีหรือมากกว่า ขึ้นกับว่าคุณเห็นรูปแบบขั้นสูงได้เร็วแค่ไหน Bare Sudoku แสดงตัวจับเวลา หยุดเวลาไว้ขณะเปิดเมนู และไม่มีตารางอันดับ จึงเล่นตามจังหวะของคุณเองได้"
+          ],
+          [
+            "ซูโดกุต้องใช้การคำนวณไหม?",
+            "ไม่ต้อง ตัวเลขเป็นแค่ป้ายกำกับ ไม่มีการบวกหรือการนับเลย สัญลักษณ์เก้าแบบใดก็ใช้ได้ และนั่นคือเหตุผลที่ซูโดกุเป็นปริศนาตรรกะ ไม่ใช่ปริศนาตัวเลข"
+          ]
+        ]
+      },
+      "index": {
+        "title": "เทคนิคการแก้ซูโดกุ อธิบายพร้อมตัวอย่าง",
+        "description": "เทคนิคการแก้ซูโดกุทั้งเก้าแบบ ตั้งแต่ตัวเลือกเดียวจนถึง Swordfish และ XYZ-Wing ตามลำดับที่คำใบ้ของ Bare Sudoku ใช้ แต่ละแบบมีตัวอย่างจริง",
+        "h1": "เทคนิคการแก้ซูโดกุ",
+        "intro": [
+          "ซูโดกุทุกข้อแก้ได้ด้วยเทคนิคเชิงตรรกะชุดเล็ก ๆ หน้านี้รวบรวมเทคนิคเก้าแบบที่ตัวแก้และคำใบ้ของ Bare Sudoku ใช้ ตามลำดับที่ตัวแก้ลองใช้: ซิงเกิลก่อน ตามด้วยการตัดตัวเลือกภายในหน่วยเดียว แล้วจึงเป็นรูปแบบที่ครอบคลุมหลายแถวและหลายคอลัมน์ แต่ละเทคนิคมีหน้าของตัวเองพร้อมคำนิยาม วิธีสังเกต ตัวอย่างจริงจากโจทย์ที่สร้างขึ้น และข้อผิดพลาดที่พบบ่อย",
+          "ระดับของโจทย์กำหนดจากเทคนิคที่ยากที่สุดที่ต้องใช้ โจทย์ระดับง่ายและปานกลางใช้แค่ซิงเกิล โจทย์ระดับยากต้องใช้ตัวเลือกที่ถูกล็อก หรือคู่และสามตัว และโจทย์ระดับผู้เชี่ยวชาญต้องใช้รูปแบบ fish หรือ wing อย่างน้อยหนึ่งครั้ง ไม่ว่าระดับใด ซิงเกิลทำงานส่วนใหญ่ เทคนิคขั้นสูงตัดตัวเลือกออกหนึ่งหรือสองตัว แล้วซิงเกิลก็ทำต่อจากตรงนั้น"
+        ],
+        "faq": [
+          [
+            "ควรลองเทคนิคซูโดกุตามลำดับไหน?",
+            "เริ่มจากง่ายที่สุด: ตัวเลือกเดียว ตำแหน่งเดียว ตัวเลือกที่ถูกล็อก คู่และสามตัวแบบเปิด คู่และสามตัวแบบซ่อน X-Wing, Y-Wing, Swordfish, XYZ-Wing Bare Sudoku ลองตามลำดับนี้ทุกประการ และคำใบ้จะบอกชื่อเทคนิคที่ง่ายที่สุดที่ช่วยให้แก้ต่อได้เสมอ"
+          ],
+          [
+            "ต้องรู้ทุกเทคนิคเหล่านี้เพื่อแก้ซูโดกุไหม?",
+            "สำหรับโจทย์ระดับง่ายและปานกลาง ซิงเกิลก็เพียงพอ โจทย์ระดับยากเพิ่มตัวเลือกที่ถูกล็อกและกลุ่มย่อย โจทย์ระดับผู้เชี่ยวชาญต้องใช้ fish หรือ wing อย่างน้อยหนึ่งครั้ง แต่ปกติแค่หนึ่งหรือสองครั้งต่อโจทย์"
+          ],
+          [
+            "มีเทคนิคที่ยากกว่า XYZ-Wing ไหม?",
+            "มี เช่น เชน การทดสอบความเป็นหนึ่งเดียว และ forcing net Bare Sudoku ไม่สร้างโจทย์ที่ต้องใช้เทคนิคเหล่านั้น ทุกโจทย์ในเกมจึงแก้จบได้ด้วยเก้าเทคนิคในหน้านี้"
+          ],
+          [
+            "ตัวเลือกคืออะไร?",
+            "ตัวเลขที่ยังอาจใส่ลงในช่องว่างได้ เพราะยังไม่มีอะไรในแถว คอลัมน์ หรือกล่องของช่องนั้นตัดมันออก โน้ตในเกมก็คือตัวเลือก ทุกเทคนิคที่เหนือกว่าซิงเกิลใช้เหตุผลกับตัวเลือก จึงควรรักษาโน้ตให้ครบและถูกต้อง"
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "ตัวเลือกเดียว",
+          "title": "ตัวเลือกเดียวในซูโดกุ: ช่องที่เหลือตัวเลือกเดียว",
+          "description": "ตัวเลือกเดียวคือช่องว่างที่ใส่ได้เพียงตัวเลขเดียว เรียนรู้วิธีหาให้เร็ว พร้อมตัวอย่างจริงทีละขั้นและข้อผิดพลาดที่พบบ่อย",
+          "h1": "ตัวเลือกเดียว",
+          "summary": "ตัวเลือกเดียว (naked single) คือช่องว่างที่มีตัวเลือกเหลือตัวเดียวพอดี: ตัวเลขอีกแปดตัวมีอยู่แล้วในแถว คอลัมน์ หรือกล่องของมัน ตัวเลขที่เหลือต้องอยู่ในช่องนั้น นี่คือเทคนิคซูโดกุที่ง่ายที่สุด ใช้บ่อยที่สุด และเป็นเทคนิคที่คำใบ้ของ Bare Sudoku รายงานว่า \"มีตัวเลือกเดียวที่นี่\"",
+          "when": [
+            "เสมอ ตัวเลือกเดียวปรากฏตั้งแต่ตาแรกจนถึงตาสุดท้ายในทุกระดับ ในโจทย์ระดับง่ายและปานกลาง ตัวเลือกเดียวกับตำแหน่งเดียวคือเทคนิคเดียวที่คุณต้องใช้ ในโจทย์ที่ยากกว่า การตัดตัวเลือกแต่ละครั้งด้วยเทคนิคขั้นสูงมักทิ้งตัวเลือกเดียวไว้ จึงควรตรวจหลังทุกขั้น"
+          ],
+          "spot": [
+            "ดูช่องที่ช่องเพื่อนบ้านถูกเติมไปมาก: ช่องในแถวที่มีตัวเลขแล้วเจ็ดตัว หรือช่องที่แถว คอลัมน์ และกล่องรวมกันครอบคลุมตัวเลขต่างกันแปดตัว ถ้าไม่มีโน้ต ให้นับตัวเลขที่มองเห็นจากช่องนั้น ถ้ามีโน้ต ตัวเลือกเดียวก็คือช่องที่แสดงตัวเลือกเพียงตัวเดียว นี่คือเหตุผลที่เติมโน้ตช่วยให้หาได้ง่าย"
+          ],
+          "examples": [
+            {
+              "h": "ตัวอย่าง",
+              "steps": [
+                "ดูที่ {cell} ช่องนี้ว่างอยู่ จึงไล่รายการตัวเลขทุกตัวที่ใส่แล้วในแถว คอลัมน์ และกล่องของมัน",
+                "แถว {row} มี {rowDigits} คอลัมน์ {col} มี {colDigits} กล่อง {box} มี {boxDigits}",
+                "รวมกันแล้ว ตัวเลขทุกตัวถูกตัดออกยกเว้น {d} ดังนั้น {d} คือตัวเลือกเดียวที่เหลือใน {cell}",
+                "เขียน {d} ลงใน {cell} แล้วตรวจว่าตัวเลขใหม่นี้สร้างซิงเกิลอื่นในแถว คอลัมน์ หรือกล่องเดียวกันหรือไม่"
+              ]
+            }
+          ],
+          "mistakes": [
+            "นับแค่แถวหรือแค่กล่อง ตัวเลขแปดตัวที่ถูกตัดออกมักมาจากทั้งสามหน่วยรวมกัน",
+            "ลืมว่าตัวเลขที่เพิ่งใส่ก็ตัดตัวเลือกออกจากช่องเพื่อนบ้าน 20 ช่องของมันด้วย ตัวเลือกเดียวใหม่ ๆ จะปรากฏทันทีหลังการใส่แต่ละครั้ง",
+            "สับสนระหว่างตัวเลือกเดียวกับตำแหน่งเดียว: ตัวเลือกเดียวคือช่องที่เหลือตัวเลือกเดียว ตำแหน่งเดียวคือตัวเลขที่เหลือช่องเดียวในหน่วยหนึ่ง"
+          ],
+          "faq": [
+            [
+              "ตัวเลือกเดียวในซูโดกุคืออะไร?",
+              "ช่องว่างที่มีตัวเลือกเหลือตัวเดียวพอดี ตัวเลขต่างกันแปดตัวถูกใส่ไว้แล้วในแถว คอลัมน์ และกล่องของมัน ตัวเลขตัวที่เก้าจึงเป็นตัวเดียวที่ใส่ได้"
+            ],
+            [
+              "ทำไมจึงเรียกว่า naked (เปลือย)?",
+              "เพราะตัวเลือกเดียวนั้นมองเห็นได้ตรง ๆ ในช่องเมื่อเขียนโน้ตแล้ว ไม่มีอะไรบังไว้ ส่วนตำแหน่งเดียวนั้นซ่อนอยู่ท่ามกลางตัวเลือกอื่น และหาได้โดยดูที่ตัวเลข ไม่ใช่ที่ช่อง"
+            ],
+            [
+              "แก้โจทย์ด้วยตัวเลือกเดียวอย่างเดียวได้ไหม?",
+              "โจทย์ระดับง่ายหลายข้อทำได้ แต่ส่วนใหญ่ต้องใช้ตำแหน่งเดียวด้วย Bare Sudoku จัดโจทย์ระดับง่ายและปานกลางว่าแก้ได้ด้วยซิงเกิลทั้งสองแบบ ส่วนโจทย์ระดับยากและผู้เชี่ยวชาญต้องใช้เทคนิคเพิ่มอย่างน้อยหนึ่งแบบ"
+            ],
+            [
+              "คำใบ้แสดงตัวเลือกเดียวไหม?",
+              "แสดง เมื่อการใส่ครั้งถัดไปเป็นตัวเลือกเดียว คำใบ้จะเลือกช่องนั้นและบอกว่า \"มีตัวเลือกเดียวที่นี่\" พร้อมตัวเลข แตะคำใบ้อีกครั้งเพื่อใส่"
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "ตำแหน่งเดียว",
+          "title": "ตำแหน่งเดียวในซูโดกุ: ที่เดียวสำหรับตัวเลขหนึ่งตัว",
+          "description": "ตำแหน่งเดียวคือช่องเดียวในแถว คอลัมน์ หรือกล่องที่ตัวเลขหนึ่งยังใส่ได้ เรียนรู้วิธีสังเกตโดยกวาดตาดูทีละตัวเลข",
+          "h1": "ตำแหน่งเดียว",
+          "summary": "ตำแหน่งเดียว (hidden single) คือตัวเลขที่เหลือช่องที่เป็นไปได้เพียงช่องเดียวในแถว คอลัมน์ หรือกล่อง แม้ช่องนั้นอาจแสดงตัวเลือกอื่นอยู่ด้วย เพราะหน่วยนั้นต้องมีตัวเลขนี้ ตัวเลขจึงต้องอยู่ที่ช่องนั้น คำใบ้ของ Bare Sudoku รายงานว่า \"ที่เดียวสำหรับ 5 ในแถวนี้\" หรือในคอลัมน์นี้ หรือในกล่องนี้",
+          "when": [
+            "ทุกครั้งที่ตัวเลขหนึ่งถูกใส่ไปมากแล้ว: เมื่อตัวเลขปรากฏห้าหรือหกครั้ง กล่องที่เหลือจะถูกจำกัดมาก และตำแหน่งเดียวมักเป็นตาถัดไป ตำแหน่งเดียวคือเทคนิคหลักของโจทย์ระดับง่ายและปานกลาง และยังเป็นเครื่องมือหลักในทุกระดับ"
+          ],
+          "spot": [
+            "กวาดตาดูทีละตัวเลข เลือกตัวเลขหนึ่ง หากล่องที่ยังไม่มีตัวเลขนั้น แล้วขีดฆ่าทุกช่องในกล่องที่อยู่แถวหรือคอลัมน์เดียวกับตัวเลขนั้นที่ใส่ไว้แล้ว ถ้าเหลือรอดเพียงช่องเดียว คุณเจอตำแหน่งเดียวแล้ว การกวาดแบบเดียวกันใช้ได้กับแถวและคอลัมน์ ในเกม ให้แตะตัวเลขที่ใส่แล้ว: ทุกตัวที่เหมือนกันจะถูกไฮไลต์ ช่องที่ยังว่างจึงเห็นได้ชัด"
+          ],
+          "examples": [
+            {
+              "h": "ตัวอย่าง",
+              "steps": [
+                "กล่อง {box} ยังไม่มี {d} ดังนั้นช่องว่างช่องใดช่องหนึ่งในกล่องต้องเป็น {d} ช่องว่างคือ {empties}",
+                "ในทุกช่องเหล่านั้นยกเว้น {cell} เลข {d} ถูกกันไว้โดย {d} ที่ใส่แล้วในแถวหรือคอลัมน์เดียวกัน {d} จึงไม่ใช่ตัวเลือกในช่องเหล่านั้น",
+                "จึงเหลือ {cell} เป็นที่เดียวสำหรับ {d} ในกล่อง {box} เขียน {d} ลงไป แม้ {cell} อาจยังแสดงตัวเลือกอื่นอยู่"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ใส่ตัวเลขในช่องที่แค่น่าจะถูก: ตรวจช่องว่างอื่นทุกช่องในหน่วย ไม่ใช่แค่ช่องที่เห็นชัด",
+            "พลาดตำแหน่งเดียวเพราะช่องนั้นแสดงตัวเลือกหลายตัว ตัวเลือกอื่นไม่สำคัญ สิ่งสำคัญคือตัวเลขนั้นไม่มีที่อื่นในหน่วยแล้ว",
+            "กวาดดูแค่กล่อง แถวและคอลัมน์ก็ให้ตำแหน่งเดียวบ่อยพอกัน โดยเฉพาะช่วงท้ายเกม"
+          ],
+          "faq": [
+            [
+              "ตำแหน่งเดียวในซูโดกุคืออะไร?",
+              "ตัวเลขที่ใส่ได้เพียงช่องเดียวในแถว คอลัมน์ หรือกล่อง หน่วยนั้นต้องมีตัวเลขนี้ ช่องนั้นจึงถูกกำหนดแล้วแม้ยังมีตัวเลือกอื่นอยู่"
+            ],
+            [
+              "ตำแหน่งเดียวต่างจากตัวเลือกเดียวอย่างไร?",
+              "ตัวเลือกเดียวมองที่ช่อง: เหลือตัวเลือกเดียว ตำแหน่งเดียวมองที่ตัวเลข: เหลือช่องเดียวในหน่วย ทั้งสองแบบใส่ตัวเลขได้อย่างแน่นอน"
+            ],
+            [
+              "แบบไหนหาง่ายกว่า?",
+              "ถ้าไม่มีโน้ต ตำแหน่งเดียวมักหาง่ายกว่า เพราะกวาดตาดูกระดานทีละตัวเลขได้ ถ้ามีโน้ตครบ ตัวเลือกเดียวหาง่ายที่สุด เพราะช่องที่มีตัวเลือกเดียวจะเด่นชัด"
+            ],
+            [
+              "คำใบ้อธิบายตำแหน่งเดียวอย่างไร?",
+              "ว่า \"ที่เดียวสำหรับ\" ตัวเลขนั้นในแถวนี้ คอลัมน์นี้ หรือกล่องนี้ โดยเลือกช่องไว้ให้ แตะคำใบ้อีกครั้งเพื่อใส่"
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "ตัวเลือกที่ถูกล็อก",
+          "title": "ตัวเลือกที่ถูกล็อกในซูโดกุ: แบบชี้และแบบยึดครอง",
+          "description": "ตัวเลือกที่ถูกล็อก: เมื่อตัวเลือกของตัวเลขหนึ่งในกล่องอยู่บนแถวหรือคอลัมน์เดียว หรือกลับกัน ตัวเลขนั้นจะถูกลบออกจากที่อื่น มีตัวอย่างจริงสองแบบ",
+          "h1": "ตัวเลือกที่ถูกล็อก",
+          "summary": "ตัวเลือกที่ถูกล็อก (locked candidates) คือเทคนิคแรกที่ลบตัวเลือกแทนการใส่ตัวเลข มีสองแบบ แบบชี้: ในกล่องหนึ่ง ตัวเลือกทั้งหมดของตัวเลขหนึ่งอยู่บนแถวหรือคอลัมน์เดียว ตัวเลขนั้นจึงถูกลบออกจากส่วนที่เหลือของเส้นนั้น แบบยึดครอง: ในแถวหรือคอลัมน์หนึ่ง ตัวเลือกทั้งหมดของตัวเลขหนึ่งอยู่ในกล่องเดียว ตัวเลขนั้นจึงถูกลบออกจากส่วนที่เหลือของกล่องนั้น คำใบ้ของ Bare Sudoku ติดป้ายการใส่ที่เทคนิคนี้ปลดล็อกว่า \"ตัวเลือกที่ถูกล็อก\"",
+          "when": [
+            "เมื่อซิงเกิลหมดในโจทย์ระดับยาก นี่คือสิ่งแรกที่ควรลอง ต้องมีโน้ตครบอย่างน้อยสำหรับตัวเลขที่กำลังตรวจ ตัวเลือกที่ถูกล็อกพบบ่อย: โจทย์ระดับยากส่วนใหญ่ต้องใช้ และโจทย์ระดับผู้เชี่ยวชาญใช้สลับกับรูปแบบที่ใหญ่กว่า"
+          ],
+          "spot": [
+            "สำหรับแบบชี้ ดูทีละกล่องและทีละตัวเลขที่กล่องยังขาด: ถ้าช่องตัวเลือกของตัวเลขนั้นอยู่บนแถวหรือคอลัมน์เดียว ให้ตรวจว่าตัวเลขเดียวกันยังเป็นตัวเลือกอยู่ตามเส้นนั้นนอกกล่องหรือไม่ สำหรับแบบยึดครอง ดูไปตามแถวหรือคอลัมน์: ถ้าตัวเลือกของตัวเลขหนึ่งอยู่ในกล่องเดียวทั้งหมด ส่วนที่เหลือของกล่องนั้นก็ล้างได้ ในเกม แตะปุ่มตัวเลขเพื่อไฮไลต์ตัวเลือกทุกตัวของมัน โน้ตที่ไฮไลต์สองหรือสามตัวเรียงเป็นแนวในกล่องเดียวคือรูปแบบนี้"
+          ],
+          "examples": [
+            {
+              "h": "แบบชี้",
+              "steps": [
+                "ในกล่อง {box} ตัวเลข {d} มีช่องตัวเลือกเพียงเท่านี้: {cells} ทั้งหมดอยู่ในแถว {row}",
+                "กล่อง {box} ต้องมี {d} ดังนั้น {d} ของแถว {row} อยู่ภายในกล่อง {box} ไม่ว่าจะลงช่องไหนในนั้น",
+                "แถว {row} มี {d} ตัวที่สองไม่ได้ จึงลบ {d} ออกจากช่องของแถว {row} ที่อยู่นอกกล่อง: {elim}"
+              ]
+            },
+            {
+              "h": "แบบยึดครอง",
+              "steps": [
+                "ในแถว {row} ตัวเลข {d} ใส่ได้แค่ใน {cells} และทั้งหมดอยู่ภายในกล่อง {box}",
+                "แถว {row} ต้องมี {d} ดังนั้น {d} ของกล่อง {box} ถูกแถว {row} ยึดไว้ ช่องอื่นในกล่อง {box} จึงเป็น {d} ไม่ได้",
+                "ลบ {d} ออกจาก {elim}"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ลบตัวเลขภายในกล่องแทนที่จะเป็นภายนอกในแบบชี้ หรือกลับกันในแบบยึดครอง การตัดตัวเลือกเกิดกับช่องที่อยู่บนเส้นแต่ไม่อยู่ในกล่อง หรืออยู่ในกล่องแต่ไม่อยู่บนเส้นเสมอ",
+            "ใช้กฎนี้ทั้งที่ตัวเลือกกระจายอยู่สองแถวของกล่อง ช่องตัวเลือกทุกช่องของตัวเลขนั้นในกล่องต้องอยู่บนเส้นเดียว",
+            "ลืมหาซิงเกิลที่เกิดจากการตัดตัวเลือก ตัวเลือกที่ถูกล็อกแทบไม่ใส่ตัวเลขได้เอง แต่มันเตรียมทางให้ซิงเกิล"
+          ],
+          "faq": [
+            [
+              "ตัวเลือกที่ถูกล็อกในซูโดกุคืออะไร?",
+              "ตัวเลือกของตัวเลขหนึ่งที่ถูกจำกัดอยู่ในส่วนที่กล่องกับเส้นตัดกัน เพราะกล่อง หรือเส้น ต้องมีตัวเลขนั้นอยู่ในส่วนที่ตัดกันนี้ ตัวเลขนั้นจึงลบออกจากส่วนที่เหลือของเส้น หรือส่วนที่เหลือของกล่องได้"
+            ],
+            [
+              "แบบชี้กับแบบยึดครองต่างกันอย่างไร?",
+              "แบบชี้เริ่มจากกล่อง: ตัวเลือกของตัวเลขในกล่องชี้ไปตามแถวหรือคอลัมน์เดียว ตัวเลขจึงถูกลบออกจากส่วนที่เหลือของเส้นนั้น แบบยึดครองเริ่มจากแถวหรือคอลัมน์: ตัวเลือกของตัวเลขบนเส้นอยู่ในกล่องเดียวทั้งหมด เส้นนั้นจึงยึดตัวเลขไว้ และตัวเลขถูกลบออกจากส่วนที่เหลือของกล่อง"
+            ],
+            [
+              "ตัวเลือกที่ถูกล็อกเรียกอีกชื่อว่า intersection removal ใช่ไหม?",
+              "ใช่ ชื่ออื่นได้แก่ box-line reduction สำหรับแบบยึดครอง และ pointing pair หรือ pointing triple สำหรับแบบชี้ Bare Sudoku ใช้ชื่อเดียวสำหรับทั้งสองแบบ"
+            ],
+            [
+              "ระดับไหนต้องใช้ตัวเลือกที่ถูกล็อก?",
+              "ระดับยาก โจทย์ที่ต้องใช้ตัวเลือกที่ถูกล็อกหรือกลุ่มย่อยแต่ไม่ต้องใช้อะไรที่ยากกว่านั้นจัดเป็นระดับยาก โจทย์ระดับผู้เชี่ยวชาญต้องใช้ fish หรือ wing เพิ่มด้วย"
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "คู่และสามตัวแบบเปิด",
+          "title": "คู่และสามตัวแบบเปิดในซูโดกุ: ทำงานอย่างไร",
+          "description": "คู่และสามตัวแบบเปิด: สองหรือสามช่องในหน่วยเดียวที่มีตัวเลือกสองหรือสามตัวชุดเดียวกัน เรียนรู้วิธีสังเกตและสิ่งที่ต้องลบ พร้อมตัวอย่างจริง",
+          "h1": "คู่และสามตัวแบบเปิด",
+          "summary": "คู่แบบเปิด (naked pair) คือสองช่องในแถว คอลัมน์ หรือกล่องเดียวกันที่มีตัวเลือกสองตัวเหมือนกันทุกประการ ตัวเลขสองตัวนั้นต้องอยู่ในสองช่องนี้ จึงลบออกจากช่องอื่นทุกช่องในหน่วยได้ สามตัวแบบเปิดคือแนวคิดเดียวกันกับสามช่องและตัวเลขสามตัว แต่ละช่องอาจแสดงสองหรือทั้งสามตัว คำใบ้ของ Bare Sudoku ติดป้ายการใส่ที่ได้ว่า \"คู่หรือสาม\"",
+          "when": [
+            "หลังจากโน้ตครบ และซิงเกิลกับตัวเลือกที่ถูกล็อกหมดแล้ว คู่แบบเปิดพบบ่อยมากในโจทย์ระดับยาก สามตัวแบบเปิดพบน้อยกว่า ทั้งสองแบบคุ้มค่าที่จะตรวจในทุกหน่วยที่ยังมีช่องว่างห้าช่องขึ้นไป"
+          ],
+          "spot": [
+            "มองหาช่องที่มีตัวเลือกแค่สองตัว แล้วหาช่องอื่นในหน่วยเดียวกันที่มีสองตัวเดียวกัน สำหรับสามตัว ให้ดูหน่วยที่มีช่องสองและสามตัวเลือกหลายช่อง แล้วตรวจว่ามีสามช่องที่รวมกันใช้ตัวเลขต่างกันเพียงสามตัวหรือไม่ ช่องที่มีตัวเลือกเหมือนกันทุกประการเห็นได้ง่ายเมื่อเขียนโน้ตแล้ว ปุ่มเติมโน้ตในเกมทำให้ด้วยการแตะครั้งเดียว"
+          ],
+          "examples": [
+            {
+              "h": "คู่แบบเปิด",
+              "steps": [
+                "{cellA} และ {cellB} ใน{unit} มีตัวเลือกสองตัวเหมือนกันทุกประการ: {d1} และ {d2}",
+                "ช่องหนึ่งต้องเป็น {d1} และอีกช่องเป็น {d2} เราไม่รู้ว่าช่องไหนเป็นตัวไหน แต่ตัวเลขทั้งสองถูกสองช่องนี้ใช้ไปแล้ว",
+                "ดังนั้นช่องอื่นใน{unit} จะเป็น {d1} หรือ {d2} ไม่ได้ ลบ {elim}"
+              ]
+            },
+            {
+              "h": "สามตัวแบบเปิด",
+              "steps": [
+                "สามช่องใน{unit} มีตัวเลือกทั้งหมดมาจากตัวเลขสามตัวชุดเดียวกัน {digits}: {cells}",
+                "ตัวเลขสามตัวนี้ต้องเติมสามช่องนี้ในลำดับใดลำดับหนึ่ง แต่ละช่องไม่จำเป็นต้องแสดงตัวเลือกครบสามตัว สิ่งสำคัญคือไม่มีช่องใดในสามช่องมีตัวเลือกนอกชุดนี้",
+                "ลบ {digits} ออกจากช่องอื่นทุกช่องใน{unit}: {elim}"
+              ]
+            }
+          ],
+          "mistakes": [
+            "เลือกสองช่องที่มีตัวเลือกสองตัวร่วมกัน แต่มีตัวที่สามด้วย สำหรับคู่แบบเปิด แต่ละช่องต้องมีตัวเลือกสองตัวนั้นพอดีและไม่มีตัวอื่น",
+            "ลบตัวเลขออกจากช่องของคู่เอง คู่นั้นเก็บตัวเลือกของมันไว้ การตัดตัวเลือกเกิดกับช่องอื่นในหน่วย",
+            "กำหนดให้ทุกช่องในสามตัวต้องแสดงครบทั้งสามตัว ช่องที่มีสองในสามตัวก็ใช้ได้ ตราบใดที่ไม่มีช่องใดมีตัวเลือกนอกชุด"
+          ],
+          "faq": [
+            [
+              "คู่แบบเปิดในซูโดกุคืออะไร?",
+              "สองช่องในหน่วยเดียวกันที่ทั้งคู่มีตัวเลือกสองตัวเหมือนกันทุกประการ ตัวเลขสองตัวนั้นถูกล็อกไว้ในสองช่องนี้ จึงลบออกจากส่วนที่เหลือของหน่วยได้"
+            ],
+            [
+              "สามตัวแบบเปิดคืออะไร?",
+              "สามช่องในหน่วยเดียวกันที่ตัวเลือกรวมกันมีเพียงสามตัวเลข แต่ละช่องอาจมีสองหรือสามตัวในนั้น ตัวเลขสามตัวเติมสามช่องนี้ จึงลบออกจากช่องอื่นในหน่วยได้"
+            ],
+            [
+              "คู่แบบเปิดใส่ตัวเลขได้เองไหม?",
+              "ไม่ได้ด้วยตัวเอง มันลบตัวเลือก และการลบนั้นมักทิ้งตัวเลือกเดียวหรือตำแหน่งเดียวไว้ คำใบ้ใน Bare Sudoku แสดงซิงเกิลนั้นและบอกชื่อเทคนิคที่ทำให้เกิดขึ้น"
+            ],
+            [
+              "คู่แบบเปิดอยู่ในกล่องและแถวพร้อมกันได้ไหม?",
+              "ได้ ถ้าสองช่องอยู่ในแถวเดียวกันและกล่องเดียวกัน คู่นั้นตัดตัวเลือกได้ในทั้งสองหน่วย Bare Sudoku จัดการทีละหน่วย"
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "คู่และสามตัวแบบซ่อน",
+          "title": "คู่และสามตัวแบบซ่อนในซูโดกุ: วิธีสังเกต",
+          "description": "คู่แบบซ่อนคือตัวเลขสองตัวที่ใส่ได้แค่ในสองช่องเดียวกันของหน่วย ตัวเลือกอื่นในสองช่องนั้นจึงถูกลบ เรียนรู้วิธีหาคู่และสามตัวแบบซ่อนทีละขั้น",
+          "h1": "คู่และสามตัวแบบซ่อน",
+          "summary": "คู่แบบซ่อน (hidden pair) คือตัวเลขสองตัวที่ในแถว คอลัมน์ หรือกล่องหนึ่ง เป็นตัวเลือกอยู่ในสองช่องเดียวกันและไม่มีที่อื่น สองช่องนั้นต้องเป็นตัวเลขสองตัวนี้ ตัวเลือกอื่นทุกตัวในสองช่องจึงลบได้ สามตัวแบบซ่อนทำงานแบบเดียวกันกับตัวเลขสามตัวที่ถูกจำกัดอยู่ในสามช่อง หลังการลบ ช่องเหล่านั้นจะกลายเป็นคู่หรือสามตัวแบบเปิด คำใบ้ของ Bare Sudoku ติดป้ายการใส่ที่ได้ว่า \"คู่หรือสาม\"",
+          "when": [
+            "เมื่อหน่วยหนึ่งมีช่องที่มีตัวเลือกมากและซิงเกิลหมดแล้ว คู่แบบซ่อนหลบอยู่ในช่องที่แน่นไปด้วยตัวเลือก จึงคุ้มค่าที่จะหาตรงจุดที่มองไม่เห็นคู่แบบเปิด สามตัวแบบซ่อนพบน้อย Bare Sudoku ตรวจหาด้วย แต่โจทย์ระดับยากส่วนใหญ่แก้ได้โดยไม่ต้องใช้"
+          ],
+          "spot": [
+            "ทำงานตามตัวเลข ไม่ใช่ตามช่อง ในหน่วยหนึ่ง จดว่าตัวเลขที่ยังขาดแต่ละตัวใส่ได้ในช่องไหนบ้าง ถ้าตัวเลขสองตัวต่างมีช่องที่เป็นไปได้แค่สองช่อง และเป็นสองช่องเดียวกัน คุณได้คู่แบบซ่อนแล้ว ในเกม แตะปุ่มตัวเลขเพื่อไฮไลต์ตัวเลือกของมัน ถ้าตัวเลขสองตัวไฮไลต์สองช่องเดียวกันในหน่วยและไม่มีช่องอื่นในหน่วยนั้น นั่นคือรูปแบบนี้"
+          ],
+          "examples": [
+            {
+              "h": "คู่แบบซ่อน",
+              "steps": [
+                "ใน{unit} ตัวเลข {d1} และ {d2} ต่างมีช่องที่เป็นไปได้แค่สองช่อง และเป็นสองช่องเดียวกัน: {cells}",
+                "สองช่องนี้ต้องเป็น {d1} และ {d2} ตัวเลือกอื่นในสองช่องนี้จึงเป็นไปไม่ได้",
+                "ลบ {elim} ตอนนี้สองช่องนี้แสดงเป็นคู่แบบเปิด ซึ่งอาจปลดล็อกการเดินต่อได้อีก"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ลบตัวเลขสองตัวของคู่ออกจากช่องของคู่ สิ่งที่ต้องลบคือตัวเลือกอื่นในช่องเหล่านั้น ตัวเลขของคู่ยังอยู่",
+            "ยอมรับตัวเลขที่ยังมีช่องที่สามที่เป็นไปได้ในหน่วย ตัวเลขทั้งสองต้องถูกจำกัดอยู่ในสองช่องนั้นพอดี",
+            "มองหาแค่ในกล่อง คู่แบบซ่อนเกิดในแถวและคอลัมน์บ่อยพอกัน"
+          ],
+          "faq": [
+            [
+              "คู่แบบซ่อนในซูโดกุคืออะไร?",
+              "ตัวเลขสองตัวที่ใส่ได้แค่ในสองช่องเดียวกันของหน่วย สองช่องนั้นต้องรับตัวเลขสองตัวนี้ ตัวเลือกอื่นของช่องจึงถูกลบ"
+            ],
+            [
+              "คู่แบบซ่อนต่างจากคู่แบบเปิดอย่างไร?",
+              "คู่แบบเปิดมองเห็นได้: สองช่องที่แสดงแค่ตัวเลือกสองตัวเดียวกัน คู่แบบซ่อนถูกบังด้วยตัวเลือกส่วนเกินในสองช่องนั้น การลบตัวเลือกส่วนเกินจะเปลี่ยนคู่แบบซ่อนเป็นคู่แบบเปิด"
+            ],
+            [
+              "สามตัวแบบซ่อนคืออะไร?",
+              "ตัวเลขสามตัวที่ถูกจำกัดอยู่ในสามช่องของหน่วย แต่ละตัวไม่จำเป็นต้องปรากฏในทั้งสามช่อง สิ่งสำคัญคือไม่มีตัวเลขใดในสามตัวมีตัวเลือกนอกช่องเหล่านั้น"
+            ],
+            [
+              "คำใบ้แยกคู่แบบซ่อนกับคู่แบบเปิดไหม?",
+              "ไม่แยก Bare Sudoku หาได้ทั้งสองแบบและติดป้ายการใส่ที่ได้ว่า \"คู่หรือสาม\" หน้าต่าง ๆ ที่นี่แยกไว้เพราะวิธีหาต่างกัน"
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing ในซูโดกุ: เทคนิคนี้ทำงานอย่างไร",
+          "description": "X-Wing: ตัวเลขที่มีช่องตัวเลือกสองช่องพอดีในสองแถว เรียงตรงกันในสองคอลัมน์เดียวกัน จะถูกลบออกจากส่วนที่เหลือของคอลัมน์เหล่านั้น พร้อมตัวอย่างจริง",
+          "h1": "X-Wing",
+          "summary": "X-Wing คือรูปแบบของตัวเลขหนึ่งตัวกับสี่ช่องที่มุมของสี่เหลี่ยมผืนผ้า ถ้าตัวเลขนั้นมีช่องตัวเลือกสองช่องพอดีในแต่ละแถวของสองแถว และช่องเหล่านั้นอยู่ในสองคอลัมน์เดียวกัน ตัวเลขนั้นต้องอยู่ที่มุมตรงข้ามกันสองมุมของสี่เหลี่ยม จึงลบออกจากช่องอื่นทุกช่องของสองคอลัมน์นั้นได้ สลับแถวกับคอลัมน์ก็ใช้ได้เช่นกัน นี่คือเทคนิคระดับผู้เชี่ยวชาญแรกใน Bare Sudoku",
+          "when": [
+            "เมื่อซิงเกิล ตัวเลือกที่ถูกล็อก และกลุ่มย่อยหมดแล้ว X-Wing คือรูปแบบระดับผู้เชี่ยวชาญที่พบบ่อยที่สุด และมักปรากฏเมื่อตัวเลขหนึ่งเหลือตัวเลือกไม่มาก โดยทั่วไปเมื่อใส่ตัวเลขนั้นไปแล้วสี่ถึงหกตัว ต้องมีโน้ตครบสำหรับตัวเลขที่กำลังตรวจ"
+          ],
+          "spot": [
+            "เลือกตัวเลขหนึ่ง แล้วหาแถวที่ตัวเลขนั้นมีช่องตัวเลือกสองช่องพอดี ถ้าสองแถวแบบนั้นใช้สองคอลัมน์เดียวกัน ให้ตรวจคอลัมน์เหล่านั้นหาตัวเลือกอื่นของตัวเลขนี้: นั่นคือตัวที่ลบได้ จากนั้นทำซ้ำโดยใช้คอลัมน์เป็นฐาน ในเกม แตะปุ่มตัวเลข: ตัวเลือกทุกตัวของมันจะถูกไฮไลต์ และสี่เหลี่ยมของโน้ตที่ไฮไลต์สี่ตัวจะเห็นได้ง่าย"
+          ],
+          "examples": [
+            {
+              "h": "ตัวอย่าง",
+              "steps": [
+                "ตัวเลข {d} มีช่องตัวเลือกสองช่องพอดีในแถว {r1} และสองช่องพอดีในแถว {r2} และเรียงตรงกันในสองคอลัมน์เดียวกันคือ {c1} และ {c2}: {cells}",
+                "แถว {r1} ใส่ {d} ในคอลัมน์ {c1} หรือ {c2} และแถว {r2} ใส่ {d} ในอีกคอลัมน์หนึ่ง ไม่ว่าแบบไหน คอลัมน์ {c1} และ {c2} ต่างได้ {d} จากสองแถวนี้",
+                "ดังนั้น {d} จะอยู่ที่อื่นในคอลัมน์ {c1} และ {c2} ไม่ได้ ลบ {d} ออกจาก {elim}"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ใช้แถวที่มีช่องตัวเลือกสามช่องสำหรับตัวเลขนั้น แถวฐานแต่ละแถวต้องมีสองช่องพอดี และทั้งสองต้องอยู่ในสองคอลัมน์ที่ใช้ร่วมกัน",
+            "ลบตัวเลขออกจากแถวแทนที่จะเป็นคอลัมน์ เมื่อใช้แถวเป็นฐาน การตัดตัวเลือกเกิดในคอลัมน์ และกลับกัน",
+            "ลืมแบบสลับ X-Wing ที่สร้างบนคอลัมน์จะตัดตัวเลือกในแถว"
+          ],
+          "faq": [
+            [
+              "X-Wing ในซูโดกุคืออะไร?",
+              "ตัวเลขที่มีช่องตัวเลือกสองช่องพอดีในแต่ละแถวของสองแถว ในสองคอลัมน์เดียวกัน ตัวเลขนั้นอยู่ที่มุมตรงข้ามกันสองมุมของสี่เหลี่ยมนั้น จึงถูกลบออกจากส่วนที่เหลือของสองคอลัมน์ สลับแถวกับคอลัมน์ได้"
+            ],
+            [
+              "ทำไม X-Wing จึงได้ผล?",
+              "แต่ละแถวของสองแถวต้องใส่ตัวเลขนั้นในคอลัมน์ใดคอลัมน์หนึ่งของสองคอลัมน์ และสองแถวใช้คอลัมน์เดียวกันไม่ได้ ดังนั้นแต่ละคอลัมน์ได้ตัวเลขนั้นจากสองแถวนี้ และตัวเลือกอื่นทุกตัวในคอลัมน์เหล่านั้นเป็นไปไม่ได้"
+            ],
+            [
+              "X-Wing เป็น fish ไหม?",
+              "ใช่ X-Wing คือ fish ขนาดสอง Swordfish คือ fish ขนาดสาม Bare Sudoku หาได้ทั้งสองแบบ"
+            ],
+            [
+              "ระดับไหนมี X-Wing?",
+              "ระดับผู้เชี่ยวชาญ โจทย์ที่ต้องใช้ X-Wing, Y-Wing, Swordfish หรือ XYZ-Wing จัดเป็นระดับผู้เชี่ยวชาญ"
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing ในซูโดกุ: เทคนิคนี้ทำงานอย่างไร",
+          "description": "Y-Wing (XY-Wing): ช่องแกนที่มีสองตัวเลือกกับสองปีกที่แต่ละปีกมีตัวเลือกร่วมกับแกนหนึ่งตัว บังคับให้ลบตัวเลขออกจากทุกช่องที่มองเห็นทั้งสองปีก",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing หรือเรียกอีกชื่อว่า XY-Wing ใช้สามช่องที่แต่ละช่องมีตัวเลือกสองตัว ช่องแกนมีตัวเลือก X และ Y ปีกหนึ่งมองเห็นแกนและมี X กับ Z อีกปีกหนึ่งมองเห็นแกนและมี Y กับ Z ไม่ว่าแกนจะเป็นอะไร ปีกข้างใดข้างหนึ่งต้องเป็น Z จึงลบ Z ออกจากทุกช่องที่มองเห็นทั้งสองปีกได้ นี่คือเทคนิคระดับผู้เชี่ยวชาญใน Bare Sudoku",
+          "when": [
+            "เมื่อโจทย์มีหลายช่องที่มีตัวเลือกสองตัวพอดี และไม่มี fish ให้ใช้ Y-Wing พบบ่อยในโจทย์ระดับผู้เชี่ยวชาญ และหาได้โดยไล่ตามช่องที่มีสองตัวเลือก: แต่ละช่องอาจเป็นแกนหรือปีกได้"
+          ],
+          "spot": [
+            "ทำรายการช่องที่มีตัวเลือกสองตัวพอดี สำหรับแต่ละช่อง ให้ถือเป็นแกนที่มีตัวเลือก X และ Y แล้วหาในช่องเพื่อนบ้านของมันว่ามีช่องที่มี X กับตัวเลขอีกตัว Z และช่องที่มี Y กับ Z ตัวเดียวกันหรือไม่ สองช่องนั้นคือปีก จากนั้นหาช่องที่มองเห็นทั้งสองปีกและมี Z อยู่ สังเกตว่าปีกทั้งสองไม่จำเป็นต้องมองเห็นกัน"
+          ],
+          "examples": [
+            {
+              "h": "ตัวอย่าง",
+              "steps": [
+                "ช่องแกน {pivot} มีตัวเลือก {x} และ {y} มันมองเห็น {wingA} ซึ่งมี {x} และ {z} และ {wingB} ซึ่งมี {y} และ {z}",
+                "ถ้า {pivot} เป็น {x} แล้ว {wingA} จะเสีย {x} และกลายเป็น {z} ถ้า {pivot} เป็น {y} แล้ว {wingB} จะกลายเป็น {z} ไม่ว่ากรณีใด ปีกข้างหนึ่งเป็น {z}",
+                "ช่องที่มองเห็นทั้งสองปีกจะเป็น {z} ไม่ได้เลย ลบ {z} ออกจาก {elim}"
+              ]
+            }
+          ],
+          "mistakes": [
+            "เลือกปีกที่ไม่ได้มองเห็นแกนทั้งคู่ ปีกแต่ละข้างต้องอยู่ในแถว คอลัมน์ หรือกล่องเดียวกับแกน",
+            "ลบ Z ออกจากช่องที่มองเห็นปีกเพียงข้างเดียว ช่องที่ถูกตัดต้องมองเห็นทั้งสองปีก",
+            "ลบ Z ออกจากแกน ใน Y-Wing แกนไม่มี Z ถ้ามี รูปแบบนั้นคือ XYZ-Wing ซึ่งมีกฎต่างออกไป"
+          ],
+          "faq": [
+            [
+              "Y-Wing ในซูโดกุคืออะไร?",
+              "สามช่องที่มีสองตัวเลือก: แกนที่มี X และ Y ปีกที่มี X และ Z ซึ่งมองเห็นแกน และปีกที่มี Y และ Z ซึ่งมองเห็นแกน ปีกข้างหนึ่งเป็น Z เสมอ Z จึงถูกลบออกจากช่องที่มองเห็นทั้งสองปีก"
+            ],
+            [
+              "Y-Wing เหมือนกับ XY-Wing ไหม?",
+              "เหมือน สองชื่อนี้หมายถึงรูปแบบเดียวกัน Bare Sudoku เรียกว่า Y-Wing"
+            ],
+            [
+              "ทำไมปีกข้างหนึ่งต้องเป็น Z?",
+              "ถ้าแกนเป็น X ปีกแรกจะเสีย X และกลายเป็น Z ถ้าแกนเป็น Y ปีกที่สองจะกลายเป็น Z แกนต้องเป็นตัวใดตัวหนึ่งในสองตัวนี้ ปีกข้างหนึ่งจึงเป็น Z"
+            ],
+            [
+              "Y-Wing ตัดตัวเลือกได้กี่ช่อง?",
+              "ปกติหนึ่งหรือสองช่อง: เฉพาะช่องที่มองเห็นทั้งสองปีกและยังมี Z อยู่ แค่นั้นก็พอจะสร้างซิงเกิลได้"
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish ในซูโดกุ: เทคนิคนี้ทำงานอย่างไร",
+          "description": "Swordfish: ตัวเลขที่ถูกจำกัดอยู่ในสามคอลัมน์ตลอดสามแถว จะถูกลบออกจากส่วนที่เหลือของคอลัมน์เหล่านั้น fish ขนาดสาม อธิบายด้วยตัวอย่างจริง",
+          "h1": "Swordfish",
+          "summary": "Swordfish คือ X-Wing ที่ใช้สามแถวและสามคอลัมน์ ถ้าตัวเลขหนึ่งมีช่องตัวเลือกไม่เกินสามช่องในแต่ละแถวของสามแถว และช่องทั้งหมดนั้นอยู่ในสามคอลัมน์เดียวกัน สามแถวนั้นจะใช้ตัวเลขนี้ในคอลัมน์เหล่านั้นจนหมด และลบตัวเลขนั้นออกจากช่องอื่นทุกช่องของสามคอลัมน์ได้ สลับแถวกับคอลัมน์ได้ Bare Sudoku ตรวจหา Swordfish หลัง Y-Wing ในโจทย์ระดับผู้เชี่ยวชาญ",
+          "when": [
+            "เมื่อ X-Wing และ Y-Wing หาอะไรไม่เจอ Swordfish พบน้อยกว่า X-Wing และต้องมีตัวเลขที่ตัวเลือกกระจายบาง ๆ อยู่บนสามเส้น ต้องมีโน้ตที่ครบและถูกต้องสำหรับตัวเลขนั้น"
+          ],
+          "spot": [
+            "เลือกตัวเลขหนึ่ง แล้วหาแถวที่มีช่องตัวเลือกสองหรือสามช่องสำหรับตัวเลขนั้น ถ้าสามแถวแบบนั้นรวมกันครอบคลุมแค่สามคอลัมน์ ให้ตรวจคอลัมน์เหล่านั้นหาตัวเลือกอื่นของตัวเลขนี้ ไม่จำเป็นที่ทุกแถวต้องมีตัวเลือกในทุกคอลัมน์: Swordfish อาจมีหก เจ็ด แปด หรือเก้าช่อง ในเกม ไฮไลต์ตัวเลขด้วยปุ่มของมัน แล้วหาสามแถวที่ตัวเลือกเรียงตรงกันในสามคอลัมน์"
+          ],
+          "examples": [
+            {
+              "h": "ตัวอย่าง",
+              "steps": [
+                "ตัวเลข {d} มีช่องตัวเลือกไม่เกินสามช่องในแต่ละแถว {rows} และช่องทั้งหมดนั้นอยู่ในคอลัมน์ {cols}: {cells}",
+                "แต่ละแถวของสามแถวต้องใส่ {d} ในคอลัมน์ใดคอลัมน์หนึ่งของสามคอลัมน์ และไม่มีสองแถวใดใช้คอลัมน์เดียวกัน ดังนั้นสามคอลัมน์ได้ {d} ของตัวเองจากสามแถวนี้",
+                "ตัวเลือก {d} อื่นใดในคอลัมน์ {cols} เป็นไปไม่ได้ ลบ {d} ออกจาก {elim}"
+              ]
+            }
+          ],
+          "mistakes": [
+            "กำหนดให้ต้องมีครบเก้าช่อง Swordfish ที่บางแถวมีสองตัวเลือกก็ยังใช้ได้ ตราบใดที่สามแถวครอบคลุมแค่สามคอลัมน์",
+            "รวมแถวที่มีช่องตัวเลือกสี่ช่อง แถวฐานแต่ละแถวต้องมีไม่เกินสามช่อง และทั้งหมดอยู่ในสามคอลัมน์",
+            "ตัดตัวเลือกในแถวฐาน เมื่อใช้แถวเป็นฐาน การตัดตัวเลือกเกิดในสามคอลัมน์ นอกแถวฐาน"
+          ],
+          "faq": [
+            [
+              "Swordfish ในซูโดกุคืออะไร?",
+              "ตัวเลขที่ตัวเลือกในสามแถวถูกจำกัดอยู่ในสามคอลัมน์ สามแถวนั้นต้องใส่ตัวเลขนี้ในสามคอลัมน์ คอลัมน์ละหนึ่งตัว ตัวเลขนั้นจึงถูกลบออกจากช่องอื่นในคอลัมน์เหล่านั้น"
+            ],
+            [
+              "Swordfish ต่างจาก X-Wing อย่างไร?",
+              "ต่างกันแค่ขนาด: X-Wing ใช้สองแถวและสองคอลัมน์ Swordfish ใช้สามและสาม เหตุผลเหมือนกัน"
+            ],
+            [
+              "Swordfish ต้องมีเก้าช่องพอดีไหม?",
+              "ไม่ต้อง แต่ละแถวมีตัวเลือกสองหรือสามตัวก็ได้ รูปแบบนี้กำหนดแค่ว่าสามแถวรวมกันต้องใช้ไม่เกินสามคอลัมน์"
+            ],
+            [
+              "มี fish ขนาดสี่ไหม?",
+              "มี คือ Jellyfish Bare Sudoku ไม่ใช้ เพราะโจทย์ในเกมไม่เคยต้องใช้"
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing ในซูโดกุ: เทคนิคนี้ทำงานอย่างไร",
+          "description": "XYZ-Wing: ช่องแกนที่มีสามตัวเลือกกับสองปีกที่มีตัวเลือกร่วมกันหนึ่งตัว บังคับให้ลบตัวเลขนั้นออกจากทุกช่องที่มองเห็นทั้งสามช่อง พร้อมตัวอย่างจริง",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing คือ Y-Wing ที่แกนมีสามตัวเลือก แกนมี X, Y และ Z ปีกหนึ่งมองเห็นแกนและมี X กับ Z อีกปีกหนึ่งมองเห็นแกนและมี Y กับ Z ช่องหนึ่งในสามช่องนี้ต้องเป็น Z จึงลบ Z ออกจากทุกช่องที่มองเห็นทั้งสามช่องได้ เพราะแกนเองก็อาจเป็น Z ช่องที่ถูกตัดจึงต้องมองเห็นทั้งแกนและสองปีก ซึ่งจำกัดให้อยู่ในกล่องหรือเส้นที่ช่องเหล่านี้ใช้ร่วมกัน นี่คือเทคนิคที่ยากที่สุดที่ Bare Sudoku ใช้",
+          "when": [
+            "เฉพาะเมื่อวิธีอื่นใช้ไม่ได้ทั้งหมด XYZ-Wing คือรูปแบบที่พบน้อยที่สุดใน Bare Sudoku และปรากฏเฉพาะในโจทย์ระดับผู้เชี่ยวชาญ ให้มองหาเมื่อช่องที่มีสามตัวเลือกอยู่ในกล่องเดียวกับช่องที่มีสองตัวเลือกซึ่งมีตัวเลขร่วมกันสองตัว"
+          ],
+          "spot": [
+            "เริ่มจากช่องที่มีตัวเลือกสามตัวพอดี แต่ละช่องอาจเป็นแกนได้ ในช่องเพื่อนบ้านของมัน หาสองช่องที่แต่ละช่องมีสองตัวเลือก ซึ่งมาจากสามตัวของแกนทั้งคู่ และมีตัวเลขร่วมกันหนึ่งตัวพอดีคือ Z จากนั้นหาช่องที่มองเห็นแกนและทั้งสองปีก และมี Z อยู่ ในทางปฏิบัติ ปีกหนึ่งอยู่ในกล่องของแกน อีกปีกอยู่ในแถวหรือคอลัมน์ของแกน และช่องที่ถูกตัดคือช่องที่เหลือของกล่องนั้นในแถวหรือคอลัมน์นั้น"
+          ],
+          "examples": [
+            {
+              "h": "ตัวอย่าง",
+              "steps": [
+                "ช่องแกน {pivot} มีสามตัวเลือก: {x}, {y} และ {z} มันมองเห็น {wingA} ที่มี {x} และ {z} และ {wingB} ที่มี {y} และ {z}",
+                "ถ้า {pivot} เป็น {z} ก็จบ ถ้าเป็น {x} แล้ว {wingA} ต้องเป็น {z} ถ้าเป็น {y} แล้ว {wingB} ต้องเป็น {z} ไม่ว่ากรณีใด ช่องหนึ่งในสามช่องเป็น {z}",
+                "ช่องที่มองเห็นทั้งสามช่องเป็น {z} ไม่ได้ ลบ {z} ออกจาก {elim}"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ตัดตัวเลือกในช่องที่มองเห็นแค่สองปีก ต่างจาก Y-Wing ตรงที่แกนอาจเป็น Z ได้ ช่องนั้นจึงต้องมองเห็นแกนด้วย",
+            "ใช้ปีกที่ตัวเลือกไม่ได้อยู่ในสามตัวเลือกของแกนทั้งหมด",
+            "สับสนกับ Y-Wing: ความต่างคือตัวเลือกที่สามในแกน และมันเปลี่ยนว่าช่องไหนล้างได้"
+          ],
+          "faq": [
+            [
+              "XYZ-Wing ในซูโดกุคืออะไร?",
+              "แกนที่มีตัวเลือก X, Y และ Z กับสองปีก ปีกหนึ่งมี X และ Z อีกปีกมี Y และ Z ทั้งสองมองเห็นแกน ช่องหนึ่งในสามช่องเป็น Z จึงลบ Z ออกจากช่องที่มองเห็นทั้งสามช่อง"
+            ],
+            [
+              "XYZ-Wing ต่างจาก Y-Wing อย่างไร?",
+              "แกนมีสามตัวเลือกแทนที่จะเป็นสอง รวม Z ด้วย แกนจึงอาจเป็นที่อยู่ของ Z ได้ มีเพียงช่องที่มองเห็นแกนและทั้งสองปีกเท่านั้นที่จะเสีย Z ได้"
+            ],
+            [
+              "XYZ-Wing พบบ่อยแค่ไหน?",
+              "พบน้อย ใน Bare Sudoku มีเพียงโจทย์ระดับผู้เชี่ยวชาญที่อาจต้องใช้ และส่วนใหญ่ก็ไม่ต้องใช้ Bare Sudoku ตรวจหาเป็นลำดับสุดท้าย หลัง X-Wing, Y-Wing และ Swordfish"
+            ],
+            [
+              "มี WXYZ-Wing ไหม?",
+              "มี โดยแกนมีสี่ตัวเลือก แต่ Bare Sudoku ไม่ใช้ ทุกโจทย์ในเกมแก้จบได้ด้วยเก้าเทคนิคในคู่มือนี้"
+            ]
+          ]
+        }
+      }
+    },
+    "ja": {
+      "learnHeading": "ナンプレを学ぶ",
+      "learnText": "ナンプレを始めたばかりの方も、難しい問題で行き詰まった方も。2つのガイドで、ルールとヒントが使うすべての解法テクニックを、実際の例とともに解説します。",
+      "howToLink": "ナンプレの遊び方",
+      "techniquesLink": "ナンプレの解き方テクニック",
+      "labels": {
+        "howTo": "遊び方",
+        "techniques": "テクニック",
+        "play": "ナンプレで遊ぶ",
+        "prev": "前のテクニック",
+        "next": "次のテクニック",
+        "all": "すべてのテクニック",
+        "example": "例",
+        "steps": "手順",
+        "when": "使う場面",
+        "spot": "見つけ方",
+        "mistakes": "よくある間違い",
+        "inGame": "Bare Sudokuでは",
+        "level": "必要になるレベル: {level}",
+        "hint": "ゲームのヒント表示: {text}",
+        "legend": "太字の数字は最初から置かれた数字、青い数字は解く途中で入れた数字、小さな数字は候補です。ハイライトされたマスがパターンを作り、斜線で消された候補は削除され、丸で囲まれた候補が入れるべき数字です。",
+        "notation": "マスはr3c7のように書きます。3行目、7列目という意味です。行は上から、列は左から数え、ブロックは左上から行ごとに1から9まで番号を振ります。",
+        "row": "{n}行目",
+        "column": "{n}列目",
+        "box": "ブロック{n}",
+        "elimItem": "{cell}の{d}",
+        "regions": "問題開始時の5行目、5列目、ブロック5",
+        "firstMove": "ネイキッドシングル: {cell}には{d}しか入らない",
+        "breadcrumb": "パンくずリスト"
+      },
+      "howTo": {
+        "title": "ナンプレの遊び方: ルール、盤面、最初の一手",
+        "description": "ナンプレの遊び方を解説します。ルール、行・列・ブロックの仕組み、どの問題も答えが一つだけである理由、メモの使い方、最初の一手の進め方がわかります。",
+        "h1": "ナンプレの遊び方",
+        "summary": "ナンプレは9×9のマスで遊ぶ論理パズルです。すべての空きマスに1から9の数字を入れ、どの行、どの列、どの3×3ブロックにも各数字がちょうど1回ずつ入るようにします。最初からいくつかの数字が置かれていて、残りは確実に決まるマスを一つずつ論理で導いていきます。当て推量は一度も必要ありません。このガイドでは、盤面、ルール、答えが一つだけという原則、メモ、そして最初の一手のための簡単な戦略を説明します。すべて、無料で論理を説明してくれるヒント付きの[Bare Sudoku](play)で練習できます。",
+        "sections": [
+          {
+            "h": "ナンプレのルールは？",
+            "p": [
+              "ルールは3つだけで、しかも同じルールを3つの方向から見たものです。どの行にも1から9の数字が入り、どの列にも1から9の数字が入り、どの3×3ブロックにも1から9の数字が入ります。したがって、同じ行、列、ブロックに同じ数字が2回現れることはありません。",
+              "太字で示された最初の数字は固定です。あなたの仕事は空きマスを埋めることです。計算も順序もありません。数字は9種類の異なる記号にすぎず、文字や図形で遊んでも何も変わりません。"
+            ]
+          },
+          {
+            "h": "盤面の構成は？",
+            "p": [
+              "盤面には9行9列、合わせて81のマスがあります。太い線で9つの3×3ブロックに区切られています。各マスはちょうど1つの行、1つの列、1つのブロックに属し、この3つのグループをそのマスのユニットと呼びます。あるマスとユニットを共有する他の20マスを、そのマスの関連マスと呼びます。マスに数字を置くと、20の関連マスすべてからその数字が除外されます。",
+              "マスはr3c7のように書きます。3行目、7列目という意味です。行は上から、列は左から数え、ブロックは左上から行ごとに1から9まで番号を振ります。この表記はすべてのテクニック解説で使うので、覚えておく価値があります。r5c5は盤面の中央です。"
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "ナンプレの答えはなぜ一つだけなのか？",
+            "p": [
+              "正しく作られたナンプレの答えは一つだけで、だからこそ論理が通用します。ある数字がユニット内の他のどこにも入らないと示せれば、その数字は残ったマスに入るしかありません。答えが存在し、しかも一つだけだからです。もし答えが二つある問題なら、どれだけ推論しても両者を区別できず、どこかで当て推量をせざるを得なくなります。",
+              "Bare Sudokuはすべての問題をあなたの端末上で生成し、答えがちょうど一つであること、そして論理ソルバーが選んだレベルのテクニックで最後まで解けることを確認しています。ですから行き詰まっても、見つけるべき次の一手が必ずあり、ヒントがそれを示してくれます。"
+            ]
+          },
+          {
+            "h": "ナンプレはどこから解き始める？",
+            "p": [
+              "最も制約の強いところから始めましょう。次の順番はどのレベルでも使えます。"
+            ],
+            "list": [
+              "すでに何度も、たとえば6回か7回現れている数字を選び、まだその数字がないブロックを探します。そのブロックでその数字が入れるマスが1つしか残っていないことがよくあります。それが[ヒドゥンシングル](hidden-single)です。",
+              "混み合ったマスを探します。行、列、ブロックを合わせて8種類の数字がすでにあるマスは、候補が1つしか残りません。これが[ネイキッドシングル](naked-single)です。ほぼ埋まった行やブロックのマスが一番の狙い目です。",
+              "数字を1つ置くたびに、20の関連マスから候補が1つ消えます。すぐにそれらのマスを確認しましょう。シングルは連鎖して現れがちです。",
+              "簡単に置ける数字がなくなったら、メモ、つまり各空きマスの候補を書きます。次に、ブロックの中で1本の線上に限られた数字（[ロックされた候補](locked-candidates)）や、同じ2つの候補を持つ2つのマス（[ネイキッドペア](naked-pairs)）を探します。",
+              "消去のたびにシングルに戻りましょう。「上級」の問題でさえ、ほとんどはシングルで解けます。高度なテクニックは次のシングルへの扉を開くだけです。"
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "メモとは？いつ使う？",
+            "p": [
+              "メモは鉛筆書きや候補とも呼ばれ、空きマスにまだ入る可能性のある数字を記録するために書く小さな数字です。簡単な問題ではほとんど必要ありませんが、「難しい」以上では欠かせません。ペア、X-Wing、Y-Wingといったテクニックは、置かれた数字ではなく候補を扱うからです。",
+              "メモは正確に保ちましょう。数字を置いたら、20の関連マスすべてのメモからその数字を消します。Bare Sudokuではこれが自動で行われ、「メモを埋める」を使えばワンタップですべての空きマスにすべての候補が書き込まれるので、完全で正しい候補の状態から始められます。メモは推測ではなく事実です。まだその数字を除外するものが何もない、という意味です。"
+            ]
+          },
+          {
+            "h": "行き詰まったらどうする？",
+            "p": [
+              "まず基本を見直します。ほぼ埋まった行、列、ブロックはどれもシングルの宝庫です。次に、メモがそろっているか確かめます。候補が欠けているとパターンが隠れ、古い候補が残っていると偽のパターンが生まれるからです。それから[テクニック](techniques)を難しさの順に試します。ロックされた候補、ペアとトリプル、X-Wing、Y-Wing、Swordfish、XYZ-Wingです。どれにも実例付きの専用ページがあります。",
+              "何をしてもだめなら、ヒントを使いましょう。Bare Sudokuのヒントは、まず置いた数字に間違いがないかを確認し、次に論理で埋められる次のマスを見つけてテクニック名を示すので、ヒントを使っても何かを学べます。もう一度ヒントを押すと数字が入力されます。"
+            ]
+          },
+          {
+            "h": "Bare Sudokuで数字を入力するには？",
+            "p": [
+              "マスをタップしてから数字をタップします。先に数字をタップすることもできます。するとその数字がロックされ、タップしたマスすべてに入力されます。ある数字の6個目、7個目、8個目を置くにはこれが一番速い方法です。もう一度その数字をタップするとロックが外れます。「メモ」ボタンで鉛筆書きに切り替え、「消す」でマスを空にし、「元に戻す」でどの手も取り消せます。間違いは赤で表示されますが、メニューでオフにできます。",
+              "キーボードでは、矢印キーで移動、1から9で数字を入力、Backspaceで消去、Nでメモ、Uで元に戻す、Hでヒント、Fでメモを埋める、Escapeでメニューです。ゲームは自動で保存され、オフラインでも動作し、広告もアカウントもありません。"
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "ナンプレで当て推量は必要？",
+            "正しい問題なら必要ありません。Bare Sudokuの問題はどれも答えがちょうど一つで、そのレベルのテクニックの範囲内で論理だけで解けることが確認されています。当て推量が必要だと感じたら、メモに候補が抜けているか、見つけられるのを待っているテクニックがあるということです。"
+          ],
+          [
+            "同じ行、列、ブロックに同じ数字が2回入ることはある？",
+            "ありません。それがルールのすべてです。9つの行、9つの列、9つのブロックのそれぞれに、1から9の数字がちょうど1回ずつ入ります。同じユニットに同じ数字が2つあれば、少なくとも一方は間違いです。"
+          ],
+          [
+            "簡単、普通、難しい、上級の違いは？",
+            "レベルは、その問題に必要なテクニックで決まります。「簡単」と「普通」はシングルだけで解け、「簡単」は最初から38個以上の数字が置かれています。「難しい」にはロックされた候補、またはペアとトリプルが必要です。「上級」にはX-Wing、Y-Wing、Swordfish、XYZ-Wingのいずれかが必要です。"
+          ],
+          [
+            "メモはすべてのマスに書くべき？一部だけでいい？",
+            "「難しい」と「上級」の問題では全部書きましょう。ペア、X-Wing、Y-Wingなどのパターンは、すべての候補が書かれていないと見えてきません。「簡単」と「普通」ではメモは任意で、ほとんどのプレイヤーはシングルを探すだけです。"
+          ],
+          [
+            "ナンプレ1問にかかる時間は？",
+            "「簡単」の問題なら数分です。「上級」の問題は、高度なパターンに気づく速さ次第で20分以上かかることもあります。Bare Sudokuはタイマーを表示し、メニューを開いている間は止めます。ランキングはないので、自分のペースで遊んでください。"
+          ],
+          [
+            "ナンプレに計算は必要？",
+            "必要ありません。数字は単なるラベルで、足し算も数を数えることもありません。どんな9種類の記号でも成り立ちます。だからナンプレは数のパズルではなく論理パズルなのです。"
+          ]
+        ]
+      },
+      "index": {
+        "title": "ナンプレの解き方テクニックを例題つきで解説",
+        "description": "ネイキッドシングルからSwordfish、XYZ-Wingまで、ナンプレの9つの解法テクニックを、Bare Sudokuのヒントが使う順に、実際の例とともに解説します。",
+        "h1": "ナンプレの解き方テクニック",
+        "intro": [
+          "どのナンプレも、少数の論理的なテクニックで解くことができます。この一覧では、Bare Sudokuのソルバーとヒントが使う9つのテクニックを、ソルバーが試す順に紹介します。まずシングル、次に1つのユニット内での消去、そして複数の行や列にまたがるパターンです。各テクニックには専用ページがあり、定義、見つけ方、生成された問題からの実例、よくある間違いを載せています。",
+          "問題のレベルは、必要となる最も難しいテクニックで決まります。「簡単」と「普通」の問題はシングルだけ、「難しい」の問題はロックされた候補かペアとトリプル、「上級」の問題は少なくとも1つのフィッシュかウイングが必要です。どのレベルでも仕事の大部分はシングルが担います。高度なテクニックが候補を1つか2つ消し、そこから先はまたシングルが進めます。"
+        ],
+        "faq": [
+          [
+            "ナンプレのテクニックはどの順で試せばいい？",
+            "手軽なものから順に、ネイキッドシングル、ヒドゥンシングル、ロックされた候補、ネイキッドペアとトリプル、ヒドゥンペアとトリプル、X-Wing、Y-Wing、Swordfish、XYZ-Wingです。Bare Sudokuはまさにこの順で試し、ヒントは常に、先へ進める最も簡単なテクニックの名前を示します。"
+          ],
+          [
+            "ナンプレを解くのにこれらのテクニックは全部必要？",
+            "「簡単」と「普通」の問題ならシングルで十分です。「難しい」の問題ではロックされた候補とペアやトリプルが加わります。「上級」の問題には少なくとも1つのフィッシュかウイングが必要ですが、たいていは1問につき1、2回だけです。"
+          ],
+          [
+            "XYZ-Wingより難しいテクニックはある？",
+            "あります。たとえばチェーン、一意性を利用する手筋、フォーシングネットなどです。Bare Sudokuはそれらが必要な問題を生成しないので、ゲーム内の問題はすべてこのページの9つのテクニックで解き終えられます。"
+          ],
+          [
+            "候補とは？",
+            "空きマスにまだ入る可能性のある数字です。その行、列、ブロックにそれを除外するものがまだ何もない状態です。ゲームのメモは候補のことです。シングル以外のテクニックはすべて候補をもとに推論するので、候補は完全かつ正確に保ちましょう。"
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "ネイキッドシングル",
+          "title": "ナンプレのネイキッドシングル: 候補が1つだけのマス",
+          "description": "ネイキッドシングルは、入る数字が1つしかない空きマスです。すばやく見つけるコツを、実際の例による手順とよくある間違いとともに解説します。",
+          "h1": "ネイキッドシングル",
+          "summary": "ネイキッドシングル（naked single）とは、候補がちょうど1つしかない空きマスのことです。ほかの8つの数字はすでにその行、列、ブロックにあるので、残った数字がそこに入ります。最も簡単で、最もよく使うナンプレのテクニックで、Bare Sudokuのヒントでは「ここの候補は5だけ」のように表示されます。",
+          "when": [
+            "いつでも使います。ネイキッドシングルは最初の一手から最後の一手まで、どのレベルでも現れます。「簡単」と「普通」の問題では、ヒドゥンシングルと並んで必要なテクニックはこれだけです。難しい問題でも、高度なテクニックで候補を消すたびにネイキッドシングルが残ることが多いので、毎回確認しましょう。"
+          ],
+          "spot": [
+            "関連マスに多くの数字が置かれているマスに注目します。すでに7つの数字がある行のマスや、行、列、ブロックを合わせて8種類の数字がそろっているマスです。メモがなければ、そのマスから見える数字を数えます。メモがあれば、ネイキッドシングルは候補が1つだけ表示されたマスにすぎません。だから「メモを埋める」を使うと簡単に見つかります。"
+          ],
+          "examples": [
+            {
+              "h": "例",
+              "steps": [
+                "{cell}を見ます。空きマスなので、その行、列、ブロックにすでに置かれている数字をすべて書き出します。",
+                "{row}行目には{rowDigits}があります。{col}列目には{colDigits}があります。ブロック{box}には{boxDigits}があります。",
+                "合わせると{d}以外のすべての数字が除外されるので、{cell}に残る候補は{d}だけです。",
+                "{cell}に{d}を書き込みます。次に、新しい数字が同じ行、列、ブロックに別のシングルを生んでいないか確認します。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "行だけ、またはブロックだけを数えること。除外される8つの数字は、ふつう3つのユニットすべてから集まります。",
+            "直前に置いた数字も、その20の関連マスから候補を除外することを忘れること。新しいネイキッドシングルは数字を置いた直後に現れます。",
+            "ネイキッドシングルとヒドゥンシングルを混同すること。ネイキッドシングルはマスに候補が1つだけ残った状態、ヒドゥンシングルはユニット内で数字の入る場所が1つだけ残った状態です。"
+          ],
+          "faq": [
+            [
+              "ナンプレのネイキッドシングルとは？",
+              "候補がちょうど1つしかない空きマスです。その行、列、ブロックに8種類の数字がすでに置かれているので、9つ目の数字だけが入ります。"
+            ],
+            [
+              "なぜネイキッド（裸）と呼ぶの？",
+              "メモを書けば、その唯一の候補がマスの中にそのまま見えるからです。隠しているものは何もありません。これに対してヒドゥンシングルは他の候補に紛れていて、マスではなく数字に注目して見つけます。"
+            ],
+            [
+              "ネイキッドシングルだけで解ける問題はある？",
+              "「簡単」の問題の多くは解けますが、たいていヒドゥンシングルも必要です。Bare Sudokuは「簡単」と「普通」の問題を両方のシングルで解けるものとして判定し、「難しい」と「上級」の問題には少なくとももう1つのテクニックが必要です。"
+            ],
+            [
+              "ヒントはネイキッドシングルを示してくれる？",
+              "はい。次に置けるのがネイキッドシングルなら、ヒントはそのマスを選び、「ここの候補は5だけ」のように数字とともに表示します。もう一度ヒントを押すと入力されます。"
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "ヒドゥンシングル",
+          "title": "ナンプレのヒドゥンシングル: 数字が入る唯一の場所",
+          "description": "ヒドゥンシングルは、行、列、ブロックの中で、ある数字が入れる唯一のマスです。数字を1つずつ見ていく方法で、ヒドゥンシングルを見つけるコツを学びましょう。",
+          "h1": "ヒドゥンシングル",
+          "summary": "ヒドゥンシングル（hidden single）とは、行、列、ブロックの中で、入れるマスが1つしか残っていない数字のことです。そのマスに他の候補が表示されていても関係ありません。ユニットにはその数字が必ず入るので、そこに置けます。Bare Sudokuのヒントでは「この行で5が入るのはここだけ」のように表示され、列やブロックの場合も同様です。",
+          "when": [
+            "ある数字が多く置かれてきたときはいつでも。ある数字が5回か6回現れると残りのブロックは強く制約され、次の一手がヒドゥンシングルであることがよくあります。ヒドゥンシングルは「簡単」と「普通」の問題の主力テクニックで、どのレベルでも頼れる存在です。"
+          ],
+          "spot": [
+            "数字を1つずつ見ていきます。ある数字を選び、その数字がないブロックを見つけ、すでに置かれた同じ数字と行か列を共有するマスをそのブロックから消していきます。1マスだけ残れば、それがヒドゥンシングルです。同じ見方は行と列にも使えます。ゲームでは置かれた数字をタップすると同じ数字がすべてハイライトされるので、空いているマスが浮かび上がります。"
+          ],
+          "examples": [
+            {
+              "h": "例",
+              "steps": [
+                "ブロック{box}にはまだ{d}がないので、空きマスのどれかに{d}が入ります。空きマスは{empties}です。",
+                "{cell}以外のすべてのマスでは、同じ行か列にすでに{d}が置かれているため、{d}は候補になりません。",
+                "したがってブロック{box}で{d}が入るのは{cell}だけです。{cell}に他の候補が表示されていても、そこに{d}を書き込みます。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "たぶん正しいと思えるだけのマスに数字を置くこと。目立つマスだけでなく、ユニット内の他の空きマスをすべて確認しましょう。",
+            "マスに複数の候補が表示されているせいでヒドゥンシングルを見落とすこと。他の候補は関係ありません。大切なのは、その数字がユニット内に他の居場所を持たないことです。",
+            "ブロックだけを探すこと。行と列でも同じくらいヒドゥンシングルが生まれます。終盤は特にそうです。"
+          ],
+          "faq": [
+            [
+              "ナンプレのヒドゥンシングルとは？",
+              "行、列、ブロックの中で1つのマスにしか入れない数字です。ユニットにはその数字が必ず入るので、他の候補が残っていてもそのマスは確定します。"
+            ],
+            [
+              "ヒドゥンシングルとネイキッドシングルの違いは？",
+              "ネイキッドシングルはマスに注目したもので、候補が1つだけ残っています。ヒドゥンシングルは数字に注目したもので、ユニット内に入れるマスが1つだけ残っています。どちらも確実に数字を置けます。"
+            ],
+            [
+              "どちらが見つけやすい？",
+              "メモがなければ、数字を1つずつ盤面全体で探せるので、ふつうはヒドゥンシングルのほうが見つけやすいです。メモが完全なら、候補が1つだけのマスは目立つので、ネイキッドシングルが最も見つけやすくなります。"
+            ],
+            [
+              "ヒントはヒドゥンシングルをどう表示する？",
+              "マスを選んだうえで、「この行で5が入るのはここだけ」のように、行、列、ブロックごとに表示します。もう一度ヒントを押すと入力されます。"
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "ロックされた候補",
+          "title": "ナンプレのロックされた候補: ポインティングとクレーミング",
+          "description": "ロックされた候補: ブロック内のある数字の候補が1つの行か列にそろうとき、またはその逆のとき、ほかの場所からその数字を消せます。2つの実例で解説します。",
+          "h1": "ロックされた候補",
+          "summary": "ロックされた候補（locked candidates）は、数字を置くのではなく候補を消す最初のテクニックです。2つの形があります。ポインティングでは、ブロック内のある数字の候補がすべて1つの行か列に並んでいるので、その線の残りの部分からその数字を消せます。クレーミングでは、行か列の中のある数字の候補がすべて1つのブロックに収まっているので、そのブロックの残りの部分からその数字を消せます。Bare Sudokuのヒントは、これによって置けるようになった数字に「ロックされた候補」と表示します。",
+          "when": [
+            "「難しい」の問題でシングルが尽きたら、まずこれを試します。少なくとも調べる数字についてはメモがそろっている必要があります。ロックされた候補はよく登場します。「難しい」の問題の多くで必要になり、「上級」の問題でも大きなパターンの合間に使われます。"
+          ],
+          "spot": [
+            "ポインティングでは、各ブロックと、そこに欠けている各数字を見ます。その数字の候補マスが1つの行か列に並んでいたら、ブロックの外のその線上に同じ数字の候補があるか確認します。クレーミングでは、行か列に沿って見ます。ある数字の候補がすべて1つのブロックの中にあれば、そのブロックの残りから消せます。ゲームでは数字キーをタップするとその数字の候補がすべてハイライトされます。1つのブロックの中で2つか3つのハイライトされたメモが一直線に並んでいれば、それがこのパターンです。"
+          ],
+          "examples": [
+            {
+              "h": "ポインティング",
+              "steps": [
+                "ブロック{box}で、数字{d}の候補マスは{cells}だけです。すべて{row}行目にあります。",
+                "ブロック{box}には{d}が必要なので、{row}行目の{d}は、どのマスに入るにせよブロック{box}の中にあります。",
+                "{row}行目に2つ目の{d}は入らないので、ブロックの外にある{row}行目のマス（{elim}）から{d}を消します。"
+              ]
+            },
+            {
+              "h": "クレーミング",
+              "steps": [
+                "{row}行目では、数字{d}は{cells}にしか入らず、そのすべてがブロック{box}の中にあります。",
+                "{row}行目には{d}が必ず入るので、ブロック{box}の{d}は{row}行目が確保します。ブロック{box}のほかのマスに{d}は入りません。",
+                "{elim}から{d}を消します。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ポインティングなのにブロックの外ではなく中から数字を消したり、クレーミングでその逆をしたりすること。消去の対象は常に、線上にあってブロック外のマス、またはブロック内にあって線外のマスです。",
+            "候補がブロックの2つの行にまたがっているのにこの規則を使うこと。ブロック内のその数字の候補マスは、すべて1本の線上になければなりません。",
+            "消去によって生まれたシングルを探し忘れること。ロックされた候補だけで数字が置けることはまれで、シングルへの下準備になります。"
+          ],
+          "faq": [
+            [
+              "ナンプレのロックされた候補とは？",
+              "ある数字の候補が、ブロックと線の交わる部分に閉じ込められている状態です。ブロック、または線は、その交わりの中にその数字を持つしかないので、線の残り、またはブロックの残りからその数字を消せます。"
+            ],
+            [
+              "ポインティングとクレーミングの違いは？",
+              "ポインティングはブロックから出発します。ブロック内のその数字の候補が1つの行か列を指しているので、その線の残りからその数字を消します。クレーミングは行か列から出発します。線上のその数字の候補がすべて1つのブロックにあるので、線がその数字を確保し、ブロックの残りから消します。"
+            ],
+            [
+              "ロックされた候補はintersection removalとも呼ばれる？",
+              "はい。ほかに、クレーミングの形をbox-line reduction、ポインティングの形をpointing pairやpointing tripleと呼ぶこともあります。Bare Sudokuは両方を1つの名前で呼びます。"
+            ],
+            [
+              "ロックされた候補が必要なのはどのレベル？",
+              "「難しい」です。ロックされた候補かペアやトリプルが必要で、それより難しいものが不要な問題は「難しい」と判定されます。「上級」の問題にはさらにフィッシュかウイングが必要です。"
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "ネイキッドペアとトリプル",
+          "title": "ナンプレのネイキッドペアとトリプル: 仕組みを解説",
+          "description": "ネイキッドペアとトリプルは、ユニット内で同じ2つか3つの候補を共有する2つか3つのマスです。見つけ方と消せる候補を、実際の例で学びましょう。",
+          "h1": "ネイキッドペアとトリプル",
+          "summary": "ネイキッドペア（naked pair）とは、同じ行、列、ブロックにある2つのマスが、まったく同じ2つの候補を持つ状態です。その2つの数字はこの2マスに入るしかないので、ユニット内のほかのすべてのマスから消せます。ネイキッドトリプルは同じ考え方を3つのマスと3つの数字に広げたもので、各マスには3つのうち2つか3つが表示されています。Bare Sudokuのヒントは、これによって置けるようになった数字に「ペアまたはトリプル」と表示します。",
+          "when": [
+            "メモがそろい、シングルとロックされた候補を使い切ったあとです。ネイキッドペアは「難しい」の問題でとてもよく見られ、ネイキッドトリプルはそれより少なめです。空きマスが5つ以上残っているユニットでは、どちらも確認する価値があります。"
+          ],
+          "spot": [
+            "候補が2つだけのマスを探し、同じユニット内に同じ2つの候補を持つ別のマスがないか見ます。トリプルの場合は、候補が2つや3つのマスがいくつかあるユニットを見て、そのうち3マスを合わせても3種類の数字しか使っていないか確かめます。まったく同じ候補を持つマスは、メモを書けば簡単に見えます。ゲームの「メモを埋める」ならワンタップです。"
+          ],
+          "examples": [
+            {
+              "h": "ネイキッドペア",
+              "steps": [
+                "{unit}の{cellA}と{cellB}は、まったく同じ2つの候補{d1}と{d2}を持っています。",
+                "片方が{d1}、もう片方が{d2}になります。どちらがどちらかはわかりませんが、2つの数字はこの2マスで使い切られます。",
+                "したがって{unit}のほかのマスに{d1}や{d2}は入りません。{elim}を消します。"
+              ]
+            },
+            {
+              "h": "ネイキッドトリプル",
+              "steps": [
+                "{unit}の3つのマス（{cells}）は、候補がすべて同じ3つの数字{digits}から成っています。",
+                "この3つの数字が、何らかの順でこの3マスを埋めます。各マスに3つの候補すべてが表示されている必要はありません。大切なのは、3マスのどれもこの組の外の候補を持たないことです。",
+                "{unit}のほかのすべてのマスから{digits}を消します。対象は{elim}です。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "2つの候補を共有していても、3つ目の候補もある2マスを選ぶこと。ネイキッドペアでは、各マスの候補がちょうどその2つだけでなければなりません。",
+            "ペアのマス自体から数字を消すこと。ペアは自分の候補を保ち、消去はユニット内のほかのマスが対象です。",
+            "トリプルのすべてのマスに3つの数字が表示されていることを求めること。3つのうち2つだけのマスでも、組の外の候補を持つマスがなければ問題ありません。"
+          ],
+          "faq": [
+            [
+              "ナンプレのネイキッドペアとは？",
+              "1つのユニットにある2つのマスが、どちらもまったく同じ2つの候補を持つ状態です。その2つの数字はこの2マスに閉じ込められるので、ユニットの残りから消せます。"
+            ],
+            [
+              "ネイキッドトリプルとは？",
+              "1つのユニットにある3つのマスで、候補を合わせても3種類の数字しかない状態です。各マスはそのうち2つか3つを持ちます。3つの数字が3マスを埋めるので、ユニット内のほかのマスから消せます。"
+            ],
+            [
+              "ネイキッドペアで数字は置ける？",
+              "それだけでは置けません。候補を消すテクニックで、その消去によってネイキッドシングルかヒドゥンシングルが残るのがふつうです。Bare Sudokuのヒントはそのシングルを示し、それを可能にしたテクニックの名前を表示します。"
+            ],
+            [
+              "ネイキッドペアがブロックと行に同時に属することはある？",
+              "あります。2つのマスが同じ行と同じブロックにあれば、そのペアは両方のユニットで候補を消せます。Bare Sudokuは1ユニットずつ処理します。"
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "ヒドゥンペアとトリプル",
+          "title": "ナンプレのヒドゥンペアとトリプル: 見つけ方",
+          "description": "ヒドゥンペアは、ユニット内で同じ2つのマスにしか入れない2つの数字で、そのマスのほかの候補を消せます。ヒドゥンペアとトリプルの見つけ方を順に解説します。",
+          "h1": "ヒドゥンペアとトリプル",
+          "summary": "ヒドゥンペア（hidden pair）とは、1つの行、列、ブロックの中で、同じ2つのマスにだけ候補として現れ、ほかのどこにも現れない2つの数字のことです。その2マスにはこの2つの数字が入るしかないので、そのマスのほかの候補はすべて消せます。ヒドゥントリプルも同じ仕組みで、3つの数字が3つのマスに閉じ込められた状態です。消去のあと、それらのマスはネイキッドペアかネイキッドトリプルになります。Bare Sudokuのヒントは、これによって置けるようになった数字に「ペアまたはトリプル」と表示します。",
+          "when": [
+            "ユニットに候補の多いマスがあり、シングルが尽きたときです。ヒドゥンペアは候補の詰まったマスに隠れているので、ネイキッドペアが見えない場所こそ探す価値があります。ヒドゥントリプルはまれです。Bare Sudokuはチェックしていますが、「難しい」の問題の多くはそれなしで解けます。"
+          ],
+          "spot": [
+            "マスではなく数字ごとに考えます。ユニットの中で、欠けている各数字が入れるマスを書き出します。2つの数字がそれぞれ2マスにしか入れず、それが同じ2マスなら、ヒドゥンペアです。ゲームでは数字キーをタップすると候補がハイライトされます。2つの数字がユニット内の同じ2マスだけを光らせ、そのユニットのほかのマスは光らないなら、それがこのパターンです。"
+          ],
+          "examples": [
+            {
+              "h": "ヒドゥンペア",
+              "steps": [
+                "{unit}では、数字{d1}と{d2}はどちらも入れるマスが2つしかなく、それが同じ2マス{cells}です。",
+                "この2マスには{d1}と{d2}が入るしかないので、ほかの候補はありえません。",
+                "{elim}を消します。これで2マスはネイキッドペアになり、さらに先へ進めるかもしれません。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ペアの2つの数字をペアのマスから消すこと。消えるのはそのマスのほかの候補で、ペアの数字は残ります。",
+            "ユニット内に3つ目の入れるマスがある数字を含めること。2つの数字はどちらもちょうどその2マスに限られていなければなりません。",
+            "ブロックだけを探すこと。ヒドゥンペアは行や列にも同じくらい現れます。"
+          ],
+          "faq": [
+            [
+              "ナンプレのヒドゥンペアとは？",
+              "ユニットの中で同じ2つのマスにしか入れない2つの数字です。そのマスにはこの2つの数字が入るしかないので、ほかの候補は消えます。"
+            ],
+            [
+              "ヒドゥンペアとネイキッドペアの違いは？",
+              "ネイキッドペアは目に見えます。同じ2つの候補だけを表示した2マスです。ヒドゥンペアは、その2マスにある余分な候補に覆われています。余分な候補を消すと、ヒドゥンペアはネイキッドペアに変わります。"
+            ],
+            [
+              "ヒドゥントリプルとは？",
+              "ユニットの3つのマスに閉じ込められた3つの数字です。各数字が3マスすべてに現れる必要はありません。大切なのは、3つの数字のどれもそのマスの外に候補を持たないことです。"
+            ],
+            [
+              "ヒントはヒドゥンペアとネイキッドペアを区別する？",
+              "いいえ。Bare Sudokuは両方を見つけ、それによって置けるようになった数字に「ペアまたはトリプル」と表示します。このガイドで分けているのは、見つけ方が違うからです。"
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "ナンプレのX-Wing: テクニックの仕組み",
+          "description": "X-Wingは、2つの行でそれぞれ候補マスがちょうど2つあり、それが同じ2列にそろうとき、その2列のほかのマスからその数字を消すテクニックです。実例つき。",
+          "h1": "X-Wing",
+          "summary": "X-Wingは、1つの数字と、長方形の四隅にある4つのマスからなるパターンです。ある数字の候補マスが2つの行でそれぞれちょうど2つずつあり、それらが同じ2つの列に並んでいるなら、その数字は長方形の対角の2隅に入るしかありません。そのため、その2列のほかのすべてのマスからその数字を消せます。行と列を入れ替えても同じです。Bare Sudokuで最初に登場する「上級」のテクニックです。",
+          "when": [
+            "シングル、ロックされた候補、ペアとトリプルを使い切ったときです。X-Wingは「上級」で最もよく見られるパターンで、ある数字の候補が少なくなったとき、典型的にはその数字がすでに4個から6個置かれたときに現れがちです。調べる数字についてメモがそろっている必要があります。"
+          ],
+          "spot": [
+            "数字を1つ選び、その数字の候補マスがちょうど2つの行を探します。そうした2行が同じ2列を共有していれば、その列にその数字のほかの候補がないか確認します。それが消去の対象です。次に列を基準にして同じことを繰り返します。ゲームでは数字キーをタップするとその数字の候補がすべてハイライトされ、4つのハイライトされたメモが作る長方形が簡単に見つかります。"
+          ],
+          "examples": [
+            {
+              "h": "例",
+              "steps": [
+                "数字{d}の候補マスは、{r1}行目にちょうど2つ、{r2}行目にもちょうど2つあり、同じ2つの列、{c1}列目と{c2}列目にそろっています（{cells}）。",
+                "{r1}行目は{d}を{c1}列目か{c2}列目に置き、{r2}行目はもう一方の列に置きます。どちらの場合でも、{c1}列目と{c2}列目はこの2行からそれぞれ1つずつ{d}を受け取ります。",
+                "したがって{c1}列目と{c2}列目のほかの場所に{d}は入りません。{elim}から{d}を消します。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "その数字の候補マスが3つある行を使うこと。基準となる各行の候補マスはちょうど2つで、どちらも共有する2列になければなりません。",
+            "列ではなく行から数字を消すこと。行を基準にすると消去は列で行い、その逆も同じです。",
+            "行と列を入れ替えた形を忘れること。列を基準にしたX-Wingは行で候補を消します。"
+          ],
+          "faq": [
+            [
+              "ナンプレのX-Wingとは？",
+              "ある数字の候補マスが2つの行でそれぞれちょうど2つずつあり、それが同じ2列にある状態です。その数字は長方形の対角の2隅に入るので、2列の残りから消せます。行と列は入れ替えられます。"
+            ],
+            [
+              "X-Wingはなぜ成り立つ？",
+              "2つの行はそれぞれ2列のどちらかにその数字を置かなければならず、2行が同じ列を使うことはできません。そのため2つの列はどちらもこの2行からその数字を受け取り、その列のほかの候補はすべてありえなくなります。"
+            ],
+            [
+              "X-Wingはフィッシュの一種？",
+              "はい。X-Wingはサイズ2のフィッシュで、Swordfishはサイズ3のフィッシュです。Bare Sudokuはどちらも見つけます。"
+            ],
+            [
+              "X-Wingが出てくるのはどのレベル？",
+              "「上級」です。X-Wing、Y-Wing、Swordfish、XYZ-Wingのいずれかが必要な問題は「上級」と判定されます。"
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "ナンプレのY-Wing: テクニックの仕組み",
+          "description": "Y-Wing（XY-Wing）は、候補2つの軸と、軸と候補を1つずつ共有する2つの翼を使い、両方の翼が見えるすべてのマスから数字を消すテクニックです。例つき。",
+          "h1": "Y-Wing",
+          "summary": "Y-WingはXY-Wingとも呼ばれ、候補を2つずつ持つ3つのマスを使います。軸のマスの候補はXとYです。一方の翼は軸が見える位置にあってXとZを持ち、もう一方の翼も軸が見える位置にあってYとZを持ちます。軸がどちらであっても翼のどちらかは必ずZになるので、両方の翼が見えるすべてのマスからZを消せます。Bare Sudokuでは「上級」のテクニックです。",
+          "when": [
+            "候補がちょうど2つのマスがいくつもあり、フィッシュが見つからないときです。Y-Wingは「上級」の問題によく現れ、候補2つのマスをたどることで見つかります。どのマスも軸か翼になる可能性があります。"
+          ],
+          "spot": [
+            "候補がちょうど2つのマスを書き出します。それぞれを候補XとYを持つ軸とみなし、その関連マスの中から、Xと別の数字Zを持つマスと、Yと同じZを持つマスを探します。この2つが翼です。次に、両方の翼が見えてZを含むマスを探します。翼どうしは互いに見えている必要がない点に注意しましょう。"
+          ],
+          "examples": [
+            {
+              "h": "例",
+              "steps": [
+                "軸{pivot}の候補は{x}と{y}です。軸からは、{x}と{z}を持つ{wingA}と、{y}と{z}を持つ{wingB}が見えます。",
+                "{pivot}が{x}なら、{wingA}から{x}が消えて{z}になります。{pivot}が{y}なら、{wingB}が{z}になります。どちらの場合も、2つの翼のどちらかが{z}です。",
+                "両方の翼が見えるマスは決して{z}になりません。{elim}から{z}を消します。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "軸が見えない翼を選ぶこと。各翼は軸と行、列、ブロックのいずれかを共有していなければなりません。",
+            "片方の翼しか見えないマスからZを消すこと。消去するマスは両方の翼が見えていなければなりません。",
+            "軸からZを消すこと。Y-Wingでは軸にZはありません。もしあれば、それはルールの異なるXYZ-Wingです。"
+          ],
+          "faq": [
+            [
+              "ナンプレのY-Wingとは？",
+              "候補2つのマス3つからなるパターンです。XとYを持つ軸、軸が見えるXとZの翼、軸が見えるYとZの翼です。翼のどちらかは必ずZなので、両方の翼が見えるマスからZを消します。"
+            ],
+            [
+              "Y-WingとXY-Wingは同じもの？",
+              "はい。2つの名前は同じパターンを指します。Bare SudokuではY-Wingと呼んでいます。"
+            ],
+            [
+              "なぜ翼のどちらかがZになる？",
+              "軸がXなら、1つ目の翼からXが消えてZになります。軸がYなら、2つ目の翼がZになります。軸はそのどちらかなので、翼の一方はZです。"
+            ],
+            [
+              "Y-Wingで消せるマスはいくつ？",
+              "ふつうは1つか2つです。両方の翼が見えて、まだZを含むマスだけです。それでシングルを生むには十分です。"
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "ナンプレのSwordfish: テクニックの仕組み",
+          "description": "Swordfishは、3つの行にわたってある数字が3つの列に閉じ込められているとき、その列の残りからその数字を消すテクニックです。サイズ3のフィッシュを実例で解説。",
+          "h1": "Swordfish",
+          "summary": "Swordfishは、3つの行と3つの列を使うX-Wingです。ある数字の候補マスが3つの行でそれぞれ3つ以下で、そのすべてが同じ3つの列に収まっているなら、3つの行がその列でその数字を使い切るので、3列のほかのすべてのマスからその数字を消せます。行と列は入れ替えられます。Bare Sudokuは「上級」の問題で、Y-Wingのあとにこれを調べます。",
+          "when": [
+            "X-WingとY-Wingで何も見つからないときです。SwordfishはX-Wingより少なく、候補が3本の線にまばらに散らばった数字が必要です。その数字についてメモが完全かつ正確である必要があります。"
+          ],
+          "spot": [
+            "数字を1つ選び、その数字の候補マスが2つか3つの行を探します。そうした3行が合わせて3列しかカバーしていなければ、その列にその数字のほかの候補がないか確認します。すべての行がすべての列に候補を持つ必要はなく、Swordfishは6、7、8、9マスのいずれかで構成されます。ゲームでは数字キーでその数字をハイライトし、候補が3つの列にそろう3つの行を探しましょう。"
+          ],
+          "examples": [
+            {
+              "h": "例",
+              "steps": [
+                "数字{d}の候補マスは、{rows}行目のそれぞれで3つ以下で、そのすべてが{cols}列目に収まっています（{cells}）。",
+                "3つの行はそれぞれ{d}を3列のどれかに置かなければならず、2つの行が同じ列を使うことはできません。そのため3つの列はこの3行から{d}を受け取ります。",
+                "{cols}列目にあるほかの{d}の候補はすべてありえません。{elim}から{d}を消します。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "9マスすべてを求めること。一部の行の候補が2つでも、3行が3列しかカバーしていなければSwordfishは成立します。",
+            "候補マスが4つある行を含めること。基準となる各行の候補マスは3つ以下で、すべて3列の中になければなりません。",
+            "基準の行で候補を消すこと。行を基準にした場合、消去は3つの列で、基準の行の外で行います。"
+          ],
+          "faq": [
+            [
+              "ナンプレのSwordfishとは？",
+              "3つの行でのある数字の候補が、3つの列に閉じ込められている状態です。3行はその数字を3列に1つずつ置くしかないので、その列のほかのマスからその数字を消せます。"
+            ],
+            [
+              "SwordfishとX-Wingの違いは？",
+              "大きさだけです。X-Wingは2行と2列、Swordfishは3行と3列を使います。考え方は同じです。"
+            ],
+            [
+              "Swordfishにはちょうど9マス必要？",
+              "いいえ。各行の候補は2つでも3つでもかまいません。このパターンに必要なのは、3行を合わせて使う列が3つ以下であることだけです。"
+            ],
+            [
+              "サイズ4のフィッシュはある？",
+              "はい、Jellyfishです。Bare Sudokuの問題では必要にならないので、使っていません。"
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "ナンプレのXYZ-Wing: テクニックの仕組み",
+          "description": "XYZ-Wingは、候補3つの軸と、そのうち1つを共有する2つの翼から、3つすべてが見えるマスでその数字を消すテクニックです。実例で順を追って解説します。",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wingは、軸の候補が3つあるY-Wingです。軸はX、Y、Zを持ち、一方の翼は軸が見える位置にあってXとZを、もう一方も軸が見える位置にあってYとZを持ちます。3つのマスのどれかは必ずZなので、3つすべてが見えるマスからZを消せます。軸自身がZかもしれないため、消去するマスは両方の翼に加えて軸も見えていなければならず、それは3マスが共有するブロックか線の中に限られます。Bare Sudokuが使う中で最も難しいテクニックです。",
+          "when": [
+            "ほかのすべてが通用しないときだけです。XYZ-WingはBare Sudokuで最もまれなパターンで、「上級」の問題にしか現れません。候補3つのマスが、その数字を2つ共有する候補2つのマスと同じブロックにあるときに探してみましょう。"
+          ],
+          "spot": [
+            "候補がちょうど3つのマスから始めます。それぞれが軸になりえます。その関連マスの中から、候補を2つずつ持ち、どちらも軸の3つの候補から取られていて、ちょうど1つの数字Zを共有する2つのマスを探します。次に、軸と両方の翼が見えてZを含むマスを探します。実際には、一方の翼は軸のブロックに、もう一方は軸の行か列にあり、消去されるのはそのブロックのうちその行か列にある残りのマスです。"
+          ],
+          "examples": [
+            {
+              "h": "例",
+              "steps": [
+                "軸{pivot}の候補は{x}、{y}、{z}の3つです。軸からは、{x}と{z}を持つ{wingA}と、{y}と{z}を持つ{wingB}が見えます。",
+                "{pivot}が{z}なら、それで決まりです。{x}なら{wingA}が{z}に、{y}なら{wingB}が{z}になります。どの場合も、3つのマスのどれかが{z}です。",
+                "3つすべてが見えるマスは{z}になりません。{elim}から{z}を消します。"
+              ]
+            }
+          ],
+          "mistakes": [
+            "2つの翼だけが見えるマスで候補を消すこと。Y-Wingと違って軸がZの場合があるので、そのマスは軸も見えていなければなりません。",
+            "候補が両方とも軸の3つの候補に含まれていない翼を使うこと。",
+            "Y-Wingと混同すること。違いは軸の3つ目の候補で、それによって消せるマスが変わります。"
+          ],
+          "faq": [
+            [
+              "ナンプレのXYZ-Wingとは？",
+              "候補X、Y、Zを持つ軸と、XとZを持つ翼、YとZを持つ翼からなり、どちらの翼も軸が見えます。3マスのどれかがZなので、3つすべてが見えるマスからZを消します。"
+            ],
+            [
+              "XYZ-WingとY-Wingの違いは？",
+              "軸の候補が2つではなく3つで、Zも含みます。そのため軸にもZが入る可能性があり、Zを消せるのは軸と両方の翼が見えるマスだけです。"
+            ],
+            [
+              "XYZ-Wingはどのくらい出てくる？",
+              "まれです。Bare Sudokuでこれが必要になりうるのは「上級」の問題だけで、その多くは必要としません。Bare SudokuはX-Wing、Y-Wing、Swordfishのあと、最後にこれを調べます。"
+            ],
+            [
+              "WXYZ-Wingはある？",
+              "あります。軸の候補が4つのものですが、Bare Sudokuは使いません。ゲームの問題はすべて、このガイドの9つのテクニックで解き終えられます。"
+            ]
+          ]
+        }
+      }
     }
   }
 }
