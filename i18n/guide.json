@@ -22116,6 +22116,2334 @@
         }
       }
     },
+    "jv": {
+      "learnHeading": "Sinau Sudoku",
+      "learnText": "Lagi wiwit main Sudoku, utawa macet ing teka-teki sing angel? Rong pandhuan iki njlentrehake aturan lan saben teknik sing dienggo pitunjuk, saben-saben nganggo conto nyata.",
+      "howToLink": "Carane main Sudoku",
+      "techniquesLink": "Teknik ngrampungake Sudoku",
+      "labels": {
+        "howTo": "Carane main",
+        "techniques": "Teknik",
+        "play": "Main Sudoku",
+        "prev": "Teknik sadurunge",
+        "next": "Teknik sabanjure",
+        "all": "Kabeh teknik",
+        "example": "Conto",
+        "steps": "Langkah demi langkah",
+        "when": "Kapan dienggo",
+        "spot": "Carane nemokake",
+        "mistakes": "Kaluputan sing kerep",
+        "inGame": "Ing Bare Sudoku",
+        "level": "Dibutuhake wiwit tingkat: {level}",
+        "hint": "Ing dolanan, pitunjuk kandha: {text}",
+        "legend": "Angka kandel wis diwenehi, angka biru diselehake nalika ngrampungake, angka cilik iku calon. Sel sing disorot mbentuk pola, calon sing dicoret dibusak, lan calon sing diubengi yaiku angka sing kudu diselehake.",
+        "notation": "Sel ditulis kaya r3c7: baris 3, kolom 7. Baris diitung saka ndhuwur, kolom saka kiwa, lan kothak 1 nganti 9 saka pojok kiwa ndhuwur, baris demi baris.",
+        "row": "baris {n}",
+        "column": "kolom {n}",
+        "box": "kothak {n}",
+        "elimItem": "{d} saka {cell}",
+        "regions": "Baris 5, kolom 5 lan kothak 5 ing wiwitan teka-teki",
+        "firstMove": "Calon tunggal: {cell} mung bisa {d}",
+        "breadcrumb": "Jejak navigasi"
+      },
+      "howTo": {
+        "title": "Carane Main Sudoku: Aturan, Papan lan Langkah Kawitan",
+        "description": "Sinau carane main Sudoku: aturane, cara kerja baris, kolom lan kothak, kenapa saben teka-teki mung duwe siji jawaban, nganggo cathetan lan langkah kawitan.",
+        "h1": "Carane main Sudoku",
+        "summary": "Sudoku iku teka-teki logika ing papan 9×9. Isi saben sel kosong nganggo angka 1 nganti 9 supaya saben baris, saben kolom lan saben kothak 3×3 ngemot saben angka persis sepisan. Sawetara angka wis diwenehi wiwit awal; sisane sampeyan golek nganggo nalar, siji sel sing wis mesthi saben wektu, lan sampeyan ora tau perlu ngira-ira. Pandhuan iki njlentrehake papan, aturan, prinsip siji jawaban, cathetan lan strategi prasaja kanggo langkah kawitan. Kabeh bisa sampeyan latih ing [Bare Sudoku](play), sing gratis lan duwe pitunjuk sing njlentrehake logikane.",
+        "sections": [
+          {
+            "h": "Apa aturane Sudoku?",
+            "p": [
+              "Aturane mung telu, lan telu-telune sejatine aturan sing padha dideleng saka telung arah: saben baris kudu ngemot angka 1 nganti 9, saben kolom kudu ngemot angka 1 nganti 9, lan saben kothak 3×3 kudu ngemot angka 1 nganti 9. Mula siji angka ora bakal bisa muncul kaping pindho ing baris, kolom utawa kothak sing padha.",
+              "Angka sing wis diwenehi, dicithak kandel, iku tetep. Gawean sampeyan yaiku ngisi sel sing kosong. Ora ana itungan lan ora ana urutan: angka-angka iku mung sanga simbol sing beda. Sampeyan bisa main nganggo aksara utawa gambar lan ora ana sing owah."
+            ]
+          },
+          {
+            "h": "Kepiye papane ditata?",
+            "p": [
+              "Papan duwe 81 sel ing 9 baris lan 9 kolom. Garis kandel mbagi papan dadi sanga kothak 3×3. Saben sel dadi bageyane persis siji baris, siji kolom lan siji kothak, lan telung klompok iki diarani unit-e. 20 sel liyane sing sak unit karo sawijining sel diarani tanggane; angka sing diselehake ing sawijining sel nyingkirake angka iku saka kabeh 20 tanggane.",
+              "Sel ditulis kaya r3c7: baris 3, kolom 7. Baris diitung saka ndhuwur, kolom saka kiwa, lan kothak 1 nganti 9 saka pojok kiwa ndhuwur, baris demi baris. Cara nulis iki dienggo ing saben pandhuan teknik lan pantes disinaoni: r5c5 iku tengahe papan."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Kenapa saben Sudoku duwe persis siji jawaban?",
+            "p": [
+              "Sudoku sing bener mung duwe siji jawaban, lan iku sing ndadekake logika bisa mlaku. Saben-saben sampeyan bisa mbuktekake yen sawijining angka ora bisa mlebu ing panggonan liya ing sawijining unit, angka iku mesthi mlebu ing sel sing isih kari, amarga jawabane ana lan mung siji. Yen teka-teki duwe rong jawaban, nalar sepira wae ora bakal bisa mbedakake loro-lorone, lan ing sawijining titik sampeyan kepeksa ngira-ira.",
+              "Bare Sudoku nggawe saben teka-teki ing piranti sampeyan lan mriksa yen teka-teki iku duwe persis siji jawaban lan pemecah logikane bisa ngrampungake nganggo teknik-teknik tingkat sing dipilih. Dadi yen sampeyan macet, mesthi ana langkah sabanjure sing bisa ditemokake, lan pitunjuk nuduhake langkah iku."
+            ]
+          },
+          {
+            "h": "Kepiye carane miwiti teka-teki Sudoku?",
+            "p": [
+              "Wiwiti saka sing paling kewates. Urutan iki mlaku ing saben tingkat:"
+            ],
+            "list": [
+              "Pilih angka sing wis kerep muncul, upamane kaping enem utawa pitu, banjur goleki kothak sing durung ngemot angka iku. Asring mung kari siji sel ing kothak kanggo angka iku: kuwi [tunggal sing ndhelik](hidden-single).",
+              "Goleki sel sing rame. Sel sing baris, kolom lan kothake bebarengan ngemot wolung angka sing beda mung kari siji calon: [calon tunggal](naked-single). Sel ing baris utawa kothak sing meh kebak iku panggonan paling apik kanggo nggoleki.",
+              "Saben angka sing sampeyan selehake mbusak siji calon saka 20 tanggane, mula priksa tangga-tangga iku langsung. Tunggal biasane teka sambung-sinambung.",
+              "Yen panyelehan sing gampang wis entek, tulis cathetan: calon kanggo saben sel kosong. Banjur goleki angka sing kekunci ing siji garis ing njero kothak ([calon sing dikunci](locked-candidates)) utawa rong sel sing duwe rong calon sing padha ([pasangan sing katon](naked-pairs)).",
+              "Bali menyang tunggal sawise saben pambusakan. Teka-teki Ahli wae umume dirampungake nganggo tunggal; teknik lanjutan mung mbukak langkah sabanjure."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Apa iku cathetan lan kapan kudu dienggo?",
+            "p": [
+              "Cathetan, uga diarani tandha potlot utawa calon, yaiku angka cilik sing sampeyan tulis ing sel kosong kanggo nyathet angka apa wae sing isih mungkin ing kono. Ing teka-teki gampang arang dibutuhake; wiwit tingkat Angel munggah cathetan wajib, amarga teknik kaya pasangan, X-Wing lan Y-Wing iku babagan calon, dudu angka sing wis diselehake.",
+              "Jaga cathetan supaya pener: yen sampeyan nyelehake angka, busak angka iku saka cathetan kabeh 20 tanggane. Ing Bare Sudoku iki kelakon otomatis, lan Isi cathetan nulis saben calon ing saben sel kosong mung sepisan tutul, dadi sampeyan bisa miwiti saka calon sing jangkep lan bener. Cathetan iku kasunyatan, dudu kira-kira: tegese durung ana sing nyingkirake angka iku."
+            ]
+          },
+          {
+            "h": "Apa sing kudu dilakoni yen macet?",
+            "p": [
+              "Priksa maneh dhasare dhisik: saben baris, kolom lan kothak sing meh kebak iku sumber tunggal. Banjur priksa yen cathetan wis jangkep, amarga calon sing ilang ndhelikake pola lan calon sing wis ora laku nggawe pola palsu. Sawise iku lakoni [teknik-teknik](techniques) urut saka sing paling gampang: calon sing dikunci, pasangan lan telu, X-Wing, Y-Wing, Swordfish lan XYZ-Wing. Saben teknik duwe kaca dhewe kanthi conto nyata.",
+              "Yen ora ana sing mempan, jupuk pitunjuk. Ing Bare Sudoku pitunjuk dhisik mriksa apa ana angka sing kliru, banjur nggoleki sel sabanjure sing bisa diisi nganggo logika lan nyebutake teknike, dadi sampeyan tetep sinau senajan nganggo pitunjuk. Tutul pitunjuk maneh kanggo nyelehake angkane."
+            ]
+          },
+          {
+            "h": "Kepiye carane nglebokake angka ing Bare Sudoku?",
+            "p": [
+              "Tutul sel, banjur angka. Utawa tutul angka dhisik: angka iku kekunci, lan saben sel sing sampeyan tutul entuk angka iku; iki cara paling cepet kanggo nyelehake angka sing padha kaping enem, pitu lan wolu. Tutul angka iku maneh kanggo nguculake. Tombol Cathetan ngalih menyang tandha potlot, Busak ngresiki sel, Batalake mbatalake langkah apa wae, lan kaluputan ditandhani abang kajaba sampeyan mateni ing menu.",
+              "Ing keyboard, gunakake tombol panah kanggo pindhah, 1 nganti 9 kanggo nglebokake angka, Backspace kanggo mbusak, N kanggo cathetan, U kanggo batalake, H kanggo pitunjuk, F kanggo ngisi cathetan lan Escape kanggo menu. Dolanan iki nyimpen dhewe, bisa offline lan ora ana iklan utawa akun."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Apa ing Sudoku kudu ngira-ira?",
+            "Ora, yen teka-tekine bener. Saben teka-teki Bare Sudoku duwe persis siji jawaban lan wis dipriksa bisa dirampungake mung nganggo logika, nganti teknik-teknik tingkate. Yen sampeyan rumangsa kudu ngira-ira, ana calon sing ilang saka cathetan utawa ana teknik sing durung ketemu."
+          ],
+          [
+            "Apa siji angka bisa muncul kaping pindho ing baris, kolom utawa kothak?",
+            "Ora. Iku intine aturan: saben sanga baris, sanga kolom lan sanga kothak ngemot saben angka 1 nganti 9 persis sepisan. Yen ana rong angka sing padha ing siji unit, paling ora salah sijine kliru."
+          ],
+          [
+            "Apa bedane Gampang, Sedhengan, Angel lan Ahli?",
+            "Tingkat ditemtokake dening teknik sing dibutuhake teka-teki. Gampang lan Sedhengan dirampungake mung nganggo tunggal, lan Gampang diwiwiti kanthi paling ora 38 angka sing wis diwenehi. Angel mbutuhake calon sing dikunci utawa pasangan lan telu. Ahli mbutuhake X-Wing, Y-Wing, Swordfish utawa XYZ-Wing."
+          ],
+          [
+            "Luwih becik ngisi cathetan kanggo kabeh sel utawa mung sawetara?",
+            "Kanggo teka-teki Angel lan Ahli, isi kabeh: pola kaya pasangan, X-Wing lan Y-Wing mung katon yen saben calon ditulis. Ing Gampang lan Sedhengan, cathetan ora wajib lan akeh pemain mung nggoleki tunggal."
+          ],
+          [
+            "Suwene ngrampungake Sudoku?",
+            "Teka-teki Gampang butuh sawetara menit; teka-teki Ahli bisa butuh rong puluh menit utawa luwih, gumantung sepira cepet sampeyan nemokake pola lanjutane. Bare Sudoku nuduhake wektu, mandhegake nalika menu dibukak lan ora nyimpen papan peringkat, dadi main sak kepenake sampeyan."
+          ],
+          [
+            "Apa Sudoku butuh itungan?",
+            "Ora. Angka-angka iku mung label; ora ana nambah utawa ngitung. Sanga simbol apa wae bisa dienggo, mulane Sudoku iku teka-teki logika, dudu teka-teki angka."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Teknik Ngrampungake Sudoku Diterangake nganggo Conto",
+        "description": "Sanga teknik ngrampungake Sudoku, saka calon tunggal nganti Swordfish lan XYZ-Wing, urut kaya sing dienggo pitunjuk Bare Sudoku, saben nganggo conto nyata.",
+        "h1": "Teknik ngrampungake Sudoku",
+        "intro": [
+          "Saben Sudoku bisa dirampungake nganggo sawetara teknik logika. Daftar iki nuduhake sanga teknik sing dienggo pemecah lan pitunjuk Bare Sudoku, urut kaya sing dicoba pemecah: tunggal dhisik, banjur pambusakan ing njero siji unit, banjur pola sing nyakup sawetara baris lan kolom. Saben teknik duwe kaca dhewe sing isine pangertene, carane nemokake, conto nyata saka teka-teki sing digawe lan kaluputan sing kerep.",
+          "Tingkat teka-teki ditemtokake dening teknik paling angel sing dibutuhake. Teka-teki Gampang lan Sedhengan mung butuh tunggal, teka-teki Angel butuh calon sing dikunci utawa pasangan lan telu, lan teka-teki Ahli butuh paling ora siji iwak utawa swiwi. Apa wae tingkate, tunggal sing nggarap akehe; teknik lanjutan mbusak siji utawa rong calon lan tunggal nerusake saka kono."
+        ],
+        "faq": [
+          [
+            "Teknik Sudoku kudu dicoba urut kepiye?",
+            "Sing paling murah dhisik: calon tunggal, tunggal sing ndhelik, calon sing dikunci, pasangan lan telu sing katon, pasangan lan telu sing ndhelik, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku nyoba persis urut iki, lan pitunjuk tansah nyebutake teknik paling prasaja sing bisa maju."
+          ],
+          [
+            "Apa aku butuh kabeh teknik iki kanggo ngrampungake Sudoku?",
+            "Kanggo teka-teki Gampang lan Sedhengan, tunggal wis cukup. Teka-teki Angel nambahi calon sing dikunci lan pasangan lan telu. Teka-teki Ahli butuh paling ora siji iwak utawa swiwi, nanging biasane mung sepisan utawa kaping pindho saben teka-teki."
+          ],
+          [
+            "Apa ana teknik sing luwih angel tinimbang XYZ-Wing?",
+            "Ana, contone ranté, tes keunikan lan jaring pameksa. Bare Sudoku ora nggawe teka-teki sing butuh teknik kuwi, dadi saben teka-teki ing dolanan bisa dirampungake nganggo sanga teknik ing kaca iki."
+          ],
+          [
+            "Apa iku calon?",
+            "Angka sing isih bisa mlebu ing sel kosong amarga durung ana apa-apa ing baris, kolom utawa kothake sing nyingkirake. Cathetan ing dolanan iku calon. Saben teknik sing luwih saka tunggal nalar nganggo calon, mula jaga supaya calon tetep jangkep lan pener."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Calon tunggal",
+          "title": "Calon Tunggal ing Sudoku: Sel sing Mung Duwe Siji Calon",
+          "description": "Calon tunggal yaiku sel kosong sing mung duwe siji angka sing mungkin. Sinau nemokake kanthi cepet nganggo conto nyata langkah demi langkah lan kaluputan umum.",
+          "h1": "Calon tunggal (naked single)",
+          "summary": "Calon tunggal yaiku sel kosong sing duwe persis siji calon: wolung angka liyane wis ana ing baris, kolom utawa kothake. Angka sing kari mesthi mlebu ing kono. Iki teknik Sudoku paling prasaja, sing paling kerep dienggo, lan sing dilaporake pitunjuk Bare Sudoku minangka \"Mung siji calon ing kene\".",
+          "when": [
+            "Tansah. Calon tunggal muncul wiwit langkah kawitan nganti pungkasan, ing saben tingkat. Ing teka-teki Gampang lan Sedhengan, bebarengan karo tunggal sing ndhelik, iki siji-sijine teknik sing dibutuhake. Ing teka-teki sing luwih angel, saben pambusakan saka teknik lanjutan biasane ninggalake calon tunggal, mula goleki sawise saben langkah."
+          ],
+          "spot": [
+            "Delengen sel sing akeh tanggane wis diisi: sel ing baris sing wis duwe pitung angka, utawa sel sing baris, kolom lan kothake bebarengan nyakup wolung angka sing beda. Tanpa cathetan, itung angka sing katon saka sel iku. Nganggo cathetan, calon tunggal mung sel sing nuduhake siji calon, mulane Isi cathetan nggampangake nemokake."
+          ],
+          "examples": [
+            {
+              "h": "Conto",
+              "steps": [
+                "Delengen {cell}. Sel iki kosong, mula daftar saben angka sing wis diselehake ing barise, kolome lan kothake.",
+                "Baris {row} ngemot {rowDigits}. Kolom {col} ngemot {colDigits}. Kothak {box} ngemot {boxDigits}.",
+                "Bebarengan kabeh iku nyingkirake saben angka kajaba {d}, mula {d} siji-sijine calon sing kari ing {cell}.",
+                "Tulis {d} ing {cell}. Banjur priksa apa angka anyar iku nggawe tunggal liyane ing baris, kolom utawa kothak sing padha."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mung ngitung baris utawa mung kothak. Wolung angka sing disingkirake biasane teka saka telung unit bebarengan.",
+            "Lali yen angka sing lagi wae diselehake uga nyingkirake calon saka 20 tanggane; calon tunggal anyar muncul langsung sawise saben panyelehan.",
+            "Kleru mbedakake calon tunggal karo tunggal sing ndhelik: calon tunggal kari siji calon ing sel, tunggal sing ndhelik kari siji sel kanggo angka ing sawijining unit."
+          ],
+          "faq": [
+            [
+              "Apa iku calon tunggal ing Sudoku?",
+              "Sel kosong sing duwe persis siji calon. Wolung angka sing beda wis diselehake ing baris, kolom lan kothake, mula angka kaping sanga iku siji-sijine sing cocog."
+            ],
+            [
+              "Kenapa ing basa Inggris diarani naked, tegese wuda?",
+              "Amarga calon siji-sijine iku katon langsung ing sel sawise cathetan ditulis; ora ana sing ndhelikake. Tunggal sing ndhelik, kosok baline, ana ing antarane calon liyane lan ditemokake kanthi ndeleng angkane, dudu sele."
+            ],
+            [
+              "Apa teka-teki bisa dirampungake mung nganggo calon tunggal?",
+              "Akeh teka-teki Gampang bisa, nanging umume uga butuh tunggal sing ndhelik. Bare Sudoku netepake teka-teki Gampang lan Sedhengan bisa dirampungake nganggo tunggal saka loro jinis kasebut; teka-teki Angel lan Ahli butuh paling ora siji teknik liyane."
+            ],
+            [
+              "Apa pitunjuk nuduhake calon tunggal?",
+              "Iya. Yen panyelehan sabanjure iku calon tunggal, pitunjuk milih sel iku lan kandha \"Mung siji calon ing kene\" karo angkane. Tutul pitunjuk maneh kanggo nyelehake."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Tunggal sing ndhelik",
+          "title": "Tunggal sing Ndhelik ing Sudoku: Mung Siji Panggonan",
+          "description": "Tunggal sing ndhelik yaiku siji-sijine sel ing baris, kolom utawa kothak sing isih bisa diisi sawijining angka. Sinau nemokake kanthi niteni angka siji-siji.",
+          "h1": "Tunggal sing ndhelik (hidden single)",
+          "summary": "Tunggal sing ndhelik yaiku angka sing mung kari siji sel sing mungkin ing baris, kolom utawa kothak, senajan sel iku bisa uga nuduhake calon liyane. Amarga unit iku kudu ngemot angka kasebut, angka iku mlebu ing kono. Pitunjuk Bare Sudoku nglaporake minangka \"Mung siji panggonan kanggo 5 ing baris iki\", utawa ing kolom utawa kothak iki.",
+          "when": [
+            "Saben ana angka sing wis akeh: yen sawijining angka wis muncul kaping lima utawa enem, kothak sing isih kari wis kewates banget, lan tunggal sing ndhelik asring dadi langkah sabanjure. Tunggal sing ndhelik iku teknik utama teka-teki Gampang lan Sedhengan lan tetep dadi andalan ing saben tingkat."
+          ],
+          "spot": [
+            "Titeni angka siji-siji. Jupuk siji angka, goleki kothak sing durung ngemot angka iku, lan coret saben sel ing kothak iku sing sak baris utawa sak kolom karo angka sing padha sing wis diselehake. Yen mung kari siji sel, sampeyan wis nemokake tunggal sing ndhelik. Cara sing padha uga mlaku kanggo baris lan kolom. Ing dolanan, tutul angka sing wis diselehake: saben angka sing padha disorot, dadi sel sing isih bebas katon cetha."
+          ],
+          "examples": [
+            {
+              "h": "Conto",
+              "steps": [
+                "Kothak {box} durung ngemot {d}, mula salah siji sel kosonge kudu diisi {d}. Sel kosonge yaiku {empties}.",
+                "Ing saben sel iku kajaba {cell}, {d} diblokir dening {d} sing wis diselehake ing baris utawa kolom sing padha, mula {d} dudu calon ing kono.",
+                "Mula {cell} dadi siji-sijine panggonan kanggo {d} ing kothak {box}. Tulis {d} ing kono, senajan {cell} bisa uga isih nuduhake calon liyane."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Nyelehake angka ing sel sing mung kira-kira bener: priksa saben sel kosong liyane ing unit iku, ora mung sing ketok.",
+            "Ora weruh tunggal sing ndhelik amarga sel iku nuduhake sawetara calon. Calon liyane ora penting; sing penting angka iku ora duwe panggonan liya ing unit kasebut.",
+            "Mung niteni kothak. Baris lan kolom uga kerep ngasilake tunggal sing ndhelik, luwih-luwih ing pungkasan."
+          ],
+          "faq": [
+            [
+              "Apa iku tunggal sing ndhelik ing Sudoku?",
+              "Angka sing mung bisa mlebu ing siji sel ing baris, kolom utawa kothak. Unit iku kudu ngemot angka kasebut, mula sel iku wis mesthi senajan isih duwe calon liyane."
+            ],
+            [
+              "Apa bedane tunggal sing ndhelik karo calon tunggal?",
+              "Calon tunggal iku babagan sel: kari siji calon. Tunggal sing ndhelik iku babagan angka: kari siji sel ing sawijining unit. Loro-lorone nyelehake angka kanthi mesthi."
+            ],
+            [
+              "Sing endi luwih gampang ditemokake?",
+              "Tanpa cathetan, tunggal sing ndhelik biasane luwih gampang amarga sampeyan bisa niteni papan kanggo angka siji-siji. Kanthi cathetan jangkep, calon tunggal sing paling gampang, amarga sel sing mung duwe siji calon katon cetha."
+            ],
+            [
+              "Kepiye pitunjuk nggambarake tunggal sing ndhelik?",
+              "Minangka \"Mung siji panggonan kanggo\" angka iku ing baris iki, kolom iki utawa kothak iki, kanthi sel sing dipilih. Tutul pitunjuk maneh kanggo nyelehake."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Calon sing dikunci",
+          "title": "Calon sing Dikunci ing Sudoku: Nuding lan Ngaku",
+          "description": "Calon sing dikunci: yen calon angka ing kothak kabeh ana ing siji baris utawa kolom, utawa kosok baline, angka iku dibusak ing liyane. Loro conto nyata.",
+          "h1": "Calon sing dikunci (locked candidates)",
+          "summary": "Calon sing dikunci iku teknik kawitan sing mbusak calon tinimbang nyelehake angka. Wujude ana loro. Nuding: ing sawijining kothak, kabeh calon kanggo sawijining angka ana ing siji baris utawa kolom, mula angka iku dibusak saka sisane garis kasebut. Ngaku: ing sawijining baris utawa kolom, kabeh calon kanggo sawijining angka ana ing siji kothak, mula angka iku dibusak saka sisane kothak kasebut. Pitunjuk Bare Sudoku menehi label \"Calon sing dikunci\" marang panyelehan sing dibukak.",
+          "when": [
+            "Yen tunggal wis entek ing teka-teki Angel, iki sing kudu dicoba dhisik. Teknik iki butuh cathetan jangkep paling ora kanggo angka sing sampeyan priksa. Calon sing dikunci iku umum: umume teka-teki Angel butuh, lan teka-teki Ahli nganggo ing antarane pola-pola sing luwih gedhe."
+          ],
+          "spot": [
+            "Kanggo nuding, delengen saben kothak lan saben angka sing durung ana ing kono: yen sel calon kanggo angka iku ana ing siji baris utawa kolom, priksa apa angka sing padha isih dadi calon ing garis iku ing sanjabane kothak. Kanggo ngaku, delengen sadawane baris utawa kolom: yen calon kanggo sawijining angka kabeh ana ing njero siji kothak, sisane kothak iku bisa diresiki. Ing dolanan, tutul tombol angka kanggo nyorot saben calone; garis rong utawa telung cathetan sing disorot ing njero siji kothak iku polane."
+          ],
+          "examples": [
+            {
+              "h": "Nuding",
+              "steps": [
+                "Ing kothak {box}, angka {d} mung duwe sel calon iki: {cells}. Kabeh ana ing baris {row}.",
+                "Kothak {box} butuh {d}, mula {d} kanggo baris {row} ana ing njero kothak {box}, ing sel endi wae saka sel-sel iku.",
+                "Baris {row} ora bisa ngemot {d} kaping pindho, mula busak {d} saka sel-sel baris {row} ing sanjabane kothak: {elim}."
+              ]
+            },
+            {
+              "h": "Ngaku",
+              "steps": [
+                "Ing baris {row}, angka {d} mung bisa mlebu ing {cells}, lan kabeh ana ing njero kothak {box}.",
+                "Baris {row} kudu ngemot {d}, mula {d} kanggo kothak {box} diaku dening baris {row}. Sel liyane ing kothak {box} ora bisa ngemot {d}.",
+                "Busak {d} saka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mbusak angka ing njero kothak tinimbang ing sanjabane nalika nuding, utawa kosok baline nalika ngaku. Pambusakan tansah ngenani sel sing ana ing garis nanging ora ing kothak, utawa ing kothak nanging ora ing garis.",
+            "Nganggo aturan iki yen calone sumebar ing rong baris ing kothak. Kabeh sel calon kanggo angka iku ing kothak kudu ana ing siji garis.",
+            "Lali nggoleki tunggal sing kawangun saka pambusakan. Calon sing dikunci arang nyelehake angka dhewe; teknik iki nyiapake tunggal."
+          ],
+          "faq": [
+            [
+              "Apa iku calon sing dikunci ing Sudoku?",
+              "Calon kanggo sawijining angka sing kekurung ing irisan antarane kothak lan garis. Amarga kothak, utawa garis, kudu ngemot angka iku ing irisan kasebut, angka iku bisa dibusak saka sisane garis, utawa sisane kothak."
+            ],
+            [
+              "Apa bedane nuding lan ngaku?",
+              "Nuding diwiwiti saka kothak: calon angka ing kothak nuding sadawane siji baris utawa kolom, mula angka iku dibusak saka sisane garis kasebut. Ngaku diwiwiti saka baris utawa kolom: calon angka ing garis kabeh ana ing siji kothak, mula garis iku ngaku angka kasebut lan angka iku dibusak saka sisane kothak."
+            ],
+            [
+              "Apa calon sing dikunci uga diarani pambusakan irisan?",
+              "Iya. Jeneng liyane yaiku reduksi kothak-garis kanggo wujud ngaku, lan pasangan nuding utawa telu nuding kanggo wujud nuding. Bare Sudoku nganggo siji jeneng kanggo loro-lorone."
+            ],
+            [
+              "Tingkat endi sing butuh calon sing dikunci?",
+              "Angel. Teka-teki sing butuh calon sing dikunci utawa pasangan lan telu nanging ora ana sing luwih angel dianggep Angel; teka-teki Ahli uga butuh iwak utawa swiwi."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Pasangan lan telu sing katon",
+          "title": "Pasangan lan Telu sing Katon ing Sudoku: Carane Mlaku",
+          "description": "Pasangan lan telu sing katon: rong utawa telung sel ing siji unit kanthi rong utawa telung calon sing padha. Sinau nemokake lan apa sing dibusak nganggo conto.",
+          "h1": "Pasangan lan telu sing katon (naked pair, naked triple)",
+          "summary": "Pasangan sing katon yaiku rong sel ing baris, kolom utawa kothak sing padha sing duwe rong calon sing persis padha. Rong angka iku kudu mlebu ing rong sel iku, mula bisa dibusak saka saben sel liyane ing unit kasebut. Telu sing katon iku gagasan sing padha kanthi telung sel lan telung angka; saben sel bisa nuduhake loro utawa telu-telune. Pitunjuk Bare Sudoku menehi label \"Pasangan utawa telu\" marang panyelehan sing diasilake.",
+          "when": [
+            "Sawise cathetan jangkep lan tunggal uga calon sing dikunci wis entek. Pasangan sing katon kerep banget ana ing teka-teki Angel, telu sing katon luwih arang. Loro-lorone pantes dipriksa ing saben unit sing isih duwe lima utawa luwih sel kosong."
+          ],
+          "spot": [
+            "Goleki sel sing mung duwe rong calon lan goleki sel liya ing unit sing padha kanthi rong calon sing padha. Kanggo telu, delengen unit sing duwe sawetara sel kanthi loro lan telung calon, banjur priksa apa telu ing antarane bebarengan mung nganggo telung angka sing beda. Sel kanthi calon sing persis padha gampang katon yen cathetan wis ditulis; Isi cathetan ing dolanan nindakake iku mung sepisan tutul."
+          ],
+          "examples": [
+            {
+              "h": "Pasangan sing katon",
+              "steps": [
+                "{cellA} lan {cellB} ing {unit} duwe rong calon sing persis padha: {d1} lan {d2}.",
+                "Salah siji kudu {d1} lan sijine {d2}. Kita ora ngerti sing endi, nanging rong angka iku wis dienggo dening rong sel iki.",
+                "Mula ora ana sel liya ing {unit} sing bisa ngemot {d1} utawa {d2}. Busak {elim}."
+              ]
+            },
+            {
+              "h": "Telu sing katon",
+              "steps": [
+                "Telung sel ing {unit} njupuk kabeh calone saka telung angka sing padha, {digits}: {cells}.",
+                "Telung angka iku kudu ngisi telung sel iki kanthi urutan apa wae. Sel ora kudu nuduhake telung calon kabeh; sing penting ora ana siji wae saka telung sel iku sing duwe calon ing njaba klompok iku.",
+                "Busak {digits} saka saben sel liyane ing {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Njupuk rong sel sing padha duwe rong calon nanging uga duwe calon katelu. Kanggo pasangan sing katon, saben sel kudu duwe persis rong calon iku lan ora liya.",
+            "Mbusak angka-angka saka sel pasangan dhewe. Pasangan iku tetep nyimpen calone; pambusakan ngenani sel liyane ing unit.",
+            "Mbutuhake saben sel ing telu nuduhake telung angka kabeh. Sel sing duwe loro saka telu iku ora apa-apa, anggere ora ana sel sing duwe calon ing njaba klompok."
+          ],
+          "faq": [
+            [
+              "Apa iku pasangan sing katon ing Sudoku?",
+              "Rong sel ing siji unit sing padha duwe rong calon sing persis padha. Rong angka iku kekunci ing rong sel iku, mula bisa dibusak saka sisane unit."
+            ],
+            [
+              "Apa iku telu sing katon?",
+              "Telung sel ing siji unit sing calone bebarengan mung telung angka. Saben sel bisa ngemot loro utawa telu saka angka-angka iku. Telung angka iku ngisi telung sel, mula bisa dibusak saka sel liyane ing unit."
+            ],
+            [
+              "Apa pasangan sing katon nyelehake angka?",
+              "Ora dhewe. Pasangan mbusak calon, lan pambusakan iku biasane ninggalake calon tunggal utawa tunggal sing ndhelik. Pitunjuk ing Bare Sudoku nuduhake tunggal iku lan nyebutake teknik sing ndadekake bisa."
+            ],
+            [
+              "Apa pasangan sing katon bisa ana ing kothak lan baris sekaligus?",
+              "Bisa. Yen rong sel iku sak baris lan sak kothak, pasangan iku mbusak ing unit loro-lorone. Bare Sudoku ngurusi unit siji-siji."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Pasangan lan telu sing ndhelik",
+          "title": "Pasangan lan Telu sing Ndhelik ing Sudoku: Carane Nemokake",
+          "description": "Pasangan sing ndhelik: rong angka sing mung bisa mlebu ing rong sel sing padha ing siji unit, mula calon liyane dibusak. Sinau nemokake pasangan lan telu.",
+          "h1": "Pasangan lan telu sing ndhelik (hidden pair, hidden triple)",
+          "summary": "Pasangan sing ndhelik yaiku rong angka sing, ing siji baris, kolom utawa kothak, dadi calon ing rong sel sing padha lan ora ing panggonan liya. Rong sel iku kudu ngemot rong angka iku, mula saben calon liyane ing sel-sel iku bisa dibusak. Telu sing ndhelik mlaku kanthi cara sing padha kanggo telung angka sing kekurung ing telung sel. Sawise pambusakan, sel-sel iku nuduhake pasangan utawa telu sing katon. Pitunjuk Bare Sudoku menehi label \"Pasangan utawa telu\" marang panyelehan sing diasilake.",
+          "when": [
+            "Yen sawijining unit duwe sel kanthi akeh calon lan tunggal wis entek. Pasangan sing ndhelik umpetan ing sel sing rame, mulane pantes digoleki persis ing panggonan sing pasangan sing katon ora ketok. Telu sing ndhelik arang; Bare Sudoku mriksa, nanging umume teka-teki Angel rampung tanpa iku."
+          ],
+          "spot": [
+            "Garap miturut angka, dudu miturut sel. Ing sawijining unit, cathet sel ngendi wae saben angka sing durung ana bisa mlebu. Yen rong angka saben-saben mung duwe rong sel sing mungkin lan sel-sele padha, sampeyan nemokake pasangan sing ndhelik. Ing dolanan, tutul tombol angka kanggo nyorot calone; yen rong angka nyorot rong sel sing padha ing sawijining unit lan ora liyane ing unit iku, iku polane."
+          ],
+          "examples": [
+            {
+              "h": "Pasangan sing ndhelik",
+              "steps": [
+                "Ing {unit}, angka {d1} lan {d2} saben-saben mung duwe rong sel sing mungkin, lan sel-sele padha: {cells}.",
+                "Rong sel iku kudu ngemot {d1} lan {d2}, mula calon liyane ing sel-sel iku ora mungkin.",
+                "Busak {elim}. Saiki rong sel iku nuduhake pasangan sing katon, sing bisa mbukak luwih akeh."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mbusak rong angka pasangan saka sel pasangan. Sing dibusak iku calon liyane ing sel-sel iku; angka pasangan tetep.",
+            "Nampa angka sing duwe sel katelu sing mungkin ing unit. Loro angka kudu diwatesi persis ing rong sel iku.",
+            "Mung nggoleki ing kothak. Pasangan sing ndhelik uga kerep ana ing baris lan kolom."
+          ],
+          "faq": [
+            [
+              "Apa iku pasangan sing ndhelik ing Sudoku?",
+              "Rong angka sing mung bisa mlebu ing rong sel sing padha ing sawijining unit. Sel-sel iku kudu njupuk angka-angka iku, mula calon liyane dibusak."
+            ],
+            [
+              "Apa bedane pasangan sing ndhelik karo pasangan sing katon?",
+              "Pasangan sing katon iku ketok: rong sel sing mung nuduhake rong calon sing padha. Pasangan sing ndhelik ketutupan calon tambahan ing rong sel iku. Mbusak calon tambahan iku ngowahi pasangan sing ndhelik dadi pasangan sing katon."
+            ],
+            [
+              "Apa iku telu sing ndhelik?",
+              "Telung angka sing kekurung ing telung sel ing sawijining unit. Saben angka ora kudu ana ing telung sel kabeh; sing penting ora ana siji wae saka telung angka iku sing duwe calon ing njaba sel-sel iku."
+            ],
+            [
+              "Apa pitunjuk mbedakake pasangan sing ndhelik lan sing katon?",
+              "Ora. Bare Sudoku nemokake loro-lorone lan menehi label \"Pasangan utawa telu\" marang panyelehan sing diasilake. Kaca-kaca iki misahake amarga cara nemokake beda."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing ing Sudoku: Carane Teknik Iki Mlaku",
+          "description": "X-Wing: angka sing duwe persis rong sel calon ing rong baris, sejajar ing rong kolom sing padha, dibusak saka sisane kolom-kolom iku. Nganggo conto nyata.",
+          "h1": "X-Wing",
+          "summary": "X-Wing yaiku pola siji angka lan papat sel ing pojok-pojoke persegi dawa. Yen angka iku duwe persis rong sel calon ing saben baris saka rong baris, lan sel-sel iku ana ing rong kolom sing padha, angka iku mesthi manggon ing rong pojok sing adhep-adhepan. Mula angka iku bisa dibusak saka saben sel liyane ing rong kolom kasebut. Iki uga mlaku yen baris lan kolom diijoli. Iki teknik Ahli kawitan ing Bare Sudoku.",
+          "when": [
+            "Yen tunggal, calon sing dikunci lan pasangan lan telu wis entek. X-Wing iku pola Ahli sing paling umum lan asring muncul yen sawijining angka mung kari sethithik calon, biasane yen wis diselehake kaping papat nganti enem. Teknik iki butuh cathetan jangkep kanggo angka sing sampeyan priksa."
+          ],
+          "spot": [
+            "Pilih angka lan goleki baris sing duwe persis rong sel calon kanggo angka iku. Yen rong baris kaya ngono nganggo rong kolom sing padha, priksa kolom-kolom iku kanggo calon liyane saka angka iku: iku sing dibusak. Banjur baleni kanthi kolom minangka dhasar. Ing dolanan, tutul tombol angka: saben calone disorot, lan persegi dawa saka papat cathetan sing disorot gampang katon."
+          ],
+          "examples": [
+            {
+              "h": "Conto",
+              "steps": [
+                "Angka {d} duwe persis rong sel calon ing baris {r1} lan persis loro ing baris {r2}, lan sel-sel iku sejajar ing rong kolom sing padha, {c1} lan {c2}: {cells}.",
+                "Baris {r1} nyelehake {d}-ne ing kolom {c1} utawa {c2}, lan baris {r2} nyelehake {d}-ne ing kolom sijine. Endi wae, kolom {c1} lan {c2} saben-saben entuk siji {d} saka rong baris iki.",
+                "Mula {d} ora bisa muncul ing panggonan liya ing kolom {c1} lan {c2}. Busak {d} saka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Nganggo baris sing duwe telung sel calon kanggo angka iku. Saben baris dhasar kudu duwe persis loro, lan loro-lorone kudu ana ing rong kolom sing padha.",
+            "Mbusak angka saka baris tinimbang saka kolom. Yen baris dadi dhasar, pambusakan ana ing kolom, lan kosok baline.",
+            "Lali versi sing diijoli. X-Wing sing dibangun ing kolom mbusak ing baris."
+          ],
+          "faq": [
+            [
+              "Apa iku X-Wing ing Sudoku?",
+              "Angka sing duwe persis rong sel calon ing saben baris saka rong baris, ing rong kolom sing padha. Angka iku manggon ing rong pojok sing adhep-adhepan ing persegi dawa iku, mula dibusak saka sisane rong kolom kasebut. Baris lan kolom bisa diijoli."
+            ],
+            [
+              "Kenapa X-Wing bisa mlaku?",
+              "Saben baris saka rong baris iku kudu nyelehake angka ing salah siji saka rong kolom, lan rong baris iku ora bisa nganggo kolom sing padha. Mula rong kolom iku saben-saben entuk angkane saka baris-baris iki, lan saben calon liyane ing kolom-kolom iku ora mungkin."
+            ],
+            [
+              "Apa X-Wing iku iwak?",
+              "Iya. X-Wing iku iwak ukuran loro; Swordfish iku iwak ukuran telu. Bare Sudoku nemokake loro-lorone."
+            ],
+            [
+              "Tingkat endi sing ana X-Wing?",
+              "Ahli. Teka-teki sing butuh X-Wing, Y-Wing, Swordfish utawa XYZ-Wing dianggep Ahli."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing ing Sudoku: Carane Teknik Iki Mlaku",
+          "description": "Y-Wing (XY-Wing): poros kanthi rong calon lan rong swiwi sing saben-saben nuduhake salah sijine meksa angka metu saka saben sel sing weruh loro swiwi. Conto.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, uga diarani XY-Wing, nganggo telung sel sing saben-saben duwe rong calon. Poros duwe calon X lan Y. Swiwi siji weruh poros lan duwe X lan Z; swiwi sijine weruh poros lan duwe Y lan Z. Apa wae porose, salah siji swiwi mesthi Z, mula Z bisa dibusak saka saben sel sing weruh loro swiwi. Iki teknik Ahli ing Bare Sudoku.",
+          "when": [
+            "Yen teka-teki duwe sawetara sel kanthi persis rong calon lan ora ana iwak. Y-Wing umum ing teka-teki Ahli lan ditemokake kanthi nurut sel-sel rong calon: saben sel iku bisa dadi poros utawa swiwi."
+          ],
+          "spot": [
+            "Daftar sel sing duwe persis rong calon. Kanggo saben sel, anggep minangka poros kanthi calon X lan Y, lan goleki ing antarane tanggane sel kanthi X lan angka liya Z, lan sel kanthi Y lan Z sing padha. Loro iku swiwine. Banjur goleki sel sing weruh loro swiwi lan ngemot Z. Elinga yen swiwi-swiwi ora kudu weruh siji lan sijine."
+          ],
+          "examples": [
+            {
+              "h": "Conto",
+              "steps": [
+                "Poros {pivot} duwe calon {x} lan {y}. Poros iku weruh {wingA}, sing duwe {x} lan {z}, lan {wingB}, sing duwe {y} lan {z}.",
+                "Yen {pivot} iku {x}, {wingA} kelangan {x} lan dadi {z}. Yen {pivot} iku {y}, {wingB} dadi {z}. Ing kahanan apa wae, salah siji swiwi iku {z}.",
+                "Sel sing weruh loro swiwi ora bakal bisa dadi {z}. Busak {z} saka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Milih swiwi sing ora padha weruh poros. Saben swiwi kudu sak baris, sak kolom utawa sak kothak karo poros.",
+            "Mbusak Z saka sel sing mung weruh siji swiwi. Sel sing dibusak kudu weruh loro swiwi.",
+            "Mbusak Z saka poros. Ing Y-Wing poros ora ngemot Z; yen ngemot, polane dadi XYZ-Wing kanthi aturan sing beda."
+          ],
+          "faq": [
+            [
+              "Apa iku Y-Wing ing Sudoku?",
+              "Telung sel rong calon: poros kanthi X lan Y, swiwi kanthi X lan Z sing weruh poros, lan swiwi kanthi Y lan Z sing weruh poros. Salah siji swiwi mesthi Z, mula Z dibusak saka sel sing weruh loro swiwi."
+            ],
+            [
+              "Apa Y-Wing padha karo XY-Wing?",
+              "Iya. Jeneng loro iku nggambarake pola sing padha. Bare Sudoku nyebut Y-Wing."
+            ],
+            [
+              "Kenapa salah siji swiwi kudu Z?",
+              "Yen poros iku X, swiwi kawitan kelangan X lan dadi Z. Yen poros iku Y, swiwi kapindho dadi Z. Poros mesthi salah siji saka loro iku, mula salah siji swiwi iku Z."
+            ],
+            [
+              "Pira sel sing dibusak Y-Wing?",
+              "Biasane siji utawa loro: mung sel sing weruh loro swiwi lan isih ngemot Z. Iku wis cukup kanggo nggawe tunggal."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish ing Sudoku: Carane Teknik Iki Mlaku",
+          "description": "Swordfish: angka sing kekurung ing telung kolom sajrone telung baris dibusak saka sisane kolom-kolom iku. Iwak ukuran telu, diterangake nganggo conto nyata.",
+          "h1": "Swordfish",
+          "summary": "Swordfish iku X-Wing kanthi telung baris lan telung kolom. Yen sawijining angka duwe paling akeh telung sel calon ing saben baris saka telung baris, lan kabeh sel iku ana ing telung kolom sing padha, telung baris iku nganggo entek angka iku ing kolom-kolom kasebut, lan angka iku bisa dibusak saka saben sel liyane ing telung kolom iku. Baris lan kolom bisa diijoli. Bare Sudoku mriksa Swordfish sawise Y-Wing, ing teka-teki Ahli.",
+          "when": [
+            "Yen X-Wing lan Y-Wing ora nemokake apa-apa. Swordfish luwih arang tinimbang X-Wing lan butuh angka sing calone sumebar tipis ing telung garis. Teknik iki butuh cathetan sing jangkep lan pener kanggo angka iku."
+          ],
+          "spot": [
+            "Pilih angka lan goleki baris kanthi loro utawa telung sel calon kanggo angka iku. Yen telung baris kaya ngono gunggunge mung nyakup telung kolom, priksa kolom-kolom iku kanggo calon liyane saka angka iku. Ora saben baris kudu duwe calon ing saben kolom: Swordfish bisa duwe enem, pitu, wolu utawa sanga sel. Ing dolanan, sorot angka nganggo tombole lan goleki telung baris sing calone sejajar ing telung kolom."
+          ],
+          "examples": [
+            {
+              "h": "Conto",
+              "steps": [
+                "Angka {d} duwe paling akeh telung sel calon ing saben baris {rows}, lan kabeh sel iku ana ing kolom {cols}: {cells}.",
+                "Saben baris saka telung baris iku kudu nyelehake {d}-ne ing salah siji saka telung kolom, lan ora ana rong baris sing bisa nganggo kolom sing padha. Mula telung kolom iku entuk {d}-ne saka telung baris iki.",
+                "Calon {d} liyane ing kolom {cols} ora mungkin. Busak {d} saka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mbutuhake kabeh sanga sel. Swordfish kanthi rong calon ing sawetara baris tetep sah, anggere telung baris iku mung nyakup telung kolom.",
+            "Nglebokake baris kanthi papat sel calon. Saben baris dhasar kudu duwe paling akeh telu, kabeh ing njero telung kolom.",
+            "Mbusak ing baris dhasar. Yen baris dadi dhasar, pambusakan ana ing telung kolom, ing njaba baris dhasar."
+          ],
+          "faq": [
+            [
+              "Apa iku Swordfish ing Sudoku?",
+              "Angka sing calone ing telung baris kekurung ing telung kolom. Telung baris iku kudu nyelehake angka ing telung kolom kasebut, siji-siji, mula angka iku dibusak saka sel liyane ing kolom-kolom iku."
+            ],
+            [
+              "Apa bedane Swordfish karo X-Wing?",
+              "Mung ukurane: X-Wing nganggo rong baris lan rong kolom, Swordfish telu lan telu. Nalare padha."
+            ],
+            [
+              "Apa Swordfish kudu persis sanga sel?",
+              "Ora. Saben baris bisa duwe loro utawa telung calon; pola iki mung mbutuhake telung baris iku bebarengan ora nganggo luwih saka telung kolom."
+            ],
+            [
+              "Apa ana iwak ukuran papat?",
+              "Ana, Jellyfish. Bare Sudoku ora nganggo, amarga teka-tekine ora tau butuh."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing ing Sudoku: Carane Teknik Iki Mlaku",
+          "description": "XYZ-Wing: poros kanthi telung calon lan rong swiwi sing padha duwe salah sijine meksa angka iku metu saka saben sel sing weruh telu-telune. Conto nyata.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing iku Y-Wing sing porose duwe telung calon. Poros duwe X, Y lan Z; swiwi siji weruh poros lan duwe X lan Z, swiwi sijine weruh poros lan duwe Y lan Z. Salah siji saka telung sel iku mesthi Z, mula Z bisa dibusak saka saben sel sing weruh telu-telune. Amarga poros dhewe bisa dadi Z, sel sing dibusak kudu weruh poros uga loro swiwi, lan iki mbatesi sel iku ing kothak utawa garis sing padha diduweni sel-sel kasebut. Iki teknik paling angel sing dienggo Bare Sudoku.",
+          "when": [
+            "Mung yen kabeh liyane gagal. XYZ-Wing iku pola paling langka ing Bare Sudoku lan mung muncul ing teka-teki Ahli. Goleki yen sel telung calon ana ing kothak bebarengan karo sel rong calon sing nuduhake loro saka angka-angkane."
+          ],
+          "spot": [
+            "Wiwiti saka sel sing duwe persis telung calon; saben sel iku bisa dadi poros. Ing antarane tanggane, goleki rong sel sing saben-saben duwe rong calon, loro-lorone dijupuk saka telung calon poros, sing padha duwe persis siji angka Z. Banjur goleki sel sing weruh poros lan loro swiwi lan ngemot Z. Ing praktike, swiwi siji ana ing kothak poros lan sijine ing baris utawa kolome, lan sel sing dibusak yaiku sel sing kari ing kothak iku ing baris utawa kolom kasebut."
+          ],
+          "examples": [
+            {
+              "h": "Conto",
+              "steps": [
+                "Poros {pivot} duwe telung calon: {x}, {y} lan {z}. Poros iku weruh {wingA} kanthi {x} lan {z}, lan {wingB} kanthi {y} lan {z}.",
+                "Yen {pivot} iku {z}, rampung. Yen {x}, {wingA} kudu {z}. Yen {y}, {wingB} kudu {z}. Ing kahanan apa wae, salah siji saka telung sel iku {z}.",
+                "Sel sing weruh telu-telune ora bisa dadi {z}. Busak {z} saka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mbusak saka sel sing mung weruh rong swiwi. Beda karo Y-Wing, poros bisa dadi Z, mula sel iku uga kudu weruh poros.",
+            "Nganggo swiwi sing calone ora kabeh kalebu ing telung calon poros.",
+            "Kleru karo Y-Wing: bedane ana ing calon katelu ing poros, lan iku ngowahi sel endi sing bisa diresiki."
+          ],
+          "faq": [
+            [
+              "Apa iku XYZ-Wing ing Sudoku?",
+              "Poros kanthi calon X, Y lan Z lan rong swiwi, siji kanthi X lan Z lan siji kanthi Y lan Z, loro-lorone weruh poros. Salah siji saka telung sel iku Z, mula Z dibusak saka sel sing weruh telu-telune."
+            ],
+            [
+              "Apa bedane XYZ-Wing karo Y-Wing?",
+              "Poros duwe telung calon tinimbang loro, kalebu Z. Iku ndadekake poros bisa dadi panggonane Z, mula mung sel sing weruh poros lan loro swiwi sing bisa kelangan Z."
+            ],
+            [
+              "Sepira kerepe XYZ-Wing muncul?",
+              "Arang. Ing Bare Sudoku mung teka-teki Ahli sing bisa butuh, lan umume ora. Bare Sudoku mriksa paling pungkasan, sawise X-Wing, Y-Wing lan Swordfish."
+            ],
+            [
+              "Apa ana WXYZ-Wing?",
+              "Ana, kanthi poros papat calon, nanging Bare Sudoku ora nganggo. Saben teka-teki ing dolanan bisa dirampungake nganggo sanga teknik ing pandhuan iki."
+            ]
+          ]
+        }
+      }
+    },
+    "sw": {
+      "learnHeading": "Jifunze Sudoku",
+      "learnText": "Wewe ni mgeni katika Sudoku, au umekwama kwenye fumbo gumu? Miongozo miwili inaeleza sheria na kila mbinu ya kutatua ambayo vidokezo hutumia, kila moja ikiwa na mfano halisi.",
+      "howToLink": "Jinsi ya kucheza Sudoku",
+      "techniquesLink": "Mbinu za kutatua Sudoku",
+      "labels": {
+        "howTo": "Jinsi ya kucheza",
+        "techniques": "Mbinu",
+        "play": "Cheza Sudoku",
+        "prev": "Mbinu iliyotangulia",
+        "next": "Mbinu inayofuata",
+        "all": "Mbinu zote",
+        "example": "Mfano",
+        "steps": "Hatua kwa hatua",
+        "when": "Wakati wa kuitumia",
+        "spot": "Jinsi ya kuiona",
+        "mistakes": "Makosa ya kawaida",
+        "inGame": "Katika Bare Sudoku",
+        "level": "Inahitajika kuanzia kiwango: {level}",
+        "hint": "Katika mchezo, kidokezo kinasema: {text}",
+        "legend": "Tarakimu nzito zimetolewa, tarakimu za buluu ziliwekwa wakati wa kutatua, tarakimu ndogo ni wagombea. Seli zilizoangaziwa zinaunda muundo, wagombea waliokatwa wanaondolewa, na mgombea aliyezungushiwa duara ndiye tarakimu ya kuweka.",
+        "notation": "Seli huandikwa kama r3c7: safu 3, safuwima 7. Safu huhesabiwa kuanzia juu, safuwima kuanzia kushoto, na visanduku 1 hadi 9 kuanzia juu kushoto, safu kwa safu.",
+        "row": "safu {n}",
+        "column": "safuwima {n}",
+        "box": "kisanduku {n}",
+        "elimItem": "{d} kutoka {cell}",
+        "regions": "Safu 5, safuwima 5 na kisanduku 5 mwanzoni mwa fumbo",
+        "firstMove": "Mgombea pekee: {cell} inaweza kuwa {d} tu",
+        "breadcrumb": "Njia ya ukurasa"
+      },
+      "howTo": {
+        "title": "Jinsi ya Kucheza Sudoku: Sheria, Gridi na Hatua za Kwanza",
+        "description": "Jifunze kucheza Sudoku: sheria, jinsi safu, safuwima na visanduku vinavyofanya kazi, kwa nini kila fumbo lina jibu moja, madokezo na hatua za kwanza.",
+        "h1": "Jinsi ya kucheza Sudoku",
+        "summary": "Sudoku ni fumbo la mantiki kwenye gridi ya 9×9. Jaza kila seli tupu kwa tarakimu kutoka 1 hadi 9 ili kila safu, kila safuwima na kila kisanduku cha 3×3 kiwe na kila tarakimu mara moja tu. Baadhi ya tarakimu zimetolewa mwanzoni; zilizobaki unazigundua kwa mantiki, seli moja ya uhakika kwa wakati, na hulazimiki kamwe kubahatisha. Mwongozo huu unaeleza gridi, sheria, kanuni ya jibu moja, madokezo na mkakati rahisi wa hatua zako za kwanza. Unaweza kufanya mazoezi ya yote haya katika [Bare Sudoku](play), ambayo ni bure na ina vidokezo vinavyoeleza mantiki.",
+        "sections": [
+          {
+            "h": "Sheria za Sudoku ni zipi?",
+            "p": [
+              "Kuna sheria tatu tu, na zote ni sheria moja inayoonekana kutoka pande tatu: kila safu lazima iwe na tarakimu 1 hadi 9, kila safuwima lazima iwe na tarakimu 1 hadi 9, na kila kisanduku cha 3×3 lazima kiwe na tarakimu 1 hadi 9. Kwa hiyo tarakimu haiwezi kamwe kutokea mara mbili katika safu, safuwima au kisanduku kimoja.",
+              "Tarakimu zilizotolewa, zilizochapishwa kwa herufi nzito, haziwezi kubadilishwa. Kazi yako ni kujaza seli tupu. Hakuna hesabu wala mpangilio: tarakimu ni alama tisa tofauti tu. Ungeweza kucheza kwa herufi au maumbo na hakuna kitu kingebadilika."
+            ]
+          },
+          {
+            "h": "Gridi imepangwa vipi?",
+            "p": [
+              "Gridi ina seli 81 katika safu 9 na safuwima 9. Mistari minene inaigawa katika visanduku tisa vya 3×3. Kila seli iko katika safu moja, safuwima moja na kisanduku kimoja hasa, na makundi haya matatu ndiyo vitengo vyake. Seli nyingine 20 zinazoshiriki kitengo na seli fulani huitwa majirani wake; tarakimu iliyowekwa kwenye seli huiondoa tarakimu hiyo katika majirani wote 20.",
+              "Seli huandikwa kama r3c7: safu 3, safuwima 7. Safu huhesabiwa kuanzia juu, safuwima kuanzia kushoto, na visanduku 1 hadi 9 kuanzia juu kushoto, safu kwa safu. Uandishi huu unatumika katika kila mwongozo wa mbinu na unafaa kujifunzwa: r5c5 ni katikati ya gridi."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Kwa nini kila Sudoku ina jibu moja tu?",
+            "p": [
+              "Sudoku halali ina jibu moja, na hilo ndilo linalofanya mantiki ifanye kazi. Kila unapoweza kuonyesha kwamba tarakimu haiwezi kwenda mahali pengine popote katika kitengo, lazima iende kwenye seli iliyobaki, kwa sababu jibu lipo na ni moja tu. Kama fumbo lingekuwa na majibu mawili, hakuna kiasi cha kufikiri kingeweza kuyatofautisha na ungelazimika kubahatisha wakati fulani.",
+              "Bare Sudoku hutengeneza kila fumbo kwenye kifaa chako na kukagua kwamba lina jibu moja tu na kwamba kitatuzi chake cha mantiki kinaweza kulimaliza kwa mbinu za kiwango ulichochagua. Kwa hiyo ukikwama, daima kuna hatua inayofuata ya kugundua, na kidokezo kinaionyesha."
+            ]
+          },
+          {
+            "h": "Unaanzaje fumbo la Sudoku?",
+            "p": [
+              "Anza na kilichobanwa zaidi. Mpangilio huu unafanya kazi katika kila kiwango:"
+            ],
+            "list": [
+              "Chagua tarakimu ambayo tayari inaonekana mara nyingi, tuseme mara sita au saba, na utafute visanduku ambavyo bado havina tarakimu hiyo. Mara nyingi imebaki seli moja tu kwenye kisanduku kwa ajili yake: hiyo ni [nafasi pekee](hidden-single).",
+              "Tafuta seli zilizosongamana. Seli ambayo safu, safuwima na kisanduku chake kwa pamoja vina tarakimu nane tofauti imebaki na mgombea mmoja tu: [mgombea pekee](naked-single). Seli zilizo katika safu au visanduku vilivyokaribia kujaa ndizo mahali pazuri pa kutafuta.",
+              "Kila tarakimu unayoweka huondoa mgombea kutoka kwa majirani 20, kwa hiyo kagua majirani hao mara moja. Single mara nyingi huja mfululizo.",
+              "Uwekaji rahisi ukiisha, andika madokezo: wagombea wa kila seli tupu. Kisha tafuta tarakimu iliyobanwa kwenye mstari mmoja ndani ya kisanduku ([wagombea waliofungwa](locked-candidates)) au seli mbili zenye wagombea wawili walewale ([jozi wazi](naked-pairs)).",
+              "Rudi kwenye single baada ya kila uondoaji. Hata mafumbo ya Mtaalamu hutatuliwa zaidi kwa single; mbinu ya hali ya juu hufungua tu hatua inayofuata."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Madokezo ni nini na uyatumie lini?",
+            "p": [
+              "Madokezo, ambayo pia huitwa alama za penseli au wagombea, ni tarakimu ndogo unazoandika kwenye seli tupu kurekodi tarakimu zipi bado zinawezekana hapo. Katika mafumbo rahisi huyahitaji mara chache; kuanzia Ngumu na kuendelea ni muhimu sana, kwa sababu mbinu kama jozi, X-Wing na Y-Wing zinahusu wagombea, si tarakimu zilizowekwa.",
+              "Weka madokezo sahihi: unapoweka tarakimu, iondoe kwenye madokezo ya majirani wote 20. Katika Bare Sudoku hili hufanyika kiotomatiki, na Jaza madokezo huandika kila mgombea katika kila seli tupu kwa mguso mmoja, ili uanze na seti kamili na sahihi ya wagombea. Dokezo ni ukweli, si kubahatisha: linamaanisha kwamba bado hakuna kinachoiondoa tarakimu hii."
+            ]
+          },
+          {
+            "h": "Ufanye nini ukikwama?",
+            "p": [
+              "Kwanza kagua upya mambo ya msingi: kila safu, safuwima na kisanduku kilichokaribia kujaa ni chanzo cha single. Kisha hakikisha madokezo yamekamilika, kwa sababu mgombea anayekosekana huficha miundo na mgombea aliyepitwa na wakati huunda miundo ya uongo. Kisha pitia [mbinu](techniques) kwa mpangilio wa ugumu: wagombea waliofungwa, jozi na watatu, X-Wing, Y-Wing, Swordfish na XYZ-Wing. Kila moja ina ukurasa wake wenye mfano halisi.",
+              "Kama hakuna kinachofanya kazi, chukua kidokezo. Katika Bare Sudoku kidokezo kwanza hukagua kama tarakimu iliyowekwa si sahihi, kisha hutafuta seli inayofuata inayoweza kujazwa kwa mantiki na kutaja mbinu, kwa hiyo unajifunza kitu hata unapokitumia. Gusa kidokezo tena ili kuweka tarakimu."
+            ]
+          },
+          {
+            "h": "Unaingizaje tarakimu katika Bare Sudoku?",
+            "p": [
+              "Gusa seli, kisha tarakimu. Au gusa tarakimu kwanza: inafungwa, na kila seli unayoigusa inaipokea, hiyo ndiyo njia ya haraka zaidi ya kuweka nakala ya sita, saba na nane ya tarakimu. Gusa tarakimu tena ili kuiachilia. Kitufe cha Madokezo hubadilisha kwenda alama za penseli, Futa husafisha seli, Tendua hurudisha hatua yoyote, na makosa huwekwa alama nyekundu isipokuwa ukizima hilo kwenye menyu.",
+              "Kwenye kibodi, tumia vitufe vya mishale kusogea, 1 hadi 9 kuingiza tarakimu, Backspace kufuta, N kwa madokezo, U kutendua, H kwa kidokezo, F kujaza madokezo na Escape kwa menyu. Mchezo hujihifadhi wenyewe, hufanya kazi nje ya mtandao na hauna matangazo wala akaunti."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Je, katika Sudoku unahitaji kubahatisha?",
+            "Si katika fumbo halali. Kila fumbo la Bare Sudoku lina jibu moja tu na limekaguliwa kuwa linaweza kutatuliwa kwa mantiki pekee, hadi mbinu za kiwango chake. Ukihisi kwamba lazima ubahatishe, kuna mgombea anayekosekana kwenye madokezo yako au mbinu inayosubiri kugunduliwa."
+          ],
+          [
+            "Je, tarakimu inaweza kutokea mara mbili katika safu, safuwima au kisanduku?",
+            "Hapana. Hiyo ndiyo sheria nzima: kila moja ya safu tisa, safuwima tisa na visanduku tisa ina kila tarakimu kutoka 1 hadi 9 mara moja tu. Tarakimu mbili zinazofanana zikiwa katika kitengo kimoja, angalau moja yao si sahihi."
+          ],
+          [
+            "Kuna tofauti gani kati ya Rahisi, Wastani, Ngumu na Mtaalamu?",
+            "Kiwango huamuliwa na mbinu ambazo fumbo linahitaji. Rahisi na Wastani hutatuliwa kwa single pekee, na Rahisi huanza na angalau tarakimu 38 zilizotolewa. Ngumu inahitaji wagombea waliofungwa au jozi na watatu. Mtaalamu inahitaji X-Wing, Y-Wing, Swordfish au XYZ-Wing."
+          ],
+          [
+            "Je, ni bora kujaza madokezo kwa kila seli au kwa baadhi tu?",
+            "Kwa mafumbo ya Ngumu na Mtaalamu, jaza yote: miundo kama jozi, X-Wing na Y-Wing huonekana tu kila mgombea anapoandikwa. Katika Rahisi na Wastani, madokezo ni hiari na wachezaji wengi hutafuta single tu."
+          ],
+          [
+            "Sudoku huchukua muda gani?",
+            "Fumbo la Rahisi huchukua dakika chache; mafumbo ya Mtaalamu yanaweza kuchukua dakika ishirini au zaidi, kutegemea jinsi unavyoona haraka muundo wa hali ya juu. Bare Sudoku huonyesha saa, huisimamisha menyu ikiwa wazi na haina orodha ya washindi, kwa hiyo cheza kwa kasi yako mwenyewe."
+          ],
+          [
+            "Je, Sudoku inahitaji hesabu?",
+            "Hapana. Tarakimu ni lebo tu; hakuna kujumlisha wala kuhesabu. Alama zozote tisa zingefanya kazi, na ndiyo sababu Sudoku ni fumbo la mantiki badala ya fumbo la namba."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Mbinu za Kutatua Sudoku Zilizoelezwa kwa Mifano",
+        "description": "Mbinu zote tisa za kutatua Sudoku, kuanzia mgombea pekee hadi Swordfish na XYZ-Wing, kwa mpangilio wa vidokezo vya Bare Sudoku, kila moja na mfano halisi.",
+        "h1": "Mbinu za kutatua Sudoku",
+        "intro": [
+          "Kila Sudoku inaweza kutatuliwa kwa seti ndogo ya mbinu za mantiki. Orodha hii inataja mbinu tisa ambazo kitatuzi cha Bare Sudoku na vidokezo vyake hutumia, kwa mpangilio ambao kitatuzi huzijaribu: single kwanza, kisha uondoaji ndani ya kitengo kimoja, kisha miundo inayoenea katika safu na safuwima kadhaa. Kila mbinu ina ukurasa wake wenye maelezo, jinsi ya kuiona, mfano halisi kutoka kwa fumbo lililotengenezwa na makosa ya kawaida.",
+          "Kiwango cha fumbo huamuliwa na mbinu ngumu zaidi inayohitajika. Mafumbo ya Rahisi na Wastani yanahitaji single tu, mafumbo ya Ngumu yanahitaji wagombea waliofungwa au jozi na watatu, na mafumbo ya Mtaalamu yanahitaji angalau samaki mmoja au bawa moja. Kiwango chochote kile, single hufanya kazi kubwa; mbinu ya hali ya juu huondoa mgombea mmoja au wawili na single huendelea kutoka hapo."
+        ],
+        "faq": [
+          [
+            "Nijaribu mbinu za Sudoku kwa mpangilio gani?",
+            "Rahisi zaidi kwanza: mgombea pekee, nafasi pekee, wagombea waliofungwa, jozi na watatu wazi, jozi na watatu fiche, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku huzijaribu kwa mpangilio huu hasa, na kidokezo daima hutaja mbinu rahisi zaidi inayosonga mbele."
+          ],
+          [
+            "Je, ninahitaji mbinu hizi zote kutatua Sudoku?",
+            "Kwa mafumbo ya Rahisi na Wastani, single zinatosha. Mafumbo ya Ngumu huongeza wagombea waliofungwa na jozi na watatu. Mafumbo ya Mtaalamu yanahitaji angalau samaki mmoja au bawa moja, lakini kwa kawaida mara moja au mbili tu kwa kila fumbo."
+          ],
+          [
+            "Je, kuna mbinu ngumu zaidi kuliko XYZ-Wing?",
+            "Ndiyo, kwa mfano minyororo, majaribio ya upekee na nyavu za kulazimisha. Bare Sudoku haitengenezi mafumbo yanayozihitaji, kwa hiyo kila fumbo katika mchezo linaweza kumalizwa kwa mbinu tisa zilizo kwenye ukurasa huu."
+          ],
+          [
+            "Mgombea ni nini?",
+            "Tarakimu ambayo bado inaweza kwenda kwenye seli tupu kwa sababu hakuna kitu katika safu, safuwima au kisanduku chake kinachoiondoa bado. Madokezo katika mchezo ni wagombea. Kila mbinu zaidi ya single hufikiri kuhusu wagombea, kwa hiyo hakikisha wako kamili na sahihi."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Mgombea pekee",
+          "title": "Mgombea Pekee katika Sudoku: Seli yenye Mgombea Mmoja",
+          "description": "Mgombea pekee ni seli tupu yenye tarakimu moja tu inayowezekana. Jifunze kuipata haraka, kwa mfano halisi hatua kwa hatua na makosa ya kawaida.",
+          "h1": "Mgombea pekee (naked single)",
+          "summary": "Mgombea pekee ni seli tupu yenye mgombea mmoja tu: tarakimu nyingine nane tayari ziko katika safu, safuwima au kisanduku chake. Tarakimu iliyobaki lazima iende hapo. Ni mbinu rahisi zaidi ya Sudoku, unayoitumia zaidi, na ile ambayo kidokezo cha Bare Sudoku huiripoti kama \"Mgombea mmoja tu hapa\".",
+          "when": [
+            "Daima. Mgombea pekee hutokea kuanzia hatua ya kwanza hadi ya mwisho, katika kila kiwango. Katika mafumbo ya Rahisi na Wastani, pamoja na nafasi pekee, ndiyo mbinu pekee unayohitaji. Katika mafumbo magumu zaidi kila uondoaji unaofanywa na mbinu ya hali ya juu kwa kawaida huacha mgombea pekee nyuma, kwa hiyo mtafute baada ya kila hatua."
+          ],
+          "spot": [
+            "Angalia seli zenye majirani wengi waliojazwa: seli katika safu ambayo tayari ina tarakimu saba, au seli ambayo safu, safuwima na kisanduku chake kwa pamoja vina tarakimu nane tofauti. Bila madokezo, hesabu tarakimu unazoweza kuziona kutoka kwenye seli. Ukiwa na madokezo, mgombea pekee ni seli inayoonyesha mgombea mmoja tu, na ndiyo sababu Jaza madokezo hurahisisha kuwapata."
+          ],
+          "examples": [
+            {
+              "h": "Mfano",
+              "steps": [
+                "Angalia {cell}. Ni tupu, kwa hiyo orodhesha kila tarakimu ambayo tayari imewekwa katika safu yake, safuwima yake na kisanduku chake.",
+                "Safu {row} ina {rowDigits}. Safuwima {col} ina {colDigits}. Kisanduku {box} kina {boxDigits}.",
+                "Kwa pamoja vinaondoa kila tarakimu isipokuwa {d}, kwa hiyo {d} ndiye mgombea pekee aliyebaki katika {cell}.",
+                "Andika {d} katika {cell}. Kisha kagua kama tarakimu mpya inaunda single nyingine katika safu, safuwima au kisanduku hicho hicho."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kuhesabu safu peke yake au kisanduku peke yake. Tarakimu nane zilizoondolewa kwa kawaida hutoka katika vitengo vyote vitatu kwa pamoja.",
+            "Kusahau kwamba tarakimu uliyoweka muda mfupi uliopita pia huondoa wagombea kutoka kwa majirani wake 20; wagombea pekee wapya hutokea mara tu baada ya kila uwekaji.",
+            "Kuchanganya mgombea pekee na nafasi pekee: mgombea pekee ni seli iliyobaki na mgombea mmoja, nafasi pekee ni tarakimu iliyobaki na seli moja katika kitengo."
+          ],
+          "faq": [
+            [
+              "Mgombea pekee katika Sudoku ni nini?",
+              "Seli tupu yenye mgombea mmoja tu. Tarakimu nane tofauti tayari zimewekwa katika safu, safuwima na kisanduku chake, kwa hiyo tarakimu ya tisa ndiyo pekee inayofaa."
+            ],
+            [
+              "Kwa nini kwa Kiingereza huitwa naked, yaani uchi?",
+              "Kwa sababu mgombea huyo mmoja anaonekana moja kwa moja kwenye seli madokezo yakishaandikwa; hakuna kinachomficha. Nafasi pekee, kinyume chake, iko kati ya wagombea wengine na hupatikana kwa kuiangalia tarakimu badala ya seli."
+            ],
+            [
+              "Je, fumbo linaweza kutatuliwa kwa wagombea pekee tu?",
+              "Mafumbo mengi ya Rahisi yanaweza, lakini mengi pia yanahitaji nafasi pekee. Bare Sudoku hukadiria mafumbo ya Rahisi na Wastani kuwa yanatatulika kwa single za aina zote mbili; mafumbo ya Ngumu na Mtaalamu yanahitaji angalau mbinu moja zaidi."
+            ],
+            [
+              "Je, kidokezo huonyesha wagombea pekee?",
+              "Ndiyo. Uwekaji unaofuata ukiwa mgombea pekee, kidokezo huchagua seli na kusema \"Mgombea mmoja tu hapa\" pamoja na tarakimu. Gusa kidokezo tena ili kuiweka."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Nafasi pekee",
+          "title": "Nafasi Pekee katika Sudoku: Mahali Pekee pa Tarakimu",
+          "description": "Nafasi pekee ni seli pekee katika safu, safuwima au kisanduku ambapo tarakimu bado inaweza kwenda. Jifunze kuzipata kwa kuchunguza tarakimu moja moja.",
+          "h1": "Nafasi pekee (hidden single)",
+          "summary": "Nafasi pekee ni tarakimu iliyobaki na seli moja tu inayowezekana katika safu, safuwima au kisanduku, hata kama seli hiyo inaonyesha wagombea wengine. Kwa kuwa kitengo lazima kiwe na tarakimu hiyo, inakwenda hapo. Kidokezo cha Bare Sudoku huiripoti kama \"Nafasi pekee ya 5 katika safu hii\", au katika safuwima au kisanduku.",
+          "when": [
+            "Kila tarakimu ikiwa imeendelea vizuri: tarakimu ikishaonekana mara tano au sita, visanduku vilivyobaki vimebanwa sana, na nafasi pekee mara nyingi ndiyo hatua inayofuata. Nafasi pekee ndiyo mbinu kuu ya mafumbo ya Rahisi na Wastani na hubaki kuwa nguzo katika kila kiwango."
+          ],
+          "spot": [
+            "Chunguza tarakimu moja baada ya nyingine. Chukua tarakimu, tafuta kisanduku kisicho nayo, na ukate kila seli ya kisanduku hicho inayoshiriki safu au safuwima na nakala iliyowekwa ya tarakimu hiyo. Seli moja ikibaki, umepata nafasi pekee. Uchunguzi huo huo hufanya kazi kwa safu na safuwima. Katika mchezo, gusa tarakimu iliyowekwa: kila nakala yake huangaziwa, kwa hiyo seli zilizo huru zinaonekana wazi."
+          ],
+          "examples": [
+            {
+              "h": "Mfano",
+              "steps": [
+                "Kisanduku {box} bado hakina {d}, kwa hiyo mojawapo ya seli zake tupu lazima iwe nayo. Seli tupu ni {empties}.",
+                "Katika kila moja yao isipokuwa {cell}, {d} imezuiwa na {d} iliyokwisha wekwa katika safu au safuwima hiyo hiyo, kwa hiyo {d} si mgombea hapo.",
+                "Hilo linaiacha {cell} kuwa mahali pekee pa {d} katika kisanduku {box}. Andika {d} hapo, hata kama {cell} bado inaonyesha wagombea wengine."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kuweka tarakimu kwenye seli ambayo pengine tu ndiyo sahihi: kagua kila seli tupu nyingine ya kitengo, si zile zinazoonekana wazi tu.",
+            "Kukosa nafasi pekee kwa sababu seli inaonyesha wagombea kadhaa. Wagombea wengine hawana umuhimu; kinachojalisha ni kwamba tarakimu haina mahali pengine katika kitengo.",
+            "Kuchunguza visanduku tu. Safu na safuwima huzalisha nafasi pekee mara nyingi vilevile, hasa karibu na mwisho."
+          ],
+          "faq": [
+            [
+              "Nafasi pekee katika Sudoku ni nini?",
+              "Tarakimu inayoweza kwenda katika seli moja tu ya safu, safuwima au kisanduku. Kitengo lazima kiwe na tarakimu hiyo, kwa hiyo seli imeamuliwa hata kama bado ina wagombea wengine."
+            ],
+            [
+              "Kuna tofauti gani kati ya nafasi pekee na mgombea pekee?",
+              "Mgombea pekee huhusu seli: amebaki mgombea mmoja. Nafasi pekee huhusu tarakimu: imebaki seli moja katika kitengo. Zote mbili huweka tarakimu kwa uhakika."
+            ],
+            [
+              "Ipi ni rahisi zaidi kuipata?",
+              "Bila madokezo, nafasi pekee kwa kawaida ni rahisi zaidi kwa sababu unaweza kuchunguza gridi kwa tarakimu moja baada ya nyingine. Ukiwa na madokezo kamili, mgombea pekee ndiye rahisi zaidi, kwa kuwa seli yenye mgombea mmoja inaonekana wazi."
+            ],
+            [
+              "Kidokezo kinaielezaje nafasi pekee?",
+              "Kama \"Nafasi pekee ya\" tarakimu hiyo katika safu hii, safuwima hii au kisanduku hiki, huku seli ikiwa imechaguliwa. Gusa kidokezo tena ili kuiweka."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Wagombea waliofungwa",
+          "title": "Wagombea Waliofungwa katika Sudoku: Kuelekeza na Kudai",
+          "description": "Wagombea waliofungwa: wagombea wote wa tarakimu katika kisanduku wakiwa kwenye mstari mmoja, au kinyume chake, tarakimu huondolewa kwingine. Mifano miwili.",
+          "h1": "Wagombea waliofungwa (locked candidates)",
+          "summary": "Wagombea waliofungwa ni mbinu ya kwanza inayoondoa wagombea badala ya kuweka tarakimu. Ina aina mbili. Kuelekeza: katika kisanduku, wagombea wote wa tarakimu fulani wako katika safu au safuwima moja, kwa hiyo tarakimu hiyo huondolewa kwenye sehemu iliyobaki ya mstari huo. Kudai: katika safu au safuwima, wagombea wote wa tarakimu fulani wako katika kisanduku kimoja, kwa hiyo tarakimu hiyo huondolewa kwenye sehemu iliyobaki ya kisanduku hicho. Kidokezo cha Bare Sudoku huuita uwekaji unaofunguliwa nayo \"Wagombea waliofungwa\".",
+          "when": [
+            "Single zikiisha katika fumbo la Ngumu, hiki ndicho cha kwanza kujaribu. Inahitaji madokezo kamili angalau kwa tarakimu unayoichunguza. Wagombea waliofungwa ni wa kawaida: mafumbo mengi ya Ngumu yanawahitaji, na mafumbo ya Mtaalamu huwatumia kati ya miundo mikubwa zaidi."
+          ],
+          "spot": [
+            "Kwa kuelekeza, angalia kila kisanduku na kila tarakimu inayokosekana ndani yake: kama seli za wagombea wa tarakimu hiyo ziko katika safu au safuwima moja, kagua kama tarakimu hiyo inaonekana kama mgombea mbele zaidi kwenye mstari huo nje ya kisanduku. Kwa kudai, angalia kwenye safu au safuwima: kama wagombea wa tarakimu wote wako ndani ya kisanduku kimoja, sehemu iliyobaki ya kisanduku hicho inaweza kusafishwa. Katika mchezo, gusa kitufe cha tarakimu ili kuangazia kila mgombea wake; mstari wa madokezo mawili au matatu yaliyoangaziwa ndani ya kisanduku kimoja ndio muundo."
+          ],
+          "examples": [
+            {
+              "h": "Kuelekeza",
+              "steps": [
+                "Katika kisanduku {box}, tarakimu {d} ina seli hizi tu za wagombea: {cells}. Zote ziko katika safu {row}.",
+                "Kisanduku {box} kinahitaji {d}, kwa hiyo {d} ya safu {row} iko ndani ya kisanduku {box}, katika seli yoyote kati ya hizo itakayoangukia.",
+                "Safu {row} haiwezi kuwa na {d} ya pili, kwa hiyo ondoa {d} kwenye seli za safu {row} zilizo nje ya kisanduku: {elim}."
+              ]
+            },
+            {
+              "h": "Kudai",
+              "steps": [
+                "Katika safu {row}, tarakimu {d} inaweza kwenda tu katika {cells}, na zote ziko ndani ya kisanduku {box}.",
+                "Safu {row} lazima iwe na {d}, kwa hiyo {d} ya kisanduku {box} inadaiwa na safu {row}. Seli nyingine za kisanduku {box} haziwezi kuwa na {d}.",
+                "Ondoa {d} kutoka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kuondoa tarakimu ndani ya kisanduku badala ya nje yake katika hali ya kuelekeza, au kinyume chake katika hali ya kudai. Uondoaji daima huenda kwenye seli zilizo kwenye mstari lakini si kwenye kisanduku, au kwenye kisanduku lakini si kwenye mstari.",
+            "Kutumia kanuni wakati wagombea wameenea katika safu mbili za kisanduku. Seli zote za wagombea wa tarakimu katika kisanduku lazima ziwe kwenye mstari mmoja.",
+            "Kusahau kutafuta single inayoundwa na uondoaji. Wagombea waliofungwa mara chache huweka tarakimu wenyewe; huandaa single."
+          ],
+          "faq": [
+            [
+              "Wagombea waliofungwa katika Sudoku ni nini?",
+              "Wagombea wa tarakimu waliobanwa kwenye makutano ya kisanduku na mstari. Kwa kuwa kisanduku, au mstari, lazima kiwe na tarakimu hiyo ndani ya makutano hayo, tarakimu inaweza kuondolewa kwenye sehemu iliyobaki ya mstari, au ya kisanduku."
+            ],
+            [
+              "Kuna tofauti gani kati ya kuelekeza na kudai?",
+              "Kuelekeza huanza na kisanduku: wagombea wa tarakimu katika kisanduku huelekeza kwenye safu au safuwima moja, kwa hiyo tarakimu huondolewa kwenye sehemu iliyobaki ya mstari huo. Kudai huanza na safu au safuwima: wagombea wa tarakimu katika mstari wote wako katika kisanduku kimoja, kwa hiyo mstari unadai tarakimu na huondolewa kwenye sehemu iliyobaki ya kisanduku."
+            ],
+            [
+              "Je, wagombea waliofungwa pia huitwa uondoaji wa makutano?",
+              "Ndiyo. Majina mengine ni upunguzaji wa kisanduku na mstari kwa aina ya kudai, na jozi zinazoelekeza au watatu wanaoelekeza kwa aina ya kuelekeza. Bare Sudoku hutumia jina moja kwa zote mbili."
+            ],
+            [
+              "Kiwango gani kinahitaji wagombea waliofungwa?",
+              "Ngumu. Fumbo linalohitaji wagombea waliofungwa au jozi na watatu lakini hakuna kitu kigumu zaidi hukadiriwa kuwa Ngumu; mafumbo ya Mtaalamu yanahitaji pia samaki au bawa."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Jozi na watatu wazi",
+          "title": "Jozi na Watatu Wazi katika Sudoku: Jinsi Zinavyofanya Kazi",
+          "description": "Jozi na watatu wazi: seli mbili au tatu katika kitengo zenye wagombea wawili au watatu walewale. Jifunze kuzitambua na nini cha kuondoa, kwa mifano halisi.",
+          "h1": "Jozi na watatu wazi (naked pair, naked triple)",
+          "summary": "Jozi wazi ni seli mbili katika safu, safuwima au kisanduku kimoja zenye wagombea wawili walewale hasa. Tarakimu hizo mbili lazima ziende katika seli hizo mbili, kwa hiyo zinaweza kuondolewa kwenye kila seli nyingine ya kitengo. Watatu wazi ni wazo hilo hilo kwa seli tatu na tarakimu tatu; kila seli inaweza kuonyesha mbili au zote tatu kati yake. Kidokezo cha Bare Sudoku huuita uwekaji unaotokana \"Jozi au watatu\".",
+          "when": [
+            "Baada ya madokezo kukamilika na single pamoja na wagombea waliofungwa kuisha. Jozi wazi ni za kawaida sana katika mafumbo ya Ngumu, watatu wazi si sana. Zote mbili zinafaa kukaguliwa katika kila kitengo ambacho bado kina seli tupu tano au zaidi."
+          ],
+          "spot": [
+            "Tafuta seli zenye wagombea wawili tu na utafute seli nyingine katika kitengo hicho hicho yenye wawili hao hao. Kwa watatu, angalia vitengo vyenye seli kadhaa za wagombea wawili na watatu na ukague kama tatu kati yake kwa pamoja zinatumia tarakimu tatu tofauti tu. Seli zenye wagombea walewale hasa ni rahisi kuonekana madokezo yakishaandikwa; Jaza madokezo katika mchezo hufanya hivyo kwa mguso mmoja."
+          ],
+          "examples": [
+            {
+              "h": "Jozi wazi",
+              "steps": [
+                "{cellA} na {cellB} katika {unit} zina wagombea wawili walewale hasa: {d1} na {d2}.",
+                "Moja yao lazima iwe {d1} na nyingine {d2}. Hatujui ni ipi, lakini tarakimu zote mbili zimetumiwa na seli hizi mbili.",
+                "Kwa hiyo hakuna seli nyingine katika {unit} inayoweza kuwa na {d1} au {d2}. Ondoa {elim}."
+              ]
+            },
+            {
+              "h": "Watatu wazi",
+              "steps": [
+                "Seli tatu katika {unit} huchukua wagombea wao wote kutoka tarakimu tatu zilezile, {digits}: {cells}.",
+                "Tarakimu hizo tatu lazima zijaze seli hizi tatu kwa mpangilio fulani. Seli haihitaji kuonyesha wagombea wote watatu; kinachojalisha ni kwamba hakuna seli kati ya hizo tatu yenye mgombea nje ya seti hiyo.",
+                "Ondoa {digits} kwenye kila seli nyingine ya {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kuchukua seli mbili zinazoshiriki wagombea wawili lakini pia zina wa tatu. Kwa jozi wazi, kila seli lazima iwe na wagombea hao wawili hasa na si mwingine.",
+            "Kuondoa tarakimu kwenye seli za jozi zenyewe. Jozi hubaki na wagombea wake; uondoaji huenda kwenye seli nyingine za kitengo.",
+            "Kutaka kila seli ya watatu ionyeshe tarakimu zote tatu. Seli yenye mbili kati ya tatu ni sawa, mradi hakuna seli yenye mgombea nje ya seti."
+          ],
+          "faq": [
+            [
+              "Jozi wazi katika Sudoku ni nini?",
+              "Seli mbili katika kitengo kimoja ambazo zote zina wagombea wawili walewale hasa. Tarakimu hizo mbili zimefungwa katika seli hizo mbili, kwa hiyo zinaweza kuondolewa kwenye sehemu iliyobaki ya kitengo."
+            ],
+            [
+              "Watatu wazi ni nini?",
+              "Seli tatu katika kitengo kimoja ambazo wagombea wao kwa pamoja ni tarakimu tatu tu. Kila seli inaweza kuwa na mbili au tatu kati yake. Tarakimu hizo tatu hujaza seli tatu, kwa hiyo zinaweza kuondolewa kwenye seli nyingine za kitengo."
+            ],
+            [
+              "Je, jozi wazi huweka tarakimu?",
+              "Si peke yake. Huondoa wagombea, na uondoaji huo kwa kawaida huacha mgombea pekee au nafasi pekee. Kidokezo katika Bare Sudoku huonyesha single hiyo na kutaja mbinu iliyoiwezesha."
+            ],
+            [
+              "Je, jozi wazi inaweza kuwa katika kisanduku na safu kwa wakati mmoja?",
+              "Ndiyo. Seli hizo mbili zikishiriki safu na kisanduku, jozi huondoa katika vitengo vyote viwili. Bare Sudoku hushughulikia kitengo kimoja kwa wakati."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Jozi na watatu fiche",
+          "title": "Jozi na Watatu Fiche katika Sudoku: Jinsi ya Kuziona",
+          "description": "Jozi fiche: tarakimu mbili zinazoweza kwenda tu katika seli mbili zilezile za kitengo, kwa hiyo wagombea wengine huondoka. Jifunze kupata jozi na watatu fiche.",
+          "h1": "Jozi na watatu fiche (hidden pair, hidden triple)",
+          "summary": "Jozi fiche ni tarakimu mbili ambazo, ndani ya safu, safuwima au kisanduku kimoja, ni wagombea katika seli mbili zilezile na si mahali pengine popote. Seli hizo mbili lazima ziwe na tarakimu hizo mbili, kwa hiyo kila mgombea mwingine ndani yake anaweza kuondolewa. Watatu fiche hufanya kazi vivyo hivyo kwa tarakimu tatu zilizobanwa katika seli tatu. Baada ya uondoaji seli huonyesha jozi wazi au watatu wazi. Kidokezo cha Bare Sudoku huuita uwekaji unaotokana \"Jozi au watatu\".",
+          "when": [
+            "Kitengo kikiwa na seli zenye wagombea wengi na single zimekwisha. Jozi fiche hujificha ndani ya seli zilizojaa wagombea, na ndiyo sababu zinafaa kutafutwa hasa mahali ambapo jozi wazi hazionekani. Watatu fiche ni nadra; Bare Sudoku huwakagua, lakini mafumbo mengi ya Ngumu hutatuliwa bila wao."
+          ],
+          "spot": [
+            "Fanya kazi kwa tarakimu, si kwa seli. Katika kitengo, andika seli ambazo kila tarakimu inayokosekana inaweza kwenda. Ikiwa tarakimu mbili kila moja ina seli mbili tu zinazowezekana na ni seli mbili zilezile, umepata jozi fiche. Katika mchezo, gusa kitufe cha tarakimu ili kuangazia wagombea wake; tarakimu mbili zikiangaza seli mbili zilezile za kitengo na hakuna nyingine ndani yake, huo ndio muundo."
+          ],
+          "examples": [
+            {
+              "h": "Jozi fiche",
+              "steps": [
+                "Katika {unit}, tarakimu {d1} na {d2} kila moja ina seli mbili tu zinazowezekana, na ni zilezile: {cells}.",
+                "Seli hizo mbili lazima ziwe na {d1} na {d2}, kwa hiyo wagombea wao wengine hawawezekani.",
+                "Ondoa {elim}. Sasa seli hizo mbili zinaonyesha jozi wazi, ambayo inaweza kufungua zaidi."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kuondoa tarakimu mbili za jozi kwenye seli za jozi. Ni wagombea wengine wa seli hizo wanaoondoka; tarakimu za jozi hubaki.",
+            "Kukubali tarakimu yenye seli ya tatu inayowezekana katika kitengo. Tarakimu zote mbili lazima ziwe na seli hizo mbili tu.",
+            "Kutafuta katika visanduku tu. Jozi fiche hutokea mara nyingi vilevile katika safu na safuwima."
+          ],
+          "faq": [
+            [
+              "Jozi fiche katika Sudoku ni nini?",
+              "Tarakimu mbili zinazoweza kwenda tu katika seli mbili zilezile za kitengo. Seli hizo lazima zichukue tarakimu hizo, kwa hiyo wagombea wao wengine huondolewa."
+            ],
+            [
+              "Jozi fiche ni tofauti vipi na jozi wazi?",
+              "Jozi wazi inaonekana: seli mbili zinazoonyesha wagombea wawili walewale tu. Jozi fiche imefunikwa na wagombea wa ziada katika seli hizo mbili. Kuondoa wagombea hao wa ziada hugeuza jozi fiche kuwa jozi wazi."
+            ],
+            [
+              "Watatu fiche ni nini?",
+              "Tarakimu tatu zilizobanwa katika seli tatu za kitengo. Kila tarakimu haihitaji kuonekana katika seli zote tatu; kinachojalisha ni kwamba hakuna tarakimu kati ya hizo tatu yenye mgombea nje ya seli hizo."
+            ],
+            [
+              "Je, kidokezo hutofautisha jozi fiche na jozi wazi?",
+              "Hapana. Bare Sudoku hupata zote mbili na kuuita uwekaji unaotokana \"Jozi au watatu\". Kurasa hizi zinazitenganisha kwa sababu hupatikana kwa njia tofauti."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing katika Sudoku: Jinsi Mbinu Inavyofanya Kazi",
+          "description": "X-Wing: tarakimu yenye seli mbili hasa za wagombea katika safu mbili, zilizo katika safuwima mbili zilezile, huondolewa kwenye safuwima hizo. Mfano halisi.",
+          "h1": "X-Wing",
+          "summary": "X-Wing ni muundo wa tarakimu moja na seli nne kwenye pembe za mstatili. Ikiwa tarakimu ina seli mbili hasa za wagombea katika kila moja ya safu mbili, na seli hizo ziko katika safuwima mbili zilezile, basi tarakimu lazima ikae kwenye pembe mbili zinazotazamana za mstatili. Kwa hiyo inaweza kuondolewa kwenye kila seli nyingine ya safuwima hizo mbili. Vivyo hivyo hufanya kazi safu na safuwima zikibadilishwa. Ni mbinu ya kwanza ya Mtaalamu katika Bare Sudoku.",
+          "when": [
+            "Single, wagombea waliofungwa na jozi na watatu vikiisha. X-Wing ndio muundo wa kawaida zaidi wa Mtaalamu na mara nyingi hutokea tarakimu ikiwa imebaki na wagombea wachache, kwa kawaida nakala nne hadi sita zikiwa tayari zimewekwa. Inahitaji madokezo kamili kwa tarakimu unayoichunguza."
+          ],
+          "spot": [
+            "Chagua tarakimu na utafute safu ambazo ina seli mbili hasa za wagombea. Safu mbili kama hizo zikishiriki safuwima mbili zilezile, kagua safuwima hizo kwa wagombea wengine wa tarakimu hiyo: hao ndio wa kuondolewa. Kisha rudia ukitumia safuwima kama msingi. Katika mchezo, gusa kitufe cha tarakimu: kila mgombea wake huangaziwa, na mstatili wa madokezo manne yaliyoangaziwa ni rahisi kuona."
+          ],
+          "examples": [
+            {
+              "h": "Mfano",
+              "steps": [
+                "Tarakimu {d} ina seli mbili hasa za wagombea katika safu {r1} na mbili hasa katika safu {r2}, na zinalingana katika safuwima mbili zilezile, {c1} na {c2}: {cells}.",
+                "Safu {r1} huweka {d} yake katika safuwima {c1} au {c2}, na safu {r2} huweka {d} yake katika ile nyingine. Vyovyote vile, safuwima {c1} na {c2} kila moja hupokea {d} kutoka kwa safu hizi mbili.",
+                "Kwa hiyo {d} haiwezi kutokea mahali pengine popote katika safuwima {c1} na {c2}. Ondoa {d} kutoka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kutumia safu yenye seli tatu za wagombea kwa tarakimu hiyo. Kila safu ya msingi lazima iwe na mbili hasa, na zote mbili ziwe katika safuwima mbili zinazoshirikiwa.",
+            "Kuondoa tarakimu kwenye safu badala ya safuwima. Safu zikiwa msingi, uondoaji uko kwenye safuwima, na kinyume chake.",
+            "Kusahau toleo lililobadilishwa. X-Wing iliyojengwa juu ya safuwima huondoa katika safu."
+          ],
+          "faq": [
+            [
+              "X-Wing katika Sudoku ni nini?",
+              "Tarakimu yenye seli mbili hasa za wagombea katika kila moja ya safu mbili, katika safuwima mbili zilezile. Tarakimu inakaa kwenye pembe mbili zinazotazamana za mstatili huo, kwa hiyo huondolewa kwenye sehemu iliyobaki ya safuwima hizo mbili. Safu na safuwima zinaweza kubadilishwa."
+            ],
+            [
+              "Kwa nini X-Wing inafanya kazi?",
+              "Kila moja ya safu hizo mbili lazima iweke tarakimu katika moja ya safuwima mbili, na safu hizo mbili haziwezi kutumia safuwima ileile. Kwa hiyo kila safuwima hupokea nakala yake ya tarakimu kutoka kwa safu hizi, na kila mgombea mwingine katika safuwima hizo hawezekani."
+            ],
+            [
+              "Je, X-Wing ni samaki?",
+              "Ndiyo. X-Wing ni samaki wa ukubwa wa mbili; Swordfish ni samaki wa ukubwa wa tatu. Bare Sudoku huwapata wote wawili."
+            ],
+            [
+              "Kiwango gani kina X-Wing?",
+              "Mtaalamu. Fumbo linalohitaji X-Wing, Y-Wing, Swordfish au XYZ-Wing hukadiriwa kuwa Mtaalamu."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing katika Sudoku: Jinsi Mbinu Inavyofanya Kazi",
+          "description": "Y-Wing (XY-Wing): kitovu chenye wagombea wawili na mabawa mawili, kila moja likishiriki mmoja wao, huondoa tarakimu kwenye seli inayoona mabawa yote. Mfano.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, pia huitwa XY-Wing, hutumia seli tatu zenye wagombea wawili kila moja. Kitovu kina wagombea X na Y. Bawa moja linaona kitovu na lina X na Z; bawa lingine linaona kitovu na lina Y na Z. Kitovu kiwe chochote, mojawapo ya mabawa lazima liwe Z, kwa hiyo Z inaweza kuondolewa kwenye kila seli inayoona mabawa yote mawili. Ni mbinu ya Mtaalamu katika Bare Sudoku.",
+          "when": [
+            "Fumbo likiwa na seli kadhaa zenye wagombea wawili hasa na hakuna samaki anayepatikana. Y-Wing ni za kawaida katika mafumbo ya Mtaalamu na hupatikana kwa kufuatilia seli zenye wagombea wawili: kila moja ni kitovu au bawa linalowezekana."
+          ],
+          "spot": [
+            "Orodhesha seli zenye wagombea wawili hasa. Kwa kila moja, ichukulie kama kitovu chenye wagombea X na Y, na utafute kati ya majirani wake seli yenye X na tarakimu nyingine Z, na seli yenye Y na Z hiyo hiyo. Hizo mbili ndizo mabawa. Kisha tafuta seli zinazoona mabawa yote mawili na zenye Z. Kumbuka kwamba mabawa hayahitaji kuonana."
+          ],
+          "examples": [
+            {
+              "h": "Mfano",
+              "steps": [
+                "Kitovu {pivot} kina wagombea {x} na {y}. Kinaona {wingA}, yenye {x} na {z}, na {wingB}, yenye {y} na {z}.",
+                "Ikiwa {pivot} ni {x}, basi {wingA} inapoteza {x} na kuwa {z}. Ikiwa {pivot} ni {y}, basi {wingB} inakuwa {z}. Kwa vyovyote vile, mojawapo ya mabawa mawili ni {z}.",
+                "Seli inayoona mabawa yote mawili haiwezi kamwe kuwa {z}. Ondoa {z} kutoka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kuchagua mabawa ambayo si yote mawili yanaona kitovu. Kila bawa lazima lishiriki safu, safuwima au kisanduku na kitovu.",
+            "Kuondoa Z kwenye seli zinazoona bawa moja tu. Seli inayoondolewa lazima ione mabawa yote mawili.",
+            "Kuondoa Z kwenye kitovu. Katika Y-Wing kitovu hakina Z; kikiwa nacho, muundo ni XYZ-Wing yenye kanuni tofauti."
+          ],
+          "faq": [
+            [
+              "Y-Wing katika Sudoku ni nini?",
+              "Seli tatu zenye wagombea wawili: kitovu chenye X na Y, bawa lenye X na Z linaloona kitovu, na bawa lenye Y na Z linaloona kitovu. Bawa moja daima ni Z, kwa hiyo Z huondolewa kwenye seli zinazoona mabawa yote mawili."
+            ],
+            [
+              "Je, Y-Wing ni sawa na XY-Wing?",
+              "Ndiyo. Majina hayo mawili yanaeleza muundo mmoja. Bare Sudoku huuita Y-Wing."
+            ],
+            [
+              "Kwa nini bawa moja lazima liwe Z?",
+              "Kitovu kikiwa X, bawa la kwanza linapoteza X na kuwa Z. Kitovu kikiwa Y, bawa la pili linakuwa Z. Kitovu ni kimoja kati ya hivyo viwili, kwa hiyo bawa moja ni Z."
+            ],
+            [
+              "Y-Wing huondoa katika seli ngapi?",
+              "Kwa kawaida moja au mbili: seli tu zinazoona mabawa yote mawili na bado zina Z. Hilo linatosha kuunda single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish katika Sudoku: Jinsi Mbinu Inavyofanya Kazi",
+          "description": "Swordfish: tarakimu iliyobanwa katika safuwima tatu kwenye safu tatu huondolewa kwenye sehemu iliyobaki ya safuwima hizo. Samaki wa ukubwa wa tatu, kwa mfano.",
+          "h1": "Swordfish",
+          "summary": "Swordfish ni X-Wing yenye safu tatu na safuwima tatu. Ikiwa tarakimu ina seli zisizozidi tatu za wagombea katika kila moja ya safu tatu, na seli hizo zote ziko katika safuwima tatu zilezile, basi safu hizo tatu zinatumia tarakimu hiyo katika safuwima hizo, na tarakimu inaweza kuondolewa kwenye kila seli nyingine ya safuwima hizo tatu. Safu na safuwima zinaweza kubadilishwa. Bare Sudoku hukagua Swordfish baada ya Y-Wing, katika mafumbo ya Mtaalamu.",
+          "when": [
+            "X-Wing na Y-Wing zisipopata chochote. Swordfish si za kawaida kama X-Wing na zinahitaji tarakimu ambayo wagombea wake wametawanyika kidogo katika mistari mitatu. Zinahitaji madokezo kamili na sahihi kwa tarakimu hiyo."
+          ],
+          "spot": [
+            "Chagua tarakimu na utafute safu zenye seli mbili au tatu za wagombea wake. Safu tatu kama hizo zikijumuisha safuwima tatu tu kwa jumla, kagua safuwima hizo kwa wagombea wengine wa tarakimu hiyo. Si kila safu inahitaji mgombea katika kila safuwima: Swordfish inaweza kuwa na seli sita, saba, nane au tisa. Katika mchezo, angazia tarakimu kwa kitufe chake na utafute safu tatu ambazo wagombea wake wanalingana katika safuwima tatu."
+          ],
+          "examples": [
+            {
+              "h": "Mfano",
+              "steps": [
+                "Tarakimu {d} ina seli zisizozidi tatu za wagombea katika kila moja ya safu {rows}, na seli hizo zote ziko katika safuwima {cols}: {cells}.",
+                "Kila moja ya safu hizo tatu lazima iweke {d} yake katika moja ya safuwima tatu, na hakuna safu mbili zinazoweza kutumia safuwima ileile. Kwa hiyo safuwima hizo tatu zinapata {d} yao kutoka kwa safu hizi tatu.",
+                "Mgombea mwingine yeyote wa {d} katika safuwima {cols} hawezekani. Ondoa {d} kutoka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kutaka seli zote tisa. Swordfish yenye wagombea wawili katika baadhi ya safu bado ni halali, mradi safu hizo tatu zinajumuisha safuwima tatu tu.",
+            "Kujumuisha safu yenye seli nne za wagombea. Kila safu ya msingi lazima iwe na zisizozidi tatu, zote ndani ya safuwima hizo tatu.",
+            "Kuondoa katika safu za msingi. Safu zikiwa msingi, uondoaji uko katika safuwima hizo tatu, nje ya safu za msingi."
+          ],
+          "faq": [
+            [
+              "Swordfish katika Sudoku ni nini?",
+              "Tarakimu ambayo wagombea wake katika safu tatu wamebanwa katika safuwima tatu. Safu hizo tatu lazima ziweke tarakimu katika safuwima hizo tatu, moja kila moja, kwa hiyo tarakimu huondolewa kwenye seli nyingine za safuwima hizo."
+            ],
+            [
+              "Swordfish ni tofauti vipi na X-Wing?",
+              "Kwa ukubwa tu: X-Wing hutumia safu mbili na safuwima mbili, Swordfish tatu na tatu. Hoja ni ileile."
+            ],
+            [
+              "Je, Swordfish inahitaji seli tisa hasa?",
+              "Hapana. Kila safu inaweza kuwa na wagombea wawili au watatu; muundo unahitaji tu kwamba safu hizo tatu kwa pamoja zisitumie zaidi ya safuwima tatu."
+            ],
+            [
+              "Je, kuna samaki wa ukubwa wa nne?",
+              "Ndiyo, Jellyfish. Bare Sudoku haimtumii, kwa sababu mafumbo yake hayamhitaji kamwe."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing katika Sudoku: Jinsi Mbinu Inavyofanya Kazi",
+          "description": "XYZ-Wing: kitovu chenye wagombea watatu na mabawa mawili yanayoshiriki mmoja wao huiondoa tarakimu hiyo kwenye kila seli inayoona zote tatu. Mfano halisi.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing ni Y-Wing ambayo kitovu chake kina wagombea watatu. Kitovu kina X, Y na Z; bawa moja linaona kitovu na lina X na Z, lingine linaona kitovu na lina Y na Z. Mojawapo ya seli hizo tatu lazima iwe Z, kwa hiyo Z inaweza kuondolewa kwenye kila seli inayoona zote tatu. Kwa kuwa kitovu chenyewe kinaweza kuwa Z, seli inayoondolewa lazima ione kitovu pamoja na mabawa yote mawili, jambo linaloiwekea mipaka kwenye kisanduku au mstari ambao seli hizo zinashiriki. Ni mbinu ngumu zaidi ambayo Bare Sudoku hutumia.",
+          "when": [
+            "Pale tu kila kitu kingine kinaposhindwa. XYZ-Wing ni muundo adimu zaidi katika Bare Sudoku na hutokea tu katika mafumbo ya Mtaalamu. Zitafute wakati seli yenye wagombea watatu iko katika kisanduku kimoja na seli yenye wagombea wawili inayoshiriki tarakimu zake mbili."
+          ],
+          "spot": [
+            "Anza na seli zenye wagombea watatu hasa; kila moja ni kitovu kinachowezekana. Kati ya majirani wake, tafuta seli mbili zenye wagombea wawili kila moja, wote wakitoka kwenye wagombea watatu wa kitovu, zinazoshiriki tarakimu moja tu Z. Kisha tafuta seli zinazoona kitovu na mabawa yote mawili na zenye Z. Kwa vitendo bawa moja liko katika kisanduku cha kitovu na lingine katika safu au safuwima yake, na seli zinazoondolewa ni seli zilizobaki za kisanduku hicho katika safu au safuwima hiyo."
+          ],
+          "examples": [
+            {
+              "h": "Mfano",
+              "steps": [
+                "Kitovu {pivot} kina wagombea watatu: {x}, {y} na {z}. Kinaona {wingA} yenye {x} na {z}, na {wingB} yenye {y} na {z}.",
+                "Ikiwa {pivot} ni {z}, imekwisha. Ikiwa ni {x}, {wingA} lazima iwe {z}. Ikiwa ni {y}, {wingB} lazima iwe {z}. Kwa vyovyote vile, mojawapo ya seli hizo tatu ni {z}.",
+                "Seli inayoona zote tatu haiwezi kuwa {z}. Ondoa {z} kutoka {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kuondoa kwenye seli zinazoona mabawa mawili tu. Tofauti na Y-Wing, kitovu kinaweza kuwa Z, kwa hiyo seli lazima ione kitovu pia.",
+            "Kutumia mabawa ambayo wagombea wao hawamo wote katika wagombea watatu wa kitovu.",
+            "Kuichanganya na Y-Wing: tofauti ni mgombea wa tatu katika kitovu, na inabadilisha ni seli zipi zinaweza kusafishwa."
+          ],
+          "faq": [
+            [
+              "XYZ-Wing katika Sudoku ni nini?",
+              "Kitovu chenye wagombea X, Y na Z na mabawa mawili, moja lenye X na Z na lingine lenye Y na Z, yote yakiona kitovu. Mojawapo ya seli hizo tatu ni Z, kwa hiyo Z huondolewa kwenye seli zinazoona zote tatu."
+            ],
+            [
+              "XYZ-Wing ni tofauti vipi na Y-Wing?",
+              "Kitovu kina wagombea watatu badala ya wawili, ikiwemo Z. Hilo linakifanya kitovu kuwa mahali panapowezekana kwa Z, kwa hiyo seli tu zinazoona kitovu na mabawa yote mawili ndizo zinaweza kupoteza Z."
+            ],
+            [
+              "XYZ-Wing hutokea mara ngapi?",
+              "Mara chache. Katika Bare Sudoku ni mafumbo ya Mtaalamu tu yanayoweza kuihitaji, na mengi hayaihitaji. Bare Sudoku huikagua mwisho, baada ya X-Wing, Y-Wing na Swordfish."
+            ],
+            [
+              "Je, kuna WXYZ-Wing?",
+              "Ndiyo, yenye kitovu cha wagombea wanne, lakini Bare Sudoku haiitumii. Kila fumbo katika mchezo linaweza kumalizwa kwa mbinu tisa za mwongozo huu."
+            ]
+          ]
+        }
+      }
+    },
+    "my": {
+      "learnHeading": "Sudoku လေ့လာရန်",
+      "learnText": "Sudoku ကို စတင်ကစားခါစလား၊ သို့မဟုတ် ခက်ခဲသော ပဟေဠိတွင် ပိတ်မိနေသလား။ လမ်းညွှန် နှစ်ခုက စည်းမျဉ်းများနှင့် အရိပ်အမြွက်များ အသုံးပြုသော ဖြေရှင်းနည်းတိုင်းကို ဥပမာအစစ်ဖြင့် ရှင်းပြထားသည်။",
+      "howToLink": "Sudoku ကစားနည်း",
+      "techniquesLink": "Sudoku ဖြေရှင်းနည်းများ",
+      "labels": {
+        "howTo": "ကစားနည်း",
+        "techniques": "နည်းလမ်းများ",
+        "play": "Sudoku ကစားမည်",
+        "prev": "ယခင် နည်းလမ်း",
+        "next": "နောက် နည်းလမ်း",
+        "all": "နည်းလမ်းအားလုံး",
+        "example": "ဥပမာ",
+        "steps": "အဆင့်ဆင့်",
+        "when": "မည်သည့်အခါ သုံးမည်နည်း",
+        "spot": "မည်သို့ ရှာဖွေမည်နည်း",
+        "mistakes": "အဖြစ်များသော အမှားများ",
+        "inGame": "Bare Sudoku တွင်",
+        "level": "စတင်လိုအပ်သည့် အဆင့်: {level}",
+        "hint": "ဂိမ်းထဲတွင် အရိပ်အမြွက်က ဤသို့ ပြောသည်: {text}",
+        "legend": "ထူသော ဂဏန်းများကို ပေးထားသည်၊ အပြာရောင် ဂဏန်းများကို ဖြေရှင်းစဉ် ထည့်ခဲ့သည်၊ ဂဏန်းငယ်များမှာ အဖြေများ ဖြစ်သည်။ အရောင်ခြယ်ထားသော အကွက်ငယ်များက ပုံစံကို ဖွဲ့စည်းသည်၊ ဖြတ်ထားသော အဖြေများကို ဖယ်ရှားသည်၊ စက်ဝိုင်းဝိုင်းထားသော အဖြေမှာ ထည့်ရမည့် ဂဏန်း ဖြစ်သည်။",
+        "notation": "အကွက်ငယ်များကို r3c7 ဟု ရေးသည်: အတန်း 3၊ ကော်လံ 7။ အတန်းများကို အပေါ်မှ၊ ကော်လံများကို ဘယ်ဘက်မှ ရေတွက်ပြီး အကွက် 1 မှ 9 ကို ဘယ်ဘက်အပေါ်မှ စ၍ အတန်းလိုက် ရေတွက်သည်။",
+        "row": "အတန်း {n}",
+        "column": "ကော်လံ {n}",
+        "box": "အကွက် {n}",
+        "elimItem": "{cell} မှ {d}",
+        "regions": "ပဟေဠိအစတွင် အတန်း 5၊ ကော်လံ 5 နှင့် အကွက် 5",
+        "firstMove": "ပေါ်နေသော တစ်ခုတည်း: {cell} သည် {d} သာ ဖြစ်နိုင်သည်",
+        "breadcrumb": "လမ်းကြောင်းပြ"
+      },
+      "howTo": {
+        "title": "Sudoku ကစားနည်း: စည်းမျဉ်း၊ ဇယားနှင့် ပထမခြေလှမ်းများ",
+        "description": "Sudoku ကစားနည်း: စည်းမျဉ်းများ၊ အတန်း၊ ကော်လံနှင့် အကွက်များ၊ အဖြေမှန် တစ်ခုတည်းရှိခြင်း၊ မှတ်စုသုံးနည်းနှင့် ပထမခြေလှမ်းများ။",
+        "h1": "Sudoku ကစားနည်း",
+        "summary": "Sudoku သည် 9×9 ဇယားပေါ်ရှိ ယုတ္တိဗေဒ ပဟေဠိ ဖြစ်သည်။ အတန်းတိုင်း၊ ကော်လံတိုင်းနှင့် 3×3 အကွက်တိုင်းတွင် ဂဏန်းတိုင်း တစ်ကြိမ်စီသာ ပါဝင်အောင် ဗလာအကွက်ငယ်တိုင်းကို 1 မှ 9 အထိ ဂဏန်းဖြင့် ဖြည့်ပါ။ ဂဏန်းအချို့ကို အစကတည်းက ပေးထားပြီး ကျန်သည်တို့ကို သေချာသော အကွက်ငယ် တစ်ကွက်ချင်းစီဖြင့် ယုတ္တိနည်းကျ ဆင်ခြင်ရှာဖွေရသည်၊ ခန့်မှန်းရန် ဘယ်တော့မှ မလိုပါ။ ဤလမ်းညွှန်တွင် ဇယား၊ စည်းမျဉ်းများ၊ အဖြေမှန် တစ်ခုတည်းသာ ရှိသည့် နိယာမ၊ မှတ်စုများနှင့် ပထမခြေလှမ်းများအတွက် ရိုးရှင်းသော နည်းဗျူဟာကို ရှင်းပြထားသည်။ အားလုံးကို အခမဲ့ဖြစ်ပြီး ယုတ္တိကို ရှင်းပြသော အရိပ်အမြွက်များ ပါသည့် [Bare Sudoku](play) တွင် လေ့ကျင့်နိုင်သည်။",
+        "sections": [
+          {
+            "h": "Sudoku ၏ စည်းမျဉ်းများက ဘာလဲ။",
+            "p": [
+              "စည်းမျဉ်း သုံးခုသာ ရှိပြီး ၎င်းတို့မှာ တစ်ခုတည်းသော စည်းမျဉ်းကို ဘက်သုံးဘက်မှ ကြည့်ခြင်းသာ ဖြစ်သည်: အတန်းတိုင်းတွင် 1 မှ 9 အထိ ဂဏန်းများ ပါရမည်၊ ကော်လံတိုင်းတွင် 1 မှ 9 အထိ ဂဏန်းများ ပါရမည်၊ 3×3 အကွက်တိုင်းတွင် 1 မှ 9 အထိ ဂဏန်းများ ပါရမည်။ ထို့ကြောင့် ဂဏန်းတစ်လုံးသည် အတန်း၊ ကော်လံ သို့မဟုတ် အကွက် တစ်ခုတည်းတွင် နှစ်ကြိမ် ဘယ်တော့မှ မပေါ်နိုင်ပါ။",
+              "ထူထူ ရိုက်နှိပ်ထားသော ပေးထားသည့် ဂဏန်းများကို ပြောင်း၍ မရပါ။ သင့်အလုပ်မှာ ဗလာအကွက်ငယ်များကို ဖြည့်ရန် ဖြစ်သည်။ ဂဏန်းတွက်ချက်မှုလည်း မရှိ၊ အစီအစဉ်လည်း မရှိပါ: ဂဏန်းများသည် မတူညီသော သင်္ကေတ ကိုးခုသာ ဖြစ်သည်။ စာလုံးများ သို့မဟုတ် ပုံများဖြင့် ကစားလည်း ဘာမှ ပြောင်းလဲမည် မဟုတ်ပါ။"
+            ]
+          },
+          {
+            "h": "ဇယားကို မည်သို့ စီစဉ်ထားသနည်း။",
+            "p": [
+              "ဇယားတွင် အတန်း 9 တန်းနှင့် ကော်လံ 9 ခုအတွင်း အကွက်ငယ် 81 ကွက် ရှိသည်။ ထူသော မျဉ်းများက ၎င်းကို 3×3 အကွက် ကိုးခု ခွဲထားသည်။ အကွက်ငယ်တိုင်းသည် အတန်း တစ်တန်း၊ ကော်လံ တစ်ခုနှင့် အကွက် တစ်ခုတွင် အတိအကျ ပါဝင်ပြီး ဤသုံးခုကို ၎င်း၏ အုပ်စုများဟု ခေါ်သည်။ အကွက်ငယ်တစ်ကွက်နှင့် အုပ်စုတူသော အခြား အကွက်ငယ် 20 ကွက်ကို ၎င်း၏ အိမ်နီးချင်းများဟု ခေါ်သည်၊ အကွက်ငယ်တစ်ကွက်တွင် ထည့်လိုက်သော ဂဏန်းသည် အိမ်နီးချင်း 20 ကွက်လုံးတွင် ထိုဂဏန်းကို ပယ်ဖျက်သည်။",
+              "အကွက်ငယ်များကို r3c7 ဟု ရေးသည်: အတန်း 3၊ ကော်လံ 7။ အတန်းများကို အပေါ်မှ၊ ကော်လံများကို ဘယ်ဘက်မှ ရေတွက်ပြီး အကွက် 1 မှ 9 ကို ဘယ်ဘက်အပေါ်မှ စ၍ အတန်းလိုက် ရေတွက်သည်။ ဤရေးနည်းကို နည်းလမ်း လမ်းညွှန်တိုင်းတွင် သုံးထားသဖြင့် လေ့လာထားသင့်သည်: r5c5 သည် ဇယား၏ အလယ်ဗဟို ဖြစ်သည်။"
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Sudoku တိုင်းတွင် အဖြေမှန် တစ်ခုတည်းသာ ဘာကြောင့် ရှိသနည်း။",
+            "p": [
+              "မှန်ကန်သော Sudoku တွင် အဖြေမှန် တစ်ခုတည်းသာ ရှိပြီး ယုတ္တိ အလုပ်ဖြစ်စေသည်မှာ ၎င်းပင် ဖြစ်သည်။ ဂဏန်းတစ်လုံးသည် အုပ်စုတစ်ခုအတွင်း အခြားမည်သည့်နေရာသို့မျှ မဝင်နိုင်ကြောင်း ပြနိုင်သည့်အခါတိုင်း ၎င်းသည် ကျန်ရှိသော အကွက်ငယ်ထဲသို့ ဝင်ရမည်၊ အကြောင်းမှာ အဖြေမှန် ရှိပြီး တစ်ခုတည်းသာ ဖြစ်သောကြောင့် ဖြစ်သည်။ ပဟေဠိတစ်ခုတွင် အဖြေမှန် နှစ်ခု ရှိခဲ့လျှင် မည်မျှ ဆင်ခြင်စေကာမူ ၎င်းတို့ကို ခွဲခြား၍ မရဘဲ တစ်နေရာရာတွင် ခန့်မှန်းရန် အတင်းအကျပ် ဖြစ်လာမည်။",
+              "Bare Sudoku သည် ပဟေဠိတိုင်းကို သင့်စက်ပေါ်တွင် ဖန်တီးပြီး အဖြေမှန် တစ်ခုတည်းသာ ရှိကြောင်းနှင့် ၎င်း၏ ယုတ္တိ ဖြေရှင်းစနစ်က ရွေးထားသော အဆင့်၏ နည်းလမ်းများဖြင့် ဖြေနိုင်ကြောင်း စစ်ဆေးသည်။ ထို့ကြောင့် ပိတ်မိနေလျှင် ရှာဖွေရမည့် နောက်ခြေလှမ်း အမြဲ ရှိပြီး အရိပ်အမြွက်က ၎င်းကို ပြသည်။"
+            ]
+          },
+          {
+            "h": "Sudoku ပဟေဠိကို မည်သို့ စတင်မည်နည်း။",
+            "p": [
+              "အကန့်အသတ် အများဆုံး နေရာမှ စပါ။ ဤအစီအစဉ်သည် အဆင့်တိုင်းတွင် အလုပ်ဖြစ်သည်:"
+            ],
+            "list": [
+              "အကြိမ်များစွာ ပေါ်ပြီးသား ဂဏန်းတစ်လုံးကို ရွေးပါ၊ ဥပမာ ခြောက်ကြိမ် သို့မဟုတ် ခုနစ်ကြိမ်၊ ပြီးလျှင် ၎င်း မပါသေးသော အကွက်များကို ရှာပါ။ မကြာခဏ အကွက်တစ်ခုတွင် ၎င်းအတွက် အကွက်ငယ် တစ်ကွက်သာ ကျန်တော့သည်: ၎င်းမှာ [ပုန်းနေသော တစ်ခုတည်း](hidden-single) ဖြစ်သည်။",
+              "ပြည့်ကျပ်နေသော အကွက်ငယ်များကို ရှာပါ။ ၎င်း၏ အတန်း၊ ကော်လံနှင့် အကွက်တို့ ပေါင်းလျှင် မတူညီသော ဂဏန်း ရှစ်လုံး ပါနေသော အကွက်ငယ်တွင် အဖြေ တစ်ခုသာ ကျန်သည်: [ပေါ်နေသော တစ်ခုတည်း](naked-single)။ နီးပါး ပြည့်နေသော အတန်းများ သို့မဟုတ် အကွက်များရှိ အကွက်ငယ်များသည် ရှာရန် အကောင်းဆုံးနေရာ ဖြစ်သည်။",
+              "သင်ထည့်လိုက်သော ဂဏန်းတိုင်းသည် အိမ်နီးချင်း 20 ကွက်မှ အဖြေတစ်ခုကို ဖယ်ရှားသဖြင့် ထိုအိမ်နီးချင်းများကို ချက်ချင်း စစ်ဆေးပါ။ တစ်ခုတည်းများသည် ကွင်းဆက်သဖွယ် ဆက်တိုက် ပေါ်လာတတ်သည်။",
+              "လွယ်ကူသော ထည့်စရာများ ကုန်သွားလျှင် မှတ်စုများ ရေးပါ: ဗလာအကွက်ငယ်တိုင်း၏ အဖြေများ။ ထို့နောက် အကွက်တစ်ခုအတွင်း မျဉ်းတစ်ကြောင်းတည်းတွင် ပိတ်မိနေသော ဂဏန်း ([ပိတ်ထားသော အဖြေများ](locked-candidates)) သို့မဟုတ် အဖြေ နှစ်ခု တူညီသော အကွက်ငယ် နှစ်ကွက် ([ပေါ်နေသော အတွဲ](naked-pairs)) ကို ရှာပါ။",
+              "ဖယ်ရှားမှုတိုင်းပြီးနောက် တစ်ခုတည်းများဆီ ပြန်သွားပါ။ ကျွမ်းကျင် ပဟေဠိများကိုပင် အများအားဖြင့် တစ်ခုတည်းများဖြင့် ဖြေရှင်းရသည်၊ အဆင့်မြင့် နည်းလမ်းက နောက်တစ်ခုကို ဖွင့်ပေးရုံသာ ဖြစ်သည်။"
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "မှတ်စုများဆိုတာ ဘာလဲ၊ ဘယ်အချိန် သုံးသင့်သနည်း။",
+            "p": [
+              "မှတ်စုများကို ခဲတံအမှတ်အသား သို့မဟုတ် အဖြေများဟုလည်း ခေါ်သည်၊ ၎င်းတို့မှာ ဗလာအကွက်ငယ်တစ်ကွက်တွင် မည်သည့်ဂဏန်းများ ဖြစ်နိုင်သေးသည်ကို မှတ်ထားရန် ရေးသော ဂဏန်းငယ်များ ဖြစ်သည်။ လွယ်ကူသော ပဟေဠိများတွင် မလိုသလောက်ပင်၊ ခက် အဆင့်မှစ၍ မရှိမဖြစ် လိုအပ်သည်၊ အကြောင်းမှာ အတွဲ၊ X-Wing နှင့် Y-Wing ကဲ့သို့ နည်းလမ်းများသည် ထည့်ပြီးသား ဂဏန်းများ မဟုတ်ဘဲ အဖြေများနှင့် သက်ဆိုင်သောကြောင့် ဖြစ်သည်။",
+              "မှတ်စုများကို တိကျအောင် ထားပါ: ဂဏန်းတစ်လုံး ထည့်သည့်အခါ အိမ်နီးချင်း 20 ကွက်လုံး၏ မှတ်စုများမှ ၎င်းကို ဖယ်ပါ။ Bare Sudoku တွင် ၎င်းသည် အလိုအလျောက် ဖြစ်ပြီး မှတ်စုဖြည့် က တစ်ချက်နှိပ်ရုံဖြင့် ဗလာအကွက်ငယ်တိုင်းတွင် အဖြေတိုင်းကို ရေးပေးသဖြင့် ပြည့်စုံမှန်ကန်သော အဖြေများဖြင့် စတင်နိုင်သည်။ မှတ်စုသည် ခန့်မှန်းချက် မဟုတ်ဘဲ အချက်အလက် ဖြစ်သည်: ဤဂဏန်းကို မည်သည့်အရာကမျှ ပယ်မထားသေးဟု ဆိုလိုသည်။"
+            ]
+          },
+          {
+            "h": "ပိတ်မိနေလျှင် ဘာလုပ်သင့်သနည်း။",
+            "p": [
+              "ပထမဦးစွာ အခြေခံများကို ပြန်စစ်ပါ: နီးပါး ပြည့်နေသော အတန်း၊ ကော်လံနှင့် အကွက်တိုင်းသည် တစ်ခုတည်းများ၏ ရင်းမြစ် ဖြစ်သည်။ ထို့နောက် မှတ်စုများ ပြည့်စုံကြောင်း သေချာပါစေ၊ အကြောင်းမှာ ပျောက်နေသော အဖြေက ပုံစံများကို ဖုံးကွယ်ပြီး ခေတ်မမီတော့သော အဖြေက အတုပုံစံများ ဖန်တီးသောကြောင့် ဖြစ်သည်။ ထို့နောက် [နည်းလမ်းများ](techniques) ကို ခက်ခဲမှုအလိုက် စဉ်ဆက်ကြည့်ပါ: ပိတ်ထားသော အဖြေများ၊ အတွဲနှင့် သုံးခုတွဲ၊ X-Wing၊ Y-Wing၊ Swordfish နှင့် XYZ-Wing။ တစ်ခုစီတွင် ဥပမာအစစ်ပါသော ကိုယ်ပိုင်စာမျက်နှာ ရှိသည်။",
+              "ဘာမှ အလုပ်မဖြစ်လျှင် အရိပ်အမြွက် ယူပါ။ Bare Sudoku တွင် အရိပ်အမြွက်က ထည့်ထားသော ဂဏန်း မှားနေသလား ဦးစွာ စစ်ပြီး ယုတ္တိဖြင့် ဖြည့်နိုင်သော နောက်အကွက်ငယ်ကို ရှာကာ နည်းလမ်းအမည်ကို ဖော်ပြသဖြင့် ၎င်းကို သုံးသည့်အခါတွင်ပင် တစ်ခုခု သင်ယူရသည်။ ဂဏန်းထည့်ရန် အရိပ်အမြွက်ကို ထပ်နှိပ်ပါ။"
+            ]
+          },
+          {
+            "h": "Bare Sudoku တွင် ဂဏန်းများကို မည်သို့ ထည့်မည်နည်း။",
+            "p": [
+              "အကွက်ငယ်တစ်ကွက်ကို နှိပ်ပြီး ဂဏန်းကို နှိပ်ပါ။ သို့မဟုတ် ဂဏန်းကို အရင်နှိပ်ပါ: ၎င်းသည် သော့ခတ်သွားပြီး သင်နှိပ်သော အကွက်ငယ်တိုင်းက ၎င်းကို ရရှိသည်၊ ဂဏန်းတစ်လုံး၏ ခြောက်ကြိမ်မြောက်၊ ခုနစ်ကြိမ်မြောက်နှင့် ရှစ်ကြိမ်မြောက်ကို ထည့်ရန် အမြန်ဆုံးနည်း ဖြစ်သည်။ လွှတ်ရန် ဂဏန်းကို ထပ်နှိပ်ပါ။ မှတ်စု ခလုတ်က ခဲတံအမှတ်အသားသို့ ပြောင်းပေးသည်၊ ဖျက် က အကွက်ငယ်ကို ရှင်းပေးသည်၊ နောက်ပြန် က မည်သည့်ခြေလှမ်းကိုမဆို ပြန်ရုပ်သိမ်းသည်၊ မီနူးတွင် မပိတ်ထားလျှင် အမှားများကို အနီရောင်ဖြင့် ပြသည်။",
+              "ကီးဘုတ်တွင် ရွှေ့ရန် မြှားခလုတ်များ၊ ဂဏန်းထည့်ရန် 1 မှ 9၊ ဖျက်ရန် Backspace၊ မှတ်စုအတွက် N၊ နောက်ပြန်အတွက် U၊ အရိပ်အမြွက်အတွက် H၊ မှတ်စုဖြည့်ရန် F နှင့် မီနူးအတွက် Escape ကို သုံးပါ။ ဂိမ်းသည် အလိုအလျောက် သိမ်းဆည်းသည်၊ အော့ဖ်လိုင်းတွင် အလုပ်လုပ်ပြီး ကြော်ငြာနှင့် အကောင့် မရှိပါ။"
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Sudoku တွင် ခန့်မှန်းရန် လိုသလား။",
+            "မှန်ကန်သော ပဟေဠိတွင် မလိုပါ။ Bare Sudoku ပဟေဠိတိုင်းတွင် အဖြေမှန် တစ်ခုတည်းသာ ရှိပြီး ၎င်း၏ အဆင့်ရှိ နည်းလမ်းများအထိ ယုတ္တိသက်သက်ဖြင့် ဖြေနိုင်ကြောင်း စစ်ဆေးထားသည်။ ခန့်မှန်းရမလို ခံစားရလျှင် သင့်မှတ်စုများတွင် အဖြေတစ်ခု ပျောက်နေခြင်း သို့မဟုတ် ရှာဖွေရန် နည်းလမ်းတစ်ခု စောင့်နေခြင်း ဖြစ်သည်။"
+          ],
+          [
+            "ဂဏန်းတစ်လုံးသည် အတန်း၊ ကော်လံ သို့မဟုတ် အကွက်တစ်ခုတွင် နှစ်ကြိမ် ပေါ်နိုင်သလား။",
+            "မပေါ်နိုင်ပါ။ စည်းမျဉ်း တစ်ခုလုံးမှာ ၎င်းပင်: အတန်း ကိုးတန်း၊ ကော်လံ ကိုးခုနှင့် အကွက် ကိုးခု တစ်ခုစီတွင် 1 မှ 9 အထိ ဂဏန်းတိုင်း တစ်ကြိမ်စီသာ ပါသည်။ တူညီသော ဂဏန်း နှစ်လုံးသည် အုပ်စုတစ်ခုတည်းတွင် ရှိနေလျှင် အနည်းဆုံး တစ်လုံး မှားနေသည်။"
+          ],
+          [
+            "လွယ်၊ အလယ်အလတ်၊ ခက်နှင့် ကျွမ်းကျင် တို့၏ ကွာခြားချက်က ဘာလဲ။",
+            "အဆင့်ကို ပဟေဠိ လိုအပ်သော နည်းလမ်းများက သတ်မှတ်သည်။ လွယ်နှင့် အလယ်အလတ်ကို တစ်ခုတည်းများဖြင့်သာ ဖြေရှင်းပြီး လွယ်တွင် ပေးထားသော ဂဏန်း အနည်းဆုံး 38 လုံးဖြင့် စတင်သည်။ ခက်တွင် ပိတ်ထားသော အဖြေများ သို့မဟုတ် အတွဲနှင့် သုံးခုတွဲ လိုအပ်သည်။ ကျွမ်းကျင်တွင် X-Wing၊ Y-Wing၊ Swordfish သို့မဟုတ် XYZ-Wing လိုအပ်သည်။"
+          ],
+          [
+            "အကွက်ငယ်တိုင်းအတွက် မှတ်စုဖြည့်တာ ကောင်းသလား၊ အချို့အတွက်သာ ဖြည့်တာ ကောင်းသလား။",
+            "ခက်နှင့် ကျွမ်းကျင် ပဟေဠိများအတွက် အားလုံး ဖြည့်ပါ: အတွဲ၊ X-Wing နှင့် Y-Wing ကဲ့သို့ ပုံစံများသည် အဖြေတိုင်း ရေးထားမှသာ ပေါ်လာသည်။ လွယ်နှင့် အလယ်အလတ်တွင် မှတ်စုများ မဖြစ်မနေ မလိုဘဲ ကစားသူအများစုက တစ်ခုတည်းများကိုသာ ရှာကြသည်။"
+          ],
+          [
+            "Sudoku တစ်ပုဒ် ဘယ်လောက်ကြာသလဲ။",
+            "လွယ် ပဟေဠိတစ်ပုဒ်သည် မိနစ်အနည်းငယ် ကြာသည်၊ ကျွမ်းကျင် ပဟေဠိများမှာ အဆင့်မြင့် ပုံစံကို မည်မျှ မြန်မြန် တွေ့သည်အပေါ် မူတည်၍ မိနစ် နှစ်ဆယ် သို့မဟုတ် ထို့ထက်ပို ကြာနိုင်သည်။ Bare Sudoku သည် အချိန်မှတ်ကို ပြသပြီး မီနူး ဖွင့်ထားစဉ် ခေတ္တရပ်ထားကာ အဆင့်ဇယား မထားသဖြင့် ကိုယ့်အရှိန်ဖြင့် ကစားပါ။"
+          ],
+          [
+            "Sudoku တွင် ဂဏန်းသင်္ချာ လိုသလား။",
+            "မလိုပါ။ ဂဏန်းများသည် တံဆိပ်များသာ ဖြစ်သည်၊ ပေါင်းခြင်း သို့မဟုတ် ရေတွက်ခြင်း မပါပါ။ မည်သည့် သင်္ကေတ ကိုးခုမဆို အလုပ်ဖြစ်မည်ဖြစ်ပြီး ထို့ကြောင့် Sudoku သည် ဂဏန်း ပဟေဠိ မဟုတ်ဘဲ ယုတ္တိ ပဟေဠိ ဖြစ်သည်။"
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku ဖြေရှင်းနည်းများ: ဥပမာများဖြင့် ရှင်းလင်းချက်",
+        "description": "ပေါ်နေသော တစ်ခုတည်းမှ Swordfish နှင့် XYZ-Wing အထိ Sudoku ဖြေရှင်းနည်း ကိုးမျိုးကို Bare Sudoku အရိပ်အမြွက်များ၏ အစီအစဉ်အတိုင်း ဥပမာအစစ်ဖြင့် ဖော်ပြထားသည်။",
+        "h1": "Sudoku ဖြေရှင်းနည်းများ",
+        "intro": [
+          "Sudoku တိုင်းကို ယုတ္တိနည်းလမ်း အနည်းငယ်ဖြင့် ဖြေရှင်းနိုင်သည်။ ဤစာရင်းတွင် Bare Sudoku ဖြေရှင်းစနစ်နှင့် ၎င်း၏ အရိပ်အမြွက်များ အသုံးပြုသော နည်းလမ်း ကိုးမျိုးကို ဖြေရှင်းစနစ်က စမ်းသည့် အစီအစဉ်အတိုင်း ဖော်ပြထားသည်: တစ်ခုတည်းများ အရင်၊ ထို့နောက် အုပ်စုတစ်ခုအတွင်း ဖယ်ရှားခြင်းများ၊ ထို့နောက် အတန်းနှင့် ကော်လံ အများအပြားကို ဖြတ်သန်းသော ပုံစံများ။ နည်းလမ်းတိုင်းတွင် အဓိပ္ပာယ်၊ ရှာဖွေနည်း၊ ဖန်တီးထားသော ပဟေဠိမှ ဥပမာအစစ်နှင့် အဖြစ်များသော အမှားများ ပါသည့် ကိုယ်ပိုင်စာမျက်နှာ ရှိသည်။",
+          "ပဟေဠိ၏ အဆင့်ကို ၎င်းလိုအပ်သော အခက်ဆုံး နည်းလမ်းက သတ်မှတ်သည်။ လွယ်နှင့် အလယ်အလတ် ပဟေဠိများတွင် တစ်ခုတည်းများသာ လိုသည်၊ ခက် ပဟေဠိများတွင် ပိတ်ထားသော အဖြေများ သို့မဟုတ် အတွဲနှင့် သုံးခုတွဲ လိုသည်၊ ကျွမ်းကျင် ပဟေဠိများတွင် အနည်းဆုံး ငါး သို့မဟုတ် တောင်ပံ တစ်ခု လိုသည်။ အဆင့်မည်သို့ပင်ရှိစေ အလုပ်အများစုကို တစ်ခုတည်းများက လုပ်သည်၊ အဆင့်မြင့် နည်းလမ်းက အဖြေ တစ်ခု နှစ်ခုကို ဖယ်ရှားပေးပြီး ထိုနေရာမှ တစ်ခုတည်းများက ဆက်လုပ်သည်။"
+        ],
+        "faq": [
+          [
+            "Sudoku နည်းလမ်းများကို မည်သည့်အစီအစဉ်ဖြင့် စမ်းသင့်သနည်း။",
+            "အလွယ်ဆုံးမှ စပါ: ပေါ်နေသော တစ်ခုတည်း၊ ပုန်းနေသော တစ်ခုတည်း၊ ပိတ်ထားသော အဖြေများ၊ ပေါ်နေသော အတွဲနှင့် သုံးခုတွဲ၊ ပုန်းနေသော အတွဲနှင့် သုံးခုတွဲ၊ X-Wing၊ Y-Wing၊ Swordfish၊ XYZ-Wing။ Bare Sudoku သည် ဤအစီအစဉ်အတိုင်း အတိအကျ စမ်းပြီး အရိပ်အမြွက်က ရှေ့ဆက်နိုင်စေသော အရိုးရှင်းဆုံး နည်းလမ်းကို အမြဲ အမည်တပ်ပြသည်။"
+          ],
+          [
+            "Sudoku ဖြေရန် ဤနည်းလမ်းအားလုံး လိုသလား။",
+            "လွယ်နှင့် အလယ်အလတ် ပဟေဠိများအတွက် တစ်ခုတည်းများ လုံလောက်သည်။ ခက် ပဟေဠိများတွင် ပိတ်ထားသော အဖြေများနှင့် အတွဲ၊ သုံးခုတွဲများ ထပ်လိုသည်။ ကျွမ်းကျင် ပဟေဠိများတွင် အနည်းဆုံး ငါး သို့မဟုတ် တောင်ပံ တစ်ခု လိုသော်လည်း များသောအားဖြင့် ပဟေဠိတစ်ပုဒ်လျှင် တစ်ကြိမ် နှစ်ကြိမ်သာ ဖြစ်သည်။"
+          ],
+          [
+            "XYZ-Wing ထက် ခက်သော နည်းလမ်းများ ရှိသလား။",
+            "ရှိသည်၊ ဥပမာ ကွင်းဆက်များ၊ တစ်မူထူးခြားမှု စစ်ဆေးချက်များနှင့် အတင်းအကျပ် ကွန်ရက်များ။ Bare Sudoku သည် ၎င်းတို့ လိုအပ်သော ပဟေဠိများကို မဖန်တီးသဖြင့် ဂိမ်းထဲရှိ ပဟေဠိတိုင်းကို ဤစာမျက်နှာရှိ နည်းလမ်း ကိုးမျိုးဖြင့် ဖြေဆုံးနိုင်သည်။"
+          ],
+          [
+            "အဖြေ (candidate) ဆိုတာ ဘာလဲ။",
+            "ဗလာအကွက်ငယ်တစ်ကွက်တွင် ၎င်း၏ အတန်း၊ ကော်လံ သို့မဟုတ် အကွက်ရှိ မည်သည့်အရာကမျှ မပယ်ရသေးသဖြင့် ဝင်နိုင်သေးသော ဂဏန်း။ ဂိမ်းထဲရှိ မှတ်စုများသည် အဖြေများ ဖြစ်သည်။ တစ်ခုတည်းများထက် ကျော်လွန်သော နည်းလမ်းတိုင်းသည် အဖြေများအပေါ် ဆင်ခြင်သဖြင့် ၎င်းတို့ကို ပြည့်စုံတိကျအောင် ထားပါ။"
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "ပေါ်နေသော တစ်ခုတည်း",
+          "title": "Sudoku တွင် ပေါ်နေသော တစ်ခုတည်း: အဖြေတစ်ခုသာ ရှိသော အကွက်ငယ်",
+          "description": "ပေါ်နေသော တစ်ခုတည်းသည် ဖြစ်နိုင်သော ဂဏန်း တစ်လုံးသာ ရှိသည့် ဗလာအကွက်ငယ် ဖြစ်သည်။ ဥပမာအစစ်ဖြင့် လျင်မြန်စွာ ရှာတတ်အောင် လေ့လာပါ။",
+          "h1": "ပေါ်နေသော တစ်ခုတည်း (naked single)",
+          "summary": "ပေါ်နေသော တစ်ခုတည်းသည် အဖြေ တစ်ခုတည်းသာ ရှိသော ဗလာအကွက်ငယ် ဖြစ်သည်: ကျန် ဂဏန်း ရှစ်လုံးသည် ၎င်း၏ အတန်း၊ ကော်လံ သို့မဟုတ် အကွက်တွင် ရှိပြီးသား ဖြစ်သည်။ ကျန်ရှိသော ဂဏန်းသည် ထိုနေရာသို့ ဝင်ရမည်။ ၎င်းသည် အရိုးရှင်းဆုံး၊ အသုံးအများဆုံး Sudoku နည်းလမ်း ဖြစ်ပြီး Bare Sudoku အရိပ်အမြွက်က \"ဤနေရာတွင် အဖြေတစ်ခုသာ\" ဟု ဖော်ပြသော နည်းလမ်း ဖြစ်သည်။",
+          "when": [
+            "အမြဲတမ်း။ ပေါ်နေသော တစ်ခုတည်းများသည် ပထမခြေလှမ်းမှ နောက်ဆုံးအထိ အဆင့်တိုင်းတွင် ပေါ်သည်။ လွယ်နှင့် အလယ်အလတ် ပဟေဠိများတွင် ပုန်းနေသော တစ်ခုတည်းနှင့်အတူ ၎င်းသည် လိုအပ်သော တစ်ခုတည်းသော နည်းလမ်း ဖြစ်သည်။ ပိုခက်သော ပဟေဠိများတွင် အဆင့်မြင့် နည်းလမ်းက ပြုလုပ်သော ဖယ်ရှားမှုတိုင်းသည် များသောအားဖြင့် ပေါ်နေသော တစ်ခုတည်း တစ်ခုကို ချန်ထားခဲ့သဖြင့် ခြေလှမ်းတိုင်းပြီးနောက် ရှာပါ။"
+          ],
+          "spot": [
+            "ဂဏန်းထည့်ပြီးသား အိမ်နီးချင်း များသော အကွက်ငယ်များကို ကြည့်ပါ: ဂဏန်း ခုနစ်လုံး ရှိပြီးသား အတန်းရှိ အကွက်ငယ်၊ သို့မဟုတ် အတန်း၊ ကော်လံနှင့် အကွက် ပေါင်းလျှင် မတူညီသော ဂဏန်း ရှစ်လုံး ပါသော အကွက်ငယ်။ မှတ်စုမရှိလျှင် ထိုအကွက်ငယ်မှ မြင်ရသော ဂဏန်းများကို ရေတွက်ပါ။ မှတ်စုရှိလျှင် ပေါ်နေသော တစ်ခုတည်းမှာ အဖြေ တစ်ခုသာ ပြသော အကွက်ငယ် ဖြစ်ပြီး ထို့ကြောင့် မှတ်စုဖြည့် က ၎င်းတို့ကို ရှာရလွယ်စေသည်။"
+          ],
+          "examples": [
+            {
+              "h": "ဥပမာ",
+              "steps": [
+                "{cell} ကို ကြည့်ပါ။ ၎င်းသည် ဗလာ ဖြစ်သဖြင့် ၎င်း၏ အတန်း၊ ကော်လံနှင့် အကွက်တွင် ထည့်ပြီးသား ဂဏန်းတိုင်းကို စာရင်းပြုစုပါ။",
+                "အတန်း {row} တွင် {rowDigits} ပါသည်။ ကော်လံ {col} တွင် {colDigits} ပါသည်။ အကွက် {box} တွင် {boxDigits} ပါသည်။",
+                "ပေါင်းလိုက်လျှင် ၎င်းတို့သည် {d} မှလွဲ၍ ဂဏန်းတိုင်းကို ပယ်သဖြင့် {d} သည် {cell} တွင် ကျန်ရှိသော တစ်ခုတည်းသော အဖြေ ဖြစ်သည်။",
+                "{cell} တွင် {d} ကို ရေးပါ။ ထို့နောက် ဂဏန်းအသစ်က တူညီသော အတန်း၊ ကော်လံ သို့မဟုတ် အကွက်တွင် နောက်ထပ် တစ်ခုတည်း တစ်ခု ဖန်တီးသလား စစ်ပါ။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "အတန်းကိုသာ သို့မဟုတ် အကွက်ကိုသာ ရေတွက်ခြင်း။ ပယ်ထားသော ဂဏန်း ရှစ်လုံးသည် များသောအားဖြင့် အုပ်စု သုံးခုလုံးမှ ပေါင်း၍ လာသည်။",
+            "ခုနက ထည့်လိုက်သော ဂဏန်းသည်လည်း ၎င်း၏ အိမ်နီးချင်း 20 ကွက်မှ အဖြေများကို ပယ်ကြောင်း မေ့ခြင်း၊ ထည့်ပြီးတိုင်း ပေါ်နေသော တစ်ခုတည်း အသစ်များ ချက်ချင်း ပေါ်လာသည်။",
+            "ပေါ်နေသော တစ်ခုတည်းကို ပုန်းနေသော တစ်ခုတည်းနှင့် ရောထွေးခြင်း: ပေါ်နေသော တစ်ခုတည်းတွင် အကွက်ငယ်၌ အဖြေ တစ်ခုသာ ကျန်သည်၊ ပုန်းနေသော တစ်ခုတည်းတွင် အုပ်စုတစ်ခုအတွင်း ဂဏန်းအတွက် အကွက်ငယ် တစ်ကွက်သာ ကျန်သည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် ပေါ်နေသော တစ်ခုတည်းဆိုတာ ဘာလဲ။",
+              "အဖြေ တစ်ခုတည်းသာ ရှိသော ဗလာအကွက်ငယ်။ ၎င်း၏ အတန်း၊ ကော်လံနှင့် အကွက်တွင် မတူညီသော ဂဏန်း ရှစ်လုံး ထည့်ပြီးသား ဖြစ်သဖြင့် ကိုးလုံးမြောက် ဂဏန်းသည် ကိုက်ညီသော တစ်ခုတည်းသော ဂဏန်း ဖြစ်သည်။"
+            ],
+            [
+              "အင်္ဂလိပ်လို naked (အဝတ်မဲ့) ဟု ဘာကြောင့် ခေါ်သနည်း။",
+              "မှတ်စုများ ရေးပြီးသည်နှင့် ထိုအဖြေ တစ်ခုသည် အကွက်ငယ်ထဲတွင် တိုက်ရိုက် မြင်ရပြီး မည်သည့်အရာကမျှ ၎င်းကို မဖုံးကွယ်သောကြောင့် ဖြစ်သည်။ ပုန်းနေသော တစ်ခုတည်းမှာမူ အခြား အဖြေများကြားတွင် ရှိပြီး အကွက်ငယ်ကို မဟုတ်ဘဲ ဂဏန်းကို ကြည့်၍ ရှာရသည်။"
+            ],
+            [
+              "ပဟေဠိကို ပေါ်နေသော တစ်ခုတည်းများဖြင့်သာ ဖြေနိုင်သလား။",
+              "လွယ် ပဟေဠိ အများအပြားကို ဖြေနိုင်သော်လည်း အများစုတွင် ပုန်းနေသော တစ်ခုတည်းများလည်း လိုသည်။ Bare Sudoku သည် လွယ်နှင့် အလယ်အလတ် ပဟေဠိများကို တစ်ခုတည်း နှစ်မျိုးလုံးဖြင့် ဖြေနိုင်သည်ဟု သတ်မှတ်သည်၊ ခက်နှင့် ကျွမ်းကျင် ပဟေဠိများတွင် အနည်းဆုံး နောက်ထပ် နည်းလမ်း တစ်ခု လိုသည်။"
+            ],
+            [
+              "အရိပ်အမြွက်က ပေါ်နေသော တစ်ခုတည်းများကို ပြသလား။",
+              "ပြသည်။ နောက်ထည့်ရမည့်အရာသည် ပေါ်နေသော တစ်ခုတည်း ဖြစ်လျှင် အရိပ်အမြွက်က အကွက်ငယ်ကို ရွေးပြီး ဂဏန်းနှင့်အတူ \"ဤနေရာတွင် အဖြေတစ်ခုသာ\" ဟု ပြောသည်။ ထည့်ရန် အရိပ်အမြွက်ကို ထပ်နှိပ်ပါ။"
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "ပုန်းနေသော တစ်ခုတည်း",
+          "title": "Sudoku တွင် ပုန်းနေသော တစ်ခုတည်း: ဂဏန်း၏ တစ်ခုတည်းသော နေရာ",
+          "description": "ပုန်းနေသော တစ်ခုတည်းသည် အတန်း၊ ကော်လံ သို့မဟုတ် အကွက်တွင် ဂဏန်းတစ်လုံး ဝင်နိုင်သေးသော တစ်ခုတည်းသော အကွက်ငယ် ဖြစ်သည်။ ဂဏန်းတစ်လုံးချင်း ကြည့်၍ ရှာပါ။",
+          "h1": "ပုန်းနေသော တစ်ခုတည်း (hidden single)",
+          "summary": "ပုန်းနေသော တစ်ခုတည်းသည် အတန်း၊ ကော်လံ သို့မဟုတ် အကွက်တွင် ဖြစ်နိုင်သော အကွက်ငယ် တစ်ကွက်သာ ကျန်သော ဂဏန်း ဖြစ်သည်၊ ထိုအကွက်ငယ်တွင် အခြား အဖြေများ ပြနေလျှင်ပင် ဖြစ်သည်။ အုပ်စုတွင် ထိုဂဏန်း ပါရမည် ဖြစ်သဖြင့် ၎င်းသည် ထိုနေရာသို့ ဝင်သည်။ Bare Sudoku အရိပ်အမြွက်က ၎င်းကို \"ဤအတန်းတွင် 5 အတွက် နေရာတစ်ခုသာ\" ဟု ဖော်ပြသည်၊ ကော်လံ သို့မဟုတ် အကွက်အတွက်လည်း ထိုနည်းတူ ဖြစ်သည်။",
+          "when": [
+            "ဂဏန်းတစ်လုံး ကောင်းကောင်း တိုးတက်လာသည့်အခါတိုင်း: ဂဏန်းတစ်လုံး ငါးကြိမ် သို့မဟုတ် ခြောက်ကြိမ် ပေါ်ပြီးသည်နှင့် ကျန်အကွက်များ အလွန် ကန့်သတ်ခံရပြီး ပုန်းနေသော တစ်ခုတည်းသည် မကြာခဏ နောက်ခြေလှမ်း ဖြစ်လာသည်။ ပုန်းနေသော တစ်ခုတည်းများသည် လွယ်နှင့် အလယ်အလတ် ပဟေဠိများ၏ အဓိက နည်းလမ်း ဖြစ်ပြီး အဆင့်တိုင်းတွင် အဓိက အားကိုးရာ အဖြစ် ဆက်ရှိနေသည်။"
+          ],
+          "spot": [
+            "ဂဏန်းတစ်လုံးချင်း စစ်ကြည့်ပါ။ ဂဏန်းတစ်လုံးကို ယူပြီး ၎င်း မပါသော အကွက်တစ်ခုကို ရှာကာ ထိုဂဏန်း ထည့်ပြီးသားနှင့် အတန်း သို့မဟုတ် ကော်လံ တူသော ထိုအကွက်ရှိ အကွက်ငယ်တိုင်းကို ဖြတ်ပါ။ အကွက်ငယ် တစ်ကွက်သာ ကျန်လျှင် ပုန်းနေသော တစ်ခုတည်းကို တွေ့ပြီ ဖြစ်သည်။ ထိုနည်းတူ စစ်ကြည့်ခြင်းသည် အတန်းများနှင့် ကော်လံများတွင်လည်း အလုပ်ဖြစ်သည်။ ဂိမ်းထဲတွင် ထည့်ပြီးသား ဂဏန်းကို နှိပ်ပါ: ၎င်း၏ မိတ္တူတိုင်း အရောင်ခြယ်ပြမည် ဖြစ်သဖြင့် လွတ်နေသော အကွက်ငယ်များ ထင်ရှားလာသည်။"
+          ],
+          "examples": [
+            {
+              "h": "ဥပမာ",
+              "steps": [
+                "အကွက် {box} တွင် {d} မပါသေးသဖြင့် ၎င်း၏ ဗလာအကွက်ငယ် တစ်ကွက်က ၎င်းကို ယူရမည်။ ဗလာအကွက်ငယ်များမှာ {empties} ဖြစ်သည်။",
+                "{cell} မှလွဲ၍ ၎င်းတို့ တစ်ကွက်စီတွင် တူညီသော အတန်း သို့မဟုတ် ကော်လံ၌ ထည့်ပြီးသား {d} က {d} ကို ပိတ်ဆို့ထားသဖြင့် {d} သည် ထိုနေရာတွင် အဖြေ မဟုတ်ပါ။",
+                "ထို့ကြောင့် {cell} သည် အကွက် {box} တွင် {d} အတွက် တစ်ခုတည်းသော နေရာ ဖြစ်သည်။ {cell} တွင် အခြား အဖြေများ ပြနေသေးလျှင်ပင် {d} ကို ထိုနေရာတွင် ရေးပါ။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "မှန်နိုင်ခြေသာ ရှိသော အကွက်ငယ်တွင် ဂဏန်းထည့်ခြင်း: ထင်ရှားသော အကွက်ငယ်များသာမက အုပ်စု၏ အခြား ဗလာအကွက်ငယ်တိုင်းကို စစ်ပါ။",
+            "အကွက်ငယ်တွင် အဖြေ အများအပြား ပြနေသဖြင့် ပုန်းနေသော တစ်ခုတည်းကို လွတ်သွားခြင်း။ အခြား အဖြေများ အရေးမကြီးပါ၊ အရေးကြီးသည်မှာ ဂဏန်းအတွက် အုပ်စုအတွင်း အခြားနေရာ မရှိခြင်း ဖြစ်သည်။",
+            "အကွက်များကိုသာ စစ်ခြင်း။ အတန်းများနှင့် ကော်လံများတွင်လည်း ပုန်းနေသော တစ်ခုတည်းများ အလားတူ မကြာခဏ ပေါ်သည်၊ အထူးသဖြင့် အဆုံးနားတွင်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် ပုန်းနေသော တစ်ခုတည်းဆိုတာ ဘာလဲ။",
+              "အတန်း၊ ကော်လံ သို့မဟုတ် အကွက်၏ အကွက်ငယ် တစ်ကွက်တည်းတွင်သာ ဝင်နိုင်သော ဂဏန်း။ အုပ်စုတွင် ထိုဂဏန်း ပါရမည် ဖြစ်သဖြင့် အကွက်ငယ်တွင် အခြား အဖြေများ ရှိနေသေးလျှင်ပင် ၎င်းကို ဆုံးဖြတ်ပြီး ဖြစ်သည်။"
+            ],
+            [
+              "ပုန်းနေသော တစ်ခုတည်းနှင့် ပေါ်နေသော တစ်ခုတည်း ဘာကွာသလဲ။",
+              "ပေါ်နေသော တစ်ခုတည်းသည် အကွက်ငယ်အကြောင်း ဖြစ်သည်: အဖြေ တစ်ခုသာ ကျန်သည်။ ပုန်းနေသော တစ်ခုတည်းသည် ဂဏန်းအကြောင်း ဖြစ်သည်: အုပ်စုတစ်ခုတွင် အကွက်ငယ် တစ်ကွက်သာ ကျန်သည်။ နှစ်မျိုးလုံးက ဂဏန်းကို သေချာစွာ ထည့်ပေးသည်။"
+            ],
+            [
+              "ဘယ်ဟာ ရှာရ ပိုလွယ်သလဲ။",
+              "မှတ်စုမရှိလျှင် ဇယားကို ဂဏန်းတစ်လုံးချင်း စစ်ကြည့်နိုင်သဖြင့် ပုန်းနေသော တစ်ခုတည်းများက များသောအားဖြင့် ပိုလွယ်သည်။ မှတ်စု ပြည့်စုံလျှင် အဖြေ တစ်ခုသာ ရှိသော အကွက်ငယ်က ထင်ရှားသဖြင့် ပေါ်နေသော တစ်ခုတည်းများက အလွယ်ဆုံး ဖြစ်သည်။"
+            ],
+            [
+              "အရိပ်အမြွက်က ပုန်းနေသော တစ်ခုတည်းကို မည်သို့ ဖော်ပြသနည်း။",
+              "အကွက်ငယ်ကို ရွေးထားပြီး ဂဏန်းအတွက် \"ဤအတန်းတွင်\"၊ \"ဤကော်လံတွင်\" သို့မဟုတ် \"ဤအကွက်တွင်\" \"နေရာတစ်ခုသာ\" ဟု ဖော်ပြသည်။ ထည့်ရန် အရိပ်အမြွက်ကို ထပ်နှိပ်ပါ။"
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "ပိတ်ထားသော အဖြေများ",
+          "title": "Sudoku ပိတ်ထားသော အဖြေများ: ညွှန်ပြခြင်း၊ ပိုင်ဆိုင်ခြင်း",
+          "description": "ပိတ်ထားသော အဖြေများ: အကွက်တစ်ခုရှိ ဂဏန်း၏ အဖြေအားလုံး မျဉ်းတစ်ကြောင်းတည်းတွင် ရှိလျှင် သို့မဟုတ် ပြောင်းပြန်ဖြစ်လျှင် ၎င်းကို အခြားနေရာမှ ဖယ်ရှားသည်။",
+          "h1": "ပိတ်ထားသော အဖြေများ (locked candidates)",
+          "summary": "ပိတ်ထားသော အဖြေများသည် ဂဏန်းထည့်မည့်အစား အဖြေများကို ဖယ်ရှားသော ပထမဆုံး နည်းလမ်း ဖြစ်သည်။ ၎င်းတွင် ပုံစံ နှစ်မျိုး ရှိသည်။ ညွှန်ပြခြင်း: အကွက်တစ်ခုအတွင်း ဂဏန်းတစ်လုံး၏ အဖြေအားလုံးသည် အတန်း သို့မဟုတ် ကော်လံ တစ်ခုတည်းတွင် ရှိသဖြင့် ထိုဂဏန်းကို ထိုမျဉ်း၏ ကျန်နေရာများမှ ဖယ်ရှားသည်။ ပိုင်ဆိုင်ခြင်း: အတန်း သို့မဟုတ် ကော်လံတစ်ခုအတွင်း ဂဏန်းတစ်လုံး၏ အဖြေအားလုံးသည် အကွက် တစ်ခုတည်းတွင် ရှိသဖြင့် ထိုဂဏန်းကို ထိုအကွက်၏ ကျန်နေရာများမှ ဖယ်ရှားသည်။ Bare Sudoku အရိပ်အမြွက်က ၎င်းဖွင့်ပေးသော ထည့်မှုကို \"ပိတ်ထားသော အဖြေများ\" ဟု အမည်တပ်သည်။",
+          "when": [
+            "ခက် ပဟေဠိတွင် တစ်ခုတည်းများ ကုန်သွားလျှင် ပထမဆုံး စမ်းရမည့်အရာ ဖြစ်သည်။ အနည်းဆုံး သင်စစ်ဆေးနေသော ဂဏန်းအတွက် မှတ်စု ပြည့်စုံရန် လိုသည်။ ပိတ်ထားသော အဖြေများသည် အဖြစ်များသည်: ခက် ပဟေဠိ အများစုတွင် လိုအပ်ပြီး ကျွမ်းကျင် ပဟေဠိများက ပိုကြီးသော ပုံစံများကြားတွင် ၎င်းတို့ကို သုံးသည်။"
+          ],
+          "spot": [
+            "ညွှန်ပြခြင်းအတွက် အကွက်တိုင်းနှင့် ၎င်းတွင် မပါသေးသော ဂဏန်းတိုင်းကို ကြည့်ပါ: ထိုဂဏန်း၏ အဖြေ အကွက်ငယ်များသည် အတန်း သို့မဟုတ် ကော်လံ တစ်ခုတည်းတွင် ရှိလျှင် ထိုမျဉ်းပေါ်တွင် အကွက်အပြင်ဘက်၌ တူညီသော ဂဏန်းက အဖြေအဖြစ် ပေါ်နေသလား စစ်ပါ။ ပိုင်ဆိုင်ခြင်းအတွက် အတန်း သို့မဟုတ် ကော်လံ တစ်လျှောက် ကြည့်ပါ: ဂဏန်းတစ်လုံး၏ အဖြေအားလုံး အကွက် တစ်ခုအတွင်း ရှိလျှင် ထိုအကွက်၏ ကျန်နေရာကို ရှင်းလင်းနိုင်သည်။ ဂိမ်းထဲတွင် ဂဏန်းခလုတ်ကို နှိပ်လျှင် ၎င်း၏ အဖြေတိုင်း အရောင်ခြယ်ပြမည်၊ အကွက်တစ်ခုအတွင်း အရောင်ခြယ်ထားသော မှတ်စု နှစ်ခု သို့မဟုတ် သုံးခု တန်းစီနေခြင်းသည် ပုံစံ ဖြစ်သည်။"
+          ],
+          "examples": [
+            {
+              "h": "ညွှန်ပြခြင်း",
+              "steps": [
+                "အကွက် {box} တွင် ဂဏန်း {d} ၏ အဖြေ အကွက်ငယ်များမှာ ဤနေရာများသာ ဖြစ်သည်: {cells}။ ၎င်းတို့အားလုံး အတန်း {row} တွင် ရှိသည်။",
+                "အကွက် {box} တွင် {d} တစ်လုံး လိုအပ်သဖြင့် ထိုအကွက်ငယ်များထဲမှ မည်သည့်တစ်ကွက်တွင် ကျသည်ဖြစ်စေ အတန်း {row} ၏ {d} သည် အကွက် {box} အတွင်း ရှိသည်။",
+                "အတန်း {row} တွင် ဒုတိယ {d} မရှိနိုင်သဖြင့် အကွက်အပြင်ဘက်ရှိ အတန်း {row} ၏ အကွက်ငယ်များမှ {d} ကို ဖယ်ရှားပါ: {elim}။"
+              ]
+            },
+            {
+              "h": "ပိုင်ဆိုင်ခြင်း",
+              "steps": [
+                "အတန်း {row} တွင် ဂဏန်း {d} သည် {cells} တွင်သာ ဝင်နိုင်ပြီး ၎င်းတို့အားလုံး အကွက် {box} အတွင်း ရှိသည်။",
+                "အတန်း {row} တွင် {d} ပါရမည် ဖြစ်သဖြင့် အကွက် {box} ၏ {d} ကို အတန်း {row} က ပိုင်ဆိုင်သည်။ အကွက် {box} ၏ အခြား အကွက်ငယ်များတွင် {d} မရှိနိုင်ပါ။",
+                "{elim} မှ {d} ကို ဖယ်ရှားပါ။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ညွှန်ပြခြင်းတွင် အကွက်အပြင်ဘက်မှ မဟုတ်ဘဲ အကွက်အတွင်းမှ ဂဏန်းကို ဖယ်ရှားခြင်း၊ သို့မဟုတ် ပိုင်ဆိုင်ခြင်းတွင် ပြောင်းပြန် လုပ်ခြင်း။ ဖယ်ရှားမှုများသည် အမြဲ မျဉ်းပေါ်တွင် ရှိပြီး အကွက်ထဲတွင် မရှိသော အကွက်ငယ်များ၊ သို့မဟုတ် အကွက်ထဲတွင် ရှိပြီး မျဉ်းပေါ်တွင် မရှိသော အကွက်ငယ်များသို့ သွားသည်။",
+            "အဖြေများသည် အကွက်၏ အတန်း နှစ်တန်းတွင် ပြန့်နေစဉ် စည်းမျဉ်းကို သုံးခြင်း။ အကွက်အတွင်း ထိုဂဏန်း၏ အဖြေ အကွက်ငယ်အားလုံး မျဉ်း တစ်ကြောင်းတည်းတွင် ရှိရမည်။",
+            "ဖယ်ရှားမှုက ဖန်တီးပေးသော တစ်ခုတည်းကို ရှာရန် မေ့ခြင်း။ ပိတ်ထားသော အဖြေများသည် ကိုယ်တိုင် ဂဏန်းထည့်ခဲသည်၊ ၎င်းတို့က တစ်ခုတည်း တစ်ခုကို ပြင်ဆင်ပေးသည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် ပိတ်ထားသော အဖြေများဆိုတာ ဘာလဲ။",
+              "အကွက်တစ်ခုနှင့် မျဉ်းတစ်ကြောင်း ဆုံရာအပိုင်းအတွင်း ပိတ်မိနေသော ဂဏန်းတစ်လုံး၏ အဖြေများ။ အကွက် သို့မဟုတ် မျဉ်းတွင် ထိုဂဏန်းကို ဆုံရာအပိုင်းအတွင်း ပါရမည် ဖြစ်သဖြင့် ဂဏန်းကို မျဉ်း၏ ကျန်နေရာ သို့မဟုတ် အကွက်၏ ကျန်နေရာမှ ဖယ်ရှားနိုင်သည်။"
+            ],
+            [
+              "ညွှန်ပြခြင်းနှင့် ပိုင်ဆိုင်ခြင်း ဘာကွာသလဲ။",
+              "ညွှန်ပြခြင်းသည် အကွက်မှ စတင်သည်: အကွက်အတွင်း ဂဏန်း၏ အဖြေများက အတန်း သို့မဟုတ် ကော်လံ တစ်ခုတည်းကို ညွှန်ပြသဖြင့် ဂဏန်းကို ထိုမျဉ်း၏ ကျန်နေရာမှ ဖယ်ရှားသည်။ ပိုင်ဆိုင်ခြင်းသည် အတန်း သို့မဟုတ် ကော်လံမှ စတင်သည်: မျဉ်း၏ ထိုဂဏန်းအတွက် အဖြေအားလုံး အကွက် တစ်ခုတည်းတွင် ရှိသဖြင့် မျဉ်းက ဂဏန်းကို ပိုင်ဆိုင်ပြီး ၎င်းကို အကွက်၏ ကျန်နေရာမှ ဖယ်ရှားသည်။"
+            ],
+            [
+              "ပိတ်ထားသော အဖြေများကို ဆုံရာ ဖယ်ရှားခြင်းဟုလည်း ခေါ်သလား။",
+              "ခေါ်သည်။ အခြား အမည်များမှာ ပိုင်ဆိုင်ခြင်း ပုံစံအတွက် အကွက်-မျဉ်း လျှော့ချခြင်း၊ ညွှန်ပြခြင်း ပုံစံအတွက် ညွှန်ပြသော အတွဲ သို့မဟုတ် ညွှန်ပြသော သုံးခုတွဲ ဖြစ်သည်။ Bare Sudoku သည် နှစ်မျိုးလုံးအတွက် အမည် တစ်ခုတည်းကို သုံးသည်။"
+            ],
+            [
+              "မည်သည့်အဆင့်တွင် ပိတ်ထားသော အဖြေများ လိုသနည်း။",
+              "ခက်။ ပိတ်ထားသော အဖြေများ သို့မဟုတ် အတွဲနှင့် သုံးခုတွဲ လိုပြီး ထို့ထက် ခက်သည့်အရာ မလိုသော ပဟေဠိကို ခက် ဟု သတ်မှတ်သည်၊ ကျွမ်းကျင် ပဟေဠိများတွင် ငါး သို့မဟုတ် တောင်ပံ တစ်ခုလည်း လိုသည်။"
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "ပေါ်နေသော အတွဲနှင့် သုံးခုတွဲ",
+          "title": "Sudoku တွင် ပေါ်နေသော အတွဲနှင့် သုံးခုတွဲ: အလုပ်လုပ်ပုံ",
+          "description": "ပေါ်နေသော အတွဲနှင့် သုံးခုတွဲ: အုပ်စုတစ်ခုရှိ အဖြေ နှစ်ခု သို့မဟုတ် သုံးခု တူညီသော အကွက်ငယ် နှစ်ကွက် သို့မဟုတ် သုံးကွက်။ ရှာနည်းကို လေ့လာပါ။",
+          "h1": "ပေါ်နေသော အတွဲနှင့် သုံးခုတွဲ (naked pair, naked triple)",
+          "summary": "ပေါ်နေသော အတွဲသည် အတန်း၊ ကော်လံ သို့မဟုတ် အကွက် တစ်ခုတည်းရှိ အဖြေ နှစ်ခု အတိအကျ တူညီသော အကွက်ငယ် နှစ်ကွက် ဖြစ်သည်။ ထိုဂဏန်း နှစ်လုံးသည် ထိုအကွက်ငယ် နှစ်ကွက်ထဲ ဝင်ရမည် ဖြစ်သဖြင့် ၎င်းတို့ကို အုပ်စု၏ အခြား အကွက်ငယ်တိုင်းမှ ဖယ်ရှားနိုင်သည်။ ပေါ်နေသော သုံးခုတွဲသည် အကွက်ငယ် သုံးကွက်နှင့် ဂဏန်း သုံးလုံးဖြင့် တူညီသော အတွေးအခေါ် ဖြစ်သည်၊ အကွက်ငယ်တစ်ကွက်စီက ၎င်းတို့ထဲမှ နှစ်လုံး သို့မဟုတ် သုံးလုံးလုံးကို ပြနိုင်သည်။ Bare Sudoku အရိပ်အမြွက်က ရလာသော ထည့်မှုကို \"အတွဲ သို့မဟုတ် သုံးခု\" ဟု အမည်တပ်သည်။",
+          "when": [
+            "မှတ်စုများ ပြည့်စုံပြီး တစ်ခုတည်းများနှင့် ပိတ်ထားသော အဖြေများ ကုန်သွားပြီးနောက်။ ပေါ်နေသော အတွဲများသည် ခက် ပဟေဠိများတွင် အလွန် အဖြစ်များပြီး ပေါ်နေသော သုံးခုတွဲများက နည်းသည်။ ဗလာအကွက်ငယ် ငါးကွက် သို့မဟုတ် ထို့ထက်ပို ကျန်သေးသော အုပ်စုတိုင်းတွင် နှစ်မျိုးလုံးကို စစ်သင့်သည်။"
+          ],
+          "spot": [
+            "အဖြေ နှစ်ခုသာ ရှိသော အကွက်ငယ်များကို ရှာပြီး တူညီသော အုပ်စုအတွင်း ထိုအဖြေ နှစ်ခုတည်း ရှိသော အခြား အကွက်ငယ်ကို ရှာပါ။ သုံးခုတွဲအတွက် အဖြေ နှစ်ခုနှင့် သုံးခု ရှိသော အကွက်ငယ် အများအပြား ပါသော အုပ်စုများကို ကြည့်ပြီး ၎င်းတို့ထဲမှ သုံးကွက်သည် ပေါင်းလျှင် မတူညီသော ဂဏန်း သုံးလုံးသာ သုံးသလား စစ်ပါ။ မှတ်စုများ ရေးပြီးသည်နှင့် အဖြေ အတိအကျ တူညီသော အကွက်ငယ်များကို မြင်ရလွယ်သည်၊ ဂိမ်းထဲရှိ မှတ်စုဖြည့် က ၎င်းကို တစ်ချက်နှိပ်ရုံဖြင့် လုပ်ပေးသည်။"
+          ],
+          "examples": [
+            {
+              "h": "ပေါ်နေသော အတွဲ",
+              "steps": [
+                "{unit} ရှိ {cellA} နှင့် {cellB} တွင် အဖြေ နှစ်ခု အတိအကျ တူညီသည်: {d1} နှင့် {d2}။",
+                "တစ်ကွက်က {d1} ဖြစ်ရမည်၊ နောက်တစ်ကွက်က {d2} ဖြစ်ရမည်။ မည်သည့်တစ်ကွက်လဲ မသိသော်လည်း ဂဏန်း နှစ်လုံးလုံးကို ဤအကွက်ငယ် နှစ်ကွက်က သုံးပြီး ဖြစ်သည်။",
+                "ထို့ကြောင့် {unit} ၏ အခြား မည်သည့် အကွက်ငယ်တွင်မျှ {d1} သို့မဟုတ် {d2} မရှိနိုင်ပါ။ {elim} ကို ဖယ်ရှားပါ။"
+              ]
+            },
+            {
+              "h": "ပေါ်နေသော သုံးခုတွဲ",
+              "steps": [
+                "{unit} ရှိ အကွက်ငယ် သုံးကွက်သည် ၎င်းတို့၏ အဖြေအားလုံးကို တူညီသော ဂဏန်း သုံးလုံး {digits} မှ ယူသည်: {cells}။",
+                "ထိုဂဏန်း သုံးလုံးသည် ဤအကွက်ငယ် သုံးကွက်ကို တစ်နည်းနည်းဖြင့် ဖြည့်ရမည်။ အကွက်ငယ်တစ်ကွက်က အဖြေ သုံးခုလုံး ပြရန် မလိုပါ၊ အရေးကြီးသည်မှာ ထိုသုံးကွက်ထဲမှ မည်သည့်တစ်ကွက်တွင်မျှ အစုအပြင်ဘက်ရှိ အဖြေ မရှိခြင်း ဖြစ်သည်။",
+                "{unit} ၏ အခြား အကွက်ငယ်တိုင်းမှ {digits} ကို ဖယ်ရှားပါ: {elim}။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "အဖြေ နှစ်ခု တူသော်လည်း တတိယ အဖြေလည်း ရှိသော အကွက်ငယ် နှစ်ကွက်ကို ယူခြင်း။ ပေါ်နေသော အတွဲအတွက် အကွက်ငယ်တစ်ကွက်စီတွင် ထိုအဖြေ နှစ်ခု အတိအကျသာ ရှိရမည်၊ အခြား မရှိရ။",
+            "အတွဲ အကွက်ငယ်များ ကိုယ်တိုင်မှ ဂဏန်းများကို ဖယ်ရှားခြင်း။ အတွဲသည် ၎င်း၏ အဖြေများကို ဆက်ထားသည်၊ ဖယ်ရှားမှုများသည် အုပ်စု၏ အခြား အကွက်ငယ်များသို့ သွားသည်။",
+            "သုံးခုတွဲ၏ အကွက်ငယ်တိုင်းက ဂဏန်း သုံးလုံးလုံး ပြရမည်ဟု တောင်းဆိုခြင်း။ အစုအပြင်ဘက် အဖြေ မည်သည့်အကွက်ငယ်တွင်မျှ မရှိသရွေ့ သုံးလုံးထဲမှ နှစ်လုံး ရှိသော အကွက်ငယ်က ရပါသည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် ပေါ်နေသော အတွဲဆိုတာ ဘာလဲ။",
+              "အုပ်စုတစ်ခုအတွင်း အဖြေ နှစ်ခု အတိအကျ တူညီသော အကွက်ငယ် နှစ်ကွက်။ ထိုဂဏန်း နှစ်လုံးသည် ထိုအကွက်ငယ် နှစ်ကွက်ထဲ ပိတ်မိနေသဖြင့် အုပ်စု၏ ကျန်နေရာမှ ဖယ်ရှားနိုင်သည်။"
+            ],
+            [
+              "ပေါ်နေသော သုံးခုတွဲဆိုတာ ဘာလဲ။",
+              "အုပ်စုတစ်ခုအတွင်း အဖြေများ ပေါင်းလျှင် ဂဏန်း သုံးလုံးသာ ဖြစ်သော အကွက်ငယ် သုံးကွက်။ အကွက်ငယ်တစ်ကွက်စီတွင် ၎င်းတို့ထဲမှ နှစ်လုံး သို့မဟုတ် သုံးလုံး ရှိနိုင်သည်။ ထိုဂဏန်း သုံးလုံးက အကွက်ငယ် သုံးကွက်ကို ဖြည့်သဖြင့် ၎င်းတို့ကို အုပ်စု၏ အခြား အကွက်ငယ်များမှ ဖယ်ရှားနိုင်သည်။"
+            ],
+            [
+              "ပေါ်နေသော အတွဲက ဂဏန်းထည့်ပေးသလား။",
+              "ကိုယ်တိုင် မထည့်ပါ။ ၎င်းက အဖြေများကို ဖယ်ရှားပြီး ထိုဖယ်ရှားမှုက များသောအားဖြင့် ပေါ်နေသော သို့မဟုတ် ပုန်းနေသော တစ်ခုတည်း တစ်ခုကို ချန်ထားသည်။ Bare Sudoku ရှိ အရိပ်အမြွက်က ထိုတစ်ခုတည်းကို ပြပြီး ၎င်းကို ဖြစ်စေသော နည်းလမ်းကို အမည်တပ်သည်။"
+            ],
+            [
+              "ပေါ်နေသော အတွဲသည် အကွက်နှင့် အတန်းတွင် တစ်ပြိုင်နက် ရှိနိုင်သလား။",
+              "ရှိနိုင်သည်။ အကွက်ငယ် နှစ်ကွက်သည် အတန်းနှင့် အကွက် တူနေလျှင် အတွဲက အုပ်စု နှစ်ခုလုံးတွင် ဖယ်ရှားသည်။ Bare Sudoku က ၎င်းတို့ကို အုပ်စု တစ်ခုချင်း ကိုင်တွယ်သည်။"
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "ပုန်းနေသော အတွဲနှင့် သုံးခုတွဲ",
+          "title": "Sudoku တွင် ပုန်းနေသော အတွဲနှင့် သုံးခုတွဲ: ရှာဖွေနည်း",
+          "description": "ပုန်းနေသော အတွဲသည် အုပ်စုတစ်ခု၏ တူညီသော အကွက်ငယ် နှစ်ကွက်တွင်သာ ဝင်နိုင်သော ဂဏန်း နှစ်လုံး ဖြစ်ပြီး အခြား အဖြေများကို ဖယ်ရှားသည်။",
+          "h1": "ပုန်းနေသော အတွဲနှင့် သုံးခုတွဲ (hidden pair, hidden triple)",
+          "summary": "ပုန်းနေသော အတွဲသည် အတန်း၊ ကော်လံ သို့မဟုတ် အကွက် တစ်ခုအတွင်း တူညီသော အကွက်ငယ် နှစ်ကွက်တွင်သာ အဖြေ ဖြစ်ပြီး အခြားမည်သည့်နေရာတွင်မျှ မဖြစ်သော ဂဏန်း နှစ်လုံး ဖြစ်သည်။ ထိုအကွက်ငယ် နှစ်ကွက်တွင် ထိုဂဏန်း နှစ်လုံး ရှိရမည် ဖြစ်သဖြင့် ၎င်းတို့ထဲရှိ အခြား အဖြေတိုင်းကို ဖယ်ရှားနိုင်သည်။ ပုန်းနေသော သုံးခုတွဲသည် အကွက်ငယ် သုံးကွက်တွင် ပိတ်မိနေသော ဂဏန်း သုံးလုံးဖြင့် ထိုနည်းတူ အလုပ်လုပ်သည်။ ဖယ်ရှားပြီးနောက် ထိုအကွက်ငယ်များက ပေါ်နေသော အတွဲ သို့မဟုတ် သုံးခုတွဲကို ပြသည်။ Bare Sudoku အရိပ်အမြွက်က ရလာသော ထည့်မှုကို \"အတွဲ သို့မဟုတ် သုံးခု\" ဟု အမည်တပ်သည်။",
+          "when": [
+            "အုပ်စုတစ်ခုတွင် အဖြေ များစွာပါသော အကွက်ငယ်များ ရှိပြီး တစ်ခုတည်းများ ကုန်သွားသည့်အခါ။ ပုန်းနေသော အတွဲများသည် ပြည့်ကျပ်နေသော အကွက်ငယ်များအတွင်း ပုန်းနေသဖြင့် ပေါ်နေသော အတွဲများ မမြင်ရသည့် နေရာတွင် အတိအကျ ရှာသင့်သည်။ ပုန်းနေသော သုံးခုတွဲများ ရှားပါးသည်၊ Bare Sudoku က ၎င်းတို့ကို စစ်ဆေးသော်လည်း ခက် ပဟေဠိ အများစုကို ၎င်းတို့မပါဘဲ ဖြေရှင်းသည်။"
+          ],
+          "spot": [
+            "အကွက်ငယ်အလိုက် မဟုတ်ဘဲ ဂဏန်းအလိုက် လုပ်ပါ။ အုပ်စုတစ်ခုတွင် မပါသေးသော ဂဏန်းတစ်လုံးစီ ဝင်နိုင်သော အကွက်ငယ်များကို မှတ်ပါ။ ဂဏန်း နှစ်လုံး တစ်လုံးစီတွင် ဖြစ်နိုင်သော အကွက်ငယ် နှစ်ကွက်သာ ရှိပြီး ၎င်းတို့မှာ တူညီသော နှစ်ကွက် ဖြစ်လျှင် ပုန်းနေသော အတွဲကို တွေ့ပြီ ဖြစ်သည်။ ဂိမ်းထဲတွင် ဂဏန်းခလုတ်ကို နှိပ်၍ ၎င်း၏ အဖြေများကို အရောင်ခြယ်ပါ၊ ဂဏန်း နှစ်လုံးက အုပ်စုတစ်ခု၏ တူညီသော အကွက်ငယ် နှစ်ကွက်ကိုသာ အရောင်ခြယ်ပြပြီး ထိုအုပ်စုတွင် အခြား မရှိလျှင် ၎င်းသည် ပုံစံ ဖြစ်သည်။"
+          ],
+          "examples": [
+            {
+              "h": "ပုန်းနေသော အတွဲ",
+              "steps": [
+                "{unit} တွင် ဂဏန်း {d1} နှင့် {d2} တစ်လုံးစီတွင် ဖြစ်နိုင်သော အကွက်ငယ် နှစ်ကွက်သာ ရှိပြီး ၎င်းတို့မှာ တူညီသော နှစ်ကွက် ဖြစ်သည်: {cells}။",
+                "ထိုအကွက်ငယ် နှစ်ကွက်တွင် {d1} နှင့် {d2} ရှိရမည် ဖြစ်သဖြင့် ၎င်းတို့၏ အခြား အဖြေများ မဖြစ်နိုင်ပါ။",
+                "{elim} ကို ဖယ်ရှားပါ။ ယခု ထိုအကွက်ငယ် နှစ်ကွက်က ပေါ်နေသော အတွဲကို ပြပြီး နောက်ထပ် ဖွင့်ပေးနိုင်သည်။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "အတွဲ ဂဏန်း နှစ်လုံးကို အတွဲ အကွက်ငယ်များမှ ဖယ်ရှားခြင်း။ ဖယ်ရှားရမည်မှာ ထိုအကွက်ငယ်များ၏ အခြား အဖြေများ ဖြစ်သည်၊ အတွဲ ဂဏန်းများ ကျန်ရစ်သည်။",
+            "အုပ်စုအတွင်း ဖြစ်နိုင်သော တတိယ အကွက်ငယ် ရှိသည့် ဂဏန်းကို လက်ခံခြင်း။ ဂဏန်း နှစ်လုံးလုံးသည် ထိုအကွက်ငယ် နှစ်ကွက်တွင်သာ အတိအကျ ကန့်သတ်ခံရမည်။",
+            "အကွက်များတွင်သာ ရှာခြင်း။ ပုန်းနေသော အတွဲများသည် အတန်းများနှင့် ကော်လံများတွင်လည်း အလားတူ မကြာခဏ ပေါ်သည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် ပုန်းနေသော အတွဲဆိုတာ ဘာလဲ။",
+              "အုပ်စုတစ်ခု၏ တူညီသော အကွက်ငယ် နှစ်ကွက်တွင်သာ ဝင်နိုင်သော ဂဏန်း နှစ်လုံး။ ထိုအကွက်ငယ်များက ထိုဂဏန်းများကို ယူရမည် ဖြစ်သဖြင့် ၎င်းတို့၏ အခြား အဖြေများကို ဖယ်ရှားသည်။"
+            ],
+            [
+              "ပုန်းနေသော အတွဲသည် ပေါ်နေသော အတွဲနှင့် ဘယ်လို ကွာသလဲ။",
+              "ပေါ်နေသော အတွဲကို မြင်ရသည်: တူညီသော အဖြေ နှစ်ခုသာ ပြသော အကွက်ငယ် နှစ်ကွက်။ ပုန်းနေသော အတွဲကို အကွက်ငယ် နှစ်ကွက်ရှိ အပို အဖြေများက ဖုံးထားသည်။ ထိုအပိုများကို ဖယ်ရှားလိုက်လျှင် ပုန်းနေသော အတွဲသည် ပေါ်နေသော အတွဲ ဖြစ်လာသည်။"
+            ],
+            [
+              "ပုန်းနေသော သုံးခုတွဲဆိုတာ ဘာလဲ။",
+              "အုပ်စုတစ်ခု၏ အကွက်ငယ် သုံးကွက်တွင် ပိတ်မိနေသော ဂဏန်း သုံးလုံး။ ဂဏန်းတစ်လုံးစီသည် အကွက်ငယ် သုံးကွက်လုံးတွင် ပေါ်ရန် မလိုပါ၊ အရေးကြီးသည်မှာ ထိုဂဏန်း သုံးလုံးထဲမှ မည်သည့်တစ်လုံးတွင်မျှ ထိုအကွက်ငယ်များ အပြင်ဘက်၌ အဖြေ မရှိခြင်း ဖြစ်သည်။"
+            ],
+            [
+              "အရိပ်အမြွက်က ပုန်းနေသော အတွဲနှင့် ပေါ်နေသော အတွဲကို ခွဲခြားသလား။",
+              "မခွဲခြားပါ။ Bare Sudoku က နှစ်မျိုးလုံးကို ရှာပြီး ရလာသော ထည့်မှုကို \"အတွဲ သို့မဟုတ် သုံးခု\" ဟု အမည်တပ်သည်။ ၎င်းတို့ကို ရှာပုံ မတူသဖြင့် ဤစာမျက်နှာများက ခွဲထားသည်။"
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Sudoku တွင် X-Wing: နည်းလမ်း အလုပ်လုပ်ပုံ",
+          "description": "X-Wing: အတန်း နှစ်တန်းတွင် အဖြေ အကွက်ငယ် နှစ်ကွက်စီ ရှိပြီး ကော်လံ နှစ်ခုတည်းတွင် တန်းစီနေသော ဂဏန်းကို ထိုကော်လံများ၏ ကျန်နေရာမှ ဖယ်ရှားသည်။",
+          "h1": "X-Wing",
+          "summary": "X-Wing သည် ဂဏန်းတစ်လုံးနှင့် ထောင့်မှန်စတုဂံ၏ ထောင့်များရှိ အကွက်ငယ် လေးကွက်ဖြင့် ဖွဲ့သော ပုံစံ ဖြစ်သည်။ ဂဏန်းတွင် အတန်း နှစ်တန်း တစ်တန်းစီ၌ အဖြေ အကွက်ငယ် နှစ်ကွက် အတိအကျ ရှိပြီး ထိုအကွက်ငယ်များသည် တူညီသော ကော်လံ နှစ်ခုတွင် ရှိလျှင် ဂဏန်းသည် စတုဂံ၏ ဆန့်ကျင်ဘက် ထောင့် နှစ်ခုကို ယူရမည်။ ထို့ကြောင့် ၎င်းကို ထိုကော်လံ နှစ်ခု၏ အခြား အကွက်ငယ်တိုင်းမှ ဖယ်ရှားနိုင်သည်။ အတန်းနှင့် ကော်လံ နေရာလဲလျှင်လည်း ထိုနည်းတူ အလုပ်ဖြစ်သည်။ ၎င်းသည် Bare Sudoku ရှိ ပထမဆုံး ကျွမ်းကျင် နည်းလမ်း ဖြစ်သည်။",
+          "when": [
+            "တစ်ခုတည်းများ၊ ပိတ်ထားသော အဖြေများနှင့် အတွဲ၊ သုံးခုတွဲများ ကုန်သွားသည့်အခါ။ X-Wing များသည် အဖြစ်အများဆုံး ကျွမ်းကျင် ပုံစံ ဖြစ်ပြီး ဂဏန်းတစ်လုံးတွင် အဖြေ အနည်းငယ်သာ ကျန်သည့်အခါ၊ ပုံမှန်အားဖြင့် လေးကြိမ်မှ ခြောက်ကြိမ် ထည့်ပြီးသည့်အခါ မကြာခဏ ပေါ်သည်။ သင်စစ်ဆေးနေသော ဂဏန်းအတွက် မှတ်စု ပြည့်စုံရန် လိုသည်။"
+          ],
+          "spot": [
+            "ဂဏန်းတစ်လုံးကို ရွေးပြီး ၎င်းအတွက် အဖြေ အကွက်ငယ် နှစ်ကွက် အတိအကျ ရှိသော အတန်းများကို ရှာပါ။ ထိုကဲ့သို့ အတန်း နှစ်တန်းသည် တူညီသော ကော်လံ နှစ်ခုကို မျှဝေလျှင် ထိုကော်လံများတွင် ထိုဂဏန်း၏ အခြား အဖြေများကို စစ်ပါ: ၎င်းတို့မှာ ဖယ်ရှားရမည့်အရာများ ဖြစ်သည်။ ထို့နောက် ကော်လံများကို အခြေခံအဖြစ် ထား၍ ထပ်လုပ်ပါ။ ဂိမ်းထဲတွင် ဂဏန်းခလုတ်ကို နှိပ်ပါ: ၎င်း၏ အဖြေတိုင်း အရောင်ခြယ်ပြမည် ဖြစ်ပြီး အရောင်ခြယ်ထားသော မှတ်စု လေးခု၏ စတုဂံကို မြင်ရလွယ်သည်။"
+          ],
+          "examples": [
+            {
+              "h": "ဥပမာ",
+              "steps": [
+                "ဂဏန်း {d} တွင် အတန်း {r1} ၌ အဖြေ အကွက်ငယ် နှစ်ကွက် အတိအကျ၊ အတန်း {r2} ၌ နှစ်ကွက် အတိအကျ ရှိပြီး ၎င်းတို့သည် တူညီသော ကော်လံ နှစ်ခု {c1} နှင့် {c2} တွင် တန်းစီနေသည်: {cells}။",
+                "အတန်း {r1} က ၎င်း၏ {d} ကို ကော်လံ {c1} သို့မဟုတ် {c2} တွင် ထည့်ပြီး အတန်း {r2} က ၎င်း၏ {d} ကို ကျန်ကော်လံတွင် ထည့်သည်။ မည်သို့ပင်ဖြစ်စေ ကော်လံ {c1} နှင့် {c2} တစ်ခုစီသည် ဤအတန်း နှစ်တန်းမှ {d} တစ်လုံးစီ ရရှိသည်။",
+                "ထို့ကြောင့် {d} သည် ကော်လံ {c1} နှင့် {c2} ၏ အခြားမည်သည့်နေရာတွင်မျှ မပေါ်နိုင်ပါ။ {elim} မှ {d} ကို ဖယ်ရှားပါ။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ဂဏန်းအတွက် အဖြေ အကွက်ငယ် သုံးကွက် ရှိသော အတန်းကို သုံးခြင်း။ အခြေခံ အတန်းတိုင်းတွင် နှစ်ကွက် အတိအကျ ရှိရမည်ဖြစ်ပြီး နှစ်ကွက်လုံး မျှဝေထားသော ကော်လံ နှစ်ခုတွင် ရှိရမည်။",
+            "ကော်လံများမှ မဟုတ်ဘဲ အတန်းများမှ ဂဏန်းကို ဖယ်ရှားခြင်း။ အတန်းများကို အခြေခံထားလျှင် ဖယ်ရှားမှုများ ကော်လံများတွင် ရှိပြီး ပြောင်းပြန်လည်း ထိုနည်းတူ ဖြစ်သည်။",
+            "နေရာလဲထားသော ပုံစံကို မေ့ခြင်း။ ကော်လံများပေါ်တွင် တည်ဆောက်ထားသော X-Wing သည် အတန်းများတွင် ဖယ်ရှားသည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် X-Wing ဆိုတာ ဘာလဲ။",
+              "အတန်း နှစ်တန်း တစ်တန်းစီတွင် တူညီသော ကော်လံ နှစ်ခု၌ အဖြေ အကွက်ငယ် နှစ်ကွက် အတိအကျ ရှိသော ဂဏန်း။ ဂဏန်းသည် ထိုစတုဂံ၏ ဆန့်ကျင်ဘက် ထောင့် နှစ်ခုကို ယူသဖြင့် ၎င်းကို ကော်လံ နှစ်ခု၏ ကျန်နေရာမှ ဖယ်ရှားသည်။ အတန်းနှင့် ကော်လံ နေရာလဲနိုင်သည်။"
+            ],
+            [
+              "X-Wing က ဘာကြောင့် အလုပ်ဖြစ်သနည်း။",
+              "အတန်း နှစ်တန်း တစ်တန်းစီသည် ဂဏန်းကို ကော်လံ နှစ်ခုထဲမှ တစ်ခုတွင် ထည့်ရမည်ဖြစ်ပြီး အတန်း နှစ်တန်းသည် တူညီသော ကော်လံကို မသုံးနိုင်ပါ။ ထို့ကြောင့် ကော်လံ နှစ်ခု တစ်ခုစီသည် ၎င်း၏ ဂဏန်းကို ဤအတန်းများမှ ရရှိပြီး ထိုကော်လံများရှိ အခြား အဖြေတိုင်း မဖြစ်နိုင်ပါ။"
+            ],
+            [
+              "X-Wing သည် ငါး တစ်မျိုးလား။",
+              "ဟုတ်သည်။ X-Wing သည် အရွယ် နှစ် ငါး ဖြစ်သည်၊ Swordfish သည် အရွယ် သုံး ငါး ဖြစ်သည်။ Bare Sudoku က နှစ်မျိုးလုံးကို ရှာသည်။"
+            ],
+            [
+              "မည်သည့်အဆင့်တွင် X-Wing ပါသနည်း။",
+              "ကျွမ်းကျင်။ X-Wing၊ Y-Wing၊ Swordfish သို့မဟုတ် XYZ-Wing လိုအပ်သော ပဟေဠိကို ကျွမ်းကျင် ဟု သတ်မှတ်သည်။"
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Sudoku တွင် Y-Wing: နည်းလမ်း အလုပ်လုပ်ပုံ",
+          "description": "Y-Wing (XY-Wing): အဖြေ နှစ်ခုရှိ ဗဟိုနှင့် တစ်ခုစီ မျှဝေသော တောင်ပံ နှစ်ခုက တောင်ပံ နှစ်ခုလုံးကို မြင်သော အကွက်ငယ်တိုင်းမှ ဂဏန်းကို ဖယ်ရှားစေသည်။",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing ကို XY-Wing ဟုလည်း ခေါ်ပြီး အဖြေ နှစ်ခုစီ ရှိသော အကွက်ငယ် သုံးကွက်ကို သုံးသည်။ ဗဟိုတွင် အဖြေ X နှင့် Y ရှိသည်။ တောင်ပံ တစ်ခုသည် ဗဟိုကို မြင်ပြီး X နှင့် Z ရှိသည်၊ အခြား တောင်ပံသည် ဗဟိုကို မြင်ပြီး Y နှင့် Z ရှိသည်။ ဗဟိုသည် မည်သည့်ဂဏန်းပင် ဖြစ်စေ တောင်ပံ တစ်ခုသည် Z ဖြစ်ရမည် ဖြစ်သဖြင့် တောင်ပံ နှစ်ခုလုံးကို မြင်သော အကွက်ငယ်တိုင်းမှ Z ကို ဖယ်ရှားနိုင်သည်။ ၎င်းသည် Bare Sudoku ရှိ ကျွမ်းကျင် နည်းလမ်း ဖြစ်သည်။",
+          "when": [
+            "ပဟေဠိတွင် အဖြေ နှစ်ခု အတိအကျ ရှိသော အကွက်ငယ် အများအပြား ရှိပြီး ငါး မရှိသည့်အခါ။ Y-Wing များသည် ကျွမ်းကျင် ပဟေဠိများတွင် အဖြစ်များပြီး အဖြေ နှစ်ခု အကွက်ငယ်များကို လိုက်ကြည့်ခြင်းဖြင့် တွေ့ရသည်: တစ်ကွက်စီသည် ဗဟို သို့မဟုတ် တောင်ပံ ဖြစ်နိုင်သည်။"
+          ],
+          "spot": [
+            "အဖြေ နှစ်ခု အတိအကျ ရှိသော အကွက်ငယ်များကို စာရင်းပြုစုပါ။ တစ်ကွက်စီကို အဖြေ X နှင့် Y ရှိသော ဗဟိုအဖြစ် ယူဆပြီး ၎င်း၏ အိမ်နီးချင်းများထဲတွင် X နှင့် အခြား ဂဏန်း Z ရှိသော အကွက်ငယ်တစ်ကွက်နှင့် Y နှင့် ထို Z တူ ရှိသော အကွက်ငယ်တစ်ကွက်ကို ရှာပါ။ ထိုနှစ်ကွက်မှာ တောင်ပံများ ဖြစ်သည်။ ထို့နောက် တောင်ပံ နှစ်ခုလုံးကို မြင်ပြီး Z ပါသော အကွက်ငယ်များကို ရှာပါ။ တောင်ပံများ အချင်းချင်း မြင်ရန် မလိုကြောင်း သတိပြုပါ။"
+          ],
+          "examples": [
+            {
+              "h": "ဥပမာ",
+              "steps": [
+                "ဗဟို {pivot} တွင် အဖြေ {x} နှင့် {y} ရှိသည်။ ၎င်းသည် {x} နှင့် {z} ရှိသော {wingA} ကို လည်းကောင်း၊ {y} နှင့် {z} ရှိသော {wingB} ကို လည်းကောင်း မြင်သည်။",
+                "{pivot} သည် {x} ဖြစ်လျှင် {wingA} က {x} ကို ဆုံးရှုံးပြီး {z} ဖြစ်လာသည်။ {pivot} သည် {y} ဖြစ်လျှင် {wingB} က {z} ဖြစ်လာသည်။ မည်သို့ပင်ဖြစ်စေ တောင်ပံ နှစ်ခုထဲမှ တစ်ခုသည် {z} ဖြစ်သည်။",
+                "တောင်ပံ နှစ်ခုလုံးကို မြင်သော အကွက်ငယ်သည် {z} ဘယ်တော့မှ မဖြစ်နိုင်ပါ။ {elim} မှ {z} ကို ဖယ်ရှားပါ။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "ဗဟိုကို နှစ်ခုလုံး မမြင်သော တောင်ပံများကို ရွေးခြင်း။ တောင်ပံတစ်ခုစီသည် ဗဟိုနှင့် အတန်း၊ ကော်လံ သို့မဟုတ် အကွက် တူရမည်။",
+            "တောင်ပံ တစ်ခုတည်းကိုသာ မြင်သော အကွက်ငယ်များမှ Z ကို ဖယ်ရှားခြင်း။ ဖယ်ရှားမည့် အကွက်ငယ်သည် တောင်ပံ နှစ်ခုလုံးကို မြင်ရမည်။",
+            "ဗဟိုမှ Z ကို ဖယ်ရှားခြင်း။ Y-Wing တွင် ဗဟို၌ Z မပါပါ၊ ပါလျှင် ပုံစံသည် စည်းမျဉ်း မတူသော XYZ-Wing ဖြစ်သည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် Y-Wing ဆိုတာ ဘာလဲ။",
+              "အဖြေ နှစ်ခုစီရှိ အကွက်ငယ် သုံးကွက်: X နှင့် Y ရှိသော ဗဟို၊ ဗဟိုကို မြင်သော X နှင့် Z ရှိ တောင်ပံ၊ ဗဟိုကို မြင်သော Y နှင့် Z ရှိ တောင်ပံ။ တောင်ပံ တစ်ခုသည် အမြဲ Z ဖြစ်သဖြင့် တောင်ပံ နှစ်ခုလုံးကို မြင်သော အကွက်ငယ်များမှ Z ကို ဖယ်ရှားသည်။"
+            ],
+            [
+              "Y-Wing နှင့် XY-Wing တူသလား။",
+              "တူသည်။ အမည် နှစ်ခုလုံးက တူညီသော ပုံစံကို ဖော်ပြသည်။ Bare Sudoku က ၎င်းကို Y-Wing ဟု ခေါ်သည်။"
+            ],
+            [
+              "တောင်ပံ တစ်ခုသည် Z ဘာကြောင့် ဖြစ်ရမည်နည်း။",
+              "ဗဟိုသည် X ဖြစ်လျှင် ပထမ တောင်ပံက X ကို ဆုံးရှုံးပြီး Z ဖြစ်လာသည်။ ဗဟိုသည် Y ဖြစ်လျှင် ဒုတိယ တောင်ပံက Z ဖြစ်လာသည်။ ဗဟိုသည် နှစ်ခုထဲမှ တစ်ခု ဖြစ်သဖြင့် တောင်ပံ တစ်ခုသည် Z ဖြစ်သည်။"
+            ],
+            [
+              "Y-Wing က အကွက်ငယ် ဘယ်နှကွက်မှ ဖယ်ရှားသလဲ။",
+              "များသောအားဖြင့် တစ်ကွက် သို့မဟုတ် နှစ်ကွက်: တောင်ပံ နှစ်ခုလုံးကို မြင်ပြီး Z ရှိနေသေးသော အကွက်ငယ်များသာ။ တစ်ခုတည်း တစ်ခု ဖန်တီးရန် ထိုမျှ လုံလောက်သည်။"
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Sudoku တွင် Swordfish: နည်းလမ်း အလုပ်လုပ်ပုံ",
+          "description": "Swordfish: အတန်း သုံးတန်းတွင် ကော်လံ သုံးခုအတွင်း ပိတ်မိနေသော ဂဏန်းကို ထိုကော်လံများ၏ ကျန်နေရာမှ ဖယ်ရှားသည်။ အရွယ် သုံး ငါးကို ဥပမာဖြင့် ရှင်းပြထားသည်။",
+          "h1": "Swordfish",
+          "summary": "Swordfish သည် အတန်း သုံးတန်းနှင့် ကော်လံ သုံးခုပါသော X-Wing ဖြစ်သည်။ ဂဏန်းတစ်လုံးတွင် အတန်း သုံးတန်း တစ်တန်းစီ၌ အဖြေ အကွက်ငယ် အများဆုံး သုံးကွက် ရှိပြီး ထိုအကွက်ငယ် အားလုံးသည် တူညီသော ကော်လံ သုံးခုတွင် ကျရောက်လျှင် အတန်း သုံးတန်းက ထိုကော်လံများရှိ ဂဏန်းကို သုံးကုန်သဖြင့် ဂဏန်းကို ကော်လံ သုံးခု၏ အခြား အကွက်ငယ်တိုင်းမှ ဖယ်ရှားနိုင်သည်။ အတန်းနှင့် ကော်လံ နေရာလဲနိုင်သည်။ Bare Sudoku သည် ကျွမ်းကျင် ပဟေဠိများတွင် Y-Wing ပြီးနောက် Swordfish ကို စစ်ဆေးသည်။",
+          "when": [
+            "X-Wing နှင့် Y-Wing က ဘာမှ မတွေ့သည့်အခါ။ Swordfish များသည် X-Wing များထက် နည်းပြီး အဖြေများ မျဉ်း သုံးကြောင်းပေါ်တွင် ပါးပါး ပြန့်နေသော ဂဏန်း လိုသည်။ ထိုဂဏန်းအတွက် မှတ်စု ပြည့်စုံတိကျရန် လိုသည်။"
+          ],
+          "spot": [
+            "ဂဏန်းတစ်လုံးကို ရွေးပြီး ၎င်းအတွက် အဖြေ အကွက်ငယ် နှစ်ကွက် သို့မဟုတ် သုံးကွက် ရှိသော အတန်းများကို ရှာပါ။ ထိုကဲ့သို့ အတန်း သုံးတန်းသည် စုစုပေါင်း ကော်လံ သုံးခုသာ ဖုံးလွှမ်းလျှင် ထိုကော်လံများတွင် ထိုဂဏန်း၏ နောက်ထပ် အဖြေများကို စစ်ပါ။ အတန်းတိုင်းတွင် ကော်လံတိုင်း၌ အဖြေ ရှိရန် မလိုပါ: Swordfish တွင် အကွက်ငယ် ခြောက်၊ ခုနစ်၊ ရှစ် သို့မဟုတ် ကိုးကွက် ရှိနိုင်သည်။ ဂိမ်းထဲတွင် ဂဏန်းကို ၎င်း၏ ခလုတ်ဖြင့် အရောင်ခြယ်ပြီး အဖြေများ ကော်လံ သုံးခုတွင် တန်းစီနေသော အတန်း သုံးတန်းကို ရှာပါ။"
+          ],
+          "examples": [
+            {
+              "h": "ဥပမာ",
+              "steps": [
+                "ဂဏန်း {d} တွင် အတန်း {rows} တစ်တန်းစီ၌ အဖြေ အကွက်ငယ် အများဆုံး သုံးကွက် ရှိပြီး ထိုအကွက်ငယ် အားလုံးသည် ကော်လံ {cols} တွင် ကျရောက်သည်: {cells}။",
+                "အတန်း သုံးတန်း တစ်တန်းစီသည် ၎င်း၏ {d} ကို ကော်လံ သုံးခုထဲမှ တစ်ခုတွင် ထည့်ရမည်ဖြစ်ပြီး မည်သည့် အတန်း နှစ်တန်းမျှ တူညီသော ကော်လံကို မသုံးနိုင်ပါ။ ထို့ကြောင့် ကော်လံ သုံးခုသည် ၎င်းတို့၏ {d} ကို ဤအတန်း သုံးတန်းမှ ရရှိသည်။",
+                "ကော်လံ {cols} ရှိ အခြား {d} အဖြေ မည်သည်မဆို မဖြစ်နိုင်ပါ။ {elim} မှ {d} ကို ဖယ်ရှားပါ။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "အကွက်ငယ် ကိုးကွက်လုံး လိုအပ်သည်ဟု ယူဆခြင်း။ အတန်း သုံးတန်းက ကော်လံ သုံးခုသာ ဖုံးလွှမ်းသရွေ့ အချို့အတန်းတွင် အဖြေ နှစ်ခုသာ ရှိသော Swordfish သည် မှန်ကန်ဆဲ ဖြစ်သည်။",
+            "အဖြေ အကွက်ငယ် လေးကွက် ရှိသော အတန်းကို ထည့်သွင်းခြင်း။ အခြေခံ အတန်းတိုင်းတွင် အများဆုံး သုံးကွက် ရှိရမည်ဖြစ်ပြီး အားလုံး ကော်လံ သုံးခုအတွင်း ရှိရမည်။",
+            "အခြေခံ အတန်းများတွင် ဖယ်ရှားခြင်း။ အတန်းများကို အခြေခံထားလျှင် ဖယ်ရှားမှုများသည် အခြေခံ အတန်းများ အပြင်ဘက်၊ ကော်လံ သုံးခုတွင် ရှိသည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် Swordfish ဆိုတာ ဘာလဲ။",
+              "အတန်း သုံးတန်းရှိ ၎င်း၏ အဖြေများ ကော်လံ သုံးခုအတွင်း ပိတ်မိနေသော ဂဏန်း။ အတန်း သုံးတန်းသည် ဂဏန်းကို ထိုကော်လံ သုံးခုတွင် တစ်ခုစီ ထည့်ရမည် ဖြစ်သဖြင့် ဂဏန်းကို ထိုကော်လံများ၏ အခြား အကွက်ငယ်များမှ ဖယ်ရှားသည်။"
+            ],
+            [
+              "Swordfish သည် X-Wing နှင့် ဘယ်လို ကွာသလဲ။",
+              "အရွယ်အစားသာ ကွာသည်: X-Wing က အတန်း နှစ်တန်းနှင့် ကော်လံ နှစ်ခု သုံးသည်၊ Swordfish က သုံးနှင့် သုံး သုံးသည်။ ဆင်ခြင်ပုံ တူသည်။"
+            ],
+            [
+              "Swordfish တွင် အကွက်ငယ် ကိုးကွက် အတိအကျ လိုသလား။",
+              "မလိုပါ။ အတန်းတစ်တန်းစီတွင် အဖြေ နှစ်ခု သို့မဟုတ် သုံးခု ရှိနိုင်သည်၊ ပုံစံက အတန်း သုံးတန်း ပေါင်းလျှင် ကော်လံ သုံးခုထက် ပို မသုံးရန်သာ လိုသည်။"
+            ],
+            [
+              "အရွယ် လေး ငါး ရှိသလား။",
+              "ရှိသည်၊ Jellyfish။ Bare Sudoku ၏ ပဟေဠိများတွင် ၎င်းကို ဘယ်တော့မှ မလိုသဖြင့် မသုံးပါ။"
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Sudoku တွင် XYZ-Wing: နည်းလမ်း အလုပ်လုပ်ပုံ",
+          "description": "XYZ-Wing: အဖြေ သုံးခုရှိ ဗဟိုနှင့် ၎င်းတို့ထဲမှ တစ်ခုကို မျှဝေသော တောင်ပံ နှစ်ခုက သုံးခုလုံးကို မြင်သော အကွက်ငယ်တိုင်းမှ ထိုဂဏန်းကို ဖယ်ရှားစေသည်။",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing သည် ဗဟိုတွင် အဖြေ သုံးခု ရှိသော Y-Wing ဖြစ်သည်။ ဗဟိုတွင် X၊ Y နှင့် Z ရှိသည်၊ တောင်ပံ တစ်ခုသည် ဗဟိုကို မြင်ပြီး X နှင့် Z ရှိသည်၊ အခြားတစ်ခုသည် ဗဟိုကို မြင်ပြီး Y နှင့် Z ရှိသည်။ အကွက်ငယ် သုံးကွက်ထဲမှ တစ်ကွက်သည် Z ဖြစ်ရမည် ဖြစ်သဖြင့် သုံးကွက်လုံးကို မြင်သော အကွက်ငယ်တိုင်းမှ Z ကို ဖယ်ရှားနိုင်သည်။ ဗဟိုကိုယ်တိုင် Z ဖြစ်နိုင်သဖြင့် ဖယ်ရှားမည့် အကွက်ငယ်သည် တောင်ပံ နှစ်ခုအပြင် ဗဟိုကိုလည်း မြင်ရမည်ဖြစ်ပြီး ၎င်းက ထိုအကွက်ငယ်ကို အကွက်ငယ်များ မျှဝေသော အကွက် သို့မဟုတ် မျဉ်းအတွင်းသို့ ကန့်သတ်သည်။ ၎င်းသည် Bare Sudoku သုံးသော အခက်ဆုံး နည်းလမ်း ဖြစ်သည်။",
+          "when": [
+            "အခြားအရာအားလုံး မအောင်မြင်မှသာ။ XYZ-Wing များသည် Bare Sudoku တွင် အရှားပါးဆုံး ပုံစံ ဖြစ်ပြီး ကျွမ်းကျင် ပဟေဠိများတွင်သာ ပေါ်သည်။ အဖြေ သုံးခုရှိ အကွက်ငယ်တစ်ကွက်သည် ၎င်း၏ ဂဏန်း နှစ်လုံးကို မျှဝေသော အဖြေ နှစ်ခုရှိ အကွက်ငယ်နှင့် အကွက်တစ်ခုတည်းတွင် ရှိနေသည့်အခါ ရှာပါ။"
+          ],
+          "spot": [
+            "အဖြေ သုံးခု အတိအကျ ရှိသော အကွက်ငယ်များမှ စပါ၊ တစ်ကွက်စီသည် ဗဟို ဖြစ်နိုင်သည်။ ၎င်း၏ အိမ်နီးချင်းများထဲတွင် အဖြေ နှစ်ခုစီ ရှိပြီး နှစ်ခုလုံး ဗဟို၏ အဖြေ သုံးခုထဲမှ ယူထားကာ ဂဏန်း Z တစ်လုံးတည်းကို မျှဝေသော အကွက်ငယ် နှစ်ကွက်ကို ရှာပါ။ ထို့နောက် ဗဟိုနှင့် တောင်ပံ နှစ်ခုလုံးကို မြင်ပြီး Z ပါသော အကွက်ငယ်များကို ရှာပါ။ လက်တွေ့တွင် တောင်ပံ တစ်ခုသည် ဗဟို၏ အကွက်ထဲတွင်၊ အခြားတစ်ခုသည် ၎င်း၏ အတန်း သို့မဟုတ် ကော်လံတွင် ရှိပြီး ဖယ်ရှားမည့် အကွက်ငယ်များမှာ ထိုအတန်း သို့မဟုတ် ကော်လံရှိ ထိုအကွက်၏ ကျန် အကွက်ငယ်များ ဖြစ်သည်။"
+          ],
+          "examples": [
+            {
+              "h": "ဥပမာ",
+              "steps": [
+                "ဗဟို {pivot} တွင် အဖြေ သုံးခု ရှိသည်: {x}၊ {y} နှင့် {z}။ ၎င်းသည် {x} နှင့် {z} ရှိသော {wingA} ကို လည်းကောင်း၊ {y} နှင့် {z} ရှိသော {wingB} ကို လည်းကောင်း မြင်သည်။",
+                "{pivot} သည် {z} ဖြစ်လျှင် ပြီးပြီ။ {x} ဖြစ်လျှင် {wingA} သည် {z} ဖြစ်ရမည်။ {y} ဖြစ်လျှင် {wingB} သည် {z} ဖြစ်ရမည်။ မည်သို့ပင်ဖြစ်စေ အကွက်ငယ် သုံးကွက်ထဲမှ တစ်ကွက်သည် {z} ဖြစ်သည်။",
+                "သုံးကွက်လုံးကို မြင်သော အကွက်ငယ်သည် {z} မဖြစ်နိုင်ပါ။ {elim} မှ {z} ကို ဖယ်ရှားပါ။"
+              ]
+            }
+          ],
+          "mistakes": [
+            "တောင်ပံ နှစ်ခုကိုသာ မြင်သော အကွက်ငယ်များမှ ဖယ်ရှားခြင်း။ Y-Wing နှင့် မတူဘဲ ဗဟိုသည် Z ဖြစ်နိုင်သဖြင့် အကွက်ငယ်သည် ဗဟိုကိုလည်း မြင်ရမည်။",
+            "အဖြေများ နှစ်ခုလုံး ဗဟို၏ အဖြေ သုံးခုတွင် မပါဝင်သော တောင်ပံများကို သုံးခြင်း။",
+            "Y-Wing နှင့် ရောထွေးခြင်း: ကွာခြားချက်မှာ ဗဟိုရှိ တတိယ အဖြေ ဖြစ်ပြီး ၎င်းက မည်သည့် အကွက်ငယ်များကို ရှင်းလင်းနိုင်သည်ကို ပြောင်းလဲစေသည်။"
+          ],
+          "faq": [
+            [
+              "Sudoku တွင် XYZ-Wing ဆိုတာ ဘာလဲ။",
+              "အဖြေ X၊ Y နှင့် Z ရှိသော ဗဟိုနှင့် တောင်ပံ နှစ်ခု၊ တစ်ခုတွင် X နှင့် Z၊ တစ်ခုတွင် Y နှင့် Z ရှိပြီး နှစ်ခုလုံး ဗဟိုကို မြင်သည်။ အကွက်ငယ် သုံးကွက်ထဲမှ တစ်ကွက်သည် Z ဖြစ်သဖြင့် သုံးကွက်လုံးကို မြင်သော အကွက်ငယ်များမှ Z ကို ဖယ်ရှားသည်။"
+            ],
+            [
+              "XYZ-Wing သည် Y-Wing နှင့် ဘယ်လို ကွာသလဲ။",
+              "ဗဟိုတွင် အဖြေ နှစ်ခုအစား Z အပါအဝင် သုံးခု ရှိသည်။ ထို့ကြောင့် ဗဟိုသည် Z ၏ ဖြစ်နိုင်သော နေရာ ဖြစ်လာသဖြင့် ဗဟိုနှင့် တောင်ပံ နှစ်ခုလုံးကို မြင်သော အကွက်ငယ်များသာ Z ကို ဆုံးရှုံးနိုင်သည်။"
+            ],
+            [
+              "XYZ-Wing ဘယ်လောက် မကြာခဏ ပေါ်သလဲ။",
+              "ရှားပါးသည်။ Bare Sudoku တွင် ကျွမ်းကျင် ပဟေဠိများသာ ၎င်းကို လိုနိုင်ပြီး အများစု မလိုပါ။ Bare Sudoku သည် X-Wing၊ Y-Wing နှင့် Swordfish ပြီးနောက် ၎င်းကို နောက်ဆုံးမှ စစ်ဆေးသည်။"
+            ],
+            [
+              "WXYZ-Wing ရှိသလား။",
+              "ရှိသည်၊ အဖြေ လေးခုရှိ ဗဟိုဖြင့် ဖြစ်သော်လည်း Bare Sudoku က မသုံးပါ။ ဂိမ်းထဲရှိ ပဟေဠိတိုင်းကို ဤလမ်းညွှန်ရှိ နည်းလမ်း ကိုးမျိုးဖြင့် ဖြေဆုံးနိုင်သည်။"
+            ]
+          ]
+        }
+      }
+    },
+    "ca": {
+      "learnHeading": "Aprèn sudoku",
+      "learnText": "Comences amb el sudoku o t'has encallat en un trencaclosques difícil? Dues guies expliquen les regles i totes les tècniques de resolució que fan servir les pistes, cadascuna amb un exemple real.",
+      "howToLink": "Com es juga al sudoku",
+      "techniquesLink": "Tècniques per resoldre sudokus",
+      "labels": {
+        "howTo": "Com es juga",
+        "techniques": "Tècniques",
+        "play": "Juga al sudoku",
+        "prev": "Tècnica anterior",
+        "next": "Tècnica següent",
+        "all": "Totes les tècniques",
+        "example": "Exemple",
+        "steps": "Pas a pas",
+        "when": "Quan fer-la servir",
+        "spot": "Com detectar-la",
+        "mistakes": "Errors habituals",
+        "inGame": "A Bare Sudoku",
+        "level": "Necessària a partir del nivell: {level}",
+        "hint": "Al joc, la pista diu: {text}",
+        "legend": "Els dígits en negreta són donats, els blaus s'han col·locat en resoldre i els petits són candidats. Les caselles ressaltades formen el patró, els candidats ratllats s'eliminen i el candidat encerclat és el dígit que cal col·locar.",
+        "notation": "Les caselles s'escriuen com r3c7: fila 3, columna 7. Les files es compten des de dalt, les columnes des de l'esquerra, i les caixes de l'1 al 9 des de dalt a l'esquerra, fila per fila.",
+        "row": "fila {n}",
+        "column": "columna {n}",
+        "box": "caixa {n}",
+        "elimItem": "{d} de {cell}",
+        "regions": "La fila 5, la columna 5 i la caixa 5 a l'inici d'un trencaclosques",
+        "firstMove": "Un candidat únic: {cell} només pot ser {d}",
+        "breadcrumb": "Ruta de navegació"
+      },
+      "howTo": {
+        "title": "Com es juga al sudoku: regles, quadrícula i primers passos",
+        "description": "Aprèn a jugar al sudoku: les regles, com funcionen files, columnes i caixes, per què cada trencaclosques té una sola solució, les notes i els primers passos.",
+        "h1": "Com es juga al sudoku",
+        "summary": "El sudoku és un trencaclosques de lògica en una quadrícula de 9×9. Omple cada casella buida amb un dígit de l'1 al 9 de manera que cada fila, cada columna i cada caixa de 3×3 contingui cada dígit exactament un cop. Alguns dígits venen donats d'entrada; la resta els dedueixes, una casella segura rere l'altra, i mai no has d'endevinar. Aquesta guia explica la quadrícula, les regles, el principi de la solució única, les notes i una estratègia senzilla per als primers moviments. Pots practicar-ho tot a [Bare Sudoku](play), que és gratuït i té pistes que expliquen la lògica.",
+        "sections": [
+          {
+            "h": "Quines són les regles del sudoku?",
+            "p": [
+              "Només hi ha tres regles, i són la mateixa regla vista des de tres direccions: cada fila ha de contenir els dígits de l'1 al 9, cada columna ha de contenir els dígits de l'1 al 9 i cada caixa de 3×3 ha de contenir els dígits de l'1 al 9. Per tant, un dígit no pot aparèixer mai dues vegades a la mateixa fila, columna o caixa.",
+              "Els dígits donats, impresos en negreta, són fixos. La teva feina és omplir les caselles buides. No hi ha aritmètica ni ordre: els dígits són només nou símbols diferents. Podries jugar amb lletres o figures i no canviaria res."
+            ]
+          },
+          {
+            "h": "Com s'organitza la quadrícula?",
+            "p": [
+              "La quadrícula té 81 caselles en 9 files i 9 columnes. Unes línies gruixudes la divideixen en nou caixes de 3×3. Cada casella pertany exactament a una fila, una columna i una caixa, i aquests tres grups són les seves unitats. Les altres 20 caselles que comparteixen una unitat amb una casella s'anomenen les seves veïnes; un dígit col·locat en una casella descarta aquest dígit a les 20 veïnes.",
+              "Les caselles s'escriuen com r3c7: fila 3, columna 7. Les files es compten des de dalt, les columnes des de l'esquerra, i les caixes de l'1 al 9 des de dalt a l'esquerra, fila per fila. Aquesta notació es fa servir a totes les guies de tècniques i val la pena aprendre-la: r5c5 és el centre de la quadrícula."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Per què cada sudoku té exactament una solució?",
+            "p": [
+              "Un sudoku ben fet té una sola solució, i això és el que fa que la lògica funcioni. Cada cop que pots demostrar que un dígit no pot anar enlloc més d'una unitat, ha d'anar a la casella que queda, perquè la solució existeix i és única. Si un trencaclosques tingués dues solucions, cap raonament no les podria distingir i en algun moment hauries d'endevinar.",
+              "Bare Sudoku genera cada trencaclosques al teu dispositiu i comprova que té exactament una solució i que el seu resolutor lògic el pot acabar amb les tècniques del nivell triat. Així, si t'encalles, sempre hi ha un pas següent per trobar, i la pista te'l mostra."
+            ]
+          },
+          {
+            "h": "Com es comença un sudoku?",
+            "p": [
+              "Comença pel que està més restringit. Aquest ordre funciona a tots els nivells:"
+            ],
+            "list": [
+              "Tria un dígit que ja aparegui moltes vegades, per exemple sis o set, i busca les caixes on encara falta. Sovint només hi queda una casella per a ell: això és un [únic amagat](hidden-single).",
+              "Busca caselles atapeïdes. Una casella la fila, columna i caixa de la qual contenen entre totes vuit dígits diferents només té un candidat: un [candidat únic](naked-single). Les caselles de files o caixes gairebé plenes són el millor lloc on mirar.",
+              "Cada dígit que col·loques elimina un candidat de 20 veïnes, així que revisa-les de seguida. Els singles solen arribar en cadena.",
+              "Quan s'acabin les col·locacions fàcils, escriu les notes: els candidats de cada casella buida. Després busca un dígit confinat a una sola línia dins d'una caixa ([candidats bloquejats](locked-candidates)) o dues caselles que comparteixen els mateixos dos candidats (una [parella nua](naked-pairs)).",
+              "Torna als singles després de cada eliminació. Fins i tot els trencaclosques Expert es resolen sobretot amb singles; la tècnica avançada només desbloqueja el següent."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Què són les notes i quan cal fer-les servir?",
+            "p": [
+              "Les notes, també anomenades marques de llapis o candidats, són els dígits petits que escrius en una casella buida per recordar quins dígits hi són encara possibles. En els trencaclosques fàcils rarament calen; a partir de Difícil són imprescindibles, perquè tècniques com les parelles, l'X-Wing i l'Y-Wing tracten de candidats, no de dígits col·locats.",
+              "Mantén les notes exactes: quan col·loques un dígit, treu-lo de les notes de les 20 veïnes. A Bare Sudoku això passa automàticament, i Omple les notes escriu tots els candidats a totes les caselles buides amb un sol toc, de manera que pots començar amb un conjunt de candidats complet i correcte. Una nota és un fet, no una suposició: vol dir que encara res no descarta aquest dígit."
+            ]
+          },
+          {
+            "h": "Què has de fer quan t'encalles?",
+            "p": [
+              "Primer torna a revisar el bàsic: cada fila, columna i caixa gairebé plena és una font de singles. Després assegura't que les notes són completes, perquè un candidat que falta amaga patrons i un d'obsolet en crea de falsos. Després repassa les [tècniques](techniques) per ordre de dificultat: candidats bloquejats, parelles i trios, X-Wing, Y-Wing, Swordfish i XYZ-Wing. Cadascuna té la seva pàgina amb un exemple real.",
+              "Si res no funciona, demana una pista. A Bare Sudoku la pista primer comprova si algun dígit col·locat és incorrecte, després troba la casella següent que es pot omplir per lògica i diu el nom de la tècnica, així que aprens alguna cosa fins i tot quan la fas servir. Toca la pista de nou per col·locar el dígit."
+            ]
+          },
+          {
+            "h": "Com s'introdueixen els dígits a Bare Sudoku?",
+            "p": [
+              "Toca una casella i després un dígit. O toca primer un dígit: queda bloquejat i cada casella que toques el rep, que és la manera més ràpida de col·locar la sisena, setena i vuitena còpia d'un dígit. Torna a tocar el dígit per alliberar-lo. El botó Notes canvia a marques de llapis, Esborra buida una casella, Desfés anul·la qualsevol moviment, i els errors es marquen en vermell tret que ho desactivis al menú.",
+              "Amb el teclat, fes servir les fletxes per moure't, de l'1 al 9 per introduir un dígit, Backspace per esborrar, N per a les notes, U per desfer, H per a una pista, F per omplir les notes i Escape per al menú. El joc es desa sol, funciona sense connexió i no té anuncis ni comptes."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Cal endevinar mai en un sudoku?",
+            "No en un trencaclosques ben fet. Cada trencaclosques de Bare Sudoku té exactament una solució i s'ha comprovat que es pot resoldre només amb lògica, fins a les tècniques del seu nivell. Si et sembla que has d'endevinar, falta un candidat a les notes o hi ha una tècnica esperant que la trobis."
+          ],
+          [
+            "Un dígit pot aparèixer dues vegades en una fila, columna o caixa?",
+            "No. Aquesta és tota la regla: cadascuna de les nou files, nou columnes i nou caixes conté cada dígit de l'1 al 9 exactament un cop. Si dos dígits iguals comparteixen una unitat, com a mínim un és incorrecte."
+          ],
+          [
+            "Quina diferència hi ha entre Fàcil, Mitjà, Difícil i Expert?",
+            "El nivell el determinen les tècniques que necessita el trencaclosques. Fàcil i Mitjà es resolen només amb singles, i Fàcil comença amb almenys 38 dígits donats. Difícil necessita candidats bloquejats o parelles i trios. Expert necessita X-Wing, Y-Wing, Swordfish o XYZ-Wing."
+          ],
+          [
+            "És millor omplir les notes de totes les caselles o només d'algunes?",
+            "En els trencaclosques Difícil i Expert, omple-les totes: patrons com les parelles, l'X-Wing i l'Y-Wing només apareixen quan tots els candidats estan escrits. A Fàcil i Mitjà les notes són opcionals i la majoria de jugadors només busquen singles."
+          ],
+          [
+            "Quant dura un sudoku?",
+            "Un trencaclosques Fàcil dura uns quants minuts; els Expert poden portar vint minuts o més, segons la rapidesa amb què detectis el patró avançat. Bare Sudoku mostra un cronòmetre, l'atura mentre el menú és obert i no té classificacions, així que juga al teu ritme."
+          ],
+          [
+            "El sudoku necessita aritmètica?",
+            "No. Els dígits només són etiquetes; no cal sumar ni comptar. Qualsevol conjunt de nou símbols funcionaria, i per això el sudoku és un trencaclosques de lògica i no de números."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tècniques per resoldre sudokus explicades amb exemples",
+        "description": "Les nou tècniques per resoldre sudokus, del candidat únic al Swordfish i l'XYZ-Wing, en l'ordre de les pistes de Bare Sudoku, cadascuna amb un exemple real.",
+        "h1": "Tècniques per resoldre sudokus",
+        "intro": [
+          "Qualsevol sudoku es pot resoldre amb un petit conjunt de tècniques lògiques. Aquest índex recull les nou tècniques que fan servir el resolutor de Bare Sudoku i les seves pistes, en l'ordre en què el resolutor les prova: primer els singles, després les eliminacions dins d'una unitat i després els patrons que abasten diverses files i columnes. Cada tècnica té la seva pàgina amb una definició, com detectar-la, un exemple real d'un trencaclosques generat i els errors habituals.",
+          "El nivell d'un trencaclosques el decideix la tècnica més difícil que necessita. Els trencaclosques Fàcil i Mitjà només necessiten singles, els Difícil necessiten candidats bloquejats o parelles i trios, i els Expert necessiten com a mínim un peix o una ala. Sigui quin sigui el nivell, els singles fan la major part de la feina; la tècnica avançada elimina un o dos candidats i els singles continuen a partir d'aquí."
+        ],
+        "faq": [
+          [
+            "En quin ordre he de provar les tècniques de sudoku?",
+            "De la més senzilla a la més costosa: candidat únic, únic amagat, candidats bloquejats, parelles i trios nus, parelles i trios amagats, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku les prova exactament en aquest ordre, i una pista sempre anomena la tècnica més senzilla que permet avançar."
+          ],
+          [
+            "Necessito totes aquestes tècniques per resoldre sudokus?",
+            "Per als trencaclosques Fàcil i Mitjà, n'hi ha prou amb els singles. Els Difícil hi afegeixen els candidats bloquejats i les parelles i trios. Els Expert necessiten com a mínim un peix o una ala, però normalment només una o dues vegades per trencaclosques."
+          ],
+          [
+            "Hi ha tècniques més difícils que l'XYZ-Wing?",
+            "Sí, per exemple les cadenes, les proves d'unicitat i les xarxes de forçament. Bare Sudoku no genera trencaclosques que les necessitin, de manera que tots els trencaclosques del joc es poden acabar amb les nou tècniques d'aquesta pàgina."
+          ],
+          [
+            "Què és un candidat?",
+            "Un dígit que encara pot anar en una casella buida perquè res de la seva fila, columna o caixa no el descarta encara. Les notes del joc són candidats. Totes les tècniques més enllà dels singles raonen sobre candidats, així que mantén-los complets i exactes."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Candidat únic",
+          "title": "Candidat únic al sudoku: la casella amb un sol candidat",
+          "description": "Un candidat únic és una casella buida amb un sol dígit possible. Aprèn a trobar-los ràpidament, amb un exemple real pas a pas i els errors més habituals.",
+          "h1": "Candidat únic (naked single)",
+          "summary": "Un candidat únic és una casella buida que té exactament un candidat: els altres vuit dígits ja apareixen a la seva fila, columna o caixa. El dígit que queda hi ha d'anar. És la tècnica de sudoku més senzilla, la que més fas servir i la que la pista de Bare Sudoku anuncia com a \"Només un candidat aquí\".",
+          "when": [
+            "Sempre. Els candidats únics apareixen del primer moviment a l'últim, a tots els nivells. En els trencaclosques Fàcil i Mitjà són, juntament amb els únics amagats, l'única tècnica que necessites. En els més difícils, cada eliminació feta per una tècnica avançada sol deixar un candidat únic al darrere, així que busca'ls després de cada pas."
+          ],
+          "spot": [
+            "Mira les caselles amb moltes veïnes plenes: una casella d'una fila que ja té set dígits, o una casella la fila, columna i caixa de la qual cobreixen entre totes vuit dígits diferents. Sense notes, compta els dígits que es veuen des de la casella. Amb notes, un candidat únic és simplement una casella que mostra un sol candidat, i per això Omple les notes fa que siguin fàcils de trobar."
+          ],
+          "examples": [
+            {
+              "h": "Exemple",
+              "steps": [
+                "Mira {cell}. És buida, així que fes la llista de tots els dígits ja col·locats a la seva fila, la seva columna i la seva caixa.",
+                "La fila {row} conté {rowDigits}. La columna {col} conté {colDigits}. La caixa {box} conté {boxDigits}.",
+                "Entre totes descarten tots els dígits excepte el {d}, així que {d} és l'únic candidat que queda a {cell}.",
+                "Escriu {d} a {cell}. Després comprova si el dígit nou crea un altre single a la mateixa fila, columna o caixa."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Comptar només la fila o només la caixa. Els vuit dígits descartats solen venir de les tres unitats juntes.",
+            "Oblidar que un dígit que acabes de col·locar també descarta candidats de les seves 20 veïnes; després de cada col·locació apareixen candidats únics nous.",
+            "Confondre un candidat únic amb un únic amagat: un candidat únic té un sol candidat a la casella, un únic amagat té una sola casella per al dígit en una unitat."
+          ],
+          "faq": [
+            [
+              "Què és un candidat únic al sudoku?",
+              "Una casella buida amb exactament un candidat. A la seva fila, columna i caixa ja hi ha vuit dígits diferents col·locats, així que el novè és l'únic que hi cap."
+            ],
+            [
+              "Per què en anglès se'n diu naked, és a dir nu?",
+              "Perquè el candidat únic es veu directament a la casella un cop escrites les notes; res no l'amaga. Un únic amagat, en canvi, és entre altres candidats i es troba mirant el dígit i no la casella."
+            ],
+            [
+              "Es pot resoldre un trencaclosques només amb candidats únics?",
+              "Molts de Fàcil, sí, però la majoria també necessiten únics amagats. Bare Sudoku classifica els trencaclosques Fàcil i Mitjà com a resolubles amb singles de tots dos tipus; els Difícil i Expert necessiten almenys una tècnica més."
+            ],
+            [
+              "La pista mostra els candidats únics?",
+              "Sí. Quan la col·locació següent és un candidat únic, la pista selecciona la casella i diu \"Només un candidat aquí\" amb el dígit. Toca la pista de nou per col·locar-lo."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Únic amagat",
+          "title": "Únic amagat al sudoku: l'únic lloc per a un dígit",
+          "description": "Un únic amagat és l'única casella d'una fila, columna o caixa on encara pot anar un dígit. Aprèn a detectar-los repassant els dígits d'un en un.",
+          "h1": "Únic amagat (hidden single)",
+          "summary": "Un únic amagat és un dígit que només té una casella possible en una fila, columna o caixa, encara que aquesta casella mostri altres candidats. Com que la unitat ha de contenir el dígit, hi va. La pista de Bare Sudoku l'anuncia com a \"Únic lloc per a 5 en aquesta fila\", columna o caixa.",
+          "when": [
+            "Sempre que un dígit estigui força avançat: quan un dígit ja apareix cinc o sis vegades, les caixes que queden estan molt restringides i sovint el pas següent és un únic amagat. Els únics amagats són la tècnica principal dels trencaclosques Fàcil i Mitjà i continuen sent l'eina bàsica a tots els nivells."
+          ],
+          "spot": [
+            "Repassa els dígits d'un en un. Agafa un dígit, busca una caixa que no el tingui i ratlla cada casella d'aquesta caixa que comparteix fila o columna amb una còpia col·locada del dígit. Si en sobreviu una, has trobat un únic amagat. El mateix repàs funciona amb files i columnes. Al joc, toca un dígit col·locat: totes les seves còpies es ressalten i les caselles lliures destaquen."
+          ],
+          "examples": [
+            {
+              "h": "Exemple",
+              "steps": [
+                "La caixa {box} encara no té cap {d}, així que una de les seves caselles buides l'ha de contenir. Les caselles buides són {empties}.",
+                "A totes excepte {cell}, el {d} està bloquejat per un {d} ja col·locat a la mateixa fila o columna, així que {d} no hi és candidat.",
+                "Això deixa {cell} com l'únic lloc per al {d} a la caixa {box}. Escriu-hi {d}, encara que {cell} mostri altres candidats."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Col·locar el dígit en una casella que només és probablement la bona: comprova totes les altres caselles buides de la unitat, no només les evidents.",
+            "Passar per alt un únic amagat perquè la casella mostra diversos candidats. Els altres candidats no importen; el que importa és que el dígit no té cap altre lloc a la unitat.",
+            "Repassar només les caixes. Les files i les columnes produeixen únics amagats igual de sovint, sobretot cap al final."
+          ],
+          "faq": [
+            [
+              "Què és un únic amagat al sudoku?",
+              "Un dígit que només pot anar a una casella d'una fila, columna o caixa. La unitat ha de contenir el dígit, així que la casella queda decidida encara que tingui altres candidats."
+            ],
+            [
+              "Quina diferència hi ha entre un únic amagat i un candidat únic?",
+              "Un candidat únic tracta d'una casella: li queda un sol candidat. Un únic amagat tracta d'un dígit: li queda una sola casella en una unitat. Tots dos col·loquen un dígit amb certesa."
+            ],
+            [
+              "Quin és més fàcil de trobar?",
+              "Sense notes, els únics amagats solen ser més fàcils perquè pots repassar la quadrícula d'un dígit en un. Amb les notes completes, els candidats únics són els més fàcils, perquè una casella amb un sol candidat destaca."
+            ],
+            [
+              "Com descriu la pista un únic amagat?",
+              "Com a \"Únic lloc per a\" el dígit en aquesta fila, aquesta columna o aquesta caixa, amb la casella seleccionada. Toca la pista de nou per col·locar-lo."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Candidats bloquejats",
+          "title": "Candidats bloquejats al sudoku: apuntar i reclamar",
+          "description": "Candidats bloquejats: si els candidats d'un dígit en una caixa són tots en una fila o columna, o a l'inrevés, el dígit s'elimina de la resta. Dos exemples.",
+          "h1": "Candidats bloquejats (locked candidates)",
+          "summary": "Els candidats bloquejats són la primera tècnica que elimina candidats en lloc de col·locar un dígit. Tenen dues formes. Apuntar: en una caixa, tots els candidats d'un dígit són en una sola fila o columna, així que el dígit s'elimina de la resta d'aquesta línia. Reclamar: en una fila o columna, tots els candidats d'un dígit són en una sola caixa, així que el dígit s'elimina de la resta d'aquesta caixa. La pista de Bare Sudoku etiqueta la col·locació que desbloquegen com a \"Candidats bloquejats\".",
+          "when": [
+            "Quan s'acaben els singles en un trencaclosques Difícil, és el primer que cal provar. Necessita les notes completes, com a mínim del dígit que examines. Els candidats bloquejats són habituals: la majoria de trencaclosques Difícil els necessiten, i els Expert els fan servir entre els patrons més grans."
+          ],
+          "spot": [
+            "Per apuntar, mira cada caixa i cada dígit que hi falta: si les caselles candidates d'aquest dígit són en una sola fila o columna, comprova si el mateix dígit apareix com a candidat més enllà en aquesta línia, fora de la caixa. Per reclamar, mira al llarg d'una fila o columna: si els candidats d'un dígit són tots dins d'una caixa, pots netejar la resta d'aquesta caixa. Al joc, toca la tecla d'un dígit per ressaltar-ne tots els candidats; una línia de dues o tres notes ressaltades dins d'una caixa és el patró."
+          ],
+          "examples": [
+            {
+              "h": "Apuntar",
+              "steps": [
+                "A la caixa {box}, el dígit {d} només té aquestes caselles candidates: {cells}. Totes són a la fila {row}.",
+                "La caixa {box} necessita un {d}, així que el {d} de la fila {row} és dins de la caixa {box}, sigui quina sigui la casella on caigui.",
+                "La fila {row} no pot tenir un segon {d}, així que elimina el {d} de les caselles de la fila {row} fora de la caixa: {elim}."
+              ]
+            },
+            {
+              "h": "Reclamar",
+              "steps": [
+                "A la fila {row}, el dígit {d} només pot anar a {cells}, i totes són dins de la caixa {box}.",
+                "La fila {row} ha de contenir un {d}, així que el {d} de la caixa {box} el reclama la fila {row}. Les altres caselles de la caixa {box} no poden contenir {d}.",
+                "Elimina el {d} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminar el dígit dins de la caixa en lloc de fora en el cas d'apuntar, o a l'inrevés en el cas de reclamar. Les eliminacions sempre van a les caselles que són a la línia però no a la caixa, o a la caixa però no a la línia.",
+            "Aplicar la regla quan els candidats ocupen dues files de la caixa. Totes les caselles candidates del dígit a la caixa han de ser en una sola línia.",
+            "Oblidar buscar el single que crea l'eliminació. Els candidats bloquejats rarament col·loquen un dígit per si sols; preparen un single."
+          ],
+          "faq": [
+            [
+              "Què són els candidats bloquejats al sudoku?",
+              "Candidats d'un dígit confinats a la intersecció d'una caixa i una línia. Com que la caixa, o la línia, ha de contenir el dígit dins d'aquesta intersecció, el dígit es pot eliminar de la resta de la línia, o de la resta de la caixa."
+            ],
+            [
+              "Quina diferència hi ha entre apuntar i reclamar?",
+              "Apuntar parteix d'una caixa: els candidats del dígit a la caixa apunten al llarg d'una fila o columna, així que el dígit s'elimina de la resta d'aquesta línia. Reclamar parteix d'una fila o columna: els candidats de la línia per al dígit són tots en una caixa, així que la línia reclama el dígit i s'elimina de la resta de la caixa."
+            ],
+            [
+              "Els candidats bloquejats també s'anomenen eliminació per intersecció?",
+              "Sí. Altres noms són reducció caixa-línia per a la forma de reclamar i parelles o trios apuntadors per a la forma d'apuntar. Bare Sudoku fa servir un sol nom per a totes dues."
+            ],
+            [
+              "Quin nivell necessita candidats bloquejats?",
+              "Difícil. Un trencaclosques que necessita candidats bloquejats o parelles i trios però res de més difícil es classifica com a Difícil; els Expert també necessiten un peix o una ala."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Parelles i trios nus",
+          "title": "Parelles i trios nus al sudoku: com funcionen",
+          "description": "Parelles i trios nus: dues o tres caselles d'una unitat que comparteixen els mateixos dos o tres candidats. Aprèn a detectar-los i què cal eliminar.",
+          "h1": "Parelles i trios nus (naked pair, naked triple)",
+          "summary": "Una parella nua són dues caselles de la mateixa fila, columna o caixa que tenen exactament els mateixos dos candidats. Els dos dígits han d'anar en aquestes dues caselles, així que es poden eliminar de totes les altres caselles de la unitat. Un trio nu és la mateixa idea amb tres caselles i tres dígits; cada casella pot mostrar-ne dos o tots tres. La pista de Bare Sudoku etiqueta la col·locació resultant com a \"Parella o trio\".",
+          "when": [
+            "Quan les notes són completes i s'han esgotat els singles i els candidats bloquejats. Les parelles nues són molt habituals en els trencaclosques Difícil; els trios nus, menys. Val la pena buscar-los a cada unitat que encara tingui cinc caselles buides o més."
+          ],
+          "spot": [
+            "Busca caselles amb només dos candidats i una altra casella de la mateixa unitat amb els mateixos dos. Per als trios, mira les unitats amb diverses caselles de dos i tres candidats i comprova si tres d'elles fan servir entre totes només tres dígits diferents. Les caselles amb exactament els mateixos candidats es veuen fàcilment un cop escrites les notes; Omple les notes ho fa al joc amb un sol toc."
+          ],
+          "examples": [
+            {
+              "h": "Parella nua",
+              "steps": [
+                "{cellA} i {cellB} a la {unit} tenen exactament els mateixos dos candidats: {d1} i {d2}.",
+                "Una ha de ser {d1} i l'altra {d2}. No sabem quina és quina, però aquestes dues caselles esgoten tots dos dígits.",
+                "Per tant, cap altra casella de la {unit} no pot contenir {d1} ni {d2}. Elimina {elim}."
+              ]
+            },
+            {
+              "h": "Trio nu",
+              "steps": [
+                "Tres caselles de la {unit} treuen tots els seus candidats dels mateixos tres dígits, {digits}: {cells}.",
+                "Els tres dígits han d'omplir aquestes tres caselles en algun ordre. Una casella no ha de mostrar els tres candidats; el que importa és que cap de les tres caselles tingui un candidat fora del conjunt.",
+                "Elimina {digits} de totes les altres caselles de la {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Agafar dues caselles que comparteixen dos candidats però que en tenen també un tercer. En una parella nua, cada casella ha de tenir exactament els dos candidats i res més.",
+            "Eliminar els dígits de les caselles de la mateixa parella. La parella conserva els seus candidats; les eliminacions van a les altres caselles de la unitat.",
+            "Exigir que cada casella d'un trio mostri els tres dígits. Una casella amb dos dels tres ja serveix, sempre que cap casella tingui un candidat fora del conjunt."
+          ],
+          "faq": [
+            [
+              "Què és una parella nua al sudoku?",
+              "Dues caselles d'una unitat que tenen totes dues exactament els mateixos dos candidats. Aquests dos dígits queden tancats en aquestes dues caselles, així que es poden eliminar de la resta de la unitat."
+            ],
+            [
+              "Què és un trio nu?",
+              "Tres caselles d'una unitat els candidats de les quals, entre totes, són només tres dígits. Cada casella en pot tenir dos o tres. Els tres dígits omplen les tres caselles, així que es poden eliminar de les altres caselles de la unitat."
+            ],
+            [
+              "Una parella nua col·loca un dígit?",
+              "No per si sola. Elimina candidats, i l'eliminació sol deixar un candidat únic o un únic amagat. La pista de Bare Sudoku mostra aquest single i anomena la tècnica que l'ha fet possible."
+            ],
+            [
+              "Pot estar una parella nua en una caixa i en una fila alhora?",
+              "Sí. Si les dues caselles comparteixen fila i caixa, la parella elimina a totes dues unitats. Bare Sudoku les tracta d'una unitat en una."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Parelles i trios amagats",
+          "title": "Parelles i trios amagats al sudoku: com detectar-los",
+          "description": "Una parella amagada són dos dígits que només poden anar a les mateixes dues caselles d'una unitat, així que els altres candidats se'n van. Aprèn a trobar-les.",
+          "h1": "Parelles i trios amagats (hidden pair, hidden triple)",
+          "summary": "Una parella amagada són dos dígits que, dins d'una fila, columna o caixa, són candidats a les mateixes dues caselles i enlloc més. Aquestes dues caselles han de contenir aquests dos dígits, així que qualsevol altre candidat que hi hagi es pot eliminar. Un trio amagat funciona igual amb tres dígits confinats a tres caselles. Després de l'eliminació, les caselles mostren una parella o un trio nu. La pista de Bare Sudoku etiqueta la col·locació resultant com a \"Parella o trio\".",
+          "when": [
+            "Quan una unitat té caselles amb molts candidats i ja no queden singles. Les parelles amagades s'amaguen dins de caselles atapeïdes, i per això val la pena buscar-les precisament on no es veuen parelles nues. Els trios amagats són rars; Bare Sudoku els busca, però la majoria de trencaclosques Difícil es resolen sense."
+          ],
+          "spot": [
+            "Treballa per dígits, no per caselles. En una unitat, anota les caselles on pot anar cada dígit que hi falta. Si dos dígits tenen cadascun només dues caselles possibles i són les mateixes dues, has trobat una parella amagada. Al joc, toca la tecla d'un dígit per ressaltar-ne els candidats; si dos dígits il·luminen les mateixes dues caselles d'una unitat i cap altra, aquest és el patró."
+          ],
+          "examples": [
+            {
+              "h": "Parella amagada",
+              "steps": [
+                "A la {unit}, els dígits {d1} i {d2} només tenen dues caselles possibles cadascun, i són les mateixes: {cells}.",
+                "Aquestes dues caselles han de contenir {d1} i {d2}, així que els seus altres candidats són impossibles.",
+                "Elimina {elim}. Ara les dues caselles mostren una parella nua, que pot desbloquejar més coses."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminar els dos dígits de la parella de les caselles de la parella. El que s'elimina són els altres candidats d'aquestes caselles; els dígits de la parella es queden.",
+            "Acceptar un dígit que té una tercera casella possible a la unitat. Tots dos dígits han d'estar limitats exactament a les dues caselles.",
+            "Buscar només a les caixes. Les parelles amagades apareixen igual de sovint a les files i les columnes."
+          ],
+          "faq": [
+            [
+              "Què és una parella amagada al sudoku?",
+              "Dos dígits que només poden anar a les mateixes dues caselles d'una unitat. Aquestes caselles han de rebre aquests dígits, així que se n'eliminen els altres candidats."
+            ],
+            [
+              "En què es diferencia una parella amagada d'una parella nua?",
+              "Una parella nua es veu: dues caselles que només mostren els mateixos dos candidats. Una parella amagada queda tapada per candidats de més a les dues caselles. Eliminar aquests candidats sobrers converteix la parella amagada en una parella nua."
+            ],
+            [
+              "Què és un trio amagat?",
+              "Tres dígits confinats a tres caselles d'una unitat. No cal que cada dígit aparegui a les tres caselles; el que importa és que cap dels tres dígits tingui un candidat fora d'aquestes caselles."
+            ],
+            [
+              "La pista distingeix les parelles amagades de les nues?",
+              "No. Bare Sudoku troba totes dues i etiqueta la col·locació resultant com a \"Parella o trio\". Aquestes pàgines les separen perquè es troben de maneres diferents."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing al sudoku: com funciona la tècnica",
+          "description": "X-Wing: un dígit amb exactament dues caselles candidates en dues files, alineades a les mateixes dues columnes, s'elimina de la resta d'aquestes columnes.",
+          "h1": "X-Wing",
+          "summary": "Un X-Wing és un patró d'un dígit i quatre caselles als vèrtexs d'un rectangle. Si el dígit té exactament dues caselles candidates a cadascuna de dues files, i aquestes caselles són a les mateixes dues columnes, el dígit ha d'ocupar dos vèrtexs oposats del rectangle. Per tant, es pot eliminar de totes les altres caselles d'aquestes dues columnes. El mateix funciona intercanviant files i columnes. És la primera tècnica Expert de Bare Sudoku.",
+          "when": [
+            "Quan s'han esgotat els singles, els candidats bloquejats i les parelles i trios. Els X-Wing són el patró Expert més habitual i sovint apareixen quan a un dígit li queden pocs candidats, normalment amb quatre a sis còpies ja col·locades. Necessiten les notes completes del dígit que examines."
+          ],
+          "spot": [
+            "Tria un dígit i busca files on tingui exactament dues caselles candidates. Si dues d'aquestes files comparteixen les mateixes dues columnes, busca en aquestes columnes altres candidats del dígit: són les eliminacions. Després repeteix-ho prenent les columnes com a base. Al joc, toca la tecla del dígit: tots els seus candidats es ressalten, i un rectangle de quatre notes ressaltades es veu fàcilment."
+          ],
+          "examples": [
+            {
+              "h": "Exemple",
+              "steps": [
+                "El dígit {d} té exactament dues caselles candidates a la fila {r1} i exactament dues a la fila {r2}, i s'alineen a les mateixes dues columnes, {c1} i {c2}: {cells}.",
+                "La fila {r1} posa el seu {d} a la columna {c1} o a la {c2}, i la fila {r2} posa el seu {d} a l'altra. En qualsevol cas, les columnes {c1} i {c2} reben cadascuna un {d} d'aquestes dues files.",
+                "Per tant, {d} no pot aparèixer enlloc més de les columnes {c1} i {c2}. Elimina el {d} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Fer servir una fila que té tres caselles candidates per al dígit. Cada fila base n'ha de tenir exactament dues, i totes dues han de ser a les dues columnes compartides.",
+            "Eliminar el dígit de les files en lloc de les columnes. Amb les files com a base, les eliminacions són a les columnes, i a l'inrevés.",
+            "Oblidar la versió intercanviada. Un X-Wing construït sobre columnes elimina a les files."
+          ],
+          "faq": [
+            [
+              "Què és un X-Wing al sudoku?",
+              "Un dígit que té exactament dues caselles candidates a cadascuna de dues files, a les mateixes dues columnes. El dígit ocupa dos vèrtexs oposats d'aquest rectangle, així que s'elimina de la resta de les dues columnes. Files i columnes es poden intercanviar."
+            ],
+            [
+              "Per què funciona un X-Wing?",
+              "Cadascuna de les dues files ha de col·locar el dígit en una de les dues columnes, i les dues files no poden fer servir la mateixa columna. Així, cada columna rep la seva còpia del dígit d'aquestes files, i qualsevol altre candidat en aquestes columnes és impossible."
+            ],
+            [
+              "Un X-Wing és un peix?",
+              "Sí. L'X-Wing és el peix de mida dos; el Swordfish és el peix de mida tres. Bare Sudoku troba tots dos."
+            ],
+            [
+              "A quin nivell hi ha X-Wing?",
+              "Expert. Un trencaclosques que necessita un X-Wing, un Y-Wing, un Swordfish o un XYZ-Wing es classifica com a Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing al sudoku: com funciona la tècnica",
+          "description": "Y-Wing (XY-Wing): un pivot amb dos candidats i dues ales que en comparteixen un cadascuna treuen un dígit de les caselles que veuen les dues ales. Exemple.",
+          "h1": "Y-Wing",
+          "summary": "Un Y-Wing, també anomenat XY-Wing, fa servir tres caselles amb dos candidats cadascuna. El pivot té els candidats X i Y. Una ala veu el pivot i té X i Z; l'altra ala veu el pivot i té Y i Z. Sigui quin sigui el valor del pivot, una de les ales ha de ser Z, així que Z es pot eliminar de totes les caselles que veuen les dues ales. És una tècnica Expert a Bare Sudoku.",
+          "when": [
+            "Quan un trencaclosques té diverses caselles amb exactament dos candidats i no hi ha cap peix disponible. Els Y-Wing són habituals en els trencaclosques Expert i es troben seguint les caselles de dos candidats: cadascuna és un possible pivot o una possible ala."
+          ],
+          "spot": [
+            "Fes la llista de les caselles amb exactament dos candidats. Per a cadascuna, considera-la el pivot amb candidats X i Y, i busca entre les seves veïnes una casella amb X i un altre dígit Z, i una casella amb Y i el mateix Z. Aquestes dues són les ales. Després busca caselles que vegin les dues ales i continguin Z. Tingues en compte que les ales no s'han de veure entre elles."
+          ],
+          "examples": [
+            {
+              "h": "Exemple",
+              "steps": [
+                "El pivot {pivot} té els candidats {x} i {y}. Veu {wingA}, que té {x} i {z}, i {wingB}, que té {y} i {z}.",
+                "Si {pivot} és {x}, {wingA} perd el {x} i esdevé {z}. Si {pivot} és {y}, {wingB} esdevé {z}. En tots els casos, una de les dues ales és {z}.",
+                "Una casella que veu les dues ales no pot ser mai {z}. Elimina el {z} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Triar ales que no veuen totes dues el pivot. Cada ala ha de compartir fila, columna o caixa amb el pivot.",
+            "Eliminar Z de caselles que només veuen una ala. La casella eliminada ha de veure les dues ales.",
+            "Eliminar Z del pivot. En un Y-Wing el pivot no conté Z; si el conté, el patró és un XYZ-Wing, amb regles diferents."
+          ],
+          "faq": [
+            [
+              "Què és un Y-Wing al sudoku?",
+              "Tres caselles de dos candidats: un pivot amb X i Y, una ala amb X i Z que veu el pivot, i una ala amb Y i Z que veu el pivot. Una ala sempre és Z, així que Z s'elimina de les caselles que veuen les dues ales."
+            ],
+            [
+              "Y-Wing i XY-Wing són el mateix?",
+              "Sí. Els dos noms descriuen el mateix patró. Bare Sudoku en diu Y-Wing."
+            ],
+            [
+              "Per què una ala ha de ser Z?",
+              "Si el pivot és X, la primera ala perd X i esdevé Z. Si el pivot és Y, la segona ala esdevé Z. El pivot és un dels dos, així que una ala és Z."
+            ],
+            [
+              "Quantes caselles elimina un Y-Wing?",
+              "Normalment una o dues: només les caselles que veuen les dues ales i encara contenen Z. N'hi ha prou per crear un single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish al sudoku: com funciona la tècnica",
+          "description": "Swordfish: un dígit confinat a tres columnes en tres files s'elimina de la resta d'aquestes columnes. El peix de mida tres, explicat amb un exemple real.",
+          "h1": "Swordfish",
+          "summary": "Un Swordfish és un X-Wing amb tres files i tres columnes. Si un dígit té com a màxim tres caselles candidates a cadascuna de tres files, i totes aquestes caselles cauen a les mateixes tres columnes, les tres files esgoten el dígit en aquestes columnes, i el dígit es pot eliminar de totes les altres caselles de les tres columnes. Files i columnes es poden intercanviar. Bare Sudoku busca Swordfish després de l'Y-Wing, en els trencaclosques Expert.",
+          "when": [
+            "Quan l'X-Wing i l'Y-Wing no troben res. Els Swordfish són menys habituals que els X-Wing i necessiten un dígit amb els candidats escampats per tres línies. Necessiten notes completes i exactes d'aquest dígit."
+          ],
+          "spot": [
+            "Tria un dígit i busca files amb dues o tres caselles candidates per a ell. Si tres d'aquestes files només cobreixen tres columnes en total, busca en aquestes columnes més candidats del dígit. No cal que cada fila tingui un candidat a cada columna: un Swordfish pot tenir sis, set, vuit o nou caselles. Al joc, ressalta el dígit amb la seva tecla i busca tres files amb els candidats alineats en tres columnes."
+          ],
+          "examples": [
+            {
+              "h": "Exemple",
+              "steps": [
+                "El dígit {d} té com a màxim tres caselles candidates a cadascuna de les files {rows}, i totes cauen a les columnes {cols}: {cells}.",
+                "Cadascuna de les tres files ha de posar el seu {d} en una de les tres columnes, i dues files no poden fer servir la mateixa columna. Així, les tres columnes reben el seu {d} d'aquestes tres files.",
+                "Qualsevol altre candidat {d} a les columnes {cols} és impossible. Elimina el {d} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Exigir les nou caselles. Un Swordfish amb dos candidats en algunes files continua sent vàlid, sempre que les tres files cobreixin només tres columnes.",
+            "Incloure una fila amb quatre caselles candidates. Cada fila base n'ha de tenir com a màxim tres, totes dins de les tres columnes.",
+            "Eliminar a les files base. Amb les files com a base, les eliminacions són a les tres columnes, fora de les files base."
+          ],
+          "faq": [
+            [
+              "Què és un Swordfish al sudoku?",
+              "Un dígit els candidats del qual, en tres files, estan confinats a tres columnes. Les tres files han de col·locar el dígit en aquestes tres columnes, una cadascuna, així que el dígit s'elimina de les altres caselles d'aquestes columnes."
+            ],
+            [
+              "En què es diferencia un Swordfish d'un X-Wing?",
+              "Només en la mida: un X-Wing fa servir dues files i dues columnes; un Swordfish, tres i tres. El raonament és el mateix."
+            ],
+            [
+              "Un Swordfish necessita exactament nou caselles?",
+              "No. Cada fila pot tenir dos o tres candidats; el patró només exigeix que les tres files juntes no facin servir més de tres columnes."
+            ],
+            [
+              "Hi ha un peix de mida quatre?",
+              "Sí, el Jellyfish. Bare Sudoku no el fa servir, perquè els seus trencaclosques no el necessiten mai."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing al sudoku: com funciona la tècnica",
+          "description": "XYZ-Wing: un pivot amb tres candidats i dues ales que en comparteixen un treuen aquest dígit de totes les caselles que veuen les tres. Exemple real pas a pas.",
+          "h1": "XYZ-Wing",
+          "summary": "Un XYZ-Wing és un Y-Wing amb un pivot de tres candidats. El pivot té X, Y i Z; una ala veu el pivot i té X i Z, l'altra veu el pivot i té Y i Z. Una de les tres caselles ha de ser Z, així que Z es pot eliminar de totes les caselles que veuen les tres. Com que el mateix pivot pot ser Z, la casella eliminada ha de veure tant el pivot com les dues ales, cosa que la limita a la caixa o la línia que comparteixen les caselles. És la tècnica més difícil que fa servir Bare Sudoku.",
+          "when": [
+            "Només quan tota la resta falla. Els XYZ-Wing són el patró més rar de Bare Sudoku i només apareixen en trencaclosques Expert. Busca'ls quan una casella de tres candidats és en una caixa amb una casella de dos candidats que comparteix dos dels seus dígits."
+          ],
+          "spot": [
+            "Comença per les caselles amb exactament tres candidats; cadascuna és un possible pivot. Entre les seves veïnes, busca dues caselles de dos candidats cadascuna, tots dos presos dels tres del pivot, que comparteixin exactament un dígit Z. Després busca caselles que vegin el pivot i les dues ales i continguin Z. A la pràctica, una ala és a la caixa del pivot i l'altra a la seva fila o columna, i les caselles eliminades són les caselles restants d'aquesta caixa en aquesta fila o columna."
+          ],
+          "examples": [
+            {
+              "h": "Exemple",
+              "steps": [
+                "El pivot {pivot} té tres candidats: {x}, {y} i {z}. Veu {wingA}, amb {x} i {z}, i {wingB}, amb {y} i {z}.",
+                "Si {pivot} és {z}, ja està. Si és {x}, {wingA} ha de ser {z}. Si és {y}, {wingB} ha de ser {z}. En tots els casos, una de les tres caselles és {z}.",
+                "Una casella que veu les tres no pot ser {z}. Elimina el {z} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminar de caselles que només veuen les dues ales. A diferència de l'Y-Wing, el pivot pot ser Z, així que la casella també ha de veure el pivot.",
+            "Fer servir ales amb candidats que no estan tots dos inclosos en els tres candidats del pivot.",
+            "Confondre'l amb un Y-Wing: la diferència és el tercer candidat del pivot, i canvia quines caselles es poden netejar."
+          ],
+          "faq": [
+            [
+              "Què és un XYZ-Wing al sudoku?",
+              "Un pivot amb candidats X, Y i Z i dues ales, una amb X i Z i l'altra amb Y i Z, que veuen totes dues el pivot. Una de les tres caselles és Z, així que Z s'elimina de les caselles que veuen les tres."
+            ],
+            [
+              "En què es diferencia un XYZ-Wing d'un Y-Wing?",
+              "El pivot té tres candidats en lloc de dos, i un d'ells és Z. Això fa que el pivot sigui un lloc possible per a Z, així que només les caselles que veuen el pivot i les dues ales poden perdre Z."
+            ],
+            [
+              "Amb quina freqüència apareix un XYZ-Wing?",
+              "Rarament. A Bare Sudoku només els trencaclosques Expert en poden necessitar un, i la majoria no. Bare Sudoku el busca l'últim, després de l'X-Wing, l'Y-Wing i el Swordfish."
+            ],
+            [
+              "Existeix un WXYZ-Wing?",
+              "Sí, amb un pivot de quatre candidats, però Bare Sudoku no el fa servir. Tots els trencaclosques del joc es poden acabar amb les nou tècniques d'aquesta guia."
+            ]
+          ]
+        }
+      }
+    },
     "sl": {
       "learnHeading": "Nauči se sudoku",
       "learnText": "Si nov v sudokuju ali se ti je zataknilo pri težki uganki? Dva vodnika razložita pravila in vse tehnike reševanja, ki jih uporabljajo namigi, vsako z resničnim primerom.",
