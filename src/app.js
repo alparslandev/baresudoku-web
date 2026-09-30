@@ -92,9 +92,18 @@ function renderLabels() {
 
 function buildBoard() {
   const board = $('board');
+  let row = null;
   for (let i = 0; i < 81; i++) {
+    if (i % 9 === 0) {
+      row = document.createElement('div');
+      row.className = 'row';
+      row.setAttribute('role', 'row');
+      board.appendChild(row);
+    }
     const cell = document.createElement('div');
     cell.dataset.i = i;
+    cell.setAttribute('role', 'gridcell');
+    cell.tabIndex = -1;
     const v = document.createElement('span');
     v.className = 'v';
     const n = document.createElement('div');
@@ -106,7 +115,7 @@ function buildBoard() {
       spans.push(s);
     }
     cell.append(v, n);
-    board.appendChild(cell);
+    row.appendChild(cell);
     cells.push(cell);
     noteSpans.push(spans);
   }
@@ -116,6 +125,7 @@ function buildBoard() {
     b.type = 'button';
     b.dataset.digit = d;
     b.innerHTML = d + '<small></small>';
+    b.setAttribute('aria-label', d);
     keys.appendChild(b);
     keyButtons.push(b);
   }
@@ -129,6 +139,22 @@ function clock(ms) {
   const h = Math.floor(m / 60);
   m %= 60;
   return (h ? h + ':' + (m < 10 ? '0' : '') : '') + m + ':' + (s < 10 ? '0' : '') + s;
+}
+
+function noteList(notes) {
+  const list = [];
+  for (let d = 1; d <= 9; d++) if (notes & bit(d)) list.push(d);
+  return list.join(' ');
+}
+
+function focusCell() {
+  const i = game.selected >= 0 ? game.selected : 40;
+  cells[i].focus({ preventScroll: true });
+}
+
+function focusPanel() {
+  const first = $('panel').querySelector('button:not([hidden])');
+  if (first) first.focus();
 }
 
 function hintMessage() {
@@ -163,6 +189,11 @@ function render() {
       if (v && (game.conflict(i) || game.wrong(i))) cls += ' wrong';
     }
     cell.className = cls;
+    cell.setAttribute('aria-selected', i === sel ? 'true' : 'false');
+    cell.tabIndex = i === (sel >= 0 ? sel : 40) ? 0 : -1;
+    if (v && cls.includes(' wrong')) cell.setAttribute('aria-label', v + ', ' + strings[S_WRONG]);
+    else if (!v && notes) cell.setAttribute('aria-label', strings[S_UNDO + 2] + ' ' + noteList(notes));
+    else cell.removeAttribute('aria-label');
     cell.firstChild.textContent = v ? v : '';
     const spans = noteSpans[i];
     for (let d = 1; d <= 9; d++) {
@@ -190,11 +221,13 @@ function render() {
   toolButtons.forEach((b, i) => {
     b.disabled = !playable || (i === 0 && !game.history.length);
     b.classList.toggle('on', playable && ((i === 2 && game.noteMode) || (i === 4 && hintOn && game.hintKind === HINT_PLACE)));
+    if (i === 2) b.setAttribute('aria-pressed', playable && game.noteMode ? 'true' : 'false');
   });
   keyButtons.forEach((b, i) => {
     const left = game.active && !generating ? Math.max(0, game.remaining(i + 1)) : 9;
     b.disabled = !playable || left === 0;
     b.classList.toggle('on', i + 1 === game.sticky);
+    b.setAttribute('aria-pressed', i + 1 === game.sticky ? 'true' : 'false');
     b.lastChild.textContent = left > 0 ? left : '';
   });
   const overlay = menuOpen || (game.active && game.solved);
@@ -235,6 +268,7 @@ function openMenu() {
   game.pause(now());
   stopTimer();
   render();
+  focusPanel();
 }
 
 function closeMenu() {
@@ -243,6 +277,7 @@ function closeMenu() {
   game.resume(now());
   startTimer();
   render();
+  focusCell();
 }
 
 function startGame(level) {
@@ -263,6 +298,7 @@ function startGame(level) {
     save();
     render();
     startTimer();
+    focusCell();
   }, 30);
 }
 
@@ -278,6 +314,7 @@ function restartGame() {
   save();
   render();
   startTimer();
+  focusCell();
 }
 
 function act(kind, d) {
@@ -309,6 +346,7 @@ function finish(changed) {
 function tapCell(i) {
   if (!game.active || generating || menuOpen || game.solved) return;
   finish(game.tap(i));
+  focusCell();
 }
 
 function selectCell(i) {
@@ -319,7 +357,7 @@ function selectCell(i) {
 
 function cellAt(e) {
   const el = document.elementFromPoint(e.clientX, e.clientY);
-  const cell = el && el.closest('#board > div');
+  const cell = el && el.closest('[data-i]');
   return cell ? +cell.dataset.i : -1;
 }
 
@@ -330,6 +368,7 @@ function move(key) {
   else if (key === 'ArrowUp') i = ((ROW[i] + 8) % 9) * 9 + COL[i];
   else i = ((ROW[i] + 1) % 9) * 9 + COL[i];
   selectCell(i);
+  focusCell();
 }
 
 function bind() {
@@ -389,6 +428,11 @@ function bind() {
     else if (k === 'Escape') {
       if (game.sticky) act('digit', game.sticky);
       else openMenu();
+    }
+    else if (k === 'Enter' || k === ' ') {
+      const cell = document.activeElement && document.activeElement.closest('[data-i]');
+      if (!cell) return;
+      tapCell(+cell.dataset.i);
     }
     else return;
     e.preventDefault();
