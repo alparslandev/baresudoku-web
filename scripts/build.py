@@ -12,51 +12,17 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import i18n
 import icons
 import indexnow
+import guide
+from consts import SITE, NAME, AUTHOR, AUTHOR_URL, AUTHOR_LINKS, PERSON_ID, WEBSITE_ID, GAME_ID, WEB_REPO, ANDROID_REPO, OG_IMAGE, SAME_AS, og_locale
 
-SITE = "https://baresudoku.com"
-NAME = "Bare Sudoku"
-AUTHOR = "Alparslan Selçuk Develioğlu"
-AUTHOR_URL = "https://devdiscipline.com/about"
-AUTHOR_LINKS = [
-    ("LinkedIn", "https://www.linkedin.com/in/alparslandev/"),
-    ("Instagram", "https://www.instagram.com/alparslandev"),
-    ("DevDiscipline", "https://devdiscipline.com"),
-    ("Yarış Radarı", "https://yarisradari.com"),
-]
 TRACKED_LINKS = {"https://yarisradari.com": "https://yarisradari.com/?utm_source=baresudoku"}
-PERSON_ID = SITE + "/#person"
-WEBSITE_ID = SITE + "/#website"
-GAME_ID = SITE + "/#game"
 ANDROID_ID = SITE + "/#android"
-WEB_REPO = "https://github.com/alparslandev/baresudoku-web"
-ANDROID_REPO = "https://github.com/alparslandev/baresudoku"
 APK_URL = ANDROID_REPO + "/releases/latest/download/baresudoku.apk"
 SCREENSHOT = "https://raw.githubusercontent.com/alparslandev/baresudoku/main/screenshot.png"
-OG_IMAGE = SITE + "/og.png"
 LICENSE_URL = WEB_REPO + "/blob/main/LICENSE"
 ANDROID_LICENSE_URL = ANDROID_REPO + "/blob/main/LICENSE"
 APK_FALLBACK = ("1.2", 24972)
 APP_STORE_URL = ""
-SAME_AS = ["https://github.com/alparslandev"] + [url for _, url in AUTHOR_LINKS] + ["https://www.youtube.com/@alparslandev"]
-OG_LOCALES = {
-    "en": "en_US", "tr": "tr_TR", "az": "az_AZ", "de": "de_DE", "fr": "fr_FR", "es": "es_ES", "pt": "pt_PT", "it": "it_IT",
-    "nl": "nl_NL", "pl": "pl_PL", "cs": "cs_CZ", "sk": "sk_SK", "hu": "hu_HU", "ro": "ro_RO", "el": "el_GR", "sv": "sv_SE",
-    "da": "da_DK", "nb": "nb_NO", "fi": "fi_FI", "ru": "ru_RU", "uk": "uk_UA", "bg": "bg_BG", "sr": "sr_RS", "hr": "hr_HR",
-    "ar": "ar_AR", "fa": "fa_IR", "he": "he_IL", "hi": "hi_IN", "bn": "bn_BD", "id": "id_ID", "ms": "ms_MY", "vi": "vi_VN",
-    "th": "th_TH", "ja": "ja_JP", "ko": "ko_KR", "zh-Hans": "zh_CN", "zh-Hant": "zh_TW",
-    "ur": "ur_PK", "pa": "pa_IN", "ta": "ta_IN", "te": "te_IN", "mr": "mr_IN", "gu": "gu_IN", "kn": "kn_IN", "ml": "ml_IN",
-    "tl": "tl_PH", "jv": "jv_ID", "sw": "sw_KE", "my": "my_MM", "ca": "ca_ES", "sl": "sl_SI", "lt": "lt_LT", "lv": "lv_LV",
-    "et": "et_EE", "sq": "sq_AL", "mk": "mk_MK", "bs": "bs_BA", "ka": "ka_GE", "hy": "hy_AM", "kk": "kk_KZ", "uz": "uz_UZ",
-    "ky": "ky_KG", "tg": "tg_TJ", "mn": "mn_MN", "ne": "ne_NP", "si": "si_LK", "km": "km_KH", "lo": "lo_LA", "am": "am_ET",
-    "ha": "ha_NG", "yo": "yo_NG", "ig": "ig_NG", "zu": "zu_ZA", "af": "af_ZA", "is": "is_IS", "ga": "ga_IE", "cy": "cy_GB",
-    "eu": "eu_ES", "gl": "gl_ES", "mt": "mt_MT", "lb": "lb_LU", "be": "be_BY", "so": "so_SO", "xh": "xh_ZA", "ht": "ht_HT",
-    "eo": "eo_EO", "la": "la_VA", "yi": "yi_DE", "ps": "ps_AF", "ku": "ku_TR", "ckb": "ckb_IQ", "ug": "ug_CN", "sd": "sd_PK",
-    "tk": "tk_TM", "tt": "tt_RU", "ba": "ba_RU", "mi": "mi_NZ", "sm": "sm_WS", "to": "to_TO", "haw": "haw_US", "fj": "fj_FJ",
-    "or": "or_IN", "as": "as_IN", "dv": "dv_MV", "ceb": "ceb_PH", "su": "su_ID", "st": "st_ZA", "sn": "sn_ZW", "rw": "rw_RW",
-    "mg": "mg_MG", "ny": "ny_MW", "ti": "ti_ET", "om": "om_ET", "wo": "wo_SN", "ln": "ln_CD", "tn": "tn_BW", "ts": "ts_ZA",
-    "lg": "lg_UG", "ak": "ak_GH", "ee": "ee_GH", "fo": "fo_FO", "gd": "gd_GB", "br": "br_FR", "oc": "oc_FR", "fy": "fy_NL",
-    "qu": "qu_PE", "gn": "gn_PY", "ay": "ay_BO", "hmn": "hmn_US", "cv": "cv_RU", "os": "os_RU", "ce": "ce_RU",
-}
 BOTS = [
     "Googlebot", "Bingbot", "Applebot", "DuckDuckBot", "YandexBot", "Google-Extended", "GoogleOther", "GPTBot", "OAI-SearchBot",
     "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "anthropic-ai", "PerplexityBot", "Perplexity-User",
@@ -67,6 +33,7 @@ CONTENT_SIGNAL = "Content-Signal: search=yes, ai-input=yes, ai-train=yes"
 ROBOTS_DISALLOW = ["Disallow: /api/", "Disallow: /stats/"]
 CSP = "default-src 'none'; script-src 'self'; connect-src 'self'; style-src 'unsafe-inline'; img-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
 DISCOVERY_CACHE = "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400"
+PAGE_CACHE = "public, max-age=600, s-maxage=86400, stale-while-revalidate=604800"
 TEXT_TYPES = (".html", ".txt", ".xml", ".webmanifest")
 
 
@@ -96,13 +63,6 @@ def privacy_url(code):
 
 def store_link():
     return ' · <a href="%s">App Store</a>' % APP_STORE_URL if APP_STORE_URL else ""
-
-
-def og_locale(code):
-    if code in OG_LOCALES:
-        return OG_LOCALES[code]
-    base = code.split("-")[0].lower()
-    return base + "_" + code.split("-")[-1].upper()
 
 
 def esc(text):
@@ -149,12 +109,14 @@ def language_links(languages):
     return "".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (i18n.path(code), code, code, esc(languages[code][0])) for code in languages)
 
 
-def content(code, entry, languages, version, size, lastmod, web):
+def content(code, entry, languages, version, size, lastmod, web, learn):
     def f(text):
         return esc(fill(text, version, size))
     parts = ['<section id="about">', "<h1>%s</h1>" % f(entry["h1"]), "<p>%s</p>" % f(entry["intro"])]
     parts.append("<h2>%s</h2>" % f(entry["featuresHeading"]))
     parts.append("<ul>%s</ul>" % "".join("<li>%s</li>" % f(item) for item in entry["features"]))
+    if learn:
+        parts.append(guide.learn_block(code, learn))
     parts.append("<h2>%s</h2>" % f(entry["androidHeading"]))
     parts.append('<p>%s <a href="%s">%s</a></p>' % (f(entry["android"]), APK_URL, f(entry["androidLink"])))
     parts.append("<h2>%s</h2>" % f(entry["privacyHeading"]))
@@ -218,7 +180,7 @@ def jsonld(code, entry, languages, version, size, lastmod, web):
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
 
 
-def page(template, css, table, code, entry, languages, version, size, lastmod, web):
+def page(template, css, table, code, entry, languages, version, size, lastmod, web, learn):
     def f(text):
         return esc(fill(text, version, size))
     alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, url_of(c)) for c in languages]
@@ -235,7 +197,7 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
         "{{OG_LOCALE}}": og_locale(code),
         "{{OG_ALT}}": f(entry["ogAlt"]),
         "{{JSONLD}}": jsonld(code, entry, languages, version, size, lastmod, web),
-        "{{CONTENT}}": content(code, entry, languages, version, size, lastmod, web),
+        "{{CONTENT}}": content(code, entry, languages, version, size, lastmod, web, learn),
         "{{WEB_VERSION}}": web,
         "{{CSS}}": css,
         "{{OPTIONS}}": options,
@@ -247,7 +209,7 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
     return out
 
 
-def headers_file():
+def headers_file(sitemaps):
     lines = [
         "/*",
         "  Strict-Transport-Security: max-age=31536000; includeSubDomains",
@@ -260,6 +222,8 @@ def headers_file():
         "/404",
         "  X-Robots-Tag: noindex",
     ]
+    for path in guide.header_paths():
+        lines += [path, "  Content-Type: text/html; charset=utf-8", "  Cache-Control: " + PAGE_CACHE]
     for path, content_type in (
         ("/robots.txt", "text/plain; charset=utf-8"),
         ("/sitemap.xml", "application/xml; charset=utf-8"),
@@ -269,6 +233,8 @@ def headers_file():
         ("/.well-known/security.txt", "text/plain; charset=utf-8"),
     ):
         lines += [path, "  Content-Type: " + content_type, "  Cache-Control: " + DISCOVERY_CACHE]
+    for name in sitemaps:
+        lines += ["/" + name, "  Content-Type: application/xml; charset=utf-8", "  Cache-Control: " + DISCOVERY_CACHE]
     lines += ["/manifest.webmanifest", "  Content-Type: application/manifest+json; charset=utf-8", "  Cache-Control: public, max-age=86400"]
     for path in ("/icon.svg", "/favicon.ico", "/icon-192.png", "/icon-512.png", "/icon-maskable-512.png", "/og.png"):
         lines += [path, "  Cache-Control: public, max-age=2592000"]
@@ -288,11 +254,22 @@ def alternate_links(languages, resolve, tag):
     return links
 
 
-def sitemap_file(languages, lastmod):
-    urls = ""
-    for resolve in (url_of, privacy_url):
-        urls += "".join("<url><loc>%s</loc><lastmod>%s</lastmod></url>\n" % (resolve(c), lastmod) for c in languages)
-    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</urlset>\n' % urls
+def urlset(codes, resolve, lastmod_of):
+    urls = []
+    for c in codes:
+        links = "".join('<xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (h, SITE + resolve(c2)) for c2, h in [(x, x) for x in codes] + [("en", "x-default")])
+        urls.append("<url><loc>%s</loc><lastmod>%s</lastmod>%s</url>\n" % (SITE + resolve(c), lastmod_of(c), links))
+    return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s</urlset>\n' % "".join(urls)
+
+
+def sitemap_files(languages, guide_languages, lastmod, guide_dates):
+    files = {"sitemap-play.xml": urlset(languages, i18n.path, lambda c: lastmod), "sitemap-privacy.xml": urlset(languages, privacy_path, lambda c: lastmod)}
+    for name, resolve in guide.sitemap_groups(guide_languages):
+        files["sitemap-%s.xml" % name] = urlset(list(guide_languages), resolve, lambda c: guide_dates[c][1])
+    newest = max([lastmod] + [d[1] for d in guide_dates.values()])
+    entries = "".join("<sitemap><loc>%s/%s</loc><lastmod>%s</lastmod></sitemap>\n" % (SITE, name, newest) for name in files)
+    files["sitemap.xml"] = '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</sitemapindex>\n' % entries
+    return files
 
 
 def privacy_page(template, css, code, entry, languages, lastmod):
@@ -323,7 +300,7 @@ def privacy_page(template, css, code, entry, languages, lastmod):
     return out
 
 
-def llms_file(site, languages, version, size, lastmod, web):
+def llms_file(site, languages, version, size, lastmod, web, guide_en):
     en = site["en"]
     lines = ["# " + NAME, "", "> " + fill(en["description"], version, size), "", fill(en["intro"], version, size), "", "## Facts"]
     lines += ["- " + fill(item, version, size) for item in en["features"]]
@@ -337,6 +314,7 @@ def llms_file(site, languages, version, size, lastmod, web):
         "## Play (%d languages)" % len(languages),
     ]
     lines += ["- [%s (%s)](%s): %s" % (NAME, languages[c][0], url_of(c), fill(site[c]["h1"], version, size)) for c in languages]
+    lines += guide.llms_lines(guide_en)
     lines += [
         "",
         "## Android app",
@@ -348,7 +326,7 @@ def llms_file(site, languages, version, size, lastmod, web):
         "- [Android source code](%s): plain Java, MIT" % ANDROID_REPO,
         "",
         "## Optional",
-        "- [Full text](%s/llms-full.txt): the complete page text in English and Turkish, plus a one-line summary in every language" % SITE,
+        "- [Full text](%s/llms-full.txt): the complete page text in English and Turkish, the guides in English, plus a one-line summary in every language" % SITE,
         "- [Author](%s): %s" % (AUTHOR_URL, AUTHOR),
         "- [Privacy policy](%s): no personal data, no account, no cookies; anonymous play counters" % privacy_url("en"),
         "- [Stats](%s/stats/): the anonymous counters, public" % SITE,
@@ -365,10 +343,12 @@ def full_text(entry, version, size):
     return lines
 
 
-def llms_full_file(site, languages, version, size, lastmod):
+def llms_full_file(site, languages, version, size, lastmod, guide_en, strings_en, examples):
     lines = full_text(site["en"], version, size)
     lines += ["", "Updated: " + lastmod, "", "---", ""]
     lines += full_text(site["tr"], version, size)
+    lines += ["", "---", ""]
+    lines += guide.full_text_lines(guide_en, site["en"], strings_en, examples)
     lines += ["", "---", "", "## Other languages"]
     for code in languages:
         if code in ("en", "tr"):
@@ -416,6 +396,8 @@ def check_placeholders(dist):
 def main():
     keys, languages = i18n.load()
     site = i18n.load_site(languages)
+    guides = i18n.load_guide(languages)
+    examples = guide.load_examples()
     lastmod = lastmod_date()
     expires = (datetime.date.today() + datetime.timedelta(days=365)).isoformat() + "T00:00:00.000Z"
     version, apk_bytes = android_release()
@@ -432,29 +414,33 @@ def main():
     write(dist, "app.js", script)
     total = 0
     for code in languages:
-        out = page(template, css, table, code, site[code], languages, version, size, lastmod, web)
+        out = page(template, css, table, code, site[code], languages, version, size, lastmod, web, guides.get(code))
         digest.update(out.encode("utf-8"))
         total += len(out.encode("utf-8"))
         write(dist, os.path.join(i18n.path(code).strip("/"), "index.html"), out)
     privacy_template = read("src", "privacy.html")
     for code in languages:
         write(dist, os.path.join(privacy_path(code).strip("/"), "index.html"), privacy_page(privacy_template, css, code, site[code], languages, lastmod))
+    names = {code: languages[code][0] for code in languages}
+    guide_count, guide_dates = guide.write_all(write, dist, read("src", "guide.html"), css, guides, site, table, examples, names)
     not_found = read("src", "404.html").replace("{{CSS}}", css).replace("{{LANGUAGE_LINKS}}", language_links(languages))
     write(dist, "404.html", not_found)
     write(dist, "sw.js", read("src", "sw.js").replace("{{HASH}}", digest.hexdigest()[:10]))
     shutil.copytree(os.path.join(ROOT, "static"), dist, dirs_exist_ok=True)
     icons.write(dist)
-    write(dist, "_headers", headers_file())
+    sitemaps = sitemap_files(languages, guides, lastmod, guide_dates)
+    write(dist, "_headers", headers_file([name for name in sitemaps if name != "sitemap.xml"]))
     write(dist, "_redirects", "/security.txt /.well-known/security.txt 301\n")
     write(dist, "robots.txt", robots_file())
-    write(dist, "sitemap.xml", sitemap_file(languages, lastmod))
-    write(dist, "llms.txt", llms_file(site, languages, version, size, lastmod, web))
-    write(dist, "llms-full.txt", llms_full_file(site, languages, version, size, lastmod))
+    for name, text in sitemaps.items():
+        write(dist, name, text)
+    write(dist, "llms.txt", llms_file(site, languages, version, size, lastmod, web, guides["en"]))
+    write(dist, "llms-full.txt", llms_full_file(site, languages, version, size, lastmod, guides["en"], table["en"], examples))
     write(dist, "humans.txt", humans_file(lastmod, len(languages), web, version))
     write(dist, os.path.join(".well-known", "security.txt"), security_file(expires))
     write(dist, indexnow.KEY + ".txt", indexnow.KEY)
     check_placeholders(dist)
-    print("dist hazir: %d dil sayfasi + gizlilik sayfalari, sayfa basina ~%d bayt, web %s, Android %s (%d KB), guncelleme %s" % (len(languages), total // len(languages), web, version, size, lastmod))
+    print("dist hazir: %d dil sayfasi + gizlilik sayfalari + %d rehber sayfasi (%d dil), sayfa basina ~%d bayt, web %s, Android %s (%d KB), guncelleme %s" % (len(languages), guide_count, len(guides), total // len(languages), web, version, size, lastmod))
 
 
 if __name__ == "__main__":
