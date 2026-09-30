@@ -1163,6 +1163,2334 @@
           ]
         }
       }
+    },
+    "sr": {
+      "learnHeading": "Nauči sudoku",
+      "learnText": "Tek počinješ sa sudokuom ili si zapeo na teškoj zagonetki? Dva vodiča objašnjavaju pravila i svaku tehniku rešavanja koju koriste saveti, svaku sa pravim primerom.",
+      "howToLink": "Kako se igra sudoku",
+      "techniquesLink": "Tehnike rešavanja sudokua",
+      "labels": {
+        "howTo": "Kako se igra",
+        "techniques": "Tehnike",
+        "play": "Igraj sudoku",
+        "prev": "Prethodna tehnika",
+        "next": "Sledeća tehnika",
+        "all": "Sve tehnike",
+        "example": "Primer",
+        "steps": "Korak po korak",
+        "when": "Kada se koristi",
+        "spot": "Kako je prepoznati",
+        "mistakes": "Česte greške",
+        "inGame": "U Bare Sudokuu",
+        "level": "Potrebna od nivoa: {level}",
+        "hint": "U igri savet kaže: {text}",
+        "legend": "Podebljane cifre su zadate, plave su upisane tokom rešavanja, a male cifre su kandidati. Istaknuta polja čine obrazac, precrtani kandidati se uklanjaju, a zaokruženi kandidat je cifra koju treba upisati.",
+        "notation": "Polja se zapisuju kao r3c7: red 3, kolona 7. Redovi se broje odozgo, kolone sleva, a blokovi od 1 do 9 počev od gornjeg levog, red po red.",
+        "row": "red {n}",
+        "column": "kolona {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} iz {cell}",
+        "regions": "Red 5, kolona 5 i blok 5 na početku zagonetke",
+        "firstMove": "Goli singl: {cell} može biti samo {d}",
+        "breadcrumb": "Putanja stranice"
+      },
+      "howTo": {
+        "title": "Kako se igra sudoku: pravila, tabla i prvi potezi",
+        "description": "Nauči kako se igra sudoku: pravila, redovi, kolone i blokovi, zašto svaka zagonetka ima jedno rešenje, kako koristiti beleške i kako povući prve poteze.",
+        "h1": "Kako se igra sudoku",
+        "summary": "Sudoku je logička zagonetka na mreži 9×9. Popuni svako prazno polje cifrom od 1 do 9 tako da svaki red, svaka kolona i svaki blok 3×3 sadrži svaku cifru tačno jednom. Neke cifre su zadate na početku; ostale izvodiš sam, jedno sigurno polje za drugim, i nikada ne moraš da pogađaš. Ovaj vodič objašnjava tablu, pravila, načelo jedinstvenog rešenja, beleške i jednostavnu strategiju za prve poteze. Sve to možeš da vežbaš u [Bare Sudokuu](play), koji je besplatan i ima savete koji objašnjavaju logiku.",
+        "sections": [
+          {
+            "h": "Koja su pravila sudokua?",
+            "p": [
+              "Postoje samo tri pravila, a zapravo je to isto pravilo posmatrano iz tri pravca: svaki red mora da sadrži cifre od 1 do 9, svaka kolona mora da sadrži cifre od 1 do 9 i svaki blok 3×3 mora da sadrži cifre od 1 do 9. Zato se ista cifra nikada ne može pojaviti dvaput u istom redu, koloni ili bloku.",
+              "Zadate cifre, ispisane podebljano, su nepromenljive. Tvoj zadatak je da popuniš prazna polja. Nema računanja ni redosleda: cifre su samo devet različitih simbola. Mogao bi da igraš sa slovima ili oblicima i ništa se ne bi promenilo."
+            ]
+          },
+          {
+            "h": "Kako je tabla organizovana?",
+            "p": [
+              "Tabla ima 81 polje u 9 redova i 9 kolona. Debele linije je dele na devet blokova 3×3. Svako polje pripada tačno jednom redu, jednoj koloni i jednom bloku, i te tri grupe su njegove jedinice. Ostalih 20 polja koja sa nekim poljem dele jedinicu zovu se njegovi susedi; cifra upisana u polje isključuje tu cifru u svih 20 suseda.",
+              "Polja se zapisuju kao r3c7: red 3, kolona 7. Redovi se broje odozgo, kolone sleva, a blokovi od 1 do 9 počev od gornjeg levog, red po red. Ova oznaka se koristi u svakom vodiču za tehnike i vredi je naučiti: r5c5 je središte table."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Zašto svaki sudoku ima tačno jedno rešenje?",
+            "p": [
+              "Pravi sudoku ima jedno rešenje, i upravo zato logika funkcioniše. Kad god pokažeš da cifra ne može nigde drugde u jedinici, ona mora u preostalo polje, jer rešenje postoji i jedinstveno je. Da zagonetka ima dva rešenja, nikakvo zaključivanje ne bi moglo da ih razlikuje i u nekom trenutku bi morao da pogađaš.",
+              "Bare Sudoku pravi svaku zagonetku na tvom uređaju i proverava da ima tačno jedno rešenje i da njegov logički rešavač može da je završi tehnikama izabranog nivoa. Dakle, ako zapneš, uvek postoji sledeći korak koji možeš da pronađeš, a savet ga pokazuje."
+            ]
+          },
+          {
+            "h": "Kako započeti sudoku zagonetku?",
+            "p": [
+              "Počni od onoga što je najviše ograničeno. Ovaj redosled funkcioniše na svakom nivou:"
+            ],
+            "list": [
+              "Izaberi cifru koja se već pojavljuje mnogo puta, recimo šest ili sedam, i pronađi blokove u kojima još nedostaje. Često joj u bloku ostaje samo jedno polje: to je [skriveni singl](hidden-single).",
+              "Traži zagušena polja. Polje čiji red, kolona i blok zajedno sadrže osam različitih cifara ima samo jednog preostalog kandidata: to je [goli singl](naked-single). Polja u skoro punim redovima ili blokovima su najbolje mesto za traženje.",
+              "Svaka cifra koju upišeš uklanja kandidata iz 20 suseda, zato odmah proveri te susede. Singlovi obično dolaze u nizu.",
+              "Kada lakih upisa ponestane, zapiši beleške: kandidate za svako prazno polje. Zatim traži cifru koja je unutar bloka ograničena na jednu liniju ([zaključani kandidati](locked-candidates)) ili dva polja sa ista dva kandidata ([goli par](naked-pairs)).",
+              "Posle svakog uklanjanja vrati se singlovima. Čak se i zagonetke nivoa Ekspert najvećim delom rešavaju singlovima; napredna tehnika samo otključa sledeći."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Šta su beleške i kada ih koristiti?",
+            "p": [
+              "Beleške, koje se zovu i oznake olovkom ili kandidati, su male cifre koje upisuješ u prazno polje da bi zapamtio koje su cifre tu još moguće. U lakim zagonetkama retko su potrebne; od nivoa Teško naviše su neophodne, jer se tehnike kao što su parovi, X-Wing i Y-Wing tiču kandidata, a ne upisanih cifara.",
+              "Drži beleške tačnim: kada upišeš cifru, ukloni je iz beleški svih 20 suseda. U Bare Sudokuu se to dešava automatski, a Popuni beleške jednim dodirom upisuje svakog kandidata u svako prazno polje, pa možeš da kreneš od potpunog i tačnog skupa kandidata. Beleška je činjenica, a ne nagađanje: znači da tu cifru još ništa ne isključuje."
+            ]
+          },
+          {
+            "h": "Šta da radiš kada zapneš?",
+            "p": [
+              "Prvo ponovo proveri osnove: svaki skoro pun red, kolona i blok je izvor singlova. Zatim se uveri da su beleške potpune, jer kandidat koji nedostaje skriva obrasce, a zastareo kandidat stvara lažne. Onda prođi kroz [tehnike](techniques) redom po težini: zaključani kandidati, parovi i trojke, X-Wing, Y-Wing, Swordfish i XYZ-Wing. Svaka ima svoju stranicu sa pravim primerom.",
+              "Ako ništa ne uspe, uzmi savet. U Bare Sudokuu savet prvo proverava da li je neka upisana cifra pogrešna, zatim pronalazi sledeće polje koje se može popuniti logikom i imenuje tehniku, pa nešto naučiš čak i kada ga koristiš. Dodirni savet ponovo da upišeš cifru."
+            ]
+          },
+          {
+            "h": "Kako se unose cifre u Bare Sudokuu?",
+            "p": [
+              "Dodirni polje, pa cifru. Ili prvo dodirni cifru: ona se zaključava i svako polje koje dodirneš je dobija, što je najbrži način da upišeš šesti, sedmi i osmi primerak neke cifre. Dodirni cifru ponovo da je otključaš. Dugme Beleške prebacuje na oznake olovkom, Obriši prazni polje, Opozovi vraća bilo koji potez, a greške se označavaju crvenom bojom, osim ako to ne isključiš u meniju.",
+              "Na tastaturi se pomeraš strelicama, tasterima 1 do 9 upisuješ cifru, Backspace briše, N služi za beleške, U za opoziv, H za savet, F za popunjavanje beleški, a Escape otvara meni. Igra se sama čuva, radi oflajn i nema ni reklame ni nalog."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Da li u sudokuu ikada moraš da pogađaš?",
+            "Ne u pravoj zagonetki. Svaka zagonetka u Bare Sudokuu ima tačno jedno rešenje i provereno je da se može rešiti samo logikom, tehnikama do njenog nivoa. Ako ti se čini da moraš da pogađaš, u beleškama nedostaje neki kandidat ili te čeka tehnika koju još nisi uočio."
+          ],
+          [
+            "Može li se cifra pojaviti dvaput u redu, koloni ili bloku?",
+            "Ne. To je celo pravilo: svaki od devet redova, devet kolona i devet blokova sadrži svaku cifru od 1 do 9 tačno jednom. Ako dve iste cifre dele jedinicu, bar jedna od njih je pogrešna."
+          ],
+          [
+            "Koja je razlika između nivoa Lako, Srednje, Teško i Ekspert?",
+            "Nivo određuju tehnike koje zagonetka zahteva. Lako i Srednje se rešavaju samo singlovima, a Lako počinje sa najmanje 38 zadatih cifara. Teško zahteva zaključane kandidate ili parove i trojke. Ekspert zahteva X-Wing, Y-Wing, Swordfish ili XYZ-Wing."
+          ],
+          [
+            "Da li je bolje popuniti beleške za svako polje ili samo za neka?",
+            "Za zagonetke nivoa Teško i Ekspert popuni ih sve: obrasci kao što su parovi, X-Wing i Y-Wing pojavljuju se tek kada je svaki kandidat zapisan. Na nivoima Lako i Srednje beleške nisu obavezne i većina igrača samo traži singlove."
+          ],
+          [
+            "Koliko traje jedan sudoku?",
+            "Zagonetka nivoa Lako traje nekoliko minuta; zagonetke nivoa Ekspert mogu da traju dvadeset minuta ili duže, zavisno od toga koliko brzo uočiš napredni obrazac. Bare Sudoku prikazuje štopericu, pauzira je dok je meni otvoren i nema rang listu, pa igraj svojim tempom."
+          ],
+          [
+            "Da li je za sudoku potrebno računanje?",
+            "Ne. Cifre su samo oznake; nema sabiranja ni brojanja. Poslužilo bi bilo kojih devet simbola, i zato je sudoku logička zagonetka, a ne zagonetka sa brojevima."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tehnike rešavanja sudokua objašnjene na primerima",
+        "description": "Svih devet tehnika rešavanja sudokua, od golog singla do tehnika Swordfish i XYZ-Wing, redom kojim ih koriste saveti Bare Sudokua, svaka sa pravim primerom.",
+        "h1": "Tehnike rešavanja sudokua",
+        "intro": [
+          "Svaki sudoku se može rešiti malim skupom logičkih tehnika. Ovaj pregled navodi devet tehnika koje koriste rešavač Bare Sudokua i njegovi saveti, redom kojim ih rešavač isprobava: prvo singlovi, zatim uklanjanja unutar jedne jedinice, pa obrasci koji se protežu kroz više redova i kolona. Svaka tehnika ima svoju stranicu sa definicijom, uputstvom kako da je prepoznaš, pravim primerom iz generisane zagonetke i čestim greškama.",
+          "Nivo zagonetke određuje najteža tehnika koju ona zahteva. Zagonetkama nivoa Lako i Srednje dovoljni su singlovi, zagonetke nivoa Teško zahtevaju zaključane kandidate ili parove i trojke, a zagonetke nivoa Ekspert bar jednu ribu ili krilo. Bez obzira na nivo, singlovi obavljaju najveći deo posla; napredna tehnika ukloni kandidata ili dva, a singlovi nastavljaju odatle."
+        ],
+        "faq": [
+          [
+            "Kojim redom treba isprobavati tehnike sudokua?",
+            "Od najjednostavnijih: goli singlovi, skriveni singlovi, zaključani kandidati, goli parovi i trojke, skriveni parovi i trojke, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ih isprobava tačno ovim redom, a savet uvek imenuje najjednostavniju tehniku koja donosi napredak."
+          ],
+          [
+            "Da li su mi potrebne sve ove tehnike da rešim sudoku?",
+            "Za zagonetke nivoa Lako i Srednje dovoljni su singlovi. Zagonetke nivoa Teško dodaju zaključane kandidate i podskupove. Zagonetke nivoa Ekspert zahtevaju bar jednu ribu ili krilo, ali obično samo jednom ili dvaput po zagonetki."
+          ],
+          [
+            "Postoje li teže tehnike od XYZ-Wing?",
+            "Da, na primer lanci, testovi jedinstvenosti i forsirajuće mreže. Bare Sudoku ne pravi zagonetke kojima su one potrebne, pa se svaka zagonetka u igri može završiti sa devet tehnika sa ove stranice."
+          ],
+          [
+            "Šta je kandidat?",
+            "Cifra koja još može da stoji u praznom polju jer je ništa u njegovom redu, koloni ili bloku još ne isključuje. Beleške u igri su kandidati. Svaka tehnika posle singlova rasuđuje o kandidatima, zato ih drži potpunim i tačnim."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Goli singl",
+          "title": "Goli singl u sudokuu: polje sa jednim kandidatom",
+          "description": "Goli singl je prazno polje sa samo jednom mogućom cifrom. Nauči kako da brzo pronađeš gole singlove, uz pravi primer korak po korak i česte greške.",
+          "h1": "Goli singl (naked single)",
+          "summary": "Goli singl je prazno polje koje ima tačno jednog kandidata: ostalih osam cifara već se nalazi u njegovom redu, koloni ili bloku. Preostala cifra mora da ide tu. To je najjednostavnija tehnika sudokua, ona koju najčešće koristiš i ona koju savet u Bare Sudokuu javlja kao „Samo jedan kandidat ovde“.",
+          "when": [
+            "Uvek. Goli singlovi se javljaju od prvog do poslednjeg poteza, na svakom nivou. U zagonetkama nivoa Lako i Srednje oni su, zajedno sa skrivenim singlovima, jedina tehnika koja ti treba. U težim zagonetkama svako uklanjanje koje napravi napredna tehnika obično za sobom ostavi goli singl, zato ih traži posle svakog koraka."
+          ],
+          "spot": [
+            "Gledaj polja sa mnogo popunjenih suseda: polje u redu koji već ima sedam cifara ili polje čiji red, kolona i blok zajedno pokrivaju osam različitih cifara. Bez beleški, prebroj cifre koje se vide iz tog polja. Sa beleškama, goli singl je jednostavno polje koje prikazuje jednog kandidata, i zato ih je uz Popuni beleške lako pronaći."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Pogledaj polje {cell}. Prazno je, zato nabroj sve cifre koje su već upisane u njegovom redu, koloni i bloku.",
+                "Red {row} sadrži {rowDigits}. Kolona {col} sadrži {colDigits}. Blok {box} sadrži {boxDigits}.",
+                "Zajedno isključuju sve cifre osim {d}, pa je {d} jedini preostali kandidat u polju {cell}.",
+                "Upiši {d} u polje {cell}. Zatim proveri da li nova cifra stvara još jedan singl u istom redu, koloni ili bloku."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Brojanje samo reda ili samo bloka. Osam isključenih cifara obično dolazi iz sve tri jedinice zajedno.",
+            "Zaboravljanje da cifra koju si upisao pre trenutak takođe isključuje kandidate iz svojih 20 suseda; novi goli singlovi se pojavljuju odmah posle svakog upisa.",
+            "Mešanje golog singla sa skrivenim: kod golog singla u polju je ostao jedan kandidat, a kod skrivenog singla cifri je u jedinici ostalo jedno polje."
+          ],
+          "faq": [
+            [
+              "Šta je goli singl u sudokuu?",
+              "Prazno polje sa tačno jednim kandidatom. Osam različitih cifara je već upisano u njegovom redu, koloni i bloku, pa se uklapa samo deveta."
+            ],
+            [
+              "Zašto se zove goli?",
+              "Zato što se jedini kandidat vidi direktno u polju kada su beleške zapisane; ništa ga ne skriva. Skriveni singl, nasuprot tome, stoji među drugim kandidatima i pronalazi se posmatranjem cifre, a ne polja."
+            ],
+            [
+              "Može li se zagonetka rešiti samo golim singlovima?",
+              "Mnoge zagonetke nivoa Lako mogu, ali većini su potrebni i skriveni singlovi. Bare Sudoku ocenjuje zagonetke nivoa Lako i Srednje kao rešive singlovima obe vrste; zagonetkama nivoa Teško i Ekspert potrebna je bar još jedna tehnika."
+            ],
+            [
+              "Da li savet prikazuje gole singlove?",
+              "Da. Kada je sledeći upis goli singl, savet označava polje i kaže „Samo jedan kandidat ovde“ uz cifru. Dodirni savet ponovo da je upišeš."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Skriveni singl",
+          "title": "Skriveni singl u sudokuu: jedino mesto za cifru",
+          "description": "Skriveni singl je jedino polje u redu, koloni ili bloku gde cifra još može da stoji. Nauči da uočiš skrivene singlove pregledajući jednu po jednu cifru.",
+          "h1": "Skriveni singl (hidden single)",
+          "summary": "Skriveni singl je cifra kojoj je u redu, koloni ili bloku ostalo samo jedno moguće polje, iako to polje možda prikazuje i druge kandidate. Pošto jedinica mora da sadrži tu cifru, ona ide tamo. Savet u Bare Sudokuu ga javlja kao „Jedino mesto za 5 u ovom redu“, odnosno u ovoj koloni ili ovom bloku.",
+          "when": [
+            "Kad god je neka cifra dobro odmakla: kada se pojavi pet ili šest puta, preostali blokovi su veoma ograničeni i skriveni singl je često sledeći potez. Skriveni singlovi su glavna tehnika u zagonetkama nivoa Lako i Srednje i ostaju glavni oslonac na svakom nivou."
+          ],
+          "spot": [
+            "Pregledaj jednu po jednu cifru. Uzmi cifru, nađi blok koji je ne sadrži i precrtaj svako polje tog bloka koje deli red ili kolonu sa već upisanim primerkom te cifre. Ako preživi jedno polje, pronašao si skriveni singl. Isti pregled radi i na redovima i kolonama. U igri dodirni upisanu cifru: svaki njen primerak se ističe, pa slobodna polja upadaju u oči."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Blok {box} još ne sadrži {d}, pa jedno od njegovih praznih polja mora da je sadrži. Prazna polja su {empties}.",
+                "U svakom od njih osim polja {cell}, cifru {d} blokira {d} koja je već upisana u istom redu ili koloni, pa {d} tamo nije kandidat.",
+                "Tako polje {cell} ostaje jedino mesto za {d} u bloku {box}. Upiši {d} tamo, iako polje {cell} možda još prikazuje druge kandidate."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Upisivanje cifre u polje koje je samo verovatno pravo: proveri svako drugo prazno polje jedinice, ne samo ona očigledna.",
+            "Propuštanje skrivenog singla zato što polje prikazuje više kandidata. Ostali kandidati nisu bitni; bitno je da cifra nema drugo mesto u jedinici.",
+            "Pregledanje samo blokova. Redovi i kolone daju skrivene singlove jednako često, naročito pred kraj."
+          ],
+          "faq": [
+            [
+              "Šta je skriveni singl u sudokuu?",
+              "Cifra koja može da stoji u samo jednom polju reda, kolone ili bloka. Jedinica mora da sadrži tu cifru, pa je polje rešeno čak i ako još ima druge kandidate."
+            ],
+            [
+              "Koja je razlika između skrivenog i golog singla?",
+              "Goli singl se tiče polja: ostao je jedan kandidat. Skriveni singl se tiče cifre: ostalo je jedno polje u jedinici. Oba upisuju cifru sa sigurnošću."
+            ],
+            [
+              "Koji je lakše pronaći?",
+              "Bez beleški su skriveni singlovi obično lakši, jer tablu možeš da pregledaš za jednu po jednu cifru. Sa potpunim beleškama goli singlovi su najlakši, jer polje sa jednim kandidatom odmah upada u oči."
+            ],
+            [
+              "Kako savet opisuje skriveni singl?",
+              "Kao „Jedino mesto za“ cifru u ovom redu, ovoj koloni ili ovom bloku, sa označenim poljem. Dodirni savet ponovo da je upišeš."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Zaključani kandidati",
+          "title": "Zaključani kandidati u sudokuu: pokazivanje i prisvajanje",
+          "description": "Zaključani kandidati: kad svi kandidati cifre u bloku leže u jednom redu ili koloni, ili obrnuto, cifra se uklanja na drugim mestima. Dva prava primera.",
+          "h1": "Zaključani kandidati (locked candidates)",
+          "summary": "Zaključani kandidati su prva tehnika koja uklanja kandidate umesto da upisuje cifru. Imaju dva oblika. Pokazivanje: u bloku svi kandidati za neku cifru leže u jednom redu ili koloni, pa se cifra uklanja iz ostatka te linije. Prisvajanje: u redu ili koloni svi kandidati za neku cifru leže u jednom bloku, pa se cifra uklanja iz ostatka tog bloka. Savet u Bare Sudokuu upis koji ova tehnika omogući označava kao „Zaključani kandidati“.",
+          "when": [
+            "Kada u zagonetki nivoa Teško ponestane singlova, ovo je prvo što treba probati. Potrebne su potpune beleške bar za cifru koju ispituješ. Zaključani kandidati su česti: potrebni su većini zagonetki nivoa Teško, a zagonetke nivoa Ekspert ih koriste između većih obrazaca."
+          ],
+          "spot": [
+            "Za pokazivanje pogledaj svaki blok i svaku cifru koja mu nedostaje: ako polja-kandidati za tu cifru leže u jednom redu ili koloni, proveri da li se ista cifra javlja kao kandidat dalje duž te linije, van bloka. Za prisvajanje gledaj duž reda ili kolone: ako su svi kandidati za cifru unutar jednog bloka, ostatak tog bloka može da se očisti. U igri dodirni taster cifre da istakneš sve njene kandidate; linija od dve ili tri istaknute beleške unutar jednog bloka je obrazac."
+          ],
+          "examples": [
+            {
+              "h": "Pokazivanje",
+              "steps": [
+                "U bloku {box} cifra {d} ima samo ova polja-kandidate: {cells}. Sva leže u redu {row}.",
+                "Bloku {box} treba {d}, pa je {d} iz reda {row} unutar bloka {box}, u koje god od tih polja da dospe.",
+                "Red {row} ne može da sadrži drugu cifru {d}, pa ukloni {d} iz polja reda {row} van bloka: {elim}."
+              ]
+            },
+            {
+              "h": "Prisvajanje",
+              "steps": [
+                "U redu {row} cifra {d} može da stoji samo u poljima {cells}, i sva su unutar bloka {box}.",
+                "Red {row} mora da sadrži {d}, pa red {row} prisvaja cifru {d} bloka {box}. Ostala polja bloka {box} ne mogu da sadrže {d}.",
+                "Ukloni {d} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uklanjanje cifre unutar bloka umesto van njega kod pokazivanja, ili obrnuto kod prisvajanja. Uklanjanja uvek idu u polja koja su na liniji, ali nisu u bloku, ili u bloku, ali nisu na liniji.",
+            "Primena pravila kada kandidati zauzimaju dva reda bloka. Sva polja-kandidati za cifru u bloku moraju da leže na jednoj liniji.",
+            "Zaboravljanje da potražiš singl koji uklanjanje stvara. Zaključani kandidati retko sami upisuju cifru; oni pripremaju singl."
+          ],
+          "faq": [
+            [
+              "Šta su zaključani kandidati u sudokuu?",
+              "Kandidati za cifru koji su ograničeni na presek bloka i linije. Pošto blok, odnosno linija, mora da sadrži cifru unutar tog preseka, cifra se može ukloniti iz ostatka linije, odnosno iz ostatka bloka."
+            ],
+            [
+              "Koja je razlika između pokazivanja i prisvajanja?",
+              "Pokazivanje polazi od bloka: kandidati cifre u bloku pokazuju duž jednog reda ili kolone, pa se cifra uklanja iz ostatka te linije. Prisvajanje polazi od reda ili kolone: svi kandidati linije za tu cifru su u jednom bloku, pa linija prisvaja cifru i ona se uklanja iz ostatka bloka."
+            ],
+            [
+              "Da li se zaključani kandidati zovu i uklanjanje preseka?",
+              "Da. Druga imena su redukcija blok-linija za oblik prisvajanja i pokazujući parovi ili pokazujuće trojke za oblik pokazivanja. Bare Sudoku koristi jedno ime za oba."
+            ],
+            [
+              "Koji nivo zahteva zaključane kandidate?",
+              "Teško. Zagonetka kojoj su potrebni zaključani kandidati ili podskupovi, ali ništa teže, ocenjuje se kao Teško; zagonetkama nivoa Ekspert potrebna je i riba ili krilo."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Goli parovi i trojke",
+          "title": "Goli parovi i trojke u sudokuu: kako funkcionišu",
+          "description": "Goli parovi i trojke: dva ili tri polja u jedinici koja dele ista dva ili tri kandidata. Nauči kako da ih uočiš i šta da ukloniš, uz prave primere.",
+          "h1": "Goli parovi i trojke (naked pairs, naked triples)",
+          "summary": "Goli par su dva polja u istom redu, koloni ili bloku koja imaju tačno ista dva kandidata. Te dve cifre moraju da idu u ta dva polja, pa se mogu ukloniti iz svakog drugog polja jedinice. Gola trojka je ista ideja sa tri polja i tri cifre; svako polje može da prikazuje dve ili sve tri. Savet u Bare Sudokuu upis koji iz toga proistekne označava kao „Par ili trojka“.",
+          "when": [
+            "Kada su beleške potpune, a singlovi i zaključani kandidati iscrpljeni. Goli parovi su veoma česti u zagonetkama nivoa Teško, gole trojke ređe. I jedne i druge vredi proveriti u svakoj jedinici koja još ima pet ili više praznih polja."
+          ],
+          "spot": [
+            "Traži polja sa samo dva kandidata i pronađi drugo polje u istoj jedinici sa ista dva. Za trojke gledaj jedinice sa više polja od dva i tri kandidata i proveri da li tri od njih zajedno koriste samo tri različite cifre. Polja sa potpuno istim kandidatima lako se vide kada su beleške zapisane; Popuni beleške u igri to radi jednim dodirom."
+          ],
+          "examples": [
+            {
+              "h": "Goli par",
+              "steps": [
+                "Polja {cellA} i {cellB} ({unit}) imaju tačno ista dva kandidata: {d1} i {d2}.",
+                "Jedno od njih mora biti {d1}, a drugo {d2}. Ne znamo koje je koje, ali ta dva polja troše obe cifre.",
+                "Zato nijedno drugo polje u jedinici {unit} ne može da sadrži {d1} ni {d2}. Ukloni {elim}."
+              ]
+            },
+            {
+              "h": "Gola trojka",
+              "steps": [
+                "Tri polja u jedinici {unit} uzimaju sve svoje kandidate iz iste tri cifre, {digits}: {cells}.",
+                "Te tri cifre moraju da popune ova tri polja nekim redosledom. Polje ne mora da prikazuje sva tri kandidata; bitno je da nijedno od tri polja nema kandidata van tog skupa.",
+                "Ukloni {digits} iz svakog drugog polja u jedinici {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uzimanje dva polja koja dele dva kandidata, ali imaju i trećeg. Za goli par svako polje mora da ima tačno ta dva kandidata i ništa više.",
+            "Uklanjanje cifara iz samih polja para. Par zadržava svoje kandidate; uklanjanja idu u ostala polja jedinice.",
+            "Zahtev da svako polje trojke prikazuje sve tri cifre. Polje sa dve od tri je u redu, dok god nijedno polje nema kandidata van skupa."
+          ],
+          "faq": [
+            [
+              "Šta je goli par u sudokuu?",
+              "Dva polja u jednoj jedinici koja oba imaju tačno ista dva kandidata. Te dve cifre su zaključane u ta dva polja, pa se mogu ukloniti iz ostatka jedinice."
+            ],
+            [
+              "Šta je gola trojka?",
+              "Tri polja u jednoj jedinici čiji su kandidati zajedno samo tri cifre. Svako polje može da ima dve ili tri od njih. Te tri cifre popunjavaju tri polja, pa se mogu ukloniti iz ostalih polja jedinice."
+            ],
+            [
+              "Da li goli par upisuje cifru?",
+              "Ne sam po sebi. On uklanja kandidate, a to uklanjanje obično ostavi goli ili skriveni singl. Savet u Bare Sudokuu pokazuje taj singl i imenuje tehniku koja ga je omogućila."
+            ],
+            [
+              "Može li goli par biti istovremeno u bloku i u redu?",
+              "Da. Ako dva polja dele red i blok, par uklanja kandidate u obe jedinice. Bare Sudoku ih obrađuje jednu po jednu jedinicu."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Skriveni parovi i trojke",
+          "title": "Skriveni parovi i trojke u sudokuu: kako ih uočiti",
+          "description": "Skriveni par su dve cifre koje mogu samo u ista dva polja jedinice, pa ostali kandidati tih polja otpadaju. Nauči da nađeš skrivene parove i trojke.",
+          "h1": "Skriveni parovi i trojke (hidden pairs, hidden triples)",
+          "summary": "Skriveni par su dve cifre koje su u jednom redu, koloni ili bloku kandidati u ista dva polja i nigde drugde. Ta dva polja moraju da sadrže te dve cifre, pa se svaki drugi kandidat u njima može ukloniti. Skrivena trojka funkcioniše isto, sa tri cifre ograničene na tri polja. Posle uklanjanja polja prikazuju goli par ili golu trojku. Savet u Bare Sudokuu upis koji iz toga proistekne označava kao „Par ili trojka“.",
+          "when": [
+            "Kada jedinica ima polja sa mnogo kandidata, a singlova više nema. Skriveni parovi se kriju u prepunim poljima, i zato ih vredi tražiti upravo tamo gde se goli parovi ne vide. Skrivene trojke su retke; Bare Sudoku ih proverava, ali se većina zagonetki nivoa Teško reši bez njih."
+          ],
+          "spot": [
+            "Radi po cifri, a ne po polju. U jedinici zabeleži polja u koja može da ide svaka cifra koja nedostaje. Ako dve cifre imaju po samo dva moguća polja i to su ista dva polja, pronašao si skriveni par. U igri dodirni taster cifre da istakneš njene kandidate; ako dve cifre osvetle ista dva polja jedinice i ništa drugo u njoj, to je obrazac."
+          ],
+          "examples": [
+            {
+              "h": "Skriveni par",
+              "steps": [
+                "U jedinici {unit} cifre {d1} i {d2} imaju po samo dva moguća polja, i to ista dva: {cells}.",
+                "Ta dva polja moraju da sadrže {d1} i {d2}, pa su njihovi ostali kandidati nemogući.",
+                "Ukloni {elim}. Sada ta dva polja prikazuju goli par, što može da otključa još nešto."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uklanjanje dve cifre para iz polja para. Otpadaju ostali kandidati tih polja; cifre para ostaju.",
+            "Prihvatanje cifre koja u jedinici ima i treće moguće polje. Obe cifre moraju biti ograničene na tačno ta dva polja.",
+            "Traženje samo u blokovima. Skriveni parovi se jednako često javljaju u redovima i kolonama."
+          ],
+          "faq": [
+            [
+              "Šta je skriveni par u sudokuu?",
+              "Dve cifre koje mogu da stoje samo u ista dva polja jedinice. Ta polja moraju da prime te cifre, pa se njihovi ostali kandidati uklanjaju."
+            ],
+            [
+              "Po čemu se skriveni par razlikuje od golog para?",
+              "Goli par se vidi: dva polja koja prikazuju samo ista dva kandidata. Skriveni par je prekriven dodatnim kandidatima u ta dva polja. Kada ukloniš te dodatne kandidate, skriveni par postaje goli par."
+            ],
+            [
+              "Šta je skrivena trojka?",
+              "Tri cifre ograničene na tri polja jedinice. Nijedna cifra ne mora da se pojavi u sva tri polja; bitno je da nijedna od tri cifre nema kandidata van tih polja."
+            ],
+            [
+              "Da li savet razlikuje skrivene i gole parove?",
+              "Ne. Bare Sudoku pronalazi i jedne i druge i upis koji iz njih proistekne označava kao „Par ili trojka“. Ove stranice ih razdvajaju jer se pronalaze na različite načine."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing u sudokuu: kako tehnika funkcioniše",
+          "description": "X-Wing: cifra sa tačno dva polja-kandidata u dva reda, poravnata u iste dve kolone, uklanja se iz ostatka tih kolona. Pravi primer korak po korak.",
+          "h1": "X-Wing",
+          "summary": "X-Wing je obrazac jedne cifre i četiri polja u uglovima pravougaonika. Ako cifra ima tačno dva polja-kandidata u svakom od dva reda, i ta polja leže u iste dve kolone, cifra mora da zauzme dva suprotna ugla pravougaonika. Zato se može ukloniti iz svakog drugog polja te dve kolone. Isto važi i kada redovi i kolone zamene uloge. To je prva tehnika nivoa Ekspert u Bare Sudokuu.",
+          "when": [
+            "Kada su singlovi, zaključani kandidati i podskupovi iscrpljeni. X-Wing je najčešći obrazac nivoa Ekspert i često se javlja kada cifri ostane malo kandidata, obično kada su već upisana četiri do šest njenih primeraka. Potrebne su potpune beleške za cifru koju ispituješ."
+          ],
+          "spot": [
+            "Izaberi cifru i traži redove u kojima ona ima tačno dva polja-kandidata. Ako dva takva reda dele iste dve kolone, proveri te kolone ima li u njima drugih kandidata te cifre: to su uklanjanja. Zatim ponovi sa kolonama kao osnovom. U igri dodirni taster cifre: svi njeni kandidati se ističu, i pravougaonik od četiri istaknute beleške lako se vidi."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Cifra {d} ima tačno dva polja-kandidata u redu {r1} i tačno dva u redu {r2}, i ona se poklapaju u iste dve kolone, {c1} i {c2}: {cells}.",
+                "Red {r1} smešta svoju cifru {d} u kolonu {c1} ili {c2}, a red {r2} u onu drugu. U svakom slučaju, kolone {c1} i {c2} dobijaju po jednu cifru {d} iz ova dva reda.",
+                "Zato se {d} ne može pojaviti nigde drugde u kolonama {c1} i {c2}. Ukloni {d} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Korišćenje reda koji ima tri polja-kandidata za cifru. Svaki osnovni red mora da ima tačno dva, i oba moraju biti u dve zajedničke kolone.",
+            "Uklanjanje cifre iz redova umesto iz kolona. Kada su redovi osnova, uklanjanja su u kolonama, i obrnuto.",
+            "Zaboravljanje obrnute verzije. X-Wing zasnovan na kolonama uklanja kandidate u redovima."
+          ],
+          "faq": [
+            [
+              "Šta je X-Wing u sudokuu?",
+              "Cifra koja ima tačno dva polja-kandidata u svakom od dva reda, u iste dve kolone. Cifra zauzima dva suprotna ugla tog pravougaonika, pa se uklanja iz ostatka te dve kolone. Redovi i kolone mogu da zamene uloge."
+            ],
+            [
+              "Zašto X-Wing funkcioniše?",
+              "Svaki od dva reda mora da smesti cifru u jednu od dve kolone, a dva reda ne mogu da koriste istu kolonu. Tako obe kolone dobijaju svoj primerak cifre iz ovih redova, i svaki drugi kandidat u tim kolonama je nemoguć."
+            ],
+            [
+              "Da li je X-Wing riba?",
+              "Da. X-Wing je riba veličine dva; Swordfish je riba veličine tri. Bare Sudoku pronalazi obe."
+            ],
+            [
+              "Na kom nivou se javlja X-Wing?",
+              "Ekspert. Zagonetka kojoj je potreban X-Wing, Y-Wing, Swordfish ili XYZ-Wing ocenjuje se kao Ekspert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing u sudokuu: kako tehnika funkcioniše",
+          "description": "Y-Wing (XY-Wing): stožer sa dva kandidata i dva krila, od kojih svako deli jednog od njih, izbacuju cifru iz svakog polja koje vidi oba krila. Primer.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, koji se zove i XY-Wing, koristi tri polja sa po dva kandidata. Stožer ima kandidate X i Y. Jedno krilo vidi stožer i ima X i Z; drugo krilo vidi stožer i ima Y i Z. Šta god da je stožer, jedno od krila mora biti Z, pa se Z može ukloniti iz svakog polja koje vidi oba krila. To je tehnika nivoa Ekspert u Bare Sudokuu.",
+          "when": [
+            "Kada zagonetka ima više polja sa tačno dva kandidata, a nijedna riba nije dostupna. Y-Wing je čest u zagonetkama nivoa Ekspert i pronalazi se praćenjem polja sa dva kandidata: svako je mogući stožer ili krilo."
+          ],
+          "spot": [
+            "Napravi spisak polja sa tačno dva kandidata. Svako od njih posmatraj kao stožer sa kandidatima X i Y i među njegovim susedima traži polje sa X i nekom drugom cifrom Z, i polje sa Y i istom cifrom Z. Ta dva polja su krila. Zatim pronađi polja koja vide oba krila i sadrže Z. Imaj na umu da krila ne moraju da vide jedno drugo."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Stožer {pivot} ima kandidate {x} i {y}. On vidi polje {wingA}, koje ima {x} i {z}, i polje {wingB}, koje ima {y} i {z}.",
+                "Ako je {pivot} jednako {x}, polje {wingA} gubi {x} i postaje {z}. Ako je {pivot} jednako {y}, polje {wingB} postaje {z}. U svakom slučaju jedno od dva krila je {z}.",
+                "Polje koje vidi oba krila nikada ne može biti {z}. Ukloni {z} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Biranje krila koja ne vide oba stožer. Svako krilo mora da deli red, kolonu ili blok sa stožerom.",
+            "Uklanjanje Z iz polja koja vide samo jedno krilo. Polje iz kog se uklanja mora da vidi oba krila.",
+            "Uklanjanje Z iz stožera. U Y-Wingu stožer ne sadrži Z; ako ga sadrži, obrazac je XYZ-Wing, koji ima drugačija pravila."
+          ],
+          "faq": [
+            [
+              "Šta je Y-Wing u sudokuu?",
+              "Tri polja sa po dva kandidata: stožer sa X i Y, krilo sa X i Z koje vidi stožer i krilo sa Y i Z koje vidi stožer. Jedno krilo je uvek Z, pa se Z uklanja iz polja koja vide oba krila."
+            ],
+            [
+              "Da li je Y-Wing isto što i XY-Wing?",
+              "Da. Oba imena opisuju isti obrazac. Bare Sudoku ga zove Y-Wing."
+            ],
+            [
+              "Zašto jedno krilo mora biti Z?",
+              "Ako je stožer X, prvo krilo gubi X i postaje Z. Ako je stožer Y, drugo krilo postaje Z. Stožer je jedno od to dvoje, pa je jedno krilo Z."
+            ],
+            [
+              "Iz koliko polja Y-Wing uklanja kandidate?",
+              "Obično iz jednog ili dva: samo iz polja koja vide oba krila i još sadrže Z. To je dovoljno da nastane singl."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish u sudokuu: kako tehnika funkcioniše",
+          "description": "Swordfish: cifra ograničena na tri kolone u tri reda uklanja se iz ostatka tih kolona. Riba veličine tri, objašnjena na pravom primeru korak po korak.",
+          "h1": "Swordfish",
+          "summary": "Swordfish je X-Wing sa tri reda i tri kolone. Ako cifra ima najviše tri polja-kandidata u svakom od tri reda, i sva ta polja padaju u iste tri kolone, tri reda troše tu cifru u tim kolonama, pa se cifra može ukloniti iz svakog drugog polja te tri kolone. Redovi i kolone mogu da zamene uloge. Bare Sudoku traži Swordfish posle Y-Winga, u zagonetkama nivoa Ekspert.",
+          "when": [
+            "Kada X-Wing i Y-Wing ne nađu ništa. Swordfish je ređi od X-Winga i zahteva cifru čiji su kandidati retko raspoređeni po tri linije. Potrebne su potpune i tačne beleške za tu cifru."
+          ],
+          "spot": [
+            "Izaberi cifru i traži redove sa dva ili tri polja-kandidata za nju. Ako tri takva reda ukupno pokrivaju samo tri kolone, proveri te kolone ima li u njima drugih kandidata te cifre. Ne mora svaki red da ima kandidata u svakoj koloni: Swordfish može da ima šest, sedam, osam ili devet polja. U igri istakni cifru njenim tasterom i traži tri reda čiji se kandidati poklapaju u tri kolone."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Cifra {d} ima najviše tri polja-kandidata u svakom od redova {rows}, i sva ta polja padaju u kolone {cols}: {cells}.",
+                "Svaki od tri reda mora da smesti svoju cifru {d} u jednu od tri kolone, i nikoja dva reda ne mogu da koriste istu kolonu. Tako tri kolone dobijaju svoju cifru {d} iz ova tri reda.",
+                "Svaki drugi kandidat {d} u kolonama {cols} je nemoguć. Ukloni {d} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Zahtev da postoji svih devet polja. Swordfish sa dva kandidata u nekim redovima i dalje važi, dok god tri reda pokrivaju samo tri kolone.",
+            "Uključivanje reda sa četiri polja-kandidata. Svaki osnovni red mora da ima najviše tri, sva unutar tri kolone.",
+            "Uklanjanje u osnovnim redovima. Kada su redovi osnova, uklanjanja su u tri kolone, van osnovnih redova."
+          ],
+          "faq": [
+            [
+              "Šta je Swordfish u sudokuu?",
+              "Cifra čiji su kandidati u tri reda ograničeni na tri kolone. Tri reda moraju da smeste cifru u te tri kolone, po jednu u svaku, pa se cifra uklanja iz ostalih polja tih kolona."
+            ],
+            [
+              "Po čemu se Swordfish razlikuje od X-Winga?",
+              "Samo po veličini: X-Wing koristi dva reda i dve kolone, Swordfish tri i tri. Rasuđivanje je isto."
+            ],
+            [
+              "Da li Swordfish zahteva tačno devet polja?",
+              "Ne. Svaki red može da ima dva ili tri kandidata; obrazac zahteva samo da tri reda zajedno ne koriste više od tri kolone."
+            ],
+            [
+              "Postoji li riba veličine četiri?",
+              "Da, Jellyfish. Bare Sudoku je ne koristi, jer njegovim zagonetkama nikada nije potrebna."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing u sudokuu: kako tehnika funkcioniše",
+          "description": "XYZ-Wing: stožer sa tri kandidata i dva krila koja dele jednog od njih izbacuju tu cifru iz svakog polja koje vidi sva tri. Pravi primer korak po korak.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing je Y-Wing čiji stožer ima tri kandidata. Stožer ima X, Y i Z; jedno krilo vidi stožer i ima X i Z, a drugo vidi stožer i ima Y i Z. Jedno od tri polja mora biti Z, pa se Z može ukloniti iz svakog polja koje vidi sva tri. Pošto i sam stožer može biti Z, polje iz kog se uklanja mora da vidi i stožer i oba krila, što ga ograničava na blok ili liniju koju ta polja dele. To je najteža tehnika koju Bare Sudoku koristi.",
+          "when": [
+            "Tek kada sve ostalo zakaže. XYZ-Wing je najređi obrazac u Bare Sudokuu i javlja se samo u zagonetkama nivoa Ekspert. Traži ga kada polje sa tri kandidata stoji u bloku sa poljem sa dva kandidata koje deli dve njegove cifre."
+          ],
+          "spot": [
+            "Kreni od polja sa tačno tri kandidata; svako je mogući stožer. Među njegovim susedima traži dva polja sa po dva kandidata, oba uzeta iz tri kandidata stožera, koja dele tačno jednu cifru Z. Zatim traži polja koja vide stožer i oba krila i sadrže Z. U praksi je jedno krilo u bloku stožera, a drugo u njegovom redu ili koloni, a polja iz kojih se uklanja su preostala polja tog bloka u tom redu ili koloni."
+          ],
+          "examples": [
+            {
+              "h": "Primer",
+              "steps": [
+                "Stožer {pivot} ima tri kandidata: {x}, {y} i {z}. On vidi polje {wingA} sa {x} i {z} i polje {wingB} sa {y} i {z}.",
+                "Ako je stožer {z}, gotovo. Ako je {x}, polje {wingA} mora biti {z}. Ako je {y}, polje {wingB} mora biti {z}. U svakom slučaju jedno od tri polja je {z}.",
+                "Polje koje vidi sva tri ne može biti {z}. Ukloni {z} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uklanjanje iz polja koja vide samo dva krila. Za razliku od Y-Winga, stožer može biti Z, pa polje mora da vidi i stožer.",
+            "Korišćenje krila čiji kandidati nisu oba sadržani u tri kandidata stožera.",
+            "Mešanje sa Y-Wingom: razlika je treći kandidat u stožeru, i on menja iz kojih polja se može ukloniti."
+          ],
+          "faq": [
+            [
+              "Šta je XYZ-Wing u sudokuu?",
+              "Stožer sa kandidatima X, Y i Z i dva krila, jedno sa X i Z i jedno sa Y i Z, koja oba vide stožer. Jedno od tri polja je Z, pa se Z uklanja iz polja koja vide sva tri."
+            ],
+            [
+              "Po čemu se XYZ-Wing razlikuje od Y-Winga?",
+              "Stožer ima tri kandidata umesto dva, među njima i Z. Zbog toga Z može da stoji i u stožeru, pa Z mogu da izgube samo polja koja vide stožer i oba krila."
+            ],
+            [
+              "Koliko se često javlja XYZ-Wing?",
+              "Retko. U Bare Sudokuu može da bude potreban samo zagonetkama nivoa Ekspert, a većini ni njih nije. Bare Sudoku ga proverava poslednjeg, posle X-Winga, Y-Winga i Swordfisha."
+            ],
+            [
+              "Postoji li WXYZ-Wing?",
+              "Da, sa stožerom od četiri kandidata, ali ga Bare Sudoku ne koristi. Svaka zagonetka u igri može se završiti sa devet tehnika iz ovog vodiča."
+            ]
+          ]
+        }
+      }
+    },
+    "hr": {
+      "learnHeading": "Nauči sudoku",
+      "learnText": "Tek počinješ sa sudokuom ili si zapeo na teškoj zagonetki? Dva vodiča objašnjavaju pravila i svaku tehniku rješavanja koju koriste savjeti, svaku sa stvarnim primjerom.",
+      "howToLink": "Kako se igra sudoku",
+      "techniquesLink": "Tehnike rješavanja sudokua",
+      "labels": {
+        "howTo": "Kako se igra",
+        "techniques": "Tehnike",
+        "play": "Igraj sudoku",
+        "prev": "Prethodna tehnika",
+        "next": "Sljedeća tehnika",
+        "all": "Sve tehnike",
+        "example": "Primjer",
+        "steps": "Korak po korak",
+        "when": "Kada se koristi",
+        "spot": "Kako je prepoznati",
+        "mistakes": "Česte pogreške",
+        "inGame": "U Bare Sudokuu",
+        "level": "Potrebna od razine: {level}",
+        "hint": "U igri savjet kaže: {text}",
+        "legend": "Podebljane znamenke su zadane, plave su upisane tijekom rješavanja, a male znamenke su kandidati. Istaknuta polja čine uzorak, prekriženi kandidati se uklanjaju, a zaokruženi kandidat je znamenka koju treba upisati.",
+        "notation": "Polja se zapisuju kao r3c7: redak 3, stupac 7. Retci se broje odozgo, stupci slijeva, a blokovi od 1 do 9 počevši od gornjeg lijevog, redak po redak.",
+        "row": "redak {n}",
+        "column": "stupac {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} iz {cell}",
+        "regions": "Redak 5, stupac 5 i blok 5 na početku zagonetke",
+        "firstMove": "Goli singl: {cell} može biti samo {d}",
+        "breadcrumb": "Putanja stranice"
+      },
+      "howTo": {
+        "title": "Kako se igra sudoku: pravila, ploča i prvi potezi",
+        "description": "Nauči kako se igra sudoku: pravila, retci, stupci i blokovi, zašto svaka zagonetka ima jedno rješenje, kako koristiti bilješke i kako povući prve poteze.",
+        "h1": "Kako se igra sudoku",
+        "summary": "Sudoku je logička zagonetka na mreži 9×9. Popuni svako prazno polje znamenkom od 1 do 9 tako da svaki redak, svaki stupac i svaki blok 3×3 sadrži svaku znamenku točno jednom. Neke su znamenke zadane na početku; ostale izvodiš sam, jedno sigurno polje za drugim, i nikada ne moraš pogađati. Ovaj vodič objašnjava ploču, pravila, načelo jedinstvenog rješenja, bilješke i jednostavnu strategiju za prve poteze. Sve to možeš vježbati u [Bare Sudokuu](play), koji je besplatan i ima savjete koji objašnjavaju logiku.",
+        "sections": [
+          {
+            "h": "Koja su pravila sudokua?",
+            "p": [
+              "Postoje samo tri pravila, a zapravo je to isto pravilo gledano iz tri smjera: svaki redak mora sadržavati znamenke od 1 do 9, svaki stupac mora sadržavati znamenke od 1 do 9 i svaki blok 3×3 mora sadržavati znamenke od 1 do 9. Zato se ista znamenka nikada ne može pojaviti dvaput u istom retku, stupcu ili bloku.",
+              "Zadane znamenke, ispisane podebljano, su nepromjenjive. Tvoj je zadatak popuniti prazna polja. Nema računanja ni redoslijeda: znamenke su samo devet različitih simbola. Mogao bi igrati sa slovima ili oblicima i ništa se ne bi promijenilo."
+            ]
+          },
+          {
+            "h": "Kako je ploča organizirana?",
+            "p": [
+              "Ploča ima 81 polje u 9 redaka i 9 stupaca. Debele crte dijele je na devet blokova 3×3. Svako polje pripada točno jednom retku, jednom stupcu i jednom bloku, i te su tri skupine njegove jedinice. Ostalih 20 polja koja s nekim poljem dijele jedinicu zovu se njegovi susjedi; znamenka upisana u polje isključuje tu znamenku u svih 20 susjeda.",
+              "Polja se zapisuju kao r3c7: redak 3, stupac 7. Retci se broje odozgo, stupci slijeva, a blokovi od 1 do 9 počevši od gornjeg lijevog, redak po redak. Ova se oznaka koristi u svakom vodiču za tehnike i vrijedi je naučiti: r5c5 je središte ploče."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Zašto svaki sudoku ima točno jedno rješenje?",
+            "p": [
+              "Pravi sudoku ima jedno rješenje, i upravo zato logika funkcionira. Kad god pokažeš da znamenka ne može nigdje drugdje u jedinici, ona mora u preostalo polje, jer rješenje postoji i jedinstveno je. Da zagonetka ima dva rješenja, nikakvo zaključivanje ne bi ih moglo razlikovati i u nekom bi trenutku morao pogađati.",
+              "Bare Sudoku stvara svaku zagonetku na tvom uređaju i provjerava ima li točno jedno rješenje i može li je njegov logički rješavač završiti tehnikama odabrane razine. Dakle, ako zapneš, uvijek postoji sljedeći korak koji možeš pronaći, a savjet ga pokazuje."
+            ]
+          },
+          {
+            "h": "Kako započeti sudoku zagonetku?",
+            "p": [
+              "Počni od onoga što je najviše ograničeno. Ovaj redoslijed funkcionira na svakoj razini:"
+            ],
+            "list": [
+              "Odaberi znamenku koja se već pojavljuje mnogo puta, recimo šest ili sedam, i pronađi blokove u kojima još nedostaje. Često joj u bloku ostaje samo jedno polje: to je [skriveni singl](hidden-single).",
+              "Traži zagušena polja. Polje čiji redak, stupac i blok zajedno sadrže osam različitih znamenaka ima samo jednog preostalog kandidata: to je [goli singl](naked-single). Polja u gotovo punim retcima ili blokovima najbolje su mjesto za traženje.",
+              "Svaka znamenka koju upišeš uklanja kandidata iz 20 susjeda, zato odmah provjeri te susjede. Singlovi obično dolaze u nizu.",
+              "Kada lakih upisa ponestane, zapiši bilješke: kandidate za svako prazno polje. Zatim traži znamenku koja je unutar bloka ograničena na jednu liniju ([zaključani kandidati](locked-candidates)) ili dva polja s ista dva kandidata ([goli par](naked-pairs)).",
+              "Nakon svakog uklanjanja vrati se singlovima. Čak se i zagonetke razine Ekspert najvećim dijelom rješavaju singlovima; napredna tehnika samo otključa sljedeći."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Što su bilješke i kada ih koristiti?",
+            "p": [
+              "Bilješke, koje se zovu i oznake olovkom ili kandidati, male su znamenke koje upisuješ u prazno polje kako bi zapamtio koje su znamenke tu još moguće. U lakim zagonetkama rijetko su potrebne; od razine Teško naviše su neophodne, jer se tehnike poput parova, X-Winga i Y-Winga tiču kandidata, a ne upisanih znamenaka.",
+              "Drži bilješke točnima: kada upišeš znamenku, ukloni je iz bilješki svih 20 susjeda. U Bare Sudokuu to se događa automatski, a Popuni bilješke jednim dodirom upisuje svakog kandidata u svako prazno polje, pa možeš krenuti od potpunog i točnog skupa kandidata. Bilješka je činjenica, a ne nagađanje: znači da tu znamenku još ništa ne isključuje."
+            ]
+          },
+          {
+            "h": "Što učiniti kada zapneš?",
+            "p": [
+              "Najprije ponovno provjeri osnove: svaki gotovo pun redak, stupac i blok izvor je singlova. Zatim se uvjeri da su bilješke potpune, jer kandidat koji nedostaje skriva uzorke, a zastarjeli kandidat stvara lažne. Onda prođi kroz [tehnike](techniques) redom po težini: zaključani kandidati, parovi i trojke, X-Wing, Y-Wing, Swordfish i XYZ-Wing. Svaka ima svoju stranicu sa stvarnim primjerom.",
+              "Ako ništa ne uspije, uzmi savjet. U Bare Sudokuu savjet najprije provjerava je li neka upisana znamenka pogrešna, zatim pronalazi sljedeće polje koje se može popuniti logikom i imenuje tehniku, pa nešto naučiš čak i kada ga koristiš. Dodirni savjet ponovno da upišeš znamenku."
+            ]
+          },
+          {
+            "h": "Kako se unose znamenke u Bare Sudokuu?",
+            "p": [
+              "Dodirni polje, pa znamenku. Ili najprije dodirni znamenku: ona se zaključava i svako polje koje dodirneš dobiva je, što je najbrži način da upišeš šesti, sedmi i osmi primjerak neke znamenke. Dodirni znamenku ponovno da je otključaš. Gumb Bilješke prebacuje na oznake olovkom, Obriši prazni polje, Poništi vraća bilo koji potez, a pogreške se označavaju crvenom bojom, osim ako to ne isključiš u izborniku.",
+              "Na tipkovnici se pomičeš strelicama, tipkama 1 do 9 upisuješ znamenku, Backspace briše, N služi za bilješke, U za poništavanje, H za savjet, F za popunjavanje bilješki, a Escape otvara izbornik. Igra se sama sprema, radi offline i nema ni reklama ni računa."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Moraš li u sudokuu ikada pogađati?",
+            "Ne u pravoj zagonetki. Svaka zagonetka u Bare Sudokuu ima točno jedno rješenje i provjereno je da se može riješiti samo logikom, tehnikama do njezine razine. Ako ti se čini da moraš pogađati, u bilješkama nedostaje neki kandidat ili te čeka tehnika koju još nisi uočio."
+          ],
+          [
+            "Može li se znamenka pojaviti dvaput u retku, stupcu ili bloku?",
+            "Ne. To je cijelo pravilo: svaki od devet redaka, devet stupaca i devet blokova sadrži svaku znamenku od 1 do 9 točno jednom. Ako dvije iste znamenke dijele jedinicu, barem je jedna od njih pogrešna."
+          ],
+          [
+            "Koja je razlika između razina Lako, Srednje, Teško i Ekspert?",
+            "Razinu određuju tehnike koje zagonetka zahtijeva. Lako i Srednje rješavaju se samo singlovima, a Lako počinje s najmanje 38 zadanih znamenaka. Teško zahtijeva zaključane kandidate ili parove i trojke. Ekspert zahtijeva X-Wing, Y-Wing, Swordfish ili XYZ-Wing."
+          ],
+          [
+            "Je li bolje popuniti bilješke za svako polje ili samo za neka?",
+            "Za zagonetke razine Teško i Ekspert popuni ih sve: uzorci poput parova, X-Winga i Y-Winga pojavljuju se tek kada je svaki kandidat zapisan. Na razinama Lako i Srednje bilješke nisu obvezne i većina igrača samo traži singlove."
+          ],
+          [
+            "Koliko traje jedan sudoku?",
+            "Zagonetka razine Lako traje nekoliko minuta; zagonetke razine Ekspert mogu trajati dvadeset minuta ili dulje, ovisno o tome koliko brzo uočiš napredni uzorak. Bare Sudoku prikazuje štopericu, pauzira je dok je izbornik otvoren i nema ljestvicu, pa igraj svojim tempom."
+          ],
+          [
+            "Treba li za sudoku računanje?",
+            "Ne. Znamenke su samo oznake; nema zbrajanja ni brojanja. Poslužilo bi bilo kojih devet simbola, i zato je sudoku logička zagonetka, a ne zagonetka s brojevima."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tehnike rješavanja sudokua objašnjene na primjerima",
+        "description": "Svih devet tehnika rješavanja sudokua, od golog singla do Swordfisha i XYZ-Winga, redom kojim ih koriste savjeti Bare Sudokua, svaka sa stvarnim primjerom.",
+        "h1": "Tehnike rješavanja sudokua",
+        "intro": [
+          "Svaki se sudoku može riješiti malim skupom logičkih tehnika. Ovaj pregled navodi devet tehnika koje koriste rješavač Bare Sudokua i njegovi savjeti, redom kojim ih rješavač isprobava: najprije singlovi, zatim uklanjanja unutar jedne jedinice, pa uzorci koji se protežu kroz više redaka i stupaca. Svaka tehnika ima svoju stranicu s definicijom, uputom kako je prepoznati, stvarnim primjerom iz generirane zagonetke i čestim pogreškama.",
+          "Razinu zagonetke određuje najteža tehnika koju ona zahtijeva. Zagonetkama razine Lako i Srednje dovoljni su singlovi, zagonetke razine Teško zahtijevaju zaključane kandidate ili parove i trojke, a zagonetke razine Ekspert barem jednu ribu ili krilo. Bez obzira na razinu, singlovi obavljaju najveći dio posla; napredna tehnika ukloni kandidata ili dva, a singlovi nastavljaju odatle."
+        ],
+        "faq": [
+          [
+            "Kojim redom isprobavati tehnike sudokua?",
+            "Od najjednostavnijih: goli singlovi, skriveni singlovi, zaključani kandidati, goli parovi i trojke, skriveni parovi i trojke, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ih isprobava točno ovim redom, a savjet uvijek imenuje najjednostavniju tehniku koja donosi napredak."
+          ],
+          [
+            "Trebam li sve ove tehnike da riješim sudoku?",
+            "Za zagonetke razine Lako i Srednje dovoljni su singlovi. Zagonetke razine Teško dodaju zaključane kandidate i podskupove. Zagonetke razine Ekspert zahtijevaju barem jednu ribu ili krilo, ali obično samo jednom ili dvaput po zagonetki."
+          ],
+          [
+            "Postoje li teže tehnike od XYZ-Wing?",
+            "Da, primjerice lanci, testovi jedinstvenosti i prisilne mreže. Bare Sudoku ne stvara zagonetke kojima su one potrebne, pa se svaka zagonetka u igri može završiti s devet tehnika s ove stranice."
+          ],
+          [
+            "Što je kandidat?",
+            "Znamenka koja još može stajati u praznom polju jer je ništa u njegovu retku, stupcu ili bloku još ne isključuje. Bilješke u igri su kandidati. Svaka tehnika nakon singlova zaključuje na temelju kandidata, zato ih drži potpunima i točnima."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Goli singl",
+          "title": "Goli singl u sudokuu: polje s jednim kandidatom",
+          "description": "Goli singl je prazno polje sa samo jednom mogućom znamenkom. Nauči kako brzo pronaći gole singlove, uz stvarni primjer korak po korak i česte pogreške.",
+          "h1": "Goli singl (naked single)",
+          "summary": "Goli singl je prazno polje koje ima točno jednog kandidata: ostalih osam znamenaka već se nalazi u njegovu retku, stupcu ili bloku. Preostala znamenka mora ići tu. To je najjednostavnija tehnika sudokua, ona koju najčešće koristiš i ona koju savjet u Bare Sudokuu javlja kao „Samo jedan kandidat ovdje“.",
+          "when": [
+            "Uvijek. Goli singlovi javljaju se od prvog do posljednjeg poteza, na svakoj razini. U zagonetkama razine Lako i Srednje oni su, zajedno sa skrivenim singlovima, jedina tehnika koja ti treba. U težim zagonetkama svako uklanjanje koje napravi napredna tehnika obično za sobom ostavi goli singl, zato ih traži nakon svakog koraka."
+          ],
+          "spot": [
+            "Gledaj polja s mnogo popunjenih susjeda: polje u retku koji već ima sedam znamenaka ili polje čiji redak, stupac i blok zajedno pokrivaju osam različitih znamenaka. Bez bilješki prebroji znamenke koje se vide iz tog polja. S bilješkama je goli singl jednostavno polje koje prikazuje jednog kandidata, i zato ih je uz Popuni bilješke lako pronaći."
+          ],
+          "examples": [
+            {
+              "h": "Primjer",
+              "steps": [
+                "Pogledaj polje {cell}. Prazno je, zato nabroji sve znamenke koje su već upisane u njegovu retku, stupcu i bloku.",
+                "Redak {row} sadrži {rowDigits}. Stupac {col} sadrži {colDigits}. Blok {box} sadrži {boxDigits}.",
+                "Zajedno isključuju sve znamenke osim {d}, pa je {d} jedini preostali kandidat u polju {cell}.",
+                "Upiši {d} u polje {cell}. Zatim provjeri stvara li nova znamenka još jedan singl u istom retku, stupcu ili bloku."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Brojanje samo retka ili samo bloka. Osam isključenih znamenaka obično dolazi iz sve tri jedinice zajedno.",
+            "Zaboravljanje da znamenka koju si upisao maloprije također isključuje kandidate iz svojih 20 susjeda; novi goli singlovi pojavljuju se odmah nakon svakog upisa.",
+            "Miješanje golog singla sa skrivenim: kod golog singla u polju je ostao jedan kandidat, a kod skrivenog singla znamenki je u jedinici ostalo jedno polje."
+          ],
+          "faq": [
+            [
+              "Što je goli singl u sudokuu?",
+              "Prazno polje s točno jednim kandidatom. Osam različitih znamenaka već je upisano u njegovu retku, stupcu i bloku, pa se uklapa samo deveta."
+            ],
+            [
+              "Zašto se zove goli?",
+              "Zato što se jedini kandidat vidi izravno u polju kada su bilješke zapisane; ništa ga ne skriva. Skriveni singl, nasuprot tome, stoji među drugim kandidatima i pronalazi se promatranjem znamenke, a ne polja."
+            ],
+            [
+              "Može li se zagonetka riješiti samo golim singlovima?",
+              "Mnoge zagonetke razine Lako mogu, ali većini su potrebni i skriveni singlovi. Bare Sudoku ocjenjuje zagonetke razine Lako i Srednje kao rješive singlovima obiju vrsta; zagonetkama razine Teško i Ekspert potrebna je barem još jedna tehnika."
+            ],
+            [
+              "Prikazuje li savjet gole singlove?",
+              "Da. Kada je sljedeći upis goli singl, savjet označava polje i kaže „Samo jedan kandidat ovdje“ uz znamenku. Dodirni savjet ponovno da je upišeš."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Skriveni singl",
+          "title": "Skriveni singl u sudokuu: jedino mjesto za znamenku",
+          "description": "Skriveni singl je jedino polje u retku, stupcu ili bloku gdje znamenka još može stajati. Nauči uočiti skrivene singlove pregledavajući znamenku po znamenku.",
+          "h1": "Skriveni singl (hidden single)",
+          "summary": "Skriveni singl je znamenka kojoj je u retku, stupcu ili bloku ostalo samo jedno moguće polje, iako to polje možda prikazuje i druge kandidate. Budući da jedinica mora sadržavati tu znamenku, ona ide onamo. Savjet u Bare Sudokuu javlja ga kao „Jedino mjesto za 5 u ovom retku“, odnosno u ovom stupcu ili ovom bloku.",
+          "when": [
+            "Kad god je neka znamenka dobro odmakla: kada se pojavi pet ili šest puta, preostali blokovi su vrlo ograničeni i skriveni singl je često sljedeći potez. Skriveni singlovi glavna su tehnika u zagonetkama razine Lako i Srednje i ostaju glavni oslonac na svakoj razini."
+          ],
+          "spot": [
+            "Pregledavaj znamenku po znamenku. Uzmi znamenku, nađi blok koji je ne sadrži i prekriži svako polje tog bloka koje dijeli redak ili stupac s već upisanim primjerkom te znamenke. Ako preživi jedno polje, pronašao si skriveni singl. Isti pregled radi i na retcima i stupcima. U igri dodirni upisanu znamenku: svaki njezin primjerak se ističe, pa slobodna polja upadaju u oči."
+          ],
+          "examples": [
+            {
+              "h": "Primjer",
+              "steps": [
+                "Blok {box} još ne sadrži {d}, pa je jedno od njegovih praznih polja mora sadržavati. Prazna polja su {empties}.",
+                "U svakom od njih osim polja {cell} znamenku {d} blokira {d} koja je već upisana u istom retku ili stupcu, pa {d} ondje nije kandidat.",
+                "Tako polje {cell} ostaje jedino mjesto za {d} u bloku {box}. Upiši {d} onamo, iako polje {cell} možda još prikazuje druge kandidate."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Upisivanje znamenke u polje koje je samo vjerojatno pravo: provjeri svako drugo prazno polje jedinice, ne samo ona očita.",
+            "Propuštanje skrivenog singla zato što polje prikazuje više kandidata. Ostali kandidati nisu važni; važno je da znamenka nema drugo mjesto u jedinici.",
+            "Pregledavanje samo blokova. Retci i stupci daju skrivene singlove jednako često, osobito pred kraj."
+          ],
+          "faq": [
+            [
+              "Što je skriveni singl u sudokuu?",
+              "Znamenka koja može stajati u samo jednom polju retka, stupca ili bloka. Jedinica mora sadržavati tu znamenku, pa je polje riješeno čak i ako još ima druge kandidate."
+            ],
+            [
+              "Koja je razlika između skrivenog i golog singla?",
+              "Goli singl tiče se polja: ostao je jedan kandidat. Skriveni singl tiče se znamenke: ostalo je jedno polje u jedinici. Oba upisuju znamenku sa sigurnošću."
+            ],
+            [
+              "Koji je lakše pronaći?",
+              "Bez bilješki su skriveni singlovi obično lakši, jer ploču možeš pregledavati znamenku po znamenku. S potpunim bilješkama goli singlovi su najlakši, jer polje s jednim kandidatom odmah upada u oči."
+            ],
+            [
+              "Kako savjet opisuje skriveni singl?",
+              "Kao „Jedino mjesto za“ znamenku u ovom retku, ovom stupcu ili ovom bloku, s označenim poljem. Dodirni savjet ponovno da je upišeš."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Zaključani kandidati",
+          "title": "Zaključani kandidati u sudokuu: pokazivanje i prisvajanje",
+          "description": "Zaključani kandidati: kad svi kandidati znamenke u bloku leže u jednom retku ili stupcu, ili obrnuto, znamenka se uklanja drugdje. Dva stvarna primjera.",
+          "h1": "Zaključani kandidati (locked candidates)",
+          "summary": "Zaključani kandidati prva su tehnika koja uklanja kandidate umjesto da upisuje znamenku. Imaju dva oblika. Pokazivanje: u bloku svi kandidati za neku znamenku leže u jednom retku ili stupcu, pa se znamenka uklanja iz ostatka te linije. Prisvajanje: u retku ili stupcu svi kandidati za neku znamenku leže u jednom bloku, pa se znamenka uklanja iz ostatka tog bloka. Savjet u Bare Sudokuu upis koji ova tehnika omogući označava kao „Zaključani kandidati“.",
+          "when": [
+            "Kada u zagonetki razine Teško ponestane singlova, ovo je prvo što treba probati. Potrebne su potpune bilješke barem za znamenku koju ispituješ. Zaključani kandidati su česti: potrebni su većini zagonetki razine Teško, a zagonetke razine Ekspert koriste ih između većih uzoraka."
+          ],
+          "spot": [
+            "Za pokazivanje pogledaj svaki blok i svaku znamenku koja mu nedostaje: ako polja-kandidati za tu znamenku leže u jednom retku ili stupcu, provjeri javlja li se ista znamenka kao kandidat dalje duž te linije, izvan bloka. Za prisvajanje gledaj duž retka ili stupca: ako su svi kandidati za znamenku unutar jednog bloka, ostatak tog bloka može se očistiti. U igri dodirni tipku znamenke da istakneš sve njezine kandidate; linija od dvije ili tri istaknute bilješke unutar jednog bloka je uzorak."
+          ],
+          "examples": [
+            {
+              "h": "Pokazivanje",
+              "steps": [
+                "U bloku {box} znamenka {d} ima samo ova polja-kandidate: {cells}. Sva leže u retku {row}.",
+                "Bloku {box} treba {d}, pa je {d} iz retka {row} unutar bloka {box}, u koje god od tih polja dospjela.",
+                "Redak {row} ne može sadržavati drugu znamenku {d}, pa ukloni {d} iz polja retka {row} izvan bloka: {elim}."
+              ]
+            },
+            {
+              "h": "Prisvajanje",
+              "steps": [
+                "U retku {row} znamenka {d} može stajati samo u poljima {cells}, i sva su unutar bloka {box}.",
+                "Redak {row} mora sadržavati {d}, pa redak {row} prisvaja znamenku {d} bloka {box}. Ostala polja bloka {box} ne mogu sadržavati {d}.",
+                "Ukloni {d} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uklanjanje znamenke unutar bloka umjesto izvan njega kod pokazivanja, ili obrnuto kod prisvajanja. Uklanjanja uvijek idu u polja koja su na liniji, ali nisu u bloku, ili u bloku, ali nisu na liniji.",
+            "Primjena pravila kada kandidati zauzimaju dva retka bloka. Sva polja-kandidati za znamenku u bloku moraju ležati na jednoj liniji.",
+            "Zaboravljanje da potražiš singl koji uklanjanje stvara. Zaključani kandidati rijetko sami upisuju znamenku; oni pripremaju singl."
+          ],
+          "faq": [
+            [
+              "Što su zaključani kandidati u sudokuu?",
+              "Kandidati za znamenku koji su ograničeni na presjek bloka i linije. Budući da blok, odnosno linija, mora sadržavati znamenku unutar tog presjeka, znamenka se može ukloniti iz ostatka linije, odnosno iz ostatka bloka."
+            ],
+            [
+              "Koja je razlika između pokazivanja i prisvajanja?",
+              "Pokazivanje polazi od bloka: kandidati znamenke u bloku pokazuju duž jednog retka ili stupca, pa se znamenka uklanja iz ostatka te linije. Prisvajanje polazi od retka ili stupca: svi kandidati linije za tu znamenku su u jednom bloku, pa linija prisvaja znamenku i ona se uklanja iz ostatka bloka."
+            ],
+            [
+              "Zovu li se zaključani kandidati i uklanjanje presjeka?",
+              "Da. Druga imena su redukcija blok-linija za oblik prisvajanja i pokazujući parovi ili pokazujuće trojke za oblik pokazivanja. Bare Sudoku koristi jedno ime za oba."
+            ],
+            [
+              "Koja razina zahtijeva zaključane kandidate?",
+              "Teško. Zagonetka kojoj su potrebni zaključani kandidati ili podskupovi, ali ništa teže, ocjenjuje se kao Teško; zagonetkama razine Ekspert potrebna je i riba ili krilo."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Goli parovi i trojke",
+          "title": "Goli parovi i trojke u sudokuu: kako funkcioniraju",
+          "description": "Goli parovi i trojke: dva ili tri polja u jedinici koja dijele ista dva ili tri kandidata. Nauči kako ih uočiti i što ukloniti, uz stvarne primjere.",
+          "h1": "Goli parovi i trojke (naked pairs, naked triples)",
+          "summary": "Goli par su dva polja u istom retku, stupcu ili bloku koja imaju točno ista dva kandidata. Te dvije znamenke moraju ići u ta dva polja, pa se mogu ukloniti iz svakog drugog polja jedinice. Gola trojka ista je ideja s tri polja i tri znamenke; svako polje može prikazivati dvije ili sve tri. Savjet u Bare Sudokuu upis koji iz toga proizađe označava kao „Par ili trojka“.",
+          "when": [
+            "Kada su bilješke potpune, a singlovi i zaključani kandidati iscrpljeni. Goli parovi vrlo su česti u zagonetkama razine Teško, gole trojke rjeđe. I jedne i druge vrijedi provjeriti u svakoj jedinici koja još ima pet ili više praznih polja."
+          ],
+          "spot": [
+            "Traži polja sa samo dva kandidata i pronađi drugo polje u istoj jedinici s ista dva. Za trojke gledaj jedinice s više polja od dva i tri kandidata i provjeri koriste li tri od njih zajedno samo tri različite znamenke. Polja s potpuno istim kandidatima lako se vide kada su bilješke zapisane; Popuni bilješke u igri to radi jednim dodirom."
+          ],
+          "examples": [
+            {
+              "h": "Goli par",
+              "steps": [
+                "Polja {cellA} i {cellB} ({unit}) imaju točno ista dva kandidata: {d1} i {d2}.",
+                "Jedno od njih mora biti {d1}, a drugo {d2}. Ne znamo koje je koje, ali ta dva polja troše obje znamenke.",
+                "Zato nijedno drugo polje u jedinici {unit} ne može sadržavati {d1} ni {d2}. Ukloni {elim}."
+              ]
+            },
+            {
+              "h": "Gola trojka",
+              "steps": [
+                "Tri polja u jedinici {unit} uzimaju sve svoje kandidate iz iste tri znamenke, {digits}: {cells}.",
+                "Te tri znamenke moraju popuniti ova tri polja nekim redoslijedom. Polje ne mora prikazivati sva tri kandidata; važno je da nijedno od tri polja nema kandidata izvan tog skupa.",
+                "Ukloni {digits} iz svakog drugog polja u jedinici {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uzimanje dvaju polja koja dijele dva kandidata, ali imaju i trećeg. Za goli par svako polje mora imati točno ta dva kandidata i ništa više.",
+            "Uklanjanje znamenaka iz samih polja para. Par zadržava svoje kandidate; uklanjanja idu u ostala polja jedinice.",
+            "Zahtjev da svako polje trojke prikazuje sve tri znamenke. Polje s dvije od tri je u redu, dokle god nijedno polje nema kandidata izvan skupa."
+          ],
+          "faq": [
+            [
+              "Što je goli par u sudokuu?",
+              "Dva polja u jednoj jedinici koja oba imaju točno ista dva kandidata. Te su dvije znamenke zaključane u ta dva polja, pa se mogu ukloniti iz ostatka jedinice."
+            ],
+            [
+              "Što je gola trojka?",
+              "Tri polja u jednoj jedinici čiji su kandidati zajedno samo tri znamenke. Svako polje može imati dvije ili tri od njih. Te tri znamenke popunjavaju tri polja, pa se mogu ukloniti iz ostalih polja jedinice."
+            ],
+            [
+              "Upisuje li goli par znamenku?",
+              "Ne sam po sebi. On uklanja kandidate, a to uklanjanje obično ostavi goli ili skriveni singl. Savjet u Bare Sudokuu pokazuje taj singl i imenuje tehniku koja ga je omogućila."
+            ],
+            [
+              "Može li goli par biti istodobno u bloku i u retku?",
+              "Da. Ako dva polja dijele redak i blok, par uklanja kandidate u obje jedinice. Bare Sudoku ih obrađuje jedinicu po jedinicu."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Skriveni parovi i trojke",
+          "title": "Skriveni parovi i trojke u sudokuu: kako ih uočiti",
+          "description": "Skriveni par su dvije znamenke koje mogu samo u ista dva polja jedinice, pa ostali kandidati tih polja otpadaju. Nauči pronaći skrivene parove i trojke.",
+          "h1": "Skriveni parovi i trojke (hidden pairs, hidden triples)",
+          "summary": "Skriveni par su dvije znamenke koje su u jednom retku, stupcu ili bloku kandidati u ista dva polja i nigdje drugdje. Ta dva polja moraju sadržavati te dvije znamenke, pa se svaki drugi kandidat u njima može ukloniti. Skrivena trojka funkcionira isto, s tri znamenke ograničene na tri polja. Nakon uklanjanja polja prikazuju goli par ili golu trojku. Savjet u Bare Sudokuu upis koji iz toga proizađe označava kao „Par ili trojka“.",
+          "when": [
+            "Kada jedinica ima polja s mnogo kandidata, a singlova više nema. Skriveni parovi kriju se u prepunim poljima, i zato ih vrijedi tražiti upravo ondje gdje se goli parovi ne vide. Skrivene trojke su rijetke; Bare Sudoku ih provjerava, ali se većina zagonetki razine Teško riješi bez njih."
+          ],
+          "spot": [
+            "Radi po znamenki, a ne po polju. U jedinici zabilježi polja u koja može ići svaka znamenka koja nedostaje. Ako dvije znamenke imaju po samo dva moguća polja i to su ista dva polja, pronašao si skriveni par. U igri dodirni tipku znamenke da istakneš njezine kandidate; ako dvije znamenke osvijetle ista dva polja jedinice i ništa drugo u njoj, to je uzorak."
+          ],
+          "examples": [
+            {
+              "h": "Skriveni par",
+              "steps": [
+                "U jedinici {unit} znamenke {d1} i {d2} imaju po samo dva moguća polja, i to ista dva: {cells}.",
+                "Ta dva polja moraju sadržavati {d1} i {d2}, pa su njihovi ostali kandidati nemogući.",
+                "Ukloni {elim}. Sada ta dva polja prikazuju goli par, što može otključati još nešto."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uklanjanje dviju znamenaka para iz polja para. Otpadaju ostali kandidati tih polja; znamenke para ostaju.",
+            "Prihvaćanje znamenke koja u jedinici ima i treće moguće polje. Obje znamenke moraju biti ograničene na točno ta dva polja.",
+            "Traženje samo u blokovima. Skriveni parovi jednako se često javljaju u retcima i stupcima."
+          ],
+          "faq": [
+            [
+              "Što je skriveni par u sudokuu?",
+              "Dvije znamenke koje mogu stajati samo u ista dva polja jedinice. Ta polja moraju primiti te znamenke, pa se njihovi ostali kandidati uklanjaju."
+            ],
+            [
+              "Po čemu se skriveni par razlikuje od golog para?",
+              "Goli par se vidi: dva polja koja prikazuju samo ista dva kandidata. Skriveni par prekriven je dodatnim kandidatima u ta dva polja. Kada ukloniš te dodatne kandidate, skriveni par postaje goli par."
+            ],
+            [
+              "Što je skrivena trojka?",
+              "Tri znamenke ograničene na tri polja jedinice. Nijedna znamenka ne mora se pojaviti u sva tri polja; važno je da nijedna od tri znamenke nema kandidata izvan tih polja."
+            ],
+            [
+              "Razlikuje li savjet skrivene i gole parove?",
+              "Ne. Bare Sudoku pronalazi i jedne i druge i upis koji iz njih proizađe označava kao „Par ili trojka“. Ove ih stranice razdvajaju jer se pronalaze na različite načine."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing u sudokuu: kako tehnika funkcionira",
+          "description": "X-Wing: znamenka s točno dva polja-kandidata u dva retka, poravnata u ista dva stupca, uklanja se iz ostatka tih stupaca. Stvarni primjer korak po korak.",
+          "h1": "X-Wing",
+          "summary": "X-Wing je uzorak jedne znamenke i četiri polja u kutovima pravokutnika. Ako znamenka ima točno dva polja-kandidata u svakom od dva retka, i ta polja leže u ista dva stupca, znamenka mora zauzeti dva suprotna kuta pravokutnika. Zato se može ukloniti iz svakog drugog polja ta dva stupca. Isto vrijedi i kada retci i stupci zamijene uloge. To je prva tehnika razine Ekspert u Bare Sudokuu.",
+          "when": [
+            "Kada su singlovi, zaključani kandidati i podskupovi iscrpljeni. X-Wing je najčešći uzorak razine Ekspert i često se javlja kada znamenki ostane malo kandidata, obično kada su već upisana četiri do šest njezinih primjeraka. Potrebne su potpune bilješke za znamenku koju ispituješ."
+          ],
+          "spot": [
+            "Odaberi znamenku i traži retke u kojima ona ima točno dva polja-kandidata. Ako dva takva retka dijele ista dva stupca, provjeri ima li u tim stupcima drugih kandidata te znamenke: to su uklanjanja. Zatim ponovi sa stupcima kao osnovom. U igri dodirni tipku znamenke: svi njezini kandidati se ističu, i pravokutnik od četiri istaknute bilješke lako se vidi."
+          ],
+          "examples": [
+            {
+              "h": "Primjer",
+              "steps": [
+                "Znamenka {d} ima točno dva polja-kandidata u retku {r1} i točno dva u retku {r2}, i ona se poklapaju u ista dva stupca, {c1} i {c2}: {cells}.",
+                "Redak {r1} smješta svoju znamenku {d} u stupac {c1} ili {c2}, a redak {r2} u onaj drugi. U svakom slučaju, stupci {c1} i {c2} dobivaju po jednu znamenku {d} iz ova dva retka.",
+                "Zato se {d} ne može pojaviti nigdje drugdje u stupcima {c1} i {c2}. Ukloni {d} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Korištenje retka koji ima tri polja-kandidata za znamenku. Svaki osnovni redak mora imati točno dva, i oba moraju biti u dva zajednička stupca.",
+            "Uklanjanje znamenke iz redaka umjesto iz stupaca. Kada su retci osnova, uklanjanja su u stupcima, i obrnuto.",
+            "Zaboravljanje obrnute inačice. X-Wing zasnovan na stupcima uklanja kandidate u retcima."
+          ],
+          "faq": [
+            [
+              "Što je X-Wing u sudokuu?",
+              "Znamenka koja ima točno dva polja-kandidata u svakom od dva retka, u ista dva stupca. Znamenka zauzima dva suprotna kuta tog pravokutnika, pa se uklanja iz ostatka ta dva stupca. Retci i stupci mogu zamijeniti uloge."
+            ],
+            [
+              "Zašto X-Wing funkcionira?",
+              "Svaki od dva retka mora smjestiti znamenku u jedan od dva stupca, a dva retka ne mogu koristiti isti stupac. Tako oba stupca dobivaju svoj primjerak znamenke iz ovih redaka, i svaki drugi kandidat u tim stupcima je nemoguć."
+            ],
+            [
+              "Je li X-Wing riba?",
+              "Da. X-Wing je riba veličine dva; Swordfish je riba veličine tri. Bare Sudoku pronalazi obje."
+            ],
+            [
+              "Na kojoj se razini javlja X-Wing?",
+              "Ekspert. Zagonetka kojoj je potreban X-Wing, Y-Wing, Swordfish ili XYZ-Wing ocjenjuje se kao Ekspert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing u sudokuu: kako tehnika funkcionira",
+          "description": "Y-Wing (XY-Wing): stožer s dva kandidata i dva krila, od kojih svako dijeli jednog od njih, izbacuju znamenku iz svakog polja koje vidi oba krila. Primjer.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, koji se zove i XY-Wing, koristi tri polja s po dva kandidata. Stožer ima kandidate X i Y. Jedno krilo vidi stožer i ima X i Z; drugo krilo vidi stožer i ima Y i Z. Što god da je stožer, jedno od krila mora biti Z, pa se Z može ukloniti iz svakog polja koje vidi oba krila. To je tehnika razine Ekspert u Bare Sudokuu.",
+          "when": [
+            "Kada zagonetka ima više polja s točno dva kandidata, a nijedna riba nije dostupna. Y-Wing je čest u zagonetkama razine Ekspert i pronalazi se praćenjem polja s dva kandidata: svako je mogući stožer ili krilo."
+          ],
+          "spot": [
+            "Napravi popis polja s točno dva kandidata. Svako od njih promatraj kao stožer s kandidatima X i Y i među njegovim susjedima traži polje s X i nekom drugom znamenkom Z te polje s Y i istom znamenkom Z. Ta dva polja su krila. Zatim pronađi polja koja vide oba krila i sadrže Z. Imaj na umu da krila ne moraju vidjeti jedno drugo."
+          ],
+          "examples": [
+            {
+              "h": "Primjer",
+              "steps": [
+                "Stožer {pivot} ima kandidate {x} i {y}. On vidi polje {wingA}, koje ima {x} i {z}, i polje {wingB}, koje ima {y} i {z}.",
+                "Ako je {pivot} jednako {x}, polje {wingA} gubi {x} i postaje {z}. Ako je {pivot} jednako {y}, polje {wingB} postaje {z}. U svakom slučaju jedno od dva krila je {z}.",
+                "Polje koje vidi oba krila nikada ne može biti {z}. Ukloni {z} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Biranje krila koja ne vide oba stožer. Svako krilo mora dijeliti redak, stupac ili blok sa stožerom.",
+            "Uklanjanje Z iz polja koja vide samo jedno krilo. Polje iz kojeg se uklanja mora vidjeti oba krila.",
+            "Uklanjanje Z iz stožera. U Y-Wingu stožer ne sadrži Z; ako ga sadrži, uzorak je XYZ-Wing, koji ima drukčija pravila."
+          ],
+          "faq": [
+            [
+              "Što je Y-Wing u sudokuu?",
+              "Tri polja s po dva kandidata: stožer s X i Y, krilo s X i Z koje vidi stožer i krilo s Y i Z koje vidi stožer. Jedno krilo je uvijek Z, pa se Z uklanja iz polja koja vide oba krila."
+            ],
+            [
+              "Je li Y-Wing isto što i XY-Wing?",
+              "Da. Oba imena opisuju isti uzorak. Bare Sudoku ga zove Y-Wing."
+            ],
+            [
+              "Zašto jedno krilo mora biti Z?",
+              "Ako je stožer X, prvo krilo gubi X i postaje Z. Ako je stožer Y, drugo krilo postaje Z. Stožer je jedno od to dvoje, pa je jedno krilo Z."
+            ],
+            [
+              "Iz koliko polja Y-Wing uklanja kandidate?",
+              "Obično iz jednog ili dva: samo iz polja koja vide oba krila i još sadrže Z. To je dovoljno da nastane singl."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish u sudokuu: kako tehnika funkcionira",
+          "description": "Swordfish: znamenka ograničena na tri stupca u tri retka uklanja se iz ostatka tih stupaca. Riba veličine tri, objašnjena na stvarnom primjeru korak po korak.",
+          "h1": "Swordfish",
+          "summary": "Swordfish je X-Wing s tri retka i tri stupca. Ako znamenka ima najviše tri polja-kandidata u svakom od tri retka, i sva ta polja padaju u ista tri stupca, tri retka troše tu znamenku u tim stupcima, pa se znamenka može ukloniti iz svakog drugog polja ta tri stupca. Retci i stupci mogu zamijeniti uloge. Bare Sudoku traži Swordfish nakon Y-Winga, u zagonetkama razine Ekspert.",
+          "when": [
+            "Kada X-Wing i Y-Wing ne nađu ništa. Swordfish je rjeđi od X-Winga i zahtijeva znamenku čiji su kandidati rijetko raspoređeni po tri linije. Potrebne su potpune i točne bilješke za tu znamenku."
+          ],
+          "spot": [
+            "Odaberi znamenku i traži retke s dva ili tri polja-kandidata za nju. Ako tri takva retka ukupno pokrivaju samo tri stupca, provjeri ima li u tim stupcima drugih kandidata te znamenke. Ne mora svaki redak imati kandidata u svakom stupcu: Swordfish može imati šest, sedam, osam ili devet polja. U igri istakni znamenku njezinom tipkom i traži tri retka čiji se kandidati poklapaju u tri stupca."
+          ],
+          "examples": [
+            {
+              "h": "Primjer",
+              "steps": [
+                "Znamenka {d} ima najviše tri polja-kandidata u svakom od redaka {rows}, i sva ta polja padaju u stupce {cols}: {cells}.",
+                "Svaki od tri retka mora smjestiti svoju znamenku {d} u jedan od tri stupca, i nikoja dva retka ne mogu koristiti isti stupac. Tako tri stupca dobivaju svoju znamenku {d} iz ova tri retka.",
+                "Svaki drugi kandidat {d} u stupcima {cols} je nemoguć. Ukloni {d} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Zahtjev da postoji svih devet polja. Swordfish s dva kandidata u nekim retcima i dalje vrijedi, dokle god tri retka pokrivaju samo tri stupca.",
+            "Uključivanje retka s četiri polja-kandidata. Svaki osnovni redak mora imati najviše tri, sva unutar tri stupca.",
+            "Uklanjanje u osnovnim retcima. Kada su retci osnova, uklanjanja su u tri stupca, izvan osnovnih redaka."
+          ],
+          "faq": [
+            [
+              "Što je Swordfish u sudokuu?",
+              "Znamenka čiji su kandidati u tri retka ograničeni na tri stupca. Tri retka moraju smjestiti znamenku u ta tri stupca, po jednu u svaki, pa se znamenka uklanja iz ostalih polja tih stupaca."
+            ],
+            [
+              "Po čemu se Swordfish razlikuje od X-Winga?",
+              "Samo po veličini: X-Wing koristi dva retka i dva stupca, Swordfish tri i tri. Zaključivanje je isto."
+            ],
+            [
+              "Zahtijeva li Swordfish točno devet polja?",
+              "Ne. Svaki redak može imati dva ili tri kandidata; uzorak zahtijeva samo da tri retka zajedno ne koriste više od tri stupca."
+            ],
+            [
+              "Postoji li riba veličine četiri?",
+              "Da, Jellyfish. Bare Sudoku je ne koristi, jer njegovim zagonetkama nikada nije potrebna."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing u sudokuu: kako tehnika funkcionira",
+          "description": "XYZ-Wing: stožer s tri kandidata i dva krila koja dijele jednog od njih izbacuju tu znamenku iz svakog polja koje vidi sva tri. Stvarni primjer korak po korak.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing je Y-Wing čiji stožer ima tri kandidata. Stožer ima X, Y i Z; jedno krilo vidi stožer i ima X i Z, a drugo vidi stožer i ima Y i Z. Jedno od tri polja mora biti Z, pa se Z može ukloniti iz svakog polja koje vidi sva tri. Budući da i sam stožer može biti Z, polje iz kojeg se uklanja mora vidjeti i stožer i oba krila, što ga ograničava na blok ili liniju koju ta polja dijele. To je najteža tehnika koju Bare Sudoku koristi.",
+          "when": [
+            "Tek kada sve ostalo zakaže. XYZ-Wing je najrjeđi uzorak u Bare Sudokuu i javlja se samo u zagonetkama razine Ekspert. Traži ga kada polje s tri kandidata stoji u bloku s poljem s dva kandidata koje dijeli dvije njegove znamenke."
+          ],
+          "spot": [
+            "Kreni od polja s točno tri kandidata; svako je mogući stožer. Među njegovim susjedima traži dva polja s po dva kandidata, oba uzeta iz tri kandidata stožera, koja dijele točno jednu znamenku Z. Zatim traži polja koja vide stožer i oba krila i sadrže Z. U praksi je jedno krilo u bloku stožera, a drugo u njegovu retku ili stupcu, a polja iz kojih se uklanja preostala su polja tog bloka u tom retku ili stupcu."
+          ],
+          "examples": [
+            {
+              "h": "Primjer",
+              "steps": [
+                "Stožer {pivot} ima tri kandidata: {x}, {y} i {z}. On vidi polje {wingA} s {x} i {z} i polje {wingB} s {y} i {z}.",
+                "Ako je stožer {z}, gotovo. Ako je {x}, polje {wingA} mora biti {z}. Ako je {y}, polje {wingB} mora biti {z}. U svakom slučaju jedno od tri polja je {z}.",
+                "Polje koje vidi sva tri ne može biti {z}. Ukloni {z} iz polja {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uklanjanje iz polja koja vide samo dva krila. Za razliku od Y-Winga, stožer može biti Z, pa polje mora vidjeti i stožer.",
+            "Korištenje krila čiji kandidati nisu oba sadržani u tri kandidata stožera.",
+            "Miješanje s Y-Wingom: razlika je treći kandidat u stožeru, i on mijenja iz kojih se polja može ukloniti."
+          ],
+          "faq": [
+            [
+              "Što je XYZ-Wing u sudokuu?",
+              "Stožer s kandidatima X, Y i Z i dva krila, jedno s X i Z i jedno s Y i Z, koja oba vide stožer. Jedno od tri polja je Z, pa se Z uklanja iz polja koja vide sva tri."
+            ],
+            [
+              "Po čemu se XYZ-Wing razlikuje od Y-Winga?",
+              "Stožer ima tri kandidata umjesto dva, među njima i Z. Zbog toga Z može stajati i u stožeru, pa Z mogu izgubiti samo polja koja vide stožer i oba krila."
+            ],
+            [
+              "Koliko se često javlja XYZ-Wing?",
+              "Rijetko. U Bare Sudokuu može biti potreban samo zagonetkama razine Ekspert, a većini ni njih nije. Bare Sudoku ga provjerava posljednjeg, nakon X-Winga, Y-Winga i Swordfisha."
+            ],
+            [
+              "Postoji li WXYZ-Wing?",
+              "Da, sa stožerom od četiri kandidata, ali ga Bare Sudoku ne koristi. Svaka zagonetka u igri može se završiti s devet tehnika iz ovog vodiča."
+            ]
+          ]
+        }
+      }
+    },
+    "ar": {
+      "learnHeading": "تعلّم السودوكو",
+      "learnText": "جديد على السودوكو، أو عالق في لغز صعب؟ يشرح دليلان القواعد وكل تقنية حل تستخدمها التلميحات، ولكل منها مثال حقيقي.",
+      "howToLink": "كيف تلعب السودوكو",
+      "techniquesLink": "تقنيات حل السودوكو",
+      "labels": {
+        "howTo": "طريقة اللعب",
+        "techniques": "التقنيات",
+        "play": "العب السودوكو",
+        "prev": "التقنية السابقة",
+        "next": "التقنية التالية",
+        "all": "كل التقنيات",
+        "example": "مثال",
+        "steps": "خطوة بخطوة",
+        "when": "متى تستخدمها",
+        "spot": "كيف تكتشفها",
+        "mistakes": "أخطاء شائعة",
+        "inGame": "في Bare Sudoku",
+        "level": "مطلوبة بدءًا من مستوى: {level}",
+        "hint": "في اللعبة يقول التلميح: {text}",
+        "legend": "الأرقام الغامقة معطاة، والأرقام الزرقاء وُضعت أثناء الحل، والأرقام الصغيرة مرشحون. الخلايا المبرزة تشكّل النمط، والمرشحون المشطوبون يُحذفون، والمرشح المحاط بدائرة هو الرقم الذي يوضع.",
+        "notation": "تُكتب الخلايا بالشكل r3c7: الصف 3، العمود 7. تُعد الصفوف من الأعلى والأعمدة من اليسار، وتُرقَّم المربعات من 1 إلى 9 بدءًا من أعلى اليسار، صفًا بعد صف.",
+        "row": "الصف {n}",
+        "column": "العمود {n}",
+        "box": "المربع {n}",
+        "elimItem": "{d} من {cell}",
+        "regions": "الصف 5 والعمود 5 والمربع 5 في بداية اللغز",
+        "firstMove": "مفرد مكشوف: الخلية {cell} لا تقبل إلا {d}",
+        "breadcrumb": "مسار التنقل"
+      },
+      "howTo": {
+        "title": "كيف تلعب السودوكو: القواعد واللوحة والنقلات الأولى",
+        "description": "تعلّم كيف تلعب السودوكو: القواعد، وكيف تعمل الصفوف والأعمدة والمربعات، ولماذا لكل لغز حل واحد، وكيف تستخدم الملاحظات وتبدأ نقلاتك الأولى.",
+        "h1": "كيف تلعب السودوكو",
+        "summary": "السودوكو لغز منطقي على شبكة 9×9. املأ كل خلية فارغة برقم من 1 إلى 9 بحيث يحتوي كل صف وكل عمود وكل مربع 3×3 على كل رقم مرة واحدة بالضبط. بعض الأرقام معطاة في البداية، وأنت تستنتج الباقي، خلية مؤكدة تلو الأخرى، ولا تحتاج إلى التخمين أبدًا. يشرح هذا الدليل اللوحة والقواعد ومبدأ الحل الوحيد والملاحظات واستراتيجية بسيطة لنقلاتك الأولى. يمكنك التدرب على كل ذلك في [Bare Sudoku](play)، وهو مجاني وفيه تلميحات تشرح المنطق.",
+        "sections": [
+          {
+            "h": "ما قواعد السودوكو؟",
+            "p": [
+              "هناك ثلاث قواعد فقط، وهي في الحقيقة قاعدة واحدة تُرى من ثلاث جهات: يجب أن يحتوي كل صف على الأرقام من 1 إلى 9، ويجب أن يحتوي كل عمود على الأرقام من 1 إلى 9، ويجب أن يحتوي كل مربع 3×3 على الأرقام من 1 إلى 9. لذلك لا يمكن أن يظهر رقم مرتين في الصف نفسه أو العمود نفسه أو المربع نفسه.",
+              "الأرقام المعطاة، المطبوعة بخط غامق، ثابتة. مهمتك أن تملأ الخلايا الفارغة. لا حساب ولا ترتيب: الأرقام مجرد تسعة رموز مختلفة. لو لعبت بحروف أو أشكال لما تغيّر شيء."
+            ]
+          },
+          {
+            "h": "كيف تُنظَّم اللوحة؟",
+            "p": [
+              "في اللوحة 81 خلية موزعة على 9 صفوف و9 أعمدة، وتقسمها خطوط سميكة إلى تسعة مربعات 3×3. تنتمي كل خلية إلى صف واحد وعمود واحد ومربع واحد بالضبط، وهذه المجموعات الثلاث هي وحداتها. أما الخلايا العشرون الأخرى التي تشاركها وحدة فتسمى أقرانها، والرقم الذي يوضع في خلية يستبعد ذلك الرقم من أقرانها العشرين كلها.",
+              "تُكتب الخلايا بالشكل r3c7: الصف 3، العمود 7. تُعد الصفوف من الأعلى والأعمدة من اليسار، وتُرقَّم المربعات من 1 إلى 9 بدءًا من أعلى اليسار، صفًا بعد صف. هذا الترميز مستخدم في كل أدلة التقنيات ويستحق أن تتعلمه: r5c5 هي مركز اللوحة."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "لماذا لكل سودوكو حل واحد بالضبط؟",
+            "p": [
+              "للسودوكو الصحيح حل واحد، وهذا ما يجعل المنطق يعمل. كلما استطعت أن تبيّن أن رقمًا لا يمكن أن يذهب إلى أي مكان آخر في وحدة، وجب أن يذهب إلى الخلية المتبقية، لأن الحل موجود وفريد. لو كان للغز حلان لما استطاع أي استدلال التمييز بينهما، ولاضطررت إلى التخمين في مرحلة ما.",
+              "يولّد Bare Sudoku كل لغز على جهازك ويتحقق من أن له حلًا واحدًا بالضبط وأن حلّاله المنطقي يستطيع إنهاءه بتقنيات المستوى المختار. لذلك إذا توقفت، فهناك دائمًا خطوة تالية يمكن إيجادها، والتلميح يُظهرها."
+            ]
+          },
+          {
+            "h": "كيف تبدأ لغز السودوكو؟",
+            "p": [
+              "ابدأ بالأكثر تقييدًا. هذا الترتيب ينجح في كل المستويات:"
+            ],
+            "list": [
+              "اختر رقمًا يظهر كثيرًا بالفعل، ست أو سبع مرات مثلًا، وابحث عن المربعات التي ما زال ينقصها. غالبًا لا تبقى له في المربع إلا خلية واحدة: هذا [مفرد مخفي](hidden-single).",
+              "ابحث عن الخلايا المزدحمة. الخلية التي يحتوي صفها وعمودها ومربعها معًا على ثمانية أرقام مختلفة لا يبقى لها إلا مرشح واحد: هذا [مفرد مكشوف](naked-single). الخلايا في الصفوف أو المربعات شبه الممتلئة هي أفضل مكان للبحث.",
+              "كل رقم تضعه يحذف مرشحًا من 20 قرينًا، فافحص هذه الأقران فورًا. وكثيرًا ما يجرّ مفردٌ مفردًا آخر.",
+              "حين تنفد الوضعيات السهلة، اكتب الملاحظات: المرشحين لكل خلية فارغة. ثم ابحث عن رقم محصور في خط واحد داخل مربع ([المرشحون المحصورون](locked-candidates)) أو عن خليتين تشتركان في المرشحَين نفسيهما ([زوج مكشوف](naked-pairs)).",
+              "ارجع إلى المفردات بعد كل حذف. حتى ألغاز مستوى خبير تُحل في معظمها بالمفردات، والتقنية المتقدمة لا تفعل أكثر من فتح الطريق إلى المفرد التالي."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "ما الملاحظات ومتى تستخدمها؟",
+            "p": [
+              "الملاحظات، وتسمى أيضًا علامات القلم أو المرشحين، هي الأرقام الصغيرة التي تكتبها في خلية فارغة لتسجل الأرقام التي ما زالت ممكنة فيها. في الألغاز السهلة نادرًا ما تحتاجها، ومن مستوى صعب فما فوق تصبح ضرورية، لأن تقنيات مثل الأزواج وX-Wing وY-Wing تتعامل مع المرشحين لا مع الأرقام الموضوعة.",
+              "حافظ على دقة الملاحظات: حين تضع رقمًا، احذفه من ملاحظات أقرانه العشرين كلها. في Bare Sudoku يحدث هذا تلقائيًا، وزر ملء الملاحظات يكتب كل مرشح في كل خلية فارغة بلمسة واحدة، فتبدأ من مجموعة مرشحين كاملة وصحيحة. الملاحظة حقيقة لا تخمين: معناها أنه لا شيء يستبعد هذا الرقم حتى الآن."
+            ]
+          },
+          {
+            "h": "ماذا تفعل حين تتوقف؟",
+            "p": [
+              "أولًا راجع الأساسيات: كل صف أو عمود أو مربع شبه ممتلئ مصدر للمفردات. ثم تأكد من أن الملاحظات كاملة، لأن المرشح الناقص يخفي الأنماط، والمرشح الذي لم يُحذف في وقته يصنع أنماطًا زائفة. بعد ذلك مرّ على [التقنيات](techniques) بحسب صعوبتها: المرشحون المحصورون، والأزواج والثلاثيات، وX-Wing، وY-Wing، وSwordfish، وXYZ-Wing. لكل منها صفحتها مع مثال حقيقي.",
+              "إذا لم ينجح شيء، فاطلب تلميحًا. في Bare Sudoku يتحقق التلميح أولًا مما إذا كان رقم موضوع خاطئًا، ثم يجد الخلية التالية التي يمكن ملؤها بالمنطق ويسمّي التقنية، فتتعلم شيئًا حتى حين تستخدمه. اضغط التلميح مرة أخرى لوضع الرقم."
+            ]
+          },
+          {
+            "h": "كيف تُدخل الأرقام في Bare Sudoku؟",
+            "p": [
+              "المس خلية ثم رقمًا. أو المس الرقم أولًا: فيُقفل، وكل خلية تلمسها تتلقاه، وهذه أسرع طريقة لوضع النسخة السادسة والسابعة والثامنة من رقم ما. المس الرقم مرة أخرى لتحريره. زر الملاحظات يبدّل إلى علامات القلم، وزر المسح يفرّغ الخلية، وزر التراجع يلغي أي نقلة، وتُعلَّم الأخطاء باللون الأحمر ما لم توقف ذلك من القائمة.",
+              "على لوحة المفاتيح، استخدم الأسهم للتنقل، والأرقام من 1 إلى 9 لإدخال رقم، وBackspace للمسح، وN للملاحظات، وU للتراجع، وH للتلميح، وF لملء الملاحظات، وEscape للقائمة. تحفظ اللعبة نفسها تلقائيًا، وتعمل دون اتصال، بلا إعلانات ولا حساب."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "هل تحتاج إلى التخمين في السودوكو؟",
+            "ليس في لغز صحيح. لكل لغز في Bare Sudoku حل واحد بالضبط، وقد تم التحقق من إمكان حله بالمنطق وحده، ضمن تقنيات مستواه. إذا شعرت أنك مضطر إلى التخمين، فهناك مرشح ناقص في ملاحظاتك أو تقنية تنتظر أن تكتشفها."
+          ],
+          [
+            "هل يمكن أن يظهر رقم مرتين في صف أو عمود أو مربع؟",
+            "لا. هذه هي القاعدة كلها: كل واحد من الصفوف التسعة والأعمدة التسعة والمربعات التسعة يحتوي على كل رقم من 1 إلى 9 مرة واحدة بالضبط. إذا اجتمع رقمان متماثلان في وحدة واحدة، فأحدهما على الأقل خاطئ."
+          ],
+          [
+            "ما الفرق بين المستويات سهل ومتوسط وصعب وخبير؟",
+            "يُحدَّد المستوى بالتقنيات التي يحتاجها اللغز. مستويا سهل ومتوسط يُحلّان بالمفرد المكشوف والمفرد المخفي فقط، ويبدأ مستوى سهل بما لا يقل عن 38 رقمًا معطى. مستوى صعب يحتاج إلى المرشحين المحصورين أو الأزواج والثلاثيات. مستوى خبير يحتاج إلى X-Wing أو Y-Wing أو Swordfish أو XYZ-Wing."
+          ],
+          [
+            "هل الأفضل ملء الملاحظات لكل الخلايا أم لبعضها فقط؟",
+            "في ألغاز صعب وخبير املأها كلها: أنماط مثل الأزواج وX-Wing وY-Wing لا تظهر إلا حين يكون كل مرشح مكتوبًا. في سهل ومتوسط الملاحظات اختيارية، ومعظم اللاعبين يكتفون بالبحث عن المفردات."
+          ],
+          [
+            "كم يستغرق حل السودوكو؟",
+            "يستغرق لغز سهل بضع دقائق، وقد تستغرق ألغاز خبير عشرين دقيقة أو أكثر، بحسب سرعتك في اكتشاف النمط المتقدم. يعرض Bare Sudoku مؤقتًا، ويوقفه ما دامت القائمة مفتوحة، ولا توجد فيه لوحة صدارة، فالعب على مهلك."
+          ],
+          [
+            "هل يحتاج السودوكو إلى الحساب؟",
+            "لا. الأرقام مجرد تسميات، ولا جمع فيها ولا عدّ. أي تسعة رموز ستؤدي الغرض نفسه، ولهذا فالسودوكو لغز منطقي وليس لغزًا حسابيًا."
+          ]
+        ]
+      },
+      "index": {
+        "title": "تقنيات حل السودوكو مشروحة بالأمثلة",
+        "description": "تقنيات حل السودوكو التسع كلها، من المفرد المكشوف إلى Swordfish وXYZ-Wing، بالترتيب الذي تستخدمه تلميحات Bare Sudoku، ولكل منها مثال حقيقي.",
+        "h1": "تقنيات حل السودوكو",
+        "intro": [
+          "يمكن حل أي سودوكو بمجموعة صغيرة من التقنيات المنطقية. يسرد هذا الفهرس التقنيات التسع التي يستخدمها حلّال Bare Sudoku وتلميحاته، بالترتيب الذي يجرّبها به الحلّال: المفردات أولًا، ثم الحذف داخل وحدة واحدة، ثم الأنماط التي تمتد عبر عدة صفوف وأعمدة. لكل تقنية صفحتها الخاصة وفيها تعريف، وطريقة اكتشافها، ومثال حقيقي من لغز مولَّد، والأخطاء الشائعة.",
+          "يُحدَّد مستوى اللغز بأصعب تقنية يحتاجها. ألغاز سهل ومتوسط لا تحتاج إلا إلى المفردات، وألغاز صعب تحتاج إلى المرشحين المحصورين أو الأزواج والثلاثيات، وألغاز خبير تحتاج إلى سمكة أو جناح واحد على الأقل. ومهما كان المستوى، فالمفردات تؤدي معظم العمل: التقنية المتقدمة تحذف مرشحًا أو اثنين، ثم تكمل المفردات من هناك."
+        ],
+        "faq": [
+          [
+            "بأي ترتيب أجرّب تقنيات السودوكو؟",
+            "الأبسط أولًا: المفرد المكشوف، المفرد المخفي، المرشحون المحصورون، الأزواج والثلاثيات المكشوفة، الأزواج والثلاثيات المخفية، X-Wing، Y-Wing، Swordfish، XYZ-Wing. يجرّبها Bare Sudoku بهذا الترتيب تمامًا، والتلميح يسمّي دائمًا أبسط تقنية تحقق تقدمًا."
+          ],
+          [
+            "هل أحتاج إلى كل هذه التقنيات لحل السودوكو؟",
+            "في ألغاز سهل ومتوسط تكفي المفردات. ألغاز صعب تضيف المرشحين المحصورين والمجموعات الجزئية. ألغاز خبير تحتاج إلى سمكة أو جناح واحد على الأقل، ولكن عادة مرة أو مرتين فقط في اللغز."
+          ],
+          [
+            "هل توجد تقنيات أصعب من XYZ-Wing؟",
+            "نعم، مثل السلاسل واختبارات التفرد وشبكات الإجبار. لا يولّد Bare Sudoku ألغازًا تحتاج إليها، لذلك يمكن إنهاء كل لغز في اللعبة بالتقنيات التسع في هذه الصفحة."
+          ],
+          [
+            "ما المرشح؟",
+            "رقم ما زال يمكن أن يوضع في خلية فارغة لأنه لا شيء في صفها أو عمودها أو مربعها يستبعده بعد. الملاحظات في اللعبة هي المرشحون. كل تقنية بعد المفردات تستدل من المرشحين، فاحرص على أن تبقى كاملة ودقيقة."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "المفرد المكشوف",
+          "title": "المفرد المكشوف في السودوكو: الخلية ذات المرشح الواحد",
+          "description": "المفرد المكشوف خلية فارغة لا يناسبها إلا رقم واحد. تعلّم كيف تجد المفردات المكشوفة بسرعة، مع مثال حقيقي خطوة بخطوة والأخطاء المعتادة.",
+          "h1": "المفرد المكشوف (Naked Single)",
+          "summary": "المفرد المكشوف خلية فارغة لها مرشح واحد بالضبط: الأرقام الثمانية الأخرى موجودة بالفعل في صفها أو عمودها أو مربعها. فالرقم المتبقي يجب أن يوضع هناك. إنها أبسط تقنيات السودوكو، وأكثرها استخدامًا، وهي التي يعلنها تلميح Bare Sudoku بعبارة «مرشح واحد فقط هنا».",
+          "when": [
+            "دائمًا. تظهر المفردات المكشوفة من النقلة الأولى حتى الأخيرة، في كل المستويات. في ألغاز سهل ومتوسط هي، مع المفردات المخفية، التقنية الوحيدة التي تحتاجها. وفي الألغاز الأصعب، كل حذف تقوم به تقنية متقدمة يترك عادة مفردًا مكشوفًا وراءه، فابحث عنها بعد كل خطوة."
+          ],
+          "spot": [
+            "انظر إلى الخلايا التي امتلأ كثير من أقرانها: خلية في صف فيه سبعة أرقام بالفعل، أو خلية يغطي صفها وعمودها ومربعها معًا ثمانية أرقام مختلفة. من دون ملاحظات، عُدّ الأرقام التي تراها من الخلية. ومع الملاحظات، المفرد المكشوف ببساطة خلية تُظهر مرشحًا واحدًا، ولهذا يجعل ملء الملاحظات العثور عليه سهلًا."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "انظر إلى الخلية {cell}. إنها فارغة، فاكتب كل رقم موضوع بالفعل في صفها وعمودها ومربعها.",
+                "الصف {row} يحتوي على {rowDigits}. العمود {col} يحتوي على {colDigits}. المربع {box} يحتوي على {boxDigits}.",
+                "معًا تستبعد كل الأرقام ما عدا {d}، فيكون {d} المرشح الوحيد المتبقي في الخلية {cell}.",
+                "اكتب {d} في الخلية {cell}. ثم تحقق مما إذا كان الرقم الجديد يصنع مفردًا آخر في الصف نفسه أو العمود نفسه أو المربع نفسه."
+              ]
+            }
+          ],
+          "mistakes": [
+            "عدّ الصف وحده أو المربع وحده. الأرقام الثمانية المستبعدة تأتي عادة من الوحدات الثلاث معًا.",
+            "نسيان أن الرقم الذي وضعته قبل لحظة يستبعد هو أيضًا مرشحين من أقرانه العشرين، فمفردات مكشوفة جديدة تظهر مباشرة بعد كل وضع.",
+            "الخلط بين المفرد المكشوف والمفرد المخفي: في المفرد المكشوف بقي مرشح واحد في الخلية، وفي المفرد المخفي بقيت خلية واحدة للرقم في وحدة."
+          ],
+          "faq": [
+            [
+              "ما المفرد المكشوف في السودوكو؟",
+              "خلية فارغة لها مرشح واحد بالضبط. ثمانية أرقام مختلفة موضوعة بالفعل في صفها وعمودها ومربعها، فلا يناسبها إلا الرقم التاسع."
+            ],
+            [
+              "لماذا يسمى مكشوفًا؟",
+              "لأن المرشح الوحيد يظهر مباشرة في الخلية بعد كتابة الملاحظات، ولا شيء يخفيه. أما المفرد المخفي فيقع بين مرشحين آخرين، ويُعثر عليه بالنظر إلى الرقم لا إلى الخلية."
+            ],
+            [
+              "هل يمكن حل لغز بالمفردات المكشوفة وحدها؟",
+              "كثير من ألغاز سهل يمكن ذلك، لكن معظمها يحتاج أيضًا إلى المفردات المخفية. يصنّف Bare Sudoku ألغاز سهل ومتوسط على أنها قابلة للحل بنوعي المفرد، أما ألغاز صعب وخبير فتحتاج إلى تقنية إضافية واحدة على الأقل."
+            ],
+            [
+              "هل يُظهر التلميح المفردات المكشوفة؟",
+              "نعم. حين يكون الوضع التالي مفردًا مكشوفًا، يحدد التلميح الخلية ويقول «مرشح واحد فقط هنا» مع الرقم. اضغط التلميح مرة أخرى لوضعه."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "المفرد المخفي",
+          "title": "المفرد المخفي في السودوكو: المكان الوحيد للرقم",
+          "description": "المفرد المخفي هو الخلية الوحيدة في صف أو عمود أو مربع التي ما زال يمكن وضع رقم ما فيها. تعلّم اكتشاف المفردات المخفية بفحص رقم واحد في كل مرة.",
+          "h1": "المفرد المخفي (Hidden Single)",
+          "summary": "المفرد المخفي رقم لم تبق له إلا خلية ممكنة واحدة في صف أو عمود أو مربع، حتى لو أظهرت تلك الخلية مرشحين آخرين. ولأن الوحدة يجب أن تحتوي على هذا الرقم، فهو يوضع هناك. يعلنه تلميح Bare Sudoku بعبارة «المكان الوحيد للرقم 5 في هذا الصف»، أو العمود أو المربع.",
+          "when": [
+            "كلما تقدّم رقم بما يكفي: حين يظهر رقم خمس أو ست مرات، تصبح المربعات المتبقية مقيدة جدًا، وكثيرًا ما يكون المفرد المخفي هو النقلة التالية. المفردات المخفية هي التقنية الأساسية في ألغاز سهل ومتوسط، وتظل الأداة الرئيسية في كل المستويات."
+          ],
+          "spot": [
+            "افحص رقمًا واحدًا في كل مرة. خذ رقمًا، وابحث عن مربع لا يحتويه، واشطب كل خلية في ذلك المربع تشترك في صف أو عمود مع نسخة موضوعة من الرقم. إذا بقيت خلية واحدة، فقد وجدت مفردًا مخفيًا. والفحص نفسه ينجح في الصفوف والأعمدة. في اللعبة، المس رقمًا موضوعًا: تُبرز كل نسخه، فتظهر الخلايا الحرة بوضوح."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "المربع {box} لا يحتوي على {d} بعد، فيجب أن تحمله إحدى خلاياه الفارغة. الخلايا الفارغة هي {empties}.",
+                "في كل منها ما عدا {cell}، يُستبعد {d} لأن {d} آخر موضوع بالفعل في الصف نفسه أو العمود نفسه، فلا يكون {d} مرشحًا هناك.",
+                "تبقى الخلية {cell} المكان الوحيد للرقم {d} في المربع {box}. اكتب {d} فيها، حتى لو كانت {cell} ما زالت تُظهر مرشحين آخرين."
+              ]
+            }
+          ],
+          "mistakes": [
+            "وضع الرقم في خلية يُرجَّح فقط أنها الصحيحة: افحص كل خلية فارغة أخرى في الوحدة، لا الواضحة منها فقط.",
+            "تفويت مفرد مخفي لأن الخلية تُظهر عدة مرشحين. المرشحون الآخرون لا يهمون، المهم أن الرقم ليس له مكان آخر في الوحدة.",
+            "فحص المربعات وحدها. الصفوف والأعمدة تنتج مفردات مخفية بالقدر نفسه، خاصة قرب النهاية."
+          ],
+          "faq": [
+            [
+              "ما المفرد المخفي في السودوكو؟",
+              "رقم لا يمكن أن يوضع إلا في خلية واحدة من صف أو عمود أو مربع. يجب أن تحتوي الوحدة على الرقم، فتُحسم الخلية حتى لو بقي فيها مرشحون آخرون."
+            ],
+            [
+              "ما الفرق بين المفرد المخفي والمفرد المكشوف؟",
+              "المفرد المكشوف يخص خلية: بقي فيها مرشح واحد. المفرد المخفي يخص رقمًا: بقيت له خلية واحدة في وحدة. وكلاهما يضع رقمًا بيقين."
+            ],
+            [
+              "أيهما أسهل في الإيجاد؟",
+              "من دون ملاحظات، المفردات المخفية أسهل عادة لأنك تستطيع فحص اللوحة رقمًا رقمًا. ومع ملاحظات كاملة، المفردات المكشوفة هي الأسهل، لأن الخلية ذات المرشح الواحد تلفت النظر."
+            ],
+            [
+              "كيف يصف التلميح المفرد المخفي؟",
+              "بعبارة «المكان الوحيد للرقم» في هذا الصف أو هذا العمود أو هذا المربع، مع تحديد الخلية. اضغط التلميح مرة أخرى لوضعه."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "المرشحون المحصورون",
+          "title": "المرشحون المحصورون في السودوكو: الإشارة والمطالبة",
+          "description": "المرشحون المحصورون: إذا وقع كل مرشحي رقم في مربع على صف أو عمود واحد، أو العكس، حُذف الرقم من المواضع الأخرى. مع مثالين حقيقيين.",
+          "h1": "المرشحون المحصورون (Locked Candidates)",
+          "summary": "المرشحون المحصورون أول تقنية تحذف مرشحين بدلًا من وضع رقم. ولها شكلان. الإشارة: في مربع ما، يقع كل مرشحي رقم معين في صف واحد أو عمود واحد، فيُحذف الرقم من بقية ذلك الخط. المطالبة: في صف أو عمود، يقع كل مرشحي رقم معين في مربع واحد، فيُحذف الرقم من بقية ذلك المربع. ويسمّي تلميح Bare Sudoku الوضع الذي تفتحه هذه التقنية «مرشحون محصورون».",
+          "when": [
+            "حين تنفد المفردات في لغز صعب، فهذه أول ما تجرّبه. تحتاج إلى ملاحظات كاملة على الأقل للرقم الذي تفحصه. المرشحون المحصورون شائعون: معظم ألغاز صعب تحتاج إليهم، وألغاز خبير تستخدمهم بين الأنماط الأكبر."
+          ],
+          "spot": [
+            "للإشارة، انظر إلى كل مربع وكل رقم ينقصه: إذا كانت الخلايا المرشحة لذلك الرقم تقع في صف أو عمود واحد، فتحقق مما إذا كان الرقم نفسه يظهر مرشحًا على امتداد ذلك الخط خارج المربع. للمطالبة، انظر على امتداد صف أو عمود: إذا كان كل مرشحي الرقم داخل مربع واحد، يمكن تنظيف بقية ذلك المربع. في اللعبة، المس زر الرقم لإبراز كل مرشحيه، وخط من ملاحظتين أو ثلاث مبرزة داخل مربع واحد هو النمط."
+          ],
+          "examples": [
+            {
+              "h": "الإشارة",
+              "steps": [
+                "في المربع {box}، للرقم {d} هذه الخلايا المرشحة فقط: {cells}. وكلها تقع في الصف {row}.",
+                "المربع {box} يحتاج إلى {d}، إذن فالرقم {d} الخاص بالصف {row} يقع داخل المربع {box}، أيًّا كانت الخلية التي يستقر فيها.",
+                "لا يمكن أن يحتوي الصف {row} على {d} ثانٍ، فاحذف {d} من خلايا الصف {row} الواقعة خارج المربع: {elim}."
+              ]
+            },
+            {
+              "h": "المطالبة",
+              "steps": [
+                "في الصف {row}، لا يمكن أن يوضع الرقم {d} إلا في {cells}، وكلها داخل المربع {box}.",
+                "يجب أن يحتوي الصف {row} على {d}، إذن فالصف {row} يطالب بالرقم {d} الخاص بالمربع {box}. ولا يمكن لبقية خلايا المربع {box} أن تحمل {d}.",
+                "احذف {d} من {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف الرقم داخل المربع بدلًا من خارجه في حالة الإشارة، أو العكس في حالة المطالبة. الحذف يكون دائمًا في الخلايا التي في الخط وليست في المربع، أو في المربع وليست في الخط.",
+            "تطبيق القاعدة حين يمتد المرشحون على صفين من المربع. يجب أن تقع كل الخلايا المرشحة للرقم في المربع على خط واحد.",
+            "نسيان البحث عن المفرد الذي يصنعه الحذف. نادرًا ما يضع المرشحون المحصورون رقمًا بأنفسهم، بل يمهدون لمفرد."
+          ],
+          "faq": [
+            [
+              "ما المرشحون المحصورون في السودوكو؟",
+              "مرشحو رقم محصورون في تقاطع مربع وخط. ولأن المربع، أو الخط، يجب أن يحتوي على الرقم داخل ذلك التقاطع، يمكن حذف الرقم من بقية الخط، أو من بقية المربع."
+            ],
+            [
+              "ما الفرق بين الإشارة والمطالبة؟",
+              "الإشارة تبدأ من مربع: مرشحو الرقم في المربع يشيرون على امتداد صف أو عمود واحد، فيُحذف الرقم من بقية ذلك الخط. المطالبة تبدأ من صف أو عمود: مرشحو الخط لذلك الرقم كلهم في مربع واحد، فيطالب الخط بالرقم ويُحذف من بقية المربع."
+            ],
+            [
+              "هل يسمى المرشحون المحصورون أيضًا حذف التقاطع؟",
+              "نعم. ومن الأسماء الأخرى اختزال المربع والخط لشكل المطالبة، والأزواج أو الثلاثيات المشيرة لشكل الإشارة. يستخدم Bare Sudoku اسمًا واحدًا للشكلين."
+            ],
+            [
+              "أي مستوى يحتاج إلى المرشحين المحصورين؟",
+              "صعب. اللغز الذي يحتاج إلى المرشحين المحصورين أو المجموعات الجزئية ولا شيء أصعب منها يُصنَّف في مستوى صعب، وألغاز خبير تحتاج أيضًا إلى سمكة أو جناح."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "الأزواج والثلاثيات المكشوفة",
+          "title": "الأزواج والثلاثيات المكشوفة في السودوكو: كيف تعمل",
+          "description": "الأزواج والثلاثيات المكشوفة: خليتان أو ثلاث في وحدة تشترك في المرشحين أنفسهم. تعلّم كيف تكتشفها وماذا تحذف، مع أمثلة حقيقية خطوة بخطوة.",
+          "h1": "الأزواج والثلاثيات المكشوفة (Naked Pairs)",
+          "summary": "الزوج المكشوف خليتان في الصف نفسه أو العمود نفسه أو المربع نفسه لهما المرشحان نفسهما بالضبط. هذان الرقمان يجب أن يوضعا في هاتين الخليتين، فيمكن حذفهما من كل خلية أخرى في الوحدة. والثلاثي المكشوف الفكرة نفسها بثلاث خلايا وثلاثة أرقام، وقد تُظهر كل خلية اثنين منها أو الثلاثة كلها. ويسمّي تلميح Bare Sudoku الوضع الناتج «زوج أو ثلاثي».",
+          "when": [
+            "بعد اكتمال الملاحظات واستنفاد المفردات والمرشحين المحصورين. الأزواج المكشوفة شائعة جدًا في ألغاز صعب، والثلاثيات المكشوفة أقل شيوعًا. ويستحق كلاهما الفحص في كل وحدة ما زالت فيها خمس خلايا فارغة أو أكثر."
+          ],
+          "spot": [
+            "ابحث عن خلايا لها مرشحان فقط، ثم عن خلية أخرى في الوحدة نفسها لها المرشحان نفسهما. للثلاثيات، انظر إلى الوحدات التي فيها عدة خلايا بمرشحين أو ثلاثة، وتحقق مما إذا كانت ثلاث منها معًا لا تستخدم إلا ثلاثة أرقام مختلفة. الخلايا ذات المرشحين المتطابقين تمامًا سهلة الرؤية بعد كتابة الملاحظات، وملء الملاحظات في اللعبة يفعل ذلك بلمسة واحدة."
+          ],
+          "examples": [
+            {
+              "h": "زوج مكشوف",
+              "steps": [
+                "للخليتين {cellA} و{cellB} في {unit} المرشحان نفسهما بالضبط: {d1} و{d2}.",
+                "إحداهما يجب أن تكون {d1} والأخرى {d2}. لا نعرف أيهما أيهما، لكن الرقمين كليهما استُهلكا في هاتين الخليتين.",
+                "لذلك لا يمكن لأي خلية أخرى في {unit} أن تحمل {d1} أو {d2}. احذف {elim}."
+              ]
+            },
+            {
+              "h": "ثلاثي مكشوف",
+              "steps": [
+                "ثلاث خلايا في {unit} تأخذ كل مرشحيها من الأرقام الثلاثة نفسها، {digits}: {cells}.",
+                "يجب أن تملأ هذه الأرقام الثلاثة هذه الخلايا الثلاث بترتيب ما. لا يلزم أن تُظهر الخلية المرشحين الثلاثة كلهم، المهم ألا يكون لأي من الخلايا الثلاث مرشح خارج المجموعة.",
+                "احذف {digits} من كل خلية أخرى في {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "أخذ خليتين تشتركان في مرشحين ولكن في إحداهما مرشح ثالث. في الزوج المكشوف يجب أن يكون لكل خلية المرشحان بالضبط ولا شيء غيرهما.",
+            "حذف الرقمين من خليتي الزوج نفسيهما. الزوج يحتفظ بمرشحيه، والحذف يكون في خلايا الوحدة الأخرى.",
+            "اشتراط أن تُظهر كل خلية في الثلاثي الأرقام الثلاثة كلها. الخلية التي فيها اثنان من الثلاثة مقبولة، ما دامت لا توجد خلية فيها مرشح خارج المجموعة."
+          ],
+          "faq": [
+            [
+              "ما الزوج المكشوف في السودوكو؟",
+              "خليتان في وحدة واحدة لكل منهما المرشحان نفسهما بالضبط. هذان الرقمان محصوران في هاتين الخليتين، فيمكن حذفهما من بقية الوحدة."
+            ],
+            [
+              "ما الثلاثي المكشوف؟",
+              "ثلاث خلايا في وحدة واحدة مرشحوها مجتمعين ثلاثة أرقام فقط. قد تحمل كل خلية اثنين منها أو ثلاثة. تملأ الأرقام الثلاثة الخلايا الثلاث، فيمكن حذفها من بقية خلايا الوحدة."
+            ],
+            [
+              "هل يضع الزوج المكشوف رقمًا؟",
+              "ليس بمفرده. إنه يحذف مرشحين، وهذا الحذف يترك عادة مفردًا مكشوفًا أو مخفيًا. يُظهر التلميح في Bare Sudoku ذلك المفرد ويسمّي التقنية التي جعلته ممكنًا."
+            ],
+            [
+              "هل يمكن أن يكون الزوج المكشوف في مربع وصف في الوقت نفسه؟",
+              "نعم. إذا اشتركت الخليتان في صف ومربع، يحذف الزوج في الوحدتين كلتيهما. ويعالجهما Bare Sudoku وحدةً وحدة."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "الأزواج والثلاثيات المخفية",
+          "title": "الأزواج والثلاثيات المخفية في السودوكو: كيف تكتشفها",
+          "description": "الزوج المخفي رقمان لا مكان لهما في وحدة إلا الخليتان نفسهما، فيُحذف باقي مرشحي الخليتين. تعلّم إيجاد الأزواج والثلاثيات المخفية خطوة بخطوة.",
+          "h1": "الأزواج والثلاثيات المخفية (Hidden Pairs)",
+          "summary": "الزوج المخفي رقمان يكونان، داخل صف أو عمود أو مربع واحد، مرشحين في الخليتين نفسيهما ولا مكان آخر. يجب أن تحمل هاتان الخليتان هذين الرقمين، فيمكن حذف كل مرشح آخر فيهما. والثلاثي المخفي يعمل بالطريقة نفسها بثلاثة أرقام محصورة في ثلاث خلايا. بعد الحذف تُظهر الخلايا زوجًا أو ثلاثيًا مكشوفًا. ويسمّي تلميح Bare Sudoku الوضع الناتج «زوج أو ثلاثي».",
+          "when": [
+            "حين تكون في الوحدة خلايا كثيرة المرشحين وقد نفدت المفردات. تختبئ الأزواج المخفية داخل الخلايا المزدحمة، ولهذا يستحق البحث عنها تحديدًا حيث لا تظهر الأزواج المكشوفة. الثلاثيات المخفية نادرة، ويبحث عنها Bare Sudoku، لكن معظم ألغاز صعب تُحل من دونها."
+          ],
+          "spot": [
+            "اعمل بحسب الرقم لا بحسب الخلية. في الوحدة، سجّل الخلايا التي يمكن أن يذهب إليها كل رقم ناقص. إذا كان لكل من رقمين خليتان ممكنتان فقط، وكانتا الخليتين نفسيهما، فقد وجدت زوجًا مخفيًا. في اللعبة، المس زر الرقم لإبراز مرشحيه، وإذا أضاء رقمان الخليتين نفسيهما في وحدة ولا شيء غيرهما فيها، فهذا هو النمط."
+          ],
+          "examples": [
+            {
+              "h": "زوج مخفي",
+              "steps": [
+                "في {unit}، لكل من الرقمين {d1} و{d2} خليتان ممكنتان فقط، وهما الخليتان نفسهما: {cells}.",
+                "يجب أن تحمل هاتان الخليتان {d1} و{d2}، فالمرشحون الآخرون فيهما مستحيلون.",
+                "احذف {elim}. الآن تُظهر الخليتان زوجًا مكشوفًا، وقد يفتح ذلك المزيد."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف رقمي الزوج من خليتي الزوج. الذي يُحذف هو المرشحون الآخرون في هاتين الخليتين، ورقما الزوج يبقيان.",
+            "قبول رقم له خلية ممكنة ثالثة في الوحدة. يجب أن يكون كل من الرقمين محصورًا في الخليتين بالضبط.",
+            "البحث في المربعات وحدها. الأزواج المخفية تظهر في الصفوف والأعمدة بالقدر نفسه."
+          ],
+          "faq": [
+            [
+              "ما الزوج المخفي في السودوكو؟",
+              "رقمان لا يمكن أن يوضعا إلا في الخليتين نفسيهما من وحدة. يجب أن تأخذ هاتان الخليتان هذين الرقمين، فيُحذف مرشحوهما الآخرون."
+            ],
+            [
+              "كيف يختلف الزوج المخفي عن الزوج المكشوف؟",
+              "الزوج المكشوف ظاهر: خليتان لا تُظهران إلا المرشحين نفسيهما. أما الزوج المخفي فيغطيه مرشحون إضافيون في الخليتين. وحذف هذه الإضافات يحوّل الزوج المخفي إلى زوج مكشوف."
+            ],
+            [
+              "ما الثلاثي المخفي؟",
+              "ثلاثة أرقام محصورة في ثلاث خلايا من وحدة. لا يلزم أن يظهر كل رقم في الخلايا الثلاث كلها، المهم ألا يكون لأي من الأرقام الثلاثة مرشح خارج تلك الخلايا."
+            ],
+            [
+              "هل يميّز التلميح بين الأزواج المخفية والمكشوفة؟",
+              "لا. يجد Bare Sudoku النوعين ويسمّي الوضع الناتج «زوج أو ثلاثي». وتفصل هذه الصفحات بينهما لأن طريقة إيجادهما مختلفة."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing في السودوكو: كيف تعمل هذه التقنية",
+          "description": "X-Wing: رقم له خليتان مرشحتان بالضبط في صفين، مصطفتان في العمودين نفسيهما، يُحذف من بقية هذين العمودين. مع مثال حقيقي خطوة بخطوة.",
+          "h1": "X-Wing",
+          "summary": "X-Wing نمط من رقم واحد وأربع خلايا في زوايا مستطيل. إذا كان للرقم خليتان مرشحتان بالضبط في كل من صفين، وكانت هذه الخلايا في العمودين نفسيهما، فلا بد أن يشغل الرقم زاويتين متقابلتين من المستطيل. لذلك يمكن حذفه من كل خلية أخرى في هذين العمودين. والأمر نفسه يصح إذا تبادلت الصفوف والأعمدة أدوارها. إنها أول تقنية من مستوى خبير في Bare Sudoku.",
+          "when": [
+            "حين تُستنفد المفردات والمرشحون المحصورون والمجموعات الجزئية. X-Wing هو أكثر أنماط مستوى خبير شيوعًا، ويظهر غالبًا حين يبقى لرقم مرشحون قليلون، وعادة بعد وضع أربع إلى ست نسخ منه. ويحتاج إلى ملاحظات كاملة للرقم الذي تفحصه."
+          ],
+          "spot": [
+            "اختر رقمًا وابحث عن صفوف له فيها خليتان مرشحتان بالضبط. إذا اشترك صفان من هذا النوع في العمودين نفسيهما، فافحص هذين العمودين بحثًا عن مرشحين آخرين للرقم: هذه هي المحذوفات. ثم كرر ذلك مع الأعمدة أساسًا. في اللعبة، المس زر الرقم: يُبرز كل مرشح له، ومن السهل رؤية مستطيل من أربع ملاحظات مبرزة."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "للرقم {d} خليتان مرشحتان بالضبط في الصف {r1} وخليتان بالضبط في الصف {r2}، وتصطف هذه الخلايا في العمودين نفسيهما، {c1} و{c2}: {cells}.",
+                "الصف {r1} يضع رقمه {d} في العمود {c1} أو {c2}، والصف {r2} يضعه في العمود الآخر. وفي الحالتين، يتلقى كل من العمودين {c1} و{c2} رقمًا {d} من هذين الصفين.",
+                "لذلك لا يمكن أن يظهر {d} في أي مكان آخر من العمودين {c1} و{c2}. احذف {d} من {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "استخدام صف فيه ثلاث خلايا مرشحة للرقم. يجب أن يكون في كل صف أساس خليتان بالضبط، وكلتاهما في العمودين المشتركين.",
+            "حذف الرقم من الصفوف بدلًا من الأعمدة. حين تكون الصفوف هي الأساس يكون الحذف في الأعمدة، والعكس بالعكس.",
+            "نسيان الصيغة المعكوسة. X-Wing المبني على الأعمدة يحذف في الصفوف."
+          ],
+          "faq": [
+            [
+              "ما X-Wing في السودوكو؟",
+              "رقم له خليتان مرشحتان بالضبط في كل من صفين، في العمودين نفسيهما. يشغل الرقم زاويتين متقابلتين من ذلك المستطيل، فيُحذف من بقية العمودين. ويمكن تبادل الصفوف والأعمدة."
+            ],
+            [
+              "لماذا ينجح X-Wing؟",
+              "كل من الصفين يجب أن يضع الرقم في أحد العمودين، ولا يمكن للصفين استخدام العمود نفسه. فيتلقى كل عمود نسخته من الرقم من هذين الصفين، ويصبح كل مرشح آخر في العمودين مستحيلًا."
+            ],
+            [
+              "هل X-Wing سمكة؟",
+              "نعم. X-Wing هو السمكة ذات الحجم اثنين، وSwordfish هو السمكة ذات الحجم ثلاثة. ويجد Bare Sudoku كليهما."
+            ],
+            [
+              "في أي مستوى يظهر X-Wing؟",
+              "خبير. اللغز الذي يحتاج إلى X-Wing أو Y-Wing أو Swordfish أو XYZ-Wing يُصنَّف في مستوى خبير."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing في السودوكو: كيف تعمل هذه التقنية",
+          "description": "Y-Wing (XY-Wing): محور بمرشحين وجناحان يشترك كل منهما معه في أحدهما، فيُطرد رقم من كل خلية ترى الجناحين كليهما. مع مثال حقيقي.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing، ويسمى أيضًا XY-Wing، يستخدم ثلاث خلايا لكل منها مرشحان. المحور مرشحاه X وY. أحد الجناحين يرى المحور ومرشحاه X وZ، والجناح الآخر يرى المحور ومرشحاه Y وZ. أيًّا كانت قيمة المحور، فلا بد أن يكون أحد الجناحين Z، لذلك يمكن حذف Z من كل خلية ترى الجناحين كليهما. إنها تقنية من مستوى خبير في Bare Sudoku.",
+          "when": [
+            "حين يكون في اللغز عدة خلايا لكل منها مرشحان بالضبط ولا تتوفر أي سمكة. Y-Wing شائع في ألغاز خبير، ويُعثر عليه بتتبع الخلايا ذات المرشحين: كل منها محور محتمل أو جناح محتمل."
+          ],
+          "spot": [
+            "اكتب قائمة بالخلايا التي لها مرشحان بالضبط. عامل كل واحدة منها على أنها المحور بمرشحين X وY، وابحث بين أقرانها عن خلية فيها X ورقم آخر Z، وخلية فيها Y وZ نفسه. هاتان هما الجناحان. ثم ابحث عن الخلايا التي ترى الجناحين كليهما وتحتوي على Z. ولاحظ أن الجناحين لا يلزم أن يرى أحدهما الآخر."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "المحور {pivot} مرشحاه {x} و{y}. وهو يرى {wingA} التي مرشحاها {x} و{z}، و{wingB} التي مرشحاها {y} و{z}.",
+                "إذا كان {pivot} هو {x}، فإن {wingA} تفقد {x} وتصبح {z}. وإذا كان {pivot} هو {y}، فإن {wingB} تصبح {z}. في كل الأحوال أحد الجناحين هو {z}.",
+                "الخلية التي ترى الجناحين كليهما لا يمكن أن تكون {z} أبدًا. احذف {z} من {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "اختيار جناحين لا يرى كلاهما المحور. يجب أن يشترك كل جناح مع المحور في صف أو عمود أو مربع.",
+            "حذف Z من خلايا لا ترى إلا جناحًا واحدًا. يجب أن ترى الخلية المحذوف منها الجناحين كليهما.",
+            "حذف Z من المحور. في Y-Wing لا يحتوي المحور على Z، وإن احتواه فالنمط XYZ-Wing وله قواعد مختلفة."
+          ],
+          "faq": [
+            [
+              "ما Y-Wing في السودوكو؟",
+              "ثلاث خلايا لكل منها مرشحان: محور فيه X وY، وجناح فيه X وZ يرى المحور، وجناح فيه Y وZ يرى المحور. أحد الجناحين هو Z دائمًا، فيُحذف Z من الخلايا التي ترى الجناحين كليهما."
+            ],
+            [
+              "هل Y-Wing هو نفسه XY-Wing؟",
+              "نعم. الاسمان يصفان النمط نفسه. ويسميه Bare Sudoku باسم Y-Wing."
+            ],
+            [
+              "لماذا يجب أن يكون أحد الجناحين Z؟",
+              "إذا كان المحور X، يفقد الجناح الأول X ويصبح Z. وإذا كان المحور Y، يصبح الجناح الثاني Z. والمحور أحد الاثنين، فأحد الجناحين هو Z."
+            ],
+            [
+              "كم خلية يحذف منها Y-Wing؟",
+              "عادة خلية أو اثنتان: فقط الخلايا التي ترى الجناحين كليهما وما زالت تحتوي على Z. وهذا يكفي لصنع مفرد."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish في السودوكو: كيف تعمل هذه التقنية",
+          "description": "Swordfish: رقم محصور في ثلاثة أعمدة عبر ثلاثة صفوف يُحذف من بقية هذه الأعمدة. السمكة ذات الحجم ثلاثة، مشروحة بمثال حقيقي خطوة بخطوة.",
+          "h1": "Swordfish",
+          "summary": "Swordfish هو X-Wing بثلاثة صفوف وثلاثة أعمدة. إذا كان للرقم ثلاث خلايا مرشحة على الأكثر في كل من ثلاثة صفوف، وكانت كل هذه الخلايا تقع في الأعمدة الثلاثة نفسها، فإن الصفوف الثلاثة تستهلك الرقم في تلك الأعمدة، ويمكن حذف الرقم من كل خلية أخرى في الأعمدة الثلاثة. ويمكن تبادل الصفوف والأعمدة. يبحث Bare Sudoku عن Swordfish بعد Y-Wing، في ألغاز خبير.",
+          "when": [
+            "حين لا يجد X-Wing ولا Y-Wing شيئًا. Swordfish أقل شيوعًا من X-Wing، ويحتاج إلى رقم مرشحوه موزعون بقلة على ثلاثة خطوط. ويحتاج إلى ملاحظات كاملة ودقيقة لذلك الرقم."
+          ],
+          "spot": [
+            "اختر رقمًا وابحث عن صفوف له فيها خليتان أو ثلاث خلايا مرشحة. إذا كانت ثلاثة صفوف من هذا النوع لا تغطي إلا ثلاثة أعمدة في المجموع، فافحص هذه الأعمدة بحثًا عن مرشحين آخرين للرقم. لا يلزم أن يكون لكل صف مرشح في كل عمود: قد يتكون Swordfish من ست أو سبع أو ثماني أو تسع خلايا. في اللعبة، أبرز الرقم بزره وابحث عن ثلاثة صفوف يصطف مرشحوها في ثلاثة أعمدة."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "للرقم {d} ثلاث خلايا مرشحة على الأكثر في كل من الصفوف {rows}، وكل هذه الخلايا تقع في الأعمدة {cols}: {cells}.",
+                "كل صف من الصفوف الثلاثة يجب أن يضع رقمه {d} في أحد الأعمدة الثلاثة، ولا يمكن لصفين استخدام العمود نفسه. فتأخذ الأعمدة الثلاثة الرقم {d} من هذه الصفوف الثلاثة.",
+                "أي مرشح {d} آخر في الأعمدة {cols} مستحيل. احذف {d} من {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "اشتراط الخلايا التسع كلها. Swordfish الذي فيه مرشحان فقط في بعض الصفوف يبقى صحيحًا، ما دامت الصفوف الثلاثة لا تغطي إلا ثلاثة أعمدة.",
+            "إدخال صف فيه أربع خلايا مرشحة. يجب أن يكون في كل صف أساس ثلاث خلايا على الأكثر، كلها داخل الأعمدة الثلاثة.",
+            "الحذف في صفوف الأساس. حين تكون الصفوف هي الأساس، يكون الحذف في الأعمدة الثلاثة خارج صفوف الأساس."
+          ],
+          "faq": [
+            [
+              "ما Swordfish في السودوكو؟",
+              "رقم مرشحوه في ثلاثة صفوف محصورون في ثلاثة أعمدة. يجب أن تضع الصفوف الثلاثة الرقم في هذه الأعمدة الثلاثة، واحدًا في كل عمود، فيُحذف الرقم من بقية خلايا تلك الأعمدة."
+            ],
+            [
+              "كيف يختلف Swordfish عن X-Wing؟",
+              "في الحجم فقط: X-Wing يستخدم صفين وعمودين، وSwordfish ثلاثة وثلاثة. والاستدلال واحد."
+            ],
+            [
+              "هل يحتاج Swordfish إلى تسع خلايا بالضبط؟",
+              "لا. قد يكون لكل صف مرشحان أو ثلاثة، والنمط لا يشترط إلا ألا تستخدم الصفوف الثلاثة معًا أكثر من ثلاثة أعمدة."
+            ],
+            [
+              "هل توجد سمكة بحجم أربعة؟",
+              "نعم، Jellyfish. لا يستخدمها Bare Sudoku، لأن ألغازه لا تحتاج إليها أبدًا."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing في السودوكو: كيف تعمل هذه التقنية",
+          "description": "XYZ-Wing: محور بثلاثة مرشحين وجناحان يشتركان في أحدها، فيُطرد ذلك الرقم من كل خلية ترى الخلايا الثلاث. مع مثال حقيقي خطوة بخطوة.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing هو Y-Wing لمحوره ثلاثة مرشحين. للمحور X وY وZ، وأحد الجناحين يرى المحور وله X وZ، والآخر يرى المحور وله Y وZ. لا بد أن تكون إحدى الخلايا الثلاث Z، لذلك يمكن حذف Z من كل خلية ترى الثلاث كلها. ولأن المحور نفسه قد يكون Z، يجب أن ترى الخلية المحذوف منها المحور والجناحين كليهما، وهذا يحصرها في المربع أو الخط الذي تشترك فيه الخلايا. إنها أصعب تقنية يستخدمها Bare Sudoku.",
+          "when": [
+            "فقط حين يفشل كل شيء آخر. XYZ-Wing أندر نمط في Bare Sudoku ولا يظهر إلا في ألغاز خبير. ابحث عنه حين تقع خلية بثلاثة مرشحين في مربع مع خلية بمرشحين تشاركها رقمين من أرقامها."
+          ],
+          "spot": [
+            "ابدأ من الخلايا التي لها ثلاثة مرشحين بالضبط، فكل منها محور محتمل. ابحث بين أقرانها عن خليتين لكل منهما مرشحان، كلاهما مأخوذ من مرشحي المحور الثلاثة، وتشتركان في رقم واحد بالضبط هو Z. ثم ابحث عن الخلايا التي ترى المحور والجناحين كليهما وتحتوي على Z. عمليًا يكون أحد الجناحين في مربع المحور والآخر في صفه أو عموده، والخلايا المحذوف منها هي بقية خلايا ذلك المربع في ذلك الصف أو العمود."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "المحور {pivot} له ثلاثة مرشحين: {x} و{y} و{z}. وهو يرى {wingA} التي فيها {x} و{z}، و{wingB} التي فيها {y} و{z}.",
+                "إذا كان {pivot} هو {z} فقد انتهى الأمر. وإذا كان {x} فيجب أن تكون {wingA} هي {z}. وإذا كان {y} فيجب أن تكون {wingB} هي {z}. في كل الأحوال إحدى الخلايا الثلاث هي {z}.",
+                "الخلية التي ترى الثلاث كلها لا يمكن أن تكون {z}. احذف {z} من {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "الحذف من خلايا لا ترى إلا الجناحين. بخلاف Y-Wing، قد يكون المحور Z، فيجب أن ترى الخلية المحور أيضًا.",
+            "استخدام جناحين ليس كل مرشحيهما من مرشحي المحور الثلاثة.",
+            "الخلط بينه وبين Y-Wing: الفرق هو المرشح الثالث في المحور، وهو يغيّر الخلايا التي يمكن تنظيفها."
+          ],
+          "faq": [
+            [
+              "ما XYZ-Wing في السودوكو؟",
+              "محور مرشحوه X وY وZ، وجناحان أحدهما فيه X وZ والآخر فيه Y وZ، وكلاهما يرى المحور. إحدى الخلايا الثلاث هي Z، فيُحذف Z من الخلايا التي ترى الثلاث كلها."
+            ],
+            [
+              "كيف يختلف XYZ-Wing عن Y-Wing؟",
+              "للمحور ثلاثة مرشحين بدلًا من اثنين، ومنها Z. وهذا يجعل المحور مكانًا محتملًا للرقم Z، فلا تفقد Z إلا الخلايا التي ترى المحور والجناحين كليهما."
+            ],
+            [
+              "ما مدى تكرار XYZ-Wing؟",
+              "نادر. في Bare Sudoku لا يحتاج إليه إلا ألغاز خبير، ومعظمها لا يحتاج إليه. ويفحصه Bare Sudoku أخيرًا، بعد X-Wing وY-Wing وSwordfish."
+            ],
+            [
+              "هل يوجد WXYZ-Wing؟",
+              "نعم، بمحور له أربعة مرشحين، لكن Bare Sudoku لا يستخدمه. كل لغز في اللعبة يمكن إنهاؤه بالتقنيات التسع في هذا الدليل."
+            ]
+          ]
+        }
+      }
+    },
+    "fa": {
+      "learnHeading": "سودوکو را یاد بگیرید",
+      "learnText": "تازه با سودوکو آشنا شده‌اید یا در یک جدول سخت گیر کرده‌اید؟ دو راهنما قوانین و همهٔ تکنیک‌های حلی را که راهنمایی‌ها به کار می‌برند، هر کدام با یک مثال واقعی، توضیح می‌دهند.",
+      "howToLink": "سودوکو چطور بازی می‌شود",
+      "techniquesLink": "تکنیک‌های حل سودوکو",
+      "labels": {
+        "howTo": "روش بازی",
+        "techniques": "تکنیک‌ها",
+        "play": "سودوکو بازی کنید",
+        "prev": "تکنیک قبلی",
+        "next": "تکنیک بعدی",
+        "all": "همهٔ تکنیک‌ها",
+        "example": "مثال",
+        "steps": "گام به گام",
+        "when": "چه زمانی به کار می‌رود",
+        "spot": "چطور پیدایش کنیم",
+        "mistakes": "اشتباه‌های رایج",
+        "inGame": "در Bare Sudoku",
+        "level": "لازم از سطح: {level}",
+        "hint": "در بازی، راهنمایی می‌گوید: {text}",
+        "legend": "ارقام پررنگ داده‌شده‌اند، ارقام آبی هنگام حل قرار داده شده‌اند و ارقام کوچک نامزدها هستند. خانه‌های برجسته الگو را می‌سازند، نامزدهای خط‌خورده حذف می‌شوند و نامزد داخل دایره رقمی است که باید قرار داده شود.",
+        "notation": "خانه‌ها به شکل r3c7 نوشته می‌شوند: سطر 3، ستون 7. سطرها از بالا و ستون‌ها از چپ شمرده می‌شوند و جعبه‌ها از 1 تا 9، از بالا سمت چپ و سطر به سطر.",
+        "row": "سطر {n}",
+        "column": "ستون {n}",
+        "box": "جعبهٔ {n}",
+        "elimItem": "{d} از {cell}",
+        "regions": "سطر 5، ستون 5 و جعبهٔ 5 در آغاز جدول",
+        "firstMove": "تک‌گزینهٔ آشکار: {cell} فقط می‌تواند {d} باشد",
+        "breadcrumb": "مسیر صفحه"
+      },
+      "howTo": {
+        "title": "سودوکو چطور بازی می‌شود: قوانین، صفحه و حرکت‌های اول",
+        "description": "یاد بگیرید سودوکو چطور بازی می‌شود: قوانین، کار سطرها، ستون‌ها و جعبه‌ها، چرا هر جدول یک جواب دارد، کار با یادداشت‌ها و نخستین حرکت‌ها.",
+        "h1": "سودوکو چطور بازی می‌شود",
+        "summary": "سودوکو یک معمای منطقی روی جدول 9×9 است. هر خانهٔ خالی را با رقمی از 1 تا 9 پر کنید، طوری که هر سطر، هر ستون و هر جعبهٔ 3×3 هر رقم را دقیقاً یک بار داشته باشد. برخی ارقام از ابتدا داده شده‌اند؛ بقیه را خودتان، هر بار یک خانهٔ قطعی، استنتاج می‌کنید و هرگز لازم نیست حدس بزنید. این راهنما صفحهٔ بازی، قوانین، اصل جواب یکتا، یادداشت‌ها و یک راهبرد ساده برای حرکت‌های اول را توضیح می‌دهد. همهٔ این‌ها را می‌توانید در [Bare Sudoku](play) تمرین کنید که رایگان است و راهنمایی‌هایی دارد که منطق را توضیح می‌دهند.",
+        "sections": [
+          {
+            "h": "قوانین سودوکو چیست؟",
+            "p": [
+              "فقط سه قانون وجود دارد و هر سه در واقع یک قانون‌اند که از سه جهت دیده می‌شود: هر سطر باید ارقام 1 تا 9 را داشته باشد، هر ستون باید ارقام 1 تا 9 را داشته باشد و هر جعبهٔ 3×3 باید ارقام 1 تا 9 را داشته باشد. بنابراین یک رقم هرگز نمی‌تواند دو بار در یک سطر، ستون یا جعبه بیاید.",
+              "ارقام داده‌شده که پررنگ چاپ شده‌اند ثابت‌اند. کار شما پر کردن خانه‌های خالی است. هیچ حساب و ترتیبی در کار نیست: ارقام فقط نُه نماد متفاوت‌اند. اگر با حروف یا شکل‌ها بازی می‌کردید هم چیزی تغییر نمی‌کرد."
+            ]
+          },
+          {
+            "h": "صفحهٔ بازی چطور سازمان یافته است؟",
+            "p": [
+              "صفحه 81 خانه در 9 سطر و 9 ستون دارد. خطوط ضخیم آن را به نُه جعبهٔ 3×3 تقسیم می‌کنند. هر خانه دقیقاً به یک سطر، یک ستون و یک جعبه تعلق دارد و این سه گروه، واحدهای آن خانه‌اند. 20 خانهٔ دیگری که با یک خانه در واحدی شریک‌اند همسایه‌های آن نامیده می‌شوند؛ رقمی که در یک خانه قرار می‌گیرد، همان رقم را در هر 20 همسایه رد می‌کند.",
+              "خانه‌ها به شکل r3c7 نوشته می‌شوند: سطر 3، ستون 7. سطرها از بالا و ستون‌ها از چپ شمرده می‌شوند و جعبه‌ها از 1 تا 9، از بالا سمت چپ و سطر به سطر. این نمادگذاری در همهٔ راهنماهای تکنیک به کار می‌رود و ارزش یاد گرفتن دارد: r5c5 مرکز صفحه است."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "چرا هر سودوکو دقیقاً یک جواب دارد؟",
+            "p": [
+              "یک سودوکوی درست یک جواب دارد و همین است که منطق را کارآمد می‌کند. هر بار که نشان دهید رقمی در یک واحد جای دیگری نمی‌تواند برود، آن رقم باید در خانهٔ باقی‌مانده قرار بگیرد، چون جواب وجود دارد و یکتاست. اگر جدولی دو جواب داشت، هیچ استدلالی نمی‌توانست آن دو را از هم جدا کند و در جایی ناچار به حدس زدن می‌شدید.",
+              "Bare Sudoku هر جدول را روی دستگاه شما می‌سازد و بررسی می‌کند که دقیقاً یک جواب داشته باشد و حل‌کنندهٔ منطقی‌اش بتواند آن را با تکنیک‌های سطح انتخاب‌شده تمام کند. پس اگر گیر کردید، همیشه گام بعدی برای یافتن وجود دارد و راهنمایی آن را نشان می‌دهد."
+            ]
+          },
+          {
+            "h": "یک جدول سودوکو را چطور شروع کنیم؟",
+            "p": [
+              "از محدودترین جا شروع کنید. این ترتیب در همهٔ سطح‌ها جواب می‌دهد:"
+            ],
+            "list": [
+              "رقمی را انتخاب کنید که بارها آمده است، مثلاً شش یا هفت بار، و جعبه‌هایی را پیدا کنید که هنوز آن را ندارند. اغلب در یک جعبه فقط یک خانه برایش می‌ماند: این یک [تک‌گزینهٔ پنهان](hidden-single) است.",
+              "دنبال خانه‌های شلوغ بگردید. خانه‌ای که سطر، ستون و جعبه‌اش روی هم هشت رقم متفاوت دارند فقط یک نامزد برایش می‌ماند: این یک [تک‌گزینهٔ آشکار](naked-single) است. خانه‌های سطرها یا جعبه‌های تقریباً پر بهترین جا برای جست‌وجو هستند.",
+              "هر رقمی که قرار می‌دهید یک نامزد را از 20 همسایه حذف می‌کند، پس بلافاصله آن همسایه‌ها را بررسی کنید. تک‌گزینه‌ها معمولاً پشت سر هم می‌آیند.",
+              "وقتی جاگذاری‌های آسان تمام شد، یادداشت بنویسید: نامزدهای هر خانهٔ خالی. سپس دنبال رقمی بگردید که درون یک جعبه به یک خط محدود شده است ([نامزدهای قفل‌شده](locked-candidates)) یا دو خانه که دو نامزد یکسان دارند ([جفت آشکار](naked-pairs)).",
+              "پس از هر حذف به تک‌گزینه‌ها برگردید. حتی جدول‌های سطح حرفه‌ای بیشترشان با تک‌گزینه‌ها حل می‌شوند؛ تکنیک پیشرفته فقط راه تک‌گزینهٔ بعدی را باز می‌کند."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "یادداشت‌ها چیستند و کی باید از آن‌ها استفاده کرد؟",
+            "p": [
+              "یادداشت‌ها، که به آن‌ها علامت مدادی یا نامزد هم می‌گویند، رقم‌های کوچکی هستند که در یک خانهٔ خالی می‌نویسید تا ثبت کنید کدام ارقام هنوز آنجا ممکن‌اند. در جدول‌های آسان به‌ندرت لازم‌اند؛ از سطح سخت به بالا ضروری‌اند، چون تکنیک‌هایی مثل جفت‌ها، X-Wing و Y-Wing با نامزدها سروکار دارند، نه با ارقام قرارداده‌شده.",
+              "یادداشت‌ها را دقیق نگه دارید: وقتی رقمی قرار می‌دهید، آن را از یادداشت‌های هر 20 همسایه پاک کنید. در Bare Sudoku این کار خودکار انجام می‌شود و «پر کردن یادداشت‌ها» با یک لمس همهٔ نامزدها را در همهٔ خانه‌های خالی می‌نویسد، پس می‌توانید از مجموعه‌ای کامل و درست از نامزدها شروع کنید. یادداشت یک واقعیت است، نه یک حدس: یعنی هنوز چیزی این رقم را رد نمی‌کند."
+            ]
+          },
+          {
+            "h": "وقتی گیر کردید چه کنید؟",
+            "p": [
+              "اول اصول را دوباره بررسی کنید: هر سطر، ستون و جعبهٔ تقریباً پر منبع تک‌گزینه است. بعد مطمئن شوید یادداشت‌ها کامل‌اند، چون نامزد جاافتاده الگوها را پنهان می‌کند و نامزد کهنه الگوهای کاذب می‌سازد. سپس [تکنیک‌ها](techniques) را به ترتیب دشواری مرور کنید: نامزدهای قفل‌شده، جفت‌ها و سه‌تایی‌ها، X-Wing، Y-Wing، Swordfish و XYZ-Wing. هر کدام صفحهٔ خودش را با یک مثال واقعی دارد.",
+              "اگر هیچ‌کدام جواب نداد، از راهنمایی کمک بگیرید. در Bare Sudoku راهنمایی اول بررسی می‌کند که آیا رقمی که قرار داده‌اید اشتباه است، سپس خانهٔ بعدی را که با منطق پر می‌شود پیدا می‌کند و نام تکنیک را می‌گوید، پس حتی وقتی از آن استفاده می‌کنید چیزی یاد می‌گیرید. برای قرار دادن رقم، دوباره راهنمایی را بزنید."
+            ]
+          },
+          {
+            "h": "در Bare Sudoku ارقام را چطور وارد کنیم؟",
+            "p": [
+              "یک خانه را لمس کنید، سپس یک رقم. یا اول رقم را لمس کنید: قفل می‌شود و هر خانه‌ای که لمس کنید آن را می‌گیرد، که سریع‌ترین راه برای گذاشتن ششمین، هفتمین و هشتمین نسخهٔ یک رقم است. برای آزاد کردن رقم، دوباره آن را لمس کنید. دکمهٔ «یادداشت‌ها» به علامت‌های مدادی می‌رود، «پاک کردن» خانه را خالی می‌کند، «واگرد» هر حرکتی را برمی‌گرداند و اشتباه‌ها با رنگ قرمز نشان داده می‌شوند، مگر اینکه این را در منو خاموش کنید.",
+              "با صفحه‌کلید، با کلیدهای جهت‌دار جابه‌جا شوید و با 1 تا 9 رقم وارد کنید؛ Backspace پاک می‌کند، N برای یادداشت، U برای واگرد، H برای راهنمایی، F برای پر کردن یادداشت‌ها و Escape برای منو است. بازی خودش ذخیره می‌شود، آفلاین کار می‌کند و نه تبلیغ دارد نه حساب کاربری."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "آیا در سودوکو هیچ‌وقت لازم است حدس بزنیم؟",
+            "در یک جدول درست، نه. هر جدول Bare Sudoku دقیقاً یک جواب دارد و بررسی شده است که فقط با منطق، تا حد تکنیک‌های سطح خودش، حل می‌شود. اگر حس می‌کنید باید حدس بزنید، نامزدی در یادداشت‌هایتان جا افتاده یا تکنیکی منتظر است که پیدایش کنید."
+          ],
+          [
+            "آیا یک رقم می‌تواند دو بار در یک سطر، ستون یا جعبه بیاید؟",
+            "نه. کل قانون همین است: هر یک از نُه سطر، نُه ستون و نُه جعبه هر رقم از 1 تا 9 را دقیقاً یک بار دارد. اگر دو رقم یکسان در یک واحد باشند، دست‌کم یکی از آن‌ها اشتباه است."
+          ],
+          [
+            "فرق آسان، متوسط، سخت و حرفه‌ای چیست؟",
+            "سطح را تکنیک‌هایی تعیین می‌کنند که جدول به آن‌ها نیاز دارد. آسان و متوسط فقط با تک‌گزینه‌ها حل می‌شوند و آسان با دست‌کم 38 رقم داده‌شده شروع می‌شود. سخت به نامزدهای قفل‌شده یا جفت‌ها و سه‌تایی‌ها نیاز دارد. حرفه‌ای به X-Wing، Y-Wing، Swordfish یا XYZ-Wing نیاز دارد."
+          ],
+          [
+            "بهتر است برای همهٔ خانه‌ها یادداشت بنویسیم یا فقط برای بعضی؟",
+            "برای جدول‌های سخت و حرفه‌ای همه را پر کنید: الگوهایی مثل جفت‌ها، X-Wing و Y-Wing فقط وقتی دیده می‌شوند که همهٔ نامزدها نوشته شده باشند. در آسان و متوسط یادداشت اختیاری است و بیشتر بازیکنان فقط دنبال تک‌گزینه‌ها می‌گردند."
+          ],
+          [
+            "حل یک سودوکو چقدر طول می‌کشد؟",
+            "یک جدول آسان چند دقیقه طول می‌کشد؛ جدول‌های حرفه‌ای ممکن است بیست دقیقه یا بیشتر طول بکشند، بسته به اینکه الگوی پیشرفته را چقدر زود ببینید. Bare Sudoku زمان‌سنج نشان می‌دهد، وقتی منو باز است آن را متوقف می‌کند و جدول امتیازات ندارد، پس با سرعت خودتان بازی کنید."
+          ],
+          [
+            "آیا سودوکو به حساب نیاز دارد؟",
+            "نه. ارقام فقط برچسب‌اند؛ هیچ جمع یا شمارشی در کار نیست. هر نُه نماد دیگری هم کار می‌کرد و به همین دلیل سودوکو یک معمای منطقی است، نه یک معمای عددی."
+          ]
+        ]
+      },
+      "index": {
+        "title": "تکنیک‌های حل سودوکو با توضیح و مثال",
+        "description": "هر نُه تکنیک حل سودوکو، از تک‌گزینهٔ آشکار تا Swordfish و XYZ-Wing، به همان ترتیبی که راهنمایی‌های Bare Sudoku به کار می‌برند، هر کدام با مثال واقعی.",
+        "h1": "تکنیک‌های حل سودوکو",
+        "intro": [
+          "هر سودوکو را می‌توان با مجموعهٔ کوچکی از تکنیک‌های منطقی حل کرد. این فهرست نُه تکنیکی را می‌آورد که حل‌کنندهٔ Bare Sudoku و راهنمایی‌هایش به کار می‌برند، به همان ترتیبی که حل‌کننده امتحانشان می‌کند: اول تک‌گزینه‌ها، سپس حذف‌ها درون یک واحد، سپس الگوهایی که چند سطر و ستون را در بر می‌گیرند. هر تکنیک صفحهٔ خودش را دارد، با تعریف، روش پیدا کردن، یک مثال واقعی از یک جدول ساخته‌شده و اشتباه‌های رایج.",
+          "سطح یک جدول را سخت‌ترین تکنیکی تعیین می‌کند که به آن نیاز دارد. جدول‌های آسان و متوسط فقط به تک‌گزینه‌ها نیاز دارند، جدول‌های سخت به نامزدهای قفل‌شده یا جفت‌ها و سه‌تایی‌ها و جدول‌های حرفه‌ای دست‌کم به یک ماهی یا بال. در هر سطحی، بیشتر کار را تک‌گزینه‌ها انجام می‌دهند؛ تکنیک پیشرفته یکی دو نامزد را حذف می‌کند و از آنجا تک‌گزینه‌ها کار را ادامه می‌دهند."
+        ],
+        "faq": [
+          [
+            "تکنیک‌های سودوکو را به چه ترتیبی امتحان کنم؟",
+            "ساده‌ترین‌ها اول: تک‌گزینهٔ آشکار، تک‌گزینهٔ پنهان، نامزدهای قفل‌شده، جفت و سه‌تایی آشکار، جفت و سه‌تایی پنهان، X-Wing، Y-Wing، Swordfish، XYZ-Wing. Bare Sudoku دقیقاً به همین ترتیب امتحانشان می‌کند و راهنمایی همیشه ساده‌ترین تکنیکی را نام می‌برد که کار را پیش می‌برد."
+          ],
+          [
+            "آیا برای حل سودوکو به همهٔ این تکنیک‌ها نیاز دارم؟",
+            "برای جدول‌های آسان و متوسط تک‌گزینه‌ها کافی‌اند. جدول‌های سخت نامزدهای قفل‌شده و زیرمجموعه‌ها را اضافه می‌کنند. جدول‌های حرفه‌ای دست‌کم به یک ماهی یا بال نیاز دارند، اما معمولاً فقط یکی دو بار در هر جدول."
+          ],
+          [
+            "آیا تکنیک‌هایی سخت‌تر از XYZ-Wing وجود دارد؟",
+            "بله، مثلاً زنجیره‌ها، آزمون‌های یکتایی و شبکه‌های اجباری. Bare Sudoku جدولی نمی‌سازد که به آن‌ها نیاز داشته باشد، پس هر جدول بازی را می‌توان با نُه تکنیک همین صفحه تمام کرد."
+          ],
+          [
+            "نامزد چیست؟",
+            "رقمی که هنوز می‌تواند در یک خانهٔ خالی قرار بگیرد، چون هنوز چیزی در سطر، ستون یا جعبهٔ آن را رد نمی‌کند. یادداشت‌های بازی همان نامزدها هستند. هر تکنیکی فراتر از تک‌گزینه‌ها با نامزدها استدلال می‌کند، پس آن‌ها را کامل و دقیق نگه دارید."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "تک‌گزینهٔ آشکار",
+          "title": "تک‌گزینهٔ آشکار در سودوکو: خانه‌ای با یک نامزد",
+          "description": "تک‌گزینهٔ آشکار خانهٔ خالی‌ای است که فقط یک رقم ممکن دارد. یاد بگیرید آن را سریع پیدا کنید، با یک مثال واقعی گام به گام و اشتباه‌های معمول.",
+          "h1": "تک‌گزینهٔ آشکار (Naked Single)",
+          "summary": "تک‌گزینهٔ آشکار خانهٔ خالی‌ای است که دقیقاً یک نامزد دارد: هشت رقم دیگر از قبل در سطر، ستون یا جعبهٔ آن هستند. رقم باقی‌مانده باید همان‌جا قرار بگیرد. این ساده‌ترین تکنیک سودوکو است، همان که بیشتر از همه به کار می‌برید، و همان که راهنمایی Bare Sudoku با «فقط یک نامزد اینجا» اعلامش می‌کند.",
+          "when": [
+            "همیشه. تک‌گزینه‌های آشکار از اولین تا آخرین حرکت، در همهٔ سطح‌ها پیدا می‌شوند. در جدول‌های آسان و متوسط، آن‌ها همراه با تک‌گزینه‌های پنهان تنها تکنیکی هستند که لازم دارید. در جدول‌های سخت‌تر، هر حذفی که یک تکنیک پیشرفته انجام می‌دهد معمولاً یک تک‌گزینهٔ آشکار به جا می‌گذارد، پس بعد از هر گام دنبالشان بگردید."
+          ],
+          "spot": [
+            "به خانه‌هایی نگاه کنید که همسایه‌های پرشدهٔ زیادی دارند: خانه‌ای در سطری که از قبل هفت رقم دارد، یا خانه‌ای که سطر، ستون و جعبه‌اش روی هم هشت رقم متفاوت را پوشش می‌دهند. بدون یادداشت، ارقامی را که از آن خانه دیده می‌شوند بشمارید. با یادداشت، تک‌گزینهٔ آشکار همان خانه‌ای است که یک نامزد نشان می‌دهد و به همین دلیل «پر کردن یادداشت‌ها» پیدا کردنشان را آسان می‌کند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "به خانهٔ {cell} نگاه کنید. خالی است، پس هر رقمی را که از قبل در سطر، ستون و جعبهٔ آن قرار گرفته فهرست کنید.",
+                "سطر {row} شامل {rowDigits} است. ستون {col} شامل {colDigits} است. جعبهٔ {box} شامل {boxDigits} است.",
+                "این‌ها روی هم همهٔ ارقام به جز {d} را رد می‌کنند، پس {d} تنها نامزد باقی‌مانده در خانهٔ {cell} است.",
+                "رقم {d} را در خانهٔ {cell} بنویسید. سپس بررسی کنید که آیا رقم تازه تک‌گزینهٔ دیگری در همان سطر، ستون یا جعبه می‌سازد."
+              ]
+            }
+          ],
+          "mistakes": [
+            "شمردن فقط سطر یا فقط جعبه. هشت رقم ردشده معمولاً از هر سه واحد با هم می‌آیند.",
+            "فراموش کردن اینکه رقمی که همین حالا قرار دادید نامزدهای 20 همسایه‌اش را هم رد می‌کند؛ تک‌گزینه‌های آشکار تازه درست بعد از هر جاگذاری پیدا می‌شوند.",
+            "اشتباه گرفتن تک‌گزینهٔ آشکار با تک‌گزینهٔ پنهان: در تک‌گزینهٔ آشکار یک نامزد در خانه مانده است، در تک‌گزینهٔ پنهان یک خانه برای رقم در یک واحد مانده است."
+          ],
+          "faq": [
+            [
+              "تک‌گزینهٔ آشکار در سودوکو چیست؟",
+              "خانهٔ خالی‌ای با دقیقاً یک نامزد. هشت رقم متفاوت از قبل در سطر، ستون و جعبهٔ آن قرار گرفته‌اند، پس فقط رقم نهم جا می‌شود."
+            ],
+            [
+              "چرا به آن آشکار می‌گویند؟",
+              "چون وقتی یادداشت‌ها نوشته شده باشند، آن تنها نامزد مستقیم در خانه دیده می‌شود؛ چیزی پنهانش نمی‌کند. در مقابل، تک‌گزینهٔ پنهان میان نامزدهای دیگر نشسته است و با نگاه به رقم، نه به خانه، پیدا می‌شود."
+            ],
+            [
+              "آیا می‌شود جدولی را فقط با تک‌گزینه‌های آشکار حل کرد؟",
+              "بسیاری از جدول‌های آسان را بله، اما بیشترشان به تک‌گزینه‌های پنهان هم نیاز دارند. Bare Sudoku جدول‌های آسان و متوسط را با هر دو نوع تک‌گزینه قابل حل می‌داند؛ جدول‌های سخت و حرفه‌ای دست‌کم به یک تکنیک دیگر نیاز دارند."
+            ],
+            [
+              "آیا راهنمایی تک‌گزینه‌های آشکار را نشان می‌دهد؟",
+              "بله. وقتی جاگذاری بعدی یک تک‌گزینهٔ آشکار باشد، راهنمایی خانه را انتخاب می‌کند و همراه با رقم می‌گوید «فقط یک نامزد اینجا». برای قرار دادن آن، دوباره راهنمایی را بزنید."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "تک‌گزینهٔ پنهان",
+          "title": "تک‌گزینهٔ پنهان در سودوکو: تنها جای یک رقم",
+          "description": "تک‌گزینهٔ پنهان تنها خانه‌ای در یک سطر، ستون یا جعبه است که رقمی هنوز می‌تواند در آن بنشیند. یاد بگیرید با بررسی رقم به رقم آن را پیدا کنید.",
+          "h1": "تک‌گزینهٔ پنهان (Hidden Single)",
+          "summary": "تک‌گزینهٔ پنهان رقمی است که در یک سطر، ستون یا جعبه فقط یک خانهٔ ممکن برایش مانده است، حتی اگر آن خانه نامزدهای دیگری هم نشان دهد. چون آن واحد باید این رقم را داشته باشد، رقم همان‌جا قرار می‌گیرد. راهنمایی Bare Sudoku آن را با «تنها جای 5 در این سطر»، یا ستون یا جعبه، اعلام می‌کند.",
+          "when": [
+            "هر وقت رقمی به‌خوبی پیش رفته باشد: وقتی رقمی پنج یا شش بار آمده باشد، جعبه‌های باقی‌مانده بسیار محدودند و تک‌گزینهٔ پنهان اغلب حرکت بعدی است. تک‌گزینه‌های پنهان تکنیک اصلی جدول‌های آسان و متوسط‌اند و در همهٔ سطح‌ها ابزار اصلی باقی می‌مانند."
+          ],
+          "spot": [
+            "رقم به رقم بررسی کنید. یک رقم را بردارید، جعبه‌ای را پیدا کنید که آن را ندارد و هر خانه از آن جعبه را که با نسخهٔ قرارگرفته‌ای از آن رقم در یک سطر یا ستون است خط بزنید. اگر یک خانه باقی ماند، یک تک‌گزینهٔ پنهان پیدا کرده‌اید. همین بررسی روی سطرها و ستون‌ها هم جواب می‌دهد. در بازی، یک رقم قرارگرفته را لمس کنید: همهٔ نسخه‌هایش برجسته می‌شوند و خانه‌های آزاد به چشم می‌آیند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "جعبهٔ {box} هنوز {d} ندارد، پس یکی از خانه‌های خالی‌اش باید آن را بگیرد. خانه‌های خالی {empties} هستند.",
+                "در همهٔ آن‌ها به جز {cell}، رقم {d} با یک {d} که از قبل در همان سطر یا ستون قرار گرفته مسدود شده است، پس {d} آنجا نامزد نیست.",
+                "پس خانهٔ {cell} تنها جای {d} در جعبهٔ {box} است. رقم {d} را آنجا بنویسید، حتی اگر {cell} هنوز نامزدهای دیگری نشان دهد."
+              ]
+            }
+          ],
+          "mistakes": [
+            "گذاشتن رقم در خانه‌ای که فقط احتمالاً درست است: همهٔ خانه‌های خالی دیگر آن واحد را بررسی کنید، نه فقط خانه‌های بدیهی را.",
+            "از دست دادن یک تک‌گزینهٔ پنهان چون خانه چند نامزد نشان می‌دهد. نامزدهای دیگر مهم نیستند؛ مهم این است که رقم در آن واحد جای دیگری ندارد.",
+            "بررسی فقط جعبه‌ها. سطرها و ستون‌ها هم به همان اندازه تک‌گزینهٔ پنهان می‌سازند، به‌ویژه نزدیک پایان."
+          ],
+          "faq": [
+            [
+              "تک‌گزینهٔ پنهان در سودوکو چیست؟",
+              "رقمی که فقط در یک خانه از یک سطر، ستون یا جعبه می‌تواند قرار بگیرد. آن واحد باید این رقم را داشته باشد، پس تکلیف خانه روشن است حتی اگر هنوز نامزدهای دیگری داشته باشد."
+            ],
+            [
+              "فرق تک‌گزینهٔ پنهان و تک‌گزینهٔ آشکار چیست؟",
+              "تک‌گزینهٔ آشکار دربارهٔ یک خانه است: یک نامزد مانده است. تک‌گزینهٔ پنهان دربارهٔ یک رقم است: یک خانه در یک واحد مانده است. هر دو رقمی را با قطعیت قرار می‌دهند."
+            ],
+            [
+              "پیدا کردن کدام آسان‌تر است؟",
+              "بدون یادداشت، تک‌گزینه‌های پنهان معمولاً آسان‌ترند، چون می‌توانید صفحه را رقم به رقم بررسی کنید. با یادداشت‌های کامل، تک‌گزینه‌های آشکار آسان‌ترین‌اند، چون خانه‌ای با یک نامزد فوراً به چشم می‌آید."
+            ],
+            [
+              "راهنمایی تک‌گزینهٔ پنهان را چطور توصیف می‌کند؟",
+              "با «تنها جای» آن رقم در این سطر، این ستون یا این جعبه، و خانه را انتخاب می‌کند. برای قرار دادن آن، دوباره راهنمایی را بزنید."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "نامزدهای قفل‌شده",
+          "title": "نامزدهای قفل‌شده در سودوکو: اشاره و تصاحب",
+          "description": "نامزدهای قفل‌شده: وقتی همهٔ نامزدهای یک رقم در یک جعبه در یک سطر یا ستون باشند، یا برعکس، رقم از جاهای دیگر حذف می‌شود. با دو مثال واقعی.",
+          "h1": "نامزدهای قفل‌شده (Locked Candidates)",
+          "summary": "نامزدهای قفل‌شده اولین تکنیکی است که به جای قرار دادن رقم، نامزد حذف می‌کند. دو شکل دارد. اشاره: در یک جعبه، همهٔ نامزدهای یک رقم در یک سطر یا ستون قرار دارند، پس رقم از بقیهٔ آن خط حذف می‌شود. تصاحب: در یک سطر یا ستون، همهٔ نامزدهای یک رقم در یک جعبه قرار دارند، پس رقم از بقیهٔ آن جعبه حذف می‌شود. راهنمایی Bare Sudoku جاگذاری‌ای را که این تکنیک باز می‌کند «نامزدهای قفل‌شده» می‌نامد.",
+          "when": [
+            "وقتی تک‌گزینه‌ها در یک جدول سخت تمام شد، این اولین چیزی است که باید امتحان کنید. دست‌کم برای رقمی که بررسی می‌کنید یادداشت کامل لازم است. نامزدهای قفل‌شده رایج‌اند: بیشتر جدول‌های سخت به آن‌ها نیاز دارند و جدول‌های حرفه‌ای در میان الگوهای بزرگ‌تر از آن‌ها استفاده می‌کنند."
+          ],
+          "spot": [
+            "برای اشاره، به هر جعبه و هر رقمی که ندارد نگاه کنید: اگر خانه‌های نامزد آن رقم در یک سطر یا ستون قرار دارند، ببینید آیا همان رقم در ادامهٔ آن خط، بیرون از جعبه، نامزد است یا نه. برای تصاحب، در طول یک سطر یا ستون نگاه کنید: اگر همهٔ نامزدهای یک رقم درون یک جعبه‌اند، بقیهٔ آن جعبه را می‌توان پاک کرد. در بازی، دکمهٔ یک رقم را بزنید تا همهٔ نامزدهایش برجسته شوند؛ خطی از دو یا سه یادداشت برجسته درون یک جعبه همان الگوست."
+          ],
+          "examples": [
+            {
+              "h": "اشاره",
+              "steps": [
+                "در جعبهٔ {box}، رقم {d} فقط این خانه‌های نامزد را دارد: {cells}. همهٔ آن‌ها در سطر {row} هستند.",
+                "جعبهٔ {box} به یک {d} نیاز دارد، پس {d} مربوط به سطر {row} درون جعبهٔ {box} قرار می‌گیرد، در هر کدام از آن خانه‌ها که باشد.",
+                "سطر {row} نمی‌تواند {d} دومی داشته باشد، پس {d} را از خانه‌های سطر {row} که بیرون از جعبه‌اند حذف کنید: {elim}."
+              ]
+            },
+            {
+              "h": "تصاحب",
+              "steps": [
+                "در سطر {row}، رقم {d} فقط می‌تواند در {cells} باشد و همهٔ آن‌ها درون جعبهٔ {box} قرار دارند.",
+                "سطر {row} باید {d} داشته باشد، پس {d} جعبهٔ {box} حتماً در سطر {row} است و سطر {row} آن را تصاحب می‌کند. خانه‌های دیگر جعبهٔ {box} نمی‌توانند {d} داشته باشند.",
+                "رقم {d} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف رقم درون جعبه به جای بیرون آن در حالت اشاره، یا برعکس در حالت تصاحب. حذف‌ها همیشه در خانه‌هایی است که در خط هستند اما در جعبه نیستند، یا در جعبه هستند اما در خط نیستند.",
+            "به کار بردن قاعده وقتی نامزدها در دو سطر جعبه پخش‌اند. همهٔ خانه‌های نامزد آن رقم در جعبه باید در یک خط باشند.",
+            "فراموش کردن جست‌وجوی تک‌گزینه‌ای که حذف می‌سازد. نامزدهای قفل‌شده به‌ندرت خودشان رقمی قرار می‌دهند؛ زمینهٔ یک تک‌گزینه را فراهم می‌کنند."
+          ],
+          "faq": [
+            [
+              "نامزدهای قفل‌شده در سودوکو چیست؟",
+              "نامزدهای یک رقم که به محل تقاطع یک جعبه و یک خط محدود شده‌اند. چون جعبه، یا خط، باید رقم را درون همان تقاطع داشته باشد، رقم را می‌توان از بقیهٔ خط، یا از بقیهٔ جعبه، حذف کرد."
+            ],
+            [
+              "فرق اشاره و تصاحب چیست؟",
+              "اشاره از جعبه شروع می‌شود: نامزدهای رقم در جعبه در امتداد یک سطر یا ستون اشاره می‌کنند، پس رقم از بقیهٔ آن خط حذف می‌شود. تصاحب از سطر یا ستون شروع می‌شود: همهٔ نامزدهای خط برای آن رقم در یک جعبه‌اند، پس خط رقم را تصاحب می‌کند و رقم از بقیهٔ جعبه حذف می‌شود."
+            ],
+            [
+              "آیا به نامزدهای قفل‌شده حذف تقاطعی هم می‌گویند؟",
+              "بله. نام‌های دیگر، کاهش جعبه و خط برای شکل تصاحب و جفت‌ها یا سه‌تایی‌های اشاره‌گر برای شکل اشاره است. Bare Sudoku برای هر دو یک نام به کار می‌برد."
+            ],
+            [
+              "کدام سطح به نامزدهای قفل‌شده نیاز دارد؟",
+              "سخت. جدولی که به نامزدهای قفل‌شده یا زیرمجموعه‌ها نیاز دارد اما به چیزی سخت‌تر نه، سخت ارزیابی می‌شود؛ جدول‌های حرفه‌ای به یک ماهی یا بال هم نیاز دارند."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "جفت و سه‌تایی آشکار",
+          "title": "جفت و سه‌تایی آشکار در سودوکو: چطور کار می‌کنند",
+          "description": "جفت و سه‌تایی آشکار: دو یا سه خانه در یک واحد که همان دو یا سه نامزد را دارند. یاد بگیرید چطور پیدایشان کنید و چه چیزی را حذف کنید، با مثال واقعی.",
+          "h1": "جفت و سه‌تایی آشکار (Naked Pair)",
+          "summary": "جفت آشکار دو خانه در یک سطر، ستون یا جعبه است که دقیقاً همان دو نامزد را دارند. آن دو رقم باید در همین دو خانه قرار بگیرند، پس می‌توان آن‌ها را از همهٔ خانه‌های دیگر آن واحد حذف کرد. سه‌تایی آشکار همین ایده با سه خانه و سه رقم است؛ هر خانه ممکن است دو تا یا هر سه را نشان دهد. راهنمایی Bare Sudoku جاگذاری حاصل را «جفت یا سه‌تایی» می‌نامد.",
+          "when": [
+            "وقتی یادداشت‌ها کامل‌اند و تک‌گزینه‌ها و نامزدهای قفل‌شده ته کشیده‌اند. جفت‌های آشکار در جدول‌های سخت بسیار رایج‌اند و سه‌تایی‌های آشکار کمتر. ارزش دارد هر دو را در هر واحدی که هنوز پنج خانهٔ خالی یا بیشتر دارد بررسی کنید."
+          ],
+          "spot": [
+            "دنبال خانه‌هایی با فقط دو نامزد بگردید و خانهٔ دیگری در همان واحد با همان دو نامزد پیدا کنید. برای سه‌تایی‌ها، به واحدهایی نگاه کنید که چند خانهٔ دو یا سه‌نامزدی دارند و ببینید آیا سه تا از آن‌ها روی هم فقط سه رقم متفاوت به کار می‌برند. وقتی یادداشت‌ها نوشته شده باشند، خانه‌هایی با نامزدهای کاملاً یکسان راحت دیده می‌شوند؛ «پر کردن یادداشت‌ها» در بازی این کار را با یک لمس انجام می‌دهد."
+          ],
+          "examples": [
+            {
+              "h": "جفت آشکار",
+              "steps": [
+                "خانه‌های {cellA} و {cellB} در {unit} دقیقاً همان دو نامزد را دارند: {d1} و {d2}.",
+                "یکی از آن‌ها باید {d1} باشد و دیگری {d2}. نمی‌دانیم کدام کدام است، اما هر دو رقم را همین دو خانه مصرف می‌کنند.",
+                "پس هیچ خانهٔ دیگری در {unit} نمی‌تواند {d1} یا {d2} داشته باشد. این‌ها را حذف کنید: {elim}."
+              ]
+            },
+            {
+              "h": "سه‌تایی آشکار",
+              "steps": [
+                "سه خانه از {unit} همهٔ نامزدهایشان را از همان سه رقم، {digits}، می‌گیرند: {cells}.",
+                "این سه رقم باید به ترتیبی این سه خانه را پر کنند. لازم نیست هر خانه هر سه نامزد را نشان دهد؛ مهم این است که هیچ‌کدام از این سه خانه نامزدی بیرون از این مجموعه نداشته باشد.",
+                "ارقام {digits} را از همهٔ خانه‌های دیگر {unit} حذف کنید: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "برداشتن دو خانه که دو نامزد مشترک دارند اما نامزد سومی هم دارند. در جفت آشکار هر خانه باید دقیقاً همان دو نامزد را داشته باشد و نه چیز دیگر.",
+            "حذف ارقام از خود خانه‌های جفت. جفت نامزدهایش را نگه می‌دارد؛ حذف‌ها در خانه‌های دیگر واحد انجام می‌شوند.",
+            "انتظار اینکه هر خانهٔ سه‌تایی هر سه رقم را نشان دهد. خانه‌ای با دو تا از آن سه هم قبول است، تا وقتی هیچ خانه‌ای نامزدی بیرون از مجموعه نداشته باشد."
+          ],
+          "faq": [
+            [
+              "جفت آشکار در سودوکو چیست؟",
+              "دو خانه در یک واحد که هر دو دقیقاً همان دو نامزد را دارند. آن دو رقم در همین دو خانه قفل شده‌اند، پس می‌توان آن‌ها را از بقیهٔ واحد حذف کرد."
+            ],
+            [
+              "سه‌تایی آشکار چیست؟",
+              "سه خانه در یک واحد که نامزدهایشان روی هم فقط سه رقم است. هر خانه ممکن است دو یا سه تا از آن‌ها را داشته باشد. این سه رقم سه خانه را پر می‌کنند، پس می‌توان آن‌ها را از خانه‌های دیگر واحد حذف کرد."
+            ],
+            [
+              "آیا جفت آشکار رقمی قرار می‌دهد؟",
+              "به‌تنهایی نه. نامزد حذف می‌کند و این حذف معمولاً یک تک‌گزینهٔ آشکار یا پنهان به جا می‌گذارد. راهنمایی در Bare Sudoku آن تک‌گزینه را نشان می‌دهد و تکنیکی را که آن را ممکن کرد نام می‌برد."
+            ],
+            [
+              "آیا یک جفت آشکار می‌تواند هم‌زمان در یک جعبه و یک سطر باشد؟",
+              "بله. اگر دو خانه در یک سطر و یک جعبه شریک باشند، جفت در هر دو واحد حذف انجام می‌دهد. Bare Sudoku آن‌ها را واحد به واحد بررسی می‌کند."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "جفت و سه‌تایی پنهان",
+          "title": "جفت و سه‌تایی پنهان در سودوکو: چطور پیدایشان کنیم",
+          "description": "جفت پنهان دو رقم است که در یک واحد فقط در همان دو خانه جا دارند، پس نامزدهای دیگر آن خانه‌ها حذف می‌شوند. پیدا کردن جفت و سه‌تایی پنهان را یاد بگیرید.",
+          "h1": "جفت و سه‌تایی پنهان (Hidden Pair)",
+          "summary": "جفت پنهان دو رقم است که در یک سطر، ستون یا جعبه فقط در همان دو خانه نامزدند و هیچ جای دیگری نه. آن دو خانه باید همین دو رقم را بگیرند، پس هر نامزد دیگری در آن‌ها را می‌توان حذف کرد. سه‌تایی پنهان به همین شکل با سه رقم محدود به سه خانه کار می‌کند. پس از حذف، این خانه‌ها یک جفت یا سه‌تایی آشکار نشان می‌دهند. راهنمایی Bare Sudoku جاگذاری حاصل را «جفت یا سه‌تایی» می‌نامد.",
+          "when": [
+            "وقتی واحدی خانه‌هایی با نامزدهای زیاد دارد و تک‌گزینه‌ها تمام شده‌اند. جفت‌های پنهان درون خانه‌های شلوغ پنهان می‌شوند و به همین دلیل ارزش دارد دقیقاً همان‌جایی دنبالشان بگردید که جفت‌های آشکار دیده نمی‌شوند. سه‌تایی‌های پنهان کمیاب‌اند؛ Bare Sudoku آن‌ها را بررسی می‌کند، اما بیشتر جدول‌های سخت بدون آن‌ها حل می‌شوند."
+          ],
+          "spot": [
+            "رقم به رقم کار کنید، نه خانه به خانه. در یک واحد، خانه‌هایی را که هر رقم غایب می‌تواند در آن‌ها برود یادداشت کنید. اگر دو رقم هر کدام فقط دو خانهٔ ممکن داشته باشند و این دو خانه یکی باشند، یک جفت پنهان پیدا کرده‌اید. در بازی، دکمهٔ یک رقم را بزنید تا نامزدهایش برجسته شوند؛ اگر دو رقم همان دو خانهٔ یک واحد را روشن کنند و هیچ خانهٔ دیگری از آن واحد را نه، الگو همین است."
+          ],
+          "examples": [
+            {
+              "h": "جفت پنهان",
+              "steps": [
+                "در {unit}، رقم‌های {d1} و {d2} هر کدام فقط دو خانهٔ ممکن دارند و این دو خانه یکی‌اند: {cells}.",
+                "این دو خانه باید {d1} و {d2} را بگیرند، پس نامزدهای دیگرشان ناممکن‌اند.",
+                "این‌ها را حذف کنید: {elim}. اکنون این دو خانه یک جفت آشکار نشان می‌دهند که ممکن است راه‌های بیشتری باز کند."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف دو رقم جفت از خانه‌های جفت. آنچه حذف می‌شود نامزدهای دیگر آن خانه‌هاست؛ رقم‌های جفت می‌مانند.",
+            "پذیرفتن رقمی که در واحد خانهٔ ممکن سومی هم دارد. هر دو رقم باید دقیقاً به همان دو خانه محدود باشند.",
+            "جست‌وجو فقط در جعبه‌ها. جفت‌های پنهان در سطرها و ستون‌ها هم به همان اندازه پیدا می‌شوند."
+          ],
+          "faq": [
+            [
+              "جفت پنهان در سودوکو چیست؟",
+              "دو رقم که در یک واحد فقط در همان دو خانه می‌توانند قرار بگیرند. آن خانه‌ها باید همین رقم‌ها را بگیرند، پس نامزدهای دیگرشان حذف می‌شوند."
+            ],
+            [
+              "جفت پنهان چه فرقی با جفت آشکار دارد؟",
+              "جفت آشکار پیداست: دو خانه که فقط همان دو نامزد را نشان می‌دهند. جفت پنهان زیر نامزدهای اضافی آن دو خانه پوشیده است. با حذف این نامزدهای اضافی، جفت پنهان به جفت آشکار تبدیل می‌شود."
+            ],
+            [
+              "سه‌تایی پنهان چیست؟",
+              "سه رقم که به سه خانه از یک واحد محدودند. لازم نیست هر رقم در هر سه خانه بیاید؛ مهم این است که هیچ‌کدام از این سه رقم بیرون از این خانه‌ها نامزد نباشد."
+            ],
+            [
+              "آیا راهنمایی جفت‌های پنهان و آشکار را از هم جدا می‌کند؟",
+              "نه. Bare Sudoku هر دو را پیدا می‌کند و جاگذاری حاصل را «جفت یا سه‌تایی» می‌نامد. این صفحه‌ها آن‌ها را جدا کرده‌اند چون روش پیدا کردنشان فرق دارد."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing در سودوکو: این تکنیک چطور کار می‌کند",
+          "description": "X-Wing: رقمی با دقیقاً دو خانهٔ نامزد در دو سطر که در همان دو ستون قرار دارند، از بقیهٔ آن ستون‌ها حذف می‌شود. با مثال واقعی گام به گام.",
+          "h1": "X-Wing",
+          "summary": "X-Wing الگویی از یک رقم و چهار خانه در گوشه‌های یک مستطیل است. اگر رقمی در هر یک از دو سطر دقیقاً دو خانهٔ نامزد داشته باشد و این خانه‌ها در همان دو ستون باشند، رقم باید دو گوشهٔ روبه‌روی مستطیل را بگیرد. بنابراین می‌توان آن را از همهٔ خانه‌های دیگر آن دو ستون حذف کرد. با جابه‌جا کردن سطرها و ستون‌ها هم همین برقرار است. این اولین تکنیک سطح حرفه‌ای در Bare Sudoku است.",
+          "when": [
+            "وقتی تک‌گزینه‌ها، نامزدهای قفل‌شده و زیرمجموعه‌ها ته کشیده‌اند. X-Wing رایج‌ترین الگوی سطح حرفه‌ای است و اغلب وقتی پیدا می‌شود که برای رقمی نامزدهای کمی مانده است، معمولاً وقتی چهار تا شش نسخه از آن قرار گرفته است. برای رقمی که بررسی می‌کنید یادداشت کامل لازم است."
+          ],
+          "spot": [
+            "رقمی را انتخاب کنید و دنبال سطرهایی بگردید که در آن‌ها دقیقاً دو خانهٔ نامزد دارد. اگر دو سطر از این دست همان دو ستون را داشته باشند، آن ستون‌ها را برای نامزدهای دیگر این رقم بررسی کنید: این‌ها همان حذف‌ها هستند. سپس با ستون‌ها به عنوان پایه تکرار کنید. در بازی، دکمهٔ رقم را بزنید: همهٔ نامزدهایش برجسته می‌شوند و مستطیلی از چهار یادداشت برجسته به‌راحتی دیده می‌شود."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "رقم {d} در سطر {r1} دقیقاً دو خانهٔ نامزد دارد و در سطر {r2} هم دقیقاً دو، و این خانه‌ها در همان دو ستون {c1} و {c2} قرار دارند: {cells}.",
+                "سطر {r1} رقم {d} خود را در ستون {c1} یا {c2} می‌گذارد و سطر {r2} در ستون دیگر. در هر حال، ستون‌های {c1} و {c2} هر کدام یک {d} از این دو سطر می‌گیرند.",
+                "پس {d} نمی‌تواند در هیچ جای دیگری از ستون‌های {c1} و {c2} بیاید. رقم {d} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "استفاده از سطری که سه خانهٔ نامزد برای آن رقم دارد. هر سطر پایه باید دقیقاً دو خانه داشته باشد و هر دو در همان دو ستون مشترک باشند.",
+            "حذف رقم از سطرها به جای ستون‌ها. وقتی سطرها پایه‌اند، حذف‌ها در ستون‌هاست و برعکس.",
+            "فراموش کردن حالت جابه‌جاشده. X-Wing که روی ستون‌ها ساخته شود، در سطرها حذف می‌کند."
+          ],
+          "faq": [
+            [
+              "X-Wing در سودوکو چیست؟",
+              "رقمی که در هر یک از دو سطر دقیقاً دو خانهٔ نامزد دارد، در همان دو ستون. رقم دو گوشهٔ روبه‌روی آن مستطیل را می‌گیرد، پس از بقیهٔ آن دو ستون حذف می‌شود. سطرها و ستون‌ها را می‌توان جابه‌جا کرد."
+            ],
+            [
+              "چرا X-Wing کار می‌کند؟",
+              "هر یک از دو سطر باید رقم را در یکی از دو ستون بگذارد و دو سطر نمی‌توانند از یک ستون استفاده کنند. پس هر دو ستون نسخهٔ خود از رقم را از همین سطرها می‌گیرند و هر نامزد دیگری در آن ستون‌ها ناممکن است."
+            ],
+            [
+              "آیا X-Wing یک ماهی است؟",
+              "بله. X-Wing ماهی با اندازهٔ دو است و Swordfish ماهی با اندازهٔ سه. Bare Sudoku هر دو را پیدا می‌کند."
+            ],
+            [
+              "X-Wing در کدام سطح می‌آید؟",
+              "حرفه‌ای. جدولی که به X-Wing، Y-Wing، Swordfish یا XYZ-Wing نیاز داشته باشد، حرفه‌ای ارزیابی می‌شود."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing در سودوکو: این تکنیک چطور کار می‌کند",
+          "description": "Y-Wing (XY-Wing): یک محور با دو نامزد و دو بال که هر کدام در یکی از آن‌ها شریک‌اند، رقمی را از هر خانه‌ای که هر دو بال را می‌بیند حذف می‌کنند.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing که XY-Wing هم نامیده می‌شود، از سه خانه با دو نامزد استفاده می‌کند. محور نامزدهای X و Y را دارد. یک بال محور را می‌بیند و X و Z دارد؛ بال دیگر محور را می‌بیند و Y و Z دارد. محور هر چه باشد، یکی از بال‌ها باید Z باشد، پس Z را می‌توان از هر خانه‌ای که هر دو بال را می‌بیند حذف کرد. این یک تکنیک سطح حرفه‌ای در Bare Sudoku است.",
+          "when": [
+            "وقتی جدول چند خانه با دقیقاً دو نامزد دارد و هیچ ماهی‌ای در دسترس نیست. Y-Wing در جدول‌های حرفه‌ای رایج است و با دنبال کردن خانه‌های دونامزدی پیدا می‌شود: هر کدام می‌تواند محور یا بال باشد."
+          ],
+          "spot": [
+            "خانه‌هایی را که دقیقاً دو نامزد دارند فهرست کنید. هر کدام را محوری با نامزدهای X و Y فرض کنید و میان همسایه‌هایش دنبال خانه‌ای با X و رقم دیگری مثل Z، و خانه‌ای با Y و همان Z بگردید. این دو، بال‌ها هستند. سپس خانه‌هایی را پیدا کنید که هر دو بال را می‌بینند و Z دارند. توجه کنید که لازم نیست بال‌ها همدیگر را ببینند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} نامزدهای {x} و {y} را دارد. این خانه {wingA} را می‌بیند که {x} و {z} دارد، و {wingB} را که {y} و {z} دارد.",
+                "اگر {pivot} برابر {x} باشد، {wingA} رقم {x} را از دست می‌دهد و {z} می‌شود. اگر {pivot} برابر {y} باشد، {wingB} برابر {z} می‌شود. در هر حال یکی از دو بال {z} است.",
+                "خانه‌ای که هر دو بال را می‌بیند هرگز نمی‌تواند {z} باشد. رقم {z} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "انتخاب بال‌هایی که هر دو محور را نمی‌بینند. هر بال باید با محور در یک سطر، ستون یا جعبه شریک باشد.",
+            "حذف Z از خانه‌هایی که فقط یک بال را می‌بینند. خانه‌ای که از آن حذف می‌شود باید هر دو بال را ببیند.",
+            "حذف Z از محور. در Y-Wing محور Z ندارد؛ اگر داشته باشد، الگو یک XYZ-Wing است با قواعد متفاوت."
+          ],
+          "faq": [
+            [
+              "Y-Wing در سودوکو چیست؟",
+              "سه خانهٔ دونامزدی: محوری با X و Y، بالی با X و Z که محور را می‌بیند و بالی با Y و Z که محور را می‌بیند. یکی از بال‌ها همیشه Z است، پس Z از خانه‌هایی که هر دو بال را می‌بینند حذف می‌شود."
+            ],
+            [
+              "آیا Y-Wing همان XY-Wing است؟",
+              "بله. این دو نام یک الگو را توصیف می‌کنند. Bare Sudoku آن را Y-Wing می‌نامد."
+            ],
+            [
+              "چرا یکی از بال‌ها باید Z باشد؟",
+              "اگر محور X باشد، بال اول X را از دست می‌دهد و Z می‌شود. اگر محور Y باشد، بال دوم Z می‌شود. محور یکی از این دوست، پس یکی از بال‌ها Z است."
+            ],
+            [
+              "Y-Wing از چند خانه حذف می‌کند؟",
+              "معمولاً یک یا دو خانه: فقط خانه‌هایی که هر دو بال را می‌بینند و هنوز Z دارند. همین برای ساختن یک تک‌گزینه کافی است."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish در سودوکو: این تکنیک چطور کار می‌کند",
+          "description": "Swordfish: رقمی که در سه سطر به سه ستون محدود است از بقیهٔ آن ستون‌ها حذف می‌شود. ماهی با اندازهٔ سه، با توضیح یک مثال واقعی گام به گام.",
+          "h1": "Swordfish",
+          "summary": "Swordfish یک X-Wing با سه سطر و سه ستون است. اگر رقمی در هر یک از سه سطر حداکثر سه خانهٔ نامزد داشته باشد و همهٔ این خانه‌ها در همان سه ستون بیفتند، این سه سطر رقم را در آن ستون‌ها مصرف می‌کنند و رقم را می‌توان از همهٔ خانه‌های دیگر آن سه ستون حذف کرد. سطرها و ستون‌ها را می‌توان جابه‌جا کرد. Bare Sudoku پس از Y-Wing، در جدول‌های حرفه‌ای، دنبال Swordfish می‌گردد.",
+          "when": [
+            "وقتی X-Wing و Y-Wing چیزی پیدا نمی‌کنند. Swordfish از X-Wing کمیاب‌تر است و به رقمی نیاز دارد که نامزدهایش به‌صورت پراکنده روی سه خط پخش شده باشند. برای آن رقم یادداشت‌های کامل و دقیق لازم است."
+          ],
+          "spot": [
+            "رقمی را انتخاب کنید و دنبال سطرهایی بگردید که دو یا سه خانهٔ نامزد برای آن دارند. اگر سه سطر از این دست روی هم فقط سه ستون را بپوشانند، آن ستون‌ها را برای نامزدهای دیگر این رقم بررسی کنید. لازم نیست هر سطر در هر ستون نامزد داشته باشد: یک Swordfish می‌تواند شش، هفت، هشت یا نُه خانه داشته باشد. در بازی، رقم را با دکمه‌اش برجسته کنید و دنبال سه سطری بگردید که نامزدهایشان در سه ستون ردیف شده‌اند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "رقم {d} در هر یک از سطرهای {rows} حداکثر سه خانهٔ نامزد دارد و همهٔ این خانه‌ها در ستون‌های {cols} قرار دارند: {cells}.",
+                "هر یک از سه سطر باید {d} خود را در یکی از سه ستون بگذارد و هیچ دو سطری نمی‌توانند از یک ستون استفاده کنند. پس سه ستون {d} خود را از همین سه سطر می‌گیرند.",
+                "هر نامزد {d} دیگری در ستون‌های {cols} ناممکن است. رقم {d} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "انتظار داشتن هر نُه خانه. Swordfish با دو نامزد در بعضی سطرها همچنان معتبر است، تا وقتی سه سطر فقط سه ستون را بپوشانند.",
+            "وارد کردن سطری با چهار خانهٔ نامزد. هر سطر پایه باید حداکثر سه خانه داشته باشد، همه درون همان سه ستون.",
+            "حذف در سطرهای پایه. وقتی سطرها پایه‌اند، حذف‌ها در سه ستون و بیرون از سطرهای پایه است."
+          ],
+          "faq": [
+            [
+              "Swordfish در سودوکو چیست؟",
+              "رقمی که نامزدهایش در سه سطر به سه ستون محدود است. سه سطر باید رقم را در آن سه ستون بگذارند، در هر ستون یکی، پس رقم از خانه‌های دیگر آن ستون‌ها حذف می‌شود."
+            ],
+            [
+              "Swordfish چه فرقی با X-Wing دارد؟",
+              "فقط در اندازه: X-Wing از دو سطر و دو ستون استفاده می‌کند و Swordfish از سه و سه. استدلال یکی است."
+            ],
+            [
+              "آیا Swordfish دقیقاً به نُه خانه نیاز دارد؟",
+              "نه. هر سطر می‌تواند دو یا سه نامزد داشته باشد؛ الگو فقط لازم دارد که سه سطر روی هم بیش از سه ستون را به کار نبرند."
+            ],
+            [
+              "آیا ماهی با اندازهٔ چهار هم هست؟",
+              "بله، Jellyfish. Bare Sudoku از آن استفاده نمی‌کند، چون جدول‌هایش هرگز به آن نیاز ندارند."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing در سودوکو: این تکنیک چطور کار می‌کند",
+          "description": "XYZ-Wing: یک محور با سه نامزد و دو بال که در یکی از آن‌ها شریک‌اند، آن رقم را از هر خانه‌ای که هر سه را می‌بیند حذف می‌کنند. با مثال واقعی.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing یک Y-Wing است که محورش سه نامزد دارد. محور X، Y و Z دارد؛ یک بال محور را می‌بیند و X و Z دارد و بال دیگر محور را می‌بیند و Y و Z دارد. یکی از این سه خانه باید Z باشد، پس Z را می‌توان از هر خانه‌ای که هر سه را می‌بیند حذف کرد. چون خود محور ممکن است Z باشد، خانه‌ای که از آن حذف می‌شود باید علاوه بر هر دو بال، محور را هم ببیند و این آن را به جعبه یا خطی که این خانه‌ها در آن شریک‌اند محدود می‌کند. این سخت‌ترین تکنیکی است که Bare Sudoku به کار می‌برد.",
+          "when": [
+            "فقط وقتی همه چیز دیگر شکست بخورد. XYZ-Wing کمیاب‌ترین الگو در Bare Sudoku است و فقط در جدول‌های حرفه‌ای پیدا می‌شود. وقتی دنبالش بگردید که یک خانهٔ سه‌نامزدی با یک خانهٔ دونامزدی که در دو رقم با آن شریک است در یک جعبه باشد."
+          ],
+          "spot": [
+            "از خانه‌هایی شروع کنید که دقیقاً سه نامزد دارند؛ هر کدام می‌تواند محور باشد. میان همسایه‌هایش دنبال دو خانهٔ دونامزدی بگردید که نامزدهای هر دو از سه نامزد محور باشد و دقیقاً در یک رقم Z شریک باشند. سپس دنبال خانه‌هایی بگردید که محور و هر دو بال را می‌بینند و Z دارند. در عمل یک بال در جعبهٔ محور است و دیگری در سطر یا ستون آن، و خانه‌هایی که از آن‌ها حذف می‌شود خانه‌های باقی‌ماندهٔ آن جعبه در همان سطر یا ستون‌اند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} سه نامزد دارد: {x}، {y} و {z}. این خانه {wingA} را با {x} و {z} و {wingB} را با {y} و {z} می‌بیند.",
+                "اگر {pivot} برابر {z} باشد، کار تمام است. اگر {x} باشد، {wingA} باید {z} باشد. اگر {y} باشد، {wingB} باید {z} باشد. در هر حال یکی از سه خانه {z} است.",
+                "خانه‌ای که هر سه را می‌بیند نمی‌تواند {z} باشد. رقم {z} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف از خانه‌هایی که فقط دو بال را می‌بینند. برخلاف Y-Wing، محور ممکن است Z باشد، پس خانه باید محور را هم ببیند.",
+            "استفاده از بال‌هایی که نامزدهایشان هر دو در سه نامزد محور نیستند.",
+            "اشتباه گرفتن آن با Y-Wing: فرق در نامزد سوم محور است و همین تعیین می‌کند کدام خانه‌ها پاک می‌شوند."
+          ],
+          "faq": [
+            [
+              "XYZ-Wing در سودوکو چیست؟",
+              "محوری با نامزدهای X، Y و Z و دو بال، یکی با X و Z و یکی با Y و Z، که هر دو محور را می‌بینند. یکی از این سه خانه Z است، پس Z از خانه‌هایی که هر سه را می‌بینند حذف می‌شود."
+            ],
+            [
+              "XYZ-Wing چه فرقی با Y-Wing دارد؟",
+              "محور به جای دو نامزد سه نامزد دارد که Z هم در میان آن‌هاست. این باعث می‌شود محور هم جای ممکنی برای Z باشد، پس فقط خانه‌هایی که محور و هر دو بال را می‌بینند Z را از دست می‌دهند."
+            ],
+            [
+              "XYZ-Wing چقدر پیش می‌آید؟",
+              "به‌ندرت. در Bare Sudoku فقط جدول‌های حرفه‌ای ممکن است به آن نیاز داشته باشند و بیشترشان ندارند. Bare Sudoku آن را آخر از همه، پس از X-Wing، Y-Wing و Swordfish، بررسی می‌کند."
+            ],
+            [
+              "آیا WXYZ-Wing هم وجود دارد؟",
+              "بله، با محوری چهارنامزدی، اما Bare Sudoku از آن استفاده نمی‌کند. هر جدول بازی را می‌توان با نُه تکنیک این راهنما تمام کرد."
+            ]
+          ]
+        }
+      }
     }
   }
 }
