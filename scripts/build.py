@@ -23,6 +23,7 @@ AUTHOR_LINKS = [
     ("DevDiscipline", "https://devdiscipline.com"),
     ("Yarış Radarı", "https://yarisradari.com"),
 ]
+TRACKED_LINKS = {"https://yarisradari.com": "https://yarisradari.com/?utm_source=baresudoku"}
 PERSON_ID = SITE + "/#person"
 WEBSITE_ID = SITE + "/#website"
 GAME_ID = SITE + "/#game"
@@ -161,7 +162,7 @@ def content(code, entry, languages, version, size, lastmod, web):
     parts.append("<h2>%s</h2>" % f(entry["faqHeading"]))
     for question, answer in entry["faq"]:
         parts.append("<details><summary>%s</summary><p>%s</p></details>" % (f(question), f(answer)))
-    author_links = "".join(' · <a href="%s" rel="me">%s</a>' % (url, esc(label)) for label, url in AUTHOR_LINKS)
+    author_links = "".join(' · <a href="%s" rel="me">%s</a>' % (TRACKED_LINKS.get(url, url), esc(label)) for label, url in AUTHOR_LINKS)
     parts.append('<p class="meta">%s%s · Web %s · Android %s%s · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · %s <time datetime="%s">%s</time></p>' % (
         f(entry["madeBy"]), author_links, web, version, store_link(), WEB_REPO, f(entry["source"]), ANDROID_REPO, f(entry["androidSource"]), privacy_path(code), f(entry["privacyHeading"]), f(entry["updated"]), lastmod, lastmod))
     parts.append('<nav aria-label="%s">%s</nav>' % (f(entry["languagesLabel"]), language_links(languages)))
