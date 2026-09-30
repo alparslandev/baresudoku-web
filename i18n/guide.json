@@ -3492,6 +3492,2334 @@
         }
       }
     },
+    "pt": {
+      "learnHeading": "Aprender Sudoku",
+      "learnText": "Novo no Sudoku, ou preso num puzzle difícil? Dois guias explicam as regras e todas as técnicas de resolução que as dicas usam, cada uma com um exemplo real.",
+      "howToLink": "Como jogar Sudoku",
+      "techniquesLink": "Técnicas de resolução de Sudoku",
+      "labels": {
+        "howTo": "Como jogar",
+        "techniques": "Técnicas",
+        "play": "Jogar Sudoku",
+        "prev": "Técnica anterior",
+        "next": "Técnica seguinte",
+        "all": "Todas as técnicas",
+        "example": "Exemplo",
+        "steps": "Passo a passo",
+        "when": "Quando usar",
+        "spot": "Como identificar",
+        "mistakes": "Erros comuns",
+        "inGame": "No Bare Sudoku",
+        "level": "Necessária a partir do nível: {level}",
+        "hint": "No jogo, a dica diz: {text}",
+        "legend": "Os algarismos em negrito são dados, os azuis foram colocados durante a resolução e os pequenos são candidatos. As células destacadas formam o padrão, os candidatos riscados são removidos e o candidato com um círculo é o algarismo a colocar.",
+        "notation": "As células são indicadas como r3c7: linha 3, coluna 7. As linhas contam-se de cima para baixo, as colunas da esquerda para a direita e os blocos de 1 a 9 a partir do canto superior esquerdo, linha a linha.",
+        "row": "linha {n}",
+        "column": "coluna {n}",
+        "box": "bloco {n}",
+        "elimItem": "{d} de {cell}",
+        "regions": "Linha 5, coluna 5 e bloco 5 no início de um puzzle",
+        "firstMove": "Candidato único: {cell} só pode ser {d}",
+        "breadcrumb": "Caminho de navegação"
+      },
+      "howTo": {
+        "title": "Como jogar Sudoku: regras, tabuleiro e primeiras jogadas",
+        "description": "Aprenda a jogar Sudoku: as regras, como funcionam linhas, colunas e blocos, a razão da solução única, como usar notas e como fazer as primeiras jogadas.",
+        "h1": "Como jogar Sudoku",
+        "summary": "O Sudoku é um puzzle de lógica numa grelha 9×9. Preencha cada célula vazia com um algarismo de 1 a 9, de modo que cada linha, cada coluna e cada bloco 3×3 contenha todos os algarismos exatamente uma vez. Alguns algarismos são dados no início; o resto é deduzido, uma célula certa de cada vez, e nunca é preciso adivinhar. Este guia explica o tabuleiro, as regras, o princípio da solução única, as notas e uma estratégia simples para as primeiras jogadas. Pode praticar tudo no [Bare Sudoku](play), que é gratuito e tem dicas que explicam a lógica.",
+        "sections": [
+          {
+            "h": "Quais são as regras do Sudoku?",
+            "p": [
+              "Há apenas três regras, e são a mesma regra vista de três direções: cada linha deve conter os algarismos de 1 a 9, cada coluna deve conter os algarismos de 1 a 9 e cada bloco 3×3 deve conter os algarismos de 1 a 9. Por isso, um algarismo nunca pode aparecer duas vezes na mesma linha, coluna ou bloco.",
+              "Os algarismos dados, impressos em negrito, são fixos. O objetivo é preencher as células vazias. Não há aritmética nem ordem: os algarismos são apenas nove símbolos diferentes. Seria possível jogar com letras ou formas e nada mudaria."
+            ]
+          },
+          {
+            "h": "Como está organizado o tabuleiro?",
+            "p": [
+              "O tabuleiro tem 81 células em 9 linhas e 9 colunas. Linhas grossas dividem-no em nove blocos 3×3. Cada célula pertence a exatamente uma linha, uma coluna e um bloco, e estes três grupos são as suas unidades. As outras 20 células que partilham uma unidade com uma célula são as suas vizinhas; um algarismo colocado numa célula exclui esse algarismo em todas as 20 vizinhas.",
+              "As células são indicadas como r3c7: linha 3, coluna 7. As linhas contam-se de cima para baixo, as colunas da esquerda para a direita e os blocos de 1 a 9 a partir do canto superior esquerdo, linha a linha. Esta notação é usada em todos os guias de técnicas e vale a pena aprendê-la: r5c5 é o centro do tabuleiro."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Por que razão cada Sudoku tem exatamente uma solução?",
+            "p": [
+              "Um Sudoku bem feito tem uma só solução, e é isso que faz a lógica funcionar. Sempre que consegue mostrar que um algarismo não pode ir para mais nenhum lugar de uma unidade, ele tem de ir para a célula que resta, porque a solução existe e é única. Se um puzzle tivesse duas soluções, nenhum raciocínio as conseguiria distinguir e, a certa altura, seria preciso adivinhar.",
+              "O Bare Sudoku gera cada puzzle no seu dispositivo e verifica que tem exatamente uma solução e que o seu solucionador lógico o consegue terminar com as técnicas do nível escolhido. Por isso, se ficar preso, há sempre um próximo passo a descobrir, e a dica mostra-o."
+            ]
+          },
+          {
+            "h": "Como começar um Sudoku?",
+            "p": [
+              "Comece pelo que está mais restrito. Esta ordem funciona em todos os níveis:"
+            ],
+            "list": [
+              "Escolha um algarismo que já apareça muitas vezes, digamos seis ou sete, e procure os blocos onde ainda falta. Muitas vezes resta-lhe uma só célula num bloco: é um [lugar único](hidden-single).",
+              "Procure células apertadas. Uma célula cuja linha, coluna e bloco juntos contêm oito algarismos diferentes só tem um candidato: é um [candidato único](naked-single). As células de linhas ou blocos quase cheios são o melhor lugar para procurar.",
+              "Cada algarismo que coloca remove um candidato de 20 vizinhas, por isso verifique logo essas vizinhas. Os singles costumam vir em cadeia.",
+              "Quando as colocações fáceis se esgotarem, escreva notas: os candidatos de cada célula vazia. Depois procure um algarismo confinado a uma só linha ou coluna dentro de um bloco ([candidatos bloqueados](locked-candidates)) ou duas células com os mesmos dois candidatos (um [par nu](naked-pairs)).",
+              "Volte aos singles depois de cada eliminação. Até os puzzles Especialista se resolvem sobretudo com singles; a técnica avançada só desbloqueia o próximo."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "O que são as notas e quando usá-las?",
+            "p": [
+              "As notas, também chamadas marcas a lápis ou candidatos, são os algarismos pequenos que escreve numa célula vazia para indicar quais algarismos ainda são possíveis ali. Nos puzzles fáceis raramente são necessárias; a partir do Difícil tornam-se essenciais, porque técnicas como os pares, o X-Wing e o Y-Wing tratam de candidatos, não de algarismos colocados.",
+              "Mantenha as notas corretas: quando coloca um algarismo, retire-o das notas das 20 vizinhas. No Bare Sudoku isso acontece automaticamente, e Preencher notas escreve todos os candidatos em todas as células vazias com um só toque, para que possa começar com um conjunto completo e correto de candidatos. Uma nota é informação, não um palpite: significa que, por enquanto, nada exclui esse algarismo."
+            ]
+          },
+          {
+            "h": "O que fazer quando não consegue avançar?",
+            "p": [
+              "Primeiro reveja o básico: cada linha, coluna ou bloco quase cheio é uma fonte de singles. Depois confirme que as notas estão completas, porque um candidato em falta esconde padrões e um desatualizado cria padrões falsos. A seguir percorra as [técnicas](techniques) por ordem de dificuldade: candidatos bloqueados, pares e trios, X-Wing, Y-Wing, Swordfish e XYZ-Wing. Cada uma tem a sua página com um exemplo real.",
+              "Se nada funcionar, peça uma dica. No Bare Sudoku, a dica verifica primeiro se algum algarismo colocado está errado, depois encontra a próxima célula que pode ser preenchida por lógica e diz o nome da técnica, por isso aprende algo mesmo quando a usa. Toque na dica outra vez para colocar o algarismo."
+            ]
+          },
+          {
+            "h": "Como inserir algarismos no Bare Sudoku?",
+            "p": [
+              "Toque numa célula e depois num algarismo. Ou toque primeiro num algarismo: ele fica bloqueado e cada célula em que tocar recebe-o, que é a forma mais rápida de colocar a sexta, a sétima e a oitava ocorrência de um algarismo. Toque de novo no algarismo para o soltar. O botão Notas passa para as marcas a lápis, Apagar limpa uma célula, Desfazer anula qualquer jogada, e os erros são marcados em vermelho, a não ser que desligue isso no menu.",
+              "No teclado, use as setas para se mover, 1 a 9 para inserir um algarismo, Backspace para apagar, N para notas, U para desfazer, H para uma dica, F para preencher as notas e Escape para o menu. O jogo é salvo automaticamente, funciona offline e não tem anúncios nem conta."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Alguma vez é preciso adivinhar no Sudoku?",
+            "Num puzzle bem feito, não. Cada puzzle do Bare Sudoku tem exatamente uma solução e é verificado para que se resolva só com lógica, usando no máximo as técnicas do seu nível. Se achar que precisa de adivinhar, falta um candidato nas suas notas ou há uma técnica à espera de ser descoberta."
+          ],
+          [
+            "Um algarismo pode aparecer duas vezes numa linha, coluna ou bloco?",
+            "Não. A regra é toda essa: cada uma das nove linhas, das nove colunas e dos nove blocos contém cada algarismo de 1 a 9 exatamente uma vez. Se dois algarismos iguais partilham uma unidade, pelo menos um deles está errado."
+          ],
+          [
+            "Qual é a diferença entre Fácil, Médio, Difícil e Especialista?",
+            "O nível é definido pelas técnicas de que o puzzle precisa. Fácil e Médio resolvem-se só com singles, e o Fácil começa com pelo menos 38 algarismos dados. Difícil exige candidatos bloqueados ou pares e trios. Especialista exige X-Wing, Y-Wing, Swordfish ou XYZ-Wing."
+          ],
+          [
+            "É melhor preencher notas em todas as células ou só em algumas?",
+            "Nos puzzles Difícil e Especialista, preencha todas: padrões como pares, X-Wing e Y-Wing só aparecem quando todos os candidatos estão escritos. No Fácil e no Médio, as notas são opcionais e a maioria dos jogadores limita-se a procurar singles."
+          ],
+          [
+            "Quanto tempo demora um Sudoku?",
+            "Um puzzle Fácil demora alguns minutos; os puzzles Especialista podem levar vinte minutos ou mais, conforme a rapidez com que encontra o padrão avançado. O Bare Sudoku mostra o tempo, pausa-o enquanto o menu está aberto e não tem tabela de classificação, por isso jogue ao seu ritmo."
+          ],
+          [
+            "O Sudoku exige contas?",
+            "Não. Os algarismos são apenas rótulos; não há somas nem contagens. Quaisquer nove símbolos serviriam, e é por isso que o Sudoku é um puzzle de lógica e não de números."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Técnicas de resolução de Sudoku explicadas com exemplos",
+        "description": "As nove técnicas de resolução de Sudoku, do candidato único ao Swordfish e ao XYZ-Wing, na ordem usada pelas dicas do Bare Sudoku, cada uma com um exemplo real.",
+        "h1": "Técnicas de resolução de Sudoku",
+        "intro": [
+          "Qualquer Sudoku pode ser resolvido com um pequeno conjunto de técnicas lógicas. Este índice apresenta as nove técnicas que o solucionador do Bare Sudoku e as suas dicas usam, pela ordem em que o solucionador as tenta: primeiro os singles, depois as eliminações dentro de uma unidade e por fim os padrões que abrangem várias linhas e colunas. Cada técnica tem a sua página, com uma definição, como identificá-la, um exemplo real de um puzzle gerado e os erros comuns.",
+          "O nível de um puzzle é decidido pela técnica mais difícil de que precisa. Os níveis Fácil e Médio só precisam de singles, o Difícil precisa de candidatos bloqueados ou de pares e trios, e o Especialista precisa de pelo menos um peixe ou uma asa. Seja qual for o nível, os singles fazem a maior parte do trabalho; a técnica avançada remove um ou dois candidatos e os singles continuam a partir daí."
+        ],
+        "faq": [
+          [
+            "Por que ordem devo tentar as técnicas de Sudoku?",
+            "Das mais simples para as mais complexas: candidato único, lugar único, candidatos bloqueados, pares e trios nus, pares e trios ocultos, X-Wing, Y-Wing, Swordfish, XYZ-Wing. O Bare Sudoku tenta-as exatamente nesta ordem, e a dica indica sempre a técnica mais simples que permite avançar."
+          ],
+          [
+            "Preciso de todas estas técnicas para resolver um Sudoku?",
+            "Nos puzzles Fácil e Médio, os singles bastam. No Difícil juntam-se os candidatos bloqueados e os subconjuntos. No Especialista é preciso pelo menos um peixe ou uma asa, mas normalmente só uma ou duas vezes por puzzle."
+          ],
+          [
+            "Há técnicas mais difíceis do que o XYZ-Wing?",
+            "Sim, por exemplo cadeias, testes de unicidade e redes de forçamento. O Bare Sudoku não gera puzzles que precisem delas, por isso qualquer puzzle do jogo pode ser terminado com as nove técnicas desta página."
+          ],
+          [
+            "O que é um candidato?",
+            "Um algarismo que ainda pode ir para uma célula vazia, porque por enquanto nada na sua linha, coluna ou bloco o exclui. As notas do jogo são candidatos. Todas as técnicas além dos singles raciocinam sobre candidatos, por isso mantenha-os completos e corretos."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Candidato único",
+          "title": "Candidato único no Sudoku: a célula com um só candidato",
+          "description": "O candidato único (naked single) é uma célula vazia com um só algarismo possível. Aprenda a encontrá-lo depressa, com um exemplo real e os erros mais comuns.",
+          "h1": "Candidato único (naked single)",
+          "summary": "Um candidato único é uma célula vazia com exatamente um candidato: os outros oito algarismos já aparecem na sua linha, coluna ou bloco. O algarismo que resta tem de ir para ali. É a técnica mais simples do Sudoku, a que mais vai usar e a que a dica do Bare Sudoku indica como \"Só um candidato aqui\".",
+          "when": [
+            "Sempre. Os candidatos únicos aparecem da primeira à última jogada, em todos os níveis. Nos puzzles Fácil e Médio são, juntamente com os lugares únicos, a única técnica de que precisa. Nos puzzles mais difíceis, cada eliminação feita por uma técnica avançada costuma deixar um candidato único para trás, por isso procure-os depois de cada passo."
+          ],
+          "spot": [
+            "Olhe para células com muitas vizinhas preenchidas: uma célula numa linha que já tem sete algarismos, ou uma célula cuja linha, coluna e bloco juntos cobrem oito algarismos diferentes. Sem notas, conte os algarismos que vê a partir da célula. Com notas, um candidato único é simplesmente uma célula que mostra um só candidato, e é por isso que Preencher notas os torna fáceis de encontrar."
+          ],
+          "examples": [
+            {
+              "h": "Exemplo",
+              "steps": [
+                "Veja {cell}. Está vazia, por isso liste todos os algarismos já colocados na sua linha, na sua coluna e no seu bloco.",
+                "A linha {row} contém {rowDigits}. A coluna {col} contém {colDigits}. O bloco {box} contém {boxDigits}.",
+                "Juntos excluem todos os algarismos exceto {d}, por isso {d} é o único candidato que resta em {cell}.",
+                "Escreva {d} em {cell}. Depois verifique se o novo algarismo cria outro single na mesma linha, coluna ou bloco."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Contar só a linha ou só o bloco. Os oito algarismos excluídos costumam vir das três unidades em conjunto.",
+            "Esquecer que um algarismo colocado há instantes também exclui candidatos das suas 20 vizinhas; novos candidatos únicos aparecem logo a seguir a cada colocação.",
+            "Confundir candidato único com lugar único: no candidato único resta um candidato na célula, no lugar único resta uma célula para o algarismo numa unidade."
+          ],
+          "faq": [
+            [
+              "O que é um candidato único no Sudoku?",
+              "Uma célula vazia com exatamente um candidato. Oito algarismos diferentes já estão colocados na sua linha, coluna e bloco, por isso o nono é o único que cabe."
+            ],
+            [
+              "Por que razão em inglês se chama naked single?",
+              "Porque, com as notas escritas, o único candidato fica à vista na célula; nada o esconde (naked significa nu). O lugar único, em inglês hidden single, está no meio de outros candidatos e encontra-se olhando para o algarismo, não para a célula."
+            ],
+            [
+              "Um puzzle pode ser resolvido só com candidatos únicos?",
+              "Muitos puzzles Fácil podem, mas a maioria também precisa de lugares únicos. O Bare Sudoku classifica os puzzles Fácil e Médio como resolúveis com singles dos dois tipos; os puzzles Difícil e Especialista precisam de pelo menos mais uma técnica."
+            ],
+            [
+              "A dica mostra candidatos únicos?",
+              "Sim. Quando a próxima colocação é um candidato único, a dica seleciona a célula e diz \"Só um candidato aqui\" com o algarismo. Toque na dica outra vez para o colocar."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Lugar único",
+          "title": "Lugar único no Sudoku: a única célula para um algarismo",
+          "description": "O lugar único (hidden single) é a única célula de uma linha, coluna ou bloco onde um algarismo pode ir. Aprenda a vê-lo percorrendo um algarismo de cada vez.",
+          "h1": "Lugar único (hidden single)",
+          "summary": "Há um lugar único quando um algarismo só tem uma célula possível numa linha, coluna ou bloco, mesmo que essa célula mostre outros candidatos. Como a unidade tem de conter o algarismo, ele vai para ali. A dica do Bare Sudoku indica-o como \"Único lugar para 5 nesta linha\", nesta coluna ou neste bloco.",
+          "when": [
+            "Sempre que um algarismo está bem avançado: quando já aparece cinco ou seis vezes, os blocos restantes ficam muito restritos e um lugar único é muitas vezes a jogada seguinte. Os lugares únicos são a técnica principal dos puzzles Fácil e Médio e continuam a fazer o trabalho pesado em todos os níveis."
+          ],
+          "spot": [
+            "Percorra um algarismo de cada vez. Escolha um algarismo, encontre um bloco que não o contenha e risque todas as células desse bloco que partilham uma linha ou coluna com uma cópia já colocada do algarismo. Se sobrar uma só célula, encontrou um lugar único. A mesma varredura funciona em linhas e colunas. No jogo, toque num algarismo colocado: todas as suas cópias ficam destacadas, e as células livres saltam à vista."
+          ],
+          "examples": [
+            {
+              "h": "Exemplo",
+              "steps": [
+                "O bloco {box} ainda não contém {d}, por isso uma das suas células vazias tem de o receber. As células vazias são {empties}.",
+                "Em todas elas, exceto {cell}, o {d} está bloqueado por um {d} já colocado na mesma linha ou coluna, por isso {d} não é candidato ali.",
+                "Resta {cell} como único lugar para {d} no bloco {box}. Escreva {d} ali, mesmo que {cell} ainda mostre outros candidatos."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Colocar o algarismo numa célula que é apenas provavelmente a certa: verifique todas as outras células vazias da unidade, não só as óbvias.",
+            "Não ver um lugar único porque a célula mostra vários candidatos. Os outros candidatos não importam; o que importa é que o algarismo não tem outro lugar na unidade.",
+            "Percorrer só os blocos. As linhas e as colunas produzem lugares únicos com a mesma frequência, sobretudo perto do fim."
+          ],
+          "faq": [
+            [
+              "O que é um lugar único no Sudoku?",
+              "Um algarismo que só pode ir para uma célula de uma linha, coluna ou bloco. A unidade tem de conter o algarismo, por isso a célula fica decidida mesmo que ainda tenha outros candidatos."
+            ],
+            [
+              "Qual é a diferença entre lugar único e candidato único?",
+              "O candidato único diz respeito a uma célula: resta um candidato. O lugar único diz respeito a um algarismo: resta uma célula numa unidade. Ambos colocam um algarismo com certeza."
+            ],
+            [
+              "Qual é mais fácil de encontrar?",
+              "Sem notas, os lugares únicos costumam ser mais fáceis, porque pode percorrer o tabuleiro um algarismo de cada vez. Com notas completas, os candidatos únicos são os mais fáceis, já que uma célula com um só candidato salta à vista."
+            ],
+            [
+              "Como a dica descreve um lugar único?",
+              "Como \"Único lugar para\" o algarismo nesta linha, nesta coluna ou neste bloco, com a célula selecionada. Toque na dica outra vez para o colocar."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Candidatos bloqueados",
+          "title": "Candidatos bloqueados no Sudoku: apontar e reivindicar",
+          "description": "Candidatos bloqueados: se os candidatos de um algarismo num bloco estão todos numa linha ou coluna, ou o inverso, o algarismo sai do resto. Dois exemplos reais.",
+          "h1": "Candidatos bloqueados (locked candidates)",
+          "summary": "Os candidatos bloqueados são a primeira técnica que remove candidatos em vez de colocar um algarismo. Têm duas formas. Apontar: num bloco, todos os candidatos de um algarismo estão numa só linha ou coluna, por isso o algarismo é removido do resto dessa linha ou coluna. Reivindicar: numa linha ou coluna, todos os candidatos de um algarismo estão num só bloco, por isso o algarismo é removido do resto desse bloco. A dica do Bare Sudoku marca a colocação que eles desbloqueiam com \"Candidatos bloqueados\".",
+          "when": [
+            "Quando os singles se esgotam num puzzle Difícil, é a primeira coisa a tentar. Precisa de notas completas, pelo menos para o algarismo que examina. Os candidatos bloqueados são frequentes: a maioria dos puzzles Difícil precisa deles, e os puzzles Especialista usam-nos entre os padrões maiores."
+          ],
+          "spot": [
+            "Para apontar, olhe para cada bloco e para cada algarismo que lhe falta: se as células candidatas desse algarismo estão numa única linha ou coluna, verifique se o mesmo algarismo aparece como candidato mais adiante nessa linha ou coluna, fora do bloco. Para reivindicar, percorra uma linha ou coluna: se os candidatos de um algarismo estão todos dentro de um bloco, o resto desse bloco pode ser limpo. No jogo, toque na tecla de um algarismo para destacar todos os seus candidatos; duas ou três notas destacadas em fila dentro de um bloco são o padrão."
+          ],
+          "examples": [
+            {
+              "h": "Apontar",
+              "steps": [
+                "No bloco {box}, o algarismo {d} só tem estas células candidatas: {cells}. Todas estão na linha {row}.",
+                "O bloco {box} precisa de um {d}, por isso o {d} da linha {row} fica dentro do bloco {box}, seja qual for a célula onde acabe por ficar.",
+                "A linha {row} não pode ter um segundo {d}, por isso remova {d} das células da linha {row} fora do bloco: {elim}."
+              ]
+            },
+            {
+              "h": "Reivindicar",
+              "steps": [
+                "Na linha {row}, o algarismo {d} só pode ir para {cells}, e todas estão dentro do bloco {box}.",
+                "A linha {row} tem de conter {d}, por isso o {d} do bloco {box} é reivindicado pela linha {row}. As outras células do bloco {box} não podem ter {d}.",
+                "Remova {d} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Remover o algarismo dentro do bloco em vez de fora dele, ao apontar, ou o contrário, ao reivindicar. As eliminações vão sempre para as células que estão na linha ou coluna mas não no bloco, ou no bloco mas fora da linha ou coluna.",
+            "Aplicar a regra quando os candidatos se espalham por duas linhas do bloco. Todas as células candidatas do algarismo no bloco têm de estar numa só linha ou coluna.",
+            "Esquecer de procurar o single que a eliminação cria. Os candidatos bloqueados raramente colocam um algarismo por si só; preparam um single."
+          ],
+          "faq": [
+            [
+              "O que são candidatos bloqueados no Sudoku?",
+              "Candidatos de um algarismo confinados à interseção de um bloco com uma linha ou coluna. Como o bloco, ou a linha ou coluna, tem de conter o algarismo dentro dessa interseção, o algarismo pode ser removido do resto da linha ou coluna, ou do resto do bloco."
+            ],
+            [
+              "Qual é a diferença entre apontar e reivindicar?",
+              "Apontar parte de um bloco: os candidatos do algarismo no bloco apontam ao longo de uma linha ou coluna, por isso o algarismo é removido do resto dessa linha ou coluna. Reivindicar parte de uma linha ou coluna: os candidatos dela para o algarismo estão todos num bloco, por isso ela reivindica o algarismo e ele é removido do resto do bloco."
+            ],
+            [
+              "Os candidatos bloqueados também se chamam remoção por interseção?",
+              "Sim. Outros nomes são redução bloco-linha, para a forma de reivindicar, e pares ou trios apontadores, para a forma de apontar. O Bare Sudoku usa um único nome para as duas."
+            ],
+            [
+              "Que nível precisa de candidatos bloqueados?",
+              "Difícil. Um puzzle que precisa de candidatos bloqueados ou de subconjuntos, mas de nada mais difícil, é classificado como Difícil; os puzzles Especialista precisam também de um peixe ou de uma asa."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Pares e trios nus",
+          "title": "Pares e trios nus no Sudoku: como funcionam",
+          "description": "Pares e trios nus: duas ou três células de uma unidade que partilham os mesmos dois ou três candidatos. Aprenda a vê-los e o que remover, com exemplos reais.",
+          "h1": "Pares e trios nus (naked pair, naked triple)",
+          "summary": "Um par nu são duas células da mesma linha, coluna ou bloco com exatamente os mesmos dois candidatos. Os dois algarismos têm de ir para essas duas células, por isso podem ser removidos de todas as outras células da unidade. Um trio nu é a mesma ideia com três células e três algarismos; cada célula pode mostrar dois deles ou os três. A dica do Bare Sudoku marca a colocação resultante como \"Par ou trio\".",
+          "when": [
+            "Depois de as notas estarem completas e de se esgotarem os singles e os candidatos bloqueados. Os pares nus são muito frequentes nos puzzles Difícil; os trios nus, menos. Vale a pena procurar ambos em todas as unidades que ainda tenham cinco ou mais células vazias."
+          ],
+          "spot": [
+            "Procure células com apenas dois candidatos e encontre outra célula na mesma unidade com os mesmos dois. Para trios, olhe para unidades com várias células de dois e três candidatos e veja se três delas, juntas, usam só três algarismos diferentes. Células com exatamente os mesmos candidatos veem-se facilmente quando as notas estão escritas; no jogo, Preencher notas faz isso com um só toque."
+          ],
+          "examples": [
+            {
+              "h": "Par nu",
+              "steps": [
+                "{cellA} e {cellB} estão na mesma unidade ({unit}) e têm exatamente os mesmos dois candidatos: {d1} e {d2}.",
+                "Uma delas tem de ser {d1} e a outra {d2}. Não sabemos qual é qual, mas os dois algarismos ficam gastos nestas duas células.",
+                "Por isso, nenhuma outra célula da unidade ({unit}) pode ter {d1} ou {d2}. Remova {elim}."
+              ]
+            },
+            {
+              "h": "Trio nu",
+              "steps": [
+                "Três células da unidade ({unit}) tiram todos os seus candidatos dos mesmos três algarismos, {digits}: {cells}.",
+                "Os três algarismos têm de preencher estas três células por alguma ordem. Uma célula não precisa de mostrar os três candidatos; o que importa é que nenhuma das três células tenha um candidato fora do conjunto.",
+                "Remova {digits} de todas as outras células da unidade ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Escolher duas células que partilham dois candidatos mas também têm um terceiro. Num par nu, cada célula tem de ter exatamente os dois candidatos e mais nenhum.",
+            "Remover os algarismos das próprias células do par. O par mantém os seus candidatos; as eliminações vão para as outras células da unidade.",
+            "Exigir que todas as células de um trio mostrem os três algarismos. Uma célula com dois dos três serve, desde que nenhuma célula tenha um candidato fora do conjunto."
+          ],
+          "faq": [
+            [
+              "O que é um par nu no Sudoku?",
+              "Duas células de uma unidade que têm ambas exatamente os mesmos dois candidatos. Esses dois algarismos ficam presos a essas duas células, por isso podem ser removidos do resto da unidade."
+            ],
+            [
+              "O que é um trio nu?",
+              "Três células de uma unidade cujos candidatos, juntos, são apenas três algarismos. Cada célula pode ter dois ou três deles. Os três algarismos preenchem as três células, por isso podem ser removidos das outras células da unidade."
+            ],
+            [
+              "Um par nu coloca um algarismo?",
+              "Não por si só. Remove candidatos, e a remoção costuma deixar um candidato único ou um lugar único. A dica do Bare Sudoku mostra esse single e diz o nome da técnica que o tornou possível."
+            ],
+            [
+              "Um par nu pode estar num bloco e numa linha ao mesmo tempo?",
+              "Sim. Se as duas células partilham uma linha e um bloco, o par elimina nas duas unidades. O Bare Sudoku trata-as uma unidade de cada vez."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Pares e trios ocultos",
+          "title": "Pares e trios ocultos no Sudoku: como identificá-los",
+          "description": "Par oculto: dois algarismos que só podem ir para as mesmas duas células de uma unidade, que perdem os outros candidatos. Aprenda a achar pares e trios ocultos.",
+          "h1": "Pares e trios ocultos (hidden pair, hidden triple)",
+          "summary": "Um par oculto são dois algarismos que, dentro de uma linha, coluna ou bloco, são candidatos nas mesmas duas células e em mais nenhuma. Essas duas células têm de ficar com esses dois algarismos, por isso todos os outros candidatos delas podem ser removidos. Um trio oculto funciona da mesma forma, com três algarismos confinados a três células. Depois da remoção, as células mostram um par ou trio nu. A dica do Bare Sudoku marca a colocação resultante como \"Par ou trio\".",
+          "when": [
+            "Quando uma unidade tem células com muitos candidatos e os singles acabaram. Os pares ocultos escondem-se dentro de células cheias, e por isso vale a pena procurá-los exatamente onde não se veem pares nus. Os trios ocultos são raros; o Bare Sudoku procura-os, mas a maioria dos puzzles Difícil resolve-se sem eles."
+          ],
+          "spot": [
+            "Trabalhe por algarismo, não por célula. Numa unidade, anote as células onde cada algarismo em falta pode ir. Se dois algarismos têm cada um só duas células possíveis e são as mesmas duas, encontrou um par oculto. No jogo, toque na tecla de um algarismo para destacar os seus candidatos; se dois algarismos acendem as mesmas duas células de uma unidade e mais nada nela, esse é o padrão."
+          ],
+          "examples": [
+            {
+              "h": "Par oculto",
+              "steps": [
+                "Nesta unidade ({unit}), os algarismos {d1} e {d2} têm cada um só duas células possíveis, e são as mesmas duas: {cells}.",
+                "Essas duas células têm de ficar com {d1} e {d2}, por isso os outros candidatos delas são impossíveis.",
+                "Remova {elim}. Agora as duas células mostram um par nu, que pode desbloquear mais jogadas."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Remover os dois algarismos do par das células do par. O que sai são os outros candidatos dessas células; os algarismos do par ficam.",
+            "Aceitar um algarismo que tem uma terceira célula possível na unidade. Os dois algarismos têm de estar limitados exatamente às duas células.",
+            "Procurar só nos blocos. Os pares ocultos aparecem com a mesma frequência em linhas e colunas."
+          ],
+          "faq": [
+            [
+              "O que é um par oculto no Sudoku?",
+              "Dois algarismos que só podem ir para as mesmas duas células de uma unidade. Essas células têm de ficar com esses algarismos, por isso os seus outros candidatos são removidos."
+            ],
+            [
+              "Qual a diferença entre um par oculto e um par nu?",
+              "Um par nu está à vista: duas células que mostram só os mesmos dois candidatos. Um par oculto está tapado por candidatos extra nas duas células. Remover esses extras transforma o par oculto num par nu."
+            ],
+            [
+              "O que é um trio oculto?",
+              "Três algarismos confinados a três células de uma unidade. Cada algarismo não precisa de aparecer nas três células; o que importa é que nenhum dos três algarismos tenha um candidato fora dessas células."
+            ],
+            [
+              "A dica distingue pares ocultos de pares nus?",
+              "Não. O Bare Sudoku encontra ambos e marca a colocação resultante como \"Par ou trio\". Estas páginas separam-nos porque se encontram de formas diferentes."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing no Sudoku: como funciona a técnica",
+          "description": "X-Wing: um algarismo com exatamente duas células candidatas em duas linhas, alinhadas nas mesmas duas colunas, sai do resto dessas colunas. Exemplo real.",
+          "h1": "X-Wing",
+          "summary": "Um X-Wing é um padrão de um algarismo e quatro células nos cantos de um retângulo. Se o algarismo tem exatamente duas células candidatas em cada uma de duas linhas, e essas células estão nas mesmas duas colunas, então o algarismo ocupa dois cantos opostos do retângulo. Por isso pode ser removido de todas as outras células dessas duas colunas. O mesmo funciona trocando linhas e colunas. É a primeira técnica de nível Especialista do Bare Sudoku.",
+          "when": [
+            "Quando os singles, os candidatos bloqueados e os subconjuntos se esgotam. O X-Wing é o padrão Especialista mais frequente e aparece muitas vezes quando um algarismo tem poucos candidatos, tipicamente com quatro a seis cópias já colocadas. Precisa de notas completas para o algarismo que examina."
+          ],
+          "spot": [
+            "Escolha um algarismo e procure linhas em que ele tenha exatamente duas células candidatas. Se duas dessas linhas partilham as mesmas duas colunas, procure nessas colunas outros candidatos do algarismo: são essas as eliminações. Depois repita usando as colunas como base. No jogo, toque na tecla do algarismo: todos os seus candidatos ficam destacados, e um retângulo de quatro notas destacadas vê-se facilmente."
+          ],
+          "examples": [
+            {
+              "h": "Exemplo",
+              "steps": [
+                "O algarismo {d} tem exatamente duas células candidatas na linha {r1} e exatamente duas na linha {r2}, e elas alinham-se nas mesmas duas colunas, {c1} e {c2}: {cells}.",
+                "A linha {r1} põe o seu {d} na coluna {c1} ou {c2}, e a linha {r2} põe o seu {d} na outra. Em qualquer caso, as colunas {c1} e {c2} recebem cada uma um {d} destas duas linhas.",
+                "Por isso {d} não pode aparecer em mais nenhum lugar das colunas {c1} e {c2}. Remova {d} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Usar uma linha com três células candidatas para o algarismo. Cada linha base tem de ter exatamente duas, e ambas nas duas colunas partilhadas.",
+            "Remover o algarismo das linhas em vez das colunas. Com as linhas como base, as eliminações são nas colunas, e vice-versa.",
+            "Esquecer a versão trocada. Um X-Wing construído sobre colunas elimina em linhas."
+          ],
+          "faq": [
+            [
+              "O que é um X-Wing no Sudoku?",
+              "Um algarismo com exatamente duas células candidatas em cada uma de duas linhas, nas mesmas duas colunas. O algarismo ocupa dois cantos opostos desse retângulo, por isso é removido do resto das duas colunas. Linhas e colunas podem ser trocadas."
+            ],
+            [
+              "Por que razão funciona o X-Wing?",
+              "Cada uma das duas linhas tem de colocar o algarismo numa das duas colunas, e as duas linhas não podem usar a mesma coluna. Assim, cada coluna recebe a sua cópia do algarismo destas linhas, e qualquer outro candidato nessas colunas é impossível."
+            ],
+            [
+              "O X-Wing é um peixe?",
+              "Sim. O X-Wing é o peixe de tamanho dois; o Swordfish é o peixe de tamanho três. O Bare Sudoku encontra ambos."
+            ],
+            [
+              "Em que nível aparecem X-Wings?",
+              "Especialista. Um puzzle que precisa de X-Wing, Y-Wing, Swordfish ou XYZ-Wing é classificado como Especialista."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing no Sudoku: como funciona a técnica",
+          "description": "Y-Wing (XY-Wing): um pivô com dois candidatos e duas asas que partilham um deles cada tiram um algarismo de todas as células que veem as duas asas. Exemplo.",
+          "h1": "Y-Wing",
+          "summary": "Um Y-Wing, também chamado XY-Wing, usa três células com dois candidatos cada. O pivô tem os candidatos X e Y. Uma asa vê o pivô e tem X e Z; a outra asa vê o pivô e tem Y e Z. Seja qual for o valor do pivô, uma das asas tem de ser Z, por isso Z pode ser removido de todas as células que veem as duas asas. É uma técnica de nível Especialista no Bare Sudoku.",
+          "when": [
+            "Quando um puzzle tem várias células com exatamente dois candidatos e não há nenhum peixe disponível. Os Y-Wings são frequentes nos puzzles Especialista e encontram-se seguindo as células de dois candidatos: cada uma é um possível pivô ou uma possível asa."
+          ],
+          "spot": [
+            "Liste as células com exatamente dois candidatos. Para cada uma, trate-a como pivô com os candidatos X e Y e procure entre as suas vizinhas uma célula com X e outro algarismo Z, e uma célula com Y e o mesmo Z. Essas duas são as asas. Depois encontre as células que veem as duas asas e contêm Z. Note que as asas não precisam de se ver uma à outra."
+          ],
+          "examples": [
+            {
+              "h": "Exemplo",
+              "steps": [
+                "O pivô {pivot} tem os candidatos {x} e {y}. Vê {wingA}, que tem {x} e {z}, e {wingB}, que tem {y} e {z}.",
+                "Se {pivot} for {x}, então {wingA} perde o {x} e fica {z}. Se {pivot} for {y}, então {wingB} fica {z}. Em qualquer caso, uma das duas asas é {z}.",
+                "Uma célula que vê as duas asas nunca pode ser {z}. Remova {z} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Escolher asas que não veem ambas o pivô. Cada asa tem de partilhar uma linha, coluna ou bloco com o pivô.",
+            "Remover Z de células que veem só uma asa. A célula eliminada tem de ver as duas asas.",
+            "Remover Z do pivô. Num Y-Wing o pivô não contém Z; se contiver, o padrão é um XYZ-Wing, com regras diferentes."
+          ],
+          "faq": [
+            [
+              "O que é um Y-Wing no Sudoku?",
+              "Três células de dois candidatos: um pivô com X e Y, uma asa com X e Z que vê o pivô e uma asa com Y e Z que vê o pivô. Uma asa é sempre Z, por isso Z é removido das células que veem as duas asas."
+            ],
+            [
+              "Y-Wing é o mesmo que XY-Wing?",
+              "Sim. Os dois nomes descrevem o mesmo padrão. O Bare Sudoku chama-lhe Y-Wing."
+            ],
+            [
+              "Por que razão uma asa tem de ser Z?",
+              "Se o pivô for X, a primeira asa perde o X e fica Z. Se o pivô for Y, a segunda asa fica Z. O pivô é um dos dois, por isso uma asa é Z."
+            ],
+            [
+              "Quantas células elimina um Y-Wing?",
+              "Normalmente uma ou duas: só as células que veem as duas asas e ainda contêm Z. Isso basta para criar um single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish no Sudoku: como funciona a técnica",
+          "description": "Swordfish: um algarismo confinado a três colunas ao longo de três linhas sai do resto dessas colunas. O peixe de tamanho três, explicado com um exemplo real.",
+          "h1": "Swordfish",
+          "summary": "Um Swordfish é um X-Wing com três linhas e três colunas. Se um algarismo tem no máximo três células candidatas em cada uma de três linhas, e todas essas células caem nas mesmas três colunas, então as três linhas esgotam o algarismo nessas colunas, e ele pode ser removido de todas as outras células das três colunas. Linhas e colunas podem ser trocadas. O Bare Sudoku procura o Swordfish depois do Y-Wing, nos puzzles Especialista.",
+          "when": [
+            "Quando o X-Wing e o Y-Wing não encontram nada. O Swordfish é menos frequente do que o X-Wing e precisa de um algarismo com poucos candidatos espalhados por três linhas ou colunas. Precisa de notas completas e corretas para esse algarismo."
+          ],
+          "spot": [
+            "Escolha um algarismo e procure linhas com duas ou três células candidatas para ele. Se três dessas linhas cobrem só três colunas no total, procure nessas colunas mais candidatos do algarismo. Nem todas as linhas precisam de um candidato em todas as colunas: um Swordfish pode ter seis, sete, oito ou nove células. No jogo, destaque o algarismo com a sua tecla e procure três linhas cujos candidatos se alinham em três colunas."
+          ],
+          "examples": [
+            {
+              "h": "Exemplo",
+              "steps": [
+                "O algarismo {d} tem no máximo três células candidatas em cada uma das linhas {rows}, e todas essas células caem nas colunas {cols}: {cells}.",
+                "Cada uma das três linhas tem de colocar o seu {d} numa das três colunas, e duas linhas não podem usar a mesma coluna. Assim, as três colunas recebem o seu {d} destas três linhas.",
+                "Qualquer outro candidato {d} nas colunas {cols} é impossível. Remova {d} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Exigir as nove células. Um Swordfish com dois candidatos em algumas linhas continua válido, desde que as três linhas cubram só três colunas.",
+            "Incluir uma linha com quatro células candidatas. Cada linha base tem de ter no máximo três, todas dentro das três colunas.",
+            "Eliminar nas linhas base. Com as linhas como base, as eliminações são nas três colunas, fora das linhas base."
+          ],
+          "faq": [
+            [
+              "O que é um Swordfish no Sudoku?",
+              "Um algarismo cujos candidatos em três linhas estão confinados a três colunas. As três linhas têm de colocar o algarismo nessas três colunas, uma em cada, por isso o algarismo é removido das outras células dessas colunas."
+            ],
+            [
+              "Qual a diferença entre um Swordfish e um X-Wing?",
+              "Só o tamanho: um X-Wing usa duas linhas e duas colunas, um Swordfish três e três. O raciocínio é o mesmo."
+            ],
+            [
+              "Um Swordfish precisa de exatamente nove células?",
+              "Não. Cada linha pode ter dois ou três candidatos; o padrão só exige que as três linhas, juntas, não usem mais de três colunas."
+            ],
+            [
+              "Existe um peixe de tamanho quatro?",
+              "Sim, o Jellyfish. O Bare Sudoku não o usa, porque os seus puzzles nunca precisam dele."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing no Sudoku: como funciona a técnica",
+          "description": "XYZ-Wing: um pivô com três candidatos e duas asas que partilham um deles tiram esse algarismo de todas as células que veem as três. Exemplo real, passo a passo.",
+          "h1": "XYZ-Wing",
+          "summary": "Um XYZ-Wing é um Y-Wing cujo pivô tem três candidatos. O pivô tem X, Y e Z; uma asa vê o pivô e tem X e Z, a outra vê o pivô e tem Y e Z. Uma das três células tem de ser Z, por isso Z pode ser removido de todas as células que veem as três. Como o próprio pivô pode ser Z, a célula eliminada tem de ver o pivô além das duas asas, o que a limita ao bloco, linha ou coluna que as células partilham. É a técnica mais difícil que o Bare Sudoku usa.",
+          "when": [
+            "Só quando tudo o resto falha. O XYZ-Wing é o padrão mais raro do Bare Sudoku e só aparece em puzzles Especialista. Procure-o quando uma célula de três candidatos está num bloco com uma célula de dois candidatos que partilha dois dos seus algarismos."
+          ],
+          "spot": [
+            "Comece pelas células com exatamente três candidatos; cada uma é um possível pivô. Entre as suas vizinhas, procure duas células com dois candidatos cada, ambos tirados dos três do pivô, que partilhem exatamente um algarismo Z. Depois procure células que vejam o pivô e as duas asas e contenham Z. Na prática, uma asa está no bloco do pivô e a outra na sua linha ou coluna, e as células eliminadas são as restantes células desse bloco nessa linha ou coluna."
+          ],
+          "examples": [
+            {
+              "h": "Exemplo",
+              "steps": [
+                "O pivô {pivot} tem três candidatos: {x}, {y} e {z}. Vê {wingA}, com {x} e {z}, e {wingB}, com {y} e {z}.",
+                "Se {pivot} for {z}, está feito. Se for {x}, {wingA} tem de ser {z}. Se for {y}, {wingB} tem de ser {z}. Em qualquer caso, uma das três células é {z}.",
+                "Uma célula que vê as três não pode ser {z}. Remova {z} de {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminar em células que veem só as duas asas. Ao contrário do Y-Wing, o pivô pode ser Z, por isso a célula tem de ver também o pivô.",
+            "Usar asas cujos candidatos não estão ambos contidos nos três candidatos do pivô.",
+            "Confundi-lo com um Y-Wing: a diferença é o terceiro candidato no pivô, e isso muda as células que podem ser limpas."
+          ],
+          "faq": [
+            [
+              "O que é um XYZ-Wing no Sudoku?",
+              "Um pivô com os candidatos X, Y e Z e duas asas, uma com X e Z e outra com Y e Z, que veem ambas o pivô. Uma das três células é Z, por isso Z é removido das células que veem as três."
+            ],
+            [
+              "Qual a diferença entre um XYZ-Wing e um Y-Wing?",
+              "O pivô tem três candidatos em vez de dois, incluindo Z. Isso torna o pivô um lugar possível para Z, por isso só as células que veem o pivô e as duas asas podem perder Z."
+            ],
+            [
+              "Com que frequência aparece um XYZ-Wing?",
+              "Raramente. No Bare Sudoku só os puzzles Especialista podem precisar de um, e a maioria não precisa. O Bare Sudoku procura-o em último lugar, depois do X-Wing, do Y-Wing e do Swordfish."
+            ],
+            [
+              "Existe um WXYZ-Wing?",
+              "Sim, com um pivô de quatro candidatos, mas o Bare Sudoku não o usa. Qualquer puzzle do jogo pode ser terminado com as nove técnicas deste guia."
+            ]
+          ]
+        }
+      }
+    },
+    "it": {
+      "learnHeading": "Impara il Sudoku",
+      "learnText": "Sei alle prime armi con il Sudoku o bloccato su uno schema difficile? Due guide spiegano le regole e ogni tecnica di risoluzione usata dai suggerimenti, ognuna con un esempio reale.",
+      "howToLink": "Come si gioca a Sudoku",
+      "techniquesLink": "Tecniche di risoluzione del Sudoku",
+      "labels": {
+        "howTo": "Come si gioca",
+        "techniques": "Tecniche",
+        "play": "Gioca a Sudoku",
+        "prev": "Tecnica precedente",
+        "next": "Tecnica successiva",
+        "all": "Tutte le tecniche",
+        "example": "Esempio",
+        "steps": "Passo dopo passo",
+        "when": "Quando usarla",
+        "spot": "Come individuarla",
+        "mistakes": "Errori comuni",
+        "inGame": "In Bare Sudoku",
+        "level": "Necessaria dal livello: {level}",
+        "hint": "Nel gioco il suggerimento dice: {text}",
+        "legend": "Le cifre in grassetto sono date, quelle blu sono state inserite durante la risoluzione e quelle piccole sono candidati. Le caselle evidenziate formano la configurazione, i candidati barrati vengono eliminati e il candidato cerchiato è la cifra da inserire.",
+        "notation": "Le caselle si indicano come r3c7: riga 3, colonna 7. Le righe si contano dall'alto, le colonne da sinistra e i blocchi da 1 a 9 a partire dall'angolo in alto a sinistra, riga per riga.",
+        "row": "riga {n}",
+        "column": "colonna {n}",
+        "box": "blocco {n}",
+        "elimItem": "{d} da {cell}",
+        "regions": "Riga 5, colonna 5 e blocco 5 all'inizio di uno schema",
+        "firstMove": "Singolo nudo: {cell} può essere solo {d}",
+        "breadcrumb": "Percorso di navigazione"
+      },
+      "howTo": {
+        "title": "Come si gioca a Sudoku: regole, griglia e prime mosse",
+        "description": "Impara a giocare a Sudoku: le regole, come funzionano righe, colonne e blocchi, perché c'è una sola soluzione, come usare le note e come fare le prime mosse.",
+        "h1": "Come si gioca a Sudoku",
+        "summary": "Il Sudoku è un rompicapo logico su una griglia 9×9. Riempi ogni casella vuota con una cifra da 1 a 9 in modo che ogni riga, ogni colonna e ogni blocco 3×3 contenga tutte le cifre esattamente una volta. Alcune cifre sono date all'inizio; il resto lo deduci, una casella certa alla volta, senza mai dover tirare a indovinare. Questa guida spiega la griglia, le regole, il principio della soluzione unica, le note e una strategia semplice per le prime mosse. Puoi fare pratica con tutto in [Bare Sudoku](play), che è gratuito e ha suggerimenti che spiegano la logica.",
+        "sections": [
+          {
+            "h": "Quali sono le regole del Sudoku?",
+            "p": [
+              "Le regole sono solo tre, e sono la stessa regola vista da tre direzioni: ogni riga deve contenere le cifre da 1 a 9, ogni colonna deve contenere le cifre da 1 a 9 e ogni blocco 3×3 deve contenere le cifre da 1 a 9. Quindi una cifra non può mai comparire due volte nella stessa riga, colonna o blocco.",
+              "Le cifre date, stampate in grassetto, sono fisse. Il tuo compito è riempire le caselle vuote. Non ci sono calcoli né ordinamenti: le cifre sono solo nove simboli diversi. Potresti giocare con lettere o forme e non cambierebbe nulla."
+            ]
+          },
+          {
+            "h": "Com'è organizzata la griglia?",
+            "p": [
+              "La griglia ha 81 caselle disposte in 9 righe e 9 colonne. Linee spesse la dividono in nove blocchi 3×3. Ogni casella appartiene esattamente a una riga, a una colonna e a un blocco, e questi tre gruppi sono le sue unità. Le altre 20 caselle che condividono un'unità con una casella si chiamano le sue vicine; una cifra inserita in una casella esclude quella cifra da tutte le 20 vicine.",
+              "Le caselle si indicano come r3c7: riga 3, colonna 7. Le righe si contano dall'alto, le colonne da sinistra e i blocchi da 1 a 9 a partire dall'angolo in alto a sinistra, riga per riga. Questa notazione è usata in tutte le guide alle tecniche e vale la pena impararla: r5c5 è il centro della griglia."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Perché ogni Sudoku ha esattamente una soluzione?",
+            "p": [
+              "Un Sudoku ben fatto ha una sola soluzione, ed è questo che fa funzionare la logica. Ogni volta che riesci a dimostrare che una cifra non può andare da nessun'altra parte in un'unità, deve andare nella casella rimasta, perché la soluzione esiste ed è unica. Se uno schema avesse due soluzioni, nessun ragionamento potrebbe distinguerle e a un certo punto dovresti tirare a indovinare.",
+              "Bare Sudoku genera ogni schema sul tuo dispositivo e controlla che abbia esattamente una soluzione e che il suo risolutore logico riesca a completarlo con le tecniche del livello scelto. Quindi, se sei bloccato, c'è sempre un passo successivo da trovare, e il suggerimento te lo mostra."
+            ]
+          },
+          {
+            "h": "Come si inizia uno schema di Sudoku?",
+            "p": [
+              "Parti da ciò che è più vincolato. Quest'ordine funziona a ogni livello:"
+            ],
+            "list": [
+              "Scegli una cifra che compare già molte volte, diciamo sei o sette, e trova i blocchi in cui manca ancora. Spesso in un blocco le resta una sola casella: è un [singolo nascosto](hidden-single).",
+              "Cerca le caselle affollate. Una casella la cui riga, colonna e blocco contengono insieme otto cifre diverse ha un solo candidato: è un [singolo nudo](naked-single). Le caselle di righe o blocchi quasi pieni sono il posto migliore dove cercare.",
+              "Ogni cifra che inserisci toglie un candidato da 20 vicine, quindi controlla subito quelle vicine. I singoli tendono ad arrivare a catena.",
+              "Quando gli inserimenti facili finiscono, scrivi le note: i candidati di ogni casella vuota. Poi cerca una cifra confinata in una sola linea all'interno di un blocco ([candidati bloccati](locked-candidates)) o due caselle con gli stessi due candidati (una [coppia nuda](naked-pairs)).",
+              "Torna ai singoli dopo ogni eliminazione. Anche gli schemi Esperto si risolvono soprattutto con i singoli; la tecnica avanzata sblocca solo il prossimo."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Cosa sono le note e quando usarle?",
+            "p": [
+              "Le note, chiamate anche segni a matita o candidati, sono le cifre piccole che scrivi in una casella vuota per ricordare quali cifre sono ancora possibili lì. Negli schemi facili servono di rado; da Difficile in su sono indispensabili, perché tecniche come le coppie, X-Wing e Y-Wing riguardano i candidati, non le cifre inserite.",
+              "Tieni le note precise: quando inserisci una cifra, toglila dalle note di tutte le 20 vicine. In Bare Sudoku succede automaticamente, e Riempi note scrive ogni candidato in ogni casella vuota con un solo tocco, così puoi partire da un insieme di candidati completo e corretto. Una nota è un fatto, non un'ipotesi: significa che finora nulla esclude quella cifra."
+            ]
+          },
+          {
+            "h": "Cosa fare quando sei bloccato?",
+            "p": [
+              "Prima ricontrolla le basi: ogni riga, colonna e blocco quasi pieno è una fonte di singoli. Poi assicurati che le note siano complete, perché un candidato mancante nasconde le configurazioni e uno non aggiornato ne crea di false. Poi passa in rassegna le [tecniche](techniques) in ordine di difficoltà: candidati bloccati, coppie e triple, X-Wing, Y-Wing, Swordfish e XYZ-Wing. Ognuna ha la sua pagina con un esempio reale.",
+              "Se non funziona niente, chiedi un suggerimento. In Bare Sudoku il suggerimento controlla prima se una cifra inserita è sbagliata, poi trova la prossima casella che si può riempire con la logica e nomina la tecnica, così impari qualcosa anche quando lo usi. Tocca di nuovo il suggerimento per inserire la cifra."
+            ]
+          },
+          {
+            "h": "Come si inseriscono le cifre in Bare Sudoku?",
+            "p": [
+              "Tocca una casella e poi una cifra. Oppure tocca prima una cifra: resta bloccata e ogni casella che tocchi la riceve, il modo più rapido per inserire la sesta, la settima e l'ottava copia di una cifra. Tocca di nuovo la cifra per sbloccarla. Il pulsante Note passa ai segni a matita, Cancella svuota una casella, Annulla ritira qualsiasi mossa e gli errori sono segnati in rosso, a meno che tu non lo disattivi nel menu.",
+              "Da tastiera usa le frecce per spostarti, da 1 a 9 per inserire una cifra, Backspace per cancellare, N per le note, U per annullare, H per un suggerimento, F per riempire le note ed Escape per il menu. Il gioco si salva da solo, funziona offline e non ha pubblicità né account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Nel Sudoku bisogna mai tirare a indovinare?",
+            "Non in uno schema ben fatto. Ogni schema di Bare Sudoku ha esattamente una soluzione ed è verificato come risolvibile con la sola logica, usando al massimo le tecniche del suo livello. Se ti sembra di dover tirare a indovinare, manca un candidato nelle tue note oppure c'è una tecnica che aspetta di essere trovata."
+          ],
+          [
+            "Una cifra può comparire due volte in una riga, colonna o blocco?",
+            "No. La regola è tutta qui: ognuna delle nove righe, delle nove colonne e dei nove blocchi contiene ogni cifra da 1 a 9 esattamente una volta. Se due cifre uguali condividono un'unità, almeno una delle due è sbagliata."
+          ],
+          [
+            "Che differenza c'è tra Facile, Medio, Difficile ed Esperto?",
+            "Il livello dipende dalle tecniche che lo schema richiede. Facile e Medio si risolvono solo con i singoli, e Facile parte con almeno 38 cifre date. Difficile richiede candidati bloccati oppure coppie e triple. Esperto richiede X-Wing, Y-Wing, Swordfish o XYZ-Wing."
+          ],
+          [
+            "Meglio scrivere le note in tutte le caselle o solo in alcune?",
+            "Negli schemi Difficile ed Esperto, scrivile tutte: configurazioni come coppie, X-Wing e Y-Wing emergono solo quando ogni candidato è scritto. In Facile e Medio le note sono facoltative e la maggior parte dei giocatori cerca semplicemente i singoli."
+          ],
+          [
+            "Quanto dura un Sudoku?",
+            "Uno schema Facile richiede pochi minuti; gli schemi Esperto possono richiedere venti minuti o più, a seconda di quanto in fretta individui la configurazione avanzata. Bare Sudoku mostra un timer, lo mette in pausa mentre il menu è aperto e non ha classifiche, quindi gioca al tuo ritmo."
+          ],
+          [
+            "Per il Sudoku serve l'aritmetica?",
+            "No. Le cifre sono solo etichette; non si somma e non si conta. Andrebbero bene nove simboli qualsiasi, ed è per questo che il Sudoku è un rompicapo logico e non numerico."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tecniche di risoluzione del Sudoku spiegate con esempi",
+        "description": "Le nove tecniche di risoluzione del Sudoku, dai singoli nudi a Swordfish e XYZ-Wing, nell'ordine usato dai suggerimenti di Bare Sudoku, con esempi reali.",
+        "h1": "Tecniche di risoluzione del Sudoku",
+        "intro": [
+          "Ogni Sudoku si può risolvere con un piccolo insieme di tecniche logiche. Questo indice elenca le nove tecniche usate dal risolutore di Bare Sudoku e dai suoi suggerimenti, nell'ordine in cui il risolutore le prova: prima i singoli, poi le eliminazioni all'interno di un'unità, poi le configurazioni che si estendono su più righe e colonne. Ogni tecnica ha la sua pagina con una definizione, come individuarla, un esempio reale tratto da uno schema generato e gli errori comuni.",
+          "Il livello di uno schema è deciso dalla tecnica più difficile che richiede. Gli schemi Facile e Medio richiedono solo i singoli, gli schemi Difficile richiedono candidati bloccati oppure coppie e triple, e gli schemi Esperto richiedono almeno un pesce o un'ala. Qualunque sia il livello, i singoli fanno la maggior parte del lavoro; la tecnica avanzata elimina un candidato o due e da lì ripartono i singoli."
+        ],
+        "faq": [
+          [
+            "In che ordine conviene provare le tecniche del Sudoku?",
+            "Prima le più semplici: singoli nudi, singoli nascosti, candidati bloccati, coppie e triple nude, coppie e triple nascoste, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku le prova esattamente in quest'ordine, e un suggerimento nomina sempre la tecnica più semplice che permette di avanzare."
+          ],
+          [
+            "Servono tutte queste tecniche per risolvere un Sudoku?",
+            "Per gli schemi Facile e Medio bastano i singoli. Gli schemi Difficile aggiungono candidati bloccati e sottoinsiemi. Gli schemi Esperto richiedono almeno un pesce o un'ala, ma di solito solo una o due volte per schema."
+          ],
+          [
+            "Esistono tecniche più difficili dell'XYZ-Wing?",
+            "Sì, per esempio catene, test di unicità e reti di forzatura. Bare Sudoku non genera schemi che le richiedano, quindi ogni schema del gioco si può completare con le nove tecniche di questa pagina."
+          ],
+          [
+            "Che cos'è un candidato?",
+            "Una cifra che potrebbe ancora andare in una casella vuota perché finora niente nella sua riga, colonna o blocco la esclude. Le note nel gioco sono candidati. Ogni tecnica oltre i singoli ragiona sui candidati, quindi tienili completi e precisi."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Singolo nudo",
+          "title": "Singolo nudo nel Sudoku: la casella con un solo candidato",
+          "description": "Un singolo nudo è una casella vuota in cui può andare una sola cifra. Impara a trovare i singoli nudi in fretta, con un esempio reale e gli errori tipici.",
+          "h1": "Singolo nudo (naked single)",
+          "summary": "Un singolo nudo è una casella vuota che ha esattamente un candidato: le altre otto cifre compaiono già nella sua riga, colonna o blocco. La cifra rimasta deve andare lì. È la tecnica più semplice del Sudoku, quella che userai di più e quella che il suggerimento di Bare Sudoku segnala con \"Un solo candidato qui\".",
+          "when": [
+            "Sempre. I singoli nudi compaiono dalla prima all'ultima mossa, a ogni livello. Negli schemi Facile e Medio sono, insieme ai singoli nascosti, l'unica tecnica che ti serve. Negli schemi più difficili ogni eliminazione fatta da una tecnica avanzata di solito lascia dietro di sé un singolo nudo, quindi cercali dopo ogni passo."
+          ],
+          "spot": [
+            "Guarda le caselle con molte vicine già piene: una casella in una riga che ha già sette cifre, o una casella la cui riga, colonna e blocco coprono insieme otto cifre diverse. Senza note, conta le cifre che vedi dalla casella. Con le note, un singolo nudo è semplicemente una casella che mostra un solo candidato, ed è per questo che Riempi note li rende facili da trovare."
+          ],
+          "examples": [
+            {
+              "h": "Esempio",
+              "steps": [
+                "Guarda {cell}. È vuota, quindi elenca tutte le cifre già inserite nella sua riga, nella sua colonna e nel suo blocco.",
+                "La riga {row} contiene {rowDigits}. La colonna {col} contiene {colDigits}. Il blocco {box} contiene {boxDigits}.",
+                "Insieme escludono tutte le cifre tranne {d}, quindi {d} è l'unico candidato rimasto in {cell}.",
+                "Scrivi {d} in {cell}. Poi controlla se la nuova cifra crea un altro singolo nella stessa riga, colonna o blocco."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Contare solo la riga o solo il blocco. Le otto cifre escluse di solito vengono da tutte e tre le unità insieme.",
+            "Dimenticare che anche una cifra appena inserita esclude candidati dalle sue 20 vicine; nuovi singoli nudi compaiono subito dopo ogni inserimento.",
+            "Confondere un singolo nudo con un singolo nascosto: nel singolo nudo resta un candidato nella casella, nel singolo nascosto resta una casella per la cifra in un'unità."
+          ],
+          "faq": [
+            [
+              "Che cos'è un singolo nudo nel Sudoku?",
+              "Una casella vuota con esattamente un candidato. Otto cifre diverse sono già presenti nella sua riga, colonna e blocco, quindi la nona è l'unica che ci sta."
+            ],
+            [
+              "Perché si chiama nudo?",
+              "Perché, una volta scritte le note, il candidato unico si vede direttamente nella casella; niente lo nasconde. Un singolo nascosto, invece, sta in mezzo ad altri candidati e si trova guardando la cifra anziché la casella."
+            ],
+            [
+              "Si può risolvere uno schema solo con i singoli nudi?",
+              "Molti schemi Facile sì, ma la maggior parte richiede anche i singoli nascosti. Bare Sudoku classifica gli schemi Facile e Medio come risolvibili con singoli di entrambi i tipi; gli schemi Difficile ed Esperto richiedono almeno un'altra tecnica."
+            ],
+            [
+              "Il suggerimento mostra i singoli nudi?",
+              "Sì. Quando il prossimo inserimento è un singolo nudo, il suggerimento seleziona la casella e dice \"Un solo candidato qui\" con la cifra. Tocca di nuovo il suggerimento per inserirla."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Singolo nascosto",
+          "title": "Singolo nascosto nel Sudoku: l'unico posto per una cifra",
+          "description": "Un singolo nascosto è l'unica casella di una riga, colonna o blocco in cui una cifra può ancora andare. Impara a trovarlo esaminando una cifra alla volta.",
+          "h1": "Singolo nascosto (hidden single)",
+          "summary": "Un singolo nascosto è una cifra che in una riga, colonna o blocco ha una sola casella possibile, anche se quella casella può mostrare altri candidati. Poiché l'unità deve contenere la cifra, la cifra va lì. Il suggerimento di Bare Sudoku lo segnala come \"Unico posto per 5 in questa riga\", colonna o blocco.",
+          "when": [
+            "Ogni volta che una cifra è ben avanti: quando compare già cinque o sei volte, i blocchi rimasti sono molto vincolati e la mossa successiva è spesso un singolo nascosto. I singoli nascosti sono la tecnica principale degli schemi Facile e Medio e restano il cavallo di battaglia a ogni livello."
+          ],
+          "spot": [
+            "Scorri una cifra alla volta. Prendi una cifra, trova un blocco che non la contiene ed escludi ogni casella di quel blocco che condivide una riga o una colonna con una copia già inserita della cifra. Se sopravvive una sola casella, hai trovato un singolo nascosto. Lo stesso controllo funziona su righe e colonne. Nel gioco tocca una cifra inserita: tutte le sue copie vengono evidenziate, così le caselle libere saltano all'occhio."
+          ],
+          "examples": [
+            {
+              "h": "Esempio",
+              "steps": [
+                "Il blocco {box} non contiene ancora {d}, quindi una delle sue caselle vuote deve ospitarlo. Le caselle vuote sono {empties}.",
+                "In tutte tranne {cell}, il {d} è bloccato da un {d} già inserito nella stessa riga o colonna, quindi lì {d} non è un candidato.",
+                "Resta {cell} come unico posto per {d} nel blocco {box}. Scrivi {d} lì, anche se {cell} mostra ancora altri candidati."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Inserire la cifra in una casella che è solo probabilmente quella giusta: controlla ogni altra casella vuota dell'unità, non solo quelle ovvie.",
+            "Perdere un singolo nascosto perché la casella mostra diversi candidati. Gli altri candidati non contano; conta che la cifra non abbia altri posti nell'unità.",
+            "Scorrere solo i blocchi. Righe e colonne producono singoli nascosti altrettanto spesso, soprattutto verso la fine."
+          ],
+          "faq": [
+            [
+              "Che cos'è un singolo nascosto nel Sudoku?",
+              "Una cifra che può andare in una sola casella di una riga, colonna o blocco. L'unità deve contenere la cifra, quindi la casella è decisa anche se ha ancora altri candidati."
+            ],
+            [
+              "Che differenza c'è tra singolo nascosto e singolo nudo?",
+              "Il singolo nudo riguarda una casella: resta un candidato. Il singolo nascosto riguarda una cifra: resta una casella in un'unità. Entrambi inseriscono una cifra con certezza."
+            ],
+            [
+              "Quale è più facile da trovare?",
+              "Senza note, i singoli nascosti di solito sono più facili, perché puoi scorrere la griglia una cifra alla volta. Con le note complete, i singoli nudi sono i più facili, perché una casella con un solo candidato salta all'occhio."
+            ],
+            [
+              "Come descrive il suggerimento un singolo nascosto?",
+              "Come \"Unico posto per\" la cifra in questa riga, in questa colonna o in questo blocco, con la casella selezionata. Tocca di nuovo il suggerimento per inserirla."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Candidati bloccati",
+          "title": "Candidati bloccati nel Sudoku: puntamento e rivendicazione",
+          "description": "Candidati bloccati: se i candidati di una cifra in un blocco stanno tutti in una riga o colonna, o viceversa, la cifra si elimina altrove. Due esempi reali.",
+          "h1": "Candidati bloccati (locked candidates)",
+          "summary": "I candidati bloccati sono la prima tecnica che elimina candidati invece di inserire una cifra. Hanno due forme. Puntamento: in un blocco, tutti i candidati di una cifra stanno in una sola riga o colonna, quindi la cifra si elimina dal resto di quella linea. Rivendicazione: in una riga o colonna, tutti i candidati di una cifra stanno in un solo blocco, quindi la cifra si elimina dal resto di quel blocco. Il suggerimento di Bare Sudoku etichetta l'inserimento che sbloccano con \"Candidati bloccati\".",
+          "when": [
+            "Quando in uno schema Difficile i singoli finiscono, è la prima cosa da provare. Servono note complete, almeno per la cifra che esamini. I candidati bloccati sono frequenti: la maggior parte degli schemi Difficile li richiede, e gli schemi Esperto li usano tra una configurazione più grande e l'altra."
+          ],
+          "spot": [
+            "Per il puntamento, guarda ogni blocco e ogni cifra che gli manca: se le caselle candidate di quella cifra stanno in una sola riga o colonna, controlla se la stessa cifra compare come candidato più avanti lungo quella linea, fuori dal blocco. Per la rivendicazione, guarda lungo una riga o colonna: se i candidati di una cifra sono tutti dentro un blocco, il resto di quel blocco si può ripulire. Nel gioco tocca il tasto di una cifra per evidenziarne tutti i candidati; una fila di due o tre note evidenziate dentro un blocco è la configurazione."
+          ],
+          "examples": [
+            {
+              "h": "Puntamento",
+              "steps": [
+                "Nel blocco {box}, la cifra {d} ha solo queste caselle candidate: {cells}. Stanno tutte nella riga {row}.",
+                "Il blocco {box} ha bisogno di un {d}, quindi il {d} della riga {row} si trova dentro il blocco {box}, in qualunque di quelle caselle finisca.",
+                "La riga {row} non può avere un secondo {d}, quindi elimina {d} dalle caselle della riga {row} fuori dal blocco: {elim}."
+              ]
+            },
+            {
+              "h": "Rivendicazione",
+              "steps": [
+                "Nella riga {row}, la cifra {d} può andare solo in {cells}, e stanno tutte dentro il blocco {box}.",
+                "La riga {row} deve contenere {d}, quindi il {d} del blocco {box} è rivendicato dalla riga {row}. Le altre caselle del blocco {box} non possono contenere {d}.",
+                "Elimina {d} da {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminare la cifra dentro il blocco invece che fuori nel caso del puntamento, o il contrario nel caso della rivendicazione. Le eliminazioni vanno sempre nelle caselle che sono nella linea ma non nel blocco, o nel blocco ma non nella linea.",
+            "Applicare la regola quando i candidati occupano due righe del blocco. Tutte le caselle candidate della cifra nel blocco devono stare in una sola linea.",
+            "Dimenticare di cercare il singolo creato dall'eliminazione. I candidati bloccati raramente inseriscono una cifra da soli; preparano un singolo."
+          ],
+          "faq": [
+            [
+              "Che cosa sono i candidati bloccati nel Sudoku?",
+              "Candidati di una cifra confinati nell'intersezione tra un blocco e una linea. Poiché il blocco, o la linea, deve contenere la cifra dentro quell'intersezione, la cifra si può eliminare dal resto della linea, o dal resto del blocco."
+            ],
+            [
+              "Che differenza c'è tra puntamento e rivendicazione?",
+              "Il puntamento parte da un blocco: i candidati della cifra nel blocco puntano lungo una riga o colonna, quindi la cifra si elimina dal resto di quella linea. La rivendicazione parte da una riga o colonna: i candidati della linea per quella cifra sono tutti in un blocco, quindi la linea rivendica la cifra e la si elimina dal resto del blocco."
+            ],
+            [
+              "I candidati bloccati si chiamano anche eliminazione per intersezione?",
+              "Sì. Altri nomi sono riduzione blocco-linea per la rivendicazione e coppie o triple puntanti per il puntamento. Bare Sudoku usa un solo nome per entrambe le forme."
+            ],
+            [
+              "Quale livello richiede i candidati bloccati?",
+              "Difficile. Uno schema che richiede candidati bloccati o sottoinsiemi ma niente di più difficile è classificato Difficile; gli schemi Esperto richiedono in più un pesce o un'ala."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Coppie e triple nude",
+          "title": "Coppie e triple nude nel Sudoku: come funzionano",
+          "description": "Coppie e triple nude: due o tre caselle di un'unità che condividono gli stessi due o tre candidati. Impara a individuarle e cosa eliminare, con esempi reali.",
+          "h1": "Coppie e triple nude (naked pair, naked triple)",
+          "summary": "Una coppia nuda è formata da due caselle della stessa riga, colonna o blocco che hanno esattamente gli stessi due candidati. Le due cifre devono andare in quelle due caselle, quindi si possono eliminare da ogni altra casella dell'unità. Una tripla nuda è la stessa idea con tre caselle e tre cifre; ogni casella può mostrarne due o tutte e tre. Il suggerimento di Bare Sudoku etichetta l'inserimento che ne risulta \"Coppia o tripla\".",
+          "when": [
+            "Quando le note sono complete e singoli e candidati bloccati sono esauriti. Le coppie nude sono molto frequenti negli schemi Difficile, le triple nude meno. Vale la pena cercarle entrambe in ogni unità che ha ancora cinque o più caselle vuote."
+          ],
+          "spot": [
+            "Cerca le caselle con solo due candidati e trova un'altra casella nella stessa unità con gli stessi due. Per le triple, guarda le unità con diverse caselle da due e tre candidati e controlla se tre di esse insieme usano solo tre cifre diverse. Le caselle con esattamente gli stessi candidati si notano facilmente una volta scritte le note; nel gioco Riempi note lo fa con un solo tocco."
+          ],
+          "examples": [
+            {
+              "h": "Coppia nuda",
+              "steps": [
+                "{cellA} e {cellB} stanno nella stessa unità ({unit}) e hanno esattamente gli stessi due candidati: {d1} e {d2}.",
+                "Una deve essere {d1} e l'altra {d2}. Non sappiamo quale sia quale, ma entrambe le cifre sono occupate da queste due caselle.",
+                "Quindi nessun'altra casella dell'unità ({unit}) può contenere {d1} o {d2}. Elimina {elim}."
+              ]
+            },
+            {
+              "h": "Tripla nuda",
+              "steps": [
+                "Tre caselle dell'unità ({unit}) prendono tutti i loro candidati dalle stesse tre cifre, {digits}: {cells}.",
+                "Le tre cifre devono riempire queste tre caselle in qualche ordine. Una casella non deve per forza mostrare tutti e tre i candidati; conta che nessuna delle tre caselle abbia un candidato fuori dall'insieme.",
+                "Elimina {digits} da ogni altra casella dell'unità ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Prendere due caselle che condividono due candidati ma ne hanno anche un terzo. In una coppia nuda ogni casella deve avere esattamente i due candidati e nient'altro.",
+            "Eliminare le cifre dalle caselle stesse della coppia. La coppia tiene i suoi candidati; le eliminazioni vanno nelle altre caselle dell'unità.",
+            "Pretendere che ogni casella di una tripla mostri tutte e tre le cifre. Una casella con due delle tre va bene, purché nessuna casella abbia un candidato fuori dall'insieme."
+          ],
+          "faq": [
+            [
+              "Che cos'è una coppia nuda nel Sudoku?",
+              "Due caselle di un'unità che hanno entrambe esattamente gli stessi due candidati. Quelle due cifre sono vincolate a quelle due caselle, quindi si possono eliminare dal resto dell'unità."
+            ],
+            [
+              "Che cos'è una tripla nuda?",
+              "Tre caselle di un'unità i cui candidati, messi insieme, sono solo tre cifre. Ogni casella può contenerne due o tre. Le tre cifre riempiono le tre caselle, quindi si possono eliminare dalle altre caselle dell'unità."
+            ],
+            [
+              "Una coppia nuda inserisce una cifra?",
+              "Non da sola. Elimina candidati, e l'eliminazione di solito lascia un singolo nudo o nascosto. Il suggerimento di Bare Sudoku mostra quel singolo e nomina la tecnica che l'ha reso possibile."
+            ],
+            [
+              "Una coppia nuda può stare in un blocco e in una riga contemporaneamente?",
+              "Sì. Se le due caselle condividono una riga e un blocco, la coppia elimina in entrambe le unità. Bare Sudoku le tratta un'unità alla volta."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Coppie e triple nascoste",
+          "title": "Coppie e triple nascoste nel Sudoku: come trovarle",
+          "description": "Coppia nascosta: due cifre che possono andare solo nelle stesse due caselle di un'unità, che perdono gli altri candidati. Impara a trovare coppie e triple.",
+          "h1": "Coppie e triple nascoste (hidden pair, hidden triple)",
+          "summary": "Una coppia nascosta è formata da due cifre che, in una riga, colonna o blocco, sono candidate nelle stesse due caselle e in nessun'altra. Quelle due caselle devono contenere quelle due cifre, quindi ogni altro candidato in esse si può eliminare. Una tripla nascosta funziona allo stesso modo, con tre cifre confinate in tre caselle. Dopo l'eliminazione le caselle mostrano una coppia o una tripla nuda. Il suggerimento di Bare Sudoku etichetta l'inserimento che ne risulta \"Coppia o tripla\".",
+          "when": [
+            "Quando un'unità ha caselle con molti candidati e i singoli sono finiti. Le coppie nascoste si celano in caselle affollate, ed è per questo che vale la pena cercarle proprio dove le coppie nude non si vedono. Le triple nascoste sono rare; Bare Sudoku le cerca, ma la maggior parte degli schemi Difficile si risolve senza."
+          ],
+          "spot": [
+            "Ragiona per cifra, non per casella. In un'unità, annota le caselle in cui può andare ogni cifra mancante. Se due cifre hanno ciascuna solo due caselle possibili e sono le stesse due, hai trovato una coppia nascosta. Nel gioco tocca il tasto di una cifra per evidenziarne i candidati; se due cifre accendono le stesse due caselle di un'unità e nient'altro in essa, quella è la configurazione."
+          ],
+          "examples": [
+            {
+              "h": "Coppia nascosta",
+              "steps": [
+                "Nell'unità ({unit}), le cifre {d1} e {d2} hanno ciascuna solo due caselle possibili, e sono le stesse due: {cells}.",
+                "Quelle due caselle devono contenere {d1} e {d2}, quindi i loro altri candidati sono impossibili.",
+                "Elimina {elim}. Ora le due caselle mostrano una coppia nuda, che può sbloccare altre mosse."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminare le due cifre della coppia dalle caselle della coppia. A sparire sono gli altri candidati di quelle caselle; le cifre della coppia restano.",
+            "Accettare una cifra che ha una terza casella possibile nell'unità. Entrambe le cifre devono essere limitate esattamente alle due caselle.",
+            "Guardare solo nei blocchi. Le coppie nascoste compaiono altrettanto spesso in righe e colonne."
+          ],
+          "faq": [
+            [
+              "Che cos'è una coppia nascosta nel Sudoku?",
+              "Due cifre che possono andare solo nelle stesse due caselle di un'unità. Quelle caselle devono prendere quelle cifre, quindi i loro altri candidati si eliminano."
+            ],
+            [
+              "In cosa una coppia nascosta è diversa da una coppia nuda?",
+              "Una coppia nuda è visibile: due caselle che mostrano solo gli stessi due candidati. Una coppia nascosta è coperta da candidati in più nelle due caselle. Eliminando quei candidati in più, la coppia nascosta diventa una coppia nuda."
+            ],
+            [
+              "Che cos'è una tripla nascosta?",
+              "Tre cifre confinate in tre caselle di un'unità. Non serve che ogni cifra compaia in tutte e tre le caselle; conta che nessuna delle tre cifre abbia un candidato fuori da quelle caselle."
+            ],
+            [
+              "Il suggerimento distingue coppie nascoste e coppie nude?",
+              "No. Bare Sudoku trova entrambe ed etichetta l'inserimento che ne risulta \"Coppia o tripla\". Queste pagine le separano perché si trovano in modi diversi."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing nel Sudoku: come funziona la tecnica",
+          "description": "X-Wing: una cifra con esattamente due caselle candidate in due righe, allineate nelle stesse due colonne, si elimina dal resto di quelle colonne. Esempio reale.",
+          "h1": "X-Wing",
+          "summary": "Un X-Wing è una configurazione formata da una cifra e da quattro caselle agli angoli di un rettangolo. Se la cifra ha esattamente due caselle candidate in ciascuna di due righe, e quelle caselle stanno nelle stesse due colonne, allora la cifra deve occupare due angoli opposti del rettangolo. Quindi si può eliminare da ogni altra casella di quelle due colonne. Lo stesso vale scambiando righe e colonne. È la prima tecnica di livello Esperto in Bare Sudoku.",
+          "when": [
+            "Quando singoli, candidati bloccati e sottoinsiemi sono esauriti. L'X-Wing è la configurazione Esperto più comune e compare spesso quando a una cifra restano pochi candidati, di solito con quattro, cinque o sei copie già inserite. Richiede note complete per la cifra che esamini."
+          ],
+          "spot": [
+            "Scegli una cifra e cerca le righe in cui ha esattamente due caselle candidate. Se due di queste righe condividono le stesse due colonne, controlla in quelle colonne gli altri candidati della cifra: sono quelle le eliminazioni. Poi ripeti usando le colonne come base. Nel gioco tocca il tasto della cifra: tutti i suoi candidati vengono evidenziati, e un rettangolo di quattro note evidenziate si nota facilmente."
+          ],
+          "examples": [
+            {
+              "h": "Esempio",
+              "steps": [
+                "La cifra {d} ha esattamente due caselle candidate nella riga {r1} ed esattamente due nella riga {r2}, e sono allineate nelle stesse due colonne, {c1} e {c2}: {cells}.",
+                "La riga {r1} mette il suo {d} nella colonna {c1} o {c2}, e la riga {r2} mette il suo {d} nell'altra. In ogni caso le colonne {c1} e {c2} ricevono ciascuna un {d} da queste due righe.",
+                "Quindi {d} non può comparire da nessun'altra parte nelle colonne {c1} e {c2}. Elimina {d} da {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Usare una riga che ha tre caselle candidate per la cifra. Ogni riga di base deve averne esattamente due, ed entrambe nelle due colonne condivise.",
+            "Eliminare la cifra dalle righe invece che dalle colonne. Con le righe come base le eliminazioni sono nelle colonne, e viceversa.",
+            "Dimenticare la versione scambiata. Un X-Wing costruito sulle colonne elimina nelle righe."
+          ],
+          "faq": [
+            [
+              "Che cos'è un X-Wing nel Sudoku?",
+              "Una cifra che ha esattamente due caselle candidate in ciascuna di due righe, nelle stesse due colonne. La cifra occupa due angoli opposti di quel rettangolo, quindi si elimina dal resto delle due colonne. Righe e colonne si possono scambiare."
+            ],
+            [
+              "Perché l'X-Wing funziona?",
+              "Ognuna delle due righe deve mettere la cifra in una delle due colonne, e le due righe non possono usare la stessa colonna. Quindi ciascuna delle due colonne riceve la sua copia della cifra da queste righe, e ogni altro candidato in quelle colonne è impossibile."
+            ],
+            [
+              "L'X-Wing è un pesce?",
+              "Sì. L'X-Wing è il pesce di dimensione due; lo Swordfish è il pesce di dimensione tre. Bare Sudoku li trova entrambi."
+            ],
+            [
+              "In quale livello ci sono gli X-Wing?",
+              "Esperto. Uno schema che richiede X-Wing, Y-Wing, Swordfish o XYZ-Wing è classificato Esperto."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing nel Sudoku: come funziona la tecnica",
+          "description": "Y-Wing (XY-Wing): un perno con due candidati e due ali che ne condividono uno ciascuna tolgono una cifra da ogni casella che vede entrambe le ali. Esempio.",
+          "h1": "Y-Wing",
+          "summary": "Un Y-Wing, detto anche XY-Wing, usa tre caselle con due candidati ciascuna. Il perno ha i candidati X e Y. Un'ala vede il perno e ha X e Z; l'altra ala vede il perno e ha Y e Z. Qualunque valore abbia il perno, una delle ali deve essere Z, quindi Z si può eliminare da ogni casella che vede entrambe le ali. In Bare Sudoku è una tecnica di livello Esperto.",
+          "when": [
+            "Quando uno schema ha diverse caselle con esattamente due candidati e non c'è nessun pesce disponibile. Gli Y-Wing sono frequenti negli schemi Esperto e si trovano seguendo le caselle con due candidati: ognuna è un possibile perno o una possibile ala."
+          ],
+          "spot": [
+            "Elenca le caselle con esattamente due candidati. Per ognuna, considerala il perno con candidati X e Y e cerca tra le sue vicine una casella con X e un'altra cifra Z, e una casella con Y e la stessa Z. Quelle due sono le ali. Poi trova le caselle che vedono entrambe le ali e contengono Z. Nota che le ali non devono vedersi tra loro."
+          ],
+          "examples": [
+            {
+              "h": "Esempio",
+              "steps": [
+                "Il perno {pivot} ha i candidati {x} e {y}. Vede {wingA}, che ha {x} e {z}, e {wingB}, che ha {y} e {z}.",
+                "Se {pivot} è {x}, allora {wingA} perde {x} e diventa {z}. Se {pivot} è {y}, allora {wingB} diventa {z}. In ogni caso una delle due ali è {z}.",
+                "Una casella che vede entrambe le ali non può mai essere {z}. Elimina {z} da {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Scegliere ali che non vedono entrambe il perno. Ogni ala deve condividere una riga, una colonna o un blocco con il perno.",
+            "Eliminare Z da caselle che vedono una sola ala. La casella eliminata deve vedere entrambe le ali.",
+            "Eliminare Z dal perno. In un Y-Wing il perno non contiene Z; se lo contiene, la configurazione è un XYZ-Wing, con regole diverse."
+          ],
+          "faq": [
+            [
+              "Che cos'è un Y-Wing nel Sudoku?",
+              "Tre caselle con due candidati: un perno con X e Y, un'ala con X e Z che vede il perno e un'ala con Y e Z che vede il perno. Un'ala è sempre Z, quindi Z si elimina dalle caselle che vedono entrambe le ali."
+            ],
+            [
+              "Y-Wing e XY-Wing sono la stessa cosa?",
+              "Sì. I due nomi descrivono la stessa configurazione. Bare Sudoku la chiama Y-Wing."
+            ],
+            [
+              "Perché un'ala deve essere Z?",
+              "Se il perno è X, la prima ala perde X e diventa Z. Se il perno è Y, la seconda ala diventa Z. Il perno è uno dei due, quindi un'ala è Z."
+            ],
+            [
+              "Quante caselle elimina un Y-Wing?",
+              "Di solito una o due: solo le caselle che vedono entrambe le ali e contengono ancora Z. Basta per creare un singolo."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish nel Sudoku: come funziona la tecnica",
+          "description": "Swordfish: una cifra confinata in tre colonne su tre righe si elimina dal resto di quelle colonne. Il pesce di dimensione tre, spiegato con un esempio reale.",
+          "h1": "Swordfish",
+          "summary": "Uno Swordfish è un X-Wing con tre righe e tre colonne. Se una cifra ha al massimo tre caselle candidate in ciascuna di tre righe, e tutte quelle caselle cadono nelle stesse tre colonne, allora le tre righe esauriscono la cifra in quelle colonne, e la cifra si può eliminare da ogni altra casella delle tre colonne. Righe e colonne si possono scambiare. Bare Sudoku cerca lo Swordfish dopo l'Y-Wing, negli schemi Esperto.",
+          "when": [
+            "Quando X-Wing e Y-Wing non trovano nulla. Gli Swordfish sono meno comuni degli X-Wing e richiedono una cifra i cui candidati sono sparsi con parsimonia su tre linee. Richiedono note complete e precise per quella cifra."
+          ],
+          "spot": [
+            "Scegli una cifra e cerca le righe con due o tre caselle candidate per essa. Se tre di queste righe coprono in tutto solo tre colonne, controlla in quelle colonne altri candidati della cifra. Non tutte le righe devono avere un candidato in ogni colonna: uno Swordfish può avere sei, sette, otto o nove caselle. Nel gioco evidenzia la cifra con il suo tasto e cerca tre righe i cui candidati si allineano in tre colonne."
+          ],
+          "examples": [
+            {
+              "h": "Esempio",
+              "steps": [
+                "La cifra {d} ha al massimo tre caselle candidate in ciascuna delle righe {rows}, e tutte quelle caselle cadono nelle colonne {cols}: {cells}.",
+                "Ognuna delle tre righe deve mettere il suo {d} in una delle tre colonne, e due righe non possono usare la stessa colonna. Quindi le tre colonne ricevono il loro {d} da queste tre righe.",
+                "Ogni altro candidato {d} nelle colonne {cols} è impossibile. Elimina {d} da {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Pretendere tutte e nove le caselle. Uno Swordfish con due candidati in alcune righe resta valido, purché le tre righe coprano solo tre colonne.",
+            "Includere una riga con quattro caselle candidate. Ogni riga di base deve averne al massimo tre, tutte dentro le tre colonne.",
+            "Eliminare nelle righe di base. Con le righe come base, le eliminazioni sono nelle tre colonne, fuori dalle righe di base."
+          ],
+          "faq": [
+            [
+              "Che cos'è uno Swordfish nel Sudoku?",
+              "Una cifra i cui candidati in tre righe sono confinati in tre colonne. Le tre righe devono mettere la cifra in quelle tre colonne, una ciascuna, quindi la cifra si elimina dalle altre caselle di quelle colonne."
+            ],
+            [
+              "In cosa uno Swordfish è diverso da un X-Wing?",
+              "Solo nella dimensione: un X-Wing usa due righe e due colonne, uno Swordfish tre e tre. Il ragionamento è lo stesso."
+            ],
+            [
+              "Uno Swordfish richiede esattamente nove caselle?",
+              "No. Ogni riga può avere due o tre candidati; la configurazione richiede solo che le tre righe insieme non usino più di tre colonne."
+            ],
+            [
+              "Esiste un pesce di dimensione quattro?",
+              "Sì, il Jellyfish. Bare Sudoku non lo usa, perché i suoi schemi non ne hanno mai bisogno."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing nel Sudoku: come funziona la tecnica",
+          "description": "XYZ-Wing: un perno con tre candidati e due ali che ne condividono uno tolgono quella cifra da ogni casella che le vede tutte e tre. Esempio reale, passo passo.",
+          "h1": "XYZ-Wing",
+          "summary": "Un XYZ-Wing è un Y-Wing il cui perno ha tre candidati. Il perno ha X, Y e Z; un'ala vede il perno e ha X e Z, l'altra vede il perno e ha Y e Z. Una delle tre caselle deve essere Z, quindi Z si può eliminare da ogni casella che le vede tutte e tre. Poiché il perno stesso può essere Z, la casella eliminata deve vedere il perno oltre alle due ali, il che la limita al blocco o alla linea che le caselle condividono. È la tecnica più difficile usata da Bare Sudoku.",
+          "when": [
+            "Solo quando tutto il resto fallisce. L'XYZ-Wing è la configurazione più rara in Bare Sudoku e compare solo negli schemi Esperto. Cercalo quando una casella con tre candidati sta in un blocco con una casella con due candidati che condivide due delle sue cifre."
+          ],
+          "spot": [
+            "Parti dalle caselle con esattamente tre candidati; ognuna è un possibile perno. Tra le sue vicine, cerca due caselle con due candidati ciascuna, entrambi presi dai tre del perno, che condividono esattamente una cifra Z. Poi cerca le caselle che vedono il perno ed entrambe le ali e contengono Z. In pratica un'ala sta nel blocco del perno e l'altra nella sua riga o colonna, e le caselle eliminate sono le restanti caselle di quel blocco in quella riga o colonna."
+          ],
+          "examples": [
+            {
+              "h": "Esempio",
+              "steps": [
+                "Il perno {pivot} ha tre candidati: {x}, {y} e {z}. Vede {wingA} con {x} e {z}, e {wingB} con {y} e {z}.",
+                "Se {pivot} è {z}, fatto. Se è {x}, {wingA} deve essere {z}. Se è {y}, {wingB} deve essere {z}. In ogni caso una delle tre caselle è {z}.",
+                "Una casella che le vede tutte e tre non può essere {z}. Elimina {z} da {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminare da caselle che vedono solo le due ali. A differenza dell'Y-Wing, il perno può essere Z, quindi la casella deve vedere anche il perno.",
+            "Usare ali i cui candidati non sono entrambi contenuti nei tre candidati del perno.",
+            "Confonderlo con un Y-Wing: la differenza è il terzo candidato nel perno, e cambia quali caselle si possono ripulire."
+          ],
+          "faq": [
+            [
+              "Che cos'è un XYZ-Wing nel Sudoku?",
+              "Un perno con candidati X, Y e Z e due ali, una con X e Z e una con Y e Z, che vedono entrambe il perno. Una delle tre caselle è Z, quindi Z si elimina dalle caselle che le vedono tutte e tre."
+            ],
+            [
+              "In cosa un XYZ-Wing è diverso da un Y-Wing?",
+              "Il perno ha tre candidati invece di due, Z compreso. Questo rende il perno un possibile posto per Z, quindi solo le caselle che vedono il perno ed entrambe le ali possono perdere Z."
+            ],
+            [
+              "Quanto spesso compare un XYZ-Wing?",
+              "Di rado. In Bare Sudoku solo gli schemi Esperto possono richiederne uno, e la maggior parte non lo richiede. Bare Sudoku lo cerca per ultimo, dopo X-Wing, Y-Wing e Swordfish."
+            ],
+            [
+              "Esiste un WXYZ-Wing?",
+              "Sì, con un perno a quattro candidati, ma Bare Sudoku non lo usa. Ogni schema del gioco si può completare con le nove tecniche di questa guida."
+            ]
+          ]
+        }
+      }
+    },
+    "nl": {
+      "learnHeading": "Leer Sudoku",
+      "learnText": "Nieuw met Sudoku, of vast bij een moeilijke puzzel? Twee gidsen leggen de regels uit en elke oplostechniek die de hints gebruiken, elk met een echt voorbeeld.",
+      "howToLink": "Hoe speel je Sudoku",
+      "techniquesLink": "Sudoku-oplostechnieken",
+      "labels": {
+        "howTo": "Hoe speel je",
+        "techniques": "Technieken",
+        "play": "Speel Sudoku",
+        "prev": "Vorige techniek",
+        "next": "Volgende techniek",
+        "all": "Alle technieken",
+        "example": "Voorbeeld",
+        "steps": "Stap voor stap",
+        "when": "Wanneer gebruik je het",
+        "spot": "Hoe herken je het",
+        "mistakes": "Veelgemaakte fouten",
+        "inGame": "In Bare Sudoku",
+        "level": "Nodig vanaf niveau: {level}",
+        "hint": "In het spel zegt de hint: {text}",
+        "legend": "Vetgedrukte cijfers zijn gegeven, blauwe cijfers zijn tijdens het oplossen geplaatst en kleine cijfers zijn kandidaten. Gemarkeerde vakjes vormen het patroon, doorgestreepte kandidaten worden verwijderd en een omcirkelde kandidaat is het cijfer dat je plaatst.",
+        "notation": "Vakjes worden geschreven als r3c7: rij 3, kolom 7. Rijen tel je van boven, kolommen van links, en blokken van 1 tot en met 9 vanaf linksboven, rij voor rij.",
+        "row": "rij {n}",
+        "column": "kolom {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} uit {cell}",
+        "regions": "Rij 5, kolom 5 en blok 5 aan het begin van een puzzel",
+        "firstMove": "Een naakte single: {cell} kan alleen {d} zijn",
+        "breadcrumb": "Kruimelpad"
+      },
+      "howTo": {
+        "title": "Hoe speel je Sudoku: regels, speelveld en eerste zetten",
+        "description": "Leer Sudoku spelen: de regels, hoe rijen, kolommen en blokken werken, waarom elke puzzel één oplossing heeft, hoe je notities gebruikt en hoe je begint.",
+        "h1": "Hoe speel je Sudoku",
+        "summary": "Sudoku is een logische puzzel op een raster van 9×9. Vul elk leeg vakje met een cijfer van 1 tot en met 9, zo dat elke rij, elke kolom en elk 3×3-blok elk cijfer precies één keer bevat. Sommige cijfers zijn vooraf gegeven; de rest beredeneer je, steeds één zeker vakje tegelijk, en je hoeft nooit te gokken. Deze gids legt het speelveld uit, de regels, het principe van de unieke oplossing, notities en een eenvoudige strategie voor je eerste zetten. Je kunt alles oefenen in [Bare Sudoku](play), dat gratis is en hints heeft die de logica uitleggen.",
+        "sections": [
+          {
+            "h": "Wat zijn de regels van Sudoku?",
+            "p": [
+              "Er zijn maar drie regels, en eigenlijk is het dezelfde regel vanuit drie richtingen bekeken: elke rij moet de cijfers 1 tot en met 9 bevatten, elke kolom moet de cijfers 1 tot en met 9 bevatten en elk 3×3-blok moet de cijfers 1 tot en met 9 bevatten. Een cijfer kan dus nooit twee keer in dezelfde rij, kolom of hetzelfde blok staan.",
+              "De gegeven cijfers, vetgedrukt, liggen vast. Jouw taak is de lege vakjes te vullen. Er komt geen rekenwerk of volgorde aan te pas: de cijfers zijn gewoon negen verschillende symbolen. Je zou met letters of vormen kunnen spelen en er zou niets veranderen."
+            ]
+          },
+          {
+            "h": "Hoe is het speelveld ingedeeld?",
+            "p": [
+              "Het speelveld heeft 81 vakjes in 9 rijen en 9 kolommen. Dikke lijnen verdelen het in negen blokken van 3×3. Elk vakje hoort bij precies één rij, één kolom en één blok, en die drie groepen zijn zijn eenheden. De 20 andere vakjes die een eenheid met een vakje delen, heten zijn buren; een cijfer dat je in een vakje plaatst, sluit dat cijfer uit in alle 20 buren.",
+              "Vakjes worden geschreven als r3c7: rij 3, kolom 7. Rijen tel je van boven, kolommen van links, en blokken van 1 tot en met 9 vanaf linksboven, rij voor rij. Deze notatie wordt in elke techniekgids gebruikt en is de moeite waard om te leren: r5c5 is het midden van het speelveld."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Waarom heeft elke Sudoku precies één oplossing?",
+            "p": [
+              "Een goede Sudoku heeft één oplossing, en daardoor werkt logica. Zodra je kunt aantonen dat een cijfer nergens anders in een eenheid kan staan, moet het in het overgebleven vakje, omdat de oplossing bestaat en uniek is. Als een puzzel twee oplossingen had, zou geen enkele redenering ze uit elkaar kunnen houden en zou je op een gegeven moment moeten gokken.",
+              "Bare Sudoku maakt elke puzzel op je apparaat en controleert dat hij precies één oplossing heeft en dat de logische oplosser hem kan afmaken met de technieken van het gekozen niveau. Zit je vast, dan is er dus altijd een volgende stap te vinden, en de hint laat die zien."
+            ]
+          },
+          {
+            "h": "Hoe begin je aan een Sudoku?",
+            "p": [
+              "Begin bij wat het meest beperkt is. Deze volgorde werkt op elk niveau:"
+            ],
+            "list": [
+              "Kies een cijfer dat al vaak voorkomt, zeg zes of zeven keer, en zoek de blokken waar het nog ontbreekt. Vaak is er in een blok nog maar één vakje voor over: dat is een [verborgen single](hidden-single).",
+              "Zoek naar drukke vakjes. Een vakje waarvan de rij, kolom en het blok samen acht verschillende cijfers bevatten, heeft nog maar één kandidaat: een [naakte single](naked-single). Vakjes in bijna volle rijen of blokken zijn de beste plek om te zoeken.",
+              "Elk cijfer dat je plaatst, haalt een kandidaat weg bij 20 buren, dus controleer die buren meteen. Singles komen vaak in ketens.",
+              "Als de makkelijke plaatsingen op zijn, schrijf dan notities: de kandidaten voor elk leeg vakje. Zoek daarna een cijfer dat binnen een blok tot één lijn beperkt is ([geblokkeerde kandidaten](locked-candidates)) of twee vakjes met dezelfde twee kandidaten (een [naakt paar](naked-pairs)).",
+              "Ga na elke eliminatie terug naar de singles. Zelfs Expert-puzzels worden grotendeels met singles opgelost; de gevorderde techniek maakt alleen de volgende vrij."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Wat zijn notities en wanneer gebruik je ze?",
+            "p": [
+              "Notities, ook wel potloodnotities of kandidaten genoemd, zijn de kleine cijfers die je in een leeg vakje zet om bij te houden welke cijfers daar nog mogelijk zijn. Bij makkelijke puzzels heb je ze zelden nodig; vanaf Moeilijk zijn ze onmisbaar, omdat technieken als paren, X-Wing en Y-Wing over kandidaten gaan, niet over geplaatste cijfers.",
+              "Houd je notities kloppend: als je een cijfer plaatst, haal het dan weg uit de notities van alle 20 buren. In Bare Sudoku gebeurt dat automatisch, en Notities vullen zet met één tik elke kandidaat in elk leeg vakje, zodat je kunt beginnen met een volledige, correcte set kandidaten. Een notitie is een feit, geen gok: ze betekent dat nog niets dit cijfer uitsluit."
+            ]
+          },
+          {
+            "h": "Wat doe je als je vastzit?",
+            "p": [
+              "Controleer eerst de basis: elke bijna volle rij, kolom en elk bijna vol blok is een bron van singles. Zorg dan dat je notities volledig zijn, want een ontbrekende kandidaat verbergt patronen en een verouderde kandidaat maakt valse. Werk daarna de [technieken](techniques) af in volgorde van moeilijkheid: geblokkeerde kandidaten, paren en drietallen, X-Wing, Y-Wing, Swordfish en XYZ-Wing. Elke techniek heeft een eigen pagina met een echt voorbeeld.",
+              "Werkt niets, neem dan een hint. In Bare Sudoku controleert de hint eerst of een geplaatst cijfer fout is, zoekt dan het volgende vakje dat met logica gevuld kan worden en noemt de techniek, zodat je ook iets leert als je hem gebruikt. Tik nogmaals op de hint om het cijfer te plaatsen."
+            ]
+          },
+          {
+            "h": "Hoe voer je cijfers in bij Bare Sudoku?",
+            "p": [
+              "Tik op een vakje en dan op een cijfer. Of tik eerst op een cijfer: het wordt vastgezet en elk vakje waarop je tikt krijgt dat cijfer, de snelste manier om het zesde, zevende en achtste exemplaar van een cijfer te plaatsen. Tik nogmaals op het cijfer om het los te laten. De knop Notities schakelt naar potloodnotities, Wissen maakt een vakje leeg, Ongedaan maken draait elke zet terug, en fouten worden rood gemarkeerd, tenzij je dat in het menu uitzet.",
+              "Op een toetsenbord gebruik je de pijltjestoetsen om te bewegen, 1 tot en met 9 om een cijfer in te voeren, Backspace om te wissen, N voor notities, U om ongedaan te maken, H voor een hint, F om notities te vullen en Escape voor het menu. Het spel slaat zichzelf op, werkt offline en heeft geen reclame en geen account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Moet je bij Sudoku ooit gokken?",
+            "Niet bij een goede puzzel. Elke puzzel in Bare Sudoku heeft precies één oplossing en is gecontroleerd op oplosbaarheid met alleen logica, met hoogstens de technieken van zijn niveau. Heb je het gevoel dat je moet gokken, dan ontbreekt er een kandidaat in je notities of wacht er een techniek om gevonden te worden."
+          ],
+          [
+            "Kan een cijfer twee keer in een rij, kolom of blok staan?",
+            "Nee. Dat is de hele regel: elk van de negen rijen, negen kolommen en negen blokken bevat elk cijfer van 1 tot en met 9 precies één keer. Als twee gelijke cijfers een eenheid delen, is minstens één ervan fout."
+          ],
+          [
+            "Wat is het verschil tussen Makkelijk, Gemiddeld, Moeilijk en Expert?",
+            "Het niveau wordt bepaald door de technieken die de puzzel nodig heeft. Makkelijk en Gemiddeld los je op met alleen singles, en Makkelijk begint met minstens 38 gegeven cijfers. Moeilijk vraagt geblokkeerde kandidaten of paren en drietallen. Expert vraagt X-Wing, Y-Wing, Swordfish of XYZ-Wing."
+          ],
+          [
+            "Kun je beter notities in elk vakje zetten of maar in een paar?",
+            "Bij Moeilijk en Expert vul je ze allemaal in: patronen als paren, X-Wing en Y-Wing worden pas zichtbaar als elke kandidaat er staat. Bij Makkelijk en Gemiddeld zijn notities optioneel en zoeken de meeste spelers gewoon naar singles."
+          ],
+          [
+            "Hoe lang duurt een Sudoku?",
+            "Een makkelijke puzzel kost een paar minuten; Expert-puzzels kunnen twintig minuten of langer duren, afhankelijk van hoe snel je het gevorderde patroon ziet. Bare Sudoku toont een timer, pauzeert die zolang het menu open is en houdt geen ranglijst bij, dus speel in je eigen tempo."
+          ],
+          [
+            "Moet je voor Sudoku kunnen rekenen?",
+            "Nee. De cijfers zijn alleen labels; er wordt niets opgeteld of geteld. Negen willekeurige symbolen zouden ook werken, en daarom is Sudoku een logische puzzel en geen rekenpuzzel."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku-oplostechnieken uitgelegd met voorbeelden",
+        "description": "Alle negen Sudoku-oplostechnieken, van naakte singles tot Swordfish en XYZ-Wing, in de volgorde van de hints van Bare Sudoku, met echte voorbeelden.",
+        "h1": "Sudoku-oplostechnieken",
+        "intro": [
+          "Elke Sudoku is op te lossen met een klein aantal logische technieken. Dit overzicht toont de negen technieken die de oplosser van Bare Sudoku en de hints gebruiken, in de volgorde waarin de oplosser ze probeert: eerst singles, dan eliminaties binnen één eenheid, dan patronen die zich over meerdere rijen en kolommen uitstrekken. Elke techniek heeft een eigen pagina met een definitie, hoe je hem herkent, een echt voorbeeld uit een gegenereerde puzzel en de veelgemaakte fouten.",
+          "Het niveau van een puzzel wordt bepaald door de moeilijkste techniek die hij nodig heeft. Makkelijke en gemiddelde puzzels hebben alleen singles nodig, moeilijke puzzels geblokkeerde kandidaten of paren en drietallen, en Expert-puzzels minstens één vis of vleugel. Op elk niveau doen singles het meeste werk; de gevorderde techniek verwijdert een of twee kandidaten en daarna nemen de singles het weer over."
+        ],
+        "faq": [
+          [
+            "In welke volgorde probeer ik Sudoku-technieken?",
+            "De eenvoudigste eerst: naakte singles, verborgen singles, geblokkeerde kandidaten, naakte paren en drietallen, verborgen paren en drietallen, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku probeert ze precies in deze volgorde, en een hint noemt altijd de eenvoudigste techniek die vooruitgang oplevert."
+          ],
+          [
+            "Heb ik al deze technieken nodig om Sudoku op te lossen?",
+            "Voor makkelijke en gemiddelde puzzels zijn singles genoeg. Moeilijke puzzels voegen geblokkeerde kandidaten en deelverzamelingen toe. Expert-puzzels hebben minstens één vis of vleugel nodig, maar meestal maar een of twee keer per puzzel."
+          ],
+          [
+            "Zijn er moeilijkere technieken dan XYZ-Wing?",
+            "Ja, bijvoorbeeld ketens, uniciteitstests en forcing-netten. Bare Sudoku maakt geen puzzels die ze nodig hebben, dus elke puzzel in het spel is af te maken met de negen technieken op deze pagina."
+          ],
+          [
+            "Wat is een kandidaat?",
+            "Een cijfer dat nog in een leeg vakje kan, omdat niets in zijn rij, kolom of blok het nog uitsluit. Notities in het spel zijn kandidaten. Elke techniek voorbij de singles redeneert met kandidaten, dus houd ze volledig en kloppend."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Naakte single",
+          "title": "Naakte single in Sudoku: het vakje met één kandidaat",
+          "description": "Een naakte single is een leeg vakje waar maar één cijfer in kan. Leer naakte singles snel te vinden, met een echt voorbeeld en de bekende valkuilen.",
+          "h1": "Naakte single (naked single)",
+          "summary": "Een naakte single is een leeg vakje met precies één kandidaat: de andere acht cijfers staan al in zijn rij, kolom of blok. Het overgebleven cijfer moet daar komen. Het is de eenvoudigste Sudoku-techniek, de techniek die je het vaakst gebruikt, en de techniek die de hint van Bare Sudoku meldt als \"Hier maar één kandidaat\".",
+          "when": [
+            "Altijd. Naakte singles duiken op van de eerste tot de laatste zet, op elk niveau. Bij Makkelijk en Gemiddeld zijn ze, samen met verborgen singles, de enige techniek die je nodig hebt. Bij moeilijkere puzzels laat elke eliminatie door een gevorderde techniek meestal een naakte single achter, dus zoek ernaar na elke stap."
+          ],
+          "spot": [
+            "Kijk naar vakjes met veel ingevulde buren: een vakje in een rij die al zeven cijfers heeft, of een vakje waarvan de rij, kolom en het blok samen acht verschillende cijfers bevatten. Zonder notities tel je de cijfers die je vanuit het vakje ziet. Met notities is een naakte single gewoon een vakje met één kandidaat, en daarom maakt Notities vullen ze makkelijk te vinden."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Kijk naar {cell}. Het is leeg, dus som alle cijfers op die al in zijn rij, zijn kolom en zijn blok staan.",
+                "Rij {row} bevat {rowDigits}. Kolom {col} bevat {colDigits}. Blok {box} bevat {boxDigits}.",
+                "Samen sluiten ze elk cijfer behalve {d} uit, dus {d} is de enige kandidaat die overblijft in {cell}.",
+                "Schrijf {d} in {cell}. Kijk daarna of het nieuwe cijfer een nieuwe single oplevert in dezelfde rij, kolom of hetzelfde blok."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Alleen de rij of alleen het blok tellen. De acht uitgesloten cijfers komen meestal uit alle drie de eenheden samen.",
+            "Vergeten dat een cijfer dat je net hebt geplaatst ook kandidaten uitsluit bij zijn 20 buren; direct na elke plaatsing verschijnen nieuwe naakte singles.",
+            "Een naakte single verwarren met een verborgen single: bij een naakte single is er in het vakje één kandidaat over, bij een verborgen single is er in een eenheid één vakje over voor het cijfer."
+          ],
+          "faq": [
+            [
+              "Wat is een naakte single in Sudoku?",
+              "Een leeg vakje met precies één kandidaat. In zijn rij, kolom en blok staan al acht verschillende cijfers, dus het negende cijfer is het enige dat past."
+            ],
+            [
+              "Waarom heet het naakt?",
+              "Omdat de enige kandidaat direct in het vakje zichtbaar is zodra de notities erin staan; niets verbergt hem. Een verborgen single staat daarentegen tussen andere kandidaten en vind je door naar het cijfer te kijken in plaats van naar het vakje."
+            ],
+            [
+              "Kun je een puzzel alleen met naakte singles oplossen?",
+              "Veel makkelijke puzzels wel, maar de meeste hebben ook verborgen singles nodig. Bare Sudoku beoordeelt Makkelijk en Gemiddeld als oplosbaar met beide soorten singles; Moeilijk en Expert hebben minstens één extra techniek nodig."
+            ],
+            [
+              "Laat de hint naakte singles zien?",
+              "Ja. Als de volgende plaatsing een naakte single is, selecteert de hint het vakje en zegt \"Hier maar één kandidaat\" met het cijfer. Tik nogmaals op de hint om het te plaatsen."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Verborgen single",
+          "title": "Verborgen single in Sudoku: de enige plek voor een cijfer",
+          "description": "Een verborgen single is het enige vakje in een rij, kolom of blok waar een cijfer nog kan staan. Leer ze te vinden door één cijfer tegelijk te scannen.",
+          "h1": "Verborgen single (hidden single)",
+          "summary": "Een verborgen single is een cijfer dat in een rij, kolom of blok nog maar één mogelijk vakje heeft, ook al kan dat vakje andere kandidaten tonen. Omdat de eenheid het cijfer moet bevatten, komt het daar. De hint van Bare Sudoku meldt het als \"Enige plek voor 5 in deze rij\", of in deze kolom of dit blok.",
+          "when": [
+            "Zodra een cijfer goed op weg is: als een cijfer al vijf of zes keer voorkomt, zijn de overgebleven blokken sterk beperkt en is een verborgen single vaak de volgende zet. Verborgen singles zijn de hoofdtechniek van Makkelijk en Gemiddeld en blijven op elk niveau het werkpaard."
+          ],
+          "spot": [
+            "Scan één cijfer tegelijk. Neem een cijfer, zoek een blok waar het nog niet in staat en streep elk vakje van dat blok weg dat een rij of kolom deelt met een geplaatst exemplaar van dat cijfer. Blijft er één vakje over, dan heb je een verborgen single gevonden. Dezelfde scan werkt voor rijen en kolommen. Tik in het spel op een geplaatst cijfer: elk exemplaar ervan wordt gemarkeerd, zodat de vrije vakjes opvallen."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Blok {box} bevat nog geen {d}, dus een van de lege vakjes moet het krijgen. De lege vakjes zijn {empties}.",
+                "In al die vakjes behalve {cell} wordt {d} geblokkeerd door een {d} die al in dezelfde rij of kolom staat, dus daar is {d} geen kandidaat.",
+                "Dan blijft {cell} over als enige plek voor {d} in blok {box}. Schrijf daar {d}, ook al toont {cell} misschien nog andere kandidaten."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Het cijfer plaatsen in een vakje dat alleen waarschijnlijk het juiste is: controleer elk ander leeg vakje van de eenheid, niet alleen de voor de hand liggende.",
+            "Een verborgen single missen omdat het vakje meerdere kandidaten toont. De andere kandidaten doen er niet toe; het gaat erom dat het cijfer geen andere plek in de eenheid heeft.",
+            "Alleen blokken scannen. Rijen en kolommen leveren net zo vaak verborgen singles op, vooral tegen het einde."
+          ],
+          "faq": [
+            [
+              "Wat is een verborgen single in Sudoku?",
+              "Een cijfer dat in maar één vakje van een rij, kolom of blok kan. De eenheid moet het cijfer bevatten, dus het vakje ligt vast, ook al heeft het nog andere kandidaten."
+            ],
+            [
+              "Wat is het verschil tussen een verborgen single en een naakte single?",
+              "Een naakte single gaat over een vakje: er is één kandidaat over. Een verborgen single gaat over een cijfer: er is één vakje over in een eenheid. Beide plaatsen een cijfer met zekerheid."
+            ],
+            [
+              "Welke is makkelijker te vinden?",
+              "Zonder notities zijn verborgen singles meestal makkelijker, omdat je het speelveld per cijfer kunt scannen. Met volledige notities zijn naakte singles het makkelijkst, want een vakje met één kandidaat valt op."
+            ],
+            [
+              "Hoe beschrijft de hint een verborgen single?",
+              "Als \"Enige plek voor\" het cijfer in deze rij, in deze kolom of in dit blok, met het vakje geselecteerd. Tik nogmaals op de hint om het te plaatsen."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Geblokkeerde kandidaten",
+          "title": "Geblokkeerde kandidaten in Sudoku: wijzen en opeisen",
+          "description": "Geblokkeerde kandidaten: liggen de kandidaten van een cijfer in een blok in één rij of kolom, of andersom, dan verdwijnt het cijfer elders. Twee voorbeelden.",
+          "h1": "Geblokkeerde kandidaten (locked candidates)",
+          "summary": "Geblokkeerde kandidaten is de eerste techniek die kandidaten verwijdert in plaats van een cijfer te plaatsen. Er zijn twee vormen. Wijzen: in een blok liggen alle kandidaten voor een cijfer in één rij of kolom, dus het cijfer wordt uit de rest van die lijn verwijderd. Opeisen: in een rij of kolom liggen alle kandidaten voor een cijfer in één blok, dus het cijfer wordt uit de rest van dat blok verwijderd. De hint van Bare Sudoku noemt de plaatsing die dit oplevert \"Geblokkeerde kandidaten\".",
+          "when": [
+            "Als de singles op zijn in een moeilijke puzzel, is dit het eerste wat je probeert. Je hebt volledige notities nodig, minstens voor het cijfer dat je onderzoekt. Geblokkeerde kandidaten komen vaak voor: de meeste moeilijke puzzels hebben ze nodig, en Expert-puzzels gebruiken ze tussen de grotere patronen door."
+          ],
+          "spot": [
+            "Voor wijzen bekijk je elk blok en elk cijfer dat erin ontbreekt: als de kandidaatvakjes voor dat cijfer in één rij of kolom liggen, kijk dan of hetzelfde cijfer verderop in die lijn, buiten het blok, als kandidaat voorkomt. Voor opeisen kijk je langs een rij of kolom: als de kandidaten voor een cijfer allemaal in één blok liggen, kan de rest van dat blok worden opgeschoond. Tik in het spel op een cijfertoets om alle kandidaten voor dat cijfer te markeren; een lijntje van twee of drie gemarkeerde notities binnen één blok is het patroon."
+          ],
+          "examples": [
+            {
+              "h": "Wijzen",
+              "steps": [
+                "In blok {box} heeft cijfer {d} alleen deze kandidaatvakjes: {cells}. Ze liggen allemaal in rij {row}.",
+                "Blok {box} heeft een {d} nodig, dus de {d} van rij {row} ligt binnen blok {box}, in welk van die vakjes hij ook terechtkomt.",
+                "Rij {row} kan geen tweede {d} hebben, dus verwijder {d} uit de vakjes van rij {row} buiten het blok: {elim}."
+              ]
+            },
+            {
+              "h": "Opeisen",
+              "steps": [
+                "In rij {row} kan cijfer {d} alleen in {cells}, en die liggen allemaal binnen blok {box}.",
+                "Rij {row} moet {d} bevatten, dus de {d} van blok {box} wordt opgeëist door rij {row}. De andere vakjes van blok {box} kunnen geen {d} bevatten.",
+                "Verwijder {d} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Bij wijzen het cijfer binnen het blok verwijderen in plaats van erbuiten, of bij opeisen andersom. De eliminaties gaan altijd naar de vakjes die in de lijn liggen maar niet in het blok, of in het blok maar niet in de lijn.",
+            "De regel toepassen als de kandidaten over twee rijen van het blok verspreid zijn. Alle kandidaatvakjes voor het cijfer in het blok moeten in één lijn liggen.",
+            "Vergeten te zoeken naar de single die de eliminatie oplevert. Geblokkeerde kandidaten plaatsen zelden zelf een cijfer; ze bereiden een single voor."
+          ],
+          "faq": [
+            [
+              "Wat zijn geblokkeerde kandidaten in Sudoku?",
+              "Kandidaten voor een cijfer die beperkt zijn tot de overlap van een blok en een lijn. Omdat het blok, of de lijn, het cijfer binnen die overlap moet hebben, kan het cijfer uit de rest van de lijn, of de rest van het blok, worden verwijderd."
+            ],
+            [
+              "Wat is het verschil tussen wijzen en opeisen?",
+              "Wijzen begint bij een blok: de kandidaten van het cijfer in het blok wijzen langs één rij of kolom, dus het cijfer wordt uit de rest van die lijn verwijderd. Opeisen begint bij een rij of kolom: de kandidaten van die lijn voor het cijfer liggen allemaal in één blok, dus de lijn eist het cijfer op en het wordt uit de rest van het blok verwijderd."
+            ],
+            [
+              "Worden geblokkeerde kandidaten ook intersectie-eliminatie genoemd?",
+              "Ja. Andere namen zijn blok-lijnreductie voor het opeisen en wijzende paren of wijzende drietallen voor het wijzen. Bare Sudoku gebruikt één naam voor beide."
+            ],
+            [
+              "Welk niveau heeft geblokkeerde kandidaten nodig?",
+              "Moeilijk. Een puzzel die geblokkeerde kandidaten of deelverzamelingen nodig heeft maar niets moeilijkers, krijgt Moeilijk; Expert-puzzels hebben daarnaast een vis of vleugel nodig."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Naakte paren en drietallen",
+          "title": "Naakte paren en drietallen in Sudoku: zo werken ze",
+          "description": "Naakte paren en drietallen: twee of drie vakjes in een eenheid die dezelfde twee of drie kandidaten delen. Leer ze herkennen en wat je wegstreept.",
+          "h1": "Naakte paren en drietallen (naked pair, naked triple)",
+          "summary": "Een naakt paar bestaat uit twee vakjes in dezelfde rij, kolom of hetzelfde blok die precies dezelfde twee kandidaten hebben. De twee cijfers moeten in die twee vakjes komen, dus ze kunnen uit elk ander vakje van de eenheid worden verwijderd. Een naakt drietal is hetzelfde idee met drie vakjes en drie cijfers; elk vakje kan er twee of alle drie tonen. De hint van Bare Sudoku noemt de plaatsing die dit oplevert \"Paar of drietal\".",
+          "when": [
+            "Als de notities volledig zijn en singles en geblokkeerde kandidaten op zijn. Naakte paren komen heel vaak voor in moeilijke puzzels, naakte drietallen minder. Het loont om beide te zoeken in elke eenheid die nog vijf of meer lege vakjes heeft."
+          ],
+          "spot": [
+            "Zoek vakjes met maar twee kandidaten en zoek een ander vakje in dezelfde eenheid met dezelfde twee. Voor drietallen bekijk je eenheden met meerdere vakjes met twee en drie kandidaten en kijk je of drie daarvan samen maar drie verschillende cijfers gebruiken. Vakjes met precies dezelfde kandidaten zie je makkelijk zodra de notities er staan; in het spel doet Notities vullen dat met één tik."
+          ],
+          "examples": [
+            {
+              "h": "Naakt paar",
+              "steps": [
+                "{cellA} en {cellB} in {unit} hebben precies dezelfde twee kandidaten: {d1} en {d2}.",
+                "Het ene vakje moet {d1} zijn en het andere {d2}. We weten niet welk welk is, maar beide cijfers worden door deze twee vakjes opgebruikt.",
+                "Dus geen ander vakje in {unit} kan {d1} of {d2} bevatten. Verwijder {elim}."
+              ]
+            },
+            {
+              "h": "Naakt drietal",
+              "steps": [
+                "Drie vakjes in {unit} halen al hun kandidaten uit dezelfde drie cijfers, {digits}: {cells}.",
+                "De drie cijfers moeten deze drie vakjes in een of andere volgorde vullen. Een vakje hoeft niet alle drie de kandidaten te tonen; het gaat erom dat geen van de drie vakjes een kandidaat buiten de set heeft.",
+                "Verwijder {digits} uit elk ander vakje in {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Twee vakjes nemen die twee kandidaten delen maar ook een derde hebben. Bij een naakt paar moet elk vakje precies de twee kandidaten hebben en verder niets.",
+            "De cijfers uit de vakjes van het paar zelf verwijderen. Het paar houdt zijn kandidaten; de eliminaties gaan naar de andere vakjes van de eenheid.",
+            "Eisen dat elk vakje van een drietal alle drie de cijfers toont. Een vakje met twee van de drie is prima, zolang geen vakje een kandidaat buiten de set heeft."
+          ],
+          "faq": [
+            [
+              "Wat is een naakt paar in Sudoku?",
+              "Twee vakjes in één eenheid die allebei precies dezelfde twee kandidaten hebben. Die twee cijfers zitten vast in die twee vakjes, dus ze kunnen uit de rest van de eenheid worden verwijderd."
+            ],
+            [
+              "Wat is een naakt drietal?",
+              "Drie vakjes in één eenheid waarvan de kandidaten samen maar drie cijfers zijn. Elk vakje kan er twee of drie van hebben. De drie cijfers vullen de drie vakjes, dus ze kunnen uit de andere vakjes van de eenheid worden verwijderd."
+            ],
+            [
+              "Plaatst een naakt paar een cijfer?",
+              "Niet op zichzelf. Het verwijdert kandidaten, en die verwijdering laat meestal een naakte of verborgen single achter. De hint in Bare Sudoku toont die single en noemt de techniek die hem mogelijk maakte."
+            ],
+            [
+              "Kan een naakt paar tegelijk in een blok en een rij liggen?",
+              "Ja. Als de twee vakjes een rij en een blok delen, elimineert het paar in beide eenheden. Bare Sudoku behandelt ze één eenheid tegelijk."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Verborgen paren en drietallen",
+          "title": "Verborgen paren en drietallen in Sudoku: zo vind je ze",
+          "description": "Verborgen paar: twee cijfers die alleen in dezelfde twee vakjes van een eenheid kunnen, dus de andere kandidaten daar vallen af. Leer ze stap voor stap vinden.",
+          "h1": "Verborgen paren en drietallen (hidden pair, hidden triple)",
+          "summary": "Een verborgen paar bestaat uit twee cijfers die binnen een rij, kolom of blok kandidaat zijn in dezelfde twee vakjes en nergens anders. Die twee vakjes moeten die twee cijfers bevatten, dus elke andere kandidaat daarin kan weg. Een verborgen drietal werkt op dezelfde manier, met drie cijfers die tot drie vakjes beperkt zijn. Na het verwijderen tonen de vakjes een naakt paar of drietal. De hint van Bare Sudoku noemt de plaatsing die dit oplevert \"Paar of drietal\".",
+          "when": [
+            "Als een eenheid vakjes met veel kandidaten heeft en de singles op zijn. Verborgen paren verstoppen zich in drukke vakjes, en daarom loont het om juist daar te zoeken waar geen naakte paren te zien zijn. Verborgen drietallen zijn zeldzaam; Bare Sudoku controleert ze wel, maar de meeste moeilijke puzzels worden zonder opgelost."
+          ],
+          "spot": [
+            "Werk per cijfer, niet per vakje. Noteer in een eenheid de vakjes waar elk ontbrekend cijfer kan staan. Als twee cijfers elk maar twee mogelijke vakjes hebben en het zijn dezelfde twee, heb je een verborgen paar. Tik in het spel op een cijfertoets om de kandidaten te markeren; als twee cijfers dezelfde twee vakjes van een eenheid laten oplichten en verder niets daarin, is dat het patroon."
+          ],
+          "examples": [
+            {
+              "h": "Verborgen paar",
+              "steps": [
+                "In {unit} hebben de cijfers {d1} en {d2} elk maar twee mogelijke vakjes, en het zijn dezelfde twee: {cells}.",
+                "Die twee vakjes moeten {d1} en {d2} bevatten, dus hun andere kandidaten zijn onmogelijk.",
+                "Verwijder {elim}. Nu tonen de twee vakjes een naakt paar, wat meer kan vrijmaken."
+              ]
+            }
+          ],
+          "mistakes": [
+            "De twee cijfers van het paar uit de vakjes van het paar verwijderen. Het zijn de andere kandidaten van die vakjes die weg moeten; de cijfers van het paar blijven.",
+            "Een cijfer accepteren dat nog een derde mogelijk vakje in de eenheid heeft. Beide cijfers moeten beperkt zijn tot precies de twee vakjes.",
+            "Alleen in blokken zoeken. Verborgen paren komen net zo vaak voor in rijen en kolommen."
+          ],
+          "faq": [
+            [
+              "Wat is een verborgen paar in Sudoku?",
+              "Twee cijfers die alleen in dezelfde twee vakjes van een eenheid kunnen. Die vakjes moeten die cijfers krijgen, dus hun andere kandidaten worden verwijderd."
+            ],
+            [
+              "Hoe verschilt een verborgen paar van een naakt paar?",
+              "Een naakt paar is zichtbaar: twee vakjes die alleen dezelfde twee kandidaten tonen. Een verborgen paar wordt afgedekt door extra kandidaten in de twee vakjes. Als je die extra kandidaten verwijdert, wordt een verborgen paar een naakt paar."
+            ],
+            [
+              "Wat is een verborgen drietal?",
+              "Drie cijfers die beperkt zijn tot drie vakjes van een eenheid. Niet elk cijfer hoeft in alle drie de vakjes voor te komen; het gaat erom dat geen van de drie cijfers een kandidaat buiten die vakjes heeft."
+            ],
+            [
+              "Maakt de hint onderscheid tussen verborgen en naakte paren?",
+              "Nee. Bare Sudoku vindt beide en noemt de plaatsing die dit oplevert \"Paar of drietal\". Deze pagina's houden ze uit elkaar omdat je ze op verschillende manieren vindt."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing in Sudoku: zo werkt de techniek",
+          "description": "X-Wing: een cijfer met precies twee kandidaatvakjes in twee rijen, in dezelfde twee kolommen, verdwijnt uit de rest van die kolommen. Met een echt voorbeeld.",
+          "h1": "X-Wing",
+          "summary": "Een X-Wing is een patroon van één cijfer en vier vakjes op de hoeken van een rechthoek. Als het cijfer precies twee kandidaatvakjes heeft in elk van twee rijen, en die vakjes in dezelfde twee kolommen liggen, dan moet het cijfer twee tegenover elkaar liggende hoeken van de rechthoek innemen. Het kan dus worden verwijderd uit elk ander vakje van die twee kolommen. Hetzelfde werkt met rijen en kolommen omgedraaid. Het is de eerste Expert-techniek in Bare Sudoku.",
+          "when": [
+            "Als singles, geblokkeerde kandidaten en deelverzamelingen op zijn. X-Wings zijn het meest voorkomende Expert-patroon en verschijnen vaak als een cijfer nog weinig kandidaten heeft, meestal als er al vier tot zes exemplaren van geplaatst zijn. Je hebt volledige notities nodig voor het cijfer dat je onderzoekt."
+          ],
+          "spot": [
+            "Kies een cijfer en zoek rijen waarin het precies twee kandidaatvakjes heeft. Als twee van zulke rijen dezelfde twee kolommen delen, kijk dan in die kolommen naar andere kandidaten voor het cijfer: dat zijn de eliminaties. Herhaal daarna met kolommen als basis. Tik in het spel op de cijfertoets: elke kandidaat voor dat cijfer wordt gemarkeerd, en een rechthoek van vier gemarkeerde notities zie je makkelijk."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Cijfer {d} heeft precies twee kandidaatvakjes in rij {r1} en precies twee in rij {r2}, en die liggen in dezelfde twee kolommen, {c1} en {c2}: {cells}.",
+                "Rij {r1} zet zijn {d} in kolom {c1} of {c2}, en rij {r2} zet zijn {d} in de andere. Hoe dan ook krijgen de kolommen {c1} en {c2} elk een {d} uit deze twee rijen.",
+                "Dus kan {d} nergens anders in de kolommen {c1} en {c2} staan. Verwijder {d} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Een rij gebruiken met drie kandidaatvakjes voor het cijfer. Elke basisrij moet er precies twee hebben, en beide in de twee gedeelde kolommen.",
+            "Het cijfer uit de rijen verwijderen in plaats van uit de kolommen. Met rijen als basis liggen de eliminaties in de kolommen, en andersom.",
+            "De omgedraaide versie vergeten. Een X-Wing op kolommen elimineert in rijen."
+          ],
+          "faq": [
+            [
+              "Wat is een X-Wing in Sudoku?",
+              "Een cijfer met precies twee kandidaatvakjes in elk van twee rijen, in dezelfde twee kolommen. Het cijfer neemt twee tegenover elkaar liggende hoeken van die rechthoek in, dus het wordt uit de rest van de twee kolommen verwijderd. Rijen en kolommen kunnen worden omgedraaid."
+            ],
+            [
+              "Waarom werkt een X-Wing?",
+              "Elk van de twee rijen moet het cijfer in een van de twee kolommen zetten, en de twee rijen kunnen niet dezelfde kolom gebruiken. Dus krijgen de twee kolommen elk hun exemplaar van het cijfer uit deze rijen, en elke andere kandidaat in die kolommen is onmogelijk."
+            ],
+            [
+              "Is een X-Wing een vis?",
+              "Ja. De X-Wing is de vis van grootte twee; Swordfish is de vis van grootte drie. Bare Sudoku vindt ze allebei."
+            ],
+            [
+              "Op welk niveau komen X-Wings voor?",
+              "Expert. Een puzzel die een X-Wing, Y-Wing, Swordfish of XYZ-Wing nodig heeft, krijgt Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: zo werkt de techniek",
+          "description": "Y-Wing (XY-Wing): een spil met twee kandidaten en twee vleugels die er elk één mee delen, halen een cijfer weg uit elk vakje dat beide vleugels ziet. Voorbeeld.",
+          "h1": "Y-Wing",
+          "summary": "Een Y-Wing, ook wel XY-Wing genoemd, gebruikt drie vakjes met elk twee kandidaten. De spil heeft kandidaten X en Y. De ene vleugel ziet de spil en heeft X en Z; de andere vleugel ziet de spil en heeft Y en Z. Wat de spil ook wordt, een van de vleugels moet Z zijn, dus Z kan worden verwijderd uit elk vakje dat beide vleugels ziet. In Bare Sudoku is het een Expert-techniek.",
+          "when": [
+            "Als een puzzel meerdere vakjes met precies twee kandidaten heeft en er geen vis beschikbaar is. Y-Wings komen vaak voor in Expert-puzzels en vind je door de vakjes met twee kandidaten te volgen: elk ervan is een mogelijke spil of vleugel."
+          ],
+          "spot": [
+            "Maak een lijst van de vakjes met precies twee kandidaten. Behandel elk ervan als spil met kandidaten X en Y, en zoek onder zijn buren een vakje met X en een ander cijfer Z, en een vakje met Y en dezelfde Z. Die twee zijn de vleugels. Zoek daarna vakjes die beide vleugels zien en Z bevatten. Let op: de vleugels hoeven elkaar niet te zien."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "De spil {pivot} heeft kandidaten {x} en {y}. Hij ziet {wingA}, met {x} en {z}, en {wingB}, met {y} en {z}.",
+                "Als {pivot} een {x} is, verliest {wingA} de {x} en wordt {z}. Als {pivot} een {y} is, wordt {wingB} een {z}. In elk geval is een van de twee vleugels {z}.",
+                "Een vakje dat beide vleugels ziet, kan nooit {z} zijn. Verwijder {z} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vleugels kiezen die niet allebei de spil zien. Elke vleugel moet een rij, kolom of blok met de spil delen.",
+            "Z verwijderen uit vakjes die maar één vleugel zien. Het vakje waaruit je elimineert, moet beide vleugels zien.",
+            "Z uit de spil verwijderen. Bij een Y-Wing bevat de spil geen Z; als dat wel zo is, is het patroon een XYZ-Wing, met andere regels."
+          ],
+          "faq": [
+            [
+              "Wat is een Y-Wing in Sudoku?",
+              "Drie vakjes met twee kandidaten: een spil met X en Y, een vleugel met X en Z die de spil ziet, en een vleugel met Y en Z die de spil ziet. Een van de vleugels is altijd Z, dus Z wordt verwijderd uit vakjes die beide vleugels zien."
+            ],
+            [
+              "Is een Y-Wing hetzelfde als een XY-Wing?",
+              "Ja. Beide namen beschrijven hetzelfde patroon. Bare Sudoku noemt het Y-Wing."
+            ],
+            [
+              "Waarom moet een van de vleugels Z zijn?",
+              "Als de spil X is, verliest de eerste vleugel X en wordt Z. Als de spil Y is, wordt de tweede vleugel Z. De spil is een van beide, dus een vleugel is Z."
+            ],
+            [
+              "Hoeveel vakjes elimineert een Y-Wing?",
+              "Meestal een of twee: alleen de vakjes die beide vleugels zien en nog Z bevatten. Dat is genoeg om een single te maken."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish in Sudoku: zo werkt de techniek",
+          "description": "Swordfish: een cijfer dat in drie rijen tot drie kolommen beperkt is, verdwijnt uit de rest van die kolommen. De vis van grootte drie, met een voorbeeld.",
+          "h1": "Swordfish",
+          "summary": "Een Swordfish is een X-Wing met drie rijen en drie kolommen. Als een cijfer in elk van drie rijen hoogstens drie kandidaatvakjes heeft, en al die vakjes in dezelfde drie kolommen vallen, dan gebruiken de drie rijen het cijfer in die kolommen op, en kan het cijfer uit elk ander vakje van de drie kolommen worden verwijderd. Rijen en kolommen kunnen worden omgedraaid. Bare Sudoku zoekt na de Y-Wing naar een Swordfish, in Expert-puzzels.",
+          "when": [
+            "Als X-Wing en Y-Wing niets vinden. Swordfish komen minder vaak voor dan X-Wings en vragen een cijfer waarvan de kandidaten dun over drie lijnen verspreid zijn. Je hebt volledige en kloppende notities voor dat cijfer nodig."
+          ],
+          "spot": [
+            "Kies een cijfer en zoek rijen met twee of drie kandidaatvakjes ervoor. Als drie van zulke rijen samen maar drie kolommen beslaan, kijk dan in die kolommen naar verdere kandidaten voor het cijfer. Niet elke rij hoeft in elke kolom een kandidaat te hebben: een Swordfish kan zes, zeven, acht of negen vakjes hebben. Markeer in het spel het cijfer met zijn toets en zoek drie rijen waarvan de kandidaten in drie kolommen op één lijn liggen."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Cijfer {d} heeft hoogstens drie kandidaatvakjes in elk van de rijen {rows}, en al die vakjes vallen in de kolommen {cols}: {cells}.",
+                "Elk van de drie rijen moet zijn {d} in een van de drie kolommen zetten, en geen twee rijen kunnen dezelfde kolom gebruiken. Dus krijgen de drie kolommen hun {d} uit deze drie rijen.",
+                "Elke andere kandidaat {d} in de kolommen {cols} is onmogelijk. Verwijder {d} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Alle negen vakjes eisen. Een Swordfish met twee kandidaten in sommige rijen is nog steeds geldig, zolang de drie rijen maar drie kolommen beslaan.",
+            "Een rij met vier kandidaatvakjes meenemen. Elke basisrij mag er hoogstens drie hebben, allemaal binnen de drie kolommen.",
+            "In de basisrijen elimineren. Met rijen als basis liggen de eliminaties in de drie kolommen, buiten de basisrijen."
+          ],
+          "faq": [
+            [
+              "Wat is een Swordfish in Sudoku?",
+              "Een cijfer waarvan de kandidaten in drie rijen beperkt zijn tot drie kolommen. De drie rijen moeten het cijfer in die drie kolommen zetten, één per kolom, dus het cijfer wordt uit de andere vakjes van die kolommen verwijderd."
+            ],
+            [
+              "Hoe verschilt een Swordfish van een X-Wing?",
+              "Alleen in grootte: een X-Wing gebruikt twee rijen en twee kolommen, een Swordfish drie en drie. De redenering is dezelfde."
+            ],
+            [
+              "Heeft een Swordfish precies negen vakjes nodig?",
+              "Nee. Elke rij kan twee of drie kandidaten hebben; het patroon vraagt alleen dat de drie rijen samen niet meer dan drie kolommen gebruiken."
+            ],
+            [
+              "Bestaat er een vis van grootte vier?",
+              "Ja, de Jellyfish. Bare Sudoku gebruikt hem niet, omdat zijn puzzels er nooit een nodig hebben."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: zo werkt de techniek",
+          "description": "XYZ-Wing: een spil met drie kandidaten en twee vleugels die er één mee delen, halen dat cijfer weg uit elk vakje dat alle drie ziet. Met een echt voorbeeld.",
+          "h1": "XYZ-Wing",
+          "summary": "Een XYZ-Wing is een Y-Wing waarvan de spil drie kandidaten heeft. De spil heeft X, Y en Z; de ene vleugel ziet de spil en heeft X en Z, de andere ziet de spil en heeft Y en Z. Een van de drie vakjes moet Z zijn, dus Z kan worden verwijderd uit elk vakje dat alle drie ziet. Omdat de spil zelf Z kan zijn, moet het vakje waaruit je elimineert zowel de spil als beide vleugels zien, wat het beperkt tot het blok of de lijn die de vakjes delen. Het is de moeilijkste techniek die Bare Sudoku gebruikt.",
+          "when": [
+            "Alleen als al het andere faalt. XYZ-Wings zijn het zeldzaamste patroon in Bare Sudoku en komen alleen in Expert-puzzels voor. Zoek ernaar als een vakje met drie kandidaten in een blok staat met een vakje met twee kandidaten dat er twee cijfers mee deelt."
+          ],
+          "spot": [
+            "Begin bij vakjes met precies drie kandidaten; elk ervan is een mogelijke spil. Zoek onder zijn buren twee vakjes met elk twee kandidaten, allebei gekozen uit de drie van de spil, die precies één cijfer Z delen. Zoek daarna vakjes die de spil en beide vleugels zien en Z bevatten. In de praktijk ligt de ene vleugel in het blok van de spil en de andere in zijn rij of kolom, en zijn de vakjes waaruit je elimineert de overige vakjes van dat blok in die rij of kolom."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "De spil {pivot} heeft drie kandidaten: {x}, {y} en {z}. Hij ziet {wingA} met {x} en {z}, en {wingB} met {y} en {z}.",
+                "Als {pivot} een {z} is, ben je klaar. Is het een {x}, dan moet {wingA} een {z} zijn. Is het een {y}, dan moet {wingB} een {z} zijn. In elk geval is een van de drie vakjes {z}.",
+                "Een vakje dat alle drie ziet, kan geen {z} zijn. Verwijder {z} uit {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Elimineren uit vakjes die alleen de twee vleugels zien. Anders dan bij een Y-Wing kan de spil Z zijn, dus het vakje moet ook de spil zien.",
+            "Vleugels gebruiken waarvan de kandidaten niet allebei in de drie kandidaten van de spil zitten.",
+            "Het verwarren met een Y-Wing: het verschil is de derde kandidaat in de spil, en die bepaalt welke vakjes je kunt opschonen."
+          ],
+          "faq": [
+            [
+              "Wat is een XYZ-Wing in Sudoku?",
+              "Een spil met kandidaten X, Y en Z en twee vleugels, een met X en Z en een met Y en Z, die allebei de spil zien. Een van de drie vakjes is Z, dus Z wordt verwijderd uit vakjes die alle drie zien."
+            ],
+            [
+              "Hoe verschilt een XYZ-Wing van een Y-Wing?",
+              "De spil heeft drie kandidaten in plaats van twee, waaronder Z. Daardoor kan Z ook in de spil komen, dus alleen vakjes die de spil en beide vleugels zien, kunnen Z verliezen."
+            ],
+            [
+              "Hoe vaak komt een XYZ-Wing voor?",
+              "Zelden. In Bare Sudoku kunnen alleen Expert-puzzels er een nodig hebben, en de meeste hebben dat niet. Bare Sudoku controleert hem als laatste, na X-Wing, Y-Wing en Swordfish."
+            ],
+            [
+              "Bestaat er een WXYZ-Wing?",
+              "Ja, met een spil van vier kandidaten, maar Bare Sudoku gebruikt hem niet. Elke puzzel in het spel is af te maken met de negen technieken uit deze gids."
+            ]
+          ]
+        }
+      }
+    },
+    "pl": {
+      "learnHeading": "Naucz się sudoku",
+      "learnText": "Zaczynasz przygodę z sudoku albo trudna łamigłówka stawia opór? Dwa poradniki wyjaśniają zasady i każdą technikę rozwiązywania używaną przez podpowiedzi, każdą na prawdziwym przykładzie.",
+      "howToLink": "Jak grać w sudoku",
+      "techniquesLink": "Techniki rozwiązywania sudoku",
+      "labels": {
+        "howTo": "Jak grać",
+        "techniques": "Techniki",
+        "play": "Graj w sudoku",
+        "prev": "Poprzednia technika",
+        "next": "Następna technika",
+        "all": "Wszystkie techniki",
+        "example": "Przykład",
+        "steps": "Krok po kroku",
+        "when": "Kiedy stosować",
+        "spot": "Jak ją rozpoznać",
+        "mistakes": "Częste błędy",
+        "inGame": "W Bare Sudoku",
+        "level": "Potrzebna od poziomu: {level}",
+        "hint": "W grze podpowiedź brzmi: {text}",
+        "legend": "Pogrubione cyfry są podane, niebieskie wpisano podczas rozwiązywania, a małe to kandydaci. Podświetlone pola tworzą układ, przekreśleni kandydaci są usuwani, a kandydat w kółku to cyfra do wpisania.",
+        "notation": "Pola zapisujemy jako r3c7: wiersz 3, kolumna 7. Wiersze liczymy od góry, kolumny od lewej, a bloki od 1 do 9 od lewego górnego rogu, wiersz po wierszu.",
+        "row": "wiersz {n}",
+        "column": "kolumna {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} z {cell}",
+        "regions": "Wiersz 5, kolumna 5 i blok 5 na początku łamigłówki",
+        "firstMove": "Nagi singiel: w {cell} pasuje tylko {d}",
+        "breadcrumb": "Ścieżka nawigacji"
+      },
+      "howTo": {
+        "title": "Jak grać w sudoku: zasady, plansza i pierwsze ruchy",
+        "description": "Naucz się grać w sudoku: zasady, jak działają wiersze, kolumny i bloki, dlaczego każda łamigłówka ma jedno rozwiązanie, jak używać notatek i jak zacząć.",
+        "h1": "Jak grać w sudoku",
+        "summary": "Sudoku to łamigłówka logiczna na planszy 9×9. Wypełnij każde puste pole cyfrą od 1 do 9 tak, aby każdy wiersz, każda kolumna i każdy blok 3×3 zawierały każdą cyfrę dokładnie raz. Część cyfr jest podana na starcie; resztę wyprowadzasz logicznie, pole po polu, zawsze na pewno, i nigdy nie musisz zgadywać. Ten poradnik objaśnia planszę, zasady, regułę jednego rozwiązania, notatki i prostą strategię na pierwsze ruchy. Wszystko to przećwiczysz w [Bare Sudoku](play), które jest darmowe i ma podpowiedzi wyjaśniające logikę.",
+        "sections": [
+          {
+            "h": "Jakie są zasady sudoku?",
+            "p": [
+              "Są tylko trzy zasady, a w gruncie rzeczy to ta sama zasada widziana z trzech stron: każdy wiersz musi zawierać cyfry od 1 do 9, każda kolumna musi zawierać cyfry od 1 do 9 i każdy blok 3×3 musi zawierać cyfry od 1 do 9. Cyfra nie może więc nigdy wystąpić dwa razy w tym samym wierszu, kolumnie ani bloku.",
+              "Podane cyfry, wydrukowane pogrubioną czcionką, są stałe. Twoim zadaniem jest wypełnienie pustych pól. Nie ma tu arytmetyki ani kolejności: cyfry to po prostu dziewięć różnych symboli. Można by grać literami albo kształtami i nic by się nie zmieniło."
+            ]
+          },
+          {
+            "h": "Jak zbudowana jest plansza?",
+            "p": [
+              "Plansza ma 81 pól w 9 wierszach i 9 kolumnach. Grube linie dzielą ją na dziewięć bloków 3×3. Każde pole należy do dokładnie jednego wiersza, jednej kolumny i jednego bloku; te trzy grupy to jego jednostki. Pozostałe 20 pól, które dzielą z danym polem jakąś jednostkę, to jego sąsiedzi; cyfra wpisana w pole wyklucza tę cyfrę u wszystkich 20 sąsiadów.",
+              "Pola zapisujemy jako r3c7: wiersz 3, kolumna 7. Wiersze liczymy od góry, kolumny od lewej, a bloki od 1 do 9 od lewego górnego rogu, wiersz po wierszu. Ten zapis pojawia się w każdym poradniku o technikach i warto go poznać: r5c5 to środek planszy."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Dlaczego każde sudoku ma dokładnie jedno rozwiązanie?",
+            "p": [
+              "Poprawne sudoku ma jedno rozwiązanie i właśnie dzięki temu logika działa. Za każdym razem, gdy potrafisz wykazać, że cyfra nie może trafić nigdzie indziej w jednostce, musi trafić do pozostałego pola, bo rozwiązanie istnieje i jest jedyne. Gdyby łamigłówka miała dwa rozwiązania, żadne rozumowanie nie mogłoby ich rozróżnić i w którymś momencie trzeba by zgadywać.",
+              "Bare Sudoku generuje każdą łamigłówkę na twoim urządzeniu i sprawdza, czy ma ona dokładnie jedno rozwiązanie i czy wbudowany solver logiczny potrafi ją dokończyć technikami wybranego poziomu. Jeśli więc utkniesz, zawsze jest następny krok do znalezienia, a podpowiedź go pokazuje."
+            ]
+          },
+          {
+            "h": "Jak zacząć rozwiązywać sudoku?",
+            "p": [
+              "Zacznij od tego, co najbardziej ograniczone. Ta kolejność sprawdza się na każdym poziomie:"
+            ],
+            "list": [
+              "Wybierz cyfrę, która występuje już wiele razy, powiedzmy sześć lub siedem, i znajdź bloki, w których jej jeszcze brakuje. Często w bloku zostaje dla niej tylko jedno pole: to [ukryty singiel](hidden-single).",
+              "Szukaj zatłoczonych pól. Pole, którego wiersz, kolumna i blok razem zawierają osiem różnych cyfr, ma tylko jednego kandydata: to [nagi singiel](naked-single). Najlepiej szukać w prawie pełnych wierszach i blokach.",
+              "Każda wpisana cyfra usuwa kandydata u 20 sąsiadów, więc od razu ich sprawdź. Single często przychodzą seriami.",
+              "Gdy łatwe wpisy się skończą, zapisz notatki: kandydatów dla każdego pustego pola. Potem szukaj cyfry zamkniętej w jednej linii wewnątrz bloku ([zablokowani kandydaci](locked-candidates)) albo dwóch pól z tymi samymi dwoma kandydatami ([naga para](naked-pairs)).",
+              "Po każdej eliminacji wracaj do singli. Nawet łamigłówki Ekspert rozwiązuje się głównie singlami; zaawansowana technika tylko odblokowuje kolejny."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Czym są notatki i kiedy ich używać?",
+            "p": [
+              "Notatki, nazywane też znaczkami ołówkiem albo kandydatami, to małe cyfry, które wpisujesz w puste pole, żeby zapamiętać, jakie cyfry są tam jeszcze możliwe. W łatwych łamigłówkach rzadko są potrzebne; od poziomu Trudny stają się niezbędne, bo techniki takie jak pary, X-Wing i Y-Wing dotyczą kandydatów, a nie wpisanych cyfr.",
+              "Dbaj o poprawność notatek: gdy wpisujesz cyfrę, usuń ją z notatek wszystkich 20 sąsiadów. W Bare Sudoku dzieje się to automatycznie, a Wypełnij notatki jednym dotknięciem wpisuje każdego kandydata w każde puste pole, więc możesz zacząć od pełnego i poprawnego zestawu kandydatów. Notatka to fakt, a nie zgadywanie: oznacza, że nic jeszcze nie wyklucza tej cyfry."
+            ]
+          },
+          {
+            "h": "Co zrobić, gdy utkniesz?",
+            "p": [
+              "Najpierw sprawdź podstawy: każdy prawie pełny wiersz, kolumna i blok to źródło singli. Potem upewnij się, że notatki są kompletne, bo brakujący kandydat ukrywa układy, a nieaktualny tworzy fałszywe. Następnie przejdź przez [techniki](techniques) według trudności: zablokowani kandydaci, pary i trójki, X-Wing, Y-Wing, Swordfish i XYZ-Wing. Każda ma własną stronę z prawdziwym przykładem.",
+              "Jeśli nic nie działa, weź podpowiedź. W Bare Sudoku podpowiedź najpierw sprawdza, czy któraś wpisana cyfra jest błędna, potem znajduje następne pole, które da się wypełnić logicznie, i podaje nazwę techniki, więc czegoś się uczysz, nawet gdy z niej korzystasz. Dotknij podpowiedzi ponownie, aby wpisać cyfrę."
+            ]
+          },
+          {
+            "h": "Jak wpisywać cyfry w Bare Sudoku?",
+            "p": [
+              "Dotknij pola, a potem cyfry. Albo najpierw dotknij cyfry: zostaje zablokowana i każde pole, którego dotkniesz, ją otrzymuje; to najszybszy sposób na wpisanie szóstego, siódmego i ósmego egzemplarza cyfry. Dotknij cyfry ponownie, aby ją zwolnić. Przycisk Notatki przełącza na znaczki ołówkiem, Wymaż czyści pole, Cofnij cofa dowolny ruch, a błędy są zaznaczane na czerwono, chyba że wyłączysz to w menu.",
+              "Na klawiaturze strzałkami poruszasz się po planszy, klawiszami od 1 do 9 wpisujesz cyfrę, Backspace kasuje, N włącza notatki, U cofa, H daje podpowiedź, F wypełnia notatki, a Escape otwiera menu. Gra zapisuje się sama, działa offline i nie ma reklam ani konta."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Czy w sudoku trzeba kiedyś zgadywać?",
+            "Nie w poprawnej łamigłówce. Każda łamigłówka w Bare Sudoku ma dokładnie jedno rozwiązanie i jest sprawdzona pod kątem rozwiązywalności samą logiką, najwyżej technikami swojego poziomu. Jeśli masz wrażenie, że musisz zgadywać, w notatkach brakuje kandydata albo jakaś technika czeka na odkrycie."
+          ],
+          [
+            "Czy cyfra może wystąpić dwa razy w wierszu, kolumnie lub bloku?",
+            "Nie. Na tym polega cała zasada: każdy z dziewięciu wierszy, dziewięciu kolumn i dziewięciu bloków zawiera każdą cyfrę od 1 do 9 dokładnie raz. Jeśli dwie takie same cyfry są w jednej jednostce, co najmniej jedna z nich jest błędna."
+          ],
+          [
+            "Czym różnią się poziomy Łatwy, Średni, Trudny i Ekspert?",
+            "Poziom wyznaczają techniki, których wymaga łamigłówka. Łatwy i Średni rozwiązuje się samymi singlami, a Łatwy zaczyna się od co najmniej 38 podanych cyfr. Trudny wymaga zablokowanych kandydatów albo par i trójek. Ekspert wymaga techniki X-Wing, Y-Wing, Swordfish lub XYZ-Wing."
+          ],
+          [
+            "Lepiej wpisywać notatki we wszystkie pola czy tylko w niektóre?",
+            "W łamigłówkach Trudny i Ekspert wypełnij wszystkie: układy takie jak pary, X-Wing i Y-Wing widać dopiero wtedy, gdy wpisany jest każdy kandydat. Na poziomach Łatwy i Średni notatki są opcjonalne, a większość graczy po prostu wypatruje singli."
+          ],
+          [
+            "Ile trwa rozwiązanie sudoku?",
+            "Łatwa łamigłówka zajmuje kilka minut; łamigłówki Ekspert mogą zająć dwadzieścia minut lub więcej, zależnie od tego, jak szybko zauważysz zaawansowany układ. Bare Sudoku pokazuje czas, zatrzymuje go, gdy menu jest otwarte, i nie prowadzi rankingów, więc graj we własnym tempie."
+          ],
+          [
+            "Czy sudoku wymaga liczenia?",
+            "Nie. Cyfry to tylko etykiety; nie ma żadnego dodawania ani liczenia. Nadałoby się dowolne dziewięć symboli i dlatego sudoku jest łamigłówką logiczną, a nie liczbową."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Techniki rozwiązywania sudoku wyjaśnione na przykładach",
+        "description": "Dziewięć technik rozwiązywania sudoku, od nagich singli po Swordfish i XYZ-Wing, w kolejności używanej przez podpowiedzi Bare Sudoku, każda z przykładem.",
+        "h1": "Techniki rozwiązywania sudoku",
+        "intro": [
+          "Każde sudoku da się rozwiązać niewielkim zestawem technik logicznych. Ten spis zawiera dziewięć technik, których używają solver Bare Sudoku i jego podpowiedzi, w kolejności, w jakiej solver je próbuje: najpierw single, potem eliminacje w obrębie jednej jednostki, a na końcu układy obejmujące kilka wierszy i kolumn. Każda technika ma własną stronę z definicją, opisem, jak ją rozpoznać, prawdziwym przykładem z wygenerowanej łamigłówki i częstymi błędami.",
+          "Poziom łamigłówki wyznacza najtrudniejsza technika, jakiej wymaga. Łamigłówki Łatwy i Średni wymagają tylko singli, Trudny wymaga zablokowanych kandydatów albo par i trójek, a Ekspert co najmniej jednej ryby lub jednego skrzydła. Niezależnie od poziomu większość pracy wykonują single; zaawansowana technika usuwa jednego lub dwóch kandydatów, a dalej znów prowadzą single."
+        ],
+        "faq": [
+          [
+            "W jakiej kolejności próbować technik sudoku?",
+            "Od najprostszych: nagie single, ukryte single, zablokowani kandydaci, nagie pary i trójki, ukryte pary i trójki, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku próbuje ich dokładnie w tej kolejności, a podpowiedź zawsze podaje najprostszą technikę, która pozwala ruszyć dalej."
+          ],
+          [
+            "Czy do rozwiązania sudoku potrzebne są wszystkie te techniki?",
+            "W łamigłówkach Łatwy i Średni wystarczą single. Łamigłówki Trudny dodają zablokowanych kandydatów i podzbiory. Łamigłówki Ekspert wymagają co najmniej jednej ryby lub jednego skrzydła, ale zwykle tylko raz lub dwa razy na łamigłówkę."
+          ],
+          [
+            "Czy są techniki trudniejsze niż XYZ-Wing?",
+            "Tak, na przykład łańcuchy, testy jednoznaczności i sieci wymuszeń. Bare Sudoku nie generuje łamigłówek, które ich wymagają, więc każdą łamigłówkę w grze da się dokończyć dziewięcioma technikami z tej strony."
+          ],
+          [
+            "Co to jest kandydat?",
+            "Cyfra, która wciąż może trafić do pustego pola, bo nic w jego wierszu, kolumnie ani bloku jeszcze jej nie wyklucza. Notatki w grze to kandydaci. Każda technika poza singlami opiera się na kandydatach, więc dbaj, by były kompletne i poprawne."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Nagi singiel",
+          "title": "Nagi singiel w sudoku: pole z jednym kandydatem",
+          "description": "Nagi singiel to puste pole, w którym może stać tylko jedna cyfra. Naucz się szybko znajdować nagie single na prawdziwym przykładzie i poznaj typowe błędy.",
+          "h1": "Nagi singiel (naked single)",
+          "summary": "Nagi singiel to puste pole, które ma dokładnie jednego kandydata: pozostałe osiem cyfr występuje już w jego wierszu, kolumnie lub bloku. Pozostała cyfra musi się tam znaleźć. To najprostsza technika sudoku, ta, której będziesz używać najczęściej, i ta, którą podpowiedź Bare Sudoku zgłasza jako \"Tylko jeden kandydat tutaj\".",
+          "when": [
+            "Zawsze. Nagie single pojawiają się od pierwszego do ostatniego ruchu, na każdym poziomie. Na poziomach Łatwy i Średni są, razem z ukrytymi singlami, jedyną potrzebną techniką. W trudniejszych łamigłówkach każda eliminacja wykonana zaawansowaną techniką zwykle zostawia po sobie nagi singiel, więc szukaj ich po każdym kroku."
+          ],
+          "spot": [
+            "Patrz na pola z wieloma wypełnionymi sąsiadami: pole w wierszu, który ma już siedem cyfr, albo pole, którego wiersz, kolumna i blok razem obejmują osiem różnych cyfr. Bez notatek policz cyfry widoczne z danego pola. Z notatkami nagi singiel to po prostu pole z jednym kandydatem i dlatego dzięki Wypełnij notatki łatwo je znaleźć."
+          ],
+          "examples": [
+            {
+              "h": "Przykład",
+              "steps": [
+                "Spójrz na pole {cell}. Jest puste, więc wypisz wszystkie cyfry wpisane już w jego wierszu, kolumnie i bloku.",
+                "Wiersz {row} zawiera {rowDigits}. Kolumna {col} zawiera {colDigits}. Blok {box} zawiera {boxDigits}.",
+                "Razem wykluczają każdą cyfrę oprócz {d}, więc {d} jest jedynym kandydatem, który zostaje w polu {cell}.",
+                "Wpisz {d} w pole {cell}. Potem sprawdź, czy nowa cyfra nie tworzy kolejnego singla w tym samym wierszu, kolumnie lub bloku."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Liczenie tylko wiersza albo tylko bloku. Osiem wykluczonych cyfr zwykle pochodzi ze wszystkich trzech jednostek razem.",
+            "Zapominanie, że cyfra wpisana przed chwilą też wyklucza kandydatów u swoich 20 sąsiadów; nowe nagie single pojawiają się tuż po każdym wpisie.",
+            "Mylenie nagiego singla z ukrytym: przy nagim singlu w polu zostaje jeden kandydat, przy ukrytym singlu w jednostce zostaje jedno pole dla cyfry."
+          ],
+          "faq": [
+            [
+              "Co to jest nagi singiel w sudoku?",
+              "Puste pole z dokładnie jednym kandydatem. W jego wierszu, kolumnie i bloku stoi już osiem różnych cyfr, więc dziewiąta cyfra jest jedyną, która pasuje."
+            ],
+            [
+              "Dlaczego nazywa się nagi?",
+              "Bo gdy notatki są wpisane, jedynego kandydata widać bezpośrednio w polu; nic go nie zasłania. Ukryty singiel natomiast stoi wśród innych kandydatów i znajduje się go, patrząc na cyfrę, a nie na pole."
+            ],
+            [
+              "Czy łamigłówkę da się rozwiązać samymi nagimi singlami?",
+              "Wiele łatwych tak, ale większość wymaga też ukrytych singli. Bare Sudoku ocenia łamigłówki Łatwy i Średni jako rozwiązywalne singlami obu rodzajów; łamigłówki Trudny i Ekspert wymagają co najmniej jednej techniki więcej."
+            ],
+            [
+              "Czy podpowiedź pokazuje nagie single?",
+              "Tak. Gdy następny wpis to nagi singiel, podpowiedź zaznacza pole i mówi \"Tylko jeden kandydat tutaj\" razem z cyfrą. Dotknij podpowiedzi ponownie, aby ją wpisać."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Ukryty singiel",
+          "title": "Ukryty singiel w sudoku: jedyne miejsce dla cyfry",
+          "description": "Ukryty singiel to jedyne pole w wierszu, kolumnie lub bloku, w którym cyfra może jeszcze stanąć. Naucz się go wypatrywać, przeglądając planszę po jednej cyfrze.",
+          "h1": "Ukryty singiel (hidden single)",
+          "summary": "Ukryty singiel to cyfra, która w wierszu, kolumnie lub bloku ma już tylko jedno możliwe pole, nawet jeśli to pole pokazuje innych kandydatów. Jednostka musi zawierać tę cyfrę, więc cyfra trafia właśnie tam. Podpowiedź Bare Sudoku zgłasza to jako \"Jedyne miejsce dla 5 w tym wierszu\", w tej kolumnie lub w tym bloku.",
+          "when": [
+            "Zawsze, gdy cyfra jest już w dużej mierze rozstawiona: gdy występuje pięć lub sześć razy, pozostałe bloki są bardzo ograniczone i następnym ruchem często jest ukryty singiel. Ukryte single to główna technika łamigłówek Łatwy i Średni i na każdym poziomie wykonują najwięcej pracy."
+          ],
+          "spot": [
+            "Przeglądaj po jednej cyfrze. Weź cyfrę, znajdź blok, który jej nie zawiera, i skreśl każde pole tego bloku, które leży w jednym wierszu lub kolumnie z wpisanym już egzemplarzem tej cyfry. Jeśli zostanie jedno pole, to jest ukryty singiel. Ten sam sposób działa dla wierszy i kolumn. W grze dotknij wpisanej cyfry: wszystkie jej egzemplarze zostaną podświetlone, więc wolne pola rzucają się w oczy."
+          ],
+          "examples": [
+            {
+              "h": "Przykład",
+              "steps": [
+                "Blok {box} nie zawiera jeszcze cyfry {d}, więc jedno z jego pustych pól musi ją przyjąć. Puste pola to {empties}.",
+                "We wszystkich z nich oprócz {cell} cyfrę {d} blokuje cyfra {d} wpisana już w tym samym wierszu lub kolumnie, więc {d} nie jest tam kandydatem.",
+                "Zostaje więc pole {cell} jako jedyne miejsce dla cyfry {d} w bloku {box}. Wpisz tam {d}, nawet jeśli pole {cell} wciąż pokazuje innych kandydatów."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wpisanie cyfry w pole, które tylko prawdopodobnie jest właściwe: sprawdź każde inne puste pole jednostki, nie tylko te oczywiste.",
+            "Przeoczenie ukrytego singla, bo pole pokazuje kilku kandydatów. Pozostali kandydaci nie mają znaczenia; liczy się to, że cyfra nie ma innego miejsca w jednostce.",
+            "Przeglądanie tylko bloków. Wiersze i kolumny dają ukryte single równie często, zwłaszcza pod koniec."
+          ],
+          "faq": [
+            [
+              "Co to jest ukryty singiel w sudoku?",
+              "Cyfra, która może trafić tylko do jednego pola wiersza, kolumny lub bloku. Jednostka musi zawierać tę cyfrę, więc pole jest przesądzone, nawet jeśli wciąż ma innych kandydatów."
+            ],
+            [
+              "Czym różni się ukryty singiel od nagiego?",
+              "Nagi singiel dotyczy pola: zostaje jeden kandydat. Ukryty singiel dotyczy cyfry: w jednostce zostaje jedno pole. Oba pozwalają wpisać cyfrę na pewno."
+            ],
+            [
+              "Który łatwiej znaleźć?",
+              "Bez notatek zwykle łatwiej o ukryte single, bo możesz przeglądać planszę po jednej cyfrze. Przy kompletnych notatkach najłatwiejsze są nagie single, bo pole z jednym kandydatem od razu rzuca się w oczy."
+            ],
+            [
+              "Jak podpowiedź opisuje ukryty singiel?",
+              "Jako \"Jedyne miejsce dla\" cyfry w tym wierszu, w tej kolumnie lub w tym bloku, z zaznaczonym polem. Dotknij podpowiedzi ponownie, aby ją wpisać."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Zablokowani kandydaci",
+          "title": "Zablokowani kandydaci w sudoku: wskazywanie i przejmowanie",
+          "description": "Zablokowani kandydaci: gdy kandydaci cyfry w bloku leżą w jednym wierszu lub kolumnie, albo odwrotnie, cyfrę usuwa się z innych pól. Dwa prawdziwe przykłady.",
+          "h1": "Zablokowani kandydaci (locked candidates)",
+          "summary": "Zablokowani kandydaci to pierwsza technika, która usuwa kandydatów zamiast wpisywać cyfrę. Ma dwie formy. Wskazywanie: w bloku wszyscy kandydaci danej cyfry leżą w jednym wierszu lub kolumnie, więc cyfrę usuwa się z reszty tej linii. Przejmowanie: w wierszu lub kolumnie wszyscy kandydaci danej cyfry leżą w jednym bloku, więc cyfrę usuwa się z reszty tego bloku. Podpowiedź Bare Sudoku oznacza wpis, który to odblokowuje, jako \"Zablokowani kandydaci\".",
+          "when": [
+            "Gdy w łamigłówce Trudny skończą się single, to pierwsza rzecz do sprawdzenia. Wymaga kompletnych notatek, przynajmniej dla badanej cyfry. Zablokowani kandydaci zdarzają się często: większość łamigłówek Trudny ich wymaga, a łamigłówki Ekspert korzystają z nich pomiędzy większymi układami."
+          ],
+          "spot": [
+            "Przy wskazywaniu przejrzyj każdy blok i każdą brakującą w nim cyfrę: jeśli pola kandydujące tej cyfry leżą w jednym wierszu lub kolumnie, sprawdź, czy ta sama cyfra występuje jako kandydat dalej w tej linii, poza blokiem. Przy przejmowaniu patrz wzdłuż wiersza lub kolumny: jeśli wszyscy kandydaci danej cyfry są wewnątrz jednego bloku, resztę tego bloku można wyczyścić. W grze dotknij klawisza cyfry, aby podświetlić wszystkich jej kandydatów; linia dwóch lub trzech podświetlonych notatek wewnątrz bloku to szukany układ."
+          ],
+          "examples": [
+            {
+              "h": "Wskazywanie",
+              "steps": [
+                "W bloku {box} cyfra {d} ma tylko te pola kandydujące: {cells}. Wszystkie leżą w wierszu {row}.",
+                "Blok {box} potrzebuje cyfry {d}, więc cyfra {d} wiersza {row} znajdzie się wewnątrz bloku {box}, w którymkolwiek z tych pól wyląduje.",
+                "Wiersz {row} nie może mieć drugiej cyfry {d}, więc usuń {d} z pól wiersza {row} poza blokiem: {elim}."
+              ]
+            },
+            {
+              "h": "Przejmowanie",
+              "steps": [
+                "W wierszu {row} cyfra {d} może trafić tylko do pól {cells}, a wszystkie one leżą w bloku {box}.",
+                "Wiersz {row} musi zawierać {d}, więc cyfrę {d} bloku {box} przejmuje wiersz {row}. Pozostałe pola bloku {box} nie mogą zawierać {d}.",
+                "Usuń {d} z pól {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Usuwanie cyfry wewnątrz bloku zamiast poza nim przy wskazywaniu albo odwrotnie przy przejmowaniu. Eliminacje zawsze dotyczą pól, które są w linii, ale nie w bloku, albo w bloku, ale nie w linii.",
+            "Stosowanie reguły, gdy kandydaci zajmują dwa wiersze bloku. Wszystkie pola kandydujące cyfry w bloku muszą leżeć w jednej linii.",
+            "Zapominanie o szukaniu singla, który powstaje po eliminacji. Zablokowani kandydaci rzadko sami wpisują cyfrę; przygotowują singiel."
+          ],
+          "faq": [
+            [
+              "Co to są zablokowani kandydaci w sudoku?",
+              "Kandydaci cyfry ograniczeni do części wspólnej bloku i linii. Ponieważ blok, albo linia, musi zawierać tę cyfrę właśnie w tej części wspólnej, cyfrę można usunąć z reszty linii albo z reszty bloku."
+            ],
+            [
+              "Czym różni się wskazywanie od przejmowania?",
+              "Wskazywanie zaczyna się od bloku: kandydaci cyfry w bloku wskazują wzdłuż jednego wiersza lub kolumny, więc cyfrę usuwa się z reszty tej linii. Przejmowanie zaczyna się od wiersza lub kolumny: kandydaci tej linii dla danej cyfry leżą w jednym bloku, więc linia przejmuje cyfrę i usuwa się ją z reszty bloku."
+            ],
+            [
+              "Czy zablokowanych kandydatów nazywa się też eliminacją przez przecięcie?",
+              "Tak. Inne nazwy to redukcja blok-linia dla przejmowania oraz pary lub trójki wskazujące dla wskazywania. Bare Sudoku używa jednej nazwy dla obu form."
+            ],
+            [
+              "Który poziom wymaga zablokowanych kandydatów?",
+              "Trudny. Łamigłówka, która wymaga zablokowanych kandydatów lub podzbiorów, ale niczego trudniejszego, dostaje poziom Trudny; łamigłówki Ekspert wymagają dodatkowo ryby lub skrzydła."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Nagie pary i trójki",
+          "title": "Nagie pary i trójki w sudoku: jak działają",
+          "description": "Nagie pary i trójki: dwa lub trzy pola jednej jednostki z tymi samymi dwoma lub trzema kandydatami. Naucz się je rozpoznawać i dowiedz się, co usunąć.",
+          "h1": "Nagie pary i trójki (naked pair, naked triple)",
+          "summary": "Naga para to dwa pola w tym samym wierszu, kolumnie lub bloku, które mają dokładnie tych samych dwóch kandydatów. Te dwie cyfry muszą trafić do tych dwóch pól, więc można je usunąć ze wszystkich pozostałych pól jednostki. Naga trójka to ten sam pomysł z trzema polami i trzema cyframi; każde pole może pokazywać dwie z nich albo wszystkie trzy. Podpowiedź Bare Sudoku oznacza wynikający z tego wpis jako \"Para lub trójka\".",
+          "when": [
+            "Gdy notatki są kompletne, a single i zablokowani kandydaci się wyczerpały. Nagie pary są bardzo częste w łamigłówkach Trudny, nagie trójki rzadsze. Warto szukać obu w każdej jednostce, która ma jeszcze pięć lub więcej pustych pól."
+          ],
+          "spot": [
+            "Szukaj pól z tylko dwoma kandydatami i znajdź w tej samej jednostce inne pole z tymi samymi dwoma. Przy trójkach przejrzyj jednostki z kilkoma polami o dwóch i trzech kandydatach i sprawdź, czy trzy z nich razem używają tylko trzech różnych cyfr. Pola z dokładnie tymi samymi kandydatami łatwo zauważyć, gdy notatki są wpisane; w grze Wypełnij notatki robi to jednym dotknięciem."
+          ],
+          "examples": [
+            {
+              "h": "Naga para",
+              "steps": [
+                "Pola {cellA} i {cellB} leżą w tej samej jednostce ({unit}) i mają dokładnie tych samych dwóch kandydatów: {d1} i {d2}.",
+                "W jednym musi stanąć {d1}, a w drugim {d2}. Nie wiemy, które jest które, ale obie cyfry są zajęte przez te dwa pola.",
+                "Żadne inne pole tej jednostki ({unit}) nie może więc zawierać {d1} ani {d2}. Usuń {elim}."
+              ]
+            },
+            {
+              "h": "Naga trójka",
+              "steps": [
+                "Trzy pola jednostki ({unit}) biorą wszystkich swoich kandydatów z tych samych trzech cyfr, {digits}: {cells}.",
+                "Trzy cyfry muszą wypełnić te trzy pola w jakiejś kolejności. Pole nie musi pokazywać wszystkich trzech kandydatów; ważne, by żadne z trzech pól nie miało kandydata spoza zestawu.",
+                "Usuń {digits} ze wszystkich pozostałych pól jednostki ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Branie dwóch pól, które mają wspólnych dwóch kandydatów, ale też trzeciego. W nagiej parze każde pole musi mieć dokładnie tych dwóch kandydatów i nic więcej.",
+            "Usuwanie cyfr z samych pól pary. Para zachowuje swoich kandydatów; eliminacje dotyczą pozostałych pól jednostki.",
+            "Wymaganie, by każde pole trójki pokazywało wszystkie trzy cyfry. Pole z dwiema z trzech jest w porządku, o ile żadne pole nie ma kandydata spoza zestawu."
+          ],
+          "faq": [
+            [
+              "Co to jest naga para w sudoku?",
+              "Dwa pola w jednej jednostce, które mają dokładnie tych samych dwóch kandydatów. Te dwie cyfry są związane z tymi dwoma polami, więc można je usunąć z reszty jednostki."
+            ],
+            [
+              "Co to jest naga trójka?",
+              "Trzy pola w jednej jednostce, których kandydaci razem to tylko trzy cyfry. Każde pole może mieć dwie lub trzy z nich. Trzy cyfry wypełniają trzy pola, więc można je usunąć z pozostałych pól jednostki."
+            ],
+            [
+              "Czy naga para wpisuje cyfrę?",
+              "Sama nie. Usuwa kandydatów, a to zwykle zostawia nagi lub ukryty singiel. Podpowiedź w Bare Sudoku pokazuje ten singiel i podaje nazwę techniki, która go umożliwiła."
+            ],
+            [
+              "Czy naga para może leżeć jednocześnie w bloku i w wierszu?",
+              "Tak. Jeśli dwa pola dzielą wiersz i blok, para eliminuje w obu jednostkach. Bare Sudoku rozpatruje je po jednej jednostce naraz."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Ukryte pary i trójki",
+          "title": "Ukryte pary i trójki w sudoku: jak je znaleźć",
+          "description": "Ukryta para to dwie cyfry, które w jednostce mogą trafić tylko do tych samych dwóch pól, więc inni kandydaci tych pól odpadają. Naucz się je znajdować.",
+          "h1": "Ukryte pary i trójki (hidden pair, hidden triple)",
+          "summary": "Ukryta para to dwie cyfry, które w wierszu, kolumnie lub bloku są kandydatami w tych samych dwóch polach i nigdzie indziej. Te dwa pola muszą zawierać te dwie cyfry, więc wszystkich innych kandydatów w nich można usunąć. Ukryta trójka działa tak samo, z trzema cyframi ograniczonymi do trzech pól. Po usunięciu pola pokazują nagą parę lub trójkę. Podpowiedź Bare Sudoku oznacza wynikający z tego wpis jako \"Para lub trójka\".",
+          "when": [
+            "Gdy jednostka ma pola z wieloma kandydatami, a single się skończyły. Ukryte pary chowają się w zatłoczonych polach, dlatego warto ich szukać właśnie tam, gdzie nagich par nie widać. Ukryte trójki są rzadkie; Bare Sudoku ich szuka, ale większość łamigłówek Trudny rozwiązuje się bez nich."
+          ],
+          "spot": [
+            "Pracuj według cyfr, nie pól. W jednostce zanotuj pola, do których może trafić każda brakująca cyfra. Jeśli dwie cyfry mają po tylko dwa możliwe pola i są to te same dwa pola, masz ukrytą parę. W grze dotknij klawisza cyfry, aby podświetlić jej kandydatów; jeśli dwie cyfry podświetlają te same dwa pola jednostki i nic więcej w niej, to jest ten układ."
+          ],
+          "examples": [
+            {
+              "h": "Ukryta para",
+              "steps": [
+                "W tej jednostce ({unit}) cyfry {d1} i {d2} mają po tylko dwa możliwe pola i są to te same dwa pola: {cells}.",
+                "Te dwa pola muszą zawierać {d1} i {d2}, więc pozostali kandydaci w nich są niemożliwi.",
+                "Usuń {elim}. Teraz te dwa pola pokazują nagą parę, co może odblokować kolejne ruchy."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Usuwanie dwóch cyfr pary z pól pary. Odpadają pozostali kandydaci tych pól; cyfry pary zostają.",
+            "Przyjmowanie cyfry, która ma w jednostce trzecie możliwe pole. Obie cyfry muszą być ograniczone dokładnie do tych dwóch pól.",
+            "Szukanie tylko w blokach. Ukryte pary występują równie często w wierszach i kolumnach."
+          ],
+          "faq": [
+            [
+              "Co to jest ukryta para w sudoku?",
+              "Dwie cyfry, które mogą trafić tylko do tych samych dwóch pól jednostki. Te pola muszą przyjąć te cyfry, więc ich pozostałych kandydatów się usuwa."
+            ],
+            [
+              "Czym ukryta para różni się od nagiej?",
+              "Naga para jest widoczna: dwa pola, które pokazują tylko tych samych dwóch kandydatów. Ukryta para jest przykryta dodatkowymi kandydatami w tych dwóch polach. Usunięcie tych dodatkowych kandydatów zamienia ukrytą parę w nagą."
+            ],
+            [
+              "Co to jest ukryta trójka?",
+              "Trzy cyfry ograniczone do trzech pól jednostki. Nie każda cyfra musi występować we wszystkich trzech polach; ważne, by żadna z trzech cyfr nie miała kandydata poza tymi polami."
+            ],
+            [
+              "Czy podpowiedź odróżnia ukryte pary od nagich?",
+              "Nie. Bare Sudoku znajduje oba rodzaje i oznacza wynikający z nich wpis jako \"Para lub trójka\". Te strony rozdzielają je, bo znajduje się je na różne sposoby."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing w sudoku: jak działa ta technika",
+          "description": "X-Wing: cyfra z dokładnie dwoma polami kandydującymi w dwóch wierszach, w tych samych dwóch kolumnach, znika z reszty tych kolumn. Prawdziwy przykład.",
+          "h1": "X-Wing",
+          "summary": "X-Wing to układ jednej cyfry i czterech pól w rogach prostokąta. Jeśli cyfra ma dokładnie dwa pola kandydujące w każdym z dwóch wierszy, a te pola leżą w tych samych dwóch kolumnach, cyfra musi zająć dwa przeciwległe rogi prostokąta. Można ją więc usunąć ze wszystkich pozostałych pól tych dwóch kolumn. To samo działa po zamianie wierszy z kolumnami. To pierwsza technika poziomu Ekspert w Bare Sudoku.",
+          "when": [
+            "Gdy single, zablokowani kandydaci i podzbiory się wyczerpały. X-Wing to najczęstszy układ poziomu Ekspert i pojawia się zwykle wtedy, gdy cyfrze zostało niewiele kandydatów, zazwyczaj przy czterech do sześciu wpisanych już egzemplarzach. Wymaga kompletnych notatek dla badanej cyfry."
+          ],
+          "spot": [
+            "Wybierz cyfrę i szukaj wierszy, w których ma dokładnie dwa pola kandydujące. Jeśli dwa takie wiersze dzielą te same dwie kolumny, sprawdź w tych kolumnach innych kandydatów tej cyfry: to są eliminacje. Potem powtórz, biorąc za podstawę kolumny. W grze dotknij klawisza cyfry: wszyscy jej kandydaci zostaną podświetleni, a prostokąt z czterech podświetlonych notatek łatwo zauważyć."
+          ],
+          "examples": [
+            {
+              "h": "Przykład",
+              "steps": [
+                "Cyfra {d} ma dokładnie dwa pola kandydujące w wierszu {r1} i dokładnie dwa w wierszu {r2}, a leżą one w tych samych dwóch kolumnach, {c1} i {c2}: {cells}.",
+                "Wiersz {r1} umieszcza swoją cyfrę {d} w kolumnie {c1} albo {c2}, a wiersz {r2} w tej drugiej. Tak czy inaczej kolumny {c1} i {c2} dostają po jednej cyfrze {d} z tych dwóch wierszy.",
+                "Cyfra {d} nie może więc stać nigdzie indziej w kolumnach {c1} i {c2}. Usuń {d} z pól {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Użycie wiersza, który ma trzy pola kandydujące dla cyfry. Każdy wiersz bazowy musi mieć dokładnie dwa, oba we wspólnych dwóch kolumnach.",
+            "Usuwanie cyfry z wierszy zamiast z kolumn. Gdy bazą są wiersze, eliminacje są w kolumnach, i odwrotnie.",
+            "Zapominanie o wersji odwróconej. X-Wing zbudowany na kolumnach eliminuje w wierszach."
+          ],
+          "faq": [
+            [
+              "Co to jest X-Wing w sudoku?",
+              "Cyfra, która ma dokładnie dwa pola kandydujące w każdym z dwóch wierszy, w tych samych dwóch kolumnach. Cyfra zajmuje dwa przeciwległe rogi tego prostokąta, więc usuwa się ją z reszty obu kolumn. Wiersze i kolumny można zamienić."
+            ],
+            [
+              "Dlaczego X-Wing działa?",
+              "Każdy z dwóch wierszy musi umieścić cyfrę w jednej z dwóch kolumn, a oba wiersze nie mogą użyć tej samej kolumny. Każda z dwóch kolumn dostaje więc swój egzemplarz cyfry z tych wierszy, a każdy inny kandydat w tych kolumnach jest niemożliwy."
+            ],
+            [
+              "Czy X-Wing to ryba?",
+              "Tak. X-Wing to ryba rozmiaru dwa; Swordfish to ryba rozmiaru trzy. Bare Sudoku znajduje obie."
+            ],
+            [
+              "Na którym poziomie pojawia się X-Wing?",
+              "Ekspert. Łamigłówka, która wymaga techniki X-Wing, Y-Wing, Swordfish lub XYZ-Wing, dostaje poziom Ekspert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing w sudoku: jak działa ta technika",
+          "description": "Y-Wing (XY-Wing): oś z dwoma kandydatami i dwa skrzydła, z których każde dzieli z nią jednego, usuwają cyfrę z każdego pola widzącego oba skrzydła. Przykład.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, nazywany też XY-Wing, wykorzystuje trzy pola z dwoma kandydatami każde. Oś ma kandydatów X i Y. Jedno skrzydło widzi oś i ma X i Z; drugie skrzydło widzi oś i ma Y i Z. Czymkolwiek okaże się oś, jedno ze skrzydeł musi być Z, więc Z można usunąć z każdego pola, które widzi oba skrzydła. W Bare Sudoku to technika poziomu Ekspert.",
+          "when": [
+            "Gdy łamigłówka ma kilka pól z dokładnie dwoma kandydatami i nie ma żadnej ryby. Y-Wing jest częsty w łamigłówkach Ekspert i znajduje się go, śledząc pola z dwoma kandydatami: każde z nich może być osią lub skrzydłem."
+          ],
+          "spot": [
+            "Wypisz pola z dokładnie dwoma kandydatami. Każde z nich potraktuj jako oś z kandydatami X i Y i poszukaj wśród jego sąsiadów pola z X i inną cyfrą Z oraz pola z Y i tą samą cyfrą Z. Te dwa pola to skrzydła. Potem znajdź pola, które widzą oba skrzydła i zawierają Z. Zauważ, że skrzydła nie muszą widzieć siebie nawzajem."
+          ],
+          "examples": [
+            {
+              "h": "Przykład",
+              "steps": [
+                "Oś {pivot} ma kandydatów {x} i {y}. Widzi pole {wingA}, które ma {x} i {z}, oraz pole {wingB}, które ma {y} i {z}.",
+                "Jeśli w {pivot} jest {x}, to w {wingA} odpada {x} i zostaje {z}. Jeśli w {pivot} jest {y}, to w {wingB} zostaje {z}. W każdym przypadku w jednym z dwóch skrzydeł stoi {z}.",
+                "Pole, które widzi oba skrzydła, nigdy nie może zawierać {z}. Usuń {z} z pól {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wybór skrzydeł, które nie oba widzą oś. Każde skrzydło musi dzielić z osią wiersz, kolumnę lub blok.",
+            "Usuwanie Z z pól, które widzą tylko jedno skrzydło. Pole, z którego eliminujesz, musi widzieć oba skrzydła.",
+            "Usuwanie Z z osi. W układzie Y-Wing oś nie zawiera Z; jeśli zawiera, to jest XYZ-Wing z innymi regułami."
+          ],
+          "faq": [
+            [
+              "Co to jest Y-Wing w sudoku?",
+              "Trzy pola z dwoma kandydatami: oś z X i Y, skrzydło z X i Z, które widzi oś, oraz skrzydło z Y i Z, które widzi oś. Jedno skrzydło zawsze jest Z, więc Z usuwa się z pól, które widzą oba skrzydła."
+            ],
+            [
+              "Czy Y-Wing to to samo co XY-Wing?",
+              "Tak. Obie nazwy opisują ten sam układ. Bare Sudoku nazywa go Y-Wing."
+            ],
+            [
+              "Dlaczego jedno skrzydło musi być Z?",
+              "Jeśli oś to X, pierwsze skrzydło traci X i zostaje Z. Jeśli oś to Y, drugie skrzydło zostaje Z. Oś jest jednym z nich, więc jedno skrzydło to Z."
+            ],
+            [
+              "Ile pól eliminuje Y-Wing?",
+              "Zwykle jedno lub dwa: tylko pola, które widzą oba skrzydła i wciąż zawierają Z. To wystarcza, by powstał singiel."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish w sudoku: jak działa ta technika",
+          "description": "Swordfish: cyfra ograniczona w trzech wierszach do trzech kolumn znika z reszty tych kolumn. Ryba rozmiaru trzy, wyjaśniona na prawdziwym przykładzie.",
+          "h1": "Swordfish",
+          "summary": "Swordfish to X-Wing z trzema wierszami i trzema kolumnami. Jeśli cyfra ma co najwyżej trzy pola kandydujące w każdym z trzech wierszy, a wszystkie te pola wypadają w tych samych trzech kolumnach, to trzy wiersze wyczerpują tę cyfrę w tych kolumnach i można ją usunąć ze wszystkich pozostałych pól trzech kolumn. Wiersze i kolumny można zamienić. Bare Sudoku szuka układu Swordfish po Y-Wing, w łamigłówkach Ekspert.",
+          "when": [
+            "Gdy X-Wing i Y-Wing nic nie znajdują. Swordfish jest rzadszy niż X-Wing i wymaga cyfry, której kandydaci są rzadko rozsiani po trzech liniach. Wymaga kompletnych i poprawnych notatek dla tej cyfry."
+          ],
+          "spot": [
+            "Wybierz cyfrę i szukaj wierszy z dwoma lub trzema polami kandydującymi dla niej. Jeśli trzy takie wiersze razem obejmują tylko trzy kolumny, sprawdź w tych kolumnach dalszych kandydatów tej cyfry. Nie każdy wiersz musi mieć kandydata w każdej kolumnie: Swordfish może mieć sześć, siedem, osiem lub dziewięć pól. W grze podświetl cyfrę jej klawiszem i szukaj trzech wierszy, których kandydaci układają się w trzech kolumnach."
+          ],
+          "examples": [
+            {
+              "h": "Przykład",
+              "steps": [
+                "Cyfra {d} ma co najwyżej trzy pola kandydujące w każdym z wierszy {rows}, a wszystkie te pola wypadają w kolumnach {cols}: {cells}.",
+                "Każdy z trzech wierszy musi umieścić swoją cyfrę {d} w jednej z trzech kolumn, a żadne dwa wiersze nie mogą użyć tej samej kolumny. Trzy kolumny dostają więc swoją cyfrę {d} z tych trzech wierszy.",
+                "Każdy inny kandydat {d} w kolumnach {cols} jest niemożliwy. Usuń {d} z pól {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wymaganie wszystkich dziewięciu pól. Swordfish z dwoma kandydatami w niektórych wierszach nadal jest poprawny, o ile trzy wiersze obejmują tylko trzy kolumny.",
+            "Włączenie wiersza z czterema polami kandydującymi. Każdy wiersz bazowy może mieć co najwyżej trzy, wszystkie w obrębie trzech kolumn.",
+            "Eliminowanie w wierszach bazowych. Gdy bazą są wiersze, eliminacje są w trzech kolumnach, poza wierszami bazowymi."
+          ],
+          "faq": [
+            [
+              "Co to jest Swordfish w sudoku?",
+              "Cyfra, której kandydaci w trzech wierszach są ograniczeni do trzech kolumn. Trzy wiersze muszą umieścić cyfrę w tych trzech kolumnach, po jednej w każdej, więc usuwa się ją z pozostałych pól tych kolumn."
+            ],
+            [
+              "Czym Swordfish różni się od X-Wing?",
+              "Tylko rozmiarem: X-Wing używa dwóch wierszy i dwóch kolumn, Swordfish trzech i trzech. Rozumowanie jest takie samo."
+            ],
+            [
+              "Czy Swordfish potrzebuje dokładnie dziewięciu pól?",
+              "Nie. Każdy wiersz może mieć dwóch lub trzech kandydatów; układ wymaga tylko, by trzy wiersze razem nie zajmowały więcej niż trzech kolumn."
+            ],
+            [
+              "Czy istnieje ryba rozmiaru cztery?",
+              "Tak, Jellyfish. Bare Sudoku jej nie używa, bo jego łamigłówki nigdy jej nie wymagają."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing w sudoku: jak działa ta technika",
+          "description": "XYZ-Wing: oś z trzema kandydatami i dwa skrzydła, które dzielą z nią jednego, usuwają tę cyfrę z każdego pola widzącego wszystkie trzy. Przykład krok po kroku.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing to Y-Wing, którego oś ma trzech kandydatów. Oś ma X, Y i Z; jedno skrzydło widzi oś i ma X i Z, drugie widzi oś i ma Y i Z. Jedno z trzech pól musi być Z, więc Z można usunąć z każdego pola, które widzi wszystkie trzy. Ponieważ sama oś może być Z, pole, z którego eliminujesz, musi widzieć oś oraz oba skrzydła, co ogranicza je do bloku lub linii wspólnej dla tych pól. To najtrudniejsza technika, jakiej używa Bare Sudoku.",
+          "when": [
+            "Tylko wtedy, gdy wszystko inne zawodzi. XYZ-Wing to najrzadszy układ w Bare Sudoku i pojawia się tylko w łamigłówkach Ekspert. Szukaj go, gdy pole z trzema kandydatami leży w bloku razem z polem z dwoma kandydatami, które dzieli z nim dwie cyfry."
+          ],
+          "spot": [
+            "Zacznij od pól z dokładnie trzema kandydatami; każde z nich może być osią. Wśród jego sąsiadów poszukaj dwóch pól z dwoma kandydatami każde, wziętymi spośród trzech kandydatów osi, które dzielą dokładnie jedną cyfrę Z. Potem szukaj pól, które widzą oś i oba skrzydła i zawierają Z. W praktyce jedno skrzydło leży w bloku osi, a drugie w jej wierszu lub kolumnie, a eliminowane pola to pozostałe pola tego bloku w tym wierszu lub kolumnie."
+          ],
+          "examples": [
+            {
+              "h": "Przykład",
+              "steps": [
+                "Oś {pivot} ma trzech kandydatów: {x}, {y} i {z}. Widzi pole {wingA} z {x} i {z} oraz pole {wingB} z {y} i {z}.",
+                "Jeśli w {pivot} jest {z}, sprawa załatwiona. Jeśli {x}, w {wingA} musi być {z}. Jeśli {y}, w {wingB} musi być {z}. W każdym przypadku jedno z trzech pól zawiera {z}.",
+                "Pole, które widzi wszystkie trzy, nie może zawierać {z}. Usuń {z} z pól {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminowanie z pól, które widzą tylko dwa skrzydła. Inaczej niż w układzie Y-Wing oś może być Z, więc pole musi widzieć także oś.",
+            "Używanie skrzydeł, których kandydaci nie mieszczą się obaj w trzech kandydatach osi.",
+            "Mylenie z układem Y-Wing: różnicą jest trzeci kandydat w osi, a to zmienia, które pola można wyczyścić."
+          ],
+          "faq": [
+            [
+              "Co to jest XYZ-Wing w sudoku?",
+              "Oś z kandydatami X, Y i Z oraz dwa skrzydła, jedno z X i Z, drugie z Y i Z, które oba widzą oś. Jedno z trzech pól to Z, więc Z usuwa się z pól, które widzą wszystkie trzy."
+            ],
+            [
+              "Czym XYZ-Wing różni się od Y-Wing?",
+              "Oś ma trzech kandydatów zamiast dwóch, w tym Z. Przez to oś też może zawierać Z, więc Z mogą stracić tylko pola, które widzą oś i oba skrzydła."
+            ],
+            [
+              "Jak często pojawia się XYZ-Wing?",
+              "Rzadko. W Bare Sudoku może go wymagać tylko łamigłówka Ekspert, a większość go nie wymaga. Bare Sudoku sprawdza go na końcu, po X-Wing, Y-Wing i Swordfish."
+            ],
+            [
+              "Czy istnieje WXYZ-Wing?",
+              "Tak, z osią o czterech kandydatach, ale Bare Sudoku go nie używa. Każdą łamigłówkę w grze da się dokończyć dziewięcioma technikami z tego poradnika."
+            ]
+          ]
+        }
+      }
+    },
     "el": {
       "learnHeading": "Μάθετε Sudoku",
       "learnText": "Είστε νέοι στο Sudoku ή κολλήσατε σε έναν δύσκολο γρίφο; Δύο οδηγοί εξηγούν τους κανόνες και κάθε τεχνική επίλυσης που χρησιμοποιούν οι βοήθειες, καθεμία με πραγματικό παράδειγμα.",
