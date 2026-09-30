@@ -5820,6 +5820,2334 @@
         }
       }
     },
+    "cs": {
+      "learnHeading": "Naučte se sudoku",
+      "learnText": "Se sudoku začínáte, nebo jste uvízli u těžkého zadání? Dva návody vysvětlují pravidla a všechny řešitelské techniky, které používají nápovědy, každou na skutečném příkladu.",
+      "howToLink": "Jak hrát sudoku",
+      "techniquesLink": "Techniky řešení sudoku",
+      "labels": {
+        "howTo": "Jak hrát",
+        "techniques": "Techniky",
+        "play": "Hrát sudoku",
+        "prev": "Předchozí technika",
+        "next": "Další technika",
+        "all": "Všechny techniky",
+        "example": "Příklad",
+        "steps": "Krok za krokem",
+        "when": "Kdy ji použít",
+        "spot": "Jak ji najít",
+        "mistakes": "Časté chyby",
+        "inGame": "V Bare Sudoku",
+        "level": "Vyžadováno od úrovně: {level}",
+        "hint": "Nápověda ve hře říká: {text}",
+        "legend": "Tučné číslice jsou zadané, modré číslice byly doplněny při řešení, malé číslice jsou kandidáti. Zvýrazněná políčka tvoří vzor, přeškrtnutí kandidáti se odstraňují a zakroužkovaný kandidát je číslice, kterou vložíte.",
+        "notation": "Políčka se zapisují jako r3c7: řádek 3, sloupec 7. Řádky se počítají shora, sloupce zleva a bloky 1 až 9 od levého horního rohu, řádek po řádku.",
+        "row": "řádek {n}",
+        "column": "sloupec {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} z {cell}",
+        "regions": "Řádek 5, sloupec 5 a blok 5 na začátku zadání",
+        "firstMove": "Nahý singl: v {cell} může být jen {d}",
+        "breadcrumb": "Drobečková navigace"
+      },
+      "howTo": {
+        "title": "Jak hrát sudoku: pravidla, hrací plocha a první tahy",
+        "description": "Naučte se hrát sudoku: pravidla, jak fungují řádky, sloupce a bloky, proč má každé zadání jedno řešení, jak používat poznámky a jak udělat první tahy.",
+        "h1": "Jak hrát sudoku",
+        "summary": "Sudoku je logická hádanka na mřížce 9×9. Vyplňte každé prázdné políčko číslicí od 1 do 9 tak, aby každý řádek, každý sloupec a každý blok 3×3 obsahoval každou číslici právě jednou. Některé číslice jsou zadané předem; zbytek odvodíte, jedno jisté políčko za druhým, a nikdy nemusíte hádat. Tento návod vysvětluje hrací plochu, pravidla, princip jediného řešení, poznámky a jednoduchou strategii pro první tahy. Všechno si můžete vyzkoušet v [Bare Sudoku](play), které je zdarma a má nápovědy vysvětlující logiku.",
+        "sections": [
+          {
+            "h": "Jaká jsou pravidla sudoku?",
+            "p": [
+              "Pravidla jsou jen tři a jde vlastně o jedno pravidlo viděné ze tří stran: každý řádek musí obsahovat číslice 1 až 9, každý sloupec musí obsahovat číslice 1 až 9 a každý blok 3×3 musí obsahovat číslice 1 až 9. Číslice se proto nikdy nesmí objevit dvakrát ve stejném řádku, sloupci ani bloku.",
+              "Zadané číslice, vytištěné tučně, jsou pevné. Vaším úkolem je vyplnit prázdná políčka. Nic se nepočítá ani neřadí: číslice jsou jen devět různých symbolů. Mohli byste hrát s písmeny nebo tvary a nic by se nezměnilo."
+            ]
+          },
+          {
+            "h": "Jak je hrací plocha uspořádána?",
+            "p": [
+              "Hrací plocha má 81 políček v 9 řádcích a 9 sloupcích. Silné čáry ji dělí na devět bloků 3×3. Každé políčko patří právě do jednoho řádku, jednoho sloupce a jednoho bloku; tyto tři skupiny jsou jeho jednotky. Dvacet dalších políček, která s ním sdílejí některou jednotku, se nazývá jeho sousedé; číslice vložená do políčka tuto číslici vylučuje ve všech 20 sousedech.",
+              "Políčka se zapisují jako r3c7: řádek 3, sloupec 7. Řádky se počítají shora, sloupce zleva a bloky 1 až 9 od levého horního rohu, řádek po řádku. Tento zápis se používá ve všech návodech k technikám a vyplatí se ho naučit: r5c5 je střed hrací plochy."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Proč má každé sudoku právě jedno řešení?",
+            "p": [
+              "Správné sudoku má jedno řešení, a právě díky tomu funguje logika. Kdykoli ukážete, že číslice nemůže v jednotce stát nikde jinde, musí patřit do zbývajícího políčka, protože řešení existuje a je jediné. Kdyby mělo zadání dvě řešení, žádné uvažování by je nerozlišilo a v určité chvíli byste museli hádat.",
+              "Bare Sudoku vytváří každé zadání přímo ve vašem zařízení a ověřuje, že má právě jedno řešení a že ho jeho logický řešitel dokončí technikami zvolené úrovně. Když tedy uvíznete, vždy existuje další krok, který lze najít, a nápověda vám ho ukáže."
+            ]
+          },
+          {
+            "h": "Jak začít řešit sudoku?",
+            "p": [
+              "Začněte tam, kde je nejvíc omezení. Tento postup funguje na každé úrovni:"
+            ],
+            "list": [
+              "Vyberte číslici, která už je na ploše mnohokrát, třeba šestkrát nebo sedmkrát, a najděte bloky, kde ještě chybí. Často pro ni v bloku zbývá jediné políčko: to je [skrytý singl](hidden-single).",
+              "Hledejte přeplněná políčka. Políčko, jehož řádek, sloupec a blok dohromady obsahují osm různých číslic, má jediného zbývajícího kandidáta: to je [nahý singl](naked-single). Nejlépe se hledá v téměř plných řádcích nebo blocích.",
+              "Každá vložená číslice odebere kandidáta 20 sousedům, proto je hned zkontrolujte. Singly obvykle přicházejí v řetězech.",
+              "Když snadná vložení dojdou, pište si poznámky: kandidáty pro každé prázdné políčko. Pak hledejte číslici, která je v bloku omezena na jeden řádek nebo sloupec ([uzamčení kandidáti](locked-candidates)), nebo dvě políčka se stejnými dvěma kandidáty ([nahá dvojice](naked-pairs)).",
+              "Po každé eliminaci se vraťte k singlům. I zadání úrovně Expert se řeší převážně singly; pokročilá technika jen odemkne další z nich."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Co jsou poznámky a kdy je používat?",
+            "p": [
+              "Poznámky, kterým se říká také tužkové značky nebo kandidáti, jsou malé číslice, které si zapisujete do prázdného políčka, abyste věděli, které číslice tam ještě připadají v úvahu. V lehkých zadáních je potřebujete jen zřídka; od úrovně Těžká jsou nezbytné, protože techniky jako dvojice, X-Wing a Y-Wing pracují s kandidáty, ne s vloženými číslicemi.",
+              "Udržujte poznámky přesné: když vložíte číslici, odstraňte ji z poznámek všech 20 sousedů. V Bare Sudoku se to děje automaticky a Vyplnit poznámky jedním klepnutím zapíše všechny kandidáty do všech prázdných políček, takže můžete začít z úplné a správné sady kandidátů. Poznámka je fakt, ne tip: znamená, že tuto číslici zatím nic nevylučuje."
+            ]
+          },
+          {
+            "h": "Co dělat, když uvíznete?",
+            "p": [
+              "Nejdřív znovu zkontrolujte základy: každý téměř plný řádek, sloupec a blok je zdrojem singlů. Pak se ujistěte, že jsou poznámky úplné, protože chybějící kandidát skrývá vzory a zastaralý vytváří falešné. Potom projděte [techniky](techniques) podle obtížnosti: uzamčení kandidáti, dvojice a trojice, X-Wing, Y-Wing, Swordfish a XYZ-Wing. Každá má vlastní stránku se skutečným příkladem.",
+              "Když nic nepomáhá, vezměte si nápovědu. V Bare Sudoku nápověda nejdřív zkontroluje, zda není některá vložená číslice špatně, pak najde další políčko, které lze vyplnit logikou, a pojmenuje techniku, takže se i při jejím použití něco naučíte. Dalším klepnutím na nápovědu číslici vložíte."
+            ]
+          },
+          {
+            "h": "Jak se v Bare Sudoku zadávají číslice?",
+            "p": [
+              "Klepněte na políčko a pak na číslici. Nebo klepněte nejdřív na číslici: uzamkne se a dostane ji každé políčko, na které klepnete, což je nejrychlejší způsob, jak vložit šestý, sedmý a osmý výskyt číslice. Dalším klepnutím na číslici ji uvolníte. Tlačítko Poznámky přepíná na tužkové značky, Smazat vymaže políčko, Zpět vrátí jakýkoli tah a chyby se značí červeně, pokud to v nabídce nevypnete.",
+              "Na klávesnici se pohybujete šipkami, klávesami 1 až 9 zadáváte číslici, Backspace maže, N přepíná poznámky, U vrací tah, H dává nápovědu, F vyplní poznámky a Escape otevře nabídku. Hra se ukládá sama, funguje offline a nemá reklamy ani účet."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Musí se v sudoku někdy hádat?",
+            "Ve správném zadání ne. Každé zadání Bare Sudoku má právě jedno řešení a je ověřeno, že jde vyřešit čistě logikou, technikami až do jeho úrovně. Pokud máte pocit, že musíte hádat, chybí vám v poznámkách kandidát nebo na objevení čeká některá technika."
+          ],
+          [
+            "Může se číslice objevit dvakrát v řádku, sloupci nebo bloku?",
+            "Ne. V tom spočívá celé pravidlo: každý z devíti řádků, devíti sloupců a devíti bloků obsahuje každou číslici od 1 do 9 právě jednou. Pokud dvě stejné číslice sdílejí jednotku, alespoň jedna z nich je špatně."
+          ],
+          [
+            "Jaký je rozdíl mezi úrovněmi Lehká, Střední, Těžká a Expert?",
+            "Úroveň určují techniky, které zadání vyžaduje. Lehká a střední zadání se řeší jen singly a lehké zadání začíná nejméně s 38 zadanými číslicemi. Těžká zadání vyžadují uzamčené kandidáty nebo dvojice a trojice. Úroveň Expert vyžaduje X-Wing, Y-Wing, Swordfish nebo XYZ-Wing."
+          ],
+          [
+            "Je lepší vyplnit poznámky do všech políček, nebo jen do některých?",
+            "U těžkých zadání a zadání úrovně Expert je vyplňte všude: vzory jako dvojice, X-Wing a Y-Wing se ukážou, jen když jsou zapsáni všichni kandidáti. U lehkých a středních zadání jsou poznámky volitelné a většina hráčů jen hledá singly."
+          ],
+          [
+            "Jak dlouho trvá vyřešit sudoku?",
+            "Lehké zadání zabere pár minut; zadání úrovně Expert může trvat dvacet minut i déle, podle toho, jak rychle odhalíte pokročilý vzor. Bare Sudoku ukazuje časomíru, při otevřené nabídce ji pozastaví a nevede žádný žebříček, takže hrajte svým tempem."
+          ],
+          [
+            "Potřebuje sudoku počítání?",
+            "Ne. Číslice jsou jen označení; nic se nesčítá ani nepočítá. Fungovalo by jakýchkoli devět symbolů, a proto je sudoku logická hádanka, ne číselná."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Techniky řešení sudoku vysvětlené na příkladech",
+        "description": "Všech devět technik řešení sudoku, od nahých singlů po Swordfish a XYZ-Wing, v pořadí, v jakém je používají nápovědy Bare Sudoku, každá s příkladem.",
+        "h1": "Techniky řešení sudoku",
+        "intro": [
+          "Každé sudoku lze vyřešit malou sadou logických technik. Tento přehled uvádí devět technik, které používá řešitel Bare Sudoku a jeho nápovědy, v pořadí, v jakém je řešitel zkouší: nejdřív singly, pak eliminace uvnitř jedné jednotky a nakonec vzory přes několik řádků a sloupců. Každá technika má vlastní stránku s definicí, návodem, jak ji najít, skutečným příkladem z vygenerovaného zadání a častými chybami.",
+          "Úroveň zadání určuje nejtěžší technika, kterou vyžaduje. Lehká a střední zadání potřebují jen singly, těžká zadání uzamčené kandidáty nebo dvojice a trojice a zadání úrovně Expert alespoň jednu rybu nebo křídlo. Na jakékoli úrovni odvedou většinu práce singly; pokročilá technika odstraní kandidáta nebo dva a singly pak pokračují."
+        ],
+        "faq": [
+          [
+            "V jakém pořadí zkoušet techniky sudoku?",
+            "Od nejlevnějších: nahé singly, skryté singly, uzamčení kandidáti, nahé dvojice a trojice, skryté dvojice a trojice, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku je zkouší přesně v tomto pořadí a nápověda vždy jmenuje nejjednodušší techniku, která vede dál."
+          ],
+          [
+            "Potřebuji k řešení sudoku všechny tyto techniky?",
+            "Na lehká a střední zadání stačí singly. Těžká zadání přidávají uzamčené kandidáty a podmnožiny. Zadání úrovně Expert vyžadují alespoň jednu rybu nebo křídlo, ale obvykle jen jednou nebo dvakrát za zadání."
+          ],
+          [
+            "Existují těžší techniky než XYZ-Wing?",
+            "Ano, například řetězce, testy jedinečnosti a vynucovací sítě. Bare Sudoku nevytváří zadání, která by je vyžadovala, takže každé zadání ve hře lze dokončit devíti technikami z této stránky."
+          ],
+          [
+            "Co je kandidát?",
+            "Číslice, která ještě může stát v prázdném políčku, protože ji zatím nic v jeho řádku, sloupci ani bloku nevylučuje. Poznámky ve hře jsou kandidáti. Každá technika nad rámec singlů pracuje s kandidáty, proto je udržujte úplné a přesné."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Nahý singl",
+          "title": "Nahý singl v sudoku: políčko s jediným kandidátem",
+          "description": "Nahý singl je prázdné políčko, kam pasuje jediná číslice. Naučte se nahé singly rychle najít, na skutečném příkladu krok za krokem, a poznejte časté chyby.",
+          "h1": "Nahý singl (naked single)",
+          "summary": "Nahý singl je prázdné políčko, které má právě jednoho kandidáta: ostatních osm číslic už je v jeho řádku, sloupci nebo bloku. Zbývající číslice tam musí patřit. Je to nejjednodušší technika sudoku, používáte ji nejčastěji a nápověda Bare Sudoku ji hlásí jako „Jediný kandidát zde“.",
+          "when": [
+            "Vždy. Nahé singly se objevují od prvního tahu do posledního, na každé úrovni. V lehkých a středních zadáních jsou spolu se skrytými singly jedinou technikou, kterou potřebujete. V těžších zadáních každá eliminace pokročilé techniky obvykle zanechá nahý singl, proto je po každém kroku hledejte."
+          ],
+          "spot": [
+            "Dívejte se na políčka s mnoha vyplněnými sousedy: na políčko v řádku, který už má sedm číslic, nebo na políčko, jehož řádek, sloupec a blok dohromady pokrývají osm různých číslic. Bez poznámek spočítejte číslice, které z políčka vidíte. S poznámkami je nahý singl prostě políčko s jediným kandidátem, a proto je díky funkci Vyplnit poznámky najdete snadno."
+          ],
+          "examples": [
+            {
+              "h": "Příklad",
+              "steps": [
+                "Podívejte se na políčko {cell}. Je prázdné, proto si vypište všechny číslice, které už jsou v jeho řádku, sloupci a bloku.",
+                "Řádek {row} obsahuje {rowDigits}. Sloupec {col} obsahuje {colDigits}. Blok {box} obsahuje {boxDigits}.",
+                "Dohromady vylučují všechny číslice kromě {d}, takže {d} je jediný kandidát, který v políčku {cell} zbývá.",
+                "Zapište {d} do políčka {cell}. Pak zkontrolujte, zda nová číslice nevytvořila další singl ve stejném řádku, sloupci nebo bloku."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Počítat jen řádek nebo jen blok. Osm vyloučených číslic obvykle pochází ze všech tří jednotek dohromady.",
+            "Zapomenout, že i číslice, kterou jste právě vložili, vylučuje kandidáty ve svých 20 sousedech; nové nahé singly se objevují hned po každém vložení.",
+            "Zaměnit nahý singl se skrytým: nahému singlu zbývá v políčku jeden kandidát, skrytému singlu zbývá pro číslici v jednotce jedno políčko."
+          ],
+          "faq": [
+            [
+              "Co je nahý singl v sudoku?",
+              "Prázdné políčko s právě jedním kandidátem. V jeho řádku, sloupci a bloku už je osm různých číslic, takže se tam hodí jen ta devátá."
+            ],
+            [
+              "Proč se mu říká nahý?",
+              "Protože jediný kandidát je po zapsání poznámek vidět přímo v políčku; nic ho neskrývá. Skrytý singl naopak leží mezi dalšími kandidáty a najdete ho tak, že sledujete číslici, ne políčko."
+            ],
+            [
+              "Dá se zadání vyřešit jen nahými singly?",
+              "Mnohá lehká zadání ano, ale většina potřebuje i skryté singly. Bare Sudoku hodnotí lehká a střední zadání jako řešitelná singly obou druhů; těžká zadání a zadání úrovně Expert potřebují alespoň jednu další techniku."
+            ],
+            [
+              "Ukazuje nápověda nahé singly?",
+              "Ano. Když je dalším vložením nahý singl, nápověda vybere políčko a řekne „Jediný kandidát zde“ spolu s číslicí. Dalším klepnutím na nápovědu ji vložíte."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Skrytý singl",
+          "title": "Skrytý singl v sudoku: jediné místo pro číslici",
+          "description": "Skrytý singl je jediné políčko v řádku, sloupci nebo bloku, kam ještě může přijít určitá číslice. Naučte se skryté singly hledat po jedné číslici.",
+          "h1": "Skrytý singl (hidden single)",
+          "summary": "Skrytý singl je číslice, které v řádku, sloupci nebo bloku zbývá jediné možné políčko, i když to políčko může ukazovat další kandidáty. Jednotka tu číslici obsahovat musí, takže patří právě tam. Nápověda Bare Sudoku ho hlásí jako „Jediné místo pro 5 v tomto řádku“, případně sloupci nebo bloku.",
+          "when": [
+            "Kdykoli je některá číslice hodně rozehraná: jakmile se objeví pětkrát nebo šestkrát, zbývající bloky jsou velmi omezené a dalším tahem často bývá skrytý singl. Skryté singly jsou hlavní technikou lehkých a středních zadání a na každé úrovni zůstávají tažným koněm."
+          ],
+          "spot": [
+            "Procházejte po jedné číslici. Vezměte číslici, najděte blok, který ji neobsahuje, a vyškrtněte v něm každé políčko, které sdílí řádek nebo sloupec s již vloženým výskytem té číslice. Pokud zbude jedno políčko, našli jste skrytý singl. Stejně to funguje u řádků a sloupců. Ve hře klepněte na vloženou číslici: všechny její výskyty se zvýrazní, takže volná políčka vyniknou."
+          ],
+          "examples": [
+            {
+              "h": "Příklad",
+              "steps": [
+                "Blok {box} ještě neobsahuje {d}, takže ji musí mít jedno z jeho prázdných políček. Prázdná políčka jsou {empties}.",
+                "Ve všech kromě {cell} blokuje číslici {d} jiná {d}, která už stojí ve stejném řádku nebo sloupci, takže tam {d} kandidátem není.",
+                "Pro {d} tak v bloku {box} zbývá jediné místo: {cell}. Zapište tam {d}, i když {cell} může stále ukazovat další kandidáty."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vložit číslici do políčka, které je jen pravděpodobně to správné: zkontrolujte všechna ostatní prázdná políčka jednotky, nejen ta zjevná.",
+            "Přehlédnout skrytý singl, protože políčko ukazuje několik kandidátů. Na ostatních kandidátech nezáleží; důležité je, že číslice nemá v jednotce jiné místo.",
+            "Procházet jen bloky. Řádky a sloupce dávají skryté singly stejně často, zvlášť ke konci."
+          ],
+          "faq": [
+            [
+              "Co je skrytý singl v sudoku?",
+              "Číslice, která může přijít jen do jednoho políčka řádku, sloupce nebo bloku. Jednotka ji obsahovat musí, takže o políčku je rozhodnuto, i když má ještě další kandidáty."
+            ],
+            [
+              "Jaký je rozdíl mezi skrytým a nahým singlem?",
+              "Nahý singl se týká políčka: zbývá mu jeden kandidát. Skrytý singl se týká číslice: zbývá jí v jednotce jedno políčko. Oba vkládají číslici s jistotou."
+            ],
+            [
+              "Který se hledá snáz?",
+              "Bez poznámek bývají snazší skryté singly, protože plochu můžete procházet po jedné číslici. S úplnými poznámkami jsou nejsnazší nahé singly, protože políčko s jediným kandidátem hned upoutá."
+            ],
+            [
+              "Jak nápověda popisuje skrytý singl?",
+              "Jako „Jediné místo pro“ číslici v tomto řádku, tomto sloupci nebo tomto bloku, s vybraným políčkem. Dalším klepnutím na nápovědu číslici vložíte."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Uzamčení kandidáti",
+          "title": "Uzamčení kandidáti v sudoku: ukazování a nárokování",
+          "description": "Uzamčení kandidáti: když kandidáti číslice v bloku leží v jednom řádku nebo sloupci, nebo naopak, číslice se jinde odstraní. Dva skutečné příklady.",
+          "h1": "Uzamčení kandidáti (locked candidates)",
+          "summary": "Uzamčení kandidáti jsou první technika, která místo vkládání číslice odstraňuje kandidáty. Má dvě podoby. Ukazování: v bloku leží všichni kandidáti číslice v jednom řádku nebo sloupci, takže se číslice odstraní ze zbytku této linie. Nárokování: v řádku nebo sloupci leží všichni kandidáti číslice v jednom bloku, takže se číslice odstraní ze zbytku tohoto bloku. Nápověda Bare Sudoku označuje vložení, které tím odemkne, jako „Uzamčení kandidáti“.",
+          "when": [
+            "Když v těžkém zadání dojdou singly, zkuste nejdřív tohle. Potřebujete úplné poznámky alespoň pro zkoumanou číslici. Uzamčení kandidáti jsou častí: potřebuje je většina těžkých zadání a zadání úrovně Expert je používají mezi většími vzory."
+          ],
+          "spot": [
+            "Pro ukazování projděte každý blok a každou číslici, která v něm chybí: pokud kandidátní políčka té číslice leží v jediném řádku nebo sloupci, zkontrolujte, zda se stejná číslice objevuje jako kandidát dál v této linii mimo blok. Pro nárokování sledujte řádek nebo sloupec: pokud jsou kandidáti číslice všichni uvnitř jednoho bloku, zbytek bloku lze vyčistit. Ve hře klepněte na tlačítko číslice a zvýrazní se všichni její kandidáti; linie dvou nebo tří zvýrazněných poznámek uvnitř jednoho bloku je hledaný vzor."
+          ],
+          "examples": [
+            {
+              "h": "Ukazování",
+              "steps": [
+                "V bloku {box} má číslice {d} jen tato kandidátní políčka: {cells}. Všechna leží v řádku {row}.",
+                "Blok {box} potřebuje {d}, takže {d} řádku {row} leží uvnitř bloku {box}, ať skončí v kterémkoli z těchto políček.",
+                "Řádek {row} nemůže obsahovat druhou {d}, proto odstraňte {d} z políček řádku {row} mimo blok: {elim}."
+              ]
+            },
+            {
+              "h": "Nárokování",
+              "steps": [
+                "V řádku {row} může číslice {d} stát jen v políčkách {cells} a všechna leží uvnitř bloku {box}.",
+                "Řádek {row} musí obsahovat {d}, takže si {d} bloku {box} nárokuje řádek {row}. Ostatní políčka bloku {box} nemohou obsahovat {d}.",
+                "Odstraňte {d} z těchto políček: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Odstranit číslici uvnitř bloku místo mimo něj u ukazování, nebo naopak u nárokování. Eliminace se vždy týkají políček, která jsou v linii, ale ne v bloku, nebo v bloku, ale ne v linii.",
+            "Použít pravidlo, když kandidáti zasahují do dvou řádků bloku. Všechna kandidátní políčka číslice v bloku musí ležet v jedné linii.",
+            "Zapomenout hledat singl, který eliminace vytvoří. Uzamčení kandidáti sami číslici vloží jen zřídka; připraví singl."
+          ],
+          "faq": [
+            [
+              "Co jsou uzamčení kandidáti v sudoku?",
+              "Kandidáti číslice, kteří jsou omezeni na průnik bloku a linie. Protože blok, případně linie, musí číslici obsahovat právě v tomto průniku, lze číslici odstranit ze zbytku linie, případně ze zbytku bloku."
+            ],
+            [
+              "Jaký je rozdíl mezi ukazováním a nárokováním?",
+              "Ukazování vychází z bloku: kandidáti číslice v bloku ukazují podél jednoho řádku nebo sloupce, takže se číslice odstraní ze zbytku této linie. Nárokování vychází z řádku nebo sloupce: kandidáti číslice v linii jsou všichni v jednom bloku, takže si linie číslici nárokuje a ta se odstraní ze zbytku bloku."
+            ],
+            [
+              "Říká se uzamčeným kandidátům také eliminace průnikem?",
+              "Ano. Další názvy jsou redukce blok-linie pro nárokování a ukazující dvojice nebo ukazující trojice pro ukazování. Bare Sudoku používá pro obě podoby jeden název."
+            ],
+            [
+              "Která úroveň vyžaduje uzamčené kandidáty?",
+              "Těžká. Zadání, které potřebuje uzamčené kandidáty nebo podmnožiny, ale nic těžšího, má úroveň Těžká; zadání úrovně Expert navíc vyžadují rybu nebo křídlo."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Nahé dvojice a trojice",
+          "title": "Nahé dvojice a trojice v sudoku: jak fungují",
+          "description": "Nahé dvojice a trojice: dvě nebo tři políčka v jednotce se stejnými dvěma nebo třemi kandidáty. Jak je najít a co odstranit, na skutečných příkladech.",
+          "h1": "Nahé dvojice a trojice (naked pair, naked triple)",
+          "summary": "Nahá dvojice jsou dvě políčka ve stejném řádku, sloupci nebo bloku, která mají přesně stejné dva kandidáty. Tyto dvě číslice musí přijít do těchto dvou políček, takže je lze odstranit ze všech ostatních políček jednotky. Nahá trojice je stejný princip se třemi políčky a třemi číslicemi; každé políčko může ukazovat dvě nebo všechny tři z nich. Nápověda Bare Sudoku označuje výsledné vložení jako „Dvojice nebo trojice“.",
+          "when": [
+            "Když jsou poznámky úplné a singly i uzamčení kandidáti vyčerpáni. Nahé dvojice jsou v těžkých zadáních velmi časté, nahé trojice méně. Obojí se vyplatí zkontrolovat v každé jednotce, která má ještě pět nebo více prázdných políček."
+          ],
+          "spot": [
+            "Hledejte políčka s jen dvěma kandidáty a najděte ve stejné jednotce další políčko se stejnými dvěma. U trojic se dívejte na jednotky s několika políčky o dvou a třech kandidátech a zkontrolujte, zda tři z nich dohromady používají jen tři různé číslice. Políčka s přesně stejnými kandidáty jsou po zapsání poznámek dobře vidět; Vyplnit poznámky to ve hře udělá jedním klepnutím."
+          ],
+          "examples": [
+            {
+              "h": "Nahá dvojice",
+              "steps": [
+                "Podívejte se na {unit}: políčka {cellA} a {cellB} mají přesně stejné dva kandidáty, {d1} a {d2}.",
+                "Jedno z nich musí být {d1} a druhé {d2}. Nevíme, které je které, ale obě číslice tato dvě políčka spotřebují.",
+                "Žádné jiné políčko této jednotky proto nemůže obsahovat {d1} ani {d2}. Odstraňte {elim}."
+              ]
+            },
+            {
+              "h": "Nahá trojice",
+              "steps": [
+                "Podívejte se na {unit}: tři jeho políčka berou všechny své kandidáty ze stejných tří číslic {digits}: {cells}.",
+                "Tyto tři číslice musí v nějakém pořadí vyplnit tato tři políčka. Políčko nemusí ukazovat všechny tři kandidáty; důležité je, že žádné z těchto tří políček nemá kandidáta mimo tuto sadu.",
+                "Odstraňte {digits} ze všech ostatních políček této jednotky: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vzít dvě políčka, která sdílejí dva kandidáty, ale mají i třetího. U nahé dvojice musí mít každé políčko přesně tyto dva kandidáty a nic jiného.",
+            "Odstranit číslice ze samotných políček dvojice. Dvojice si své kandidáty ponechává; eliminace se týkají ostatních políček jednotky.",
+            "Vyžadovat, aby každé políčko trojice ukazovalo všechny tři číslice. Políčko se dvěma z nich je v pořádku, pokud žádné políčko nemá kandidáta mimo sadu."
+          ],
+          "faq": [
+            [
+              "Co je nahá dvojice v sudoku?",
+              "Dvě políčka v jedné jednotce, která mají obě přesně stejné dva kandidáty. Tyto dvě číslice jsou uzamčeny v těchto dvou políčkách, takže je lze odstranit ze zbytku jednotky."
+            ],
+            [
+              "Co je nahá trojice?",
+              "Tři políčka v jedné jednotce, jejichž kandidáti dohromady tvoří jen tři číslice. Každé políčko může mít dvě nebo tři z nich. Tři číslice vyplní tři políčka, takže je lze odstranit z ostatních políček jednotky."
+            ],
+            [
+              "Vloží nahá dvojice číslici?",
+              "Sama ne. Odstraňuje kandidáty a po odstranění obvykle zbude nahý nebo skrytý singl. Nápověda v Bare Sudoku ukáže tento singl a pojmenuje techniku, která ho umožnila."
+            ],
+            [
+              "Může být nahá dvojice zároveň v bloku i v řádku?",
+              "Ano. Pokud dvě políčka sdílejí řádek i blok, dvojice eliminuje v obou jednotkách. Bare Sudoku je zpracovává po jedné jednotce."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Skryté dvojice a trojice",
+          "title": "Skryté dvojice a trojice v sudoku: jak je najít",
+          "description": "Skrytá dvojice jsou dvě číslice, které mohou v jednotce stát jen ve stejných dvou políčkách, takže jejich další kandidáti mizí. Jak je hledat krok za krokem.",
+          "h1": "Skryté dvojice a trojice (hidden pair, hidden triple)",
+          "summary": "Skrytá dvojice jsou dvě číslice, které jsou v rámci jednoho řádku, sloupce nebo bloku kandidáty ve stejných dvou políčkách a nikde jinde. Tato dvě políčka musí obsahovat tyto dvě číslice, takže všechny ostatní kandidáty v nich lze odstranit. Skrytá trojice funguje stejně se třemi číslicemi omezenými na tři políčka. Po odstranění políčka ukazují nahou dvojici nebo trojici. Nápověda Bare Sudoku označuje výsledné vložení jako „Dvojice nebo trojice“.",
+          "when": [
+            "Když má jednotka políčka s mnoha kandidáty a singly jsou pryč. Skryté dvojice se schovávají v zaplněných políčkách, a proto se vyplatí je hledat právě tam, kde nahé dvojice vidět nejsou. Skryté trojice jsou vzácné; Bare Sudoku je kontroluje, ale většina těžkých zadání se vyřeší bez nich."
+          ],
+          "spot": [
+            "Postupujte podle číslic, ne podle políček. V jednotce si poznamenejte, kam může přijít každá chybějící číslice. Pokud dvě číslice mají každá jen dvě možná políčka a jsou to stejná dvě políčka, máte skrytou dvojici. Ve hře klepněte na tlačítko číslice a zvýrazní se její kandidáti; pokud dvě číslice rozsvítí stejná dvě políčka jednotky a nic dalšího v ní, je to hledaný vzor."
+          ],
+          "examples": [
+            {
+              "h": "Skrytá dvojice",
+              "steps": [
+                "Podívejte se na {unit}: číslice {d1} a {d2} mají každá jen dvě možná políčka, a jsou to stejná dvě: {cells}.",
+                "Tato dvě políčka musí obsahovat {d1} a {d2}, takže jejich ostatní kandidáti jsou nemožní.",
+                "Odstraňte {elim}. Teď obě políčka ukazují nahou dvojici, která může odemknout další postup."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Odstranit obě číslice dvojice z políček dvojice. Mizí ostatní kandidáti těchto políček; číslice dvojice zůstávají.",
+            "Připustit číslici, která má v jednotce třetí možné políčko. Obě číslice musí být omezeny přesně na tato dvě políčka.",
+            "Hledat jen v blocích. Skryté dvojice se v řádcích a sloupcích vyskytují stejně často."
+          ],
+          "faq": [
+            [
+              "Co je skrytá dvojice v sudoku?",
+              "Dvě číslice, které mohou v jednotce stát jen ve stejných dvou políčkách. Tato políčka musí tyto číslice dostat, takže se jejich ostatní kandidáti odstraní."
+            ],
+            [
+              "Čím se skrytá dvojice liší od nahé?",
+              "Nahá dvojice je vidět: dvě políčka, která ukazují jen stejné dva kandidáty. Skrytou dvojici zakrývají další kandidáti v obou políčkách. Když je odstraníte, ze skryté dvojice se stane nahá."
+            ],
+            [
+              "Co je skrytá trojice?",
+              "Tři číslice omezené na tři políčka jednotky. Každá číslice nemusí být ve všech třech políčkách; důležité je, že žádná z těch tří číslic nemá kandidáta mimo tato políčka."
+            ],
+            [
+              "Rozlišuje nápověda skryté a nahé dvojice?",
+              "Ne. Bare Sudoku najde obojí a výsledné vložení označí jako „Dvojice nebo trojice“. Tyto stránky je oddělují, protože se hledají různými způsoby."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing v sudoku: jak technika funguje",
+          "description": "X-Wing: číslice s právě dvěma kandidátními políčky ve dvou řádcích, ve stejných dvou sloupcích, se odstraní ze zbytku těchto sloupců. Skutečný příklad.",
+          "h1": "X-Wing",
+          "summary": "X-Wing je vzor jedné číslice a čtyř políček v rozích obdélníku. Pokud má číslice právě dvě kandidátní políčka v každém ze dvou řádků a tato políčka leží ve stejných dvou sloupcích, musí číslice obsadit dva protilehlé rohy obdélníku. Proto ji lze odstranit ze všech ostatních políček těchto dvou sloupců. Totéž platí s prohozenými řádky a sloupci. V Bare Sudoku je to první technika úrovně Expert.",
+          "when": [
+            "Když jste vyčerpali singly, uzamčené kandidáty i podmnožiny. X-Wing je nejčastějším vzorem úrovně Expert a často se objeví, když číslici zbývá málo kandidátů, typicky když už je vložena čtyřikrát až šestkrát. Potřebuje úplné poznámky pro zkoumanou číslici."
+          ],
+          "spot": [
+            "Zvolte číslici a hledejte řádky, v nichž má právě dvě kandidátní políčka. Pokud dva takové řádky sdílejí stejné dva sloupce, zkontrolujte, zda jsou v těchto sloupcích další kandidáti té číslice: to jsou eliminace. Pak totéž zopakujte se sloupci jako základnou. Ve hře klepněte na tlačítko číslice: zvýrazní se všichni její kandidáti a obdélník ze čtyř zvýrazněných poznámek je dobře vidět."
+          ],
+          "examples": [
+            {
+              "h": "Příklad",
+              "steps": [
+                "Číslice {d} má právě dvě kandidátní políčka v řádku {r1} a právě dvě v řádku {r2} a leží ve stejných dvou sloupcích, {c1} a {c2}: {cells}.",
+                "Řádek {r1} umístí svou {d} do sloupce {c1} nebo {c2} a řádek {r2} svou {d} do toho druhého. Tak či onak dostanou sloupce {c1} i {c2} každý jednu {d} z těchto dvou řádků.",
+                "Číslice {d} se tedy nemůže objevit nikde jinde ve sloupcích {c1} a {c2}. Odstraňte {d} z těchto políček: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Použít řádek, který má pro číslici tři kandidátní políčka. Každý základní řádek musí mít právě dvě a obě musí ležet ve dvou společných sloupcích.",
+            "Odstranit číslici z řádků místo ze sloupců. Když jsou základnou řádky, eliminace jsou ve sloupcích, a naopak.",
+            "Zapomenout na prohozenou verzi. X-Wing postavený na sloupcích eliminuje v řádcích."
+          ],
+          "faq": [
+            [
+              "Co je X-Wing v sudoku?",
+              "Číslice, která má právě dvě kandidátní políčka v každém ze dvou řádků, ve stejných dvou sloupcích. Číslice obsadí dva protilehlé rohy tohoto obdélníku, takže se odstraní ze zbytku obou sloupců. Řádky a sloupce lze prohodit."
+            ],
+            [
+              "Proč X-Wing funguje?",
+              "Každý z obou řádků musí číslici umístit do jednoho ze dvou sloupců a oba řádky nemohou použít stejný sloupec. Oba sloupce tedy dostanou svůj výskyt číslice z těchto řádků a každý další kandidát v těchto sloupcích je nemožný."
+            ],
+            [
+              "Je X-Wing ryba?",
+              "Ano. X-Wing je ryba velikosti dvě; Swordfish je ryba velikosti tři. Bare Sudoku najde obojí."
+            ],
+            [
+              "Na které úrovni se X-Wing objevuje?",
+              "Expert. Zadání, které vyžaduje X-Wing, Y-Wing, Swordfish nebo XYZ-Wing, má úroveň Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing v sudoku: jak technika funguje",
+          "description": "Y-Wing (XY-Wing): pivot se dvěma kandidáty a dvě křídla, z nichž každé sdílí jednoho z nich, vyřadí číslici z každého políčka, které vidí obě křídla.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, nazývaný také XY-Wing, používá tři políčka, každé se dvěma kandidáty. Pivot má kandidáty X a Y. Jedno křídlo vidí pivot a má X a Z; druhé křídlo vidí pivot a má Y a Z. Ať je v pivotu cokoli, jedno z křídel musí být Z, takže Z lze odstranit ze všech políček, která vidí obě křídla. V Bare Sudoku je to technika úrovně Expert.",
+          "when": [
+            "Když má zadání několik políček s právě dvěma kandidáty a žádná ryba není k dispozici. Y-Wing je v zadáních úrovně Expert častý a najdete ho sledováním políček se dvěma kandidáty: každé je možný pivot nebo křídlo."
+          ],
+          "spot": [
+            "Vypište si políčka s právě dvěma kandidáty. Každé z nich berte jako pivot s kandidáty X a Y a hledejte mezi jeho sousedy políčko s X a další číslicí Z a políčko s Y a stejnou Z. Ta dvě jsou křídla. Pak najděte políčka, která vidí obě křídla a obsahují Z. Všimněte si, že křídla se navzájem vidět nemusí."
+          ],
+          "examples": [
+            {
+              "h": "Příklad",
+              "steps": [
+                "Pivot {pivot} má kandidáty {x} a {y}. Vidí {wingA} s kandidáty {x} a {z} a {wingB} s kandidáty {y} a {z}.",
+                "Pokud je v {pivot} číslice {x}, přijde {wingA} o kandidáta {x} a zbude v něm {z}. Pokud je v {pivot} číslice {y}, zbude {z} v {wingB}. V každém případě je v jednom z křídel {z}.",
+                "Políčko, které vidí obě křídla, nikdy nemůže obsahovat {z}. Odstraňte {z} z těchto políček: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Zvolit křídla, z nichž některé nevidí pivot. Každé křídlo musí s pivotem sdílet řádek, sloupec nebo blok.",
+            "Odstranit Z z políček, která vidí jen jedno křídlo. Políčko s eliminací musí vidět obě křídla.",
+            "Odstranit Z z pivotu. Pivot Y-Wingu Z neobsahuje; pokud ano, jde o XYZ-Wing s jinými pravidly."
+          ],
+          "faq": [
+            [
+              "Co je Y-Wing v sudoku?",
+              "Tři políčka se dvěma kandidáty: pivot s X a Y, křídlo s X a Z, které vidí pivot, a křídlo s Y a Z, které také vidí pivot. Jedno křídlo je vždy Z, takže Z se odstraní z políček, která vidí obě křídla."
+            ],
+            [
+              "Je Y-Wing totéž co XY-Wing?",
+              "Ano. Oba názvy popisují stejný vzor. Bare Sudoku mu říká Y-Wing."
+            ],
+            [
+              "Proč musí být jedno křídlo Z?",
+              "Pokud je pivot X, první křídlo ztratí X a zbude v něm Z. Pokud je pivot Y, zbude Z ve druhém křídle. Pivot je jedno z obojího, takže jedno křídlo je Z."
+            ],
+            [
+              "Kolik políček Y-Wing vyčistí?",
+              "Obvykle jedno nebo dvě: jen políčka, která vidí obě křídla a stále obsahují Z. To stačí k vytvoření singlu."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish v sudoku: jak technika funguje",
+          "description": "Swordfish: číslice omezená ve třech řádcích na tři sloupce se odstraní ze zbytku těchto sloupců. Ryba velikosti tři vysvětlená na skutečném příkladu.",
+          "h1": "Swordfish",
+          "summary": "Swordfish je X-Wing se třemi řádky a třemi sloupci. Pokud má číslice v každém ze tří řádků nejvýše tři kandidátní políčka a všechna tato políčka leží ve stejných třech sloupcích, tři řádky v těchto sloupcích číslici vyčerpají a lze ji odstranit ze všech ostatních políček těchto tří sloupců. Řádky a sloupce lze prohodit. Bare Sudoku hledá Swordfish po technice Y-Wing, v zadáních úrovně Expert.",
+          "when": [
+            "Když X-Wing ani Y-Wing nic nenajdou. Swordfish je méně častý než X-Wing a potřebuje číslici, jejíž kandidáti jsou řídce rozprostřeni přes tři linie. Vyžaduje úplné a přesné poznámky pro tuto číslici."
+          ],
+          "spot": [
+            "Vyberte číslici a hledejte řádky, kde pro ni jsou dvě nebo tři kandidátní políčka. Pokud tři takové řádky dohromady pokrývají jen tři sloupce, zkontrolujte v těchto sloupcích další kandidáty té číslice. Ne každý řádek musí mít kandidáta v každém sloupci: Swordfish může mít šest, sedm, osm nebo devět políček. Ve hře zvýrazněte číslici jejím tlačítkem a hledejte tři řádky, jejichž kandidáti se seřadí do tří sloupců."
+          ],
+          "examples": [
+            {
+              "h": "Příklad",
+              "steps": [
+                "Číslice {d} má v každém z řádků {rows} nejvýše tři kandidátní políčka a všechna leží ve sloupcích {cols}: {cells}.",
+                "Každý ze tří řádků musí svou {d} umístit do jednoho ze tří sloupců a žádné dva řádky nemohou použít stejný sloupec. Tři sloupce tak dostanou svou {d} z těchto tří řádků.",
+                "Jakýkoli další kandidát {d} ve sloupcích {cols} je nemožný. Odstraňte {d} z těchto políček: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vyžadovat všech devět políček. Swordfish se dvěma kandidáty v některých řádcích také platí, pokud tři řádky pokrývají jen tři sloupce.",
+            "Zahrnout řádek se čtyřmi kandidátními políčky. Každý základní řádek smí mít nejvýše tři, všechny uvnitř tří sloupců.",
+            "Eliminovat v základních řádcích. Když jsou základnou řádky, eliminace jsou ve třech sloupcích, mimo základní řádky."
+          ],
+          "faq": [
+            [
+              "Co je Swordfish v sudoku?",
+              "Číslice, jejíž kandidáti ve třech řádcích jsou omezeni na tři sloupce. Tři řádky musí číslici umístit do těchto tří sloupců, do každého jednou, takže se číslice odstraní z ostatních políček těchto sloupců."
+            ],
+            [
+              "Čím se Swordfish liší od X-Wing?",
+              "Jen velikostí: X-Wing používá dva řádky a dva sloupce, Swordfish tři a tři. Úvaha je stejná."
+            ],
+            [
+              "Potřebuje Swordfish přesně devět políček?",
+              "Ne. Každý řádek může mít dva nebo tři kandidáty; vzor jen vyžaduje, aby tři řádky dohromady nepoužily víc než tři sloupce."
+            ],
+            [
+              "Existuje ryba velikosti čtyři?",
+              "Ano, Jellyfish. Bare Sudoku ji nepoužívá, protože jeho zadání ji nikdy nepotřebují."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing v sudoku: jak technika funguje",
+          "description": "XYZ-Wing: pivot se třemi kandidáty a dvě křídla, která sdílejí jednoho z nich, vyřadí ji z každého políčka, které vidí všechna tři. Příklad krok za krokem.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing je Y-Wing, jehož pivot má tři kandidáty. Pivot má X, Y a Z; jedno křídlo vidí pivot a má X a Z, druhé vidí pivot a má Y a Z. Jedno ze tří políček musí být Z, takže Z lze odstranit ze všech políček, která vidí všechna tři. Protože i samotný pivot může být Z, políčko s eliminací musí vidět pivot i obě křídla, což ho omezuje na blok nebo linii, které tato políčka sdílejí. Je to nejtěžší technika, kterou Bare Sudoku používá.",
+          "when": [
+            "Jen když všechno ostatní selže. XYZ-Wing je v Bare Sudoku nejvzácnějším vzorem a objevuje se jen v zadáních úrovně Expert. Hledejte ho, když políčko se třemi kandidáty leží v bloku s políčkem se dvěma kandidáty, které sdílí dvě z jeho číslic."
+          ],
+          "spot": [
+            "Začněte u políček s právě třemi kandidáty; každé je možný pivot. Mezi jeho sousedy hledejte dvě políčka se dvěma kandidáty, vzatými ze tří kandidátů pivotu, která sdílejí právě jednu číslici Z. Pak hledejte políčka, která vidí pivot i obě křídla a obsahují Z. V praxi je jedno křídlo v bloku pivotu a druhé v jeho řádku nebo sloupci a políčka s eliminací jsou zbývající políčka toho bloku v tom řádku nebo sloupci."
+          ],
+          "examples": [
+            {
+              "h": "Příklad",
+              "steps": [
+                "Pivot {pivot} má tři kandidáty: {x}, {y} a {z}. Vidí {wingA} s kandidáty {x} a {z} a {wingB} s kandidáty {y} a {z}.",
+                "Pokud je v {pivot} číslice {z}, je hotovo. Pokud je tam {x}, musí být v {wingA} číslice {z}. Pokud je tam {y}, musí být {z} v {wingB}. V každém případě je v jednom ze tří políček {z}.",
+                "Políčko, které vidí všechna tři, nemůže obsahovat {z}. Odstraňte {z} z těchto políček: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminovat v políčkách, která vidí jen obě křídla. Na rozdíl od Y-Wingu může být Z i pivot, takže políčko musí vidět také pivot.",
+            "Použít křídla, jejichž kandidáti nejsou oba obsaženi ve třech kandidátech pivotu.",
+            "Zaměnit ho s Y-Wingem: rozdílem je třetí kandidát v pivotu a ten mění, která políčka lze vyčistit."
+          ],
+          "faq": [
+            [
+              "Co je XYZ-Wing v sudoku?",
+              "Pivot s kandidáty X, Y a Z a dvě křídla, jedno s X a Z a druhé s Y a Z, která obě vidí pivot. Jedno ze tří políček je Z, takže Z se odstraní z políček, která vidí všechna tři."
+            ],
+            [
+              "Čím se XYZ-Wing liší od Y-Wingu?",
+              "Pivot má tři kandidáty místo dvou, včetně Z. Pivot se tak stává možným místem pro Z, takže Z mohou ztratit jen políčka, která vidí pivot i obě křídla."
+            ],
+            [
+              "Jak často se XYZ-Wing objevuje?",
+              "Zřídka. V Bare Sudoku ho mohou potřebovat jen zadání úrovně Expert a většina ho nepotřebuje. Bare Sudoku ho kontroluje jako poslední, po technikách X-Wing, Y-Wing a Swordfish."
+            ],
+            [
+              "Existuje WXYZ-Wing?",
+              "Ano, s pivotem o čtyřech kandidátech, ale Bare Sudoku ho nepoužívá. Každé zadání ve hře lze dokončit devíti technikami z tohoto návodu."
+            ]
+          ]
+        }
+      }
+    },
+    "sk": {
+      "learnHeading": "Naučte sa sudoku",
+      "learnText": "So sudoku začínate alebo ste uviazli pri ťažkom zadaní? Dva návody vysvetľujú pravidlá a všetky riešiteľské techniky, ktoré používajú pomôcky, každú na skutočnom príklade.",
+      "howToLink": "Ako hrať sudoku",
+      "techniquesLink": "Techniky riešenia sudoku",
+      "labels": {
+        "howTo": "Ako hrať",
+        "techniques": "Techniky",
+        "play": "Hrať sudoku",
+        "prev": "Predchádzajúca technika",
+        "next": "Ďalšia technika",
+        "all": "Všetky techniky",
+        "example": "Príklad",
+        "steps": "Krok za krokom",
+        "when": "Kedy ju použiť",
+        "spot": "Ako ju nájsť",
+        "mistakes": "Časté chyby",
+        "inGame": "V Bare Sudoku",
+        "level": "Vyžaduje sa od úrovne: {level}",
+        "hint": "Pomôcka v hre hovorí: {text}",
+        "legend": "Tučné číslice sú zadané, modré číslice boli doplnené počas riešenia, malé číslice sú kandidáti. Zvýraznené políčka tvoria vzor, prečiarknutí kandidáti sa odstraňujú a zakrúžkovaný kandidát je číslica, ktorú vložíte.",
+        "notation": "Políčka sa zapisujú ako r3c7: riadok 3, stĺpec 7. Riadky sa počítajú zhora, stĺpce zľava a bloky 1 až 9 od ľavého horného rohu, riadok po riadku.",
+        "row": "riadok {n}",
+        "column": "stĺpec {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} z {cell}",
+        "regions": "Riadok 5, stĺpec 5 a blok 5 na začiatku zadania",
+        "firstMove": "Nahý singel: v {cell} môže byť len {d}",
+        "breadcrumb": "Navigačná cesta"
+      },
+      "howTo": {
+        "title": "Ako hrať sudoku: pravidlá, hracia plocha a prvé ťahy",
+        "description": "Naučte sa hrať sudoku: pravidlá, ako fungujú riadky, stĺpce a bloky, prečo má každé zadanie jedno riešenie, ako používať poznámky a ako urobiť prvé ťahy.",
+        "h1": "Ako hrať sudoku",
+        "summary": "Sudoku je logický hlavolam na mriežke 9×9. Vyplňte každé prázdne políčko číslicou od 1 do 9 tak, aby každý riadok, každý stĺpec a každý blok 3×3 obsahoval každú číslicu práve raz. Niektoré číslice sú zadané vopred; zvyšok odvodíte, jedno isté políčko za druhým, a nikdy nemusíte hádať. Tento návod vysvetľuje hraciu plochu, pravidlá, princíp jediného riešenia, poznámky a jednoduchú stratégiu pre prvé ťahy. Všetko si môžete vyskúšať v [Bare Sudoku](play), ktoré je zadarmo a má pomôcky vysvetľujúce logiku.",
+        "sections": [
+          {
+            "h": "Aké sú pravidlá sudoku?",
+            "p": [
+              "Pravidlá sú len tri a v skutočnosti ide o jedno pravidlo videné z troch strán: každý riadok musí obsahovať číslice 1 až 9, každý stĺpec musí obsahovať číslice 1 až 9 a každý blok 3×3 musí obsahovať číslice 1 až 9. Číslica sa preto nikdy nesmie objaviť dvakrát v tom istom riadku, stĺpci ani bloku.",
+              "Zadané číslice, vytlačené tučne, sú pevné. Vašou úlohou je vyplniť prázdne políčka. Nič sa nepočíta ani nezoraďuje: číslice sú len deväť rôznych symbolov. Mohli by ste hrať s písmenami alebo tvarmi a nič by sa nezmenilo."
+            ]
+          },
+          {
+            "h": "Ako je hracia plocha usporiadaná?",
+            "p": [
+              "Hracia plocha má 81 políčok v 9 riadkoch a 9 stĺpcoch. Hrubé čiary ju delia na deväť blokov 3×3. Každé políčko patrí práve do jedného riadka, jedného stĺpca a jedného bloku; tieto tri skupiny sú jeho jednotky. Dvadsať ďalších políčok, ktoré s ním zdieľajú niektorú jednotku, sa nazýva jeho susedia; číslica vložená do políčka túto číslicu vylučuje vo všetkých 20 susedoch.",
+              "Políčka sa zapisujú ako r3c7: riadok 3, stĺpec 7. Riadky sa počítajú zhora, stĺpce zľava a bloky 1 až 9 od ľavého horného rohu, riadok po riadku. Tento zápis sa používa vo všetkých návodoch k technikám a oplatí sa ho naučiť: r5c5 je stred hracej plochy."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Prečo má každé sudoku práve jedno riešenie?",
+            "p": [
+              "Správne sudoku má jedno riešenie, a práve vďaka tomu funguje logika. Kedykoľvek ukážete, že číslica nemôže v jednotke stáť nikde inde, musí patriť do zostávajúceho políčka, pretože riešenie existuje a je jediné. Keby malo zadanie dve riešenia, žiadne uvažovanie by ich nerozlíšilo a v určitej chvíli by ste museli hádať.",
+              "Bare Sudoku vytvára každé zadanie priamo vo vašom zariadení a overuje, že má práve jedno riešenie a že ho jeho logický riešiteľ dokončí technikami zvolenej úrovne. Keď teda uviaznete, vždy existuje ďalší krok, ktorý sa dá nájsť, a pomôcka vám ho ukáže."
+            ]
+          },
+          {
+            "h": "Ako začať riešiť sudoku?",
+            "p": [
+              "Začnite tam, kde je najviac obmedzení. Tento postup funguje na každej úrovni:"
+            ],
+            "list": [
+              "Vyberte číslicu, ktorá už je na ploche veľakrát, napríklad šesťkrát alebo sedemkrát, a nájdite bloky, kde ešte chýba. Často pre ňu v bloku zostáva jediné políčko: to je [skrytý singel](hidden-single).",
+              "Hľadajte preplnené políčka. Políčko, ktorého riadok, stĺpec a blok spolu obsahujú osem rôznych číslic, má jediného zostávajúceho kandidáta: to je [nahý singel](naked-single). Najlepšie sa hľadá v takmer plných riadkoch alebo blokoch.",
+              "Každá vložená číslica odoberie kandidáta 20 susedom, preto ich hneď skontrolujte. Singly zvyčajne prichádzajú v reťazcoch.",
+              "Keď sa jednoduché vloženia minú, píšte si poznámky: kandidátov pre každé prázdne políčko. Potom hľadajte číslicu, ktorá je v bloku obmedzená na jeden riadok alebo stĺpec ([uzamknutí kandidáti](locked-candidates)), alebo dve políčka s rovnakými dvoma kandidátmi ([nahá dvojica](naked-pairs)).",
+              "Po každej eliminácii sa vráťte k singlom. Aj zadania úrovne Expert sa riešia prevažne singlami; pokročilá technika len odomkne ďalší z nich."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Čo sú poznámky a kedy ich používať?",
+            "p": [
+              "Poznámky, ktorým sa hovorí aj ceruzkové značky alebo kandidáti, sú malé číslice, ktoré si zapisujete do prázdneho políčka, aby ste vedeli, ktoré číslice tam ešte prichádzajú do úvahy. V ľahkých zadaniach ich potrebujete len zriedka; od úrovne Ťažká sú nevyhnutné, pretože techniky ako dvojice, X-Wing a Y-Wing pracujú s kandidátmi, nie s vloženými číslicami.",
+              "Udržujte poznámky presné: keď vložíte číslicu, odstráňte ju z poznámok všetkých 20 susedov. V Bare Sudoku sa to deje automaticky a Vyplniť poznámky jedným ťuknutím zapíše všetkých kandidátov do všetkých prázdnych políčok, takže môžete začať z úplnej a správnej sady kandidátov. Poznámka je fakt, nie tip: znamená, že túto číslicu zatiaľ nič nevylučuje."
+            ]
+          },
+          {
+            "h": "Čo robiť, keď uviaznete?",
+            "p": [
+              "Najprv znova skontrolujte základy: každý takmer plný riadok, stĺpec a blok je zdrojom singlov. Potom sa uistite, že sú poznámky úplné, pretože chýbajúci kandidát skrýva vzory a zastaraný vytvára falošné. Potom prejdite [techniky](techniques) podľa obtiažnosti: uzamknutí kandidáti, dvojice a trojice, X-Wing, Y-Wing, Swordfish a XYZ-Wing. Každá má vlastnú stránku so skutočným príkladom.",
+              "Keď nič nepomáha, použite pomôcku. V Bare Sudoku pomôcka najprv skontroluje, či nie je niektorá vložená číslica nesprávna, potom nájde ďalšie políčko, ktoré sa dá vyplniť logikou, a pomenuje techniku, takže sa aj pri jej použití niečo naučíte. Ďalším ťuknutím na pomôcku číslicu vložíte."
+            ]
+          },
+          {
+            "h": "Ako sa v Bare Sudoku zadávajú číslice?",
+            "p": [
+              "Ťuknite na políčko a potom na číslicu. Alebo ťuknite najprv na číslicu: uzamkne sa a dostane ju každé políčko, na ktoré ťuknete, čo je najrýchlejší spôsob, ako vložiť šiesty, siedmy a ôsmy výskyt číslice. Ďalším ťuknutím na číslicu ju uvoľníte. Tlačidlo Poznámky prepína na ceruzkové značky, Vymazať vymaže políčko, Späť vráti akýkoľvek ťah a chyby sa označujú červenou, ak to v ponuke nevypnete.",
+              "Na klávesnici sa pohybujete šípkami, klávesmi 1 až 9 zadávate číslicu, Backspace maže, N prepína poznámky, U vracia ťah, H dáva pomôcku, F vyplní poznámky a Escape otvorí ponuku. Hra sa ukladá sama, funguje offline a nemá reklamy ani účet."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Treba v sudoku niekedy hádať?",
+            "V správnom zadaní nie. Každé zadanie Bare Sudoku má práve jedno riešenie a je overené, že sa dá vyriešiť čisto logikou, technikami až po jeho úroveň. Ak máte pocit, že musíte hádať, chýba vám v poznámkach kandidát alebo na objavenie čaká niektorá technika."
+          ],
+          [
+            "Môže sa číslica objaviť dvakrát v riadku, stĺpci alebo bloku?",
+            "Nie. V tom spočíva celé pravidlo: každý z deviatich riadkov, deviatich stĺpcov a deviatich blokov obsahuje každú číslicu od 1 do 9 práve raz. Ak dve rovnaké číslice zdieľajú jednotku, aspoň jedna z nich je nesprávna."
+          ],
+          [
+            "Aký je rozdiel medzi úrovňami Ľahká, Stredná, Ťažká a Expert?",
+            "Úroveň určujú techniky, ktoré zadanie vyžaduje. Ľahké a stredné zadania sa riešia len singlami a ľahké zadanie začína najmenej s 38 zadanými číslicami. Ťažké zadania vyžadujú uzamknutých kandidátov alebo dvojice a trojice. Úroveň Expert vyžaduje X-Wing, Y-Wing, Swordfish alebo XYZ-Wing."
+          ],
+          [
+            "Je lepšie vyplniť poznámky do všetkých políčok, alebo len do niektorých?",
+            "Pri ťažkých zadaniach a zadaniach úrovne Expert ich vyplňte všade: vzory ako dvojice, X-Wing a Y-Wing sa ukážu, len keď sú zapísaní všetci kandidáti. Pri ľahkých a stredných zadaniach sú poznámky voliteľné a väčšina hráčov len hľadá singly."
+          ],
+          [
+            "Ako dlho trvá vyriešiť sudoku?",
+            "Ľahké zadanie zaberie pár minút; zadanie úrovne Expert môže trvať dvadsať minút aj dlhšie, podľa toho, ako rýchlo odhalíte pokročilý vzor. Bare Sudoku ukazuje časomieru, pri otvorenej ponuke ju pozastaví a nevedie žiadny rebríček, takže hrajte svojím tempom."
+          ],
+          [
+            "Potrebuje sudoku počítanie?",
+            "Nie. Číslice sú len označenia; nič sa nesčítava ani nepočíta. Fungovalo by akýchkoľvek deväť symbolov, a preto je sudoku logický hlavolam, nie číselný."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Techniky riešenia sudoku vysvetlené na príkladoch",
+        "description": "Všetkých deväť techník riešenia sudoku, od nahých singlov po Swordfish a XYZ-Wing, v poradí, v akom ich používajú pomôcky Bare Sudoku, každá s príkladom.",
+        "h1": "Techniky riešenia sudoku",
+        "intro": [
+          "Každé sudoku sa dá vyriešiť malou sadou logických techník. Tento prehľad uvádza deväť techník, ktoré používa riešiteľ Bare Sudoku a jeho pomôcky, v poradí, v akom ich riešiteľ skúša: najprv singly, potom eliminácie vnútri jednej jednotky a nakoniec vzory cez niekoľko riadkov a stĺpcov. Každá technika má vlastnú stránku s definíciou, návodom, ako ju nájsť, skutočným príkladom z vygenerovaného zadania a častými chybami.",
+          "Úroveň zadania určuje najťažšia technika, ktorú vyžaduje. Ľahké a stredné zadania potrebujú len singly, ťažké zadania uzamknutých kandidátov alebo dvojice a trojice a zadania úrovne Expert aspoň jednu rybu alebo krídlo. Na akejkoľvek úrovni odvedú väčšinu práce singly; pokročilá technika odstráni kandidáta alebo dvoch a singly potom pokračujú."
+        ],
+        "faq": [
+          [
+            "V akom poradí skúšať techniky sudoku?",
+            "Od najlacnejších: nahé singly, skryté singly, uzamknutí kandidáti, nahé dvojice a trojice, skryté dvojice a trojice, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ich skúša presne v tomto poradí a pomôcka vždy menuje najjednoduchšiu techniku, ktorá vedie ďalej."
+          ],
+          [
+            "Potrebujem na riešenie sudoku všetky tieto techniky?",
+            "Na ľahké a stredné zadania stačia singly. Ťažké zadania pridávajú uzamknutých kandidátov a podmnožiny. Zadania úrovne Expert vyžadujú aspoň jednu rybu alebo krídlo, ale zvyčajne len raz alebo dvakrát za zadanie."
+          ],
+          [
+            "Existujú ťažšie techniky ako XYZ-Wing?",
+            "Áno, napríklad reťazce, testy jedinečnosti a vynucovacie siete. Bare Sudoku nevytvára zadania, ktoré by ich vyžadovali, takže každé zadanie v hre sa dá dokončiť deviatimi technikami z tejto stránky."
+          ],
+          [
+            "Čo je kandidát?",
+            "Číslica, ktorá ešte môže stáť v prázdnom políčku, pretože ju zatiaľ nič v jeho riadku, stĺpci ani bloku nevylučuje. Poznámky v hre sú kandidáti. Každá technika nad rámec singlov pracuje s kandidátmi, preto ich udržujte úplné a presné."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Nahý singel",
+          "title": "Nahý singel v sudoku: políčko s jediným kandidátom",
+          "description": "Nahý singel je prázdne políčko, kam pasuje jediná číslica. Naučte sa nahé singly rýchlo nájsť, na skutočnom príklade krok za krokom, a spoznajte časté chyby.",
+          "h1": "Nahý singel (naked single)",
+          "summary": "Nahý singel je prázdne políčko, ktoré má práve jedného kandidáta: ostatných osem číslic už je v jeho riadku, stĺpci alebo bloku. Zostávajúca číslica tam musí patriť. Je to najjednoduchšia technika sudoku, používate ju najčastejšie a pomôcka Bare Sudoku ju hlási ako „Jediný kandidát tu“.",
+          "when": [
+            "Vždy. Nahé singly sa objavujú od prvého ťahu po posledný, na každej úrovni. V ľahkých a stredných zadaniach sú spolu so skrytými singlami jedinou technikou, ktorú potrebujete. V ťažších zadaniach každá eliminácia pokročilej techniky zvyčajne zanechá nahý singel, preto ich po každom kroku hľadajte."
+          ],
+          "spot": [
+            "Pozerajte sa na políčka s mnohými vyplnenými susedmi: na políčko v riadku, ktorý už má sedem číslic, alebo na políčko, ktorého riadok, stĺpec a blok spolu pokrývajú osem rôznych číslic. Bez poznámok spočítajte číslice, ktoré z políčka vidíte. S poznámkami je nahý singel jednoducho políčko s jediným kandidátom, a preto ich vďaka funkcii Vyplniť poznámky nájdete ľahko."
+          ],
+          "examples": [
+            {
+              "h": "Príklad",
+              "steps": [
+                "Pozrite sa na políčko {cell}. Je prázdne, preto si vypíšte všetky číslice, ktoré už sú v jeho riadku, stĺpci a bloku.",
+                "Riadok {row} obsahuje {rowDigits}. Stĺpec {col} obsahuje {colDigits}. Blok {box} obsahuje {boxDigits}.",
+                "Spolu vylučujú všetky číslice okrem {d}, takže {d} je jediný kandidát, ktorý v políčku {cell} zostáva.",
+                "Zapíšte {d} do políčka {cell}. Potom skontrolujte, či nová číslica nevytvorila ďalší singel v tom istom riadku, stĺpci alebo bloku."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Počítať len riadok alebo len blok. Osem vylúčených číslic zvyčajne pochádza zo všetkých troch jednotiek spolu.",
+            "Zabudnúť, že aj číslica, ktorú ste práve vložili, vylučuje kandidátov vo svojich 20 susedoch; nové nahé singly sa objavujú hneď po každom vložení.",
+            "Zameniť nahý singel so skrytým: nahému singlu zostáva v políčku jeden kandidát, skrytému singlu zostáva pre číslicu v jednotke jedno políčko."
+          ],
+          "faq": [
+            [
+              "Čo je nahý singel v sudoku?",
+              "Prázdne políčko s práve jedným kandidátom. V jeho riadku, stĺpci a bloku už je osem rôznych číslic, takže sa tam hodí len tá deviata."
+            ],
+            [
+              "Prečo sa mu hovorí nahý?",
+              "Pretože jediný kandidát je po zapísaní poznámok vidieť priamo v políčku; nič ho neskrýva. Skrytý singel naopak leží medzi ďalšími kandidátmi a nájdete ho tak, že sledujete číslicu, nie políčko."
+            ],
+            [
+              "Dá sa zadanie vyriešiť len nahými singlami?",
+              "Mnohé ľahké zadania áno, ale väčšina potrebuje aj skryté singly. Bare Sudoku hodnotí ľahké a stredné zadania ako riešiteľné singlami oboch druhov; ťažké zadania a zadania úrovne Expert potrebujú aspoň jednu ďalšiu techniku."
+            ],
+            [
+              "Ukazuje pomôcka nahé singly?",
+              "Áno. Keď je ďalším vložením nahý singel, pomôcka vyberie políčko a povie „Jediný kandidát tu“ spolu s číslicou. Ďalším ťuknutím na pomôcku ju vložíte."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Skrytý singel",
+          "title": "Skrytý singel v sudoku: jediné miesto pre číslicu",
+          "description": "Skrytý singel je jediné políčko v riadku, stĺpci alebo bloku, kam ešte môže prísť určitá číslica. Naučte sa skryté singly hľadať po jednej číslici.",
+          "h1": "Skrytý singel (hidden single)",
+          "summary": "Skrytý singel je číslica, ktorej v riadku, stĺpci alebo bloku zostáva jediné možné políčko, aj keď to políčko môže ukazovať ďalších kandidátov. Jednotka tú číslicu obsahovať musí, takže patrí práve tam. Pomôcka Bare Sudoku ho hlási ako „Jediné miesto pre 5 v tomto riadku“, prípadne stĺpci alebo bloku.",
+          "when": [
+            "Kedykoľvek je niektorá číslica výrazne rozohraná: keď sa objaví päťkrát alebo šesťkrát, zostávajúce bloky sú veľmi obmedzené a ďalším ťahom často býva skrytý singel. Skryté singly sú hlavnou technikou ľahkých a stredných zadaní a na každej úrovni zostávajú ťahúňom."
+          ],
+          "spot": [
+            "Prechádzajte po jednej číslici. Vezmite číslicu, nájdite blok, ktorý ju neobsahuje, a vyškrtnite v ňom každé políčko, ktoré zdieľa riadok alebo stĺpec s už vloženým výskytom tej číslice. Ak zostane jedno políčko, našli ste skrytý singel. Rovnako to funguje pri riadkoch a stĺpcoch. V hre ťuknite na vloženú číslicu: všetky jej výskyty sa zvýraznia, takže voľné políčka vyniknú."
+          ],
+          "examples": [
+            {
+              "h": "Príklad",
+              "steps": [
+                "Blok {box} ešte neobsahuje {d}, takže ju musí mať jedno z jeho prázdnych políčok. Prázdne políčka sú {empties}.",
+                "Vo všetkých okrem {cell} blokuje číslicu {d} iná {d}, ktorá už stojí v tom istom riadku alebo stĺpci, takže tam {d} nie je kandidátom.",
+                "Pre {d} tak v bloku {box} zostáva jediné miesto: {cell}. Zapíšte tam {d}, aj keď {cell} môže stále ukazovať ďalších kandidátov."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vložiť číslicu do políčka, ktoré je len pravdepodobne to správne: skontrolujte všetky ostatné prázdne políčka jednotky, nielen tie zjavné.",
+            "Prehliadnuť skrytý singel, pretože políčko ukazuje niekoľko kandidátov. Na ostatných kandidátoch nezáleží; dôležité je, že číslica nemá v jednotke iné miesto.",
+            "Prechádzať len bloky. Riadky a stĺpce dávajú skryté singly rovnako často, najmä ku koncu."
+          ],
+          "faq": [
+            [
+              "Čo je skrytý singel v sudoku?",
+              "Číslica, ktorá môže prísť len do jedného políčka riadka, stĺpca alebo bloku. Jednotka ju obsahovať musí, takže o políčku je rozhodnuté, aj keď má ešte ďalších kandidátov."
+            ],
+            [
+              "Aký je rozdiel medzi skrytým a nahým singlom?",
+              "Nahý singel sa týka políčka: zostáva mu jeden kandidát. Skrytý singel sa týka číslice: zostáva jej v jednotke jedno políčko. Oba vkladajú číslicu s istotou."
+            ],
+            [
+              "Ktorý sa hľadá ľahšie?",
+              "Bez poznámok bývajú ľahšie skryté singly, pretože plochu môžete prechádzať po jednej číslici. S úplnými poznámkami sú najľahšie nahé singly, pretože políčko s jediným kandidátom hneď upúta."
+            ],
+            [
+              "Ako pomôcka opisuje skrytý singel?",
+              "Ako „Jediné miesto pre“ číslicu v tomto riadku, tomto stĺpci alebo tomto bloku, s vybraným políčkom. Ďalším ťuknutím na pomôcku číslicu vložíte."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Uzamknutí kandidáti",
+          "title": "Uzamknutí kandidáti v sudoku: ukazovanie a nárokovanie",
+          "description": "Uzamknutí kandidáti: keď kandidáti číslice v bloku ležia v jednom riadku alebo stĺpci, alebo naopak, číslica sa inde odstráni. Dva skutočné príklady.",
+          "h1": "Uzamknutí kandidáti (locked candidates)",
+          "summary": "Uzamknutí kandidáti sú prvá technika, ktorá namiesto vkladania číslice odstraňuje kandidátov. Má dve podoby. Ukazovanie: v bloku ležia všetci kandidáti číslice v jednom riadku alebo stĺpci, takže sa číslica odstráni zo zvyšku tejto línie. Nárokovanie: v riadku alebo stĺpci ležia všetci kandidáti číslice v jednom bloku, takže sa číslica odstráni zo zvyšku tohto bloku. Pomôcka Bare Sudoku označuje vloženie, ktoré tým odomkne, ako „Uzamknutí kandidáti“.",
+          "when": [
+            "Keď sa v ťažkom zadaní minú singly, skúste najprv toto. Potrebujete úplné poznámky aspoň pre skúmanú číslicu. Uzamknutí kandidáti sú častí: potrebuje ich väčšina ťažkých zadaní a zadania úrovne Expert ich používajú medzi väčšími vzormi."
+          ],
+          "spot": [
+            "Pri ukazovaní prejdite každý blok a každú číslicu, ktorá v ňom chýba: ak kandidátske políčka tej číslice ležia v jedinom riadku alebo stĺpci, skontrolujte, či sa rovnaká číslica objavuje ako kandidát ďalej v tejto línii mimo bloku. Pri nárokovaní sledujte riadok alebo stĺpec: ak sú kandidáti číslice všetci vnútri jedného bloku, zvyšok bloku sa dá vyčistiť. V hre ťuknite na tlačidlo číslice a zvýraznia sa všetci jej kandidáti; línia dvoch alebo troch zvýraznených poznámok vnútri jedného bloku je hľadaný vzor."
+          ],
+          "examples": [
+            {
+              "h": "Ukazovanie",
+              "steps": [
+                "V bloku {box} má číslica {d} len tieto kandidátske políčka: {cells}. Všetky ležia v riadku {row}.",
+                "Blok {box} potrebuje {d}, takže {d} riadka {row} leží vnútri bloku {box}, nech skončí v ktoromkoľvek z týchto políčok.",
+                "Riadok {row} nemôže obsahovať druhú {d}, preto odstráňte {d} z políčok riadka {row} mimo bloku: {elim}."
+              ]
+            },
+            {
+              "h": "Nárokovanie",
+              "steps": [
+                "V riadku {row} môže číslica {d} stáť len v políčkach {cells} a všetky ležia vnútri bloku {box}.",
+                "Riadok {row} musí obsahovať {d}, takže si {d} bloku {box} nárokuje riadok {row}. Ostatné políčka bloku {box} nemôžu obsahovať {d}.",
+                "Odstráňte {d} z týchto políčok: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Odstrániť číslicu vnútri bloku namiesto mimo neho pri ukazovaní, alebo naopak pri nárokovaní. Eliminácie sa vždy týkajú políčok, ktoré sú v línii, ale nie v bloku, alebo v bloku, ale nie v línii.",
+            "Použiť pravidlo, keď kandidáti zasahujú do dvoch riadkov bloku. Všetky kandidátske políčka číslice v bloku musia ležať v jednej línii.",
+            "Zabudnúť hľadať singel, ktorý eliminácia vytvorí. Uzamknutí kandidáti sami číslicu vložia len zriedka; pripravia singel."
+          ],
+          "faq": [
+            [
+              "Čo sú uzamknutí kandidáti v sudoku?",
+              "Kandidáti číslice, ktorí sú obmedzení na prienik bloku a línie. Keďže blok, prípadne línia, musí číslicu obsahovať práve v tomto prieniku, dá sa číslica odstrániť zo zvyšku línie, prípadne zo zvyšku bloku."
+            ],
+            [
+              "Aký je rozdiel medzi ukazovaním a nárokovaním?",
+              "Ukazovanie vychádza z bloku: kandidáti číslice v bloku ukazujú pozdĺž jedného riadka alebo stĺpca, takže sa číslica odstráni zo zvyšku tejto línie. Nárokovanie vychádza z riadka alebo stĺpca: kandidáti číslice v línii sú všetci v jednom bloku, takže si línia číslicu nárokuje a tá sa odstráni zo zvyšku bloku."
+            ],
+            [
+              "Hovorí sa uzamknutým kandidátom aj eliminácia prienikom?",
+              "Áno. Ďalšie názvy sú redukcia blok-línia pre nárokovanie a ukazujúce dvojice alebo ukazujúce trojice pre ukazovanie. Bare Sudoku používa pre obe podoby jeden názov."
+            ],
+            [
+              "Ktorá úroveň vyžaduje uzamknutých kandidátov?",
+              "Ťažká. Zadanie, ktoré potrebuje uzamknutých kandidátov alebo podmnožiny, ale nič ťažšie, má úroveň Ťažká; zadania úrovne Expert navyše vyžadujú rybu alebo krídlo."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Nahé dvojice a trojice",
+          "title": "Nahé dvojice a trojice v sudoku: ako fungujú",
+          "description": "Nahé dvojice a trojice: dve alebo tri políčka v jednotke s rovnakými dvoma alebo troma kandidátmi. Ako ich nájsť a čo odstrániť, na skutočných príkladoch.",
+          "h1": "Nahé dvojice a trojice (naked pair, naked triple)",
+          "summary": "Nahá dvojica sú dve políčka v tom istom riadku, stĺpci alebo bloku, ktoré majú presne rovnakých dvoch kandidátov. Tieto dve číslice musia prísť do týchto dvoch políčok, takže sa dajú odstrániť zo všetkých ostatných políčok jednotky. Nahá trojica je rovnaký princíp s tromi políčkami a tromi číslicami; každé políčko môže ukazovať dve alebo všetky tri z nich. Pomôcka Bare Sudoku označuje výsledné vloženie ako „Dvojica alebo trojica“.",
+          "when": [
+            "Keď sú poznámky úplné a singly aj uzamknutí kandidáti sú vyčerpaní. Nahé dvojice sú v ťažkých zadaniach veľmi časté, nahé trojice menej. Oboje sa oplatí skontrolovať v každej jednotke, ktorá má ešte päť alebo viac prázdnych políčok."
+          ],
+          "spot": [
+            "Hľadajte políčka s len dvoma kandidátmi a nájdite v tej istej jednotke ďalšie políčko s rovnakými dvoma. Pri trojiciach sa pozerajte na jednotky s niekoľkými políčkami s dvoma a troma kandidátmi a skontrolujte, či tri z nich spolu používajú len tri rôzne číslice. Políčka s presne rovnakými kandidátmi sú po zapísaní poznámok dobre vidieť; Vyplniť poznámky to v hre urobí jedným ťuknutím."
+          ],
+          "examples": [
+            {
+              "h": "Nahá dvojica",
+              "steps": [
+                "Pozrite sa na {unit}: políčka {cellA} a {cellB} majú presne rovnakých dvoch kandidátov, {d1} a {d2}.",
+                "Jedno z nich musí byť {d1} a druhé {d2}. Nevieme, ktoré je ktoré, ale obe číslice tieto dve políčka spotrebujú.",
+                "Žiadne iné políčko tejto jednotky preto nemôže obsahovať {d1} ani {d2}. Odstráňte {elim}."
+              ]
+            },
+            {
+              "h": "Nahá trojica",
+              "steps": [
+                "Pozrite sa na {unit}: tri jeho políčka berú všetkých svojich kandidátov z tých istých troch číslic {digits}: {cells}.",
+                "Tieto tri číslice musia v nejakom poradí vyplniť tieto tri políčka. Políčko nemusí ukazovať všetkých troch kandidátov; dôležité je, že žiadne z týchto troch políčok nemá kandidáta mimo tejto sady.",
+                "Odstráňte {digits} zo všetkých ostatných políčok tejto jednotky: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vziať dve políčka, ktoré zdieľajú dvoch kandidátov, ale majú aj tretieho. Pri nahej dvojici musí mať každé políčko presne týchto dvoch kandidátov a nič iné.",
+            "Odstrániť číslice zo samotných políčok dvojice. Dvojica si svojich kandidátov ponecháva; eliminácie sa týkajú ostatných políčok jednotky.",
+            "Vyžadovať, aby každé políčko trojice ukazovalo všetky tri číslice. Políčko s dvoma z nich je v poriadku, ak žiadne políčko nemá kandidáta mimo sady."
+          ],
+          "faq": [
+            [
+              "Čo je nahá dvojica v sudoku?",
+              "Dve políčka v jednej jednotke, ktoré majú obe presne rovnakých dvoch kandidátov. Tieto dve číslice sú uzamknuté v týchto dvoch políčkach, takže sa dajú odstrániť zo zvyšku jednotky."
+            ],
+            [
+              "Čo je nahá trojica?",
+              "Tri políčka v jednej jednotke, ktorých kandidáti spolu tvoria len tri číslice. Každé políčko môže mať dve alebo tri z nich. Tri číslice vyplnia tri políčka, takže sa dajú odstrániť z ostatných políčok jednotky."
+            ],
+            [
+              "Vloží nahá dvojica číslicu?",
+              "Sama nie. Odstraňuje kandidátov a po odstránení zvyčajne zostane nahý alebo skrytý singel. Pomôcka v Bare Sudoku ukáže tento singel a pomenuje techniku, ktorá ho umožnila."
+            ],
+            [
+              "Môže byť nahá dvojica zároveň v bloku aj v riadku?",
+              "Áno. Ak dve políčka zdieľajú riadok aj blok, dvojica eliminuje v oboch jednotkách. Bare Sudoku ich spracúva po jednej jednotke."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Skryté dvojice a trojice",
+          "title": "Skryté dvojice a trojice v sudoku: ako ich nájsť",
+          "description": "Skrytá dvojica sú dve číslice, ktoré môžu v jednotke stáť len v rovnakých dvoch políčkach, takže ich ďalší kandidáti miznú. Ako ich hľadať krok za krokom.",
+          "h1": "Skryté dvojice a trojice (hidden pair, hidden triple)",
+          "summary": "Skrytá dvojica sú dve číslice, ktoré sú v rámci jedného riadka, stĺpca alebo bloku kandidátmi v rovnakých dvoch políčkach a nikde inde. Tieto dve políčka musia obsahovať tieto dve číslice, takže všetkých ostatných kandidátov v nich možno odstrániť. Skrytá trojica funguje rovnako s tromi číslicami obmedzenými na tri políčka. Po odstránení políčka ukazujú nahú dvojicu alebo trojicu. Pomôcka Bare Sudoku označuje výsledné vloženie ako „Dvojica alebo trojica“.",
+          "when": [
+            "Keď má jednotka políčka s mnohými kandidátmi a singly sú preč. Skryté dvojice sa schovávajú v zaplnených políčkach, a preto sa oplatí hľadať ich práve tam, kde nahé dvojice vidieť nie sú. Skryté trojice sú zriedkavé; Bare Sudoku ich kontroluje, ale väčšina ťažkých zadaní sa vyrieši bez nich."
+          ],
+          "spot": [
+            "Postupujte podľa číslic, nie podľa políčok. V jednotke si poznačte, kam môže prísť každá chýbajúca číslica. Ak dve číslice majú každá len dve možné políčka a sú to tie isté dve políčka, máte skrytú dvojicu. V hre ťuknite na tlačidlo číslice a zvýraznia sa jej kandidáti; ak dve číslice rozsvietia tie isté dve políčka jednotky a nič ďalšie v nej, je to hľadaný vzor."
+          ],
+          "examples": [
+            {
+              "h": "Skrytá dvojica",
+              "steps": [
+                "Pozrite sa na {unit}: číslice {d1} a {d2} majú každá len dve možné políčka, a sú to tie isté dve: {cells}.",
+                "Tieto dve políčka musia obsahovať {d1} a {d2}, takže ich ostatní kandidáti sú nemožní.",
+                "Odstráňte {elim}. Teraz obe políčka ukazujú nahú dvojicu, ktorá môže odomknúť ďalší postup."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Odstrániť obe číslice dvojice z políčok dvojice. Miznú ostatní kandidáti týchto políčok; číslice dvojice zostávajú.",
+            "Pripustiť číslicu, ktorá má v jednotke tretie možné políčko. Obe číslice musia byť obmedzené presne na tieto dve políčka.",
+            "Hľadať len v blokoch. Skryté dvojice sa v riadkoch a stĺpcoch vyskytujú rovnako často."
+          ],
+          "faq": [
+            [
+              "Čo je skrytá dvojica v sudoku?",
+              "Dve číslice, ktoré môžu v jednotke stáť len v rovnakých dvoch políčkach. Tieto políčka musia tieto číslice dostať, takže sa ich ostatní kandidáti odstránia."
+            ],
+            [
+              "Čím sa skrytá dvojica líši od nahej?",
+              "Nahá dvojica je vidieť: dve políčka, ktoré ukazujú len rovnakých dvoch kandidátov. Skrytú dvojicu zakrývajú ďalší kandidáti v oboch políčkach. Keď ich odstránite, zo skrytej dvojice sa stane nahá."
+            ],
+            [
+              "Čo je skrytá trojica?",
+              "Tri číslice obmedzené na tri políčka jednotky. Každá číslica nemusí byť vo všetkých troch políčkach; dôležité je, že žiadna z tých troch číslic nemá kandidáta mimo týchto políčok."
+            ],
+            [
+              "Rozlišuje pomôcka skryté a nahé dvojice?",
+              "Nie. Bare Sudoku nájde oboje a výsledné vloženie označí ako „Dvojica alebo trojica“. Tieto stránky ich oddeľujú, pretože sa hľadajú rôznymi spôsobmi."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing v sudoku: ako technika funguje",
+          "description": "X-Wing: číslica s práve dvoma kandidátskymi políčkami v dvoch riadkoch, v tých istých dvoch stĺpcoch, sa odstráni zo zvyšku týchto stĺpcov. Skutočný príklad.",
+          "h1": "X-Wing",
+          "summary": "X-Wing je vzor jednej číslice a štyroch políčok v rohoch obdĺžnika. Ak má číslica práve dve kandidátske políčka v každom z dvoch riadkov a tieto políčka ležia v tých istých dvoch stĺpcoch, musí číslica obsadiť dva protiľahlé rohy obdĺžnika. Preto ju možno odstrániť zo všetkých ostatných políčok týchto dvoch stĺpcov. To isté platí s vymenenými riadkami a stĺpcami. V Bare Sudoku je to prvá technika úrovne Expert.",
+          "when": [
+            "Keď ste vyčerpali singly, uzamknutých kandidátov aj podmnožiny. X-Wing je najčastejším vzorom úrovne Expert a často sa objaví, keď číslici zostáva málo kandidátov, typicky keď už je vložená štyrikrát až šesťkrát. Potrebuje úplné poznámky pre skúmanú číslicu."
+          ],
+          "spot": [
+            "Zvoľte číslicu a hľadajte riadky, v ktorých má práve dve kandidátske políčka. Ak dva takéto riadky zdieľajú tie isté dva stĺpce, skontrolujte, či sú v týchto stĺpcoch ďalší kandidáti tej číslice: to sú eliminácie. Potom to isté zopakujte so stĺpcami ako základňou. V hre ťuknite na tlačidlo číslice: zvýraznia sa všetci jej kandidáti a obdĺžnik zo štyroch zvýraznených poznámok je dobre vidieť."
+          ],
+          "examples": [
+            {
+              "h": "Príklad",
+              "steps": [
+                "Číslica {d} má práve dve kandidátske políčka v riadku {r1} a práve dve v riadku {r2} a ležia v tých istých dvoch stĺpcoch, {c1} a {c2}: {cells}.",
+                "Riadok {r1} umiestni svoju {d} do stĺpca {c1} alebo {c2} a riadok {r2} svoju {d} do toho druhého. Tak či onak dostanú stĺpce {c1} aj {c2} každý jednu {d} z týchto dvoch riadkov.",
+                "Číslica {d} sa teda nemôže objaviť nikde inde v stĺpcoch {c1} a {c2}. Odstráňte {d} z týchto políčok: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Použiť riadok, ktorý má pre číslicu tri kandidátske políčka. Každý základný riadok musí mať práve dve a obe musia ležať v dvoch spoločných stĺpcoch.",
+            "Odstrániť číslicu z riadkov namiesto zo stĺpcov. Keď sú základňou riadky, eliminácie sú v stĺpcoch, a naopak.",
+            "Zabudnúť na vymenenú verziu. X-Wing postavený na stĺpcoch eliminuje v riadkoch."
+          ],
+          "faq": [
+            [
+              "Čo je X-Wing v sudoku?",
+              "Číslica, ktorá má práve dve kandidátske políčka v každom z dvoch riadkov, v tých istých dvoch stĺpcoch. Číslica obsadí dva protiľahlé rohy tohto obdĺžnika, takže sa odstráni zo zvyšku oboch stĺpcov. Riadky a stĺpce sa dajú vymeniť."
+            ],
+            [
+              "Prečo X-Wing funguje?",
+              "Každý z oboch riadkov musí číslicu umiestniť do jedného z dvoch stĺpcov a oba riadky nemôžu použiť ten istý stĺpec. Oba stĺpce teda dostanú svoj výskyt číslice z týchto riadkov a každý ďalší kandidát v týchto stĺpcoch je nemožný."
+            ],
+            [
+              "Je X-Wing ryba?",
+              "Áno. X-Wing je ryba veľkosti dva; Swordfish je ryba veľkosti tri. Bare Sudoku nájde oboje."
+            ],
+            [
+              "Na ktorej úrovni sa X-Wing objavuje?",
+              "Expert. Zadanie, ktoré vyžaduje X-Wing, Y-Wing, Swordfish alebo XYZ-Wing, má úroveň Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing v sudoku: ako technika funguje",
+          "description": "Y-Wing (XY-Wing): pivot s dvoma kandidátmi a dve krídla, z ktorých každé zdieľa jedného z nich, vyradia číslicu z každého políčka, ktoré vidí obe krídla.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, nazývaný aj XY-Wing, používa tri políčka, každé s dvoma kandidátmi. Pivot má kandidátov X a Y. Jedno krídlo vidí pivot a má X a Z; druhé krídlo vidí pivot a má Y a Z. Nech je v pivote čokoľvek, jedno z krídel musí byť Z, takže Z možno odstrániť zo všetkých políčok, ktoré vidia obe krídla. V Bare Sudoku je to technika úrovne Expert.",
+          "when": [
+            "Keď má zadanie niekoľko políčok s práve dvoma kandidátmi a žiadna ryba nie je k dispozícii. Y-Wing je v zadaniach úrovne Expert častý a nájdete ho sledovaním políčok s dvoma kandidátmi: každé je možný pivot alebo krídlo."
+          ],
+          "spot": [
+            "Vypíšte si políčka s práve dvoma kandidátmi. Každé z nich berte ako pivot s kandidátmi X a Y a hľadajte medzi jeho susedmi políčko s X a ďalšou číslicou Z a políčko s Y a tou istou Z. Tie dve sú krídla. Potom nájdite políčka, ktoré vidia obe krídla a obsahujú Z. Všimnite si, že krídla sa navzájom vidieť nemusia."
+          ],
+          "examples": [
+            {
+              "h": "Príklad",
+              "steps": [
+                "Pivot {pivot} má kandidátov {x} a {y}. Vidí {wingA} s kandidátmi {x} a {z} a {wingB} s kandidátmi {y} a {z}.",
+                "Ak je v {pivot} číslica {x}, príde {wingA} o kandidáta {x} a zostane v ňom {z}. Ak je v {pivot} číslica {y}, zostane {z} v {wingB}. V každom prípade je v jednom z krídel {z}.",
+                "Políčko, ktoré vidí obe krídla, nikdy nemôže obsahovať {z}. Odstráňte {z} z týchto políčok: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Zvoliť krídla, z ktorých niektoré nevidí pivot. Každé krídlo musí s pivotom zdieľať riadok, stĺpec alebo blok.",
+            "Odstrániť Z z políčok, ktoré vidia len jedno krídlo. Políčko s elimináciou musí vidieť obe krídla.",
+            "Odstrániť Z z pivotu. Pivot Y-Wingu Z neobsahuje; ak áno, ide o XYZ-Wing s inými pravidlami."
+          ],
+          "faq": [
+            [
+              "Čo je Y-Wing v sudoku?",
+              "Tri políčka s dvoma kandidátmi: pivot s X a Y, krídlo s X a Z, ktoré vidí pivot, a krídlo s Y a Z, ktoré tiež vidí pivot. Jedno krídlo je vždy Z, takže Z sa odstráni z políčok, ktoré vidia obe krídla."
+            ],
+            [
+              "Je Y-Wing to isté ako XY-Wing?",
+              "Áno. Oba názvy opisujú ten istý vzor. Bare Sudoku ho volá Y-Wing."
+            ],
+            [
+              "Prečo musí byť jedno krídlo Z?",
+              "Ak je pivot X, prvé krídlo stratí X a zostane v ňom Z. Ak je pivot Y, zostane Z v druhom krídle. Pivot je jedno z toho, takže jedno krídlo je Z."
+            ],
+            [
+              "Koľko políčok Y-Wing vyčistí?",
+              "Zvyčajne jedno alebo dve: len políčka, ktoré vidia obe krídla a stále obsahujú Z. To stačí na vytvorenie singla."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish v sudoku: ako technika funguje",
+          "description": "Swordfish: číslica obmedzená v troch riadkoch na tri stĺpce sa odstráni zo zvyšku týchto stĺpcov. Ryba veľkosti tri vysvetlená na skutočnom príklade.",
+          "h1": "Swordfish",
+          "summary": "Swordfish je X-Wing s tromi riadkami a tromi stĺpcami. Ak má číslica v každom z troch riadkov najviac tri kandidátske políčka a všetky tieto políčka ležia v tých istých troch stĺpcoch, tri riadky v týchto stĺpcoch číslicu vyčerpajú a možno ju odstrániť zo všetkých ostatných políčok týchto troch stĺpcov. Riadky a stĺpce sa dajú vymeniť. Bare Sudoku hľadá Swordfish po technike Y-Wing, v zadaniach úrovne Expert.",
+          "when": [
+            "Keď X-Wing ani Y-Wing nič nenájdu. Swordfish je menej častý ako X-Wing a potrebuje číslicu, ktorej kandidáti sú riedko rozložení cez tri línie. Vyžaduje úplné a presné poznámky pre túto číslicu."
+          ],
+          "spot": [
+            "Vyberte číslicu a hľadajte riadky, kde sú pre ňu dve alebo tri kandidátske políčka. Ak tri takéto riadky spolu pokrývajú len tri stĺpce, skontrolujte v týchto stĺpcoch ďalších kandidátov tej číslice. Nie každý riadok musí mať kandidáta v každom stĺpci: Swordfish môže mať šesť, sedem, osem alebo deväť políčok. V hre zvýraznite číslicu jej tlačidlom a hľadajte tri riadky, ktorých kandidáti sa zoradia do troch stĺpcov."
+          ],
+          "examples": [
+            {
+              "h": "Príklad",
+              "steps": [
+                "Číslica {d} má v každom z riadkov {rows} najviac tri kandidátske políčka a všetky ležia v stĺpcoch {cols}: {cells}.",
+                "Každý z troch riadkov musí svoju {d} umiestniť do jedného z troch stĺpcov a žiadne dva riadky nemôžu použiť ten istý stĺpec. Tri stĺpce tak dostanú svoju {d} z týchto troch riadkov.",
+                "Akýkoľvek ďalší kandidát {d} v stĺpcoch {cols} je nemožný. Odstráňte {d} z týchto políčok: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vyžadovať všetkých deväť políčok. Swordfish s dvoma kandidátmi v niektorých riadkoch tiež platí, ak tri riadky pokrývajú len tri stĺpce.",
+            "Zahrnúť riadok so štyrmi kandidátskymi políčkami. Každý základný riadok smie mať najviac tri, všetky vnútri troch stĺpcov.",
+            "Eliminovať v základných riadkoch. Keď sú základňou riadky, eliminácie sú v troch stĺpcoch, mimo základných riadkov."
+          ],
+          "faq": [
+            [
+              "Čo je Swordfish v sudoku?",
+              "Číslica, ktorej kandidáti v troch riadkoch sú obmedzení na tri stĺpce. Tri riadky musia číslicu umiestniť do týchto troch stĺpcov, do každého raz, takže sa číslica odstráni z ostatných políčok týchto stĺpcov."
+            ],
+            [
+              "Čím sa Swordfish líši od X-Wing?",
+              "Len veľkosťou: X-Wing používa dva riadky a dva stĺpce, Swordfish tri a tri. Úvaha je rovnaká."
+            ],
+            [
+              "Potrebuje Swordfish presne deväť políčok?",
+              "Nie. Každý riadok môže mať dvoch alebo troch kandidátov; vzor len vyžaduje, aby tri riadky spolu nepoužili viac ako tri stĺpce."
+            ],
+            [
+              "Existuje ryba veľkosti štyri?",
+              "Áno, Jellyfish. Bare Sudoku ju nepoužíva, pretože jeho zadania ju nikdy nepotrebujú."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing v sudoku: ako technika funguje",
+          "description": "XYZ-Wing: pivot s troma kandidátmi a dve krídla, ktoré zdieľajú jedného z nich, ho vyradia z každého políčka, ktoré vidí všetky tri. Príklad krok za krokom.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing je Y-Wing, ktorého pivot má troch kandidátov. Pivot má X, Y a Z; jedno krídlo vidí pivot a má X a Z, druhé vidí pivot a má Y a Z. Jedno z troch políčok musí byť Z, takže Z možno odstrániť zo všetkých políčok, ktoré vidia všetky tri. Keďže aj samotný pivot môže byť Z, políčko s elimináciou musí vidieť pivot aj obe krídla, čo ho obmedzuje na blok alebo líniu, ktoré tieto políčka zdieľajú. Je to najťažšia technika, ktorú Bare Sudoku používa.",
+          "when": [
+            "Len keď všetko ostatné zlyhá. XYZ-Wing je v Bare Sudoku najzriedkavejší vzor a objavuje sa len v zadaniach úrovne Expert. Hľadajte ho, keď políčko s troma kandidátmi leží v bloku s políčkom s dvoma kandidátmi, ktoré zdieľa dve z jeho číslic."
+          ],
+          "spot": [
+            "Začnite pri políčkach s práve troma kandidátmi; každé je možný pivot. Medzi jeho susedmi hľadajte dve políčka s dvoma kandidátmi, vzatými z troch kandidátov pivotu, ktoré zdieľajú práve jednu číslicu Z. Potom hľadajte políčka, ktoré vidia pivot aj obe krídla a obsahujú Z. V praxi je jedno krídlo v bloku pivotu a druhé v jeho riadku alebo stĺpci a políčka s elimináciou sú zostávajúce políčka toho bloku v tom riadku alebo stĺpci."
+          ],
+          "examples": [
+            {
+              "h": "Príklad",
+              "steps": [
+                "Pivot {pivot} má troch kandidátov: {x}, {y} a {z}. Vidí {wingA} s kandidátmi {x} a {z} a {wingB} s kandidátmi {y} a {z}.",
+                "Ak je v {pivot} číslica {z}, je hotovo. Ak je tam {x}, musí byť v {wingA} číslica {z}. Ak je tam {y}, musí byť {z} v {wingB}. V každom prípade je v jednom z troch políčok {z}.",
+                "Políčko, ktoré vidí všetky tri, nemôže obsahovať {z}. Odstráňte {z} z týchto políčok: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminovať v políčkach, ktoré vidia len obe krídla. Na rozdiel od Y-Wingu môže byť Z aj pivot, takže políčko musí vidieť aj pivot.",
+            "Použiť krídla, ktorých kandidáti nie sú oba obsiahnutí v troch kandidátoch pivotu.",
+            "Zameniť ho s Y-Wingom: rozdielom je tretí kandidát v pivote a ten mení, ktoré políčka sa dajú vyčistiť."
+          ],
+          "faq": [
+            [
+              "Čo je XYZ-Wing v sudoku?",
+              "Pivot s kandidátmi X, Y a Z a dve krídla, jedno s X a Z a druhé s Y a Z, ktoré obe vidia pivot. Jedno z troch políčok je Z, takže Z sa odstráni z políčok, ktoré vidia všetky tri."
+            ],
+            [
+              "Čím sa XYZ-Wing líši od Y-Wingu?",
+              "Pivot má troch kandidátov namiesto dvoch, vrátane Z. Pivot sa tak stáva možným miestom pre Z, takže Z môžu stratiť len políčka, ktoré vidia pivot aj obe krídla."
+            ],
+            [
+              "Ako často sa XYZ-Wing objavuje?",
+              "Zriedka. V Bare Sudoku ho môžu potrebovať len zadania úrovne Expert a väčšina ho nepotrebuje. Bare Sudoku ho kontroluje ako posledný, po technikách X-Wing, Y-Wing a Swordfish."
+            ],
+            [
+              "Existuje WXYZ-Wing?",
+              "Áno, s pivotom so štyrmi kandidátmi, ale Bare Sudoku ho nepoužíva. Každé zadanie v hre sa dá dokončiť deviatimi technikami z tohto návodu."
+            ]
+          ]
+        }
+      }
+    },
+    "hu": {
+      "learnHeading": "Tanulj sudokut",
+      "learnText": "Most ismerkedsz a sudokuval, vagy elakadtál egy nehéz feladványnál? Két útmutató elmagyarázza a szabályokat és a tippek által használt összes megoldási technikát, mindegyiket valódi példával.",
+      "howToLink": "Hogyan kell sudokut játszani",
+      "techniquesLink": "Sudoku megoldási technikák",
+      "labels": {
+        "howTo": "Hogyan kell játszani",
+        "techniques": "Technikák",
+        "play": "Játssz sudokut",
+        "prev": "Előző technika",
+        "next": "Következő technika",
+        "all": "Összes technika",
+        "example": "Példa",
+        "steps": "Lépésről lépésre",
+        "when": "Mikor használd",
+        "spot": "Hogyan veheted észre",
+        "mistakes": "Gyakori hibák",
+        "inGame": "A Bare Sudokuban",
+        "level": "Ettől a szinttől szükséges: {level}",
+        "hint": "A játékban a tipp így szól: {text}",
+        "legend": "A vastag számjegyek adottak, a kék számjegyek a megoldás során kerültek be, a kis számjegyek jelöltek. A kiemelt cellák alkotják a mintát, az áthúzott jelöltek törlődnek, a bekarikázott jelölt pedig a beírandó számjegy.",
+        "notation": "A cellákat r3c7 formában jelöljük: 3. sor, 7. oszlop. A sorokat felülről, az oszlopokat balról számoljuk, a blokkokat pedig 1-től 9-ig a bal felső saroktól, soronként.",
+        "row": "{n}. sor",
+        "column": "{n}. oszlop",
+        "box": "{n}. blokk",
+        "elimItem": "{d} az {cell} cellából",
+        "regions": "Az 5. sor, az 5. oszlop és az 5. blokk a feladvány elején",
+        "firstMove": "Csupasz single: az {cell} cellába csak {d} kerülhet",
+        "breadcrumb": "Navigációs útvonal"
+      },
+      "howTo": {
+        "title": "Hogyan kell sudokut játszani: szabályok, tábla, első lépések",
+        "description": "Tanuld meg, hogyan kell sudokut játszani: szabályok, sorok, oszlopok és blokkok, miért egy megoldása van minden feladványnak, jegyzetek és első lépések.",
+        "h1": "Hogyan kell sudokut játszani",
+        "summary": "A sudoku logikai rejtvény egy 9×9-es rácson. Töltsd ki az összes üres cellát 1 és 9 közötti számjegyekkel úgy, hogy minden sorban, minden oszlopban és minden 3×3-as blokkban minden számjegy pontosan egyszer szerepeljen. Néhány számjegy már az elején adott; a többit te vezeted le, egyszerre egy biztos cellával, és soha nem kell találgatnod. Ez az útmutató bemutatja a táblát, a szabályokat, az egyértelmű megoldás elvét, a jegyzeteket és egy egyszerű stratégiát az első lépésekhez. Mindezt kipróbálhatod a [Bare Sudokuban](play), amely ingyenes, és a tippjei elmagyarázzák a logikát.",
+        "sections": [
+          {
+            "h": "Mik a sudoku szabályai?",
+            "p": [
+              "Csak három szabály van, és valójában ez egyetlen szabály három irányból nézve: minden sorban szerepelnie kell az 1-től 9-ig terjedő számjegyeknek, minden oszlopban szerepelnie kell az 1-től 9-ig terjedő számjegyeknek, és minden 3×3-as blokkban szerepelnie kell az 1-től 9-ig terjedő számjegyeknek. Egy számjegy ezért soha nem fordulhat elő kétszer ugyanabban a sorban, oszlopban vagy blokkban.",
+              "A vastagon szedett adott számjegyek rögzítettek. A te feladatod az üres cellák kitöltése. Nincs benne számolás és nincs sorrend: a számjegyek csak kilenc különböző jel. Játszhatnál betűkkel vagy alakzatokkal is, és semmi sem változna."
+            ]
+          },
+          {
+            "h": "Hogyan épül fel a tábla?",
+            "p": [
+              "A táblán 81 cella van, 9 sorban és 9 oszlopban. Vastag vonalak kilenc 3×3-as blokkra osztják. Minden cella pontosan egy sorhoz, egy oszlophoz és egy blokkhoz tartozik; ez a három csoport a cella egységei. Az a 20 másik cella, amely közös egységben van egy cellával, a cella társai; egy cellába beírt számjegy mind a 20 társban kizárja ugyanazt a számjegyet.",
+              "A cellákat r3c7 formában jelöljük: 3. sor, 7. oszlop. A sorokat felülről, az oszlopokat balról számoljuk, a blokkokat pedig 1-től 9-ig a bal felső saroktól, soronként. Ezt a jelölést minden technika leírása használja, ezért érdemes megtanulni: az r5c5 a tábla közepe."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Miért van minden sudokunak pontosan egy megoldása?",
+            "p": [
+              "Egy szabályos sudokunak egy megoldása van, és éppen ettől működik a logika. Ha megmutatod, hogy egy számjegy egy egységen belül sehová máshová nem kerülhet, akkor a megmaradt cellába kell kerülnie, mert a megoldás létezik és egyértelmű. Ha egy feladványnak két megoldása lenne, semmilyen gondolatmenet nem tudná megkülönböztetni őket, és egy ponton találgatnod kellene.",
+              "A Bare Sudoku minden feladványt a te eszközödön állít elő, és ellenőrzi, hogy pontosan egy megoldása van, és hogy a logikai megoldója a választott szint technikáival végig tudja oldani. Ha tehát elakadsz, mindig van egy következő lépés, amit megtalálhatsz, és a tipp meg is mutatja."
+            ]
+          },
+          {
+            "h": "Hogyan kezdj hozzá egy sudokuhoz?",
+            "p": [
+              "Kezdd ott, ahol a legtöbb a megkötés. Ez a sorrend minden szinten beválik:"
+            ],
+            "list": [
+              "Válassz egy számjegyet, amely már sokszor szerepel, mondjuk hatszor vagy hétszer, és keresd meg azokat a blokkokat, amelyekből még hiányzik. Egy blokkban gyakran csak egy cella marad neki: ez egy [rejtett single](hidden-single).",
+              "Keress zsúfolt cellákat. Ha egy cella sora, oszlopa és blokkja együtt nyolc különböző számjegyet tartalmaz, a cellának egyetlen jelöltje marad: ez egy [csupasz single](naked-single). A legjobb helyek erre a majdnem teli sorok és blokkok.",
+              "Minden beírt számjegy 20 társból töröl egy jelöltet, ezért ezeket rögtön nézd át. A single-ök általában láncban jönnek.",
+              "Amikor elfogynak a könnyű beírások, írj jegyzeteket: minden üres cella jelöltjeit. Aztán keress olyan számjegyet, amely egy blokkon belül egyetlen sorra vagy oszlopra szorul ([zárt jelöltek](locked-candidates)), vagy két cellát ugyanazzal a két jelölttel ([csupasz pár](naked-pairs)).",
+              "Minden kizárás után térj vissza a single-ökhöz. Még a Szakértő feladványok nagy részét is single-ök oldják meg; a haladó technika csak megnyitja az utat a következőhöz."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Mik a jegyzetek, és mikor használd őket?",
+            "p": [
+              "A jegyzetek, más néven ceruzás jelölések vagy jelöltek, azok a kis számjegyek, amelyeket egy üres cellába írsz, hogy lásd, mely számjegyek jöhetnek még ott szóba. Könnyű feladványokban ritkán van rájuk szükség; a Nehéz szinttől felfelé nélkülözhetetlenek, mert az olyan technikák, mint a párok, az X-Wing és az Y-Wing, jelöltekkel dolgoznak, nem beírt számjegyekkel.",
+              "Tartsd pontosan a jegyzeteket: ha beírsz egy számjegyet, töröld mind a 20 társ jegyzeteiből. A Bare Sudokuban ez automatikusan megtörténik, a Jegyzetek kitöltése pedig egyetlen érintéssel minden üres cellába beírja az összes jelöltet, így teljes és helyes jelöltkészletből indulhatsz. A jegyzet tény, nem találgatás: azt jelenti, hogy ezt a számjegyet még semmi sem zárja ki."
+            ]
+          },
+          {
+            "h": "Mit tegyél, ha elakadtál?",
+            "p": [
+              "Először nézd át újra az alapokat: minden majdnem teli sor, oszlop és blokk single-ök forrása. Aztán győződj meg róla, hogy a jegyzetek teljesek, mert egy hiányzó jelölt mintákat rejt el, egy elavult pedig hamis mintákat teremt. Ezután haladj végig a [technikákon](techniques) nehézségi sorrendben: zárt jelöltek, párok és hármasok, X-Wing, Y-Wing, Swordfish és XYZ-Wing. Mindegyiknek saját oldala van valódi példával.",
+              "Ha semmi sem működik, kérj tippet. A Bare Sudokuban a tipp először ellenőrzi, hogy nem hibás-e valamelyik beírt számjegy, aztán megkeresi a következő cellát, amelyet logikával ki lehet tölteni, és megnevezi a technikát, így akkor is tanulsz valamit, ha használod. Koppints újra a tippre, és beírja a számjegyet."
+            ]
+          },
+          {
+            "h": "Hogyan írhatsz be számjegyeket a Bare Sudokuban?",
+            "p": [
+              "Koppints egy cellára, majd egy számjegyre. Vagy koppints előbb a számjegyre: ekkor rögzül, és minden cella, amelyre koppintasz, megkapja; így lehet a leggyorsabban beírni egy számjegy hatodik, hetedik és nyolcadik példányát. A feloldáshoz koppints újra a számjegyre. A Jegyzetek gomb ceruzás jelölésre vált, a Törlés kiüríti a cellát, a Visszavonás bármely lépést visszavon, a hibák pedig pirossal jelennek meg, hacsak ki nem kapcsolod ezt a menüben.",
+              "Billentyűzeten a nyilakkal mozoghatsz, az 1-től 9-ig terjedő billentyűkkel írhatsz be számjegyet, a Backspace töröl, az N a jegyzeteket kapcsolja, az U visszavon, a H tippet ad, az F kitölti a jegyzeteket, az Escape pedig megnyitja a menüt. A játék magától ment, offline is működik, nincs benne reklám, és nem kell hozzá fiók."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Kell valaha találgatni a sudokuban?",
+            "Egy szabályos feladványban nem. Minden Bare Sudoku-feladványnak pontosan egy megoldása van, és ellenőrzött, hogy tisztán logikával megoldható, legfeljebb a saját szintje technikáival. Ha úgy érzed, találgatnod kell, akkor hiányzik egy jelölt a jegyzeteidből, vagy egy technika vár arra, hogy észrevedd."
+          ],
+          [
+            "Szerepelhet egy számjegy kétszer egy sorban, oszlopban vagy blokkban?",
+            "Nem. Ez maga a szabály: a kilenc sor, a kilenc oszlop és a kilenc blokk mindegyike pontosan egyszer tartalmazza az 1-től 9-ig terjedő számjegyeket. Ha két azonos számjegy közös egységben van, legalább az egyik hibás."
+          ],
+          [
+            "Mi a különbség a Könnyű, a Közepes, a Nehéz és a Szakértő szint között?",
+            "A szintet a feladvány által igényelt technikák határozzák meg. A Könnyű és a Közepes feladványok csak single-ökkel megoldhatók, és a Könnyű feladványok legalább 38 adott számjeggyel indulnak. A Nehéz szinthez zárt jelöltek vagy párok és hármasok kellenek. A Szakértő szinthez X-Wing, Y-Wing, Swordfish vagy XYZ-Wing kell."
+          ],
+          [
+            "Érdemesebb minden cellába jegyzetet írni, vagy csak néhányba?",
+            "Nehéz és Szakértő feladványoknál töltsd ki mindet: az olyan minták, mint a párok, az X-Wing és az Y-Wing, csak akkor látszanak, ha minden jelölt fel van írva. Könnyű és Közepes szinten a jegyzetek elhagyhatók, és a legtöbb játékos csak single-öket keres."
+          ],
+          [
+            "Mennyi ideig tart egy sudoku?",
+            "Egy Könnyű feladvány néhány percig tart; a Szakértő feladványok húsz percig vagy tovább is eltarthatnak, attól függően, milyen gyorsan veszed észre a haladó mintát. A Bare Sudoku időmérőt mutat, szünetelteti, amíg a menü nyitva van, és nem vezet ranglistát, így a saját tempódban játszhatsz."
+          ],
+          [
+            "Kell a sudokuhoz számolni?",
+            "Nem. A számjegyek csak címkék; nincs összeadás és nincs számolás. Bármilyen kilenc jel megfelelne, és ezért a sudoku logikai rejtvény, nem számrejtvény."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku megoldási technikák, példákkal elmagyarázva",
+        "description": "Mind a kilenc sudoku megoldási technika a csupasz single-től az XYZ-Wingig, abban a sorrendben, ahogy a Bare Sudoku tippjei használják, mindegyik példával.",
+        "h1": "Sudoku megoldási technikák",
+        "intro": [
+          "Minden sudoku megoldható néhány logikai technikával. Ez az áttekintés azt a kilenc technikát sorolja fel, amelyet a Bare Sudoku megoldója és tippjei használnak, abban a sorrendben, ahogy a megoldó kipróbálja őket: először a single-ök, aztán az egy egységen belüli kizárások, végül a több soron és oszlopon átívelő minták. Minden technikának saját oldala van meghatározással, felismerési tanácsokkal, egy generált feladványból vett valódi példával és a gyakori hibákkal.",
+          "Egy feladvány szintjét a legnehezebb technika határozza meg, amelyre szüksége van. A Könnyű és a Közepes feladványokhoz csak single-ök kellenek, a Nehéz feladványokhoz zárt jelöltek vagy párok és hármasok, a Szakértő feladványokhoz pedig legalább egy hal vagy szárny. Szinttől függetlenül a munka nagy részét a single-ök végzik; a haladó technika töröl egy-két jelöltet, és onnan a single-ök viszik tovább."
+        ],
+        "faq": [
+          [
+            "Milyen sorrendben érdemes kipróbálni a sudoku technikákat?",
+            "A legolcsóbbal kezdve: csupasz single-ök, rejtett single-ök, zárt jelöltek, csupasz párok és hármasok, rejtett párok és hármasok, X-Wing, Y-Wing, Swordfish, XYZ-Wing. A Bare Sudoku pontosan ebben a sorrendben próbálja őket, és a tipp mindig a legegyszerűbb olyan technikát nevezi meg, amely előrevisz."
+          ],
+          [
+            "Szükségem van mindezekre a technikákra a sudoku megoldásához?",
+            "Könnyű és Közepes feladványokhoz elegendők a single-ök. A Nehéz feladványokhoz zárt jelöltek és részhalmazok is kellenek. A Szakértő feladványokhoz legalább egy hal vagy szárny kell, de általában feladványonként csak egyszer vagy kétszer."
+          ],
+          [
+            "Vannak az XYZ-Wingnél nehezebb technikák?",
+            "Igen, például a láncok, az egyértelműségi tesztek és a kényszerítő hálók. A Bare Sudoku nem készít olyan feladványt, amelyhez ezek kellenének, így a játék minden feladványa befejezhető az ezen az oldalon szereplő kilenc technikával."
+          ],
+          [
+            "Mi az a jelölt?",
+            "Egy számjegy, amely még kerülhet egy üres cellába, mert a sorában, oszlopában és blokkjában még semmi sem zárja ki. A játékban a jegyzetek jelöltek. A single-ökön túli összes technika jelöltekkel érvel, ezért tartsd őket teljesnek és pontosnak."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Csupasz single",
+          "title": "Csupasz single a sudokuban: a cella egyetlen jelölttel",
+          "description": "A csupasz single olyan üres cella, amelybe csak egy számjegy kerülhet. Így találod meg gyorsan: valódi példa lépésről lépésre, a gyakori hibákkal együtt.",
+          "h1": "Csupasz single (naked single)",
+          "summary": "A csupasz single olyan üres cella, amelynek pontosan egy jelöltje van: a többi nyolc számjegy már szerepel a sorában, oszlopában vagy blokkjában. A megmaradt számjegynek oda kell kerülnie. Ez a legegyszerűbb sudoku technika, ezt használod a leggyakrabban, és a Bare Sudoku tippje így jelzi: „Csak egy jelölt itt”.",
+          "when": [
+            "Mindig. Csupasz single-ök az első lépéstől az utolsóig, minden szinten előfordulnak. A Könnyű és a Közepes feladványokban a rejtett single-ökkel együtt ez az egyetlen technika, amelyre szükséged van. Nehezebb feladványokban egy haladó technika minden kizárása általában hátrahagy egy csupasz single-t, ezért minden lépés után keresd őket."
+          ],
+          "spot": [
+            "Figyeld azokat a cellákat, amelyeknek sok társa már ki van töltve: egy olyan sor celláját, amelyben már hét számjegy van, vagy egy olyan cellát, amelynek sora, oszlopa és blokkja együtt nyolc különböző számjegyet fed le. Jegyzetek nélkül számold meg, hány számjegyet látsz a cellából. Jegyzetekkel a csupasz single egyszerűen egy egyetlen jelöltet mutató cella, ezért a Jegyzetek kitöltése után könnyű rájuk találni."
+          ],
+          "examples": [
+            {
+              "h": "Példa",
+              "steps": [
+                "Nézd meg az {cell} cellát. Üres, ezért sorold fel az összes számjegyet, amely már szerepel a sorában, az oszlopában és a blokkjában.",
+                "A sorában ({row}. sor) ezek vannak: {rowDigits}. Az oszlopában ({col}. oszlop): {colDigits}. A blokkjában ({box}. blokk): {boxDigits}.",
+                "Ezek együtt minden számjegyet kizárnak, kivéve ezt: {d}. Az {cell} cella egyetlen megmaradt jelöltje tehát {d}.",
+                "Az {cell} cellába {d} kerül: írd be. Aztán nézd meg, hogy az új számjegy nem hozott-e létre újabb single-t ugyanabban a sorban, oszlopban vagy blokkban."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Csak a sort vagy csak a blokkot nézni. A nyolc kizárt számjegy általában mindhárom egységből együtt jön ki.",
+            "Elfelejteni, hogy az imént beírt számjegy is kizár jelölteket a 20 társában; új csupasz single-ök közvetlenül minden beírás után jelennek meg.",
+            "Összekeverni a csupasz single-t a rejtett single-lel: a csupasz single-nél a cellában marad egy jelölt, a rejtett single-nél a számjegynek marad egy cellája az egységben."
+          ],
+          "faq": [
+            [
+              "Mi a csupasz single a sudokuban?",
+              "Egy üres cella pontosan egy jelölttel. A sorában, oszlopában és blokkjában már nyolc különböző számjegy szerepel, így csak a kilencedik fér oda."
+            ],
+            [
+              "Miért hívják csupasznak?",
+              "Mert az egyetlen jelölt a jegyzetek felírása után közvetlenül látszik a cellában; semmi sem takarja. A rejtett single ezzel szemben más jelöltek között bújik meg, és a számjegy felől nézve találod meg, nem a cella felől."
+            ],
+            [
+              "Megoldható egy feladvány csak csupasz single-ökkel?",
+              "Sok Könnyű feladvány igen, de a legtöbbhöz rejtett single-ök is kellenek. A Bare Sudoku a Könnyű és a Közepes feladványokat mindkét fajta single-lel megoldhatónak minősíti; a Nehéz és a Szakértő feladványokhoz legalább még egy technika kell."
+            ],
+            [
+              "Mutatja a tipp a csupasz single-öket?",
+              "Igen. Ha a következő beírás egy csupasz single, a tipp kijelöli a cellát, és a számjeggyel együtt ezt mondja: „Csak egy jelölt itt”. Koppints újra a tippre a beírásához."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Rejtett single",
+          "title": "Rejtett single a sudokuban: egy számjegy egyetlen helye",
+          "description": "A rejtett single az egyetlen cella egy sorban, oszlopban vagy blokkban, ahová egy számjegy még kerülhet. Tanuld meg észrevenni, számjegyenként pásztázva.",
+          "h1": "Rejtett single (hidden single)",
+          "summary": "A rejtett single olyan számjegy, amelynek egy sorban, oszlopban vagy blokkban csak egy lehetséges cellája maradt, még ha az a cella más jelölteket is mutat. Mivel az egységnek tartalmaznia kell a számjegyet, oda kerül. A Bare Sudoku tippje így jelzi: „Az egyetlen hely a 3 számára ebben a sorban”, illetve oszlopban vagy blokkban.",
+          "when": [
+            "Amikor egy számjegy már jócskán előrehaladt: ha ötször-hatszor szerepel, a maradék blokkok nagyon szűkek, és a következő lépés gyakran egy rejtett single. A rejtett single-ök a Könnyű és a Közepes feladványok fő technikája, és minden szinten igáslovak maradnak."
+          ],
+          "spot": [
+            "Egyszerre egy számjegyet pásztázz. Válassz egy számjegyet, keress egy blokkot, amelyben nincs meg, és húzd ki annak a blokknak minden olyan celláját, amely egy sorban vagy oszlopban van a számjegy egy már beírt példányával. Ha egy cella marad, megtaláltad a rejtett single-t. Ugyanez sorokra és oszlopokra is működik. A játékban koppints egy beírt számjegyre: minden példánya kiemelődik, így a szabad cellák feltűnnek."
+          ],
+          "examples": [
+            {
+              "h": "Példa",
+              "steps": [
+                "Ebben a blokkban ({box}. blokk) még nincs meg ez a számjegy: {d}, tehát valamelyik üres cellájába kerülnie kell. Az üres cellák: {empties}.",
+                "Az {cell} kivételével mindegyikben kizárja egy ugyanabban a sorban vagy oszlopban már beírt {d}, így ott nem jelölt.",
+                "Így a blokkban egyedül az {cell} maradt, ahová {d} kerülhet. Írd be oda, még ha az {cell} más jelölteket is mutat."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Beírni a számjegyet egy olyan cellába, amely csak valószínűleg a jó: ellenőrizd az egység összes többi üres celláját, ne csak a kézenfekvőket.",
+            "Elnézni egy rejtett single-t, mert a cella több jelöltet mutat. A többi jelölt nem számít; az számít, hogy a számjegynek nincs más helye az egységben.",
+            "Csak blokkokat pásztázni. A sorok és oszlopok ugyanolyan gyakran adnak rejtett single-t, főleg a vége felé."
+          ],
+          "faq": [
+            [
+              "Mi a rejtett single a sudokuban?",
+              "Egy számjegy, amely egy sorban, oszlopban vagy blokkban csak egyetlen cellába kerülhet. Az egységnek tartalmaznia kell a számjegyet, így a cella eldőlt, még ha más jelöltjei is vannak."
+            ],
+            [
+              "Mi a különbség a rejtett single és a csupasz single között?",
+              "A csupasz single egy cellára vonatkozik: egy jelölt maradt benne. A rejtett single egy számjegyre vonatkozik: egy cella maradt neki az egységben. Mindkettő biztosan beír egy számjegyet."
+            ],
+            [
+              "Melyiket könnyebb megtalálni?",
+              "Jegyzetek nélkül általában a rejtett single-öket, mert a táblát számjegyenként pásztázhatod. Teljes jegyzetekkel a csupasz single-ök a legkönnyebbek, mert az egyetlen jelöltet mutató cella rögtön feltűnik."
+            ],
+            [
+              "Hogyan írja le a tipp a rejtett single-t?",
+              "Úgy, hogy „Az egyetlen hely” a számjegy számára ebben a sorban, ebben az oszlopban vagy ebben a blokkban, a cella kijelölésével. Koppints újra a tippre a beírásához."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Zárt jelöltek",
+          "title": "Zárt jelöltek a sudokuban: mutató és igénylő forma",
+          "description": "Zárt jelöltek: ha egy számjegy jelöltjei egy blokkban egyetlen sorban vagy oszlopban vannak, vagy fordítva, a számjegy máshonnan törölhető. Két valódi példa.",
+          "h1": "Zárt jelöltek (locked candidates)",
+          "summary": "A zárt jelöltek az első olyan technika, amely nem beír egy számjegyet, hanem jelölteket töröl. Két formája van. Mutató forma: egy blokkban egy számjegy összes jelöltje egy sorban vagy oszlopban van, ezért a számjegy a vonal többi részéből törölhető. Igénylő forma: egy sorban vagy oszlopban egy számjegy összes jelöltje egy blokkban van, ezért a számjegy a blokk többi részéből törölhető. A Bare Sudoku tippje az így megnyíló beírást „Zárt jelöltek” címkével jelöli.",
+          "when": [
+            "Ha egy Nehéz feladványban elfogynak a single-ök, először ezt próbáld. Legalább a vizsgált számjegyhez teljes jegyzetek kellenek. A zárt jelöltek gyakoriak: a legtöbb Nehéz feladványhoz szükség van rájuk, a Szakértő feladványok pedig a nagyobb minták között használják őket."
+          ],
+          "spot": [
+            "A mutató formához nézd végig minden blokkot és minden számjegyet, amely hiányzik belőle: ha a számjegy jelöltcellái egyetlen sorban vagy oszlopban vannak, nézd meg, szerepel-e ugyanez a számjegy jelöltként ugyanezen a vonalon a blokkon kívül. Az igénylő formához kövess végig egy sort vagy oszlopot: ha egy számjegy jelöltjei mind egy blokkon belül vannak, a blokk többi része kitisztítható. A játékban koppints egy számjegygombra, és minden jelöltje kiemelődik; ha egy blokkon belül két-három kiemelt jegyzet egy vonalban áll, az a minta."
+          ],
+          "examples": [
+            {
+              "h": "Mutató forma",
+              "steps": [
+                "Vizsgált számjegy: {d}. Ebben a blokkban ({box}. blokk) csak ezekben a cellákban jelölt: {cells}. Mindegyik ugyanabban a sorban van ({row}. sor).",
+                "A blokknak tartalmaznia kell ezt a számjegyet, ezért a sorban lévő példánya is a blokkon belül lesz, bármelyik cellába kerül is.",
+                "A sorban nem lehet második {d}, ezért töröld ezt a jelöltet a sor blokkon kívüli celláiból: {elim}."
+              ]
+            },
+            {
+              "h": "Igénylő forma",
+              "steps": [
+                "Vizsgált számjegy: {d}. Ebben a sorban ({row}. sor) csak ezekbe a cellákba kerülhet: {cells}, és ezek mind ugyanabban a blokkban vannak ({box}. blokk).",
+                "A sornak tartalmaznia kell ezt a számjegyet, így a blokk példányát a sor foglalja le. A blokk többi cellájában nem lehet {d}.",
+                "Töröld ezt a jelöltet innen: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "A mutató formánál a blokkon belül törölni a számjegyet a blokkon kívül helyett, vagy fordítva az igénylő formánál. A kizárások mindig azokra a cellákra vonatkoznak, amelyek a vonalon vannak, de nem a blokkban, vagy a blokkban vannak, de nem a vonalon.",
+            "Alkalmazni a szabályt, amikor a jelöltek a blokk két sorára terjednek ki. A számjegy összes blokkbeli jelöltcellájának egy vonalon kell lennie.",
+            "Elfelejteni megkeresni a single-t, amelyet a kizárás létrehoz. A zárt jelöltek ritkán írnak be maguk számjegyet; egy single-t készítenek elő."
+          ],
+          "faq": [
+            [
+              "Mik a zárt jelöltek a sudokuban?",
+              "Egy számjegy jelöltjei, amelyek egy blokk és egy vonal metszetére szorulnak. Mivel a blokknak, illetve a vonalnak éppen ebben a metszetben kell tartalmaznia a számjegyet, a számjegy törölhető a vonal, illetve a blokk többi részéből."
+            ],
+            [
+              "Mi a különbség a mutató és az igénylő forma között?",
+              "A mutató forma egy blokkból indul: a számjegy blokkbeli jelöltjei egy sor vagy oszlop mentén mutatnak, ezért a számjegy a vonal többi részéből törlődik. Az igénylő forma egy sorból vagy oszlopból indul: a vonalban a számjegy összes jelöltje egy blokkban van, ezért a vonal igényli a számjegyet, és az a blokk többi részéből törlődik."
+            ],
+            [
+              "A zárt jelölteket metszetkizárásnak is hívják?",
+              "Igen. További nevek: doboz-vonal redukció az igénylő formára, mutató pár vagy mutató hármas a mutató formára. A Bare Sudoku mindkettőre egy nevet használ."
+            ],
+            [
+              "Melyik szinthez kellenek zárt jelöltek?",
+              "A Nehézhez. Az a feladvány, amelyhez zárt jelöltek vagy részhalmazok kellenek, de semmi nehezebb, Nehéz besorolást kap; a Szakértő feladványokhoz ezen felül egy hal vagy egy szárny is kell."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Csupasz párok és hármasok",
+          "title": "Csupasz párok és hármasok a sudokuban: így működnek",
+          "description": "Csupasz párok és hármasok: két vagy három cella egy egységben ugyanazzal a két vagy három jelölttel. Így veheted észre őket, és ezt törölheted, példákkal.",
+          "h1": "Csupasz párok és hármasok (naked pair, naked triple)",
+          "summary": "A csupasz pár két cella ugyanabban a sorban, oszlopban vagy blokkban, amelyeknek pontosan ugyanaz a két jelöltjük van. A két számjegynek ebbe a két cellába kell kerülnie, így az egység összes többi cellájából törölhetők. A csupasz hármas ugyanez az elv három cellával és három számjeggyel; mindegyik cella mutathat kettőt vagy mindhármat közülük. A Bare Sudoku tippje az így kapott beírást „Pár vagy hármas” címkével jelöli.",
+          "when": [
+            "Ha a jegyzetek teljesek, és a single-ök meg a zárt jelöltek elfogytak. A csupasz párok nagyon gyakoriak a Nehéz feladványokban, a csupasz hármasok ritkábbak. Mindkettőt érdemes ellenőrizni minden olyan egységben, amelyben még öt vagy több üres cella van."
+          ],
+          "spot": [
+            "Keress csak két jelöltet tartalmazó cellákat, és ugyanabban az egységben egy másik cellát ugyanazzal a kettővel. Hármasokhoz nézd azokat az egységeket, amelyekben több két- és háromjelöltes cella van, és ellenőrizd, hogy közülük három együtt csak három különböző számjegyet használ-e. A pontosan azonos jelöltű cellák a jegyzetek felírása után jól látszanak; a játékban a Jegyzetek kitöltése ezt egyetlen érintéssel elvégzi."
+          ],
+          "examples": [
+            {
+              "h": "Csupasz pár",
+              "steps": [
+                "Nézd ezt az egységet: {unit}. Az {cellA} és az {cellB} cellának pontosan ugyanaz a két jelöltje van: {d1} és {d2}.",
+                "Az egyik értéke {d1}, a másiké {d2}. Nem tudjuk, melyik melyik, de ez a két cella mindkét számjegyet lefoglalja.",
+                "Így az egység egyetlen más cellájában sem lehet {d1} vagy {d2}. Töröld ezeket: {elim}."
+              ]
+            },
+            {
+              "h": "Csupasz hármas",
+              "steps": [
+                "Nézd ezt az egységet: {unit}. Három cellája minden jelöltjét ugyanabból a három számjegyből ({digits}) meríti: {cells}.",
+                "Ez a három számjegy valamilyen sorrendben kitölti ezt a három cellát. Nem kell, hogy egy cella mindhárom jelöltet mutassa; az számít, hogy a három cella egyikében sincs a halmazon kívüli jelölt.",
+                "Töröld ezeket a számjegyeket ({digits}) az egység összes többi cellájából: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Két olyan cellát venni, amelyeknek két közös jelöltje van, de van egy harmadik is. Csupasz párnál mindkét cellának pontosan ez a két jelöltje van, és semmi más.",
+            "A számjegyeket magukból a pár celláiból törölni. A pár megtartja a jelöltjeit; a kizárások az egység többi cellájára vonatkoznak.",
+            "Megkövetelni, hogy a hármas minden cellája mindhárom számjegyet mutassa. A háromból kettőt mutató cella is rendben van, amíg egyik cellának sincs a halmazon kívüli jelöltje."
+          ],
+          "faq": [
+            [
+              "Mi a csupasz pár a sudokuban?",
+              "Két cella egy egységben, amelyeknek pontosan ugyanaz a két jelöltjük van. Ez a két számjegy ebbe a két cellába zárul, így az egység többi részéből törölhetők."
+            ],
+            [
+              "Mi a csupasz hármas?",
+              "Három cella egy egységben, amelyek jelöltjei együtt csak három számjegyet adnak ki. Mindegyik cellában kettő vagy három lehet közülük. A három számjegy kitölti a három cellát, így az egység többi cellájából törölhetők."
+            ],
+            [
+              "Beír egy számjegyet a csupasz pár?",
+              "Önmagában nem. Jelölteket töröl, és a törlés után általában marad egy csupasz vagy rejtett single. A Bare Sudoku tippje ezt a single-t mutatja meg, és megnevezi a technikát, amely lehetővé tette."
+            ],
+            [
+              "Lehet egy csupasz pár egyszerre egy blokkban és egy sorban is?",
+              "Igen. Ha a két cella közös sorban és közös blokkban is van, a pár mindkét egységben kizár. A Bare Sudoku egyszerre egy egységgel foglalkozik."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Rejtett párok és hármasok",
+          "title": "Rejtett párok és hármasok a sudokuban: így veheted észre",
+          "description": "A rejtett pár két számjegy, amely egy egységben csak ugyanabba a két cellába kerülhet, így e cellák többi jelöltje törölhető. Tanuld meg lépésről lépésre.",
+          "h1": "Rejtett párok és hármasok (hidden pair, hidden triple)",
+          "summary": "A rejtett pár két számjegy, amely egy soron, oszlopon vagy blokkon belül ugyanabban a két cellában jelölt, és sehol máshol. Ennek a két cellának kell tartalmaznia a két számjegyet, így a bennük lévő összes többi jelölt törölhető. A rejtett hármas ugyanígy működik három számjeggyel, amelyek három cellára szorulnak. A törlés után a cellák csupasz párt vagy hármast mutatnak. A Bare Sudoku tippje az így kapott beírást „Pár vagy hármas” címkével jelöli.",
+          "when": [
+            "Ha egy egységben sok jelöltet tartalmazó cellák vannak, és a single-ök elfogytak. A rejtett párok zsúfolt cellákban bújnak meg, ezért éppen ott érdemes keresni őket, ahol csupasz pár nem látszik. A rejtett hármasok ritkák; a Bare Sudoku keresi őket, de a legtöbb Nehéz feladvány megoldható nélkülük."
+          ],
+          "spot": [
+            "Számjegyenként dolgozz, ne cellánként. Egy egységben jegyezd meg, hová kerülhet a hiányzó számjegyek mindegyike. Ha két számjegynek csak két-két lehetséges cellája van, és ez ugyanaz a két cella, rejtett párt találtál. A játékban koppints egy számjegygombra a jelöltjei kiemeléséhez; ha két számjegy egy egység ugyanazon két celláját világítja ki, és mást nem abban az egységben, az a minta."
+          ],
+          "examples": [
+            {
+              "h": "Rejtett pár",
+              "steps": [
+                "Nézd ezt az egységet: {unit}. Két számjegynek ({d1} és {d2}) csak két-két lehetséges cellája van, és ez mindkettőnél ugyanaz a két cella: {cells}.",
+                "Ennek a két cellának kell tartalmaznia ezt a két számjegyet, ezért a többi jelöltjük lehetetlen.",
+                "Töröld ezeket: {elim}. A két cella most csupasz párt mutat, ami további lépéseket nyithat meg."
+              ]
+            }
+          ],
+          "mistakes": [
+            "A pár két számjegyét törölni a pár celláiból. Ezeknek a celláknak a többi jelöltje törlődik; a pár számjegyei maradnak.",
+            "Elfogadni egy olyan számjegyet, amelynek van egy harmadik lehetséges cellája az egységben. Mindkét számjegynek pontosan erre a két cellára kell szorulnia.",
+            "Csak blokkokban keresni. Rejtett párok ugyanolyan gyakran fordulnak elő sorokban és oszlopokban."
+          ],
+          "faq": [
+            [
+              "Mi a rejtett pár a sudokuban?",
+              "Két számjegy, amely egy egységben csak ugyanabba a két cellába kerülhet. Ezeknek a celláknak kell megkapniuk ezt a két számjegyet, ezért a többi jelöltjük törlődik."
+            ],
+            [
+              "Miben különbözik a rejtett pár a csupasz pártól?",
+              "A csupasz pár látható: két cella, amely csak ugyanazt a két jelöltet mutatja. A rejtett párt a két cella további jelöltjei takarják. Ha ezeket törlöd, a rejtett párból csupasz pár lesz."
+            ],
+            [
+              "Mi a rejtett hármas?",
+              "Három számjegy, amely egy egység három cellájára szorul. Nem kell mindegyik számjegynek mindhárom cellában szerepelnie; az számít, hogy a három számjegy egyikének sincs jelöltje ezeken a cellákon kívül."
+            ],
+            [
+              "Megkülönbözteti a tipp a rejtett és a csupasz párokat?",
+              "Nem. A Bare Sudoku mindkettőt megtalálja, és az így kapott beírást „Pár vagy hármas” címkével jelöli. Ezek az oldalak azért választják szét őket, mert másképp kell keresni őket."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing a sudokuban: így működik a technika",
+          "description": "X-Wing: ha egy számjegynek két sorban pontosan két-két jelöltcellája van ugyanabban a két oszlopban, a két oszlop többi részéből törölhető. Valódi példa.",
+          "h1": "X-Wing",
+          "summary": "Az X-Wing egy számjegy és négy cella mintája egy téglalap sarkain. Ha a számjegynek két sor mindegyikében pontosan két jelöltcellája van, és ezek ugyanabban a két oszlopban vannak, akkor a számjegynek a téglalap két átellenes sarkát kell elfoglalnia. Ezért a két oszlop összes többi cellájából törölhető. Ugyanez működik a sorok és oszlopok felcserélésével is. A Bare Sudokuban ez az első Szakértő szintű technika.",
+          "when": [
+            "Ha a single-ök, a zárt jelöltek és a részhalmazok elfogytak. Az X-Wing a leggyakoribb Szakértő minta, és gyakran akkor jelenik meg, amikor egy számjegynek már kevés jelöltje maradt, jellemzően négy-hat beírt példány mellett. A vizsgált számjegyhez teljes jegyzetek kellenek."
+          ],
+          "spot": [
+            "Válassz egy számjegyet, és keress olyan sorokat, amelyekben pontosan két jelöltcellája van. Ha két ilyen sor ugyanazon a két oszlopon osztozik, nézd meg, van-e a számjegynek más jelöltje ezekben az oszlopokban: ezek a kizárások. Aztán ismételd meg oszlopokkal mint alappal. A játékban koppints a számjegygombra: minden jelöltje kiemelődik, és egy négy kiemelt jegyzetből álló téglalap könnyen észrevehető."
+          ],
+          "examples": [
+            {
+              "h": "Példa",
+              "steps": [
+                "Vizsgált számjegy: {d}. Két sorban ({r1}. és {r2}. sor) pontosan két-két jelöltcellája van, és ezek ugyanabba a két oszlopba esnek ({c1}. és {c2}. oszlop): {cells}.",
+                "Az egyik sor a számjegyet vagy az egyik, vagy a másik oszlopba teszi, a másik sor pedig a megmaradtba. Akárhogy is, mindkét oszlop ebből a két sorból kapja meg a maga példányát.",
+                "Ezért a két oszlop többi cellájában nem lehet {d}. Töröld ezt a jelöltet innen: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Olyan sort használni, amelyben a számjegynek három jelöltcellája van. Minden alapsorban pontosan kettő kell, és mindkettőnek a két közös oszlopban kell lennie.",
+            "A számjegyet a sorokból törölni az oszlopok helyett. Ha a sorok az alap, a kizárások az oszlopokban vannak, és fordítva.",
+            "Megfeledkezni a felcserélt változatról. Az oszlopokra épülő X-Wing sorokban zár ki."
+          ],
+          "faq": [
+            [
+              "Mi az X-Wing a sudokuban?",
+              "Egy számjegy, amelynek két sor mindegyikében pontosan két jelöltcellája van, ugyanabban a két oszlopban. A számjegy a téglalap két átellenes sarkát foglalja el, ezért a két oszlop többi részéből törlődik. A sorok és az oszlopok felcserélhetők."
+            ],
+            [
+              "Miért működik az X-Wing?",
+              "Mindkét sornak a két oszlop egyikébe kell tennie a számjegyet, és a két sor nem használhatja ugyanazt az oszlopot. Így mindkét oszlop ezekből a sorokból kapja meg a maga példányát, és az oszlopokban minden más jelölt lehetetlen."
+            ],
+            [
+              "Hal az X-Wing?",
+              "Igen. Az X-Wing a kettes méretű hal; a Swordfish a hármas méretű. A Bare Sudoku mindkettőt megtalálja."
+            ],
+            [
+              "Melyik szinten van X-Wing?",
+              "A Szakértőn. Az a feladvány, amelyhez X-Wing, Y-Wing, Swordfish vagy XYZ-Wing kell, Szakértő besorolást kap."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing a sudokuban: így működik a technika",
+          "description": "Y-Wing (XY-Wing): egy kétjelöltes tengely és két szárny, mindegyik egy közös jelölttel, kizár egy számjegyet minden cellából, amely mindkét szárnyat látja.",
+          "h1": "Y-Wing",
+          "summary": "Az Y-Wing, más néven XY-Wing, három cellát használ, mindegyikben két jelölttel. A tengely jelöltjei X és Y. Az egyik szárny látja a tengelyt, és jelöltjei X és Z; a másik szárny is látja a tengelyt, és jelöltjei Y és Z. Bármi is a tengely értéke, az egyik szárny értéke Z lesz, ezért Z törölhető minden cellából, amely mindkét szárnyat látja. A Bare Sudokuban ez Szakértő szintű technika.",
+          "when": [
+            "Ha egy feladványban több, pontosan két jelöltet tartalmazó cella van, és nincs elérhető hal. Az Y-Wing gyakori a Szakértő feladványokban, és a kétjelöltes cellák követésével találod meg: mindegyik lehet tengely vagy szárny."
+          ],
+          "spot": [
+            "Írd össze a pontosan két jelöltet tartalmazó cellákat. Mindegyiket tekintsd X és Y jelöltű tengelynek, és keress a társai között egy cellát X-szel és egy másik számjeggyel, Z-vel, valamint egy cellát Y-nal és ugyanazzal a Z-vel. Ez a kettő a két szárny. Aztán keress olyan cellákat, amelyek mindkét szárnyat látják, és tartalmazzák Z-t. Figyelj: a szárnyaknak nem kell látniuk egymást."
+          ],
+          "examples": [
+            {
+              "h": "Példa",
+              "steps": [
+                "A tengely az {pivot} cella, jelöltjei {x} és {y}. Látja az {wingA} cellát ({x} és {z} jelöltekkel) és az {wingB} cellát ({y} és {z} jelöltekkel).",
+                "Ha a tengely értéke {x}, az {wingA} cella elveszíti ezt a jelöltet, és értéke {z} lesz. Ha a tengely értéke {y}, az {wingB} cella értéke lesz {z}. Az egyik szárny értéke tehát mindenképp {z}.",
+                "Annak a cellának, amely mindkét szárnyat látja, sosem lehet {z} az értéke. Töröld ezt a jelöltet innen: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Olyan szárnyakat választani, amelyek közül valamelyik nem látja a tengelyt. Mindkét szárnynak közös sorban, oszlopban vagy blokkban kell lennie a tengellyel.",
+            "Z-t olyan cellákból törölni, amelyek csak az egyik szárnyat látják. A kizárt cellának mindkét szárnyat látnia kell.",
+            "Z-t a tengelyből törölni. Az Y-Wing tengelyében nincs Z; ha mégis van, a minta XYZ-Wing, más szabályokkal."
+          ],
+          "faq": [
+            [
+              "Mi az Y-Wing a sudokuban?",
+              "Három kétjelöltes cella: egy X és Y jelöltű tengely, egy X és Z jelöltű szárny, amely látja a tengelyt, és egy Y és Z jelöltű szárny, amely szintén látja a tengelyt. Az egyik szárny mindig Z, ezért Z törlődik azokból a cellákból, amelyek mindkét szárnyat látják."
+            ],
+            [
+              "Ugyanaz az Y-Wing, mint az XY-Wing?",
+              "Igen. A két név ugyanazt a mintát írja le. A Bare Sudoku Y-Wingnek hívja."
+            ],
+            [
+              "Miért kell az egyik szárnynak Z-nek lennie?",
+              "Ha a tengely X, az első szárny elveszíti X-et, és Z lesz. Ha a tengely Y, a második szárny lesz Z. A tengely a kettő egyike, tehát az egyik szárny Z."
+            ],
+            [
+              "Hány cellából zár ki egy Y-Wing?",
+              "Általában egyből vagy kettőből: csak azokból, amelyek mindkét szárnyat látják, és még tartalmazzák Z-t. Ez elég ahhoz, hogy létrejöjjön egy single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish a sudokuban: így működik a technika",
+          "description": "Swordfish: ha egy számjegy három sorban három oszlopra szorul, a három oszlop többi részéből törölhető. A hármas méretű hal, valódi példával elmagyarázva.",
+          "h1": "Swordfish",
+          "summary": "A Swordfish egy három sorral és három oszloppal működő X-Wing. Ha egy számjegynek három sor mindegyikében legfeljebb három jelöltcellája van, és ezek a cellák mind ugyanabba a három oszlopba esnek, akkor a három sor ezekben az oszlopokban elhasználja a számjegyet, és az a három oszlop összes többi cellájából törölhető. A sorok és oszlopok felcserélhetők. A Bare Sudoku az Y-Wing után keresi a Swordfish mintát, a Szakértő feladványokban.",
+          "when": [
+            "Ha az X-Wing és az Y-Wing nem talál semmit. A Swordfish ritkább az X-Wingnél, és olyan számjegy kell hozzá, amelynek jelöltjei ritkásan oszlanak el három vonalon. Ehhez a számjegyhez teljes és pontos jegyzetek kellenek."
+          ],
+          "spot": [
+            "Válassz egy számjegyet, és keress olyan sorokat, amelyekben két vagy három jelöltcellája van. Ha három ilyen sor összesen csak három oszlopot fed le, nézd meg ezekben az oszlopokban a számjegy további jelöltjeit. Nem kell minden sornak minden oszlopban jelöltet tartalmaznia: egy Swordfish hat, hét, nyolc vagy kilenc cellából állhat. A játékban emeld ki a számjegyet a gombjával, és keress három sort, amelyek jelöltjei három oszlopba rendeződnek."
+          ],
+          "examples": [
+            {
+              "h": "Példa",
+              "steps": [
+                "Vizsgált számjegy: {d}. Három sorban (sorok: {rows}) legfeljebb három-három jelöltcellája van, és ezek mind ugyanabba a három oszlopba esnek (oszlopok: {cols}): {cells}.",
+                "Mindhárom sornak el kell helyeznie a számjegyet a három oszlop egyikében, és két sor nem használhatja ugyanazt az oszlopot. Így a három oszlop ebből a három sorból kapja meg a maga példányát.",
+                "A három oszlopban (oszlopok: {cols}) minden más ilyen jelölt lehetetlen. Töröld ezt a jelöltet innen: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mind a kilenc cellát megkövetelni. Az a Swordfish is érvényes, amelynek egyes soraiban csak két jelölt van, amíg a három sor csak három oszlopot fed le.",
+            "Négy jelöltcellás sort bevenni. Minden alapsorban legfeljebb három lehet, mind a három oszlopon belül.",
+            "Az alapsorokban kizárni. Ha a sorok az alap, a kizárások a három oszlopban vannak, az alapsorokon kívül."
+          ],
+          "faq": [
+            [
+              "Mi a Swordfish a sudokuban?",
+              "Egy számjegy, amelynek jelöltjei három sorban három oszlopra szorulnak. A három sornak ebbe a három oszlopba kell tennie a számjegyet, mindegyikbe egyszer, ezért a számjegy az oszlopok többi cellájából törlődik."
+            ],
+            [
+              "Miben különbözik a Swordfish az X-Wingtől?",
+              "Csak a méretben: az X-Wing két sort és két oszlopot használ, a Swordfish hármat és hármat. A gondolatmenet ugyanaz."
+            ],
+            [
+              "Pontosan kilenc cella kell a Swordfishhez?",
+              "Nem. Mindegyik sorban két vagy három jelölt lehet; a minta csak azt kívánja meg, hogy a három sor együtt legfeljebb három oszlopot használjon."
+            ],
+            [
+              "Van négyes méretű hal?",
+              "Igen, a Jellyfish. A Bare Sudoku nem használja, mert a feladványaihoz sosincs rá szükség."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing a sudokuban: így működik a technika",
+          "description": "XYZ-Wing: egy háromjelöltes tengely és két szárny egy közös jelölttel kizárja azt minden cellából, amely mindhármat látja. Valódi példa lépésről lépésre.",
+          "h1": "XYZ-Wing",
+          "summary": "Az XYZ-Wing olyan Y-Wing, amelynek tengelye három jelöltet tartalmaz. A tengely jelöltjei X, Y és Z; az egyik szárny látja a tengelyt, és jelöltjei X és Z, a másik is látja a tengelyt, és jelöltjei Y és Z. A három cella egyikének Z-nek kell lennie, ezért Z törölhető minden cellából, amely mindhármat látja. Mivel maga a tengely is lehet Z, a kizárt cellának a tengelyt és mindkét szárnyat is látnia kell, ami arra a blokkra vagy vonalra korlátozza, amelyen a cellák osztoznak. Ez a legnehezebb technika, amelyet a Bare Sudoku használ.",
+          "when": [
+            "Csak ha minden más kudarcot vall. Az XYZ-Wing a legritkább minta a Bare Sudokuban, és csak Szakértő feladványokban fordul elő. Akkor keresd, ha egy háromjelöltes cella egy blokkban van egy olyan kétjelöltes cellával, amely két számjegyén osztozik vele."
+          ],
+          "spot": [
+            "Indulj ki a pontosan három jelöltet tartalmazó cellákból; mindegyik lehetséges tengely. A társai között keress két kétjelöltes cellát, amelyek jelöltjei mind a tengely három jelöltje közül valók, és pontosan egy számjegyen, Z-n osztoznak. Aztán keress olyan cellákat, amelyek látják a tengelyt és mindkét szárnyat, és tartalmazzák Z-t. A gyakorlatban az egyik szárny a tengely blokkjában van, a másik a sorában vagy oszlopában, a kizárt cellák pedig ennek a blokknak az ebbe a sorba vagy oszlopba eső maradék cellái."
+          ],
+          "examples": [
+            {
+              "h": "Példa",
+              "steps": [
+                "A tengely az {pivot} cella, három jelöltje {x}, {y} és {z}. Látja az {wingA} cellát ({x} és {z} jelöltekkel) és az {wingB} cellát ({y} és {z} jelöltekkel).",
+                "Ha a tengely értéke {z}, kész. Ha {x}, akkor az {wingA} cella értéke {z}. Ha {y}, akkor az {wingB} cella értéke {z}. A három cella egyikének értéke tehát mindenképp {z}.",
+                "Annak a cellának, amely mind a hármat látja, nem lehet {z} az értéke. Töröld ezt a jelöltet innen: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Olyan cellákból kizárni, amelyek csak a két szárnyat látják. Az Y-Winggel ellentétben itt a tengely is lehet Z, ezért a cellának a tengelyt is látnia kell.",
+            "Olyan szárnyakat használni, amelyek jelöltjei nincsenek mind benne a tengely három jelöltjében.",
+            "Összekeverni az Y-Winggel: a különbség a tengely harmadik jelöltje, és ez megváltoztatja, mely cellák tisztíthatók ki."
+          ],
+          "faq": [
+            [
+              "Mi az XYZ-Wing a sudokuban?",
+              "Egy X, Y és Z jelöltű tengely és két szárny, az egyik X és Z, a másik Y és Z jelöltekkel, amelyek mindketten látják a tengelyt. A három cella egyike Z, ezért Z törlődik azokból a cellákból, amelyek mindhármat látják."
+            ],
+            [
+              "Miben különbözik az XYZ-Wing az Y-Wingtől?",
+              "A tengelynek kettő helyett három jelöltje van, köztük Z. Így maga a tengely is lehet Z helye, ezért csak azok a cellák veszíthetik el Z-t, amelyek a tengelyt és mindkét szárnyat látják."
+            ],
+            [
+              "Milyen gyakran fordul elő XYZ-Wing?",
+              "Ritkán. A Bare Sudokuban csak Szakértő feladványokhoz kellhet, és a legtöbbhöz nem kell. A Bare Sudoku utolsóként ellenőrzi, az X-Wing, az Y-Wing és a Swordfish után."
+            ],
+            [
+              "Létezik WXYZ-Wing?",
+              "Igen, négyjelöltes tengellyel, de a Bare Sudoku nem használja. A játék minden feladványa befejezhető az ebben az útmutatóban szereplő kilenc technikával."
+            ]
+          ]
+        }
+      }
+    },
+    "ro": {
+      "learnHeading": "Învață Sudoku",
+      "learnText": "Ești nou în Sudoku sau te-ai blocat la o grilă grea? Două ghiduri explică regulile și fiecare tehnică de rezolvare pe care o folosesc indiciile, fiecare cu un exemplu real.",
+      "howToLink": "Cum se joacă Sudoku",
+      "techniquesLink": "Tehnici de rezolvare Sudoku",
+      "labels": {
+        "howTo": "Cum se joacă",
+        "techniques": "Tehnici",
+        "play": "Joacă Sudoku",
+        "prev": "Tehnica anterioară",
+        "next": "Tehnica următoare",
+        "all": "Toate tehnicile",
+        "example": "Exemplu",
+        "steps": "Pas cu pas",
+        "when": "Când o folosești",
+        "spot": "Cum o recunoști",
+        "mistakes": "Greșeli frecvente",
+        "inGame": "În Bare Sudoku",
+        "level": "Necesară de la nivelul: {level}",
+        "hint": "În joc, indiciul spune: {text}",
+        "legend": "Cifrele îngroșate sunt date, cifrele albastre au fost plasate în timpul rezolvării, cifrele mici sunt candidați. Celulele evidențiate formează tiparul, candidații tăiați sunt eliminați, iar candidatul încercuit este cifra de plasat.",
+        "notation": "Celulele se notează r3c7: rândul 3, coloana 7. Rândurile se numără de sus, coloanele de la stânga, iar blocurile de la 1 la 9 din colțul din stânga sus, rând cu rând.",
+        "row": "rândul {n}",
+        "column": "coloana {n}",
+        "box": "blocul {n}",
+        "elimItem": "{d} din {cell}",
+        "regions": "Rândul 5, coloana 5 și blocul 5 la începutul grilei",
+        "firstMove": "Single evident: în {cell} poate fi doar {d}",
+        "breadcrumb": "Cale de navigare"
+      },
+      "howTo": {
+        "title": "Cum se joacă Sudoku: reguli, tabla de joc și primele mutări",
+        "description": "Învață să joci Sudoku: regulile, cum funcționează rândurile, coloanele și blocurile, de ce orice grilă are o singură soluție, notițele și primele mutări.",
+        "h1": "Cum se joacă Sudoku",
+        "summary": "Sudoku este un joc de logică pe o grilă 9×9. Completează fiecare celulă goală cu o cifră de la 1 la 9, astfel încât fiecare rând, fiecare coloană și fiecare bloc 3×3 să conțină fiecare cifră exact o dată. Unele cifre sunt date de la început; pe celelalte le deduci, câte o celulă sigură pe rând, și nu trebuie niciodată să ghicești. Acest ghid explică tabla de joc, regulile, principiul soluției unice, notițele și o strategie simplă pentru primele mutări. Poți exersa totul în [Bare Sudoku](play), care este gratuit și are indicii care explică logica.",
+        "sections": [
+          {
+            "h": "Care sunt regulile Sudoku?",
+            "p": [
+              "Există doar trei reguli și sunt de fapt aceeași regulă privită din trei direcții: fiecare rând trebuie să conțină cifrele de la 1 la 9, fiecare coloană trebuie să conțină cifrele de la 1 la 9 și fiecare bloc 3×3 trebuie să conțină cifrele de la 1 la 9. Prin urmare, o cifră nu poate apărea niciodată de două ori pe același rând, pe aceeași coloană sau în același bloc.",
+              "Cifrele date, tipărite îngroșat, sunt fixe. Sarcina ta este să completezi celulele goale. Nu există aritmetică și nici ordine: cifrele sunt doar nouă simboluri diferite. Ai putea juca cu litere sau cu forme și nimic nu s-ar schimba."
+            ]
+          },
+          {
+            "h": "Cum este organizată tabla de joc?",
+            "p": [
+              "Tabla are 81 de celule, în 9 rânduri și 9 coloane. Liniile groase o împart în nouă blocuri 3×3. Fiecare celulă aparține exact unui rând, unei coloane și unui bloc, iar aceste trei grupuri sunt unitățile ei. Celelalte 20 de celule care au o unitate comună cu o celulă se numesc vecinii ei; o cifră plasată într-o celulă exclude acea cifră din toți cei 20 de vecini.",
+              "Celulele se notează r3c7: rândul 3, coloana 7. Rândurile se numără de sus, coloanele de la stânga, iar blocurile de la 1 la 9 din colțul din stânga sus, rând cu rând. Această notație este folosită în fiecare ghid de tehnică și merită învățată: r5c5 este centrul tablei."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "De ce are orice Sudoku exact o soluție?",
+            "p": [
+              "Un Sudoku corect are o singură soluție, și tocmai asta face ca logica să funcționeze. Ori de câte ori poți arăta că o cifră nu poate merge nicăieri altundeva într-o unitate, ea trebuie să meargă în celula rămasă, pentru că soluția există și este unică. Dacă o grilă ar avea două soluții, niciun raționament nu le-ar putea deosebi și, la un moment dat, ai fi obligat să ghicești.",
+              "Bare Sudoku generează fiecare grilă pe dispozitivul tău și verifică dacă are exact o soluție și dacă rezolvitorul său logic o poate termina cu tehnicile nivelului ales. Așa că, dacă te-ai blocat, există mereu un pas următor de găsit, iar indiciul ți-l arată."
+            ]
+          },
+          {
+            "h": "Cum începi o grilă de Sudoku?",
+            "p": [
+              "Începe cu ce este cel mai constrâns. Această ordine funcționează la orice nivel:"
+            ],
+            "list": [
+              "Alege o cifră care apare deja de multe ori, să zicem de șase sau de șapte ori, și găsește blocurile în care încă lipsește. Adesea într-un bloc îi rămâne o singură celulă: acesta este un [single ascuns](hidden-single).",
+              "Caută celule aglomerate. O celulă al cărei rând, coloană și bloc conțin împreună opt cifre diferite mai are un singur candidat: un [single evident](naked-single). Celulele din rândurile sau blocurile aproape pline sunt cel mai bun loc de căutat.",
+              "Fiecare cifră pe care o plasezi elimină un candidat din 20 de vecini, așa că verifică imediat acei vecini. Single-urile tind să vină în lanț.",
+              "Când plasările ușoare se termină, scrie notițe: candidații fiecărei celule goale. Apoi caută o cifră limitată la o singură linie în interiorul unui bloc ([candidați blocați](locked-candidates)) sau două celule care au aceiași doi candidați (o [pereche evidentă](naked-pairs)).",
+              "Revino la single-uri după fiecare eliminare. Chiar și grilele Expert se rezolvă mai ales cu single-uri; tehnica avansată doar îl deblochează pe următorul."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Ce sunt notițele și când le folosești?",
+            "p": [
+              "Notițele, numite și semne de creion sau candidați, sunt cifrele mici pe care le scrii într-o celulă goală ca să ții evidența cifrelor care mai sunt posibile acolo. La grilele ușoare ai rar nevoie de ele; de la nivelul Greu în sus sunt esențiale, pentru că tehnici ca perechile, X-Wing și Y-Wing lucrează cu candidați, nu cu cifre plasate.",
+              "Păstrează notițele corecte: când plasezi o cifră, șterge-o din notițele tuturor celor 20 de vecini. În Bare Sudoku acest lucru se întâmplă automat, iar Umple notițele scrie cu o singură atingere fiecare candidat în fiecare celulă goală, așa că poți porni de la un set complet și corect de candidați. O notiță este un fapt, nu o presupunere: înseamnă că nimic nu exclude încă acea cifră."
+            ]
+          },
+          {
+            "h": "Ce faci când te-ai blocat?",
+            "p": [
+              "Mai întâi verifică din nou elementele de bază: fiecare rând, coloană și bloc aproape plin este o sursă de single-uri. Apoi asigură-te că notițele sunt complete, pentru că un candidat lipsă ascunde tipare, iar unul învechit creează tipare false. Apoi parcurge [tehnicile](techniques) în ordinea dificultății: candidați blocați, perechi și triplete, X-Wing, Y-Wing, Swordfish și XYZ-Wing. Fiecare are pagina ei, cu un exemplu real.",
+              "Dacă nimic nu merge, cere un indiciu. În Bare Sudoku, indiciul verifică mai întâi dacă vreo cifră plasată este greșită, apoi găsește următoarea celulă care poate fi completată prin logică și numește tehnica, așa că înveți ceva chiar și când îl folosești. Atinge din nou indiciul ca să plasezi cifra."
+            ]
+          },
+          {
+            "h": "Cum introduci cifre în Bare Sudoku?",
+            "p": [
+              "Atinge o celulă, apoi o cifră. Sau atinge mai întâi o cifră: se blochează, iar fiecare celulă pe care o atingi o primește, ceea ce este cel mai rapid mod de a plasa a șasea, a șaptea și a opta apariție a unei cifre. Atinge din nou cifra ca să o deblochezi. Butonul Notițe comută pe semne de creion, Șterge golește o celulă, Anulează retrage orice mutare, iar greșelile sunt marcate cu roșu, dacă nu dezactivezi asta din meniu.",
+              "Pe tastatură, folosește săgețile ca să te miști, tastele de la 1 la 9 ca să introduci o cifră, Backspace ca să ștergi, N pentru notițe, U pentru anulare, H pentru indiciu, F ca să umpli notițele și Escape pentru meniu. Jocul se salvează singur, funcționează offline și nu are reclame și nici cont."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Trebuie vreodată să ghicești în Sudoku?",
+            "Nu, într-o grilă corectă. Fiecare grilă Bare Sudoku are exact o soluție și este verificată ca să poată fi rezolvată doar prin logică, cu tehnicile nivelului ei. Dacă simți că trebuie să ghicești, lipsește un candidat din notițe sau te așteaptă o tehnică pe care încă nu ai găsit-o."
+          ],
+          [
+            "Poate o cifră să apară de două ori pe un rând, pe o coloană sau într-un bloc?",
+            "Nu. Asta este toată regula: fiecare dintre cele nouă rânduri, nouă coloane și nouă blocuri conține fiecare cifră de la 1 la 9 exact o dată. Dacă două cifre identice sunt în aceeași unitate, cel puțin una dintre ele este greșită."
+          ],
+          [
+            "Care este diferența dintre Ușor, Mediu, Greu și Expert?",
+            "Nivelul este stabilit de tehnicile de care are nevoie grila. Ușor și Mediu se rezolvă doar cu single-uri, iar Ușor începe cu cel puțin 38 de cifre date. Greu cere candidați blocați sau perechi și triplete. Expert cere X-Wing, Y-Wing, Swordfish sau XYZ-Wing."
+          ],
+          [
+            "Este mai bine să completezi notițe în toate celulele sau doar în unele?",
+            "La grilele Greu și Expert, completează-le pe toate: tipare ca perechile, X-Wing și Y-Wing apar doar când fiecare candidat este scris. La Ușor și Mediu, notițele sunt opționale, iar majoritatea jucătorilor caută doar single-uri."
+          ],
+          [
+            "Cât durează un Sudoku?",
+            "O grilă Ușor durează câteva minute; grilele Expert pot dura douăzeci de minute sau mai mult, în funcție de cât de repede observi tiparul avansat. Bare Sudoku afișează un cronometru, îl pune pe pauză cât timp meniul este deschis și nu ține clasamente, așa că joacă în ritmul tău."
+          ],
+          [
+            "Sudoku cere calcule?",
+            "Nu. Cifrele sunt doar etichete; nu se adună și nu se numără nimic. Orice nouă simboluri ar funcționa, și de aceea Sudoku este un joc de logică, nu unul cu numere."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tehnici de rezolvare Sudoku explicate cu exemple",
+        "description": "Toate cele nouă tehnici de rezolvare Sudoku, de la single-uri evidente la Swordfish și XYZ-Wing, în ordinea indiciilor Bare Sudoku, fiecare cu un exemplu.",
+        "h1": "Tehnici de rezolvare Sudoku",
+        "intro": [
+          "Orice Sudoku poate fi rezolvat cu un set mic de tehnici logice. Acest index prezintă cele nouă tehnici pe care le folosesc rezolvitorul Bare Sudoku și indiciile sale, în ordinea în care rezolvitorul le încearcă: întâi single-urile, apoi eliminările într-o singură unitate, apoi tiparele care se întind pe mai multe rânduri și coloane. Fiecare tehnică are pagina ei, cu o definiție, cum o recunoști, un exemplu real dintr-o grilă generată și greșelile frecvente.",
+          "Nivelul unei grile este dat de cea mai grea tehnică de care are nevoie. Grilele Ușor și Mediu au nevoie doar de single-uri, grilele Greu de candidați blocați sau de perechi și triplete, iar grilele Expert de cel puțin un pește sau o aripă. Indiferent de nivel, single-urile fac cea mai mare parte din muncă; tehnica avansată elimină un candidat sau doi, iar single-urile continuă de acolo."
+        ],
+        "faq": [
+          [
+            "În ce ordine ar trebui să încerc tehnicile Sudoku?",
+            "Cele mai ieftine întâi: single-uri evidente, single-uri ascunse, candidați blocați, perechi și triplete evidente, perechi și triplete ascunse, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku le încearcă exact în această ordine, iar un indiciu numește întotdeauna cea mai simplă tehnică ce duce mai departe."
+          ],
+          [
+            "Am nevoie de toate aceste tehnici ca să rezolv Sudoku?",
+            "Pentru grilele Ușor și Mediu, single-urile sunt suficiente. Grilele Greu adaugă candidați blocați și submulțimi. Grilele Expert au nevoie de cel puțin un pește sau o aripă, dar de obicei doar o dată sau de două ori pe grilă."
+          ],
+          [
+            "Există tehnici mai grele decât XYZ-Wing?",
+            "Da, de exemplu lanțurile, testele de unicitate și rețelele de forțare. Bare Sudoku nu generează grile care au nevoie de ele, așa că orice grilă din joc poate fi terminată cu cele nouă tehnici de pe această pagină."
+          ],
+          [
+            "Ce este un candidat?",
+            "O cifră care încă ar putea merge într-o celulă goală, pentru că nimic de pe rândul, de pe coloana sau din blocul ei nu o exclude deocamdată. Notițele din joc sunt candidați. Fiecare tehnică dincolo de single-uri raționează cu candidați, așa că păstrează-i compleți și corecți."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Single evident",
+          "title": "Single evident în Sudoku: celula cu un singur candidat",
+          "description": "Un single evident este o celulă goală cu o singură cifră posibilă. Învață să le găsești rapid, cu un exemplu real pas cu pas și greșelile obișnuite.",
+          "h1": "Single evident (naked single)",
+          "summary": "Un single evident este o celulă goală care are exact un candidat: celelalte opt cifre apar deja pe rândul, pe coloana sau în blocul ei. Cifra rămasă trebuie să meargă acolo. Este cea mai simplă tehnică Sudoku, cea pe care o folosești cel mai des și cea pe care indiciul Bare Sudoku o anunță prin „Un singur candidat aici”.",
+          "when": [
+            "Mereu. Single-urile evidente apar de la prima mutare până la ultima, la orice nivel. În grilele Ușor și Mediu sunt, împreună cu single-urile ascunse, singura tehnică de care ai nevoie. În grilele mai grele, fiecare eliminare făcută de o tehnică avansată lasă de obicei în urmă un single evident, așa că caută-le după fiecare pas."
+          ],
+          "spot": [
+            "Uită-te la celulele cu mulți vecini completați: o celulă de pe un rând care are deja șapte cifre sau o celulă al cărei rând, coloană și bloc acoperă împreună opt cifre diferite. Fără notițe, numără cifrele pe care le vezi din celulă. Cu notițe, un single evident este pur și simplu o celulă care arată un singur candidat, de aceea Umple notițele le face ușor de găsit."
+          ],
+          "examples": [
+            {
+              "h": "Exemplu",
+              "steps": [
+                "Uită-te la {cell}. Este goală, așa că enumeră fiecare cifră deja plasată pe rândul, pe coloana și în blocul ei.",
+                "Rândul {row} conține {rowDigits}. Coloana {col} conține {colDigits}. Blocul {box} conține {boxDigits}.",
+                "Împreună exclud orice cifră în afară de {d}, deci {d} este singurul candidat rămas în {cell}.",
+                "Scrie {d} în {cell}. Apoi verifică dacă noua cifră creează un alt single pe același rând, pe aceeași coloană sau în același bloc."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să numeri doar rândul sau doar blocul. Cele opt cifre excluse vin de obicei din toate cele trei unități împreună.",
+            "Să uiți că o cifră plasată acum o clipă exclude și ea candidați din cei 20 de vecini ai ei; single-uri evidente noi apar imediat după fiecare plasare.",
+            "Să confunzi un single evident cu un single ascuns: un single evident are un singur candidat rămas în celulă, un single ascuns are o singură celulă rămasă pentru cifră într-o unitate."
+          ],
+          "faq": [
+            [
+              "Ce este un single evident în Sudoku?",
+              "O celulă goală cu exact un candidat. Opt cifre diferite sunt deja plasate pe rândul, pe coloana și în blocul ei, așa că doar a noua cifră se potrivește."
+            ],
+            [
+              "De ce se numește evident?",
+              "Pentru că singurul candidat se vede direct în celulă după ce notițele sunt scrise; nimic nu îl ascunde. Un single ascuns, în schimb, stă printre alți candidați și îl găsești uitându-te la cifră, nu la celulă."
+            ],
+            [
+              "Poate fi rezolvată o grilă doar cu single-uri evidente?",
+              "Multe grile Ușor pot, dar majoritatea au nevoie și de single-uri ascunse. Bare Sudoku clasifică grilele Ușor și Mediu ca rezolvabile cu single-uri de ambele feluri; grilele Greu și Expert au nevoie de cel puțin încă o tehnică."
+            ],
+            [
+              "Arată indiciul single-urile evidente?",
+              "Da. Când următoarea plasare este un single evident, indiciul selectează celula și spune „Un singur candidat aici”, împreună cu cifra. Atinge din nou indiciul ca să o plasezi."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Single ascuns",
+          "title": "Single ascuns în Sudoku: singurul loc pentru o cifră",
+          "description": "Un single ascuns este singura celulă de pe un rând, o coloană sau dintr-un bloc în care mai poate merge o cifră. Învață să le găsești verificând câte o cifră.",
+          "h1": "Single ascuns (hidden single)",
+          "summary": "Un single ascuns este o cifră care mai are o singură celulă posibilă pe un rând, pe o coloană sau într-un bloc, chiar dacă acea celulă arată și alți candidați. Pentru că unitatea trebuie să conțină cifra, ea merge acolo. Indiciul Bare Sudoku îl anunță prin „Singurul loc pentru 5 pe acest rând”, pe această coloană sau în acest bloc.",
+          "when": [
+            "Ori de câte ori o cifră este bine avansată: când apare de cinci sau de șase ori, blocurile rămase sunt foarte constrânse, iar un single ascuns este adesea următoarea mutare. Single-urile ascunse sunt tehnica principală a grilelor Ușor și Mediu și rămân calul de povară la orice nivel."
+          ],
+          "spot": [
+            "Verifică pe rând câte o cifră. Ia o cifră, găsește un bloc care nu o conține și taie fiecare celulă a acelui bloc care are un rând sau o coloană comună cu o copie deja plasată a cifrei. Dacă rămâne o singură celulă, ai găsit un single ascuns. Aceeași verificare funcționează pe rânduri și coloane. În joc, atinge o cifră plasată: fiecare copie a ei este evidențiată, așa că celulele libere ies în evidență."
+          ],
+          "examples": [
+            {
+              "h": "Exemplu",
+              "steps": [
+                "Blocul {box} nu conține încă {d}, așa că una dintre celulele lui goale trebuie să o primească. Celulele goale sunt {empties}.",
+                "În fiecare dintre ele, în afară de {cell}, {d} este blocat de un {d} deja plasat pe același rând sau pe aceeași coloană, deci {d} nu este candidat acolo.",
+                "Rămâne {cell} ca singurul loc pentru {d} în blocul {box}. Scrie {d} acolo, chiar dacă {cell} mai arată și alți candidați."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să plasezi cifra într-o celulă care doar pare cea bună: verifică fiecare altă celulă goală a unității, nu doar pe cele la îndemână.",
+            "Să ratezi un single ascuns pentru că celula arată mai mulți candidați. Ceilalți candidați nu contează; contează că cifra nu are alt loc în unitate.",
+            "Să verifici doar blocurile. Rândurile și coloanele produc single-uri ascunse la fel de des, mai ales spre final."
+          ],
+          "faq": [
+            [
+              "Ce este un single ascuns în Sudoku?",
+              "O cifră care poate merge într-o singură celulă de pe un rând, de pe o coloană sau dintr-un bloc. Unitatea trebuie să conțină cifra, așa că celula este decisă chiar dacă mai are alți candidați."
+            ],
+            [
+              "Care este diferența dintre un single ascuns și un single evident?",
+              "Un single evident privește o celulă: îi mai rămâne un candidat. Un single ascuns privește o cifră: îi mai rămâne o celulă într-o unitate. Amândouă plasează o cifră cu certitudine."
+            ],
+            [
+              "Care este mai ușor de găsit?",
+              "Fără notițe, single-urile ascunse sunt de obicei mai ușoare, pentru că poți parcurge tabla câte o cifră pe rând. Cu notițe complete, single-urile evidente sunt cele mai ușoare, pentru că o celulă cu un singur candidat sare în ochi."
+            ],
+            [
+              "Cum descrie indiciul un single ascuns?",
+              "Ca „Singurul loc pentru” cifră pe acest rând, pe această coloană sau în acest bloc, cu celula selectată. Atinge din nou indiciul ca să o plasezi."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Candidați blocați",
+          "title": "Candidați blocați în Sudoku: indicare și revendicare",
+          "description": "Candidați blocați: când candidații unei cifre dintr-un bloc stau toți pe un rând sau o coloană, sau invers, cifra se elimină în altă parte. Două exemple reale.",
+          "h1": "Candidați blocați (locked candidates)",
+          "summary": "Candidații blocați sunt prima tehnică ce elimină candidați în loc să plaseze o cifră. Au două forme. Indicarea: într-un bloc, toți candidații unei cifre stau pe un singur rând sau pe o singură coloană, așa că cifra se elimină din restul acelei linii. Revendicarea: pe un rând sau pe o coloană, toți candidații unei cifre stau într-un singur bloc, așa că cifra se elimină din restul acelui bloc. Indiciul Bare Sudoku marchează plasarea pe care o deblochează cu „Candidați blocați”.",
+          "when": [
+            "Când single-urile se termină într-o grilă Greu, aceasta este primul lucru de încercat. Are nevoie de notițe complete măcar pentru cifra pe care o examinezi. Candidații blocați sunt frecvenți: majoritatea grilelor Greu au nevoie de ei, iar grilele Expert îi folosesc între tiparele mai mari."
+          ],
+          "spot": [
+            "Pentru indicare, uită-te la fiecare bloc și la fiecare cifră care îi lipsește: dacă celulele candidate pentru acea cifră stau pe un singur rând sau pe o singură coloană, verifică dacă aceeași cifră apare ca candidat mai departe pe acea linie, în afara blocului. Pentru revendicare, privește de-a lungul unui rând sau al unei coloane: dacă toți candidații unei cifre sunt în același bloc, restul blocului poate fi curățat. În joc, atinge tasta unei cifre ca să-i evidențiezi toți candidații; o linie de două sau trei notițe evidențiate în interiorul unui bloc este tiparul."
+          ],
+          "examples": [
+            {
+              "h": "Indicare",
+              "steps": [
+                "În blocul {box}, cifra {d} are doar aceste celule candidate: {cells}. Toate stau pe rândul {row}.",
+                "Blocul {box} are nevoie de un {d}, așa că {d} de pe rândul {row} se află în blocul {box}, oricare dintre acele celule l-ar primi.",
+                "Rândul {row} nu poate avea un al doilea {d}, așa că elimină {d} din celulele rândului {row} din afara blocului: {elim}."
+              ]
+            },
+            {
+              "h": "Revendicare",
+              "steps": [
+                "Pe rândul {row}, cifra {d} poate merge doar în {cells}, iar acestea stau toate în blocul {box}.",
+                "Rândul {row} trebuie să conțină {d}, așa că {d} din blocul {box} este revendicat de rândul {row}. Celelalte celule ale blocului {box} nu pot conține {d}.",
+                "Elimină {d} din {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să elimini cifra în interiorul blocului în loc de în afara lui, la indicare, sau invers, la revendicare. Eliminările merg întotdeauna în celulele care sunt pe linie, dar nu în bloc, sau în bloc, dar nu pe linie.",
+            "Să aplici regula când candidații se întind pe două rânduri ale blocului. Toate celulele candidate ale cifrei din bloc trebuie să stea pe o singură linie.",
+            "Să uiți să cauți single-ul pe care îl creează eliminarea. Candidații blocați plasează rar o cifră singuri; ei pregătesc un single."
+          ],
+          "faq": [
+            [
+              "Ce sunt candidații blocați în Sudoku?",
+              "Candidații unei cifre care sunt limitați la intersecția dintre un bloc și o linie. Pentru că blocul, sau linia, trebuie să conțină cifra în acea intersecție, cifra poate fi eliminată din restul liniei, sau din restul blocului."
+            ],
+            [
+              "Care este diferența dintre indicare și revendicare?",
+              "Indicarea pornește de la un bloc: candidații cifrei din bloc indică de-a lungul unui rând sau al unei coloane, așa că cifra se elimină din restul acelei linii. Revendicarea pornește de la un rând sau de la o coloană: candidații liniei pentru cifră sunt toți într-un bloc, așa că linia revendică cifra, iar aceasta se elimină din restul blocului."
+            ],
+            [
+              "Candidații blocați se mai numesc și eliminare prin intersecție?",
+              "Da. Alte nume sunt reducere bloc-linie pentru forma de revendicare și perechi indicatoare sau triplete indicatoare pentru forma de indicare. Bare Sudoku folosește un singur nume pentru ambele."
+            ],
+            [
+              "Ce nivel are nevoie de candidați blocați?",
+              "Greu. O grilă care are nevoie de candidați blocați sau de submulțimi, dar de nimic mai greu, este clasificată Greu; grilele Expert au nevoie în plus de un pește sau de o aripă."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Perechi și triplete evidente",
+          "title": "Perechi și triplete evidente în Sudoku: cum funcționează",
+          "description": "Perechi și triplete evidente: două sau trei celule dintr-o unitate cu aceiași doi sau trei candidați. Învață să le recunoști și ce să elimini, cu exemple reale.",
+          "h1": "Perechi și triplete evidente (naked pair, naked triple)",
+          "summary": "O pereche evidentă înseamnă două celule de pe același rând, de pe aceeași coloană sau din același bloc care au exact aceiași doi candidați. Cele două cifre trebuie să meargă în acele două celule, așa că pot fi eliminate din fiecare altă celulă a unității. Un triplet evident este aceeași idee cu trei celule și trei cifre; fiecare celulă poate arăta două sau toate trei dintre ele. Indiciul Bare Sudoku marchează plasarea rezultată cu „Pereche sau triplet”.",
+          "when": [
+            "După ce notițele sunt complete, iar single-urile și candidații blocați s-au epuizat. Perechile evidente sunt foarte frecvente în grilele Greu, tripletele evidente mai puțin. Merită verificate amândouă în fiecare unitate care mai are cinci sau mai multe celule goale."
+          ],
+          "spot": [
+            "Caută celule cu doar doi candidați și găsește o altă celulă din aceeași unitate cu aceiași doi. Pentru triplete, uită-te la unitățile cu mai multe celule de doi și trei candidați și verifică dacă trei dintre ele folosesc împreună doar trei cifre diferite. Celulele cu exact aceiași candidați se văd ușor după ce notițele sunt scrise; Umple notițele face asta în joc cu o singură atingere."
+          ],
+          "examples": [
+            {
+              "h": "Pereche evidentă",
+              "steps": [
+                "În {unit}, {cellA} și {cellB} au exact aceiași doi candidați: {d1} și {d2}.",
+                "Una dintre ele trebuie să fie {d1}, iar cealaltă {d2}. Nu știm care e care, dar ambele cifre sunt consumate de aceste două celule.",
+                "Deci nicio altă celulă din {unit} nu poate conține {d1} sau {d2}. Elimină {elim}."
+              ]
+            },
+            {
+              "h": "Triplet evident",
+              "steps": [
+                "Trei celule din {unit} își iau toți candidații din aceleași trei cifre, {digits}: {cells}.",
+                "Cele trei cifre trebuie să umple aceste trei celule într-o anumită ordine. O celulă nu trebuie să arate toți cei trei candidați; contează ca niciuna dintre cele trei celule să nu aibă un candidat din afara setului.",
+                "Elimină {digits} din fiecare altă celulă din {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să iei două celule care au doi candidați comuni, dar și un al treilea. La o pereche evidentă, fiecare celulă trebuie să aibă exact cei doi candidați și nimic altceva.",
+            "Să elimini cifrele chiar din celulele perechii. Perechea își păstrează candidații; eliminările merg în celelalte celule ale unității.",
+            "Să ceri ca fiecare celulă a tripletului să arate toate cele trei cifre. O celulă cu două dintre ele este în regulă, atâta timp cât nicio celulă nu are un candidat din afara setului."
+          ],
+          "faq": [
+            [
+              "Ce este o pereche evidentă în Sudoku?",
+              "Două celule dintr-o unitate care au amândouă exact aceiași doi candidați. Cele două cifre sunt blocate în acele două celule, așa că pot fi eliminate din restul unității."
+            ],
+            [
+              "Ce este un triplet evident?",
+              "Trei celule dintr-o unitate ai căror candidați sunt, împreună, doar trei cifre. Fiecare celulă poate avea două sau trei dintre ele. Cele trei cifre umplu cele trei celule, așa că pot fi eliminate din celelalte celule ale unității."
+            ],
+            [
+              "O pereche evidentă plasează o cifră?",
+              "Nu de una singură. Elimină candidați, iar eliminarea lasă de obicei în urmă un single evident sau ascuns. Indiciul din Bare Sudoku arată acel single și numește tehnica ce l-a făcut posibil."
+            ],
+            [
+              "Poate o pereche evidentă să fie în același timp într-un bloc și pe un rând?",
+              "Da. Dacă cele două celule au în comun un rând și un bloc, perechea elimină în ambele unități. Bare Sudoku le tratează câte o unitate pe rând."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Perechi și triplete ascunse",
+          "title": "Perechi și triplete ascunse în Sudoku: cum le găsești",
+          "description": "O pereche ascunsă înseamnă două cifre care pot merge doar în aceleași două celule ale unei unități, deci ceilalți candidați ai lor pleacă. Învață pas cu pas.",
+          "h1": "Perechi și triplete ascunse (hidden pair, hidden triple)",
+          "summary": "O pereche ascunsă înseamnă două cifre care, pe un rând, pe o coloană sau într-un bloc, sunt candidate în aceleași două celule și nicăieri altundeva. Acele două celule trebuie să conțină cele două cifre, așa că orice alt candidat din ele poate fi eliminat. Un triplet ascuns funcționează la fel, cu trei cifre limitate la trei celule. După eliminare, celulele arată o pereche sau un triplet evident. Indiciul Bare Sudoku marchează plasarea rezultată cu „Pereche sau triplet”.",
+          "when": [
+            "Când o unitate are celule cu mulți candidați și single-urile s-au terminat. Perechile ascunse se ascund în celule aglomerate, de aceea merită căutate exact acolo unde perechile evidente nu se văd. Tripletele ascunse sunt rare; Bare Sudoku le verifică, dar majoritatea grilelor Greu se rezolvă fără ele."
+          ],
+          "spot": [
+            "Lucrează pe cifre, nu pe celule. Într-o unitate, notează celulele în care poate merge fiecare cifră lipsă. Dacă două cifre au fiecare doar două celule posibile și acestea sunt aceleași două celule, ai o pereche ascunsă. În joc, atinge tasta unei cifre ca să-i evidențiezi candidații; dacă două cifre luminează aceleași două celule ale unei unități și nimic altceva în ea, acesta este tiparul."
+          ],
+          "examples": [
+            {
+              "h": "Pereche ascunsă",
+              "steps": [
+                "În {unit}, cifrele {d1} și {d2} au fiecare doar două celule posibile, iar acestea sunt aceleași două: {cells}.",
+                "Acele două celule trebuie să conțină {d1} și {d2}, așa că ceilalți candidați ai lor sunt imposibili.",
+                "Elimină {elim}. Acum cele două celule arată o pereche evidentă, care poate debloca mai mult."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să elimini cele două cifre ale perechii din celulele perechii. Pleacă ceilalți candidați ai acelor celule; cifrele perechii rămân.",
+            "Să accepți o cifră care are o a treia celulă posibilă în unitate. Ambele cifre trebuie să fie limitate exact la cele două celule.",
+            "Să cauți doar în blocuri. Perechile ascunse apar la fel de des pe rânduri și pe coloane."
+          ],
+          "faq": [
+            [
+              "Ce este o pereche ascunsă în Sudoku?",
+              "Două cifre care pot merge doar în aceleași două celule ale unei unități. Acele celule trebuie să primească acele cifre, așa că ceilalți candidați ai lor sunt eliminați."
+            ],
+            [
+              "Prin ce diferă o pereche ascunsă de o pereche evidentă?",
+              "O pereche evidentă se vede: două celule care arată doar aceiași doi candidați. O pereche ascunsă este acoperită de candidați în plus în cele două celule. Eliminarea acestora transformă perechea ascunsă într-o pereche evidentă."
+            ],
+            [
+              "Ce este un triplet ascuns?",
+              "Trei cifre limitate la trei celule ale unei unități. Nu trebuie ca fiecare cifră să apară în toate cele trei celule; contează ca niciuna dintre cele trei cifre să nu aibă un candidat în afara acelor celule."
+            ],
+            [
+              "Face indiciul diferența între perechile ascunse și cele evidente?",
+              "Nu. Bare Sudoku le găsește pe amândouă și marchează plasarea rezultată cu „Pereche sau triplet”. Paginile de aici le separă pentru că se găsesc în moduri diferite."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing în Sudoku: cum funcționează tehnica",
+          "description": "X-Wing: o cifră cu exact două celule candidate pe fiecare din două rânduri, pe aceleași două coloane, se elimină din restul acelor coloane. Exemplu real.",
+          "h1": "X-Wing",
+          "summary": "Un X-Wing este un tipar format dintr-o cifră și patru celule aflate în colțurile unui dreptunghi. Dacă cifra are exact două celule candidate pe fiecare din două rânduri, iar acele celule stau pe aceleași două coloane, atunci cifra trebuie să ocupe două colțuri opuse ale dreptunghiului. Prin urmare, poate fi eliminată din fiecare altă celulă a celor două coloane. Același lucru funcționează cu rândurile și coloanele inversate. Este prima tehnică Expert din Bare Sudoku.",
+          "when": [
+            "Când single-urile, candidații blocați și submulțimile s-au epuizat. X-Wing este cel mai frecvent tipar Expert și apare adesea când unei cifre i-au rămas puțini candidați, de obicei când are deja patru până la șase copii plasate. Are nevoie de notițe complete pentru cifra examinată."
+          ],
+          "spot": [
+            "Alege o cifră și caută rândurile pe care are exact două celule candidate. Dacă două astfel de rânduri au aceleași două coloane, verifică dacă pe acele coloane mai există alți candidați ai cifrei: aceștia sunt eliminările. Apoi repetă, cu coloanele ca bază. În joc, atinge tasta cifrei: fiecare candidat al ei este evidențiat, iar un dreptunghi de patru notițe evidențiate se vede ușor."
+          ],
+          "examples": [
+            {
+              "h": "Exemplu",
+              "steps": [
+                "Cifra {d} are exact două celule candidate pe rândul {r1} și exact două pe rândul {r2}, iar acestea stau pe aceleași două coloane, {c1} și {c2}: {cells}.",
+                "Rândul {r1} își pune {d} pe coloana {c1} sau {c2}, iar rândul {r2} își pune {d} pe cealaltă. Oricum ar fi, coloanele {c1} și {c2} primesc fiecare câte un {d} din aceste două rânduri.",
+                "Deci {d} nu poate apărea nicăieri altundeva pe coloanele {c1} și {c2}. Elimină {d} din {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să folosești un rând care are trei celule candidate pentru cifră. Fiecare rând de bază trebuie să aibă exact două, și amândouă pe cele două coloane comune.",
+            "Să elimini cifra de pe rânduri în loc de pe coloane. Cu rândurile ca bază, eliminările sunt pe coloane, și invers.",
+            "Să uiți versiunea inversată. Un X-Wing construit pe coloane elimină pe rânduri."
+          ],
+          "faq": [
+            [
+              "Ce este un X-Wing în Sudoku?",
+              "O cifră care are exact două celule candidate pe fiecare din două rânduri, pe aceleași două coloane. Cifra ocupă două colțuri opuse ale acelui dreptunghi, așa că se elimină din restul celor două coloane. Rândurile și coloanele pot fi inversate."
+            ],
+            [
+              "De ce funcționează un X-Wing?",
+              "Fiecare dintre cele două rânduri trebuie să plaseze cifra pe una dintre cele două coloane, iar cele două rânduri nu pot folosi aceeași coloană. Așa că fiecare coloană își primește copia cifrei din aceste rânduri, iar orice alt candidat de pe acele coloane este imposibil."
+            ],
+            [
+              "Este X-Wing un pește?",
+              "Da. X-Wing este peștele de mărime doi; Swordfish este peștele de mărime trei. Bare Sudoku le găsește pe amândouă."
+            ],
+            [
+              "La ce nivel apare X-Wing?",
+              "Expert. O grilă care are nevoie de X-Wing, Y-Wing, Swordfish sau XYZ-Wing este clasificată Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing în Sudoku: cum funcționează tehnica",
+          "description": "Y-Wing (XY-Wing): un pivot cu doi candidați și două aripi care împart câte unul cu el elimină o cifră din fiecare celulă care vede ambele aripi. Exemplu.",
+          "h1": "Y-Wing",
+          "summary": "Un Y-Wing, numit și XY-Wing, folosește trei celule cu câte doi candidați. Pivotul are candidații X și Y. O aripă vede pivotul și are X și Z; cealaltă aripă vede pivotul și are Y și Z. Oricare ar fi valoarea pivotului, una dintre aripi trebuie să fie Z, așa că Z poate fi eliminat din fiecare celulă care vede ambele aripi. În Bare Sudoku este o tehnică Expert.",
+          "when": [
+            "Când o grilă are mai multe celule cu exact doi candidați și niciun pește nu este disponibil. Y-Wing este frecvent în grilele Expert și se găsește urmărind celulele cu doi candidați: fiecare este un posibil pivot sau o posibilă aripă."
+          ],
+          "spot": [
+            "Enumeră celulele cu exact doi candidați. Tratează-le pe rând ca pivot cu candidații X și Y și caută printre vecinii fiecăreia o celulă cu X și o altă cifră Z, și o celulă cu Y și același Z. Acestea două sunt aripile. Apoi găsește celulele care văd ambele aripi și conțin Z. Reține că aripile nu trebuie să se vadă între ele."
+          ],
+          "examples": [
+            {
+              "h": "Exemplu",
+              "steps": [
+                "Pivotul {pivot} are candidații {x} și {y}. Vede {wingA}, care are {x} și {z}, și {wingB}, care are {y} și {z}.",
+                "Dacă {pivot} este {x}, atunci {wingA} pierde {x} și devine {z}. Dacă {pivot} este {y}, atunci {wingB} devine {z}. Una dintre cele două aripi este {z} în orice caz.",
+                "O celulă care vede ambele aripi nu poate fi niciodată {z}. Elimină {z} din {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să alegi aripi care nu văd amândouă pivotul. Fiecare aripă trebuie să aibă un rând, o coloană sau un bloc comun cu pivotul.",
+            "Să elimini Z din celule care văd doar o aripă. Celula din care elimini trebuie să vadă ambele aripi.",
+            "Să elimini Z din pivot. Într-un Y-Wing pivotul nu conține Z; dacă îl conține, tiparul este un XYZ-Wing, cu alte reguli."
+          ],
+          "faq": [
+            [
+              "Ce este un Y-Wing în Sudoku?",
+              "Trei celule cu câte doi candidați: un pivot cu X și Y, o aripă cu X și Z care vede pivotul și o aripă cu Y și Z care vede pivotul. O aripă este mereu Z, așa că Z se elimină din celulele care văd ambele aripi."
+            ],
+            [
+              "Y-Wing este același lucru cu XY-Wing?",
+              "Da. Cele două nume descriu același tipar. Bare Sudoku îl numește Y-Wing."
+            ],
+            [
+              "De ce trebuie ca o aripă să fie Z?",
+              "Dacă pivotul este X, prima aripă pierde X și devine Z. Dacă pivotul este Y, a doua aripă devine Z. Pivotul este unul dintre cele două, deci o aripă este Z."
+            ],
+            [
+              "Câte celule elimină un Y-Wing?",
+              "De obicei una sau două: doar celulele care văd ambele aripi și încă îl conțin pe Z. Asta este suficient ca să creeze un single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish în Sudoku: cum funcționează tehnica",
+          "description": "Swordfish: o cifră limitată la trei coloane pe trei rânduri se elimină din restul acelor coloane. Peștele de mărime trei, explicat cu un exemplu real.",
+          "h1": "Swordfish",
+          "summary": "Un Swordfish este un X-Wing cu trei rânduri și trei coloane. Dacă o cifră are cel mult trei celule candidate pe fiecare din trei rânduri, iar toate acele celule cad pe aceleași trei coloane, cele trei rânduri consumă cifra pe acele coloane, iar cifra poate fi eliminată din fiecare altă celulă a celor trei coloane. Rândurile și coloanele pot fi inversate. Bare Sudoku caută Swordfish după Y-Wing, în grilele Expert.",
+          "when": [
+            "Când X-Wing și Y-Wing nu găsesc nimic. Swordfish este mai rar decât X-Wing și are nevoie de o cifră ai cărei candidați sunt răsfirați pe trei linii. Are nevoie de notițe complete și corecte pentru acea cifră."
+          ],
+          "spot": [
+            "Alege o cifră și caută rânduri cu două sau trei celule candidate pentru ea. Dacă trei astfel de rânduri acoperă în total doar trei coloane, verifică pe acele coloane alți candidați ai cifrei. Nu trebuie ca fiecare rând să aibă un candidat pe fiecare coloană: un Swordfish poate avea șase, șapte, opt sau nouă celule. În joc, evidențiază cifra cu tasta ei și caută trei rânduri ai căror candidați se aliniază pe trei coloane."
+          ],
+          "examples": [
+            {
+              "h": "Exemplu",
+              "steps": [
+                "Cifra {d} are cel mult trei celule candidate pe fiecare dintre rândurile {rows}, iar toate aceste celule cad pe coloanele {cols}: {cells}.",
+                "Fiecare dintre cele trei rânduri trebuie să își plaseze {d} pe una dintre cele trei coloane, iar două rânduri nu pot folosi aceeași coloană. Așa că cele trei coloane își primesc {d} din aceste trei rânduri.",
+                "Orice alt candidat {d} de pe coloanele {cols} este imposibil. Elimină {d} din {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să ceri toate cele nouă celule. Un Swordfish cu doi candidați pe unele rânduri este tot valid, atâta timp cât cele trei rânduri acoperă doar trei coloane.",
+            "Să incluzi un rând cu patru celule candidate. Fiecare rând de bază trebuie să aibă cel mult trei, toate pe cele trei coloane.",
+            "Să elimini pe rândurile de bază. Cu rândurile ca bază, eliminările sunt pe cele trei coloane, în afara rândurilor de bază."
+          ],
+          "faq": [
+            [
+              "Ce este un Swordfish în Sudoku?",
+              "O cifră ai cărei candidați de pe trei rânduri sunt limitați la trei coloane. Cele trei rânduri trebuie să plaseze cifra pe acele trei coloane, câte una pe fiecare, așa că cifra se elimină din celelalte celule ale acelor coloane."
+            ],
+            [
+              "Prin ce diferă un Swordfish de un X-Wing?",
+              "Doar prin mărime: un X-Wing folosește două rânduri și două coloane, un Swordfish trei și trei. Raționamentul este același."
+            ],
+            [
+              "Are nevoie un Swordfish de exact nouă celule?",
+              "Nu. Fiecare rând poate avea doi sau trei candidați; tiparul cere doar ca cele trei rânduri să nu folosească împreună mai mult de trei coloane."
+            ],
+            [
+              "Există un pește de mărime patru?",
+              "Da, Jellyfish. Bare Sudoku nu îl folosește, pentru că grilele lui nu au niciodată nevoie de el."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing în Sudoku: cum funcționează tehnica",
+          "description": "XYZ-Wing: un pivot cu trei candidați și două aripi care împart unul dintre ei îl elimină din fiecare celulă care le vede pe toate trei. Exemplu pas cu pas.",
+          "h1": "XYZ-Wing",
+          "summary": "Un XYZ-Wing este un Y-Wing al cărui pivot are trei candidați. Pivotul are X, Y și Z; o aripă vede pivotul și are X și Z, cealaltă vede pivotul și are Y și Z. Una dintre cele trei celule trebuie să fie Z, așa că Z poate fi eliminat din fiecare celulă care le vede pe toate trei. Pentru că pivotul însuși poate fi Z, celula din care elimini trebuie să vadă pivotul și ambele aripi, ceea ce o limitează la blocul sau linia pe care celulele le au în comun. Este cea mai grea tehnică folosită de Bare Sudoku.",
+          "when": [
+            "Doar când tot restul eșuează. XYZ-Wing este cel mai rar tipar din Bare Sudoku și apare doar în grilele Expert. Caută-l când o celulă cu trei candidați stă într-un bloc cu o celulă cu doi candidați care are în comun două dintre cifrele ei."
+          ],
+          "spot": [
+            "Pornește de la celulele cu exact trei candidați; fiecare este un posibil pivot. Printre vecinii lui, caută două celule cu câte doi candidați, luați dintre cei trei ai pivotului, care au în comun exact o cifră Z. Apoi caută celulele care văd pivotul și ambele aripi și conțin Z. În practică, o aripă este în blocul pivotului, iar cealaltă pe rândul sau pe coloana lui, iar celulele din care elimini sunt celelalte celule ale acelui bloc de pe acel rând sau acea coloană."
+          ],
+          "examples": [
+            {
+              "h": "Exemplu",
+              "steps": [
+                "Pivotul {pivot} are trei candidați: {x}, {y} și {z}. Vede {wingA}, cu {x} și {z}, și {wingB}, cu {y} și {z}.",
+                "Dacă {pivot} este {z}, gata. Dacă este {x}, {wingA} trebuie să fie {z}. Dacă este {y}, {wingB} trebuie să fie {z}. În orice caz, una dintre cele trei celule este {z}.",
+                "O celulă care le vede pe toate trei nu poate fi {z}. Elimină {z} din {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Să elimini din celule care văd doar cele două aripi. Spre deosebire de Y-Wing, pivotul poate fi Z, așa că celula trebuie să vadă și pivotul.",
+            "Să folosești aripi ai căror candidați nu sunt amândoi incluși în cei trei candidați ai pivotului.",
+            "Să îl confunzi cu un Y-Wing: diferența este al treilea candidat din pivot, iar acesta schimbă celulele care pot fi curățate."
+          ],
+          "faq": [
+            [
+              "Ce este un XYZ-Wing în Sudoku?",
+              "Un pivot cu candidații X, Y și Z și două aripi, una cu X și Z și una cu Y și Z, care văd amândouă pivotul. Una dintre cele trei celule este Z, așa că Z se elimină din celulele care le văd pe toate trei."
+            ],
+            [
+              "Prin ce diferă un XYZ-Wing de un Y-Wing?",
+              "Pivotul are trei candidați în loc de doi, inclusiv Z. Asta face din pivot un loc posibil pentru Z, așa că doar celulele care văd pivotul și ambele aripi pot pierde Z."
+            ],
+            [
+              "Cât de des apare un XYZ-Wing?",
+              "Rar. În Bare Sudoku doar grilele Expert pot avea nevoie de unul, iar majoritatea nu au. Bare Sudoku îl verifică ultimul, după X-Wing, Y-Wing și Swordfish."
+            ],
+            [
+              "Există un WXYZ-Wing?",
+              "Da, cu un pivot cu patru candidați, dar Bare Sudoku nu îl folosește. Orice grilă din joc poate fi terminată cu cele nouă tehnici din acest ghid."
+            ]
+          ]
+        }
+      }
+    },
     "el": {
       "learnHeading": "Μάθετε Sudoku",
       "learnText": "Είστε νέοι στο Sudoku ή κολλήσατε σε έναν δύσκολο γρίφο; Δύο οδηγοί εξηγούν τους κανόνες και κάθε τεχνική επίλυσης που χρησιμοποιούν οι βοήθειες, καθεμία με πραγματικό παράδειγμα.",
