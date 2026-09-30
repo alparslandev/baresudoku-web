@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import worker, { dayOf, parseEvent, summarize, renderStats } from "../worker/index.js";
+import worker, { dayOf, parseEvent, summarize, renderStats, automated } from "../worker/index.js";
 
 const NOW = Date.UTC(2026, 8, 29, 12, 0, 0);
 const DAY = 86400e3;
@@ -80,7 +80,7 @@ function fakeEnv() {
 
 async function post(body, headers = {}) {
   const { env, ctx, batches, waits } = fakeEnv();
-  const request = new Request("https://baresudoku.com/api/e", { method: "POST", body, headers: { "Sec-Fetch-Site": "same-origin", "User-Agent": "Mozilla/5.0", ...headers } });
+  const request = new Request("https://baresudoku.com/api/e", { method: "POST", body, headers: { "Sec-Fetch-Site": "same-origin", "User-Agent": "Mozilla/5.0", "Accept-Language": "tr-TR,tr;q=0.9", ...headers } });
   const res = await worker.fetch(request, env, ctx);
   await Promise.all(waits);
   return { status: res.status, batches };
@@ -93,6 +93,14 @@ test("collector writes only valid same-origin human events", async () => {
   expect(ok.batches[0][0].args).toEqual([expect.any(String), "start", "1", 1]);
   expect((await post('{"e":"start","k":1}', { "User-Agent": "Mozilla/5.0 (compatible; Googlebot/2.1)" })).batches.length).toBe(0);
   expect((await post('{"e":"start","k":1}', { "Sec-Fetch-Site": "cross-site" })).batches.length).toBe(0);
+  expect((await post('{"e":"start","k":1}', { "Accept-Language": "" })).batches.length).toBe(0);
+  const chrome = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36";
+  expect((await post('{"e":"start","k":1}', { "User-Agent": chrome })).batches.length).toBe(0);
+  expect((await post('{"e":"start","k":1}', { "User-Agent": chrome, "Sec-CH-UA": '"Chromium";v="148", "Google Chrome";v="148"' })).batches.length).toBe(1);
+  const human = new Headers({ "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 19_0 like Mac OS X) AppleWebKit/605.1.15 Version/19.0 Mobile/15E148 Safari/604.1", "Accept-Language": "ja,en;q=0.8" });
+  expect(automated(human, { asn: 15897 })).toBe(false);
+  expect(automated(human, undefined)).toBe(false);
+  expect(automated(human, { asn: 16509 })).toBe(true);
   expect((await post('{"e":"start","k":1,"x":"' + "a".repeat(400) + '"}')).batches.length).toBe(0);
   const broken = await post("broken");
   expect(broken.batches.length).toBe(0);
