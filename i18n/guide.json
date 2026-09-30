@@ -1164,6 +1164,2334 @@
         }
       }
     },
+    "fi": {
+      "learnHeading": "Opi sudoku",
+      "learnText": "Uusi sudokun parissa tai jumissa vaikean ruudukon kanssa? Kaksi opasta selittää säännöt ja jokaisen vihjeiden käyttämän ratkaisutekniikan, kukin todellisen esimerkin avulla.",
+      "howToLink": "Miten sudokua pelataan",
+      "techniquesLink": "Sudokun ratkaisutekniikat",
+      "labels": {
+        "howTo": "Pelaaminen",
+        "techniques": "Tekniikat",
+        "play": "Pelaa sudokua",
+        "prev": "Edellinen tekniikka",
+        "next": "Seuraava tekniikka",
+        "all": "Kaikki tekniikat",
+        "example": "Esimerkki",
+        "steps": "Vaihe vaiheelta",
+        "when": "Milloin sitä käytetään",
+        "spot": "Miten sen huomaa",
+        "mistakes": "Yleiset virheet",
+        "inGame": "Bare Sudokussa",
+        "level": "Tarvitaan tasosta alkaen: {level}",
+        "hint": "Pelissä vihje sanoo: {text}",
+        "legend": "Lihavoidut numerot on annettu valmiiksi, siniset numerot on sijoitettu ratkaistessa ja pienet numerot ovat ehdokkaita. Korostetut ruudut muodostavat kuvion, yliviivatut ehdokkaat poistetaan ja ympyröity ehdokas on sijoitettava numero.",
+        "notation": "Ruudut merkitään muodossa r3c7: rivi 3, sarake 7. Rivit lasketaan ylhäältä, sarakkeet vasemmalta ja laatikot 1-9 vasemmasta yläkulmasta alkaen rivi kerrallaan.",
+        "row": "rivi {n}",
+        "column": "sarake {n}",
+        "box": "laatikko {n}",
+        "elimItem": "{d} ruudusta {cell}",
+        "regions": "Rivi 5, sarake 5 ja laatikko 5 pelin alussa",
+        "firstMove": "Ainoa ehdokas: ruutuun {cell} käy vain {d}",
+        "breadcrumb": "Murupolku"
+      },
+      "howTo": {
+        "title": "Miten sudokua pelataan: säännöt, ruudukko ja ensisiirrot",
+        "description": "Opi pelaamaan sudokua: säännöt, rivit, sarakkeet ja laatikot, miksi jokaisella ruudukolla on yksi ratkaisu, muistiinpanot ja ensimmäiset siirrot.",
+        "h1": "Miten sudokua pelataan",
+        "summary": "Sudoku on logiikkapulma 9×9-ruudukossa. Täytä jokainen tyhjä ruutu numerolla 1-9 niin, että jokaisella rivillä, jokaisessa sarakkeessa ja jokaisessa 3×3-laatikossa on jokainen numero täsmälleen kerran. Osa numeroista on annettu alussa; loput päättelet ruutu kerrallaan varmuudella, eikä sinun tarvitse koskaan arvata. Tämä opas selittää ruudukon, säännöt, yhden ratkaisun periaatteen, muistiinpanot ja yksinkertaisen strategian ensimmäisiin siirtoihin. Voit harjoitella kaikkea [Bare Sudokussa](play), joka on ilmainen ja jonka vihjeet selittävät päättelyn.",
+        "sections": [
+          {
+            "h": "Mitkä ovat sudokun säännöt?",
+            "p": [
+              "Sääntöjä on vain kolme, ja ne ovat sama sääntö kolmesta suunnasta katsottuna: jokaisella rivillä on oltava numerot 1-9, jokaisessa sarakkeessa on oltava numerot 1-9 ja jokaisessa 3×3-laatikossa on oltava numerot 1-9. Sama numero ei siis voi koskaan esiintyä kahdesti samalla rivillä, samassa sarakkeessa tai samassa laatikossa.",
+              "Lihavoidut annetut numerot ovat kiinteitä. Sinun tehtäväsi on täyttää tyhjät ruudut. Laskutoimituksia tai järjestystä ei ole: numerot ovat vain yhdeksän eri symbolia. Voisit pelata kirjaimilla tai kuvioilla, eikä mikään muuttuisi."
+            ]
+          },
+          {
+            "h": "Miten ruudukko on rakennettu?",
+            "p": [
+              "Ruudukossa on 81 ruutua 9 rivissä ja 9 sarakkeessa. Paksut viivat jakavat sen yhdeksään 3×3-laatikkoon. Jokainen ruutu kuuluu täsmälleen yhteen riviin, yhteen sarakkeeseen ja yhteen laatikkoon, ja nämä kolme ryhmää ovat ruudun yksiköt. Ne 20 muuta ruutua, jotka jakavat yksikön ruudun kanssa, ovat sen naapureita; ruutuun sijoitettu numero sulkee saman numeron pois kaikista 20 naapurista.",
+              "Ruudut merkitään muodossa r3c7: rivi 3, sarake 7. Rivit lasketaan ylhäältä, sarakkeet vasemmalta ja laatikot 1-9 vasemmasta yläkulmasta alkaen rivi kerrallaan. Tätä merkintää käytetään jokaisessa tekniikkaoppaassa, ja se kannattaa opetella: r5c5 on ruudukon keskipiste."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Miksi jokaisella sudokulla on täsmälleen yksi ratkaisu?",
+            "p": [
+              "Kunnollisella sudokulla on yksi ratkaisu, ja juuri siksi logiikka toimii. Aina kun pystyt osoittamaan, ettei numero voi mennä yksikössä mihinkään muualle, sen on mentävä jäljelle jäävään ruutuun, koska ratkaisu on olemassa ja se on yksikäsitteinen. Jos ruudukolla olisi kaksi ratkaisua, mikään päättely ei erottaisi niitä toisistaan, ja joutuisit jossain vaiheessa arvaamaan.",
+              "Bare Sudoku luo jokaisen ruudukon laitteellasi ja tarkistaa, että sillä on täsmälleen yksi ratkaisu ja että sen looginen ratkaisija pystyy viemään sen loppuun valitun tason tekniikoilla. Jos siis jumitut, seuraava askel on aina löydettävissä, ja vihje näyttää sen."
+            ]
+          },
+          {
+            "h": "Miten sudoku aloitetaan?",
+            "p": [
+              "Aloita siitä, mikä on rajatuinta. Tämä järjestys toimii jokaisella tasolla:"
+            ],
+            "list": [
+              "Valitse numero, joka esiintyy jo monta kertaa, vaikkapa kuusi tai seitsemän, ja etsi laatikot, joista se vielä puuttuu. Usein laatikossa on sille jäljellä vain yksi ruutu: se on [ainoa paikka](hidden-single).",
+              "Etsi ahtaita ruutuja. Ruudulla, jonka rivillä, sarakkeessa ja laatikossa on yhteensä kahdeksan eri numeroa, on jäljellä vain yksi ehdokas: se on [ainoa ehdokas](naked-single). Lähes täysien rivien ja laatikoiden ruudut ovat paras paikka etsiä.",
+              "Jokainen sijoittamasi numero poistaa ehdokkaan 20 naapurista, joten tarkista ne naapurit heti. Singlet tulevat usein ketjuina.",
+              "Kun helpot sijoitukset loppuvat, kirjoita muistiinpanot: jokaisen tyhjän ruudun ehdokkaat. Etsi sitten numero, joka on laatikon sisällä rajoittunut yhdelle linjalle ([lukitut ehdokkaat](locked-candidates)), tai kaksi ruutua, joilla on samat kaksi ehdokasta ([paljas pari](naked-pairs)).",
+              "Palaa singleihin jokaisen poiston jälkeen. Asiantuntija-tasonkin ruudukot ratkeavat enimmäkseen singleillä; edistynyt tekniikka vain avaa tien seuraavalle."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Mitä muistiinpanot ovat ja milloin niitä kannattaa käyttää?",
+            "p": [
+              "Muistiinpanot, joita kutsutaan myös kynämerkinnöiksi tai ehdokkaiksi, ovat pieniä numeroita, jotka kirjoitat tyhjään ruutuun merkitäksesi, mitkä numerot siihen vielä sopivat. Helpoissa ruudukoissa niitä tarvitaan harvoin; Vaikeasta tasosta ylöspäin ne ovat välttämättömiä, koska parien, X-Wingin ja Y-Wingin kaltaiset tekniikat käsittelevät ehdokkaita eivätkä sijoitettuja numeroita.",
+              "Pidä muistiinpanot tarkkoina: kun sijoitat numeron, poista se kaikkien 20 naapurin muistiinpanoista. Bare Sudokussa tämä tapahtuu automaattisesti, ja Täytä muistiinpanot kirjoittaa jokaisen ehdokkaan jokaiseen tyhjään ruutuun yhdellä napautuksella, joten voit aloittaa täydellisestä ja oikeasta ehdokasjoukosta. Muistiinpano on tosiasia, ei arvaus: se tarkoittaa, ettei mikään vielä sulje tätä numeroa pois."
+            ]
+          },
+          {
+            "h": "Mitä tehdä, kun olet jumissa?",
+            "p": [
+              "Tarkista ensin perusasiat: jokainen lähes täysi rivi, sarake ja laatikko on singlien lähde. Varmista sitten, että muistiinpanot ovat täydelliset, sillä puuttuva ehdokas kätkee kuvioita ja vanhentunut ehdokas luo vääriä. Käy sitten [tekniikat](techniques) läpi vaikeusjärjestyksessä: lukitut ehdokkaat, parit ja kolmikot, X-Wing, Y-Wing, Swordfish ja XYZ-Wing. Jokaisella on oma sivunsa todellisen esimerkin kera.",
+              "Jos mikään ei auta, ota vihje. Bare Sudokussa vihje tarkistaa ensin, onko jokin sijoitettu numero väärin, etsii sitten seuraavan ruudun, jonka voi täyttää päättelemällä, ja kertoo tekniikan nimen, joten opit jotain silloinkin, kun käytät sitä. Napauta vihjettä uudelleen sijoittaaksesi numeron."
+            ]
+          },
+          {
+            "h": "Miten numerot syötetään Bare Sudokussa?",
+            "p": [
+              "Napauta ruutua ja sitten numeroa. Tai napauta ensin numeroa: se lukittuu, ja jokainen napauttamasi ruutu saa sen, mikä on nopein tapa sijoittaa numeron kuudes, seitsemäs ja kahdeksas kappale. Vapauta numero napauttamalla sitä uudelleen. Muistiinpanot-painike vaihtaa kynämerkintöihin, Pyyhi tyhjentää ruudun, Kumoa peruu minkä tahansa siirron, ja virheet merkitään punaisella, ellet kytke sitä pois valikosta.",
+              "Näppäimistöllä liiku nuolinäppäimillä, syötä numero näppäimillä 1-9, pyyhi Backspacella, N avaa muistiinpanot, U kumoaa, H antaa vihjeen, F täyttää muistiinpanot ja Escape avaa valikon. Peli tallentuu itsestään, toimii ilman verkkoyhteyttä, eikä siinä ole mainoksia eikä tiliä."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Pitääkö sudokussa koskaan arvata?",
+            "Ei kunnollisessa ruudukossa. Jokaisella Bare Sudoku -ruudukolla on täsmälleen yksi ratkaisu, ja on tarkistettu, että sen voi ratkaista pelkällä logiikalla tasonsa tekniikoita käyttäen. Jos tuntuu, että sinun on pakko arvata, muistiinpanoistasi puuttuu ehdokas tai jokin tekniikka odottaa löytämistään."
+          ],
+          [
+            "Voiko numero esiintyä kahdesti samalla rivillä, samassa sarakkeessa tai samassa laatikossa?",
+            "Ei. Siinä on koko sääntö: jokaisella yhdeksällä rivillä, jokaisessa yhdeksässä sarakkeessa ja jokaisessa yhdeksässä laatikossa on jokainen numero 1-9 täsmälleen kerran. Jos kaksi samaa numeroa on samassa yksikössä, ainakin toinen niistä on väärin."
+          ],
+          [
+            "Mitä eroa on tasoilla Helppo, Keskitaso, Vaikea ja Asiantuntija?",
+            "Taso määräytyy sen mukaan, mitä tekniikoita ruudukko vaatii. Helppo ja Keskitaso ratkeavat pelkillä singleillä, ja Helpossa on alussa vähintään 38 annettua numeroa. Vaikea vaatii lukittuja ehdokkaita tai pareja ja kolmikoita. Asiantuntija vaatii X-Wingin, Y-Wingin, Swordfishin tai XYZ-Wingin."
+          ],
+          [
+            "Kannattaako muistiinpanot täyttää kaikkiin ruutuihin vai vain osaan?",
+            "Vaikeissa ja Asiantuntija-tason ruudukoissa täytä kaikki: parien, X-Wingin ja Y-Wingin kaltaiset kuviot tulevat näkyviin vasta, kun jokainen ehdokas on kirjoitettu. Helpoissa ja Keskitason ruudukoissa muistiinpanot ovat vapaaehtoisia, ja useimmat pelaajat etsivät vain singlejä."
+          ],
+          [
+            "Kuinka kauan yksi sudoku kestää?",
+            "Helppo ruudukko vie muutaman minuutin; Asiantuntija-tason ruudukko voi viedä kaksikymmentä minuuttia tai enemmän sen mukaan, kuinka nopeasti huomaat edistyneen kuvion. Bare Sudoku näyttää ajastimen, pysäyttää sen valikon ollessa auki eikä pidä tulostaulukkoa, joten pelaa omaan tahtiisi."
+          ],
+          [
+            "Tarvitaanko sudokussa laskutaitoa?",
+            "Ei. Numerot ovat vain tunnisteita; mitään ei lasketa yhteen eikä mitään lasketa. Mitkä tahansa yhdeksän symbolia kävisivät, ja siksi sudoku on logiikkapulma eikä numeropulma."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudokun ratkaisutekniikat esimerkein selitettyinä",
+        "description": "Kaikki yhdeksän sudokun ratkaisutekniikkaa ainoasta ehdokkaasta Swordfishiin ja XYZ-Wingiin Bare Sudokun vihjeiden järjestyksessä, kukin esimerkin kera.",
+        "h1": "Sudokun ratkaisutekniikat",
+        "intro": [
+          "Jokaisen sudokun voi ratkaista pienellä joukolla loogisia tekniikoita. Tämä hakemisto luettelee ne yhdeksän tekniikkaa, joita Bare Sudokun ratkaisija ja sen vihjeet käyttävät, siinä järjestyksessä kuin ratkaisija niitä kokeilee: ensin singlet, sitten poistot yhden yksikön sisällä ja sitten kuviot, jotka ulottuvat useille riveille ja sarakkeille. Jokaisella tekniikalla on oma sivunsa, jossa on määritelmä, ohjeet sen huomaamiseen, todellinen esimerkki luodusta ruudukosta ja yleiset virheet.",
+          "Ruudukon tason ratkaisee vaikein tekniikka, jota se vaatii. Helpot ja Keskitason ruudukot vaativat vain singlejä, Vaikeat ruudukot vaativat lukittuja ehdokkaita tai pareja ja kolmikoita, ja Asiantuntija-tason ruudukot vaativat vähintään yhden kalan tai siiven. Tasosta riippumatta singlet tekevät suurimman osan työstä; edistynyt tekniikka poistaa ehdokkaan tai kaksi, ja singlet jatkavat siitä."
+        ],
+        "faq": [
+          [
+            "Missä järjestyksessä sudokutekniikoita kannattaa kokeilla?",
+            "Kevyin ensin: ainoa ehdokas, ainoa paikka, lukitut ehdokkaat, paljaat parit ja kolmikot, piilotetut parit ja kolmikot, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku kokeilee niitä juuri tässä järjestyksessä, ja vihje nimeää aina yksinkertaisimman tekniikan, jolla pääsee eteenpäin."
+          ],
+          [
+            "Tarvitaanko kaikkia näitä tekniikoita sudokun ratkaisemiseen?",
+            "Helpoissa ja Keskitason ruudukoissa singlet riittävät. Vaikeissa ruudukoissa mukaan tulevat lukitut ehdokkaat ja osajoukot. Asiantuntija-tason ruudukot vaativat vähintään yhden kalan tai siiven, mutta yleensä vain kerran tai kahdesti ruudukkoa kohden."
+          ],
+          [
+            "Onko XYZ-Wingiä vaikeampia tekniikoita?",
+            "On, esimerkiksi ketjut, yksikäsitteisyystestit ja pakotusverkot. Bare Sudoku ei luo ruudukoita, jotka vaatisivat niitä, joten jokaisen pelin ruudukon voi ratkaista tämän sivun yhdeksällä tekniikalla."
+          ],
+          [
+            "Mikä on ehdokas?",
+            "Numero, joka voi vielä mennä tyhjään ruutuun, koska mikään sen rivillä, sarakkeessa tai laatikossa ei vielä sulje sitä pois. Pelin muistiinpanot ovat ehdokkaita. Jokainen singlejä edistyneempi tekniikka päättelee ehdokkaiden avulla, joten pidä ne täydellisinä ja tarkkoina."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Ainoa ehdokas",
+          "title": "Ainoa ehdokas sudokussa: ruutu, jossa on vain yksi ehdokas",
+          "description": "Ainoa ehdokas (naked single) on tyhjä ruutu, johon sopii vain yksi numero. Opi löytämään ne nopeasti todellisen esimerkin avulla ja vältä yleiset virheet.",
+          "h1": "Ainoa ehdokas (naked single)",
+          "summary": "Ainoa ehdokas on tyhjä ruutu, jolla on täsmälleen yksi ehdokas: muut kahdeksan numeroa ovat jo sen rivillä, sarakkeessa tai laatikossa. Jäljelle jäävän numeron on mentävä siihen. Se on sudokun yksinkertaisin tekniikka, se jota käytät eniten, ja Bare Sudokun vihje ilmoittaa sen sanoin ”Vain yksi ehdokas tässä”.",
+          "when": [
+            "Aina. Ainoita ehdokkaita löytyy ensimmäisestä siirrosta viimeiseen, jokaisella tasolla. Helpoissa ja Keskitason ruudukoissa ne ovat yhdessä ainoiden paikkojen kanssa ainoa tekniikka, jota tarvitset. Vaikeammissa ruudukoissa jokainen edistyneen tekniikan tekemä poisto jättää yleensä jälkeensä ainoan ehdokkaan, joten tarkista ne jokaisen askeleen jälkeen."
+          ],
+          "spot": [
+            "Katso ruutuja, joiden naapureissa on paljon sijoitettuja numeroita: ruutu rivillä, jolla on jo seitsemän numeroa, tai ruutu, jonka rivi, sarake ja laatikko kattavat yhdessä kahdeksan eri numeroa. Ilman muistiinpanoja laske numerot, jotka näet ruudusta käsin. Muistiinpanojen kanssa ainoa ehdokas on yksinkertaisesti ruutu, jossa näkyy yksi ehdokas, ja siksi Täytä muistiinpanot tekee niistä helppoja löytää."
+          ],
+          "examples": [
+            {
+              "h": "Esimerkki",
+              "steps": [
+                "Katso ruutua {cell}. Se on tyhjä, joten luettele kaikki numerot, jotka on jo sijoitettu sen riville, sarakkeeseen ja laatikkoon.",
+                "Rivin {row} numerot ovat {rowDigits}. Sarakkeen {col} numerot ovat {colDigits}. Laatikon {box} numerot ovat {boxDigits}.",
+                "Yhdessä ne sulkevat pois kaikki numerot paitsi numeron {d}, joten {d} on ruudun {cell} ainoa jäljellä oleva ehdokas.",
+                "Kirjoita {d} ruutuun {cell}. Tarkista sitten, syntyykö uudesta numerosta uusi single samalle riville, samaan sarakkeeseen tai samaan laatikkoon."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vain rivin tai vain laatikon laskeminen. Kahdeksan poissuljettua numeroa tulevat yleensä kaikista kolmesta yksiköstä yhdessä.",
+            "Sen unohtaminen, että hetki sitten sijoittamasi numero sulkee myös ehdokkaita pois 20 naapuristaan; uusia ainoita ehdokkaita ilmestyy heti jokaisen sijoituksen jälkeen.",
+            "Ainoan ehdokkaan sekoittaminen ainoaan paikkaan: ainoassa ehdokkaassa ruudulla on yksi ehdokas jäljellä, ainoassa paikassa numerolla on yksikössä yksi ruutu jäljellä."
+          ],
+          "faq": [
+            [
+              "Mikä on ainoa ehdokas (naked single) sudokussa?",
+              "Tyhjä ruutu, jolla on täsmälleen yksi ehdokas. Sen rivillä, sarakkeessa ja laatikossa on jo kahdeksan eri numeroa, joten yhdeksäs numero on ainoa, joka sopii."
+            ],
+            [
+              "Miksi englanniksi puhutaan paljaasta (naked) singlestä?",
+              "Koska ainoa ehdokas näkyy suoraan ruudussa, kun muistiinpanot on kirjoitettu; mikään ei kätke sitä. Ainoa paikka (hidden single) sen sijaan on muiden ehdokkaiden seassa, ja se löydetään katsomalla numeroa eikä ruutua."
+            ],
+            [
+              "Voiko ruudukon ratkaista pelkillä ainoilla ehdokkailla?",
+              "Monet Helpot ruudukot voi, mutta useimmat vaativat myös ainoita paikkoja. Bare Sudoku luokittelee Helpot ja Keskitason ruudukot ratkeaviksi kummankin lajin singleillä; Vaikeat ja Asiantuntija-tason ruudukot vaativat vähintään yhden muun tekniikan."
+            ],
+            [
+              "Näyttääkö vihje ainoat ehdokkaat?",
+              "Kyllä. Kun seuraava sijoitus on ainoa ehdokas, vihje valitsee ruudun ja sanoo ”Vain yksi ehdokas tässä” sekä numeron. Napauta vihjettä uudelleen sijoittaaksesi sen."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Ainoa paikka",
+          "title": "Ainoa paikka sudokussa: numerolle jää vain yksi ruutu",
+          "description": "Ainoa paikka (hidden single) on rivin, sarakkeen tai laatikon ainoa ruutu, johon numero voi vielä mennä. Opi löytämään ne käymällä läpi numero kerrallaan.",
+          "h1": "Ainoa paikka (hidden single)",
+          "summary": "Ainoa paikka on numero, jolla on rivillä, sarakkeessa tai laatikossa jäljellä vain yksi mahdollinen ruutu, vaikka ruudussa näkyisi muitakin ehdokkaita. Koska yksikössä on oltava tämä numero, se menee siihen. Bare Sudokun vihje ilmoittaa sen muodossa ”Ainoa paikka numerolle 5 tällä rivillä”, ja vastaavasti sarakkeelle tai laatikolle.",
+          "when": [
+            "Aina kun numero on pitkällä: kun numero esiintyy viisi tai kuusi kertaa, jäljellä olevat laatikot ovat hyvin rajattuja, ja seuraava siirto on usein ainoa paikka. Ainoat paikat ovat Helppojen ja Keskitason ruudukoiden päätekniikka ja pysyvät työjuhtana jokaisella tasolla."
+          ],
+          "spot": [
+            "Käy läpi yksi numero kerrallaan. Ota numero, etsi laatikko, josta se puuttuu, ja yliviivaa laatikon jokainen ruutu, joka on samalla rivillä tai samassa sarakkeessa kuin jo sijoitettu sama numero. Jos yksi ruutu jää jäljelle, olet löytänyt ainoan paikan. Sama läpikäynti toimii riveillä ja sarakkeilla. Pelissä napauta sijoitettua numeroa: sen jokainen esiintymä korostuu, joten vapaat ruudut erottuvat."
+          ],
+          "examples": [
+            {
+              "h": "Esimerkki",
+              "steps": [
+                "Laatikossa {box} ei ole vielä numeroa {d}, joten yhden sen tyhjistä ruuduista on saatava se. Tyhjät ruudut ovat {empties}.",
+                "Kaikissa niissä paitsi ruudussa {cell} numeron {d} estää samalla rivillä tai samassa sarakkeessa jo oleva {d}, joten {d} ei ole niissä ehdokas.",
+                "Näin ruutu {cell} on ainoa paikka numerolle {d} laatikossa {box}. Kirjoita {d} siihen, vaikka ruudussa {cell} näkyisi vielä muita ehdokkaita."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Numeron sijoittaminen ruutuun, joka on vain todennäköisesti oikea: tarkista yksikön jokainen muu tyhjä ruutu, ei vain ilmeisiä.",
+            "Ainoan paikan ohittaminen, koska ruudussa näkyy useita ehdokkaita. Muilla ehdokkailla ei ole merkitystä; ratkaisevaa on, ettei numerolla ole yksikössä muuta paikkaa.",
+            "Pelkkien laatikoiden läpikäyminen. Rivit ja sarakkeet tuottavat ainoita paikkoja yhtä usein, varsinkin lopussa."
+          ],
+          "faq": [
+            [
+              "Mikä on ainoa paikka (hidden single) sudokussa?",
+              "Numero, joka voi mennä vain yhteen rivin, sarakkeen tai laatikon ruutuun. Yksikössä on oltava tämä numero, joten ruutu on ratkaistu, vaikka siinä olisi vielä muita ehdokkaita."
+            ],
+            [
+              "Mitä eroa on ainoalla paikalla ja ainoalla ehdokkaalla?",
+              "Ainoa ehdokas koskee ruutua: yksi ehdokas jäljellä. Ainoa paikka koskee numeroa: yksikössä yksi ruutu jäljellä. Kumpikin sijoittaa numeron varmasti."
+            ],
+            [
+              "Kumman löytää helpommin?",
+              "Ilman muistiinpanoja ainoat paikat ovat yleensä helpompia, koska voit käydä ruudukkoa läpi numero kerrallaan. Täydellisten muistiinpanojen kanssa ainoat ehdokkaat ovat helpoimpia, sillä ruutu, jossa on vain yksi ehdokas, erottuu heti."
+            ],
+            [
+              "Miten vihje kuvaa ainoan paikan?",
+              "Sanoin ”Ainoa paikka numerolle” ja numero tällä rivillä, tässä sarakkeessa tai tässä laatikossa, ja ruutu on valittuna. Napauta vihjettä uudelleen sijoittaaksesi sen."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Lukitut ehdokkaat",
+          "title": "Lukitut ehdokkaat sudokussa: osoittaminen ja varaaminen",
+          "description": "Lukitut ehdokkaat: kun numeron ehdokkaat laatikossa ovat yhdellä rivillä tai sarakkeessa, tai päinvastoin, numero poistetaan muualta. Kaksi oikeaa esimerkkiä.",
+          "h1": "Lukitut ehdokkaat (locked candidates)",
+          "summary": "Lukitut ehdokkaat on ensimmäinen tekniikka, joka poistaa ehdokkaita sen sijaan, että sijoittaisi numeron. Sillä on kaksi muotoa. Osoittaminen: laatikossa kaikki numeron ehdokkaat ovat yhdellä rivillä tai yhdessä sarakkeessa, joten numero poistetaan linjan muista ruuduista. Varaaminen: rivillä tai sarakkeessa kaikki numeron ehdokkaat ovat yhdessä laatikossa, joten numero poistetaan laatikon muista ruuduista. Bare Sudokun vihje merkitsee sijoituksen, jonka tekniikka avaa, nimellä ”Lukitut ehdokkaat”.",
+          "when": [
+            "Kun singlet loppuvat Vaikeassa ruudukossa, tätä kannattaa kokeilla ensimmäisenä. Se vaatii täydelliset muistiinpanot ainakin tutkittavalle numerolle. Lukitut ehdokkaat ovat yleisiä: useimmat Vaikeat ruudukot tarvitsevat niitä, ja Asiantuntija-tason ruudukot käyttävät niitä isompien kuvioiden välissä."
+          ],
+          "spot": [
+            "Osoittamista varten katso jokaista laatikkoa ja jokaista siitä puuttuvaa numeroa: jos numeron ehdokasruudut ovat yhdellä rivillä tai yhdessä sarakkeessa, tarkista, näkyykö sama numero ehdokkaana samalla linjalla laatikon ulkopuolella. Varaamista varten katso riviä tai saraketta: jos numeron ehdokkaat ovat kaikki yhden laatikon sisällä, laatikon muut ruudut voi tyhjentää siitä. Pelissä napauta numeronäppäintä korostaaksesi kaikki sen ehdokkaat; kahden tai kolmen korostetun muistiinpanon jono yhden laatikon sisällä on etsimäsi kuvio."
+          ],
+          "examples": [
+            {
+              "h": "Osoittaminen",
+              "steps": [
+                "Laatikossa {box} numerolla {d} on vain nämä ehdokasruudut: {cells}. Ne kaikki ovat rivillä {row}.",
+                "Laatikkoon {box} tarvitaan {d}, joten rivin {row} numero {d} on laatikon {box} sisällä, mihin näistä ruuduista se sitten päätyykin.",
+                "Rivillä {row} ei voi olla toista numeroa {d}, joten poista {d} rivin {row} ruuduista laatikon ulkopuolella: {elim}."
+              ]
+            },
+            {
+              "h": "Varaaminen",
+              "steps": [
+                "Rivillä {row} numero {d} voi mennä vain ruutuihin {cells}, ja ne ovat kaikki laatikossa {box}.",
+                "Rivillä {row} on oltava {d}, joten rivi {row} varaa laatikon {box} numeron {d}. Laatikon {box} muissa ruuduissa ei voi olla numeroa {d}.",
+                "Poista {d} ruuduista {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Numeron poistaminen osoittamisessa laatikon sisältä eikä ulkopuolelta, tai päinvastoin varaamisessa. Poistot kohdistuvat aina ruutuihin, jotka ovat linjalla mutta eivät laatikossa, tai laatikossa mutta eivät linjalla.",
+            "Säännön soveltaminen, kun ehdokkaat jakautuvat laatikon kahdelle riville. Kaikkien numeron ehdokasruutujen laatikossa on oltava yhdellä linjalla.",
+            "Poiston synnyttämän singlen etsimisen unohtaminen. Lukitut ehdokkaat sijoittavat harvoin numeron itse; ne pohjustavat singlen."
+          ],
+          "faq": [
+            [
+              "Mitä lukitut ehdokkaat ovat sudokussa?",
+              "Numeron ehdokkaita, jotka rajoittuvat laatikon ja linjan leikkaukseen. Koska laatikon, tai linjan, on sisällettävä numero juuri tuossa leikkauksessa, numeron voi poistaa linjan muista ruuduista tai laatikon muista ruuduista."
+            ],
+            [
+              "Mitä eroa on osoittamisella ja varaamisella?",
+              "Osoittaminen lähtee laatikosta: numeron ehdokkaat laatikossa osoittavat yhtä riviä tai saraketta pitkin, joten numero poistetaan linjan muista ruuduista. Varaaminen lähtee rivistä tai sarakkeesta: linjan kaikki ehdokkaat numerolle ovat yhdessä laatikossa, joten linja varaa numeron ja se poistetaan laatikon muista ruuduista."
+            ],
+            [
+              "Kutsutaanko lukittuja ehdokkaita myös leikkausrajaukseksi?",
+              "Kyllä. Muita nimiä ovat laatikko-linja-rajaus varaavalle muodolle sekä osoittavat parit tai osoittavat kolmikot osoittavalle muodolle. Bare Sudoku käyttää molemmista yhtä nimeä."
+            ],
+            [
+              "Mikä taso vaatii lukittuja ehdokkaita?",
+              "Vaikea. Ruudukko, joka vaatii lukittuja ehdokkaita tai osajoukkoja mutta ei mitään vaikeampaa, luokitellaan Vaikeaksi; Asiantuntija-tason ruudukot vaativat lisäksi kalan tai siiven."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Paljaat parit ja kolmikot",
+          "title": "Paljaat parit ja kolmikot sudokussa: näin ne toimivat",
+          "description": "Paljaat parit ja kolmikot: kaksi tai kolme yksikön ruutua, joilla on samat kaksi tai kolme ehdokasta. Opi huomaamaan ne ja mitä poistaa, todellisin esimerkein.",
+          "h1": "Paljaat parit ja kolmikot (naked pair, naked triple)",
+          "summary": "Paljas pari on kaksi samalla rivillä, samassa sarakkeessa tai samassa laatikossa olevaa ruutua, joilla on täsmälleen samat kaksi ehdokasta. Näiden kahden numeron on mentävä noihin kahteen ruutuun, joten ne voi poistaa yksikön kaikista muista ruuduista. Paljas kolmikko on sama ajatus kolmella ruudulla ja kolmella numerolla; kussakin ruudussa voi näkyä niistä kaksi tai kaikki kolme. Bare Sudokun vihje merkitsee tästä seuraavan sijoituksen nimellä ”Pari tai kolmikko”.",
+          "when": [
+            "Kun muistiinpanot ovat täydelliset ja singlet sekä lukitut ehdokkaat on käytetty. Paljaat parit ovat hyvin yleisiä Vaikeissa ruudukoissa, paljaat kolmikot harvinaisempia. Molempia kannattaa etsiä jokaisesta yksiköstä, jossa on vielä viisi tai useampia tyhjiä ruutuja."
+          ],
+          "spot": [
+            "Etsi ruutuja, joissa on vain kaksi ehdokasta, ja etsi samasta yksiköstä toinen ruutu, jossa on samat kaksi. Kolmikoita varten katso yksiköitä, joissa on useita kahden ja kolmen ehdokkaan ruutuja, ja tarkista, käyttävätkö kolme niistä yhteensä vain kolmea eri numeroa. Täsmälleen samat ehdokkaat sisältävät ruudut on helppo nähdä, kun muistiinpanot on kirjoitettu; pelin Täytä muistiinpanot tekee sen yhdellä napautuksella."
+          ],
+          "examples": [
+            {
+              "h": "Paljas pari",
+              "steps": [
+                "Ruuduilla {cellA} ja {cellB} ({unit}) on täsmälleen samat kaksi ehdokasta: {d1} ja {d2}.",
+                "Toisen niistä on oltava {d1} ja toisen {d2}. Emme tiedä kumpi on kumpi, mutta nämä kaksi ruutua käyttävät molemmat numerot.",
+                "Siksi {unit} ei voi sisältää numeroa {d1} tai {d2} missään muussa ruudussa. Poista {elim}."
+              ]
+            },
+            {
+              "h": "Paljas kolmikko",
+              "steps": [
+                "Kolmen ruudun ({unit}) kaikki ehdokkaat tulevat samoista kolmesta numerosta, {digits}: {cells}.",
+                "Kolmen numeron on täytettävä nämä kolme ruutua jossain järjestyksessä. Ruudussa ei tarvitse näkyä kaikkia kolmea ehdokasta; ratkaisevaa on, ettei yhdelläkään kolmesta ruudusta ole ehdokasta joukon ulkopuolelta.",
+                "Poista numerot {digits} kaikista muista ruuduista, jotka {unit} sisältää: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sellaisten kahden ruudun valitseminen, joilla on yhteiset kaksi ehdokasta mutta myös kolmas. Paljaassa parissa kummassakin ruudussa on oltava täsmälleen nuo kaksi ehdokasta eikä mitään muuta.",
+            "Numeroiden poistaminen itse parin ruuduista. Pari säilyttää ehdokkaansa; poistot kohdistuvat yksikön muihin ruutuihin.",
+            "Sen vaatiminen, että kolmikon jokaisessa ruudussa näkyvät kaikki kolme numeroa. Ruutu, jossa on kaksi kolmesta, kelpaa, kunhan millään ruudulla ei ole ehdokasta joukon ulkopuolelta."
+          ],
+          "faq": [
+            [
+              "Mikä on paljas pari (naked pair) sudokussa?",
+              "Kaksi saman yksikön ruutua, joilla kummallakin on täsmälleen samat kaksi ehdokasta. Nämä kaksi numeroa ovat lukittuina noihin kahteen ruutuun, joten ne voi poistaa yksikön muista ruuduista."
+            ],
+            [
+              "Mikä on paljas kolmikko?",
+              "Kolme saman yksikön ruutua, joiden ehdokkaat ovat yhteensä vain kolme numeroa. Kussakin ruudussa voi olla niistä kaksi tai kolme. Kolme numeroa täyttävät kolme ruutua, joten ne voi poistaa yksikön muista ruuduista."
+            ],
+            [
+              "Sijoittaako paljas pari numeron?",
+              "Ei yksinään. Se poistaa ehdokkaita, ja poisto jättää yleensä jälkeensä ainoan ehdokkaan tai ainoan paikan. Bare Sudokun vihje näyttää tuon singlen ja nimeää tekniikan, joka teki sen mahdolliseksi."
+            ],
+            [
+              "Voiko paljas pari olla yhtä aikaa laatikossa ja rivillä?",
+              "Voi. Jos kaksi ruutua ovat samalla rivillä ja samassa laatikossa, pari poistaa ehdokkaita molemmista yksiköistä. Bare Sudoku käsittelee ne yksi yksikkö kerrallaan."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Piilotetut parit ja kolmikot",
+          "title": "Piilotetut parit ja kolmikot sudokussa: näin löydät ne",
+          "description": "Piilotettu pari on kaksi numeroa, jotka voivat mennä vain samoihin kahteen yksikön ruutuun, joten ruutujen muut ehdokkaat poistuvat. Opi löytämään ne.",
+          "h1": "Piilotetut parit ja kolmikot (hidden pair, hidden triple)",
+          "summary": "Piilotettu pari on kaksi numeroa, jotka ovat rivillä, sarakkeessa tai laatikossa ehdokkaina samoissa kahdessa ruudussa eivätkä missään muualla. Noissa kahdessa ruudussa on oltava nuo kaksi numeroa, joten niiden kaikki muut ehdokkaat voi poistaa. Piilotettu kolmikko toimii samoin kolmella numerolla, jotka rajoittuvat kolmeen ruutuun. Poiston jälkeen ruuduissa näkyy paljas pari tai kolmikko. Bare Sudokun vihje merkitsee tästä seuraavan sijoituksen nimellä ”Pari tai kolmikko”.",
+          "when": [
+            "Kun yksikössä on paljon ehdokkaita sisältäviä ruutuja eikä singlejä enää ole. Piilotetut parit piiloutuvat täysiin ruutuihin, ja siksi niitä kannattaa etsiä juuri sieltä, missä paljaita pareja ei näy. Piilotetut kolmikot ovat harvinaisia; Bare Sudoku tarkistaa nekin, mutta useimmat Vaikeat ruudukot ratkeavat ilman niitä."
+          ],
+          "spot": [
+            "Työskentele numeroittain, älä ruuduittain. Merkitse yksikössä ruudut, joihin kukin puuttuva numero voi mennä. Jos kahdella numerolla on kummallakin vain kaksi mahdollista ruutua ja ne ovat samat kaksi ruutua, olet löytänyt piilotetun parin. Pelissä napauta numeronäppäintä korostaaksesi sen ehdokkaat; jos kaksi numeroa korostaa yksikössä samat kaksi ruutua eikä mitään muuta, se on kuvio."
+          ],
+          "examples": [
+            {
+              "h": "Piilotettu pari",
+              "steps": [
+                "Numeroilla {d1} ja {d2} on kummallakin vain kaksi mahdollista ruutua ({unit}), ja ne ovat samat kaksi: {cells}.",
+                "Noissa kahdessa ruudussa on oltava {d1} ja {d2}, joten niiden muut ehdokkaat ovat mahdottomia.",
+                "Poista {elim}. Nyt ruuduissa näkyy paljas pari, joka voi avata lisää."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Parin kahden numeron poistaminen parin ruuduista. Ruutujen muut ehdokkaat poistuvat; parin numerot jäävät.",
+            "Sellaisen numeron hyväksyminen, jolla on yksikössä kolmas mahdollinen ruutu. Molempien numeroiden on rajoituttava täsmälleen kahteen ruutuun.",
+            "Etsiminen vain laatikoista. Piilotettuja pareja esiintyy riveillä ja sarakkeissa yhtä usein."
+          ],
+          "faq": [
+            [
+              "Mikä on piilotettu pari (hidden pair) sudokussa?",
+              "Kaksi numeroa, jotka voivat mennä vain samoihin kahteen yksikön ruutuun. Noiden ruutujen on saatava nuo numerot, joten niiden muut ehdokkaat poistetaan."
+            ],
+            [
+              "Miten piilotettu pari eroaa paljaasta parista?",
+              "Paljas pari on näkyvissä: kaksi ruutua, joissa näkyvät vain samat kaksi ehdokasta. Piilotetun parin peittävät ylimääräiset ehdokkaat kahdessa ruudussa. Kun ylimääräiset poistetaan, piilotettu pari muuttuu paljaaksi pariksi."
+            ],
+            [
+              "Mikä on piilotettu kolmikko?",
+              "Kolme numeroa, jotka rajoittuvat kolmeen yksikön ruutuun. Jokaisen numeron ei tarvitse esiintyä kaikissa kolmessa ruudussa; ratkaisevaa on, ettei yhdelläkään kolmesta numerosta ole ehdokasta noiden ruutujen ulkopuolella."
+            ],
+            [
+              "Erotteleeko vihje piilotetut ja paljaat parit?",
+              "Ei. Bare Sudoku löytää molemmat ja merkitsee tästä seuraavan sijoituksen nimellä ”Pari tai kolmikko”. Nämä sivut erottelevat ne, koska ne löydetään eri tavoin."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing sudokussa: näin tekniikka toimii",
+          "description": "X-Wing: numero, jolla on kahdella rivillä täsmälleen kaksi ehdokasruutua samoissa kahdessa sarakkeessa, poistetaan sarakkeiden muista ruuduista. Esimerkki.",
+          "h1": "X-Wing",
+          "summary": "X-Wing on yhden numeron ja neljän ruudun kuvio suorakulmion kulmissa. Jos numerolla on täsmälleen kaksi ehdokasruutua kummallakin kahdesta rivistä ja ne ovat samoissa kahdessa sarakkeessa, numeron on oltava suorakulmion kahdessa vastakkaisessa kulmassa. Siksi sen voi poistaa kaikista muista noiden kahden sarakkeen ruuduista. Sama toimii rivit ja sarakkeet vaihdettuina. Se on Bare Sudokun ensimmäinen Asiantuntija-tason tekniikka.",
+          "when": [
+            "Kun singlet, lukitut ehdokkaat ja osajoukot on käytetty. X-Wing on yleisin Asiantuntija-tason kuvio ja ilmaantuu usein, kun numerolla on jäljellä vähän ehdokkaita, tyypillisesti kun sitä on jo sijoitettu neljästä kuuteen kappaletta. Se vaatii täydelliset muistiinpanot tutkittavalle numerolle."
+          ],
+          "spot": [
+            "Valitse numero ja etsi rivejä, joilla sillä on täsmälleen kaksi ehdokasruutua. Jos kaksi tällaista riviä jakaa samat kaksi saraketta, tarkista noista sarakkeista numeron muut ehdokkaat: ne ovat poistot. Toista sitten sarakkeet pohjana. Pelissä napauta numeronäppäintä: kaikki sen ehdokkaat korostuvat, ja neljän korostetun muistiinpanon suorakulmion näkee helposti."
+          ],
+          "examples": [
+            {
+              "h": "Esimerkki",
+              "steps": [
+                "Numerolla {d} on täsmälleen kaksi ehdokasruutua rivillä {r1} ja täsmälleen kaksi rivillä {r2}, ja ne ovat samoissa kahdessa sarakkeessa, {c1} ja {c2}: {cells}.",
+                "Rivi {r1} sijoittaa numeron {d} sarakkeeseen {c1} tai {c2}, ja rivi {r2} sijoittaa omansa toiseen. Kummin tahansa sarakkeet {c1} ja {c2} saavat kumpikin numeron {d} näiltä kahdelta riviltä.",
+                "Siksi {d} ei voi olla missään muualla sarakkeissa {c1} ja {c2}. Poista {d} ruuduista {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sellaisen rivin käyttäminen, jolla numerolla on kolme ehdokasruutua. Jokaisella pohjarivillä on oltava täsmälleen kaksi, ja molempien on oltava yhteisissä kahdessa sarakkeessa.",
+            "Numeron poistaminen riveiltä sarakkeiden sijaan. Kun pohjana ovat rivit, poistot tehdään sarakkeista, ja päinvastoin.",
+            "Käänteisen version unohtaminen. Sarakkeiden varaan rakennettu X-Wing poistaa ehdokkaita riveiltä."
+          ],
+          "faq": [
+            [
+              "Mikä on X-Wing sudokussa?",
+              "Numero, jolla on täsmälleen kaksi ehdokasruutua kummallakin kahdesta rivistä, samoissa kahdessa sarakkeessa. Numero on suorakulmion kahdessa vastakkaisessa kulmassa, joten se poistetaan kahden sarakkeen muista ruuduista. Rivit ja sarakkeet voi vaihtaa keskenään."
+            ],
+            [
+              "Miksi X-Wing toimii?",
+              "Kummankin rivin on sijoitettava numero jompaankumpaan kahdesta sarakkeesta, eivätkä rivit voi käyttää samaa saraketta. Siksi kumpikin sarake saa oman numeronsa näiltä riveiltä, ja kaikki muut ehdokkaat noissa sarakkeissa ovat mahdottomia."
+            ],
+            [
+              "Onko X-Wing kala?",
+              "On. X-Wing on koon kaksi kala; Swordfish on koon kolme kala. Bare Sudoku löytää molemmat."
+            ],
+            [
+              "Millä tasolla X-Wingejä on?",
+              "Asiantuntija. Ruudukko, joka vaatii X-Wingin, Y-Wingin, Swordfishin tai XYZ-Wingin, luokitellaan Asiantuntija-tasolle."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing sudokussa: näin tekniikka toimii",
+          "description": "Y-Wing (XY-Wing): kahden ehdokkaan sarana ja kaksi siipeä, joilla kummallakin on yksi sen ehdokkaista, poistavat numeron molemmat siivet näkevistä ruuduista.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, jota kutsutaan myös XY-Wingiksi, käyttää kolmea ruutua, joissa kussakin on kaksi ehdokasta. Saranan ehdokkaat ovat X ja Y. Toinen siipi näkee saranan ja sisältää X:n ja Z:n; toinen siipi näkee saranan ja sisältää Y:n ja Z:n. Oli sarana mikä tahansa, toisen siivistä on oltava Z, joten Z:n voi poistaa jokaisesta ruudusta, joka näkee molemmat siivet. Se on Bare Sudokussa Asiantuntija-tason tekniikka.",
+          "when": [
+            "Kun ruudukossa on useita ruutuja, joissa on täsmälleen kaksi ehdokasta, eikä kalaa löydy. Y-Wingit ovat yleisiä Asiantuntija-tason ruudukoissa, ja ne löytyvät seuraamalla kahden ehdokkaan ruutuja: jokainen niistä on mahdollinen sarana tai siipi."
+          ],
+          "spot": [
+            "Luettele ruudut, joissa on täsmälleen kaksi ehdokasta. Pidä kutakin vuorollaan saranana, jonka ehdokkaat ovat X ja Y, ja etsi sen naapureista ruutu, jossa on X ja jokin toinen numero Z, sekä ruutu, jossa on Y ja sama Z. Ne kaksi ovat siivet. Etsi sitten ruudut, jotka näkevät molemmat siivet ja sisältävät Z:n. Huomaa, ettei siipien tarvitse nähdä toisiaan."
+          ],
+          "examples": [
+            {
+              "h": "Esimerkki",
+              "steps": [
+                "Saranan {pivot} ehdokkaat ovat {x} ja {y}. Se näkee ruudun {wingA}, jossa on {x} ja {z}, sekä ruudun {wingB}, jossa on {y} ja {z}.",
+                "Jos {pivot} on {x}, ruutu {wingA} menettää ehdokkaan {x} ja siitä tulee {z}. Jos {pivot} on {y}, ruudusta {wingB} tulee {z}. Kummassakin tapauksessa toinen siivistä on {z}.",
+                "Ruutu, joka näkee molemmat siivet, ei voi koskaan olla {z}. Poista {z} ruuduista {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sellaisten siipien valitseminen, jotka eivät molemmat näe saranaa. Kummankin siiven on oltava saranan kanssa samalla rivillä, samassa sarakkeessa tai samassa laatikossa.",
+            "Z:n poistaminen ruuduista, jotka näkevät vain yhden siiven. Poistettavan ruudun on nähtävä molemmat siivet.",
+            "Z:n poistaminen saranasta. Y-Wingissä saranassa ei ole Z:aa; jos on, kuvio on XYZ-Wing, jolla on eri säännöt."
+          ],
+          "faq": [
+            [
+              "Mikä on Y-Wing sudokussa?",
+              "Kolme kahden ehdokkaan ruutua: sarana, jossa on X ja Y, siipi, jossa on X ja Z ja joka näkee saranan, sekä siipi, jossa on Y ja Z ja joka näkee saranan. Toinen siivistä on aina Z, joten Z poistetaan ruuduista, jotka näkevät molemmat siivet."
+            ],
+            [
+              "Onko Y-Wing sama kuin XY-Wing?",
+              "On. Molemmat nimet tarkoittavat samaa kuviota. Bare Sudoku käyttää nimeä Y-Wing."
+            ],
+            [
+              "Miksi toisen siiven on oltava Z?",
+              "Jos sarana on X, ensimmäinen siipi menettää X:n ja siitä tulee Z. Jos sarana on Y, toisesta siivestä tulee Z. Sarana on jompikumpi, joten toinen siivistä on Z."
+            ],
+            [
+              "Kuinka monesta ruudusta Y-Wing poistaa?",
+              "Yleensä yhdestä tai kahdesta: vain ruuduista, jotka näkevät molemmat siivet ja sisältävät vielä Z:n. Se riittää synnyttämään singlen."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish sudokussa: näin tekniikka toimii",
+          "description": "Swordfish: numero, joka rajoittuu kolmella rivillä kolmeen sarakkeeseen, poistetaan sarakkeiden muista ruuduista. Koon kolme kala todellisella esimerkillä.",
+          "h1": "Swordfish",
+          "summary": "Swordfish on X-Wing kolmella rivillä ja kolmella sarakkeella. Jos numerolla on enintään kolme ehdokasruutua kullakin kolmesta rivistä ja kaikki nuo ruudut osuvat samoihin kolmeen sarakkeeseen, kolme riviä käyttävät numeron noissa sarakkeissa, ja numeron voi poistaa kolmen sarakkeen kaikista muista ruuduista. Rivit ja sarakkeet voi vaihtaa keskenään. Bare Sudoku etsii Swordfishia Y-Wingin jälkeen Asiantuntija-tason ruudukoissa.",
+          "when": [
+            "Kun X-Wing ja Y-Wing eivät löydä mitään. Swordfishit ovat harvinaisempia kuin X-Wingit ja vaativat numeron, jonka ehdokkaat ovat harvassa kolmella linjalla. Ne vaativat täydelliset ja tarkat muistiinpanot tuolle numerolle."
+          ],
+          "spot": [
+            "Valitse numero ja etsi rivejä, joilla sillä on kaksi tai kolme ehdokasruutua. Jos kolme tällaista riviä kattaa yhteensä vain kolme saraketta, tarkista noista sarakkeista numeron muut ehdokkaat. Jokaisella rivillä ei tarvitse olla ehdokasta jokaisessa sarakkeessa: Swordfishissa voi olla kuusi, seitsemän, kahdeksan tai yhdeksän ruutua. Pelissä korosta numero sen näppäimellä ja etsi kolme riviä, joiden ehdokkaat asettuvat kolmeen sarakkeeseen."
+          ],
+          "examples": [
+            {
+              "h": "Esimerkki",
+              "steps": [
+                "Numerolla {d} on enintään kolme ehdokasruutua kullakin riveistä {rows}, ja kaikki nuo ruudut osuvat sarakkeisiin {cols}: {cells}.",
+                "Jokaisen kolmesta rivistä on sijoitettava numeronsa {d} johonkin kolmesta sarakkeesta, eikä kaksi riviä voi käyttää samaa saraketta. Siksi kolme saraketta saavat numeronsa {d} näiltä kolmelta riviltä.",
+                "Kaikki muut numeron {d} ehdokkaat sarakkeissa {cols} ovat mahdottomia. Poista {d} ruuduista {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kaikkien yhdeksän ruudun vaatiminen. Swordfish, jossa joillakin riveillä on kaksi ehdokasta, on silti pätevä, kunhan kolme riviä kattavat vain kolme saraketta.",
+            "Neljän ehdokasruudun rivin ottaminen mukaan. Jokaisella pohjarivillä saa olla enintään kolme, kaikki kolmen sarakkeen sisällä.",
+            "Poistaminen pohjariveiltä. Kun pohjana ovat rivit, poistot tehdään kolmesta sarakkeesta pohjarivien ulkopuolelta."
+          ],
+          "faq": [
+            [
+              "Mikä on Swordfish sudokussa?",
+              "Numero, jonka ehdokkaat kolmella rivillä rajoittuvat kolmeen sarakkeeseen. Kolmen rivin on sijoitettava numero noihin kolmeen sarakkeeseen, yksi kuhunkin, joten numero poistetaan sarakkeiden muista ruuduista."
+            ],
+            [
+              "Miten Swordfish eroaa X-Wingistä?",
+              "Vain koossa: X-Wing käyttää kahta riviä ja kahta saraketta, Swordfish kolmea ja kolmea. Päättely on sama."
+            ],
+            [
+              "Tarvitaanko Swordfishiin täsmälleen yhdeksän ruutua?",
+              "Ei. Jokaisella rivillä voi olla kaksi tai kolme ehdokasta; kuvio vaatii vain, että kolme riviä käyttävät yhteensä enintään kolmea saraketta."
+            ],
+            [
+              "Onko olemassa koon neljä kalaa?",
+              "On, Jellyfish. Bare Sudoku ei käytä sitä, koska sen ruudukot eivät koskaan tarvitse sitä."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing sudokussa: näin tekniikka toimii",
+          "description": "XYZ-Wing: kolmen ehdokkaan sarana ja kaksi siipeä, joilla on yksi yhteinen numero, poistavat sen ruuduista, jotka näkevät kaikki kolme. Todellinen esimerkki.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing on Y-Wing, jonka saranalla on kolme ehdokasta. Saranassa on X, Y ja Z; toinen siipi näkee saranan ja sisältää X:n ja Z:n, toinen näkee saranan ja sisältää Y:n ja Z:n. Yhden kolmesta ruudusta on oltava Z, joten Z:n voi poistaa jokaisesta ruudusta, joka näkee kaikki kolme. Koska sarana itse voi olla Z, poistettavan ruudun on nähtävä sarana sekä molemmat siivet, mikä rajaa sen laatikkoon tai linjaan, jonka ruudut jakavat. Se on vaikein tekniikka, jota Bare Sudoku käyttää.",
+          "when": [
+            "Vain kun kaikki muu pettää. XYZ-Wing on Bare Sudokun harvinaisin kuvio ja esiintyy vain Asiantuntija-tason ruudukoissa. Etsi sitä, kun kolmen ehdokkaan ruutu on samassa laatikossa sellaisen kahden ehdokkaan ruudun kanssa, jolla on kaksi sen numeroista."
+          ],
+          "spot": [
+            "Aloita ruuduista, joissa on täsmälleen kolme ehdokasta; kukin on mahdollinen sarana. Etsi sen naapureista kaksi ruutua, joissa kummassakin on kaksi ehdokasta saranan kolmesta ja jotka jakavat täsmälleen yhden numeron Z. Etsi sitten ruudut, jotka näkevät saranan ja molemmat siivet ja sisältävät Z:n. Käytännössä toinen siipi on saranan laatikossa ja toinen sen rivillä tai sarakkeessa, ja poistettavat ruudut ovat tuon laatikon loput ruudut kyseisellä rivillä tai kyseisessä sarakkeessa."
+          ],
+          "examples": [
+            {
+              "h": "Esimerkki",
+              "steps": [
+                "Saranalla {pivot} on kolme ehdokasta: {x}, {y} ja {z}. Se näkee ruudun {wingA}, jossa on {x} ja {z}, sekä ruudun {wingB}, jossa on {y} ja {z}.",
+                "Jos {pivot} on {z}, asia on selvä. Jos se on {x}, ruudun {wingA} on oltava {z}. Jos se on {y}, ruudun {wingB} on oltava {z}. Joka tapauksessa yksi kolmesta ruudusta on {z}.",
+                "Ruutu, joka näkee kaikki kolme, ei voi olla {z}. Poista {z} ruuduista {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Poistaminen ruuduista, jotka näkevät vain kaksi siipeä. Toisin kuin Y-Wingissä sarana voi olla Z, joten ruudun on nähtävä myös sarana.",
+            "Sellaisten siipien käyttäminen, joiden ehdokkaat eivät molemmat sisälly saranan kolmeen ehdokkaaseen.",
+            "Sekoittaminen Y-Wingiin: ero on saranan kolmas ehdokas, ja se muuttaa sitä, mistä ruuduista voi poistaa."
+          ],
+          "faq": [
+            [
+              "Mikä on XYZ-Wing sudokussa?",
+              "Sarana, jonka ehdokkaat ovat X, Y ja Z, sekä kaksi siipeä, joista toisessa on X ja Z ja toisessa Y ja Z, ja jotka molemmat näkevät saranan. Yksi kolmesta ruudusta on Z, joten Z poistetaan ruuduista, jotka näkevät kaikki kolme."
+            ],
+            [
+              "Miten XYZ-Wing eroaa Y-Wingistä?",
+              "Saranalla on kahden sijaan kolme ehdokasta, Z mukaan lukien. Siksi sarana on mahdollinen paikka Z:lle, joten vain ruudut, jotka näkevät saranan ja molemmat siivet, voivat menettää Z:n."
+            ],
+            [
+              "Kuinka usein XYZ-Wing esiintyy?",
+              "Harvoin. Bare Sudokussa vain Asiantuntija-tason ruudukot voivat vaatia sitä, eivätkä useimmat vaadi. Bare Sudoku tarkistaa sen viimeisenä, X-Wingin, Y-Wingin ja Swordfishin jälkeen."
+            ],
+            [
+              "Onko olemassa WXYZ-Wing?",
+              "On, neljän ehdokkaan saranalla, mutta Bare Sudoku ei käytä sitä. Jokaisen pelin ruudukon voi ratkaista tämän oppaan yhdeksällä tekniikalla."
+            ]
+          ]
+        }
+      }
+    },
+    "ru": {
+      "learnHeading": "Обучение судоку",
+      "learnText": "Только начинаете играть в судоку или застряли на трудной головоломке? Два руководства объясняют правила и все техники решения, которые используют подсказки, на реальных примерах.",
+      "howToLink": "Как играть в судоку",
+      "techniquesLink": "Техники решения судоку",
+      "labels": {
+        "howTo": "Как играть",
+        "techniques": "Техники",
+        "play": "Играть в судоку",
+        "prev": "Предыдущая техника",
+        "next": "Следующая техника",
+        "all": "Все техники",
+        "example": "Пример",
+        "steps": "Шаг за шагом",
+        "when": "Когда применять",
+        "spot": "Как заметить",
+        "mistakes": "Частые ошибки",
+        "inGame": "В Bare Sudoku",
+        "level": "Требуется с уровня: {level}",
+        "hint": "В игре подсказка говорит: {text}",
+        "legend": "Жирные цифры даны изначально, синие поставлены в ходе решения, маленькие цифры обозначают кандидатов. Выделенные клетки образуют фигуру, зачёркнутые кандидаты удаляются, а обведённый кандидат показывает цифру, которую нужно поставить.",
+        "notation": "Клетки записываются как r3c7: строка 3, столбец 7. Строки считаются сверху, столбцы слева, а блоки от 1 до 9 с левого верхнего угла, ряд за рядом.",
+        "row": "строка {n}",
+        "column": "столбец {n}",
+        "box": "блок {n}",
+        "elimItem": "{d} из {cell}",
+        "regions": "Строка 5, столбец 5 и блок 5 в начале головоломки",
+        "firstMove": "Открытая одиночка: в {cell} может стоять только {d}",
+        "breadcrumb": "Навигационная цепочка"
+      },
+      "howTo": {
+        "title": "Как играть в судоку: правила, поле и первые ходы",
+        "description": "Как играть в судоку: правила, как устроены строки, столбцы и блоки, почему у головоломки одно решение, как вести заметки и делать первые ходы.",
+        "h1": "Как играть в судоку",
+        "summary": "Судоку представляет собой логическую головоломку на поле 9×9. Заполните каждую пустую клетку цифрой от 1 до 9 так, чтобы в каждой строке, каждом столбце и каждом блоке 3×3 каждая цифра встречалась ровно один раз. Часть цифр дана с самого начала; остальные вы выводите логически, клетку за клеткой, и угадывать никогда не придётся. Это руководство объясняет устройство поля, правила, принцип единственного решения, заметки и простую стратегию первых ходов. Всё это можно отработать в [Bare Sudoku](play): игра бесплатная, а её подсказки объясняют логику.",
+        "sections": [
+          {
+            "h": "Каковы правила судоку?",
+            "p": [
+              "Правил всего три, и это одно и то же правило, увиденное с трёх сторон: в каждой строке должны быть цифры от 1 до 9, в каждом столбце должны быть цифры от 1 до 9 и в каждом блоке 3×3 должны быть цифры от 1 до 9. Поэтому одна цифра никогда не может встретиться дважды в одной строке, одном столбце или одном блоке.",
+              "Данные цифры, напечатанные жирным, неизменны. Ваша задача состоит в том, чтобы заполнить пустые клетки. Здесь нет ни арифметики, ни порядка: цифры служат просто девятью разными символами. Можно было бы играть буквами или фигурами, и ничего бы не изменилось."
+            ]
+          },
+          {
+            "h": "Как устроено поле?",
+            "p": [
+              "На поле 81 клетка в 9 строках и 9 столбцах. Толстые линии делят его на девять блоков 3×3. Каждая клетка принадлежит ровно одной строке, одному столбцу и одному блоку, и эти три группы называют её группами. Остальные 20 клеток, которые делят с клеткой хотя бы одну группу, называют её соседями; цифра, поставленная в клетку, исключает эту цифру во всех 20 соседях.",
+              "Клетки записываются как r3c7: строка 3, столбец 7. Строки считаются сверху, столбцы слева, а блоки от 1 до 9 с левого верхнего угла, ряд за рядом. Это обозначение используется во всех руководствах по техникам, и его стоит запомнить: r5c5 находится в центре поля."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Почему у каждого судоку ровно одно решение?",
+            "p": [
+              "У правильного судоку одно решение, и именно благодаря этому работает логика. Когда вы можете показать, что цифра не может встать больше никуда в группе, она обязана встать в оставшуюся клетку, потому что решение существует и оно единственное. Если бы у головоломки было два решения, никакие рассуждения не смогли бы их различить, и в какой-то момент пришлось бы угадывать.",
+              "Bare Sudoku создаёт каждую головоломку на вашем устройстве и проверяет, что у неё ровно одно решение и что его логический решатель может довести её до конца техниками выбранного уровня. Поэтому, если вы застряли, следующий шаг всегда есть, и подсказка его покажет."
+            ]
+          },
+          {
+            "h": "С чего начать решение судоку?",
+            "p": [
+              "Начинайте с самого ограниченного. Этот порядок работает на любом уровне:"
+            ],
+            "list": [
+              "Выберите цифру, которая уже встречается много раз, скажем шесть или семь, и найдите блоки, где её ещё нет. Часто в блоке для неё остаётся лишь одна клетка: это [скрытая одиночка](hidden-single).",
+              "Ищите плотно окружённые клетки. У клетки, в строке, столбце и блоке которой вместе стоят восемь разных цифр, остаётся лишь один кандидат: это [открытая одиночка](naked-single). Лучше всего искать в почти заполненных строках и блоках.",
+              "Каждая поставленная цифра убирает кандидата из 20 соседей, поэтому сразу проверяйте этих соседей. Одиночки обычно идут цепочкой.",
+              "Когда простые ходы закончатся, запишите заметки: кандидатов для каждой пустой клетки. Затем ищите цифру, которая внутри блока ограничена одной линией ([заблокированные кандидаты](locked-candidates)), или две клетки с одними и теми же двумя кандидатами ([открытая пара](naked-pairs)).",
+              "После каждого исключения возвращайтесь к одиночкам. Даже головоломки уровня Эксперт решаются в основном одиночками; продвинутая техника лишь открывает путь к следующей."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Что такое заметки и когда их использовать?",
+            "p": [
+              "Заметки, которые также называют пометками карандашом или кандидатами, представляют собой маленькие цифры, которые вы пишете в пустой клетке, чтобы отметить, какие цифры там ещё возможны. В лёгких головоломках они нужны редко; начиная с уровня Сложно они необходимы, потому что такие техники, как пары, X-Wing и Y-Wing, работают с кандидатами, а не с поставленными цифрами.",
+              "Следите за точностью заметок: поставив цифру, уберите её из заметок всех 20 соседей. В Bare Sudoku это происходит автоматически, а кнопка Заполнить заметки одним касанием записывает всех кандидатов во все пустые клетки, так что можно начать с полного и правильного набора кандидатов. Заметка отражает факт, а не догадку: она означает, что пока ничто не исключает эту цифру."
+            ]
+          },
+          {
+            "h": "Что делать, если вы застряли?",
+            "p": [
+              "Сначала перепроверьте основу: каждая почти заполненная строка, столбец и блок служат источником одиночек. Затем убедитесь, что заметки полные, потому что пропущенный кандидат скрывает фигуры, а устаревший создаёт ложные. Потом переберите [техники](techniques) по возрастанию сложности: заблокированные кандидаты, пары и тройки, X-Wing, Y-Wing, Swordfish и XYZ-Wing. У каждой есть своя страница с реальным примером.",
+              "Если ничего не помогает, возьмите подсказку. В Bare Sudoku подсказка сначала проверяет, нет ли среди поставленных цифр неверной, затем находит следующую клетку, которую можно заполнить логически, и называет технику, так что вы чему-то учитесь, даже когда пользуетесь ею. Нажмите подсказку ещё раз, чтобы поставить цифру."
+            ]
+          },
+          {
+            "h": "Как вводить цифры в Bare Sudoku?",
+            "p": [
+              "Коснитесь клетки, затем цифры. Или сначала коснитесь цифры: она зафиксируется, и каждая клетка, которой вы коснётесь, получит её; так быстрее всего расставить шестую, седьмую и восьмую копию цифры. Коснитесь цифры ещё раз, чтобы снять фиксацию. Кнопка Заметки переключает на пометки, Стереть очищает клетку, Отменить отменяет любой ход, а ошибки отмечаются красным, если вы не отключите это в меню.",
+              "На клавиатуре перемещайтесь стрелками, вводите цифры клавишами от 1 до 9, стирайте клавишей Backspace; N включает заметки, U отменяет ход, H даёт подсказку, F заполняет заметки, а Escape открывает меню. Игра сохраняется сама, работает офлайн, в ней нет рекламы и не нужна учётная запись."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Нужно ли в судоку когда-нибудь угадывать?",
+            "В правильной головоломке нет. У каждой головоломки Bare Sudoku ровно одно решение, и проверено, что её можно решить одной логикой с помощью техник её уровня. Если кажется, что без угадывания не обойтись, значит, в заметках не хватает кандидата или какая-то техника ждёт, чтобы её нашли."
+          ],
+          [
+            "Может ли цифра встретиться дважды в строке, столбце или блоке?",
+            "Нет. В этом и состоит всё правило: каждая из девяти строк, девяти столбцов и девяти блоков содержит каждую цифру от 1 до 9 ровно один раз. Если две одинаковые цифры оказались в одной группе, хотя бы одна из них неверна."
+          ],
+          [
+            "Чем отличаются уровни Легко, Средне, Сложно и Эксперт?",
+            "Уровень определяется техниками, которые нужны головоломке. Легко и Средне решаются одними одиночками, причём на уровне Легко с самого начала дано не меньше 38 цифр. Для уровня Сложно нужны заблокированные кандидаты или пары и тройки. Для уровня Эксперт нужны X-Wing, Y-Wing, Swordfish или XYZ-Wing."
+          ],
+          [
+            "Лучше заполнять заметки во всех клетках или только в некоторых?",
+            "В головоломках уровней Сложно и Эксперт заполняйте все: такие фигуры, как пары, X-Wing и Y-Wing, видны только тогда, когда записаны все кандидаты. На уровнях Легко и Средне заметки необязательны, и большинство игроков просто ищут одиночки."
+          ],
+          [
+            "Сколько времени занимает одно судоку?",
+            "Лёгкая головоломка занимает несколько минут; головоломки уровня Эксперт могут занять двадцать минут и больше, в зависимости от того, как быстро вы заметите продвинутую фигуру. Bare Sudoku показывает таймер, останавливает его, пока открыто меню, и не ведёт таблицы рекордов, так что играйте в своём темпе."
+          ],
+          [
+            "Нужна ли для судоку арифметика?",
+            "Нет. Цифры служат лишь метками; складывать или считать ничего не нужно. Подошли бы любые девять символов, и именно поэтому судоку является логической головоломкой, а не числовой."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Техники решения судоку: объяснения с примерами",
+        "description": "Все девять техник решения судоку, от открытых одиночек до Swordfish и XYZ-Wing, в том порядке, в каком их применяет Bare Sudoku, каждая с реальным примером.",
+        "h1": "Техники решения судоку",
+        "intro": [
+          "Любое судоку можно решить небольшим набором логических техник. В этом списке собраны девять техник, которые используют решатель Bare Sudoku и его подсказки, в том порядке, в каком решатель их пробует: сначала одиночки, затем исключения внутри одной группы, затем фигуры, охватывающие несколько строк и столбцов. У каждой техники есть своя страница с определением, способом её заметить, реальным примером из сгенерированной головоломки и частыми ошибками.",
+          "Уровень головоломки определяется самой сложной техникой, которая ей нужна. Для уровней Легко и Средне достаточно одиночек, для уровня Сложно нужны заблокированные кандидаты или пары и тройки, а для уровня Эксперт хотя бы одна рыба или одно крыло. На любом уровне основную работу делают одиночки; продвинутая техника убирает одного-двух кандидатов, а дальше снова работают одиночки."
+        ],
+        "faq": [
+          [
+            "В каком порядке пробовать техники судоку?",
+            "От самых простых: открытые одиночки, скрытые одиночки, заблокированные кандидаты, открытые пары и тройки, скрытые пары и тройки, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku пробует их именно в этом порядке, и подсказка всегда называет самую простую технику, которая позволяет продвинуться."
+          ],
+          [
+            "Нужны ли все эти техники, чтобы решать судоку?",
+            "Для уровней Легко и Средне хватает одиночек. На уровне Сложно добавляются заблокированные кандидаты и подмножества. Для уровня Эксперт нужна хотя бы одна рыба или одно крыло, но обычно лишь один-два раза за головоломку."
+          ],
+          [
+            "Есть ли техники сложнее XYZ-Wing?",
+            "Да, например цепочки, проверки на единственность решения и сети форсирования. Bare Sudoku не создаёт головоломок, которым они нужны, поэтому любую головоломку в игре можно решить девятью техниками с этой страницы."
+          ],
+          [
+            "Что такое кандидат?",
+            "Цифра, которая ещё может стоять в пустой клетке, потому что пока ничто в её строке, столбце или блоке её не исключает. Заметки в игре и есть кандидаты. Все техники сложнее одиночек рассуждают о кандидатах, поэтому держите их полными и точными."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Открытая одиночка",
+          "title": "Открытая одиночка в судоку: клетка с одним кандидатом",
+          "description": "Открытая одиночка (naked single): пустая клетка, в которую подходит только одна цифра. Как быстро находить такие клетки, на реальном примере шаг за шагом.",
+          "h1": "Открытая одиночка (naked single)",
+          "summary": "Открытая одиночка представляет собой пустую клетку ровно с одним кандидатом: остальные восемь цифр уже есть в её строке, столбце или блоке. Оставшаяся цифра обязана стоять здесь. Это самая простая техника судоку и та, которой вы пользуетесь чаще всего; подсказка Bare Sudoku сообщает о ней словами «Здесь только один кандидат».",
+          "when": [
+            "Всегда. Открытые одиночки встречаются от первого хода до последнего на любом уровне. На уровнях Легко и Средне они вместе со скрытыми одиночками составляют единственную нужную вам технику. В более трудных головоломках каждое исключение, сделанное продвинутой техникой, обычно оставляет после себя открытую одиночку, поэтому проверяйте их после каждого шага."
+          ],
+          "spot": [
+            "Смотрите на клетки, у которых много заполненных соседей: клетку в строке, где уже стоят семь цифр, или клетку, строка, столбец и блок которой вместе содержат восемь разных цифр. Без заметок считайте цифры, видимые из клетки. С заметками открытая одиночка выглядит просто как клетка с одним кандидатом, поэтому с кнопкой Заполнить заметки их легко найти."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Посмотрите на {cell}. Клетка пуста, поэтому выпишите все цифры, которые уже стоят в её строке, столбце и блоке.",
+                "В строке {row} стоят {rowDigits}. В столбце {col} стоят {colDigits}. В блоке {box} стоят {boxDigits}.",
+                "Вместе они исключают все цифры, кроме {d}, поэтому {d} остаётся единственным кандидатом в {cell}.",
+                "Поставьте {d} в {cell}. Затем проверьте, не создала ли новая цифра ещё одну одиночку в той же строке, том же столбце или том же блоке."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Считать только строку или только блок. Восемь исключённых цифр обычно набираются из всех трёх групп вместе.",
+            "Забывать, что только что поставленная цифра тоже исключает кандидатов из своих 20 соседей; новые открытые одиночки появляются сразу после каждой постановки.",
+            "Путать открытую одиночку со скрытой: у открытой одиночки в клетке остался один кандидат, у скрытой у цифры осталась одна клетка в группе."
+          ],
+          "faq": [
+            [
+              "Что такое открытая одиночка (naked single) в судоку?",
+              "Пустая клетка ровно с одним кандидатом. В её строке, столбце и блоке уже стоят восемь разных цифр, поэтому подходит только девятая."
+            ],
+            [
+              "Почему она называется открытой?",
+              "Потому что единственный кандидат виден прямо в клетке, как только записаны заметки; его ничто не скрывает. Скрытая одиночка, наоборот, стоит среди других кандидатов, и её находят, глядя на цифру, а не на клетку."
+            ],
+            [
+              "Можно ли решить головоломку одними открытыми одиночками?",
+              "Многие головоломки уровня Легко можно, но большинству нужны и скрытые одиночки. Bare Sudoku относит головоломки уровней Легко и Средне к решаемым одиночками обоих видов; для уровней Сложно и Эксперт нужна хотя бы ещё одна техника."
+            ],
+            [
+              "Показывает ли подсказка открытые одиночки?",
+              "Да. Когда следующая постановка оказывается открытой одиночкой, подсказка выделяет клетку и пишет «Здесь только один кандидат» вместе с цифрой. Нажмите подсказку ещё раз, чтобы поставить её."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Скрытая одиночка",
+          "title": "Скрытая одиночка в судоку: единственное место для цифры",
+          "description": "Скрытая одиночка (hidden single): единственная клетка строки, столбца или блока, куда ещё может встать цифра. Как находить их, просматривая по одной цифре.",
+          "h1": "Скрытая одиночка (hidden single)",
+          "summary": "Скрытая одиночка представляет собой цифру, у которой в строке, столбце или блоке осталась только одна возможная клетка, даже если в этой клетке видны и другие кандидаты. Группа обязана содержать эту цифру, поэтому она встаёт туда. Подсказка Bare Sudoku сообщает о ней словами «Единственное место для 5 в этой строке», а также в этом столбце или этом блоке.",
+          "when": [
+            "Когда цифра уже далеко продвинулась: если цифра встречается пять или шесть раз, оставшиеся блоки сильно ограничены, и следующим ходом часто оказывается скрытая одиночка. Скрытые одиночки служат главной техникой уровней Легко и Средне и остаются рабочей лошадкой на любом уровне."
+          ],
+          "spot": [
+            "Просматривайте по одной цифре. Возьмите цифру, найдите блок, где её нет, и вычеркните в этом блоке каждую клетку, которая лежит в одной строке или одном столбце с уже поставленной такой же цифрой. Если осталась одна клетка, вы нашли скрытую одиночку. Так же можно просматривать строки и столбцы. В игре коснитесь поставленной цифры: все её копии подсветятся, и свободные клетки станут заметны."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "В блоке {box} ещё нет цифры {d}, поэтому одна из его пустых клеток должна её содержать. Пустые клетки: {empties}.",
+                "Во всех из них, кроме {cell}, цифре {d} мешает уже поставленная {d} в той же строке или том же столбце, поэтому там {d} не является кандидатом.",
+                "Остаётся {cell} как единственное место для {d} в блоке {box}. Поставьте туда {d}, даже если в {cell} ещё видны другие кандидаты."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ставить цифру в клетку, которая лишь вероятно верна: проверьте все остальные пустые клетки группы, а не только очевидные.",
+            "Пропускать скрытую одиночку из-за того, что в клетке несколько кандидатов. Другие кандидаты не важны; важно, что у цифры нет другого места в группе.",
+            "Просматривать только блоки. Строки и столбцы дают скрытые одиночки так же часто, особенно ближе к концу."
+          ],
+          "faq": [
+            [
+              "Что такое скрытая одиночка (hidden single) в судоку?",
+              "Цифра, которая может встать только в одну клетку строки, столбца или блока. Группа обязана содержать эту цифру, поэтому клетка определена, даже если в ней ещё есть другие кандидаты."
+            ],
+            [
+              "Чем скрытая одиночка отличается от открытой?",
+              "Открытая одиночка касается клетки: в ней остался один кандидат. Скрытая одиночка касается цифры: в группе для неё осталась одна клетка. Обе ставят цифру наверняка."
+            ],
+            [
+              "Какую из них легче найти?",
+              "Без заметок обычно легче найти скрытые одиночки, потому что можно просматривать поле по одной цифре. С полными заметками легче всего открытые одиночки, ведь клетка с единственным кандидатом сразу бросается в глаза."
+            ],
+            [
+              "Как подсказка описывает скрытую одиночку?",
+              "Словами «Единственное место для» цифры в этой строке, этом столбце или этом блоке, при этом клетка выделена. Нажмите подсказку ещё раз, чтобы поставить цифру."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Заблокированные кандидаты",
+          "title": "Заблокированные кандидаты в судоку: указание и захват",
+          "description": "Заблокированные кандидаты: если кандидаты цифры в блоке лежат в одной строке или столбце, или наоборот, цифру убирают из других клеток. Два реальных примера.",
+          "h1": "Заблокированные кандидаты (locked candidates)",
+          "summary": "Заблокированные кандидаты: первая техника, которая не ставит цифру, а убирает кандидатов. У неё две формы. Указание: в блоке все кандидаты цифры лежат в одной строке или одном столбце, поэтому цифру убирают из остальной части этой линии. Захват: в строке или столбце все кандидаты цифры лежат в одном блоке, поэтому цифру убирают из остальной части этого блока. Подсказка Bare Sudoku помечает постановку, которую открывает эта техника, словами «Заблокированные кандидаты».",
+          "when": [
+            "Когда в головоломке уровня Сложно закончились одиночки, это первое, что стоит попробовать. Нужны полные заметки хотя бы для исследуемой цифры. Заблокированные кандидаты встречаются часто: они нужны большинству головоломок уровня Сложно, а головоломки уровня Эксперт используют их между более крупными фигурами."
+          ],
+          "spot": [
+            "Для указания смотрите на каждый блок и каждую недостающую в нём цифру: если клетки-кандидаты этой цифры лежат в одной строке или одном столбце, проверьте, встречается ли та же цифра кандидатом дальше по этой линии за пределами блока. Для захвата смотрите вдоль строки или столбца: если все кандидаты цифры находятся внутри одного блока, остальную часть блока можно от неё очистить. В игре коснитесь клавиши цифры, чтобы подсветить всех её кандидатов; линия из двух-трёх подсвеченных заметок внутри одного блока и есть нужная фигура."
+          ],
+          "examples": [
+            {
+              "h": "Указание",
+              "steps": [
+                "В блоке {box} у цифры {d} есть только такие клетки-кандидаты: {cells}. Все они лежат в строке {row}.",
+                "Блоку {box} нужна цифра {d}, поэтому цифра {d} строки {row} окажется внутри блока {box}, в какую бы из этих клеток она ни попала.",
+                "Второй цифры {d} в строке {row} быть не может, поэтому уберите {d} из клеток строки {row} вне блока: {elim}."
+              ]
+            },
+            {
+              "h": "Захват",
+              "steps": [
+                "В строке {row} цифра {d} может стоять только в {cells}, и все они находятся внутри блока {box}.",
+                "Строка {row} обязана содержать {d}, поэтому цифру {d} блока {box} забирает строка {row}. Остальные клетки блока {box} не могут содержать {d}.",
+                "Уберите {d} из клеток {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Убирать цифру внутри блока, а не за его пределами, при указании, или наоборот при захвате. Исключения всегда касаются клеток, которые лежат на линии, но не в блоке, или в блоке, но не на линии.",
+            "Применять правило, когда кандидаты занимают две строки блока. Все клетки-кандидаты цифры в блоке должны лежать на одной линии.",
+            "Забывать искать одиночку, которую создаёт исключение. Заблокированные кандидаты редко ставят цифру сами; они подготавливают одиночку."
+          ],
+          "faq": [
+            [
+              "Что такое заблокированные кандидаты в судоку?",
+              "Кандидаты цифры, запертые в пересечении блока и линии. Поскольку блок, или линия, обязан содержать цифру именно в этом пересечении, цифру можно убрать из остальной части линии или из остальной части блока."
+            ],
+            [
+              "Чем указание отличается от захвата?",
+              "Указание начинается с блока: кандидаты цифры в блоке указывают вдоль одной строки или одного столбца, поэтому цифру убирают из остальной части этой линии. Захват начинается со строки или столбца: все кандидаты линии для этой цифры находятся в одном блоке, поэтому линия забирает цифру себе, и её убирают из остальной части блока."
+            ],
+            [
+              "Называют ли заблокированных кандидатов также исключением на пересечении?",
+              "Да. Другие названия: сокращение блок-линия для формы захвата и указывающие пары или указывающие тройки для формы указания. Bare Sudoku использует одно название для обеих."
+            ],
+            [
+              "Для какого уровня нужны заблокированные кандидаты?",
+              "Для уровня Сложно. Головоломка, которой нужны заблокированные кандидаты или подмножества, но ничего сложнее, получает уровень Сложно; головоломкам уровня Эксперт нужна ещё и рыба или крыло."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Открытые пары и тройки",
+          "title": "Открытые пары и тройки в судоку: как они работают",
+          "description": "Открытые пары и тройки: две или три клетки группы с одними и теми же двумя или тремя кандидатами. Как их заметить и что убрать, на реальных примерах.",
+          "h1": "Открытые пары и тройки (naked pair, naked triple)",
+          "summary": "Открытая пара состоит из двух клеток одной строки, столбца или блока, у которых ровно одни и те же два кандидата. Эти две цифры обязаны стоять в этих двух клетках, поэтому их можно убрать из всех остальных клеток группы. Открытая тройка работает так же с тремя клетками и тремя цифрами; в каждой клетке могут быть видны две или все три из них. Подсказка Bare Sudoku помечает постановку, которая из этого следует, словами «Пара или тройка».",
+          "when": [
+            "Когда заметки полные, а одиночки и заблокированные кандидаты исчерпаны. Открытые пары очень часто встречаются в головоломках уровня Сложно, открытые тройки реже. И те и другие стоит проверять в каждой группе, где ещё пять или больше пустых клеток."
+          ],
+          "spot": [
+            "Ищите клетки всего с двумя кандидатами и найдите в той же группе другую клетку с теми же двумя. Для троек смотрите на группы с несколькими клетками на два и три кандидата и проверьте, не используют ли три из них вместе всего три разные цифры. Клетки с точно одинаковыми кандидатами легко увидеть, когда заметки записаны; кнопка Заполнить заметки в игре делает это одним касанием."
+          ],
+          "examples": [
+            {
+              "h": "Открытая пара",
+              "steps": [
+                "У клеток {cellA} и {cellB} ({unit}) ровно одни и те же два кандидата: {d1} и {d2}.",
+                "Одна из них должна быть {d1}, другая {d2}. Мы не знаем, какая именно, но обе цифры заняты этими двумя клетками.",
+                "Значит, ни в одной другой клетке ({unit}) не может стоять {d1} или {d2}. Уберите {elim}."
+              ]
+            },
+            {
+              "h": "Открытая тройка",
+              "steps": [
+                "Три клетки ({unit}) берут всех своих кандидатов из одних и тех же трёх цифр, {digits}: {cells}.",
+                "Три цифры должны заполнить эти три клетки в каком-то порядке. Клетке не обязательно показывать всех трёх кандидатов; важно, чтобы ни у одной из трёх клеток не было кандидата вне этого набора.",
+                "Уберите {digits} из всех остальных клеток ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Брать две клетки с двумя общими кандидатами, у которых есть и третий. Для открытой пары в каждой клетке должны быть ровно эти два кандидата и ничего больше.",
+            "Убирать цифры из самих клеток пары. Пара сохраняет своих кандидатов; исключения касаются остальных клеток группы.",
+            "Требовать, чтобы в каждой клетке тройки были видны все три цифры. Клетка с двумя из трёх подходит, если ни у одной клетки нет кандидата вне набора."
+          ],
+          "faq": [
+            [
+              "Что такое открытая пара (naked pair) в судоку?",
+              "Две клетки одной группы, у обеих ровно одни и те же два кандидата. Эти две цифры заперты в этих двух клетках, поэтому их можно убрать из остальной части группы."
+            ],
+            [
+              "Что такое открытая тройка?",
+              "Три клетки одной группы, кандидаты которых вместе составляют всего три цифры. В каждой клетке может быть две или три из них. Три цифры заполняют три клетки, поэтому их можно убрать из остальных клеток группы."
+            ],
+            [
+              "Ставит ли открытая пара цифру?",
+              "Сама по себе нет. Она убирает кандидатов, а после этого обычно остаётся открытая или скрытая одиночка. Подсказка в Bare Sudoku показывает эту одиночку и называет технику, которая сделала её возможной."
+            ],
+            [
+              "Может ли открытая пара быть одновременно в блоке и в строке?",
+              "Да. Если две клетки лежат в одной строке и одном блоке, пара исключает кандидатов в обеих группах. Bare Sudoku рассматривает группы по одной."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Скрытые пары и тройки",
+          "title": "Скрытые пары и тройки в судоку: как их найти",
+          "description": "Скрытая пара: две цифры, которые могут стоять только в одних и тех же двух клетках группы, поэтому другие кандидаты этих клеток уходят. Пошаговый пример.",
+          "h1": "Скрытые пары и тройки (hidden pair, hidden triple)",
+          "summary": "Скрытая пара состоит из двух цифр, которые в пределах одной строки, столбца или блока являются кандидатами в одних и тех же двух клетках и больше нигде. Эти две клетки обязаны содержать эти две цифры, поэтому все остальные кандидаты в них можно убрать. Скрытая тройка работает так же с тремя цифрами, запертыми в трёх клетках. После исключения в клетках видна открытая пара или тройка. Подсказка Bare Sudoku помечает постановку, которая из этого следует, словами «Пара или тройка».",
+          "when": [
+            "Когда в группе есть клетки со множеством кандидатов, а одиночки закончились. Скрытые пары прячутся в загруженных клетках, поэтому их стоит искать именно там, где открытых пар не видно. Скрытые тройки редки; Bare Sudoku проверяет и их, но большинство головоломок уровня Сложно решается без них."
+          ],
+          "spot": [
+            "Работайте по цифрам, а не по клеткам. В группе отметьте, в какие клетки может встать каждая недостающая цифра. Если у двух цифр только по две возможные клетки и это одни и те же две клетки, вы нашли скрытую пару. В игре коснитесь клавиши цифры, чтобы подсветить её кандидатов; если две цифры подсвечивают в группе одни и те же две клетки и больше ничего, это и есть фигура."
+          ],
+          "examples": [
+            {
+              "h": "Скрытая пара",
+              "steps": [
+                "У цифр {d1} и {d2} только по две возможные клетки ({unit}), и это одни и те же две клетки: {cells}.",
+                "Эти две клетки обязаны содержать {d1} и {d2}, поэтому их остальные кандидаты невозможны.",
+                "Уберите {elim}. Теперь в двух клетках видна открытая пара, и это может открыть новые ходы."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Убирать две цифры пары из клеток пары. Уходят другие кандидаты этих клеток; цифры пары остаются.",
+            "Принимать цифру, у которой в группе есть третья возможная клетка. Обе цифры должны быть ограничены ровно двумя клетками.",
+            "Искать только в блоках. В строках и столбцах скрытые пары встречаются так же часто."
+          ],
+          "faq": [
+            [
+              "Что такое скрытая пара (hidden pair) в судоку?",
+              "Две цифры, которые могут стоять только в одних и тех же двух клетках группы. Эти клетки обязаны принять эти цифры, поэтому их остальные кандидаты убираются."
+            ],
+            [
+              "Чем скрытая пара отличается от открытой?",
+              "Открытая пара видна сразу: две клетки, в которых только одни и те же два кандидата. Скрытая пара закрыта лишними кандидатами в двух клетках. Если убрать эти лишние кандидаты, скрытая пара превращается в открытую."
+            ],
+            [
+              "Что такое скрытая тройка?",
+              "Три цифры, запертые в трёх клетках группы. Каждой цифре не обязательно встречаться во всех трёх клетках; важно, чтобы ни у одной из трёх цифр не было кандидата вне этих клеток."
+            ],
+            [
+              "Различает ли подсказка скрытые и открытые пары?",
+              "Нет. Bare Sudoku находит и те и другие и помечает постановку, которая из них следует, словами «Пара или тройка». Здесь они описаны на разных страницах, потому что находят их по-разному."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing в судоку: как работает эта техника",
+          "description": "X-Wing: если у цифры в двух строках ровно по две клетки-кандидата в одних и тех же двух столбцах, её убирают из остальных клеток этих столбцов. Пример.",
+          "h1": "X-Wing",
+          "summary": "X-Wing представляет собой фигуру из одной цифры и четырёх клеток в углах прямоугольника. Если у цифры ровно две клетки-кандидата в каждой из двух строк и эти клетки лежат в одних и тех же двух столбцах, цифра обязана занять два противоположных угла прямоугольника. Поэтому её можно убрать из всех остальных клеток этих двух столбцов. То же работает, если поменять строки и столбцы местами. В Bare Sudoku это первая техника уровня Эксперт.",
+          "when": [
+            "Когда одиночки, заблокированные кандидаты и подмножества исчерпаны. X-Wing является самой частой фигурой уровня Эксперт и обычно появляется, когда у цифры осталось мало кандидатов, как правило, когда уже поставлены от четырёх до шести её копий. Нужны полные заметки для исследуемой цифры."
+          ],
+          "spot": [
+            "Выберите цифру и ищите строки, в которых у неё ровно две клетки-кандидата. Если две такие строки делят одни и те же два столбца, проверьте в этих столбцах другие кандидаты этой цифры: их и нужно исключить. Затем повторите, взяв за основу столбцы. В игре коснитесь клавиши цифры: все её кандидаты подсветятся, и прямоугольник из четырёх подсвеченных заметок легко увидеть."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "У цифры {d} ровно две клетки-кандидата в строке {r1} и ровно две в строке {r2}, и они стоят в одних и тех же двух столбцах, {c1} и {c2}: {cells}.",
+                "Строка {r1} ставит свою цифру {d} в столбец {c1} или {c2}, а строка {r2} ставит свою в другой. В любом случае столбцы {c1} и {c2} получают по одной цифре {d} из этих двух строк.",
+                "Значит, больше нигде в столбцах {c1} и {c2} цифры {d} быть не может. Уберите {d} из клеток {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Брать строку, где у цифры три клетки-кандидата. В каждой базовой строке должно быть ровно две, и обе в двух общих столбцах.",
+            "Убирать цифру из строк вместо столбцов. Если за основу взяты строки, исключения делаются в столбцах, и наоборот.",
+            "Забывать о зеркальном варианте. X-Wing, построенный на столбцах, исключает кандидатов в строках."
+          ],
+          "faq": [
+            [
+              "Что такое X-Wing в судоку?",
+              "Цифра, у которой ровно две клетки-кандидата в каждой из двух строк, в одних и тех же двух столбцах. Цифра занимает два противоположных угла этого прямоугольника, поэтому её убирают из остальной части двух столбцов. Строки и столбцы можно поменять местами."
+            ],
+            [
+              "Почему X-Wing работает?",
+              "Каждая из двух строк обязана поставить цифру в один из двух столбцов, и две строки не могут использовать один и тот же столбец. Значит, каждый из двух столбцов получает свою копию цифры из этих строк, и все остальные кандидаты в этих столбцах невозможны."
+            ],
+            [
+              "X-Wing относится к рыбам?",
+              "Да. X-Wing является рыбой размера два, а Swordfish рыбой размера три. Bare Sudoku находит обе."
+            ],
+            [
+              "На каком уровне встречается X-Wing?",
+              "На уровне Эксперт. Головоломка, которой нужен X-Wing, Y-Wing, Swordfish или XYZ-Wing, получает уровень Эксперт."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing в судоку: как работает эта техника",
+          "description": "Y-Wing (XY-Wing): опорная клетка с двумя кандидатами и два крыла, каждое с одним из них, убирают цифру из всех клеток, видящих оба крыла. Пример шаг за шагом.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, который также называют XY-Wing, использует три клетки с двумя кандидатами в каждой. У опорной клетки кандидаты X и Y. Одно крыло видит опорную клетку и содержит X и Z; другое крыло видит опорную клетку и содержит Y и Z. Какой бы ни оказалась опорная клетка, одно из крыльев обязано быть Z, поэтому Z можно убрать из каждой клетки, которая видит оба крыла. В Bare Sudoku это техника уровня Эксперт.",
+          "when": [
+            "Когда в головоломке несколько клеток ровно с двумя кандидатами, а рыбы нет. Y-Wing часто встречается в головоломках уровня Эксперт, и его находят, перебирая клетки с двумя кандидатами: каждая из них может оказаться опорной клеткой или крылом."
+          ],
+          "spot": [
+            "Выпишите клетки ровно с двумя кандидатами. Каждую по очереди считайте опорной клеткой с кандидатами X и Y и ищите среди её соседей клетку с X и другой цифрой Z и клетку с Y и той же Z. Эти две клетки и есть крылья. Затем найдите клетки, которые видят оба крыла и содержат Z. Заметьте, что крыльям не обязательно видеть друг друга."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "У опорной клетки {pivot} кандидаты {x} и {y}. Она видит {wingA} с кандидатами {x} и {z} и {wingB} с кандидатами {y} и {z}.",
+                "Если в {pivot} стоит {x}, то {wingA} теряет {x}, и в ней остаётся {z}. Если в {pivot} стоит {y}, то в {wingB} остаётся {z}. В любом случае в одном из двух крыльев стоит {z}.",
+                "Клетка, которая видит оба крыла, никогда не может содержать {z}. Уберите {z} из клеток {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Выбирать крылья, которые не оба видят опорную клетку. Каждое крыло должно делить с опорной клеткой строку, столбец или блок.",
+            "Убирать Z из клеток, которые видят только одно крыло. Клетка, из которой убирают кандидата, должна видеть оба крыла.",
+            "Убирать Z из опорной клетки. В Y-Wing опорная клетка не содержит Z; если содержит, это XYZ-Wing с другими правилами."
+          ],
+          "faq": [
+            [
+              "Что такое Y-Wing в судоку?",
+              "Три клетки с двумя кандидатами: опорная клетка с X и Y, крыло с X и Z, которое видит опорную клетку, и крыло с Y и Z, которое тоже её видит. Одно из крыльев всегда равно Z, поэтому Z убирают из клеток, которые видят оба крыла."
+            ],
+            [
+              "Y-Wing и XY-Wing обозначают одно и то же?",
+              "Да. Оба названия описывают одну и ту же фигуру. Bare Sudoku называет её Y-Wing."
+            ],
+            [
+              "Почему одно крыло обязано быть Z?",
+              "Если опорная клетка равна X, первое крыло теряет X и становится Z. Если опорная клетка равна Y, второе крыло становится Z. Опорная клетка равна одному из двух, значит, одно из крыльев равно Z."
+            ],
+            [
+              "Из скольких клеток Y-Wing убирает кандидата?",
+              "Обычно из одной или двух: только из клеток, которые видят оба крыла и ещё содержат Z. Этого достаточно, чтобы появилась одиночка."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish в судоку: как работает эта техника",
+          "description": "Swordfish: цифру, запертую в трёх столбцах на протяжении трёх строк, убирают из остальных клеток этих столбцов. Рыба размера три на реальном примере.",
+          "h1": "Swordfish",
+          "summary": "Swordfish представляет собой X-Wing с тремя строками и тремя столбцами. Если у цифры не больше трёх клеток-кандидатов в каждой из трёх строк и все эти клетки попадают в одни и те же три столбца, то три строки расходуют эту цифру в этих столбцах, и её можно убрать из всех остальных клеток трёх столбцов. Строки и столбцы можно поменять местами. Bare Sudoku ищет Swordfish после Y-Wing, в головоломках уровня Эксперт.",
+          "when": [
+            "Когда X-Wing и Y-Wing ничего не находят. Swordfish встречается реже, чем X-Wing, и требует цифры, кандидаты которой редко разбросаны по трём линиям. Для этой цифры нужны полные и точные заметки."
+          ],
+          "spot": [
+            "Выберите цифру и ищите строки, где у неё две или три клетки-кандидата. Если три такие строки вместе охватывают всего три столбца, проверьте в этих столбцах другие кандидаты этой цифры. Не в каждой строке обязан быть кандидат в каждом столбце: Swordfish может состоять из шести, семи, восьми или девяти клеток. В игре подсветите цифру её клавишей и ищите три строки, кандидаты которых выстраиваются в три столбца."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "У цифры {d} не больше трёх клеток-кандидатов в каждой из строк {rows}, и все эти клетки попадают в столбцы {cols}: {cells}.",
+                "Каждая из трёх строк обязана поставить свою цифру {d} в один из трёх столбцов, и никакие две строки не могут использовать один и тот же столбец. Значит, три столбца получают свои цифры {d} из этих трёх строк.",
+                "Любой другой кандидат {d} в столбцах {cols} невозможен. Уберите {d} из клеток {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Требовать все девять клеток. Swordfish, у которого в некоторых строках по два кандидата, всё равно верен, если три строки охватывают всего три столбца.",
+            "Включать строку с четырьмя клетками-кандидатами. В каждой базовой строке должно быть не больше трёх, и все внутри трёх столбцов.",
+            "Исключать в базовых строках. Если за основу взяты строки, исключения делаются в трёх столбцах, за пределами базовых строк."
+          ],
+          "faq": [
+            [
+              "Что такое Swordfish в судоку?",
+              "Цифра, кандидаты которой в трёх строках заперты в трёх столбцах. Три строки обязаны поставить цифру в эти три столбца, по одной в каждый, поэтому цифру убирают из остальных клеток этих столбцов."
+            ],
+            [
+              "Чем Swordfish отличается от X-Wing?",
+              "Только размером: X-Wing использует две строки и два столбца, Swordfish три и три. Рассуждение то же самое."
+            ],
+            [
+              "Нужно ли для Swordfish ровно девять клеток?",
+              "Нет. В каждой строке может быть два или три кандидата; фигура требует лишь, чтобы три строки вместе использовали не больше трёх столбцов."
+            ],
+            [
+              "Бывает ли рыба размера четыре?",
+              "Да, Jellyfish. Bare Sudoku её не использует, потому что его головоломкам она никогда не нужна."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing в судоку: как работает эта техника",
+          "description": "XYZ-Wing: опорная клетка с тремя кандидатами и два крыла с одной общей цифрой убирают её из всех клеток, видящих все три. Реальный пример шаг за шагом.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing представляет собой Y-Wing, у опорной клетки которого три кандидата. Опорная клетка содержит X, Y и Z; одно крыло видит её и содержит X и Z, другое видит её и содержит Y и Z. Одна из трёх клеток обязана быть Z, поэтому Z можно убрать из каждой клетки, которая видит все три. Поскольку сама опорная клетка может оказаться Z, клетка для исключения должна видеть и опорную клетку, и оба крыла, а это ограничивает её блоком или линией, которые эти клетки делят. Это самая сложная техника, которую использует Bare Sudoku.",
+          "when": [
+            "Только когда всё остальное не помогает. XYZ-Wing является самой редкой фигурой в Bare Sudoku и встречается только в головоломках уровня Эксперт. Ищите его, когда клетка с тремя кандидатами стоит в одном блоке с клеткой на два кандидата, которая делит с ней две её цифры."
+          ],
+          "spot": [
+            "Начните с клеток ровно с тремя кандидатами; каждая может быть опорной. Среди её соседей ищите две клетки по два кандидата, взятых из трёх кандидатов опорной клетки, у которых ровно одна общая цифра Z. Затем ищите клетки, которые видят опорную клетку и оба крыла и содержат Z. На практике одно крыло находится в блоке опорной клетки, а другое в её строке или столбце, и исключения приходятся на оставшиеся клетки этого блока в этой строке или этом столбце."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "У опорной клетки {pivot} три кандидата: {x}, {y} и {z}. Она видит {wingA} с {x} и {z} и {wingB} с {y} и {z}.",
+                "Если в {pivot} стоит {z}, всё ясно. Если там {x}, то в {wingA} должна стоять {z}. Если {y}, то в {wingB} должна стоять {z}. В любом случае в одной из трёх клеток стоит {z}.",
+                "Клетка, которая видит все три, не может содержать {z}. Уберите {z} из клеток {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Исключать из клеток, которые видят только два крыла. В отличие от Y-Wing, опорная клетка может быть Z, поэтому клетка должна видеть и её.",
+            "Брать крылья, кандидаты которых не входят целиком в три кандидата опорной клетки.",
+            "Путать его с Y-Wing: разница в третьем кандидате опорной клетки, и она меняет то, какие клетки можно очистить."
+          ],
+          "faq": [
+            [
+              "Что такое XYZ-Wing в судоку?",
+              "Опорная клетка с кандидатами X, Y и Z и два крыла, одно с X и Z, другое с Y и Z, причём оба видят опорную клетку. Одна из трёх клеток равна Z, поэтому Z убирают из клеток, которые видят все три."
+            ],
+            [
+              "Чем XYZ-Wing отличается от Y-Wing?",
+              "У опорной клетки не два кандидата, а три, включая Z. Поэтому Z может оказаться в самой опорной клетке, и потерять Z могут только клетки, которые видят опорную клетку и оба крыла."
+            ],
+            [
+              "Как часто встречается XYZ-Wing?",
+              "Редко. В Bare Sudoku он может понадобиться только головоломкам уровня Эксперт, и большинству из них он не нужен. Bare Sudoku проверяет его последним, после X-Wing, Y-Wing и Swordfish."
+            ],
+            [
+              "Существует ли WXYZ-Wing?",
+              "Да, с опорной клеткой на четыре кандидата, но Bare Sudoku его не использует. Любую головоломку в игре можно решить девятью техниками из этого руководства."
+            ]
+          ]
+        }
+      }
+    },
+    "uk": {
+      "learnHeading": "Навчання судоку",
+      "learnText": "Тільки починаєте грати в судоку або застрягли на складній головоломці? Два посібники пояснюють правила та всі техніки розв'язування, якими користуються підказки, на реальних прикладах.",
+      "howToLink": "Як грати в судоку",
+      "techniquesLink": "Техніки розв'язування судоку",
+      "labels": {
+        "howTo": "Як грати",
+        "techniques": "Техніки",
+        "play": "Грати в судоку",
+        "prev": "Попередня техніка",
+        "next": "Наступна техніка",
+        "all": "Усі техніки",
+        "example": "Приклад",
+        "steps": "Крок за кроком",
+        "when": "Коли застосовувати",
+        "spot": "Як помітити",
+        "mistakes": "Поширені помилки",
+        "inGame": "У Bare Sudoku",
+        "level": "Потрібна з рівня: {level}",
+        "hint": "У грі підказка каже: {text}",
+        "legend": "Жирні цифри задані від початку, сині поставлені під час розв'язування, маленькі цифри позначають кандидатів. Виділені клітинки утворюють фігуру, закреслені кандидати вилучаються, а обведений кандидат показує цифру, яку треба поставити.",
+        "notation": "Клітинки записуються як r3c7: рядок 3, стовпець 7. Рядки лічаться згори, стовпці зліва, а блоки від 1 до 9 з лівого верхнього кута, ряд за рядом.",
+        "row": "рядок {n}",
+        "column": "стовпець {n}",
+        "box": "блок {n}",
+        "elimItem": "{d} з {cell}",
+        "regions": "Рядок 5, стовпець 5 і блок 5 на початку головоломки",
+        "firstMove": "Відкритий одинак: у {cell} може стояти лише {d}",
+        "breadcrumb": "Навігаційний ланцюжок"
+      },
+      "howTo": {
+        "title": "Як грати в судоку: правила, поле та перші ходи",
+        "description": "Як грати в судоку: правила, як влаштовані рядки, стовпці й блоки, чому в головоломки один розв'язок, як вести нотатки та робити перші ходи.",
+        "h1": "Як грати в судоку",
+        "summary": "Судоку є логічною головоломкою на полі 9×9. Заповніть кожну порожню клітинку цифрою від 1 до 9 так, щоб у кожному рядку, кожному стовпці та кожному блоці 3×3 кожна цифра траплялася рівно один раз. Частина цифр задана від початку; решту ви виводите логічно, клітинку за клітинкою, і вгадувати ніколи не доведеться. Цей посібник пояснює будову поля, правила, принцип єдиного розв'язку, нотатки та просту стратегію перших ходів. Усе це можна відпрацювати в [Bare Sudoku](play): гра безкоштовна, а її підказки пояснюють логіку.",
+        "sections": [
+          {
+            "h": "Які правила судоку?",
+            "p": [
+              "Правил лише три, і це одне й те саме правило, побачене з трьох боків: у кожному рядку мають бути цифри від 1 до 9, у кожному стовпці мають бути цифри від 1 до 9 і в кожному блоці 3×3 мають бути цифри від 1 до 9. Тож одна цифра ніколи не може трапитися двічі в одному рядку, одному стовпці чи одному блоці.",
+              "Задані цифри, надруковані жирним, незмінні. Ваше завдання полягає в тому, щоб заповнити порожні клітинки. Тут немає ні арифметики, ні порядку: цифри слугують просто дев'ятьма різними символами. Можна було б грати літерами чи фігурами, і нічого б не змінилося."
+            ]
+          },
+          {
+            "h": "Як влаштоване поле?",
+            "p": [
+              "Поле має 81 клітинку в 9 рядках і 9 стовпцях. Товсті лінії ділять його на дев'ять блоків 3×3. Кожна клітинка належить рівно одному рядку, одному стовпцю та одному блоку, і ці три групи називають її групами. Інші 20 клітинок, які мають із клітинкою хоча б одну спільну групу, називають її сусідами; цифра, поставлена в клітинку, виключає цю цифру в усіх 20 сусідах.",
+              "Клітинки записуються як r3c7: рядок 3, стовпець 7. Рядки лічаться згори, стовпці зліва, а блоки від 1 до 9 з лівого верхнього кута, ряд за рядом. Це позначення використовується в усіх посібниках з технік, і його варто запам'ятати: r5c5 розташована в центрі поля."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Чому кожне судоку має рівно один розв'язок?",
+            "p": [
+              "Правильне судоку має один розв'язок, і саме завдяки цьому працює логіка. Щоразу, коли ви можете показати, що цифра не може стати більше ніде в групі, вона мусить стати в клітинку, що залишилася, бо розв'язок існує і він єдиний. Якби головоломка мала два розв'язки, жодні міркування не змогли б їх розрізнити, і в якийсь момент довелося б вгадувати.",
+              "Bare Sudoku створює кожну головоломку на вашому пристрої та перевіряє, що вона має рівно один розв'язок і що його логічний розв'язувач може довести її до кінця техніками обраного рівня. Тож якщо ви застрягли, наступний крок завжди є, і підказка його покаже."
+            ]
+          },
+          {
+            "h": "З чого почати розв'язування судоку?",
+            "p": [
+              "Починайте з найбільш обмеженого. Цей порядок працює на будь-якому рівні:"
+            ],
+            "list": [
+              "Виберіть цифру, яка вже трапляється багато разів, скажімо шість чи сім, і знайдіть блоки, де її ще немає. Часто в блоці для неї лишається тільки одна клітинка: це [прихований одинак](hidden-single).",
+              "Шукайте щільно оточені клітинки. У клітинки, в рядку, стовпці та блоці якої разом стоять вісім різних цифр, лишається лише один кандидат: це [відкритий одинак](naked-single). Найкраще шукати в майже заповнених рядках і блоках.",
+              "Кожна поставлена цифра прибирає кандидата з 20 сусідів, тож одразу перевіряйте цих сусідів. Одинаки зазвичай ідуть ланцюжком.",
+              "Коли прості ходи скінчаться, запишіть нотатки: кандидатів для кожної порожньої клітинки. Потім шукайте цифру, яка всередині блоку обмежена однією лінією ([заблоковані кандидати](locked-candidates)), або дві клітинки з тими самими двома кандидатами ([відкрита пара](naked-pairs)).",
+              "Після кожного виключення повертайтеся до одинаків. Навіть головоломки рівня Експерт розв'язуються здебільшого одинаками; просунута техніка лише відкриває шлях до наступного."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Що таке нотатки і коли ними користуватися?",
+            "p": [
+              "Нотатками, або позначками олівцем чи кандидатами, називають маленькі цифри, які ви пишете в порожній клітинці, щоб зазначити, які цифри там ще можливі. У легких головоломках вони потрібні рідко; починаючи з рівня Складно вони необхідні, бо такі техніки, як пари, X-Wing і Y-Wing, працюють із кандидатами, а не з поставленими цифрами.",
+              "Стежте за точністю нотаток: поставивши цифру, приберіть її з нотаток усіх 20 сусідів. У Bare Sudoku це відбувається автоматично, а кнопка Заповнити нотатки одним дотиком записує всіх кандидатів у всі порожні клітинки, тож можна почати з повного і правильного набору кандидатів. Нотатка фіксує факт, а не здогадку: вона означає, що поки ніщо не виключає цієї цифри."
+            ]
+          },
+          {
+            "h": "Що робити, коли ви застрягли?",
+            "p": [
+              "Спершу перевірте основи: кожен майже заповнений рядок, стовпець і блок є джерелом одинаків. Потім переконайтеся, що нотатки повні, бо пропущений кандидат приховує фігури, а застарілий створює хибні. Далі перейдіть [техніки](techniques) за зростанням складності: заблоковані кандидати, пари й трійки, X-Wing, Y-Wing, Swordfish і XYZ-Wing. Кожна має власну сторінку з реальним прикладом.",
+              "Якщо нічого не допомагає, візьміть підказку. У Bare Sudoku підказка спершу перевіряє, чи немає серед поставлених цифр неправильної, потім знаходить наступну клітинку, яку можна заповнити логічно, і називає техніку, тож ви чогось навчаєтеся, навіть коли нею користуєтеся. Натисніть підказку ще раз, щоб поставити цифру."
+            ]
+          },
+          {
+            "h": "Як вводити цифри в Bare Sudoku?",
+            "p": [
+              "Торкніться клітинки, потім цифри. Або спершу торкніться цифри: вона зафіксується, і кожна клітинка, якої ви торкнетеся, отримає її; так найшвидше розставити шосту, сьому й восьму копію цифри. Торкніться цифри ще раз, щоб зняти фіксацію. Кнопка Нотатки перемикає на позначки, Стерти очищає клітинку, Скасувати скасовує будь-який хід, а помилки позначаються червоним, якщо ви не вимкнете це в меню.",
+              "На клавіатурі переміщуйтеся стрілками, вводьте цифри клавішами від 1 до 9, стирайте клавішею Backspace; N вмикає нотатки, U скасовує хід, H дає підказку, F заповнює нотатки, а Escape відкриває меню. Гра зберігається сама, працює офлайн, у ній немає реклами і не потрібен обліковий запис."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Чи доводиться в судоку колись вгадувати?",
+            "У правильній головоломці ні. Кожна головоломка Bare Sudoku має рівно один розв'язок, і перевірено, що її можна розв'язати самою логікою за допомогою технік її рівня. Якщо здається, що без вгадування не обійтися, значить, у нотатках бракує кандидата або якась техніка чекає, щоб її знайшли."
+          ],
+          [
+            "Чи може цифра трапитися двічі в рядку, стовпці чи блоці?",
+            "Ні. У цьому й полягає все правило: кожен із дев'яти рядків, дев'яти стовпців і дев'яти блоків містить кожну цифру від 1 до 9 рівно один раз. Якщо дві однакові цифри опинилися в одній групі, щонайменше одна з них неправильна."
+          ],
+          [
+            "Чим відрізняються рівні Легко, Середньо, Складно та Експерт?",
+            "Рівень визначають техніки, потрібні головоломці. Легко і Середньо розв'язуються самими одинаками, причому на рівні Легко від початку задано щонайменше 38 цифр. Для рівня Складно потрібні заблоковані кандидати або пари й трійки. Для рівня Експерт потрібні X-Wing, Y-Wing, Swordfish або XYZ-Wing."
+          ],
+          [
+            "Краще заповнювати нотатки в усіх клітинках чи лише в деяких?",
+            "У головоломках рівнів Складно та Експерт заповнюйте всі: такі фігури, як пари, X-Wing і Y-Wing, видно лише тоді, коли записано всіх кандидатів. На рівнях Легко і Середньо нотатки необов'язкові, і більшість гравців просто шукає одинаків."
+          ],
+          [
+            "Скільки часу займає одне судоку?",
+            "Легка головоломка займає кілька хвилин; головоломки рівня Експерт можуть забрати двадцять хвилин і більше, залежно від того, як швидко ви помітите просунуту фігуру. Bare Sudoku показує таймер, зупиняє його, поки відкрите меню, і не веде таблиці рекордів, тож грайте у своєму темпі."
+          ],
+          [
+            "Чи потрібна для судоку арифметика?",
+            "Ні. Цифри слугують лише мітками; нічого не треба додавати чи рахувати. Підійшли б будь-які дев'ять символів, і саме тому судоку є логічною головоломкою, а не числовою."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Техніки розв'язування судоку: пояснення з прикладами",
+        "description": "Усі дев'ять технік розв'язування судоку, від відкритих одинаків до Swordfish і XYZ-Wing, у порядку, в якому їх застосовує Bare Sudoku, кожна з прикладом.",
+        "h1": "Техніки розв'язування судоку",
+        "intro": [
+          "Будь-яке судоку можна розв'язати невеликим набором логічних технік. У цьому списку зібрано дев'ять технік, якими користуються розв'язувач Bare Sudoku та його підказки, у тому порядку, в якому розв'язувач їх пробує: спершу одинаки, потім виключення в межах однієї групи, далі фігури, що охоплюють кілька рядків і стовпців. Кожна техніка має власну сторінку з визначенням, способом її помітити, реальним прикладом зі згенерованої головоломки та поширеними помилками.",
+          "Рівень головоломки визначає найскладніша техніка, яка їй потрібна. Для рівнів Легко і Середньо досить одинаків, для рівня Складно потрібні заблоковані кандидати або пари й трійки, а для рівня Експерт щонайменше одна риба або одне крило. На будь-якому рівні основну роботу виконують одинаки; просунута техніка прибирає одного-двох кандидатів, а далі знову працюють одинаки."
+        ],
+        "faq": [
+          [
+            "У якому порядку пробувати техніки судоку?",
+            "Від найпростіших: відкриті одинаки, приховані одинаки, заблоковані кандидати, відкриті пари й трійки, приховані пари й трійки, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku пробує їх саме в цьому порядку, і підказка завжди називає найпростішу техніку, яка дає змогу просунутися."
+          ],
+          [
+            "Чи потрібні всі ці техніки, щоб розв'язувати судоку?",
+            "Для рівнів Легко і Середньо вистачає одинаків. На рівні Складно додаються заблоковані кандидати та підмножини. Для рівня Експерт потрібна щонайменше одна риба або одне крило, але зазвичай лише раз чи двічі за головоломку."
+          ],
+          [
+            "Чи є техніки, складніші за XYZ-Wing?",
+            "Так, наприклад ланцюжки, перевірки на єдиність розв'язку та мережі форсування. Bare Sudoku не створює головоломок, яким вони потрібні, тож будь-яку головоломку в грі можна розв'язати дев'ятьма техніками з цієї сторінки."
+          ],
+          [
+            "Що таке кандидат?",
+            "Цифра, яка ще може стояти в порожній клітинці, бо поки ніщо в її рядку, стовпці чи блоці її не виключає. Нотатки в грі і є кандидатами. Усі техніки, складніші за одинаків, міркують про кандидатів, тож тримайте їх повними й точними."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Відкритий одинак",
+          "title": "Відкритий одинак у судоку: клітинка з одним кандидатом",
+          "description": "Відкритий одинак (naked single): порожня клітинка, у яку підходить лише одна цифра. Як швидко знаходити такі клітинки, на реальному прикладі крок за кроком.",
+          "h1": "Відкритий одинак (naked single)",
+          "summary": "Відкритим одинаком називають порожню клітинку рівно з одним кандидатом: решта вісім цифр уже є в її рядку, стовпці чи блоці. Цифра, що залишилася, мусить стояти тут. Це найпростіша техніка судоку і та, якою ви користуєтеся найчастіше; підказка Bare Sudoku повідомляє про неї словами «Тут лише один кандидат».",
+          "when": [
+            "Завжди. Відкриті одинаки трапляються від першого ходу до останнього на будь-якому рівні. На рівнях Легко і Середньо вони разом із прихованими одинаками становлять єдину потрібну вам техніку. У складніших головоломках кожне виключення, зроблене просунутою технікою, зазвичай залишає по собі відкритого одинака, тож перевіряйте їх після кожного кроку."
+          ],
+          "spot": [
+            "Дивіться на клітинки, у яких багато заповнених сусідів: клітинку в рядку, де вже стоять сім цифр, або клітинку, рядок, стовпець і блок якої разом містять вісім різних цифр. Без нотаток лічіть цифри, видимі з клітинки. З нотатками відкритий одинак виглядає просто як клітинка з одним кандидатом, тому з кнопкою Заповнити нотатки їх легко знайти."
+          ],
+          "examples": [
+            {
+              "h": "Приклад",
+              "steps": [
+                "Подивіться на {cell}. Клітинка порожня, тож випишіть усі цифри, які вже стоять у її рядку, стовпці та блоці.",
+                "У рядку {row} стоять {rowDigits}. У стовпці {col} стоять {colDigits}. У блоці {box} стоять {boxDigits}.",
+                "Разом вони виключають усі цифри, крім {d}, тож {d} лишається єдиним кандидатом у {cell}.",
+                "Поставте {d} у {cell}. Потім перевірте, чи не створила нова цифра ще одного одинака в тому самому рядку, стовпці чи блоці."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Лічити тільки рядок або тільки блок. Вісім виключених цифр зазвичай набираються з усіх трьох груп разом.",
+            "Забувати, що щойно поставлена цифра теж виключає кандидатів зі своїх 20 сусідів; нові відкриті одинаки з'являються одразу після кожного ходу.",
+            "Плутати відкритого одинака з прихованим: у відкритого одинака в клітинці залишився один кандидат, у прихованого в цифри залишилася одна клітинка в групі."
+          ],
+          "faq": [
+            [
+              "Що таке відкритий одинак (naked single) у судоку?",
+              "Порожня клітинка рівно з одним кандидатом. У її рядку, стовпці та блоці вже стоять вісім різних цифр, тож підходить лише дев'ята."
+            ],
+            [
+              "Чому його називають відкритим?",
+              "Бо єдиний кандидат видно просто в клітинці, щойно записано нотатки; його ніщо не приховує. Прихований одинак, навпаки, стоїть серед інших кандидатів, і його знаходять, дивлячись на цифру, а не на клітинку."
+            ],
+            [
+              "Чи можна розв'язати головоломку самими відкритими одинаками?",
+              "Багато головоломок рівня Легко можна, але більшості потрібні й приховані одинаки. Bare Sudoku зараховує головоломки рівнів Легко і Середньо до таких, що розв'язуються одинаками обох видів; для рівнів Складно та Експерт потрібна щонайменше ще одна техніка."
+            ],
+            [
+              "Чи показує підказка відкритих одинаків?",
+              "Так. Коли наступний хід виявляється відкритим одинаком, підказка виділяє клітинку й пише «Тут лише один кандидат» разом із цифрою. Натисніть підказку ще раз, щоб поставити її."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Прихований одинак",
+          "title": "Прихований одинак у судоку: єдине місце для цифри",
+          "description": "Прихований одинак (hidden single): єдина клітинка рядка, стовпця чи блоку, куди ще може стати цифра. Як знаходити їх, переглядаючи поле по одній цифрі.",
+          "h1": "Прихований одинак (hidden single)",
+          "summary": "Прихованим одинаком називають цифру, для якої в рядку, стовпці чи блоці залишилася тільки одна можлива клітинка, навіть якщо в цій клітинці видно й інших кандидатів. Група мусить містити цю цифру, тож вона стає туди. Підказка Bare Sudoku повідомляє про нього словами «Єдине місце для 5 у цьому рядку», а також у цьому стовпці чи цьому блоці.",
+          "when": [
+            "Коли цифра вже далеко просунулася: якщо цифра трапляється п'ять чи шість разів, решта блоків дуже обмежені, і наступним ходом часто виявляється прихований одинак. Приховані одинаки становлять головну техніку рівнів Легко і Середньо і залишаються робочою конячкою на будь-якому рівні."
+          ],
+          "spot": [
+            "Переглядайте по одній цифрі. Візьміть цифру, знайдіть блок, де її немає, і закресліть у цьому блоці кожну клітинку, яка лежить в одному рядку чи одному стовпці з уже поставленою такою самою цифрою. Якщо залишилася одна клітинка, ви знайшли прихованого одинака. Так само можна переглядати рядки й стовпці. У грі торкніться поставленої цифри: усі її копії підсвітяться, і вільні клітинки стануть помітними."
+          ],
+          "examples": [
+            {
+              "h": "Приклад",
+              "steps": [
+                "У блоці {box} ще немає цифри {d}, тож одна з його порожніх клітинок мусить її містити. Порожні клітинки: {empties}.",
+                "В усіх них, крім {cell}, цифрі {d} заважає вже поставлена {d} у тому самому рядку чи тому самому стовпці, тож там {d} не є кандидатом.",
+                "Лишається {cell} як єдине місце для {d} у блоці {box}. Поставте туди {d}, навіть якщо в {cell} ще видно інших кандидатів."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ставити цифру в клітинку, яка лише ймовірно правильна: перевірте всі інші порожні клітинки групи, а не тільки очевидні.",
+            "Пропускати прихованого одинака через те, що в клітинці кілька кандидатів. Інші кандидати не важливі; важливо, що цифра не має іншого місця в групі.",
+            "Переглядати тільки блоки. Рядки й стовпці дають прихованих одинаків так само часто, особливо ближче до кінця."
+          ],
+          "faq": [
+            [
+              "Що таке прихований одинак (hidden single) у судоку?",
+              "Цифра, яка може стати лише в одну клітинку рядка, стовпця чи блоку. Група мусить містити цю цифру, тож клітинка визначена, навіть якщо в ній ще є інші кандидати."
+            ],
+            [
+              "Чим прихований одинак відрізняється від відкритого?",
+              "Відкритий одинак стосується клітинки: у ній залишився один кандидат. Прихований одинак стосується цифри: у групі для неї залишилася одна клітинка. Обидва ставлять цифру напевно."
+            ],
+            [
+              "Якого з них легше знайти?",
+              "Без нотаток зазвичай легше знайти прихованих одинаків, бо можна переглядати поле по одній цифрі. З повними нотатками найлегше знайти відкритих одинаків, адже клітинка з єдиним кандидатом одразу впадає в око."
+            ],
+            [
+              "Як підказка описує прихованого одинака?",
+              "Словами «Єдине місце для» цифри в цьому рядку, цьому стовпці чи цьому блоці, при цьому клітинку виділено. Натисніть підказку ще раз, щоб поставити цифру."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Заблоковані кандидати",
+          "title": "Заблоковані кандидати в судоку: вказування і захоплення",
+          "description": "Заблоковані кандидати: якщо кандидати цифри в блоці лежать в одному рядку чи стовпці, або навпаки, цифру прибирають з інших клітинок. Два реальні приклади.",
+          "h1": "Заблоковані кандидати (locked candidates)",
+          "summary": "Заблоковані кандидати: перша техніка, яка не ставить цифру, а прибирає кандидатів. Вона має дві форми. Вказування: у блоці всі кандидати цифри лежать в одному рядку чи одному стовпці, тож цифру прибирають з решти цієї лінії. Захоплення: у рядку чи стовпці всі кандидати цифри лежать в одному блоці, тож цифру прибирають з решти цього блоку. Підказка Bare Sudoku позначає хід, який відкриває ця техніка, словами «Заблоковані кандидати».",
+          "when": [
+            "Коли в головоломці рівня Складно скінчилися одинаки, це перше, що варто спробувати. Потрібні повні нотатки принаймні для досліджуваної цифри. Заблоковані кандидати трапляються часто: вони потрібні більшості головоломок рівня Складно, а головоломки рівня Експерт використовують їх між більшими фігурами."
+          ],
+          "spot": [
+            "Для вказування дивіться на кожен блок і кожну цифру, якої в ньому бракує: якщо клітинки-кандидати цієї цифри лежать в одному рядку чи одному стовпці, перевірте, чи трапляється та сама цифра як кандидат далі вздовж цієї лінії поза блоком. Для захоплення дивіться вздовж рядка чи стовпця: якщо всі кандидати цифри лежать усередині одного блоку, решту блоку можна від неї очистити. У грі торкніться клавіші цифри, щоб підсвітити всіх її кандидатів; лінія з двох-трьох підсвічених нотаток усередині одного блоку і є потрібна фігура."
+          ],
+          "examples": [
+            {
+              "h": "Вказування",
+              "steps": [
+                "У блоці {box} цифра {d} має лише такі клітинки-кандидати: {cells}. Усі вони лежать у рядку {row}.",
+                "Блоку {box} потрібна цифра {d}, тож цифра {d} рядка {row} опиниться всередині блоку {box}, хоч би в яку з цих клітинок вона потрапила.",
+                "Другої цифри {d} у рядку {row} бути не може, тож приберіть {d} з клітинок рядка {row} поза блоком: {elim}."
+              ]
+            },
+            {
+              "h": "Захоплення",
+              "steps": [
+                "У рядку {row} цифра {d} може стояти лише в {cells}, і всі вони лежать усередині блоку {box}.",
+                "Рядок {row} мусить містити {d}, тож цифру {d} блоку {box} забирає рядок {row}. Інші клітинки блоку {box} не можуть містити {d}.",
+                "Приберіть {d} з клітинок {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Прибирати цифру всередині блоку, а не поза ним, при вказуванні, або навпаки при захопленні. Виключення завжди стосуються клітинок, які лежать на лінії, але не в блоці, або в блоці, але не на лінії.",
+            "Застосовувати правило, коли кандидати займають два рядки блоку. Усі клітинки-кандидати цифри в блоці мають лежати на одній лінії.",
+            "Забувати шукати одинака, якого створює виключення. Заблоковані кандидати рідко ставлять цифру самі; вони готують одинака."
+          ],
+          "faq": [
+            [
+              "Що таке заблоковані кандидати в судоку?",
+              "Кандидати цифри, замкнені в перетині блоку й лінії. Оскільки блок, або лінія, мусить містити цифру саме в цьому перетині, цифру можна прибрати з решти лінії або з решти блоку."
+            ],
+            [
+              "Чим вказування відрізняється від захоплення?",
+              "Вказування починається з блоку: кандидати цифри в блоці вказують уздовж одного рядка чи одного стовпця, тож цифру прибирають з решти цієї лінії. Захоплення починається з рядка чи стовпця: усі кандидати лінії для цієї цифри лежать в одному блоці, тож лінія забирає цифру собі, і її прибирають з решти блоку."
+            ],
+            [
+              "Чи називають заблокованих кандидатів також виключенням на перетині?",
+              "Так. Інші назви: скорочення блок-лінія для форми захоплення і вказівні пари або вказівні трійки для форми вказування. Bare Sudoku використовує одну назву для обох."
+            ],
+            [
+              "Для якого рівня потрібні заблоковані кандидати?",
+              "Для рівня Складно. Головоломка, якій потрібні заблоковані кандидати або підмножини, але нічого складнішого, отримує рівень Складно; головоломкам рівня Експерт потрібна ще й риба або крило."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Відкриті пари й трійки",
+          "title": "Відкриті пари й трійки в судоку: як вони працюють",
+          "description": "Відкриті пари й трійки: дві або три клітинки групи з тими самими двома чи трьома кандидатами. Як їх помітити і що прибрати, на реальних прикладах.",
+          "h1": "Відкриті пари й трійки (naked pair, naked triple)",
+          "summary": "Відкрита пара складається з двох клітинок одного рядка, стовпця чи блоку, які мають рівно тих самих двох кандидатів. Ці дві цифри мусять стояти в цих двох клітинках, тож їх можна прибрати з усіх інших клітинок групи. Відкрита трійка працює так само з трьома клітинками й трьома цифрами; у кожній клітинці може бути видно дві чи всі три з них. Підказка Bare Sudoku позначає хід, що з цього випливає, словами «Пара або трійка».",
+          "when": [
+            "Коли нотатки повні, а одинаки й заблоковані кандидати вичерпано. Відкриті пари дуже часто трапляються в головоломках рівня Складно, відкриті трійки рідше. І ті, й інші варто перевіряти в кожній групі, де ще п'ять або більше порожніх клітинок."
+          ],
+          "spot": [
+            "Шукайте клітинки лише з двома кандидатами і знайдіть у тій самій групі іншу клітинку з тими самими двома. Для трійок дивіться на групи з кількома клітинками на два й три кандидати і перевірте, чи не використовують три з них разом лише три різні цифри. Клітинки з точно однаковими кандидатами легко побачити, коли нотатки записано; кнопка Заповнити нотатки в грі робить це одним дотиком."
+          ],
+          "examples": [
+            {
+              "h": "Відкрита пара",
+              "steps": [
+                "Клітинки {cellA} і {cellB} ({unit}) мають рівно тих самих двох кандидатів: {d1} і {d2}.",
+                "Одна з них мусить бути {d1}, інша {d2}. Ми не знаємо, яка саме, але обидві цифри зайняті цими двома клітинками.",
+                "Отже, у жодній іншій клітинці ({unit}) не може стояти {d1} чи {d2}. Приберіть {elim}."
+              ]
+            },
+            {
+              "h": "Відкрита трійка",
+              "steps": [
+                "Три клітинки ({unit}) беруть усіх своїх кандидатів з тих самих трьох цифр, {digits}: {cells}.",
+                "Три цифри мусять заповнити ці три клітинки в якомусь порядку. Клітинці не обов'язково показувати всіх трьох кандидатів; важливо, щоб жодна з трьох клітинок не мала кандидата поза цим набором.",
+                "Приберіть {digits} з усіх інших клітинок ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Брати дві клітинки з двома спільними кандидатами, які мають ще й третього. Для відкритої пари кожна клітинка мусить мати рівно цих двох кандидатів і нічого більше.",
+            "Прибирати цифри з самих клітинок пари. Пара зберігає своїх кандидатів; виключення стосуються інших клітинок групи.",
+            "Вимагати, щоб у кожній клітинці трійки було видно всі три цифри. Клітинка з двома з трьох підходить, якщо жодна клітинка не має кандидата поза набором."
+          ],
+          "faq": [
+            [
+              "Що таке відкрита пара (naked pair) у судоку?",
+              "Дві клітинки однієї групи, обидві з рівно тими самими двома кандидатами. Ці дві цифри замкнені в цих двох клітинках, тож їх можна прибрати з решти групи."
+            ],
+            [
+              "Що таке відкрита трійка?",
+              "Три клітинки однієї групи, кандидати яких разом становлять лише три цифри. Кожна клітинка може мати дві чи три з них. Три цифри заповнюють три клітинки, тож їх можна прибрати з інших клітинок групи."
+            ],
+            [
+              "Чи ставить відкрита пара цифру?",
+              "Сама по собі ні. Вона прибирає кандидатів, а після цього зазвичай залишається відкритий або прихований одинак. Підказка в Bare Sudoku показує цього одинака й називає техніку, яка зробила його можливим."
+            ],
+            [
+              "Чи може відкрита пара бути водночас у блоці й у рядку?",
+              "Так. Якщо дві клітинки лежать в одному рядку й одному блоці, пара виключає кандидатів в обох групах. Bare Sudoku розглядає групи по одній."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Приховані пари й трійки",
+          "title": "Приховані пари й трійки в судоку: як їх знайти",
+          "description": "Прихована пара: дві цифри, які можуть стояти лише в тих самих двох клітинках групи, тож інші кандидати цих клітинок зникають. Покроковий приклад.",
+          "h1": "Приховані пари й трійки (hidden pair, hidden triple)",
+          "summary": "Прихована пара складається з двох цифр, які в межах одного рядка, стовпця чи блоку є кандидатами в тих самих двох клітинках і більше ніде. Ці дві клітинки мусять містити ці дві цифри, тож усіх інших кандидатів у них можна прибрати. Прихована трійка працює так само з трьома цифрами, замкненими в трьох клітинках. Після виключення в клітинках видно відкриту пару чи трійку. Підказка Bare Sudoku позначає хід, що з цього випливає, словами «Пара або трійка».",
+          "when": [
+            "Коли в групі є клітинки з багатьма кандидатами, а одинаки скінчилися. Приховані пари ховаються в переповнених клітинках, тому їх варто шукати саме там, де відкритих пар не видно. Приховані трійки рідкісні; Bare Sudoku перевіряє і їх, але більшість головоломок рівня Складно розв'язується без них."
+          ],
+          "spot": [
+            "Працюйте за цифрами, а не за клітинками. У групі позначте, в які клітинки може стати кожна відсутня цифра. Якщо дві цифри мають лише по дві можливі клітинки і це ті самі дві клітинки, ви знайшли приховану пару. У грі торкніться клавіші цифри, щоб підсвітити її кандидатів; якщо дві цифри підсвічують у групі ті самі дві клітинки й більше нічого, це і є фігура."
+          ],
+          "examples": [
+            {
+              "h": "Прихована пара",
+              "steps": [
+                "Цифри {d1} і {d2} мають лише по дві можливі клітинки ({unit}), і це ті самі дві клітинки: {cells}.",
+                "Ці дві клітинки мусять містити {d1} і {d2}, тож їхні інші кандидати неможливі.",
+                "Приберіть {elim}. Тепер у двох клітинках видно відкриту пару, і це може відкрити нові ходи."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Прибирати дві цифри пари з клітинок пари. Зникають інші кандидати цих клітинок; цифри пари залишаються.",
+            "Приймати цифру, яка має в групі третю можливу клітинку. Обидві цифри мають бути обмежені рівно двома клітинками.",
+            "Шукати тільки в блоках. У рядках і стовпцях приховані пари трапляються так само часто."
+          ],
+          "faq": [
+            [
+              "Що таке прихована пара (hidden pair) у судоку?",
+              "Дві цифри, які можуть стояти лише в тих самих двох клітинках групи. Ці клітинки мусять прийняти ці цифри, тож їхніх інших кандидатів прибирають."
+            ],
+            [
+              "Чим прихована пара відрізняється від відкритої?",
+              "Відкрита пара видна одразу: дві клітинки, у яких лише ті самі два кандидати. Прихована пара закрита зайвими кандидатами у двох клітинках. Якщо прибрати цих зайвих кандидатів, прихована пара перетворюється на відкриту."
+            ],
+            [
+              "Що таке прихована трійка?",
+              "Три цифри, замкнені в трьох клітинках групи. Кожній цифрі не обов'язково траплятися в усіх трьох клітинках; важливо, щоб жодна з трьох цифр не мала кандидата поза цими клітинками."
+            ],
+            [
+              "Чи розрізняє підказка приховані й відкриті пари?",
+              "Ні. Bare Sudoku знаходить і ті, й інші та позначає хід, що з них випливає, словами «Пара або трійка». Тут вони описані на різних сторінках, бо знаходять їх по-різному."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing у судоку: як працює ця техніка",
+          "description": "X-Wing: якщо цифра має у двох рядках рівно по дві клітинки-кандидати в тих самих двох стовпцях, її прибирають з інших клітинок цих стовпців. Приклад.",
+          "h1": "X-Wing",
+          "summary": "X-Wing є фігурою з однієї цифри та чотирьох клітинок у кутах прямокутника. Якщо цифра має рівно дві клітинки-кандидати в кожному з двох рядків і ці клітинки лежать у тих самих двох стовпцях, цифра мусить зайняти два протилежні кути прямокутника. Тому її можна прибрати з усіх інших клітинок цих двох стовпців. Те саме працює, якщо поміняти рядки й стовпці місцями. У Bare Sudoku це перша техніка рівня Експерт.",
+          "when": [
+            "Коли одинаки, заблоковані кандидати й підмножини вичерпано. X-Wing є найчастішою фігурою рівня Експерт і зазвичай з'являється, коли в цифри залишилося мало кандидатів, як правило, коли вже поставлено від чотирьох до шести її копій. Потрібні повні нотатки для досліджуваної цифри."
+          ],
+          "spot": [
+            "Виберіть цифру і шукайте рядки, у яких вона має рівно дві клітинки-кандидати. Якщо два такі рядки мають ті самі два стовпці, перевірте в цих стовпцях інших кандидатів цієї цифри: саме їх і треба виключити. Потім повторіть, узявши за основу стовпці. У грі торкніться клавіші цифри: усі її кандидати підсвітяться, і прямокутник із чотирьох підсвічених нотаток легко побачити."
+          ],
+          "examples": [
+            {
+              "h": "Приклад",
+              "steps": [
+                "Цифра {d} має рівно дві клітинки-кандидати в рядку {r1} і рівно дві в рядку {r2}, і вони стоять у тих самих двох стовпцях, {c1} і {c2}: {cells}.",
+                "Рядок {r1} ставить свою цифру {d} у стовпець {c1} або {c2}, а рядок {r2} ставить свою в інший. У будь-якому разі стовпці {c1} і {c2} отримують по одній цифрі {d} з цих двох рядків.",
+                "Отже, більше ніде в стовпцях {c1} і {c2} цифри {d} бути не може. Приберіть {d} з клітинок {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Брати рядок, де цифра має три клітинки-кандидати. У кожному базовому рядку має бути рівно дві, і обидві у двох спільних стовпцях.",
+            "Прибирати цифру з рядків замість стовпців. Якщо за основу взято рядки, виключення робляться в стовпцях, і навпаки.",
+            "Забувати про дзеркальний варіант. X-Wing, побудований на стовпцях, виключає кандидатів у рядках."
+          ],
+          "faq": [
+            [
+              "Що таке X-Wing у судоку?",
+              "Цифра, яка має рівно дві клітинки-кандидати в кожному з двох рядків, у тих самих двох стовпцях. Цифра займає два протилежні кути цього прямокутника, тож її прибирають з решти двох стовпців. Рядки й стовпці можна поміняти місцями."
+            ],
+            [
+              "Чому X-Wing працює?",
+              "Кожен із двох рядків мусить поставити цифру в один із двох стовпців, і два рядки не можуть використати той самий стовпець. Отже, кожен із двох стовпців отримує свою копію цифри з цих рядків, і всі інші кандидати в цих стовпцях неможливі."
+            ],
+            [
+              "Чи належить X-Wing до риб?",
+              "Так. X-Wing є рибою розміру два, а Swordfish рибою розміру три. Bare Sudoku знаходить обидві."
+            ],
+            [
+              "На якому рівні трапляється X-Wing?",
+              "На рівні Експерт. Головоломка, якій потрібен X-Wing, Y-Wing, Swordfish або XYZ-Wing, отримує рівень Експерт."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing у судоку: як працює ця техніка",
+          "description": "Y-Wing (XY-Wing): опорна клітинка з двома кандидатами і два крила, кожне з одним із них, прибирають цифру з усіх клітинок, що бачать обидва крила. Приклад.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, який також називають XY-Wing, використовує три клітинки з двома кандидатами в кожній. Опорна клітинка має кандидатів X і Y. Одне крило бачить опорну клітинку й містить X і Z; друге крило бачить опорну клітинку й містить Y і Z. Хоч би якою виявилася опорна клітинка, одне з крил мусить бути Z, тож Z можна прибрати з кожної клітинки, яка бачить обидва крила. У Bare Sudoku це техніка рівня Експерт.",
+          "when": [
+            "Коли в головоломці кілька клітинок рівно з двома кандидатами, а риби немає. Y-Wing часто трапляється в головоломках рівня Експерт, і його знаходять, перебираючи клітинки з двома кандидатами: кожна з них може виявитися опорною клітинкою або крилом."
+          ],
+          "spot": [
+            "Випишіть клітинки рівно з двома кандидатами. Кожну по черзі вважайте опорною клітинкою з кандидатами X і Y і шукайте серед її сусідів клітинку з X та іншою цифрою Z і клітинку з Y та тією самою Z. Ці дві клітинки і є крилами. Потім знайдіть клітинки, які бачать обидва крила й містять Z. Зверніть увагу, що крилам не обов'язково бачити одне одного."
+          ],
+          "examples": [
+            {
+              "h": "Приклад",
+              "steps": [
+                "Опорна клітинка {pivot} має кандидатів {x} і {y}. Вона бачить {wingA} з кандидатами {x} і {z} та {wingB} з кандидатами {y} і {z}.",
+                "Якщо в {pivot} стоїть {x}, то {wingA} втрачає {x}, і в ній лишається {z}. Якщо в {pivot} стоїть {y}, то в {wingB} лишається {z}. У будь-якому разі в одному з двох крил стоїть {z}.",
+                "Клітинка, яка бачить обидва крила, ніколи не може містити {z}. Приберіть {z} з клітинок {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Вибирати крила, які не обидва бачать опорну клітинку. Кожне крило мусить мати з опорною клітинкою спільний рядок, стовпець чи блок.",
+            "Прибирати Z з клітинок, які бачать лише одне крило. Клітинка, з якої прибирають кандидата, мусить бачити обидва крила.",
+            "Прибирати Z з опорної клітинки. У Y-Wing опорна клітинка не містить Z; якщо містить, це XYZ-Wing з іншими правилами."
+          ],
+          "faq": [
+            [
+              "Що таке Y-Wing у судоку?",
+              "Три клітинки з двома кандидатами: опорна клітинка з X і Y, крило з X і Z, яке бачить опорну клітинку, і крило з Y і Z, яке теж її бачить. Одне з крил завжди дорівнює Z, тож Z прибирають з клітинок, які бачать обидва крила."
+            ],
+            [
+              "Y-Wing і XY-Wing означають одне й те саме?",
+              "Так. Обидві назви описують ту саму фігуру. Bare Sudoku називає її Y-Wing."
+            ],
+            [
+              "Чому одне крило мусить бути Z?",
+              "Якщо опорна клітинка дорівнює X, перше крило втрачає X і стає Z. Якщо опорна клітинка дорівнює Y, друге крило стає Z. Опорна клітинка дорівнює одному з двох, отже, одне з крил дорівнює Z."
+            ],
+            [
+              "З кількох клітинок Y-Wing прибирає кандидата?",
+              "Зазвичай з однієї чи двох: лише з клітинок, які бачать обидва крила й ще містять Z. Цього досить, щоб з'явився одинак."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish у судоку: як працює ця техніка",
+          "description": "Swordfish: цифру, замкнену в трьох стовпцях у межах трьох рядків, прибирають з інших клітинок цих стовпців. Риба розміру три на реальному прикладі.",
+          "h1": "Swordfish",
+          "summary": "Swordfish є X-Wing з трьома рядками й трьома стовпцями. Якщо цифра має не більше трьох клітинок-кандидатів у кожному з трьох рядків і всі ці клітинки потрапляють у ті самі три стовпці, то три рядки витрачають цю цифру в цих стовпцях, і її можна прибрати з усіх інших клітинок трьох стовпців. Рядки й стовпці можна поміняти місцями. Bare Sudoku шукає Swordfish після Y-Wing, у головоломках рівня Експерт.",
+          "when": [
+            "Коли X-Wing і Y-Wing нічого не знаходять. Swordfish трапляється рідше, ніж X-Wing, і потребує цифри, кандидати якої рідко розкидані по трьох лініях. Для цієї цифри потрібні повні й точні нотатки."
+          ],
+          "spot": [
+            "Виберіть цифру і шукайте рядки, де вона має дві чи три клітинки-кандидати. Якщо три такі рядки разом охоплюють лише три стовпці, перевірте в цих стовпцях інших кандидатів цієї цифри. Не кожен рядок мусить мати кандидата в кожному стовпці: Swordfish може складатися з шести, семи, восьми чи дев'яти клітинок. У грі підсвітіть цифру її клавішею і шукайте три рядки, кандидати яких вишиковуються у три стовпці."
+          ],
+          "examples": [
+            {
+              "h": "Приклад",
+              "steps": [
+                "Цифра {d} має не більше трьох клітинок-кандидатів у кожному з рядків {rows}, і всі ці клітинки потрапляють у стовпці {cols}: {cells}.",
+                "Кожен із трьох рядків мусить поставити свою цифру {d} в один із трьох стовпців, і жодні два рядки не можуть використати той самий стовпець. Отже, три стовпці отримують свої цифри {d} з цих трьох рядків.",
+                "Будь-який інший кандидат {d} у стовпцях {cols} неможливий. Приберіть {d} з клітинок {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Вимагати всі дев'ять клітинок. Swordfish, у якого в деяких рядках по два кандидати, все одно правильний, якщо три рядки охоплюють лише три стовпці.",
+            "Включати рядок із чотирма клітинками-кандидатами. У кожному базовому рядку має бути не більше трьох, і всі в межах трьох стовпців.",
+            "Виключати в базових рядках. Якщо за основу взято рядки, виключення робляться в трьох стовпцях, поза базовими рядками."
+          ],
+          "faq": [
+            [
+              "Що таке Swordfish у судоку?",
+              "Цифра, кандидати якої в трьох рядках замкнені в трьох стовпцях. Три рядки мусять поставити цифру в ці три стовпці, по одній у кожен, тож цифру прибирають з інших клітинок цих стовпців."
+            ],
+            [
+              "Чим Swordfish відрізняється від X-Wing?",
+              "Лише розміром: X-Wing використовує два рядки й два стовпці, Swordfish три й три. Міркування те саме."
+            ],
+            [
+              "Чи потрібно для Swordfish рівно дев'ять клітинок?",
+              "Ні. У кожному рядку може бути два чи три кандидати; фігура вимагає лише, щоб три рядки разом використовували не більше трьох стовпців."
+            ],
+            [
+              "Чи буває риба розміру чотири?",
+              "Так, Jellyfish. Bare Sudoku її не використовує, бо його головоломкам вона ніколи не потрібна."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing у судоку: як працює ця техніка",
+          "description": "XYZ-Wing: опорна клітинка з трьома кандидатами і два крила з однією спільною цифрою прибирають її з усіх клітинок, що бачать усі три. Реальний приклад.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing є Y-Wing, опорна клітинка якого має три кандидати. Опорна клітинка містить X, Y і Z; одне крило бачить її і містить X і Z, друге бачить її і містить Y і Z. Одна з трьох клітинок мусить бути Z, тож Z можна прибрати з кожної клітинки, яка бачить усі три. Оскільки сама опорна клітинка може виявитися Z, клітинка для виключення мусить бачити і опорну клітинку, і обидва крила, а це обмежує її блоком або лінією, спільними для цих клітинок. Це найскладніша техніка, якою користується Bare Sudoku.",
+          "when": [
+            "Лише тоді, коли все інше не допомагає. XYZ-Wing є найрідкіснішою фігурою в Bare Sudoku і трапляється тільки в головоломках рівня Експерт. Шукайте його, коли клітинка з трьома кандидатами стоїть в одному блоці з клітинкою на два кандидати, яка має дві її цифри."
+          ],
+          "spot": [
+            "Почніть із клітинок рівно з трьома кандидатами; кожна може бути опорною. Серед її сусідів шукайте дві клітинки по два кандидати, взяті з трьох кандидатів опорної клітинки, які мають рівно одну спільну цифру Z. Потім шукайте клітинки, які бачать опорну клітинку й обидва крила та містять Z. На практиці одне крило лежить у блоці опорної клітинки, а друге в її рядку чи стовпці, і виключення припадають на решту клітинок цього блоку в цьому рядку чи цьому стовпці."
+          ],
+          "examples": [
+            {
+              "h": "Приклад",
+              "steps": [
+                "Опорна клітинка {pivot} має три кандидати: {x}, {y} і {z}. Вона бачить {wingA} з {x} і {z} та {wingB} з {y} і {z}.",
+                "Якщо в {pivot} стоїть {z}, усе ясно. Якщо там {x}, то в {wingA} мусить стояти {z}. Якщо {y}, то в {wingB} мусить стояти {z}. У будь-якому разі в одній із трьох клітинок стоїть {z}.",
+                "Клітинка, яка бачить усі три, не може містити {z}. Приберіть {z} з клітинок {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Виключати з клітинок, які бачать лише два крила. На відміну від Y-Wing, опорна клітинка може бути Z, тож клітинка мусить бачити і її.",
+            "Брати крила, кандидати яких не входять повністю до трьох кандидатів опорної клітинки.",
+            "Плутати його з Y-Wing: різниця в третьому кандидаті опорної клітинки, і вона змінює те, які клітинки можна очистити."
+          ],
+          "faq": [
+            [
+              "Що таке XYZ-Wing у судоку?",
+              "Опорна клітинка з кандидатами X, Y і Z та два крила, одне з X і Z, друге з Y і Z, причому обидва бачать опорну клітинку. Одна з трьох клітинок дорівнює Z, тож Z прибирають з клітинок, які бачать усі три."
+            ],
+            [
+              "Чим XYZ-Wing відрізняється від Y-Wing?",
+              "Опорна клітинка має не два кандидати, а три, включно із Z. Тому Z може опинитися в самій опорній клітинці, і втратити Z можуть лише клітинки, які бачать опорну клітинку й обидва крила."
+            ],
+            [
+              "Як часто трапляється XYZ-Wing?",
+              "Рідко. У Bare Sudoku він може знадобитися лише головоломкам рівня Експерт, і більшості з них він не потрібен. Bare Sudoku перевіряє його останнім, після X-Wing, Y-Wing і Swordfish."
+            ],
+            [
+              "Чи існує WXYZ-Wing?",
+              "Так, з опорною клітинкою на чотири кандидати, але Bare Sudoku його не використовує. Будь-яку головоломку в грі можна розв'язати дев'ятьма техніками з цього посібника."
+            ]
+          ]
+        }
+      }
+    },
+    "bg": {
+      "learnHeading": "Научете судоку",
+      "learnText": "Нови сте в судоку или сте заседнали на трудна задача? Две ръководства обясняват правилата и всяка техника за решаване, която използват подсказките, с реални примери.",
+      "howToLink": "Как се играе судоку",
+      "techniquesLink": "Техники за решаване на судоку",
+      "labels": {
+        "howTo": "Как се играе",
+        "techniques": "Техники",
+        "play": "Играйте судоку",
+        "prev": "Предишна техника",
+        "next": "Следваща техника",
+        "all": "Всички техники",
+        "example": "Пример",
+        "steps": "Стъпка по стъпка",
+        "when": "Кога да се използва",
+        "spot": "Как да я забележите",
+        "mistakes": "Чести грешки",
+        "inGame": "В Bare Sudoku",
+        "level": "Нужна от ниво: {level}",
+        "hint": "В играта подсказката казва: {text}",
+        "legend": "Удебелените цифри са дадени, сините са поставени по време на решаването, малките цифри са кандидати. Оцветените клетки образуват фигурата, зачертаните кандидати се премахват, а огражденият кандидат е цифрата за поставяне.",
+        "notation": "Клетките се записват като r3c7: ред 3, колона 7. Редовете се броят отгоре, колоните отляво, а каретата от 1 до 9 от горния ляв ъгъл, ред по ред.",
+        "row": "ред {n}",
+        "column": "колона {n}",
+        "box": "каре {n}",
+        "elimItem": "{d} от {cell}",
+        "regions": "Ред 5, колона 5 и каре 5 в началото на задачата",
+        "firstMove": "Открит единак: в {cell} може да стои само {d}",
+        "breadcrumb": "Навигационна пътека"
+      },
+      "howTo": {
+        "title": "Как се играе судоку: правила, поле и първи ходове",
+        "description": "Научете как се играе судоку: правилата, редовете, колоните и каретата, защо всяка задача има едно решение, как да водите бележки и да направите първи ходове.",
+        "h1": "Как се играе судоку",
+        "summary": "Судоку е логическа задача върху мрежа 9×9. Попълнете всяка празна клетка с цифра от 1 до 9 така, че всеки ред, всяка колона и всяко каре 3×3 да съдържа всяка цифра точно веднъж. Някои цифри са дадени в началото; останалите извеждате с логика, клетка по клетка, и никога не се налага да гадаете. Това ръководство обяснява полето, правилата, принципа на единственото решение, бележките и проста стратегия за първите ходове. Можете да упражните всичко в [Bare Sudoku](play), което е безплатно и има подсказки, обясняващи логиката.",
+        "sections": [
+          {
+            "h": "Какви са правилата на судоку?",
+            "p": [
+              "Правилата са само три и всъщност са едно и също правило, погледнато от три посоки: всеки ред трябва да съдържа цифрите от 1 до 9, всяка колона трябва да съдържа цифрите от 1 до 9 и всяко каре 3×3 трябва да съдържа цифрите от 1 до 9. Затова една цифра никога не може да се появи два пъти в един и същ ред, колона или каре.",
+              "Дадените цифри, отпечатани с удебелен шрифт, са фиксирани. Вашата работа е да попълните празните клетки. Няма аритметика и няма подредба: цифрите са просто девет различни символа. Бихте могли да играете с букви или фигури и нищо нямаше да се промени."
+            ]
+          },
+          {
+            "h": "Как е устроено полето?",
+            "p": [
+              "Полето има 81 клетки в 9 реда и 9 колони. Дебели линии го делят на девет карета 3×3. Всяка клетка принадлежи точно на един ред, една колона и едно каре и тези три области са нейните групи. Другите 20 клетки, които споделят група с дадена клетка, се наричат нейни съседи; цифра, поставена в клетка, изключва същата цифра във всичките 20 съседа.",
+              "Клетките се записват като r3c7: ред 3, колона 7. Редовете се броят отгоре, колоните отляво, а каретата от 1 до 9 от горния ляв ъгъл, ред по ред. Този запис се използва във всяко ръководство за техника и си струва да го научите: r5c5 е центърът на полето."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Защо всяко судоку има точно едно решение?",
+            "p": [
+              "Правилното судоку има едно решение и точно затова логиката работи. Щом можете да покажете, че една цифра не може да отиде никъде другаде в група, тя трябва да отиде в оставащата клетка, защото решението съществува и е единствено. Ако задачата имаше две решения, никакви разсъждения не биха могли да ги различат и в някакъв момент щеше да се наложи да гадаете.",
+              "Bare Sudoku създава всяка задача на вашето устройство и проверява, че тя има точно едно решение и че логическият решател може да я довърши с техниките на избраното ниво. Така че, ако сте заседнали, винаги има следваща стъпка и подсказката ще ви я покаже."
+            ]
+          },
+          {
+            "h": "Как да започнете судоку?",
+            "p": [
+              "Започнете от най-ограниченото. Тази последователност работи на всяко ниво:"
+            ],
+            "list": [
+              "Изберете цифра, която вече се среща много пъти, да речем шест или седем, и намерете каретата, в които още липсва. Често в каре за нея остава само една клетка: това е [скрит единак](hidden-single).",
+              "Търсете претъпкани клетки. Клетка, чийто ред, колона и каре заедно съдържат осем различни цифри, има само един кандидат: това е [открит единак](naked-single). Клетките в почти пълни редове и карета са най-доброто място за търсене.",
+              "Всяка поставена цифра премахва кандидат от 20 съседа, затова веднага проверете тези съседи. Единаците често идват на вериги.",
+              "Когато лесните ходове свършат, запишете бележки: кандидатите за всяка празна клетка. После търсете цифра, която в рамките на каре е ограничена до една линия ([заключени кандидати](locked-candidates)), или две клетки с едни и същи два кандидата ([открита двойка](naked-pairs)).",
+              "След всяко изключване се връщайте към единаците. Дори задачите на ниво Експерт се решават предимно с единаци; напредналата техника само отключва следващия."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Какво са бележките и кога да ги използвате?",
+            "p": [
+              "Бележките, наричани още отметки с молив или кандидати, са малките цифри, които пишете в празна клетка, за да отбележите кои цифри все още са възможни там. В лесните задачи рядко са нужни; от ниво Трудно нагоре са незаменими, защото техники като двойките, X-Wing и Y-Wing работят с кандидати, а не с поставени цифри.",
+              "Поддържайте бележките точни: когато поставите цифра, премахнете я от бележките на всичките 20 съседа. В Bare Sudoku това става автоматично, а Попълни бележките записва всеки кандидат във всяка празна клетка с едно докосване, така че можете да започнете от пълен и верен набор кандидати. Бележката е факт, а не догадка: тя означава, че засега нищо не изключва тази цифра."
+            ]
+          },
+          {
+            "h": "Какво да правите, когато сте заседнали?",
+            "p": [
+              "Първо проверете отново основното: всеки почти пълен ред, колона и каре е източник на единаци. После се уверете, че бележките са пълни, защото липсващ кандидат скрива фигури, а остарял създава фалшиви. След това минете през [техниките](techniques) по ред на трудност: заключени кандидати, двойки и тройки, X-Wing, Y-Wing, Swordfish и XYZ-Wing. Всяка има своя страница с реален пример.",
+              "Ако нищо не помага, вземете подсказка. В Bare Sudoku подсказката първо проверява дали някоя поставена цифра не е грешна, после намира следващата клетка, която може да се попълни с логика, и назовава техниката, така че научавате нещо дори когато я използвате. Натиснете подсказката отново, за да поставите цифрата."
+            ]
+          },
+          {
+            "h": "Как се въвеждат цифри в Bare Sudoku?",
+            "p": [
+              "Докоснете клетка, после цифра. Или първо докоснете цифра: тя се заключва и всяка клетка, която докоснете, я получава; това е най-бързият начин да поставите шестото, седмото и осмото копие на цифра. Докоснете цифрата отново, за да я освободите. Бутонът Бележки превключва към отметки с молив, Изтрий изчиства клетка, Отмени връща всеки ход, а грешките се отбелязват в червено, освен ако не го изключите от менюто.",
+              "На клавиатура се движете със стрелките, въвеждайте цифри с клавишите от 1 до 9, изтривайте с Backspace; N е за бележки, U за отмяна, H за подсказка, F за попълване на бележките, а Escape отваря менюто. Играта се запазва сама, работи офлайн и няма реклами и профил."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Налага ли се някога да гадаете в судоку?",
+            "Не и в правилна задача. Всяка задача в Bare Sudoku има точно едно решение и е проверено, че може да се реши само с логика, с техниките на нейното ниво. Ако ви се струва, че трябва да гадаете, в бележките ви липсва кандидат или някоя техника чака да бъде открита."
+          ],
+          [
+            "Може ли цифра да се появи два пъти в ред, колона или каре?",
+            "Не. Това е цялото правило: всеки от деветте реда, деветте колони и деветте карета съдържа всяка цифра от 1 до 9 точно веднъж. Ако две еднакви цифри са в една група, поне едната от тях е грешна."
+          ],
+          [
+            "Каква е разликата между Лесно, Средно, Трудно и Експерт?",
+            "Нивото се определя от техниките, които задачата изисква. Лесно и Средно се решават само с единаци, а Лесно започва с поне 38 дадени цифри. Трудно изисква заключени кандидати или двойки и тройки. Експерт изисква X-Wing, Y-Wing, Swordfish или XYZ-Wing."
+          ],
+          [
+            "По-добре ли е да попълвате бележки във всяка клетка или само в някои?",
+            "При задачи на ниво Трудно и Експерт попълнете всички: фигури като двойките, X-Wing и Y-Wing се виждат само когато всеки кандидат е записан. На нива Лесно и Средно бележките не са задължителни и повечето играчи просто търсят единаци."
+          ],
+          [
+            "Колко време отнема едно судоку?",
+            "Лесна задача отнема няколко минути; задачите на ниво Експерт може да отнемат двадесет минути или повече, в зависимост от това колко бързо забележите напредналата фигура. Bare Sudoku показва таймер, спира го, докато менюто е отворено, и не води класация, така че играйте със свое темпо."
+          ],
+          [
+            "Нужна ли е аритметика за судоку?",
+            "Не. Цифрите са само етикети; не се събира и не се брои нищо. Всякакви девет символа биха свършили работа и затова судоку е логическа задача, а не числова."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Техники за решаване на судоку, обяснени с примери",
+        "description": "Всички девет техники за решаване на судоку, от открит единак до Swordfish и XYZ-Wing, в реда, в който ги използват подсказките на Bare Sudoku, с реални примери.",
+        "h1": "Техники за решаване на судоку",
+        "intro": [
+          "Всяко судоку може да се реши с малък набор логически техники. Този списък съдържа деветте техники, които използват решателят на Bare Sudoku и неговите подсказки, в реда, в който решателят ги опитва: първо единаците, после изключванията в рамките на една група, после фигурите, които обхващат няколко реда и колони. Всяка техника има своя страница с определение, как да я забележите, реален пример от генерирана задача и честите грешки.",
+          "Нивото на задачата се определя от най-трудната техника, която тя изисква. Задачите на ниво Лесно и Средно изискват само единаци, на ниво Трудно изискват заключени кандидати или двойки и тройки, а на ниво Експерт поне една риба или едно крило. Каквото и да е нивото, единаците вършат повечето работа; напредналата техника премахва един или два кандидата и единаците продължават оттам."
+        ],
+        "faq": [
+          [
+            "В какъв ред да опитвам техниките за судоку?",
+            "Първо най-простите: открити единаци, скрити единаци, заключени кандидати, открити двойки и тройки, скрити двойки и тройки, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ги опитва точно в този ред и подсказката винаги назовава най-простата техника, която води напред."
+          ],
+          [
+            "Нужни ли са всички тези техники, за да се решава судоку?",
+            "За задачи на ниво Лесно и Средно единаците стигат. На ниво Трудно се добавят заключени кандидати и подмножества. На ниво Експерт е нужна поне една риба или едно крило, но обикновено само веднъж или два пъти на задача."
+          ],
+          [
+            "Има ли по-трудни техники от XYZ-Wing?",
+            "Да, например вериги, тестове за единственост и мрежи с форсиране. Bare Sudoku не създава задачи, които ги изискват, така че всяка задача в играта може да се реши с деветте техники от тази страница."
+          ],
+          [
+            "Какво е кандидат?",
+            "Цифра, която още може да отиде в празна клетка, защото нищо в нейния ред, колона или каре засега не я изключва. Бележките в играта са кандидати. Всяка техника отвъд единаците разсъждава върху кандидатите, затова ги поддържайте пълни и точни."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Открит единак",
+          "title": "Открит единак в судоку: клетка с един кандидат",
+          "description": "Открит единак (naked single) е празна клетка, в която пасва само една цифра. Научете как бързо да ги намирате, с реален пример стъпка по стъпка и чести грешки.",
+          "h1": "Открит единак (naked single)",
+          "summary": "Открит единак е празна клетка, която има точно един кандидат: другите осем цифри вече са в нейния ред, колона или каре. Оставащата цифра трябва да отиде там. Това е най-простата техника в судоку, тази, която използвате най-често, и тази, за която подсказката на Bare Sudoku съобщава със „Само един кандидат тук“.",
+          "when": [
+            "Винаги. Откритите единаци се появяват от първия до последния ход, на всяко ниво. В задачите на ниво Лесно и Средно те заедно със скритите единаци са единствената техника, която ви трябва. В по-трудните задачи всяко изключване от напреднала техника обикновено оставя след себе си открит единак, затова проверявайте за тях след всяка стъпка."
+          ],
+          "spot": [
+            "Гледайте клетки с много попълнени съседи: клетка в ред, който вече има седем цифри, или клетка, чиито ред, колона и каре заедно покриват осем различни цифри. Без бележки пребройте цифрите, които виждате от клетката. С бележки откритият единак е просто клетка, която показва един кандидат, и затова Попълни бележките ги прави лесни за намиране."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Погледнете {cell}. Клетката е празна, затова изброете всяка цифра, която вече е поставена в нейния ред, колона и каре.",
+                "Ред {row} съдържа {rowDigits}. Колона {col} съдържа {colDigits}. Каре {box} съдържа {boxDigits}.",
+                "Заедно те изключват всяка цифра освен {d}, така че {d} е единственият оставащ кандидат в {cell}.",
+                "Запишете {d} в {cell}. После проверете дали новата цифра не създава още един единак в същия ред, колона или каре."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да броите само реда или само карето. Осемте изключени цифри обикновено идват от трите групи заедно.",
+            "Да забравите, че цифра, която току-що сте поставили, също изключва кандидати от своите 20 съседа; нови открити единаци се появяват веднага след всяко поставяне.",
+            "Да бъркате открит единак със скрит: при открития единак в клетката е останал един кандидат, при скрития за цифрата е останала една клетка в групата."
+          ],
+          "faq": [
+            [
+              "Какво е открит единак (naked single) в судоку?",
+              "Празна клетка с точно един кандидат. В нейния ред, колона и каре вече има осем различни цифри, така че деветата е единствената, която пасва."
+            ],
+            [
+              "Защо се нарича открит?",
+              "Защото единственият кандидат се вижда направо в клетката, щом бележките са записани; нищо не го скрива. Скритият единак, напротив, стои сред други кандидати и се намира, като гледате цифрата, а не клетката."
+            ],
+            [
+              "Може ли задача да се реши само с открити единаци?",
+              "Много задачи на ниво Лесно могат, но повечето изискват и скрити единаци. Bare Sudoku оценява задачите на ниво Лесно и Средно като решими с единаци от двата вида; задачите на ниво Трудно и Експерт изискват поне още една техника."
+            ],
+            [
+              "Показва ли подсказката откритите единаци?",
+              "Да. Когато следващото поставяне е открит единак, подсказката избира клетката и казва „Само един кандидат тук“ заедно с цифрата. Натиснете подсказката отново, за да я поставите."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Скрит единак",
+          "title": "Скрит единак в судоку: единственото място за цифра",
+          "description": "Скрит единак (hidden single) е единствената клетка в ред, колона или каре, където дадена цифра още може да отиде. Научете се да ги откривате цифра по цифра.",
+          "h1": "Скрит единак (hidden single)",
+          "summary": "Скрит единак е цифра, за която в даден ред, колона или каре е останала само една възможна клетка, дори ако тази клетка показва и други кандидати. Тъй като групата трябва да съдържа цифрата, тя отива там. Подсказката на Bare Sudoku го съобщава като „Единствено място за 5 в този ред“, съответно в тази колона или това каре.",
+          "when": [
+            "Винаги когато една цифра е напреднала: щом цифрата се появява пет или шест пъти, оставащите карета са силно ограничени и следващият ход често е скрит единак. Скритите единаци са основната техника при задачите на ниво Лесно и Средно и остават работният кон на всяко ниво."
+          ],
+          "spot": [
+            "Преглеждайте по една цифра. Вземете цифра, намерете каре, което не я съдържа, и зачеркнете всяка клетка от това каре, която е в един ред или една колона с вече поставено копие на цифрата. Ако остане една клетка, намерили сте скрит единак. Същият преглед работи за редове и колони. В играта докоснете поставена цифра: всяко нейно копие се оцветява и свободните клетки изпъкват."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Каре {box} още не съдържа {d}, така че една от празните му клетки трябва да я получи. Празните клетки са {empties}.",
+                "Във всяка от тях освен {cell} цифрата {d} е блокирана от вече поставена {d} в същия ред или колона, така че там {d} не е кандидат.",
+                "Така {cell} остава единственото място за {d} в каре {box}. Запишете {d} там, дори ако {cell} още показва други кандидати."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да поставите цифрата в клетка, която само вероятно е правилната: проверете всяка друга празна клетка в групата, не само очевидните.",
+            "Да пропуснете скрит единак, защото клетката показва няколко кандидата. Другите кандидати нямат значение; важното е, че цифрата няма друго място в групата.",
+            "Да преглеждате само карета. Редовете и колоните дават скрити единаци също толкова често, особено към края."
+          ],
+          "faq": [
+            [
+              "Какво е скрит единак (hidden single) в судоку?",
+              "Цифра, която може да отиде само в една клетка от ред, колона или каре. Групата трябва да съдържа цифрата, така че клетката е определена, дори ако още има други кандидати."
+            ],
+            [
+              "Каква е разликата между скрит и открит единак?",
+              "Откритият единак е свързан с клетка: остава един кандидат. Скритият единак е свързан с цифра: остава една клетка в групата. И двата поставят цифра със сигурност."
+            ],
+            [
+              "Кой се намира по-лесно?",
+              "Без бележки скритите единаци обикновено са по-лесни, защото можете да преглеждате полето по една цифра. С пълни бележки най-лесни са откритите единаци, тъй като клетка с един кандидат веднага се откроява."
+            ],
+            [
+              "Как подсказката описва скрит единак?",
+              "Като „Единствено място за“ цифрата в този ред, тази колона или това каре, с избрана клетка. Натиснете подсказката отново, за да я поставите."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Заключени кандидати",
+          "title": "Заключени кандидати в судоку: посочване и присвояване",
+          "description": "Заключени кандидати: когато кандидатите на цифра в каре са в един ред или колона, или обратното, цифрата се премахва от другите клетки. Два реални примера.",
+          "h1": "Заключени кандидати (locked candidates)",
+          "summary": "Заключените кандидати са първата техника, която премахва кандидати, вместо да поставя цифра. Тя има две форми. Посочване: в едно каре всички кандидати за дадена цифра са в един ред или една колона, така че цифрата се премахва от останалата част на тази линия. Присвояване: в ред или колона всички кандидати за дадена цифра са в едно каре, така че цифрата се премахва от останалата част на това каре. Подсказката на Bare Sudoku обозначава поставянето, което техниката отключва, със „Заключени кандидати“.",
+          "when": [
+            "Когато единаците свършат в задача на ниво Трудно, това е първото, което да опитате. Нужни са пълни бележки поне за цифрата, която изследвате. Заключените кандидати са чести: повечето задачи на ниво Трудно ги изискват, а задачите на ниво Експерт ги използват между по-големите фигури."
+          ],
+          "spot": [
+            "За посочване гледайте всяко каре и всяка цифра, която липсва в него: ако клетките кандидати за тази цифра са в един ред или една колона, проверете дали същата цифра се среща като кандидат по-нататък по тази линия извън карето. За присвояване гледайте по ред или колона: ако всички кандидати за дадена цифра са вътре в едно каре, останалата част от карето може да се изчисти. В играта докоснете клавиша на цифра, за да оцветите всички нейни кандидати; линия от две или три оцветени бележки в едно каре е търсената фигура."
+          ],
+          "examples": [
+            {
+              "h": "Посочване",
+              "steps": [
+                "В каре {box} цифрата {d} има само тези клетки кандидати: {cells}. Всички те са в ред {row}.",
+                "Каре {box} трябва да съдържа {d}, така че цифрата {d} на ред {row} е вътре в каре {box}, в която и от тези клетки да попадне.",
+                "Ред {row} не може да съдържа втора цифра {d}, затова премахнете {d} от клетките на ред {row} извън карето: {elim}."
+              ]
+            },
+            {
+              "h": "Присвояване",
+              "steps": [
+                "В ред {row} цифрата {d} може да отиде само в {cells} и всички те са в каре {box}.",
+                "Ред {row} трябва да съдържа {d}, така че цифрата {d} на каре {box} е присвоена от ред {row}. Другите клетки на каре {box} не могат да съдържат {d}.",
+                "Премахнете {d} от {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да премахнете цифрата вътре в карето вместо извън него при посочване, или обратното при присвояване. Изключванията винаги са в клетките, които са на линията, но не в карето, или в карето, но не на линията.",
+            "Да приложите правилото, когато кандидатите са в два реда на карето. Всички клетки кандидати за цифрата в карето трябва да са на една линия.",
+            "Да забравите да потърсите единака, който изключването създава. Заключените кандидати рядко поставят цифра сами; те подготвят единак."
+          ],
+          "faq": [
+            [
+              "Какво са заключените кандидати в судоку?",
+              "Кандидати за цифра, затворени в пресечната област на каре и линия. Тъй като карето, или линията, трябва да съдържа цифрата именно в тази пресечна област, цифрата може да се премахне от останалата част на линията или от останалата част на карето."
+            ],
+            [
+              "Каква е разликата между посочване и присвояване?",
+              "Посочването започва от каре: кандидатите на цифрата в карето сочат по един ред или една колона, така че цифрата се премахва от останалата част на тази линия. Присвояването започва от ред или колона: кандидатите на линията за цифрата са всички в едно каре, така че линията си присвоява цифрата и тя се премахва от останалата част на карето."
+            ],
+            [
+              "Наричат ли се заключените кандидати и изключване при пресичане?",
+              "Да. Други имена са редукция каре-линия за формата с присвояване и посочващи двойки или посочващи тройки за формата с посочване. Bare Sudoku използва едно име и за двете."
+            ],
+            [
+              "Кое ниво изисква заключени кандидати?",
+              "Трудно. Задача, която изисква заключени кандидати или подмножества, но нищо по-трудно, получава ниво Трудно; задачите на ниво Експерт изискват и риба или крило."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Открити двойки и тройки",
+          "title": "Открити двойки и тройки в судоку: как работят",
+          "description": "Открити двойки и тройки: две или три клетки в група с едни и същи два или три кандидата. Научете как да ги забележите и какво да премахнете, с реални примери.",
+          "h1": "Открити двойки и тройки (naked pair, naked triple)",
+          "summary": "Открита двойка се нарича двойка клетки в един и същ ред, колона или каре, които имат точно едни и същи два кандидата. Двете цифри трябва да отидат в тези две клетки, така че могат да се премахнат от всяка друга клетка на групата. Открита тройка е същата идея с три клетки и три цифри; всяка клетка може да показва две или и трите от тях. Подсказката на Bare Sudoku обозначава поставянето, което следва, с „Двойка или тройка“.",
+          "when": [
+            "Когато бележките са пълни, а единаците и заключените кандидати са изчерпани. Откритите двойки са много чести в задачите на ниво Трудно, откритите тройки по-рядко. Струва си да ги търсите във всяка група, която още има пет или повече празни клетки."
+          ],
+          "spot": [
+            "Търсете клетки само с два кандидата и намерете друга клетка в същата група със същите два. За тройки гледайте групи с няколко клетки с два и три кандидата и проверете дали три от тях заедно използват само три различни цифри. Клетки с точно еднакви кандидати се виждат лесно, когато бележките са записани; Попълни бележките в играта прави това с едно докосване."
+          ],
+          "examples": [
+            {
+              "h": "Открита двойка",
+              "steps": [
+                "{cellA} и {cellB} в {unit} имат точно едни и същи два кандидата: {d1} и {d2}.",
+                "Едната трябва да е {d1}, а другата {d2}. Не знаем коя коя е, но и двете цифри са заети от тези две клетки.",
+                "Затова никоя друга клетка в {unit} не може да съдържа {d1} или {d2}. Премахнете {elim}."
+              ]
+            },
+            {
+              "h": "Открита тройка",
+              "steps": [
+                "Три клетки в {unit} вземат всичките си кандидати от едни и същи три цифри, {digits}: {cells}.",
+                "Трите цифри трябва да запълнят тези три клетки в някакъв ред. Не е нужно клетката да показва и трите кандидата; важното е никоя от трите клетки да няма кандидат извън набора.",
+                "Премахнете {digits} от всяка друга клетка в {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да вземете две клетки, които имат два общи кандидата, но и трети. За открита двойка всяка клетка трябва да има точно тези два кандидата и нищо друго.",
+            "Да премахнете цифрите от самите клетки на двойката. Двойката запазва кандидатите си; изключванията са в другите клетки на групата.",
+            "Да изисквате всяка клетка на тройката да показва и трите цифри. Клетка с две от трите е наред, стига никоя клетка да няма кандидат извън набора."
+          ],
+          "faq": [
+            [
+              "Какво е открита двойка (naked pair) в судоку?",
+              "Две клетки в една група, които имат точно едни и същи два кандидата. Тези две цифри са заключени в тези две клетки, така че могат да се премахнат от останалата част на групата."
+            ],
+            [
+              "Какво е открита тройка?",
+              "Три клетки в една група, чиито кандидати заедно са само три цифри. Всяка клетка може да има две или три от тях. Трите цифри запълват трите клетки, така че могат да се премахнат от другите клетки на групата."
+            ],
+            [
+              "Поставя ли откритата двойка цифра?",
+              "Не сама по себе си. Тя премахва кандидати и премахването обикновено оставя открит или скрит единак. Подсказката в Bare Sudoku показва този единак и назовава техниката, която го е направила възможен."
+            ],
+            [
+              "Може ли открита двойка да е едновременно в каре и в ред?",
+              "Да. Ако двете клетки споделят ред и каре, двойката изключва и в двете групи. Bare Sudoku обработва групите една по една."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Скрити двойки и тройки",
+          "title": "Скрити двойки и тройки в судоку: как да ги откриете",
+          "description": "Скрита двойка са две цифри, които могат да отидат само в едни и същи две клетки на група, така че другите кандидати там отпадат. Научете се да ги откривате.",
+          "h1": "Скрити двойки и тройки (hidden pair, hidden triple)",
+          "summary": "Скрита двойка се наричат две цифри, които в рамките на един ред, колона или каре са кандидати в едни и същи две клетки и никъде другаде. Тези две клетки трябва да съдържат тези две цифри, така че всеки друг кандидат в тях може да се премахне. Скритата тройка работи по същия начин с три цифри, затворени в три клетки. След премахването клетките показват открита двойка или тройка. Подсказката на Bare Sudoku обозначава поставянето, което следва, с „Двойка или тройка“.",
+          "when": [
+            "Когато в група има клетки с много кандидати, а единаците са свършили. Скритите двойки се крият в пълните с кандидати клетки, затова си струва да ги търсите точно там, където открити двойки не се виждат. Скритите тройки са редки; Bare Sudoku проверява и за тях, но повечето задачи на ниво Трудно се решават без тях."
+          ],
+          "spot": [
+            "Работете по цифри, а не по клетки. В една група отбележете клетките, където може да отиде всяка липсваща цифра. Ако две цифри имат само по две възможни клетки и това са същите две клетки, намерили сте скрита двойка. В играта докоснете клавиша на цифра, за да оцветите кандидатите ѝ; ако две цифри оцветяват едни и същи две клетки в група и нищо друго в нея, това е фигурата."
+          ],
+          "examples": [
+            {
+              "h": "Скрита двойка",
+              "steps": [
+                "В {unit} цифрите {d1} и {d2} имат само по две възможни клетки и това са същите две: {cells}.",
+                "Тези две клетки трябва да съдържат {d1} и {d2}, така че другите им кандидати са невъзможни.",
+                "Премахнете {elim}. Сега двете клетки показват открита двойка, което може да отключи още ходове."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да премахнете двете цифри на двойката от клетките ѝ. Премахват се другите кандидати на тези клетки; цифрите на двойката остават.",
+            "Да приемете цифра, която има трета възможна клетка в групата. И двете цифри трябва да са ограничени точно до двете клетки.",
+            "Да търсите само в карета. Скритите двойки се срещат също толкова често в редове и колони."
+          ],
+          "faq": [
+            [
+              "Какво е скрита двойка (hidden pair) в судоку?",
+              "Две цифри, които могат да отидат само в едни и същи две клетки на група. Тези клетки трябва да приемат тези цифри, така че другите им кандидати се премахват."
+            ],
+            [
+              "С какво скритата двойка се различава от откритата?",
+              "Откритата двойка се вижда: две клетки, които показват само едни и същи два кандидата. Скритата двойка е покрита от допълнителни кандидати в двете клетки. Премахването на тези допълнителни кандидати превръща скритата двойка в открита."
+            ],
+            [
+              "Какво е скрита тройка?",
+              "Три цифри, затворени в три клетки на група. Не е нужно всяка цифра да се появява и в трите клетки; важното е никоя от трите цифри да няма кандидат извън тези клетки."
+            ],
+            [
+              "Разграничава ли подсказката скрити и открити двойки?",
+              "Не. Bare Sudoku намира и двете и обозначава поставянето, което следва, с „Двойка или тройка“. Страниците тук ги разделят, защото се откриват по различен начин."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing в судоку: как работи техниката",
+          "description": "X-Wing: цифра с точно две клетки кандидати в два реда, подредени в едни и същи две колони, се премахва от останалата част на тези колони. Реален пример.",
+          "h1": "X-Wing",
+          "summary": "X-Wing е фигура от една цифра и четири клетки в ъглите на правоъгълник. Ако цифрата има точно две клетки кандидати във всеки от два реда и тези клетки са в едни и същи две колони, цифрата трябва да заеме два срещуположни ъгъла на правоъгълника. Затова може да се премахне от всяка друга клетка на тези две колони. Същото важи, ако редовете и колоните се разменят. Това е първата техника от ниво Експерт в Bare Sudoku.",
+          "when": [
+            "Когато единаците, заключените кандидати и подмножествата са изчерпани. X-Wing е най-честата фигура на ниво Експерт и често се появява, когато на цифрата са ѝ останали малко кандидати, обикновено когато вече са поставени от четири до шест нейни копия. Нужни са пълни бележки за цифрата, която изследвате."
+          ],
+          "spot": [
+            "Изберете цифра и търсете редове, в които тя има точно две клетки кандидати. Ако два такива реда споделят едни и същи две колони, проверете тези колони за други кандидати на цифрата: това са изключванията. После повторете с колоните като основа. В играта докоснете клавиша на цифрата: всички нейни кандидати се оцветяват и правоъгълник от четири оцветени бележки се вижда лесно."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Цифрата {d} има точно две клетки кандидати в ред {r1} и точно две в ред {r2}, и те са подредени в едни и същи две колони, {c1} и {c2}: {cells}.",
+                "Ред {r1} поставя своята цифра {d} в колона {c1} или {c2}, а ред {r2} поставя своята в другата. Така или иначе колони {c1} и {c2} получават по една цифра {d} от тези два реда.",
+                "Затова {d} не може да се появи никъде другаде в колони {c1} и {c2}. Премахнете {d} от {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да използвате ред, който има три клетки кандидати за цифрата. Всеки базов ред трябва да има точно две и двете да са в общите две колони.",
+            "Да премахнете цифрата от редовете вместо от колоните. Когато основата са редове, изключванията са в колоните, и обратното.",
+            "Да забравите обърнатия вариант. X-Wing, построен върху колони, изключва в редове."
+          ],
+          "faq": [
+            [
+              "Какво е X-Wing в судоку?",
+              "Цифра, която има точно две клетки кандидати във всеки от два реда, в едни и същи две колони. Цифрата заема два срещуположни ъгъла на този правоъгълник, така че се премахва от останалата част на двете колони. Редовете и колоните могат да се разменят."
+            ],
+            [
+              "Защо X-Wing работи?",
+              "Всеки от двата реда трябва да постави цифрата в една от двете колони, а двата реда не могат да използват една и съща колона. Така всяка от двете колони получава своето копие на цифрата от тези редове и всеки друг кандидат в тези колони е невъзможен."
+            ],
+            [
+              "X-Wing риба ли е?",
+              "Да. X-Wing е рибата с размер две; Swordfish е рибата с размер три. Bare Sudoku намира и двете."
+            ],
+            [
+              "На кое ниво има X-Wing?",
+              "Експерт. Задача, която изисква X-Wing, Y-Wing, Swordfish или XYZ-Wing, получава ниво Експерт."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing в судоку: как работи техниката",
+          "description": "Y-Wing (XY-Wing): опорна клетка с два кандидата и две крила, всяко с един от тях, изключват цифра от всяка клетка, която вижда и двете крила. Пример.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, наричан още XY-Wing, използва три клетки с по два кандидата. Опорната клетка има кандидати X и Y. Едното крило вижда опорната клетка и има X и Z; другото крило вижда опорната клетка и има Y и Z. Каквато и да е опорната клетка, едното от крилата трябва да е Z, така че Z може да се премахне от всяка клетка, която вижда и двете крила. В Bare Sudoku това е техника от ниво Експерт.",
+          "when": [
+            "Когато задачата има няколко клетки с точно два кандидата и няма риба. Y-Wing е чест в задачите на ниво Експерт и се открива, като следите клетките с два кандидата: всяка от тях е възможна опорна клетка или крило."
+          ],
+          "spot": [
+            "Изброете клетките с точно два кандидата. Приемете всяка от тях за опорна клетка с кандидати X и Y и търсете сред съседите ѝ клетка с X и друга цифра Z и клетка с Y и същото Z. Тези две клетки са крилата. После намерете клетките, които виждат и двете крила и съдържат Z. Имайте предвид, че не е нужно крилата да се виждат помежду си."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Опорната клетка {pivot} има кандидати {x} и {y}. Тя вижда {wingA}, която има {x} и {z}, и {wingB}, която има {y} и {z}.",
+                "Ако {pivot} е {x}, тогава {wingA} губи {x} и става {z}. Ако {pivot} е {y}, тогава {wingB} става {z}. Във всеки случай едното от двете крила е {z}.",
+                "Клетка, която вижда и двете крила, никога не може да е {z}. Премахнете {z} от {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да изберете крила, които не виждат и двете опорната клетка. Всяко крило трябва да споделя ред, колона или каре с опорната клетка.",
+            "Да премахнете Z от клетки, които виждат само едното крило. Клетката, от която се изключва, трябва да вижда и двете крила.",
+            "Да премахнете Z от опорната клетка. При Y-Wing опорната клетка не съдържа Z; ако съдържа, фигурата е XYZ-Wing с различни правила."
+          ],
+          "faq": [
+            [
+              "Какво е Y-Wing в судоку?",
+              "Три клетки с по два кандидата: опорна клетка с X и Y, крило с X и Z, което вижда опорната клетка, и крило с Y и Z, което също я вижда. Едното крило винаги е Z, така че Z се премахва от клетките, които виждат и двете крила."
+            ],
+            [
+              "Y-Wing и XY-Wing едно и също ли са?",
+              "Да. Двете имена описват една и съща фигура. Bare Sudoku я нарича Y-Wing."
+            ],
+            [
+              "Защо едното крило трябва да е Z?",
+              "Ако опорната клетка е X, първото крило губи X и става Z. Ако опорната клетка е Y, второто крило става Z. Опорната клетка е едното от двете, така че едно крило е Z."
+            ],
+            [
+              "От колко клетки изключва Y-Wing?",
+              "Обикновено от една или две: само от клетките, които виждат и двете крила и още съдържат Z. Това стига, за да се появи единак."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish в судоку: как работи техниката",
+          "description": "Swordfish: цифра, затворена в три колони през три реда, се премахва от останалата част на тези колони. Рибата с размер три, обяснена с реален пример.",
+          "h1": "Swordfish",
+          "summary": "Swordfish е X-Wing с три реда и три колони. Ако цифрата има най-много три клетки кандидати във всеки от три реда и всички тези клетки попадат в едни и същи три колони, трите реда изчерпват цифрата в тези колони и тя може да се премахне от всяка друга клетка на трите колони. Редовете и колоните могат да се разменят. Bare Sudoku търси Swordfish след Y-Wing, в задачите на ниво Експерт.",
+          "when": [
+            "Когато X-Wing и Y-Wing не намират нищо. Swordfish е по-рядък от X-Wing и изисква цифра, чиито кандидати са пръснати нарядко по три линии. Нужни са пълни и точни бележки за тази цифра."
+          ],
+          "spot": [
+            "Изберете цифра и търсете редове с две или три клетки кандидати за нея. Ако три такива реда заедно обхващат само три колони, проверете тези колони за още кандидати на цифрата. Не е нужно всеки ред да има кандидат във всяка колона: Swordfish може да има шест, седем, осем или девет клетки. В играта оцветете цифрата с нейния клавиш и търсете три реда, чиито кандидати се подреждат в три колони."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Цифрата {d} има най-много три клетки кандидати във всеки от редове {rows} и всички тези клетки попадат в колони {cols}: {cells}.",
+                "Всеки от трите реда трябва да постави своята цифра {d} в една от трите колони и никои два реда не могат да използват една и съща колона. Така трите колони получават своите цифри {d} от тези три реда.",
+                "Всеки друг кандидат {d} в колони {cols} е невъзможен. Премахнете {d} от {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да изисквате и деветте клетки. Swordfish с по два кандидата в някои редове е валиден, стига трите реда да обхващат само три колони.",
+            "Да включите ред с четири клетки кандидати. Всеки базов ред трябва да има най-много три, всичките в рамките на трите колони.",
+            "Да изключвате в базовите редове. Когато основата са редове, изключванията са в трите колони, извън базовите редове."
+          ],
+          "faq": [
+            [
+              "Какво е Swordfish в судоку?",
+              "Цифра, чиито кандидати в три реда са затворени в три колони. Трите реда трябва да поставят цифрата в тези три колони, по веднъж във всяка, така че цифрата се премахва от другите клетки на тези колони."
+            ],
+            [
+              "С какво Swordfish се различава от X-Wing?",
+              "Само по размер: X-Wing използва два реда и две колони, Swordfish три и три. Разсъждението е същото."
+            ],
+            [
+              "Нужни ли са на Swordfish точно девет клетки?",
+              "Не. Всеки ред може да има два или три кандидата; фигурата изисква само трите реда заедно да използват не повече от три колони."
+            ],
+            [
+              "Има ли риба с размер четири?",
+              "Да, Jellyfish. Bare Sudoku не я използва, защото задачите му никога не я изискват."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing в судоку: как работи техниката",
+          "description": "XYZ-Wing: опорна клетка с три кандидата и две крила с една обща цифра я изключват от всяка клетка, която вижда и трите. Реален пример стъпка по стъпка.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing е Y-Wing, чиято опорна клетка има три кандидата. Опорната клетка има X, Y и Z; едното крило вижда опорната клетка и има X и Z, другото я вижда и има Y и Z. Една от трите клетки трябва да е Z, така че Z може да се премахне от всяка клетка, която вижда и трите. Тъй като самата опорна клетка може да е Z, клетката за изключване трябва да вижда опорната клетка, както и двете крила, което я ограничава до карето или линията, които клетките споделят. Това е най-трудната техника, която използва Bare Sudoku.",
+          "when": [
+            "Само когато всичко друго се провали. XYZ-Wing е най-рядката фигура в Bare Sudoku и се появява само в задачи на ниво Експерт. Търсете го, когато клетка с три кандидата е в едно каре с клетка с два кандидата, която споделя две от нейните цифри."
+          ],
+          "spot": [
+            "Започнете от клетки с точно три кандидата; всяка е възможна опорна клетка. Сред съседите ѝ търсете две клетки с по два кандидата, взети от трите на опорната клетка, които споделят точно една цифра Z. После търсете клетки, които виждат опорната клетка и двете крила и съдържат Z. На практика едното крило е в карето на опорната клетка, а другото в нейния ред или колона, и изключваните клетки са останалите клетки на това каре в този ред или тази колона."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Опорната клетка {pivot} има три кандидата: {x}, {y} и {z}. Тя вижда {wingA} с {x} и {z} и {wingB} с {y} и {z}.",
+                "Ако {pivot} е {z}, готово. Ако е {x}, {wingA} трябва да е {z}. Ако е {y}, {wingB} трябва да е {z}. Във всеки случай една от трите клетки е {z}.",
+                "Клетка, която вижда и трите, не може да е {z}. Премахнете {z} от {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Да изключвате от клетки, които виждат само двете крила. За разлика от Y-Wing опорната клетка може да е Z, така че клетката трябва да вижда и нея.",
+            "Да използвате крила, чиито кандидати не се съдържат изцяло в трите кандидата на опорната клетка.",
+            "Да го бъркате с Y-Wing: разликата е третият кандидат в опорната клетка и тя променя кои клетки могат да се изчистят."
+          ],
+          "faq": [
+            [
+              "Какво е XYZ-Wing в судоку?",
+              "Опорна клетка с кандидати X, Y и Z и две крила, едното с X и Z, другото с Y и Z, като и двете виждат опорната клетка. Една от трите клетки е Z, така че Z се премахва от клетките, които виждат и трите."
+            ],
+            [
+              "С какво XYZ-Wing се различава от Y-Wing?",
+              "Опорната клетка има три кандидата вместо два, включително Z. Това прави самата опорна клетка възможно място за Z, така че само клетки, които виждат опорната клетка и двете крила, могат да загубят Z."
+            ],
+            [
+              "Колко често се среща XYZ-Wing?",
+              "Рядко. В Bare Sudoku само задачите на ниво Експерт могат да го изискват, а повечето не го изискват. Bare Sudoku го проверява последен, след X-Wing, Y-Wing и Swordfish."
+            ],
+            [
+              "Има ли WXYZ-Wing?",
+              "Да, с опорна клетка с четири кандидата, но Bare Sudoku не го използва. Всяка задача в играта може да се реши с деветте техники от това ръководство."
+            ]
+          ]
+        }
+      }
+    },
     "sr": {
       "learnHeading": "Nauči sudoku",
       "learnText": "Tek počinješ sa sudokuom ili si zapeo na teškoj zagonetki? Dva vodiča objašnjavaju pravila i svaku tehniku rešavanja koju koriste saveti, svaku sa pravim primerom.",
