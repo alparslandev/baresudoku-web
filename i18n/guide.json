@@ -1,0 +1,1168 @@
+{
+  "languages": {
+    "en": {
+      "learnHeading": "Learn Sudoku",
+      "learnText": "New to Sudoku, or stuck on a hard puzzle? Two guides explain the rules and every solving technique the hints use, each with a real example.",
+      "howToLink": "How to play Sudoku",
+      "techniquesLink": "Sudoku solving techniques",
+      "labels": {
+        "howTo": "How to play",
+        "techniques": "Techniques",
+        "play": "Play Sudoku",
+        "prev": "Previous technique",
+        "next": "Next technique",
+        "all": "All techniques",
+        "example": "Example",
+        "steps": "Step by step",
+        "when": "When to use it",
+        "spot": "How to spot it",
+        "mistakes": "Common mistakes",
+        "inGame": "In Bare Sudoku",
+        "level": "Needed from level: {level}",
+        "hint": "In the game, the hint says: {text}",
+        "legend": "Bold digits are given, blue digits were placed while solving, small digits are candidates. Highlighted cells form the pattern, crossed-out candidates are removed, and a circled candidate is the digit to place.",
+        "notation": "Cells are written as r3c7: row 3, column 7. Rows are counted from the top, columns from the left, and boxes 1 to 9 from the top left, row by row.",
+        "row": "row {n}",
+        "column": "column {n}",
+        "box": "box {n}",
+        "elimItem": "{d} from {cell}",
+        "regions": "Row 5, column 5 and box 5 at the start of a puzzle",
+        "firstMove": "A naked single: {cell} can only be {d}",
+        "breadcrumb": "Breadcrumb"
+      },
+      "howTo": {
+        "title": "How to Play Sudoku: Rules, Board and First Moves",
+        "description": "Learn how to play Sudoku: the rules, how rows, columns and boxes work, why every puzzle has one solution, how to use notes and how to make your first moves.",
+        "h1": "How to play Sudoku",
+        "summary": "Sudoku is a logic puzzle on a 9×9 grid. Fill every empty cell with a digit from 1 to 9 so that each row, each column and each 3×3 box contains every digit exactly once. Some digits are given at the start; you deduce the rest, one certain cell at a time, and you never have to guess. This guide explains the board, the rules, the single-solution principle, notes and a simple strategy for your first moves. You can practise everything in [Bare Sudoku](play), which is free and has hints that explain the logic.",
+        "sections": [
+          {
+            "h": "What are the rules of Sudoku?",
+            "p": [
+              "There are only three rules, and they are the same rule seen from three directions: every row must contain the digits 1 to 9, every column must contain the digits 1 to 9, and every 3×3 box must contain the digits 1 to 9. A digit can therefore never appear twice in the same row, column or box.",
+              "The given digits, printed in bold, are fixed. Your job is to fill the empty cells. There is no arithmetic and no ordering: the digits are just nine different symbols. You could play with letters or shapes and nothing would change."
+            ]
+          },
+          {
+            "h": "How is the board organised?",
+            "p": [
+              "The board has 81 cells in 9 rows and 9 columns. Thick lines divide it into nine 3×3 boxes. Each cell belongs to exactly one row, one column and one box, and these three groups are its units. The 20 other cells that share a unit with a cell are called its peers; a digit placed in a cell rules that digit out in all 20 peers.",
+              "Cells are written as r3c7: row 3, column 7. Rows are counted from the top, columns from the left, and boxes 1 to 9 from the top left, row by row. This notation is used in every technique guide and is worth learning: r5c5 is the centre of the board."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Why does every Sudoku have exactly one solution?",
+            "p": [
+              "A proper Sudoku has one solution, and that is what makes logic work. Whenever you can show that a digit cannot go anywhere else in a unit, it must go in the remaining cell, because the solution exists and is unique. If a puzzle had two solutions, no amount of reasoning could tell them apart and you would be forced to guess at some point.",
+              "Bare Sudoku generates every puzzle on your device and checks that it has exactly one solution and that its logical solver can finish it with the techniques of the chosen level. So if you are stuck, there is always a next step to find, and the hint shows it."
+            ]
+          },
+          {
+            "h": "How do you start a Sudoku puzzle?",
+            "p": [
+              "Start with what is most constrained. This order works at every level:"
+            ],
+            "list": [
+              "Pick a digit that already appears many times, say six or seven, and find the boxes that still miss it. Often only one cell in a box is left for it: that is a [hidden single](hidden-single).",
+              "Look for crowded cells. A cell whose row, column and box together contain eight different digits has only one candidate left: a [naked single](naked-single). Cells in nearly full rows or boxes are the best place to look.",
+              "Every digit you place removes a candidate from 20 peers, so check those peers straight away. Singles tend to come in chains.",
+              "When the easy placements dry up, write notes: the candidates for each empty cell. Then look for a digit that is confined to one line inside a box ([locked candidates](locked-candidates)) or two cells that share the same two candidates (a [naked pair](naked-pairs)).",
+              "Return to singles after every elimination. Even Expert puzzles are solved mostly by singles; the advanced technique just unlocks the next one."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "What are notes and when should you use them?",
+            "p": [
+              "Notes, also called pencil marks or candidates, are the small digits you write in an empty cell to record which digits are still possible there. In easy puzzles you rarely need them; from Hard upward they are essential, because techniques like pairs, X-Wing and Y-Wing are about candidates, not placed digits.",
+              "Keep notes accurate: when you place a digit, remove it from the notes of all 20 peers. In Bare Sudoku this happens automatically, and Fill notes writes every candidate into every empty cell with one tap, so you can start from a complete, correct set of candidates. A note is a fact, not a guess: it means that nothing rules this digit out yet."
+            ]
+          },
+          {
+            "h": "What should you do when you are stuck?",
+            "p": [
+              "First recheck the basics: every nearly full row, column and box is a source of singles. Then make sure the notes are complete, because a missing candidate hides patterns and a stale one creates false ones. Then work through the [techniques](techniques) in order of difficulty: locked candidates, pairs and triples, X-Wing, Y-Wing, Swordfish and XYZ-Wing. Each has its own page with a real example.",
+              "If nothing works, take a hint. In Bare Sudoku the hint first checks whether a placed digit is wrong, then finds the next cell that can be filled by logic and names the technique, so you learn something even when you use it. Tap the hint again to place the digit."
+            ]
+          },
+          {
+            "h": "How do you enter digits in Bare Sudoku?",
+            "p": [
+              "Tap a cell, then a digit. Or tap a digit first: it locks, and every cell you tap receives it, which is the fastest way to place the sixth, seventh and eighth copy of a digit. Tap the digit again to release it. The Notes button switches to pencil marks, Erase clears a cell, Undo takes back any move, and mistakes are marked in red unless you turn that off in the menu.",
+              "On a keyboard, use the arrow keys to move, 1 to 9 to enter a digit, Backspace to erase, N for notes, U for undo, H for a hint, F to fill notes and Escape for the menu. The game saves itself, works offline and has no ads and no account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Do you ever need to guess in Sudoku?",
+            "Not in a proper puzzle. Every Bare Sudoku puzzle has exactly one solution and is checked to be solvable by logic alone, up to the techniques of its level. If you feel you must guess, a candidate is missing from your notes or a technique is waiting to be found."
+          ],
+          [
+            "Can a digit appear twice in a row, column or box?",
+            "No. That is the whole rule: each of the nine rows, nine columns and nine boxes contains every digit from 1 to 9 exactly once. If two identical digits share a unit, at least one of them is wrong."
+          ],
+          [
+            "What is the difference between Easy, Medium, Hard and Expert?",
+            "The level is set by the techniques the puzzle needs. Easy and Medium are solved with singles only, and Easy starts with at least 38 given digits. Hard needs locked candidates or pairs and triples. Expert needs X-Wing, Y-Wing, Swordfish or XYZ-Wing."
+          ],
+          [
+            "Is it better to fill notes for every cell or only for some?",
+            "For Hard and Expert puzzles, fill them all: patterns such as pairs, X-Wing and Y-Wing only show up when every candidate is written. In Easy and Medium, notes are optional and most players just scan for singles."
+          ],
+          [
+            "How long does a Sudoku take?",
+            "An Easy puzzle takes a few minutes; Expert puzzles can take twenty minutes or more, depending on how quickly you spot the advanced pattern. Bare Sudoku shows a timer, pauses it while the menu is open and keeps no leaderboard, so play at your own pace."
+          ],
+          [
+            "Does Sudoku need arithmetic?",
+            "No. The digits are only labels; no adding or counting is involved. Any nine symbols would work, and that is why Sudoku is a logic puzzle rather than a number puzzle."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku Solving Techniques Explained with Examples",
+        "description": "All nine Sudoku solving techniques, from naked singles to Swordfish and XYZ-Wing, in the order the Bare Sudoku hints use them, each with a real example.",
+        "h1": "Sudoku solving techniques",
+        "intro": [
+          "Every Sudoku can be solved with a small set of logical techniques. This index lists the nine techniques that the Bare Sudoku solver and its hints use, in the order the solver tries them: singles first, then eliminations within one unit, then patterns that span several rows and columns. Each technique has its own page with a definition, how to spot it, a real example from a generated puzzle and the common mistakes.",
+          "The level of a puzzle is decided by the hardest technique it needs. Easy and Medium puzzles need only singles, Hard puzzles need locked candidates or pairs and triples, and Expert puzzles need at least one fish or wing. Whatever the level, singles do most of the work; the advanced technique removes a candidate or two and singles carry on from there."
+        ],
+        "faq": [
+          [
+            "In which order should I try Sudoku techniques?",
+            "Cheapest first: naked singles, hidden singles, locked candidates, naked pairs and triples, hidden pairs and triples, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku tries them in exactly this order, and a hint always names the simplest technique that makes progress."
+          ],
+          [
+            "Do I need all these techniques to solve Sudoku?",
+            "For Easy and Medium puzzles, singles are enough. Hard puzzles add locked candidates and subsets. Expert puzzles need at least one fish or wing, but usually only once or twice per puzzle."
+          ],
+          [
+            "Are there harder techniques than XYZ-Wing?",
+            "Yes, for example chains, uniqueness tests and forcing nets. Bare Sudoku does not generate puzzles that need them, so every puzzle in the game can be finished with the nine techniques on this page."
+          ],
+          [
+            "What is a candidate?",
+            "A digit that could still go in an empty cell because nothing in its row, column or box rules it out yet. Notes in the game are candidates. Every technique beyond singles reasons about candidates, so keep them complete and accurate."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Naked single",
+          "title": "Naked Single in Sudoku: The Cell with One Candidate",
+          "description": "A naked single is an empty cell with only one possible digit. Learn how to find naked singles quickly, with a real example step by step and the usual mistakes.",
+          "h1": "Naked single",
+          "summary": "A naked single is an empty cell that has exactly one candidate: the other eight digits already appear in its row, column or box. The remaining digit must go there. It is the simplest Sudoku technique, the one you use most, and the one the Bare Sudoku hint reports as \"Only one candidate here\".",
+          "when": [
+            "Always. Naked singles appear from the first move to the last, at every level. In Easy and Medium puzzles they are, together with hidden singles, the only technique you need. In harder puzzles every elimination made by an advanced technique usually leaves a naked single behind, so check for them after every step."
+          ],
+          "spot": [
+            "Look at cells with many placed peers: a cell in a row that already has seven digits, or a cell whose row, column and box together cover eight different digits. Without notes, count the digits you can see from the cell. With notes, a naked single is simply a cell showing one candidate, which is why Fill notes makes them easy to find."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Look at {cell}. It is empty, so list every digit that is already placed in its row, its column and its box.",
+                "Row {row} contains {rowDigits}. Column {col} contains {colDigits}. Box {box} contains {boxDigits}.",
+                "Together they rule out every digit except {d}, so {d} is the only candidate left in {cell}.",
+                "Write {d} in {cell}. Then check whether the new digit creates another single in the same row, column or box."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Counting only the row or only the box. The eight excluded digits usually come from all three units together.",
+            "Forgetting that a digit you placed a moment ago also excludes candidates from its 20 peers; new naked singles appear right after each placement.",
+            "Confusing a naked single with a hidden single: a naked single has one candidate left in the cell, a hidden single has one cell left for the digit in a unit."
+          ],
+          "faq": [
+            [
+              "What is a naked single in Sudoku?",
+              "An empty cell with exactly one candidate. Eight different digits are already placed in its row, column and box, so the ninth digit is the only one that fits."
+            ],
+            [
+              "Why is it called naked?",
+              "Because the single candidate is visible directly in the cell once the notes are written; nothing hides it. A hidden single, by contrast, sits among other candidates and is found by looking at the digit rather than the cell."
+            ],
+            [
+              "Can a puzzle be solved with naked singles only?",
+              "Many Easy puzzles can, but most also need hidden singles. Bare Sudoku rates Easy and Medium puzzles as solvable with singles of both kinds; Hard and Expert puzzles need at least one further technique."
+            ],
+            [
+              "Does the hint show naked singles?",
+              "Yes. When the next placement is a naked single, the hint selects the cell and says \"Only one candidate here\" with the digit. Tap the hint again to place it."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Hidden single",
+          "title": "Hidden Single in Sudoku: The Only Place for a Digit",
+          "description": "A hidden single is the only cell in a row, column or box where a digit can still go. Learn to spot hidden singles by scanning one digit at a time.",
+          "h1": "Hidden single",
+          "summary": "A hidden single is a digit that has only one possible cell left in a row, column or box, even though that cell may show other candidates. Because the unit must contain the digit, it goes there. The Bare Sudoku hint reports it as \"Only place for 5 in this row\", column or box.",
+          "when": [
+            "Whenever a digit is well advanced: once a digit appears five or six times, the remaining boxes are very constrained, and a hidden single is often the next move. Hidden singles are the main technique of Easy and Medium puzzles and remain the workhorse at every level."
+          ],
+          "spot": [
+            "Scan one digit at a time. Take a digit, find a box that does not contain it, and cross out every cell of that box that shares a row or column with a placed copy of the digit. If one cell survives, you have found a hidden single. The same scan works on rows and columns. In the game, tap a placed digit: every copy of it is highlighted, so the free cells stand out."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Box {box} does not contain {d} yet, so one of its empty cells must hold it. The empty cells are {empties}.",
+                "In every one of them except {cell}, {d} is blocked by a {d} already placed in the same row or column, so {d} is not a candidate there.",
+                "That leaves {cell} as the only place for {d} in box {box}. Write {d} there, even though {cell} may still show other candidates."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Placing the digit in a cell that is only probably the right one: check every other empty cell of the unit, not just the obvious ones.",
+            "Missing a hidden single because the cell shows several candidates. The other candidates do not matter; what matters is that the digit has no other place in the unit.",
+            "Scanning only boxes. Rows and columns produce hidden singles just as often, especially near the end."
+          ],
+          "faq": [
+            [
+              "What is a hidden single in Sudoku?",
+              "A digit that can go in only one cell of a row, column or box. The unit must contain the digit, so the cell is decided even if it still has other candidates."
+            ],
+            [
+              "What is the difference between a hidden single and a naked single?",
+              "A naked single is about a cell: one candidate left. A hidden single is about a digit: one cell left in a unit. Both place a digit with certainty."
+            ],
+            [
+              "Which is easier to find?",
+              "Without notes, hidden singles are usually easier because you can scan the board for one digit at a time. With complete notes, naked singles are the easiest, since a cell with a single candidate stands out."
+            ],
+            [
+              "How does the hint describe a hidden single?",
+              "As \"Only place for\" the digit in this row, this column or this box, with the cell selected. Tap the hint again to place it."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Locked candidates",
+          "title": "Locked Candidates in Sudoku: Pointing and Claiming",
+          "description": "Locked candidates: when a digit's candidates in a box all lie in one row or column, or the reverse, the digit is removed elsewhere. Two real examples.",
+          "h1": "Locked candidates",
+          "summary": "Locked candidates is the first technique that removes candidates instead of placing a digit. It has two forms. Pointing: in a box, all candidates for a digit lie in one row or column, so the digit is removed from the rest of that line. Claiming: in a row or column, all candidates for a digit lie in one box, so the digit is removed from the rest of that box. The Bare Sudoku hint labels the placement it unlocks with \"Locked candidates\".",
+          "when": [
+            "When singles run out in a Hard puzzle, this is the first thing to try. It needs complete notes for at least the digit you examine. Locked candidates are common: most Hard puzzles need them, and Expert puzzles use them between the bigger patterns."
+          ],
+          "spot": [
+            "For pointing, look at each box and each digit missing from it: if the candidate cells for that digit sit in a single row or column, check whether the same digit appears as a candidate further along that line outside the box. For claiming, look along a row or column: if the candidates for a digit are all inside one box, the rest of that box can be cleared. In the game, tap a digit key to highlight every candidate for it; a line of two or three highlighted notes inside one box is the pattern."
+          ],
+          "examples": [
+            {
+              "h": "Pointing",
+              "steps": [
+                "In box {box}, digit {d} has only these candidate cells: {cells}. All of them lie in row {row}.",
+                "Box {box} needs a {d}, so the {d} of row {row} is inside box {box}, whichever of those cells it lands in.",
+                "Row {row} cannot hold a second {d}, so remove {d} from the cells of row {row} outside the box: {elim}."
+              ]
+            },
+            {
+              "h": "Claiming",
+              "steps": [
+                "In row {row}, digit {d} can only go in {cells}, and they all sit inside box {box}.",
+                "Row {row} must contain {d}, so the {d} of box {box} is claimed by row {row}. The other cells of box {box} cannot hold {d}.",
+                "Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Removing the digit inside the box instead of outside it in the pointing case, or the other way round in the claiming case. The eliminations always go to the cells that are in the line but not in the box, or in the box but not in the line.",
+            "Applying the rule when the candidates span two rows of the box. All candidate cells for the digit in the box must lie in one line.",
+            "Forgetting to look for the single that the elimination creates. Locked candidates rarely place a digit by themselves; they set up a single."
+          ],
+          "faq": [
+            [
+              "What are locked candidates in Sudoku?",
+              "Candidates for a digit that are confined to the intersection of a box and a line. Since the box, or the line, must contain the digit within that intersection, the digit can be removed from the rest of the line, or the rest of the box."
+            ],
+            [
+              "What is the difference between pointing and claiming?",
+              "Pointing starts from a box: the digit's candidates in the box point along one row or column, so the digit is removed from the rest of that line. Claiming starts from a row or column: the line's candidates for the digit are all in one box, so the line claims the digit and it is removed from the rest of the box."
+            ],
+            [
+              "Are locked candidates also called intersection removal?",
+              "Yes. Other names are box-line reduction for the claiming form and pointing pairs or pointing triples for the pointing form. Bare Sudoku uses one name for both."
+            ],
+            [
+              "Which level needs locked candidates?",
+              "Hard. A puzzle that needs locked candidates or subsets but nothing harder is rated Hard; Expert puzzles need a fish or a wing as well."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Naked pairs and triples",
+          "title": "Naked Pairs and Triples in Sudoku: How They Work",
+          "description": "Naked pairs and triples: two or three cells in a unit that share the same two or three candidates. Learn to spot them and what to remove, with real examples.",
+          "h1": "Naked pairs and triples",
+          "summary": "A naked pair is two cells in the same row, column or box that have exactly the same two candidates. The two digits must go in those two cells, so they can be removed from every other cell of the unit. A naked triple is the same idea with three cells and three digits; each cell may show two or all three of them. The Bare Sudoku hint labels the resulting placement \"Pair or triple\".",
+          "when": [
+            "After the notes are complete and singles and locked candidates are exhausted. Naked pairs are very common in Hard puzzles, naked triples less so. Both are worth checking in every unit that still has five or more empty cells."
+          ],
+          "spot": [
+            "Look for cells with only two candidates and find another cell in the same unit with the same two. For triples, look at units with several two- and three-candidate cells and check whether three of them together use only three different digits. Cells with exactly the same candidates are easy to see once the notes are written; Fill notes in the game does that in one tap."
+          ],
+          "examples": [
+            {
+              "h": "Naked pair",
+              "steps": [
+                "{cellA} and {cellB} in {unit} have exactly the same two candidates: {d1} and {d2}.",
+                "One of them must be {d1} and the other {d2}. We do not know which, but both digits are used up by these two cells.",
+                "So no other cell of {unit} can hold {d1} or {d2}. Remove {elim}."
+              ]
+            },
+            {
+              "h": "Naked triple",
+              "steps": [
+                "Three cells of {unit} draw all their candidates from the same three digits, {digits}: {cells}.",
+                "The three digits must fill these three cells in some order. A cell does not need to show all three candidates; what matters is that none of the three cells has a candidate outside the set.",
+                "Remove {digits} from every other cell of {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Taking two cells that share two candidates but also have a third one. For a naked pair, each cell must have exactly the two candidates and nothing else.",
+            "Removing the digits from the pair cells themselves. The pair keeps its candidates; the eliminations go to the other cells of the unit.",
+            "Requiring every cell of a triple to show all three digits. A cell with two of the three is fine, as long as no cell has a candidate outside the set."
+          ],
+          "faq": [
+            [
+              "What is a naked pair in Sudoku?",
+              "Two cells in one unit that both have exactly the same two candidates. Those two digits are locked into those two cells, so they can be removed from the rest of the unit."
+            ],
+            [
+              "What is a naked triple?",
+              "Three cells in one unit whose candidates together are only three digits. Each cell may hold two or three of them. The three digits fill the three cells, so they can be removed from the other cells of the unit."
+            ],
+            [
+              "Does a naked pair place a digit?",
+              "Not by itself. It removes candidates, and the removal usually leaves a naked or hidden single. The hint in Bare Sudoku shows that single and names the technique that made it possible."
+            ],
+            [
+              "Can a naked pair be in a box and a row at the same time?",
+              "Yes. If the two cells share a row and a box, the pair eliminates in both units. Bare Sudoku handles them one unit at a time."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Hidden pairs and triples",
+          "title": "Hidden Pairs and Triples in Sudoku: How to Spot Them",
+          "description": "A hidden pair is two digits that can only go in the same two cells of a unit, so their other candidates go. Learn to find hidden pairs and triples step by step.",
+          "h1": "Hidden pairs and triples",
+          "summary": "A hidden pair is two digits that, within one row, column or box, are candidates in the same two cells and nowhere else. Those two cells must hold those two digits, so every other candidate in them can be removed. A hidden triple works the same way with three digits confined to three cells. After the removal the cells show a naked pair or triple. The Bare Sudoku hint labels the resulting placement \"Pair or triple\".",
+          "when": [
+            "When a unit has cells with many candidates and singles are gone. Hidden pairs hide inside busy cells, which is why they are worth looking for exactly where naked pairs are not visible. Hidden triples are rare; Bare Sudoku checks for them, but most Hard puzzles are solved without."
+          ],
+          "spot": [
+            "Work by digit, not by cell. In a unit, note the cells where each missing digit can go. If two digits each have only two possible cells and they are the same two cells, you have a hidden pair. In the game, tap a digit key to highlight its candidates; if two digits light up the same two cells of a unit and nothing else in it, that is the pattern."
+          ],
+          "examples": [
+            {
+              "h": "Hidden pair",
+              "steps": [
+                "In {unit}, digits {d1} and {d2} each have only two possible cells, and they are the same two: {cells}.",
+                "Those two cells must hold {d1} and {d2}, so their other candidates are impossible.",
+                "Remove {elim}. Now the two cells show a naked pair, which may unlock more."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Removing the two pair digits from the pair cells. It is the other candidates of those cells that go; the pair digits stay.",
+            "Accepting a digit that has a third possible cell in the unit. Both digits must be limited to exactly the two cells.",
+            "Looking only in boxes. Hidden pairs occur just as often in rows and columns."
+          ],
+          "faq": [
+            [
+              "What is a hidden pair in Sudoku?",
+              "Two digits that can go in only the same two cells of a unit. Those cells must take those digits, so their other candidates are removed."
+            ],
+            [
+              "How is a hidden pair different from a naked pair?",
+              "A naked pair is visible: two cells that show only the same two candidates. A hidden pair is covered by extra candidates in the two cells. Removing those extras turns a hidden pair into a naked pair."
+            ],
+            [
+              "What is a hidden triple?",
+              "Three digits confined to three cells of a unit. Each digit need not appear in all three cells; what matters is that none of the three digits has a candidate outside those cells."
+            ],
+            [
+              "Does the hint distinguish hidden and naked pairs?",
+              "No. Bare Sudoku finds both and labels the resulting placement \"Pair or triple\". The pages here separate them because they are found in different ways."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing in Sudoku: How the Technique Works",
+          "description": "X-Wing: a digit with exactly two candidate cells in two rows, lined up in the same two columns, is removed from the rest of those columns. Real example.",
+          "h1": "X-Wing",
+          "summary": "An X-Wing is a pattern of one digit and four cells at the corners of a rectangle. If the digit has exactly two candidate cells in each of two rows, and those cells lie in the same two columns, then the digit must occupy two opposite corners of the rectangle. It can therefore be removed from every other cell of those two columns. The same works with rows and columns swapped. It is the first Expert technique in Bare Sudoku.",
+          "when": [
+            "When singles, locked candidates and subsets are exhausted. X-Wings are the most common Expert pattern and often appear when a digit has few candidates left, typically with four to six copies already placed. They need complete notes for the digit you examine."
+          ],
+          "spot": [
+            "Choose a digit and look for rows in which it has exactly two candidate cells. If two such rows share the same two columns, check those columns for other candidates of the digit: those are the eliminations. Then repeat with columns as the base. In the game, tap the digit key: every candidate for it is highlighted, and a rectangle of four highlighted notes is easy to see."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Digit {d} has exactly two candidate cells in row {r1} and exactly two in row {r2}, and they line up in the same two columns, {c1} and {c2}: {cells}.",
+                "Row {r1} puts its {d} in column {c1} or {c2}, and row {r2} puts its {d} in the other one. Either way, columns {c1} and {c2} each receive a {d} from these two rows.",
+                "So {d} cannot appear anywhere else in columns {c1} and {c2}. Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Using a row that has three candidate cells for the digit. Each base row must have exactly two, and both must be in the two shared columns.",
+            "Removing the digit from the rows instead of the columns. With rows as the base, the eliminations are in the columns, and vice versa.",
+            "Forgetting the swapped version. An X-Wing built on columns eliminates in rows."
+          ],
+          "faq": [
+            [
+              "What is an X-Wing in Sudoku?",
+              "A digit that has exactly two candidate cells in each of two rows, in the same two columns. The digit occupies two opposite corners of that rectangle, so it is removed from the rest of the two columns. Rows and columns can be swapped."
+            ],
+            [
+              "Why does an X-Wing work?",
+              "Each of the two rows must place the digit in one of the two columns, and the two rows cannot use the same column. So the two columns each receive their copy of the digit from these rows, and every other candidate in those columns is impossible."
+            ],
+            [
+              "Is an X-Wing a fish?",
+              "Yes. The X-Wing is the fish of size two; Swordfish is the fish of size three. Bare Sudoku finds both."
+            ],
+            [
+              "Which level has X-Wings?",
+              "Expert. A puzzle that needs an X-Wing, Y-Wing, Swordfish or XYZ-Wing is rated Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: How the Technique Works",
+          "description": "Y-Wing (XY-Wing): a pivot with two candidates and two wings that each share one of them force a digit out of every cell that sees both wings. Example.",
+          "h1": "Y-Wing",
+          "summary": "A Y-Wing, also called XY-Wing, uses three cells with two candidates each. The pivot has candidates X and Y. One wing sees the pivot and has X and Z; the other wing sees the pivot and has Y and Z. Whatever the pivot is, one of the wings must be Z, so Z can be removed from every cell that sees both wings. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When a puzzle has several cells with exactly two candidates and no fish is available. Y-Wings are common in Expert puzzles and are found by following the two-candidate cells: each is a potential pivot or wing."
+          ],
+          "spot": [
+            "List the cells with exactly two candidates. For each one, treat it as the pivot with candidates X and Y, and look among its peers for a cell with X and another digit Z, and a cell with Y and the same Z. Those two are the wings. Then find cells that see both wings and contain Z. Note that the wings do not need to see each other."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "The pivot {pivot} has candidates {x} and {y}. It sees {wingA}, which has {x} and {z}, and {wingB}, which has {y} and {z}.",
+                "If {pivot} is {x}, then {wingA} loses {x} and becomes {z}. If {pivot} is {y}, then {wingB} becomes {z}. One of the two wings is {z} in every case.",
+                "A cell that sees both wings can never be {z}. Remove {z} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Choosing wings that do not both see the pivot. Each wing must share a row, column or box with the pivot.",
+            "Removing Z from cells that see only one wing. The eliminated cell must see both wings.",
+            "Removing Z from the pivot. The pivot does not contain Z in a Y-Wing; if it does, the pattern is an XYZ-Wing with different rules."
+          ],
+          "faq": [
+            [
+              "What is a Y-Wing in Sudoku?",
+              "Three two-candidate cells: a pivot with X and Y, a wing with X and Z that sees the pivot, and a wing with Y and Z that sees the pivot. One wing is always Z, so Z is removed from cells that see both wings."
+            ],
+            [
+              "Is Y-Wing the same as XY-Wing?",
+              "Yes. The two names describe the same pattern. Bare Sudoku calls it Y-Wing."
+            ],
+            [
+              "Why must one wing be Z?",
+              "If the pivot is X, the first wing loses X and becomes Z. If the pivot is Y, the second wing becomes Z. The pivot is one of the two, so one wing is Z."
+            ],
+            [
+              "How many cells does a Y-Wing eliminate?",
+              "Usually one or two: only the cells that see both wings and still contain Z. That is enough to create a single."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish in Sudoku: How the Technique Works",
+          "description": "Swordfish: a digit confined to three columns across three rows is removed from the rest of those columns. The size-three fish, explained with a real example.",
+          "h1": "Swordfish",
+          "summary": "A Swordfish is an X-Wing with three rows and three columns. If a digit has at most three candidate cells in each of three rows, and all of those cells fall in the same three columns, then the three rows use up the digit in those columns, and the digit can be removed from every other cell of the three columns. Rows and columns can be swapped. Bare Sudoku checks for Swordfish after Y-Wing, in Expert puzzles.",
+          "when": [
+            "When X-Wing and Y-Wing find nothing. Swordfish are less common than X-Wings and need a digit whose candidates are spread thinly over three lines. They need complete and accurate notes for that digit."
+          ],
+          "spot": [
+            "Pick a digit and look for rows with two or three candidate cells for it. If three such rows cover only three columns in total, check those columns for further candidates of the digit. Not every row needs a candidate in every column: a Swordfish can have six, seven, eight or nine cells. In the game, highlight the digit with its key and look for three rows whose candidates line up in three columns."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Digit {d} has at most three candidate cells in each of rows {rows}, and all of those cells fall in columns {cols}: {cells}.",
+                "Each of the three rows must place its {d} in one of the three columns, and no two rows can use the same column. So the three columns get their {d} from these three rows.",
+                "Any other {d} candidate in columns {cols} is impossible. Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Requiring all nine cells. A Swordfish with two candidates in some rows is still valid, as long as the three rows cover only three columns.",
+            "Including a row with four candidate cells. Each base row must have at most three, all within the three columns.",
+            "Eliminating in the base rows. With rows as the base, the eliminations are in the three columns, outside the base rows."
+          ],
+          "faq": [
+            [
+              "What is a Swordfish in Sudoku?",
+              "A digit whose candidates in three rows are confined to three columns. The three rows must place the digit in those three columns, one each, so the digit is removed from the other cells of those columns."
+            ],
+            [
+              "How is a Swordfish different from an X-Wing?",
+              "Only in size: an X-Wing uses two rows and two columns, a Swordfish three and three. The reasoning is the same."
+            ],
+            [
+              "Does a Swordfish need exactly nine cells?",
+              "No. Each row can have two or three candidates; the pattern only requires that the three rows together use no more than three columns."
+            ],
+            [
+              "Is there a fish of size four?",
+              "Yes, the Jellyfish. Bare Sudoku does not use it, because its puzzles never need one."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: How the Technique Works",
+          "description": "XYZ-Wing: a pivot with three candidates and two wings that share one of them force that digit out of every cell seeing all three. Real example, step by step.",
+          "h1": "XYZ-Wing",
+          "summary": "An XYZ-Wing is a Y-Wing whose pivot has three candidates. The pivot has X, Y and Z; one wing sees the pivot and has X and Z, the other sees the pivot and has Y and Z. One of the three cells must be Z, so Z can be removed from every cell that sees all three. Because the pivot itself may be Z, the eliminated cell must see the pivot as well as both wings, which limits it to the box or line the cells share. It is the hardest technique Bare Sudoku uses.",
+          "when": [
+            "Only when everything else fails. XYZ-Wings are the rarest pattern in Bare Sudoku and appear only in Expert puzzles. Look for them when a three-candidate cell sits in a box with a two-candidate cell that shares two of its digits."
+          ],
+          "spot": [
+            "Start from cells with exactly three candidates; each is a possible pivot. Among its peers, look for two cells with two candidates each, both taken from the pivot's three, sharing exactly one digit Z. Then look for cells that see the pivot and both wings and contain Z. In practice one wing is in the pivot's box and the other in its row or column, and the eliminated cells are the remaining cells of that box in that row or column."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "The pivot {pivot} has three candidates: {x}, {y} and {z}. It sees {wingA} with {x} and {z}, and {wingB} with {y} and {z}.",
+                "If {pivot} is {z}, done. If it is {x}, {wingA} must be {z}. If it is {y}, {wingB} must be {z}. In every case one of the three cells is {z}.",
+                "A cell that sees all three cannot be {z}. Remove {z} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminating from cells that see only the two wings. Unlike a Y-Wing, the pivot can be Z, so the cell must see the pivot too.",
+            "Using wings whose candidates are not both contained in the pivot's three candidates.",
+            "Confusing it with a Y-Wing: the difference is the third candidate in the pivot, and it changes which cells can be cleared."
+          ],
+          "faq": [
+            [
+              "What is an XYZ-Wing in Sudoku?",
+              "A pivot with candidates X, Y and Z and two wings, one with X and Z and one with Y and Z, both seeing the pivot. One of the three cells is Z, so Z is removed from cells that see all three."
+            ],
+            [
+              "How is an XYZ-Wing different from a Y-Wing?",
+              "The pivot has three candidates instead of two, including Z. That makes the pivot a possible home for Z, so only cells that see the pivot and both wings can lose Z."
+            ],
+            [
+              "How often does an XYZ-Wing appear?",
+              "Rarely. In Bare Sudoku only Expert puzzles can need one, and most do not. Bare Sudoku checks it last, after X-Wing, Y-Wing and Swordfish."
+            ],
+            [
+              "Is there a WXYZ-Wing?",
+              "Yes, with a four-candidate pivot, but Bare Sudoku does not use it. Every puzzle in the game can be finished with the nine techniques of this guide."
+            ]
+          ]
+        }
+      }
+    },
+    "tr": {
+      "learnHeading": "Sudoku öğren",
+      "learnText": "Sudokuya yeni mi başladın, ya da zor bir bulmacada mı takıldın? İki rehber kuralları ve ipuçlarının kullandığı her çözüm tekniğini gerçek örneklerle anlatıyor.",
+      "howToLink": "Sudoku nasıl oynanır",
+      "techniquesLink": "Sudoku çözüm teknikleri",
+      "labels": {
+        "howTo": "Nasıl oynanır",
+        "techniques": "Teknikler",
+        "play": "Sudoku oyna",
+        "prev": "Önceki teknik",
+        "next": "Sonraki teknik",
+        "all": "Tüm teknikler",
+        "example": "Örnek",
+        "steps": "Adım adım",
+        "when": "Ne zaman kullanılır",
+        "spot": "Nasıl fark edilir",
+        "mistakes": "Yaygın hatalar",
+        "inGame": "Bare Sudoku'da",
+        "level": "Gerektiği seviye: {level}",
+        "hint": "Oyunda ipucu şöyle der: {text}",
+        "legend": "Kalın rakamlar verili, mavi rakamlar çözerken yerleştirilmiş, küçük rakamlar adaydır. Vurgulu hücreler örüntüyü oluşturur, üstü çizili adaylar silinir, daire içindeki aday yerleştirilecek rakamdır.",
+        "notation": "Hücreler r3c7 biçiminde yazılır: 3. satır, 7. sütun. Satırlar üstten, sütunlar soldan sayılır; kutular sol üstten başlayarak satır satır 1'den 9'a numaralanır.",
+        "row": "{n}. satır",
+        "column": "{n}. sütun",
+        "box": "{n}. kutu",
+        "elimItem": "{cell} hücresinden {d}",
+        "regions": "Bulmacanın başında 5. satır, 5. sütun ve 5. kutu",
+        "firstMove": "Bir tek aday: {cell} yalnızca {d} olabilir",
+        "breadcrumb": "Sayfa yolu"
+      },
+      "howTo": {
+        "title": "Sudoku Nasıl Oynanır: Kurallar, Tahta ve İlk Hamleler",
+        "description": "Sudoku nasıl oynanır: kurallar, satır, sütun ve kutular, her bulmacanın neden tek çözümü olduğu, notlar nasıl kullanılır ve ilk hamleler nasıl yapılır.",
+        "h1": "Sudoku nasıl oynanır",
+        "summary": "Sudoku 9×9 bir ızgara üzerinde oynanan bir mantık bulmacasıdır. Her boş hücreye 1'den 9'a bir rakam yazarsın; her satırda, her sütunda ve her 3×3 kutuda her rakam tam bir kez bulunmalıdır. Bazı rakamlar başta verilir; kalanını her seferinde kesin olan bir hücreyi bularak çıkarırsın ve hiç tahmin etmen gerekmez. Bu rehber tahtayı, kuralları, tek çözüm ilkesini, notları ve ilk hamleler için basit bir strateji anlatır. Hepsini ücretsiz olan ve mantığı açıklayan ipuçları veren [Bare Sudoku](play)'da deneyebilirsin.",
+        "sections": [
+          {
+            "h": "Sudokunun kuralları nedir?",
+            "p": [
+              "Yalnızca üç kural vardır ve üçü de aynı kuralın üç yönden görünüşüdür: her satırda 1'den 9'a tüm rakamlar bulunmalı, her sütunda 1'den 9'a tüm rakamlar bulunmalı, her 3×3 kutuda 1'den 9'a tüm rakamlar bulunmalıdır. Dolayısıyla bir rakam aynı satırda, sütunda ya da kutuda asla iki kez yer alamaz.",
+              "Kalın yazılan verili rakamlar sabittir. Senin işin boş hücreleri doldurmak. Aritmetik ve sıralama yoktur: rakamlar yalnızca dokuz farklı simgedir. Harflerle ya da şekillerle oynasan hiçbir şey değişmezdi."
+            ]
+          },
+          {
+            "h": "Tahta nasıl düzenlenmiştir?",
+            "p": [
+              "Tahtada 9 satır ve 9 sütunda 81 hücre vardır. Kalın çizgiler tahtayı dokuz 3×3 kutuya böler. Her hücre tam olarak bir satıra, bir sütuna ve bir kutuya aittir; bu üç gruba hücrenin birimleri denir. Bir hücreyle birim paylaşan diğer 20 hücreye komşuları denir; bir hücreye yerleştirilen rakam 20 komşuda o rakamı eler.",
+              "Hücreler r3c7 biçiminde yazılır: 3. satır, 7. sütun. Satırlar üstten, sütunlar soldan sayılır; kutular sol üstten başlayarak satır satır 1'den 9'a numaralanır. Bu gösterim her teknik rehberinde kullanılır ve öğrenmeye değer: r5c5 tahtanın merkezidir."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Her sudokunun neden tam olarak tek çözümü vardır?",
+            "p": [
+              "Düzgün bir sudokunun tek çözümü vardır ve mantığı işleten şey budur. Bir rakamın bir birimde başka hiçbir yere gidemeyeceğini gösterebildiğin her seferinde rakam kalan hücreye gitmek zorundadır, çünkü çözüm vardır ve tektir. Bir bulmacanın iki çözümü olsaydı hiçbir akıl yürütme ikisini ayırt edemez ve bir noktada tahmin etmek zorunda kalırdın.",
+              "Bare Sudoku her bulmacayı cihazında üretir; tam olarak tek çözümü olduğunu ve mantıksal çözücüsünün seçilen seviyenin teknikleriyle bitirebildiğini denetler. Yani takıldığında bulunacak bir sonraki adım her zaman vardır ve ipucu onu gösterir."
+            ]
+          },
+          {
+            "h": "Sudokuya nasıl başlanır?",
+            "p": [
+              "En kısıtlı olandan başla. Bu sıra her seviyede işe yarar:"
+            ],
+            "list": [
+              "Zaten çok kez, diyelim altı ya da yedi kez görünen bir rakam seç ve onu hâlâ içermeyen kutuları bul. Çoğu zaman kutuda ona yalnızca tek hücre kalmıştır: bu bir [gizli tek](hidden-single)tir.",
+              "Kalabalık hücrelere bak. Satırı, sütunu ve kutusu birlikte sekiz farklı rakam içeren bir hücrede tek aday kalmıştır: bir [tek aday](naked-single). Neredeyse dolu satır ve kutulardaki hücreler bakılacak en iyi yerdir.",
+              "Yerleştirdiğin her rakam 20 komşudan bir adayı siler, bu yüzden o komşuları hemen kontrol et. Tekler zincir halinde gelir.",
+              "Kolay yerleştirmeler bitince notları yaz: her boş hücrenin adayları. Sonra bir kutunun içinde tek bir çizgiye sıkışmış bir rakam ([kilitli adaylar](locked-candidates)) ya da aynı iki adayı paylaşan iki hücre (bir [açık çift](naked-pairs)) ara.",
+              "Her elemeden sonra teklere dön. Uzman bulmacalar bile çoğunlukla teklerle çözülür; ileri teknik yalnızca bir sonrakinin kilidini açar."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Notlar nedir ve ne zaman kullanılmalı?",
+            "p": [
+              "Notlar, kalem işaretleri ya da adaylar da denir, boş bir hücreye orada hangi rakamların hâlâ mümkün olduğunu kaydetmek için yazdığın küçük rakamlardır. Kolay bulmacalarda nadiren gerekir; Zor seviyeden itibaren vazgeçilmezdir, çünkü çift, X-Wing ve Y-Wing gibi teknikler yerleştirilmiş rakamlarla değil adaylarla ilgilidir.",
+              "Notları doğru tut: bir rakam yerleştirdiğinde onu 20 komşunun notlarından sil. Bare Sudoku'da bu kendiliğinden olur ve Notları doldur tek dokunuşla her boş hücreye her adayı yazar, böylece eksiksiz ve doğru bir aday kümesiyle başlarsın. Not bir tahmin değil bir olgudur: henüz hiçbir şeyin bu rakamı elemediği anlamına gelir."
+            ]
+          },
+          {
+            "h": "Takılınca ne yapmalı?",
+            "p": [
+              "Önce temelleri yeniden gözden geçir: neredeyse dolu her satır, sütun ve kutu bir tek kaynağıdır. Sonra notların eksiksiz olduğundan emin ol, çünkü eksik bir aday örüntüleri gizler, bayat bir aday sahte örüntüler yaratır. Sonra [teknikleri](techniques) zorluk sırasıyla dene: kilitli adaylar, çift ve üçlüler, X-Wing, Y-Wing, Swordfish ve XYZ-Wing. Her birinin gerçek örnekli kendi sayfası vardır.",
+              "Hiçbiri işe yaramazsa ipucu al. Bare Sudoku'da ipucu önce yerleştirilmiş bir rakamın yanlış olup olmadığına bakar, sonra mantıkla doldurulabilecek bir sonraki hücreyi bulur ve tekniğin adını söyler; böylece ipucu kullanırken bile bir şey öğrenirsin. Rakamı yerleştirmek için ipucuna tekrar dokun."
+            ]
+          },
+          {
+            "h": "Bare Sudoku'da rakamlar nasıl girilir?",
+            "p": [
+              "Bir hücreye, sonra bir rakama dokun. Ya da önce rakama dokun: rakam kilitlenir ve dokunduğun her hücreye yazılır; bu, bir rakamın altıncı, yedinci ve sekizinci kopyasını yerleştirmenin en hızlı yoludur. Bırakmak için rakama tekrar dokun. Not düğmesi kalem işaretlerine geçer, Sil hücreyi temizler, Geri al her hamleyi geri alır ve menüden kapatmadıkça hatalar kırmızıyla işaretlenir.",
+              "Klavyede ok tuşlarıyla gez, 1'den 9'a rakam gir, Backspace ile sil, N not, U geri al, H ipucu, F notları doldur, Escape menü. Oyun kendini kaydeder, internetsiz çalışır; reklamı ve hesabı yoktur."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Sudokuda hiç tahmin etmek gerekir mi?",
+            "Düzgün bir bulmacada gerekmez. Her Bare Sudoku bulmacasının tam olarak tek çözümü vardır ve seviyesinin teknikleriyle yalnızca mantıkla çözülebildiği denetlenir. Tahmin etmen gerektiğini hissediyorsan notlarında bir aday eksiktir ya da bulunmayı bekleyen bir teknik vardır."
+          ],
+          [
+            "Bir rakam aynı satırda, sütunda ya da kutuda iki kez yer alabilir mi?",
+            "Hayır. Kuralın tamamı budur: dokuz satırın, dokuz sütunun ve dokuz kutunun her biri 1'den 9'a her rakamı tam bir kez içerir. Aynı iki rakam bir birimi paylaşıyorsa en az biri yanlıştır."
+          ],
+          [
+            "Kolay, Orta, Zor ve Uzman arasındaki fark nedir?",
+            "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca teklerle çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar ya da çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Swordfish ya da XYZ-Wing gerektirir."
+          ],
+          [
+            "Notları her hücreye mi yoksa yalnızca bazılarına mı yazmak daha iyi?",
+            "Zor ve Uzman bulmacalarda hepsini doldur: çift, X-Wing ve Y-Wing gibi örüntüler ancak her aday yazılıyken görünür. Kolay ve Orta'da notlar isteğe bağlıdır ve çoğu oyuncu yalnızca tek arar."
+          ],
+          [
+            "Bir sudoku ne kadar sürer?",
+            "Kolay bir bulmaca birkaç dakika sürer; Uzman bulmacalar ileri örüntüyü ne kadar çabuk fark ettiğine bağlı olarak yirmi dakika ya da daha uzun sürebilir. Bare Sudoku süre gösterir, menü açıkken durdurur ve liderlik tablosu tutmaz; kendi hızında oyna."
+          ],
+          [
+            "Sudoku için aritmetik gerekir mi?",
+            "Hayır. Rakamlar yalnızca etikettir; toplama ya da sayma yoktur. Herhangi dokuz simge iş görürdü; sudokunun bir sayı bulmacası değil bir mantık bulmacası olmasının nedeni budur."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku Çözüm Teknikleri: Örneklerle Anlatım",
+        "description": "Tek adaydan Swordfish ve XYZ-Wing'e dokuz sudoku çözüm tekniğinin tamamı, Bare Sudoku ipuçlarının kullandığı sırayla; her biri gerçek bir örnekle.",
+        "h1": "Sudoku çözüm teknikleri",
+        "intro": [
+          "Her sudoku küçük bir mantıksal teknik kümesiyle çözülebilir. Bu dizin Bare Sudoku çözücüsünün ve ipuçlarının kullandığı dokuz tekniği çözücünün deneme sırasıyla listeler: önce tekler, sonra tek birim içindeki elemeler, sonra birden çok satır ve sütuna yayılan örüntüler. Her tekniğin tanım, nasıl fark edileceği, üretilmiş bir bulmacadan gerçek bir örnek ve yaygın hatalar içeren kendi sayfası vardır.",
+          "Bulmacanın seviyesini gerektirdiği en zor teknik belirler. Kolay ve Orta bulmacalar yalnızca tek ister, Zor bulmacalar kilitli adaylar ya da çift ve üçlü ister, Uzman bulmacalar en az bir balık ya da kanat ister. Seviye ne olursa olsun işin çoğunu tekler yapar; ileri teknik bir iki aday siler ve tekler oradan devam eder."
+        ],
+        "faq": [
+          [
+            "Sudoku tekniklerini hangi sırayla denemeliyim?",
+            "Önce en ucuz olan: tek aday, gizli tek, kilitli adaylar, açık çift ve üçlü, gizli çift ve üçlü, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku tam bu sırayla dener ve ipucu her zaman ilerleme sağlayan en basit tekniğin adını verir."
+          ],
+          [
+            "Sudoku çözmek için bu tekniklerin hepsi gerekli mi?",
+            "Kolay ve Orta bulmacalar için tekler yeter. Zor bulmacalar kilitli adaylar ve alt kümeleri ekler. Uzman bulmacalar en az bir balık ya da kanat ister, ama genellikle bulmaca başına yalnızca bir iki kez."
+          ],
+          [
+            "XYZ-Wing'den daha zor teknikler var mı?",
+            "Evet, örneğin zincirler, teklik testleri ve zorlama ağları. Bare Sudoku bunları gerektiren bulmaca üretmez; oyundaki her bulmaca bu sayfadaki dokuz teknikle bitirilebilir."
+          ],
+          [
+            "Aday nedir?",
+            "Satırında, sütununda ya da kutusunda hiçbir şey henüz elemediği için boş bir hücreye hâlâ gidebilecek bir rakam. Oyundaki notlar adaydır. Teklerin ötesindeki her teknik adaylar üzerinde akıl yürütür; bu yüzden onları eksiksiz ve doğru tut."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Tek aday",
+          "title": "Sudokuda Tek Aday (Naked Single): Tek Adaylı Hücre",
+          "description": "Tek aday (naked single), yalnızca tek rakamın gidebildiği boş hücredir. Tek adayları hızla bulmayı gerçek bir örnekle adım adım öğren, yaygın hatalardan kaçın.",
+          "h1": "Tek aday (naked single)",
+          "summary": "Tek aday (naked single), tam olarak tek adayı olan boş hücredir: diğer sekiz rakam zaten satırında, sütununda ya da kutusunda vardır. Kalan rakam oraya gitmek zorundadır. En basit, en çok kullanılan sudoku tekniğidir ve Bare Sudoku ipucu onu \"Bu hücrede tek aday\" diye bildirir.",
+          "when": [
+            "Her zaman. Tek adaylar ilk hamleden sonuncusuna, her seviyede görünür. Kolay ve Orta bulmacalarda gizli teklerle birlikte ihtiyacın olan tek tekniktir. Daha zor bulmacalarda ileri bir tekniğin yaptığı her eleme genellikle geride bir tek aday bırakır; bu yüzden her adımdan sonra onları kontrol et."
+          ],
+          "spot": [
+            "Komşusu çok dolu hücrelere bak: zaten yedi rakamı olan bir satırdaki hücre ya da satırı, sütunu ve kutusu birlikte sekiz farklı rakamı kapsayan bir hücre. Notsuz, hücreden görebildiğin rakamları say. Notlarla tek aday yalnızca tek aday gösteren bir hücredir; Notları doldur'un onları kolay bulunur kılmasının nedeni budur."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{cell} hücresine bak. Boş, o yüzden satırında, sütununda ve kutusunda zaten yerleşmiş her rakamı listele.",
+                "{row}. satırda {rowDigits} var. {col}. sütunda {colDigits} var. {box}. kutuda {boxDigits} var.",
+                "Birlikte {d} dışındaki her rakamı elerler; yani {cell} hücresinde kalan tek aday {d}.",
+                "{cell} hücresine {d} yaz. Sonra yeni rakamın aynı satırda, sütunda ya da kutuda başka bir tek yaratıp yaratmadığına bak."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Yalnızca satırı ya da yalnızca kutuyu saymak. Elenen sekiz rakam genellikle üç birimden birlikte gelir.",
+            "Az önce yerleştirdiğin rakamın da 20 komşusundan aday elediğini unutmak; her yerleştirmeden hemen sonra yeni tek adaylar belirir.",
+            "Tek adayı gizli tekle karıştırmak: tek adayda hücrede tek aday kalmıştır, gizli tekte birimde rakam için tek hücre kalmıştır."
+          ],
+          "faq": [
+            [
+              "Sudokuda tek aday (naked single) nedir?",
+              "Tam olarak tek adayı olan boş bir hücre. Satırında, sütununda ve kutusunda sekiz farklı rakam zaten yerleşmiştir; dokuzuncu rakam sığan tek rakamdır."
+            ],
+            [
+              "Neden İngilizcede naked, yani açık deniyor?",
+              "Çünkü notlar yazıldığında tek aday doğrudan hücrede görünür; hiçbir şey onu gizlemez. Gizli tek ise diğer adayların arasında durur ve hücreye değil rakama bakarak bulunur."
+            ],
+            [
+              "Bir bulmaca yalnızca tek adaylarla çözülebilir mi?",
+              "Birçok Kolay bulmaca çözülebilir, ama çoğu gizli tek de ister. Bare Sudoku, Kolay ve Orta bulmacaları her iki tür tekle çözülebilir diye derecelendirir; Zor ve Uzman bulmacalar en az bir teknik daha ister."
+            ],
+            [
+              "İpucu tek adayları gösterir mi?",
+              "Evet. Sonraki yerleştirme bir tek adaysa ipucu hücreyi seçer ve rakamla birlikte \"Bu hücrede tek aday\" der. Yerleştirmek için ipucuna tekrar dokun."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Gizli tek",
+          "title": "Sudokuda Gizli Tek (Hidden Single): Rakamın Tek Yeri",
+          "description": "Gizli tek (hidden single), bir satır, sütun ya da kutuda bir rakamın gidebildiği tek hücredir. Rakamları tek tek tarayarak bulmayı gerçek bir örnekle öğren.",
+          "h1": "Gizli tek (hidden single)",
+          "summary": "Gizli tek (hidden single), bir satırda, sütunda ya da kutuda yalnızca tek olası hücresi kalmış rakamdır; o hücre başka adaylar gösteriyor olsa bile. Birim rakamı içermek zorunda olduğundan rakam oraya gider. Bare Sudoku ipucu bunu \"Bu satırda 5 için tek yer\", sütunda ya da kutuda diye bildirir.",
+          "when": [
+            "Bir rakam epey ilerlemişse: bir rakam beş altı kez göründüğünde kalan kutular çok kısıtlıdır ve sonraki hamle çoğu zaman bir gizli tektir. Gizli tekler Kolay ve Orta bulmacaların ana tekniğidir ve her seviyede işin yükünü taşımaya devam eder."
+          ],
+          "spot": [
+            "Rakamları tek tek tara. Bir rakam al, onu içermeyen bir kutu bul ve o kutuda, rakamın yerleşmiş bir kopyasıyla satır ya da sütun paylaşan her hücrenin üstünü çiz. Tek hücre kalırsa gizli teki bulmuşsundur. Aynı tarama satır ve sütunlarda da işler. Oyunda yerleşmiş bir rakama dokun: her kopyası vurgulanır, böylece boş hücreler öne çıkar."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{box}. kutuda henüz {d} yok, o yüzden boş hücrelerinden biri onu almalı. Boş hücreler: {empties}.",
+                "{cell} dışında hepsinde {d}, aynı satıra ya da sütuna zaten yerleşmiş bir {d} tarafından engellenir; yani {d} oralarda aday değildir.",
+                "Geriye {box}. kutuda {d} için tek yer olarak {cell} kalır. {cell} hâlâ başka adaylar gösteriyor olsa da oraya {d} yaz."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Rakamı yalnızca muhtemelen doğru olan bir hücreye yerleştirmek: yalnızca göze çarpanları değil birimdeki diğer her boş hücreyi kontrol et.",
+            "Hücre birkaç aday gösterdiği için gizli teki kaçırmak. Diğer adayların önemi yoktur; önemli olan rakamın birimde başka yerinin olmamasıdır.",
+            "Yalnızca kutuları taramak. Satır ve sütunlar da en az o kadar sık gizli tek üretir, özellikle sona doğru."
+          ],
+          "faq": [
+            [
+              "Sudokuda gizli tek (hidden single) nedir?",
+              "Bir satırın, sütunun ya da kutunun yalnızca tek hücresine gidebilen bir rakam. Birim rakamı içermek zorundadır; bu yüzden hücrede başka adaylar olsa bile hücre kesinleşir."
+            ],
+            [
+              "Gizli tek ile tek aday arasındaki fark nedir?",
+              "Tek aday hücreyle ilgilidir: tek aday kalmıştır. Gizli tek rakamla ilgilidir: birimde tek hücre kalmıştır. İkisi de rakamı kesin olarak yerleştirir."
+            ],
+            [
+              "Hangisini bulmak daha kolay?",
+              "Notsuz, gizli tekler genellikle daha kolaydır çünkü tahtayı her seferinde tek rakam için tarayabilirsin. Eksiksiz notlarla tek adaylar en kolayıdır, çünkü tek adaylı hücre göze çarpar."
+            ],
+            [
+              "İpucu gizli teki nasıl anlatır?",
+              "Hücre seçiliyken \"Bu satırda\", \"Bu sütunda\" ya da \"Bu kutuda ... için tek yer\" diye. Yerleştirmek için ipucuna tekrar dokun."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Kilitli adaylar",
+          "title": "Sudokuda Kilitli Adaylar: İşaret Etme ve Sahiplenme",
+          "description": "Kilitli adaylar: bir rakamın kutudaki adayları tek satır ya da sütunda toplanmışsa, ya da tersi, rakam başka yerlerden silinir. İki gerçek örnek, adım adım.",
+          "h1": "Kilitli adaylar",
+          "summary": "Kilitli adaylar, rakam yerleştirmek yerine aday silen ilk tekniktir. İki biçimi vardır. İşaret etme: bir kutuda bir rakamın tüm adayları tek satırda ya da sütunda durur, dolayısıyla rakam o çizginin geri kalanından silinir. Sahiplenme: bir satırda ya da sütunda bir rakamın tüm adayları tek kutuda durur, dolayısıyla rakam o kutunun geri kalanından silinir. Bare Sudoku ipucu açtığı yerleştirmeyi \"Kilitli adaylar\" diye etiketler.",
+          "when": [
+            "Zor bir bulmacada tekler bittiğinde ilk denenecek şey budur. En azından incelediğin rakam için eksiksiz not gerektirir. Kilitli adaylar yaygındır: çoğu Zor bulmaca onları ister, Uzman bulmacalar büyük örüntülerin arasında kullanır."
+          ],
+          "spot": [
+            "İşaret etme için her kutuya ve kutuda eksik olan her rakama bak: o rakamın aday hücreleri tek bir satırda ya da sütunda duruyorsa aynı rakamın o çizgi boyunca kutunun dışında aday olarak görünüp görünmediğini kontrol et. Sahiplenme için bir satır ya da sütun boyunca bak: bir rakamın adaylarının hepsi tek kutunun içindeyse o kutunun geri kalanı temizlenebilir. Oyunda bir rakam tuşuna dokununca o rakamın her adayı vurgulanır; bir kutunun içinde iki üç vurgulu nottan oluşan bir çizgi aradığın örüntüdür."
+          ],
+          "examples": [
+            {
+              "h": "İşaret etme",
+              "steps": [
+                "{box}. kutuda {d} rakamının yalnızca şu aday hücreleri var: {cells}. Hepsi {row}. satırda duruyor.",
+                "{box}. kutuya bir {d} gerek; o yüzden {row}. satırın {d} rakamı, bu hücrelerden hangisine düşerse düşsün {box}. kutunun içindedir.",
+                "{row}. satır ikinci bir {d} alamaz; o yüzden {row}. satırın kutu dışındaki hücrelerinden {d} rakamını sil: {elim}."
+              ]
+            },
+            {
+              "h": "Sahiplenme",
+              "steps": [
+                "{row}. satırda {d} rakamı yalnızca {cells} hücrelerine gidebilir ve hepsi {box}. kutunun içindedir.",
+                "{row}. satır {d} içermek zorundadır; o yüzden {box}. kutunun {d} rakamını {row}. satır sahiplenir. {box}. kutunun diğer hücreleri {d} alamaz.",
+                "Şu hücrelerden {d} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "İşaret etmede rakamı kutunun dışından değil içinden silmek, sahiplenmede ise tersi. Elemeler her zaman çizgide olup kutuda olmayan ya da kutuda olup çizgide olmayan hücrelere gider.",
+            "Adaylar kutunun iki satırına yayılmışken kuralı uygulamak. Kutuda rakamın tüm aday hücreleri tek çizgide durmalıdır.",
+            "Elemenin yarattığı teki aramayı unutmak. Kilitli adaylar tek başına nadiren rakam yerleştirir; bir teki hazırlar."
+          ],
+          "faq": [
+            [
+              "Sudokuda kilitli adaylar nedir?",
+              "Bir kutuyla bir çizginin kesişimine sıkışmış rakam adayları. Kutu ya da çizgi rakamı o kesişimde içermek zorunda olduğundan rakam çizginin geri kalanından ya da kutunun geri kalanından silinebilir."
+            ],
+            [
+              "İşaret etme ile sahiplenme arasındaki fark nedir?",
+              "İşaret etme kutudan başlar: rakamın kutudaki adayları tek bir satır ya da sütun boyunca işaret eder, o yüzden rakam o çizginin geri kalanından silinir. Sahiplenme satır ya da sütundan başlar: çizginin o rakam için adayları tek kutudadır, o yüzden çizgi rakamı sahiplenir ve rakam kutunun geri kalanından silinir."
+            ],
+            [
+              "Kilitli adaylara kesişim eleme de denir mi?",
+              "Evet. Diğer adlar sahiplenme biçimi için kutu-çizgi indirgeme, işaret etme biçimi için işaret eden çift ya da işaret eden üçlüdür. Bare Sudoku ikisi için tek ad kullanır."
+            ],
+            [
+              "Hangi seviye kilitli aday gerektirir?",
+              "Zor. Kilitli adaylar ya da alt kümeler isteyen ama daha zorunu istemeyen bulmaca Zor diye derecelendirilir; Uzman bulmacalar ayrıca bir balık ya da kanat ister."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Açık çift ve üçlü",
+          "title": "Sudokuda Açık Çift ve Üçlü (Naked Pair): Nasıl Çalışır",
+          "description": "Açık çift ve üçlü (naked pair, naked triple): bir birimde aynı iki ya da üç adayı paylaşan hücreler. Fark etmeyi ve neyi sileceğini gerçek örneklerle öğren.",
+          "h1": "Açık çift ve üçlü (naked pair, naked triple)",
+          "summary": "Açık çift (naked pair), aynı satırda, sütunda ya da kutuda tam olarak aynı iki adaya sahip iki hücredir. İki rakam o iki hücreye gitmek zorundadır; bu yüzden birimin diğer her hücresinden silinebilir. Açık üçlü (naked triple) aynı fikrin üç hücre ve üç rakamla halidir; her hücre bunların ikisini ya da üçünü gösterebilir. Bare Sudoku ipucu ortaya çıkan yerleştirmeyi \"Çift veya üçlü\" diye etiketler.",
+          "when": [
+            "Notlar eksiksizken ve tekler ile kilitli adaylar tükenmişken. Açık çiftler Zor bulmacalarda çok yaygındır, açık üçlüler daha azdır. Hâlâ beş ya da daha çok boş hücresi olan her birimde ikisine de bakmaya değer."
+          ],
+          "spot": [
+            "Yalnızca iki adayı olan hücreleri ara ve aynı birimde aynı iki adaya sahip başka bir hücre bul. Üçlüler için içinde birkaç iki ve üç adaylı hücre olan birimlere bak ve üçünün birlikte yalnızca üç farklı rakam kullanıp kullanmadığını kontrol et. Notlar yazıldığında tam olarak aynı adaylara sahip hücreleri görmek kolaydır; oyunda Notları doldur bunu tek dokunuşla yapar."
+          ],
+          "examples": [
+            {
+              "h": "Açık çift",
+              "steps": [
+                "{unit}daki {cellA} ve {cellB} hücrelerinin tam olarak aynı iki adayı var: {d1} ve {d2}.",
+                "Biri {d1}, diğeri {d2} olmalı. Hangisi olduğunu bilmiyoruz ama iki rakam da bu iki hücre tarafından tüketilmiştir.",
+                "Yani {unit}daki başka hiçbir hücre {d1} ya da {d2} alamaz. Sil: {elim}."
+              ]
+            },
+            {
+              "h": "Açık üçlü",
+              "steps": [
+                "{unit}daki üç hücre tüm adaylarını aynı üç rakamdan, {digits}, alıyor: {cells}.",
+                "Üç rakam bu üç hücreyi bir sırayla doldurmak zorundadır. Bir hücrenin üç adayı da göstermesi gerekmez; önemli olan üç hücreden hiçbirinin küme dışında adayı olmamasıdır.",
+                "{unit}daki diğer her hücreden {digits} rakamlarını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "İki adayı paylaşan ama üçüncü bir adayı da olan iki hücreyi almak. Açık çift için her hücrede tam olarak o iki aday olmalı, başka hiçbir şey olmamalı.",
+            "Rakamları çiftin kendi hücrelerinden silmek. Çift adaylarını korur; elemeler birimin diğer hücrelerine gider.",
+            "Üçlünün her hücresinin üç rakamı da göstermesini beklemek. Hiçbir hücrede küme dışında aday olmadığı sürece üçten ikisini gösteren hücre sorun değildir."
+          ],
+          "faq": [
+            [
+              "Sudokuda açık çift (naked pair) nedir?",
+              "Bir birimde ikisi de tam olarak aynı iki adaya sahip iki hücre. O iki rakam o iki hücreye kilitlenmiştir; bu yüzden birimin geri kalanından silinebilir."
+            ],
+            [
+              "Açık üçlü (naked triple) nedir?",
+              "Bir birimde adayları birlikte yalnızca üç rakam olan üç hücre. Her hücre bunların ikisini ya da üçünü taşıyabilir. Üç rakam üç hücreyi doldurur; bu yüzden birimin diğer hücrelerinden silinebilir."
+            ],
+            [
+              "Açık çift rakam yerleştirir mi?",
+              "Tek başına hayır. Aday siler ve silme genellikle bir tek aday ya da gizli tek bırakır. Bare Sudoku'da ipucu o teki gösterir ve onu mümkün kılan tekniğin adını verir."
+            ],
+            [
+              "Açık çift aynı anda hem kutuda hem satırda olabilir mi?",
+              "Evet. İki hücre bir satırı ve bir kutuyu paylaşıyorsa çift iki birimde de eler. Bare Sudoku birimleri tek tek ele alır."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Gizli çift ve üçlü",
+          "title": "Sudokuda Gizli Çift ve Üçlü (Hidden Pair): Nasıl Fark Edilir",
+          "description": "Gizli çift (hidden pair): bir birimde yalnızca aynı iki hücreye gidebilen iki rakam; o hücrelerin diğer adayları silinir. Gerçek bir örnekle bulmayı öğren.",
+          "h1": "Gizli çift ve üçlü (hidden pair, hidden triple)",
+          "summary": "Gizli çift (hidden pair), bir satır, sütun ya da kutu içinde aynı iki hücrede aday olan ve başka hiçbir yerde olmayan iki rakamdır. O iki hücre o iki rakamı almak zorundadır; bu yüzden içlerindeki diğer her aday silinebilir. Gizli üçlü (hidden triple) üç hücreye sıkışmış üç rakamla aynı biçimde çalışır. Silmeden sonra hücreler bir açık çift ya da üçlü gösterir. Bare Sudoku ipucu ortaya çıkan yerleştirmeyi \"Çift veya üçlü\" diye etiketler.",
+          "when": [
+            "Bir birimde çok adaylı hücreler varken ve tekler bitmişken. Gizli çiftler kalabalık hücrelerin içinde saklanır; bu yüzden tam da açık çiftlerin görünmediği yerde aramaya değer. Gizli üçlüler nadirdir; Bare Sudoku onları da denetler ama çoğu Zor bulmaca onlarsız çözülür."
+          ],
+          "spot": [
+            "Hücreye göre değil rakama göre çalış. Bir birimde eksik her rakamın gidebileceği hücreleri not et. İki rakamın her birinin yalnızca iki olası hücresi varsa ve bunlar aynı iki hücreyse bir gizli çift bulmuşsundur. Oyunda bir rakam tuşuna dokununca adayları vurgulanır; iki rakam bir birimde aynı iki hücreyi yakıp birimde başka hiçbir şeyi yakmıyorsa örüntü budur."
+          ],
+          "examples": [
+            {
+              "h": "Gizli çift",
+              "steps": [
+                "{unit}da {d1} ve {d2} rakamlarının her birinin yalnızca iki olası hücresi var ve bunlar aynı iki hücre: {cells}.",
+                "O iki hücre {d1} ve {d2} almak zorundadır; bu yüzden diğer adayları imkânsızdır.",
+                "Sil: {elim}. Artık iki hücre bir açık çift gösteriyor; bu daha fazlasının kilidini açabilir."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Çiftin iki rakamını çift hücrelerinden silmek. Giden, o hücrelerin diğer adaylarıdır; çift rakamları kalır.",
+            "Birimde üçüncü bir olası hücresi olan bir rakamı kabul etmek. İki rakam da tam olarak o iki hücreyle sınırlı olmalıdır.",
+            "Yalnızca kutulara bakmak. Gizli çiftler satır ve sütunlarda da aynı sıklıkta görülür."
+          ],
+          "faq": [
+            [
+              "Sudokuda gizli çift (hidden pair) nedir?",
+              "Bir birimde yalnızca aynı iki hücreye gidebilen iki rakam. O hücreler o rakamları almak zorundadır; bu yüzden diğer adayları silinir."
+            ],
+            [
+              "Gizli çift açık çiftten nasıl farklıdır?",
+              "Açık çift görünürdür: yalnızca aynı iki adayı gösteren iki hücre. Gizli çift, iki hücredeki fazladan adayların altında örtülüdür. O fazlalıkları silmek gizli çifti açık çifte dönüştürür."
+            ],
+            [
+              "Gizli üçlü (hidden triple) nedir?",
+              "Bir birimin üç hücresine sıkışmış üç rakam. Her rakamın üç hücrede de görünmesi gerekmez; önemli olan üç rakamdan hiçbirinin o hücrelerin dışında adayı olmamasıdır."
+            ],
+            [
+              "İpucu gizli ve açık çiftleri ayırır mı?",
+              "Hayır. Bare Sudoku ikisini de bulur ve ortaya çıkan yerleştirmeyi \"Çift veya üçlü\" diye etiketler. Buradaki sayfalar onları farklı yollarla bulundukları için ayırır."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Sudokuda X-Wing: Teknik Nasıl Çalışır",
+          "description": "X-Wing: iki satırda tam olarak iki aday hücresi olan ve aynı iki sütunda hizalanan bir rakam o sütunların geri kalanından silinebilir. Gerçek örnek, adım adım.",
+          "h1": "X-Wing",
+          "summary": "X-Wing, tek bir rakam ve bir dikdörtgenin köşelerindeki dört hücreden oluşan bir örüntüdür. Rakamın iki satırın her birinde tam olarak iki aday hücresi varsa ve bu hücreler aynı iki sütunda duruyorsa rakam dikdörtgenin karşılıklı iki köşesini almak zorundadır. Dolayısıyla o iki sütunun diğer her hücresinden silinebilir. Satır ve sütun yer değiştirince de aynı şey işler. Bare Sudoku'daki ilk Uzman tekniğidir.",
+          "when": [
+            "Tekler, kilitli adaylar ve alt kümeler tükendiğinde. X-Wing en yaygın Uzman örüntüsüdür ve genellikle bir rakamın az adayı kaldığında, tipik olarak dört ila altı kopyası yerleşmişken görünür. İncelediğin rakam için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Bir rakam seç ve o rakamın tam olarak iki aday hücresi olduğu satırları ara. Böyle iki satır aynı iki sütunu paylaşıyorsa o sütunlarda rakamın başka adaylarını kontrol et: elemeler onlardır. Sonra sütunları taban alarak yinele. Oyunda rakam tuşuna dokun: o rakamın her adayı vurgulanır ve dört vurgulu nottan oluşan dikdörtgen kolayca görülür."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{d} rakamının {r1}. satırda tam olarak iki, {r2}. satırda tam olarak iki aday hücresi var ve bunlar aynı iki sütunda, {c1} ve {c2}, hizalanıyor: {cells}.",
+                "{r1}. satır {d} rakamını {c1}. ya da {c2}. sütuna koyar, {r2}. satır ise diğerine. Her iki durumda da {c1}. ve {c2}. sütunların her biri bu iki satırdan bir {d} alır.",
+                "Yani {d} rakamı {c1}. ve {c2}. sütunlarda başka hiçbir yerde olamaz. Şu hücrelerden {d} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Rakam için üç aday hücresi olan bir satırı kullanmak. Her taban satırında tam olarak iki olmalı ve ikisi de paylaşılan iki sütunda bulunmalı.",
+            "Rakamı sütunlar yerine satırlardan silmek. Taban satırlarsa elemeler sütunlardadır, tersi de öyle.",
+            "Ters çevrilmiş halini unutmak. Sütunlar üzerine kurulan X-Wing satırlarda eler."
+          ],
+          "faq": [
+            [
+              "Sudokuda X-Wing nedir?",
+              "İki satırın her birinde aynı iki sütunda tam olarak iki aday hücresi olan bir rakam. Rakam o dikdörtgenin karşılıklı iki köşesini alır; bu yüzden iki sütunun geri kalanından silinir. Satır ve sütun yer değiştirebilir."
+            ],
+            [
+              "X-Wing neden işler?",
+              "İki satırın her biri rakamı iki sütundan birine koymak zorundadır ve iki satır aynı sütunu kullanamaz. Dolayısıyla iki sütunun her biri rakamın kendi kopyasını bu satırlardan alır ve o sütunlardaki diğer her aday imkânsızdır."
+            ],
+            [
+              "X-Wing bir balık mı?",
+              "Evet. X-Wing iki boyutlu balıktır; Swordfish üç boyutlu balık. Bare Sudoku ikisini de bulur."
+            ],
+            [
+              "Hangi seviyede X-Wing var?",
+              "Uzman. X-Wing, Y-Wing, Swordfish ya da XYZ-Wing gerektiren bulmaca Uzman diye derecelendirilir."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Sudokuda Y-Wing: Teknik Nasıl Çalışır",
+          "description": "Y-Wing (XY-Wing): iki adaylı bir eksen ve onlardan birini paylaşan iki kanat, iki kanadı da gören her hücreden bir rakamı çıkarır. Gerçek örnek, adım adım.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, XY-Wing de denir, her biri iki adaylı üç hücre kullanır. Eksen hücresinin adayları X ve Y'dir. Bir kanat ekseni görür ve X ile Z taşır; diğer kanat ekseni görür ve Y ile Z taşır. Eksen ne olursa olsun kanatlardan biri Z olmak zorundadır; bu yüzden Z, iki kanadı da gören her hücreden silinebilir. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "Bulmacada tam olarak iki adaylı birkaç hücre varken ve hiçbir balık yokken. Y-Wing Uzman bulmacalarda yaygındır ve iki adaylı hücreleri izleyerek bulunur: her biri olası bir eksen ya da kanattır."
+          ],
+          "spot": [
+            "Tam olarak iki adayı olan hücreleri listele. Her birini X ve Y adaylı eksen kabul et ve komşuları arasında X ile başka bir Z rakamı taşıyan bir hücre ve Y ile aynı Z'yi taşıyan bir hücre ara. Bu ikisi kanatlardır. Sonra iki kanadı da gören ve Z içeren hücreleri bul. Kanatların birbirini görmesi gerekmez."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "Eksen {pivot} hücresinin adayları {x} ve {y}. {x} ile {z} taşıyan {wingA} hücresini ve {y} ile {z} taşıyan {wingB} hücresini görüyor.",
+                "{pivot} {x} ise {wingA} {x} adayını kaybeder ve {z} olur. {pivot} {y} ise {wingB} {z} olur. Her durumda iki kanattan biri {z}.",
+                "İki kanadı da gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "İkisi de ekseni görmeyen kanatlar seçmek. Her kanat eksenle bir satır, sütun ya da kutu paylaşmalıdır.",
+            "Z'yi yalnızca bir kanadı gören hücrelerden silmek. Elenen hücre iki kanadı da görmelidir.",
+            "Z'yi eksenden silmek. Y-Wing'de eksen Z içermez; içeriyorsa örüntü farklı kuralları olan bir XYZ-Wing'dir."
+          ],
+          "faq": [
+            [
+              "Sudokuda Y-Wing nedir?",
+              "İki adaylı üç hücre: X ve Y taşıyan bir eksen, ekseni gören X ve Z taşıyan bir kanat, ekseni gören Y ve Z taşıyan bir kanat. Bir kanat her zaman Z'dir; bu yüzden Z iki kanadı da gören hücrelerden silinir."
+            ],
+            [
+              "Y-Wing ile XY-Wing aynı şey mi?",
+              "Evet. İki ad da aynı örüntüyü anlatır. Bare Sudoku ona Y-Wing der."
+            ],
+            [
+              "Neden bir kanat Z olmak zorunda?",
+              "Eksen X ise ilk kanat X'i kaybeder ve Z olur. Eksen Y ise ikinci kanat Z olur. Eksen ikisinden biridir; dolayısıyla bir kanat Z'dir."
+            ],
+            [
+              "Y-Wing kaç hücreden eler?",
+              "Genellikle bir ya da iki: yalnızca iki kanadı da gören ve hâlâ Z içeren hücreler. Bir tek yaratmaya bu yeter."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Sudokuda Swordfish: Teknik Nasıl Çalışır",
+          "description": "Swordfish: üç satır boyunca üç sütuna sıkışmış bir rakam o sütunların geri kalanından silinebilir. Üç boyutlu balık, gerçek bir örnekle adım adım anlatılıyor.",
+          "h1": "Swordfish",
+          "summary": "Swordfish, üç satır ve üç sütunlu bir X-Wing'dir. Bir rakamın üç satırın her birinde en çok üç aday hücresi varsa ve bu hücrelerin hepsi aynı üç sütuna düşüyorsa üç satır rakamı o sütunlarda tüketir ve rakam üç sütunun diğer her hücresinden silinebilir. Satır ve sütun yer değiştirebilir. Bare Sudoku, Uzman bulmacalarda Swordfish'i Y-Wing'den sonra denetler.",
+          "when": [
+            "X-Wing ve Y-Wing hiçbir şey bulamadığında. Swordfish X-Wing'den daha az yaygındır ve adayları üç çizgiye seyrek yayılmış bir rakam ister. O rakam için eksiksiz ve doğru not gerektirir."
+          ],
+          "spot": [
+            "Bir rakam seç ve o rakam için iki ya da üç aday hücresi olan satırları ara. Böyle üç satır toplamda yalnızca üç sütunu kapsıyorsa o sütunlarda rakamın başka adaylarını kontrol et. Her satırın her sütunda adayı olması gerekmez: bir Swordfish altı, yedi, sekiz ya da dokuz hücreli olabilir. Oyunda rakamı tuşuyla vurgula ve adayları üç sütunda hizalanan üç satır ara."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{d} rakamının {rows}. satırların her birinde en çok üç aday hücresi var ve bu hücrelerin hepsi {cols}. sütunlara düşüyor: {cells}.",
+                "Üç satırın her biri {d} rakamını üç sütundan birine koymak zorundadır ve iki satır aynı sütunu kullanamaz. Yani üç sütun {d} rakamlarını bu üç satırdan alır.",
+                "{cols}. sütunlardaki diğer her {d} adayı imkânsızdır. Şu hücrelerden {d} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Dokuz hücrenin hepsini istemek. Bazı satırlarda iki adayı olan Swordfish, üç satır yalnızca üç sütunu kapsadığı sürece yine geçerlidir.",
+            "Dört aday hücresi olan bir satırı dahil etmek. Her taban satırında en çok üç olmalı, hepsi üç sütunun içinde.",
+            "Taban satırlarında eleme yapmak. Taban satırlarsa elemeler taban satırlarının dışında, üç sütundadır."
+          ],
+          "faq": [
+            [
+              "Sudokuda Swordfish nedir?",
+              "Üç satırdaki adayları üç sütuna sıkışmış bir rakam. Üç satır rakamı o üç sütuna birer kez koymak zorundadır; bu yüzden rakam o sütunların diğer hücrelerinden silinir."
+            ],
+            [
+              "Swordfish X-Wing'den nasıl farklıdır?",
+              "Yalnızca boyutta: X-Wing iki satır ve iki sütun kullanır, Swordfish üç ve üç. Akıl yürütme aynıdır."
+            ],
+            [
+              "Swordfish için tam dokuz hücre mi gerekir?",
+              "Hayır. Her satırda iki ya da üç aday olabilir; örüntü yalnızca üç satırın birlikte üçten fazla sütun kullanmamasını ister."
+            ],
+            [
+              "Dört boyutlu balık var mı?",
+              "Evet, Jellyfish. Bare Sudoku onu kullanmaz, çünkü bulmacaları hiç gerektirmez."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Sudokuda XYZ-Wing: Teknik Nasıl Çalışır",
+          "description": "XYZ-Wing: üç adaylı bir eksen ve onlardan birini paylaşan iki kanat, o rakamı üçünü de gören her hücreden çıkarır. Son teknik, gerçek bir örnekle adım adım.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing, ekseni üç adaylı bir Y-Wing'dir. Eksen X, Y ve Z taşır; bir kanat ekseni görür ve X ile Z taşır, diğeri ekseni görür ve Y ile Z taşır. Üç hücreden biri Z olmak zorundadır; bu yüzden Z üçünü de gören her hücreden silinebilir. Eksenin kendisi Z olabileceğinden elenen hücre iki kanadın yanı sıra ekseni de görmelidir; bu da onu hücrelerin paylaştığı kutu ya da çizgiyle sınırlar. Bare Sudoku'nun kullandığı en zor tekniktir.",
+          "when": [
+            "Yalnızca diğer her şey başarısız olduğunda. XYZ-Wing, Bare Sudoku'daki en nadir örüntüdür ve yalnızca Uzman bulmacalarda görünür. Üç adaylı bir hücre, rakamlarından ikisini paylaşan iki adaylı bir hücreyle aynı kutuda duruyorsa ara."
+          ],
+          "spot": [
+            "Tam olarak üç adayı olan hücrelerden başla; her biri olası bir eksendir. Komşuları arasında ikişer adaylı, ikisi de eksenin üç adayından alınmış ve tam olarak bir Z rakamını paylaşan iki hücre ara. Sonra ekseni ve iki kanadı gören ve Z içeren hücreleri bul. Uygulamada kanatlardan biri eksenin kutusunda, diğeri satırında ya da sütunundadır ve elenen hücreler o kutunun o satır ya da sütundaki kalan hücreleridir."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "Eksen {pivot} hücresinin üç adayı var: {x}, {y} ve {z}. {x} ile {z} taşıyan {wingA} hücresini ve {y} ile {z} taşıyan {wingB} hücresini görüyor.",
+                "{pivot} {z} ise iş bitti. {x} ise {wingA} {z} olmalı. {y} ise {wingB} {z} olmalı. Her durumda üç hücreden biri {z}.",
+                "Üçünü de gören bir hücre {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Yalnızca iki kanadı gören hücrelerden eleme yapmak. Y-Wing'den farklı olarak eksen Z olabilir; bu yüzden hücre ekseni de görmelidir.",
+            "Adayları eksenin üç adayının içinde olmayan kanatlar kullanmak.",
+            "Y-Wing ile karıştırmak: fark eksendeki üçüncü adaydır ve bu, hangi hücrelerin temizlenebileceğini değiştirir."
+          ],
+          "faq": [
+            [
+              "Sudokuda XYZ-Wing nedir?",
+              "X, Y ve Z adaylı bir eksen ile biri X ve Z, diğeri Y ve Z taşıyan, ikisi de ekseni gören iki kanat. Üç hücreden biri Z'dir; bu yüzden Z üçünü de gören hücrelerden silinir."
+            ],
+            [
+              "XYZ-Wing Y-Wing'den nasıl farklıdır?",
+              "Eksenin iki değil, Z dahil üç adayı vardır. Bu, ekseni Z için olası bir yer yapar; dolayısıyla yalnızca ekseni ve iki kanadı gören hücreler Z kaybedebilir."
+            ],
+            [
+              "XYZ-Wing ne sıklıkla görülür?",
+              "Nadiren. Bare Sudoku'da yalnızca Uzman bulmacalar gerektirebilir, çoğu gerektirmez. Bare Sudoku onu en son, X-Wing, Y-Wing ve Swordfish'ten sonra denetler."
+            ],
+            [
+              "WXYZ-Wing var mı?",
+              "Evet, dört adaylı eksenle, ama Bare Sudoku onu kullanmaz. Oyundaki her bulmaca bu rehberin dokuz tekniğiyle bitirilebilir."
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
