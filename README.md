@@ -15,13 +15,17 @@ bun run dev          # wrangler dev: pages, Worker and a local D1 on :8787
 bun run deploy       # test, build and publish to Cloudflare
 ```
 
-Game strings for all languages are in `i18n/strings.json`; page texts (title, description, features, FAQ) are in `i18n/site.json`. Adding a language is one line in the first file and one block in the second; the build stops if either is incomplete.
+Game strings for all languages are in `i18n/strings.json`; page texts (title, description, features, FAQ) are in `i18n/site.json`; the guide texts (how to play, the technique index and nine technique pages) are in `i18n/guide.json`. Adding a language is one line in the first file and one block in each of the other two; the build stops if any is incomplete. Translation batches go into separate JSON files and are merged with `python3 scripts/guide_merge.py batch.json`.
 
 ## Pages and SEO
 
 `scripts/build.py` writes one page per language (`/`, `/tr/`, `/de/` and so on) from `src/index.html`: localized title and description, hreflang links for every language, Open Graph and Twitter tags, JSON-LD (WebSite, Person, WebApplication and VideoGame, MobileApplication, SoftwareSourceCode, WebPage and FAQPage) and a text section under the game with features, the Android app, privacy and FAQ. The language of a page comes from its URL; `/` sends browsers with another language to their page once, and the language menu switches pages.
 
-The build also writes `robots.txt` (AI crawlers allowed, Content-Signal), `sitemap.xml` with hreflang, `llms.txt`, `llms-full.txt`, `humans.txt`, `.well-known/security.txt`, the IndexNow key file, `_headers` (security headers and the CSP) and `404.html`. `art/render.sh` renders `static/og.png` from `art/og.svg` with rsvg-convert. `bun run deploy` ends with an IndexNow ping.
+## Guides
+
+Every language also gets `/how-to-play/`, `/techniques/` and one page per technique (`/techniques/x-wing/` and so on, under the language path for other languages). The technique list mirrors the hint engine in `src/engine.js`: naked and hidden singles, locked candidates, naked and hidden pairs and triples, X-Wing, Y-Wing, Swordfish and XYZ-Wing. Each page shows a real example: `bun scripts/examples.js` generates puzzles, follows the solver until the technique fires and stores the board, candidates and eliminations in `src/examples.json`; `test/examples.test.js` checks that the engine still makes the same step. The board is a static HTML table, so the pages contain no script. Each page has its own JSON-LD (WebPage, Article, BreadcrumbList, FAQPage), hreflang links, breadcrumbs, previous and next links and a per-language `dateModified` taken from the git history of `guide.json`.
+
+The build also writes `robots.txt` (AI crawlers allowed, Content-Signal), `sitemap.xml` (an index of one sitemap per page type, each with hreflang links), `llms.txt` (with a Guides section), `llms-full.txt` (the game page text plus the guides in English), `humans.txt`, `.well-known/security.txt`, the IndexNow key file, `_headers` (security headers and the CSP) and `404.html`. `art/render.sh` renders `static/og.png` from `art/og.svg` with rsvg-convert. `bun run deploy` ends with an IndexNow ping.
 
 Cloudflare dashboard settings the site expects: a redirect rule from www to the root domain, AI crawlers allowed in AI Crawl Control, managed robots.txt and Content Signals off, Email Address Obfuscation and Rocket Loader off (they inject scripts the CSP blocks), Crawler Hints on, Web Analytics off.
 
