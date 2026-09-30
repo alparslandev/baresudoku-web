@@ -40739,6 +40739,2334 @@
           ]
         }
       }
+    },
+    "xh": {
+      "learnHeading": "Funda i-Sudoku",
+      "learnText": "Umtsha kwi-Sudoku, okanye ubambekile kwimfumba enzima? Izikhokelo ezimbini zichaza imithetho nendlela nganye yokusombulula esetyenziswa ngamacebiso, zombini zinemizekelo yokwenyani.",
+      "howToLink": "Idlalwa njani i-Sudoku",
+      "techniquesLink": "Iindlela zokusombulula i-Sudoku",
+      "labels": {
+        "howTo": "Indlela yokudlala",
+        "techniques": "Iindlela",
+        "play": "Dlala i-Sudoku",
+        "prev": "Indlela yangaphambili",
+        "next": "Indlela elandelayo",
+        "all": "Zonke iindlela",
+        "example": "Umzekelo",
+        "steps": "Inyathelo ngenyathelo",
+        "when": "Isetyenziswa nini",
+        "spot": "Ungayibona njani",
+        "mistakes": "Iimpazamo eziqhelekileyo",
+        "inGame": "Kwi-Bare Sudoku",
+        "level": "Iyafuneka ukusukela kwinqanaba: {level}",
+        "hint": "Emdlalweni, icebiso lithi: {text}",
+        "legend": "Amanani angqindilili anikiwe, amanani aluhlaza okwesibhakabhaka afakwe ngexesha lokusombulula, amanani amancinci ngabangeneli. Iiseli ezikhanyisiweyo zenza ipateni, abangeneli abacinyiweyo bayasuswa, kwaye umngeneli ojikelezwe ngesangqa linani ekufuneka lifakwe.",
+        "notation": "Iiseli zibhalwa ngolu hlobo: r3c7, oko kukuthi umgca 3, ikholam 7. Imigca ibalwa ukusuka phezulu, iikholam ukusuka ngasekhohlo, kwaye iibhokisi zibalwa ukusuka ku-1 ukuya ku-9 ukusuka phezulu ekhohlo, umgca ngomgca.",
+        "row": "umgca {n}",
+        "column": "ikholam {n}",
+        "box": "ibhokisi {n}",
+        "elimItem": "i-{d} kwi-{cell}",
+        "regions": "Umgca 5, ikholam 5 nebhokisi 5 ekuqaleni kwemfumba",
+        "firstMove": "Eyodwa ecacileyo: iseli {cell} inokuba yi-{d} kuphela",
+        "breadcrumb": "Umkhondo"
+      },
+      "howTo": {
+        "title": "Idlalwa njani i-Sudoku: imithetho, igridi, ukuqala",
+        "description": "Funda ukudlala i-Sudoku: imithetho, imigca, iikholam neebhokisi, isizathu sokuba imfumba nganye inesisombululo esinye, amanqaku namanyathelo okuqala.",
+        "h1": "Idlalwa njani i-Sudoku",
+        "summary": "I-Sudoku yimfumba yengqiqo kwigridi engu-9×9. Zalisa iseli nganye engenanto ngenani ukusuka ku-1 ukuya ku-9 ukuze inani ngalinye libe kanye kuphela kumgca ngamnye, kwikholam nganye nakwibhokisi nganye engu-3×3. Amanye amanani anikwa ekuqaleni; amanye uwafumana ngengqiqo, iseli eqinisekileyo enye emva kwenye, kwaye akunyanzelekanga ukuba uqikelele. Esi sikhokelo sichaza igridi, imithetho, umgaqo wesisombululo esinye, amanqaku kunye nesicwangciso esilula samanyathelo akho okuqala. Ungaziqhelisela zonke ezi zinto kwi-[Bare Sudoku](play), esimahla kwaye enamacebiso achaza ingqiqo.",
+        "sections": [
+          {
+            "h": "Yeyiphi imithetho ye-Sudoku?",
+            "p": [
+              "Mithathu kuphela imithetho, kwaye ingumthetho omnye obonwa ngamacala amathathu: umgca ngamnye kufuneka ube namanani u-1 ukuya ku-9, ikholam nganye kufuneka ibe namanani u-1 ukuya ku-9, kwaye ibhokisi nganye engu-3×3 kufuneka ibe namanani u-1 ukuya ku-9. Ngoko inani alinakuze libonakale kabini kumgca omnye, kwikholam enye okanye kwibhokisi enye.",
+              "Amanani anikiweyo, ashicilelwe engqindilili, akatshintshi. Umsebenzi wakho kukuzalisa iiseli ezingenanto. Akukho zibalo kwaye akukho kulandelelana: amanani ziimpawu ezilithoba nje ezahlukeneyo. Ungadlala ngoonobumba okanye ngeemilo kwaye akukho nto ibiya kutshintsha."
+            ]
+          },
+          {
+            "h": "Igridi ilungelelaniswe njani?",
+            "p": [
+              "Igridi ineeseli ezingama-81 kwimigca elithoba nakwiikholam ezilithoba. Imida engqindilili iyahlula ibe ziibhokisi ezilithoba ezingu-3×3. Iseli nganye ikumgca omnye, kwikholam enye nakwibhokisi enye kuphela, kwaye la maqela mathathu ziiyunithi zayo. Ezinye iiseli ezingama-20 ezabelana ngeyunithi neseli zibizwa ngokuba ngabamelwane bayo; inani elifakwe kwiseli likhupha elo nani kubo bonke abamelwane abangama-20.",
+              "Iiseli zibhalwa ngolu hlobo: r3c7, oko kukuthi umgca 3, ikholam 7. Imigca ibalwa ukusuka phezulu, iikholam ukusuka ngasekhohlo, kwaye iibhokisi zibalwa ukusuka ku-1 ukuya ku-9 ukusuka phezulu ekhohlo, umgca ngomgca. Olu phawu lusetyenziswa kuso sonke isikhokelo sendlela kwaye kufanelekile ukulufunda: i-r5c5 isembindini wegridi."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Kutheni i-Sudoku nganye inesisombululo esinye kuphela?",
+            "p": [
+              "I-Sudoku eyiyo inesisombululo esinye, kwaye yiloo nto eyenza ingqiqo isebenze. Nanini na xa unokubonisa ukuba inani alinakuya naphi na kwenye indawo kwiyunithi, kufuneka liye kwiseli eseleyo, kuba isisombululo sikhona kwaye sisinye kuphela. Ukuba imfumba ibinezisombululo ezibini, akukho kuqiqa bekunokuzahlula, kwaye ngaxa lithile ubuya kunyanzeleka ukuba uqikelele.",
+              "I-Bare Sudoku yenza imfumba nganye kwisixhobo sakho kwaye ijonga ukuba inesisombululo esinye kuphela nokuba isisombululi sayo sengqiqo singayigqiba ngeendlela zenqanaba olikhethileyo. Ngoko ukuba ubambekile, kusoloko kukho inyathelo elilandelayo ekufuneka lifunyanwe, kwaye icebiso liyalibonisa."
+            ]
+          },
+          {
+            "h": "Uyiqala njani imfumba ye-Sudoku?",
+            "p": [
+              "Qala ngezona ndawo zithintelwe kakhulu. Olu landelelwano lusebenza kuwo onke amanqanaba:"
+            ],
+            "list": [
+              "Khetha inani esele libonakala amaxesha amaninzi, masithi kathandathu okanye kasixhenxe, uze ufumane iibhokisi ezingekabinalo. Kaninzi kusala iseli enye kuphela kwibhokisi apho linokungena khona: nantsi [eyodwa efihlakeleyo](hidden-single).",
+              "Khangela iiseli ezijikelezwe ngamanani amaninzi. Iseli apho umgca wayo, ikholam yayo nebhokisi yayo zizonke zinamanani asibhozo ahlukeneyo inomngeneli omnye kuphela oseleyo: nantsi [eyodwa ecacileyo](naked-single). Iiseli ezikwimigca okanye kwiibhokisi eziphantse ukuzala zezona ndawo zilungileyo zokukhangela.",
+              "Inani ngalinye olifakayo lisusa umngeneli kubamelwane abangama-20, ngoko jonga abo bamelwane ngoko nangoko. Ezizodwa zihlala zisiza ngokulandelelana.",
+              "Xa ukufaka okulula kuphelile, bhala amanqaku: abangeneli beseli nganye engenanto. Emva koko khangela inani elivalelwe kumgca omnye okanye kwikholam enye ngaphakathi kwebhokisi ([abangeneli abatshixiweyo](locked-candidates)) okanye iiseli ezimbini ezinabangeneli ababini abafanayo ([isibini esicacileyo](naked-pairs)).",
+              "Buyela kwezizodwa emva kokususa ngakunye. Kwaneemfumba zeNgcali zisonjululwa ikakhulu ngezizodwa; indlela ephambili ivula nje inyathelo elilandelayo."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Yintoni amanqaku kwaye uwasebenzisa nini?",
+            "p": [
+              "Amanqaku, akwabizwa ngokuba ngamanqaku epensile okanye abangeneli, ngamanani amancinci owabhala kwiseli engenanto ukuze ubone ukuba ngawaphi amanani asenokungena apho. Kwiimfumba ezilula akufane uwadinge; ukusukela kwinqanaba elithi Kunzima ayafuneka kakhulu, kuba iindlela ezinjengezibini, i-X-Wing ne-Y-Wing zijongana nabangeneli, hayi namanani afakiweyo.",
+              "Gcina amanqaku echanekile: xa ufaka inani, lisuse kumanqaku abo bonke abamelwane abangama-20. Kwi-Bare Sudoku oku kwenzeka ngokuzenzekelayo, kwaye iqhosha elithi Zalisa amanqaku libhala wonke umngeneli kuyo yonke iseli engenanto ngokucofa kanye, ukuze uqale ngeqela labangeneli elipheleleyo nelichanekileyo. Inqaku liyinyani, alikokuqikelela: lithetha ukuba akukho nto ilikhuphayo eli nani okwangoku."
+            ]
+          },
+          {
+            "h": "Wenza ntoni xa ubambekile?",
+            "p": [
+              "Kuqala phinda ujonge izinto ezisisiseko: wonke umgca, ikholam nebhokisi ephantse ukuzala ngumthombo wezizodwa. Emva koko qinisekisa ukuba amanqaku apheleleyo, kuba umngeneli ongekhoyo ufihla iipateni kwaye umngeneli ongasasebenziyo wenza iipateni zobuxoki. Emva koko landela [iindlela](techniques) ngokobunzima bazo: abangeneli abatshixiweyo, izibini nezithathu, X-Wing, Y-Wing, Swordfish ne-XYZ-Wing. Nganye inephepha layo elinomzekelo wokwenyani.",
+              "Ukuba akukho nto isebenzayo, thatha icebiso. Kwi-Bare Sudoku icebiso liqala lijonge ukuba kukho inani elifakiweyo elingalunganga na, emva koko lifumane iseli elandelayo enokuzaliswa ngengqiqo kwaye libize igama lendlela, ngoko ufunda into nokuba uyalisebenzisa. Cofa icebiso kwakhona ukuze ufake inani."
+            ]
+          },
+          {
+            "h": "Uwafaka njani amanani kwi-Bare Sudoku?",
+            "p": [
+              "Cofa iseli, uze ucofe inani. Okanye cofa inani kuqala: liyatshixeka, kwaye iseli nganye oyicofayo iyalifumana; le yeyona ndlela ikhawulezayo yokufaka ikopi yesithandathu, yesixhenxe neyesibhozo yenani. Cofa inani kwakhona ukuze ulivule. Iqhosha elithi Amanqaku litshintshela kumanqaku epensile, Cima icima iseli, Buyisela ibuyisa nayiphi na intshukumo, kwaye iimpazamo ziphawulwa ngombala obomvu ngaphandle kokuba ukucime oko kwimenyu.",
+              "Kwikhibhodi, sebenzisa amaqhosha otolo ukuhamba, u-1 ukuya ku-9 ukufaka inani, Backspace ukucima, N yamanqaku, U yokubuyisela, H yecebiso, F yokuzalisa amanqaku kunye ne-Escape yemenyu. Umdlalo uzigcina ngokwawo, usebenza ngaphandle kwe-intanethi kwaye awunazo iintengiso okanye iakhawunti."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ingaba kukho xa kufuneka uqikelele kwi-Sudoku?",
+            "Hayi kwimfumba eyiyo. Yonke imfumba ye-Bare Sudoku inesisombululo esinye kuphela kwaye ijongiwe ukuba ingasonjululwa ngengqiqo kuphela, kude kube ziindlela zenqanaba layo. Ukuba uziva ngathi kufuneka uqikelele, kukho umngeneli ongekhoyo kumanqaku akho okanye kukho indlela elindele ukufunyanwa."
+          ],
+          [
+            "Ingaba inani linokubonakala kabini kumgca, kwikholam okanye kwibhokisi?",
+            "Hayi. Nguwo lowo umthetho uphela: kwimigca elithoba, kwiikholam ezilithoba nakwiibhokisi ezilithoba, nganye inenani ngalinye ukusuka ku-1 ukuya ku-9 kube kanye kuphela. Ukuba amanani amabini afanayo akwiyunithi enye, ubuncinci elinye lawo aliyilo."
+          ],
+          [
+            "Yintoni umahluko phakathi kwamanqanaba athi Kulula, Phakathi, Kunzima nelithi Ingcali?",
+            "Inqanaba limiselwa ziindlela ezifunwa yimfumba. Iimfumba ezilula neziphakathi zisonjululwa ngezizodwa kuphela, kwaye iimfumba ezilula ziqala ubuncinci ngamanani anikiweyo angama-38. Inqanaba elithi Kunzima lifuna abangeneli abatshixiweyo okanye izibini nezithathu. Inqanaba elithi Ingcali lifuna i-X-Wing, i-Y-Wing, i-Swordfish okanye i-XYZ-Wing."
+          ],
+          [
+            "Ingaba kungcono ukuzalisa amanqaku kuzo zonke iiseli okanye kwezinye kuphela?",
+            "Kwiimfumba ezinzima nezeNgcali, zalisa onke: iipateni ezinjengezibini, i-X-Wing ne-Y-Wing zibonakala kuphela xa wonke umngeneli ebhaliwe. Kwiimfumba ezilula neziphakathi amanqaku akanyanzelekanga, kwaye uninzi lwabadlali lukhangela ezizodwa kuphela."
+          ],
+          [
+            "Ithatha ixesha elingakanani i-Sudoku?",
+            "Imfumba elula ithatha imizuzu embalwa; iimfumba zeNgcali zinokuthatha imizuzu engamashumi amabini nangaphezulu, kuxhomekeke ekukhawuleni kwakho ukubona ipateni ephambili. I-Bare Sudoku ibonisa isibali-xesha, isimisa xa imenyu ivulekile kwaye ayigcini luhlu lwabaphumeleleyo, ngoko dlala ngesantya sakho."
+          ],
+          [
+            "Ingaba i-Sudoku ifuna izibalo?",
+            "Hayi. Amanani ziilebheli nje; akukho kudibanisa okanye kubala. Naziphi na iimpawu ezilithoba bezinokusebenza, kwaye yiyo loo nto i-Sudoku iyimfumba yengqiqo, hayi imfumba yamanani."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Iindlela zokusombulula i-Sudoku zichazwe ngemizekelo",
+        "description": "Zonke iindlela ezilithoba zokusombulula i-Sudoku, ukusuka kwezizodwa ezicacileyo ukuya kwi-Swordfish ne-XYZ-Wing, ngokulandelelana kwamacebiso e-Bare Sudoku.",
+        "h1": "Iindlela zokusombulula i-Sudoku",
+        "intro": [
+          "Yonke i-Sudoku ingasonjululwa ngeqela elincinci leendlela zengqiqo. Olu luhlu lubonisa iindlela ezilithoba ezisetyenziswa sisisombululi se-Bare Sudoku namacebiso aso, ngokulandelelana esizizama ngako: ezizodwa kuqala, emva koko ukususa ngaphakathi kweyunithi enye, emva koko iipateni ezinabela kwimigca neekholam ezininzi. Indlela nganye inephepha layo elinenkcazelo, indlela yokuyibona, umzekelo wokwenyani ovela kwimfumba eyenziweyo kunye neempazamo eziqhelekileyo.",
+          "Inqanaba lemfumba ligqitywa yeyona ndlela inzima eyifunayo. Iimfumba ezilula neziphakathi zifuna ezizodwa kuphela, iimfumba ezinzima zifuna abangeneli abatshixiweyo okanye izibini nezithathu, kwaye iimfumba zeNgcali zifuna ubuncinci intlanzi enye okanye iphiko elinye. Nokuba lithini na inqanaba, ezizodwa zenza uninzi lomsebenzi; indlela ephambili isusa umngeneli omnye okanye ababini, kwaye ezizodwa ziqhubeka ukusuka apho."
+        ],
+        "faq": [
+          [
+            "Ndizame iindlela ze-Sudoku ngoluphi ulandelelwano?",
+            "Ezona zilula kuqala: ezizodwa ezicacileyo, ezizodwa ezifihlakeleyo, abangeneli abatshixiweyo, izibini nezithathu ezicacileyo, izibini nezithathu ezifihlakeleyo, X-Wing, Y-Wing, Swordfish, XYZ-Wing. I-Bare Sudoku izizama ngolu landelelwano kanye, kwaye icebiso lihlala libiza eyona ndlela ilula eqhubela phambili."
+          ],
+          [
+            "Ingaba ndizidinga zonke ezi ndlela ukuze ndisombulule i-Sudoku?",
+            "Kwiimfumba ezilula neziphakathi, ezizodwa zanele. Iimfumba ezinzima zongeza abangeneli abatshixiweyo nezibini nezithathu. Iimfumba zeNgcali zifuna ubuncinci intlanzi enye okanye iphiko elinye, kodwa ngokuqhelekileyo kube kanye okanye kabini kuphela kwimfumba nganye."
+          ],
+          [
+            "Ingaba zikhona iindlela ezinzima ngakumbi kune-XYZ-Wing?",
+            "Ewe, umzekelo amatyathanga, iimvavanyo zokuba isisombululo sisinye neminatha enyanzelayo. I-Bare Sudoku ayenzi iimfumba ezizifunayo, ngoko yonke imfumba emdlalweni ingagqitywa ngeendlela ezilithoba ezikweli phepha."
+          ],
+          [
+            "Yintoni umngeneli?",
+            "Linani elisenokungena kwiseli engenanto kuba akukho nto kumgca wayo, kwikholam yayo okanye kwibhokisi yayo elikhuphayo okwangoku. Amanqaku emdlalweni ngabangeneli. Yonke indlela engaphaya kwezizodwa iqiqa ngabangeneli, ngoko bagcine bepheleleyo kwaye bechanekile."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Eyodwa ecacileyo",
+          "title": "Eyodwa ecacileyo kwi-Sudoku: iseli enomngeneli omnye",
+          "description": "Eyodwa ecacileyo yiseli engenanto enenani elinye kuphela elinokungena. Funda ukuzifumana ngokukhawuleza, ngomzekelo wokwenyani neempazamo eziqhelekileyo.",
+          "h1": "Eyodwa ecacileyo (naked single)",
+          "summary": "Eyodwa ecacileyo yiseli engenanto enomngeneli omnye kuphela: amanye amanani asibhozo sele ebonakala kumgca wayo, kwikholam yayo okanye kwibhokisi yayo. Inani eliseleyo kufuneka lingene apho. Yeyona ndlela ilula ye-Sudoku, leyo uyisebenzisa rhoqo, kwaye yileyo icebiso le-Bare Sudoku liyibika ngamazwi athi \"Mnye kuphela ongenela apha\".",
+          "when": [
+            "Rhoqo. Ezizodwa ezicacileyo zibonakala ukusuka kwinyathelo lokuqala ukuya kwelokugqibela, kuwo onke amanqanaba. Kwiimfumba ezilula neziphakathi, kunye nezizodwa ezifihlakeleyo, kuphela kwendlela oyidingayo. Kwiimfumba ezinzima ngakumbi, ukususa ngakunye okwenziwa yindlela ephambili kudla ngokushiya eyodwa ecacileyo, ngoko zikhangele emva kwenyathelo ngalinye."
+          ],
+          "spot": [
+            "Jonga iiseli ezinabamelwane abaninzi abasele bezalisiwe: iseli ekumgca osele unamanani asixhenxe, okanye iseli apho umgca wayo, ikholam yayo nebhokisi yayo zizonke zigubungela amanani asibhozo ahlukeneyo. Ngaphandle kwamanqaku, bala amanani onokuwabona ukusuka kwiseli. Ngamanqaku, eyodwa ecacileyo yiseli ebonisa umngeneli omnye nje, yiyo loo nto iqhosha elithi Zalisa amanqaku lizenza zibe lula ukufumaneka."
+          ],
+          "examples": [
+            {
+              "h": "Umzekelo",
+              "steps": [
+                "Jonga iseli {cell}. Ayinanto, ngoko bhala uluhlu lwawo onke amanani asele efakiwe kumgca wayo, kwikholam yayo nakwibhokisi yayo.",
+                "Umgca {row} unamanani {rowDigits}. Ikholam {col} inamanani {colDigits}. Ibhokisi {box} inamanani {boxDigits}.",
+                "Xa edibene, akhupha onke amanani ngaphandle kwe-{d}, ngoko i-{d} ngumngeneli ekuphela kwakhe oseleyo kwiseli {cell}.",
+                "Bhala i-{d} kwiseli {cell}. Emva koko jonga ukuba inani elitsha lenza enye eyodwa kumgca lowo, kwikholam leyo okanye kwibhokisi leyo."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukubala umgca kuphela okanye ibhokisi kuphela. Amanani asibhozo akhutshiweyo adla ngokuvela kuzo zontathu iiyunithi zizonke.",
+            "Ukulibala ukuba inani osandula ukulifaka likhupha abangeneli nakubamelwane balo abangama-20; ezizodwa ezicacileyo ezintsha zibonakala kwangoko emva kokufaka ngakunye.",
+            "Ukudida eyodwa ecacileyo neyodwa efihlakeleyo: eyodwa ecacileyo inomngeneli omnye oseleyo kwiseli, eyodwa efihlakeleyo inendawo enye eseleyo yenani kwiyunithi."
+          ],
+          "faq": [
+            [
+              "Yintoni eyodwa ecacileyo kwi-Sudoku?",
+              "Yiseli engenanto enomngeneli omnye kuphela. Amanani asibhozo ahlukeneyo sele efakiwe kumgca wayo, kwikholam yayo nakwibhokisi yayo, ngoko inani lesithoba kuphela kwalo elilungelayo."
+            ],
+            [
+              "Kutheni ibizwa ngokuba ecacileyo?",
+              "Kuba umngeneli omnye ubonakala ngqo kwiseli xa amanqaku ebhaliwe; akukho nto imfihlayo. Eyodwa efihlakeleyo yona ihleli phakathi kwabanye abangeneli kwaye ifunyanwa ngokujonga inani endaweni yeseli."
+            ],
+            [
+              "Ingaba imfumba ingasonjululwa ngezizodwa ezicacileyo kuphela?",
+              "Iimfumba ezininzi ezilula zingasonjululwa, kodwa uninzi lwazo lufuna nezizodwa ezifihlakeleyo. I-Bare Sudoku ibeka iimfumba ezilula neziphakathi njengezisonjululwa ngezizodwa zazo zombini iintlobo; iimfumba ezinzima nezeNgcali zifuna ubuncinci enye indlela."
+            ],
+            [
+              "Ingaba icebiso libonisa ezizodwa ezicacileyo?",
+              "Ewe. Xa ukufaka okulandelayo kuyeyodwa ecacileyo, icebiso likhetha iseli kwaye lithi \"Mnye kuphela ongenela apha\" kunye nenani. Cofa icebiso kwakhona ukuze ulifake."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Eyodwa efihlakeleyo",
+          "title": "Eyodwa efihlakeleyo kwi-Sudoku: indawo enye yenani",
+          "description": "Eyodwa efihlakeleyo yiseli ekuphela kwayo kumgca, kwikholam okanye kwibhokisi apho inani lisenokungena. Funda ukuzibona ngokuhlola inani elinye ngexesha.",
+          "h1": "Eyodwa efihlakeleyo (hidden single)",
+          "summary": "Eyodwa efihlakeleyo linani elinendawo enye kuphela eseleyo kumgca, kwikholam okanye kwibhokisi, nokuba iseli leyo ibonisa abanye abangeneli. Ekubeni iyunithi kufuneka ibe nelo nani, lingena apho. Icebiso le-Bare Sudoku liyibika ngamazwi athi \"Yindawo enye kuphela ye-5 kulo mgca\", ikholam okanye ibhokisi.",
+          "when": [
+            "Nanini na xa inani lihambele phambili: xa inani sele libonakala kahlanu okanye kathandathu, iibhokisi eziseleyo zithintelwe kakhulu, kwaye eyodwa efihlakeleyo idla ngokuba linyathelo elilandelayo. Ezizodwa ezifihlakeleyo yeyona ndlela iphambili yeemfumba ezilula neziphakathi kwaye zihlala ziyinkabi yomsebenzi kuwo onke amanqanaba."
+          ],
+          "spot": [
+            "Hlola inani elinye ngexesha. Thatha inani, fumana ibhokisi engenalo, uze ucime yonke iseli yaloo bhokisi ekumgca okanye kwikholam enye nekopi yenani esele ifakiwe. Ukuba kusala iseli enye, ufumene eyodwa efihlakeleyo. Oku kuhlola kusebenza nakwimigca nakwiikholam. Emdlalweni, cofa inani elifakiweyo: zonke iikopi zalo ziyakhanyiswa, ngoko iiseli ezingenanto ziyabonakala."
+          ],
+          "examples": [
+            {
+              "h": "Umzekelo",
+              "steps": [
+                "Ibhokisi {box} ayikabi nayo i-{d}, ngoko enye yeeseli zayo ezingenanto kufuneka ibe nayo. Iiseli ezingenanto zezi: {empties}.",
+                "Kuzo zonke ngaphandle kweseli {cell}, i-{d} ivalwa yi-{d} esele ifakiwe kumgca omnye okanye kwikholam enye nazo, ngoko i-{d} ayingomngeneli apho.",
+                "Oko kushiya iseli {cell} njengendawo ekuphela kwayo ye-{d} kwibhokisi {box}. Bhala i-{d} apho, nokuba iseli {cell} isenokubonisa abanye abangeneli."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukufaka inani kwiseli ebonakala ngathi iyiyo nje: jonga yonke enye iseli engenanto yeyunithi, hayi ezicacileyo kuphela.",
+            "Ukuphosa eyodwa efihlakeleyo kuba iseli ibonisa abangeneli abaninzi. Abanye abangeneli abanamsebenzi; okubalulekileyo kukuba inani alinayo enye indawo kwiyunithi.",
+            "Ukuhlola iibhokisi kuphela. Imigca neekholam zivelisa ezizodwa ezifihlakeleyo rhoqo ngokulinganayo, ingakumbi ngasekupheleni."
+          ],
+          "faq": [
+            [
+              "Yintoni eyodwa efihlakeleyo kwi-Sudoku?",
+              "Linani elinokungena kwiseli enye kuphela yomgca, yekholam okanye yebhokisi. Iyunithi kufuneka ibe nelo nani, ngoko iseli igqitywe, nokuba isenabo abanye abangeneli."
+            ],
+            [
+              "Yintoni umahluko phakathi kweyodwa efihlakeleyo neyodwa ecacileyo?",
+              "Eyodwa ecacileyo imalunga neseli: kusala umngeneli omnye. Eyodwa efihlakeleyo imalunga nenani: kusala iseli enye kwiyunithi. Zombini zifaka inani ngokuqiniseka."
+            ],
+            [
+              "Yeyiphi elula ukuyifumana?",
+              "Ngaphandle kwamanqaku, ezizodwa ezifihlakeleyo zidla ngokuba lula kuba unokuhlola igridi inani elinye ngexesha. Ngamanqaku apheleleyo, ezizodwa ezicacileyo zezona zilula, kuba iseli enomngeneli omnye iyabonakala."
+            ],
+            [
+              "Icebiso liyichaza njani eyodwa efihlakeleyo?",
+              "Ngamazwi athi \"Yindawo enye kuphela ye-\" nenani kulo mgca, kule kholam okanye kule bhokisi, iseli ikhethiwe. Cofa icebiso kwakhona ukuze ulifake."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Abangeneli abatshixiweyo",
+          "title": "Abangeneli abatshixiweyo kwi-Sudoku: ukukhomba nokubanga",
+          "description": "Abangeneli abatshixiweyo: xa bonke abangeneli benani kwibhokisi bekumgca omnye okanye kwikholam enye, okanye ngokuchaseneyo, inani lisuswa kwezinye iindawo.",
+          "h1": "Abangeneli abatshixiweyo (locked candidates)",
+          "summary": "Abangeneli abatshixiweyo yindlela yokuqala esusa abangeneli endaweni yokufaka inani. Inezimo ezibini. Ukukhomba: kwibhokisi, bonke abangeneli benani bakumgca omnye okanye kwikholam enye, ngoko inani lisuswa kwezinye iiseli zaloo mgca okanye ikholam. Ukubanga: kumgca okanye kwikholam, bonke abangeneli benani bakwibhokisi enye, ngoko inani lisuswa kwezinye iiseli zaloo bhokisi. Icebiso le-Bare Sudoku liphawula ukufaka elikuvulayo ngamazwi athi \"Abangeneli abatshixiweyo\".",
+          "when": [
+            "Xa ezizodwa ziphela kwimfumba enzima, le yeyona nto yokuqala ukuyizama. Ifuna amanqaku apheleleyo ubuncinci kwinani olihlolayo. Abangeneli abatshixiweyo baqhelekile: uninzi lweemfumba ezinzima luyabafuna, kwaye iimfumba zeNgcali zibasebenzisa phakathi kweepateni ezinkulu."
+          ],
+          "spot": [
+            "Ukukhomba, jonga ibhokisi nganye nenani ngalinye elingekhoyo kuyo: ukuba iiseli ezinomngeneli welo nani zikumgca omnye okanye kwikholam enye, jonga ukuba inani elifanayo livela njengomngeneli kwaloo mgca okanye ikholam ngaphandle kwebhokisi. Ukubanga, jonga ecaleni komgca okanye ikholam: ukuba bonke abangeneli benani bangaphakathi kwebhokisi enye, ezinye iiseli zaloo bhokisi zingacocwa. Emdlalweni, cofa iqhosha lenani ukuze ukhanyise bonke abangeneli balo; umgca wamanqaku amabini okanye amathathu akhanyisiweyo ngaphakathi kwebhokisi enye yipateni."
+          ],
+          "examples": [
+            {
+              "h": "Ukukhomba",
+              "steps": [
+                "Kwibhokisi {box}, inani {d} lingangena kuphela kwezi seli: {cells}. Zonke zikumgca {row}.",
+                "Ibhokisi {box} idinga i-{d}, ngoko i-{d} yomgca {row} ingaphakathi kwebhokisi {box}, nokuba iwela kweyiphi na kwezo seli.",
+                "Umgca {row} awunakuba ne-{d} yesibini, ngoko susa i-{d} kwiiseli zomgca {row} ezingaphandle kwebhokisi: {elim}."
+              ]
+            },
+            {
+              "h": "Ukubanga",
+              "steps": [
+                "Kumgca {row}, inani {d} lingangena kuphela kwiiseli {cells}, kwaye zonke zingaphakathi kwebhokisi {box}.",
+                "Umgca {row} kufuneka ube ne-{d}, ngoko i-{d} yebhokisi {box} ibangwa ngumgca {row}. Ezinye iiseli zebhokisi {box} azinakuba ne-{d}.",
+                "Susa i-{d} kwiiseli {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukususa inani ngaphakathi kwebhokisi endaweni yangaphandle kwayo kwimeko yokukhomba, okanye ngokuchaseneyo kwimeko yokubanga. Ukususwa kuhlala kusiya kwiiseli ezikumgca okanye kwikholam kodwa zingekho kwibhokisi, okanye ezikwibhokisi kodwa zingekho kumgca okanye kwikholam.",
+            "Ukusebenzisa umthetho xa abangeneli benabela kwimigca emibini yebhokisi. Zonke iiseli ezinomngeneli welo nani kwibhokisi kufuneka zibe kumgca omnye okanye kwikholam enye.",
+            "Ukulibala ukukhangela eyodwa eyenziwa kukususa. Abangeneli abatshixiweyo kunqabile ukuba bafake inani ngokwabo; balungiselela eyodwa."
+          ],
+          "faq": [
+            [
+              "Yintoni abangeneli abatshixiweyo kwi-Sudoku?",
+              "Ngabangeneli benani abavalelwe kwindawo edibana kuyo ibhokisi nomgca okanye ikholam. Ekubeni ibhokisi, okanye umgca, kufuneka ibe nelo nani ngaphakathi kwaloo ndawo idibanayo, inani lingasuswa kwezinye iiseli zomgca, okanye kwezinye iiseli zebhokisi."
+            ],
+            [
+              "Yintoni umahluko phakathi kokukhomba nokubanga?",
+              "Ukukhomba kuqala kwibhokisi: abangeneli benani kwibhokisi bakhomba kumgca omnye okanye kwikholam enye, ngoko inani lisuswa kwezinye iiseli zaloo mgca okanye ikholam. Ukubanga kuqala kumgca okanye kwikholam: bonke abangeneli balo benani bakwibhokisi enye, ngoko umgca uyalibanga inani, kwaye lisuswa kwezinye iiseli zebhokisi."
+            ],
+            [
+              "Ingaba abangeneli abatshixiweyo bakwabizwa ngokuba kukususwa kwindawo edibanayo?",
+              "Ewe. Amanye amagama kukuncitshiswa kwebhokisi nomgca kwimo yokubanga, nezibini ezikhombayo okanye izithathu ezikhombayo kwimo yokukhomba. I-Bare Sudoku isebenzisa igama elinye kuzo zombini."
+            ],
+            [
+              "Leliphi inqanaba elifuna abangeneli abatshixiweyo?",
+              "Kunzima. Imfumba efuna abangeneli abatshixiweyo okanye izibini nezithathu, kodwa ingafuni nto inzima ngakumbi, ibekwa kwinqanaba elithi Kunzima; iimfumba zeNgcali zifuna nentlanzi okanye iphiko."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Izibini nezithathu ezicacileyo",
+          "title": "Izibini nezithathu ezicacileyo kwi-Sudoku: zisebenza njani",
+          "description": "Izibini nezithathu ezicacileyo: iiseli ezimbini okanye ezintathu kwiyunithi ezinabangeneli abafanayo. Funda ukuzibona nento ekufuneka isuswe, ngemizekelo.",
+          "h1": "Izibini nezithathu ezicacileyo (naked pairs, naked triples)",
+          "summary": "Isibini esicacileyo ziiseli ezimbini kumgca omnye, kwikholam enye okanye kwibhokisi enye ezinabangeneli ababini abafanayo ngqo. La manani mabini kufuneka angene kwezo seli zimbini, ngoko angasuswa kuyo yonke enye iseli yeyunithi. Isithathu esicacileyo sisimbo esifanayo neeseli ezintathu namanani amathathu; iseli nganye ingabonisa amabini okanye omathathu. Icebiso le-Bare Sudoku liphawula ukufaka okulandelayo ngamazwi athi \"Isibini okanye isithathu\".",
+          "when": [
+            "Emva kokuba amanqaku epheleleyo kwaye ezizodwa nabangeneli abatshixiweyo bephelile. Izibini ezicacileyo ziqhelekile kakhulu kwiimfumba ezinzima, izithathu ezicacileyo zinqabile ngakumbi. Kufanelekile ukuzijonga zombini kuyo yonke iyunithi esenazo iiseli ezingenanto ezintlanu nangaphezulu."
+          ],
+          "spot": [
+            "Khangela iiseli ezinabangeneli ababini kuphela uze ufumane enye iseli kwiyunithi enye enabo ababini abafanayo. Kwizithathu, jonga iiyunithi ezineeseli ezininzi ezinabangeneli ababini nabathathu uze ujonge ukuba ezintathu kuzo zizonke zisebenzisa amanani amathathu ahlukeneyo kuphela. Iiseli ezinabangeneli abafanayo ngqo zibonakala lula xa amanqaku ebhaliwe; iqhosha elithi Zalisa amanqaku emdlalweni likwenza oko ngokucofa kanye."
+          ],
+          "examples": [
+            {
+              "h": "Isibini esicacileyo",
+              "steps": [
+                "{unit}: iiseli {cellA} kunye ne-{cellB} zinabangeneli ababini abafanayo ngqo, i-{d1} ne-{d2}.",
+                "Enye yazo kufuneka ibe yi-{d1} enye ibe yi-{d2}. Asazi ukuba yeyiphi, kodwa omabini amanani athathwe zezi seli zimbini.",
+                "Ngoko akukho enye iseli yale yunithi ({unit}) enokuba ne-{d1} okanye ne-{d2}. Susa {elim}."
+              ]
+            },
+            {
+              "h": "Isithathu esicacileyo",
+              "steps": [
+                "{unit}: iiseli ezintathu zithatha bonke abangeneli bazo kumanani amathathu afanayo, {digits}: {cells}.",
+                "Amanani amathathu kufuneka azalise ezi seli zintathu ngendlela ethile. Iseli ayidingi kubonisa bonke abangeneli abathathu; okubalulekileyo kukuba akukho nanye kwezi seli zintathu enomngeneli ongaphandle kweli qela.",
+                "Susa amanani {digits} kuyo yonke enye iseli yale yunithi ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukuthatha iiseli ezimbini ezabelana ngabangeneli ababini kodwa ezinomngeneli wesithathu. Kwisibini esicacileyo, iseli nganye kufuneka ibe nabangeneli ababini kanye kwaye kungabikho nto yimbi.",
+            "Ukususa amanani kwiiseli zesibini ngokwazo. Isibini sigcina abangeneli baso; ukususwa kusiya kwezinye iiseli zeyunithi.",
+            "Ukufuna ukuba iseli nganye yesithathu ibonise omathathu amanani. Iseli enamabini kwamathathu ilungile, ukuba nje akukho seli inomngeneli ongaphandle kweqela."
+          ],
+          "faq": [
+            [
+              "Yintoni isibini esicacileyo kwi-Sudoku?",
+              "Ziiseli ezimbini kwiyunithi enye ezinabangeneli ababini abafanayo ngqo zombini. Loo manani mabini atshixiwe kwezo seli zimbini, ngoko angasuswa kwiyunithi eseleyo."
+            ],
+            [
+              "Yintoni isithathu esicacileyo?",
+              "Ziiseli ezintathu kwiyunithi enye ezinabangeneli abangamanani amathathu kuphela xa bedibene. Iseli nganye ingaba namabini okanye amathathu kuwo. Amanani amathathu azalisa iiseli ezintathu, ngoko angasuswa kwezinye iiseli zeyunithi."
+            ],
+            [
+              "Ingaba isibini esicacileyo sifaka inani?",
+              "Hayi sodwa. Sisusa abangeneli, kwaye ukususwa kudla ngokushiya eyodwa ecacileyo okanye efihlakeleyo. Icebiso kwi-Bare Sudoku libonisa eyodwa leyo kwaye libiza igama lendlela eyenze ukuba kwenzeke."
+            ],
+            [
+              "Ingaba isibini esicacileyo singaba kwibhokisi nakumgca ngaxeshanye?",
+              "Ewe. Ukuba iiseli ezimbini zabelana ngomgca nangebhokisi, isibini sisusa kuzo zombini iiyunithi. I-Bare Sudoku izisebenza iyunithi enye ngexesha."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Izibini nezithathu ezifihlakeleyo",
+          "title": "Izibini nezithathu ezifihlakeleyo kwi-Sudoku: ukuzibona",
+          "description": "Isibini esifihlakeleyo ngamanani amabini angena kuphela kwiiseli ezimbini ezifanayo zeyunithi, ngoko abanye abangeneli bazo bayasuswa. Funda ukuzifumana.",
+          "h1": "Izibini nezithathu ezifihlakeleyo (hidden pairs, hidden triples)",
+          "summary": "Isibini esifihlakeleyo ngamanani amabini athi, ngaphakathi komgca omnye, ikholam enye okanye ibhokisi enye, abe ngabangeneli kwiiseli ezimbini ezifanayo kwaye kungabikho ndawo yimbi. Ezo seli zimbini kufuneka zibe nala manani mabini, ngoko nawuphi na omnye umngeneli kuzo angasuswa. Isithathu esifihlakeleyo sisebenza ngendlela efanayo namanani amathathu avalelwe kwiiseli ezintathu. Emva kokususa, iiseli zibonisa isibini okanye isithathu esicacileyo. Icebiso le-Bare Sudoku liphawula ukufaka okulandelayo ngamazwi athi \"Isibini okanye isithathu\".",
+          "when": [
+            "Xa iyunithi ineeseli ezinabangeneli abaninzi kwaye ezizodwa ziphelile. Izibini ezifihlakeleyo zizimela kwiiseli ezixakekileyo, yiyo loo nto kufanelekile ukuzikhangela kanye apho izibini ezicacileyo zingabonakaliyo. Izithathu ezifihlakeleyo zinqabile; i-Bare Sudoku iyazijonga, kodwa uninzi lweemfumba ezinzima lusonjululwa ngaphandle kwazo."
+          ],
+          "spot": [
+            "Sebenza ngenani, hayi ngeseli. Kwiyunithi, phawula iiseli apho inani ngalinye elingekhoyo linokungena khona. Ukuba amanani amabini lilinye linendawo ezimbini kuphela ezinokwenzeka kwaye zezo seli zimbini zifanayo, unesibini esifihlakeleyo. Emdlalweni, cofa iqhosha lenani ukuze ukhanyise abangeneli balo; ukuba amanani amabini akhanyisa iiseli ezimbini ezifanayo zeyunithi kwaye akukho nto yimbi kuyo, yipateni leyo."
+          ],
+          "examples": [
+            {
+              "h": "Isibini esifihlakeleyo",
+              "steps": [
+                "{unit}: amanani {d1} ne-{d2} lilinye linendawo ezimbini kuphela ezinokwenzeka, kwaye zezimbini ezifanayo: {cells}.",
+                "Ezo seli zimbini kufuneka zibe ne-{d1} ne-{d2}, ngoko abanye abangeneli bazo abanakwenzeka.",
+                "Susa {elim}. Ngoku iiseli ezimbini zibonisa isibini esicacileyo, esinokuvula okungakumbi."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukususa amanani amabini esibini kwiiseli zesibini. Ngabanye abangeneli bezo seli abasuswayo; amanani esibini ayahlala.",
+            "Ukwamkela inani elinendawo yesithathu enokwenzeka kwiyunithi. Omabini amanani kufuneka avalelwe kwezo seli zimbini kanye.",
+            "Ukukhangela kwiibhokisi kuphela. Izibini ezifihlakeleyo zivela rhoqo ngokulinganayo nakwimigca nakwiikholam."
+          ],
+          "faq": [
+            [
+              "Yintoni isibini esifihlakeleyo kwi-Sudoku?",
+              "Ngamanani amabini angena kuphela kwiiseli ezimbini ezifanayo zeyunithi. Ezo seli kufuneka zithathe loo manani, ngoko abanye abangeneli bazo bayasuswa."
+            ],
+            [
+              "Isibini esifihlakeleyo sahluke njani kwisibini esicacileyo?",
+              "Isibini esicacileyo siyabonakala: iiseli ezimbini ezibonisa abangeneli ababini abafanayo kuphela. Isibini esifihlakeleyo sigqunywe ngabangeneli abongezelelweyo kwezo seli zimbini. Ukususa abo bongezelelweyo kuguqula isibini esifihlakeleyo sibe sisibini esicacileyo."
+            ],
+            [
+              "Yintoni isithathu esifihlakeleyo?",
+              "Ngamanani amathathu avalelwe kwiiseli ezintathu zeyunithi. Akuyomfuneko ukuba inani ngalinye libonakale kuzo zontathu iiseli; okubalulekileyo kukuba akukho nalinye kula manani mathathu elinomngeneli ngaphandle kwezo seli."
+            ],
+            [
+              "Ingaba icebiso liyazahlula izibini ezifihlakeleyo nezicacileyo?",
+              "Hayi. I-Bare Sudoku ifumana zombini kwaye iphawula ukufaka okulandelayo ngamazwi athi \"Isibini okanye isithathu\". Amaphepha apha ayazahlula kuba zifunyanwa ngeendlela ezahlukeneyo."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing kwi-Sudoku: isebenza njani le ndlela",
+          "description": "X-Wing: inani elingangena kwiiseli ezimbini kanye kwimigca emibini, kwiikholam ezimbini ezifanayo, lisuswa kwezinye iiseli zezo kholam. Umzekelo wokwenyani.",
+          "h1": "X-Wing",
+          "summary": "I-X-Wing yipateni yenani elinye neeseli ezine ezikwiikona zoxande. Ukuba inani linomngeneli kwiiseli ezimbini kanye kumgca ngamnye kwemibini, kwaye ezo seli zikwiikholam ezimbini ezifanayo, inani kufuneka lithathe iikona ezimbini ezijongeneyo zoxande. Ngoko lingasuswa kuyo yonke enye iseli yezo kholam zimbini. Kusebenza ngendlela efanayo xa imigca neekholam zitshintshiwe. Yindlela yokuqala yeNgcali kwi-Bare Sudoku.",
+          "when": [
+            "Xa ezizodwa, abangeneli abatshixiweyo nezibini nezithathu ziphelile. I-X-Wing yeyona pateni yeNgcali iqhelekileyo kwaye idla ngokuvela xa inani linabangeneli abambalwa abaseleyo, ngokuqhelekileyo xa sele kufakwe iikopi ezine ukuya kwezintandathu. Ifuna amanqaku apheleleyo enani olihlolayo."
+          ],
+          "spot": [
+            "Khetha inani uze ukhangele imigca apho linomngeneli kwiiseli ezimbini kanye. Ukuba imigca emibini enjalo yabelana ngeekholam ezimbini ezifanayo, jonga ezo kholam ukuba zinabanye abangeneli belo nani: abo ngabasuswayo. Emva koko phinda usebenzisa iikholam njengesiseko. Emdlalweni, cofa iqhosha lenani: wonke umngeneli walo uyakhanyiswa, kwaye uxande lwamanqaku amane akhanyisiweyo lubonakala lula."
+          ],
+          "examples": [
+            {
+              "h": "Umzekelo",
+              "steps": [
+                "Inani {d} linomngeneli kwiiseli ezimbini kanye kumgca {r1} nakwiiseli ezimbini kanye kumgca {r2}, kwaye zime kwiikholam ezimbini ezifanayo, {c1} ne-{c2}: {cells}.",
+                "Umgca {r1} ufaka i-{d} yawo kwikholam {c1} okanye {c2}, kwaye umgca {r2} ufaka i-{d} yawo kwenye. Nokuba kunjani, iikholam {c1} ne-{c2} nganye ifumana i-{d} kule migca mibini.",
+                "Ngoko i-{d} ayinakuvela naphi na kwiikholam {c1} ne-{c2}. Susa i-{d} kwiiseli {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukusebenzisa umgca onomngeneli welo nani kwiiseli ezintathu. Umgca ngamnye wesiseko kufuneka ube nezimbini kanye, kwaye zombini zibe kwiikholam ezimbini ekwabelwana ngazo.",
+            "Ukususa inani emigceni endaweni yeekholam. Xa imigca isisiseko, ukususwa kukwiikholam, kwaye ngokuchaseneyo.",
+            "Ukulibala uhlobo olutshintshiweyo. I-X-Wing eyakhelwe kwiikholam isusa emigceni."
+          ],
+          "faq": [
+            [
+              "Yintoni i-X-Wing kwi-Sudoku?",
+              "Linani elinomngeneli kwiiseli ezimbini kanye kumgca ngamnye kwemibini, kwiikholam ezimbini ezifanayo. Inani lithatha iikona ezimbini ezijongeneyo zolo xande, ngoko lisuswa kwezinye iiseli zezo kholam zimbini. Imigca neekholam zingatshintshwa."
+            ],
+            [
+              "Kutheni i-X-Wing isebenza?",
+              "Umgca ngamnye kwemibini kufuneka ufake inani kwenye yeekholam ezimbini, kwaye imigca emibini ayinakusebenzisa ikholam enye. Ngoko iikholam ezimbini nganye ifumana ikopi yayo yenani kule migca, kwaye wonke omnye umngeneli kwezo kholam akanakwenzeka."
+            ],
+            [
+              "Ingaba i-X-Wing yintlanzi?",
+              "Ewe. I-X-Wing yintlanzi yobukhulu obubini; i-Swordfish yintlanzi yobukhulu obuthathu. I-Bare Sudoku iyazifumana zombini."
+            ],
+            [
+              "Leliphi inqanaba eline-X-Wing?",
+              "Ingcali. Imfumba efuna i-X-Wing, i-Y-Wing, i-Swordfish okanye i-XYZ-Wing ibekwa kwinqanaba leNgcali."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing kwi-Sudoku: isebenza njani le ndlela",
+          "description": "Y-Wing (XY-Wing): iziko elinabangeneli ababini namaphiko amabini, ngalinye labelana ngomnye wabo, akhupha inani kuzo zonke iiseli ezibona omabini amaphiko.",
+          "h1": "Y-Wing",
+          "summary": "I-Y-Wing, ekwabizwa ngokuba yi-XY-Wing, isebenzisa iiseli ezintathu ezinabangeneli ababini nganye. Iziko linabangeneli u-X no-Y. Iphiko elinye libona iziko kwaye lino-X no-Z; elinye iphiko libona iziko kwaye lino-Y no-Z. Nokuba iziko liyintoni na, elinye lamaphiko kufuneka libe ngu-Z, ngoko u-Z angasuswa kuyo yonke iseli ebona omabini amaphiko. Yindlela yeNgcali kwi-Bare Sudoku.",
+          "when": [
+            "Xa imfumba ineeseli ezininzi ezinabangeneli ababini kanye kwaye akukho ntlanzi ifumanekayo. Ii-Y-Wing ziqhelekile kwiimfumba zeNgcali kwaye zifunyanwa ngokulandela iiseli ezinabangeneli ababini: nganye ingaba liziko okanye iphiko."
+          ],
+          "spot": [
+            "Bhala uluhlu lweeseli ezinabangeneli ababini kanye. Nganye yazo, yithathe njengeziko elinabangeneli u-X no-Y, uze ukhangele phakathi kwabamelwane bayo iseli eno-X nelinye inani u-Z, neseli eno-Y no-Z ofanayo. Ezo zimbini ngamaphiko. Emva koko fumana iiseli ezibona omabini amaphiko kwaye zino-Z. Qaphela ukuba amaphiko akufuneki abonane."
+          ],
+          "examples": [
+            {
+              "h": "Umzekelo",
+              "steps": [
+                "Iziko {pivot} linabangeneli i-{x} ne-{y}. Libona iseli {wingA}, ene-{x} ne-{z}, neseli {wingB}, ene-{y} ne-{z}.",
+                "Ukuba iziko {pivot} liyi-{x}, iseli {wingA} iphulukana ne-{x} ize ibe yi-{z}. Ukuba iziko {pivot} liyi-{y}, iseli {wingB} iba yi-{z}. Kuzo zonke iimeko elinye lamaphiko amabini liyi-{z}.",
+                "Iseli ebona omabini amaphiko ayinakuze ibe yi-{z}. Susa i-{z} kwiiseli {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukukhetha amaphiko angaliboniyo iziko omabini. Iphiko ngalinye kufuneka labelane ngomgca, ikholam okanye ibhokisi neziko.",
+            "Ukususa u-Z kwiiseli ezibona iphiko elinye kuphela. Iseli esuswa kuyo kufuneka ibone omabini amaphiko.",
+            "Ukususa u-Z eziko. Kwi-Y-Wing iziko alinaye u-Z; ukuba linaye, ipateni yi-XYZ-Wing enemithetho eyahlukileyo."
+          ],
+          "faq": [
+            [
+              "Yintoni i-Y-Wing kwi-Sudoku?",
+              "Ziiseli ezintathu ezinabangeneli ababini: iziko elino-X no-Y, iphiko elino-X no-Z elibona iziko, nephiko elino-Y no-Z elibona iziko. Elinye iphiko lihlala lingu-Z, ngoko u-Z uyasuswa kwiiseli ezibona omabini amaphiko."
+            ],
+            [
+              "Ingaba i-Y-Wing iyafana ne-XY-Wing?",
+              "Ewe. La magama mabini achaza ipateni enye. I-Bare Sudoku iyibiza ngokuba yi-Y-Wing."
+            ],
+            [
+              "Kutheni elinye iphiko kufuneka libe ngu-Z?",
+              "Ukuba iziko ngu-X, iphiko lokuqala liphulukana no-X libe ngu-Z. Ukuba iziko ngu-Y, iphiko lesibini liba ngu-Z. Iziko lingomnye kwaba babini, ngoko elinye iphiko lingu-Z."
+            ],
+            [
+              "I-Y-Wing isusa kwiiseli ezingaphi?",
+              "Ngokuqhelekileyo kwenye okanye kwezimbini: kuphela kwiiseli ezibona omabini amaphiko kwaye zisenaye u-Z. Oko kwanele ukwenza eyodwa."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish kwi-Sudoku: isebenza njani le ndlela",
+          "description": "Swordfish: inani elivalelwe kwiikholam ezintathu kwimigca emithathu lisuswa kwezinye iiseli zezo kholam. Intlanzi yobukhulu obuthathu, ichazwe ngomzekelo.",
+          "h1": "Swordfish",
+          "summary": "I-Swordfish yi-X-Wing enemigca emithathu neekholam ezintathu. Ukuba inani linomngeneli kwiiseli ezintathu ubuninzi kumgca ngamnye kwemithathu, kwaye zonke ezo seli ziwela kwiikholam ezintathu ezifanayo, imigca emithathu iyalisebenzisa lonke inani kwezo kholam, kwaye inani lingasuswa kuyo yonke enye iseli yezo kholam zintathu. Imigca neekholam zingatshintshwa. I-Bare Sudoku ijonga i-Swordfish emva kwe-Y-Wing, kwiimfumba zeNgcali.",
+          "when": [
+            "Xa i-X-Wing ne-Y-Wing zingafumani nto. I-Swordfish inqabile ngakumbi kune-X-Wing kwaye ifuna inani elinabangeneli abasasazeke kancinci kwimigca okanye kwiikholam ezintathu. Ifuna amanqaku apheleleyo nachanekileyo aloo nani."
+          ],
+          "spot": [
+            "Khetha inani uze ukhangele imigca eneeseli ezimbini okanye ezintathu ezinomngeneli walo. Ukuba imigca emithathu enjalo igubungela iikholam ezintathu kuphela zizonke, jonga ezo kholam ukuba zinabanye abangeneli belo nani. Akufuneki umgca ngamnye ube nomngeneli kwikholam nganye: i-Swordfish ingaba neeseli ezintandathu, ezisixhenxe, ezisibhozo okanye ezilithoba. Emdlalweni, khanyisa inani ngeqhosha lalo uze ukhangele imigca emithathu enabangeneli abame kwiikholam ezintathu."
+          ],
+          "examples": [
+            {
+              "h": "Umzekelo",
+              "steps": [
+                "Inani {d} linomngeneli kwiiseli ezintathu ubuninzi kumgca ngamnye kwimigca {rows}, kwaye zonke ezo seli ziwela kwiikholam {cols}: {cells}.",
+                "Umgca ngamnye kwemithathu kufuneka ufake i-{d} yawo kwenye yeekholam ezintathu, kwaye akukho migca mibini inokusebenzisa ikholam enye. Ngoko iikholam ezintathu zifumana i-{d} yazo kule migca mithathu.",
+                "Nawuphi na omnye umngeneli we-{d} kwiikholam {cols} akanakwenzeka. Susa i-{d} kwiiseli {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukufuna zonke iiseli ezilithoba. I-Swordfish enabangeneli ababini kweminye imigca isasebenza, ukuba nje imigca emithathu igubungela iikholam ezintathu kuphela.",
+            "Ukufaka umgca oneeseli ezine ezinomngeneli. Umgca ngamnye wesiseko kufuneka ube nezintathu ubuninzi, zonke ngaphakathi kweekholam ezintathu.",
+            "Ukususa kwimigca yesiseko. Xa imigca isisiseko, ukususwa kukwiikholam ezintathu, ngaphandle kwemigca yesiseko."
+          ],
+          "faq": [
+            [
+              "Yintoni i-Swordfish kwi-Sudoku?",
+              "Linani elinabangeneli abakwimigca emithathu abavalelwe kwiikholam ezintathu. Imigca emithathu kufuneka ifake inani kwezo kholam zintathu, enye kwinye, ngoko inani lisuswa kwezinye iiseli zezo kholam."
+            ],
+            [
+              "I-Swordfish yahluke njani kwi-X-Wing?",
+              "Ngobukhulu kuphela: i-X-Wing isebenzisa imigca emibini neekholam ezimbini, i-Swordfish emithathu nezintathu. Ukuqiqa kuyafana."
+            ],
+            [
+              "Ingaba i-Swordfish ifuna iiseli ezilithoba kanye?",
+              "Hayi. Umgca ngamnye unokuba nabangeneli ababini okanye abathathu; ipateni ifuna kuphela ukuba imigca emithathu izonke ingasebenzisi ngaphezu kweekholam ezintathu."
+            ],
+            [
+              "Ingaba ikhona intlanzi yobukhulu obune?",
+              "Ewe, yi-Jellyfish. I-Bare Sudoku ayiyisebenzisi, kuba iimfumba zayo azize ziyidinge."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing kwi-Sudoku: isebenza njani le ndlela",
+          "description": "XYZ-Wing: iziko elinabangeneli abathathu namaphiko amabini abelana ngomnye wabo akhupha elo nani kuzo zonke iiseli ezibona zontathu. Umzekelo wokwenyani.",
+          "h1": "XYZ-Wing",
+          "summary": "I-XYZ-Wing yi-Y-Wing eneziko elinabangeneli abathathu. Iziko lino-X, u-Y no-Z; iphiko elinye libona iziko kwaye lino-X no-Z, elinye libona iziko kwaye lino-Y no-Z. Enye yeeseli ezintathu kufuneka ibe ngu-Z, ngoko u-Z angasuswa kuyo yonke iseli ebona zontathu. Ekubeni iziko ngokwalo linokuba ngu-Z, iseli esuswa kuyo kufuneka ibone iziko kunye namaphiko omabini, nto leyo eyinciphisela kwibhokisi, kumgca okanye kwikholam ekwabelwana ngayo ziiseli. Yeyona ndlela inzima esetyenziswa yi-Bare Sudoku.",
+          "when": [
+            "Kuphela xa yonke enye into isilela. Ii-XYZ-Wing zezona pateni zinqabileyo kwi-Bare Sudoku kwaye zivela kuphela kwiimfumba zeNgcali. Yikhangele xa iseli enabangeneli abathathu ihleli kwibhokisi eneseli enabangeneli ababini eyabelana ngamanani amabini ayo."
+          ],
+          "spot": [
+            "Qala kwiiseli ezinabangeneli abathathu kanye; nganye iliziko elinokwenzeka. Phakathi kwabamelwane bayo, khangela iiseli ezimbini ezinabangeneli ababini nganye, bobabini bethathwe kwabathathu beziko, ezabelana ngenani elinye kanye u-Z. Emva koko khangela iiseli ezibona iziko namaphiko omabini kwaye zino-Z. Ngokwenyani iphiko elinye likwibhokisi yeziko kwaye elinye likumgca okanye kwikholam yalo, kwaye iiseli ezisuswa kuzo ziiseli eziseleyo zaloo bhokisi kulo mgca okanye kule kholam."
+          ],
+          "examples": [
+            {
+              "h": "Umzekelo",
+              "steps": [
+                "Iziko {pivot} linabangeneli abathathu: i-{x}, i-{y} ne-{z}. Libona iseli {wingA} ene-{x} ne-{z}, neseli {wingB} ene-{y} ne-{z}.",
+                "Ukuba iziko {pivot} liyi-{z}, kugqityiwe. Ukuba liyi-{x}, iseli {wingA} kufuneka ibe yi-{z}. Ukuba liyi-{y}, iseli {wingB} kufuneka ibe yi-{z}. Kuzo zonke iimeko enye yeeseli ezintathu iyi-{z}.",
+                "Iseli ebona zontathu ayinakuba yi-{z}. Susa i-{z} kwiiseli {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ukususa kwiiseli ezibona amaphiko omabini kuphela. Ngokungafaniyo ne-Y-Wing, iziko linokuba ngu-Z, ngoko iseli kufuneka ibone neziko.",
+            "Ukusebenzisa amaphiko anabangeneli abangaqulathwanga bobabini kubangeneli abathathu beziko.",
+            "Ukuyidida ne-Y-Wing: umahluko ngumngeneli wesithathu eziko, kwaye utshintsha ukuba zeziphi iiseli ezinokucocwa."
+          ],
+          "faq": [
+            [
+              "Yintoni i-XYZ-Wing kwi-Sudoku?",
+              "Liziko elinabangeneli u-X, u-Y no-Z namaphiko amabini, elinye lino-X no-Z elinye lino-Y no-Z, omabini ebona iziko. Enye yeeseli ezintathu ingu-Z, ngoko u-Z uyasuswa kwiiseli ezibona zontathu."
+            ],
+            [
+              "I-XYZ-Wing yahluke njani kwi-Y-Wing?",
+              "Iziko linabangeneli abathathu endaweni yababini, kuquka u-Z. Oko kwenza iziko libe yindawo enokwenzeka ka-Z, ngoko kuphela iiseli ezibona iziko namaphiko omabini ezinokuphulukana no-Z."
+            ],
+            [
+              "I-XYZ-Wing ivela kangakanani?",
+              "Kunqabile. Kwi-Bare Sudoku ziimfumba zeNgcali kuphela ezinokuyidinga, kwaye uninzi lwazo aluyidingi. I-Bare Sudoku iyijonga ekugqibeleni, emva kwe-X-Wing, i-Y-Wing ne-Swordfish."
+            ],
+            [
+              "Ingaba ikhona i-WXYZ-Wing?",
+              "Ewe, eneziko elinabangeneli abane, kodwa i-Bare Sudoku ayiyisebenzisi. Yonke imfumba emdlalweni ingagqitywa ngeendlela ezilithoba zesi sikhokelo."
+            ]
+          ]
+        }
+      }
+    },
+    "ht": {
+      "learnHeading": "Aprann Sudoku",
+      "learnText": "Ou nouvo nan Sudoku, oswa ou bloke sou yon devinèt difisil? De gid eksplike règ yo ak chak teknik rezolisyon endis yo itilize, chak ak yon vrè egzanp.",
+      "howToLink": "Kijan pou jwe Sudoku",
+      "techniquesLink": "Teknik pou rezoud Sudoku",
+      "labels": {
+        "howTo": "Kijan pou jwe",
+        "techniques": "Teknik",
+        "play": "Jwe Sudoku",
+        "prev": "Teknik anvan an",
+        "next": "Teknik apre a",
+        "all": "Tout teknik yo",
+        "example": "Egzanp",
+        "steps": "Etap pa etap",
+        "when": "Kilè pou itilize l",
+        "spot": "Kijan pou rekonèt li",
+        "mistakes": "Erè yo fè souvan",
+        "inGame": "Nan Bare Sudoku",
+        "level": "Nivo kote li nesesè: {level}",
+        "hint": "Nan jwèt la, endis la di: {text}",
+        "legend": "Chif ki an gra yo te bay depi nan kòmansman, chif ble yo te mete pandan rezolisyon an, ti chif yo se kandida. Kaz ki make yo fòme modèl la, kandida ki bare yo retire, e kandida ki nan yon sèk la se chif pou mete a.",
+        "notation": "Nou ekri kaz yo konsa: r3c7, sa vle di liy 3, kolòn 7. Nou konte liy yo depi anwo, kolòn yo depi agoch, e bwat yo soti 1 rive 9 depi anwo agoch, liy pa liy.",
+        "row": "liy {n}",
+        "column": "kolòn {n}",
+        "box": "bwat {n}",
+        "elimItem": "{d} nan {cell}",
+        "regions": "Liy 5, kolòn 5 ak bwat 5 nan kòmansman yon devinèt",
+        "firstMove": "Yon sèl vizib: {cell} ka sèlman {d}",
+        "breadcrumb": "Chemen navigasyon"
+      },
+      "howTo": {
+        "title": "Kijan pou jwe Sudoku: règ, griy ak premye mouvman",
+        "description": "Aprann jwe Sudoku: règ yo, kijan liy, kolòn ak bwat yo mache, poukisa chak devinèt gen yon sèl solisyon, kijan pou sèvi ak nòt ak fè premye mouvman.",
+        "h1": "Kijan pou jwe Sudoku",
+        "summary": "Sudoku se yon devinèt lojik sou yon griy 9×9. Ranpli chak kaz vid ak yon chif soti 1 rive 9 pou chak liy, chak kolòn ak chak bwat 3×3 gen chak chif yon sèl fwa. Gen kèk chif yo bay depi nan kòmansman; rès la ou dedwi yo, yon kaz sèten apre lòt, e ou pa janm bezwen devine. Gid sa a eksplike griy la, règ yo, prensip yon sèl solisyon an, nòt yo ak yon estrateji senp pou premye mouvman ou. Ou ka pratike tout sa nan [Bare Sudoku](play), ki gratis e ki gen endis ki eksplike lojik la.",
+        "sections": [
+          {
+            "h": "Ki règ Sudoku yo?",
+            "p": [
+              "Gen sèlman twa règ, e se menm règ la ou wè nan twa direksyon: chak liy dwe gen chif 1 rive 9, chak kolòn dwe gen chif 1 rive 9, e chak bwat 3×3 dwe gen chif 1 rive 9. Kidonk yon chif pa ka janm parèt de fwa nan menm liy, kolòn oswa bwat.",
+              "Chif yo bay yo, ki enprime an gra, fiks. Travay ou se ranpli kaz vid yo. Pa gen kalkil ni lòd: chif yo se sèlman nèf senbòl diferan. Ou te ka jwe ak lèt oswa fòm, e anyen pa t ap chanje."
+            ]
+          },
+          {
+            "h": "Kijan griy la òganize?",
+            "p": [
+              "Griy la gen 81 kaz nan 9 liy ak 9 kolòn. Trè ki pi epè yo divize l an nèf bwat 3×3. Chak kaz fè pati egzakteman yon liy, yon kolòn ak yon bwat, e twa gwoup sa yo se inite li. 20 lòt kaz ki pataje yon inite ak yon kaz se vwazen li; yon chif ou mete nan yon kaz elimine chif sa a nan tout 20 vwazen yo.",
+              "Nou ekri kaz yo konsa: r3c7, sa vle di liy 3, kolòn 7. Nou konte liy yo depi anwo, kolòn yo depi agoch, e bwat yo soti 1 rive 9 depi anwo agoch, liy pa liy. Chak gid teknik sèvi ak notasyon sa a, e li vo lapèn aprann li: r5c5 se mitan griy la."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Poukisa chak Sudoku gen egzakteman yon sèl solisyon?",
+            "p": [
+              "Yon bon Sudoku gen yon sèl solisyon, e se sa ki fè lojik la mache. Chak fwa ou ka montre yon chif pa ka ale okenn lòt kote nan yon inite, li oblije ale nan kaz ki rete a, paske solisyon an egziste e li inik. Si yon devinèt te gen de solisyon, okenn rezònman pa t ap ka separe yo, e nan yon moman ou t ap oblije devine.",
+              "Bare Sudoku kreye chak devinèt sou aparèy ou a e li verifye li gen egzakteman yon sèl solisyon e rezolvè lojik li a ka fini l ak teknik nivo ou chwazi a. Kidonk si ou bloke, toujou gen yon pwochen etap pou jwenn, e endis la montre l."
+            ]
+          },
+          {
+            "h": "Kijan pou kòmanse yon Sudoku?",
+            "p": [
+              "Kòmanse ak sa ki pi limite. Lòd sa a mache nan tout nivo:"
+            ],
+            "list": [
+              "Chwazi yon chif ki deja parèt anpil fwa, di sis oswa sèt fwa, epi chèche bwat ki poko genyen l. Souvan se yon sèl kaz ki rete pou li nan yon bwat: se yon [sèl kache](hidden-single).",
+              "Chèche kaz ki antoure ak anpil chif. Yon kaz kote liy li, kolòn li ak bwat li ansanm gen uit chif diferan gen yon sèl kandida ki rete: yon [sèl vizib](naked-single). Kaz nan liy oswa bwat ki prèske plen se pi bon kote pou chèche.",
+              "Chak chif ou mete retire yon kandida nan 20 vwazen, kidonk tcheke vwazen sa yo touswit. Sèl yo konn vini youn dèyè lòt.",
+              "Lè plasman fasil yo fini, ekri nòt: kandida chak kaz vid. Apre sa chèche yon chif ki fèmen sou yon sèl liy oswa kolòn anndan yon bwat ([kandida bloke](locked-candidates)) oswa de kaz ki gen menm de kandida yo (yon [pè vizib](naked-pairs)).",
+              "Retounen sou sèl yo apre chak eliminasyon. Menm devinèt Ekspè yo rezoud sitou ak sèl; teknik avanse a jis debloke pwochen an."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Kisa nòt yo ye e kilè pou sèvi ak yo?",
+            "p": [
+              "Nòt, yo rele yo tou mak kreyon oswa kandida, se ti chif ou ekri nan yon kaz vid pou make ki chif ki toujou posib la. Nan devinèt fasil ou raman bezwen yo; depi Difisil yo endispansab, paske teknik tankou pè, X-Wing ak Y-Wing travay sou kandida, pa sou chif ki deja mete.",
+              "Kenbe nòt yo egzak: lè ou mete yon chif, retire l nan nòt tout 20 vwazen yo. Nan Bare Sudoku sa fèt otomatikman, e Ranpli nòt yo ekri chak kandida nan chak kaz vid ak yon sèl touche, konsa ou ka kòmanse ak yon ansanm kandida ki konplè e ki kòrèk. Yon nòt se yon bagay sèten, pa yon sipozisyon: li vle di anyen poko elimine chif sa a."
+            ]
+          },
+          {
+            "h": "Kisa pou fè lè ou bloke?",
+            "p": [
+              "Premye bagay, tcheke baz yo ankò: chak liy, kolòn ak bwat ki prèske plen se yon sous sèl. Apre sa asire w nòt yo konplè, paske yon kandida ki manke kache modèl yo e yon kandida ki pa ajou kreye fo modèl. Apre sa pase nan [teknik yo](techniques) dapre difikilte: kandida bloke, pè ak twa, X-Wing, Y-Wing, Swordfish ak XYZ-Wing. Chak gen pwòp paj li ak yon vrè egzanp.",
+              "Si anyen pa mache, pran yon endis. Nan Bare Sudoku endis la tcheke dabò si yon chif ou mete pa bon, apre sa li jwenn pwochen kaz ou ka ranpli ak lojik e li bay non teknik la, konsa ou aprann yon bagay menm lè ou sèvi avè l. Touche endis la ankò pou mete chif la."
+            ]
+          },
+          {
+            "h": "Kijan pou antre chif nan Bare Sudoku?",
+            "p": [
+              "Touche yon kaz, apre sa yon chif. Oswa touche yon chif anvan: li bloke, e chak kaz ou touche resevwa l; se fason ki pi rapid pou mete sizyèm, setyèm ak uityèm kopi yon chif. Touche chif la ankò pou debloke l. Bouton Nòt la pase nan mak kreyon, Efase vide yon kaz, Defèt anile nenpòt mouvman, e erè yo make an wouj sof si ou etenn sa nan meni an.",
+              "Sou yon klavye, sèvi ak flèch yo pou deplase, 1 rive 9 pou antre yon chif, Backspace pou efase, N pou nòt, U pou defèt, H pou yon endis, F pou ranpli nòt yo ak Escape pou meni an. Jwèt la sove tèt li, li mache san entènèt e li pa gen piblisite ni kont."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Èske ou janm bezwen devine nan Sudoku?",
+            "Pa nan yon bon devinèt. Chak devinèt Bare Sudoku gen egzakteman yon sèl solisyon e yo verifye li ka rezoud ak lojik sèlman, jiska teknik nivo li. Si ou santi ou oblije devine, gen yon kandida ki manke nan nòt ou oswa gen yon teknik k ap tann ou jwenn li."
+          ],
+          [
+            "Èske yon chif ka parèt de fwa nan yon liy, kolòn oswa bwat?",
+            "Non. Se tout règ la: chak nan nèf liy yo, nèf kolòn yo ak nèf bwat yo gen chak chif soti 1 rive 9 yon sèl fwa. Si de chif menm jan pataje yon inite, omwen youn ladan yo pa bon."
+          ],
+          [
+            "Ki diferans ant Fasil, Mwayen, Difisil ak Ekspè?",
+            "Se teknik devinèt la bezwen ki fikse nivo a. Fasil ak Mwayen rezoud ak sèl sèlman, e Fasil kòmanse ak omwen 38 chif yo bay. Difisil bezwen kandida bloke oswa pè ak twa. Ekspè bezwen X-Wing, Y-Wing, Swordfish oswa XYZ-Wing."
+          ],
+          [
+            "Èske li pi bon pou ranpli nòt pou chak kaz oswa pou kèk sèlman?",
+            "Pou devinèt Difisil ak Ekspè, ranpli yo tout: modèl tankou pè, X-Wing ak Y-Wing parèt sèlman lè chak kandida ekri. Nan Fasil ak Mwayen, nòt yo pa obligatwa e pifò jwè jis chèche sèl yo."
+          ],
+          [
+            "Konbyen tan yon Sudoku pran?",
+            "Yon devinèt Fasil pran kèk minit; devinèt Ekspè ka pran ven minit oswa plis, selon jan ou rekonèt modèl avanse a vit. Bare Sudoku montre yon kwonomèt, li kanpe l pandan meni an louvri e li pa gen okenn klasman, kidonk jwe nan pwòp ritm ou."
+          ],
+          [
+            "Èske Sudoku mande kalkil?",
+            "Non. Chif yo se sèlman etikèt; pa gen adisyon ni kont pou fè. Nenpòt nèf senbòl t ap mache, e se pou sa Sudoku se yon devinèt lojik, pa yon devinèt chif."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Teknik pou rezoud Sudoku eksplike ak egzanp",
+        "description": "Tout nèf teknik pou rezoud Sudoku, soti nan sèl vizib rive nan Swordfish ak XYZ-Wing, nan lòd endis Bare Sudoku yo sèvi ak yo, chak ak yon vrè egzanp.",
+        "h1": "Teknik pou rezoud Sudoku",
+        "intro": [
+          "Ou ka rezoud chak Sudoku ak yon ti ansanm teknik lojik. Endèks sa a bay lis nèf teknik rezolvè Bare Sudoku a ak endis li yo itilize, nan lòd rezolvè a eseye yo: sèl yo an premye, apre sa eliminasyon anndan yon sèl inite, apre sa modèl ki kouvri plizyè liy ak kolòn. Chak teknik gen pwòp paj li ak yon definisyon, kijan pou rekonèt li, yon vrè egzanp ki soti nan yon devinèt jenere ak erè yo fè souvan.",
+          "Se teknik ki pi difisil yon devinèt bezwen ki deside nivo li. Devinèt Fasil ak Mwayen bezwen sèl sèlman, devinèt Difisil bezwen kandida bloke oswa pè ak twa, e devinèt Ekspè bezwen omwen yon pwason oswa yon zèl. Kèlkeswa nivo a, sèl yo fè pi fò travay la; teknik avanse a retire youn oswa de kandida, e sèl yo kontinye apati la."
+        ],
+        "faq": [
+          [
+            "Nan ki lòd pou m eseye teknik Sudoku yo?",
+            "Sa ki pi senp yo an premye: sèl vizib, sèl kache, kandida bloke, pè ak twa vizib, pè ak twa kache, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku eseye yo egzakteman nan lòd sa a, e yon endis toujou bay non teknik ki pi senp ki fè pwogrè a."
+          ],
+          [
+            "Èske m bezwen tout teknik sa yo pou m rezoud Sudoku?",
+            "Pou devinèt Fasil ak Mwayen, sèl yo ase. Devinèt Difisil ajoute kandida bloke ak pè ak twa. Devinèt Ekspè bezwen omwen yon pwason oswa yon zèl, men anjeneral yon fwa oswa de fwa sèlman pa devinèt."
+          ],
+          [
+            "Èske gen teknik ki pi difisil pase XYZ-Wing?",
+            "Wi, pa egzanp chèn, tès inisite ak rezo fòse. Bare Sudoku pa kreye devinèt ki bezwen yo, kidonk ou ka fini chak devinèt nan jwèt la ak nèf teknik ki sou paj sa a."
+          ],
+          [
+            "Kisa yon kandida ye?",
+            "Yon chif ki ka toujou ale nan yon kaz vid paske anyen nan liy li, kolòn li oswa bwat li poko elimine l. Nòt nan jwèt la se kandida. Chak teknik ki pi lwen pase sèl yo rezone sou kandida, kidonk kenbe yo konplè e egzak."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Sèl vizib",
+          "title": "Sèl vizib nan Sudoku: kaz ki gen yon sèl kandida",
+          "description": "Yon sèl vizib se yon kaz vid ki gen yon sèl chif posib. Aprann jwenn sèl vizib yo vit, ak yon vrè egzanp etap pa etap ak erè yo fè pi souvan.",
+          "h1": "Sèl vizib (naked single)",
+          "summary": "Yon sèl vizib se yon kaz vid ki gen egzakteman yon sèl kandida: uit lòt chif yo deja parèt nan liy li, kolòn li oswa bwat li. Chif ki rete a oblije ale la. Se teknik Sudoku ki pi senp, sa ou sèvi ak li pi souvan, e sa endis Bare Sudoku a anonse ak \"Yon sèl kandida isit la\".",
+          "when": [
+            "Toujou. Sèl vizib parèt depi premye mouvman rive nan dènye a, nan tout nivo. Nan devinèt Fasil ak Mwayen, ansanm ak sèl kache, se sèl teknik ou bezwen. Nan devinèt ki pi difisil, chak eliminasyon yon teknik avanse fè konn kite yon sèl vizib dèyè, kidonk chèche yo apre chak etap."
+          ],
+          "spot": [
+            "Gade kaz ki gen anpil vwazen ki deja ranpli: yon kaz nan yon liy ki deja gen sèt chif, oswa yon kaz kote liy li, kolòn li ak bwat li ansanm kouvri uit chif diferan. San nòt, konte chif ou ka wè apati kaz la. Ak nòt, yon sèl vizib se tou senpleman yon kaz ki montre yon sèl kandida, se pou sa Ranpli nòt yo fè yo fasil pou jwenn."
+          ],
+          "examples": [
+            {
+              "h": "Egzanp",
+              "steps": [
+                "Gade {cell}. Li vid, kidonk fè lis tout chif ki deja nan liy li, kolòn li ak bwat li.",
+                "Liy {row} gen {rowDigits}. Kolòn {col} gen {colDigits}. Bwat {box} gen {boxDigits}.",
+                "Ansanm yo elimine tout chif eksepte {d}, kidonk {d} se sèl kandida ki rete nan {cell}.",
+                "Ekri {d} nan {cell}. Apre sa tcheke si nouvo chif la kreye yon lòt sèl nan menm liy, kolòn oswa bwat la."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Konte sèlman liy lan oswa sèlman bwat la. Uit chif ki elimine yo konn soti nan twa inite yo ansanm.",
+            "Bliye yon chif ou fèk mete elimine kandida tou nan 20 vwazen li; nouvo sèl vizib parèt touswit apre chak plasman.",
+            "Konfonn yon sèl vizib ak yon sèl kache: yon sèl vizib gen yon sèl kandida ki rete nan kaz la, yon sèl kache gen yon sèl kaz ki rete pou chif la nan yon inite."
+          ],
+          "faq": [
+            [
+              "Kisa yon sèl vizib ye nan Sudoku?",
+              "Yon kaz vid ki gen egzakteman yon sèl kandida. Uit chif diferan deja nan liy li, kolòn li ak bwat li, kidonk nevyèm chif la se sèl grenn ki ka ale la."
+            ],
+            [
+              "Poukisa yo rele l vizib?",
+              "Paske sèl kandida a parèt dirèkteman nan kaz la depi nòt yo ekri; anyen pa kache l. Yon sèl kache, okontrè, chita pami lòt kandida e ou jwenn li lè ou gade chif la olye de kaz la."
+            ],
+            [
+              "Èske ou ka rezoud yon devinèt ak sèl vizib sèlman?",
+              "Anpil devinèt Fasil kapab, men pifò bezwen sèl kache tou. Bare Sudoku klase devinèt Fasil ak Mwayen kòm devinèt ou ka rezoud ak de kalite sèl yo; devinèt Difisil ak Ekspè bezwen omwen yon lòt teknik."
+            ],
+            [
+              "Èske endis la montre sèl vizib?",
+              "Wi. Lè pwochen plasman an se yon sèl vizib, endis la chwazi kaz la e li di \"Yon sèl kandida isit la\" ak chif la. Touche endis la ankò pou mete l."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Sèl kache",
+          "title": "Sèl kache nan Sudoku: sèl plas pou yon chif",
+          "description": "Yon sèl kache se sèl kaz nan yon liy, kolòn oswa bwat kote yon chif ka toujou ale. Aprann rekonèt sèl kache yo lè ou egzamine chif yo youn apre lòt.",
+          "h1": "Sèl kache (hidden single)",
+          "summary": "Yon sèl kache se yon chif ki gen yon sèl kaz posib ki rete pou li nan yon liy, kolòn oswa bwat, menm si kaz sa a montre lòt kandida. Paske inite a oblije gen chif la, li ale la. Endis Bare Sudoku a anonse l ak \"Sèl plas pou 5 nan liy sa a\", kolòn oswa bwat.",
+          "when": [
+            "Chak fwa yon chif byen avanse: depi yon chif parèt senk oswa sis fwa, bwat ki rete yo trè limite, e yon sèl kache souvan se pwochen mouvman an. Sèl kache se teknik prensipal devinèt Fasil ak Mwayen e yo rete chwal batay la nan tout nivo."
+          ],
+          "spot": [
+            "Egzamine yon chif alafwa. Pran yon chif, jwenn yon bwat ki pa genyen l, e bare chak kaz nan bwat sa a ki pataje yon liy oswa yon kolòn ak yon kopi chif la ki deja mete. Si yon sèl kaz rete, ou jwenn yon sèl kache. Menm egzamen an mache pou liy ak kolòn. Nan jwèt la, touche yon chif ki deja mete: tout kopi li vin make, kidonk kaz ki lib yo parèt klè."
+          ],
+          "examples": [
+            {
+              "h": "Egzanp",
+              "steps": [
+                "Bwat {box} poko gen {d}, kidonk youn nan kaz vid li yo oblije genyen l. Kaz vid yo se {empties}.",
+                "Nan chak ladan yo eksepte {cell}, {d} bloke pa yon {d} ki deja mete nan menm liy oswa kolòn nan, kidonk {d} pa yon kandida la.",
+                "Sa kite {cell} kòm sèl plas pou {d} nan bwat {box}. Ekri {d} la, menm si {cell} ka toujou montre lòt kandida."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mete chif la nan yon kaz ki sèlman sanble se bon an: tcheke chak lòt kaz vid nan inite a, pa sèlman sa ki evidan yo.",
+            "Rate yon sèl kache paske kaz la montre plizyè kandida. Lòt kandida yo pa konte; sa ki konte se chif la pa gen okenn lòt plas nan inite a.",
+            "Egzamine bwat sèlman. Liy ak kolòn bay sèl kache otan, sitou vè lafen."
+          ],
+          "faq": [
+            [
+              "Kisa yon sèl kache ye nan Sudoku?",
+              "Yon chif ki ka ale nan yon sèl kaz nan yon liy, kolòn oswa bwat. Inite a oblije gen chif la, kidonk kaz la deside menm si li toujou gen lòt kandida."
+            ],
+            [
+              "Ki diferans ant yon sèl kache ak yon sèl vizib?",
+              "Yon sèl vizib konsène yon kaz: yon sèl kandida rete. Yon sèl kache konsène yon chif: yon sèl kaz rete nan yon inite. Toude mete yon chif avèk sètitid."
+            ],
+            [
+              "Kilès ki pi fasil pou jwenn?",
+              "San nòt, sèl kache yo konn pi fasil paske ou ka egzamine griy la yon chif alafwa. Ak nòt konplè, sèl vizib yo pi fasil, paske yon kaz ki gen yon sèl kandida parèt klè."
+            ],
+            [
+              "Kijan endis la dekri yon sèl kache?",
+              "Kòm \"Sèl plas pou\" chif la nan liy sa a, kolòn sa a oswa bwat sa a, ak kaz la chwazi. Touche endis la ankò pou mete l."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Kandida bloke",
+          "title": "Kandida bloke nan Sudoku: pwente ak reklame",
+          "description": "Kandida bloke: lè tout kandida yon chif nan yon bwat chita sou yon sèl liy oswa kolòn, oswa lekontrè, yo retire chif la lòt kote. De vrè egzanp.",
+          "h1": "Kandida bloke (locked candidates)",
+          "summary": "Kandida bloke se premye teknik ki retire kandida olye li mete yon chif. Li gen de fòm. Pwente: nan yon bwat, tout kandida pou yon chif chita sou yon sèl liy oswa kolòn, kidonk ou retire chif la nan rès liy oswa kolòn sa a. Reklame: nan yon liy oswa kolòn, tout kandida pou yon chif chita nan yon sèl bwat, kidonk ou retire chif la nan rès bwat sa a. Endis Bare Sudoku a make plasman li debloke a ak \"Kandida bloke\".",
+          "when": [
+            "Lè sèl yo fini nan yon devinèt Difisil, se premye bagay pou eseye. Li bezwen nòt konplè omwen pou chif w ap egzamine a. Kandida bloke parèt souvan: pifò devinèt Difisil bezwen yo, e devinèt Ekspè sèvi ak yo ant pi gwo modèl yo."
+          ],
+          "spot": [
+            "Pou pwente, gade chak bwat ak chak chif ki manke ladan l: si kaz kandida pou chif sa a chita sou yon sèl liy oswa kolòn, tcheke si menm chif la parèt kòm kandida pi lwen sou liy oswa kolòn sa a, andeyò bwat la. Pou reklame, gade sou longè yon liy oswa kolòn: si kandida pou yon chif yo tout anndan yon sèl bwat, ou ka netwaye rès bwat sa a. Nan jwèt la, touche bouton yon chif pou make tout kandida li; yon ranje de oswa twa nòt make anndan yon sèl bwat se modèl la."
+          ],
+          "examples": [
+            {
+              "h": "Pwente",
+              "steps": [
+                "Nan bwat {box}, chif {d} gen sèlman kaz kandida sa yo: {cells}. Yo tout sou liy {row}.",
+                "Bwat {box} bezwen yon {d}, kidonk {d} liy {row} a anndan bwat {box}, kèlkeswa kaz kote li tonbe.",
+                "Liy {row} pa ka gen yon dezyèm {d}, kidonk retire {d} nan kaz liy {row} ki andeyò bwat la: {elim}."
+              ]
+            },
+            {
+              "h": "Reklame",
+              "steps": [
+                "Nan liy {row}, chif {d} ka ale sèlman nan {cells}, e yo tout anndan bwat {box}.",
+                "Liy {row} oblije gen {d}, kidonk liy {row} reklame {d} bwat {box} a. Lòt kaz nan bwat {box} pa ka gen {d}.",
+                "Retire {d} nan {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Retire chif la anndan bwat la olye andeyò l nan ka pwente a, oswa lekontrè nan ka reklame a. Eliminasyon yo toujou ale nan kaz ki sou liy oswa kolòn nan men ki pa nan bwat la, oswa ki nan bwat la men ki pa sou liy oswa kolòn nan.",
+            "Aplike règ la lè kandida yo kouvri de liy nan bwat la. Tout kaz kandida pou chif la nan bwat la dwe sou yon sèl liy oswa kolòn.",
+            "Bliye chèche sèl eliminasyon an kreye a. Kandida bloke raman mete yon chif pou kont yo; yo prepare yon sèl."
+          ],
+          "faq": [
+            [
+              "Kisa kandida bloke ye nan Sudoku?",
+              "Kandida pou yon chif ki fèmen nan entèseksyon yon bwat ak yon liy oswa kolòn. Paske bwat la, oswa liy lan, oblije gen chif la anndan entèseksyon sa a, ou ka retire chif la nan rès liy lan, oswa nan rès bwat la."
+            ],
+            [
+              "Ki diferans ant pwente ak reklame?",
+              "Pwente kòmanse nan yon bwat: kandida chif la nan bwat la pwente sou yon sèl liy oswa kolòn, kidonk ou retire chif la nan rès liy oswa kolòn sa a. Reklame kòmanse nan yon liy oswa kolòn: tout kandida li pou chif la nan yon sèl bwat, kidonk li reklame chif la e ou retire l nan rès bwat la."
+            ],
+            [
+              "Èske yo rele kandida bloke tou eliminasyon pa entèseksyon?",
+              "Wi. Lòt non yo se rediksyon bwat-liy pou fòm reklame a ak pè pwente oswa twa pwente pou fòm pwente a. Bare Sudoku sèvi ak yon sèl non pou toude."
+            ],
+            [
+              "Ki nivo ki bezwen kandida bloke?",
+              "Difisil. Yon devinèt ki bezwen kandida bloke oswa pè ak twa, men anyen ki pi difisil, klase Difisil; devinèt Ekspè bezwen tou yon pwason oswa yon zèl."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Pè ak twa vizib",
+          "title": "Pè ak twa vizib nan Sudoku: kijan yo mache",
+          "description": "Pè ak twa vizib: de oswa twa kaz nan yon inite ki gen menm de oswa twa kandida yo. Aprann rekonèt yo ak sa pou retire, ak vrè egzanp.",
+          "h1": "Pè ak twa vizib (naked pairs, naked triples)",
+          "summary": "Yon pè vizib se de kaz nan menm liy, kolòn oswa bwat ki gen egzakteman menm de kandida yo. De chif yo oblije ale nan de kaz sa yo, kidonk ou ka retire yo nan chak lòt kaz nan inite a. Yon twa vizib se menm lide a ak twa kaz ak twa chif; chak kaz ka montre de oswa tout twa. Endis Bare Sudoku a make plasman ki soti ladan l lan ak \"Pè oswa twa\".",
+          "when": [
+            "Apre nòt yo konplè e sèl yo ak kandida bloke yo fini. Pè vizib parèt trè souvan nan devinèt Difisil, twa vizib mwens. Li vo lapèn tcheke toude nan chak inite ki toujou gen senk kaz vid oswa plis."
+          ],
+          "spot": [
+            "Chèche kaz ki gen sèlman de kandida e jwenn yon lòt kaz nan menm inite a ki gen menm de yo. Pou twa, gade inite ki gen plizyè kaz ak de oswa twa kandida e tcheke si twa ladan yo ansanm sèvi ak sèlman twa chif diferan. Kaz ki gen egzakteman menm kandida yo fasil pou wè lè nòt yo ekri; Ranpli nòt yo nan jwèt la fè sa ak yon sèl touche."
+          ],
+          "examples": [
+            {
+              "h": "Pè vizib",
+              "steps": [
+                "{cellA} ak {cellB} nan {unit} gen egzakteman menm de kandida yo: {d1} ak {d2}.",
+                "Youn ladan yo dwe {d1} e lòt la {d2}. Nou pa konnen kilès, men de chif yo itilize nèt pa de kaz sa yo.",
+                "Kidonk okenn lòt kaz nan {unit} pa ka gen {d1} oswa {d2}. Retire {elim}."
+              ]
+            },
+            {
+              "h": "Twa vizib",
+              "steps": [
+                "Twa kaz nan {unit} pran tout kandida yo nan menm twa chif yo, {digits}: {cells}.",
+                "Twa chif yo dwe ranpli twa kaz sa yo nan yon lòd kèlkonk. Yon kaz pa bezwen montre tout twa kandida yo; sa ki konte se okenn nan twa kaz yo pa gen yon kandida andeyò ansanm nan.",
+                "Retire {digits} nan chak lòt kaz nan {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Pran de kaz ki pataje de kandida men ki gen yon twazyèm tou. Pou yon pè vizib, chak kaz dwe gen egzakteman de kandida yo e anyen ankò.",
+            "Retire chif yo nan kaz pè a menm. Pè a kenbe kandida li yo; eliminasyon yo ale nan lòt kaz nan inite a.",
+            "Egzije chak kaz nan yon twa montre tout twa chif yo. Yon kaz ki gen de nan twa yo bon, depi okenn kaz pa gen yon kandida andeyò ansanm nan."
+          ],
+          "faq": [
+            [
+              "Kisa yon pè vizib ye nan Sudoku?",
+              "De kaz nan yon inite ki tou de gen egzakteman menm de kandida yo. De chif sa yo bloke nan de kaz sa yo, kidonk ou ka retire yo nan rès inite a."
+            ],
+            [
+              "Kisa yon twa vizib ye?",
+              "Twa kaz nan yon inite ki, ansanm, gen sèlman twa chif kòm kandida. Chak kaz ka gen de oswa twa ladan yo. Twa chif yo ranpli twa kaz yo, kidonk ou ka retire yo nan lòt kaz inite a."
+            ],
+            [
+              "Èske yon pè vizib mete yon chif?",
+              "Pa pou kont li. Li retire kandida, e retrè a konn kite yon sèl vizib oswa kache. Endis Bare Sudoku a montre sèl sa a e li bay non teknik ki te fè l posib la."
+            ],
+            [
+              "Èske yon pè vizib ka nan yon bwat ak yon liy an menm tan?",
+              "Wi. Si de kaz yo pataje yon liy ak yon bwat, pè a elimine nan toude inite yo. Bare Sudoku trete yo yon inite alafwa."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Pè ak twa kache",
+          "title": "Pè ak twa kache nan Sudoku: kijan pou rekonèt yo",
+          "description": "Yon pè kache se de chif ki ka ale sèlman nan menm de kaz yo nan yon inite, kidonk lòt kandida yo soti. Aprann jwenn pè ak twa kache etap pa etap.",
+          "h1": "Pè ak twa kache (hidden pairs, hidden triples)",
+          "summary": "Yon pè kache se de chif ki, nan yon sèl liy, kolòn oswa bwat, se kandida nan menm de kaz yo e okenn lòt kote. De kaz sa yo oblije gen de chif sa yo, kidonk ou ka retire tout lòt kandida ki ladan yo. Yon twa kache mache menm jan ak twa chif ki fèmen nan twa kaz. Apre retrè a, kaz yo montre yon pè oswa yon twa vizib. Endis Bare Sudoku a make plasman ki soti ladan l lan ak \"Pè oswa twa\".",
+          "when": [
+            "Lè yon inite gen kaz ak anpil kandida e sèl yo fini. Pè kache yo kache nan kaz ki chaje, se pou sa li vo lapèn chèche yo egzakteman kote pè vizib pa parèt. Twa kache ra; Bare Sudoku chèche yo, men pifò devinèt Difisil rezoud san yo."
+          ],
+          "spot": [
+            "Travay pa chif, pa pa kaz. Nan yon inite, note kaz kote chak chif ki manke ka ale. Si de chif gen chak sèlman de kaz posib e se menm de kaz yo, ou gen yon pè kache. Nan jwèt la, touche bouton yon chif pou make kandida li; si de chif limen menm de kaz nan yon inite e anyen lòt ladan l, se modèl la."
+          ],
+          "examples": [
+            {
+              "h": "Pè kache",
+              "steps": [
+                "Nan {unit}, chif {d1} ak {d2} gen chak sèlman de kaz posib, e se menm de yo: {cells}.",
+                "De kaz sa yo oblije gen {d1} ak {d2}, kidonk lòt kandida yo pa posib.",
+                "Retire {elim}. Kounye a de kaz yo montre yon pè vizib, ki ka debloke plis bagay."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Retire de chif pè a nan kaz pè a. Se lòt kandida kaz sa yo ki soti; chif pè a rete.",
+            "Aksepte yon chif ki gen yon twazyèm kaz posib nan inite a. Toude chif yo dwe limite a egzakteman de kaz yo.",
+            "Chèche sèlman nan bwat. Pè kache parèt otan nan liy ak kolòn."
+          ],
+          "faq": [
+            [
+              "Kisa yon pè kache ye nan Sudoku?",
+              "De chif ki ka ale sèlman nan menm de kaz yo nan yon inite. Kaz sa yo oblije pran chif sa yo, kidonk ou retire lòt kandida yo."
+            ],
+            [
+              "Ki diferans ant yon pè kache ak yon pè vizib?",
+              "Yon pè vizib parèt klè: de kaz ki montre sèlman menm de kandida yo. Yon pè kache kouvri ak kandida anplis nan de kaz yo. Lè ou retire kandida anplis sa yo, pè kache a tounen yon pè vizib."
+            ],
+            [
+              "Kisa yon twa kache ye?",
+              "Twa chif ki fèmen nan twa kaz nan yon inite. Chak chif pa bezwen parèt nan tout twa kaz yo; sa ki konte se okenn nan twa chif yo pa gen yon kandida andeyò kaz sa yo."
+            ],
+            [
+              "Èske endis la fè diferans ant pè kache ak pè vizib?",
+              "Non. Bare Sudoku jwenn toude e li make plasman ki soti ladan l lan ak \"Pè oswa twa\". Paj yo isit la separe yo paske ou jwenn yo nan fason diferan."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing nan Sudoku: kijan teknik la mache",
+          "description": "X-Wing: yon chif ki gen egzakteman de kaz kandida nan de liy, nan menm de kolòn yo, soti nan rès kolòn sa yo. Eksplike ak yon vrè egzanp.",
+          "h1": "X-Wing",
+          "summary": "Yon X-Wing se yon modèl yon chif ak kat kaz nan kwen yon rektang. Si chif la gen egzakteman de kaz kandida nan chak nan de liy, e kaz sa yo nan menm de kolòn yo, chif la oblije okipe de kwen opoze rektang lan. Kidonk ou ka retire l nan chak lòt kaz nan de kolòn sa yo. Menm bagay la mache si ou chanje liy ak kolòn. Se premye teknik Ekspè nan Bare Sudoku.",
+          "when": [
+            "Lè sèl, kandida bloke ak pè ak twa fini. X-Wing se modèl Ekspè ki parèt pi souvan e li konn parèt lè yon chif gen kèk kandida sèlman ki rete, anjeneral ak kat a sis kopi ki deja mete. Li bezwen nòt konplè pou chif w ap egzamine a."
+          ],
+          "spot": [
+            "Chwazi yon chif e chèche liy kote li gen egzakteman de kaz kandida. Si de liy konsa pataje menm de kolòn yo, tcheke kolòn sa yo pou lòt kandida chif la: se yo ki eliminasyon yo. Apre sa refè menm bagay la ak kolòn kòm baz. Nan jwèt la, touche bouton chif la: chak kandida li vin make, e yon rektang kat nòt make fasil pou wè."
+          ],
+          "examples": [
+            {
+              "h": "Egzanp",
+              "steps": [
+                "Chif {d} gen egzakteman de kaz kandida nan liy {r1} ak egzakteman de nan liy {r2}, e yo aliyen nan menm de kolòn yo, {c1} ak {c2}: {cells}.",
+                "Liy {r1} mete {d} li nan kolòn {c1} oswa {c2}, e liy {r2} mete {d} pa l nan lòt la. Nan tou de ka yo, kolòn {c1} ak {c2} chak resevwa yon {d} nan de liy sa yo.",
+                "Kidonk {d} pa ka parèt okenn lòt kote nan kolòn {c1} ak {c2}. Retire {d} nan {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sèvi ak yon liy ki gen twa kaz kandida pou chif la. Chak liy baz dwe gen egzakteman de, e toude dwe nan de kolòn yo pataje yo.",
+            "Retire chif la nan liy yo olye nan kolòn yo. Ak liy kòm baz, eliminasyon yo nan kolòn yo, e lekontrè.",
+            "Bliye vèsyon ranvèse a. Yon X-Wing ki bati sou kolòn elimine nan liy."
+          ],
+          "faq": [
+            [
+              "Kisa yon X-Wing ye nan Sudoku?",
+              "Yon chif ki gen egzakteman de kaz kandida nan chak nan de liy, nan menm de kolòn yo. Chif la okipe de kwen opoze rektang sa a, kidonk ou retire l nan rès de kolòn yo. Ou ka chanje liy ak kolòn."
+            ],
+            [
+              "Poukisa X-Wing mache?",
+              "Chak nan de liy yo oblije mete chif la nan youn nan de kolòn yo, e de liy yo pa ka sèvi ak menm kolòn nan. Kidonk de kolòn yo chak resevwa kopi chif la nan liy sa yo, e tout lòt kandida nan kolòn sa yo pa posib."
+            ],
+            [
+              "Èske X-Wing se yon pwason?",
+              "Wi. X-Wing se pwason gwosè de a; Swordfish se pwason gwosè twa a. Bare Sudoku jwenn toude."
+            ],
+            [
+              "Ki nivo ki gen X-Wing?",
+              "Ekspè. Yon devinèt ki bezwen X-Wing, Y-Wing, Swordfish oswa XYZ-Wing klase Ekspè."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing nan Sudoku: kijan teknik la mache",
+          "description": "Y-Wing (XY-Wing): yon pivo ak de kandida e de zèl ki chak pataje youn ladan yo fòse yon chif soti nan chak kaz ki wè toude zèl yo. Egzanp.",
+          "h1": "Y-Wing",
+          "summary": "Yon Y-Wing, yo rele l XY-Wing tou, sèvi ak twa kaz ki chak gen de kandida. Pivo a gen kandida X ak Y. Yon zèl wè pivo a e li gen X ak Z; lòt zèl la wè pivo a e li gen Y ak Z. Kèlkeswa sa pivo a ye, youn nan zèl yo oblije Z, kidonk ou ka retire Z nan chak kaz ki wè toude zèl yo. Se yon teknik Ekspè nan Bare Sudoku.",
+          "when": [
+            "Lè yon devinèt gen plizyè kaz ak egzakteman de kandida e pa gen okenn pwason disponib. Y-Wing parèt souvan nan devinèt Ekspè e ou jwenn yo lè ou swiv kaz ki gen de kandida yo: chak ladan yo ka yon pivo oswa yon zèl."
+          ],
+          "spot": [
+            "Fè lis kaz ki gen egzakteman de kandida. Pou chak, konsidere l kòm pivo a ak kandida X ak Y, e chèche pami vwazen li yon kaz ak X ak yon lòt chif Z, ak yon kaz ak Y ak menm Z a. De sa yo se zèl yo. Apre sa jwenn kaz ki wè toude zèl yo e ki gen Z. Remake zèl yo pa bezwen wè youn lòt."
+          ],
+          "examples": [
+            {
+              "h": "Egzanp",
+              "steps": [
+                "Pivo {pivot} gen kandida {x} ak {y}. Li wè {wingA}, ki gen {x} ak {z}, ak {wingB}, ki gen {y} ak {z}.",
+                "Si {pivot} se {x}, {wingA} pèdi {x} e li vin {z}. Si {pivot} se {y}, {wingB} vin {z}. Nan tout ka, youn nan de zèl yo se {z}.",
+                "Yon kaz ki wè toude zèl yo pa ka janm {z}. Retire {z} nan {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Chwazi zèl ki pa tou de wè pivo a. Chak zèl dwe pataje yon liy, yon kolòn oswa yon bwat ak pivo a.",
+            "Retire Z nan kaz ki wè yon sèl zèl. Kaz w ap elimine a dwe wè toude zèl yo.",
+            "Retire Z nan pivo a. Nan yon Y-Wing pivo a pa gen Z; si li genyen, modèl la se yon XYZ-Wing ak lòt règ."
+          ],
+          "faq": [
+            [
+              "Kisa yon Y-Wing ye nan Sudoku?",
+              "Twa kaz ak de kandida: yon pivo ak X ak Y, yon zèl ak X ak Z ki wè pivo a, ak yon zèl ak Y ak Z ki wè pivo a. Youn nan zèl yo toujou Z, kidonk ou retire Z nan kaz ki wè toude zèl yo."
+            ],
+            [
+              "Èske Y-Wing se menm bagay ak XY-Wing?",
+              "Wi. De non yo dekri menm modèl la. Bare Sudoku rele l Y-Wing."
+            ],
+            [
+              "Poukisa youn nan zèl yo oblije Z?",
+              "Si pivo a se X, premye zèl la pèdi X e li vin Z. Si pivo a se Y, dezyèm zèl la vin Z. Pivo a se youn nan de a, kidonk youn nan zèl yo se Z."
+            ],
+            [
+              "Nan konbyen kaz yon Y-Wing elimine?",
+              "Anjeneral youn oswa de: sèlman kaz ki wè toude zèl yo e ki toujou gen Z. Sa ase pou kreye yon sèl."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish nan Sudoku: kijan teknik la mache",
+          "description": "Swordfish: yon chif ki fèmen nan twa kolòn sou twa liy soti nan rès kolòn sa yo. Pwason gwosè twa a, eksplike ak yon vrè egzanp.",
+          "h1": "Swordfish",
+          "summary": "Yon Swordfish se yon X-Wing ak twa liy ak twa kolòn. Si yon chif gen pou pi plis twa kaz kandida nan chak nan twa liy, e tout kaz sa yo tonbe nan menm twa kolòn yo, twa liy yo itilize chif la nèt nan kolòn sa yo, e ou ka retire chif la nan chak lòt kaz nan twa kolòn yo. Ou ka chanje liy ak kolòn. Bare Sudoku chèche Swordfish apre Y-Wing, nan devinèt Ekspè.",
+          "when": [
+            "Lè X-Wing ak Y-Wing pa jwenn anyen. Swordfish mwens komen pase X-Wing e li bezwen yon chif ki gen kandida li gaye mens sou twa liy oswa kolòn. Li bezwen nòt konplè e egzak pou chif sa a."
+          ],
+          "spot": [
+            "Chwazi yon chif e chèche liy ki gen de oswa twa kaz kandida pou li. Si twa liy konsa kouvri sèlman twa kolòn antou, tcheke kolòn sa yo pou lòt kandida chif la. Se pa chak liy ki bezwen yon kandida nan chak kolòn: yon Swordfish ka gen sis, sèt, uit oswa nèf kaz. Nan jwèt la, make chif la ak bouton li e chèche twa liy ki gen kandida yo aliyen nan twa kolòn."
+          ],
+          "examples": [
+            {
+              "h": "Egzanp",
+              "steps": [
+                "Chif {d} gen pou pi plis twa kaz kandida nan chak nan liy {rows}, e tout kaz sa yo tonbe nan kolòn {cols}: {cells}.",
+                "Chak nan twa liy yo oblije mete {d} li nan youn nan twa kolòn yo, e okenn de liy pa ka sèvi ak menm kolòn nan. Kidonk twa kolòn yo resevwa {d} yo nan twa liy sa yo.",
+                "Tout lòt kandida {d} nan kolòn {cols} pa posib. Retire {d} nan {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Egzije tout nèf kaz yo. Yon Swordfish ak de kandida nan kèk liy toujou valab, depi twa liy yo kouvri sèlman twa kolòn.",
+            "Mete yon liy ki gen kat kaz kandida. Chak liy baz dwe gen pou pi plis twa, tout anndan twa kolòn yo.",
+            "Elimine nan liy baz yo. Ak liy kòm baz, eliminasyon yo nan twa kolòn yo, andeyò liy baz yo."
+          ],
+          "faq": [
+            [
+              "Kisa yon Swordfish ye nan Sudoku?",
+              "Yon chif ki gen kandida li nan twa liy fèmen nan twa kolòn. Twa liy yo oblije mete chif la nan twa kolòn sa yo, youn chak, kidonk ou retire chif la nan lòt kaz kolòn sa yo."
+            ],
+            [
+              "Ki diferans ant yon Swordfish ak yon X-Wing?",
+              "Sèlman gwosè a: yon X-Wing sèvi ak de liy ak de kolòn, yon Swordfish twa ak twa. Rezònman an se menm."
+            ],
+            [
+              "Èske yon Swordfish bezwen egzakteman nèf kaz?",
+              "Non. Chak liy ka gen de oswa twa kandida; modèl la mande sèlman pou twa liy yo ansanm pa sèvi ak plis pase twa kolòn."
+            ],
+            [
+              "Èske gen yon pwason gwosè kat?",
+              "Wi, Jellyfish. Bare Sudoku pa sèvi ak li, paske devinèt li yo pa janm bezwen l."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing nan Sudoku: kijan teknik la mache",
+          "description": "XYZ-Wing: yon pivo ak twa kandida e de zèl ki pataje youn ladan yo fòse chif sa a soti nan chak kaz ki wè tout twa. Vrè egzanp etap pa etap.",
+          "h1": "XYZ-Wing",
+          "summary": "Yon XYZ-Wing se yon Y-Wing kote pivo a gen twa kandida. Pivo a gen X, Y ak Z; yon zèl wè pivo a e li gen X ak Z, lòt la wè pivo a e li gen Y ak Z. Youn nan twa kaz yo oblije Z, kidonk ou ka retire Z nan chak kaz ki wè tout twa. Paske pivo a li menm ka Z, kaz w ap elimine a dwe wè pivo a osi byen ke toude zèl yo, sa ki limite l nan bwat, liy oswa kolòn kaz yo pataje a. Se teknik ki pi difisil Bare Sudoku sèvi ak li.",
+          "when": [
+            "Sèlman lè tout lòt bagay echwe. XYZ-Wing se modèl ki pi ra nan Bare Sudoku e li parèt sèlman nan devinèt Ekspè. Chèche l lè yon kaz ak twa kandida chita nan yon bwat ak yon kaz ak de kandida ki pataje de nan chif li yo."
+          ],
+          "spot": [
+            "Kòmanse ak kaz ki gen egzakteman twa kandida; chak se yon pivo posib. Pami vwazen li, chèche de kaz ki gen de kandida chak, tou de pran nan twa kandida pivo a, ki pataje egzakteman yon chif Z. Apre sa chèche kaz ki wè pivo a ak toude zèl yo e ki gen Z. Nan pratik, yon zèl nan bwat pivo a e lòt la nan liy oswa kolòn li, e kaz yo elimine yo se lòt kaz bwat sa a ki nan liy oswa kolòn sa a."
+          ],
+          "examples": [
+            {
+              "h": "Egzanp",
+              "steps": [
+                "Pivo {pivot} gen twa kandida: {x}, {y} ak {z}. Li wè {wingA}, ki gen {x} ak {z}, ak {wingB}, ki gen {y} ak {z}.",
+                "Si {pivot} se {z}, sa fini. Si li se {x}, {wingA} oblije {z}. Si li se {y}, {wingB} oblije {z}. Nan tout ka, youn nan twa kaz yo se {z}.",
+                "Yon kaz ki wè tout twa pa ka {z}. Retire {z} nan {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Elimine nan kaz ki wè sèlman de zèl yo. Kontrèman ak yon Y-Wing, pivo a ka Z, kidonk kaz la dwe wè pivo a tou.",
+            "Sèvi ak zèl ki gen kandida ki pa tou de nan twa kandida pivo a.",
+            "Konfonn li ak yon Y-Wing: diferans lan se twazyèm kandida nan pivo a, e li chanje ki kaz ou ka netwaye."
+          ],
+          "faq": [
+            [
+              "Kisa yon XYZ-Wing ye nan Sudoku?",
+              "Yon pivo ak kandida X, Y ak Z e de zèl, youn ak X ak Z e youn ak Y ak Z, tou de wè pivo a. Youn nan twa kaz yo se Z, kidonk ou retire Z nan kaz ki wè tout twa."
+            ],
+            [
+              "Ki diferans ant yon XYZ-Wing ak yon Y-Wing?",
+              "Pivo a gen twa kandida olye de, enkli Z. Sa fè pivo a vin yon plas posib pou Z, kidonk se sèlman kaz ki wè pivo a ak toude zèl yo ki ka pèdi Z."
+            ],
+            [
+              "Konbyen fwa XYZ-Wing parèt?",
+              "Raman. Nan Bare Sudoku se sèlman devinèt Ekspè ki ka bezwen l, e pifò pa bezwen l. Bare Sudoku tcheke l an dènye, apre X-Wing, Y-Wing ak Swordfish."
+            ],
+            [
+              "Èske gen yon WXYZ-Wing?",
+              "Wi, ak yon pivo kat kandida, men Bare Sudoku pa sèvi ak li. Ou ka fini chak devinèt nan jwèt la ak nèf teknik gid sa a."
+            ]
+          ]
+        }
+      }
+    },
+    "eo": {
+      "learnHeading": "Lernu Sudokon",
+      "learnText": "Ĉu vi estas nova ĉe Sudoko, aŭ blokita ĉe malfacila enigmo? Du gvidiloj klarigas la regulojn kaj ĉiun solvoteknikon, kiun la helpoj uzas, ĉiun kun reala ekzemplo.",
+      "howToLink": "Kiel ludi Sudokon",
+      "techniquesLink": "Teknikoj por solvi Sudokon",
+      "labels": {
+        "howTo": "Kiel ludi",
+        "techniques": "Teknikoj",
+        "play": "Ludi Sudokon",
+        "prev": "Antaŭa tekniko",
+        "next": "Sekva tekniko",
+        "all": "Ĉiuj teknikoj",
+        "example": "Ekzemplo",
+        "steps": "Paŝon post paŝo",
+        "when": "Kiam uzi ĝin",
+        "spot": "Kiel rimarki ĝin",
+        "mistakes": "Oftaj eraroj",
+        "inGame": "En Bare Sudoku",
+        "level": "Necesa ekde la nivelo: {level}",
+        "hint": "En la ludo la helpo diras: {text}",
+        "legend": "Grasaj ciferoj estas donitaj, bluaj ciferoj estis metitaj dum la solvado, malgrandaj ciferoj estas kandidatoj. Emfazitaj ĉeloj formas la ŝablonon, trastrekitaj kandidatoj estas forigitaj, kaj rondigita kandidato estas la metota cifero.",
+        "notation": "Ĉeloj estas skribataj kiel r3c7: vico 3, kolumno 7. Vicoj estas nombrataj de supre, kolumnoj de maldekstre, kaj kestoj de 1 ĝis 9 ekde la supra maldekstra angulo, vicon post vico.",
+        "row": "vico {n}",
+        "column": "kolumno {n}",
+        "box": "kesto {n}",
+        "elimItem": "{d} el {cell}",
+        "regions": "Vico 5, kolumno 5 kaj kesto 5 komence de enigmo",
+        "firstMove": "Nuda unuopulo: {cell} povas esti nur {d}",
+        "breadcrumb": "Navigada vojo"
+      },
+      "howTo": {
+        "title": "Kiel ludi Sudokon: reguloj, krado kaj unuaj movoj",
+        "description": "Lernu ludi Sudokon: la reguloj, kiel funkcias vicoj, kolumnoj kaj kestoj, kial ĉiu enigmo havas unu solvon, kiel uzi notojn kaj fari la unuajn movojn.",
+        "h1": "Kiel ludi Sudokon",
+        "summary": "Sudoko estas logika enigmo sur krado 9×9. Plenigu ĉiun malplenan ĉelon per cifero de 1 ĝis 9 tiel, ke ĉiu vico, ĉiu kolumno kaj ĉiu 3×3-kesto enhavu ĉiun ciferon ekzakte unufoje. Kelkaj ciferoj estas donitaj komence; la ceterajn vi deduktas, po unu certa ĉelo, kaj vi neniam devas diveni. Ĉi tiu gvidilo klarigas la kradon, la regulojn, la principon de la unusola solvo, la notojn kaj simplan strategion por viaj unuaj movoj. Vi povas ekzerci ĉion en [Bare Sudoku](play), kiu estas senpaga kaj havas helpojn, kiuj klarigas la logikon.",
+        "sections": [
+          {
+            "h": "Kiuj estas la reguloj de Sudoko?",
+            "p": [
+              "Estas nur tri reguloj, kaj ili estas la sama regulo vidata el tri direktoj: ĉiu vico devas enhavi la ciferojn 1 ĝis 9, ĉiu kolumno devas enhavi la ciferojn 1 ĝis 9, kaj ĉiu 3×3-kesto devas enhavi la ciferojn 1 ĝis 9. Tial cifero neniam povas aperi dufoje en la sama vico, kolumno aŭ kesto.",
+              "La donitaj ciferoj, presitaj grase, estas fiksaj. Via tasko estas plenigi la malplenajn ĉelojn. Ne estas aritmetiko nek ordo: la ciferoj estas nur naŭ malsamaj simboloj. Vi povus ludi per literoj aŭ formoj, kaj nenio ŝanĝiĝus."
+            ]
+          },
+          {
+            "h": "Kiel la krado estas organizita?",
+            "p": [
+              "La krado havas 81 ĉelojn en 9 vicoj kaj 9 kolumnoj. Dikaj linioj dividas ĝin en naŭ 3×3-kestojn. Ĉiu ĉelo apartenas al ekzakte unu vico, unu kolumno kaj unu kesto, kaj tiuj tri grupoj estas ĝiaj unuoj. La 20 aliaj ĉeloj, kiuj dividas unuon kun ĉelo, estas ĝiaj najbaroj; cifero metita en ĉelon ekskludas tiun ciferon en ĉiuj 20 najbaroj.",
+              "Ĉeloj estas skribataj kiel r3c7: vico 3, kolumno 7. Vicoj estas nombrataj de supre, kolumnoj de maldekstre, kaj kestoj de 1 ĝis 9 ekde la supra maldekstra angulo, vicon post vico. Ĉi tiu notacio estas uzata en ĉiu gvidilo pri teknikoj kaj indas lerni ĝin: r5c5 estas la centro de la krado."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Kial ĉiu Sudoko havas ekzakte unu solvon?",
+            "p": [
+              "Ĝusta Sudoko havas unu solvon, kaj ĝuste tio igas la logikon funkcii. Kiam ajn vi povas montri, ke cifero ne povas iri aliloken en unuo, ĝi devas iri en la restantan ĉelon, ĉar la solvo ekzistas kaj estas unika. Se enigmo havus du solvojn, neniom da rezonado povus distingi ilin, kaj iam vi estus devigita diveni.",
+              "Bare Sudoku generas ĉiun enigmon en via aparato kaj kontrolas, ke ĝi havas ekzakte unu solvon kaj ke ĝia logika solvilo povas fini ĝin per la teknikoj de la elektita nivelo. Do se vi blokiĝas, ĉiam estas sekva paŝo trovebla, kaj la helpo montras ĝin."
+            ]
+          },
+          {
+            "h": "Kiel komenci Sudokon?",
+            "p": [
+              "Komencu per tio, kio estas plej limigita. Ĉi tiu ordo funkcias ĉe ĉiu nivelo:"
+            ],
+            "list": [
+              "Elektu ciferon, kiu jam aperas multfoje, ekzemple ses aŭ sep fojojn, kaj trovu la kestojn, al kiuj ĝi ankoraŭ mankas. Ofte restas por ĝi nur unu ĉelo en kesto: tio estas [kaŝita unuopulo](hidden-single).",
+              "Serĉu ĉelojn ĉirkaŭitajn de multaj ciferoj. Ĉelo, kies vico, kolumno kaj kesto kune enhavas ok malsamajn ciferojn, havas nur unu restantan kandidaton: [nuda unuopulo](naked-single). Ĉeloj en preskaŭ plenaj vicoj aŭ kestoj estas la plej bona loko por serĉi.",
+              "Ĉiu cifero, kiun vi metas, forigas kandidaton el 20 najbaroj, do kontrolu tiujn najbarojn tuj. Unuopuloj emas veni en ĉenoj.",
+              "Kiam la facilaj metoj elĉerpiĝas, skribu notojn: la kandidatojn por ĉiu malplena ĉelo. Poste serĉu ciferon, kiu estas limigita al unu linio ene de kesto ([ŝlositaj kandidatoj](locked-candidates)), aŭ du ĉelojn kun la samaj du kandidatoj ([nuda paro](naked-pairs)).",
+              "Revenu al unuopuloj post ĉiu forigo. Eĉ Spertulaj enigmoj estas solvataj ĉefe per unuopuloj; la progresinta tekniko nur malŝlosas la sekvan."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Kio estas notoj kaj kiam uzi ilin?",
+            "p": [
+              "Notoj, ankaŭ nomataj krajonmarkoj aŭ kandidatoj, estas la malgrandaj ciferoj, kiujn vi skribas en malplenan ĉelon por registri, kiuj ciferoj ankoraŭ eblas tie. En facilaj enigmoj vi malofte bezonas ilin; ekde Malfacila ili estas nemalhaveblaj, ĉar teknikoj kiel paroj, X-Wing kaj Y-Wing temas pri kandidatoj, ne pri metitaj ciferoj.",
+              "Tenu la notojn precizaj: kiam vi metas ciferon, forigu ĝin el la notoj de ĉiuj 20 najbaroj. En Bare Sudoku tio okazas aŭtomate, kaj Plenigi notojn skribas ĉiun kandidaton en ĉiun malplenan ĉelon per unu tuŝo, do vi povas komenci de kompleta kaj ĝusta aro da kandidatoj. Noto estas fakto, ne diveno: ĝi signifas, ke nenio ankoraŭ ekskludas tiun ciferon."
+            ]
+          },
+          {
+            "h": "Kion fari, kiam vi blokiĝas?",
+            "p": [
+              "Unue rekontrolu la bazaĵojn: ĉiu preskaŭ plena vico, kolumno kaj kesto estas fonto de unuopuloj. Poste certigu, ke la notoj estas kompletaj, ĉar mankanta kandidato kaŝas ŝablonojn kaj malaktuala kandidato kreas falsajn. Poste trairu la [teknikojn](techniques) laŭ malfacileco: ŝlositaj kandidatoj, paroj kaj triopoj, X-Wing, Y-Wing, Swordfish kaj XYZ-Wing. Ĉiu havas sian propran paĝon kun reala ekzemplo.",
+              "Se nenio funkcias, petu helpon. En Bare Sudoku la helpo unue kontrolas, ĉu metita cifero estas malĝusta, poste trovas la sekvan ĉelon plenigeblan per logiko kaj nomas la teknikon, do vi lernas ion eĉ kiam vi uzas ĝin. Tuŝu la helpon denove por meti la ciferon."
+            ]
+          },
+          {
+            "h": "Kiel enigi ciferojn en Bare Sudoku?",
+            "p": [
+              "Tuŝu ĉelon, poste ciferon. Aŭ tuŝu unue ciferon: ĝi ŝlosiĝas, kaj ĉiu ĉelo, kiun vi tuŝas, ricevas ĝin; tio estas la plej rapida maniero meti la sesan, sepan kaj okan ekzempleron de cifero. Tuŝu la ciferon denove por malŝlosi ĝin. La butono Notoj ŝaltas krajonmarkojn, Forviŝi malplenigas ĉelon, Malfari nuligas ajnan movon, kaj eraroj estas markitaj ruĝe, krom se vi malŝaltas tion en la menuo.",
+              "Per klavaro uzu la sagoklavojn por moviĝi, 1 ĝis 9 por enigi ciferon, Backspace por forviŝi, N por notoj, U por malfari, H por helpo, F por plenigi notojn kaj Escape por la menuo. La ludo konserviĝas aŭtomate, funkcias eksterrete kaj havas nek reklamojn nek konton."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ĉu oni iam devas diveni en Sudoko?",
+            "Ne en ĝusta enigmo. Ĉiu enigmo de Bare Sudoku havas ekzakte unu solvon kaj estas kontrolita kiel solvebla nur per logiko, ĝis la teknikoj de sia nivelo. Se vi sentas, ke vi devas diveni, kandidato mankas en viaj notoj aŭ tekniko atendas esti trovita."
+          ],
+          [
+            "Ĉu cifero povas aperi dufoje en vico, kolumno aŭ kesto?",
+            "Ne. Tio estas la tuta regulo: ĉiu el la naŭ vicoj, naŭ kolumnoj kaj naŭ kestoj enhavas ĉiun ciferon de 1 ĝis 9 ekzakte unufoje. Se du samaj ciferoj dividas unuon, almenaŭ unu el ili estas malĝusta."
+          ],
+          [
+            "Kio estas la diferenco inter Facila, Meza, Malfacila kaj Spertulo?",
+            "La nivelon difinas la teknikoj, kiujn la enigmo bezonas. Facila kaj Meza estas solvataj nur per unuopuloj, kaj Facila komenciĝas kun almenaŭ 38 donitaj ciferoj. Malfacila bezonas ŝlositajn kandidatojn aŭ parojn kaj triopojn. Spertulo bezonas X-Wing, Y-Wing, Swordfish aŭ XYZ-Wing."
+          ],
+          [
+            "Ĉu pli bone plenigi notojn por ĉiu ĉelo aŭ nur por kelkaj?",
+            "Por Malfacilaj kaj Spertulaj enigmoj plenigu ĉiujn: ŝablonoj kiel paroj, X-Wing kaj Y-Wing aperas nur kiam ĉiu kandidato estas skribita. Ĉe Facila kaj Meza notoj estas malnepraj, kaj plej multaj ludantoj simple serĉas unuopulojn."
+          ],
+          [
+            "Kiom longe daŭras Sudoko?",
+            "Facila enigmo daŭras kelkajn minutojn; Spertulaj enigmoj povas daŭri dudek minutojn aŭ pli, depende de kiom rapide vi rimarkas la progresintan ŝablonon. Bare Sudoku montras tempomezurilon, paŭzigas ĝin dum la menuo estas malfermita kaj ne havas rangotabelon, do ludu laŭ via propra ritmo."
+          ],
+          [
+            "Ĉu Sudoko postulas aritmetikon?",
+            "Ne. La ciferoj estas nur etikedoj; neniu adiciado aŭ kalkulado estas bezonata. Ajnaj naŭ simboloj funkcius, kaj tial Sudoko estas logika enigmo, ne nombra enigmo."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Teknikoj por solvi Sudokon, klarigitaj per ekzemploj",
+        "description": "Ĉiuj naŭ teknikoj por solvi Sudokon, de nudaj unuopuloj ĝis Swordfish kaj XYZ-Wing, en la ordo de la helpoj de Bare Sudoku, ĉiu kun reala ekzemplo.",
+        "h1": "Teknikoj por solvi Sudokon",
+        "intro": [
+          "Ĉiu Sudoko solveblas per malgranda aro da logikaj teknikoj. Ĉi tiu indekso listigas la naŭ teknikojn, kiujn uzas la solvilo de Bare Sudoku kaj ĝiaj helpoj, en la ordo, en kiu la solvilo provas ilin: unue unuopuloj, poste forigoj ene de unu unuo, poste ŝablonoj, kiuj etendiĝas tra pluraj vicoj kaj kolumnoj. Ĉiu tekniko havas sian propran paĝon kun difino, klarigo pri kiel rimarki ĝin, reala ekzemplo el generita enigmo kaj la oftaj eraroj.",
+          "La nivelon de enigmo decidas la plej malfacila tekniko, kiun ĝi bezonas. Facilaj kaj Mezaj enigmoj bezonas nur unuopulojn, Malfacilaj enigmoj bezonas ŝlositajn kandidatojn aŭ parojn kaj triopojn, kaj Spertulaj enigmoj bezonas almenaŭ unu fiŝon aŭ flugilon. Kia ajn estas la nivelo, unuopuloj faras la plej grandan parton de la laboro; la progresinta tekniko forigas unu aŭ du kandidatojn, kaj unuopuloj daŭrigas de tie."
+        ],
+        "faq": [
+          [
+            "En kiu ordo mi provu la teknikojn de Sudoko?",
+            "La plej simplajn unue: nudaj unuopuloj, kaŝitaj unuopuloj, ŝlositaj kandidatoj, nudaj paroj kaj triopoj, kaŝitaj paroj kaj triopoj, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku provas ilin ekzakte en tiu ordo, kaj helpo ĉiam nomas la plej simplan teknikon, kiu antaŭenigas la solvadon."
+          ],
+          [
+            "Ĉu mi bezonas ĉiujn ĉi teknikojn por solvi Sudokon?",
+            "Por Facilaj kaj Mezaj enigmoj unuopuloj sufiĉas. Malfacilaj enigmoj aldonas ŝlositajn kandidatojn kaj subarojn. Spertulaj enigmoj bezonas almenaŭ unu fiŝon aŭ flugilon, sed kutime nur unu- aŭ dufoje en enigmo."
+          ],
+          [
+            "Ĉu ekzistas teknikoj pli malfacilaj ol XYZ-Wing?",
+            "Jes, ekzemple ĉenoj, unikecaj testoj kaj devigaj retoj. Bare Sudoku ne generas enigmojn, kiuj bezonas ilin, do ĉiu enigmo en la ludo fineblas per la naŭ teknikoj de ĉi tiu paĝo."
+          ],
+          [
+            "Kio estas kandidato?",
+            "Cifero, kiu ankoraŭ povus iri en malplenan ĉelon, ĉar nenio en ĝia vico, kolumno aŭ kesto ankoraŭ ekskludas ĝin. La notoj en la ludo estas kandidatoj. Ĉiu tekniko preter la unuopuloj rezonas pri kandidatoj, do tenu ilin kompletaj kaj precizaj."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Nuda unuopulo",
+          "title": "Nuda unuopulo en Sudoko: la ĉelo kun unu kandidato",
+          "description": "Nuda unuopulo estas malplena ĉelo kun nur unu ebla cifero. Lernu rapide trovi nudajn unuopulojn, kun reala ekzemplo paŝon post paŝo kaj la kutimaj eraroj.",
+          "h1": "Nuda unuopulo (naked single)",
+          "summary": "Nuda unuopulo estas malplena ĉelo, kiu havas ekzakte unu kandidaton: la aliaj ok ciferoj jam aperas en ĝia vico, kolumno aŭ kesto. La restanta cifero devas iri tien. Ĝi estas la plej simpla tekniko de Sudoko, tiu, kiun vi uzas plej ofte, kaj tiu, kiun la helpo de Bare Sudoku anoncas per \"Nur unu kandidato ĉi tie\".",
+          "when": [
+            "Ĉiam. Nudaj unuopuloj aperas de la unua movo ĝis la lasta, ĉe ĉiu nivelo. En Facilaj kaj Mezaj enigmoj ili estas, kune kun kaŝitaj unuopuloj, la sola tekniko, kiun vi bezonas. En pli malfacilaj enigmoj ĉiu forigo farita de progresinta tekniko kutime postlasas nudan unuopulon, do serĉu ilin post ĉiu paŝo."
+          ],
+          "spot": [
+            "Rigardu ĉelojn kun multaj metitaj najbaroj: ĉelon en vico, kiu jam havas sep ciferojn, aŭ ĉelon, kies vico, kolumno kaj kesto kune kovras ok malsamajn ciferojn. Sen notoj kalkulu la ciferojn, kiujn vi povas vidi de la ĉelo. Kun notoj nuda unuopulo estas simple ĉelo, kiu montras unu kandidaton, kaj tial Plenigi notojn faciligas trovi ilin."
+          ],
+          "examples": [
+            {
+              "h": "Ekzemplo",
+              "steps": [
+                "Rigardu {cell}. Ĝi estas malplena, do listigu ĉiun ciferon jam metitan en ĝia vico, ĝia kolumno kaj ĝia kesto.",
+                "Vico {row} enhavas {rowDigits}. Kolumno {col} enhavas {colDigits}. Kesto {box} enhavas {boxDigits}.",
+                "Kune ili ekskludas ĉiun ciferon krom {d}, do {d} estas la sola restanta kandidato en {cell}.",
+                "Skribu {d} en {cell}. Poste kontrolu, ĉu la nova cifero kreas alian unuopulon en la sama vico, kolumno aŭ kesto."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kalkuli nur la vicon aŭ nur la keston. La ok ekskluditaj ciferoj kutime venas el ĉiuj tri unuoj kune.",
+            "Forgesi, ke cifero, kiun vi ĵus metis, ankaŭ ekskludas kandidatojn el siaj 20 najbaroj; novaj nudaj unuopuloj aperas tuj post ĉiu meto.",
+            "Konfuzi nudan unuopulon kun kaŝita unuopulo: nuda unuopulo havas unu restantan kandidaton en la ĉelo, kaŝita unuopulo havas unu restantan ĉelon por la cifero en unuo."
+          ],
+          "faq": [
+            [
+              "Kio estas nuda unuopulo en Sudoko?",
+              "Malplena ĉelo kun ekzakte unu kandidato. Ok malsamaj ciferoj jam estas metitaj en ĝia vico, kolumno kaj kesto, do la naŭa cifero estas la sola, kiu taŭgas."
+            ],
+            [
+              "Kial ĝi nomiĝas nuda?",
+              "Ĉar la sola kandidato estas rekte videbla en la ĉelo, tuj kiam la notoj estas skribitaj; nenio kaŝas ĝin. Kaŝita unuopulo, male, sidas inter aliaj kandidatoj kaj estas trovata per rigardo al la cifero anstataŭ al la ĉelo."
+            ],
+            [
+              "Ĉu enigmo solveblas nur per nudaj unuopuloj?",
+              "Multaj Facilaj enigmoj jes, sed plej multaj ankaŭ bezonas kaŝitajn unuopulojn. Bare Sudoku taksas Facilajn kaj Mezajn enigmojn solveblaj per ambaŭ specoj de unuopuloj; Malfacilaj kaj Spertulaj enigmoj bezonas almenaŭ unu plian teknikon."
+            ],
+            [
+              "Ĉu la helpo montras nudajn unuopulojn?",
+              "Jes. Kiam la sekva meto estas nuda unuopulo, la helpo elektas la ĉelon kaj diras \"Nur unu kandidato ĉi tie\" kun la cifero. Tuŝu la helpon denove por meti ĝin."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Kaŝita unuopulo",
+          "title": "Kaŝita unuopulo en Sudoko: la sola loko por cifero",
+          "description": "Kaŝita unuopulo estas la sola ĉelo en vico, kolumno aŭ kesto, kien cifero ankoraŭ povas iri. Lernu rimarki kaŝitajn unuopulojn, skanante po unu ciferon.",
+          "h1": "Kaŝita unuopulo (hidden single)",
+          "summary": "Kaŝita unuopulo estas cifero, kiu havas nur unu eblan ĉelon en vico, kolumno aŭ kesto, eĉ se tiu ĉelo montras aliajn kandidatojn. Ĉar la unuo devas enhavi la ciferon, ĝi iras tien. La helpo de Bare Sudoku anoncas ĝin per \"Sola loko por 5 en ĉi tiu vico\", kolumno aŭ kesto.",
+          "when": [
+            "Kiam ajn cifero estas bone progresinta: tuj kiam cifero aperas kvin aŭ ses fojojn, la restantaj kestoj estas tre limigitaj, kaj kaŝita unuopulo ofte estas la sekva movo. Kaŝitaj unuopuloj estas la ĉefa tekniko de Facilaj kaj Mezaj enigmoj kaj restas la laborĉevalo ĉe ĉiu nivelo."
+          ],
+          "spot": [
+            "Skanu po unu ciferon. Prenu ciferon, trovu keston, kiu ne enhavas ĝin, kaj forstreku ĉiun ĉelon de tiu kesto, kiu dividas vicon aŭ kolumnon kun jam metita ekzemplero de la cifero. Se restas unu ĉelo, vi trovis kaŝitan unuopulon. La sama skanado funkcias por vicoj kaj kolumnoj. En la ludo tuŝu metitan ciferon: ĉiu ĝia ekzemplero estas emfazita, do la liberaj ĉeloj elstaras."
+          ],
+          "examples": [
+            {
+              "h": "Ekzemplo",
+              "steps": [
+                "Kesto {box} ankoraŭ ne enhavas {d}, do unu el ĝiaj malplenaj ĉeloj devas enhavi ĝin. La malplenaj ĉeloj estas {empties}.",
+                "En ĉiu el ili krom {cell}, {d} estas blokita de {d} jam metita en la sama vico aŭ kolumno, do {d} ne estas kandidato tie.",
+                "Tio lasas {cell} kiel la solan lokon por {d} en kesto {box}. Skribu {d} tien, eĉ se {cell} eble ankoraŭ montras aliajn kandidatojn."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Meti la ciferon en ĉelon, kiu nur verŝajne estas la ĝusta: kontrolu ĉiun alian malplenan ĉelon de la unuo, ne nur la evidentajn.",
+            "Maltrafi kaŝitan unuopulon, ĉar la ĉelo montras plurajn kandidatojn. La aliaj kandidatoj ne gravas; gravas, ke la cifero ne havas alian lokon en la unuo.",
+            "Skani nur kestojn. Vicoj kaj kolumnoj produktas kaŝitajn unuopulojn same ofte, precipe proksime al la fino."
+          ],
+          "faq": [
+            [
+              "Kio estas kaŝita unuopulo en Sudoko?",
+              "Cifero, kiu povas iri en nur unu ĉelon de vico, kolumno aŭ kesto. La unuo devas enhavi la ciferon, do la ĉelo estas decidita, eĉ se ĝi ankoraŭ havas aliajn kandidatojn."
+            ],
+            [
+              "Kio estas la diferenco inter kaŝita unuopulo kaj nuda unuopulo?",
+              "Nuda unuopulo temas pri ĉelo: restas unu kandidato. Kaŝita unuopulo temas pri cifero: restas unu ĉelo en unuo. Ambaŭ metas ciferon kun certeco."
+            ],
+            [
+              "Kiun estas pli facile trovi?",
+              "Sen notoj kaŝitaj unuopuloj kutime estas pli facilaj, ĉar vi povas skani la kradon po unu cifero. Kun kompletaj notoj nudaj unuopuloj estas la plej facilaj, ĉar ĉelo kun sola kandidato elstaras."
+            ],
+            [
+              "Kiel la helpo priskribas kaŝitan unuopulon?",
+              "Per \"Sola loko por\" la cifero en ĉi tiu vico, ĉi tiu kolumno aŭ ĉi tiu kesto, kun la ĉelo elektita. Tuŝu la helpon denove por meti ĝin."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Ŝlositaj kandidatoj",
+          "title": "Ŝlositaj kandidatoj en Sudoko: montrado kaj postulado",
+          "description": "Ŝlositaj kandidatoj: kiam ĉiuj kandidatoj de cifero en kesto kuŝas en unu vico aŭ kolumno, aŭ inverse, la cifero foriĝas aliloke. Du realaj ekzemploj.",
+          "h1": "Ŝlositaj kandidatoj (locked candidates)",
+          "summary": "Ŝlositaj kandidatoj estas la unua tekniko, kiu forigas kandidatojn anstataŭ meti ciferon. Ĝi havas du formojn. Montrado: en kesto ĉiuj kandidatoj por cifero kuŝas en unu vico aŭ kolumno, do la cifero estas forigita el la resto de tiu linio. Postulado: en vico aŭ kolumno ĉiuj kandidatoj por cifero kuŝas en unu kesto, do la cifero estas forigita el la resto de tiu kesto. La helpo de Bare Sudoku etikedas la meton, kiun ĝi malŝlosas, per \"Ŝlositaj kandidatoj\".",
+          "when": [
+            "Kiam unuopuloj elĉerpiĝas en Malfacila enigmo, tio estas la unua afero por provi. Ĝi bezonas kompletajn notojn almenaŭ por la cifero, kiun vi ekzamenas. Ŝlositaj kandidatoj estas oftaj: plej multaj Malfacilaj enigmoj bezonas ilin, kaj Spertulaj enigmoj uzas ilin inter la pli grandaj ŝablonoj."
+          ],
+          "spot": [
+            "Por montrado, rigardu ĉiun keston kaj ĉiun ciferon, kiu mankas al ĝi: se la kandidataj ĉeloj por tiu cifero sidas en unu sola vico aŭ kolumno, kontrolu, ĉu la sama cifero aperas kiel kandidato pli for laŭ tiu linio, ekster la kesto. Por postulado, rigardu laŭlonge de vico aŭ kolumno: se la kandidatoj por cifero ĉiuj estas ene de unu kesto, la resto de tiu kesto povas esti purigita. En la ludo tuŝu ciferklavon por emfazi ĉiujn ĝiajn kandidatojn; linio de du aŭ tri emfazitaj notoj ene de unu kesto estas la ŝablono."
+          ],
+          "examples": [
+            {
+              "h": "Montrado",
+              "steps": [
+                "En kesto {box}, cifero {d} havas nur ĉi tiujn kandidatajn ĉelojn: {cells}. Ĉiuj kuŝas en vico {row}.",
+                "Kesto {box} bezonas {d}, do la {d} de vico {row} estas ene de kesto {box}, en kiu ajn el tiuj ĉeloj ĝi finfine estos.",
+                "Vico {row} ne povas enhavi duan {d}, do forigu {d} el la ĉeloj de vico {row} ekster la kesto: {elim}."
+              ]
+            },
+            {
+              "h": "Postulado",
+              "steps": [
+                "En vico {row}, cifero {d} povas iri nur en {cells}, kaj ili ĉiuj sidas ene de kesto {box}.",
+                "Vico {row} devas enhavi {d}, do la {d} de kesto {box} estas postulita de vico {row}. La aliaj ĉeloj de kesto {box} ne povas enhavi {d}.",
+                "Forigu {d} el {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Forigi la ciferon ene de la kesto anstataŭ ekster ĝi en la montra kazo, aŭ inverse en la postula kazo. La forigoj ĉiam koncernas la ĉelojn, kiuj estas en la linio sed ne en la kesto, aŭ en la kesto sed ne en la linio.",
+            "Apliki la regulon, kiam la kandidatoj etendiĝas tra du vicoj de la kesto. Ĉiuj kandidataj ĉeloj por la cifero en la kesto devas kuŝi en unu linio.",
+            "Forgesi serĉi la unuopulon, kiun la forigo kreas. Ŝlositaj kandidatoj malofte metas ciferon per si mem; ili preparas unuopulon."
+          ],
+          "faq": [
+            [
+              "Kio estas ŝlositaj kandidatoj en Sudoko?",
+              "Kandidatoj por cifero, kiuj estas limigitaj al la intersekco de kesto kaj linio. Ĉar la kesto, aŭ la linio, devas enhavi la ciferon ene de tiu intersekco, la cifero povas esti forigita el la resto de la linio, aŭ el la resto de la kesto."
+            ],
+            [
+              "Kio estas la diferenco inter montrado kaj postulado?",
+              "Montrado komenciĝas de kesto: la kandidatoj de la cifero en la kesto montras laŭ unu vico aŭ kolumno, do la cifero estas forigita el la resto de tiu linio. Postulado komenciĝas de vico aŭ kolumno: la kandidatoj de la linio por la cifero ĉiuj estas en unu kesto, do la linio postulas la ciferon, kaj ĝi estas forigita el la resto de la kesto."
+            ],
+            [
+              "Ĉu ŝlositaj kandidatoj nomiĝas ankaŭ intersekca forigo?",
+              "Jes. Aliaj nomoj estas kesto-linia redukto por la postula formo kaj montrantaj paroj aŭ montrantaj triopoj por la montra formo. Bare Sudoku uzas unu nomon por ambaŭ."
+            ],
+            [
+              "Kiu nivelo bezonas ŝlositajn kandidatojn?",
+              "Malfacila. Enigmo, kiu bezonas ŝlositajn kandidatojn aŭ subarojn sed nenion pli malfacilan, estas taksata Malfacila; Spertulaj enigmoj bezonas krome fiŝon aŭ flugilon."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Nudaj paroj kaj triopoj",
+          "title": "Nudaj paroj kaj triopoj en Sudoko: kiel ili funkcias",
+          "description": "Nudaj paroj kaj triopoj: du aŭ tri ĉeloj en unuo kun la samaj du aŭ tri kandidatoj. Lernu rimarki ilin kaj kion forigi, kun realaj ekzemploj.",
+          "h1": "Nudaj paroj kaj triopoj",
+          "summary": "Nuda paro (naked pair) estas du ĉeloj en la sama vico, kolumno aŭ kesto, kiuj havas ekzakte la samajn du kandidatojn. La du ciferoj devas iri en tiujn du ĉelojn, do ili povas esti forigitaj el ĉiu alia ĉelo de la unuo. Nuda triopo estas la sama ideo kun tri ĉeloj kaj tri ciferoj; ĉiu ĉelo povas montri du aŭ ĉiujn tri el ili. La helpo de Bare Sudoku etikedas la rezultan meton per \"Paro aŭ triopo\".",
+          "when": [
+            "Post kiam la notoj estas kompletaj kaj unuopuloj kaj ŝlositaj kandidatoj estas elĉerpitaj. Nudaj paroj estas tre oftaj en Malfacilaj enigmoj, nudaj triopoj malpli. Ambaŭ indas kontroli en ĉiu unuo, kiu ankoraŭ havas kvin aŭ pli da malplenaj ĉeloj."
+          ],
+          "spot": [
+            "Serĉu ĉelojn kun nur du kandidatoj kaj trovu alian ĉelon en la sama unuo kun la samaj du. Por triopoj rigardu unuojn kun pluraj ĉeloj de du kaj tri kandidatoj kaj kontrolu, ĉu tri el ili kune uzas nur tri malsamajn ciferojn. Ĉeloj kun ekzakte la samaj kandidatoj estas facile videblaj, kiam la notoj estas skribitaj; Plenigi notojn en la ludo faras tion per unu tuŝo."
+          ],
+          "examples": [
+            {
+              "h": "Nuda paro",
+              "steps": [
+                "{cellA} kaj {cellB} en {unit} havas ekzakte la samajn du kandidatojn: {d1} kaj {d2}.",
+                "Unu el ili devas esti {d1} kaj la alia {d2}. Ni ne scias kiu, sed ambaŭ ciferoj estas elĉerpitaj de ĉi tiuj du ĉeloj.",
+                "Do neniu alia ĉelo de {unit} povas enhavi {d1} aŭ {d2}. Forigu {elim}."
+              ]
+            },
+            {
+              "h": "Nuda triopo",
+              "steps": [
+                "Tri ĉeloj de {unit} prenas ĉiujn siajn kandidatojn el la samaj tri ciferoj, {digits}: {cells}.",
+                "La tri ciferoj devas plenigi ĉi tiujn tri ĉelojn en iu ordo. Ĉelo ne bezonas montri ĉiujn tri kandidatojn; gravas, ke neniu el la tri ĉeloj havas kandidaton ekster la aro.",
+                "Forigu {digits} el ĉiu alia ĉelo de {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Preni du ĉelojn, kiuj dividas du kandidatojn sed havas ankaŭ trian. Por nuda paro ĉiu ĉelo devas havi ekzakte la du kandidatojn kaj nenion alian.",
+            "Forigi la ciferojn el la ĉeloj de la paro mem. La paro konservas siajn kandidatojn; la forigoj koncernas la aliajn ĉelojn de la unuo.",
+            "Postuli, ke ĉiu ĉelo de triopo montru ĉiujn tri ciferojn. Ĉelo kun du el la tri estas en ordo, kondiĉe ke neniu ĉelo havas kandidaton ekster la aro."
+          ],
+          "faq": [
+            [
+              "Kio estas nuda paro en Sudoko?",
+              "Du ĉeloj en unu unuo, kiuj ambaŭ havas ekzakte la samajn du kandidatojn. Tiuj du ciferoj estas ŝlositaj en tiuj du ĉeloj, do ili povas esti forigitaj el la resto de la unuo."
+            ],
+            [
+              "Kio estas nuda triopo?",
+              "Tri ĉeloj en unu unuo, kies kandidatoj kune estas nur tri ciferoj. Ĉiu ĉelo povas enhavi du aŭ tri el ili. La tri ciferoj plenigas la tri ĉelojn, do ili povas esti forigitaj el la aliaj ĉeloj de la unuo."
+            ],
+            [
+              "Ĉu nuda paro metas ciferon?",
+              "Ne per si mem. Ĝi forigas kandidatojn, kaj la forigo kutime postlasas nudan aŭ kaŝitan unuopulon. La helpo en Bare Sudoku montras tiun unuopulon kaj nomas la teknikon, kiu ebligis ĝin."
+            ],
+            [
+              "Ĉu nuda paro povas esti samtempe en kesto kaj en vico?",
+              "Jes. Se la du ĉeloj dividas vicon kaj keston, la paro forigas en ambaŭ unuoj. Bare Sudoku traktas ilin po unu unuo."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Kaŝitaj paroj kaj triopoj",
+          "title": "Kaŝitaj paroj kaj triopoj en Sudoko: kiel rimarki ilin",
+          "description": "Kaŝita paro estas du ciferoj, kiuj povas iri nur en la samajn du ĉelojn de unuo, do iliaj aliaj kandidatoj foriĝas. Lernu trovi kaŝitajn parojn kaj triopojn.",
+          "h1": "Kaŝitaj paroj kaj triopoj",
+          "summary": "Kaŝita paro (hidden pair) estas du ciferoj, kiuj ene de unu vico, kolumno aŭ kesto estas kandidatoj en la samaj du ĉeloj kaj nenie alie. Tiuj du ĉeloj devas enhavi tiujn du ciferojn, do ĉiu alia kandidato en ili povas esti forigita. Kaŝita triopo funkcias same kun tri ciferoj limigitaj al tri ĉeloj. Post la forigo la ĉeloj montras nudan paron aŭ triopon. La helpo de Bare Sudoku etikedas la rezultan meton per \"Paro aŭ triopo\".",
+          "when": [
+            "Kiam unuo havas ĉelojn kun multaj kandidatoj kaj la unuopuloj elĉerpiĝis. Kaŝitaj paroj kaŝiĝas en plenŝtopitaj ĉeloj, kaj tial indas serĉi ilin ĝuste tie, kie nudaj paroj ne videblas. Kaŝitaj triopoj estas maloftaj; Bare Sudoku kontrolas ilin, sed plej multaj Malfacilaj enigmoj solviĝas sen ili."
+          ],
+          "spot": [
+            "Laboru laŭ cifero, ne laŭ ĉelo. En unuo notu la ĉelojn, kien ĉiu mankanta cifero povas iri. Se du ciferoj havas ĉiu nur du eblajn ĉelojn kaj tiuj estas la samaj du ĉeloj, vi havas kaŝitan paron. En la ludo tuŝu ciferklavon por emfazi ĝiajn kandidatojn; se du ciferoj lumigas la samajn du ĉelojn de unuo kaj nenion alian en ĝi, tio estas la ŝablono."
+          ],
+          "examples": [
+            {
+              "h": "Kaŝita paro",
+              "steps": [
+                "En {unit}, la ciferoj {d1} kaj {d2} havas ĉiu nur du eblajn ĉelojn, kaj ili estas la samaj du: {cells}.",
+                "Tiuj du ĉeloj devas enhavi {d1} kaj {d2}, do iliaj aliaj kandidatoj estas neeblaj.",
+                "Forigu {elim}. Nun la du ĉeloj montras nudan paron, kiu eble malŝlosas pli."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Forigi la du ciferojn de la paro el la ĉeloj de la paro. Foriĝas la aliaj kandidatoj de tiuj ĉeloj; la ciferoj de la paro restas.",
+            "Akcepti ciferon, kiu havas trian eblan ĉelon en la unuo. Ambaŭ ciferoj devas esti limigitaj al ekzakte la du ĉeloj.",
+            "Serĉi nur en kestoj. Kaŝitaj paroj okazas same ofte en vicoj kaj kolumnoj."
+          ],
+          "faq": [
+            [
+              "Kio estas kaŝita paro en Sudoko?",
+              "Du ciferoj, kiuj povas iri nur en la samajn du ĉelojn de unuo. Tiuj ĉeloj devas preni tiujn ciferojn, do iliaj aliaj kandidatoj estas forigitaj."
+            ],
+            [
+              "Kiel kaŝita paro diferencas de nuda paro?",
+              "Nuda paro estas videbla: du ĉeloj, kiuj montras nur la samajn du kandidatojn. Kaŝita paro estas kovrita de kromaj kandidatoj en la du ĉeloj. Forigi tiujn kromajn kandidatojn igas kaŝitan paron nuda paro."
+            ],
+            [
+              "Kio estas kaŝita triopo?",
+              "Tri ciferoj limigitaj al tri ĉeloj de unuo. Ĉiu cifero ne bezonas aperi en ĉiuj tri ĉeloj; gravas, ke neniu el la tri ciferoj havas kandidaton ekster tiuj ĉeloj."
+            ],
+            [
+              "Ĉu la helpo distingas kaŝitajn kaj nudajn parojn?",
+              "Ne. Bare Sudoku trovas ambaŭ kaj etikedas la rezultan meton per \"Paro aŭ triopo\". La paĝoj ĉi tie apartigas ilin, ĉar oni trovas ilin en malsamaj manieroj."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing en Sudoko: kiel la tekniko funkcias",
+          "description": "X-Wing: cifero kun ekzakte du kandidataj ĉeloj en du vicoj, en la samaj du kolumnoj, estas forigita el la resto de tiuj kolumnoj. Reala ekzemplo.",
+          "h1": "X-Wing",
+          "summary": "X-Wing estas ŝablono de unu cifero kaj kvar ĉeloj ĉe la anguloj de rektangulo. Se la cifero havas ekzakte du kandidatajn ĉelojn en ĉiu el du vicoj, kaj tiuj ĉeloj kuŝas en la samaj du kolumnoj, tiam la cifero devas okupi du kontraŭajn angulojn de la rektangulo. Tial ĝi povas esti forigita el ĉiu alia ĉelo de tiuj du kolumnoj. La sama funkcias kun vicoj kaj kolumnoj interŝanĝitaj. Ĝi estas la unua Spertula tekniko en Bare Sudoku.",
+          "when": [
+            "Kiam unuopuloj, ŝlositaj kandidatoj kaj subaroj estas elĉerpitaj. X-Wing estas la plej ofta Spertula ŝablono kaj ofte aperas, kiam cifero havas malmultajn restantajn kandidatojn, tipe kun kvar ĝis ses ekzempleroj jam metitaj. Ĝi bezonas kompletajn notojn por la cifero, kiun vi ekzamenas."
+          ],
+          "spot": [
+            "Elektu ciferon kaj serĉu vicojn, en kiuj ĝi havas ekzakte du kandidatajn ĉelojn. Se du tiaj vicoj dividas la samajn du kolumnojn, kontrolu tiujn kolumnojn por aliaj kandidatoj de la cifero: tiuj estas la forigoj. Poste ripetu kun kolumnoj kiel bazo. En la ludo tuŝu la ciferklavon: ĉiu ĝia kandidato estas emfazita, kaj rektangulo el kvar emfazitaj notoj estas facile videbla."
+          ],
+          "examples": [
+            {
+              "h": "Ekzemplo",
+              "steps": [
+                "Cifero {d} havas ekzakte du kandidatajn ĉelojn en vico {r1} kaj ekzakte du en vico {r2}, kaj ili estas vicigitaj en la samaj du kolumnoj, {c1} kaj {c2}: {cells}.",
+                "Vico {r1} metas sian {d} en kolumnon {c1} aŭ {c2}, kaj vico {r2} metas sian {d} en la alian. Ĉiuokaze kolumnoj {c1} kaj {c2} ricevas po unu {d} el ĉi tiuj du vicoj.",
+                "Do {d} ne povas aperi aliloke en kolumnoj {c1} kaj {c2}. Forigu {d} el {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Uzi vicon, kiu havas tri kandidatajn ĉelojn por la cifero. Ĉiu baza vico devas havi ekzakte du, kaj ambaŭ devas esti en la du komunaj kolumnoj.",
+            "Forigi la ciferon el la vicoj anstataŭ el la kolumnoj. Kun vicoj kiel bazo la forigoj estas en la kolumnoj, kaj inverse.",
+            "Forgesi la interŝanĝitan version. X-Wing konstruita sur kolumnoj forigas en vicoj."
+          ],
+          "faq": [
+            [
+              "Kio estas X-Wing en Sudoko?",
+              "Cifero, kiu havas ekzakte du kandidatajn ĉelojn en ĉiu el du vicoj, en la samaj du kolumnoj. La cifero okupas du kontraŭajn angulojn de tiu rektangulo, do ĝi estas forigita el la resto de la du kolumnoj. Vicoj kaj kolumnoj povas esti interŝanĝitaj."
+            ],
+            [
+              "Kial X-Wing funkcias?",
+              "Ĉiu el la du vicoj devas meti la ciferon en unu el la du kolumnoj, kaj la du vicoj ne povas uzi la saman kolumnon. Do la du kolumnoj ricevas ĉiu sian ekzempleron de la cifero el ĉi tiuj vicoj, kaj ĉiu alia kandidato en tiuj kolumnoj estas neebla."
+            ],
+            [
+              "Ĉu X-Wing estas fiŝo?",
+              "Jes. X-Wing estas la fiŝo de grandeco du; Swordfish estas la fiŝo de grandeco tri. Bare Sudoku trovas ambaŭ."
+            ],
+            [
+              "Kiu nivelo havas X-Wing?",
+              "Spertulo. Enigmo, kiu bezonas X-Wing, Y-Wing, Swordfish aŭ XYZ-Wing, estas taksata Spertulo."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing en Sudoko: kiel la tekniko funkcias",
+          "description": "Y-Wing (XY-Wing): pivoto kun du kandidatoj kaj du flugiloj, kiuj ĉiu dividas unu el ili, forpelas ciferon el ĉiu ĉelo, kiu vidas ambaŭ flugilojn.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, ankaŭ nomata XY-Wing, uzas tri ĉelojn kun po du kandidatoj. La pivoto havas la kandidatojn X kaj Y. Unu flugilo vidas la pivoton kaj havas X kaj Z; la alia flugilo vidas la pivoton kaj havas Y kaj Z. Kio ajn estas la pivoto, unu el la flugiloj devas esti Z, do Z povas esti forigita el ĉiu ĉelo, kiu vidas ambaŭ flugilojn. Ĝi estas Spertula tekniko en Bare Sudoku.",
+          "when": [
+            "Kiam enigmo havas plurajn ĉelojn kun ekzakte du kandidatoj kaj neniu fiŝo disponeblas. Y-Wing estas ofta en Spertulaj enigmoj kaj troviĝas per sekvado de la ĉeloj kun du kandidatoj: ĉiu el ili estas ebla pivoto aŭ flugilo."
+          ],
+          "spot": [
+            "Listigu la ĉelojn kun ekzakte du kandidatoj. Traktu ĉiun kiel la pivoton kun kandidatoj X kaj Y, kaj serĉu inter ĝiaj najbaroj ĉelon kun X kaj alia cifero Z, kaj ĉelon kun Y kaj la sama Z. Tiuj du estas la flugiloj. Poste trovu ĉelojn, kiuj vidas ambaŭ flugilojn kaj enhavas Z. Notu, ke la flugiloj ne bezonas vidi unu la alian."
+          ],
+          "examples": [
+            {
+              "h": "Ekzemplo",
+              "steps": [
+                "La pivoto {pivot} havas la kandidatojn {x} kaj {y}. Ĝi vidas {wingA}, kiu havas {x} kaj {z}, kaj {wingB}, kiu havas {y} kaj {z}.",
+                "Se {pivot} estas {x}, tiam {wingA} perdas {x} kaj iĝas {z}. Se {pivot} estas {y}, tiam {wingB} iĝas {z}. Ĉiuokaze unu el la du flugiloj estas {z}.",
+                "Ĉelo, kiu vidas ambaŭ flugilojn, neniam povas esti {z}. Forigu {z} el {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Elekti flugilojn, kiuj ne ambaŭ vidas la pivoton. Ĉiu flugilo devas dividi vicon, kolumnon aŭ keston kun la pivoto.",
+            "Forigi Z el ĉeloj, kiuj vidas nur unu flugilon. La ĉelo, el kiu oni forigas, devas vidi ambaŭ flugilojn.",
+            "Forigi Z el la pivoto. En Y-Wing la pivoto ne enhavas Z; se ĝi enhavas, la ŝablono estas XYZ-Wing kun aliaj reguloj."
+          ],
+          "faq": [
+            [
+              "Kio estas Y-Wing en Sudoko?",
+              "Tri ĉeloj kun po du kandidatoj: pivoto kun X kaj Y, flugilo kun X kaj Z, kiu vidas la pivoton, kaj flugilo kun Y kaj Z, kiu vidas la pivoton. Unu flugilo ĉiam estas Z, do Z estas forigita el ĉeloj, kiuj vidas ambaŭ flugilojn."
+            ],
+            [
+              "Ĉu Y-Wing estas la sama kiel XY-Wing?",
+              "Jes. La du nomoj priskribas la saman ŝablonon. Bare Sudoku nomas ĝin Y-Wing."
+            ],
+            [
+              "Kial unu flugilo devas esti Z?",
+              "Se la pivoto estas X, la unua flugilo perdas X kaj iĝas Z. Se la pivoto estas Y, la dua flugilo iĝas Z. La pivoto estas unu el la du, do unu flugilo estas Z."
+            ],
+            [
+              "El kiom da ĉeloj Y-Wing forigas kandidaton?",
+              "Kutime el unu aŭ du: nur el la ĉeloj, kiuj vidas ambaŭ flugilojn kaj ankoraŭ enhavas Z. Tio sufiĉas por krei unuopulon."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish en Sudoko: kiel la tekniko funkcias",
+          "description": "Swordfish: cifero limigita al tri kolumnoj tra tri vicoj estas forigita el la resto de tiuj kolumnoj. La fiŝo de grandeco tri, klarigita per reala ekzemplo.",
+          "h1": "Swordfish",
+          "summary": "Swordfish estas X-Wing kun tri vicoj kaj tri kolumnoj. Se cifero havas maksimume tri kandidatajn ĉelojn en ĉiu el tri vicoj, kaj ĉiuj tiuj ĉeloj falas en la samaj tri kolumnoj, tiam la tri vicoj elĉerpas la ciferon en tiuj kolumnoj, kaj la cifero povas esti forigita el ĉiu alia ĉelo de la tri kolumnoj. Vicoj kaj kolumnoj povas esti interŝanĝitaj. Bare Sudoku kontrolas Swordfish post Y-Wing, en Spertulaj enigmoj.",
+          "when": [
+            "Kiam X-Wing kaj Y-Wing trovas nenion. Swordfish estas malpli ofta ol X-Wing kaj bezonas ciferon, kies kandidatoj estas maldense disigitaj tra tri linioj. Ĝi bezonas kompletajn kaj precizajn notojn por tiu cifero."
+          ],
+          "spot": [
+            "Elektu ciferon kaj serĉu vicojn kun du aŭ tri kandidataj ĉeloj por ĝi. Se tri tiaj vicoj kovras entute nur tri kolumnojn, kontrolu tiujn kolumnojn por pliaj kandidatoj de la cifero. Ne ĉiu vico bezonas kandidaton en ĉiu kolumno: Swordfish povas havi ses, sep, ok aŭ naŭ ĉelojn. En la ludo emfazu la ciferon per ĝia klavo kaj serĉu tri vicojn, kies kandidatoj viciĝas en tri kolumnoj."
+          ],
+          "examples": [
+            {
+              "h": "Ekzemplo",
+              "steps": [
+                "Cifero {d} havas maksimume tri kandidatajn ĉelojn en ĉiu el la vicoj {rows}, kaj ĉiuj tiuj ĉeloj falas en la kolumnoj {cols}: {cells}.",
+                "Ĉiu el la tri vicoj devas meti sian {d} en unu el la tri kolumnoj, kaj neniuj du vicoj povas uzi la saman kolumnon. Do la tri kolumnoj ricevas sian {d} el ĉi tiuj tri vicoj.",
+                "Ĉiu alia kandidato {d} en la kolumnoj {cols} estas neebla. Forigu {d} el {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Postuli ĉiujn naŭ ĉelojn. Swordfish kun du kandidatoj en kelkaj vicoj ankoraŭ validas, kondiĉe ke la tri vicoj kovras nur tri kolumnojn.",
+            "Inkluzivi vicon kun kvar kandidataj ĉeloj. Ĉiu baza vico devas havi maksimume tri, ĉiujn ene de la tri kolumnoj.",
+            "Forigi en la bazaj vicoj. Kun vicoj kiel bazo la forigoj estas en la tri kolumnoj, ekster la bazaj vicoj."
+          ],
+          "faq": [
+            [
+              "Kio estas Swordfish en Sudoko?",
+              "Cifero, kies kandidatoj en tri vicoj estas limigitaj al tri kolumnoj. La tri vicoj devas meti la ciferon en tiujn tri kolumnojn, po unu, do la cifero estas forigita el la aliaj ĉeloj de tiuj kolumnoj."
+            ],
+            [
+              "Kiel Swordfish diferencas de X-Wing?",
+              "Nur laŭ grandeco: X-Wing uzas du vicojn kaj du kolumnojn, Swordfish tri kaj tri. La rezonado estas la sama."
+            ],
+            [
+              "Ĉu Swordfish bezonas ekzakte naŭ ĉelojn?",
+              "Ne. Ĉiu vico povas havi du aŭ tri kandidatojn; la ŝablono postulas nur, ke la tri vicoj kune uzu ne pli ol tri kolumnojn."
+            ],
+            [
+              "Ĉu ekzistas fiŝo de grandeco kvar?",
+              "Jes, Jellyfish. Bare Sudoku ne uzas ĝin, ĉar ĝiaj enigmoj neniam bezonas ĝin."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing en Sudoko: kiel la tekniko funkcias",
+          "description": "XYZ-Wing: pivoto kun tri kandidatoj kaj du flugiloj, kiuj dividas unu el ili, forpelas tiun ciferon el ĉiu ĉelo, kiu vidas ĉiujn tri. Reala ekzemplo.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing estas Y-Wing, kies pivoto havas tri kandidatojn. La pivoto havas X, Y kaj Z; unu flugilo vidas la pivoton kaj havas X kaj Z, la alia vidas la pivoton kaj havas Y kaj Z. Unu el la tri ĉeloj devas esti Z, do Z povas esti forigita el ĉiu ĉelo, kiu vidas ĉiujn tri. Ĉar la pivoto mem povas esti Z, la ĉelo, el kiu oni forigas, devas vidi la pivoton same kiel ambaŭ flugilojn, kio limigas ĝin al la kesto aŭ linio, kiun la ĉeloj dividas. Ĝi estas la plej malfacila tekniko, kiun Bare Sudoku uzas.",
+          "when": [
+            "Nur kiam ĉio alia malsukcesas. XYZ-Wing estas la plej malofta ŝablono en Bare Sudoku kaj aperas nur en Spertulaj enigmoj. Serĉu ĝin, kiam ĉelo kun tri kandidatoj sidas en kesto kun ĉelo kun du kandidatoj, kiu dividas du el ĝiaj ciferoj."
+          ],
+          "spot": [
+            "Komencu de ĉeloj kun ekzakte tri kandidatoj; ĉiu estas ebla pivoto. Inter ĝiaj najbaroj serĉu du ĉelojn kun po du kandidatoj, ambaŭ prenitaj el la tri de la pivoto, kiuj dividas ekzakte unu ciferon Z. Poste serĉu ĉelojn, kiuj vidas la pivoton kaj ambaŭ flugilojn kaj enhavas Z. Praktike unu flugilo estas en la kesto de la pivoto kaj la alia en ĝia vico aŭ kolumno, kaj la ĉeloj, el kiuj oni forigas, estas la restantaj ĉeloj de tiu kesto en tiu vico aŭ kolumno."
+          ],
+          "examples": [
+            {
+              "h": "Ekzemplo",
+              "steps": [
+                "La pivoto {pivot} havas tri kandidatojn: {x}, {y} kaj {z}. Ĝi vidas {wingA} kun {x} kaj {z}, kaj {wingB} kun {y} kaj {z}.",
+                "Se {pivot} estas {z}, jen ĉio. Se ĝi estas {x}, {wingA} devas esti {z}. Se ĝi estas {y}, {wingB} devas esti {z}. En ĉiu kazo unu el la tri ĉeloj estas {z}.",
+                "Ĉelo, kiu vidas ĉiujn tri, ne povas esti {z}. Forigu {z} el {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Forigi el ĉeloj, kiuj vidas nur la du flugilojn. Male al Y-Wing, la pivoto povas esti Z, do la ĉelo devas vidi ankaŭ la pivoton.",
+            "Uzi flugilojn, kies kandidatoj ne ambaŭ estas enhavataj en la tri kandidatoj de la pivoto.",
+            "Konfuzi ĝin kun Y-Wing: la diferenco estas la tria kandidato en la pivoto, kaj ĝi ŝanĝas, kiuj ĉeloj povas esti purigitaj."
+          ],
+          "faq": [
+            [
+              "Kio estas XYZ-Wing en Sudoko?",
+              "Pivoto kun la kandidatoj X, Y kaj Z kaj du flugiloj, unu kun X kaj Z kaj unu kun Y kaj Z, ambaŭ vidantaj la pivoton. Unu el la tri ĉeloj estas Z, do Z estas forigita el ĉeloj, kiuj vidas ĉiujn tri."
+            ],
+            [
+              "Kiel XYZ-Wing diferencas de Y-Wing?",
+              "La pivoto havas tri kandidatojn anstataŭ du, inkluzive de Z. Tio igas la pivoton ebla loko por Z, do nur ĉeloj, kiuj vidas la pivoton kaj ambaŭ flugilojn, povas perdi Z."
+            ],
+            [
+              "Kiom ofte XYZ-Wing aperas?",
+              "Malofte. En Bare Sudoku nur Spertulaj enigmoj povas bezoni ĝin, kaj plej multaj ne bezonas. Bare Sudoku kontrolas ĝin laste, post X-Wing, Y-Wing kaj Swordfish."
+            ],
+            [
+              "Ĉu ekzistas WXYZ-Wing?",
+              "Jes, kun pivoto de kvar kandidatoj, sed Bare Sudoku ne uzas ĝin. Ĉiu enigmo en la ludo fineblas per la naŭ teknikoj de ĉi tiu gvidilo."
+            ]
+          ]
+        }
+      }
+    },
+    "la": {
+      "learnHeading": "Disce Sudoku",
+      "learnText": "Novus in Sudoku es, an in aenigmate difficili haeres? Duo commentarii regulas explicant et omnem artem solvendi qua indicia utuntur, singulas cum exemplo vero.",
+      "howToLink": "Quomodo Sudoku luditur",
+      "techniquesLink": "Artes Sudoku solvendi",
+      "labels": {
+        "howTo": "Quomodo luditur",
+        "techniques": "Artes",
+        "play": "Lude Sudoku",
+        "prev": "Ars prior",
+        "next": "Ars sequens",
+        "all": "Omnes artes",
+        "example": "Exemplum",
+        "steps": "Gradatim",
+        "when": "Quando adhibeatur",
+        "spot": "Quomodo agnoscatur",
+        "mistakes": "Errores frequentes",
+        "inGame": "In Bare Sudoku",
+        "level": "Necessaria a gradu: {level}",
+        "hint": "In ludo indicium dicit: {text}",
+        "legend": "Numeri crassi dati sunt, caerulei inter solvendum positi, parvi candidati sunt. Cellae illustratae figuram faciunt, candidati transfixi removentur, et candidatus circulo cinctus est numerus ponendus.",
+        "notation": "Cellae sic scribuntur: r3c7, id est series 3, columna 7. Series a summo numerantur, columnae a sinistra, arcae ab 1 ad 9 a summo angulo sinistro seriatim.",
+        "row": "series {n}",
+        "column": "columna {n}",
+        "box": "arca {n}",
+        "elimItem": "{d} ex {cell}",
+        "regions": "Series 5, columna 5 et arca 5 initio aenigmatis",
+        "firstMove": "Singulus nudus: {cell} solum {d} esse potest",
+        "breadcrumb": "Semita"
+      },
+      "howTo": {
+        "title": "Quomodo Sudoku luditur: regulae, tabula, primi motus",
+        "description": "Disce Sudoku ludere: regulas, series, columnas et arcas, cur quodque aenigma unam solutionem habeat, quomodo notis utaris et primos motus facias.",
+        "h1": "Quomodo Sudoku luditur",
+        "summary": "Sudoku est aenigma logicum in tabula 9×9. Imple quamque cellam vacuam numero ab 1 ad 9, ita ut quaeque series, quaeque columna et quaeque arca 3×3 omnem numerum semel tantum contineat. Quidam numeri initio dantur; ceteros deducis, cellam certam post cellam certam, nec umquam tibi coniciendum est. Hic commentarius tabulam, regulas, principium unicae solutionis, notas et rationem simplicem primorum motuum explicat. Omnia exercere potes in [Bare Sudoku](play), quod gratuitum est et indicia habet quae rationem explicant.",
+        "sections": [
+          {
+            "h": "Quae sunt regulae Sudoku?",
+            "p": [
+              "Tres tantum regulae sunt, eaedemque una regula ex tribus partibus spectata: quaeque series numeros ab 1 ad 9 continere debet, quaeque columna numeros ab 1 ad 9 continere debet, quaeque arca 3×3 numeros ab 1 ad 9 continere debet. Itaque numerus numquam bis in eadem serie, columna aut arca apparere potest.",
+              "Numeri dati, litteris crassis impressi, fixi sunt. Tuum est cellas vacuas implere. Nulla arithmetica, nullus ordo: numeri tantum novem signa diversa sunt. Litteris aut figuris ludere posses, nec quicquam mutaretur."
+            ]
+          },
+          {
+            "h": "Quomodo tabula disposita est?",
+            "p": [
+              "Tabula 81 cellas habet in 9 seriebus et 9 columnis. Lineae crassae eam in novem arcas 3×3 dividunt. Quaeque cella ad unam seriem, unam columnam et unam arcam pertinet, et hae tres partes regiones eius sunt. Ceterae 20 cellae quae regionem cum aliqua cella communem habent vicinae eius vocantur; numerus in cella positus eundem numerum in omnibus 20 vicinis excludit.",
+              "Cellae sic scribuntur: r3c7, id est series 3, columna 7. Series a summo numerantur, columnae a sinistra, arcae ab 1 ad 9 a summo angulo sinistro seriatim. Haec notatio in omni commentario artium adhibetur et discenda est: r5c5 medium tabulae est."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Cur quodque Sudoku unam tantum solutionem habet?",
+            "p": [
+              "Verum Sudoku unam solutionem habet, et hoc efficit ut ratio valeat. Quotiens ostendere potes numerum nusquam alibi in regione poni posse, in reliqua cella ponendus est, quia solutio exstat et unica est. Si aenigma duas solutiones haberet, nulla ratiocinatio eas distinguere posset, et aliquando coniectare cogereris.",
+              "Bare Sudoku quodque aenigma in tuo instrumento generat et probat id unam tantum solutionem habere et solutorem suum logicum id artibus gradus electi perficere posse. Itaque si haeres, semper proximus passus inveniendus est, et indicium eum ostendit."
+            ]
+          },
+          {
+            "h": "Quomodo aenigma Sudoku incipis?",
+            "p": [
+              "Incipe ab eo quod maxime constrictum est. Hic ordo in omni gradu valet:"
+            ],
+            "list": [
+              "Elige numerum qui iam saepe apparet, puta sexies aut septies, et quaere arcas quibus adhuc deest. Saepe una tantum cella in arca ei relinquitur: hic est [singulus occultus](hidden-single).",
+              "Quaere cellas multis numeris circumdatas. Cella cuius series, columna et arca simul octo numeros diversos continent unum tantum candidatum reliquum habet: [singulus nudus](naked-single). Cellae in seriebus aut arcis paene plenis optimus locus quaerendi sunt.",
+              "Quisque numerus quem ponis candidatum ex 20 vicinis removet, itaque eas vicinas statim inspice. Singuli fere catenatim veniunt.",
+              "Cum faciles positiones deficiunt, notas scribe: candidatos cuiusque cellae vacuae. Deinde quaere numerum qui intra arcam ad unam lineam restringitur ([candidati clausi](locked-candidates)), aut duas cellas quae eosdem duos candidatos habent ([par nudum](naked-pairs)).",
+              "Post quamque remotionem ad singulos redi. Etiam aenigmata gradus Peritus maxime singulis solvuntur; ars provectior tantum proximum reserat."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Quid sunt notae et quando eis utendum est?",
+            "p": [
+              "Notae, quae etiam signa stili aut candidati vocantur, sunt parvi numeri quos in cella vacua scribis ut memoriae mandes qui numeri ibi adhuc fieri possint. In aenigmatibus facilibus raro eis eges; a gradu Difficile necessariae sunt, quia artes ut paria, X-Wing et Y-Wing de candidatis agunt, non de numeris positis.",
+              "Notas accuratas serva: cum numerum ponis, eum ex notis omnium 20 vicinarum remove. In Bare Sudoku hoc sponte fit, et mandatum Notas comple omnem candidatum in omnem cellam vacuam uno tactu scribit, ut a plena rectaque candidatorum copia incipere possis. Nota res certa est, non coniectura: significat nihil adhuc hunc numerum excludere."
+            ]
+          },
+          {
+            "h": "Quid facias cum haeres?",
+            "p": [
+              "Primum fundamenta iterum inspice: quaeque series, columna et arca paene plena fons singulorum est. Deinde cura ut notae plenae sint, quia candidatus deficiens figuras celat et candidatus obsoletus falsas creat. Deinde [artes](techniques) ordine difficultatis percurre: candidati clausi, paria et terniones, X-Wing, Y-Wing, Swordfish et XYZ-Wing. Quaeque suam paginam cum exemplo vero habet.",
+              "Si nihil proficit, indicium cape. In Bare Sudoku indicium primum inspicit num numerus positus falsus sit, deinde proximam cellam invenit quae ratione impleri potest et artem nominat, ut aliquid discas etiam cum eo uteris. Indicium iterum tange ut numerum ponas."
+            ]
+          },
+          {
+            "h": "Quomodo numeros in Bare Sudoku inseris?",
+            "p": [
+              "Cellam tange, deinde numerum. Aut primum numerum tange: clauditur, et quaeque cella quam tangis eum accipit, quae celerrima via est sextum, septimum et octavum exemplar numeri ponendi. Numerum iterum tange ut eum solvas. Mandatum Notae ad signa stili transit, Dele cellam purgat, Revoca quemvis motum revocat, et errores rubro notantur nisi hoc in indice optionum exstinguis.",
+              "In claviatura clavibus sagittarum utere ad movendum, 1 ad 9 ad numerum inserendum, Backspace ad delendum, N ad notas, U ad revocandum, H ad indicium, F ad notas complendas et Escape ad indicem optionum. Ludus se ipse servat, sine rete operatur, nec nuntios habet nec inscriptionem postulat."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Num umquam in Sudoku coniciendum est?",
+            "Non in aenigmate vero. Quodque aenigma Bare Sudoku unam tantum solutionem habet et probatum est sola ratione solvi posse, usque ad artes sui gradus. Si tibi coniciendum esse videtur, aut candidatus ex notis tuis deest aut ars aliqua invenienda restat."
+          ],
+          [
+            "Potestne numerus bis in serie, columna aut arca apparere?",
+            "Non. Haec est tota regula: quaeque ex novem seriebus, novem columnis et novem arcis omnem numerum ab 1 ad 9 semel tantum continet. Si duo numeri aequales eandem regionem habent, saltem unus eorum falsus est."
+          ],
+          [
+            "Quid interest inter Facile, Medium, Difficile et Peritus?",
+            "Gradus artibus quas aenigma postulat statuitur. Facile et Medium solis singulis solvuntur, et Facile saltem 38 numeris datis incipit. Difficile candidatos clausos aut paria et terniones postulat. Peritus X-Wing, Y-Wing, Swordfish aut XYZ-Wing postulat."
+          ],
+          [
+            "Utrum melius est notas omnibus cellis an quibusdam tantum complere?",
+            "In aenigmatibus graduum Difficile et Peritus omnes comple: figurae ut paria, X-Wing et Y-Wing tantum apparent cum omnis candidatus scriptus est. In Facile et Medium notae ad libitum sunt, et plerique lusores singulos tantum quaerunt."
+          ],
+          [
+            "Quamdiu aenigma Sudoku durat?",
+            "Aenigma Facile paucis minutis constat; aenigmata Peritus viginti minuta aut plus postulare possunt, prout celeriter figuram provectiorem agnoscis. Bare Sudoku horologium ostendit, id sistit dum index optionum apertus est, nec tabulam victorum servat, itaque tuo ipsius gressu lude."
+          ],
+          [
+            "Egetne Sudoku arithmetica?",
+            "Non. Numeri tantum tituli sunt; nihil addendum aut numerandum est. Quaelibet novem signa idem facerent, et ideo Sudoku aenigma logicum est, non numericum."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Artes Sudoku solvendi exemplis explicatae",
+        "description": "Omnes novem artes Sudoku solvendi, a singulis nudis usque ad Swordfish et XYZ-Wing, eo ordine quo indicia Bare Sudoku eas adhibent, singulae cum exemplo vero.",
+        "h1": "Artes Sudoku solvendi",
+        "intro": [
+          "Quodque Sudoku parva artium logicarum copia solvi potest. Hic index novem artes enumerat quibus solutor Bare Sudoku eiusque indicia utuntur, eo ordine quo solutor eas temptat: primum singuli, deinde remotiones intra unam regionem, deinde figurae quae per plures series et columnas patent. Quaeque ars suam paginam habet cum definitione, modo agnoscendi, exemplo vero ex aenigmate generato et erroribus frequentibus.",
+          "Gradus aenigmatis arte difficillima quam postulat decernitur. Aenigmata Facile et Medium solos singulos postulant, aenigmata Difficile candidatos clausos aut paria et terniones, aenigmata Peritus saltem unum piscem aut unam alam. Quicumque gradus est, singuli plurimum operis faciunt; ars provectior unum aut alterum candidatum removet, et singuli inde pergunt."
+        ],
+        "faq": [
+          [
+            "Quo ordine artes Sudoku temptare debeo?",
+            "Faciliores primum: singuli nudi, singuli occulti, candidati clausi, paria et terniones nuda, paria et terniones occulta, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku eas hoc ipso ordine temptat, et indicium semper artem simplicissimam nominat quae progressum facit."
+          ],
+          [
+            "Egeone omnibus his artibus ut Sudoku solvam?",
+            "Ad aenigmata Facile et Medium singuli sufficiunt. Aenigmata Difficile candidatos clausos et paria ac terniones addunt. Aenigmata Peritus saltem unum piscem aut unam alam postulant, sed plerumque semel aut bis tantum in aenigmate."
+          ],
+          [
+            "Suntne artes difficiliores quam XYZ-Wing?",
+            "Sunt, exempli gratia catenae, probationes unicitatis et retia cogentia. Bare Sudoku aenigmata quae eis egent non generat, itaque quodque aenigma in ludo novem artibus huius paginae perfici potest."
+          ],
+          [
+            "Quid est candidatus?",
+            "Numerus qui adhuc in cellam vacuam ire potest, quia nihil in eius serie, columna aut arca eum adhuc excludit. Notae in ludo candidati sunt. Omnis ars ultra singulos de candidatis ratiocinatur, itaque eos plenos et accuratos serva."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Singulus nudus",
+          "title": "Singulus nudus in Sudoku: cella cum uno candidato",
+          "description": "Singulus nudus est cella vacua cum uno tantum numero possibili. Disce singulos nudos celeriter invenire, cum exemplo vero gradatim et erroribus usitatis.",
+          "h1": "Singulus nudus (naked single)",
+          "summary": "Singulus nudus est cella vacua quae unum tantum candidatum habet: ceteri octo numeri iam in eius serie, columna aut arca apparent. Numerus reliquus ibi ponendus est. Haec est ars Sudoku simplicissima, qua saepissime uteris, et quam indicium Bare Sudoku verbis \"Unus tantum candidatus hic\" nuntiat.",
+          "when": [
+            "Semper. Singuli nudi a primo motu usque ad ultimum apparent, in omni gradu. In aenigmatibus Facile et Medium sunt, una cum singulis occultis, sola ars qua eges. In aenigmatibus difficilioribus quaeque remotio arte provectiore facta plerumque singulum nudum relinquit, itaque post omnem passum eos quaere."
+          ],
+          "spot": [
+            "Specta cellas multis vicinis positis circumdatas: cellam in serie quae iam septem numeros habet, aut cellam cuius series, columna et arca simul octo numeros diversos tegunt. Sine notis numeros numera quos ex cella videre potes. Cum notis singulus nudus simpliciter est cella unum candidatum ostendens, quam ob rem mandato Notas comple facile inveniuntur."
+          ],
+          "examples": [
+            {
+              "h": "Exemplum",
+              "steps": [
+                "Specta {cell}. Vacua est, itaque omnem numerum enumera qui iam in eius serie, columna et arca positus est.",
+                "Series {row} continet {rowDigits}. Columna {col} continet {colDigits}. Arca {box} continet {boxDigits}.",
+                "Simul omnem numerum praeter {d} excludunt, itaque {d} solus candidatus in {cell} relinquitur.",
+                "Scribe {d} in {cell}. Deinde inspice num novus numerus alium singulum in eadem serie, columna aut arca creet."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Solam seriem aut solam arcam numerare. Octo numeri exclusi plerumque ex omnibus tribus regionibus simul veniunt.",
+            "Oblivisci numerum quem modo posuisti etiam candidatos ex suis 20 vicinis excludere; novi singuli nudi statim post quamque positionem apparent.",
+            "Singulum nudum cum singulo occulto confundere: singulo nudo unus candidatus in cella relinquitur, singulo occulto una cella numero in regione relinquitur."
+          ],
+          "faq": [
+            [
+              "Quid est singulus nudus in Sudoku?",
+              "Cella vacua cum uno tantum candidato. Octo numeri diversi iam in eius serie, columna et arca positi sunt, itaque nonus numerus solus convenit."
+            ],
+            [
+              "Cur nudus appellatur?",
+              "Quia unicus candidatus in ipsa cella statim cernitur, cum notae scriptae sunt; nihil eum celat. Singulus occultus contra inter alios candidatos latet et invenitur numerum potius quam cellam spectando."
+            ],
+            [
+              "Potestne aenigma solis singulis nudis solvi?",
+              "Multa aenigmata Facile possunt, sed pleraque etiam singulos occultos postulant. Bare Sudoku aenigmata Facile et Medium aestimat solvi posse singulis utriusque generis; aenigmata Difficile et Peritus saltem unam artem aliam postulant."
+            ],
+            [
+              "Ostenditne indicium singulos nudos?",
+              "Ostendit. Cum proxima positio singulus nudus est, indicium cellam eligit et dicit \"Unus tantum candidatus hic\" cum numero. Indicium iterum tange ut eum ponas."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Singulus occultus",
+          "title": "Singulus occultus in Sudoku: unicus locus numeri",
+          "description": "Singulus occultus est unica cella in serie, columna aut arca ubi numerus adhuc poni potest. Disce singulos occultos agnoscere, numerum post numerum perlustrans.",
+          "h1": "Singulus occultus (hidden single)",
+          "summary": "Singulus occultus est numerus qui in serie, columna aut arca unam tantum cellam possibilem reliquam habet, etiam si ea cella alios candidatos ostendit. Quia regio numerum continere debet, ibi ponitur. Indicium Bare Sudoku eum nuntiat verbis \"Unicus locus pro 5 in hac serie\", columna aut arca.",
+          "when": [
+            "Quotiens numerus bene processit: simul ac numerus quinquies aut sexies apparet, arcae reliquae valde constrictae sunt, et singulus occultus saepe motus proximus est. Singuli occulti sunt ars praecipua aenigmatum Facile et Medium et in omni gradu plurimum laboris sustinent."
+          ],
+          "spot": [
+            "Unum numerum post alium perlustra. Numerum sume, arcam quae eum non continet inveni, et omnem cellam eius arcae expunge quae seriem aut columnam cum exemplari numeri iam posito communem habet. Si una cella superest, singulum occultum invenisti. Eadem perlustratio in seriebus et columnis valet. In ludo numerum positum tange: omne eius exemplar illustratur, itaque cellae liberae eminent."
+          ],
+          "examples": [
+            {
+              "h": "Exemplum",
+              "steps": [
+                "Arca {box} nondum {d} continet, itaque una ex eius cellis vacuis eum capere debet. Cellae vacuae sunt {empties}.",
+                "In omnibus praeter {cell}, {d} impeditur a {d} iam in eadem serie aut columna posito, itaque {d} ibi candidatus non est.",
+                "Ita {cell} unicus locus pro {d} in arca {box} relinquitur. Scribe ibi {d}, etiam si {cell} fortasse alios candidatos adhuc ostendit."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Numerum in cella ponere quae tantum probabiliter recta est: omnem aliam cellam vacuam regionis inspice, non solum manifestas.",
+            "Singulum occultum praetermittere quia cella plures candidatos ostendit. Ceteri candidati nihil referunt; id refert quod numerus nullum alium locum in regione habet.",
+            "Solas arcas perlustrare. Series et columnae aeque saepe singulos occultos gignunt, praesertim sub finem."
+          ],
+          "faq": [
+            [
+              "Quid est singulus occultus in Sudoku?",
+              "Numerus qui in unam tantum cellam seriei, columnae aut arcae ire potest. Regio numerum continere debet, itaque cella decreta est, etiam si alios candidatos adhuc habet."
+            ],
+            [
+              "Quid interest inter singulum occultum et singulum nudum?",
+              "Singulus nudus ad cellam pertinet: unus candidatus relinquitur. Singulus occultus ad numerum pertinet: una cella in regione relinquitur. Uterque numerum certo ponit."
+            ],
+            [
+              "Uter facilius invenitur?",
+              "Sine notis singuli occulti plerumque faciliores sunt, quia tabulam numerum post numerum perlustrare potes. Cum notis plenis singuli nudi facillimi sunt, quoniam cella cum unico candidato eminet."
+            ],
+            [
+              "Quomodo indicium singulum occultum describit?",
+              "Verbis \"Unicus locus pro\" numero in hac serie, hac columna aut hac arca, cella electa. Indicium iterum tange ut eum ponas."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Candidati clausi",
+          "title": "Candidati clausi in Sudoku: monstratio et vindicatio",
+          "description": "Candidati clausi: cum omnes candidati numeri in arca in una serie aut columna iacent, aut contra, numerus alibi removetur. Duo exempla vera explicata.",
+          "h1": "Candidati clausi (locked candidates)",
+          "summary": "Candidati clausi sunt prima ars quae candidatos removet potius quam numerum ponit. Duas formas habet. Monstratio: in arca omnes candidati numeri in una serie aut columna iacent, itaque numerus ex reliqua ea linea removetur. Vindicatio: in serie aut columna omnes candidati numeri in una arca iacent, itaque numerus ex reliqua ea arca removetur. Indicium Bare Sudoku positionem quam reserat titulo \"Candidati clausi\" notat.",
+          "when": [
+            "Cum singuli in aenigmate Difficile deficiunt, hoc primum temptandum est. Notas plenas saltem pro numero quem examinas postulat. Candidati clausi frequentes sunt: pleraque aenigmata Difficile eis egent, et aenigmata Peritus eis inter maiores figuras utuntur."
+          ],
+          "spot": [
+            "Ad monstrationem specta quamque arcam et quemque numerum qui ei deest: si cellae candidatae eius numeri in una serie aut columna sedent, inspice num idem numerus ut candidatus ulterius in ea linea extra arcam appareat. Ad vindicationem per seriem aut columnam specta: si candidati numeri omnes intra unam arcam sunt, reliqua ea arca purgari potest. In ludo clavem numeri tange ut omnes eius candidati illustrentur; linea duarum aut trium notarum illustratarum intra unam arcam figura est."
+          ],
+          "examples": [
+            {
+              "h": "Monstratio",
+              "steps": [
+                "In arca {box} numerus {d} has solas cellas candidatas habet: {cells}. Omnes in serie {row} iacent.",
+                "Arca {box} numerum {d} requirit, itaque {d} seriei {row} intra arcam {box} est, in quamcumque earum cellarum cadat.",
+                "Series {row} alterum {d} capere non potest, itaque remove {d} ex cellis seriei {row} extra arcam: {elim}."
+              ]
+            },
+            {
+              "h": "Vindicatio",
+              "steps": [
+                "In serie {row} numerus {d} tantum in {cells} ire potest, et omnes intra arcam {box} sedent.",
+                "Series {row} numerum {d} continere debet, itaque {d} arcae {box} a serie {row} vindicatur. Ceterae cellae arcae {box} {d} capere non possunt.",
+                "Remove {d} ex {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "In monstratione numerum intra arcam removere potius quam extra, aut contra in vindicatione. Remotiones semper ad cellas pertinent quae in linea sunt sed non in arca, aut in arca sed non in linea.",
+            "Regulam adhibere cum candidati per duas series arcae patent. Omnes cellae candidatae numeri in arca in una linea iacere debent.",
+            "Oblivisci singulum quaerere quem remotio creat. Candidati clausi raro per se numerum ponunt; singulum parant."
+          ],
+          "faq": [
+            [
+              "Quid sunt candidati clausi in Sudoku?",
+              "Candidati numeri qui ad intersectionem arcae et lineae restringuntur. Quia arca, aut linea, numerum intra eam intersectionem continere debet, numerus ex reliqua linea, aut ex reliqua arca, removeri potest."
+            ],
+            [
+              "Quid interest inter monstrationem et vindicationem?",
+              "Monstratio ab arca incipit: candidati numeri in arca per unam seriem aut columnam monstrant, itaque numerus ex reliqua ea linea removetur. Vindicatio a serie aut columna incipit: candidati lineae pro numero omnes in una arca sunt, itaque linea numerum sibi vindicat et is ex reliqua arca removetur."
+            ],
+            [
+              "Vocanturne candidati clausi etiam remotio intersectionis?",
+              "Vocantur. Alia nomina sunt reductio arcae et lineae pro forma vindicationis, et paria aut terniones monstrantes pro forma monstrationis. Bare Sudoku uno nomine pro utraque utitur."
+            ],
+            [
+              "Quis gradus candidatos clausos postulat?",
+              "Difficile. Aenigma quod candidatos clausos aut paria et terniones postulat, nec quicquam difficilius, gradu Difficile aestimatur; aenigmata Peritus insuper piscem aut alam postulant."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Paria et terniones nuda",
+          "title": "Paria et terniones nuda in Sudoku: quomodo valent",
+          "description": "Paria et terniones nuda: duae aut tres cellae in regione quae eosdem duos aut tres candidatos habent. Disce ea agnoscere et quid removendum sit.",
+          "h1": "Paria et terniones nuda",
+          "summary": "Par nudum (naked pair) constat ex duabus cellis in eadem serie, columna aut arca quae eosdem prorsus duos candidatos habent. Duo numeri in illas duas cellas ire debent, itaque ex omni alia cella regionis removeri possunt. Ternio nudus (naked triple) eadem est ratio cum tribus cellis et tribus numeris; quaeque cella duos aut omnes tres ostendere potest. Indicium Bare Sudoku positionem inde ortam titulo \"Par aut ternio\" notat.",
+          "when": [
+            "Postquam notae plenae sunt et singuli candidatique clausi exhausti. Paria nuda in aenigmatibus Difficile frequentissima sunt, terniones nudi minus. Utraque inspicienda sunt in omni regione quae adhuc quinque aut plures cellas vacuas habet."
+          ],
+          "spot": [
+            "Quaere cellas cum duobus tantum candidatis et aliam cellam in eadem regione cum eisdem duobus inveni. Ad terniones specta regiones cum pluribus cellis duorum et trium candidatorum et inspice num tres earum simul tres tantum numeros diversos adhibeant. Cellae cum eisdem prorsus candidatis facile cernuntur cum notae scriptae sunt; mandatum Notas comple in ludo hoc uno tactu facit."
+          ],
+          "examples": [
+            {
+              "h": "Par nudum",
+              "steps": [
+                "{unit}: {cellA} et {cellB} eosdem prorsus duos candidatos habent, {d1} et {d2}.",
+                "Una earum {d1} esse debet, altera {d2}. Utra sit nescimus, sed ambo numeri ab his duabus cellis consumuntur.",
+                "Itaque nulla alia cella huius regionis ({unit}) {d1} aut {d2} capere potest. Remove {elim}."
+              ]
+            },
+            {
+              "h": "Ternio nudus",
+              "steps": [
+                "{unit}: tres cellae omnes candidatos suos ex eisdem tribus numeris, {digits}, sumunt: {cells}.",
+                "Tres numeri has tres cellas aliquo ordine implere debent. Cella non omnes tres candidatos ostendere debet; id refert quod nulla trium cellarum candidatum extra hanc copiam habet.",
+                "Remove {digits} ex omni alia cella huius regionis ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Duas cellas sumere quae duos candidatos communes habent sed etiam tertium. In pari nudo quaeque cella duos illos candidatos exacte habere debet nec quicquam aliud.",
+            "Numeros ex ipsis cellis paris removere. Par candidatos suos retinet; remotiones ad ceteras cellas regionis pertinent.",
+            "Postulare ut quaeque cella ternionis omnes tres numeros ostendat. Cella cum duobus ex tribus recte se habet, dummodo nulla cella candidatum extra copiam habeat."
+          ],
+          "faq": [
+            [
+              "Quid est par nudum in Sudoku?",
+              "Duae cellae in una regione quae ambae eosdem prorsus duos candidatos habent. Illi duo numeri in illis duabus cellis clauduntur, itaque ex reliqua regione removeri possunt."
+            ],
+            [
+              "Quid est ternio nudus?",
+              "Tres cellae in una regione quarum candidati simul tres tantum numeri sunt. Quaeque cella duos aut tres eorum habere potest. Tres numeri tres cellas implent, itaque ex ceteris cellis regionis removeri possunt."
+            ],
+            [
+              "Ponitne par nudum numerum?",
+              "Non per se. Candidatos removet, et remotio plerumque singulum nudum aut occultum relinquit. Indicium in Bare Sudoku illum singulum ostendit et artem nominat quae eum effecit."
+            ],
+            [
+              "Potestne par nudum simul in arca et in serie esse?",
+              "Potest. Si duae cellae seriem et arcam communes habent, par in utraque regione removet. Bare Sudoku regiones singillatim tractat."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Paria et terniones occulta",
+          "title": "Paria et terniones occulta in Sudoku: quomodo agnoscantur",
+          "description": "Par occultum constat ex duobus numeris qui in easdem tantum duas cellas regionis ire possunt, itaque ceteri earum candidati removentur. Disce ea invenire.",
+          "h1": "Paria et terniones occulta",
+          "summary": "Par occultum (hidden pair) constat ex duobus numeris qui intra unam seriem, columnam aut arcam candidati sunt in eisdem duabus cellis nec usquam alibi. Illae duae cellae illos duos numeros capere debent, itaque omnis alius candidatus in eis removeri potest. Ternio occultus (hidden triple) eodem modo valet cum tribus numeris ad tres cellas restrictis. Post remotionem cellae par aut ternionem nudum ostendunt. Indicium Bare Sudoku positionem inde ortam titulo \"Par aut ternio\" notat.",
+          "when": [
+            "Cum regio cellas cum multis candidatis habet et singuli defecerunt. Paria occulta in cellis refertis latent, quam ob rem ea quaerere operae pretium est ibi ipsum ubi paria nuda non cernuntur. Terniones occulti rari sunt; Bare Sudoku eos inquirit, sed pleraque aenigmata Difficile sine eis solvuntur."
+          ],
+          "spot": [
+            "Per numeros labora, non per cellas. In regione nota cellas in quas quisque numerus deficiens ire potest. Si duo numeri singuli duas tantum cellas possibiles habent eaeque eaedem duae cellae sunt, par occultum habes. In ludo clavem numeri tange ut candidati eius illustrentur; si duo numeri easdem duas cellas regionis illuminant nec quicquam aliud in ea, haec est figura."
+          ],
+          "examples": [
+            {
+              "h": "Par occultum",
+              "steps": [
+                "{unit}: numeri {d1} et {d2} singuli duas tantum cellas possibiles habent, easque easdem: {cells}.",
+                "Illae duae cellae {d1} et {d2} capere debent, itaque ceteri earum candidati fieri non possunt.",
+                "Remove {elim}. Nunc duae cellae par nudum ostendunt, quod fortasse plura reserat."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Duos numeros paris ex cellis paris removere. Ceteri illarum cellarum candidati removentur; numeri paris manent.",
+            "Numerum admittere qui tertiam cellam possibilem in regione habet. Ambo numeri ad duas illas cellas exacte restringi debent.",
+            "In solis arcis quaerere. Paria occulta aeque saepe in seriebus et columnis occurrunt."
+          ],
+          "faq": [
+            [
+              "Quid est par occultum in Sudoku?",
+              "Duo numeri qui in easdem tantum duas cellas regionis ire possunt. Illae cellae illos numeros capere debent, itaque ceteri earum candidati removentur."
+            ],
+            [
+              "Quomodo par occultum a pari nudo differt?",
+              "Par nudum conspicuum est: duae cellae quae eosdem tantum duos candidatos ostendunt. Par occultum candidatis supervacaneis in duabus cellis tegitur. His remotis par occultum fit par nudum."
+            ],
+            [
+              "Quid est ternio occultus?",
+              "Tres numeri ad tres cellas regionis restricti. Non necesse est quemque numerum in omnibus tribus cellis apparere; id refert quod nullus trium numerorum candidatum extra illas cellas habet."
+            ],
+            [
+              "Distinguitne indicium paria occulta et nuda?",
+              "Non. Bare Sudoku utraque invenit et positionem inde ortam titulo \"Par aut ternio\" notat. Paginae hic ea separant quia diversis modis inveniuntur."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing in Sudoku: quomodo haec ars valet",
+          "description": "X-Wing: numerus cum duabus exacte cellis candidatis in duabus seriebus, in eisdem duabus columnis, ex reliquis earum columnarum removetur. Exemplum verum.",
+          "h1": "X-Wing",
+          "summary": "X-Wing est figura unius numeri et quattuor cellarum in angulis rectanguli. Si numerus in utraque duarum serierum duas exacte cellas candidatas habet, eaeque cellae in eisdem duabus columnis iacent, numerus duos angulos oppositos rectanguli occupare debet. Itaque ex omni alia cella illarum duarum columnarum removeri potest. Idem valet seriebus et columnis permutatis. Prima ars gradus Peritus in Bare Sudoku est.",
+          "when": [
+            "Cum singuli, candidati clausi et paria ac terniones exhausti sunt. X-Wing est figura gradus Peritus frequentissima et saepe apparet cum numerus paucos candidatos reliquos habet, plerumque quattuor ad sex exemplaribus iam positis. Notas plenas pro numero quem examinas postulat."
+          ],
+          "spot": [
+            "Numerum elige et series quaere in quibus duas exacte cellas candidatas habet. Si duae tales series easdem duas columnas communes habent, in eis columnis alios candidatos numeri inspice: hae sunt remotiones. Deinde idem fac columnis pro basi sumptis. In ludo clavem numeri tange: omnis eius candidatus illustratur, et rectangulum quattuor notarum illustratarum facile cernitur."
+          ],
+          "examples": [
+            {
+              "h": "Exemplum",
+              "steps": [
+                "Numerus {d} duas exacte cellas candidatas in serie {r1} habet et duas exacte in serie {r2}, quae in eisdem duabus columnis, {c1} et {c2}, directae sunt: {cells}.",
+                "Series {r1} suum {d} in columna {c1} aut {c2} ponit, et series {r2} suum {d} in altera. Utroque modo columnae {c1} et {c2} singulae {d} ex his duabus seriebus accipiunt.",
+                "Itaque {d} nusquam alibi in columnis {c1} et {c2} apparere potest. Remove {d} ex {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Seriem adhibere quae tres cellas candidatas pro numero habet. Quaeque series basis duas exacte habere debet, et ambas in duabus columnis communibus.",
+            "Numerum ex seriebus removere potius quam ex columnis. Seriebus pro basi sumptis remotiones in columnis sunt, et contra.",
+            "Formam permutatam oblivisci. X-Wing in columnis constructum in seriebus removet."
+          ],
+          "faq": [
+            [
+              "Quid est X-Wing in Sudoku?",
+              "Numerus qui in utraque duarum serierum duas exacte cellas candidatas habet, in eisdem duabus columnis. Numerus duos angulos oppositos illius rectanguli occupat, itaque ex reliquis duarum columnarum cellis removetur. Series et columnae permutari possunt."
+            ],
+            [
+              "Cur X-Wing valet?",
+              "Utraque duarum serierum numerum in una duarum columnarum ponere debet, nec duae series eandem columnam adhibere possunt. Itaque duae columnae singulae exemplar suum numeri ex his seriebus accipiunt, et omnis alius candidatus in eis columnis fieri non potest."
+            ],
+            [
+              "Estne X-Wing piscis?",
+              "Est. X-Wing piscis ordinis secundi est; Swordfish piscis ordinis tertii. Bare Sudoku utrumque invenit."
+            ],
+            [
+              "Quis gradus X-Wing habet?",
+              "Peritus. Aenigma quod X-Wing, Y-Wing, Swordfish aut XYZ-Wing postulat gradu Peritus aestimatur."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: quomodo haec ars valet",
+          "description": "Y-Wing (XY-Wing): cardo cum duobus candidatis et duae alae, quarum quaeque unum eorum habet, numerum ex omni cella utramque alam videnti expellunt.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, quod etiam XY-Wing appellatur, tres cellas adhibet quarum quaeque duos candidatos habet. Cardo candidatos X et Y habet. Una ala cardinem videt et X et Z habet; altera ala cardinem videt et Y et Z habet. Quidquid cardo est, una alarum Z esse debet, itaque Z ex omni cella quae utramque alam videt removeri potest. In Bare Sudoku ars gradus Peritus est.",
+          "when": [
+            "Cum aenigma plures cellas cum duobus exacte candidatis habet nec ullus piscis praesto est. Y-Wing in aenigmatibus Peritus frequens est et invenitur cellas duorum candidatorum sequendo: quaeque cardo aut ala esse potest."
+          ],
+          "spot": [
+            "Cellas cum duobus exacte candidatis enumera. Quamque ut cardinem cum candidatis X et Y tracta, et inter eius vicinas quaere cellam cum X et alio numero Z, et cellam cum Y et eodem Z. Hae duae alae sunt. Deinde cellas inveni quae utramque alam vident et Z continent. Nota alas non necesse esse inter se videre."
+          ],
+          "examples": [
+            {
+              "h": "Exemplum",
+              "steps": [
+                "Cardo {pivot} candidatos {x} et {y} habet. Videt {wingA}, quae {x} et {z} habet, et {wingB}, quae {y} et {z} habet.",
+                "Si {pivot} est {x}, {wingA} {x} amittit et fit {z}. Si {pivot} est {y}, {wingB} fit {z}. Utroque casu una duarum alarum est {z}.",
+                "Cella quae utramque alam videt numquam {z} esse potest. Remove {z} ex {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Alas eligere quae non ambae cardinem vident. Quaeque ala seriem, columnam aut arcam cum cardine communem habere debet.",
+            "Z ex cellis removere quae unam tantum alam vident. Cella ex qua removetur utramque alam videre debet.",
+            "Z ex cardine removere. In Y-Wing cardo Z non continet; si continet, figura est XYZ-Wing aliis regulis."
+          ],
+          "faq": [
+            [
+              "Quid est Y-Wing in Sudoku?",
+              "Tres cellae binorum candidatorum: cardo cum X et Y, ala cum X et Z quae cardinem videt, et ala cum Y et Z quae cardinem videt. Una ala semper est Z, itaque Z ex cellis removetur quae utramque alam vident."
+            ],
+            [
+              "Estne Y-Wing idem ac XY-Wing?",
+              "Est. Duo nomina eandem figuram describunt. Bare Sudoku eam Y-Wing appellat."
+            ],
+            [
+              "Cur una ala Z esse debet?",
+              "Si cardo est X, prima ala X amittit et fit Z. Si cardo est Y, secunda ala fit Z. Cardo alterum ex duobus est, itaque una ala est Z."
+            ],
+            [
+              "Ex quot cellis Y-Wing candidatum removet?",
+              "Plerumque ex una aut duabus: tantum ex cellis quae utramque alam vident et Z adhuc continent. Id satis est ad singulum creandum."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish in Sudoku: quomodo haec ars valet",
+          "description": "Swordfish: numerus ad tres columnas per tres series restrictus ex reliquis earum columnarum removetur. Piscis ordinis tertii, exemplo vero explicatus.",
+          "h1": "Swordfish",
+          "summary": "Swordfish est X-Wing cum tribus seriebus et tribus columnis. Si numerus in unaquaque trium serierum ad summum tres cellas candidatas habet, omnesque eae cellae in eisdem tribus columnis cadunt, tres series numerum in eis columnis consumunt, et numerus ex omni alia cella trium columnarum removeri potest. Series et columnae permutari possunt. Bare Sudoku Swordfish post Y-Wing inquirit, in aenigmatibus Peritus.",
+          "when": [
+            "Cum X-Wing et Y-Wing nihil inveniunt. Swordfish rarior est quam X-Wing et numerum postulat cuius candidati per tres lineas tenuiter sparsi sunt. Notas plenas et accuratas pro eo numero postulat."
+          ],
+          "spot": [
+            "Numerum elige et series quaere cum duabus aut tribus cellis candidatis pro eo. Si tres tales series omnino tres tantum columnas tegunt, in eis columnis alios candidatos numeri inspice. Non quaeque series candidatum in quaque columna requirit: Swordfish sex, septem, octo aut novem cellas habere potest. In ludo numerum clave sua illustra et tres series quaere quarum candidati in tribus columnis directi sunt."
+          ],
+          "examples": [
+            {
+              "h": "Exemplum",
+              "steps": [
+                "Numerus {d} in unaquaque serierum {rows} ad summum tres cellas candidatas habet, omnesque eae cellae in columnis {cols} cadunt: {cells}.",
+                "Quaeque trium serierum suum {d} in una trium columnarum ponere debet, nec duae series eandem columnam adhibere possunt. Itaque tres columnae suum {d} ex his tribus seriebus accipiunt.",
+                "Quivis alius candidatus {d} in columnis {cols} fieri non potest. Remove {d} ex {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Omnes novem cellas postulare. Swordfish cum duobus candidatis in quibusdam seriebus nihilominus valet, dummodo tres series tres tantum columnas tegant.",
+            "Seriem cum quattuor cellis candidatis includere. Quaeque series basis ad summum tres habere debet, omnes intra tres columnas.",
+            "In seriebus basis removere. Seriebus pro basi sumptis remotiones in tribus columnis sunt, extra series basis."
+          ],
+          "faq": [
+            [
+              "Quid est Swordfish in Sudoku?",
+              "Numerus cuius candidati in tribus seriebus ad tres columnas restringuntur. Tres series numerum in illis tribus columnis ponere debent, singulum in singulis, itaque numerus ex ceteris earum columnarum cellis removetur."
+            ],
+            [
+              "Quomodo Swordfish ab X-Wing differt?",
+              "Magnitudine tantum: X-Wing duas series et duas columnas adhibet, Swordfish tres et tres. Ratio eadem est."
+            ],
+            [
+              "Egetne Swordfish exacte novem cellis?",
+              "Non. Quaeque series duos aut tres candidatos habere potest; figura id solum postulat, ut tres series simul non plures quam tres columnas adhibeant."
+            ],
+            [
+              "Exstatne piscis ordinis quarti?",
+              "Exstat, Jellyfish. Bare Sudoku eo non utitur, quia eius aenigmata eo numquam egent."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: quomodo haec ars valet",
+          "description": "XYZ-Wing: cardo cum tribus candidatis et duae alae unum eorum communem habentes eum numerum ex omni cella tres videnti expellunt. Exemplum verum gradatim.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing est Y-Wing cuius cardo tres candidatos habet. Cardo X, Y et Z habet; una ala cardinem videt et X et Z habet, altera cardinem videt et Y et Z habet. Una trium cellarum Z esse debet, itaque Z ex omni cella quae omnes tres videt removeri potest. Quia ipse cardo Z esse potest, cella ex qua removetur cardinem videre debet non minus quam ambas alas, quod eam ad arcam aut lineam quam cellae communem habent restringit. Ars difficillima est qua Bare Sudoku utitur.",
+          "when": [
+            "Tantum cum omnia alia deficiunt. XYZ-Wing figura rarissima est in Bare Sudoku et in solis aenigmatibus Peritus apparet. Eam quaere cum cella trium candidatorum in arca sedet una cum cella duorum candidatorum quae duos eius numeros communes habet."
+          ],
+          "spot": [
+            "A cellis cum tribus exacte candidatis incipe; quaeque cardo possibilis est. Inter eius vicinas quaere duas cellas binorum candidatorum, utrosque ex tribus cardinis sumptos, quae unum exacte numerum Z communem habent. Deinde cellas quaere quae cardinem et ambas alas vident et Z continent. Re vera una ala in arca cardinis est, altera in eius serie aut columna, et cellae ex quibus removetur sunt reliquae cellae illius arcae in illa serie aut columna."
+          ],
+          "examples": [
+            {
+              "h": "Exemplum",
+              "steps": [
+                "Cardo {pivot} tres candidatos habet: {x}, {y} et {z}. Videt {wingA} cum {x} et {z}, et {wingB} cum {y} et {z}.",
+                "Si {pivot} est {z}, res confecta est. Si est {x}, {wingA} {z} esse debet. Si est {y}, {wingB} {z} esse debet. Quocumque casu una trium cellarum est {z}.",
+                "Cella quae omnes tres videt {z} esse non potest. Remove {z} ex {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ex cellis removere quae duas tantum alas vident. Dissimiliter ac in Y-Wing cardo Z esse potest, itaque cella etiam cardinem videre debet.",
+            "Alas adhibere quarum candidati non ambo in tribus cardinis candidatis continentur.",
+            "Eam cum Y-Wing confundere: differentia est tertius candidatus in cardine, qui mutat quae cellae purgari possint."
+          ],
+          "faq": [
+            [
+              "Quid est XYZ-Wing in Sudoku?",
+              "Cardo cum candidatis X, Y et Z et duae alae, una cum X et Z, altera cum Y et Z, ambae cardinem videntes. Una trium cellarum est Z, itaque Z ex cellis removetur quae omnes tres vident."
+            ],
+            [
+              "Quomodo XYZ-Wing ab Y-Wing differt?",
+              "Cardo tres candidatos pro duobus habet, Z inclusum. Ita cardo locus possibilis pro Z fit, itaque solae cellae quae cardinem et ambas alas vident Z amittere possunt."
+            ],
+            [
+              "Quam saepe XYZ-Wing apparet?",
+              "Raro. In Bare Sudoku sola aenigmata Peritus eo egere possunt, et pleraque non egent. Bare Sudoku id ultimum inquirit, post X-Wing, Y-Wing et Swordfish."
+            ],
+            [
+              "Exstatne etiam WXYZ-Wing?",
+              "Exstat, cum cardine quattuor candidatorum, sed Bare Sudoku eo non utitur. Quodque aenigma in ludo novem artibus huius commentarii perfici potest."
+            ]
+          ]
+        }
+      }
     }
   }
 }
