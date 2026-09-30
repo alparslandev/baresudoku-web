@@ -4,6 +4,9 @@ const BODY_LIMIT = 300;
 const LANG = /^[a-z]{2,3}(-[A-Za-z]{2,4})?$/;
 const HOST = /^[a-z0-9-]{1,63}(\.[a-z0-9-]{1,63})+$/;
 const BOT = /bot|crawl|spider|slurp|headless|lighthouse|preview|fetch|python|curl|wget/i;
+const DESKTOP_CHROME = /Chrome\/\d/;
+const DESKTOP_OS = /Windows NT|Macintosh|X11|CrOS/;
+const DATACENTER_ASN = new Set([16509, 14618, 15169, 396982, 8075, 14061, 24940, 16276, 31898, 63949, 20473, 45102, 132203]);
 const UPSERT = 'INSERT INTO counts (day, dim, name, n) VALUES (?1, ?2, ?3, ?4) ON CONFLICT (day, dim, name) DO UPDATE SET n = n + excluded.n';
 const RANGES = { 7: 7, 30: 30, 90: 90, all: 0 };
 const RANGE_LABELS = { 7: '7 days', 30: '30 days', 90: '90 days', all: 'All time' };
@@ -52,10 +55,18 @@ export function parseEvent(raw, nowMs) {
   return rows;
 }
 
+export function automated(headers, cf) {
+  const ua = headers.get('User-Agent') || '';
+  if (BOT.test(ua)) return true;
+  if (!headers.get('Accept-Language')) return true;
+  if (DESKTOP_CHROME.test(ua) && DESKTOP_OS.test(ua) && !headers.get('Sec-CH-UA')) return true;
+  return DATACENTER_ASN.has(+(cf && cf.asn));
+}
+
 async function collect(request, env, ctx) {
   const site = request.headers.get('Sec-Fetch-Site');
   if (site && site !== 'same-origin') return;
-  if (BOT.test(request.headers.get('User-Agent') || '')) return;
+  if (automated(request.headers, request.cf)) return;
   if (+(request.headers.get('Content-Length') || 0) > BODY_LIMIT) return;
   const raw = await request.text();
   if (raw.length > BODY_LIMIT) return;
