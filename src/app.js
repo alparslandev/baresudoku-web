@@ -2,7 +2,7 @@
 'use strict';
 const S_UNDO = 4, S_NEW = 9, S_ERRORS = 10, S_ON = 11, S_OFF = 12, S_CANCEL = 13, S_SOLVED = 14, S_PREPARING = 15;
 const S_WRONG = 16, S_NAKED = 17, S_ROW = 18, S_COL = 19, S_BOX = 20, S_AGAIN = 21, S_TECH = 22, S_TITLE = 28;
-const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31, S_RESTART = 32;
+const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31, S_RESTART = 32, S_TECH_EXTRA = 33;
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
 const now = () => Date.now();
@@ -161,7 +161,8 @@ function hintMessage() {
   if (game.hintKind === HINT_WRONG) return strings[S_WRONG];
   const u = game.hintUnit;
   let s = strings[u === 0 ? S_ROW : u === 1 ? S_COL : u === 2 ? S_BOX : S_NAKED].replace('#', game.hintDigit);
-  if (game.hintTech > 0) s += ' (' + strings[S_TECH + game.hintTech - 1] + ')';
+  const t = game.hintTech;
+  if (t > 0) s += ' (' + strings[t < 7 ? S_TECH + t - 1 : S_TECH_EXTRA + t - 7] + ')';
   return s;
 }
 
