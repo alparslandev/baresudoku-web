@@ -138,7 +138,7 @@
         "Dört seviye: Kolay, Orta, Zor ve Uzman",
         "Her bulmacanın tek çözümü var, tahmin gerekmez",
         "Not, geri al, sil ve tek dokunuşla tüm notları doldur",
-        "Tekniği açıklayan ipucu: tek aday, kilitli adaylar, çift ve üçlü, X-Wing, Y-Wing, Swordfish ve XYZ-Wing",
+        "Tekniği açıklayan ipucu: tek aday ve çiftlerden X-Wing, Y-Wing, Skyscraper ve Unique Rectangle'a kadar",
         "Satır, sütun, kutu ve aynı rakam vurgusu; kapatılabilir hata işareti",
         "Otomatik kayıt, koyu tema, klavye desteği ve yatay düzen",
         "İlk ziyaretten sonra internetsiz çalışır, mağaza gerekmez",
@@ -173,7 +173,7 @@
         ],
         [
           "İpucu ne açıklar?",
-          "İpucu doldurabileceğin sonraki hücreyi gösterir ve tekniği söyler: tek aday, bir rakam için satır, sütun veya kutudaki tek yer, kilitli adaylar, çift ve üçlü, X-Wing, Y-Wing, Swordfish veya XYZ-Wing. Rakamı yerleştirmek için ipucuna tekrar bas."
+          "İpucu doldurabileceğin sonraki hücreyi gösterir ve gereken tekniği söyler; örneğin tek aday, bir rakam için satır, sütun veya kutudaki tek yer, kilitli adaylar, çift veya üçlü, X-Wing, Y-Wing, Skyscraper veya Unique Rectangle. Rakamı yerleştirmek için ipucuna tekrar bas."
         ],
         [
           "Bare Sudoku veri topluyor mu?",
@@ -205,7 +205,7 @@
         ],
         [
           "Kolay, Orta, Zor ve Uzman seviyeleri arasındaki fark ne?",
-          "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca tek adaylarla çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar veya çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Swordfish veya XYZ-Wing gerektirir. Her seviyede tam olarak tek çözüm vardır."
+          "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca tek adaylarla çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar veya çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Skyscraper veya Unique Rectangle gibi en az bir ileri örüntü gerektirir. Her seviyede tam olarak tek çözüm vardır."
         ],
         [
           "Aynı bulmacaya baştan başlayabilir miyim?",
