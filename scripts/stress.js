@@ -15,10 +15,14 @@ const option = (name, fallback) => {
   return i >= 0 ? +args[i + 1] : fallback;
 };
 const MINIMAL = option('minimal', 5000);
+const TIMED = option('timed', 500);
 const GENERATED = option('generated', 2000);
 const WALKS = option('walks', 300);
 
+const skipped = args.includes('--skip') ? args[args.indexOf('--skip') + 1].split(',').map(Number) : [];
 const e = new Sudoku();
+for (const id of skipped) e.techOff[id] = 1;
+if (skipped.length) console.log('kapali teknikler:', skipped.join(','));
 const usage = new Array(TECH_COUNT).fill(0);
 const failures = [];
 const now = () => performance.now();
@@ -42,9 +46,12 @@ function minimalPuzzle() {
   return { puzzle, solution: full };
 }
 
+let hardestBase = 0;
+
 function solveChecked(puzzle, solution) {
   e.load(puzzle);
   let rating = 0;
+  hardestBase = 0;
   while (!e.complete()) {
     if (e.stuck()) {
       fail('cikmaz', puzzle);
@@ -54,6 +61,7 @@ function solveChecked(puzzle, solution) {
     if (t < 0) return -1;
     usage[t]++;
     if (e.stepRating > rating) rating = e.stepRating;
+    if (TECH_BASE[t] > hardestBase) hardestBase = TECH_BASE[t];
     for (let c = 0; c < 81; c++) {
       if (e.lv[c] ? e.lv[c] !== solution[c] : !(e.lc[c] & bit(solution[c]))) {
         fail('yanlis adim teknik ' + t + ' hucre ' + c, puzzle);
@@ -70,13 +78,18 @@ function percentile(values, p) {
   return sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))];
 }
 
-function walkHints(puzzle, solution, randomOrder) {
+const walkMs = [];
+
+function walkHints(puzzle, solution, randomOrder, timed) {
   const values = puzzle.slice();
   const empties = [];
   for (let c = 0; c < 81; c++) if (!values[c]) empties.push(c);
   if (randomOrder) e.shuffle(empties);
   for (let k = 0; k < empties.length; k++) {
-    if (!e.hint(values, puzzle)) return fail('ipucu yok', puzzle);
+    const start = now();
+    const found = e.hint(values, puzzle);
+    if (timed) walkMs.push(now() - start);
+    if (!found) return fail('ipucu yok', puzzle);
     if (values[e.stepCell] || solution[e.stepCell] !== e.stepDigit) return fail('ipucu yanlis', puzzle);
     if (e.hintTech < 0 || e.hintTech >= TECH_COUNT) return fail('ipucu teknigi aralik disi', puzzle);
     const c = randomOrder ? empties[k] : e.stepCell;
@@ -97,14 +110,16 @@ for (let i = 0; i < MINIMAL; i++) {
     phases.unsolved++;
     if (phases.unsolved <= 20) console.log('COZULEMEDI', puzzle.join(''));
   } else if (r >= 0) {
-    if (r <= TECH_BASE[0]) phases.singles++;
-    else if (r < MASTER_RATING) phases.basic++;
-    else if (r < FORCING_RATING) phases.chains++;
+    if (hardestBase <= TECH_BASE[0]) phases.singles++;
+    else if (hardestBase < MASTER_RATING) phases.basic++;
+    else if (hardestBase < FORCING_RATING) phases.chains++;
     else phases.forcing++;
+    if (i < TIMED) walkHints(puzzle, solution, false, true);
   }
 }
 console.log(`minimal: ${MINIMAL} bulmaca, ${((now() - t0) / 1000).toFixed(1)} s, ipucu ms p50 ${percentile(hintMs, 0.5).toFixed(1)} p99 ${percentile(hintMs, 0.99).toFixed(1)} max ${percentile(hintMs, 1).toFixed(1)}`);
 console.log('fazlar:', JSON.stringify(phases));
+console.log(`ipucu yuruyusu (${Math.min(TIMED, MINIMAL)} minimal bulmaca, ${walkMs.length} cagri): ms p50 ${percentile(walkMs, 0.5).toFixed(2)} p99 ${percentile(walkMs, 0.99).toFixed(2)} max ${percentile(walkMs, 1).toFixed(2)}`);
 
 for (let level = 0; level < LEVELS && GENERATED > 0; level++) {
   const ms = [];
