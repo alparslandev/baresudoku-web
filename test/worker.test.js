@@ -31,7 +31,8 @@ test("start and done events become counters", () => {
   ]);
   expect(parseEvent(JSON.stringify({ e: "done", k: 0, t: NOW - 61 * DAY, s: 99999 }), NOW)).toEqual([{ day: "2026-09-29", dim: "done", name: "0", n: 1 }]);
   expect(parseEvent(JSON.stringify({ e: "done", k: 0, t: NOW + 3600e3, s: 0 }), NOW)).toEqual([{ day: "2026-09-29", dim: "done", name: "0", n: 1 }]);
-  expect(parseEvent('{"e":"start","k":4}', NOW)).toBeNull();
+  expect(parseEvent('{"e":"start","k":4}', NOW)).toEqual([{ day: "2026-09-29", dim: "start", name: "4", n: 1 }]);
+  expect(parseEvent('{"e":"start","k":5}', NOW)).toBeNull();
   expect(parseEvent('{"e":"start","k":"1"}', NOW)).toBeNull();
   expect(parseEvent('{"e":"quit","k":1}', NOW)).toBeNull();
   expect(parseEvent("nope", NOW)).toBeNull();
@@ -46,17 +47,20 @@ test("summary and page", () => {
     { day: "2026-09-29", dim: "ref", name: "google.com", n: 2 }, { day: "2026-09-29", dim: "ref", name: "<b>x</b>.com", n: 1 },
     { day: "2026-09-29", dim: "start", name: "2", n: 10 }, { day: "2026-09-29", dim: "done", name: "2", n: 4 },
     { day: "2026-09-29", dim: "time", name: "2", n: 1200 }, { day: "2026-09-29", dim: "timed", name: "2", n: 4 },
+    { day: "2026-09-29", dim: "start", name: "4", n: 2 }, { day: "2026-09-29", dim: "done", name: "4", n: 1 },
     { day: "2026-09-29", dim: "start", name: "9", n: 1 }, { day: "2026-09-29", dim: "junk", name: "0", n: 1 },
   ];
   const s = summarize(rows);
-  expect(s.total).toEqual({ visit: 3, open: 9, start: 10, done: 4 });
+  expect(s.total).toEqual({ visit: 3, open: 9, start: 12, done: 5 });
   expect(s.levels[2]).toEqual({ start: 10, done: 4, time: 1200, timed: 4 });
+  expect(s.levels[4]).toEqual({ start: 2, done: 1, time: 0, timed: 0 });
   expect(s.days.map(d => d.day)).toEqual(["2026-09-29", "2026-09-28"]);
   expect(s.days[1]).toEqual({ day: "2026-09-28", visit: 3, open: 5, start: 0, done: 0 });
   expect(s.langs).toEqual([["tr", 5], ["en", 4]]);
   expect(s.devs).toEqual([6, 3]);
   const html = renderStats(s, 30, "2026-09-29");
   expect(html).toContain("40%");
+  expect(html).toContain("Master");
   expect(html).toContain("5:00");
   expect(html).toContain("&lt;b&gt;x&lt;/b&gt;.com");
   expect(html).not.toContain("<b>x</b>");

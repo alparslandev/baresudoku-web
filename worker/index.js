@@ -10,7 +10,7 @@ const DATACENTER_ASN = new Set([16509, 14618, 15169, 396982, 8075, 14061, 24940,
 const UPSERT = 'INSERT INTO counts (day, dim, name, n) VALUES (?1, ?2, ?3, ?4) ON CONFLICT (day, dim, name) DO UPDATE SET n = n + excluded.n';
 const RANGES = { 7: 7, 30: 30, 90: 90, all: 0 };
 const RANGE_LABELS = { 7: '7 days', 30: '30 days', 90: '90 days', all: 'All time' };
-const LEVELS = ['Easy', 'Medium', 'Hard', 'Expert'];
+const LEVELS = ['Easy', 'Medium', 'Hard', 'Expert', 'Master'];
 const STATS_HEADERS = {
   'Content-Type': 'text/html; charset=utf-8',
   'Cache-Control': 'public, max-age=60',
@@ -45,7 +45,7 @@ export function parseEvent(raw, nowMs) {
     return rows;
   }
   if (ev.e !== 'start' && ev.e !== 'done') return null;
-  if (!Number.isInteger(ev.k) || ev.k < 0 || ev.k > 3) return null;
+  if (!Number.isInteger(ev.k) || ev.k < 0 || ev.k >= LEVELS.length) return null;
   const level = String(ev.k);
   if (ev.e === 'start') return [row(today, 'start', level, 1)];
   const t = +ev.t;

@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIXED = ["X-Wing", "Y-Wing", "Swordfish", "XYZ-Wing"]
@@ -32,7 +33,8 @@ def load():
 def table(keys, values):
     body = values[1:]
     split = keys.index("language")
-    return body[:split] + FIXED + [TITLE] + body[split:] + FIXED_EXTRA
+    fixed_end = keys.index("restart") + 1
+    return body[:split] + FIXED + [TITLE] + body[split:fixed_end] + FIXED_EXTRA + body[fixed_end:]
 
 
 def web(keys, languages):
@@ -226,6 +228,9 @@ def load_guide(languages):
 
 if __name__ == "__main__":
     keys, languages = load()
-    site = load_site(languages)
-    guide = load_guide(languages)
-    print("%d dil, %d metin, %d site metni, %d rehber dili" % (len(languages), len(table(keys, languages["en"])), len(SITE_KEYS), len(guide)))
+    if len(sys.argv) == 3 and sys.argv[1] == "table":
+        print(json.dumps(table(keys, languages[sys.argv[2]]), ensure_ascii=False))
+    else:
+        site = load_site(languages)
+        guide = load_guide(languages)
+        print("%d dil, %d metin, %d site metni, %d rehber dili" % (len(languages), len(table(keys, languages["en"])), len(SITE_KEYS), len(guide)))

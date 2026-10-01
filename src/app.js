@@ -3,6 +3,7 @@
 const S_UNDO = 4, S_NEW = 9, S_ERRORS = 10, S_ON = 11, S_OFF = 12, S_CANCEL = 13, S_SOLVED = 14, S_PREPARING = 15;
 const S_WRONG = 16, S_NAKED = 17, S_ROW = 18, S_COL = 19, S_BOX = 20, S_AGAIN = 21, S_TECH = 22, S_TITLE = 28;
 const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31, S_RESTART = 32, S_TECH_EXTRA = 33;
+const S_MASTER = S_TECH_EXTRA + TECH_COUNT - 7;
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
 const now = () => Date.now();
@@ -13,6 +14,10 @@ const L = JSON.parse($('i18n').textContent);
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 let meta = { t: 0, d: false };
+
+function levelName(level) {
+  return strings[level < 4 ? level : S_MASTER];
+}
 
 function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 function fetchStored(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
@@ -81,7 +86,11 @@ function switchLang(code) {
 
 function renderLabels() {
   toolButtons.forEach((b, i) => { b.querySelector('span').textContent = strings[S_UNDO + i]; });
-  document.querySelectorAll('#panel [data-level]').forEach(b => { b.textContent = strings[+b.dataset.level]; });
+  document.querySelectorAll('#panel [data-level]').forEach(b => {
+    const name = levelName(+b.dataset.level);
+    b.hidden = name === undefined;
+    b.textContent = name || '';
+  });
   $('cancel-btn').textContent = strings[S_CANCEL];
   $('restart-btn').textContent = strings[S_RESTART];
   $('lang-label').textContent = strings[S_LANGUAGE];
@@ -171,7 +180,7 @@ function renderTime() {
 }
 
 function render() {
-  $('level').textContent = generating ? strings[pendingLevel] : game.active ? strings[game.level] : '';
+  $('level').textContent = generating ? levelName(pendingLevel) : game.active ? levelName(game.level) : '';
   renderTime();
   const sel = game.selected;
   const selValue = (sel >= 0 && game.active ? game.value[sel] : 0) || game.sticky;
@@ -236,7 +245,7 @@ function render() {
   if (overlay) {
     const solved = game.active && game.solved;
     $('panel-title').textContent = solved ? strings[S_SOLVED] : strings[S_TITLE];
-    $('panel-sub').textContent = solved ? strings[game.level] + '  ' + clock(game.time(now())) + '\n' + strings[S_NEW] : strings[S_NEW];
+    $('panel-sub').textContent = solved ? levelName(game.level) + '  ' + clock(game.time(now())) + '\n' + strings[S_NEW] : strings[S_NEW];
     $('errors-btn').textContent = strings[S_ERRORS] + ': ' + strings[game.showErrors ? S_ON : S_OFF];
     $('cancel-btn').hidden = !cancellable();
     $('restart-btn').hidden = !game.active;
