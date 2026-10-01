@@ -96612,6 +96612,2334 @@
         }
       }
     },
+    "zea": {
+      "learnHeading": "Sudoku leêre",
+      "learnText": "Nieuw mie Sudoku, of zit je vast in 'n moeilijke puzzel? Twee gidsen legge de regels uut en elke oplostechniek die de hints gebruke, elk mie 'n echt voorbeeld.",
+      "howToLink": "Oe speel je Sudoku",
+      "techniquesLink": "Sudoku-oplostechnieken",
+      "labels": {
+        "howTo": "Oe speel je",
+        "techniques": "Technieken",
+        "play": "Speel Sudoku",
+        "prev": "Vorige techniek",
+        "next": "Volgende techniek",
+        "all": "Alle technieken",
+        "example": "Voorbeeld",
+        "steps": "Stap vò stap",
+        "when": "Wanneer gebruuk je 't",
+        "spot": "Oe vin je 't",
+        "mistakes": "Vee gemaekte fouten",
+        "inGame": "In Bare Sudoku",
+        "level": "Nôdig vanaf niveau: {level}",
+        "hint": "In 't spel zeit de hint: {text}",
+        "legend": "Vette ciefers bin gegeven, blauwe ciefers bin tiedens 't oplosse geplaetst, kleine ciefers bin kandidaeten. Gemarkeerde vakjes vorme 't patroôn, doorgestreepte kandidaeten gaen weg, en 'n omcirkelde kandidaet is 't ciefer dat je plaetst.",
+        "notation": "Vakjes schrief je as r3c7: rie 3, kolom 7. Rieën tel je van boven, kolommen van links, en blokken van 1 tot 9 van linksboven, rie vò rie.",
+        "row": "rie {n}",
+        "column": "kolom {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} uut {cell}",
+        "regions": "Rie 5, kolom 5 en blok 5 an 't begin van 'n puzzel",
+        "firstMove": "'n Naekte single: {cell} kan allêên {d} weze",
+        "breadcrumb": "Kruumelpad"
+      },
+      "howTo": {
+        "title": "Oe speel je Sudoku: regels, speelveld en eêrste zetten",
+        "description": "Leêr oe je Sudoku speelt: de regels, oe rieën, kolommen en blokken werke, waerom elke puzzel êên oplossienge eit, notities en je eêrste zetten.",
+        "h1": "Oe speel je Sudoku",
+        "summary": "Sudoku is 'n logische puzzel op 'n rooster van 9×9. Vul elk leeg vakje in mie 'n ciefer van 1 tot 9, zô dat elke rie, elke kolom en elk blok van 3×3 elk ciefer percies êên keer bevat. Sommige ciefers bin an 't begin a gegeven; de rest beredeneer je, telkens êên vakje dat zeker is, en je oeft nooit te gokke. Deêze gids legt 't speelveld uut, de regels, 't principe van êên oplossienge, notities en 'n simpele strategie vò je eêrste zetten. Je kan alles oefene in [Bare Sudoku](play), dat gratis is en hints eit die de logica uutlegge.",
+        "sections": [
+          {
+            "h": "Wat bin de regels van Sudoku?",
+            "p": [
+              "Der bin mae drie regels, en 't is eigenlijk dezelfde regel uut drie richtiengen bekeke: elke rie moet de ciefers 1 tot 9 bevatte, elke kolom moet de ciefers 1 tot 9 bevatte, en elk blok van 3×3 moet de ciefers 1 tot 9 bevatte. 'n Ciefer kan dus nooit twee keer in dezelfde rie, kolom of blok staen.",
+              "De gegeven ciefers, vetgedrukt, ligge vast. Je taek is om de lege vakjes in te vulle. Der komt geên rekenwerk an te pas en geên volgorde: de ciefers bin gewoon negen verschillende tekens. Je zou 't ok mie letters of vormen kunne doe en der zou niks verandere."
+            ]
+          },
+          {
+            "h": "Oe is 't speelveld ingedeeld?",
+            "p": [
+              "'t Speelveld eit 81 vakjes in 9 rieën en 9 kolommen. Dikke lienen verdeêle 't in negen blokken van 3×3. Elk vakje oort bie percies êên rie, êên kolom en êên blok, en die drie bin z'n groepen. De 20 aore vakjes die 'n groep mie 'n vakje deêle, eête z'n buren; 'n ciefer dat je in 'n vakje zet, sluut dat ciefer uut in alle 20 buren.",
+              "Vakjes schrief je as r3c7: rie 3, kolom 7. Rieën tel je van boven, kolommen van links, en blokken van 1 tot 9 van linksboven, rie vò rie. Deêze notatie wordt in elke techniekgids gebruukt en is de moeite weêrd om te leêre: r5c5 is 't midden van 't speelveld."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Waerom eit elke Sudoku percies êên oplossienge?",
+            "p": [
+              "'n Echte Sudoku eit êên oplossienge, en daerdeur werkt de logica. As je kan laete zie dat 'n ciefer nerges aors in 'n groep kan, dan moet 't in 't vakje dat overblieft, want de oplossienge bestaet en is uniek. As 'n puzzel twee oplossiengen ao, kon geên enkele redenerienge ze uut mekaore ouwe en zou je op 'n gegeven moment moete gokke.",
+              "Bare Sudoku maekt elke puzzel op je toestel en kiekt nae of 'n puzzel percies êên oplossienge eit en of z'n logische oplosser 'm kan afmaeke mie de technieken van 't gekozen niveau. As je vastzit, is der dus altied 'n volgende stap te vinde, en de hint laet 'm zie."
+            ]
+          },
+          {
+            "h": "Oe begin je an 'n Sudoku?",
+            "p": [
+              "Begin mie wat 't meêst beperkt is. Deêze volgorde werkt op elk niveau:"
+            ],
+            "list": [
+              "Kies 'n ciefer dat a vee keer staet, zeg zes of zeven keer, en zoek de blokken waer 't nog ontbreekt. Vaek is der in 'n blok mae êên vakje vò over: dat is 'n [verborge single](hidden-single).",
+              "Kiek nae drukke vakjes. 'n Vakje waervan de rie, kolom en 't blok saemen acht verschillende ciefers bevatte, eit nog mae êên kandidaet over: 'n [naekte single](naked-single). Vakjes in bienae volle rieën of blokken bin de beste plekke om te kieke.",
+              "Elk ciefer dat je zet, haelt 'n kandidaet weg uut 20 buren, dus kiek die buren meteen nae. Singles komme vaek in ketens.",
+              "As de makkelijke zetten op bin, schrief dan notities: de kandidaeten vò elk leeg vakje. Zoek dan 'n ciefer dat in 'n blok tot êên lien beperkt is ([vastezette kandidaeten](locked-candidates)) of twee vakjes mie dezelfde twee kandidaeten ('n [naekt paer](naked-pairs)).",
+              "Gae nae elke kandidaet die je wegstreept terug nae de singles. Zelfs Expert-puzzels los je vooral op mie singles; de moeilijkere techniek zet allêên de volgende klaer."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Wat bin notities en wanneer gebruuk je ze?",
+            "p": [
+              "Notities, ok potloodtekens of kandidaeten genoemd, bin de kleine ciefers die je in 'n leeg vakje schrieft om bie te ouwe welke ciefers daer nog kunne. In makkelijke puzzels bin ze zelden nôdig; vanaf Moeilijk bin ze onmisbaer, want technieken as paeren, X-Wing en Y-Wing gaen over kandidaeten, nie over geplaetste ciefers.",
+              "Ouw de notities juust: as je 'n ciefer zet, hael 't dan weg uut de notities van alle 20 buren. In Bare Sudoku gebeurt dat vanzelf, en Notities invulle zet mie êên tik elke kandidaet in elk leeg vakje, zô dat je kan beginne mie 'n volledige, juuste set kandidaeten. 'n Notitie is 'n feit, geên gok: 't betekent dat nog niks dat ciefer uutsluut."
+            ]
+          },
+          {
+            "h": "Wat doe je as je vastzit?",
+            "p": [
+              "Kiek eest de basis nog es nae: elke bienae volle rie, kolom en blok levert singles op. Zorg dan dat de notities volledig bin, want 'n ontbrekende kandidaet verstopt patroônen en 'n kandidaet die nie meêr klopt, maekt valse patroônen. Werk dan de [technieken](techniques) af op volgorde van moeilijkheid: vastezette kandidaeten, paeren en drietallen, X-Wing, Y-Wing, Swordfish en XYZ-Wing. Elke techniek eit z'n eigen pagina mie 'n echt voorbeeld.",
+              "As niks werkt, neem dan 'n hint. In Bare Sudoku kiekt de hint eest of der 'n geplaetst ciefer verkeêrd is, zoekt dan 't volgende vakje dat je mie logica kan invulle en noemt de techniek, zô dat je der toch wat van leêrt. Tik nog es op d'n hint om 't ciefer te plaetsen."
+            ]
+          },
+          {
+            "h": "Oe voer je ciefers in in Bare Sudoku?",
+            "p": [
+              "Tik op 'n vakje en dan op 'n ciefer. Of tik eest op 'n ciefer: 't wordt vastezet, en elk vakje waer je op tikt, kriegt 't. Dat is de snelste manier om 't zesde, zevende en achtste exemplaer van 'n ciefer te zetten. Tik nog es op 't ciefer om 't los te laete. De knop Notities schakelt over nae potloodtekens, Wisse maekt 'n vakje leeg, Ongedaen maeke draait elke zet terug, en fouten zie je in 't rood, behalve as je dat in 't menu uutzet.",
+              "Op 'n toetsenbord gebruuk je de pieltjestoetsen om te bewege, 1 tot 9 om 'n ciefer in te voere, Backspace om te wisse, N vò notities, U om ongedaen te maeke, H vò 'n hint, F om notities in te vulle en Escape vò 't menu. 't Spel slaet vanzelf op, werkt offline en eit geên reclame en geên account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Moet je bie Sudoku ooit gokke?",
+            "Nie in 'n echte puzzel. Elke puzzel van Bare Sudoku eit percies êên oplossienge en is nagekeke of je 'm allêên mie logica kan oplosse, mie de technieken van z'n niveau. As 't voelt of je moet gokke, dan ontbreekt der 'n kandidaet in je notities of wacht der nog 'n techniek om gevonde te worre."
+          ],
+          [
+            "Kan 'n ciefer twee keer in 'n rie, kolom of blok staen?",
+            "Nee. Dat is de 'ele regel: elk van de negen rieën, negen kolommen en negen blokken bevat elk ciefer van 1 tot 9 percies êên keer. As twee dezelfde ciefers in dezelfde groep staen, is minstens êên der van verkeêrd."
+          ],
+          [
+            "Wat is 't verschil tussen Makkelijk, Middel, Moeilijk en Expert?",
+            "'t Niveau angt af van de technieken die de puzzel nôdig eit. Makkelijk en Middel los je op mie allêên singles, en Makkelijk begint mie minstens 38 gegeven ciefers. Moeilijk eit vastezette kandidaeten of paeren en drietallen nôdig. Expert eit X-Wing, Y-Wing, Swordfish of XYZ-Wing nôdig."
+          ],
+          [
+            "Is 't beter om notities in te vulle vò alle vakjes of mae vò 'n paer?",
+            "Vò Moeilijk en Expert: vul ze allemaele in, want patroônen as paeren, X-Wing en Y-Wing komme pas in beeld as elke kandidaet der staet. In Makkelijk en Middel bin notities nie verplicht en de meêste spelers zoeke gewoon nae singles."
+          ],
+          [
+            "Oe lange duurt 'n Sudoku?",
+            "'n Makkelijke puzzel duurt 'n paer minuten; Expert-puzzels kunne twintig minuten of langer dure, afangend van oe gauw je 't moeilijke patroôn ziet. Bare Sudoku toônt 'n timer, zet 'm stil as 't menu open is en ouwt geên ranglieste bie, dus speel in je eigen tempo."
+          ],
+          [
+            "Moet je bie Sudoku rekene?",
+            "Nee. De ciefers bin allêên mae labels; der wordt niks opgeteld of geteld. Elk stel van negen tekens zou werke, en daerom is Sudoku 'n logische puzzel en geên rekenpuzzel."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku-oplostechnieken uutgelegd mie voorbeelden",
+        "description": "Alle negen oplostechnieken vò Sudoku, van naekte singles tot Swordfish en XYZ-Wing, in de volgorde van de hints van Bare Sudoku, elk mie 'n echt voorbeeld.",
+        "h1": "Sudoku-oplostechnieken",
+        "intro": [
+          "Elke Sudoku kan opgelost worre mie 'n kleine set logische technieken. Deêze lieste toônt de negen technieken die de oplosser van Bare Sudoku en z'n hints gebruke, in de volgorde waerin de oplosser ze probeert: eest singles, dan wegstreepe binnen êên groep, dan patroônen die over meêrdere rieën en kolommen gaen. Elke techniek eit z'n eigen pagina mie 'n definitie, oe je 'm vint, 'n echt voorbeeld uut 'n gemaekte puzzel en de vee gemaekte fouten.",
+          "'t Niveau van 'n puzzel wordt bepaeld deur de moeilijkste techniek die 't nôdig eit. Makkelijke en Middel-puzzels ebbe allêên singles nôdig, Moeilijke puzzels ebbe vastezette kandidaeten of paeren en drietallen nôdig, en Expert-puzzels ebbe minstens êên vis of vleugel nôdig. Wat 't niveau ok is, singles doe 't meêste werk; de moeilijkere techniek streept 'n kandidaet of twee weg en de singles gaen daer verder."
+        ],
+        "faq": [
+          [
+            "In welke volgorde probeer ik de Sudoku-technieken?",
+            "De makkelijkste eest: naekte singles, verborge singles, vastezette kandidaeten, naekte paeren en drietallen, verborge paeren en drietallen, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku probeert ze percies in deêze volgorde, en 'n hint noemt altied de simpelste techniek die je verder ellept."
+          ],
+          [
+            "Eb ik al deêze technieken nôdig om Sudoku op te losse?",
+            "Vò Makkelijk en Middel bin singles genoeg. Moeilijke puzzels voege der vastezette kandidaeten en paeren en drietallen an toe. Expert-puzzels ebbe minstens êên vis of vleugel nôdig, mae meêstal mae êên of twee keer per puzzel."
+          ],
+          [
+            "Bin der moeilijkere technieken dan XYZ-Wing?",
+            "Jae, bievoorbeeld ketens, uniciteitstests en forcing nets. Bare Sudoku maekt geên puzzels die ze nôdig ebbe, dus elke puzzel in 't spel kan je afmaeke mie de negen technieken op deêze pagina."
+          ],
+          [
+            "Wat is 'n kandidaet?",
+            "'n Ciefer dat nog in 'n leeg vakje kan staen, omdat niks in z'n rie, kolom of blok 't nog uutsluut. De notities in 't spel bin kandidaeten. Elke techniek nae de singles redeneert over kandidaeten, dus ouw ze volledig en juust."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Naekte single",
+          "title": "Naekte single in Sudoku: 't vakje mie êên kandidaet",
+          "description": "'n Naekte single is 'n leeg vakje mie mae êên mogelijk ciefer. Leêr naekte singles gauw vinde, mie 'n echt voorbeeld stap vò stap en de vee gemaekte fouten.",
+          "h1": "Naekte single (naked single)",
+          "summary": "'n Naekte single is 'n leeg vakje mie percies êên kandidaet: de aore acht ciefers staen a in z'n rie, kolom of blok. 't Ciefer dat overblieft, moet daer. 't Is de simpelste techniek van Sudoku, de techniek die je 't meêst gebruukt, en de hint van Bare Sudoku meldt 'm as \"Mae ienen kandidaet ier\".",
+          "when": [
+            "Altied. Naekte singles komme vò van de eêrste tot de laetste zet, op elk niveau. In Makkelijke en Middel-puzzels bin ze, saemen mie verborge singles, de enige techniek die nôdig is. In moeilijkere puzzels laet elke kandidaet die 'n moeilijkere techniek wegstreept meêstal 'n naekte single achter, dus kiek der nae elke stap nae."
+          ],
+          "spot": [
+            "Kiek nae vakjes mie vee geplaetste buren: 'n vakje in 'n rie mie a zeven ciefers, of 'n vakje waervan de rie, kolom en 't blok saemen acht verschillende ciefers dekke. Zonder notities tel je de ciefers die je vanuut 't vakje ziet. Mie notities is 'n naekte single gewoon 'n vakje mie êên kandidaet, en daerom maekt Notities invulle ze makkelijk te vinde."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Kiek nae {cell}. 't Is leeg, dus schrief alle ciefers op die a in z'n rie, z'n kolom en z'n blok staen.",
+                "Rie {row} bevat {rowDigits}. Kolom {col} bevat {colDigits}. Blok {box} bevat {boxDigits}.",
+                "Saemen sluten ze elk ciefer uut behalve {d}, dus {d} is de enige kandidaet die in {cell} overblieft.",
+                "Zet {d} in {cell}. Kiek dan of 't nieuwe ciefer 'n aore single maekt in dezelfde rie, kolom of blok."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Allêên de rie of allêên 't blok telle. De acht uutgesloten ciefers komme meêstal uut alle drie de groepen saemen.",
+            "Vergete dat 'n ciefer dat net gezet is ok kandidaeten uutsluut in z'n 20 buren; nieuwe naekte singles komme vò meteen nae elke zet.",
+            "'n Naekte single verwarre mie 'n verborge single: bie 'n naekte single eit 't vakje êên kandidaet over, bie 'n verborge single eit 't ciefer êên vakje over in 'n groep."
+          ],
+          "faq": [
+            [
+              "Wat is 'n naekte single in Sudoku?",
+              "'n Leeg vakje mie percies êên kandidaet. Acht verschillende ciefers staen a in z'n rie, kolom en blok, dus 't negende ciefer is 't enige dat past."
+            ],
+            [
+              "Waerom eêt 't naekt?",
+              "Omdat de enige kandidaet zô in 't vakje te zien is as de notities der staen; niks verstopt 'm. 'n Verborge single staet daerentegen tussen aore kandidaeten en vin je deur nae 't ciefer te kieke in plekke van nae 't vakje."
+            ],
+            [
+              "Kan je 'n puzzel oplosse mie allêên naekte singles?",
+              "Vee Makkelijke puzzels wel, mae de meêste ebbe ok verborge singles nôdig. Bare Sudoku beoordeelt Makkelijke en Middel-puzzels as oplosbaer mie singles van allebei de soorten; Moeilijke en Expert-puzzels ebbe minstens êên aore techniek nôdig."
+            ],
+            [
+              "Laet de hint naekte singles zie?",
+              "Jae. As de volgende zet 'n naekte single is, kiest de hint 't vakje en zeit \"Mae ienen kandidaet ier\" mie 't ciefer. Tik nog es op d'n hint om 't te plaetsen."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Verborge single",
+          "title": "Verborge single in Sudoku: de enige plekke vò 'n ciefer",
+          "description": "'n Verborge single is 't enige vakje in 'n rie, kolom of blok waer 'n ciefer nog kan. Leêr verborge singles vinde deur êên ciefer tegelieke te bekieke.",
+          "h1": "Verborge single (hidden single)",
+          "summary": "'n Verborge single is 'n ciefer dat in 'n rie, kolom of blok nog mae êên mogelijk vakje eit, ok al toônt dat vakje misschien aore kandidaeten. Omdat de groep 't ciefer moet bevatte, moet 't daer. De hint van Bare Sudoku meldt 'm as \"Enige plekke vò 5 in deêze rieë\", kolom of blok.",
+          "when": [
+            "Altied as 'n ciefer a goed opgeschote is: as 'n ciefer vuuf of zes keer staet, bin de overige blokken sterk beperkt en is 'n verborge single vaek de volgende zet. Verborge singles bin de belangriekste techniek van Makkelijke en Middel-puzzels en blieve op elk niveau 't werkpeerd."
+          ],
+          "spot": [
+            "Bekiek êên ciefer tegelieke. Neem 'n ciefer, zoek 'n blok waer 't nog nie in staet, en streep elk vakje van dat blok deur dat 'n rie of kolom deêlt mie 'n geplaetst exemplaer van dat ciefer. As der êên vakje overblieft, is dat 'n verborge single. Dezelfde aenpak werkt op rieën en kolommen. In 't spel tik je op 'n geplaetst ciefer: elk exemplaer wordt gemarkeerd, zô dat de vrie vakjes opvalle."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Blok {box} eit nog geên {d}, dus êên van z'n lege vakjes moet 'm krieë. De lege vakjes bin {empties}.",
+                "In elk van die vakjes behalve {cell} wordt {d} geblokkeerd deur 'n {d} die a in dezelfde rie of kolom staet, dus {d} is daer geên kandidaet.",
+                "Dan blieft {cell} over as enige plekke vò {d} in blok {box}. Zet {d} daer, ok al toônt {cell} misschien nog aore kandidaeten."
+              ]
+            }
+          ],
+          "mistakes": [
+            "'t Ciefer zetten in 'n vakje dat mae waerschienlijk 't goeie is: kiek elk aor leeg vakje van de groep nae, nie allêên de vakjes die voor de and ligge.",
+            "'n Verborge single over 't oofd zie omdat 't vakje meêrdere kandidaeten toônt. De aore kandidaeten doe der nie toe; 't gaet derom dat 't ciefer geên aore plekke in de groep eit.",
+            "Allêên blokken bekieke. Rieën en kolommen geve net zô vaek verborge singles, vooral tegen 't einde."
+          ],
+          "faq": [
+            [
+              "Wat is 'n verborge single in Sudoku?",
+              "'n Ciefer dat in mae êên vakje van 'n rie, kolom of blok kan. De groep moet 't ciefer bevatte, dus 't vakje ligt vast, ok al eit 't nog aore kandidaeten."
+            ],
+            [
+              "Wat is 't verschil tussen 'n verborge single en 'n naekte single?",
+              "'n Naekte single gaet over 'n vakje: êên kandidaet over. 'n Verborge single gaet over 'n ciefer: êên vakje over in 'n groep. Allebei zette ze 'n ciefer mie zekereid."
+            ],
+            [
+              "Welke is makkelijker te vinde?",
+              "Zonder notities bin verborge singles meêstal makkelijker, want je kan 't speelveld êên ciefer tegelieke bekieke. Mie volledige notities bin naekte singles 't makkelijkst, want 'n vakje mie êên kandidaet valt meteen op."
+            ],
+            [
+              "Oe beschrieft de hint 'n verborge single?",
+              "As \"Enige plekke vò\" 't ciefer in deêze rieë, deêze kolom of dit blok, mie 't vakje geselecteerd. Tik nog es op d'n hint om 't te plaetsen."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Vastezette kandidaeten",
+          "title": "Vastezette kandidaeten in Sudoku: wieze en opeise",
+          "description": "Vastezette kandidaeten: as de kandidaeten vò 'n ciefer in 'n blok allemaele in êên rie of kolom ligge, of andersom, gaet 't ciefer aors weg. Twee voorbeelden.",
+          "h1": "Vastezette kandidaeten (locked candidates)",
+          "summary": "Vastezette kandidaeten is de eêrste techniek die kandidaeten weg'aelt in plekke van 'n ciefer te zetten. Der bin twee vormen. Wieze: in 'n blok ligge alle kandidaeten vò 'n ciefer in êên rie of kolom, dus 't ciefer gaet weg uut de rest van die lien. Opeise: in 'n rie of kolom ligge alle kandidaeten vò 'n ciefer in êên blok, dus 't ciefer gaet weg uut de rest van dat blok. De hint van Bare Sudoku zet \"Vastezette kandidaeten\" bie de zet die daerdeur mogelijk wordt.",
+          "when": [
+            "As de singles op bin in 'n Moeilijke puzzel, is dit 't eêrste om te probere. Der bin volledige notities vò nôdig, minstens vò 't ciefer dat je bekiekt. Vastezette kandidaeten komme vee vò: de meêste Moeilijke puzzels ebbe ze nôdig, en Expert-puzzels gebruke ze tussen de grôtere patroônen deur."
+          ],
+          "spot": [
+            "Vò wieze bekiek je elk blok en elk ciefer dat der nog in ontbreekt: as de kandidaetvakjes vò dat ciefer in êên rie of kolom ligge, kiek dan of 't zelfde ciefer verderop in die lien, buten 't blok, as kandidaet staet. Vò opeise kiek je langs 'n rie of kolom: as de kandidaeten vò 'n ciefer allemaele in êên blok ligge, mag 't ciefer uut de rest van dat blok weg. In 't spel tik je op 'n ciefertoets om elke kandidaet vò dat ciefer te markere; 'n lien van twee of drie gemarkeerde notities in êên blok is 't patroôn."
+          ],
+          "examples": [
+            {
+              "h": "Wieze",
+              "steps": [
+                "In blok {box} eit ciefer {d} allêên deêze kandidaetvakjes: {cells}. Ze ligge allemaele in rie {row}.",
+                "Blok {box} eit 'n {d} nôdig, dus de {d} van rie {row} ligt in blok {box}, in welk van die vakjes 't ok komt.",
+                "Rie {row} kan geên tweede {d} bevatte, dus hael {d} weg uut de vakjes van rie {row} buten 't blok: {elim}."
+              ]
+            },
+            {
+              "h": "Opeise",
+              "steps": [
+                "In rie {row} kan ciefer {d} allêên in {cells}, en die ligge allemaele in blok {box}.",
+                "Rie {row} moet {d} bevatte, dus de {d} van blok {box} wordt opgeëist deur rie {row}. De aore vakjes van blok {box} kunne geên {d} bevatte.",
+                "Hael {d} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Bie wieze 't ciefer binnen 't blok wegstreepe in plekke van erbuten, of andersom bie opeise. Je streept altied weg in de vakjes die in de lien ligge mae nie in 't blok, of in 't blok mae nie in de lien.",
+            "De regel toepasse as de kandidaeten over twee rieën van 't blok verspreid ligge. Alle kandidaetvakjes vò 't ciefer in 't blok moete in êên lien ligge.",
+            "Vergete te zoeke nae de single die deur 't wegstreepe ontstaet. Vastezette kandidaeten zette zelden zelf 'n ciefer; ze maeke 'n single klaer."
+          ],
+          "faq": [
+            [
+              "Wat bin vastezette kandidaeten in Sudoku?",
+              "Kandidaeten vò 'n ciefer die beperkt bin tot de overlap van 'n blok en 'n lien. Omdat 't blok, of de lien, 't ciefer binnen die overlap moet bevatte, kan 't ciefer weg uut de rest van de lien, of de rest van 't blok."
+            ],
+            [
+              "Wat is 't verschil tussen wieze en opeise?",
+              "Wieze begint bie 'n blok: de kandidaeten van 't ciefer in 't blok wieze langs êên rie of kolom, dus 't ciefer gaet weg uut de rest van die lien. Opeise begint bie 'n rie of kolom: de kandidaeten van die lien vò 't ciefer ligge allemaele in êên blok, dus de lien eist 't ciefer op en 't gaet weg uut de rest van 't blok."
+            ],
+            [
+              "Eête vastezette kandidaeten ok intersectie-eliminatie?",
+              "Jae. Aore naemen bin blok-lienreductie vò 't opeise en wiezende paeren of wiezende drietallen vò 't wieze. Bare Sudoku gebruukt êên naem vò allebei."
+            ],
+            [
+              "Welk niveau eit vastezette kandidaeten nôdig?",
+              "Moeilijk. 'n Puzzel die vastezette kandidaeten of paeren en drietallen nôdig eit mae niks moeilijkers, wordt Moeilijk; Expert-puzzels ebbe daernaest ok 'n vis of 'n vleugel nôdig."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Naekte paeren en drietallen",
+          "title": "Naekte paeren en drietallen in Sudoku: oe ze werke",
+          "description": "Naekte paeren en drietallen: twee of drie vakjes in 'n groep mie dezelfde twee of drie kandidaeten. Leêr ze vinde en wat je wegstreept, mie echte voorbeelden.",
+          "h1": "Naekte paeren en drietallen (naked pair, naked triple)",
+          "summary": "'n Naekt paer is twee vakjes in dezelfde rie, kolom of blok mie percies dezelfde twee kandidaeten. Die twee ciefers moete in die twee vakjes, dus ze kunne weg uut elk aor vakje van de groep. 'n Naekt drietal is 't zelfde idee mie drie vakjes en drie ciefers; elk vakje kan twee of alle drie der van toône. De hint van Bare Sudoku zet \"Paer of drietal\" bie de zet die daeruut volgt.",
+          "when": [
+            "As de notities volledig bin en de singles en vastezette kandidaeten op bin. Naekte paeren komme in Moeilijke puzzels 'eêl vaek vò, naekte drietallen minder. Allebei bin ze de moeite weêrd in elke groep die nog vuuf of meêr lege vakjes eit."
+          ],
+          "spot": [
+            "Zoek vakjes mie mae twee kandidaeten en zoek 'n aor vakje in dezelfde groep mie dezelfde twee. Vò drietallen bekiek je groepen mie meêrdere vakjes van twee en drie kandidaeten, en kiek je of der drie saemen mae drie verschillende ciefers gebruke. Vakjes mie percies dezelfde kandidaeten zie je makkelijk as de notities der staen; Notities invulle in 't spel doet dat mie êên tik."
+          ],
+          "examples": [
+            {
+              "h": "Naekt paer",
+              "steps": [
+                "{cellA} en {cellB} in {unit} ebbe percies dezelfde twee kandidaeten: {d1} en {d2}.",
+                "'t Ene moet {d1} weze en 't aore {d2}. Welk welk is, weet je nie, mae allebei de ciefers worre deur deêze twee vakjes opgebruukt.",
+                "Dus geên aor vakje van {unit} kan {d1} of {d2} bevatte. Hael weg: {elim}."
+              ]
+            },
+            {
+              "h": "Naekt drietal",
+              "steps": [
+                "Drie vakjes van {unit} haele al under kandidaeten uut dezelfde drie ciefers, {digits}: {cells}.",
+                "De drie ciefers moete deêze drie vakjes in de een of aore volgorde vulle. 'n Vakje oeft nie alle drie de kandidaeten te toône; 't gaet derom dat geên van de drie vakjes 'n kandidaet buten de set eit.",
+                "Hael {digits} weg uut elk aor vakje van {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Twee vakjes neme die twee kandidaeten deêle mae ok nog 'n derde ebbe. Vò 'n naekt paer moet elk vakje percies de twee kandidaeten ebbe en niks aors.",
+            "De ciefers uut de paervakjes zelf weg'aele. 't Paer ouwt z'n kandidaeten; je streept weg in de aore vakjes van de groep.",
+            "Eise dat elk vakje van 'n drietal alle drie de ciefers toônt. 'n Vakje mie twee van de drie is goed, zôlank geên vakje 'n kandidaet buten de set eit."
+          ],
+          "faq": [
+            [
+              "Wat is 'n naekt paer in Sudoku?",
+              "Twee vakjes in êên groep die allebei percies dezelfde twee kandidaeten ebbe. Die twee ciefers zitte vast in die twee vakjes, dus ze kunne weg uut de rest van de groep."
+            ],
+            [
+              "Wat is 'n naekt drietal?",
+              "Drie vakjes in êên groep waervan de kandidaeten saemen mae drie ciefers bin. Elk vakje kan twee of drie der van ebbe. De drie ciefers vulle de drie vakjes, dus ze kunne weg uut de aore vakjes van de groep."
+            ],
+            [
+              "Zet 'n naekt paer 'n ciefer?",
+              "Nie in z'n eentje. 't Streept kandidaeten weg, en daernae blieft der meêstal 'n naekte of verborge single over. De hint in Bare Sudoku toônt die single en noemt de techniek die 'm mogelijk maekte."
+            ],
+            [
+              "Kan 'n naekt paer tegelieke in 'n blok en 'n rie ligge?",
+              "Jae. As de twee vakjes 'n rie en 'n blok deêle, streept 't paer in allebei de groepen weg. Bare Sudoku doet dat êên groep tegelieke."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Verborge paeren en drietallen",
+          "title": "Verborge paeren en drietallen in Sudoku: zô vin je ze",
+          "description": "'n Verborge paer is twee ciefers die allêên in dezelfde twee vakjes van 'n groep kunne, dus under aore kandidaeten gaen weg. Leêr ze stap vò stap vinde.",
+          "h1": "Verborge paeren en drietallen (hidden pair, hidden triple)",
+          "summary": "'n Verborge paer is twee ciefers die binnen êên rie, kolom of blok kandidaet bin in dezelfde twee vakjes en nerges aors. Die twee vakjes moete die twee ciefers krieë, dus elke aore kandidaet in die vakjes kan weg. 'n Verborge drietal werkt op dezelfde manier mie drie ciefers die tot drie vakjes beperkt bin. Nae 't wegstreepe toône de vakjes 'n naekt paer of drietal. De hint van Bare Sudoku zet \"Paer of drietal\" bie de zet die daeruut volgt.",
+          "when": [
+            "As 'n groep vakjes mie vee kandidaeten eit en de singles op bin. Verborge paeren verstoppe under in drukke vakjes, en daerom loont 't om ze te zoeke percies daer waer je geên naekte paeren ziet. Verborge drietallen bin zeldzaem; Bare Sudoku zoekt der wel nae, mae de meêste Moeilijke puzzels los je zonder op."
+          ],
+          "spot": [
+            "Werk per ciefer, nie per vakje. Kiek in 'n groep in welke vakjes elk ontbrekend ciefer kan. As twee ciefers elk mae twee mogelijke vakjes ebbe en 't bin dezelfde twee vakjes, dan is dat 'n verborge paer. In 't spel tik je op 'n ciefertoets om z'n kandidaeten te markere; as twee ciefers dezelfde twee vakjes van 'n groep oplichte en verder niks in die groep, dan is dat 't patroôn."
+          ],
+          "examples": [
+            {
+              "h": "Verborge paer",
+              "steps": [
+                "In {unit} ebbe de ciefers {d1} en {d2} elk mae twee mogelijke vakjes, en 't bin dezelfde twee: {cells}.",
+                "Die twee vakjes moete {d1} en {d2} krieë, dus under aore kandidaeten bin onmogelijk.",
+                "Hael weg: {elim}. Noe toône de twee vakjes 'n naekt paer, en dat kan nog meêr vriemaeke."
+              ]
+            }
+          ],
+          "mistakes": [
+            "De twee paerciefers uut de paervakjes weg'aele. 't Bin de aore kandidaeten van die vakjes die weggaen; de paerciefers blieve.",
+            "'n Ciefer meêtelle dat nog 'n derde mogelijk vakje in de groep eit. Allebei de ciefers moete tot percies de twee vakjes beperkt bin.",
+            "Allêên in blokken kieke. Verborge paeren komme net zô vaek vò in rieën en kolommen."
+          ],
+          "faq": [
+            [
+              "Wat is 'n verborge paer in Sudoku?",
+              "Twee ciefers die allêên in dezelfde twee vakjes van 'n groep kunne. Die vakjes moete die ciefers krieë, dus under aore kandidaeten gaen weg."
+            ],
+            [
+              "Oe verschilt 'n verborge paer van 'n naekt paer?",
+              "'n Naekt paer zie je zô: twee vakjes die allêên dezelfde twee kandidaeten toône. 'n Verborge paer wordt bedekt deur extra kandidaeten in de twee vakjes. As je die extra's wegstreept, wordt 'n verborge paer 'n naekt paer."
+            ],
+            [
+              "Wat is 'n verborge drietal?",
+              "Drie ciefers die tot drie vakjes van 'n groep beperkt bin. Elk ciefer oeft nie in alle drie de vakjes te staen; 't gaet derom dat geên van de drie ciefers 'n kandidaet buten die vakjes eit."
+            ],
+            [
+              "Maekt de hint onderscheid tussen verborge en naekte paeren?",
+              "Nee. Bare Sudoku vint allebei en zet \"Paer of drietal\" bie de zet die daeruut volgt. De pagina's ier ouwe ze uut mekaore omdat je ze op 'n aore manier vint."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing in Sudoku: zô werkt de techniek",
+          "description": "X-Wing: 'n ciefer mie percies twee kandidaetvakjes in twee rieën, in dezelfde twee kolommen, gaet weg uut de rest van die kolommen. Mie 'n echt voorbeeld.",
+          "h1": "X-Wing",
+          "summary": "'n X-Wing is 'n patroôn van êên ciefer en vier vakjes op de oeken van 'n rechthoek. As 't ciefer in elk van twee rieën percies twee kandidaetvakjes eit, en die vakjes ligge in dezelfde twee kolommen, dan moet 't ciefer op twee tegenoverliggende oeken van de rechthoek staen. Daerom kan 't weg uut elk aor vakje van die twee kolommen. 't Zelfde werkt mie rieën en kolommen omgewisseld. 't Is de eêrste Expert-techniek in Bare Sudoku.",
+          "when": [
+            "As singles, vastezette kandidaeten en paeren en drietallen op bin. X-Wings bin 't meêst voorkommende Expert-patroôn en komme vaek vò as 'n ciefer nog mae weinig kandidaeten eit, meêstal as der a vier tot zes exemplaeren staen. Der bin volledige notities vò nôdig vò 't ciefer dat je bekiekt."
+          ],
+          "spot": [
+            "Kies 'n ciefer en zoek rieën waerin 't percies twee kandidaetvakjes eit. As twee van die rieën dezelfde twee kolommen deêle, kiek dan in die kolommen nae aore kandidaeten vò dat ciefer: die mag je wegstreepe. Doe 't dan nog es mie kolommen as basis. In 't spel tik je op de ciefertoets: elke kandidaet vò dat ciefer wordt gemarkeerd, en 'n rechthoek van vier gemarkeerde notities zie je makkelijk."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Ciefer {d} eit percies twee kandidaetvakjes in rie {r1} en percies twee in rie {r2}, en ze ligge in dezelfde twee kolommen, {c1} en {c2}: {cells}.",
+                "Rie {r1} zet z'n {d} in kolom {c1} of {c2}, en rie {r2} zet z'n {d} in de aore. Oe dan ok, kolom {c1} en kolom {c2} krieë elk 'n {d} uut deêze twee rieën.",
+                "Dus {d} kan nerges aors in de kolommen {c1} en {c2} staen. Hael {d} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "'n Rie gebruke waerin 't ciefer drie kandidaetvakjes eit. Elke basisrie moet der percies twee ebbe, en allebei in de twee gedeêlde kolommen.",
+            "'t Ciefer uut de rieën weg'aele in plekke van uut de kolommen. Mie rieën as basis streep je weg in de kolommen, en andersom.",
+            "De omgewisselde versie vergete. 'n X-Wing op kolommen streept weg in rieën."
+          ],
+          "faq": [
+            [
+              "Wat is 'n X-Wing in Sudoku?",
+              "'n Ciefer dat in elk van twee rieën percies twee kandidaetvakjes eit, in dezelfde twee kolommen. 't Ciefer staet op twee tegenoverliggende oeken van die rechthoek, dus 't gaet weg uut de rest van de twee kolommen. Rieën en kolommen kunne omgewisseld worre."
+            ],
+            [
+              "Waerom werkt 'n X-Wing?",
+              "Elk van de twee rieën moet 't ciefer in êên van de twee kolommen zetten, en de twee rieën kunne nie dezelfde kolom gebruke. Dus krieë de twee kolommen elk under exemplaer van 't ciefer uut deêze rieën, en elke aore kandidaet in die kolommen is onmogelijk."
+            ],
+            [
+              "Is 'n X-Wing 'n vis?",
+              "Jae. De X-Wing is de vis van grôte twee; Swordfish is de vis van grôte drie. Bare Sudoku vint allebei."
+            ],
+            [
+              "Op welk niveau komme X-Wings vò?",
+              "Expert. 'n Puzzel die 'n X-Wing, Y-Wing, Swordfish of XYZ-Wing nôdig eit, wordt Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: zô werkt de techniek",
+          "description": "Y-Wing (XY-Wing): 'n spil mie twee kandidaeten en twee vleugels die elk êên der van deêle, dwinge 'n ciefer weg uut elk vakje dat allebei de vleugels ziet.",
+          "h1": "Y-Wing",
+          "summary": "'n Y-Wing, ok XY-Wing genoemd, gebruukt drie vakjes mie elk twee kandidaeten. De spil eit de kandidaeten X en Y. De ene vleugel ziet de spil en eit X en Z; de aore vleugel ziet de spil en eit Y en Z. Wat de spil ok wordt, êên van de vleugels moet Z weze, dus Z kan weg uut elk vakje dat allebei de vleugels ziet. In Bare Sudoku is 't 'n Expert-techniek.",
+          "when": [
+            "As 'n puzzel meêrdere vakjes mie percies twee kandidaeten eit en der geên vis te vinde is. Y-Wings komme vee vò in Expert-puzzels en je vint ze deur de vakjes mie twee kandidaeten te volge: elk der van kan 'n spil of 'n vleugel weze."
+          ],
+          "spot": [
+            "Maek 'n lieste van de vakjes mie percies twee kandidaeten. Neem elk der van as spil mie de kandidaeten X en Y, en zoek tussen z'n buren 'n vakje mie X en 'n aor ciefer Z, en 'n vakje mie Y en dezelfde Z. Die twee bin de vleugels. Zoek dan vakjes die allebei de vleugels zie en Z bevatte. Let op: de vleugels oeve mekaore nie te zie."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "De spil {pivot} eit de kandidaeten {x} en {y}. Die ziet {wingA}, mie {x} en {z}, en {wingB}, mie {y} en {z}.",
+                "As {pivot} {x} is, verliest {wingA} de {x} en wordt {z}. As {pivot} {y} is, wordt {wingB} {z}. In elk geval is êên van de twee vleugels {z}.",
+                "'n Vakje dat allebei de vleugels ziet, kan nooit {z} weze. Hael {z} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vleugels kieze die nie allebei de spil zie. Elke vleugel moet 'n rie, kolom of blok mie de spil deêle.",
+            "Z weg'aele uut vakjes die mae êên vleugel zie. 't Vakje waeruut je Z wegstreept, moet allebei de vleugels zie.",
+            "Z uut de spil weg'aele. In 'n Y-Wing eit de spil geên Z; as 'n die wel eit, is 't patroôn 'n XYZ-Wing mie aore regels."
+          ],
+          "faq": [
+            [
+              "Wat is 'n Y-Wing in Sudoku?",
+              "Drie vakjes mie twee kandidaeten: 'n spil mie X en Y, 'n vleugel mie X en Z die de spil ziet, en 'n vleugel mie Y en Z die de spil ziet. Êên vleugel is altied Z, dus Z gaet weg uut vakjes die allebei de vleugels zie."
+            ],
+            [
+              "Is Y-Wing 't zelfde as XY-Wing?",
+              "Jae. De twee naemen beschrieve 't zelfde patroôn. Bare Sudoku noemt 't Y-Wing."
+            ],
+            [
+              "Waerom moet êên vleugel Z weze?",
+              "As de spil X is, verliest de eêrste vleugel X en wordt Z. As de spil Y is, wordt de tweede vleugel Z. De spil is êên van de twee, dus êên vleugel is Z."
+            ],
+            [
+              "In oevee vakjes streept 'n Y-Wing weg?",
+              "Meêstal êên of twee: allêên de vakjes die allebei de vleugels zie en nog Z bevatte. Dat is genoeg om 'n single te maeke."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish in Sudoku: zô werkt de techniek",
+          "description": "Swordfish: 'n ciefer dat in drie rieën tot drie kolommen beperkt is, gaet weg uut de rest van die kolommen. De vis van grôte drie, mie 'n echt voorbeeld.",
+          "h1": "Swordfish",
+          "summary": "'n Swordfish is 'n X-Wing mie drie rieën en drie kolommen. As 'n ciefer in elk van drie rieën oogstens drie kandidaetvakjes eit, en al die vakjes valle in dezelfde drie kolommen, dan gebruke de drie rieën 't ciefer in die kolommen op, en kan 't ciefer weg uut elk aor vakje van de drie kolommen. Rieën en kolommen kunne omgewisseld worre. Bare Sudoku zoekt nae Swordfish nae Y-Wing, in Expert-puzzels.",
+          "when": [
+            "As X-Wing en Y-Wing niks opleveren. Swordfish komme minder vaek vò dan X-Wings en ebbe 'n ciefer nôdig waervan de kandidaeten dun over drie lienen verspreid bin. Der bin volledige en juuste notities vò dat ciefer vò nôdig."
+          ],
+          "spot": [
+            "Kies 'n ciefer en zoek rieën mie twee of drie kandidaetvakjes der vò. As drie van die rieën saemen mae drie kolommen beslaen, kiek dan in die kolommen nae meêr kandidaeten vò dat ciefer. Nie elke rie oeft in elke kolom 'n kandidaet te ebbe: 'n Swordfish kan zes, zeven, acht of negen vakjes ebbe. In 't spel markeer je 't ciefer mie z'n toets en zoek je drie rieën waervan de kandidaeten in drie kolommen ligge."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Ciefer {d} eit in elk van de rieën {rows} oogstens drie kandidaetvakjes, en al die vakjes valle in de kolommen {cols}: {cells}.",
+                "Elk van de drie rieën moet z'n {d} in êên van de drie kolommen zetten, en geên twee rieën kunne dezelfde kolom gebruke. Dus krieë de drie kolommen under {d} uut deêze drie rieën.",
+                "Elke aore kandidaet {d} in de kolommen {cols} is onmogelijk. Hael {d} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Alle negen vakjes eise. 'n Swordfish mie twee kandidaeten in sommige rieën is ok goed, zôlank de drie rieën mae drie kolommen beslaen.",
+            "'n Rie meêneme mie vier kandidaetvakjes. Elke basisrie mag oogstens drie ebbe, allemaele binnen de drie kolommen.",
+            "Wegstreepe in de basisrieën. Mie rieën as basis streep je weg in de drie kolommen, buten de basisrieën."
+          ],
+          "faq": [
+            [
+              "Wat is 'n Swordfish in Sudoku?",
+              "'n Ciefer waervan de kandidaeten in drie rieën tot drie kolommen beperkt bin. De drie rieën moete 't ciefer in die drie kolommen zetten, êên per kolom, dus 't ciefer gaet weg uut de aore vakjes van die kolommen."
+            ],
+            [
+              "Oe verschilt 'n Swordfish van 'n X-Wing?",
+              "Allêên in grôte: 'n X-Wing gebruukt twee rieën en twee kolommen, 'n Swordfish drie en drie. De redenerienge is dezelfde."
+            ],
+            [
+              "Eit 'n Swordfish percies negen vakjes nôdig?",
+              "Nee. Elke rie kan twee of drie kandidaeten ebbe; 't patroôn eist allêên dat de drie rieën saemen nie meêr as drie kolommen gebruke."
+            ],
+            [
+              "Bestaet der 'n vis van grôte vier?",
+              "Jae, de Jellyfish. Bare Sudoku gebruukt 'm nie, omdat z'n puzzels der nooit êên nôdig ebbe."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: zô werkt de techniek",
+          "description": "XYZ-Wing: 'n spil mie drie kandidaeten en twee vleugels die êên der van deêle, dwinge dat ciefer weg uut elk vakje dat ze alle drie ziet. Echt voorbeeld.",
+          "h1": "XYZ-Wing",
+          "summary": "'n XYZ-Wing is 'n Y-Wing waervan de spil drie kandidaeten eit. De spil eit X, Y en Z; de ene vleugel ziet de spil en eit X en Z, de aore ziet de spil en eit Y en Z. Êên van de drie vakjes moet Z weze, dus Z kan weg uut elk vakje dat ze alle drie ziet. Omdat de spil zelf Z kan weze, moet 't vakje waeruut je wegstreept de spil en allebei de vleugels zie, en dat beperkt 't tot 't blok of de lien die de vakjes deêle. 't Is de moeilijkste techniek die Bare Sudoku gebruukt.",
+          "when": [
+            "Allêên as al de rest faelt. XYZ-Wings bin 't zeldzaemste patroôn in Bare Sudoku en komme allêên vò in Expert-puzzels. Zoek der nae as 'n vakje mie drie kandidaeten in 'n blok ligt mie 'n vakje mie twee kandidaeten dat twee van z'n ciefers deêlt."
+          ],
+          "spot": [
+            "Begin bie vakjes mie percies drie kandidaeten; elk der van kan 'n spil weze. Zoek tussen z'n buren twee vakjes mie elk twee kandidaeten, allebei uut de drie van de spil, die percies êên ciefer Z deêle. Zoek dan vakjes die de spil en allebei de vleugels zie en Z bevatte. In de praktiek ligt de ene vleugel in 't blok van de spil en de aore in z'n rie of kolom, en bin de vakjes waeruut je wegstreept de overige vakjes van dat blok in die rie of kolom."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "De spil {pivot} eit drie kandidaeten: {x}, {y} en {z}. Die ziet {wingA} mie {x} en {z}, en {wingB} mie {y} en {z}.",
+                "As {pivot} {z} is, klaer. As 't {x} is, moet {wingA} {z} weze. As 't {y} is, moet {wingB} {z} weze. In elk geval is êên van de drie vakjes {z}.",
+                "'n Vakje dat ze alle drie ziet, kan geên {z} weze. Hael {z} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wegstreepe uut vakjes die allêên de twee vleugels zie. Anders as bie 'n Y-Wing kan de spil Z weze, dus 't vakje moet ok de spil zie.",
+            "Vleugels gebruke waervan de kandidaeten nie allebei binnen de drie kandidaeten van de spil valle.",
+            "'t Verwarre mie 'n Y-Wing: 't verschil is de derde kandidaet in de spil, en die bepaelt uut welke vakjes je mag wegstreepe."
+          ],
+          "faq": [
+            [
+              "Wat is 'n XYZ-Wing in Sudoku?",
+              "'n Spil mie de kandidaeten X, Y en Z en twee vleugels, êên mie X en Z en êên mie Y en Z, die allebei de spil zie. Êên van de drie vakjes is Z, dus Z gaet weg uut vakjes die ze alle drie zie."
+            ],
+            [
+              "Oe verschilt 'n XYZ-Wing van 'n Y-Wing?",
+              "De spil eit drie kandidaeten in plekke van twee, en Z is der êên van. Daerdeur kan Z ok in de spil terechtkomme, dus allêên vakjes die de spil en allebei de vleugels zie, kunne Z kwiet raeke."
+            ],
+            [
+              "Oe vaek komt 'n XYZ-Wing vò?",
+              "Zelden. In Bare Sudoku kunne allêên Expert-puzzels der êên nôdig ebbe, en de meêste ebbe 't nie. Bare Sudoku kiekt 'm as laetste nae, nae X-Wing, Y-Wing en Swordfish."
+            ],
+            [
+              "Bestaet der 'n WXYZ-Wing?",
+              "Jae, mie 'n spil mie vier kandidaeten, mae Bare Sudoku gebruukt 'm nie. Elke puzzel in 't spel kan je afmaeke mie de negen technieken van deêze gids."
+            ]
+          ]
+        }
+      }
+    },
+    "vls": {
+      "learnHeading": "Sudoku leern",
+      "learnText": "Nieuw in Sudoku, of zit je vaste mee e moeilike puzzel? Twee gidsn leggn de regels uut en elke oplostechniek die de hints gebruukn, elk mee e echt voorbeeld.",
+      "howToLink": "Oe speel je Sudoku",
+      "techniquesLink": "Sudoku-oplostechniekn",
+      "labels": {
+        "howTo": "Oe speel je",
+        "techniques": "Techniekn",
+        "play": "Speel Sudoku",
+        "prev": "Vorige techniek",
+        "next": "Volgende techniek",
+        "all": "Alle techniekn",
+        "example": "Voorbeeld",
+        "steps": "Stap voe stap",
+        "when": "Wanneer gebruuk je 't",
+        "spot": "Oe vind je 't",
+        "mistakes": "Veel gemakte foutn",
+        "inGame": "In Bare Sudoku",
+        "level": "Nodig vanof niveau: {level}",
+        "hint": "In 't spel zegt den hint: {text}",
+        "legend": "Vette cyfers zyn gegeven, blauwe cyfers zyn tydens 't oplossn geplaatst, klinne cyfers zyn kandidoatn. Gemarkeerde vakjes vormn 't patroon, deurgestreepte kandidoatn goan weg, en e kandidoat mee e cirkeltje rond is 't cyfer da je plaatst.",
+        "notation": "Vakjes schryf je as r3c7: reke 3, kolom 7. Rekn tel je van boven, kolommn van links, en blokkn van 1 toet 9 van linksboven, reke voe reke.",
+        "row": "reke {n}",
+        "column": "kolom {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} uut {cell}",
+        "regions": "Reke 5, kolom 5 en blok 5 an 't begin van e puzzel",
+        "firstMove": "E noakte single: {cell} kan moar {d} zyn",
+        "breadcrumb": "Kruumelpad"
+      },
+      "howTo": {
+        "title": "Oe speel je Sudoku: regels, speelveld en eeste zettn",
+        "description": "Leer oe da je Sudoku speelt: de regels, oe rekn, kolommn en blokkn werkn, woarom elke puzzel één oplossinge eit, notities en je eeste zettn.",
+        "h1": "Oe speel je Sudoku",
+        "summary": "Sudoku is e logische puzzel op e rooster van 9×9. Vul elk leeg vakje in mee e cyfer van 1 toet 9, zoda elke reke, elke kolom en elk blok van 3×3 elk cyfer juste één keer bevat. Sommige cyfers zyn an 't begin al gegeven; de rest beredeneer je, telkens één vakje da zeker is, en je moet nooit gokkn. Deze gids legt 't speelveld uut, de regels, 't principe van één oplossinge, notities en e simpele strategie voe je eeste zettn. Je kunt alles oefenn in [Bare Sudoku](play), da gratis is en hints eit die de logica uutleggn.",
+        "sections": [
+          {
+            "h": "Wuk zyn de regels van Sudoku?",
+            "p": [
+              "Der zyn moar drie regels, en 't is eigenlik dezelfste regel uut drie richtingn bekekn: elke reke moet de cyfers 1 toet 9 bevattn, elke kolom moet de cyfers 1 toet 9 bevattn, en elk blok van 3×3 moet de cyfers 1 toet 9 bevattn. E cyfer kan dus nooit twee keer in dezelfste reke, kolom of blok stoan.",
+              "De gegeven cyfers, in 't vet, liggn vaste. Je toak is de leege vakjes in te vulln. Der komt gin rekenwerk an te pas en gin volgorde: de cyfers zyn gewoon negen verschillende tekens. Je zou 't ook mee letters of vormn kunn doen en der zou niks verandern."
+            ]
+          },
+          {
+            "h": "Oe is 't speelveld ingedeeld?",
+            "p": [
+              "'t Speelveld eit 81 vakjes in 9 rekn en 9 kolommn. Dikke lynn verdeeln 't in negen blokkn van 3×3. Elk vakje oort by juste één reke, één kolom en één blok, en die drie zyn zyn groepn. De 20 andere vakjes die e groep mee e vakje deeln, eetn zyn gebuurn; e cyfer da je in e vakje zet, sluut da cyfer uut in alle 20 gebuurn.",
+              "Vakjes schryf je as r3c7: reke 3, kolom 7. Rekn tel je van boven, kolommn van links, en blokkn van 1 toet 9 van linksboven, reke voe reke. Die notatie wordt in elke techniekgids gebruukt en is de moeite weerd om te leern: r5c5 is 't midden van 't speelveld."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Woarom eit elke Sudoku juste één oplossinge?",
+            "p": [
+              "E echte Sudoku eit één oplossinge, en doardeure werkt de logica. As je kunt toogn da e cyfer nieveranst anders in e groep kan, dan moet 't in 't vakje da overblyft, want de oplossinge bestoat en is uniek. As e puzzel twee oplossingn ad, kon gin enkele redeneringe ze uut malkoar oudn en zou je op e gegeven moment moetn gokkn.",
+              "Bare Sudoku moakt elke puzzel op je toestel en kykt noa of da 'n puzzel juste één oplossinge eit en of zyn logische oplosser 'm kan afmoakn mee de techniekn van 't gekozen niveau. As je vaste zit, is der dus altyd e volgende stap te vindn, en den hint toogt 'm."
+            ]
+          },
+          {
+            "h": "Oe begin je an e Sudoku?",
+            "p": [
+              "Begin mee wuk dat 't meest beperkt is. Deze volgorde werkt op elk niveau:"
+            ],
+            "list": [
+              "Kies e cyfer da der al dikkers stoat, zeg zes of zeven keer, en zoek de blokkn woa dat 't nog ontbreekt. Dikkers is der in e blok moar één vakje meer voe: da's e [verborgn single](hidden-single).",
+              "Kyk noar volle vakjes. E vakje woavan de reke, kolom en 't blok samen acht verschillende cyfers bevattn, eit nog moar één kandidoat over: e [noakte single](naked-single). Vakjes in bykans volle rekn of blokkn zyn de beste plekkn om te kykn.",
+              "Elk cyfer da je zet, oalt e kandidoat weg uut 20 gebuurn, dus kyk die gebuurn direct noa. Singles kommn dikkers achter malkoar.",
+              "As de gemakkelike zettn op zyn, schryf dan notities: de kandidoatn voe elk leeg vakje. Zoek dan e cyfer da in e blok toet één lyn beperkt is ([vastgezette kandidoatn](locked-candidates)) of twee vakjes mee dezelfste twee kandidoatn (e [noakt poar](naked-pairs)).",
+              "Goa noa elke kandidoat da je wegstreept were noar de singles. Zelfs Expert-puzzels los je vooral op mee singles; de moeilikere techniek zet enkel de volgende kloar."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Wuk zyn notities en wanneer gebruuk je ze?",
+            "p": [
+              "Notities, ook potloodtekens of kandidoatn genoemd, zyn de klinne cyfers da je in e leeg vakje schryft om by te oudn welke cyfers doa nog kunn. In gemakkelike puzzels zyn ze zelden nodig; vanof Moeilik zyn ze onmisboar, want techniekn lik poarn, X-Wing en Y-Wing goan over kandidoatn, nie over geplaatste cyfers.",
+              "Oud de notities juste: as je e cyfer zet, oal 't dan weg uut de notities van alle 20 gebuurn. In Bare Sudoku gebeurt da vanzelf, en Notities invulln zet mee één tik elke kandidoat in elk leeg vakje, zoda je kunt beginn mee e volledige, juste set kandidoatn. E notitie is e feit, gin gok: 't betekent da nog niks da cyfer uutsluut."
+            ]
+          },
+          {
+            "h": "Wuk doe je as je vaste zit?",
+            "p": [
+              "Kyk eerst de basis nog e ki noa: elke bykans volle reke, kolom en blok levert singles op. Zorg dan da de notities volledig zyn, want e kandidoat die ontbreekt verstopt patroonn en e kandidoat die nie meer klopt, moakt valse patroonn. Werk dan de [techniekn](techniques) af in volgorde van moeilikeid: vastgezette kandidoatn, poarn en drietalln, X-Wing, Y-Wing, Swordfish en XYZ-Wing. Elke techniek eit zyn eigen pagina mee e echt voorbeeld.",
+              "As niks werkt, pak dan e hint. In Bare Sudoku kykt den hint eerst of der e geplaatst cyfer verkeerd is, zoekt dan 't volgende vakje da je mee logica kunt invulln en noemt de techniek, zoda je der toch iets van leert. Tikt nog e ki op den hint voe 't cyfer te plaatsn."
+            ]
+          },
+          {
+            "h": "Oe zet je cyfers in Bare Sudoku?",
+            "p": [
+              "Tik op e vakje en dan op e cyfer. Of tik eerst op e cyfer: 't wordt vastgezet, en elk vakje woa da je op tikt, krygt 't. Da's de rapste manier om 't zesde, zevende en achtste exemplaar van e cyfer te zettn. Tik nog e ki op 't cyfer om 't lus te loatn. De knop Notities schakelt over noar potloodtekens, Vagen moakt e vakje leeg, Ongedoan moakn droait elke zet were, en foutn zie je in 't rood, behalve as je da in 't menu uutzet.",
+              "Op e toetsenbord gebruuk je de pyltjestoetsn om te bewegn, 1 toet 9 om e cyfer in te geevn, Backspace om te vagen, N voe notities, U om ongedoan te moakn, H voe e hint, F om notities in te vulln en Escape voe 't menu. 't Spel sloat zichzelve op, werkt offline en eit gin reclame en gin account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Moe je by Sudoku ooit gokkn?",
+            "Nie in e echte puzzel. Elke puzzel van Bare Sudoku eit juste één oplossinge en is nagekekn of je 'm enkel mee logica kunt oplossn, mee de techniekn van zyn niveau. As 't voelt of je moet gokkn, dan ontbreekt der e kandidoat in je notities of wacht der nog e techniek om gevondn te wordn."
+          ],
+          [
+            "Kan e cyfer twee keer in e reke, kolom of blok stoan?",
+            "Nee. Da's de heele regel: elk van de negen rekn, negen kolommn en negen blokkn bevat elk cyfer van 1 toet 9 juste één keer. As twee dezelfste cyfers in dezelfste groep stoan, is der minstens één van verkeerd."
+          ],
+          [
+            "Wuk is 't verschil tusschn Gemakkelik, Middel, Moeilik en Expert?",
+            "'t Niveau angt af van de techniekn die de puzzel vroagt. Gemakkelik en Middel los je op mee enkel singles, en Gemakkelik begint mee minstens 38 gegeven cyfers. Moeilik vroagt vastgezette kandidoatn of poarn en drietalln. Expert vroagt X-Wing, Y-Wing, Swordfish of XYZ-Wing."
+          ],
+          [
+            "Is 't beter om notities in te vulln voe alle vakjes of moar voe e poar?",
+            "Voe Moeilik en Expert: vul ze allemoal in, want patroonn lik poarn, X-Wing en Y-Wing kommn pas in beeld as elke kandidoat der stoat. In Gemakkelik en Middel zyn notities nie verplicht en de meeste spelers zoekn gewoon noar singles."
+          ],
+          [
+            "Oe lange duurt e Sudoku?",
+            "E gemakkelike puzzel duurt e poar minuutn; Expert-puzzels kunn twintig minuutn of langer duurn, afhankelik van oe rap da je 't moeilike patroon ziet. Bare Sudoku toogt e timer, zet 'm stil as 't menu open is en oudt gin ranglyste by, dus speel in je eigen tempo."
+          ],
+          [
+            "Moe je by Sudoku rekenn?",
+            "Nee. De cyfers zyn moar etiketn; der wordt niks opgeteld of geteld. Elke reeks van negen tekens zou werkn, en doarom is Sudoku e logische puzzel en gin rekenpuzzel."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku-oplostechniekn uutgelegd mee voorbeeldn",
+        "description": "Alle negen oplostechniekn voe Sudoku, van noakte singles toet Swordfish en XYZ-Wing, in de volgorde van de hints van Bare Sudoku, elk mee e echt voorbeeld.",
+        "h1": "Sudoku-oplostechniekn",
+        "intro": [
+          "Elke Sudoku kan opgelost wordn mee e klein setje logische techniekn. Deze lyste toogt de negen techniekn die de oplosser van Bare Sudoku en zyn hints gebruukn, in de volgorde woarin de oplosser ze probeert: eerst singles, dan wegstreepn binnen één groep, dan patroonn die over meerdere rekn en kolommn goan. Elke techniek eit zyn eigen pagina mee e definitie, oe da je 'm vindt, e echt voorbeeld uut e gemakte puzzel en de veel gemakte foutn.",
+          "'t Niveau van e puzzel wordt bepoald deur de moeilikste techniek die 't vroagt. Gemakkelike en Middel-puzzels vroagn enkel singles, Moeilike puzzels vroagn vastgezette kandidoatn of poarn en drietalln, en Expert-puzzels vroagn minstens één vis of vleugel. Wuk 't niveau ook is, singles doen 't meeste werk; de moeilikere techniek streept e kandidoat of twee weg en de singles goan doa verder."
+        ],
+        "faq": [
+          [
+            "In welke volgorde probeer ik de Sudoku-techniekn?",
+            "De gemakkelikste eerst: noakte singles, verborgn singles, vastgezette kandidoatn, noakte poarn en drietalln, verborgn poarn en drietalln, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku probeert ze juste in die volgorde, en e hint noemt altyd de simpelste techniek die je verder elpt."
+          ],
+          [
+            "E'k al die techniekn nodig om Sudoku op te lossn?",
+            "Voe Gemakkelik en Middel zyn singles genoeg. Moeilike puzzels voegn der vastgezette kandidoatn en poarn en drietalln an toe. Expert-puzzels vroagn minstens één vis of vleugel, moar meestentyds moar één of twee keer per puzzel."
+          ],
+          [
+            "Zyn der moeilikere techniekn dan XYZ-Wing?",
+            "Joa, bevoorbeeld kettingn, uniciteitstests en forcing nets. Bare Sudoku moakt gin puzzels die ze vroagn, dus elke puzzel in 't spel kun je afmoakn mee de negen techniekn op deze pagina."
+          ],
+          [
+            "Wuk is e kandidoat?",
+            "E cyfer da nog in e leeg vakje kan stoan, omda niks in zyn reke, kolom of blok 't nog uutsluut. De notities in 't spel zyn kandidoatn. Elke techniek noa de singles redeneert over kandidoatn, dus oud ze volledig en juste."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Noakte single",
+          "title": "Noakte single in Sudoku: 't vakje mee één kandidoat",
+          "description": "E noakte single is e leeg vakje mee moar één mogelik cyfer. Leer noakte singles rap vindn, mee e echt voorbeeld stap voe stap en de veel gemakte foutn.",
+          "h1": "Noakte single (naked single)",
+          "summary": "E noakte single is e leeg vakje mee juste één kandidoat: de andere acht cyfers stoan al in zyn reke, kolom of blok. 't Cyfer da overblyft, moet doa. 't Is de simpelste techniek van Sudoku, de techniek da je 't meest gebruukt, en den hint van Bare Sudoku meldt 'm as \"Moar één kandidoat hier\".",
+          "when": [
+            "Altyd. Noakte singles kommn veur van de eeste toet de loatste zet, op elk niveau. In Gemakkelike en Middel-puzzels zyn ze, samen mee verborgn singles, de enigste techniek die nodig is. In moeilikere puzzels loat elke kandidoat die e moeilikere techniek wegstreept meestentyds e noakte single achter, dus kyk der noa elke stap noar."
+          ],
+          "spot": [
+            "Kyk noar vakjes mee veel geplaatste gebuurn: e vakje in e reke mee al zeven cyfers, of e vakje woavan de reke, kolom en 't blok samen acht verschillende cyfers dekkn. Zonder notities tel je de cyfers da je vanuut 't vakje ziet. Mee notities is e noakte single gewoon e vakje mee één kandidoat, en doarom moakt Notities invulln ze gemakkelik te vindn."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Kyk noar {cell}. 't Is leeg, dus schryf alle cyfers op die al in zyn reke, zyn kolom en zyn blok stoan.",
+                "Reke {row} bevat {rowDigits}. Kolom {col} bevat {colDigits}. Blok {box} bevat {boxDigits}.",
+                "Samen sluutn ze elk cyfer uut behalve {d}, dus {d} is de enigste kandidoat die in {cell} overblyft.",
+                "Zet {d} in {cell}. Kyk dan of 't nieuw cyfer e nieuwe single moakt in dezelfste reke, kolom of blok."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Enkel de reke of enkel 't blok telln. De acht uutgeslotn cyfers kommn meestentyds uut alle drie de groepn samen.",
+            "Vergetn da e cyfer da juste gezet is ook kandidoatn uutsluut in zyn 20 gebuurn; nieuwe noakte singles kommn direct noa elke zet veur.",
+            "E noakte single verwarrn mee e verborgn single: by e noakte single eit 't vakje één kandidoat over, by e verborgn single eit 't cyfer één vakje over in e groep."
+          ],
+          "faq": [
+            [
+              "Wuk is e noakte single in Sudoku?",
+              "E leeg vakje mee juste één kandidoat. Acht verschillende cyfers stoan al in zyn reke, kolom en blok, dus 't negende cyfer is 't enigste da past."
+            ],
+            [
+              "Woarom eet 't noakt?",
+              "Omda de enigste kandidoat zo in 't vakje te zien is as de notities der stoan; niks verstopt 'm. E verborgn single stoat doartegen tusschn andere kandidoatn en vind je deur noar 't cyfer te kykn in de plekke van noar 't vakje."
+            ],
+            [
+              "Kun je e puzzel oplossn mee enkel noakte singles?",
+              "Veel Gemakkelike puzzels wel, moar de meeste vroagn ook verborgn singles. Bare Sudoku beoordeelt Gemakkelike en Middel-puzzels as oplosboar mee singles van alle twee de soortn; Moeilike en Expert-puzzels vroagn minstens één andere techniek."
+            ],
+            [
+              "Toogt den hint noakte singles?",
+              "Joa. As de volgende zet e noakte single is, kiest den hint 't vakje en zegt \"Moar één kandidoat hier\" mee 't cyfer. Tikt nog e ki op den hint voe 't te plaatsn."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Verborgn single",
+          "title": "Verborgn single in Sudoku: d'enigste plekke voe e cyfer",
+          "description": "E verborgn single is 't enigste vakje in e reke, kolom of blok woa da e cyfer nog kan. Leer verborgn singles vindn deur telkens één cyfer te bekykn.",
+          "h1": "Verborgn single (hidden single)",
+          "summary": "E verborgn single is e cyfer da in e reke, kolom of blok nog moar één mogelik vakje eit, ook al toogt da vakje misschien andere kandidoatn. Omda de groep 't cyfer moet bevattn, moet 't doa. Den hint van Bare Sudoku meldt 'm as \"Eenigste plekke voe 5 in deze reke\", kolom of blok.",
+          "when": [
+            "Altyd as e cyfer al goed opgeschotn is: as e cyfer vyf of zes keer stoat, zyn de andere blokkn sterk beperkt en is e verborgn single dikkers de volgende zet. Verborgn singles zyn de belangrykste techniek van Gemakkelike en Middel-puzzels en blyvn op elk niveau 't werkpeerd."
+          ],
+          "spot": [
+            "Bekyk telkens één cyfer. Pak e cyfer, zoek e blok woa dat 't nog nie in stoat, en streep elk vakje van da blok deur da e reke of kolom deelt mee e geplaatst exemplaar van da cyfer. As der één vakje overblyft, is da e verborgn single. Dezelfste anpak werkt op rekn en kolommn. In 't spel tik je op e geplaatst cyfer: elk exemplaar wordt gemarkeerd, zoda de vrye vakjes opvalln."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Blok {box} eit nog gin {d}, dus één van zyn leege vakjes moet 'm krygn. De leege vakjes zyn {empties}.",
+                "In elk van die vakjes behalve {cell} wordt {d} geblokkeerd deur e {d} die al in dezelfste reke of kolom stoat, dus {d} is doa gin kandidoat.",
+                "Dan blyft {cell} over as enigste plekke voe {d} in blok {box}. Zet {d} doa, ook al toogt {cell} misschien nog andere kandidoatn."
+              ]
+            }
+          ],
+          "mistakes": [
+            "'t Cyfer zettn in e vakje da moar woarschynlik 't goeie is: kyk elk ander leeg vakje van de groep noa, nie enkel de vakjes die veur de and liggn.",
+            "E verborgn single over 't oofd zien omda 't vakje meerdere kandidoatn toogt. De andere kandidoatn doen der nie toe; 't goat derom da 't cyfer gin andere plekke in de groep eit.",
+            "Enkel blokkn bekykn. Rekn en kolommn geevn even dikkers verborgn singles, vooral tegn 't einde."
+          ],
+          "faq": [
+            [
+              "Wuk is e verborgn single in Sudoku?",
+              "E cyfer da moar in één vakje van e reke, kolom of blok kan. De groep moet 't cyfer bevattn, dus 't vakje ligt vaste, ook al eit 't nog andere kandidoatn."
+            ],
+            [
+              "Wuk is 't verschil tusschn e verborgn single en e noakte single?",
+              "E noakte single goat over e vakje: één kandidoat over. E verborgn single goat over e cyfer: één vakje over in e groep. Alle twee zettn ze e cyfer mee zekereid."
+            ],
+            [
+              "Welke is gemakkeliker te vindn?",
+              "Zonder notities zyn verborgn singles meestentyds gemakkeliker, want je kunt 't speelveld telkens voe één cyfer bekykn. Mee volledige notities zyn noakte singles 't gemakkelikst, want e vakje mee één kandidoat valt direct op."
+            ],
+            [
+              "Oe beschryft den hint e verborgn single?",
+              "As \"Eenigste plekke voe\" 't cyfer in deze reke, deze kolom of da blok, mee 't vakje geselecteerd. Tikt nog e ki op den hint voe 't te plaatsn."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Vastgezette kandidoatn",
+          "title": "Vastgezette kandidoatn in Sudoku: wyzn en opeisn",
+          "description": "Vastgezette kandidoatn: as de kandidoatn voe e cyfer in e blok allemoal in één reke of kolom liggn, of omgekeerd, goat 't cyfer elders weg. Twee voorbeeldn.",
+          "h1": "Vastgezette kandidoatn (locked candidates)",
+          "summary": "Vastgezette kandidoatn is de eeste techniek die kandidoatn wegoalt in de plekke van e cyfer te zettn. Der zyn twee vormn. Wyzn: in e blok liggn alle kandidoatn voe e cyfer in één reke of kolom, dus 't cyfer goat weg uut de rest van die lyn. Opeisn: in e reke of kolom liggn alle kandidoatn voe e cyfer in één blok, dus 't cyfer goat weg uut de rest van da blok. Den hint van Bare Sudoku zet \"Vastgezette kandidoatn\" by de zet die doardeure mogelik wordt.",
+          "when": [
+            "As de singles op zyn in e Moeilike puzzel, is dit 't eeste om te proberen. Der zyn volledige notities voe nodig, minstens voe 't cyfer da je bekykt. Vastgezette kandidoatn kommn veel veur: de meeste Moeilike puzzels vroagn ze, en Expert-puzzels gebruukn ze tusschn de grotere patroonn deure."
+          ],
+          "spot": [
+            "Voe 't wyzn bekyk je elk blok en elk cyfer da der nog in ontbreekt: as de kandidoatvakjes voe da cyfer in één reke of kolom liggn, kyk dan of 't zelfste cyfer verderop in die lyn, buutn 't blok, as kandidoat stoat. Voe 't opeisn kyk je langs e reke of kolom: as de kandidoatn voe e cyfer allemoal in één blok liggn, mag 't cyfer uut de rest van da blok weg. In 't spel tik je op e cyfertoets om elke kandidoat voe da cyfer te markeern; e lyn van twee of drie gemarkeerde notities in één blok is 't patroon."
+          ],
+          "examples": [
+            {
+              "h": "Wyzn",
+              "steps": [
+                "In blok {box} eit cyfer {d} moar deze kandidoatvakjes: {cells}. Ze liggn allemoal in reke {row}.",
+                "Blok {box} moet e {d} ebbn, dus de {d} van reke {row} ligt in blok {box}, in welk van die vakjes da 't ook komt.",
+                "Reke {row} kan gin tweede {d} bevattn, dus oal {d} weg uut de vakjes van reke {row} buutn 't blok: {elim}."
+              ]
+            },
+            {
+              "h": "Opeisn",
+              "steps": [
+                "In reke {row} kan cyfer {d} moar in {cells}, en die liggn allemoal in blok {box}.",
+                "Reke {row} moet {d} bevattn, dus de {d} van blok {box} wordt opgeëist deur reke {row}. De andere vakjes van blok {box} kunn gin {d} bevattn.",
+                "Oal {d} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "By 't wyzn 't cyfer binnen 't blok wegstreepn in de plekke van derbuutn, of omgekeerd by 't opeisn. Je streept altyd weg in de vakjes die in de lyn liggn moar nie in 't blok, of in 't blok moar nie in de lyn.",
+            "De regel toepassn as de kandidoatn over twee rekn van 't blok verspreid liggn. Alle kandidoatvakjes voe 't cyfer in 't blok moetn in één lyn liggn.",
+            "Vergetn te zoekn noar de single die deur 't wegstreepn ontstoat. Vastgezette kandidoatn zettn zelden zelve e cyfer; ze moakn e single kloar."
+          ],
+          "faq": [
+            [
+              "Wuk zyn vastgezette kandidoatn in Sudoku?",
+              "Kandidoatn voe e cyfer die beperkt zyn toet de overlap van e blok en e lyn. Omda 't blok, of de lyn, 't cyfer binnen die overlap moet bevattn, kan 't cyfer weg uut de rest van de lyn, of de rest van 't blok."
+            ],
+            [
+              "Wuk is 't verschil tusschn wyzn en opeisn?",
+              "Wyzn begint by e blok: de kandidoatn van 't cyfer in 't blok wyzn langs één reke of kolom, dus 't cyfer goat weg uut de rest van die lyn. Opeisn begint by e reke of kolom: de kandidoatn van die lyn voe 't cyfer liggn allemoal in één blok, dus de lyn eist 't cyfer op en 't goat weg uut de rest van 't blok."
+            ],
+            [
+              "Eetn vastgezette kandidoatn ook intersectie-eliminatie?",
+              "Joa. Andere noamn zyn blok-lynreductie voe 't opeisn en wyzende poarn of wyzende drietalln voe 't wyzn. Bare Sudoku gebruukt één noame voe alle twee."
+            ],
+            [
+              "Welk niveau vroagt vastgezette kandidoatn?",
+              "Moeilik. E puzzel die vastgezette kandidoatn of poarn en drietalln vroagt moar niks moeilikers, wordt Moeilik; Expert-puzzels vroagn doarbovn ook e vis of e vleugel."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Noakte poarn en drietalln",
+          "title": "Noakte poarn en drietalln in Sudoku: oe da ze werkn",
+          "description": "Noakte poarn en drietalln: twee of drie vakjes in e groep mee dezelfste twee of drie kandidoatn. Leer ze vindn en wuk da je wegstreept, mee echte voorbeeldn.",
+          "h1": "Noakte poarn en drietalln (naked pair, naked triple)",
+          "summary": "E noakt poar is twee vakjes in dezelfste reke, kolom of blok mee juste dezelfste twee kandidoatn. Die twee cyfers moetn in die twee vakjes, dus ze kunn weg uut elk ander vakje van de groep. E noakt drietal is 't zelfste idee mee drie vakjes en drie cyfers; elk vakje kan der twee of alle drie van toogn. Den hint van Bare Sudoku zet \"Poar of drietal\" by de zet die doaruut volgt.",
+          "when": [
+            "As de notities volledig zyn en de singles en vastgezette kandidoatn op zyn. Noakte poarn kommn in Moeilike puzzels heel dikkers veur, noakte drietalln minder. Alle twee zyn ze de moeite weerd in elke groep die nog vyf of meer leege vakjes eit."
+          ],
+          "spot": [
+            "Zoek vakjes mee moar twee kandidoatn en zoek e ander vakje in dezelfste groep mee dezelfste twee. Voe drietalln bekyk je groepn mee meerdere vakjes van twee en drie kandidoatn, en kyk je of der drie samen moar drie verschillende cyfers gebruukn. Vakjes mee juste dezelfste kandidoatn zie je gemakkelik as de notities der stoan; Notities invulln in 't spel doet da mee één tik."
+          ],
+          "examples": [
+            {
+              "h": "Noakt poar",
+              "steps": [
+                "{cellA} en {cellB} in {unit} ebbn juste dezelfste twee kandidoatn: {d1} en {d2}.",
+                "'t Een moet {d1} zyn en 't ander {d2}. Welk da welk is, weet je nie, moar alle twee de cyfers wordn deur die twee vakjes opgebruukt.",
+                "Dus gin ander vakje van {unit} kan {d1} of {d2} bevattn. Oal weg: {elim}."
+              ]
+            },
+            {
+              "h": "Noakt drietal",
+              "steps": [
+                "Drie vakjes van {unit} oaln al under kandidoatn uut dezelfste drie cyfers, {digits}: {cells}.",
+                "De drie cyfers moetn die drie vakjes in de een of andere volgorde vulln. E vakje moet nie alle drie de kandidoatn toogn; 't goat derom da gin van de drie vakjes e kandidoat buutn de set eit.",
+                "Oal {digits} weg uut elk ander vakje van {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Twee vakjes pakkn die twee kandidoatn deeln moar ook nog e derde ebbn. Voe e noakt poar moet elk vakje juste de twee kandidoatn ebbn en niks anders.",
+            "De cyfers uut de poarvakjes zelve wegoaln. 't Poar oudt zyn kandidoatn; je streept weg in de andere vakjes van de groep.",
+            "Eisn da elk vakje van e drietal alle drie de cyfers toogt. E vakje mee twee van de drie is goed, zolange da gin vakje e kandidoat buutn de set eit."
+          ],
+          "faq": [
+            [
+              "Wuk is e noakt poar in Sudoku?",
+              "Twee vakjes in één groep die alle twee juste dezelfste twee kandidoatn ebbn. Die twee cyfers zittn vaste in die twee vakjes, dus ze kunn weg uut de rest van de groep."
+            ],
+            [
+              "Wuk is e noakt drietal?",
+              "Drie vakjes in één groep woavan de kandidoatn samen moar drie cyfers zyn. Elk vakje kan der twee of drie van ebbn. De drie cyfers vulln de drie vakjes, dus ze kunn weg uut de andere vakjes van de groep."
+            ],
+            [
+              "Zet e noakt poar e cyfer?",
+              "Nie in zyn eentje. 't Streept kandidoatn weg, en doarachter blyft der meestentyds e noakte of verborgn single over. Den hint in Bare Sudoku toogt die single en noemt de techniek die 'm mogelik moakte."
+            ],
+            [
+              "Kan e noakt poar tegelyk in e blok en e reke liggn?",
+              "Joa. As de twee vakjes e reke en e blok deeln, streept 't poar in alle twee de groepn weg. Bare Sudoku doet da groep per groep."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Verborgn poarn en drietalln",
+          "title": "Verborgn poarn en drietalln in Sudoku: zo vind je ze",
+          "description": "E verborgn poar is twee cyfers die moar in dezelfste twee vakjes van e groep kunn, dus de andere kandidoatn doa goan weg. Leer ze stap voe stap vindn.",
+          "h1": "Verborgn poarn en drietalln (hidden pair, hidden triple)",
+          "summary": "E verborgn poar is twee cyfers die binnen één reke, kolom of blok kandidoat zyn in dezelfste twee vakjes en nieveranst anders. Die twee vakjes moetn die twee cyfers krygn, dus elke andere kandidoat in die vakjes kan weg. E verborgn drietal werkt op dezelfste manier mee drie cyfers die toet drie vakjes beperkt zyn. Noa 't wegstreepn toogn de vakjes e noakt poar of drietal. Den hint van Bare Sudoku zet \"Poar of drietal\" by de zet die doaruut volgt.",
+          "when": [
+            "As e groep vakjes mee veel kandidoatn eit en de singles op zyn. Verborgn poarn verstoppn zichzelve in volle vakjes, en doarom loont 't om ze te zoekn juste doa woa da je gin noakte poarn ziet. Verborgn drietalln zyn zeldzoam; Bare Sudoku zoekt der wel noar, moar de meeste Moeilike puzzels los je zonder op."
+          ],
+          "spot": [
+            "Werk per cyfer, nie per vakje. Kyk in e groep in welke vakjes elk ontbrekend cyfer kan. As twee cyfers elk moar twee mogelike vakjes ebbn en 't zyn dezelfste twee vakjes, dan is da e verborgn poar. In 't spel tik je op e cyfertoets om zyn kandidoatn te markeern; as twee cyfers dezelfste twee vakjes van e groep doen oplichtn en verder niks in die groep, dan is da 't patroon."
+          ],
+          "examples": [
+            {
+              "h": "Verborgn poar",
+              "steps": [
+                "In {unit} ebbn de cyfers {d1} en {d2} elk moar twee mogelike vakjes, en 't zyn dezelfste twee: {cells}.",
+                "Die twee vakjes moetn {d1} en {d2} krygn, dus de andere kandidoatn in die vakjes zyn onmogelik.",
+                "Oal weg: {elim}. Nu toogn de twee vakjes e noakt poar, en da kan nog meer vrymoakn."
+              ]
+            }
+          ],
+          "mistakes": [
+            "De twee poarcyfers uut de poarvakjes wegoaln. 't Zyn de andere kandidoatn van die vakjes die weggoan; de poarcyfers blyvn.",
+            "E cyfer meetelln da nog e derde mogelik vakje in de groep eit. Alle twee de cyfers moetn toet juste de twee vakjes beperkt zyn.",
+            "Enkel in blokkn kykn. Verborgn poarn kommn even dikkers veur in rekn en kolommn."
+          ],
+          "faq": [
+            [
+              "Wuk is e verborgn poar in Sudoku?",
+              "Twee cyfers die moar in dezelfste twee vakjes van e groep kunn. Die vakjes moetn die cyfers krygn, dus de andere kandidoatn in die vakjes goan weg."
+            ],
+            [
+              "Oe verschilt e verborgn poar van e noakt poar?",
+              "E noakt poar zie je direct: twee vakjes die moar dezelfste twee kandidoatn toogn. E verborgn poar wordt bedekt deur extra kandidoatn in de twee vakjes. As je die extra's wegstreept, wordt e verborgn poar e noakt poar."
+            ],
+            [
+              "Wuk is e verborgn drietal?",
+              "Drie cyfers die toet drie vakjes van e groep beperkt zyn. Elk cyfer moet nie in alle drie de vakjes stoan; 't goat derom da gin van de drie cyfers e kandidoat buutn die vakjes eit."
+            ],
+            [
+              "Moakt den hint verschil tusschn verborgn en noakte poarn?",
+              "Nee. Bare Sudoku vindt alle twee en zet \"Poar of drietal\" by de zet die doaruut volgt. De pagina's hier oudn ze uut malkoar omda je ze op e verschillende manier vindt."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing in Sudoku: zo werkt de techniek",
+          "description": "X-Wing: e cyfer mee juste twee kandidoatvakjes in twee rekn, in dezelfste twee kolommn, goat weg uut de rest van die kolommn. Mee e echt voorbeeld.",
+          "h1": "X-Wing",
+          "summary": "E X-Wing is e patroon van één cyfer en vier vakjes op de oekn van e rechthoek. As 't cyfer in elk van twee rekn juste twee kandidoatvakjes eit, en die vakjes liggn in dezelfste twee kolommn, dan moet 't cyfer op twee tegenoverliggende oekn van de rechthoek stoan. Doarom kan 't weg uut elk ander vakje van die twee kolommn. 't Zelfste werkt mee rekn en kolommn omgewisseld. 't Is de eeste Expert-techniek in Bare Sudoku.",
+          "when": [
+            "As singles, vastgezette kandidoatn en poarn en drietalln op zyn. X-Wings zyn 't meest veurkommende Expert-patroon en kommn dikkers veur as e cyfer nog moar weinig kandidoatn eit, meestentyds as der al vier toet zes exemplaren stoan. Der zyn volledige notities voe nodig voe 't cyfer da je bekykt."
+          ],
+          "spot": [
+            "Kies e cyfer en zoek rekn woarin dat 't juste twee kandidoatvakjes eit. As twee van die rekn dezelfste twee kolommn deeln, kyk dan in die kolommn noar andere kandidoatn voe da cyfer: die mag je wegstreepn. Doe 't dan nog e ki mee kolommn as basis. In 't spel tik je op de cyfertoets: elke kandidoat voe da cyfer wordt gemarkeerd, en e rechthoek van vier gemarkeerde notities zie je gemakkelik."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Cyfer {d} eit juste twee kandidoatvakjes in reke {r1} en juste twee in reke {r2}, en ze liggn in dezelfste twee kolommn, {c1} en {c2}: {cells}.",
+                "Reke {r1} zet zyn {d} in kolom {c1} of {c2}, en reke {r2} zet zyn {d} in de andere. Oe da 't ook uutvalt, kolom {c1} en kolom {c2} krygn elk e {d} uut die twee rekn.",
+                "Dus {d} kan nieveranst anders in de kolommn {c1} en {c2} stoan. Oal {d} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "E reke gebruukn woarin da 't cyfer drie kandidoatvakjes eit. Elke basisreke moet der juste twee ebbn, en alle twee in de twee gedeelde kolommn.",
+            "'t Cyfer uut de rekn wegoaln in de plekke van uut de kolommn. Mee rekn as basis streep je weg in de kolommn, en omgekeerd.",
+            "De omgewisselde versie vergetn. E X-Wing op kolommn streept weg in rekn."
+          ],
+          "faq": [
+            [
+              "Wuk is e X-Wing in Sudoku?",
+              "E cyfer da in elk van twee rekn juste twee kandidoatvakjes eit, in dezelfste twee kolommn. 't Cyfer stoat op twee tegenoverliggende oekn van die rechthoek, dus 't goat weg uut de rest van de twee kolommn. Rekn en kolommn kunn omgewisseld wordn."
+            ],
+            [
+              "Woarom werkt e X-Wing?",
+              "Elk van de twee rekn moet 't cyfer in één van de twee kolommn zettn, en de twee rekn kunn nie dezelfste kolom gebruukn. Dus krygn de twee kolommn elk under exemplaar van 't cyfer uut die rekn, en elke andere kandidoat in die kolommn is onmogelik."
+            ],
+            [
+              "Is e X-Wing e vis?",
+              "Joa. De X-Wing is de vis van grootte twee; Swordfish is de vis van grootte drie. Bare Sudoku vindt alle twee."
+            ],
+            [
+              "Op welk niveau kommn X-Wings veur?",
+              "Expert. E puzzel die e X-Wing, Y-Wing, Swordfish of XYZ-Wing vroagt, wordt Expert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: zo werkt de techniek",
+          "description": "Y-Wing (XY-Wing): e spil mee twee kandidoatn en twee vleugels die elk één der van deeln, dwingn e cyfer weg uut elk vakje da alle twee de vleugels ziet.",
+          "h1": "Y-Wing",
+          "summary": "E Y-Wing, ook XY-Wing genoemd, gebruukt drie vakjes mee elk twee kandidoatn. De spil eit de kandidoatn X en Y. De ene vleugel ziet de spil en eit X en Z; de andere vleugel ziet de spil en eit Y en Z. Wuk da de spil ook wordt, één van de vleugels moet Z zyn, dus Z kan weg uut elk vakje da alle twee de vleugels ziet. In Bare Sudoku is 't e Expert-techniek.",
+          "when": [
+            "As e puzzel meerdere vakjes mee juste twee kandidoatn eit en der gin vis te vindn is. Y-Wings kommn veel veur in Expert-puzzels en je vindt ze deur de vakjes mee twee kandidoatn te volgn: elk der van kan e spil of e vleugel zyn."
+          ],
+          "spot": [
+            "Moak e lyste van de vakjes mee juste twee kandidoatn. Pak elk der van as spil mee de kandidoatn X en Y, en zoek tusschn zyn gebuurn e vakje mee X en e ander cyfer Z, en e vakje mee Y en dezelfste Z. Die twee zyn de vleugels. Zoek dan vakjes die alle twee de vleugels zien en Z bevattn. Let op: de vleugels moetn malkoar nie zien."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "De spil {pivot} eit de kandidoatn {x} en {y}. Hy ziet {wingA}, mee {x} en {z}, en {wingB}, mee {y} en {z}.",
+                "As {pivot} {x} is, verliest {wingA} de {x} en wordt {z}. As {pivot} {y} is, wordt {wingB} {z}. In elk geval is één van de twee vleugels {z}.",
+                "E vakje da alle twee de vleugels ziet, kan nooit {z} zyn. Oal {z} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vleugels kiezn die nie alle twee de spil zien. Elke vleugel moet e reke, kolom of blok mee de spil deeln.",
+            "Z wegoaln uut vakjes die moar één vleugel zien. 't Vakje woaruut je Z wegstreept, moet alle twee de vleugels zien.",
+            "Z uut de spil wegoaln. In e Y-Wing eit de spil gin Z; as 'n Z wel eit, is 't patroon e XYZ-Wing mee andere regels."
+          ],
+          "faq": [
+            [
+              "Wuk is e Y-Wing in Sudoku?",
+              "Drie vakjes mee twee kandidoatn: e spil mee X en Y, e vleugel mee X en Z die de spil ziet, en e vleugel mee Y en Z die de spil ziet. Eén vleugel is altyd Z, dus Z goat weg uut vakjes die alle twee de vleugels zien."
+            ],
+            [
+              "Is Y-Wing 't zelfste as XY-Wing?",
+              "Joa. De twee noamn beschryvn 't zelfste patroon. Bare Sudoku noemt 't Y-Wing."
+            ],
+            [
+              "Woarom moet één vleugel Z zyn?",
+              "As de spil X is, verliest den eeste vleugel X en wordt Z. As de spil Y is, wordt den tweede vleugel Z. De spil is één van de twee, dus één vleugel is Z."
+            ],
+            [
+              "In oeveel vakjes streept e Y-Wing weg?",
+              "Meestentyds één of twee: enkel de vakjes die alle twee de vleugels zien en nog Z bevattn. Da's genoeg om e single te moakn."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish in Sudoku: zo werkt de techniek",
+          "description": "Swordfish: e cyfer da in drie rekn toet drie kolommn beperkt is, goat weg uut de rest van die kolommn. De vis van grootte drie, mee e echt voorbeeld.",
+          "h1": "Swordfish",
+          "summary": "E Swordfish is e X-Wing mee drie rekn en drie kolommn. As e cyfer in elk van drie rekn oogstens drie kandidoatvakjes eit, en al die vakjes valln in dezelfste drie kolommn, dan gebruukn de drie rekn 't cyfer in die kolommn op, en kan 't cyfer weg uut elk ander vakje van de drie kolommn. Rekn en kolommn kunn omgewisseld wordn. Bare Sudoku zoekt noar Swordfish noa Y-Wing, in Expert-puzzels.",
+          "when": [
+            "As X-Wing en Y-Wing niks opleevern. Swordfish kommn minder dikkers veur dan X-Wings en vroagn e cyfer woavan de kandidoatn dun over drie lynn verspreid zyn. Der zyn volledige en juste notities voe da cyfer voe nodig."
+          ],
+          "spot": [
+            "Kies e cyfer en zoek rekn mee twee of drie kandidoatvakjes voe da cyfer. As drie van die rekn samen moar drie kolommn beslaan, kyk dan in die kolommn noar meer kandidoatn voe da cyfer. Nie elke reke moet in elke kolom e kandidoat ebbn: e Swordfish kan zes, zeven, acht of negen vakjes ebbn. In 't spel markeer je 't cyfer mee zyn toets en zoek je drie rekn woavan de kandidoatn in drie kolommn liggn."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "Cyfer {d} eit in elk van de rekn {rows} oogstens drie kandidoatvakjes, en al die vakjes valln in de kolommn {cols}: {cells}.",
+                "Elk van de drie rekn moet zyn {d} in één van de drie kolommn zettn, en gin twee rekn kunn dezelfste kolom gebruukn. Dus krygn de drie kolommn under {d} uut die drie rekn.",
+                "Elke andere kandidoat {d} in de kolommn {cols} is onmogelik. Oal {d} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Alle negen vakjes eisn. E Swordfish mee twee kandidoatn in sommige rekn is ook goed, zolange da de drie rekn moar drie kolommn beslaan.",
+            "E reke meepakkn mee vier kandidoatvakjes. Elke basisreke mag oogstens drie ebbn, allemoal binnen de drie kolommn.",
+            "Wegstreepn in de basisrekn. Mee rekn as basis streep je weg in de drie kolommn, buutn de basisrekn."
+          ],
+          "faq": [
+            [
+              "Wuk is e Swordfish in Sudoku?",
+              "E cyfer woavan de kandidoatn in drie rekn toet drie kolommn beperkt zyn. De drie rekn moetn 't cyfer in die drie kolommn zettn, één per kolom, dus 't cyfer goat weg uut de andere vakjes van die kolommn."
+            ],
+            [
+              "Oe verschilt e Swordfish van e X-Wing?",
+              "Enkel in grootte: e X-Wing gebruukt twee rekn en twee kolommn, e Swordfish drie en drie. De redeneringe is dezelfste."
+            ],
+            [
+              "Moet e Swordfish juste negen vakjes ebbn?",
+              "Nee. Elke reke kan twee of drie kandidoatn ebbn; 't patroon eist enkel da de drie rekn samen nie meer as drie kolommn gebruukn."
+            ],
+            [
+              "Bestoat der e vis van grootte vier?",
+              "Joa, de Jellyfish. Bare Sudoku gebruukt 'm nie, omda zyn puzzels der nooit één nodig ebbn."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: zo werkt de techniek",
+          "description": "XYZ-Wing: e spil mee drie kandidoatn en twee vleugels die één der van deeln, dwingn da cyfer weg uut elk vakje da ze alle drie ziet. Echt voorbeeld.",
+          "h1": "XYZ-Wing",
+          "summary": "E XYZ-Wing is e Y-Wing woavan de spil drie kandidoatn eit. De spil eit X, Y en Z; de ene vleugel ziet de spil en eit X en Z, den andere ziet de spil en eit Y en Z. Eén van de drie vakjes moet Z zyn, dus Z kan weg uut elk vakje da ze alle drie ziet. Omda de spil zelve Z kan zyn, moet 't vakje woaruut je wegstreept de spil en alle twee de vleugels zien, en da beperkt 't toet 't blok of de lyn die de vakjes deeln. 't Is de moeilikste techniek die Bare Sudoku gebruukt.",
+          "when": [
+            "Enkel as al de rest misluukt. XYZ-Wings zyn 't zeldzoamste patroon in Bare Sudoku en kommn enkel veur in Expert-puzzels. Zoek der noar as e vakje mee drie kandidoatn in e blok ligt mee e vakje mee twee kandidoatn da twee van zyn cyfers deelt."
+          ],
+          "spot": [
+            "Begin by vakjes mee juste drie kandidoatn; elk der van kan e spil zyn. Zoek tusschn zyn gebuurn twee vakjes mee elk twee kandidoatn, alle twee uut de drie van de spil, die juste één cyfer Z deeln. Zoek dan vakjes die de spil en alle twee de vleugels zien en Z bevattn. In de praktyk ligt de ene vleugel in 't blok van de spil en den andere in zyn reke of kolom, en zyn de vakjes woaruut je wegstreept de overige vakjes van da blok in die reke of kolom."
+          ],
+          "examples": [
+            {
+              "h": "Voorbeeld",
+              "steps": [
+                "De spil {pivot} eit drie kandidoatn: {x}, {y} en {z}. Hy ziet {wingA} mee {x} en {z}, en {wingB} mee {y} en {z}.",
+                "As {pivot} {z} is, kloar. As 't {x} is, moet {wingA} {z} zyn. As 't {y} is, moet {wingB} {z} zyn. In elk geval is één van de drie vakjes {z}.",
+                "E vakje da ze alle drie ziet, kan gin {z} zyn. Oal {z} weg uut {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wegstreepn uut vakjes die enkel de twee vleugels zien. Anders as by e Y-Wing kan de spil Z zyn, dus 't vakje moet ook de spil zien.",
+            "Vleugels gebruukn woavan de kandidoatn nie alle twee binnen de drie kandidoatn van de spil valln.",
+            "'t Verwarrn mee e Y-Wing: 't verschil is de derde kandidoat in de spil, en die bepoalt uut welke vakjes je mag wegstreepn."
+          ],
+          "faq": [
+            [
+              "Wuk is e XYZ-Wing in Sudoku?",
+              "E spil mee de kandidoatn X, Y en Z en twee vleugels, één mee X en Z en één mee Y en Z, die alle twee de spil zien. Eén van de drie vakjes is Z, dus Z goat weg uut vakjes die ze alle drie zien."
+            ],
+            [
+              "Oe verschilt e XYZ-Wing van e Y-Wing?",
+              "De spil eit drie kandidoatn in de plekke van twee, en Z is der één van. Doardeure kan Z ook in de spil terechtkommn, dus enkel vakjes die de spil en alle twee de vleugels zien, kunn Z kwyt geraakn."
+            ],
+            [
+              "Oe dikkers komt e XYZ-Wing veur?",
+              "Zelden. In Bare Sudoku kunn enkel Expert-puzzels der één vroagn, en de meeste doen da nie. Bare Sudoku kykt 'm as loatste noa, noa X-Wing, Y-Wing en Swordfish."
+            ],
+            [
+              "Bestoat der e WXYZ-Wing?",
+              "Joa, mee e spil mee vier kandidoatn, moar Bare Sudoku gebruukt 'm nie. Elke puzzel in 't spel kun je afmoakn mee de negen techniekn van deze gids."
+            ]
+          ]
+        }
+      }
+    },
+    "smn": {
+      "learnHeading": "Uápá Sudoku",
+      "learnText": "Lii-uv Sudoku tunjin uđđâ, teikkâ lah-uv kiddâ lossâd ärvádâsâst? Kyehti čielgiittâs čielgejeh njuolgâdusâid já puoh čuávdimteknikâid, maid ravvuuh kevttih, já jyehi čielgiittâsâst lii tuođâlâš ovdâmerkkâ.",
+      "howToLink": "Maht Sudoku spellâđ",
+      "techniquesLink": "Sudoku čuávdimteknikah",
+      "labels": {
+        "howTo": "Maht spellâđ",
+        "techniques": "Teknikah",
+        "play": "Sierâ Sudoku",
+        "prev": "Ovdeb teknik",
+        "next": "Puáttee teknik",
+        "all": "Puoh teknikah",
+        "example": "Ovdâmerkkâ",
+        "steps": "Lävkki lävkkist",
+        "when": "Kuás kevttiđ",
+        "spot": "Maht tom kavnâđ",
+        "mistakes": "Táválâš feeilah",
+        "inGame": "Bare Sudokust",
+        "level": "Vuossâmuš tääsi: {level}",
+        "hint": "Siärvust ravvuu iätá: {text}",
+        "legend": "Paksâ lovoh láá adelum, aalis lovoh láá piejum čuávdim ääigi, já uccâ lovoh láá kandidaatah. Merkkum siäluh rähtih minstâr, sihhum kandidaatah láá väldum meddâl, já kierduin merkkum kandidaat lii lohho, mon pieijah.",
+        "notation": "Siäluid čáálah nuuvt: r3c7 merkkâš räiđu 3, čuáldá 7. Räiđuid lohah pajeen, čuáldáid kuruu peelist, já lávkkáid 1 räi 9 kuruu peeli pajemus čiegâst, räiđu räiđust.",
+        "row": "räiđu {n}",
+        "column": "čuáldá {n}",
+        "box": "lávkká {n}",
+        "elimItem": "{d} siälust {cell}",
+        "regions": "Räiđu 5, čuáldá 5 já lávkká 5 ärvádâs aalgâst",
+        "firstMove": "Áinoo kandidaat: {cell} puáhtá leđe tuše {d}",
+        "breadcrumb": "Pälgis"
+      },
+      "howTo": {
+        "title": "Maht Sudoku spellâđ: njuolgâdusah já vuossâmuš lävkkih",
+        "description": "Uápá Sudoku: njuolgâdusah, maht räiđuh, čuáldááh já lávkkááh toimeh, mondiet jyehi ärvádâsâst lii ohtâ čuávdus, muštâlusah já vuossâmuš lävkkih.",
+        "h1": "Maht Sudoku spellâđ",
+        "summary": "Sudoku lii loogiikärvádâs 9×9 kriidâst. Čääli jyehi kuárus siällun lohho 1 räi 9 nuuvt, ete jyehi räiđoost, jyehi čuáldáást já jyehi 3×3 lávkkáást lii jyehi lohho tárkkáht oovtâ keerdi. Muáddi lovoh láá adelum aalgâst; eres lovoid kavnah loogiikáin siällu siälu maŋa, jyehi lävkki lii vissâ, já jieh kuássin taarbâš árvâliđ. Taat čielgiittâs čielgee kriidâ, njuolgâdusâid, oovtâ čuávdus prinsiip, muštâlusâid já älkkee strategia álgun. Puoh taid puávtáh harjottâllâđ [Bare Sudokust](play), mii lii nuuvtá já mast ravvuuh čielgejeh loogiik.",
+        "sections": [
+          {
+            "h": "Mii láá Sudoku njuolgâdusah?",
+            "p": [
+              "Njuolgâdusah láá tuše kulmâ, já toh láá seämmi njuolgâdus kuulmâ peeleest kiäččum: jyehi räiđoost kolgeh leđe lovoh 1 räi 9, jyehi čuáldáást kolgeh leđe lovoh 1 räi 9, já jyehi 3×3 lávkkáást kolgeh leđe lovoh 1 räi 9. Tondiet lohho ij kuássin pyevti leđe kuohtii seämmi räiđoost, čuáldáást teikkâ lávkkáást.",
+              "Adelum lovoh, moh láá paksâ čäällimáin, láá kiddâ. Tuu pargo lii tievdiđ kuárus siäluid. Tast ij lah rekinistem ige ortnig: lovoh láá tuše ovce sierâlágán merkkâ. Lovoi sajan puávtáh kevttiđ meid puustavijd teikkâ hämmejd, já ärvádâs lii seämmi."
+            ]
+          },
+          {
+            "h": "Maht kriidâ lii rähtum?",
+            "p": [
+              "Kriidâst láá 81 siälu, 9 räiđu já 9 čuáldá. Paksâ linjááh rähtih ovce 3×3 lávkká. Jyehi siällu lii tárkkáht oovtâ räiđoost, oovtâ čuáldáást já oovtâ lávkkáást, já taah kulmâ láá suu juávkuh. Taah 20 eres siälu, moh láá seämmi juávkust ko siällu, láá suu ränjásiäluh; lohho, mon pieijah siällun, väldá seämmi lovo meddâl puoh 20 ränjásiäluin.",
+              "Siäluid čáálah nuuvt: r3c7 merkkâš räiđu 3, čuáldá 7. Räiđuid lohah pajeen, čuáldáid kuruu peelist, já lávkkáid 1 räi 9 kuruu peeli pajemus čiegâst, räiđu räiđust. Taat merkkimvyehi lii kevttum puoh teknikčielgiittâsâin, já tom lii ávhálâš oppâđ: r5c5 lii kriidâ kuávdáš."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Mondiet jyehi Sudokust lii tárkkáht ohtâ čuávdus?",
+            "p": [
+              "Vuoigâ Sudokust lii ohtâ čuávdus, já tondiet loogiik toimâ. Ko puávtáh čäittiđ, ete lohho ij pyevti leđe eres sajeest juávkust, te tot kalga leđe tast siälust, mii lii pääcám, ko čuávdus lii já tot lii áinoo. Ärvádâsâst, mast láá kyehti čuávdus, loogiik ij pyevti erottiđ taid, já ovdil teikkâ maŋeláá kalgah árvâliđ.",
+              "Bare Sudoku rähtá jyehi ärvádâs tuu rusttâsist já tärhist, ete tast lii tárkkáht ohtâ čuávdus já ete suu loogiklâš čuávdee puáhtá čuávdiđ tom valjim tääsi teknikâiguin. Jis lah kiddâ, te ain lii puáttee lävkki, mon puávtáh kavnâđ, já ravvuu čáittá tom."
+            ]
+          },
+          {
+            "h": "Maht aalgiđ Sudoku?",
+            "p": [
+              "Aalgât tast, mii lii eenâmusâst ráddjum. Taat ortnig toimâ jyehi tääsist:"
+            ],
+            "list": [
+              "Valjii lohho, mii lii jo maŋgii kriidâst, ovdâmerkkân kuttâ teikkâ čiččâm keerdi, já uusâ lávkkáid, main tot ain váilu. Tavan lávkkáást lii tuše ohtâ siällu pääcám tom várás: tot lii [áinoo saje](hidden-single).",
+              "Uusâ siäluid, main láá uccán máhđulâšvuođah. Siälust, mon räiđoost, čuáldáást já lávkkáást láá oohtân käävci sierâ lovo, lii tuše ohtâ kandidaat pääcám: [áinoo kandidaat](naked-single). Siäluh masa tievâ räiđuin teikkâ lávkkáin láá pyeremus saje uuccâđ.",
+              "Jyehi lohho, mon pieijah, väldá kandidaat meddâl 20 ränjásiäluin, tondiet tärhist taid siäluid tallaan. Áinoo kandidaatah já áinoo sajeh puátih tavan maŋaluvâi.",
+              "Ko jieh šat kavnâ älkkee lävkkijd, čääli muštâlusâid: jyehi kuárus siälu kandidaatâid. Uusâ tastoo lovo, mii lii ráddjum oovtâ linján lávkká siste ([lohkkum kandidaatah](locked-candidates)), teikkâ kyehti siälu, main láá seämmi kyehti kandidaat ([čielgâ pááru](naked-pairs)).",
+              "Maassâ áinoo kandidaatij já áinoo sajij lusa jyehi meddâlväldim maŋa. Meid Äššitobdee-ärvádâsah čuávdojeh eenâmusâst taiguin; lossâdub teknik tuše rabá puáttee lävkki."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Mii láá muštâlusah já kuás taid kalga kevttiđ?",
+            "p": [
+              "Muštâlusah, moh kočodeh meid pliijântâmerkkân teikkâ kandidaatân, láá uccâ lovoh, maid čáálah kuárus siällun muštâđ, mii lohho tast ain puáhtá leđe. Älkkee ärvádâsâin taarbâšah taid harvii; Lossâd tääsist rääjist toh láá taarbâšlâžžâh, ko teknikah nuuvt ko páárruh, X-Wing já Y-Wing kevttih kandidaatâid, iä piejum lovoid.",
+              "Muštâlusah kolgeh leđe riekta: ko pieijah lovo, väldi tom meddâl puoh 20 ränjásiälu muštâlusâin. Bare Sudokust taat tábáhtuvá automaatlávt, já Tievdi muštâlusâid čáálá jyehi kandidaat jyehi kuárus siällun oovtâ tohhoomáin, nuuvt ete puávtáh aalgiđ ollâsâš já riekta kandidaatâiguin. Muštâlus lii tuođâlâšvuotâ, ij árvâlus: tot merkkâš, ete mihheen ij vala väldi taam lovo meddâl."
+            ]
+          },
+          {
+            "h": "Maid toohâđ, ko lah kiddâ?",
+            "p": [
+              "Tärhist vuossâmužžân vuáđuid: jyehi masa tievâ räiđu, čuáldá já lávkká addel áinoo kandidaatâid já áinoo sajijd. Tastoo tärhist, ete muštâlusah láá ollâsâžžâh, ko kandidaat, mii váilu, čiehá minstârijd, já puáris kandidaat rähtá puástud minstârijd. Tastoo mana [teknikâid](techniques) čoođâ lossâdvuođâ mield: lohkkum kandidaatah, páárruh já kulmâsah, X-Wing, Y-Wing, Swordfish já XYZ-Wing. Jyehi teknikist lii jieijâs siijđo tuođâlâš ovdâmerkkáin.",
+              "Jis mihheen ij toimâ, väldi ravvuu. Bare Sudokust ravvuu vuossâmužžân tärhist, lii-uv piejum lohho puástud, tastoo kavna puáttee siälu, mon puáhtá tievdiđ loogiikáin, já nomât teknik, nuuvt ete oppâh ain maidnii, veikkâ kiävtáh tom. Toho ravvuu uđđâsist pieijâđ lovo."
+            ]
+          },
+          {
+            "h": "Maht čáálah lovoid Bare Sudokust?",
+            "p": [
+              "Toho siälu já tastoo lovo. Teikkâ toho vuossâmužžân lovo: tot lohkkoo, já jyehi siällu, mon tohoh, finnee tom; tot lii jotteleumos vyehi pieijâđ lovo kuuđâd, čiččâd já käävcád keerdi. Toho lovo uđđâsist, vâi lohkkim luoštâš. Muštâlusah-poolâ molsoo pliijântâmerkkáid, Sihhoođ väldá lovo meddâl siälust, Maccâđ väldá maasâd jyehi lävkki, já feeilah láá merkkum ruopsâdin, jis jieh väldi tom meddâl menust.",
+              "Poolâpeevdist sirdáh njuolâpooláiguin, čáálah lovo pooláiguin 1 räi 9, sikkoh Backspace-pooláin, já kiävtáh N muštâlusâid, U maccâmân, H ravvuun, F muštâlusâi tievdimân já Escape menun. Siärvu vuárhá jieijâs, toimâ almaa vieermi, já tast ij lah reklaam ige kontto."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Kalga-uv Sudokust kuássin árvâliđ?",
+            "Ij vuoigâ ärvádâsâst. Jyehi Bare Sudoku -ärvádâsâst lii tárkkáht ohtâ čuávdus, já lii tärhistum, ete tom puáhtá čuávdiđ tuše loogiikáin, jieijâs tääsi teknikâiguin. Jis tobdâh, ete kalgah árvâliđ, te kandidaat váilu tuu muštâlusâin teikkâ teknik vuordá kavnâmist."
+          ],
+          [
+            "Puáhtá-uv lohho leđe kuohtii räiđoost, čuáldáást teikkâ lávkkáást?",
+            "Ij pyevti. Taat lii ollâ njuolgâdus: jyehi ovce räiđoost, ovce čuáldáást já ovce lávkkáást lii jyehi lohho 1 räi 9 tárkkáht oovtâ keerdi. Jis kyehti seämmi lovo láá seämmi juávkust, te ainâs nubbe tain lii puástud."
+          ],
+          [
+            "Mii lii Älkkee, Kooskâsâš, Lossâd já Äššitobdee tääsi erohus?",
+            "Tääsi lii teknikâi mield, maid ärvádâs taarbâš. Älkkee já Kooskâsâš čuávdojeh tuše áinoo kandidaatâiguin já áinoo sajijguin, já Älkkee-ärvádâsâst láá aalgâst ainâs 38 adelum lovo. Lossâd taarbâš lohkkum kandidaatâid teikkâ páárruid já kulmâsâid. Äššitobdee taarbâš X-Wing, Y-Wing, Swordfish teikkâ XYZ-Wing."
+          ],
+          [
+            "Lii-uv pyereeb tievdiđ muštâlusâid jyehi siällun teikkâ tuše muáddi siällun?",
+            "Lossâd já Äššitobdee ärvádâsâin tievdi puoh: minstârh nuuvt ko páárruh, X-Wing já Y-Wing šaddeh oinnolâžžân tuše, ko jyehi kandidaat lii čállum. Älkkee já Kooskâsâš ärvádâsâin muštâlusah iä lah taarbâšlâžžâh, já eenâb oosi spellein uuccih tuše áinoo kandidaatâid já áinoo sajijd."
+          ],
+          [
+            "Mon kuhháá Sudoku pištá?",
+            "Älkkee ärvádâs pištá muáddi minuttâ; Äššitobdee ärvádâsah pyehtih pištiđ kyehtlov minuttâ teikkâ eenâb, tast kiddâ, mon jotelávt huámášah lossâdub minstâr. Bare Sudoku čáittá tiijme, orostât tom, ko menu lii ävus, já tast ij lah ráŋgalisto, nuuvt ete sierâ jieijâd tempoin."
+          ],
+          [
+            "Taarbâš-uv Sudoku rekinistem?",
+            "Ij. Lovoh láá tuše merkkah; ij lasettem ige lohhom. Ovce eres merkkâ toimeh meid, já tondiet Sudoku lii loogiikärvádâs, ij lohoärvádâs."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku čuávdimteknikah čielgejum ovdâmerkkâiguin",
+        "description": "Puoh ovce Sudoku čuávdimteknik, áinoo kandidaatist Swordfish já XYZ-Wing rääjin, tom ortnigist, mast Bare Sudoku ravvuuh taid kevttih, ovdâmerkkâiguin.",
+        "h1": "Sudoku čuávdimteknikah",
+        "intro": [
+          "Jyehi Sudoku puáhtá čuávdiđ uccâ meeri loogiklâš teknikâiguin. Taat listo čáittá ovce teknik, maid Bare Sudoku čuávdee já tom ravvuuh kevttih, tom ortnigist, mast čuávdee keččâl taid: vuossâmužžân áinoo kandidaatah já áinoo sajeh, tastoo meddâlväldimeh oovtâ juávkust, já tastoo minstârh, moh láá maaŋgâ räiđoost já čuáldáást. Jyehi teknikist lii jieijâs siijđo, mast láá definitio, maht tom kavnâđ, tuođâlâš ovdâmerkkâ rähtum ärvádâsâst já táválâš feeilah.",
+          "Ärvádâs tääsi lii lossâdumos teknik mield, mon tot taarbâš. Älkkee já Kooskâsâš ärvádâsah tarbâšeh tuše áinoo kandidaatâid já áinoo sajijd, Lossâd ärvádâsah tarbâšeh lohkkum kandidaatâid teikkâ páárruid já kulmâsâid, já Äššitobdee ärvádâsah tarbâšeh ainâs oovtâ kyele teikkâ suájá (wing). Jyehi tääsist áinoo kandidaatah já áinoo sajeh tohheh eenâb oosi pargoost; lossâdub teknik väldá meddâl oovtâ teikkâ kyevti kandidaat, já tastoo älkkee teknikah juátkih."
+        ],
+        "faq": [
+          [
+            "Mon ortnigist kalgâm keččâliđ Sudoku teknikâid?",
+            "Älkkimus vuossâmužžân: áinoo kandidaatah, áinoo sajeh, lohkkum kandidaatah, čielgâ páárruh já kulmâsah, čiegâs páárruh já kulmâsah, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku keččâl taid tárkkáht taan ortnigist, já ravvuu nomât jyehi keerdi älkkimus teknik, mii ovdâd čuávdim."
+          ],
+          [
+            "Taarbâšâm-uv puoh taid teknikâid čuávdiđ Sudoku?",
+            "Älkkee já Kooskâsâš ärvádâsân áinoo kandidaatah já áinoo sajeh láá tuárvi. Lossâd ärvádâsah lasseh lohkkum kandidaatâid, páárruid já kulmâsâid. Äššitobdee ärvádâsah tarbâšeh ainâs oovtâ kyele teikkâ suájá, mut táválávt tuše oovtii teikkâ kuohtii jyehi ärvádâsâst."
+          ],
+          [
+            "Láá-uv lossâdub teknikah ko XYZ-Wing?",
+            "Láá, ovdâmerkkân ráiduuh (chains), áinoovuođâtestih já forcing nets. Bare Sudoku ij rähti ärvádâsâid, moh tarbâšeh taid, tondiet jyehi siärvu ärvádâs puáhtá čuávdiđ taan siijđo ovce teknikáin."
+          ],
+          [
+            "Mii lii kandidaat?",
+            "Lohho, mii ain puáhtá leđe kuárus siälust, ko mihheen suu räiđoost, čuáldáást teikkâ lávkkáást ij vala väldi tom meddâl. Siärvu muštâlusah láá kandidaatah. Puoh teknikah áinoo kandidaatij já áinoo sajij maŋa jurdâččeh kandidaatâi vuáđuld, tondiet muštâlusah kolgeh leđe ollâsâžžâh já riekta."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Áinoo kandidaat",
+          "title": "Áinoo kandidaat Sudokust: siällu, mast lii ohtâ kandidaat",
+          "description": "Áinoo kandidaat lii kuárus siällu, mast lii tuše ohtâ máhđulâš lohho. Uápá kavnâđ taid jotelávt tuođâlâš ovdâmerkkáin lävkki lävkkist já táválâš feeiláiguin.",
+          "h1": "Áinoo kandidaat (naked single)",
+          "summary": "Áinoo kandidaat lii kuárus siällu, mast lii tárkkáht ohtâ kandidaat: eres käävci lovo láá jo suu räiđoost, čuáldáást teikkâ lávkkáást. Pääcám lohho kalga leđe tobbeen. Tot lii älkkimus Sudoku teknik, tot, mon kiävtáh eenâmusâst, já tot, mon Bare Sudoku ravvuu almoot nuuvt: \"Tuše ohtâ kandidaat tääbbin\".",
+          "when": [
+            "Jyehi keerdi. Áinoo kandidaatah ilmâneh vuossâmuš lävkkist majemuš lävkki rääjin, jyehi tääsist. Älkkee já Kooskâsâš ärvádâsâin toh láá, ohtâ áinoo sajijguin, áinoo teknik, mon taarbâšah. Lossâdub ärvádâsâin jyehi meddâlväldim, mon lossâdub teknik taha, táválávt kuođđá áinoo kandidaat maŋŋâsis, tondiet uusâ taid jyehi lävkki maŋa."
+          ],
+          "spot": [
+            "Kiäččâ siäluid, main láá maaŋgâ piejum ränjásiälu: siällu räiđoost, mast láá jo čiččâm lovo, teikkâ siällu, mon räiđoost, čuáldáást já lávkkáást láá oohtân käävci sierâ lovo. Almaa muštâlusâid lohâ lovoid, maid siälust uáinah. Muštâlusâiguin áinoo kandidaat lii tuše siällu, mast oinnoo ohtâ kandidaat, já tondiet Tievdi muštâlusâid taha taid älkkeen kavnâđ."
+          ],
+          "examples": [
+            {
+              "h": "Ovdâmerkkâ",
+              "steps": [
+                "Kiäččâ siälu {cell}. Tot lii kuárus, tondiet čääli listo puoh lovoin, moh láá jo suu räiđoost, čuáldáást já lávkkáást.",
+                "Räiđoost {row} láá {rowDigits}. Čuáldáást {col} láá {colDigits}. Lávkkáást {box} láá {boxDigits}.",
+                "Oohtân toh väldeh meddâl puoh eres lovoid ko {d}, tondiet {d} lii áinoo kandidaat, mii lii pääcám siälust {cell}.",
+                "Čääli {d} siällun {cell}. Tärhist tastoo, rähtá-uv uđđâ lohho uđđâ áinoo kandidaat teikkâ áinoo saje seämmi räiđoost, čuáldáást teikkâ lávkkáást."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Lohkâđ tuše räiđu teikkâ tuše lávkká. Käävci meddâl väldum lovo puátih táválávt puoh kuulmâ juávkuin oohtân.",
+            "Vajálduttiđ, ete uđđâ piejum lohho väldá meid kandidaatâid meddâl suu 20 ränjásiäluin; uđđâ áinoo kandidaatah ilmâneh tallaan jyehi pieijâm maŋa.",
+            "Seeguttiđ áinoo kandidaat já áinoo saje: áinoo kandidaat merkkâš, ete siälust lii ohtâ kandidaat pääcám, áinoo saje merkkâš, ete lovost lii ohtâ siällu pääcám juávkust."
+          ],
+          "faq": [
+            [
+              "Mii lii áinoo kandidaat Sudokust?",
+              "Kuárus siällu, mast lii tárkkáht ohtâ kandidaat. Käävci sierâ lovo láá jo suu räiđoost, čuáldáást já lávkkáást, tondiet ovcád lohho lii áinoo, mii hiäive."
+            ],
+            [
+              "Mondiet tot kočoduvvoo eŋgâlâskielân naked single?",
+              "Ko áinoo kandidaat oinnoo njuolgist siälust, ko muštâlusah láá čállum; mihheen ij čievâ tom. Áinoo saje (hidden single) lii jieš eres kandidaatâi kooskâst, já tom kavnah, ko kiäččah lovo, ij siälu."
+            ],
+            [
+              "Puáhtá-uv ärvádâs čuávdiđ tuše áinoo kandidaatâiguin?",
+              "Maaŋgâ Älkkee ärvádâs puáhtá, mut eenâb oosi tarbâšeh meid áinoo sajijd. Bare Sudoku árvuštâl Älkkee já Kooskâsâš ärvádâsâid nuuvt, ete taid puáhtá čuávdiđ kuohâš šlaajâiguin; Lossâd já Äššitobdee ärvádâsah tarbâšeh ainâs oovtâ eres teknik."
+            ],
+            [
+              "Čáittá-uv ravvuu áinoo kandidaatâid?",
+              "Čáittá. Ko puáttee lävkki lii áinoo kandidaat, ravvuu merkkee siälu, iätá \"Tuše ohtâ kandidaat tääbbin\" já čáittá lovo. Toho ravvuu uđđâsist pieijâđ tom."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Áinoo saje",
+          "title": "Áinoo saje Sudokust: lovo áinoo máhđulâš siällu",
+          "description": "Áinoo saje lii áinoo siällu räiđoost, čuáldáást teikkâ lávkkáást, kuus lohho ain hiäive. Uápá kavnâđ áinoo sajijd kiäččâmáin oovtâ lovo oovtâ keerdi.",
+          "h1": "Áinoo saje (hidden single)",
+          "summary": "Áinoo saje lii lohho, mast lii tuše ohtâ máhđulâš siällu pääcám räiđoost, čuáldáást teikkâ lávkkáást, veikkâ tot siällu čáittá eres kandidaatâid. Ko juávkust kalga leđe tot lohho, te tot kalga leđe tobbeen. Bare Sudoku ravvuu almoot tom nuuvt: \"Áinoo saje 5 taan räiđoost\", čuáldáást teikkâ lávkkáást.",
+          "when": [
+            "Ko lohho lii jo ovdánâm: ko lohho lii vittâ teikkâ kuttâ keerdi kriidâst, eres lávkkááh láá eenâb ráddjum, já áinoo saje lii tavan puáttee lävkki. Áinoo sajeh láá Älkkee já Kooskâsâš ärvádâsâi vuáđuteknik já pääcih jyehi tääsist táválumos pargoneevvon."
+          ],
+          "spot": [
+            "Kiäččâ oovtâ lovo oovtâ keerdi. Valjii lohho, uusâ lávkká, mast tot ij lah, já väldi meddâl jyehi taan lávkká siälu, mii lii seämmi räiđoost teikkâ čuáldáást ko piejum lohho. Jis ohtâ siällu pääcá, te lah kavnâm áinoo saje. Seämmi vyehi toimâ räiđuin já čuáldáin. Siärvust toho piejum lovo: jyehi tot lohho merkkoo, já kuárus siäluh šaddeh oinnolâžžân."
+          ],
+          "examples": [
+            {
+              "h": "Ovdâmerkkâ",
+              "steps": [
+                "Lávkkáást {box} ij lah vala {d}, tondiet ohtâ suu kuárus siäluin kalga finniđ tom. Kuárus siäluh láá {empties}.",
+                "Puoh taain siäluin, eres ko {cell}, {d} lii estum, ko {d} lii jo seämmi räiđoost teikkâ čuáldáást, tondiet {d} ij lah kandidaat tobbeen.",
+                "Tâlle {cell} pääcá áinoo sajen lovo {d} várás lávkkáást {box}. Čääli {d} tohon, veikkâ {cell} ain čáittá eres kandidaatâid."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Pieijâđ lovo siällun, mii tuše orroo riekta: tärhist jyehi eres kuárus siälu juávkust, ij tuše čielgâ siäluid.",
+            "Vajálduttiđ áinoo saje, ko siällu čáittá maaŋgâ kandidaat. Eres kandidaatah iä merkkâš mihheen; tuše tot merkkâš, ete lovost ij lah eres saje juávkust.",
+            "Kiäččâđ tuše lávkkáid. Räiđuh já čuáldááh adeleh áinoo sajijd seämmi tavan, eromâšávt loppâgeččin."
+          ],
+          "faq": [
+            [
+              "Mii lii áinoo saje Sudokust?",
+              "Lohho, mii puáhtá leđe tuše oovtâ siälust räiđoost, čuáldáást teikkâ lávkkáást. Juávkust kalga leđe tot lohho, tondiet siällu lii vissâ, veikkâ tast ain láá eres kandidaatah."
+            ],
+            [
+              "Mii lii áinoo saje já áinoo kandidaat erohus?",
+              "Áinoo kandidaat kyeskee siälu: ohtâ kandidaat pääcám. Áinoo saje kyeskee lovo: ohtâ siällu pääcám juávkust. Kuohâžeh piejeh lovo vissásávt."
+            ],
+            [
+              "Kuábbá lii älkkeeb kavnâđ?",
+              "Almaa muštâlusâid áinoo sajeh láá táválávt älkkeeb, ko puávtáh kiäččâđ kriidâ oovtâ lovo oovtâ keerdi. Ollâsâš muštâlusâiguin áinoo kandidaatah láá älkkimus, ko siällu, mast lii ohtâ kandidaat, oinnoo tallaan."
+            ],
+            [
+              "Maht ravvuu čielgee áinoo saje?",
+              "Nuuvt: \"Áinoo saje\" já lohho, tastoo \"taan räiđoost\", \"taan čuáldáást\" teikkâ \"taan lávkkáást\", já siällu lii merkkum. Toho ravvuu uđđâsist pieijâđ tom."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Lohkkum kandidaatah",
+          "title": "Lohkkum kandidaatah Sudokust: čujottâm já vaatâm",
+          "description": "Lohkkum kandidaatah: ko kandidaatah lávkkáást láá oovtâ linjást, teikkâ linjá kandidaatah oovtâ lávkkáást, lohho väldoo meddâl eres sajijn. Kyehti ovdâmerkkâ.",
+          "h1": "Lohkkum kandidaatah (locked candidates)",
+          "summary": "Lohkkum kandidaatah lii vuossâmuš teknik, mii väldá kandidaatâid meddâl lovo pieijâm sajan. Tast láá kyehti hámi. Čujottâm (pointing): lávkkáást láá lovo puoh kandidaatah oovtâ räiđoost teikkâ čuáldáást, tondiet lohho väldoo meddâl taan linjá eres siäluin. Vaatâm (claiming): räiđoost teikkâ čuáldáást láá lovo puoh kandidaatah oovtâ lávkkáást, tondiet lohho väldoo meddâl taan lávkká eres siäluin. Bare Sudoku ravvuu merkkee lävkki, mon taat teknik rabá, nuuvt: \"Lohkkum kandidaatah\".",
+          "when": [
+            "Ko áinoo kandidaatah já áinoo sajeh nuhâšeh Lossâd ärvádâsâst, taat lii vuossâmuš, mii kalga keččâliđ. Taat taarbâš ollâsâš muštâlusâid ainâs tom lovo várás, mon kiäččah. Lohkkum kandidaatah láá táválâžžâh: eenâb oosi Lossâd ärvádâsâin tarbâšeh taid, já Äššitobdee ärvádâsah kevttih taid styereeb minstârij kooskâst."
+          ],
+          "spot": [
+            "Čujottâm várás kiäččâ jyehi lávkká já jyehi lovo, mii tast váilu: jis taan lovo kandidaatsiäluh láá oovtâ räiđoost teikkâ čuáldáást, tärhist, lii-uv seämmi lohho kandidaat taan linjá eres siäluin lávkká olgobeln. Vaatâm várás kiäččâ räiđu teikkâ čuáldá: jis lovo kandidaatah láá puoh oovtâ lávkkáást, te lohho väldoo meddâl taan lávkká eres siäluin. Siärvust toho lovopoolâ, vâi jyehi tom lovo kandidaat merkkoo; linjá, mast láá kyehti teikkâ kulmâ merkkum muštâlus oovtâ lávkkáást, lii minstâr."
+          ],
+          "examples": [
+            {
+              "h": "Čujottâm",
+              "steps": [
+                "Lávkkáást {box} lovost {d} láá tuše taah kandidaatsiäluh: {cells}. Puoh toh láá räiđoost {row}.",
+                "Lávkkáást {box} kalga leđe {d}, tondiet räiđu {row} {d} lii lávkká {box} siste, veikkâ kuábbá taain siäluin tot šadda.",
+                "Räiđoost {row} ij pyevti leđe nubbe {d}, tondiet väldi {d} meddâl räiđu {row} siäluin lávkká olgobeln: {elim}."
+              ]
+            },
+            {
+              "h": "Vaatâm",
+              "steps": [
+                "Räiđoost {row} lohho {d} puáhtá leđe tuše siäluin {cells}, já puoh toh láá lávkká {box} siste.",
+                "Räiđoost {row} kalga leđe {d}, tondiet räiđu {row} vaatá lávkká {box} lovo {d}. Lávkká {box} eres siäluin ij pyevti leđe {d}.",
+                "Väldi {d} meddâl taain siäluin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Čujottâmist väldiđ lovo meddâl lávkká siste, ij olgobeln, teikkâ vaatâmist linjá siste, ij lávkká eres siäluin. Meddâlväldimeh láá jyehi keerdi siäluin, moh láá linjást, mut iä lávkkáást, teikkâ lávkkáást, mut iä linjást.",
+            "Kevttiđ njuolgâdus, ko kandidaatah láá lávkká kyevti räiđoost. Puoh lovo kandidaatsiäluh lávkkáást kolgeh leđe oovtâ linjást.",
+            "Vajálduttiđ uuccâđ áinoo kandidaat teikkâ áinoo saje, mon meddâlväldim rähtá. Lohkkum kandidaatah harvii piejeh lovo jieijâs; toh vuálmâšeh áinoo kandidaat teikkâ áinoo saje."
+          ],
+          "faq": [
+            [
+              "Mii láá lohkkum kandidaatah Sudokust?",
+              "Lovo kandidaatah, moh láá ráddjum lávkká já linjá ohtâssajan. Ko lávkkáást, teikkâ linjást, kalga leđe lohho taan ohtâssaajeest, lohho väldoo meddâl linjá eres siäluin, teikkâ lávkká eres siäluin."
+            ],
+            [
+              "Mii lii čujottâm já vaatâm erohus?",
+              "Čujottâm álgá lávkkáást: lovo kandidaatah lávkkáást čujoteh oovtâ räiđu teikkâ čuáldá kuávlu, tondiet lohho väldoo meddâl taan linjá eres siäluin. Vaatâm álgá räiđoost teikkâ čuáldáást: linjá puoh kandidaatah taan lovo várás láá oovtâ lávkkáást, tondiet linjá vaatá lovo já tot väldoo meddâl lávkká eres siäluin."
+            ],
+            [
+              "Lii-uv lohkkum kandidaatâin meid nommâ intersection removal?",
+              "Lii. Eres nommah láá box-line reduction vaatâm várás já pointing pairs teikkâ pointing triples čujottâm várás. Bare Sudoku kiävttá kuohâžân oovtâ noomâ."
+            ],
+            [
+              "Kuábbá tääsi taarbâš lohkkum kandidaatâid?",
+              "Lossâd. Ärvádâs, mii taarbâš lohkkum kandidaatâid teikkâ páárruid já kulmâsâid, mut ij mihheen lossâdub, lii Lossâd; Äššitobdee ärvádâsah tarbâšeh meid kyele teikkâ suájá."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Čielgâ páárruh já kulmâsah",
+          "title": "Čielgâ páárruh já kulmâsah Sudokust: maht toh toimeh",
+          "description": "Čielgâ páárruh já kulmâsah: kyehti teikkâ kulmâ siälu juávkust, main láá seämmi kyehti teikkâ kulmâ kandidaat. Uápá kavnâđ taid já maid väldiđ meddâl.",
+          "h1": "Čielgâ páárruh já kulmâsah (naked pair, naked triple)",
+          "summary": "Čielgâ pááru lii kyehti siälu seämmi räiđoost, čuáldáást teikkâ lávkkáást, main láá tárkkáht seämmi kyehti kandidaat. Taah kyehti lovo kolgeh leđe taain kyevti siäluin, tondiet taid puáhtá väldiđ meddâl juávku puoh eres siäluin. Čielgâ kulmâs lii seämmi jurdâ kuulmâ siäluin já kuulmâ lovoin; jyehi siälust puáhtá oinnođ kyehti teikkâ puoh kulmâ tain. Bare Sudoku ravvuu merkkee lävkki, mii tast čuávu, nuuvt: \"Pááru teikkâ kulmâs\".",
+          "when": [
+            "Ko muštâlusah láá ollâsâžžâh já áinoo kandidaatah, áinoo sajeh já lohkkum kandidaatah láá nuhâšâm. Čielgâ páárruh láá táválâžžâh Lossâd ärvádâsâin, čielgâ kulmâsah láá harvebeh. Kuohâžijd lii ávhálâš uuccâđ jyehi juávkust, mast láá ain vittâ teikkâ eenâb kuárus siälu."
+          ],
+          "spot": [
+            "Uusâ siäluid, main láá tuše kyehti kandidaat, já uusâ seämmi juávkust eres siälu, mast láá seämmi kyehti. Kulmâsâi várás kiäččâ juávkuid, main láá maaŋgâ siälu kyevti já kuulmâ kandidaatáin, já tärhist, kevttih-uv kulmâ tain oohtân tuše kulmâ sierâ lovo. Siäluh, main láá tárkkáht seämmi kandidaatah, oinnojeh älkkeht, ko muštâlusah láá čállum; siärvu Tievdi muštâlusâid taha tom oovtâ tohhoomáin."
+          ],
+          "examples": [
+            {
+              "h": "Čielgâ pááru",
+              "steps": [
+                "Siäluin {cellA} já {cellB} juávkust {unit} láá tárkkáht seämmi kyehti kandidaat: {d1} já {d2}.",
+                "Nubbe tain kalga leđe {d1} já nubbe {d2}. Ij lah tiättum, kuábbá lii kuábbá, mut kuohâš lovo láá taain kyevti siäluin.",
+                "Tondiet ij ohtâgin eres siällu juávkust {unit} pyevti leđe {d1} teikkâ {d2}. Väldi meddâl: {elim}."
+              ]
+            },
+            {
+              "h": "Čielgâ kulmâs",
+              "steps": [
+                "Kuulmâ siälu kandidaatah juávkust {unit} láá puoh seämmi kuulmâ lovost, {digits}: {cells}.",
+                "Taah kulmâ lovo kolgeh tievdiđ taid kulmâ siälu veikkâ magarâš ortnigist. Siällu ij taarbâš čäittiđ puoh kulmâ kandidaat; tehálâš lii, ete ij ohtâgin kuulmâ siäluin lah kandidaat, mii lii taid kuulmâ lovo olgobeln.",
+                "Väldi {digits} meddâl juávku {unit} puoh eres siäluin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Väldiđ kyehti siälu, main láá seämmi kyehti kandidaat, mut meid kuálmád. Čielgâ pááru várás jyehi siälust kolgeh leđe tárkkáht kyehti kandidaat já ij mihheen eres.",
+            "Väldiđ lovoid meddâl pááru siäluin jieijâs. Pááru tuálá jieijâs kandidaatâid; meddâlväldimeh láá juávku eres siäluin.",
+            "Váátiđ, ete kulmâs jyehi siälust oinnojeh puoh kulmâ lovo. Siällu, mast láá kyehti kuulmâ lovost, lii riekta, jis ij ohtâgin siälust lah kandidaat taid kuulmâ lovo olgobeln."
+          ],
+          "faq": [
+            [
+              "Mii lii čielgâ pááru Sudokust?",
+              "Kyehti siälu oovtâ juávkust, main kuohâžijn láá tárkkáht seämmi kyehti kandidaat. Taah kyehti lovo láá lohkkum taid kyevti siällun, tondiet taid puáhtá väldiđ meddâl juávku eres siäluin."
+            ],
+            [
+              "Mii lii čielgâ kulmâs?",
+              "Kulmâ siälu oovtâ juávkust, main kandidaatah láá oohtân tuše kulmâ lovo. Jyehi siälust puáhtá leđe kyehti teikkâ kulmâ tain. Kulmâ lovo tievdih kulmâ siälu, tondiet taid puáhtá väldiđ meddâl juávku eres siäluin."
+            ],
+            [
+              "Pieijá-uv čielgâ pááru lovo?",
+              "Ij jieijâs. Tot väldá kandidaatâid meddâl, já meddâlväldim kuođđá táválávt áinoo kandidaat teikkâ áinoo saje. Bare Sudoku ravvuu čáittá taan lävkki já nomât teknik, mii taha tom máhđulâžžân."
+            ],
+            [
+              "Puáhtá-uv čielgâ pááru leđe seämmi ääigi lávkkáást já räiđoost?",
+              "Puáhtá. Jis kyehti siälu láá seämmi räiđoost já seämmi lávkkáást, pááru väldá kandidaatâid meddâl kuohâš juávkust. Bare Sudoku tärhist taid juávku juávku maŋa."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Čiegâs páárruh já kulmâsah",
+          "title": "Čiegâs páárruh já kulmâsah Sudokust: maht taid kavnâđ",
+          "description": "Čiegâs pááru lii kyehti lovo, moh pyehtih leđe tuše juávku seämmi kyevti siälust, tondiet taain siäluin eres kandidaatah väldojeh meddâl. Uápá kavnâđ taid.",
+          "h1": "Čiegâs páárruh já kulmâsah (hidden pair, hidden triple)",
+          "summary": "Čiegâs pááru lii kyehti lovo, moh láá oovtâ räiđoost, čuáldáást teikkâ lávkkáást kandidaatah tuše seämmi kyevti siäluin ige eres sajeest. Taain kyevti siäluin kolgeh leđe taah kyehti lovo, tondiet puoh eres kandidaatâid taain siäluin puáhtá väldiđ meddâl. Čiegâs kulmâs toimâ seämmi vuáhán kuulmâ lovoin, moh láá ráddjum kulmâ siällun. Meddâlväldim maŋa siäluh čäittih čielgâ pááru teikkâ kulmâs. Bare Sudoku ravvuu merkkee lävkki, mii tast čuávu, nuuvt: \"Pááru teikkâ kulmâs\".",
+          "when": [
+            "Ko juávkust láá siäluh, main láá maaŋgâ kandidaat, já áinoo kandidaatah já áinoo sajeh láá nuhâšâm. Čiegâs páárruh čievâšeh siäluid siisâ, main láá maaŋgâ kandidaat, já tondiet taid lii ávhálâš uuccâđ juste tobbeen, kost čielgâ páárruh iä oinnoo. Čiegâs kulmâsah láá harvii; Bare Sudoku keččâl kavnâđ taid, mut eenâb oosi Lossâd ärvádâsâin čuávdojeh almaa taid."
+          ],
+          "spot": [
+            "Porgâ lovo mield, ij siälu mield. Kiäččâ juávkust, kuus jyehi lohho, mii váilu, puáhtá moonnâđ. Jis kyevti lovost láá kuohâžijn tuše kyehti máhđulâš siälu já toh láá seämmi kyehti siälu, te tast lii čiegâs pááru. Siärvust toho lovopoolâ, vâi tom kandidaatah merkkojeh; jis kyehti lovo čuovâdeh seämmi kyehti siälu juávkust já ij mihheen eres tast, tot lii minstâr."
+          ],
+          "examples": [
+            {
+              "h": "Čiegâs pááru",
+              "steps": [
+                "Juávkust {unit} lovoin {d1} já {d2} láá kuohâžijn tuše kyehti máhđulâš siälu, já toh láá seämmi kyehti: {cells}.",
+                "Taain kyevti siäluin kolgeh leđe {d1} já {d2}, tondiet taid eres kandidaatah láá máhđuttemeh.",
+                "Väldi meddâl: {elim}. Tääl kyehti siälu čäittih čielgâ pááru, mii puáhtá rahâđ eenâb."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Väldiđ pááru kyehti lovo meddâl pááru siäluin. Siäluin väldojeh meddâl eres kandidaatah; pááru lovoh pääcih.",
+            "Tuhhiđ lovo, mast lii kuálmád máhđulâš siällu juávkust. Kuohâš lovo kolgeh leđe ráddjum tárkkáht kyevti siällun.",
+            "Uuccâđ tuše lávkkáin. Čiegâs páárruh láá seämmi tavan räiđuin já čuáldáin."
+          ],
+          "faq": [
+            [
+              "Mii lii čiegâs pááru Sudokust?",
+              "Kyehti lovo, moh pyehtih leđe tuše juávku seämmi kyevti siälust. Taain siäluin kolgeh leđe taah lovoh, tondiet taid eres kandidaatah väldojeh meddâl."
+            ],
+            [
+              "Maht čiegâs pááru iäru čielgâ páárust?",
+              "Čielgâ pááru oinnoo: kyehti siälu, moh čäittih tuše seämmi kyehti kandidaat. Čiegâs pááru lii lasekandidaatâi vyelni kyevti siälust. Ko taah lasekandidaatah väldojeh meddâl, čiegâs pááru šadda čielgâ páárun."
+            ],
+            [
+              "Mii lii čiegâs kulmâs?",
+              "Kulmâ lovo, moh láá ráddjum juávku kulmâ siällun. Jyehi lohho ij taarbâš leđe puoh kuulmâ siälust; tehálâš lii, ete ij ohtâgin kuulmâ lovost lah kandidaat taid siäluid olgobeln."
+            ],
+            [
+              "Čáittá-uv ravvuu, lii-uv pááru čiegâs teikkâ čielgâ?",
+              "Ij. Bare Sudoku kavna kuohâžijd já merkkee lävkki, mii tast čuávu, nuuvt: \"Pááru teikkâ kulmâs\". Taah siijđoh sierrejeh taid, ko taid kavnah sierâ vuáhán."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing Sudokust: maht teknik toimâ",
+          "description": "X-Wing: lohho, mast láá tárkkáht kyehti kandidaatsiälu kyevti räiđoost seämmi kyevti čuáldáást, väldoo meddâl taan kyevti čuáldá eres siäluin. Ovdâmerkkâ.",
+          "h1": "X-Wing",
+          "summary": "X-Wing lii minstâr, mast lii ohtâ lohho já nelji siälu rektaangel čiegâin. Jis lovost láá kuohâš räiđoost tárkkáht kyehti kandidaatsiälu, já toh siäluh láá seämmi kyevti čuáldáást, te lohho kalga leđe rektaangel kyevti vuástálâs čiegâst. Tondiet tom puáhtá väldiđ meddâl taan kyevti čuáldá puoh eres siäluin. Seämmi toimâ, ko räiđuh já čuáldááh molsâšeh sajijd. Tot lii vuossâmuš Äššitobdee-teknik Bare Sudokust.",
+          "when": [
+            "Ko áinoo kandidaatah, áinoo sajeh, lohkkum kandidaatah já páárruh já kulmâsah láá nuhâšâm. X-Wing lii táválumos Äššitobdee-minstâr já ilmán tavan, ko lovost láá uccán kandidaatah pääcám, táválávt ko lohho lii jo nelji, vittâ teikkâ kuttâ keerdi kriidâst. Taat taarbâš ollâsâš muštâlusâid tom lovo várás, mon kiäččah."
+          ],
+          "spot": [
+            "Valjii lohho já uusâ räiđuid, main tast láá tárkkáht kyehti kandidaatsiälu. Jis kyehti taggaar räiđu kevttih seämmi kyevti čuáldá, tärhist taid čuáldáid, láá-uv tain eres taan lovo kandidaatah: toh láá meddâlväldimeh. Tastoo kiäččâ seämmi vuáhán čuáldáid vuáđđun. Siärvust toho lovopoolâ: jyehi tom lovo kandidaat merkkoo, já nelji merkkum muštâlus rektaangel oinnoo älkkeht."
+          ],
+          "examples": [
+            {
+              "h": "Ovdâmerkkâ",
+              "steps": [
+                "Lovost {d} láá tárkkáht kyehti kandidaatsiälu räiđoost {r1} já tárkkáht kyehti räiđoost {r2}, já toh láá seämmi kyevti čuáldáást, {c1} já {c2}: {cells}.",
+                "Räiđu {r1} pieijá jieijâs {d} čuáldán {c1} teikkâ {c2}, já räiđu {r2} pieijá jieijâs {d} nubbe čuáldán. Kuohâš tiileest čuáldááh {c1} já {c2} finnejeh kuohâžeh oovtâ {d} taain kyevti räiđoost.",
+                "Tondiet {d} ij pyevti leđe eres sajeest čuáldáin {c1} já {c2}. Väldi {d} meddâl taain siäluin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kevttiđ räiđu, mast lovost láá kulmâ kandidaatsiälu. Jyehi vuáđuräiđoost kolgeh leđe tárkkáht kyehti, já kuohâžeh kolgeh leđe kyevti ohtsâš čuáldáást.",
+            "Väldiđ lovo meddâl räiđuin čuáldái sajan. Ko räiđuh láá vuáđđun, meddâlväldimeh láá čuáldáin, já ko čuáldááh láá vuáđđun, meddâlväldimeh láá räiđuin.",
+            "Vajálduttiđ molsum versio. X-Wing, mii lii čuáldái vuáđuld, väldá meddâl räiđuin."
+          ],
+          "faq": [
+            [
+              "Mii lii X-Wing Sudokust?",
+              "Lohho, mast lii kuohâš räiđoost tárkkáht kyehti kandidaatsiälu, seämmi kyevti čuáldáást. Lohho lii taan rektaangel kyevti vuástálâs čiegâst, tondiet tot väldoo meddâl kyevti čuáldá eres siäluin. Räiđuh já čuáldááh pyehtih molsâšiđ sajijd."
+            ],
+            [
+              "Mondiet X-Wing toimâ?",
+              "Kuohâš räiđoost kalga lohho leđe kuábbáá-uv kyevti čuáldáást, já kyehti räiđu iä pyevti kevttiđ seämmi čuáldá. Tondiet kuohâš čuáldá finnee jieijâs lovo taain räiđuin, já puoh eres kandidaatah taain čuáldáin láá máhđuttemeh."
+            ],
+            [
+              "Lii-uv X-Wing kyeli?",
+              "Lii. X-Wing lii kyeli, mon stuorâdâh lii kyehti; Swordfish lii kyeli, mon stuorâdâh lii kulmâ. Bare Sudoku kavna kuohâžijd."
+            ],
+            [
+              "Kuábbá tääsist láá X-Wingeh?",
+              "Äššitobdee. Ärvádâs, mii taarbâš X-Wing, Y-Wing, Swordfish teikkâ XYZ-Wing, lii Äššitobdee."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing Sudokust: maht teknik toimâ",
+          "description": "Y-Wing (XY-Wing): kuávdášsiällu kyevti kandidaatáin já kyehti suájá, main kuohâžist lii ohtâ tain, väldeh lovo meddâl siäluin, moh oinneh kuohâš suájá.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, mon meid kočodeh XY-Wing, kiävttá kulmâ siälu, main jyehi siälust láá kyehti kandidaat. Kuávdášsiälust láá kandidaatah X já Y. Nubbe suájá uáiná kuávdášsiälu já tast láá X já Z; nubbe suájá uáiná kuávdášsiälu já tast láá Y já Z. Veikkâ mii kuávdášsiällu šadda, nubbe suájáin kalga leđe Z, tondiet Z puáhtá väldiđ meddâl jyehi siälust, mii uáiná kuohâš suájá. Tot lii Äššitobdee-teknik Bare Sudokust.",
+          "when": [
+            "Ko ärvádâsâst láá maaŋgâ siälu, main láá tárkkáht kyehti kandidaat, já kyeli ij kávnu. Y-Wing lii táválâš Äššitobdee-ärvádâsâin, já tom kavnah, ko čuávuh siäluid, main láá kyehti kandidaat: jyehi tain puáhtá leđe kuávdášsiällu teikkâ suájá."
+          ],
+          "spot": [
+            "Čääli listo siäluin, main láá tárkkáht kyehti kandidaat. Kiäččâ jyehi tain kuávdášsiällun kandidaatâiguin X já Y, já uusâ tom ränjásiäluin siälu, mast láá X já eres lohho Z, já siälu, mast láá Y já seämmi Z. Toh kyehti láá suájáh. Uusâ tastoo siäluid, moh oinneh kuohâš suájá já main lii Z. Huámáš, ete suájáh iä taarbâš oinnođ nubbe nube."
+          ],
+          "examples": [
+            {
+              "h": "Ovdâmerkkâ",
+              "steps": [
+                "Kuávdášsiälust {pivot} láá kandidaatah {x} já {y}. Tot uáiná siälu {wingA}, mast láá {x} já {z}, já siälu {wingB}, mast láá {y} já {z}.",
+                "Jis {pivot} lii {x}, te {wingA} massá kandidaat {x} já šadda {z}. Jis {pivot} lii {y}, te {wingB} šadda {z}. Nubbe suájáin lii {z} jyehi tiileest.",
+                "Siällu, mii uáiná kuohâš suájá, ij kuássin pyevti leđe {z}. Väldi {z} meddâl taain siäluin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Valjiđ suájáid, moh iä kuohâžeh uáini kuávdášsiälu. Jyehi suájá kalga leđe seämmi räiđoost, čuáldáást teikkâ lávkkáást ko kuávdášsiällu.",
+            "Väldiđ Z meddâl siäluin, moh oinneh tuše oovtâ suájá. Siällu, mast Z väldoo meddâl, kalga oinnođ kuohâš suájá.",
+            "Väldiđ Z meddâl kuávdášsiälust. Y-Wing kuávdášsiälust ij lah Z; jis tast lii, te minstâr lii XYZ-Wing eres njuolgâdusâiguin."
+          ],
+          "faq": [
+            [
+              "Mii lii Y-Wing Sudokust?",
+              "Kulmâ siälu, main láá kyehti kandidaat: kuávdášsiällu, mast láá X já Y, suájá, mast láá X já Z já mii uáiná kuávdášsiälu, já suájá, mast láá Y já Z já mii uáiná kuávdášsiälu. Nubbe suájáin lii jyehi keerdi Z, tondiet Z väldoo meddâl siäluin, moh oinneh kuohâš suájá."
+            ],
+            [
+              "Lii-uv Y-Wing seämmi ko XY-Wing?",
+              "Lii. Kuohâš noomâ čielgejeh seämmi minstâr. Bare Sudoku kiävttá noomâ Y-Wing."
+            ],
+            [
+              "Mondiet nubbe suájáin kalga leđe Z?",
+              "Jis kuávdášsiällu lii X, vuossâmuš suájá massá X já šadda Z. Jis kuávdášsiällu lii Y, nubbe suájá šadda Z. Kuávdášsiällu lii nubbe taain kyevti lovost, tondiet nubbe suájáin lii Z."
+            ],
+            [
+              "Mon maŋgâ siälust Y-Wing väldá kandidaatâid meddâl?",
+              "Táválávt oovtâ teikkâ kyevti siälust: tuše siäluin, moh oinneh kuohâš suájá já main lii ain Z. Taat lii tuárvi rähtiđ áinoo kandidaat teikkâ áinoo saje."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish Sudokust: maht teknik toimâ",
+          "description": "Swordfish: lohho, mii lii kuulmâ räiđoost ráddjum kulmâ čuáldán, väldoo meddâl taan kuulmâ čuáldá eres siäluin. Kyeli, mon stuorâdâh lii kulmâ, ovdâmerkkáin.",
+          "h1": "Swordfish",
+          "summary": "Swordfish lii X-Wing kuulmâ räiđuin já kuulmâ čuáldáin. Jis lovost láá jyehi kuulmâ räiđoost eenâmustáá kulmâ kandidaatsiälu, já puoh toh siäluh láá seämmi kuulmâ čuáldáást, te kulmâ räiđu kevttih lovo taain čuáldáin, já lovo puáhtá väldiđ meddâl kuulmâ čuáldá puoh eres siäluin. Räiđuh já čuáldááh pyehtih molsâšiđ sajijd. Bare Sudoku keččâl Swordfish Y-Wing maŋa, Äššitobdee-ärvádâsâin.",
+          "when": [
+            "Ko X-Wing já Y-Wing iä kavnâ mihheen. Swordfish lii harvebeh ko X-Wing, já taarbâš lovo, mast láá uccán kandidaatah kuulmâ linjást. Taat taarbâš ollâsâš já riekta muštâlusâid tom lovo várás."
+          ],
+          "spot": [
+            "Valjii lohho já uusâ räiđuid, main tast láá kyehti teikkâ kulmâ kandidaatsiälu. Jis kulmâ taggaar räiđu kandidaatah láá oohtân tuše kuulmâ čuáldáást, tärhist, láá-uv taain čuáldáin eres taan lovo kandidaatah. Jyehi räiđoost ij taarbâš leđe kandidaat jyehi čuáldáást: Swordfishist puáhtá leđe kuttâ, čiččâm, käävci teikkâ ovce siälu. Siärvust merkkii lovo tom poolâin já uusâ kulmâ räiđu, main kandidaatah láá kuulmâ čuáldáást."
+          ],
+          "examples": [
+            {
+              "h": "Ovdâmerkkâ",
+              "steps": [
+                "Lovost {d} láá jyehi räiđoost {rows} eenâmustáá kulmâ kandidaatsiälu, já puoh toh siäluh láá čuáldáin {cols}: {cells}.",
+                "Jyehi kuulmâ räiđoost kalga lohho {d} leđe oovtâ kuulmâ čuáldáást, já kyehti räiđu iä pyevti kevttiđ seämmi čuáldá. Tondiet kulmâ čuáldá finnejeh jieijâs {d} taain kuulmâ räiđoost.",
+                "Puoh eres {d}-kandidaatah čuáldáin {cols} láá máhđuttemeh. Väldi {d} meddâl taain siäluin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Váátiđ puoh ovce siälu. Swordfish, mast láá kyehti kandidaat muáddi räiđoost, lii meid riekta, jis kulmâ räiđu láá oohtân tuše kuulmâ čuáldáást.",
+            "Väldiđ fáárun räiđu, mast láá nelji kandidaatsiälu. Jyehi vuáđuräiđoost puáhtá leđe eenâmustáá kulmâ, puoh kuulmâ čuáldá siste.",
+            "Väldiđ meddâl vuáđuräiđuin. Ko räiđuh láá vuáđđun, meddâlväldimeh láá kuulmâ čuáldáin, vuáđuräiđui olgobeln."
+          ],
+          "faq": [
+            [
+              "Mii lii Swordfish Sudokust?",
+              "Lohho, mon kandidaatah kuulmâ räiđoost láá ráddjum kulmâ čuáldán. Kulmâ räiđu kolgeh pieijâđ lovo taid kulmâ čuáldán, oovtâ jyehi čuáldán, tondiet lohho väldoo meddâl eres siäluin taain čuáldáin."
+            ],
+            [
+              "Maht Swordfish iäru X-Wingist?",
+              "Tuše stuorâdâhâst: X-Wing kiävttá kyevti räiđu já kyevti čuáldá, Swordfish kuulmâ já kuulmâ. Jurdâččem lii seämmi."
+            ],
+            [
+              "Taarbâš-uv Swordfish tárkkáht ovce siälu?",
+              "Ij. Jyehi räiđoost puáhtá leđe kyehti teikkâ kulmâ kandidaat; minstâr váátá tuše, ete kulmâ räiđu iä kevttii oohtân eenâb ko kulmâ čuáldá."
+            ],
+            [
+              "Kávnoo-uv kyeli, mon stuorâdâh lii nelji?",
+              "Kávnoo, Jellyfish. Bare Sudoku ij kevttii tom, ko suu ärvádâsah iä kuássin taarbâš tom."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing Sudokust: maht teknik toimâ",
+          "description": "XYZ-Wing: kuávdášsiällu kuulmâ kandidaatáin já kyehti suájá, moh juohâđeh ohtâ tain, väldeh lovo meddâl siäluin, moh oinneh puoh kuulmâ. Ovdâmerkkâ.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing lii Y-Wing, mast kuávdášsiälust láá kulmâ kandidaat. Kuávdášsiälust láá X, Y já Z; nubbe suájá uáiná kuávdášsiälu já tast láá X já Z, nubbe uáiná kuávdášsiälu já tast láá Y já Z. Ohtâ kuulmâ siälust kalga leđe Z, tondiet Z puáhtá väldiđ meddâl jyehi siälust, mii uáiná puoh kuulmâ. Ko kuávdášsiällu jieš puáhtá leđe Z, siällu, mast Z väldoo meddâl, kalga oinnođ kuávdášsiälu já kuohâš suájá, já taat ráddjá tom lávkkán teikkâ linján, mii lii siäluin ohtsâš. Tot lii lossâdumos teknik, mon Bare Sudoku kiävttá.",
+          "when": [
+            "Tuše ko mihheen eres ij toimâ. XYZ-Wing lii harvemus minstâr Bare Sudokust já ilmán tuše Äššitobdee-ärvádâsâin. Uusâ tom, ko siällu, mast láá kulmâ kandidaat, lii lávkkáást ohtâ siäluin, mast láá kyehti kandidaat já mii juohâd kyevti tain lovoin."
+          ],
+          "spot": [
+            "Aalgât siäluin, main láá tárkkáht kulmâ kandidaat; jyehi tain puáhtá leđe kuávdášsiällu. Uusâ tom ränjásiäluin kyehti siälu, main kuohâžist láá kyehti kandidaat, kuohâžeh kuávdášsiälu kuulmâ lovost, já moh juohâđeh tárkkáht oovtâ lovo Z. Uusâ tastoo siäluid, moh oinneh kuávdášsiälu já kuohâš suájá já main lii Z. Tuođâlávt nubbe suájá lii kuávdášsiälu lávkkáást já nubbe tom räiđoost teikkâ čuáldáást, já siäluh, main Z väldoo meddâl, láá taan lávkká eres siäluh taan räiđoost teikkâ čuáldáást."
+          ],
+          "examples": [
+            {
+              "h": "Ovdâmerkkâ",
+              "steps": [
+                "Kuávdášsiälust {pivot} láá kulmâ kandidaat: {x}, {y} já {z}. Tot uáiná siälu {wingA}, mast láá {x} já {z}, já siälu {wingB}, mast láá {y} já {z}.",
+                "Jis {pivot} lii {z}, te taat lii čielgâ. Jis tot lii {x}, {wingA} kalga leđe {z}. Jis tot lii {y}, {wingB} kalga leđe {z}. Jyehi tiileest ohtâ kuulmâ siälust lii {z}.",
+                "Siällu, mii uáiná puoh kuulmâ, ij pyevti leđe {z}. Väldi {z} meddâl taain siäluin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Väldiđ meddâl siäluin, moh oinneh tuše kyehti suájá. Eres láhkái ko Y-Wingist, kuávdášsiällu puáhtá leđe Z, tondiet siällu kalga oinnođ meid kuávdášsiälu.",
+            "Kevttiđ suájáid, mon kandidaatah iä lah kuohâžeh kuávdášsiälu kuulmâ kandidaat siste.",
+            "Seeguttiđ tom Y-Wingáin: erohus lii kuávdášsiälu kuálmád kandidaat, já tot muttá, maid siäluid puáhtá čuorgâđ."
+          ],
+          "faq": [
+            [
+              "Mii lii XYZ-Wing Sudokust?",
+              "Kuávdášsiällu kandidaatâiguin X, Y já Z já kyehti suájá, nubbe mast láá X já Z, nubbe mast láá Y já Z, já kuohâžeh oinneh kuávdášsiälu. Ohtâ kuulmâ siälust lii Z, tondiet Z väldoo meddâl siäluin, moh oinneh puoh kuulmâ."
+            ],
+            [
+              "Maht XYZ-Wing iäru Y-Wingist?",
+              "Kuávdášsiälust láá kulmâ kandidaat kyevti sajan, já Z lii nubbe tain. Tondiet Z puáhtá leđe meid kuávdášsiälust, já tuše siäluin, moh oinneh kuávdášsiälu já kuohâš suájá, puáhtá Z väldiđ meddâl."
+            ],
+            [
+              "Mon tavan XYZ-Wing ilmán?",
+              "Harvii. Bare Sudokust tuše Äššitobdee-ärvádâsah pyehtih taarbâšiđ tom, já eenâb oosi iä taarbâš. Bare Sudoku tärhist tom majemužžân, X-Wing, Y-Wing já Swordfish maŋa."
+            ],
+            [
+              "Kávnoo-uv WXYZ-Wing?",
+              "Kávnoo, kuávdášsiäluin, mast láá nelji kandidaat, mut Bare Sudoku ij kevttii tom. Jyehi siärvu ärvádâs puáhtá čuávdiđ taan čielgiittâs ovce teknikáin."
+            ]
+          ]
+        }
+      }
+    },
+    "sms": {
+      "learnHeading": "Mätt Sudoku",
+      "learnText": "Lij-a Sudoku tuʹnne ođđ, leʹbe leäk-a tåʹrǩǩõõttâm lossâd mieʹrǩǩmõʹšše? Kuõʹhtt čiõlǥtõõzz čiõlǥte njuõʹlǧǧõõzzid da pukid räʹtǩǩeemteknikkid, kooid vuäʹpstõõzz ââʹnne, da juõʹǩǩ čiõlǥtõõzzâst lij tuõttlaž ooudâsmeʹrkk.",
+      "howToLink": "Mäʹhtt Sudoku spällʼled",
+      "techniquesLink": "Sudoku räʹtǩǩeemteknikk",
+      "labels": {
+        "howTo": "Mäʹhtt spällʼled",
+        "techniques": "Teknikk",
+        "play": "Siõr Sudoku",
+        "prev": "Ouddâl teknikk",
+        "next": "Pueʹtti teknikk",
+        "all": "Puk teknikk",
+        "example": "Ooudâsmeʹrkk",
+        "steps": "Vuõʹhǩǩ vuõʹhǩǩest",
+        "when": "Koʹs ââʹnned",
+        "spot": "Mäʹhtt tõn kaunnâd",
+        "mistakes": "Täujja vââʹjj",
+        "inGame": "Bare Sudokust",
+        "level": "Vuõssmõs tääʹss: {level}",
+        "hint": "Siõrâst vuäʹpstõs särnn: {text}",
+        "legend": "Paʹǩǩes lookk lie uʹvddum, ââlǧǧâs lookk lie pijjum räʹtǩǩeem ääiʹj, da ucc lookk lie kandidaatt. Meärkkuum seeʹl raajje mallâ, jaukkuum kandidaatt lie vaʹlddum meädda, da kõõrdin meärkkuum kandidaatt lij lokk, kåʹtt pieʹjjak.",
+        "notation": "Seeʹlid ǩeʹrjjak nuʹtt: r3c7 miõttâd räidd 3, čuõll 7. Räiddid lookkak pâʹjjen, čuõllid kuʹrr beäʹlest, da lääʹddid 1 räjja 9 kuʹrr beäʹl pâʹjjmõs čiõʹǩǩest, räidd räiddâst.",
+        "row": "räidd {n}",
+        "column": "čuõll {n}",
+        "box": "lääʹdd {n}",
+        "elimItem": "{d} seeʹlest {cell}",
+        "regions": "Räidd 5, čuõll 5 da lääʹdd 5 mieʹrǩǩmõõžž aalǥâst",
+        "firstMove": "Åʹhtti kandidaatt: {cell} vuäitt leeʹd tåʹlǩ {d}",
+        "breadcrumb": "Pääʹlǧǧ"
+      },
+      "howTo": {
+        "title": "Mäʹhtt Sudoku spällʼled: njuõʹlǧǧõõzz da vuõssmõs vuõʹhǩǩ",
+        "description": "Mätt Sudoku: njuõʹlǧǧõõzz, mäʹhtt räidd, čuõll da lääʹdd tuåimme, mõõzz diõtt juõʹǩǩ mieʹrǩǩmõõžžâst lij õhtt räʹtǩǩõs, mõõntõõzz da vuõssmõs vuõʹhǩǩ.",
+        "h1": "Mäʹhtt Sudoku spällʼled",
+        "summary": "Sudoku lij logiikmieʹrǩǩmõš 9×9 kriidâst. Piijj juõʹǩǩ kuârrâs sieʹlle lookk 1 räjja 9 nuʹtt, što juõʹǩǩ räiddast, juõʹǩǩ čuõllâst da juõʹǩǩ 3×3 lääʹddest lij juõʹǩǩ lokk tääʹrǩed õõut vuâra. Muäʹdd lookk lie aalǥâst uʹvddum; jeeʹres lookkid kaaunak logiikin sieʹll seeʹl mâŋŋa, juõʹǩǩ vuõʹhǩǩ lij vissa, da jiõk ni kuäss taarbâš äʹrvvled. Tät čiõlǥtõs čiõlǥat kriid, njuõʹlǧǧõõzzid, õõut räʹtǩǩõõzz prinsiip, mõõntõõzzid da äʹlǩes strategia aalǥ vääras. Pukid tõid vuäitak harjjtõõllâd [Bare Sudokust](play), kåʹtt lij määusteʹmes da koʹst vuäʹpstõõzz čiõlǥte logiik.",
+        "sections": [
+          {
+            "h": "Mii lie Sudoku njuõʹlǧǧõõzz?",
+            "p": [
+              "Njuõʹlǧǧõõzz lie tåʹlǩ koumm, da tõk lie seämma njuõʹlǧǧõs kolmm beäʹlest ǩiõčč: juõʹǩǩ räiddast âʹlǧǧe leeʹd lookk 1 räjja 9, juõʹǩǩ čuõllâst âʹlǧǧe leeʹd lookk 1 räjja 9, da juõʹǩǩ 3×3 lääʹddest âʹlǧǧe leeʹd lookk 1 räjja 9. Tõn diõtt lokk ij ni kuäss vuäitt leeʹd kuõʹhtt vuâra seämma räiddast, čuõllâst leʹbe lääʹddest.",
+              "Uʹvddum lookk, kook lie paʹǩǩes ǩeeʹrjin, lie kiõʹrǧǧ. Tuu tuâjj lij teâuddad kuârrâs seeʹlid. Tõʹst ij leäkku rekknummuš ni riâǥǥ: lookk lie tåʹlǩ ååʹcc jeeʹresnallšem meärkk. Lookki sâjja vuäitak ââʹnned še puõʹstvid leʹbe häämid, da mieʹrǩǩmõš lij seämma."
+            ]
+          },
+          {
+            "h": "Mäʹhtt kriid lij raajjuum?",
+            "p": [
+              "Kriidâst lie 81 seeʹl, 9 räidd da 9 čuõll. Paʹǩǩes liinn raajje ååʹcc 3×3 lääʹdd. Juõʹǩǩ sieʹll lij tääʹrǩed õõut räiddast, õõut čuõllâst da õõut lääʹddest, da tõk koumm lie suu joukk. Tõk 20 jeeʹres seeʹl, kook lie seämma joukkâst ko sieʹll, lie suu kuåimmseeʹl; lokk, kåʹtt pieʹjjak sieʹlle, jaukkad seämma lookk puk 20 kuåimmseeʹlin.",
+              "Seeʹlid ǩeʹrjjak nuʹtt: r3c7 miõttâd räidd 3, čuõll 7. Räiddid lookkak pâʹjjen, čuõllid kuʹrr beäʹlest, da lääʹddid 1 räjja 9 kuʹrr beäʹl pâʹjjmõs čiõʹǩǩest, räidd räiddâst. Tät meärkkâmvueʹǩǩ lij âânnmest puk teknikkčiõlǥtõõzzin, da tõn lij äʹvvkõs mättjed: r5c5 lij kriid kõskk."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Mõõzz diõtt juõʹǩǩ Sudokust lij tääʹrǩed õhtt räʹtǩǩõs?",
+            "p": [
+              "Vuõiggâd Sudokust lij õhtt räʹtǩǩõs, da tõn diõtt logiikk tuåimm. Ko vuäitak čuäʹjted, što lokk ij vuäitt leeʹd jeeʹres sâjjest joukkâst, teʹl tõt âlgg leeʹd tõn seeʹlest, kåʹtt lij päcc, ko räʹtǩǩõs lij da tõt lij åʹhtti. Mieʹrǩǩmõõžžâst, koʹst lie kuõʹhtt räʹtǩǩõõzz, logiikk ij vuäitt jeeʹrsted tõid, da ouddâl leʹbe mâŋŋa âlgak äʹrvvled.",
+              "Bare Sudoku raajj juõʹǩǩ mieʹrǩǩmõõžž tuu neävvâst da tarkstâll, što tõʹst lij tääʹrǩed õhtt räʹtǩǩõs da što suu logiikklaž räʹtǩǩeei vuäitt räʹtǩǩeed tõn vaʹlljum tääʹzz teknikkivuiʹm. Jõs leäk tåʹrǩǩõõttâm, teʹl ain lij pueʹtti vuõʹhǩǩ, kåʹtt vuäitak kaunnâd, da vuäʹpstõs čuäʹjat tõn."
+            ]
+          },
+          {
+            "h": "Mäʹhtt alttâd Sudoku?",
+            "p": [
+              "Alttääd tõʹst, kåʹtt lij jeänmõsân rääʹjjuum. Tät riâǥǥ tuåimm juõʹǩǩ tääʹzzest:"
+            ],
+            "list": [
+              "Vaʹllji lokk, kåʹtt lij juʹn määŋg vuâra kriidâst, ooudâsmeʹrkkân kuäʹtt leʹbe čiččâm vuâra, da ooʒʒ lääʹddid, koin tõt ain fäʹlli. Täujja lääʹddest lij tåʹlǩ õhtt sieʹll päcc tõn vääras: tõt lij [åʹhtti sââʹjj](hidden-single).",
+              "Ooʒʒ seeʹlid, koin lie ucc vueiʹtlvõõđ. Seeʹlest, koon räiddast, čuõllâst da lääʹddest lie õõutsââʹjest kääuʹc jeeʹres lookk, lij tåʹlǩ õhtt kandidaatt päcc: [åʹhtti kandidaatt](naked-single). Seeʹl lââʹǩǩ teäʹvv räiddin leʹbe lääʹddin lie pueʹrmõs sââʹjj ooccâd.",
+              "Juõʹǩǩ lokk, kåʹtt pieʹjjak, jaukkad kandidaatt 20 kuåimmseeʹlin, tõn diõtt tarkstõõll tõid seeʹlid seämmanalla. Åʹhtti kandidaatt da åʹhtti sââʹjj pueʹtte täujja kuõimmes mâŋŋa.",
+              "Ko jiõk šâʹtt kaunn äʹlǩes vuõʹhǩǩid, ǩeʹrjjed mõõntõõzzid: juõʹǩǩ kuârrâs seeʹl kandidaattid. Ooʒʒ teʹl lookk, kåʹtt lij rääʹjjuum õõut liinna lääʹdd seʹst ([loʹǩǩuum kandidaatt](locked-candidates)), leʹbe kuõʹhtt seeʹl, koin lie seämma kuõʹhtt kandidaatt ([čiõlgg pääʹrr](naked-pairs)).",
+              "Mäʹcc åʹhtti kandidaatti da åʹhtti sââʹjji årra juõʹǩǩ jaukkummuž mâŋŋa. Še Äʹšštobddi-mieʹrǩǩmõõžž räʹtǩǩe jeänmõsân tõivuiʹm; lossâdab teknikk tåʹlǩ ävvad pueʹtti vuõʹhǩǩ."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Mii lie mõõntõõzz da koʹs tõid âlgg ââʹnned?",
+            "p": [
+              "Mõõntõõzz, kooid nõõmte še pliiʹjjažmeärkkân leʹbe kandidaattân, lie ucc lookk, kooid ǩeʹrjjak kuârrâs sieʹlle mušttâd, mii lokk tõʹst ain vuäitt leeʹd. Äʹlǩes mieʹrǩǩmõõžžin taarbšak tõid harvvâd; Lossâd tääʹzzest räjja tõk lie taarbšõõttâm, ko teknikk mäʹhtt pääʹr, X-Wing da Y-Wing ââʹnne kandidaattid, jeäʹla pijjum lookkid.",
+              "Mõõntõõzz âʹlǧǧe leeʹd vuõiggâd: ko pieʹjjak lookk, jaukk tõn puk 20 kuåimmseeʹl mõõntõõzzin. Bare Sudokust tät šâdd automaattlânji, da Teâudd mõõntõõzzid ǩeʹrjjad juõʹǩǩ kandidaatt juõʹǩǩ kuârrâs sieʹlle õõut kuõskkmõõžžin, nuʹtt što vuäitak alttâd tiuddsaž da vuõiggâd kandidaattivuiʹm. Mõõntõs lij tuõttvuõtt, ij äʹrvvlõs: tõt miõttâd, što ni mii ij ain jaukkam tän lookk."
+            ]
+          },
+          {
+            "h": "Mâid raajjâd, ko leäk tåʹrǩǩõõttâm?",
+            "p": [
+              "Tarkstõõll vuõssân vuâđaid: juõʹǩǩ lââʹǩǩ teäʹvv räidd, čuõll da lääʹdd oudd åʹhtti kandidaattid da åʹhtti sââʹjjid. Teʹl tarkstõõll, što mõõntõõzz lie tiuddsaž, ko kandidaatt, kåʹtt fäʹlli, čiõǥǥad mallid, da tuâlǥas kandidaatt raajj puästtad mallid. Teʹl mõõnn [teknikkid](techniques) čõʹđ lossâdvuõđ mieʹldd: loʹǩǩuum kandidaatt, pääʹr da koumm, X-Wing, Y-Wing, Swordfish da XYZ-Wing. Juõʹǩǩ teknikkâst lij jiijjâs seidd tuõttlaž ooudâsmeʹrkkin.",
+              "Jõs ni mii ij tuåimm, vääʹld vuäʹpstõõzz. Bare Sudokust vuäʹpstõs vuõssân tarkstâll, lij-a pijjum lokk puästtad, teʹl kaunn pueʹtti seeʹl, kåʹtt vuäitt teâuddâd logiikin, da nõõmat teknikk, nuʹtt što mätt ain mâʹte, mâʹte ââʹnak tõn. Kuõskkâd vuäʹpstõõzz oʹdđest piijjâd lookk."
+            ]
+          },
+          {
+            "h": "Mäʹhtt ǩeʹrjjak lookkid Bare Sudokust?",
+            "p": [
+              "Kuõskkâd seeʹl da tõn mâŋŋa lookk. Leʹbe kuõskkâd vuõssân lookk: tõt loʹǩǩčâvv, da juõʹǩǩ sieʹll, kåʹtt kuõskkâk, vuäžž tõn; tõt lij jåʹttlõs vueʹǩǩ piijjâd lookk kuuʹdes, čiččâd da kääuʹcad vuâra. Kuõskkâd lookk oʹdđest, što loʹǩǩ ääʹvai. Mõõntõõzz-pââʹjj mottai pliiʹjjažmeärkkid, Jaukkeed jaukkad lookk seeʹlest, Mäʹcced mäccat juõʹǩǩ vuõʹhǩǩ, da vââʹjj lie meärkkuum ruõʹpsseʹn, jõs jiõk jaukk tõn menust.",
+              "Tastlõõvâst seʹrddak njuõllpââʹjivuiʹm, ǩeʹrjjak lookk pââʹjivuiʹm 1 räjja 9, jaukkak Backspace-pââʹjin, da ââʹnak N mõõntõõzzid, U mäʹccmõʹšše, H vuäʹpstõʹsse, F mõõntõõzzi teâuddmõʹšše da Escape menu vääras. Siõr ruõkk jiijjâs, tuåimm neeʹttatää, da tõʹst ij leäkku reklaam ni konto."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Âlgg-a Sudokust kuäʹss-ne äʹrvvled?",
+            "Ij vuõiggâd mieʹrǩǩmõõžžâst. Juõʹǩǩ Bare Sudoku -mieʹrǩǩmõõžžâst lij tääʹrǩed õhtt räʹtǩǩõs, da lij tarkstõllum, što tõn vuäitt räʹtǩǩeed tåʹlǩ logiikin, jiijjâs tääʹzz teknikkivuiʹm. Jõs tobdak, što âlgak äʹrvvled, teʹl kandidaatt fäʹlli tuu mõõntõõzzin leʹbe teknikk vuõʹrdd kaunnummuž."
+          ],
+          [
+            "Vuäitt-a lokk leeʹd kuõʹhtt vuâra räiddast, čuõllâst leʹbe lääʹddest?",
+            "Ij vuäitt. Tät lij ooʹles njuõʹlǧǧõs: juõʹǩǩ ååʹcc räiddast, ååʹcc čuõllâst da ååʹcc lääʹddest lij juõʹǩǩ lokk 1 räjja 9 tääʹrǩed õõut vuâra. Jõs kuõʹhtt seämma lookk lie seämma joukkâst, teʹl ucemõsân nubbe tõin lij puästtad."
+          ],
+          [
+            "Mii lij Hiâlpp, Kõskklõs, Lossâd da Äʹšštobddi tääʹzz jeeʹresvuõtt?",
+            "Tääʹss lij teknikki mieʹldd, kooid mieʹrǩǩmõš taarbâš. Hiâlpp da Kõskklõs räʹtǩǩe tåʹlǩ åʹhtti kandidaattivuiʹm da åʹhtti sââʹjjivuiʹm, da Hiâlpp-mieʹrǩǩmõõžžâst lie aalǥâst ucemõsân 38 uʹvddum lookk. Lossâd taarbâš loʹǩǩuum kandidaattid leʹbe pääʹrid da kolmmid. Äʹšštobddi taarbâš X-Wing, Y-Wing, Swordfish leʹbe XYZ-Wing."
+          ],
+          [
+            "Lij-a pueʹrab teâuddâd mõõntõõzzid juõʹǩǩ sieʹlle leʹbe tåʹlǩ muäʹdd sieʹlle?",
+            "Lossâd da Äʹšštobddi mieʹrǩǩmõõžžin teâudd puk: mall mäʹhtt pääʹr, X-Wing da Y-Wing šâʹdde vuäinnemnallšem tåʹlǩ, ko juõʹǩǩ kandidaatt lij ǩeʹrjjuum. Hiâlpp da Kõskklõs mieʹrǩǩmõõžžin mõõntõõzz jeäʹla leäkku taarbšõõttâm, da jeänaš siõrri ooʒʒe tåʹlǩ åʹhtti kandidaattid da åʹhtti sââʹjjid."
+          ],
+          [
+            "Mõõn kuʹǩǩ Sudoku pešt?",
+            "Hiâlpp mieʹrǩǩmõš pešt muäʹdd minuʹttenalla; Äʹšštobddi mieʹrǩǩmõõžž vueiʹtte peʹštted kueʹhtlååʹǩǩ minuʹtt leʹbe jeänab, tõʹst kiõʹrǧǧ, mäʹhtt jåʹttlânji kaaunak lossâdab mall. Bare Sudoku čuäʹjat čiâss, åårast tõn, ko menu lij ääʹved, da tõʹst ij leäkku rääʹjjliist, nuʹtt što siõr jiijjâd tempoin."
+          ],
+          [
+            "Taarbâš-a Sudoku rekknummuž?",
+            "Ij. Lookk lie tåʹlǩ meärkk; ij lâʹssjummuš ni lookkmõš. Ååʹcc jeeʹres meärkk tuåimme še, da tõn diõtt Sudoku lij logiikmieʹrǩǩmõš, ij lookkmieʹrǩǩmõš."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku räʹtǩǩeemteknikk čiõlǥtum ooudâsmeʹrkkivuiʹm",
+        "description": "Puk ååʹcc Sudoku räʹtǩǩeemteknikk, åʹhtti kandidaattâst Swordfish da XYZ-Wing räjja, tõn riâǥǥast, koʹst Bare Sudoku vuäʹpstõõzz tõid ââʹnne, ooudâsmeʹrkkin.",
+        "h1": "Sudoku räʹtǩǩeemteknikk",
+        "intro": [
+          "Juõʹǩǩ Sudoku vuäitt räʹtǩǩeed ucc meäʹrin logiikklaž teknikkivuiʹm. Tät liist čuäʹjat ååʹcc teknikk, kooid Bare Sudoku räʹtǩǩeei da tõn vuäʹpstõõzz ââʹnne, tõn riâǥǥast, koʹst räʹtǩǩeei ǩeäčlad tõid: vuõssân åʹhtti kandidaatt da åʹhtti sââʹjj, teʹl jaukkummuž õõut joukkâst, da teʹl mall, kook lie määŋg räiddast da čuõllâst. Juõʹǩǩ teknikkâst lij jiijjâs seidd, koʹst lie definitio, mäʹhtt tõn kaunnâd, tuõttlaž ooudâsmeʹrkk raajjuum mieʹrǩǩmõõžžâst da täujja vââʹjj.",
+          "Mieʹrǩǩmõõžž tääʹss lij lossâdmõs teknikk mieʹldd, kåʹtt tõʹst taarbâš. Hiâlpp da Kõskklõs mieʹrǩǩmõõžž taarbše tåʹlǩ åʹhtti kandidaattid da åʹhtti sââʹjjid, Lossâd mieʹrǩǩmõõžž taarbše loʹǩǩuum kandidaattid leʹbe pääʹrid da kolmmid, da Äʹšštobddi mieʹrǩǩmõõžž taarbše ucemõsân õõut kuõl leʹbe sueʹjj (wing). Juõʹǩǩ tääʹzzest åʹhtti kandidaatt da åʹhtti sââʹjj raajje jeänmõs tuâjast; lossâdab teknikk jaukkad õõut leʹbe kueʹhtt kandidaatt, da teʹl äʹlǩes teknikk juätkke."
+        ],
+        "faq": [
+          [
+            "Mõõn riâǥǥast âlgam ǩeäččlõõttâd Sudoku teknikkid?",
+            "Äʹlǩǩmõs vuõssân: åʹhtti kandidaatt, åʹhtti sââʹjj, loʹǩǩuum kandidaatt, čiõlgg pääʹr da koumm, čiõǥǥuum pääʹr da koumm, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ǩeäčlad tõid tääʹrǩed tän riâǥǥast, da vuäʹpstõs nõõmat juõʹǩǩ vuâra äʹlǩǩmõs teknikk, kåʹtt ouddad räʹtǩǩeem."
+          ],
+          [
+            "Taarbšam-a puk tõid teknikkid räʹtǩǩeed Sudoku?",
+            "Hiâlpp da Kõskklõs mieʹrǩǩmõõžžid åʹhtti kandidaatt da åʹhtti sââʹjj lie tuâlvai. Lossâd mieʹrǩǩmõõžž lâʹsse loʹǩǩuum kandidaattid, pääʹrid da kolmmid. Äʹšštobddi mieʹrǩǩmõõžž taarbše ucemõsân õõut kuõl leʹbe sueʹjj, leâša tääʹvlânji tåʹlǩ õõut leʹbe kuõʹhtt vuâra juõʹǩǩ mieʹrǩǩmõõžžâst."
+          ],
+          [
+            "Lie-a lossâdab teknikk ko XYZ-Wing?",
+            "Lie, ooudâsmeʹrkkân räiddõõzz (chains), åʹhttivuõđtestt da forcing nets. Bare Sudoku ij raaj mieʹrǩǩmõõžžid, kook taarbše tõid, tõn diõtt juõʹǩǩ siõr mieʹrǩǩmõõžž vuäitt räʹtǩǩeed tän seeid ååʹcc teknikkin."
+          ],
+          [
+            "Mii lij kandidaatt?",
+            "Lokk, kåʹtt ain vuäitt leeʹd kuârrâs seeʹlest, ko ni mii suu räiddast, čuõllâst leʹbe lääʹddest ij ain jaukkam tõn. Siõr mõõntõõzz lie kandidaatt. Puk teknikk åʹhtti kandidaatti da åʹhtti sââʹjji mâŋŋa smiõtte kandidaatti vuâđald, tõn diõtt mõõntõõzz âʹlǧǧe leeʹd tiuddsaž da vuõiggâd."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Åʹhtti kandidaatt",
+          "title": "Åʹhtti kandidaatt Sudokust: sieʹll õõut kandidaattin",
+          "description": "Åʹhtti kandidaatt: kuârrâs sieʹll, koʹst lij tåʹlǩ õhtt vueiʹtlvaž lokk. Mätt kaunnâd tõid jåʹttlânji, vuõʹhǩǩ vuõʹhǩǩest ooudâsmeʹrkkin da täujja vââʹjjivuiʹm.",
+          "h1": "Åʹhtti kandidaatt (naked single)",
+          "summary": "Åʹhtti kandidaatt lij kuârrâs sieʹll, koʹst lij tääʹrǩed õhtt kandidaatt: jeeʹres kääuʹc lookk lie juʹn suu räiddast, čuõllâst leʹbe lääʹddest. Päcc lokk âlgg leeʹd tåʹben. Tõt lij äʹlǩǩmõs Sudoku teknikk, tõt, kåʹtt ââʹnak jeänmõsân, da tõt, kåʹtt Bare Sudoku vuäʹpstõs ilmmat nuʹtt: \"Tåʹlǩ õhtt kandidaatt tääiʹben\".",
+          "when": [
+            "Juõʹǩǩ vuâra. Åʹhtti kandidaatt ilmmne vuõssmõs vuõʹhǩǩest mââimõs vuõʹhǩǩ räjja, juõʹǩǩ tääʹzzest. Hiâlpp da Kõskklõs mieʹrǩǩmõõžžin tõk lie, õõutsââʹjest åʹhtti sââʹjjivuiʹm, åʹhtti teknikk, kåʹtt taarbšak. Lossâdab mieʹrǩǩmõõžžin juõʹǩǩ jaukkummuš, kåʹtt lossâdab teknikk raajj, tääʹvlânji kuõđđ åʹhtti kandidaatt mâŋŋses, tõn diõtt ooʒʒ tõid juõʹǩǩ vuõʹhǩǩ mâŋŋa."
+          ],
+          "spot": [
+            "Ǩiõčč seeʹlid, koin lie määŋg pijjum kuåimmseeʹl: sieʹll räiddast, koʹst lie juʹn čiččâm lookk, leʹbe sieʹll, koon räiddast, čuõllâst da lääʹddest lie õõutsââʹjest kääuʹc jeeʹres lookk. Mõõntõõzztää lookk lookkid, kooid seeʹlest vueiʹnak. Mõõntõõzzivuiʹm åʹhtti kandidaatt lij tåʹlǩ sieʹll, koʹst vueiʹnet õhtt kandidaatt, da tõn diõtt Teâudd mõõntõõzzid raajj tõid äʹlǩǩsen kaunnâd."
+          ],
+          "examples": [
+            {
+              "h": "Ooudâsmeʹrkk",
+              "steps": [
+                "Ǩiõčč seeʹl {cell}. Tõt lij kuârrâs, tõn diõtt ǩeʹrjjed liist puk lookkin, kook lie juʹn suu räiddast, čuõllâst da lääʹddest.",
+                "Räiddast {row} lie {rowDigits}. Čuõllâst {col} lie {colDigits}. Lääʹddest {box} lie {boxDigits}.",
+                "Õõutsââʹjest tõk jaukke puk jeeʹres lookkid ko {d}, tõn diõtt {d} lij åʹhtti kandidaatt, kåʹtt lij päcc seeʹlest {cell}.",
+                "Piijj {d} sieʹlle {cell}. Tarkstõõll teʹl, raajj-a ođđ lokk ođđ åʹhtti kandidaatt leʹbe åʹhtti sââʹjj seämma räiddast, čuõllâst leʹbe lääʹddest."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Lookkâd tåʹlǩ räidd leʹbe tåʹlǩ lääʹdd. Kääuʹc jaukkuum lookk pueʹtte tääʹvlânji puk kolmm joukkin õõutsââʹjest.",
+            "Vajjeed, što ođđ pijjum lokk jaukkad še kandidaattid suu 20 kuåimmseeʹlin; ođđ åʹhtti kandidaatt ilmmne seämmanalla juõʹǩǩ piijjmõõžž mâŋŋa.",
+            "Seʹǩǩeed åʹhtti kandidaatt da åʹhtti sââʹjj: åʹhtti kandidaatt miõttâd, što seeʹlest lij õhtt kandidaatt päcc, åʹhtti sââʹjj miõttâd, što lookkâst lij õhtt sieʹll päcc joukkâst."
+          ],
+          "faq": [
+            [
+              "Mii lij åʹhtti kandidaatt Sudokust?",
+              "Kuârrâs sieʹll, koʹst lij tääʹrǩed õhtt kandidaatt. Kääuʹc jeeʹres lookk lie juʹn suu räiddast, čuõllâst da lääʹddest, tõn diõtt ååʹccad lokk lij åʹhtti, kåʹtt šiõtt."
+            ],
+            [
+              "Mõõzz diõtt tõn nõõmte eŋgglõsǩiõʹlle naked single?",
+              "Ko åʹhtti kandidaatt vueiʹnet veʹǩǩ seeʹlest, ko mõõntõõzz lie ǩeʹrjjuum; ni mii ij čiõǥǥ tõn. Åʹhtti sââʹjj (hidden single) lij jeeʹres kandidaatti kõõskâst, da tõn kaaunak, ko ǩiõččak lookk, ij seeʹl."
+            ],
+            [
+              "Vuäitt-a mieʹrǩǩmõõžž räʹtǩǩeed tåʹlǩ åʹhtti kandidaattivuiʹm?",
+              "Määŋg Hiâlpp mieʹrǩǩmõõžž vuäitt, leâša jeänaš taarbše še åʹhtti sââʹjjid. Bare Sudoku ärvvtâll Hiâlpp da Kõskklõs mieʹrǩǩmõõžžid nuʹtt, što tõid vuäitt räʹtǩǩeed kuhttu šlaajjin; Lossâd da Äʹšštobddi mieʹrǩǩmõõžž taarbše ucemõsân õõut jeeʹres teknikk."
+            ],
+            [
+              "Čuäʹjat-a vuäʹpstõs åʹhtti kandidaattid?",
+              "Čuäʹjat. Ko pueʹtti vuõʹhǩǩ lij åʹhtti kandidaatt, vuäʹpstõs meärkkad seeʹl, särnn \"Tåʹlǩ õhtt kandidaatt tääiʹben\" da čuäʹjat lookk. Kuõskkâd vuäʹpstõõzz oʹdđest piijjâd tõn."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Åʹhtti sââʹjj",
+          "title": "Åʹhtti sââʹjj Sudokust: lookk åʹhtti vueiʹtlvaž sieʹll",
+          "description": "Åʹhtti sââʹjj lij åʹhtti sieʹll räiddast, čuõllâst leʹbe lääʹddest, koozz lokk ain šiõtt. Mätt kaunnâd åʹhtti sââʹjjid ǩiõččmin õõut lookk õõut vuâra.",
+          "h1": "Åʹhtti sââʹjj (hidden single)",
+          "summary": "Åʹhtti sââʹjj lij lokk, koʹst lij tåʹlǩ õhtt vueiʹtlvaž sieʹll päcc räiddast, čuõllâst leʹbe lääʹddest, mâʹte tõt sieʹll čuäʹjat jeeʹres kandidaattid. Ko joukkâst âlgg leeʹd tõt lokk, teʹl tõt âlgg leeʹd tåʹben. Bare Sudoku vuäʹpstõs ilmmat tõn nuʹtt: \"Åʹhtti sââʹjj 5 tän räiddast\", čuõllâst leʹbe lääʹddest.",
+          "when": [
+            "Ko lokk lij juʹn ooudâsmannam: ko lokk lij vitt leʹbe kuäʹtt vuâra kriidâst, jeeʹres lääʹdd lie jeänab rääʹjjuum, da åʹhtti sââʹjj lij täujja pueʹtti vuõʹhǩǩ. Åʹhtti sââʹjj lie Hiâlpp da Kõskklõs mieʹrǩǩmõõžži vuâđđteknikk da paccce juõʹǩǩ tääʹzzest tääʹvlõs tuâjjneävvân."
+          ],
+          "spot": [
+            "Ǩiõčč õõut lookk õõut vuâra. Vaʹllji lokk, ooʒʒ lääʹdd, koʹst tõt ij leäkku, da jaukk juõʹǩǩ tän lääʹdd seeʹl, kåʹtt lij seämma räiddast leʹbe čuõllâst ko pijjum lokk. Jõs õhtt sieʹll päcc, teʹl leäk kaunnâm åʹhtti sââʹjj. Seämma vueʹǩǩ tuåimm räiddin da čuõllin. Siõrâst kuõskkâd pijjum lookk: juõʹǩǩ tõt lokk meärkkât, da kuârrâs seeʹl šâʹdde vuäinnemnallšem."
+          ],
+          "examples": [
+            {
+              "h": "Ooudâsmeʹrkk",
+              "steps": [
+                "Lääʹddest {box} ij leäkku ain {d}, tõn diõtt õhtt suu kuârrâs seeʹlin âlgg vuäžžad tõn. Kuârrâs seeʹl lie {empties}.",
+                "Puk tõin seeʹlin, jeeʹres ko {cell}, {d} lij cõggõttum, ko {d} lij juʹn seämma räiddast leʹbe čuõllâst, tõn diõtt {d} ij leäkku kandidaatt tåʹben.",
+                "Teʹl {cell} paacc åʹhtti sââʹjjen lookk {d} vääras lääʹddest {box}. Piijj {d} tåkka, mâʹte {cell} ain čuäʹjat jeeʹres kandidaattid."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Piijjâd lookk sieʹlle, kåʹtt tåʹlǩ jäʹtt leeʹd vuõiggâd: tarkstõõll juõʹǩǩ jeeʹres kuârrâs seeʹl joukkâst, ij tåʹlǩ čiõlgg seeʹlid.",
+            "Vajjeed åʹhtti sââʹjj, ko sieʹll čuäʹjat määŋg kandidaatt. Jeeʹres kandidaatt jeäʹla miõttâd ni mâid; tåʹlǩ tõt miõttâd, što lookkâst ij leäkku jeeʹres sââʹjj joukkâst.",
+            "Ǩiõččâd tåʹlǩ lääʹddid. Räidd da čuõll oudde åʹhtti sââʹjjid seämma täujja, jeäʹrben loopp ääiʹj."
+          ],
+          "faq": [
+            [
+              "Mii lij åʹhtti sââʹjj Sudokust?",
+              "Lokk, kåʹtt vuäitt leeʹd tåʹlǩ õõut seeʹlest räiddast, čuõllâst leʹbe lääʹddest. Joukkâst âlgg leeʹd tõt lokk, tõn diõtt sieʹll lij vissa, mâʹte tõʹst ain lie jeeʹres kandidaatt."
+            ],
+            [
+              "Mii lij åʹhtti sââʹjj da åʹhtti kandidaatt jeeʹresvuõtt?",
+              "Åʹhtti kandidaatt kuâskk seeʹl: õhtt kandidaatt päcc. Åʹhtti sââʹjj kuâskk lookk: õhtt sieʹll päcc joukkâst. Kuhttu pâʹjje lookk vissânji."
+            ],
+            [
+              "Kååʹtt lij äʹlǩǩab kaunnâd?",
+              "Mõõntõõzztää åʹhtti sââʹjj lie tääʹvlânji äʹlǩǩab, ko vuäitak ǩiõččâd kriid õõut lookk õõut vuâra. Tiuddsaž mõõntõõzzivuiʹm åʹhtti kandidaatt lie äʹlǩǩmõs, ko sieʹll, koʹst lij õhtt kandidaatt, vueiʹnet seämmanalla."
+            ],
+            [
+              "Mäʹhtt vuäʹpstõs čiõlǥat åʹhtti sââʹjj?",
+              "Nuʹtt: \"Åʹhtti sââʹjj\" da lokk, teʹl \"tän räiddast\", \"tän čuõllâst\" leʹbe \"tän lääʹddest\", da sieʹll lij meärkkuum. Kuõskkâd vuäʹpstõõzz oʹdđest piijjâd tõn."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Loʹǩǩuum kandidaatt",
+          "title": "Loʹǩǩuum kandidaatt Sudokust: čuäʹjtummuš da vaattmõš",
+          "description": "Loʹǩǩuum kandidaatt: ko kandidaatt lääʹddest lie õõut liinnâst, leʹbe liinn kandidaatt õõut lääʹddest, lokk jaukkât jeeʹres sâjjin. Kuõʹhtt ooudâsmeʹrkk.",
+          "h1": "Loʹǩǩuum kandidaatt (locked candidates)",
+          "summary": "Loʹǩǩuum kandidaatt lij vuõssmõs teknikk, kåʹtt jaukkad kandidaattid lookk piijjmõõžž sâjja. Tõʹst lie kuõʹhtt häämm. Čuäʹjtummuš (pointing): lääʹddest lie lookk puk kandidaatt õõut räiddast leʹbe čuõllâst, tõn diõtt lokk jaukkât tän liinn jeeʹres seeʹlin. Vaattmõš (claiming): räiddast leʹbe čuõllâst lie lookk puk kandidaatt õõut lääʹddest, tõn diõtt lokk jaukkât tän lääʹdd jeeʹres seeʹlin. Bare Sudoku vuäʹpstõs meärkkad vuõʹhǩǩ, kåʹtt tät teknikk ävvad, nuʹtt: \"Loʹǩǩuum kandidaatt\".",
+          "when": [
+            "Ko åʹhtti kandidaatt da åʹhtti sââʹjj nõʹhǩǩe Lossâd mieʹrǩǩmõõžžâst, tät lij vuõssmõs, mâid âlgg ǩeäččlõõttâd. Tät taarbâš tiuddsaž mõõntõõzzid ucemõsân tõn lookk vääras, kåʹtt ǩiõččak. Loʹǩǩuum kandidaatt lie tääʹvlaž: jeänaš Lossâd mieʹrǩǩmõõžžin taarbše tõid, da Äʹšštobddi mieʹrǩǩmõõžž ââʹnne tõid stuõrab malli kõõskâst."
+          ],
+          "spot": [
+            "Čuäʹjtummuž vääras ǩiõčč juõʹǩǩ lääʹdd da juõʹǩǩ lookk, kåʹtt tõʹst fäʹlli: jõs tän lookk kandidaattseeʹl lie õõut räiddast leʹbe čuõllâst, tarkstõõll, lij-a seämma lokk kandidaatt tän liinn jeeʹres seeʹlin lääʹdd ålggbeäʹlnn. Vaattmõõžž vääras ǩiõčč räidd leʹbe čuõll: jõs lookk kandidaatt lie puk õõut lääʹddest, teʹl lokk jaukkât tän lääʹdd jeeʹres seeʹlin. Siõrâst kuõskkâd lookkpââʹjj, što juõʹǩǩ tõn lookk kandidaatt meärkkât; liinn, koʹst lie kuõʹhtt leʹbe koumm meärkkuum mõõntõõzz õõut lääʹddest, lij mall."
+          ],
+          "examples": [
+            {
+              "h": "Čuäʹjtummuš",
+              "steps": [
+                "Lääʹddest {box} lookkâst {d} lie tåʹlǩ tõk kandidaattseeʹl: {cells}. Puk tõk lie räiddast {row}.",
+                "Lääʹddest {box} âlgg leeʹd {d}, tõn diõtt räidd {row} {d} lij lääʹdd {box} seʹst, mâʹte koon tõin seeʹlin tõt šâdd.",
+                "Räiddast {row} ij vuäitt leeʹd nubbe {d}, tõn diõtt jaukk {d} räidd {row} seeʹlin lääʹdd ålggbeäʹlnn: {elim}."
+              ]
+            },
+            {
+              "h": "Vaattmõš",
+              "steps": [
+                "Räiddast {row} lokk {d} vuäitt leeʹd tåʹlǩ seeʹlin {cells}, da puk tõk lie lääʹdd {box} seʹst.",
+                "Räiddast {row} âlgg leeʹd {d}, tõn diõtt räidd {row} vaattâd lääʹdd {box} lookk {d}. Lääʹdd {box} jeeʹres seeʹlin ij vuäitt leeʹd {d}.",
+                "Jaukk {d} tõin seeʹlin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Čuäʹjtummžest jaukkeed lookk lääʹdd seʹst, ij ålggbeäʹlnn, leʹbe vaattmõõžžâst liinn seʹst, ij lääʹdd jeeʹres seeʹlin. Jaukkummuž lie juõʹǩǩ vuâra seeʹlin, kook lie liinnâst, leâša jeäʹla lääʹddest, leʹbe lääʹddest, leâša jeäʹla liinnâst.",
+            "Ââʹnned njuõʹlǧǧõõzz, ko kandidaatt lie lääʹdd kueʹhtt räiddast. Puk lookk kandidaattseeʹl lääʹddest âʹlǧǧe leeʹd õõut liinnâst.",
+            "Vajjeed ooccâd åʹhtti kandidaatt leʹbe åʹhtti sââʹjj, kåʹtt jaukkummuš raajj. Loʹǩǩuum kandidaatt harvvâd pâʹjje lookk jiijjâs; tõk valmštâʹlle åʹhtti kandidaatt leʹbe åʹhtti sââʹjj."
+          ],
+          "faq": [
+            [
+              "Mii lie loʹǩǩuum kandidaatt Sudokust?",
+              "Lookk kandidaatt, kook lie rääʹjjuum lääʹdd da liinn õhttsââʹjje. Ko lääʹddest, leʹbe liinnâst, âlgg leeʹd lokk tän õhttsââʹjest, lokk jaukkât liinn jeeʹres seeʹlin, leʹbe lääʹdd jeeʹres seeʹlin."
+            ],
+            [
+              "Mii lij čuäʹjtummuž da vaattmõõžž jeeʹresvuõtt?",
+              "Čuäʹjtummuš älgg lääʹddest: lookk kandidaatt lääʹddest čuäʹjte õõut räidd leʹbe čuõll mieʹldd, tõn diõtt lokk jaukkât tän liinn jeeʹres seeʹlin. Vaattmõš älgg räiddast leʹbe čuõllâst: liinn puk kandidaatt tän lookk vääras lie õõut lääʹddest, tõn diõtt liinn vaattâd lookk da tõt jaukkât lääʹdd jeeʹres seeʹlin."
+            ],
+            [
+              "Lij-a loʹǩǩuum kandidaattin še nõmm intersection removal?",
+              "Lij. Jeeʹres nõõm lie box-line reduction vaattmõõžž vääras da pointing pairs leʹbe pointing triples čuäʹjtummuž vääras. Bare Sudoku âânn kuhttun õõut nõõm."
+            ],
+            [
+              "Kååʹtt tääʹss taarbâš loʹǩǩuum kandidaattid?",
+              "Lossâd. Mieʹrǩǩmõš, kåʹtt taarbâš loʹǩǩuum kandidaattid leʹbe pääʹrid da kolmmid, leâša ij ni mâid lossâdab, lij Lossâd; Äʹšštobddi mieʹrǩǩmõõžž taarbše še kuõl leʹbe sueʹjj."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Čiõlgg pääʹr da koumm",
+          "title": "Čiõlgg pääʹr da koumm Sudokust: mäʹhtt tõk tuåimme",
+          "description": "Čiõlgg pääʹr da koumm: kuõʹhtt leʹbe koumm seeʹl joukkâst, koin lie seämma kuõʹhtt leʹbe koumm kandidaatt. Mätt kaunnâd tõid da mâid jaukkeed, ooudâsmeʹrkkin.",
+          "h1": "Čiõlgg pääʹr da koumm (naked pair, naked triple)",
+          "summary": "Čiõlgg pääʹrr lij kuõʹhtt seeʹl seämma räiddast, čuõllâst leʹbe lääʹddest, koin lie tääʹrǩed seämma kuõʹhtt kandidaatt. Tõk kuõʹhtt lookk âʹlǧǧe leeʹd tõin kueʹhtt seeʹlin, tõn diõtt tõid vuäitt jaukkeed joukk puk jeeʹres seeʹlin. Čiõlgg koumm lij seämma jurdd kolmm seeʹlin da kolmm lookkin; juõʹǩǩ seeʹlest vuäitt vueiʹnned kuõʹhtt leʹbe puk koumm tõin. Bare Sudoku vuäʹpstõs meärkkad vuõʹhǩǩ, kåʹtt tõʹst puätt, nuʹtt: \"Pääʹrr leʹbe koumm\".",
+          "when": [
+            "Ko mõõntõõzz lie tiuddsaž da åʹhtti kandidaatt, åʹhtti sââʹjj da loʹǩǩuum kandidaatt lie nõʹhǩǩâm. Čiõlgg pääʹr lie tääʹvlaž Lossâd mieʹrǩǩmõõžžin, čiõlgg koumm lie harvvõõžžab. Kuhttuid lij äʹvvkõs ooccâd juõʹǩǩ joukkâst, koʹst lie ain vitt leʹbe jeänab kuârrâs seeʹl."
+          ],
+          "spot": [
+            "Ooʒʒ seeʹlid, koin lie tåʹlǩ kuõʹhtt kandidaatt, da ooʒʒ seämma joukkâst jeeʹres seeʹl, koʹst lie seämma kuõʹhtt. Kolmmi vääras ǩiõčč joukkid, koin lie määŋg seeʹl kueʹhtt da kolmm kandidaattin, da tarkstõõll, ââʹnne-a koumm tõin õõutsââʹjest tåʹlǩ koumm jeeʹres lookk. Seeʹl, koin lie tääʹrǩed seämma kandidaatt, vueiʹnet äʹlǩǩsânji, ko mõõntõõzz lie ǩeʹrjjuum; siõr Teâudd mõõntõõzzid raajj tõn õõut kuõskkmõõžžin."
+          ],
+          "examples": [
+            {
+              "h": "Čiõlgg pääʹrr",
+              "steps": [
+                "Seeʹlin {cellA} da {cellB} joukkâst {unit} lie tääʹrǩed seämma kuõʹhtt kandidaatt: {d1} da {d2}.",
+                "Nubbe tõin âlgg leeʹd {d1} da nubbe {d2}. Ij leäkku tiõttum, kååʹtt lij kååʹtt, leâša kuhttu lookk lie tõin kueʹhtt seeʹlin.",
+                "Tõn diõtt ni õhtt jeeʹres sieʹll joukkâst {unit} ij vuäitt leeʹd {d1} leʹbe {d2}. Jaukk: {elim}."
+              ]
+            },
+            {
+              "h": "Čiõlgg koumm",
+              "steps": [
+                "Kolmm seeʹl kandidaatt joukkâst {unit} lie puk seämma kolmm lookkâst, {digits}: {cells}.",
+                "Tõk koumm lookk âʹlǧǧe teâuddâd tõid koumm seeʹl mâʹte koon riâǥǥast. Sieʹll ij taarbâš čuäʹjted puk koumm kandidaatt; vääžnai lij, što ni õõut kolmm seeʹlest ij leäkku kandidaatt, kåʹtt lij tõid kolmm lookk ålggbeäʹlnn.",
+                "Jaukk {digits} joukk {unit} puk jeeʹres seeʹlin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Väʹldded kuõʹhtt seeʹl, koin lie seämma kuõʹhtt kandidaatt, leâša še kuälmad. Čiõlgg pääʹr vääras juõʹǩǩ seeʹlest âʹlǧǧe leeʹd tääʹrǩed kuõʹhtt kandidaatt da ij ni mii jeeʹres.",
+            "Jaukkeed lookkid pääʹr seeʹlin jiijjâs. Pääʹrr âânn jiijjâs kandidaattid; jaukkummuž lie joukk jeeʹres seeʹlin.",
+            "Vaattâd, što kolmm juõʹǩǩ seeʹlest vueiʹnet puk koumm lookk. Sieʹll, koʹst lie kuõʹhtt kolmm lookkâst, lij vuõiggâd, jõs ni õõut seeʹlest ij leäkku kandidaatt tõid kolmm lookk ålggbeäʹlnn."
+          ],
+          "faq": [
+            [
+              "Mii lij čiõlgg pääʹrr Sudokust?",
+              "Kuõʹhtt seeʹl õõut joukkâst, koin kuhttuin lie tääʹrǩed seämma kuõʹhtt kandidaatt. Tõk kuõʹhtt lookk lie loʹǩǩuum tõid kueʹhtt sieʹlle, tõn diõtt tõid vuäitt jaukkeed joukk jeeʹres seeʹlin."
+            ],
+            [
+              "Mii lij čiõlgg koumm?",
+              "Koumm seeʹl õõut joukkâst, koin kandidaatt lie õõutsââʹjest tåʹlǩ koumm lookk. Juõʹǩǩ seeʹlest vuäitt leeʹd kuõʹhtt leʹbe koumm tõin. Koumm lookk teâuddâʹvve koumm seeʹl, tõn diõtt tõid vuäitt jaukkeed joukk jeeʹres seeʹlin."
+            ],
+            [
+              "Pâʹjj-a čiõlgg pääʹrr lookk?",
+              "Ij jiijjâs. Tõt jaukkad kandidaattid, da jaukkummuš kuõđđ tääʹvlânji åʹhtti kandidaatt leʹbe åʹhtti sââʹjj. Bare Sudoku vuäʹpstõs čuäʹjat tän vuõʹhǩǩ da nõõmat teknikk, kåʹtt raajj tõn vueiʹtlvaž."
+            ],
+            [
+              "Vuäitt-a čiõlgg pääʹrr leeʹd seämma ääiʹj lääʹddest da räiddast?",
+              "Vuäitt. Jõs kuõʹhtt seeʹl lie seämma räiddast da seämma lääʹddest, pääʹrr jaukkad kandidaattid kuhttu joukkâst. Bare Sudoku tarkstâll tõid joukk joukk mâŋŋa."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Čiõǥǥuum pääʹr da koumm",
+          "title": "Čiõǥǥuum pääʹr da koumm Sudokust: mäʹhtt tõid kaunnâd",
+          "description": "Čiõǥǥuum pääʹrr lij kuõʹhtt lookk, kook vueiʹtte leeʹd tåʹlǩ joukk seämma kueʹhtt seeʹlest, da tõin seeʹlin jeeʹres kandidaatt jaukkâʹvve. Mätt kaunnâd tõid.",
+          "h1": "Čiõǥǥuum pääʹr da koumm (hidden pair, hidden triple)",
+          "summary": "Čiõǥǥuum pääʹrr lij kuõʹhtt lookk, kook lie õõut räiddast, čuõllâst leʹbe lääʹddest kandidaatt tåʹlǩ seämma kueʹhtt seeʹlin ni jeeʹres sâjjest. Tõin kueʹhtt seeʹlin âʹlǧǧe leeʹd tõk kuõʹhtt lookk, tõn diõtt puk jeeʹres kandidaattid tõin seeʹlin vuäitt jaukkeed. Čiõǥǥuum koumm tuåimm seämmanalla kolmm lookkin, kook lie rääʹjjuum koumm sieʹlle. Jaukkummuž mâŋŋa seeʹl čuäʹjte čiõlgg pääʹr leʹbe koumm. Bare Sudoku vuäʹpstõs meärkkad vuõʹhǩǩ, kåʹtt tõʹst puätt, nuʹtt: \"Pääʹrr leʹbe koumm\".",
+          "when": [
+            "Ko joukkâst lie seeʹl, koin lie määŋg kandidaatt, da åʹhtti kandidaatt da åʹhtti sââʹjj lie nõʹhǩǩâm. Čiõǥǥuum pääʹr čiõʹǩǩe seeʹli seʹst, koin lie määŋg kandidaatt, da tõn diõtt tõid lij äʹvvkõs ooccâd jeäʹrben tåʹben, koʹst čiõlgg pääʹr jeäʹla vuäinnu. Čiõǥǥuum koumm lie harvvâd; Bare Sudoku ǩeäčlad kaunnâd tõid, leâša jeänaš Lossâd mieʹrǩǩmõõžžin räʹtǩǩe tõitää."
+          ],
+          "spot": [
+            "Tuåimât lookk mieʹldd, ij seeʹl mieʹldd. Ǩiõčč joukkâst, koozz juõʹǩǩ lokk, kåʹtt fäʹlli, vuäitt mõõnnâd. Jõs kueʹhtt lookkâst lie kuhttuin tåʹlǩ kuõʹhtt vueiʹtlvaž seeʹl da tõk lie seämma kuõʹhtt seeʹl, teʹl tõʹst lij čiõǥǥuum pääʹrr. Siõrâst kuõskkâd lookkpââʹjj, što tõn kandidaatt meärkkâʹvve; jõs kuõʹhtt lookk čuõvâʹvve seämma kuõʹhtt seeʹl joukkâst da ij ni mii jeeʹres tõʹst, tõt lij mall."
+          ],
+          "examples": [
+            {
+              "h": "Čiõǥǥuum pääʹrr",
+              "steps": [
+                "Joukkâst {unit} lookkin {d1} da {d2} lie kuhttuin tåʹlǩ kuõʹhtt vueiʹtlvaž seeʹl, da tõk lie seämma kuõʹhtt: {cells}.",
+                "Tõin kueʹhtt seeʹlin âʹlǧǧe leeʹd {d1} da {d2}, tõn diõtt tõi jeeʹres kandidaatt jeäʹla vuäitt leeʹd.",
+                "Jaukk: {elim}. Ääʹšš kuõʹhtt seeʹl čuäʹjte čiõlgg pääʹr, kåʹtt vuäitt äävad jeänab."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Jaukkeed pääʹr kuõʹhtt lookk pääʹr seeʹlin. Seeʹlin jaukkâʹvve jeeʹres kandidaatt; pääʹr lookk paccce.",
+            "Tuʹhhjeed lookk, koʹst lij kuälmad vueiʹtlvaž sieʹll joukkâst. Kuhttu lookk âʹlǧǧe leeʹd rääʹjjuum tääʹrǩed kueʹhtt sieʹlle.",
+            "Ooccâd tåʹlǩ lääʹddin. Čiõǥǥuum pääʹr lie seämma täujja räiddin da čuõllin."
+          ],
+          "faq": [
+            [
+              "Mii lij čiõǥǥuum pääʹrr Sudokust?",
+              "Kuõʹhtt lookk, kook vueiʹtte leeʹd tåʹlǩ joukk seämma kueʹhtt seeʹlest. Tõin seeʹlin âʹlǧǧe leeʹd tõk lookk, tõn diõtt tõi jeeʹres kandidaatt jaukkâʹvve."
+            ],
+            [
+              "Mäʹhtt čiõǥǥuum pääʹrr jeeʹresnâstt čiõlgg pääʹrâst?",
+              "Čiõlgg pääʹr vueiʹnet: kuõʹhtt seeʹl, kook čuäʹjte tåʹlǩ seämma kuõʹhtt kandidaatt. Čiõǥǥuum pääʹrr lij lâʹsskandidaatti vueʹlnn kueʹhtt seeʹlest. Ko tõk lâʹsskandidaatt jaukkâʹvve, čiõǥǥuum pääʹrr šâdd čiõlgg pääʹren."
+            ],
+            [
+              "Mii lij čiõǥǥuum koumm?",
+              "Koumm lookk, kook lie rääʹjjuum joukk koumm sieʹlle. Juõʹǩǩ lokk ij taarbâš leeʹd puk kolmm seeʹlest; vääžnai lij, što ni õõut kolmm lookkâst ij leäkku kandidaatt tõi seeʹli ålggbeäʹlnn."
+            ],
+            [
+              "Čuäʹjat-a vuäʹpstõs, lij-a pääʹrr čiõǥǥuum leʹbe čiõlgg?",
+              "Ij. Bare Sudoku kaunn kuhttuid da meärkkad vuõʹhǩǩ, kåʹtt tõʹst puätt, nuʹtt: \"Pääʹrr leʹbe koumm\". Täk seid jeeʹrste tõid, ko tõid kaaunak jeeʹres vueʹjjest."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing Sudokust: mäʹhtt teknikk tuåimm",
+          "description": "X-Wing: lokk, koʹst lie tääʹrǩed kuõʹhtt kandidaattseeʹl kueʹhtt räiddast seämma kueʹhtt čuõllâst, jaukkât tõi kueʹhtt čuõll jeeʹres seeʹlin. Ooudâsmeʹrkk.",
+          "h1": "X-Wing",
+          "summary": "X-Wing lij mall, koʹst lij õhtt lokk da nellj seeʹl reʹktangeel čiõʹǩǩin. Jõs lookkâst lie kuhttu räiddast tääʹrǩed kuõʹhtt kandidaattseeʹl, da tõk seeʹl lie seämma kueʹhtt čuõllâst, teʹl lokk âlgg leeʹd reʹktangeel kueʹhtt vuʹvddsaž čiõʹǩǩest. Tõn diõtt tõn vuäitt jaukkeed tõi kueʹhtt čuõll puk jeeʹres seeʹlin. Seämma tuåimm, ko räidd da čuõll moʹttje sâjjid. Tõt lij vuõssmõs Äʹšštobddi-teknikk Bare Sudokust.",
+          "when": [
+            "Ko åʹhtti kandidaatt, åʹhtti sââʹjj, loʹǩǩuum kandidaatt da pääʹr da koumm lie nõʹhǩǩâm. X-Wing lij tääʹvlõs Äʹšštobddi-mall da ilmmn täujja, ko lookkâst lie ucc kandidaatt päcc, tääʹvlânji ko lokk lij juʹn nellj, vitt leʹbe kuäʹtt vuâra kriidâst. Tät taarbâš tiuddsaž mõõntõõzzid tõn lookk vääras, kåʹtt ǩiõččak."
+          ],
+          "spot": [
+            "Vaʹllji lokk da ooʒʒ räiddid, koin tõʹst lie tääʹrǩed kuõʹhtt kandidaattseeʹl. Jõs kuõʹhtt nåkam räidd ââʹnne seämma kueʹhtt čuõll, tarkstõõll tõid čuõllid, lie-a tõin jeeʹres tän lookk kandidaatt: tõk lie jaukkummuž. Teʹl ǩiõčč seämmanalla čuõllid vuâđđân. Siõrâst kuõskkâd lookkpââʹjj: juõʹǩǩ tõn lookk kandidaatt meärkkât, da nellj meärkkuum mõõntõõzz reʹktangeel vueiʹnet äʹlǩǩsânji."
+          ],
+          "examples": [
+            {
+              "h": "Ooudâsmeʹrkk",
+              "steps": [
+                "Lookkâst {d} lie tääʹrǩed kuõʹhtt kandidaattseeʹl räiddast {r1} da tääʹrǩed kuõʹhtt räiddast {r2}, da tõk lie seämma kueʹhtt čuõllâst, {c1} da {c2}: {cells}.",
+                "Räidd {r1} pâʹjj jiijjâs {d} čuõlla {c1} leʹbe {c2}, da räidd {r2} pâʹjj jiijjâs {d} nubbe čuõlla. Kuhttu vueʹjjest čuõll {c1} da {c2} vuäʹžže kuhttu õõut {d} tõin kueʹhtt räiddast.",
+                "Tõn diõtt {d} ij vuäitt leeʹd jeeʹres sâjjest čuõllin {c1} da {c2}. Jaukk {d} tõin seeʹlin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ââʹnned räidd, koʹst lookkâst lie koumm kandidaattseeʹl. Juõʹǩǩ vuâđđräiddast âʹlǧǧe leeʹd tääʹrǩed kuõʹhtt, da kuhttu âʹlǧǧe leeʹd kueʹhtt õhttsaž čuõllâst.",
+            "Jaukkeed lookk räiddin čuõlli sâjja. Ko räidd lie vuâđđân, jaukkummuž lie čuõllin, da ko čuõll lie vuâđđân, jaukkummuž lie räiddin.",
+            "Vajjeed moʹttjuum versio. X-Wing, kåʹtt lij čuõlli vuâđald, jaukkad räiddin."
+          ],
+          "faq": [
+            [
+              "Mii lij X-Wing Sudokust?",
+              "Lokk, koʹst lij kuhttu räiddast tääʹrǩed kuõʹhtt kandidaattseeʹl, seämma kueʹhtt čuõllâst. Lokk lij tän reʹktangeel kueʹhtt vuʹvddsaž čiõʹǩǩest, tõn diõtt tõt jaukkât kueʹhtt čuõll jeeʹres seeʹlin. Räidd da čuõll vueiʹtte moʹttjed sâjjid."
+            ],
+            [
+              "Mõõzz diõtt X-Wing tuåimm?",
+              "Kuhttu räiddast âlgg lokk leeʹd kååʹtt-ne kueʹhtt čuõllâst, da kuõʹhtt räidd jeäʹla vuäitt ââʹnned seämma čuõll. Tõn diõtt kuhttu čuõll vuäžž jiijjâs lookk tõin räiddin, da puk jeeʹres kandidaatt tõin čuõllin jeäʹla vuäitt leeʹd."
+            ],
+            [
+              "Lij-a X-Wing kuõll?",
+              "Lij. X-Wing lij kuõll, koon stuorrvuõtt lij kuõʹhtt; Swordfish lij kuõll, koon stuorrvuõtt lij koumm. Bare Sudoku kaunn kuhttuid."
+            ],
+            [
+              "Kååʹtt tääʹzzest lie X-Wing?",
+              "Äʹšštobddi. Mieʹrǩǩmõš, kåʹtt taarbâš X-Wing, Y-Wing, Swordfish leʹbe XYZ-Wing, lij Äʹšštobddi."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing Sudokust: mäʹhtt teknikk tuåimm",
+          "description": "Y-Wing (XY-Wing): kõskksieʹll kueʹhtt kandidaattin da kuõʹhtt sueʹjj, koin kuhttuin lij õhtt tõin, jaukke lookk seeʹlin, kook vueiʹnne kuhttu sueʹjj.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, kåʹtt nõõmte še XY-Wing, âânn koumm seeʹl, koin juõʹǩǩ seeʹlest lie kuõʹhtt kandidaatt. Kõskkseeʹlest lie kandidaatt X da Y. Nubbe sueʹjj vuäinn kõskkseeʹl da tõʹst lie X da Z; nubbe sueʹjj vuäinn kõskkseeʹl da tõʹst lie Y da Z. Mâʹte mii kõskksieʹll šâdd, nubbe sueʹjjin âlgg leeʹd Z, tõn diõtt Z vuäitt jaukkeed juõʹǩǩ seeʹlest, kåʹtt vuäinn kuhttu sueʹjj. Tõt lij Äʹšštobddi-teknikk Bare Sudokust.",
+          "when": [
+            "Ko mieʹrǩǩmõõžžâst lie määŋg seeʹl, koin lie tääʹrǩed kuõʹhtt kandidaatt, da kuõll ij kaaunât. Y-Wing lij tääʹvlaž Äʹšštobddi-mieʹrǩǩmõõžžin, da tõn kaaunak, ko čuõvvak seeʹlid, koin lie kuõʹhtt kandidaatt: juõʹǩǩ tõin vuäitt leeʹd kõskksieʹll leʹbe sueʹjj."
+          ],
+          "spot": [
+            "Ǩeʹrjjed liist seeʹlin, koin lie tääʹrǩed kuõʹhtt kandidaatt. Ǩiõčč juõʹǩǩ tõin kõskkseeʹlen kandidaattivuiʹm X da Y, da ooʒʒ tõn kuåimmseeʹlin seeʹl, koʹst lie X da jeeʹres lokk Z, da seeʹl, koʹst lie Y da seämma Z. Tõk kuõʹhtt lie sueʹjj. Ooʒʒ teʹl seeʹlid, kook vueiʹnne kuhttu sueʹjj da koin lij Z. Fuʹtte, što sueʹjj jeäʹla taarbâš vueiʹnned nubb nubbu."
+          ],
+          "examples": [
+            {
+              "h": "Ooudâsmeʹrkk",
+              "steps": [
+                "Kõskkseeʹlest {pivot} lie kandidaatt {x} da {y}. Tõt vuäinn seeʹl {wingA}, koʹst lie {x} da {z}, da seeʹl {wingB}, koʹst lie {y} da {z}.",
+                "Jõs {pivot} lij {x}, teʹl {wingA} mašt kandidaatt {x} da šâdd {z}. Jõs {pivot} lij {y}, teʹl {wingB} šâdd {z}. Nubbe sueʹjjin lij {z} juõʹǩǩ vueʹjjest.",
+                "Sieʹll, kåʹtt vuäinn kuhttu sueʹjj, ij ni kuäss vuäitt leeʹd {z}. Jaukk {z} tõin seeʹlin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vaʹlljeed sueʹjjid, kook jeäʹla kuhttu vueiʹn kõskkseeʹl. Juõʹǩǩ sueʹjj âlgg leeʹd seämma räiddast, čuõllâst leʹbe lääʹddest ko kõskksieʹll.",
+            "Jaukkeed Z seeʹlin, kook vueiʹnne tåʹlǩ õõut sueʹjj. Sieʹll, koʹst Z jaukkât, âlgg vueiʹnned kuhttu sueʹjj.",
+            "Jaukkeed Z kõskkseeʹlest. Y-Wing kõskkseeʹlest ij leäkku Z; jõs tõʹst lij, teʹl mall lij XYZ-Wing jeeʹres njuõʹlǧǧõõzzivuiʹm."
+          ],
+          "faq": [
+            [
+              "Mii lij Y-Wing Sudokust?",
+              "Koumm seeʹl, koin lie kuõʹhtt kandidaatt: kõskksieʹll, koʹst lie X da Y, sueʹjj, koʹst lie X da Z da kåʹtt vuäinn kõskkseeʹl, da sueʹjj, koʹst lie Y da Z da kåʹtt vuäinn kõskkseeʹl. Nubbe sueʹjjin lij juõʹǩǩ vuâra Z, tõn diõtt Z jaukkât seeʹlin, kook vueiʹnne kuhttu sueʹjj."
+            ],
+            [
+              "Lij-a Y-Wing seämma ko XY-Wing?",
+              "Lij. Kuhttu nõõm čiõlǥte seämma mall. Bare Sudoku âânn nõõm Y-Wing."
+            ],
+            [
+              "Mõõzz diõtt nubbe sueʹjjin âlgg leeʹd Z?",
+              "Jõs kõskksieʹll lij X, vuõssmõs sueʹjj mašt X da šâdd Z. Jõs kõskksieʹll lij Y, nubbe sueʹjj šâdd Z. Kõskksieʹll lij nubbe tõin kueʹhtt lookkâst, tõn diõtt nubbe sueʹjjin lij Z."
+            ],
+            [
+              "Mõõn määŋg seeʹlest Y-Wing jaukkad kandidaattid?",
+              "Tääʹvlânji õõut leʹbe kueʹhtt seeʹlest: tåʹlǩ seeʹlin, kook vueiʹnne kuhttu sueʹjj da koin lij ain Z. Tät lij tuâlvai raajjâd åʹhtti kandidaatt leʹbe åʹhtti sââʹjj."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish Sudokust: mäʹhtt teknikk tuåimm",
+          "description": "Swordfish: lokk, kåʹtt lij kolmm räiddast rääʹjjuum koumm čuõlla, jaukkât tõi kolmm čuõll jeeʹres seeʹlin. Kuõll, koon stuorrvuõtt lij koumm, ooudâsmeʹrkkin.",
+          "h1": "Swordfish",
+          "summary": "Swordfish lij X-Wing kolmm räiddin da kolmm čuõllin. Jõs lookkâst lie juõʹǩǩ kolmm räiddast jeänmõsân koumm kandidaattseeʹl, da puk tõk seeʹl lie seämma kolmm čuõllâst, teʹl koumm räidd ââʹnne lookk tõin čuõllin, da lookk vuäitt jaukkeed kolmm čuõll puk jeeʹres seeʹlin. Räidd da čuõll vueiʹtte moʹttjed sâjjid. Bare Sudoku ǩeäčlad Swordfish Y-Wing mâŋŋa, Äʹšštobddi-mieʹrǩǩmõõžžin.",
+          "when": [
+            "Ko X-Wing da Y-Wing jeäʹla kaunn ni mâid. Swordfish lij harvvõõžžab ko X-Wing, da taarbâš lookk, koʹst lie ucc kandidaatt kolmm liinnâst. Tät taarbâš tiuddsaž da vuõiggâd mõõntõõzzid tõn lookk vääras."
+          ],
+          "spot": [
+            "Vaʹllji lokk da ooʒʒ räiddid, koin tõʹst lie kuõʹhtt leʹbe koumm kandidaattseeʹl. Jõs koumm nåkam räidd kandidaatt lie õõutsââʹjest tåʹlǩ kolmm čuõllâst, tarkstõõll, lie-a tõin čuõllin jeeʹres tän lookk kandidaatt. Juõʹǩǩ räiddast ij taarbâš leeʹd kandidaatt juõʹǩǩ čuõllâst: Swordfishâst vuäitt leeʹd kuäʹtt, čiččâm, kääuʹc leʹbe ååʹcc seeʹl. Siõrâst meärkk lookk suu pââʹjin da ooʒʒ koumm räidd, koin kandidaatt lie kolmm čuõllâst."
+          ],
+          "examples": [
+            {
+              "h": "Ooudâsmeʹrkk",
+              "steps": [
+                "Lookkâst {d} lie juõʹǩǩ räiddast {rows} jeänmõsân koumm kandidaattseeʹl, da puk tõk seeʹl lie čuõllin {cols}: {cells}.",
+                "Juõʹǩǩ kolmm räiddast âlgg lokk {d} leeʹd õõut kolmm čuõllâst, da kuõʹhtt räidd jeäʹla vuäitt ââʹnned seämma čuõll. Tõn diõtt koumm čuõll vuäʹžže jiijjâs {d} tõin kolmm räiddast.",
+                "Puk jeeʹres {d}-kandidaatt čuõllin {cols} jeäʹla vuäitt leeʹd. Jaukk {d} tõin seeʹlin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vaattâd puk ååʹcc seeʹl. Swordfish, koʹst lie kuõʹhtt kandidaatt muäʹdd räiddast, lij še vuõiggâd, jõs koumm räidd lie õõutsââʹjest tåʹlǩ kolmm čuõllâst.",
+            "Väʹldded mieʹldd räidd, koʹst lie nellj kandidaattseeʹl. Juõʹǩǩ vuâđđräiddast vuäitt leeʹd jeänmõsân koumm, puk kolmm čuõll seʹst.",
+            "Jaukkeed vuâđđräiddin. Ko räidd lie vuâđđân, jaukkummuž lie kolmm čuõllin, vuâđđräiddi ålggbeäʹlnn."
+          ],
+          "faq": [
+            [
+              "Mii lij Swordfish Sudokust?",
+              "Lokk, koon kandidaatt kolmm räiddast lie rääʹjjuum koumm čuõlla. Koumm räidd âʹlǧǧe piijjâd lookk tõid koumm čuõlla, õõut juõʹǩǩ čuõlla, tõn diõtt lokk jaukkât jeeʹres seeʹlin tõin čuõllin."
+            ],
+            [
+              "Mäʹhtt Swordfish jeeʹresnâstt X-Wingâst?",
+              "Tåʹlǩ stuorrvuõđâst: X-Wing âânn kueʹhtt räidd da kueʹhtt čuõll, Swordfish kolmm da kolmm. Smiõttmõš lij seämma."
+            ],
+            [
+              "Taarbâš-a Swordfish tääʹrǩed ååʹcc seeʹl?",
+              "Ij. Juõʹǩǩ räiddast vuäitt leeʹd kuõʹhtt leʹbe koumm kandidaatt; mall vaatt tåʹlǩ, što koumm räidd jeäʹla ââʹn õõutsââʹjest jeänab ko koumm čuõll."
+            ],
+            [
+              "Kaaunât-a kuõll, koon stuorrvuõtt lij nellj?",
+              "Kaaunât, Jellyfish. Bare Sudoku ij ââʹn tõn, ko suu mieʹrǩǩmõõžž jeäʹla ni kuäss taarbâš tõn."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing Sudokust: mäʹhtt teknikk tuåimm",
+          "description": "XYZ-Wing: kõskksieʹll kolmm kandidaattin da kuõʹhtt sueʹjj, kook juõʹǩǩe õõut tõin, jaukke tõn lookk seeʹlin, kook vueiʹnne puk koumm. Ooudâsmeʹrkk.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing lij Y-Wing, koʹst kõskkseeʹlest lie koumm kandidaatt. Kõskkseeʹlest lie X, Y da Z; nubbe sueʹjj vuäinn kõskkseeʹl da tõʹst lie X da Z, nubbe vuäinn kõskkseeʹl da tõʹst lie Y da Z. Õhtt kolmm seeʹlest âlgg leeʹd Z, tõn diõtt Z vuäitt jaukkeed juõʹǩǩ seeʹlest, kåʹtt vuäinn puk koumm. Ko kõskksieʹll jiõčč vuäitt leeʹd Z, sieʹll, koʹst Z jaukkât, âlgg vueiʹnned kõskkseeʹl da kuhttu sueʹjj, da tät rääʹjj tõn lääʹdde leʹbe liinna, kåʹtt lij seeʹli õhttsaž. Tõt lij lossâdmõs teknikk, kåʹtt Bare Sudoku âânn.",
+          "when": [
+            "Tåʹlǩ ko ni mii jeeʹres ij tuåimm. XYZ-Wing lij harvvmõs mall Bare Sudokust da ilmmn tåʹlǩ Äʹšštobddi-mieʹrǩǩmõõžžin. Ooʒʒ tõn, ko sieʹll, koʹst lie koumm kandidaatt, lij lääʹddest õõutsââʹjest seeʹlin, koʹst lie kuõʹhtt kandidaatt da kåʹtt juâkk kueʹhtt tõn lookkin."
+          ],
+          "spot": [
+            "Alttääd seeʹlin, koin lie tääʹrǩed koumm kandidaatt; juõʹǩǩ tõin vuäitt leeʹd kõskksieʹll. Ooʒʒ tõn kuåimmseeʹlin kuõʹhtt seeʹl, koin kuhttuin lie kuõʹhtt kandidaatt, kuhttu kõskkseeʹl kolmm lookkâst, da kook juõʹǩǩe tääʹrǩed õõut lookk Z. Ooʒʒ teʹl seeʹlid, kook vueiʹnne kõskkseeʹl da kuhttu sueʹjj da koin lij Z. Tuõđâst nubbe sueʹjj lij kõskkseeʹl lääʹddest da nubbe tõn räiddast leʹbe čuõllâst, da seeʹl, koin Z jaukkât, lie tän lääʹdd jeeʹres seeʹl tän räiddast leʹbe čuõllâst."
+          ],
+          "examples": [
+            {
+              "h": "Ooudâsmeʹrkk",
+              "steps": [
+                "Kõskkseeʹlest {pivot} lie koumm kandidaatt: {x}, {y} da {z}. Tõt vuäinn seeʹl {wingA}, koʹst lie {x} da {z}, da seeʹl {wingB}, koʹst lie {y} da {z}.",
+                "Jõs {pivot} lij {z}, teʹl tät lij čiõlgg. Jõs tõt lij {x}, {wingA} âlgg leeʹd {z}. Jõs tõt lij {y}, {wingB} âlgg leeʹd {z}. Juõʹǩǩ vueʹjjest õhtt kolmm seeʹlest lij {z}.",
+                "Sieʹll, kåʹtt vuäinn puk koumm, ij vuäitt leeʹd {z}. Jaukk {z} tõin seeʹlin: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Jaukkeed seeʹlin, kook vueiʹnne tåʹlǩ kuõʹhtt sueʹjj. Jeeʹresnalla ko Y-Wingâst, kõskksieʹll vuäitt leeʹd Z, tõn diõtt sieʹll âlgg vueiʹnned še kõskkseeʹl.",
+            "Ââʹnned sueʹjjid, koon kandidaatt jeäʹla leäkku kuhttu kõskkseeʹl kolmm kandidaatt seʹst.",
+            "Seʹǩǩeed tõn Y-Wingin: jeeʹresvuõtt lij kõskkseeʹl kuälmad kandidaatt, da tõt mottai, kooid seeʹlid vuäitt jaukkeed."
+          ],
+          "faq": [
+            [
+              "Mii lij XYZ-Wing Sudokust?",
+              "Kõskksieʹll kandidaattivuiʹm X, Y da Z da kuõʹhtt sueʹjj, nubbe koʹst lie X da Z, nubbe koʹst lie Y da Z, da kuhttu vueiʹnne kõskkseeʹl. Õhtt kolmm seeʹlest lij Z, tõn diõtt Z jaukkât seeʹlin, kook vueiʹnne puk koumm."
+            ],
+            [
+              "Mäʹhtt XYZ-Wing jeeʹresnâstt Y-Wingâst?",
+              "Kõskkseeʹlest lie koumm kandidaatt kueʹhtt sâjja, da Z lij nubbe tõin. Tõn diõtt Z vuäitt leeʹd še kõskkseeʹlest, da tåʹlǩ seeʹlin, kook vueiʹnne kõskkseeʹl da kuhttu sueʹjj, vuäitt Z jaukkeed."
+            ],
+            [
+              "Mõõn täujja XYZ-Wing ilmmn?",
+              "Harvvâd. Bare Sudokust tåʹlǩ Äʹšštobddi-mieʹrǩǩmõõžž vueiʹtte taarbšed tõn, da jeänaš jeäʹla taarbâš. Bare Sudoku tarkstâll tõn mââimõsân, X-Wing, Y-Wing da Swordfish mâŋŋa."
+            ],
+            [
+              "Kaaunât-a WXYZ-Wing?",
+              "Kaaunât, kõskkseeʹlin, koʹst lie nellj kandidaatt, leâša Bare Sudoku ij ââʹn tõn. Juõʹǩǩ siõr mieʹrǩǩmõõžž vuäitt räʹtǩǩeed tän čiõlǥtõõzz ååʹcc teknikkin."
+            ]
+          ]
+        }
+      }
+    },
     "kk-Arab": {
       "learnHeading": "سۋدوكۋدى ۇيرەنۋ",
       "learnText": "سۋدوكۋدى جاڭا باستادىڭىز با، الدە قيىن جۇمباقتا توقتاپ قالدىڭىز با؟ ەكى نۇسقاۋلىق ەرەجەلەردى جانە كەڭەستەر قولداناتىن بارلىق شەشۋ تاسىلدەرىن ناقتى مىسالدارمەن تۇسىندىرەدى.",
