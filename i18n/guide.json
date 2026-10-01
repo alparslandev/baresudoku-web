@@ -852,7 +852,7 @@
           {
             "h": "Takılınca ne yapmalı?",
             "p": [
-              "Önce temelleri yeniden gözden geçir: neredeyse dolu her satır, sütun ve kutu bir tek kaynağıdır. Sonra notların eksiksiz olduğundan emin ol, çünkü eksik bir aday örüntüleri gizler, bayat bir aday sahte örüntüler yaratır. Sonra [teknikleri](techniques) zorluk sırasıyla dene: kilitli adaylar, çift ve üçlüler, X-Wing, Y-Wing, Swordfish ve XYZ-Wing. Her birinin gerçek örnekli kendi sayfası vardır.",
+              "Önce temelleri yeniden gözden geçir: neredeyse dolu her satır, sütun ve kutu bir tek kaynağıdır. Sonra notların eksiksiz olduğundan emin ol, çünkü eksik bir aday örüntüleri gizler, bayat bir aday sahte örüntüler yaratır. Sonra [teknikleri](techniques) zorluk sırasıyla dene: kilitli adaylar, çift ve üçlüler, sonra X-Wing, Y-Wing ve Skyscraper gibi ileri örüntüler. Her birinin gerçek örnekli kendi sayfası vardır.",
               "Hiçbiri işe yaramazsa ipucu al. Bare Sudoku'da ipucu önce yerleştirilmiş bir rakamın yanlış olup olmadığına bakar, sonra mantıkla doldurulabilecek bir sonraki hücreyi bulur ve tekniğin adını söyler; böylece ipucu kullanırken bile bir şey öğrenirsin. Rakamı yerleştirmek için ipucuna tekrar dokun."
             ]
           },
@@ -875,7 +875,7 @@
           ],
           [
             "Kolay, Orta, Zor ve Uzman arasındaki fark nedir?",
-            "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca teklerle çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar ya da çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Swordfish ya da XYZ-Wing gerektirir."
+            "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca teklerle çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar ya da çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü gerektirir."
           ],
           [
             "Notları her hücreye mi yoksa yalnızca bazılarına mı yazmak daha iyi?",
@@ -893,24 +893,24 @@
       },
       "index": {
         "title": "Sudoku Çözüm Teknikleri: Örneklerle Anlatım",
-        "description": "Tek adaydan Swordfish ve XYZ-Wing'e dokuz sudoku çözüm tekniğinin tamamı, Bare Sudoku ipuçlarının kullandığı sırayla; her biri gerçek bir örnekle.",
+        "description": "Tek adaydan X-Wing, Skyscraper ve Unique Rectangle'a sudoku çözüm teknikleri, Bare Sudoku ipuçlarının kullandığı sırayla; her biri gerçek bir örnekle.",
         "h1": "Sudoku çözüm teknikleri",
         "intro": [
-          "Her sudoku küçük bir mantıksal teknik kümesiyle çözülebilir. Bu dizin Bare Sudoku çözücüsünün ve ipuçlarının kullandığı dokuz tekniği çözücünün deneme sırasıyla listeler: önce tekler, sonra tek birim içindeki elemeler, sonra birden çok satır ve sütuna yayılan örüntüler. Her tekniğin tanım, nasıl fark edileceği, üretilmiş bir bulmacadan gerçek bir örnek ve yaygın hatalar içeren kendi sayfası vardır.",
-          "Bulmacanın seviyesini gerektirdiği en zor teknik belirler. Kolay ve Orta bulmacalar yalnızca tek ister, Zor bulmacalar kilitli adaylar ya da çift ve üçlü ister, Uzman bulmacalar en az bir balık ya da kanat ister. Seviye ne olursa olsun işin çoğunu tekler yapar; ileri teknik bir iki aday siler ve tekler oradan devam eder."
+          "Her sudoku küçük bir mantıksal teknik kümesiyle çözülebilir. Bu dizin Bare Sudoku çözücüsünün ve ipuçlarının kullandığı teknikleri çözücünün deneme sırasıyla listeler: önce tekler, sonra tek birim içindeki elemeler, sonra birden çok satıra, sütuna ve kutuya yayılan örüntüler; bunların arasında bulmacanın tam olarak tek çözümü olmasına dayanan örüntüler de vardır. Her tekniğin tanım, nasıl fark edileceği, üretilmiş bir bulmacadan gerçek bir örnek ve yaygın hatalar içeren kendi sayfası vardır.",
+          "Bulmacanın seviyesini gerektirdiği en zor teknik belirler. Kolay ve Orta bulmacalar yalnızca tek ister, Zor bulmacalar kilitli adaylar ya da çift ve üçlü ister, Uzman bulmacalar ise balık, kanat, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü ister. Seviye ne olursa olsun işin çoğunu tekler yapar; ileri teknik bir iki aday siler ve tekler oradan devam eder."
         ],
         "faq": [
           [
             "Sudoku tekniklerini hangi sırayla denemeliyim?",
-            "Önce en ucuz olan: tek aday, gizli tek, kilitli adaylar, açık çift ve üçlü, gizli çift ve üçlü, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku tam bu sırayla dener ve ipucu her zaman ilerleme sağlayan en basit tekniğin adını verir."
+            "Önce en ucuz olan, bu dizindeki sırayla: tekler, sonra kilitli adaylar, sonra açık ve gizli çift ve üçlüler, sonra X-Wing ile başlayan ileri örüntüler. Bare Sudoku tekniklerini tam bu sırayla dener ve her zaman ilerleme sağlayan ilk tekniği uygular; ipucu, bir sonraki rakama ulaşmak için gereken en zor tekniğin adını verir."
           ],
           [
             "Sudoku çözmek için bu tekniklerin hepsi gerekli mi?",
-            "Kolay ve Orta bulmacalar için tekler yeter. Zor bulmacalar kilitli adaylar ve alt kümeleri ekler. Uzman bulmacalar en az bir balık ya da kanat ister, ama genellikle bulmaca başına yalnızca bir iki kez."
+            "Kolay ve Orta bulmacalar için tekler yeter. Zor bulmacalar kilitli adaylar ve alt kümeleri ekler. Uzman bulmacalar balık, kanat, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü ister, ama genellikle bulmaca başına yalnızca bir iki kez."
           ],
           [
-            "XYZ-Wing'den daha zor teknikler var mı?",
-            "Evet, örneğin zincirler, teklik testleri ve zorlama ağları. Bare Sudoku bunları gerektiren bulmaca üretmez; oyundaki her bulmaca bu sayfadaki dokuz teknikle bitirilebilir."
+            "Bu rehberdekilerden daha zor teknikler var mı?",
+            "Evet. Oyuncular en zor bulmacalar için çok daha fazla teknik tanımlamıştır ve yenileri çıkmaya devam ediyor. Bare Sudoku yalnızca bu rehberdeki tekniklerin bitirebildiği bulmacalar üretir; yani oyundaki her bulmaca burada anlatılanlarla çözülebilir."
           ],
           [
             "Aday nedir?",
@@ -1062,7 +1062,7 @@
             ],
             [
               "Hangi seviye kilitli aday gerektirir?",
-              "Zor. Kilitli adaylar ya da alt kümeler isteyen ama daha zorunu istemeyen bulmaca Zor diye derecelendirilir; Uzman bulmacalar ayrıca bir balık ya da kanat ister."
+              "Zor. Kilitli adaylar ya da alt kümeler isteyen ama daha zorunu istemeyen bulmaca Zor diye derecelendirilir; Uzman bulmacalar ayrıca balık ya da kanat gibi bir ileri örüntü ister."
             ]
           ]
         },
@@ -1173,7 +1173,7 @@
           "h1": "X-Wing",
           "summary": "X-Wing, tek bir rakam ve bir dikdörtgenin köşelerindeki dört hücreden oluşan bir örüntüdür. Rakamın iki satırın her birinde tam olarak iki aday hücresi varsa ve bu hücreler aynı iki sütunda duruyorsa rakam dikdörtgenin karşılıklı iki köşesini almak zorundadır. Dolayısıyla o iki sütunun diğer her hücresinden silinebilir. Satır ve sütun yer değiştirince de aynı şey işler. Bare Sudoku'daki ilk Uzman tekniğidir.",
           "when": [
-            "Tekler, kilitli adaylar ve alt kümeler tükendiğinde. X-Wing en yaygın Uzman örüntüsüdür ve genellikle bir rakamın az adayı kaldığında, tipik olarak dört ila altı kopyası yerleşmişken görünür. İncelediğin rakam için eksiksiz not gerektirir."
+            "Tekler, kilitli adaylar ve alt kümeler tükendiğinde. X-Wing aranacak ilk Uzman örüntüsüdür ve genellikle bir rakamın az adayı kaldığında, tipik olarak dört ila altı kopyası yerleşmişken görünür. İncelediğin rakam için eksiksiz not gerektirir."
           ],
           "spot": [
             "Bir rakam seç ve o rakamın tam olarak iki aday hücresi olduğu satırları ara. Böyle iki satır aynı iki sütunu paylaşıyorsa o sütunlarda rakamın başka adaylarını kontrol et: elemeler onlardır. Sonra sütunları taban alarak yinele. Oyunda rakam tuşuna dokun: o rakamın her adayı vurgulanır ve dört vurgulu nottan oluşan dikdörtgen kolayca görülür."
@@ -1208,7 +1208,7 @@
             ],
             [
               "Hangi seviyede X-Wing var?",
-              "Uzman. X-Wing, Y-Wing, Swordfish ya da XYZ-Wing gerektiren bulmaca Uzman diye derecelendirilir."
+              "Uzman. Bare Sudoku X-Wing gerektiren bulmacayı Uzman diye derecelendirir; Y-Wing ve Skyscraper gibi diğer ileri örüntüler de Uzman sayılır."
             ]
           ]
         },
@@ -1300,18 +1300,18 @@
             ],
             [
               "Dört boyutlu balık var mı?",
-              "Evet, Jellyfish. Bare Sudoku onu kullanmaz, çünkü bulmacaları hiç gerektirmez."
+              "Evet, dört satır ve dört sütunlu Jellyfish. Akıl yürütme X-Wing ve Swordfish ile aynıdır, yalnızca daha çok çizgi vardır."
             ]
           ]
         },
         "xyz-wing": {
           "name": "XYZ-Wing",
           "title": "Sudokuda XYZ-Wing: Teknik Nasıl Çalışır",
-          "description": "XYZ-Wing: üç adaylı bir eksen ve onlardan birini paylaşan iki kanat, o rakamı üçünü de gören her hücreden çıkarır. Son teknik, gerçek bir örnekle adım adım.",
+          "description": "XYZ-Wing: üç adaylı bir eksen ve onlardan birini paylaşan iki kanat, o rakamı üçünü de gören her hücreden çıkarır. Gerçek bir örnekle, adım adım anlatılıyor.",
           "h1": "XYZ-Wing",
-          "summary": "XYZ-Wing, ekseni üç adaylı bir Y-Wing'dir. Eksen X, Y ve Z taşır; bir kanat ekseni görür ve X ile Z taşır, diğeri ekseni görür ve Y ile Z taşır. Üç hücreden biri Z olmak zorundadır; bu yüzden Z üçünü de gören her hücreden silinebilir. Eksenin kendisi Z olabileceğinden elenen hücre iki kanadın yanı sıra ekseni de görmelidir; bu da onu hücrelerin paylaştığı kutu ya da çizgiyle sınırlar. Bare Sudoku'nun kullandığı en zor tekniktir.",
+          "summary": "XYZ-Wing, ekseni üç adaylı bir Y-Wing'dir. Eksen X, Y ve Z taşır; bir kanat ekseni görür ve X ile Z taşır, diğeri ekseni görür ve Y ile Z taşır. Üç hücreden biri Z olmak zorundadır; bu yüzden Z üçünü de gören her hücreden silinebilir. Eksenin kendisi Z olabileceğinden elenen hücre iki kanadın yanı sıra ekseni de görmelidir; bu da onu hücrelerin paylaştığı kutu ya da çizgiyle sınırlar. Bare Sudoku'da bir Uzman tekniğidir.",
           "when": [
-            "Yalnızca diğer her şey başarısız olduğunda. XYZ-Wing, Bare Sudoku'daki en nadir örüntüdür ve yalnızca Uzman bulmacalarda görünür. Üç adaylı bir hücre, rakamlarından ikisini paylaşan iki adaylı bir hücreyle aynı kutuda duruyorsa ara."
+            "X-Wing, Y-Wing ve Swordfish hiçbir şey bulamadığında. XYZ-Wing, Y-Wing'den daha az görülür. Üç adaylı bir hücre, rakamlarından ikisini paylaşan iki adaylı bir hücreyle aynı kutuda duruyorsa ara."
           ],
           "spot": [
             "Tam olarak üç adayı olan hücrelerden başla; her biri olası bir eksendir. Komşuları arasında ikişer adaylı, ikisi de eksenin üç adayından alınmış ve tam olarak bir Z rakamını paylaşan iki hücre ara. Sonra ekseni ve iki kanadı gören ve Z içeren hücreleri bul. Uygulamada kanatlardan biri eksenin kutusunda, diğeri satırında ya da sütunundadır ve elenen hücreler o kutunun o satır ya da sütundaki kalan hücreleridir."
@@ -1342,11 +1342,199 @@
             ],
             [
               "XYZ-Wing ne sıklıkla görülür?",
-              "Nadiren. Bare Sudoku'da yalnızca Uzman bulmacalar gerektirebilir, çoğu gerektirmez. Bare Sudoku onu en son, X-Wing, Y-Wing ve Swordfish'ten sonra denetler."
+              "Y-Wing'den daha seyrek: Bare Sudoku'daki Uzman bulmacaların çoğu onsuz çözülür. Çözücü onu X-Wing, Y-Wing ve Swordfish'ten sonra arar."
             ],
             [
               "WXYZ-Wing var mı?",
-              "Evet, dört adaylı eksenle, ama Bare Sudoku onu kullanmaz. Oyundaki her bulmaca bu rehberin dokuz tekniğiyle bitirilebilir."
+              "Evet, dört adaylı eksenle. Bare Sudoku'daki her bulmaca bu rehberde anlatılan tekniklerle bitirilebilir."
+            ]
+          ]
+        },
+        "skyscraper": {
+          "name": "Skyscraper",
+          "title": "Sudokuda Skyscraper: Teknik Nasıl Çalışır",
+          "description": "Skyscraper: iki satırda ikişer aday hücresi olan ve yalnızca bir sütunda hizalanan rakam, diğer iki ucu da gören hücrelerden silinir. Gerçek örnek, adım adım.",
+          "h1": "Skyscraper",
+          "summary": "Skyscraper (gökdelen), bir rakamın tam olarak iki aday hücresi olduğu iki satır üzerine kurulan tek rakamlı bir örüntüdür. Her satırın bir hücresi aynı sütunda durur; bu iki hücre tabandır ve ikisi birden rakamı alamaz. Diğer iki hücre, yani tepeler, farklı sütunlardadır. Taban hücrelerinden en az biri rakam olmadığına göre tepelerden en az biri rakam olmak zorundadır; bu yüzden rakam iki tepeyi de gören her hücreden silinebilir. Satırlar yerine sütunlarla da aynı şey işler. Skyscraper, [2-String Kite](two-string-kite) gibi bir Turbot Fish biçimidir ve Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "X-Wing, Y-Wing, Swordfish ve XYZ-Wing hiçbir şey bulamadığında. Skyscraper, Bare Sudoku'daki en yaygın Uzman örüntülerinden biridir ve çoğu zaman bir [X-Wing](x-wing) örüntüsünün neredeyse tuttuğu yerde görünür: bir rakam için ikişer adaylı iki satır, iki sütun yerine yalnızca birini paylaşır. İncelediğin rakam için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Bir rakam seç ve o rakamın tam olarak iki aday hücresi olduğu satırları listele. Bu satırları ikişer ikişer karşılaştır: her satırın tam olarak bir aday hücresi aynı sütunda duruyorsa bu iki hücre taban, diğer ikisi tepedir. Sonra iki tepeyi de gören ve hâlâ rakamı içeren hücrelere bak; bunlar genellikle bir tepenin kutusunda ve diğerinin sütunundadır. Aynısını satırlar yerine sütunlarla yinele. Oyunda rakam tuşuna dokunarak adaylarını vurgula ve tam olarak ikişer aday gösteren iki satır ara."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{d} rakamının {r1}. satırda tam olarak iki aday hücresi var, {baseA} ve {topA}; {r2}. satırda da tam olarak iki, {baseB} ve {topB}.",
+                "{baseA} ve {baseB} ikisi de {col}. sütunda; bu yüzden en çok biri {d} olabilir. Bu iki hücre tabandır; {topA} ve {topB} tepelerdir.",
+                "{baseA} {d} değilse {r1}. satır {d} rakamını {topA} hücresine koymak zorundadır. {baseB} {d} değilse {r2}. satır {d} rakamını {topB} hücresine koymak zorundadır. Taban hücrelerinden en az biri {d} değildir; yani tepelerden en az biri {d}.",
+                "İki tepeyi de gören bir hücre asla {d} olamaz. Şu hücrelerden {d} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Rakam için üç aday hücresi olan bir satırı kullanmak. İki satırın her birinde tam olarak iki olmalı; yoksa satır rakamı başka bir yere koyabilir.",
+            "Adayları iki sütunda da hizalanan iki satır almak. Bu bir X-Wing'dir ve rakamı onun yerine iki sütunun geri kalanından siler.",
+            "Rakamı yalnızca bir tepeyi gören hücrelerden silmek. Elenen hücre iki tepeyi de görmelidir."
+          ],
+          "faq": [
+            [
+              "Sudokuda Skyscraper nedir?",
+              "Bir rakamın iki satırda ya da iki sütunda ikişer aday hücresi olduğu örüntü. Her satırın bir hücresi ortak bir sütunda hizalanır; diğer ikisi, yani tepeler, hizalanmaz. Tepelerden en az biri rakamı alır; bu yüzden rakam iki tepeyi de gören her hücreden silinir."
+            ],
+            [
+              "Neden Skyscraper (gökdelen) denir?",
+              "Sütunlu biçimdeki görünüşü yüzünden: iki sütun ortak bir taban satırından iki kule gibi yükselir ve tepeleri farklı yüksekliklerde biter. Satırlı biçim aynı örüntünün yan yatırılmış halidir."
+            ],
+            [
+              "Skyscraper bir Turbot Fish mi?",
+              "Evet. Turbot Fish, bir rakamın tam olarak iki adayı olduğu iki birimi birbirini gören iki hücre üzerinden bağlar. Skyscraper'da iki birim paralel satırlar ya da paralel sütunlardır ve bağlanan hücreler bir sütunu ya da satırı paylaşır; 2-String Kite'ta ise birimler bir satır ve bir sütundur ve bir kutuda bağlanır."
+            ],
+            [
+              "Skyscraper X-Wing'den nasıl farklıdır?",
+              "X-Wing, iki aday çiftinin de aynı iki sütunda hizalanmasını ister ve rakamı o sütunların geri kalanından siler. Skyscraper'da yalnızca bir çift hizalanır; tepeler serbesttir ve rakamı yalnızca iki tepeyi de gören hücreler kaybeder."
+            ]
+          ]
+        },
+        "two-string-kite": {
+          "name": "2-String Kite",
+          "title": "Sudokuda 2-String Kite: Teknik Nasıl Çalışır",
+          "description": "2-String Kite: bir satırda ve bir sütunda ikişer adayı olan ve bir kutuda bağlanan rakam, iki serbest ucu da gören hücrelerden silinir. Gerçek örnek, adım adım.",
+          "h1": "2-String Kite",
+          "summary": "2-String Kite (iki ipli uçurtma), bir rakamın tam olarak iki aday hücresi olduğu bir satır ve bir sütundan oluşan tek rakamlı bir örüntüdür. Satırın bir hücresi ile sütunun bir hücresi aynı kutudadır; bu yüzden en çok biri rakamı alabilir. Dolayısıyla diğer iki hücreden, yani uçurtmanın uçlarından, en az biri rakamı alır ve rakam iki ucu da gören her hücreden silinebilir. [Skyscraper](skyscraper) gibi bir Turbot Fish biçimidir ve Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "[Skyscraper](skyscraper) ve ondan önceki örüntüler hiçbir şey bulamadığında. 2-String Kite, Skyscraper'dan daha az görülür. Bir rakamın bir satırda iki, bir sütunda iki adayı kalmışsa ve her birinin bir adayı aynı kutudaysa ara. O rakam için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Bir rakam seç; o rakamın tam olarak iki aday hücresi olduğu bir satır ve yine tam olarak iki aday hücresi olduğu bir sütun bul, ortak hücreleri olmasın. Satırın bir hücresi ile sütunun bir hücresi aynı kutudaysa kalan iki hücre uçurtmanın uçlarıdır. Sonra iki ucu da gören hücrelere bak; genellikle yalnızca bir tane vardır, bir ucun satırında ve diğerinin sütununda. Oyunda rakam tuşuna dokun: satırda ve sütunda ikişer vurgulu not görünür."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{d} rakamının {row}. satırda tam olarak iki aday hücresi var, {rowInBox} ve {rowEnd}; {col}. sütunda da tam olarak iki, {colInBox} ve {colEnd}.",
+                "{rowInBox} ve {colInBox} ikisi de {box}. kutuda; bu yüzden en çok biri {d} olabilir.",
+                "{rowInBox} {d} değilse {row}. satır {d} rakamını {rowEnd} hücresine koymak zorundadır. {colInBox} {d} değilse {col}. sütun {d} rakamını {colEnd} hücresine koymak zorundadır. Kutudaki iki hücreden en az biri {d} değildir; yani {rowEnd} ya da {colEnd} {d} olur.",
+                "Hem {rowEnd} hem {colEnd} hücresini gören bir hücre asla {d} olamaz. Şu hücrelerden {d} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Rakam için üç aday hücresi olan bir satır ya da sütun kullanmak. İki ipte de tam olarak iki aday olmalı.",
+            "İpleri farklı kutulardaki hücreler üzerinden bağlamak. Örüntü yalnızca içteki iki hücre bir kutuyu paylaştığı, dolayısıyla ikisi birden rakamı alamadığı için işler.",
+            "Rakamı ipleri bağlayan kutudan ya da yalnızca bir ucu gören hücrelerden silmek. Rakamı yalnızca iki ucu da gören hücreler kaybeder."
+          ],
+          "faq": [
+            [
+              "Sudokuda 2-String Kite nedir?",
+              "Bir rakamın bir satırda tam olarak iki, bir sütunda tam olarak iki aday hücresi olduğu örüntü. Satırın bir hücresi ile sütunun bir hücresi bir kutuyu paylaşır; bu yüzden diğer iki hücreden en az biri rakamı alır ve rakam ikisini de gören her hücreden silinir."
+            ],
+            [
+              "Neden 2-String Kite (iki ipli uçurtma) denir?",
+              "Satır ve sütun, her biri tam olarak iki aday taşıyan iki iptir; buluştukları kutu onları birbirine bağlar. Tahtada çizildiğinde iki ip ve kutu bir uçurtmaya benzer."
+            ],
+            [
+              "2-String Kite bir Turbot Fish mi?",
+              "Evet. Skyscraper gibi, rakamın tam olarak iki adayı olduğu iki birimi birbirini gören iki hücre üzerinden bağlar. Uçurtmada birimler bir satır ve bir sütundur, bağlanan iki hücre de bir kutuyu paylaşır."
+            ],
+            [
+              "2-String Kite Skyscraper'dan nasıl farklıdır?",
+              "Skyscraper iki paralel çizgi, yani iki satır ya da iki sütun kullanır ve onları ortak bir sütunda ya da satırda bağlar. 2-String Kite bir satır ve bir sütun kullanır ve onları bir kutuda bağlar. Akıl yürütme ve elemeler aynı biçimde işler."
+            ]
+          ]
+        },
+        "w-wing": {
+          "name": "W-Wing",
+          "title": "Sudokuda W-Wing: Teknik Nasıl Çalışır",
+          "description": "W-Wing: aynı iki adayı taşıyan iki hücre, bir birimde yalnızca iki yeri olan bir rakamla bağlanınca diğer rakamı ikisini de gören hücrelerden çıkarır.",
+          "h1": "W-Wing",
+          "summary": "W-Wing, tam olarak aynı iki adayı, X ve Z'yi, taşıyan ve birbirini görmeyen iki hücre kullanır. Bu iki eş hücre X üzerinden güçlü bir bağla bağlanır: X'in tam olarak iki aday hücresi olduğu ve bu hücrelerden birinin bir eş hücreyi, diğerinin öbür eş hücreyi gördüğü bir satır, sütun ya da kutu. İki eş hücre de X olsaydı o birimde X'e yer kalmazdı; demek ki en az biri Z'dir. Bu yüzden Z, iki eş hücreyi de gören her hücreden silinebilir. W-Wing, Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "[Skyscraper](skyscraper) ve [2-String Kite](two-string-kite) gibi tek rakamlı örüntüler hiçbir şey bulamadığında. W-Wing, [Y-Wing](y-wing) örüntüsünden daha az görülür ama Uzman bulmacalarda düzenli olarak çıkar. Birbirinden uzak iki hücre aynı aday çiftini gösteriyorsa ara."
+          ],
+          "spot": [
+            "Tam olarak iki adayı olan hücreleri listele ve aynı çifti, örneğin X ve Z'yi, taşıyan ve hiçbir satır, sütun ya da kutu paylaşmayan iki hücre ara. İki rakamın her biri için, o rakamın tam olarak iki aday hücresi olan ve bu hücrelerden biri bir eş hücreyi, diğeri öbürünü gören bir satır, sütun ya da kutu ara. X'in böyle bir bağı varsa iki eş hücreyi de gören hücrelere bak: onlar Z'yi kaybeder. Sonra aynısını Z üzerindeki bir bağla dene; bu da X'i siler."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{wingA} ve {wingB} hücrelerinin ikisinin de adayları tam olarak {x} ve {z}; bu iki hücre birbirini görmüyor.",
+                "{unit}da {x} rakamının yalnızca iki aday hücresi var: {wingA} hücresini gören {linkA} ve {wingB} hücresini gören {linkB}. Bunlardan biri {x} olmak zorunda.",
+                "{wingA} ve {wingB} ikisi de {x} olsaydı ne {linkA} ne de {linkB} {x} olabilirdi ve {unit}da {x} için yer kalmazdı. Yani {wingA} ile {wingB} hücrelerinden en az biri {z}.",
+                "Hem {wingA} hem {wingB} hücresini gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "X'in üç ya da daha fazla aday hücresi olduğu bir bağ birimi kullanmak. X'in o birimde tam olarak iki yeri olmalı ve her biri bir eş hücreyi görmeli.",
+            "Z yerine X'i silmek. Bağ X üzerindedir; bu yüzden silinen rakam diğer aday, yani Z'dir.",
+            "Birbirini gören iki eş hücre kullanmak. O zaman bunlar bir açık çifttir; bu daha basit teknik iki rakamı da paylaştıkları birimden siler."
+          ],
+          "faq": [
+            [
+              "Sudokuda W-Wing nedir?",
+              "Aynı iki adayı, X ve Z'yi, taşıyan ve birbirini görmeyen iki hücre ile X'in tam olarak iki aday hücresi olduğu, bunlardan birinin bir hücreyi, diğerinin öbürünü gördüğü bir satır, sütun ya da kutu. İki hücreden en az biri Z'dir; bu yüzden Z ikisini de gören her hücreden silinir."
+            ],
+            [
+              "W-Wing neden işler?",
+              "İki eş hücre de X olsaydı X'i iki bağ hücresinden de elerlerdi ve bağ biriminde X'in gidebileceği yer kalmazdı. Demek ki en az bir eş hücre Z'dir ve ikisini de gören bir hücre Z olamaz."
+            ],
+            [
+              "W-Wing Y-Wing'den nasıl farklıdır?",
+              "Y-Wing iki kanadını iki adaylı bir eksen hücresi üzerinden bağlar. W-Wing aynı adaylara sahip iki hücreyi güçlü bir bağla, yani rakamlarından birinin yalnızca iki yeri olduğu bir birimle bağlar. İkisi de bir rakamı iki ucu da gören hücrelerden siler."
+            ],
+            [
+              "W-Wing'in bağı bir kutuda olabilir mi?",
+              "Evet. Bağ, X'in tam olarak iki aday hücresi olduğu herhangi bir satır, sütun ya da kutu olabilir; yeter ki bu hücrelerden biri bir eş hücreyi, diğeri öbürünü görsün."
+            ]
+          ]
+        },
+        "unique-rectangle": {
+          "name": "Unique Rectangle",
+          "title": "Sudokuda Unique Rectangle: Teknik Nasıl Çalışır",
+          "description": "Unique Rectangle: iki kutudaki bir dikdörtgenin üç köşesi yalnızca aynı iki adayı taşıyorsa dördüncü köşe onları kaybeder, yoksa iki çözüm olurdu.",
+          "h1": "Unique Rectangle",
+          "summary": "Unique Rectangle (benzersiz dikdörtgen) bir teklik tekniğidir: düzgün bir sudokunun tam olarak tek çözümü olmasına dayanır. İki satır, iki sütun ve tam olarak iki kutudaki bir dikdörtgenin köşelerinde duran dört boş hücre yalnızca iki rakamla, A ve B ile doldurulamaz; çünkü o zaman A ile B dört köşede yer değiştirebilir ve bulmacanın iki çözümü olurdu. Dolayısıyla üç köşenin adayları tam olarak A ve B ise ve dördüncü köşede A, B ve başka adaylar varsa dördüncü köşe A ya da B olamaz ve ikisi de oradan silinir. Bu sayfa, Bare Sudoku çözücüsünün kullandığı biçim olan Tip 1'i anlatır. Akıl yürütme geçerlidir, çünkü her Bare Sudoku bulmacasının tam olarak tek çözümü olduğu denetlenir.",
+          "when": [
+            "Bir dikdörtgenin üç köşesinde aynı iki aday kaldığında ve daha basit örüntüler hiçbir şey bulamadığında. Unique Rectangle nadirdir: Bare Sudoku bulmacalarının yalnızca küçük bir kısmı onu gerektirir. En azından dört köşe için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Aynı satırda tam olarak aynı iki adayı taşıyan iki hücre ara, sonra bunlardan birinin sütununda aynı çifti taşıyan üçüncü bir hücre. Dördüncü köşe dikdörtgeni tamamlar. Dört hücrenin tam olarak iki kutuda olduğunu ve dördüncü köşede çiftin yanında en az bir başka aday daha bulunduğunu kontrol et; sonra çifti ondan sil. Dört kutuya yayılan bir dikdörtgen hiçbir şey kanıtlamaz, çünkü rakamlarının yerini değiştirmek kutuları bozar."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "Boş {corners} hücreleri iki satır ve iki sütundaki bir dikdörtgenin köşeleridir ve tam olarak iki kutuda, {boxA}. ve {boxB}. kutularda dururlar.",
+                "Üç köşenin, yani {pairCells} hücrelerinin, adayları tam olarak {a} ve {b}. Dördüncü köşe {target} ise {a} ve {b} ile birlikte fazladan {extra} taşıyor.",
+                "{target} {a} ya da {b} olsaydı dört köşede yalnızca {a} ve {b} bulunurdu ve bu iki rakamın yerini değiştirmek ikinci bir çözüm verirdi. Her Bare Sudoku bulmacasının tam olarak tek çözümü vardır; bu yüzden bu olamaz.",
+                "Yani {target} ne {a} ne de {b} olabilir. {target} hücresinden {a} ve {b} adaylarını sil; geriye {extra} kalır."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Köşeleri dört kutuya yayılan bir dikdörtgen kullanmak. O zaman rakamların yerini değiştirmek kutuları bozar; kaçınılacak ikinci bir çözüm olmadığı için silinecek bir şey de yoktur.",
+            "Çifti, yalnızca onu taşıyan üç köşeden silmek. Eleme yalnızca dördüncü köşede, fazladan adayı olan köşede yapılır.",
+            "Tekniği birden fazla çözümü olabilecek bir bulmacada kullanmak. Teknik tekliğe dayanır; Bare Sudoku her bulmacanın tek çözümü olduğunu denetler ama başka yerden gelen bir bulmaca denetlenmemiş olabilir."
+          ],
+          "faq": [
+            [
+              "Sudokuda Unique Rectangle nedir?",
+              "İki satır, iki sütun ve iki kutudaki bir dikdörtgenin köşelerinde duran dört boş hücreden oluşan örüntü. Üç köşede yalnızca A ve B adayları varsa dördüncü köşe A ya da B olamaz, yoksa bulmacanın iki çözümü olurdu; bu yüzden A ve B oradan silinir."
+            ],
+            [
+              "Tekliğe dayanmak neden güvenli?",
+              "Çünkü düzgün bir sudokunun tam olarak tek çözümü vardır ve Bare Sudoku ürettiği her bulmacanın tek çözümü olduğunu denetler. Dört köşede yalnızca A ve B olsaydı yerlerini değiştirmek ikinci bir çözüm verirdi; böyle bir çözüm olamayacağına göre dördüncü köşe başka bir rakam almalıdır."
+            ],
+            [
+              "Bare Sudoku hangi Unique Rectangle tipini kullanır?",
+              "Tip 1: tam olarak aynı iki adayı taşıyan üç köşe ve bu ikisinin yanında başka adayları da olan bir dördüncü köşe. Genellikle 2'den 6'ya numaralanan diğer tipler iki ya da daha fazla köşedeki fazladan adayları ya da köşeler arasındaki güçlü bağları kullanır; bu sayfa Tip 1'i anlatır."
+            ],
+            [
+              "Ölümcül örüntü (deadly pattern) nedir?",
+              "İki satır, iki sütun ve iki kutudaki bir dikdörtgenin köşelerinde aynı iki rakamın çapraz biçimde yer alması. Bu rakamlar hiçbir kuralı bozmadan yer değiştirebilirdi; bu yüzden tek çözümlü bir bulmaca hiçbir zaman böyle bitmez. Unique Rectangle, bu örüntüyü yaratacak adayları siler."
             ]
           ]
         }
