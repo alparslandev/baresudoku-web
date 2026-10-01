@@ -70,8 +70,8 @@ def load_site(languages):
 GUIDE_KEYS = ["learnHeading", "learnText", "howToLink", "techniquesLink", "labels", "howTo", "index", "tech"]
 GUIDE_LABELS = ["howTo", "techniques", "play", "prev", "next", "all", "example", "steps", "when", "spot", "mistakes", "inGame", "level", "hint", "legend", "notation", "row", "column", "box", "elimItem", "regions", "firstMove", "breadcrumb"]
 LABEL_PLACEHOLDERS = {"level": {"level"}, "hint": {"text"}, "row": {"n"}, "column": {"n"}, "box": {"n"}, "elimItem": {"d", "cell"}, "firstMove": {"cell", "d"}}
-TECHNIQUES = ["naked-single", "hidden-single", "locked-candidates", "naked-pairs", "hidden-pairs", "x-wing", "y-wing", "swordfish", "xyz-wing"]
-TECH_LEVEL = {"naked-single": 0, "hidden-single": 0, "locked-candidates": 2, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 3, "swordfish": 3, "xyz-wing": 3}
+TECHNIQUES = ["naked-single", "hidden-single", "locked-candidates", "naked-pairs", "hidden-pairs", "x-wing", "y-wing", "swordfish", "xyz-wing", "skyscraper", "two-string-kite", "w-wing", "unique-rectangle"]
+TECH_LEVEL = {"naked-single": 0, "hidden-single": 0, "locked-candidates": 2, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 3, "swordfish": 3, "xyz-wing": 3, "skyscraper": 3, "two-string-kite": 3, "w-wing": 3, "unique-rectangle": 3}
 HOWTO_KEYS = ["title", "description", "h1", "summary", "sections", "faq"]
 INDEX_KEYS = ["title", "description", "h1", "intro", "faq"]
 TECH_KEYS = ["name", "title", "description", "h1", "summary", "when", "spot", "examples", "mistakes", "faq"]

@@ -15,8 +15,11 @@ GUIDE_SOURCES = ["i18n/guide.json", "src/guide.html", "src/examples.json"]
 LINK = re.compile(r"\[([^\]]+)\]\(([a-z0-9-]+)\)")
 PLACEHOLDER = re.compile(r"\{([A-Za-z0-9]+)\}")
 TAG = re.compile(r"<[^>]+>")
-S_NAKED, S_BOX, S_LOCKED, S_SUBSET, S_FIXED = 17, 20, 22, 23, 24
-HINT_INDEX = {"naked-single": S_NAKED, "hidden-single": S_BOX, "locked-candidates": S_LOCKED, "naked-pairs": S_SUBSET, "hidden-pairs": S_SUBSET, "x-wing": S_FIXED, "y-wing": S_FIXED + 1, "swordfish": S_FIXED + 2, "xyz-wing": S_FIXED + 3}
+S_NAKED, S_BOX, S_LOCKED, S_SUBSET, S_FIXED, S_TECH_EXTRA = 17, 20, 22, 23, 24, 33
+HINT_INDEX = {
+    "naked-single": S_NAKED, "hidden-single": S_BOX, "locked-candidates": S_LOCKED, "naked-pairs": S_SUBSET, "hidden-pairs": S_SUBSET, "x-wing": S_FIXED, "y-wing": S_FIXED + 1, "swordfish": S_FIXED + 2, "xyz-wing": S_FIXED + 3,
+    "skyscraper": S_TECH_EXTRA, "two-string-kite": S_TECH_EXTRA + 1, "w-wing": S_TECH_EXTRA + 2, "unique-rectangle": S_TECH_EXTRA + 3,
+}
 UNITS = []
 for u in range(9):
     UNITS.append([u * 9 + k for k in range(9)])
@@ -132,7 +135,17 @@ def params(ex, labels):
         return {"d": digits[0], "r1": ex["base"][0] + 1, "r2": ex["base"][1] + 1, "c1": ex["cover"][0] + 1, "c2": ex["cover"][1] + 1, "cells": joined(ref(c) for c in cells), "elim": elim_cells}
     if tech == "swordfish":
         return {"d": digits[0], "rows": joined(r + 1 for r in ex["base"]), "cols": joined(c + 1 for c in ex["cover"]), "cells": joined(ref(c) for c in cells), "elim": elim_cells}
-    return {"pivot": ref(ex["pivot"]), "x": ex["x"], "y": ex["y"], "z": ex["z"], "wingA": ref(ex["wings"][0]), "wingB": ref(ex["wings"][1]), "elim": elim_cells}
+    if tech in ("y-wing", "xyz-wing"):
+        return {"pivot": ref(ex["pivot"]), "x": ex["x"], "y": ex["y"], "z": ex["z"], "wingA": ref(ex["wings"][0]), "wingB": ref(ex["wings"][1]), "elim": elim_cells}
+    if tech == "skyscraper":
+        return {"d": digits[0], "r1": ex["lines"][0] + 1, "r2": ex["lines"][1] + 1, "col": ex["baseLine"] + 1, "baseA": ref(ex["bases"][0]), "baseB": ref(ex["bases"][1]), "topA": ref(ex["tops"][0]), "topB": ref(ex["tops"][1]), "elim": elim_cells}
+    if tech == "two-string-kite":
+        return {"d": digits[0], "row": ex["row"] + 1, "col": ex["col"] + 1, "box": ex["box"] + 1, "rowEnd": ref(ex["rowEnd"]), "rowInBox": ref(ex["rowInBox"]), "colInBox": ref(ex["colInBox"]), "colEnd": ref(ex["colEnd"]), "elim": elim_cells}
+    if tech == "w-wing":
+        return {"x": ex["x"], "z": ex["z"], "wingA": ref(ex["wings"][0]), "wingB": ref(ex["wings"][1]), "unit": unit_label(labels, ex["unit"]), "linkA": ref(ex["links"][0]), "linkB": ref(ex["links"][1]), "elim": elim_cells}
+    if tech == "unique-rectangle":
+        return {"a": digits[0], "b": digits[1], "corners": joined(ref(c) for c in sorted(ex["corners"])), "boxA": ex["boxes"][0] + 1, "boxB": ex["boxes"][1] + 1, "pairCells": joined(ref(c) for c in sorted(ex["floor"])), "target": ref(ex["target"]), "extra": joined(ex["extra"])}
+    raise SystemExit("bilinmeyen teknik ornegi: %s" % tech)
 
 
 def board_html(ex, caption, mode):

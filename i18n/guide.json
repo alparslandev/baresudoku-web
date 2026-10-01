@@ -579,6 +579,194 @@
               "Yes, with a four-candidate pivot, but Bare Sudoku does not use it. Every puzzle in the game can be finished with the nine techniques of this guide."
             ]
           ]
+        },
+        "skyscraper": {
+          "name": "Skyscraper",
+          "title": "Skyscraper in Sudoku: How the Technique Works",
+          "description": "Skyscraper: a digit with exactly two candidates in each of two rows, aligned in one column only, is removed from cells seeing both other ends. Real example.",
+          "h1": "Skyscraper",
+          "summary": "A Skyscraper is a single-digit pattern built on two rows in which a digit has exactly two candidate cells. One cell of each row lies in the same column; these two cells are the base, and they cannot both hold the digit. The other two cells, the tops, lie in different columns. Because at least one base cell is not the digit, at least one top must be, so the digit can be removed from every cell that sees both tops. The same works with columns instead of rows. The Skyscraper is a form of Turbot Fish, like the [2-String Kite](two-string-kite), and it is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When X-Wing, Y-Wing, Swordfish and XYZ-Wing find nothing. The Skyscraper is one of the most common Expert patterns in Bare Sudoku, and it often appears where an [X-Wing](x-wing) almost works: two rows with two candidates each for a digit, sharing only one column instead of two. It needs complete notes for the digit you examine."
+          ],
+          "spot": [
+            "Pick a digit and list the rows in which it has exactly two candidate cells. Compare those rows in pairs: if exactly one candidate cell of each row sits in the same column, those two cells are the base and the other two are the tops. Then look for cells that see both tops and still contain the digit; usually they sit in the box of one top and the column of the other. Repeat with columns instead of rows. In the game, tap the digit key to highlight its candidates and look for two rows that show exactly two each."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Digit {d} has exactly two candidate cells in row {r1}, {baseA} and {topA}, and exactly two in row {r2}, {baseB} and {topB}.",
+                "{baseA} and {baseB} are both in column {col}, so at most one of them can be {d}. They form the base; {topA} and {topB} are the tops.",
+                "If {baseA} is not {d}, row {r1} must put its {d} in {topA}. If {baseB} is not {d}, row {r2} must put its {d} in {topB}. At least one base cell is not {d}, so at least one top is {d}.",
+                "A cell that sees both tops can never be {d}. Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Using a row that has three candidate cells for the digit. Each of the two rows must have exactly two, or the row could place the digit somewhere else.",
+            "Taking two rows whose candidates line up in both columns. That is an X-Wing, which removes the digit from the rest of the two columns instead.",
+            "Removing the digit from cells that see only one top. The eliminated cell must see both tops."
+          ],
+          "faq": [
+            [
+              "What is a Skyscraper in Sudoku?",
+              "A pattern of one digit in two rows, or two columns, where the digit has exactly two candidate cells each. One cell of each row lines up in a shared column; the other two, the tops, do not. At least one top holds the digit, so it is removed from every cell that sees both tops."
+            ],
+            [
+              "Why is it called a Skyscraper?",
+              "Because of its shape in the column version: two columns rise from a shared base row like two towers, and their tops end at different heights. The row version is the same pattern turned on its side."
+            ],
+            [
+              "Is a Skyscraper a Turbot Fish?",
+              "Yes. A Turbot Fish joins two units in which a digit has exactly two candidates through two cells that see each other. In a Skyscraper the two units are parallel rows or parallel columns, and the joined cells share a column or a row; in a 2-String Kite they are a row and a column joined in a box."
+            ],
+            [
+              "How is a Skyscraper different from an X-Wing?",
+              "An X-Wing needs both pairs of candidates to line up in the same two columns, and it removes the digit from the rest of those columns. A Skyscraper lines up only one pair; the tops are free, and only cells that see both tops lose the digit."
+            ]
+          ]
+        },
+        "two-string-kite": {
+          "name": "2-String Kite",
+          "title": "2-String Kite in Sudoku: How the Technique Works",
+          "description": "2-String Kite: a digit with two candidates in a row and two in a column, joined in one box, is removed from cells that see both free ends. Real example.",
+          "h1": "2-String Kite",
+          "summary": "A 2-String Kite is a single-digit pattern made of one row and one column in which a digit has exactly two candidate cells each. One cell of the row and one cell of the column lie in the same box, so at most one of them holds the digit. Therefore at least one of the two other cells, the ends of the kite, holds it, and the digit can be removed from every cell that sees both ends. Like the [Skyscraper](skyscraper), it is a form of Turbot Fish, and it is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When the [Skyscraper](skyscraper) and the patterns before it find nothing. 2-String Kites are less common than Skyscrapers. Look for them when a digit is down to two candidates in a row and two in a column, with one candidate of each in the same box. They need complete notes for that digit."
+          ],
+          "spot": [
+            "Pick a digit and find a row where it has exactly two candidate cells and a column where it has exactly two, with no cell in common. If one cell of the row and one cell of the column share a box, the two remaining cells are the ends of the kite. Then look at the cells that see both ends; usually there is just one, in the row of one end and the column of the other. In the game, tap the digit key: the row and the column each show two highlighted notes."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Digit {d} has exactly two candidate cells in row {row}, {rowInBox} and {rowEnd}, and exactly two in column {col}, {colInBox} and {colEnd}.",
+                "{rowInBox} and {colInBox} are both in box {box}, so at most one of them can be {d}.",
+                "If {rowInBox} is not {d}, row {row} must put its {d} in {rowEnd}. If {colInBox} is not {d}, column {col} must put its {d} in {colEnd}. At least one of the two box cells is not {d}, so {rowEnd} or {colEnd} is {d}.",
+                "A cell that sees both {rowEnd} and {colEnd} can never be {d}. Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Using a row or a column with three candidate cells for the digit. Both strings must have exactly two.",
+            "Joining the strings through cells in different boxes. The pattern only works because the two inner cells share a box, so they cannot both hold the digit.",
+            "Removing the digit from the box that joins the strings, or from cells that see only one end. Only cells that see both ends lose the digit."
+          ],
+          "faq": [
+            [
+              "What is a 2-String Kite in Sudoku?",
+              "A pattern of one digit with exactly two candidate cells in a row and exactly two in a column. One cell of the row and one of the column share a box, so at least one of the other two cells holds the digit, and it is removed from every cell that sees both of them."
+            ],
+            [
+              "Why is it called a 2-String Kite?",
+              "The row and the column are the two strings, each holding exactly two candidates, and the box where they meet ties them together. Drawn on the grid, the two strings and the box look like a kite."
+            ],
+            [
+              "Is a 2-String Kite a Turbot Fish?",
+              "Yes. Like the Skyscraper, it joins two units in which the digit has exactly two candidates through two cells that see each other. In the kite the units are a row and a column, and the two joined cells share a box."
+            ],
+            [
+              "How is a 2-String Kite different from a Skyscraper?",
+              "A Skyscraper uses two parallel lines, two rows or two columns, joined in a shared column or row. A 2-String Kite uses one row and one column joined in a box. The reasoning and the eliminations work the same way."
+            ]
+          ]
+        },
+        "w-wing": {
+          "name": "W-Wing",
+          "title": "W-Wing in Sudoku: How the Technique Works",
+          "description": "W-Wing: two cells with the same two candidates, linked by a digit that has only two places in a unit, remove the other digit from cells that see both.",
+          "h1": "W-Wing",
+          "summary": "A W-Wing uses two cells that have exactly the same two candidates, X and Z, and do not see each other. They are joined by a strong link on X: a row, column or box in which X has exactly two candidate cells, one seeing each of the two pair cells. If both pair cells were X, that unit would have no place left for X, so at least one of them is Z. Z can therefore be removed from every cell that sees both pair cells. The W-Wing is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When single-digit patterns such as the [Skyscraper](skyscraper) and the [2-String Kite](two-string-kite) find nothing. W-Wings are less common than [Y-Wings](y-wing) but appear regularly in Expert puzzles. Look for them when two cells far apart show the same pair of candidates."
+          ],
+          "spot": [
+            "List the cells with exactly two candidates and look for two with the same pair, say X and Z, that share no row, column or box. For each of the two digits, look for a row, column or box where it has exactly two candidate cells, one seeing each pair cell. If X has such a link, check the cells that see both pair cells: they lose Z. Then try the same with a link on Z, which would remove X."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "{wingA} and {wingB} both have exactly the candidates {x} and {z}, and they do not see each other.",
+                "In {unit}, digit {x} has only two candidate cells: {linkA}, which sees {wingA}, and {linkB}, which sees {wingB}. One of them must be {x}.",
+                "If {wingA} and {wingB} were both {x}, neither {linkA} nor {linkB} could be {x}, and {unit} would have no place for {x}. So at least one of {wingA} and {wingB} is {z}.",
+                "A cell that sees both {wingA} and {wingB} can never be {z}. Remove {z} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Using a link unit in which X has three or more candidate cells. X must have exactly two places in that unit, one seeing each pair cell.",
+            "Removing X instead of Z. The link is on X, so the digit that is removed is the other candidate, Z.",
+            "Using two pair cells that see each other. They are then a naked pair, a simpler technique that removes both digits from the unit they share."
+          ],
+          "faq": [
+            [
+              "What is a W-Wing in Sudoku?",
+              "Two cells with the same two candidates, X and Z, that do not see each other, plus a row, column or box where X has exactly two candidate cells, one seeing each of them. At least one of the two cells is Z, so Z is removed from every cell that sees both."
+            ],
+            [
+              "Why does a W-Wing work?",
+              "If both pair cells were X, they would rule X out of both link cells, and the link unit would have nowhere to put X. So at least one pair cell is Z, and a cell that sees both of them cannot be Z."
+            ],
+            [
+              "How is a W-Wing different from a Y-Wing?",
+              "A Y-Wing connects its two wings through a pivot cell with two candidates. A W-Wing connects two cells with identical candidates through a strong link, a unit where one of their digits has only two places. Both remove a digit from the cells that see both ends."
+            ],
+            [
+              "Can the link of a W-Wing be in a box?",
+              "Yes. The link can be any row, column or box in which X has exactly two candidate cells, as long as one of them sees each pair cell."
+            ]
+          ]
+        },
+        "unique-rectangle": {
+          "name": "Unique Rectangle",
+          "title": "Unique Rectangle in Sudoku: How the Technique Works",
+          "description": "Unique Rectangle: when three corners of a rectangle in two boxes hold only the same two candidates, the fourth loses them, or there would be two solutions.",
+          "h1": "Unique Rectangle",
+          "summary": "A Unique Rectangle is a uniqueness technique: it relies on the fact that a proper Sudoku has exactly one solution. Four empty cells at the corners of a rectangle, in two rows, two columns and exactly two boxes, can never be filled with just two digits A and B, because A and B could then be swapped in all four corners and the puzzle would have two solutions. So when three corners have exactly the candidates A and B and the fourth has A, B and more, the fourth corner cannot be A or B, and both are removed from it. This page explains Type 1, the form the Bare Sudoku solver uses. The argument is valid because every Bare Sudoku puzzle is checked to have exactly one solution.",
+          "when": [
+            "When three corners of a rectangle are down to the same two candidates and the simpler patterns find nothing. Unique Rectangles are rare: only a small share of Bare Sudoku puzzles need one. They need complete notes, at least for the four corners."
+          ],
+          "spot": [
+            "Look for two cells in the same row with exactly the same two candidates, then for a third cell with that pair in the column of one of them. The fourth corner completes the rectangle. Check that the four cells lie in exactly two boxes and that the fourth corner has the pair plus at least one other candidate; then remove the pair from it. A rectangle spread over four boxes proves nothing, because swapping its digits would break the boxes."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "The empty cells {corners} are the corners of a rectangle in two rows and two columns, and they lie in exactly two boxes, {boxA} and {boxB}.",
+                "Three corners, {pairCells}, have exactly the candidates {a} and {b}. The fourth corner, {target}, has {a} and {b} plus {extra}.",
+                "If {target} were {a} or {b}, all four corners would hold only {a} and {b}, and swapping the two digits in them would give a second solution. Every Bare Sudoku puzzle has exactly one solution, so this cannot happen.",
+                "So {target} is neither {a} nor {b}. Remove {a} and {b} from {target}; it keeps {extra}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Using a rectangle whose corners lie in four boxes. Swapping the digits would then break the boxes, so there is no second solution to avoid and nothing to remove.",
+            "Removing the pair from the three corners that hold only it. The eliminations happen only in the fourth corner, the one with extra candidates.",
+            "Using the technique on a puzzle that may have more than one solution. It relies on uniqueness; Bare Sudoku checks every puzzle for exactly one solution, but a puzzle from elsewhere may not be checked."
+          ],
+          "faq": [
+            [
+              "What is a Unique Rectangle in Sudoku?",
+              "A pattern of four empty cells at the corners of a rectangle in two rows, two columns and two boxes. If three corners hold only the candidates A and B, the fourth corner cannot be A or B, because otherwise the puzzle would have two solutions, so A and B are removed from it."
+            ],
+            [
+              "Why is it safe to rely on uniqueness?",
+              "Because a proper Sudoku has exactly one solution, and Bare Sudoku checks that every puzzle it generates has exactly one. If the four corners held only A and B, swapping them would give a second solution, which cannot exist, so the fourth corner must take another digit."
+            ],
+            [
+              "Which type of Unique Rectangle does Bare Sudoku use?",
+              "Type 1: three corners with exactly the same two candidates and a fourth corner with those two plus others. Other types, usually numbered 2 to 6, use extra candidates in two or more corners or strong links between them; this page covers Type 1."
+            ],
+            [
+              "What is a deadly pattern?",
+              "Four corners of a rectangle in two rows, two columns and two boxes that hold the same two digits crosswise. The digits could be swapped without breaking any rule, so a puzzle with one solution never ends up with one. Unique Rectangles remove the candidates that would create it."
+            ]
+          ]
         }
       }
     },
