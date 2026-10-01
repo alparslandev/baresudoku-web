@@ -108252,6 +108252,2334 @@
         }
       }
     },
+    "kdr": {
+      "learnHeading": "Sudokuny üjren",
+      "learnText": "Sudokuny jangy bašładynmy, jemiesie kyjyn tapmačada tochtap kałdynmy? Eki biet kanunłarny da kienieš kułłanhan cher usułnu angłatat, cher birin čyn misal była.",
+      "howToLink": "Sudokuny nečik ojnajdyłar",
+      "techniquesLink": "Sudoku čiešüv usułłary",
+      "labels": {
+        "howTo": "Nečik ojnajdyłar",
+        "techniques": "Usułłar",
+        "play": "Sudoku ojna",
+        "prev": "Ałdahy usuł",
+        "next": "Kielgian usuł",
+        "all": "Bary usułłar",
+        "example": "Misal",
+        "steps": "Adym-adym",
+        "when": "Kačan kieriek",
+        "spot": "Nečik tabmach",
+        "mistakes": "Kiop etilgian jangyłyšłar",
+        "inGame": "Bare Sudoku-de",
+        "level": "Kieriek bołhan daradža: {level}",
+        "hint": "Ojunda kienieš ajtat: {text}",
+        "legend": "Kałyn sanłar baštan berilgian, kiok sanłar ojun ičinde salynhan, kiči sanłar kandidatłar. Jaryk kletkałar figurany kurat, syzylhan kandidatłar sürtüledi, tögierek ičindegi kandidat salmach kieriek bołhan san.",
+        "notation": "Kletkałar r3c7 kibik jazyłat: 3-nči satyr, 7-nči bahana. Satyrłar jochardan, bahanałar sołdan sanałat; kutułar soł jochardan bašłap, satyr-satyr 1-dien 9-ha dejin sanałat.",
+        "row": "{n}-nči satyr",
+        "column": "{n}-nči bahana",
+        "box": "{n}-nči kutu",
+        "elimItem": "{cell} kletkadan {d}",
+        "regions": "Tapmačanyn bašynda 5-nči satyr, 5-nči bahana da 5-nči kutu",
+        "firstMove": "Ačych jalhyz: {cell} kletkaha {d} hana kiredi",
+        "breadcrumb": "Bietnin jołu"
+      },
+      "howTo": {
+        "title": "Sudokuny nečik ojnajdyłar: kanunłar, setka, birinči adymłar",
+        "description": "Sudokuny nečik ojnamach: kanunłar, satyrłar, bahanałar da kutułar nečik išlejt, ne üčiun cher tapmačanyn bir čiešimi bar, belgiler da birinči adymłar.",
+        "h1": "Sudokuny nečik ojnajdyłar",
+        "summary": "Sudoku 9×9 setkada mantych tapmačasy. Cher boš kletkany 1-dien 9-ha dejin bir san była tołtur, ałaj ki cher satyrda, cher bahanada da cher 3×3 kutuda cher san tüz bir kieriet bołsun. Bir-bir sanłar baštan berilgian; kałhanyn sien mantych była, cher kieriet bir kletka, tabasyn, da sahynyp tabmach ech kačan kieriek tüviul. Bu biet setkany, kanunłarny, jalhyz čiešim kanununu, belgilerni da birinči adymłar üčiun bir jengil jołnu angłatat. Barysyn [Bare Sudoku](play)-de ojnap üjrenmiek bołat: oł tegin da anyn kieniešleri mantychny angłatat.",
+        "sections": [
+          {
+            "h": "Sudokunun kanunłary ne?",
+            "p": [
+              "Üč kanun hana bar, da üčiusiu üč jandan kioriungian bir kanun: cher satyrda 1-dien 9-ha dejin sanłar bołmach kieriek, cher bahanada 1-dien 9-ha dejin sanłar bołmach kieriek da cher 3×3 kutuda 1-dien 9-ha dejin sanłar bołmach kieriek. Anyn üčiun bir san bir satyrda, bahanada jemiesie kutuda ech kačan eki kieriet bołmach bołmajt.",
+              "Kałyn jazyłhan berilgian sanłar ałyšmajt. Sienin išin boš kletkałarny tołturmach. Arifmetika da tiziv da joch: sanłar tohuz bašha-bašha simvol hana. Harfler jemiesie figurałar była ojnasan da, ech nese ałyšmajt."
+            ]
+          },
+          {
+            "h": "Setka nečik kurułhan?",
+            "p": [
+              "Setkada 9 satyrda da 9 bahanada 81 kletka bar. Kałyn syzyhłar any tohuz 3×3 kutuha bioledi. Cher kletka tüz bir satyrha, bir bahanaha da bir kutuha kiredi, da bu üčiusiu kletkanyn biolekleri. Kletka była bir biolekte turhan bašha 20 kletka anyn jołdašłary; bir kletkaha salynhan san bu sanny bary 20 jołdašyndan čyharat.",
+              "Kletkałar r3c7 kibik jazyłat: 3-nči satyr, 7-nči bahana. Satyrłar jochardan, bahanałar sołdan sanałat; kutułar soł jochardan bašłap, satyr-satyr 1-dien 9-ha dejin sanałat. Bu jazuv bary usuł bietlerinde kułłanyłat da üjrenmiekke tijišli: r5c5 setkanyn ortasy."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Ne üčiun cher sudokunun tüz bir čiešimi bar?",
+            "p": [
+              "Tüz sudokunun bir čiešimi hana bar, da mantych anyn üčiun išlejt. Cher kieriet kiorgiuzsien ki bir san biolekte bašha jerge kirmiek bołmajt, oł san kałhan kletkaha kirmiek kieriek, čiunki čiešim bar da oł jalhyz. Eger tapmačanyn eki čiešimi bołsa, mantych ałarny ajyrmach bołmajt, da bir jerde sahynyp tabmach kieriek bołat.",
+              "Bare Sudoku cher tapmačany sienin tüzügiunde jasajt da synajt: tüz bir čiešimi bołmach kieriek, da mantych čiešüvčisi any sajłanhan daradžanyn usułłary była bitirmiek kieriek. Anyn üčiun tochtap kałsan, tabmach üčiun kielgian adym cher kačan bar, da kienieš any kiorgiuzedi."
+            ]
+          },
+          {
+            "h": "Sudoku tapmačasyn nečik bašłamach?",
+            "p": [
+              "Eng tar jerden bašła. Bu tiziv cher daradžada išlejt:"
+            ],
+            "list": [
+              "Kiop kieriet salynhan bir sanny sajła, misalga 6 jemiesie 7 kieriet, da oł san bołmahan kutułarny izle. Kiop kieriet kutuda anyn üčiun bir kletka hana kałat: bu [jašyryn jalhyz](hidden-single).",
+              "Tyhyz kletkałarny izle. Satyry, bahanasy da kutusu birgie siekiz bašha san tutchan kletkanyn bir kandidaty hana kałat: bu [ačych jalhyz](naked-single). Tołuha jachyn satyrłardahy jemiesie kutułardahy kletkałar izlemiek üčiun eng jachšy jer.",
+              "Cher salynhan san 20 jołdaštan bir kandidatny čyharat, anyn üčiun bu jołdašłarha tez kara. Jalhyzłar kiop kieriet birinin artyndan biri kieledi.",
+              "Jengil sanłar bitkiande, belgiler jaz: cher boš kletkanyn kandidatłary. Song kutu ičinde bir syzyhka kysyłhan sanny izle ([kilitlengian kandidatłar](locked-candidates)) jemiesie eki kandidaty birdiej bołhan eki kletkany ([ačych eki](naked-pairs)).",
+              "Cher sürtüvdian song jalhyzłarha kajt. Usta tapmačałar da kiobiusiu jalhyzłar była čiešiledi; kyjynrach usuł kielgian jalhyzha jołnu ačat hana."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Belgiler ne, da kačan ałarny kułłanmach kieriek?",
+            "p": [
+              "Belgiler, karandaš belgileri jemiesie kandidatłar da, boš kletkaha jazyłhan kiči sanłar. Ałar kiorgiuzedi: bu kletkaha kajsy sanłar kirmiek bołat. Jengil tapmačałarda ałar az kieriek; Kyjyn daradžadan jochary ałar kieriek, čiunki ekiler, X-Wing da Y-Wing kibik usułłar kandidatłar była išlejt, salynhan sanłar była tüviul.",
+              "Belgilerni tüz tut: san salhanda, any 20 jołdašnyn belgilerinden sürt. Bare Sudoku-de bu oz-oziundian bołat, da «Belgilerni tołtur» bir basuv była cher boš kletkaha bary kandidatłarny jazat, anyn üčiun tołu da tüz kandidatłar była bašłamach bołat. Belgi sahynyp tabuv tüviul: oł ajtat ki ech nese bu sanny čyharmajt."
+            ]
+          },
+          {
+            "h": "Tochtap kałsan ne etmiek?",
+            "p": [
+              "Ałda jengil jerlerni tahyn kara: cher tołuha jachyn satyr, bahana da kutu jalhyzłar üčiun čyhanach. Song kara, belgiler tołumu, čiunki joch bołhan kandidat figurałarny jašyrat, eski kandidat da jałhan figurałar kurat. Song [usułłarny](techniques) kyjynłyk tizivinde kara: kilitlengian kandidatłar, ekiler da üčler, X-Wing, Y-Wing, Swordfish da XYZ-Wing. Cher birinin čyn misałły oz bieti bar.",
+              "Ech nese išlemiesie, kienieš ał. Bare Sudoku-de kienieš ałda karajt, salynhan sanłarda jangyłyš barmy; song mantych była tołturmach bołhan kielgian kletkany tabat da usułnun atyn ajtat, anyn üčiun any kułłanhanda da bir zat üjrenesin. Sanny salmach üčiun kienieški tahyn bas."
+            ]
+          },
+          {
+            "h": "Bare Sudoku-de sanłarny nečik kirgizmiek?",
+            "p": [
+              "Kletkaha bas, song sanha. Jemiesie ałda sanha bas: oł kilitlenedi, da kajsy kletkaha basasyn, oł bu sanny ałat; bu bir sannyn 6-nči, 7-nči da 8-nči kopijasyn salmach üčiun eng tez joł. Kilitni ačmach üčiun sanha tahyn bas. «Belgiler» knopkasy karandaš belgilerine ałyštyrat, «Sürt» kletkany tazałajt, «Kajtar» cher adymny kajtarat, jangyłyšłar kyzył była belgilenedi, eger menjuda any siondiurmiesien.",
+              "Klaviaturada ok knopkałary sajłavny kiočiüredi, 1-dien 9-ha dejin knopkałar san kirgizedi, Backspace sürtedi, N belgiler üčiun, U kajtaruv üčiun, H kienieš üčiun, F belgilerni tołturuv üčiun, Escape menju üčiun. Ojun oz-oziundian sachłanat, internetsiz išlejt, reklama da akkaunt joch."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Sudokuda sahynyp tabmach ech kieriekmi?",
+            "Tüz tapmačada joch. Bare Sudoku-nun cher tapmačasynyn tüz bir čiešimi bar, da cher biri synałhan: oł oz daradžasynyn usułłary była, mantych hana była čiešiledi. Sahynyp tabmach kieriek kibik kiorünsie, belgilerinde bir kandidat joch, jemiesie bir usułnu kiormiedin."
+          ],
+          [
+            "Bir san bir satyrda, bahanada jemiesie kutuda eki kieriet bołmach bołamy?",
+            "Joch. Bary kanun bu: tohuz satyrnyn, tohuz bahananyn da tohuz kutunun cher birinde 1-dien 9-ha dejin cher san tüz bir kieriet bar. Bir biolekte eki birdiej san bołsa, ałarnyn biri, eng azy, jangyłyš."
+          ],
+          [
+            "Jengil, Orta, Kyjyn da Usta arasynda ne ajyrma bar?",
+            "Daradžany tapmačaha kieriek usułłar belgilejt. Jengil da Orta jalhyzłar była hana čiešiledi, da Jengil eng azy 38 berilgian san była bašłanat. Kyjynha kilitlengian kandidatłar jemiesie ekiler da üčler kieriek. Ustaha X-Wing, Y-Wing, Swordfish jemiesie XYZ-Wing kieriek."
+          ],
+          [
+            "Cher kletkaha belgi jazmach jachšyrachmy, jemiesie bir-bir kletkałarha hana?",
+            "Kyjyn da Usta tapmačałar üčiun barysyn tołtur: ekiler, X-Wing da Y-Wing kibik figurałar bary kandidatłar jazyłhanda hana kioriunedi. Jengil da Orta daradžada belgiler kieriek tüviul, da kiop ojnavčyłar jalhyzłarny hana izlejt."
+          ],
+          [
+            "Bir sudokuha neče zaman kieriek?",
+            "Jengil tapmačaha bir-neče minut kieriek; Usta tapmačałar 20 minut jemiesie artych ałmach bołat, bu kyjyn figurany neče tez tapchanynha bahły. Bare Sudoku saatny kiorgiuzedi, menju ačych bołhanda any tochtatat da rejting joch, anyn üčiun oz tempinde ojna."
+          ],
+          [
+            "Sudokuha arifmetika kieriekmi?",
+            "Joch. Sanłar atłar hana; jyjmach da sanamach joch. Cher tohuz simvol išlemiek bołat, da anyn üčiun sudoku mantych tapmačasy, san tapmačasy tüviul."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku čiešüv usułłary: misałłar była angłatuv",
+        "description": "Sudokunun tohuz čiešüv usułu, ačych jalhyzdan Swordfish da XYZ-Wing usułłaryna dejin, Bare Sudoku kieniešleri kułłanhan tizivde, cher biri čyn misal była.",
+        "h1": "Sudoku čiešüv usułłary",
+        "intro": [
+          "Cher sudoku kiči bir mantych usułłar topłamy była čiešilmiek bołat. Bu tizim Bare Sudoku čiešüvčisi da anyn kieniešleri kułłanhan tohuz usułnu, čiešüvči ałarny synahan tizivde kiorgiuzedi: ałda jalhyzłar, song bir biolek ičinde sürtüvler, song bir-neče satyrha da bahanaha jajyłhan figurałar. Cher usułnun oz bieti bar: angłatuv, nečik tabmach, jasałhan tapmačadan čyn misal da kiop etilgian jangyłyšłar.",
+          "Tapmačanyn daradžasyn anha kieriek eng kyjyn usuł belgilejt. Jengil da Orta tapmačałarha jalhyzłar hana kieriek, Kyjyn tapmačałarha kilitlengian kandidatłar jemiesie ekiler da üčler, Usta tapmačałarha da eng azy bir bałych jemiesie kanat. Daradža ne bołsa da, išnin kiobiusiun jalhyzłar etedi; kyjyn usuł bir-eki kandidatny sürtedi, song jalhyzłar išni davam etedi."
+        ],
+        "faq": [
+          [
+            "Sudoku usułłaryn kajsy tizivde synamach kieriek?",
+            "Ałda eng jengilleri: ačych jalhyz, jašyryn jalhyz, kilitlengian kandidatłar, ačych ekiler da üčler, jašyryn ekiler da üčler, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ałarny tüz bu tizivde synajt, da kienieš cher kačan iš ilgieri baryrha kieriek bołhan eng jengil usułnun atyn ajtat."
+          ],
+          [
+            "Sudokuny čiešmiek üčiun bu bary usułłar kieriekmi?",
+            "Jengil da Orta tapmačałar üčiun jalhyzłar jetedi. Kyjyn tapmačałarha kilitlengian kandidatłar da ekiler-üčler da kieriek. Usta tapmačałarha eng azy bir bałych jemiesie kanat kieriek, ama kiop kieriet tapmačada bir-eki kieriet hana."
+          ],
+          [
+            "XYZ-Wing-dian kyjynrach usułłar barmy?",
+            "Ov, misalga zinžirler, jalhyz čiešim synavłary da zorłavčy setkałar. Bare Sudoku ałar kieriek bołhan tapmačałar jasamajt, anyn üčiun ojundahy cher tapmača bu biettegi tohuz usuł była bitmiek bołat."
+          ],
+          [
+            "Kandidat ne?",
+            "Boš kletkaha kirmiek bołhan san, čiunki anyn satyrynda, bahanasynda jemiesie kutusunda any čyharhan nese joch. Ojundahy belgiler kandidatłar. Jalhyzłardan kyjynrach cher usuł kandidatłar bojunča sahynat, anyn üčiun ałarny tołu da tüz tut."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Ačych jalhyz",
+          "title": "Sudokuda ačych jalhyz: bir kandidatły kletka",
+          "description": "Ačych jalhyz: bir san hana kirmiek bołhan boš kletka. Ačych jalhyzłarny tez tabmach üjren, adym-adym čyn misal da kiop etilgian jangyłyšłar była.",
+          "h1": "Ačych jalhyz (naked single)",
+          "summary": "Ačych jalhyz tüz bir kandidaty bołhan boš kletka: kałhan siekiz san anyn satyrynda, bahanasynda jemiesie kutusunda ałda bar. Kałhan san anda kirmiek kieriek. Bu sudokunun eng jengil da eng kiop kułłanyłhan usułu; Bare Sudoku kienieši any «Munda bir kandidat bar» sioziu była kiorgiuzedi.",
+          "when": [
+            "Cher kačan. Ačych jalhyzłar birinči adymdan ahyrha dejin, cher daradžada tabyłat. Jengil da Orta tapmačałarda ałar jašyryn jalhyzłar była birgie kieriek bołhan jalhyz usuł. Kyjynrach tapmačałarda kyjyn usuł etkian cher sürtüv kiop kieriet artyndan bir ačych jalhyz kałdyrat, anyn üčiun cher adymdan song ałarny izle."
+          ],
+          "spot": [
+            "Kiop tołu jołdašy bołhan kletkałarha kara: ałda 7 sany bołhan satyrdahy kletka, jemiesie satyry, bahanasy da kutusu birgie siekiz bašha san tutchan kletka. Belgilersiz, kletkadan kioriungian sanłarny sana. Belgiler była ačych jalhyz bir kandidat kiorgiuzgian kletka hana, anyn üčiun «Belgilerni tołtur» ałarny tabmachny jengil etedi."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{cell} kletkaha kara. Oł boš, anyn üčiun anyn satyrynda, bahanasynda da kutusunda ałda salynhan cher sanny jaz.",
+                "{row}-nči satyrda {rowDigits} bar. {col}-nči bahanada {colDigits} bar. {box}-nči kutuda {boxDigits} bar.",
+                "Ałar birgie {d} sanyndan bašha cher sanny čyharat, anyn üčiun {cell} kletkada kałhan jalhyz kandidat {d}.",
+                "{cell} kletkaha {d} jaz. Song kara: jangy san bu satyrda, bahanada jemiesie kutuda bašha bir jalhyz kurdumu?"
+              ]
+            }
+          ],
+          "mistakes": [
+            "Satyrny hana jemiesie kutunu hana sanamach. Čyharyłhan siekiz san kiop kieriet üč biolekten birgie kieledi.",
+            "Jangy salynhan sannyn da 20 jołdašyndan kandidatłar čyharhanyn unutmach; jangy ačych jalhyzłar cher salmachtan song tez kioriunedi.",
+            "Ačych jalhyzny jašyryn jalhyz była karyštyrmach: ačych jalhyzda kletkada bir kandidat kałhan, jašyryn jalhyzda biolekte sanha bir kletka kałhan."
+          ],
+          "faq": [
+            [
+              "Sudokuda ačych jalhyz ne?",
+              "Tüz bir kandidaty bołhan boš kletka. Anyn satyrynda, bahanasynda da kutusunda siekiz bašha san ałda salynhan, anyn üčiun tohuzunču san hana kiredi."
+            ],
+            [
+              "Ne üčiun any ačych dejdiler?",
+              "Čiunki belgiler jazyłhanda, oł jalhyz kandidat kletkada ačych kioriunedi; any ech nese jašyrmajt. Jašyryn jalhyz bołsa bašha kandidatłar arasynda turat da kletkaha tüviul, sanha karap tabyłat."
+            ],
+            [
+              "Tapmačany ačych jalhyzłar była hana čiešmiek bołamy?",
+              "Kiop Jengil tapmačany bołat, ama kiobiusiune jašyryn jalhyzłar da kieriek. Bare Sudoku Jengil da Orta tapmačałarny eki türlü jalhyzłar była čiešilgian tapmačałar dep sanajt; Kyjyn da Usta tapmačałarha eng azy bir bašha usuł kieriek."
+            ],
+            [
+              "Kienieš ačych jalhyzłarny kiorgiuzedimi?",
+              "Ov. Kielgian salmach ačych jalhyz bołsa, kienieš kletkany sajłajt da san była birgie «Munda bir kandidat bar» dep ajtat. Any salmach üčiun kienieški tahyn bas."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Jašyryn jalhyz",
+          "title": "Sudokuda jašyryn jalhyz: sannyn jalhyz jeri",
+          "description": "Jašyryn jalhyz: satyrda, bahanada jemiesie kutuda bir san kirmiek bołhan jalhyz kletka. Any tabmach üjren, cher kieriet bir sanny izlep, adym-adym.",
+          "h1": "Jašyryn jalhyz (hidden single)",
+          "summary": "Jašyryn jalhyz: bir satyrda, bahanada jemiesie kutuda anyn üčiun bir kletka hana kałhan san, oł kletkada bašha kandidatłar bołsa da. Biolekte bu san bołmach kieriek, anyn üčiun san anda kiredi. Bare Sudoku kienieši any «Bu satyrda 5 üčiun bir jer» kibik ajtat, bahana jemiesie kutu üčiun da.",
+          "when": [
+            "Bir san kiop kieriet salynhanda: san 5 jemiesie 6 kieriet salynhanda, kałhan kutułar kiop tar bołat, da jašyryn jalhyz kiop kieriet kielgian adym. Jašyryn jalhyzłar Jengil da Orta tapmačałarnyn bašhy usułu da cher daradžada eng kiop kułłanyłhan kural bołup kałat."
+          ],
+          "spot": [
+            "Cher kieriet bir sanny kara. Bir san sajła, any tutmahan kutuny tap, da bu kutuda salynhan oł san była bir satyrda jemiesie bahanada turhan cher kletkany syz. Bir kletka kałsa, jašyryn jalhyz taptyn. Bu karav satyrłarda da bahanałarda da išlejt. Ojunda salynhan bir sanha bas: anyn bary kopijałary jaryk bołat, da boš kletkałar ačych kioriunedi."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{box}-nči kutuda {d} sany joch, anyn üčiun boš kletkałarynyn biri any ałmach kieriek. Boš kletkałar: {empties}.",
+                "{cell} kletkadan bašha cher birinde {d} sanyn bu satyrda jemiesie bahanada ałda salynhan {d} jabat, anyn üčiun anda {d} kandidat tüviul.",
+                "Anyn üčiun {cell} kletka {box}-nči kutuda {d} üčiun jalhyz jer. {d} sanyn anda jaz, {cell} kletkada bašha kandidatłar bołsa da."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sanny bielki tüz bołhan kletkaha salmach: bioleknin cher bašha boš kletkasyn kara, ačych kioriungianlerin hana tüviul.",
+            "Kletka bir-neče kandidat kiorgiuzgiani üčiun jašyryn jalhyzny kiormiemiek. Bašha kandidatłar kieriekli tüviul; kieriekli zat: biolekte sannyn bašha jeri joch.",
+            "Kutułarny hana karamach. Satyrłar da bahanałar da jašyryn jalhyzłarny ałaj ok kiop beredi, ahyrha jachyn da."
+          ],
+          "faq": [
+            [
+              "Sudokuda jašyryn jalhyz ne?",
+              "Satyrnyn, bahananyn jemiesie kutunun bir kletkasyna hana kirmiek bołhan san. Biolekte bu san bołmach kieriek, anyn üčiun kletkada bašha kandidatłar bołsa da, kletka belgili."
+            ],
+            [
+              "Jašyryn jalhyz da ačych jalhyz arasynda ne ajyrma bar?",
+              "Ačych jalhyz kletka üčiun: bir kandidat kałhan. Jašyryn jalhyz san üčiun: biolekte bir kletka kałhan. Ekiusiu da sanny tüz salat."
+            ],
+            [
+              "Kajsysyn tabmach jengilrach?",
+              "Belgilersiz kiop kieriet jašyryn jalhyzłar jengilrach, čiunki setkany cher kieriet bir san üčiun karamach bołat. Tołu belgiler była ačych jalhyzłar eng jengil, čiunki bir kandidatły kletka tez kioriunedi."
+            ],
+            [
+              "Kienieš jašyryn jalhyzny nečik ajtat?",
+              "«Bu satyrda 5 üčiun bir jer» kibik ajtat, bahana jemiesie kutu üčiun da, da kletkany sajłajt. Any salmach üčiun kienieški tahyn bas."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Kilitlengian kandidatłar",
+          "title": "Kilitlengian kandidatłar: kiorgiuzüv da oziune ałuv",
+          "description": "Kilitlengian kandidatłar: kutuda sannyn bary kandidatłary bir satyrda jemiesie bahanada bołsa, jemiesie tiersine, san bašha jerlerden sürtüledi. Eki misal.",
+          "h1": "Kilitlengian kandidatłar (locked candidates)",
+          "summary": "Kilitlengian kandidatłar san salmach ornuna kandidatłar sürtkian birinči usuł. Anyn eki türü bar. Kiorgiuzüv: kutuda sannyn bary kandidatłary bir satyrda jemiesie bahanada, anyn üčiun san oł syzyhnyn kałhanyndan sürtüledi. Oziune ałuv: satyrda jemiesie bahanada sannyn bary kandidatłary bir kutuda, anyn üčiun san oł kutunun kałhanyndan sürtüledi. Bare Sudoku kienieši bu usuł bołdurhan salmach üčiun «Kilitlengian kandidatłar» dep ajtat.",
+          "when": [
+            "Kyjyn tapmačada jalhyzłar bitkiande, ałda bu usułnu syna. Eng azy karahan san üčiun tołu belgiler kieriek. Kilitlengian kandidatłar kiop tabyłat: Kyjyn tapmačałarnyn kiobiusiune ałar kieriek, Usta tapmačałar da ałarny ułłurach figurałar arasynda kułłanat."
+          ],
+          "spot": [
+            "Kiorgiuzüv üčiun cher kutuha da anda bołmahan cher sanha kara: oł sannyn kandidat kletkałary bir satyrda jemiesie bahanada bołsa, kara, oł san bu syzyhnyn kutudan tyšta kałhan jerinde kandidat barmy. Oziune ałuv üčiun satyr jemiesie bahana bojunča kara: sannyn bary kandidatłary bir kutu ičinde bołsa, oł kutunun kałhanyn tazałamach bołat. Ojunda sannyn knopkasyna bas, anyn bary kandidatłary jaryk bołsun; bir kutu ičinde eki jemiesie üč jaryk belginin syzyhy, bu figura."
+          ],
+          "examples": [
+            {
+              "h": "Kiorgiuzüv",
+              "steps": [
+                "{box}-nči kutuda {d} sanynyn bu kandidat kletkałary hana bar: {cells}. Barysy {row}-nči satyrda.",
+                "{box}-nči kutuha bir {d} kieriek, anyn üčiun {row}-nči satyrnyn {d} sany, bu kletkałarnyn kajsysyna tüšsie da, {box}-nči kutu ičinde.",
+                "{row}-nči satyrda ekinči {d} bołmach bołmajt, anyn üčiun {d} sanyn {row}-nči satyrnyn kutudan tyštahy kletkałaryndan sürt: {elim}."
+              ]
+            },
+            {
+              "h": "Oziune ałuv",
+              "steps": [
+                "{row}-nči satyrda {d} sany {cells} kletkałarha hana kirmiek bołat, da barysy {box}-nči kutu ičinde.",
+                "{row}-nči satyrda {d} bołmach kieriek, anyn üčiun {box}-nči kutunun {d} sanyn {row}-nči satyr oziune ałat. {box}-nči kutunun bašha kletkałarynda {d} bołmach bołmajt.",
+                "Bu kletkałardan {d} sanyn sürt: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kiorgiuzüvde sanny kutu ičinden sürtmiek, tyšyndan tüviul, jemiesie oziune ałuvda tiersine. Sürtüvler cher kačan syzyhta bołup kutuda bołmahan, jemiesie kutuda bołup syzyhta bołmahan kletkałarda.",
+            "Kandidatłar kutunun eki satyryna jajyłhanda kanunnu kułłanmach. Kutuda sannyn bary kandidat kletkałary bir syzyhta bołmach kieriek.",
+            "Sürtüv kurhan jalhyzny izlemiekni unutmach. Kilitlengian kandidatłar oz-oziundian az kieriet san salat; ałar jalhyzha joł chazyrłajt."
+          ],
+          "faq": [
+            [
+              "Sudokuda kilitlengian kandidatłar ne?",
+              "Kutu da syzyh kiesišken jerge kysyłhan bir sannyn kandidatłary. Kutuda, jemiesie syzyhta, bu san oł kiesišken jerde bołmach kieriek, anyn üčiun sanny syzyhnyn kałhanyndan, jemiesie kutunun kałhanyndan, sürtmiek bołat."
+            ],
+            [
+              "Kiorgiuzüv da oziune ałuv arasynda ne ajyrma bar?",
+              "Kiorgiuzüv kutudan bašłanat: kutudahy sannyn kandidatłary bir satyr jemiesie bahana bojunča kiorgiuzedi, anyn üčiun san oł syzyhnyn kałhanyndan sürtüledi. Oziune ałuv satyrdan jemiesie bahanadan bašłanat: syzyhnyn bu san üčiun bary kandidatłary bir kutuda, anyn üčiun syzyh sanny oziune ałat da san kutunun kałhanyndan sürtüledi."
+            ],
+            [
+              "Kilitlengian kandidatłarny kiesišiuv sürtüvü da dejdilermi?",
+              "Ov. Bašha atłar: oziune ałuv türü üčiun kutu-syzyh azajtuv, kiorgiuzüv türü üčiun kiorgiuzgian ekiler jemiesie üčler. Bare Sudoku ekiusiu üčiun bir at kułłanat."
+            ],
+            [
+              "Kajsy daradžaha kilitlengian kandidatłar kieriek?",
+              "Kyjyn. Kilitlengian kandidatłar jemiesie ekiler-üčler kieriek bołhan, ama ałardan kyjynrach nese kieriek bołmahan tapmača Kyjyn sanałat; Usta tapmačałarha bałych jemiesie kanat da kieriek."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Ačych ekiler da üčler",
+          "title": "Sudokuda ačych ekiler da üčler: nečik išlejt",
+          "description": "Ačych ekiler da üčler: biolekte birdiej eki jemiesie üč kandidaty bołhan eki jemiesie üč kletka. Ałarny tabmach da ne sürtmiek üjren, čyn misałłar była.",
+          "h1": "Ačych ekiler da üčler (naked pair, naked triple)",
+          "summary": "Ačych eki: bir satyrda, bahanada jemiesie kutuda tüz birdiej eki kandidaty bołhan eki kletka. Bu eki san bu eki kletkaha kirmiek kieriek, anyn üčiun ałarny bioleknin bašha cher kletkasyndan sürtmiek bołat. Ačych üč bu ok fikir, üč kletka da üč san była; cher kletka ałardan ekisin jemiesie üčiusiun kiorgiuzmiek bołat. Bare Sudoku kienieši bundan kielgian salmach üčiun «Eki jemiesie üč» dep ajtat.",
+          "when": [
+            "Belgiler tołu bołhanda, jalhyzłar da kilitlengian kandidatłar bitkiande. Ačych ekiler Kyjyn tapmačałarda kiop tabyłat, ačych üčler azrach. 5 jemiesie artych boš kletkasy bołhan cher biolekte ekiusiun da izlemiek tijišli."
+          ],
+          "spot": [
+            "Eki kandidaty hana bołhan kletkałarny izle da bu biolekte birdiej eki kandidaty bołhan bašha kletka tap. Üčler üčiun eki da üč kandidatły bir-neče kletkasy bołhan bioleklerge kara: ałardan üčiusiu birgie üč bašha san hana kułłanamy? Belgiler jazyłhanda birdiej kandidatły kletkałar tez kioriunedi; ojundahy «Belgilerni tołtur» any bir basuv była etedi."
+          ],
+          "examples": [
+            {
+              "h": "Ačych eki",
+              "steps": [
+                "{unit}da {cellA} da {cellB} kletkałarnyn tüz birdiej eki kandidaty bar: {d1} da {d2}.",
+                "Ałardan biri {d1}, bašhasy {d2} bołmach kieriek. Kajsysy {d1}, kajsysy {d2}, bilmiejbiz, ama eki sanny da bu eki kletka ałat.",
+                "Anyn üčiun {unit}da bašha ech bir kletkada {d1} jemiesie {d2} bołmach bołmajt. Sürt: {elim}."
+              ]
+            },
+            {
+              "h": "Ačych üč",
+              "steps": [
+                "{unit}da üč kletka bary kandidatłaryn birdiej üč sandan, {digits}, ałat: {cells}.",
+                "Üč san bu üč kletkany bir tizivde tołturmach kieriek. Cher kletka üč kandidatny da kiorgiuzmiek kieriek tüviul; kieriekli zat: üč kletkanyn ech birinde bu topłamdan tyšta kandidat joch.",
+                "{unit}da bašha cher kletkadan {digits} sanłaryn sürt: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eki ortach kandidaty bołup üčiunčiu kandidaty da bołhan eki kletkany ałmach. Ačych ekide cher kletkada tüz bu eki kandidat bołmach kieriek, bašha nese joch.",
+            "Sanłarny eki kletkanyn oziunden sürtmiek. Eki oz kandidatłaryn tutat; sürtüvler bioleknin bašha kletkałarynda bołat.",
+            "Üčnin cher kletkasynda üč san da bołmach kieriek dep sanamach. Üčten ekisi bołhan kletka da jarajt, ech bir kletkada topłamdan tyšta kandidat bołmasa."
+          ],
+          "faq": [
+            [
+              "Sudokuda ačych eki ne?",
+              "Bir biolekte ekiusiunde da tüz birdiej eki kandidat bołhan eki kletka. Bu eki san bu eki kletkaha kilitlengian, anyn üčiun ałarny bioleknin kałhanyndan sürtmiek bołat."
+            ],
+            [
+              "Ačych üč ne?",
+              "Bir biolekte kandidatłary birgie üč san hana bołhan üč kletka. Cher kletkada ałardan ekisi jemiesie üčiusiu bołmach bołat. Üč san üč kletkany tołturat, anyn üčiun ałarny bioleknin bašha kletkałaryndan sürtmiek bołat."
+            ],
+            [
+              "Ačych eki san salamy?",
+              "Oz-oziundian joch. Oł kandidatłar sürtedi, da bu sürtüv kiop kieriet artyndan ačych jemiesie jašyryn jalhyz kałdyrat. Bare Sudoku-de kienieš oł jalhyzny kiorgiuzedi da any bołdurhan usułnun atyn ajtat."
+            ],
+            [
+              "Ačych eki bir zamanda kutuda da satyrda bołmach bołamy?",
+              "Ov. Eki kletka bir satyrda da bir kutuda bołsa, eki ekiusiu biolekte de sürtedi. Bare Sudoku ałarny cher kieriet bir biolekte karajt."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Jašyryn ekiler da üčler",
+          "title": "Sudokuda jašyryn ekiler da üčler: nečik tabmach",
+          "description": "Jašyryn eki: biolekte birdiej eki kletkaha hana kirmiek bołhan eki san; bu kletkałarnyn bašha kandidatłary sürtüledi. Jašyryn ekilerni da üčlerni tabmach üjren.",
+          "h1": "Jašyryn ekiler da üčler (hidden pair, hidden triple)",
+          "summary": "Jašyryn eki: bir satyrda, bahanada jemiesie kutuda birdiej eki kletkada hana kandidat bołhan, bašha jerde bołmahan eki san. Bu eki kletka bu eki sanny ałmach kieriek, anyn üčiun ałardahy bašha cher kandidatny sürtmiek bołat. Jašyryn üč da ałaj ok išlejt: üč kletkaha kysyłhan üč san. Sürtüvdian song bu kletkałar ačych eki jemiesie üč kiorgiuzedi. Bare Sudoku kienieši bundan kielgian salmach üčiun «Eki jemiesie üč» dep ajtat.",
+          "when": [
+            "Biolekte kiop kandidatły kletkałar bar da jalhyzłar bitkian bołhanda. Jašyryn ekiler kiop kandidatły kletkałar ičinde jašyrynat, anyn üčiun ałarny ačych ekiler kioriunmiegian jerde izlemiek tijišli. Jašyryn üčler az tabyłat; Bare Sudoku ałarny izlejt, ama Kyjyn tapmačałarnyn kiobiusiu ałarsyz čiešiledi."
+          ],
+          "spot": [
+            "Kletka bojunča tüviul, san bojunča išle. Biolekte joch bołhan cher san kirmiek bołhan kletkałarny belgile. Eki sannyn cher biri eki kletkaha hana kirmiek bołsa da bu kletkałar birdiej bołsa, jašyryn eki taptyn. Ojunda sannyn knopkasyna bas, kandidatłary jaryk bołsun; eki san bioleknin birdiej eki kletkasyn jarytsa da anda bašha nese jarytmasa, figura bu."
+          ],
+          "examples": [
+            {
+              "h": "Jašyryn eki",
+              "steps": [
+                "{unit}da {d1} da {d2} sanłarynyn cher biri eki kletkaha hana kirmiek bołat, da bu kletkałar birdiej: {cells}.",
+                "Bu eki kletka {d1} da {d2} sanłaryn ałmach kieriek, anyn üčiun ałardahy bašha kandidatłar bołmach bołmajt.",
+                "Sürt: {elim}. Endi eki kletka ačych eki kiorgiuzedi, da bu bašha jołłarny da ačmach bołat."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ekinin sanłaryn eki kletkadan sürtmiek. Bu kletkałarnyn bašha kandidatłary sürtüledi; ekinin sanłary kałat.",
+            "Biolekte üčiunčiu kletkaha da kirmiek bołhan sanny kabuł etmiek. Eki san da tüz bu eki kletkaha kysyłhan bołmach kieriek.",
+            "Kutułarda hana izlemiek. Jašyryn ekiler satyrłarda da bahanałarda da ałaj ok kiop tabyłat."
+          ],
+          "faq": [
+            [
+              "Sudokuda jašyryn eki ne?",
+              "Biolekte birdiej eki kletkaha hana kirmiek bołhan eki san. Bu kletkałar bu sanłarny ałmach kieriek, anyn üčiun ałardahy bašha kandidatłar sürtüledi."
+            ],
+            [
+              "Jašyryn eki ačych ekidian nečik ajyrylat?",
+              "Ačych eki kioriunedi: birdiej eki kandidat hana kiorgiuzgian eki kletka. Jašyryn eki bu eki kletkadahy artych kandidatłar astynda jašyryn. Bu artych kandidatłarny sürtsien, jašyryn eki ačych ekige ałyšat."
+            ],
+            [
+              "Jašyryn üč ne?",
+              "Bioleknin üč kletkasyna kysyłhan üč san. Cher san üč kletkada da bołmach kieriek tüviul; kieriekli zat: üč sannyn ech birinin bu kletkałardan tyšta kandidaty joch."
+            ],
+            [
+              "Kienieš jašyryn da ačych ekilerni ajyramy?",
+              "Joch. Bare Sudoku ekiusiun da tabat da ałardan kielgian salmach üčiun «Eki jemiesie üč» dep ajtat. Bu bietler ałarny ajyrat, čiunki ałar bašha-bašha jołłar była tabyłat."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Sudokuda X-Wing: bu usuł nečik išlejt",
+          "description": "X-Wing: eki satyrda tüz eki kandidat kletkasy bołhan da bu kletkałary birdiej eki bahanada turhan san, bu bahanałarnyn kałhanyndan sürtüledi. Misal.",
+          "h1": "X-Wing",
+          "summary": "X-Wing bir san da diort kiošieli figuranyn kiošielerinde turhan diort kletka. Eger bir sannyn eki satyrnyn cher birinde tüz eki kandidat kletkasy bołsa da bu kletkałar birdiej eki bahanada bołsa, san bu figuranyn eki karšy kiošiesin ałmach kieriek. Anyn üčiun any bu eki bahananyn bašha cher kletkasyndan sürtmiek bołat. Satyrłar da bahanałar ałyštyrylsa da bu tüz. Bu Bare Sudoku-de Usta daradžanyn birinči usułu.",
+          "when": [
+            "Jalhyzłar, kilitlengian kandidatłar da ekiler-üčler bitkiande. X-Wing Usta daradžanyn eng kiop tabyłhan figurasy da kiop kieriet bir sannyn az kandidaty kałhanda kioriunedi, kiop kieriet anyn 4-tien 6-ha dejin kopijasy salynhanda. Karahan san üčiun tołu belgiler kieriek."
+          ],
+          "spot": [
+            "Bir san sajła da anyn tüz eki kandidat kletkasy bołhan satyrłaryn izle. Ałaj eki satyr birdiej eki bahanany tutsa, bu bahanałarda bu sannyn bašha kandidatłaryn kara: ałar sürtüvler. Song satyrłar ornuna bahanałarny tiemiel etip tahyn kara. Ojunda sannyn knopkasyna bas: anyn bary kandidatłary jaryk bołat, da diort jaryk belginin diort kiošieli figurasy tez kioriunedi."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{d} sanynyn {r1}-nči satyrda tüz eki kandidat kletkasy bar, {r2}-nči satyrda da tüz eki, da ałar birdiej eki bahanada, {c1}-nči da {c2}-nči bahanada, turat: {cells}.",
+                "{r1}-nči satyr oz {d} sanyn {c1}-nči jemiesie {c2}-nči bahanaha salat, {r2}-nči satyr da bašhasyna. Ne bołsa da, {c1}-nči da {c2}-nči bahanałarnyn cher biri bu eki satyrdan bir {d} ałat.",
+                "Anyn üčiun {d} {c1}-nči da {c2}-nči bahanałarnyn bašha ech bir jerinde bołmach bołmajt. {d} sanyn sürt: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sanha üč kandidat kletkasy bołhan satyrny kułłanmach. Cher tiemiel satyrda tüz eki bołmach kieriek, da ekiusiu da ortach eki bahanada.",
+            "Sanny bahanałardan tüviul, satyrłardan sürtmiek. Satyrłar tiemiel bołhanda sürtüvler bahanałarda, da tiersine.",
+            "Ałyštyrylhan türün unutmach. Bahanałar üstüne kurułhan X-Wing satyrłarda sürtedi."
+          ],
+          "faq": [
+            [
+              "Sudokuda X-Wing ne?",
+              "Eki satyrnyn cher birinde, birdiej eki bahanada, tüz eki kandidat kletkasy bołhan san. San bu figuranyn eki karšy kiošiesin ałat, anyn üčiun eki bahananyn kałhanyndan sürtüledi. Satyrłar da bahanałar ałyštyrylmach bołat."
+            ],
+            [
+              "X-Wing ne üčiun išlejt?",
+              "Eki satyrnyn cher biri sanny eki bahananyn birine salmach kieriek, da eki satyr bir bahanany kułłanmach bołmajt. Anyn üčiun eki bahana da oz sanyn bu satyrłardan ałat, da bu bahanałarda bašha cher kandidat bołmach bołmajt."
+            ],
+            [
+              "X-Wing bałychmy?",
+              "Ov. X-Wing eki satyr była kurułhan bałych, Swordfish üč satyr była kurułhan bałych. Bare Sudoku ekiusiun da tabat."
+            ],
+            [
+              "X-Wing kajsy daradžada kieriek?",
+              "Usta. X-Wing, Y-Wing, Swordfish jemiesie XYZ-Wing kieriek bołhan tapmača Usta sanałat."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Sudokuda Y-Wing: bu usuł nečik išlejt",
+          "description": "Y-Wing (XY-Wing): eki kandidatły orta kletka da anyn bir kandidaty da bołhan eki kanat, eki kanatny da kiorgian cher kletkadan bir sanny sürtedi.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, XY-Wing dep da ajtyłat, eki kandidatły üč kletkany kułłanat. Orta kletkanyn kandidatłary X da Y. Bir kanat orta kletkany kioredi da X da Z tutat; bašha kanat orta kletkany kioredi da Y da Z tutat. Orta kletka ne bołsa da, kanatłardan biri Z bołmach kieriek, anyn üčiun Z-ni eki kanatny da kiorgian cher kletkadan sürtmiek bołat. Bu Bare Sudoku-de Usta daradžanyn usułu.",
+          "when": [
+            "Tapmačada tüz eki kandidatły bir-neče kletka bołhanda da ech bir bałych tabyłmahanda. Y-Wing Usta tapmačałarda kiop tabyłat da eki kandidatły kletkałarny izlep tabyłat: cher biri orta kletka jemiesie kanat bołmach bołat."
+          ],
+          "spot": [
+            "Tüz eki kandidatły kletkałarnyn tizimin jasa. Cher birin X da Y kandidatły orta kletka dep sana da anyn jołdašłary arasynda X da bašha bir san Z bołhan kletkany, Y da bu Z bołhan kletkany izle. Bu ekiusiu kanatłar. Song eki kanatny da kiorgian da Z tutchan kletkałarny tap. Unutma: kanatłar bir-birin kiormiek kieriek tüviul."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{pivot} orta kletkanyn kandidatłary {x} da {y}. Oł {x} da {z} tutchan {wingA} kletkany da {y} da {z} tutchan {wingB} kletkany kioredi.",
+                "{pivot} {x} bołsa, {wingA} {x} sanyn joch etedi da {z} bołat. {pivot} {y} bołsa, {wingB} {z} bołat. Ne bołsa da, eki kanattan biri {z}.",
+                "Eki kanatny da kiorgian kletka ech kačan {z} bołmach bołmajt. {z} sanyn sürt: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ekiusiu da orta kletkany kiormiegian kanatłar sajłamach. Cher kanat orta kletka była bir satyrda, bahanada jemiesie kutuda bołmach kieriek.",
+            "Z-ni bir kanatny hana kiorgian kletkałardan sürtmiek. Z sürtülgian kletka eki kanatny da kiormiek kieriek.",
+            "Z-ni orta kletkadan sürtmiek. Y-Wing-de orta kletkada Z joch; bar bołsa, figura bašha kanunłu XYZ-Wing."
+          ],
+          "faq": [
+            [
+              "Sudokuda Y-Wing ne?",
+              "Eki kandidatły üč kletka: X da Y tutchan orta kletka, orta kletkany kiorgian X da Z tutchan kanat, da orta kletkany kiorgian Y da Z tutchan kanat. Kanatłardan biri cher kačan Z, anyn üčiun Z eki kanatny da kiorgian kletkałardan sürtüledi."
+            ],
+            [
+              "Y-Wing da XY-Wing birdiejmi?",
+              "Ov. Eki at bir figurany ajtat. Bare Sudoku any Y-Wing dep atajt."
+            ],
+            [
+              "Ne üčiun kanatłardan biri Z bołmach kieriek?",
+              "Orta kletka X bołsa, birinči kanat X-ni joch etedi da Z bołat. Orta kletka Y bołsa, ekinči kanat Z bołat. Orta kletka bu ekidian biri, anyn üčiun kanatłardan biri Z."
+            ],
+            [
+              "Y-Wing neče kletkadan sürtedi?",
+              "Kiop kieriet bir jemiesie eki kletkadan: eki kanatny da kiorgian da Z tutchan kletkałardan hana. Bir jalhyz kurmach üčiun bu jetedi."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Sudokuda Swordfish: bu usuł nečik išlejt",
+          "description": "Swordfish: üč satyrda üč bahanaha kysyłhan san bu bahanałarnyn kałhanyndan sürtüledi. Üč satyr była kurułhan bałych, čyn misal była angłatyłhan.",
+          "h1": "Swordfish",
+          "summary": "Swordfish üč satyr da üč bahana była X-Wing. Eger bir sannyn üč satyrnyn cher birinde eng kiop üč kandidat kletkasy bołsa da bu kletkałarnyn barysy birdiej üč bahanaha tüšsie, üč satyr bu bahanałardahy sanny tołu ałat, da sanny üč bahananyn bašha cher kletkasyndan sürtmiek bołat. Satyrłar da bahanałar ałyštyrylmach bołat. Bare Sudoku Usta tapmačałarda Swordfish usułun Y-Wing usułundan song izlejt.",
+          "when": [
+            "X-Wing da Y-Wing nese tapmahanda. Swordfish X-Wing usułundan az tabyłat da kandidatłary üč syzyhka az-az jajyłhan sanny kieriek etedi. Bu san üčiun tołu da tüz belgiler kieriek."
+          ],
+          "spot": [
+            "Bir san sajła da anyn üčiun eki jemiesie üč kandidat kletkasy bołhan satyrłarny izle. Ałaj üč satyr birgie üč bahanany hana tutsa, bu bahanałarda bu sannyn bašha kandidatłaryn kara. Cher satyrda cher bahanada kandidat bołmach kieriek tüviul: Swordfish 6, 7, 8 jemiesie 9 kletkadan bołmach bołat. Ojunda sanny knopkasy była jaryt da kandidatłary üč bahanada tizilgian üč satyrny izle."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{d} sanynyn {rows} satyrłarnyn cher birinde eng kiop üč kandidat kletkasy bar, da bu kletkałarnyn barysy {cols} bahanałarda: {cells}.",
+                "Üč satyrnyn cher biri oz {d} sanyn üč bahananyn birine salmach kieriek, da ech eki satyr bir bahanany kułłanmach bołmajt. Anyn üčiun üč bahana oz {d} sanyn bu üč satyrdan ałat.",
+                "{cols} bahanałarda bašha cher {d} kandidaty bołmach bołmajt. {d} sanyn sürt: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Bary tohuz kletkany kieriek dep sanamach. Bir-bir satyrłarda eki kandidaty bołhan Swordfish da tüz, üč satyr üč bahanany hana tutsa.",
+            "Diort kandidat kletkasy bołhan satyrny kirgizmiek. Cher tiemiel satyrda eng kiop üč kletka bołmach kieriek, barysy üč bahana ičinde.",
+            "Tiemiel satyrłarda sürtmiek. Satyrłar tiemiel bołhanda sürtüvler üč bahanada, tiemiel satyrłardan tyšta."
+          ],
+          "faq": [
+            [
+              "Sudokuda Swordfish ne?",
+              "Üč satyrdahy kandidatłary üč bahanaha kysyłhan san. Üč satyr sanny bu üč bahanaha, cher bahanaha birin, salmach kieriek, anyn üčiun san bu bahanałarnyn bašha kletkałaryndan sürtüledi."
+            ],
+            [
+              "Swordfish X-Wing usułundan nečik ajyrylat?",
+              "Ułłułuhu bojunča hana: X-Wing eki satyr da eki bahana kułłanat, Swordfish üč da üč. Mantych birdiej."
+            ],
+            [
+              "Swordfish üčiun tüz tohuz kletka kieriekmi?",
+              "Joch. Cher satyrda eki jemiesie üč kandidat bołmach bołat; figuraha bu hana kieriek: üč satyr birgie üč bahanadan artych kułłanmasyn."
+            ],
+            [
+              "Diort satyrły bałych barmy?",
+              "Ov, Jellyfish. Bare Sudoku any kułłanmajt, čiunki anyn tapmačałaryna ech kačan kieriek bołmajt."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Sudokuda XYZ-Wing: bu usuł nečik išlejt",
+          "description": "XYZ-Wing: üč kandidatły orta kletka da anyn bir kandidatyn tutchan eki kanat, üčiusiun da kiorgian cher kletkadan bu sanny sürtedi. Čyn misal, adym-adym.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing orta kletkasynyn üč kandidaty bołhan Y-Wing. Orta kletka X, Y da Z tutat; bir kanat orta kletkany kioredi da X da Z tutat, bašhasy orta kletkany kioredi da Y da Z tutat. Üč kletkadan biri Z bołmach kieriek, anyn üčiun Z-ni üčiusiun da kiorgian cher kletkadan sürtmiek bołat. Orta kletkanyn oziu da Z bołmach bołat, anyn üčiun Z sürtülgian kletka eki kanatny da, orta kletkany da kiormiek kieriek; bu any kletkałar ortach tutchan kutuha jemiesie syzyhka kysat. Bu Bare Sudoku kułłanhan eng kyjyn usuł.",
+          "when": [
+            "Bašha nese išlemiegiande hana. XYZ-Wing Bare Sudoku-de eng az tabyłhan figura da Usta tapmačałarda hana kioriunedi. Üč kandidatły kletka, anyn sanłaryndan ekisin tutchan eki kandidatły kletka była bir kutuda bołhanda any izle."
+          ],
+          "spot": [
+            "Tüz üč kandidaty bołhan kletkałardan bašła; cher biri orta kletka bołmach bołat. Anyn jołdašłary arasynda eki kandidatły eki kletka izle: ekiusiunin da kandidatłary orta kletkanyn üč kandidatyndan, da ałar tüz bir san Z ortach tutat. Song orta kletkany da eki kanatny da kiorgian da Z tutchan kletkałarny izle. Kiop kieriet bir kanat orta kletkanyn kutusunda, bašhasy anyn satyrynda jemiesie bahanasynda turat, da sürtüv bu kutunun bu satyrdahy jemiesie bahanadahy kałhan kletkałarynda bołat."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{pivot} orta kletkanyn üč kandidaty bar: {x}, {y} da {z}. Oł {x} da {z} tutchan {wingA} kletkany da {y} da {z} tutchan {wingB} kletkany kioredi.",
+                "{pivot} {z} bołsa, iš bitti. {x} bołsa, {wingA} {z} bołmach kieriek. {y} bołsa, {wingB} {z} bołmach kieriek. Ne bołsa da, üč kletkadan biri {z}.",
+                "Üčiusiun da kiorgian kletka {z} bołmach bołmajt. {z} sanyn sürt: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eki kanatny hana kiorgian kletkałardan sürtmiek. Y-Wing usułundan bašha, orta kletka Z bołmach bołat, anyn üčiun kletka orta kletkany da kiormiek kieriek.",
+            "Kandidatłarynyn ekiusiu da orta kletkanyn üč kandidaty ičinde bołmahan kanatłarny kułłanmach.",
+            "Any Y-Wing była karyštyrmach: ajyrma orta kletkanyn üčiunčiu kandidatynda, da kajsy kletkałar tazałanmach bołat, any bu belgilejt."
+          ],
+          "faq": [
+            [
+              "Sudokuda XYZ-Wing ne?",
+              "X, Y da Z kandidatły orta kletka da eki kanat: biri X da Z, bašhasy Y da Z tutat, ekiusiu da orta kletkany kioredi. Üč kletkadan biri Z, anyn üčiun Z üčiusiun da kiorgian kletkałardan sürtüledi."
+            ],
+            [
+              "XYZ-Wing Y-Wing usułundan nečik ajyrylat?",
+              "Orta kletkada eki tüviul, üč kandidat bar, Z da ałarnyn ičinde. Anyn üčiun Z orta kletkaha da kirmiek bołat, da Z sanyn orta kletkany da eki kanatny da kiorgian kletkałar hana joch etedi."
+            ],
+            [
+              "XYZ-Wing neče kieriet kioriunedi?",
+              "Az. Bare Sudoku-de any Usta tapmačałar hana kieriek etmiek bołat, da kiobiusiune kieriek tüviul. Bare Sudoku any X-Wing, Y-Wing da Swordfish usułłaryndan song, eng ahyrda karajt."
+            ],
+            [
+              "WXYZ-Wing barmy?",
+              "Ov, diort kandidatły orta kletka była, ama Bare Sudoku any kułłanmajt. Ojundahy cher tapmača bu bietlerdegi tohuz usuł była bitmiek bołat."
+            ]
+          ]
+        }
+      }
+    },
+    "fa-AF": {
+      "learnHeading": "سودوکو را یاد بگیرید",
+      "learnText": "تازه با سودوکو آشنا شده‌اید یا در یک جدول دشوار گیر مانده‌اید؟ دو رهنما قواعد و همهٔ تخنیک‌های حلی را که رهنمایی‌ها به کار می‌برند، هر کدام با یک مثال واقعی، شرح می‌دهند.",
+      "howToLink": "سودوکو چطور بازی می‌شود",
+      "techniquesLink": "تخنیک‌های حل سودوکو",
+      "labels": {
+        "howTo": "طرز بازی",
+        "techniques": "تخنیک‌ها",
+        "play": "سودوکو بازی کنید",
+        "prev": "تخنیک قبلی",
+        "next": "تخنیک بعدی",
+        "all": "همهٔ تخنیک‌ها",
+        "example": "مثال",
+        "steps": "قدم به قدم",
+        "when": "چه وقت به کار می‌رود",
+        "spot": "چطور پیدایش کنیم",
+        "mistakes": "اشتباه‌های معمول",
+        "inGame": "در Bare Sudoku",
+        "level": "لازم از سطح: {level}",
+        "hint": "در بازی، رهنمایی می‌گوید: {text}",
+        "legend": "رقم‌های پررنگ داده‌شده‌اند، رقم‌های آبی هنگام حل گذاشته شده‌اند و رقم‌های کوچک نامزدها هستند. حجره‌های برجسته الگو را می‌سازند، نامزدهای خط‌خورده حذف می‌شوند و نامزد داخل دایره رقمی است که باید گذاشته شود.",
+        "notation": "حجره‌ها به شکل r3c7 نوشته می‌شوند: سطر 3، ستون 7. سطرها از بالا و ستون‌ها از چپ شمرده می‌شوند و خانه‌ها از 1 تا 9، از بالا سمت چپ و سطر به سطر.",
+        "row": "سطر {n}",
+        "column": "ستون {n}",
+        "box": "خانهٔ {n}",
+        "elimItem": "{d} از {cell}",
+        "regions": "سطر 5، ستون 5 و خانهٔ 5 در آغاز جدول",
+        "firstMove": "تک‌گزینهٔ آشکار: {cell} فقط می‌تواند {d} باشد",
+        "breadcrumb": "مسیر صفحه"
+      },
+      "howTo": {
+        "title": "سودوکو چطور بازی می‌شود: قواعد، صفحه و حرکت‌های اول",
+        "description": "یاد بگیرید سودوکو چطور بازی می‌شود: قواعد، کار سطرها، ستون‌ها و خانه‌ها، چرا هر جدول یک جواب دارد، کار با یادداشت‌ها و نخستین حرکت‌ها.",
+        "h1": "سودوکو چطور بازی می‌شود",
+        "summary": "سودوکو یک معمای منطقی روی جدول 9×9 است. هر حجرهٔ خالی را با رقمی از 1 تا 9 پر کنید، طوری که هر سطر، هر ستون و هر خانهٔ 3×3 هر رقم را دقیقاً یک بار داشته باشد. بعضی رقم‌ها از اول داده شده‌اند؛ بقیه را خودتان، هر بار یک حجرهٔ قطعی، با استدلال پیدا می‌کنید و هیچ‌وقت لازم نیست حدس بزنید. این رهنما صفحهٔ بازی، قواعد، اصل جواب یگانه، یادداشت‌ها و یک راهبرد ساده برای حرکت‌های اول را شرح می‌دهد. همهٔ این‌ها را می‌توانید در [Bare Sudoku](play) تمرین کنید که رایگان است و رهنمایی‌هایی دارد که منطق را شرح می‌دهند.",
+        "sections": [
+          {
+            "h": "قواعد سودوکو چیست؟",
+            "p": [
+              "فقط سه قاعده وجود دارد و هر سه در واقع یک قاعده‌اند که از سه طرف دیده می‌شود: هر سطر باید رقم‌های 1 تا 9 را داشته باشد، هر ستون باید رقم‌های 1 تا 9 را داشته باشد و هر خانهٔ 3×3 باید رقم‌های 1 تا 9 را داشته باشد. پس یک رقم هیچ‌وقت نمی‌تواند دو بار در یک سطر، ستون یا خانه بیاید.",
+              "رقم‌های داده‌شده که پررنگ نوشته شده‌اند ثابت‌اند. کار شما پر کردن حجره‌های خالی است. هیچ حساب و ترتیبی در کار نیست: رقم‌ها فقط نُه نشانهٔ متفاوت‌اند. اگر با حروف یا شکل‌ها بازی می‌کردید هم چیزی تغییر نمی‌کرد."
+            ]
+          },
+          {
+            "h": "صفحهٔ بازی چطور ترتیب شده است؟",
+            "p": [
+              "صفحه 81 حجره در 9 سطر و 9 ستون دارد. خط‌های ضخیم آن را به نُه خانهٔ 3×3 تقسیم می‌کنند. هر حجره دقیقاً به یک سطر، یک ستون و یک خانه تعلق دارد و این سه گروه، واحدهای آن حجره‌اند. 20 حجرهٔ دیگری که با یک حجره در واحدی شریک‌اند همسایه‌های آن نامیده می‌شوند؛ رقمی که در یک حجره گذاشته می‌شود، همان رقم را در هر 20 همسایه رد می‌کند.",
+              "حجره‌ها به شکل r3c7 نوشته می‌شوند: سطر 3، ستون 7. سطرها از بالا و ستون‌ها از چپ شمرده می‌شوند و خانه‌ها از 1 تا 9، از بالا سمت چپ و سطر به سطر. این نشانه‌گذاری در همهٔ رهنماهای تخنیک به کار می‌رود و ارزش یاد گرفتن دارد: r5c5 مرکز صفحه است."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "چرا هر سودوکو دقیقاً یک جواب دارد؟",
+            "p": [
+              "یک سودوکوی درست یک جواب دارد و همین است که منطق را کارآمد می‌سازد. هر بار که نشان دهید رقمی در یک واحد به جای دیگری رفته نمی‌تواند، آن رقم باید در حجرهٔ باقی‌مانده گذاشته شود، چون جواب وجود دارد و یگانه است. اگر جدولی دو جواب می‌داشت، هیچ استدلالی نمی‌توانست آن دو را از هم جدا کند و در جایی ناچار به حدس زدن می‌شدید.",
+              "Bare Sudoku هر جدول را روی دستگاه شما می‌سازد و بررسی می‌کند که دقیقاً یک جواب داشته باشد و حل‌کنندهٔ منطقی‌اش بتواند آن را با تخنیک‌های سطح انتخاب‌شده تمام کند. پس اگر گیر ماندید، همیشه قدم بعدی برای پیدا کردن وجود دارد و رهنمایی آن را نشان می‌دهد."
+            ]
+          },
+          {
+            "h": "یک جدول سودوکو را چطور شروع کنیم؟",
+            "p": [
+              "از محدودترین جا شروع کنید. این ترتیب در همهٔ سطح‌ها کار می‌دهد:"
+            ],
+            "list": [
+              "رقمی را انتخاب کنید که بارها آمده است، مثلاً شش یا هفت بار، و خانه‌هایی را پیدا کنید که هنوز آن را ندارند. اغلب در یک خانه فقط یک حجره برایش می‌ماند: این یک [تک‌گزینهٔ پنهان](hidden-single) است.",
+              "دنبال حجره‌های پرازدحام بگردید. حجره‌ای که سطر، ستون و خانه‌اش روی هم هشت رقم متفاوت دارند فقط یک نامزد برایش می‌ماند: این یک [تک‌گزینهٔ آشکار](naked-single) است. حجره‌های سطرها یا خانه‌های تقریباً پر بهترین جا برای جست‌وجو هستند.",
+              "هر رقمی که می‌گذارید یک نامزد را از 20 همسایه حذف می‌کند، پس فوراً آن همسایه‌ها را بررسی کنید. تک‌گزینه‌ها معمولاً پشت سر هم می‌آیند.",
+              "وقتی گذاشتن‌های آسان تمام شد، یادداشت بنویسید: نامزدهای هر حجرهٔ خالی. بعد دنبال رقمی بگردید که درون یک خانه به یک خط محدود شده است ([نامزدهای قفل‌شده](locked-candidates)) یا دو حجره که دو نامزد یکسان دارند ([جفت آشکار](naked-pairs)).",
+              "بعد از هر حذف به تک‌گزینه‌ها برگردید. حتی جدول‌های سطح ماهر بیشترشان با تک‌گزینه‌ها حل می‌شوند؛ تخنیک پیشرفته فقط راه تک‌گزینهٔ بعدی را باز می‌کند."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "یادداشت‌ها چیستند و چه وقت باید از آن‌ها استفاده کرد؟",
+            "p": [
+              "یادداشت‌ها، که به آن‌ها نشانهٔ پنسلی یا نامزد هم می‌گویند، رقم‌های کوچکی هستند که در یک حجرهٔ خالی می‌نویسید تا ثبت کنید کدام رقم‌ها هنوز آنجا ممکن‌اند. در جدول‌های آسان کم پیش می‌آید که لازم شوند؛ از سطح دشوار به بالا ضروری‌اند، چون تخنیک‌هایی مثل جفت‌ها، X-Wing و Y-Wing با نامزدها سروکار دارند، نه با رقم‌های گذاشته‌شده.",
+              "یادداشت‌ها را دقیق نگه دارید: وقتی رقمی می‌گذارید، آن را از یادداشت‌های هر 20 همسایه پاک کنید. در Bare Sudoku این کار خودکار انجام می‌شود و «پر کردن یادداشت‌ها» با یک لمس همهٔ نامزدها را در همهٔ حجره‌های خالی می‌نویسد، پس می‌توانید از مجموعه‌ای کامل و درست از نامزدها شروع کنید. یادداشت یک واقعیت است، نه یک حدس: یعنی هنوز چیزی این رقم را رد نمی‌کند."
+            ]
+          },
+          {
+            "h": "وقتی گیر ماندید چه کنید؟",
+            "p": [
+              "اول اساسات را دوباره بررسی کنید: هر سطر، ستون و خانهٔ تقریباً پر منبع تک‌گزینه است. بعد مطمئن شوید یادداشت‌ها کامل‌اند، چون نامزدی که جا مانده الگوها را پنهان می‌کند و نامزد کهنه الگوهای نادرست می‌سازد. سپس [تخنیک‌ها](techniques) را به ترتیب دشواری مرور کنید: نامزدهای قفل‌شده، جفت‌ها و سه‌تایی‌ها، X-Wing، Y-Wing، Swordfish و XYZ-Wing. هر کدام صفحهٔ خودش را با یک مثال واقعی دارد.",
+              "اگر هیچ‌کدام کار نداد، از رهنمایی کمک بگیرید. در Bare Sudoku رهنمایی اول بررسی می‌کند که آیا رقمی که گذاشته‌اید غلط است، بعد حجرهٔ بعدی را که با منطق پر می‌شود پیدا می‌کند و نام تخنیک را می‌گوید، پس حتی وقتی از آن استفاده می‌کنید چیزی یاد می‌گیرید. برای گذاشتن رقم، رهنمایی را دوباره بزنید."
+            ]
+          },
+          {
+            "h": "در Bare Sudoku رقم‌ها را چطور وارد کنیم؟",
+            "p": [
+              "یک حجره را لمس کنید، بعد یک رقم. یا اول رقم را لمس کنید: قفل می‌شود و هر حجره‌ای که لمس کنید آن را می‌گیرد، که تیزترین راه برای گذاشتن ششمین، هفتمین و هشتمین نسخهٔ یک رقم است. برای آزاد کردن رقم، دوباره آن را لمس کنید. دکمهٔ «یادداشت» به نشانه‌های پنسلی می‌رود، «پاک کردن» حجره را خالی می‌کند، «واپس» هر حرکتی را پس می‌گیرد و اشتباه‌ها به رنگ سرخ نشان داده می‌شوند، مگر اینکه این را در منو غیرفعال کنید.",
+              "با کیبورد، با کلیدهای جهت حرکت کنید و با 1 تا 9 رقم وارد کنید؛ Backspace پاک می‌کند، N برای یادداشت، U برای واپس، H برای رهنمایی، F برای پر کردن یادداشت‌ها و Escape برای منو است. بازی خودش ذخیره می‌شود، بدون انترنت کار می‌کند و نه اعلان دارد نه حساب."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "آیا در سودوکو هیچ‌وقت لازم است حدس بزنیم؟",
+            "در یک جدول درست، نخیر. هر جدول Bare Sudoku دقیقاً یک جواب دارد و بررسی شده است که فقط با منطق، تا حد تخنیک‌های سطح خودش، حل می‌شود. اگر حس می‌کنید باید حدس بزنید، نامزدی در یادداشت‌هایتان جا مانده یا تخنیکی منتظر است که پیدایش کنید."
+          ],
+          [
+            "آیا یک رقم می‌تواند دو بار در یک سطر، ستون یا خانه بیاید؟",
+            "نخیر. کل قاعده همین است: هر یک از نُه سطر، نُه ستون و نُه خانه هر رقم از 1 تا 9 را دقیقاً یک بار دارد. اگر دو رقم یکسان در یک واحد باشند، دست‌کم یکی از آن‌ها غلط است."
+          ],
+          [
+            "فرق آسان، متوسط، دشوار و ماهر چیست؟",
+            "سطح را تخنیک‌هایی تعیین می‌کنند که جدول به آن‌ها ضرورت دارد. آسان و متوسط فقط با تک‌گزینه‌ها حل می‌شوند و آسان با دست‌کم 38 رقم داده‌شده شروع می‌شود. دشوار به نامزدهای قفل‌شده یا جفت‌ها و سه‌تایی‌ها ضرورت دارد. ماهر به X-Wing، Y-Wing، Swordfish یا XYZ-Wing ضرورت دارد."
+          ],
+          [
+            "بهتر است برای همهٔ حجره‌ها یادداشت بنویسیم یا فقط برای بعضی؟",
+            "برای جدول‌های دشوار و ماهر همه را پر کنید: الگوهایی مثل جفت‌ها، X-Wing و Y-Wing فقط وقتی دیده می‌شوند که همهٔ نامزدها نوشته شده باشند. در آسان و متوسط یادداشت اختیاری است و بیشتر بازیکنان فقط دنبال تک‌گزینه‌ها می‌گردند."
+          ],
+          [
+            "حل یک سودوکو چقدر وقت می‌گیرد؟",
+            "یک جدول آسان چند دقیقه وقت می‌گیرد؛ جدول‌های ماهر ممکن است بیست دقیقه یا بیشتر طول بکشند، بسته به اینکه الگوی پیشرفته را چقدر زود ببینید. Bare Sudoku زمان‌سنج نشان می‌دهد، وقتی منو باز است آن را متوقف می‌کند و جدول برترین‌ها ندارد، پس با سرعت خودتان بازی کنید."
+          ],
+          [
+            "آیا سودوکو به حساب ضرورت دارد؟",
+            "نخیر. رقم‌ها فقط برچسب‌اند؛ هیچ جمع یا شمارشی در کار نیست. هر نُه نشانهٔ دیگری هم کار می‌داد و به همین دلیل سودوکو یک معمای منطقی است، نه یک معمای عددی."
+          ]
+        ]
+      },
+      "index": {
+        "title": "تخنیک‌های حل سودوکو با شرح و مثال",
+        "description": "هر نُه تخنیک حل سودوکو، از تک‌گزینهٔ آشکار تا Swordfish و XYZ-Wing، به همان ترتیبی که رهنمایی‌های Bare Sudoku به کار می‌برند، هر کدام با مثال واقعی.",
+        "h1": "تخنیک‌های حل سودوکو",
+        "intro": [
+          "هر سودوکو را می‌توان با مجموعهٔ کوچکی از تخنیک‌های منطقی حل کرد. این فهرست نُه تخنیکی را می‌آورد که حل‌کنندهٔ Bare Sudoku و رهنمایی‌هایش به کار می‌برند، به همان ترتیبی که حل‌کننده امتحانشان می‌کند: اول تک‌گزینه‌ها، بعد حذف‌ها درون یک واحد، بعد الگوهایی که چند سطر و ستون را در بر می‌گیرند. هر تخنیک صفحهٔ خودش را دارد، با تعریف، طرز پیدا کردن، یک مثال واقعی از یک جدول ساخته‌شده و اشتباه‌های معمول.",
+          "سطح یک جدول را دشوارترین تخنیکی تعیین می‌کند که به آن ضرورت دارد. جدول‌های آسان و متوسط فقط به تک‌گزینه‌ها ضرورت دارند، جدول‌های دشوار به نامزدهای قفل‌شده یا جفت‌ها و سه‌تایی‌ها و جدول‌های ماهر دست‌کم به یک ماهی یا بال. در هر سطحی، بیشتر کار را تک‌گزینه‌ها انجام می‌دهند؛ تخنیک پیشرفته یکی دو نامزد را حذف می‌کند و از آنجا تک‌گزینه‌ها کار را ادامه می‌دهند."
+        ],
+        "faq": [
+          [
+            "تخنیک‌های سودوکو را به چه ترتیبی امتحان کنم؟",
+            "ساده‌ترین‌ها اول: تک‌گزینهٔ آشکار، تک‌گزینهٔ پنهان، نامزدهای قفل‌شده، جفت و سه‌تایی آشکار، جفت و سه‌تایی پنهان، X-Wing، Y-Wing، Swordfish، XYZ-Wing. Bare Sudoku دقیقاً به همین ترتیب امتحانشان می‌کند و رهنمایی همیشه ساده‌ترین تخنیکی را نام می‌برد که کار را پیش می‌برد."
+          ],
+          [
+            "آیا برای حل سودوکو به همهٔ این تخنیک‌ها ضرورت دارم؟",
+            "برای جدول‌های آسان و متوسط تک‌گزینه‌ها کافی‌اند. جدول‌های دشوار نامزدهای قفل‌شده و زیرمجموعه‌ها را اضافه می‌کنند. جدول‌های ماهر دست‌کم به یک ماهی یا بال ضرورت دارند، اما معمولاً فقط یکی دو بار در هر جدول."
+          ],
+          [
+            "آیا تخنیک‌هایی دشوارتر از XYZ-Wing وجود دارد؟",
+            "بله، مثلاً زنجیره‌ها، آزمون‌های یگانگی و شبکه‌های اجباری. Bare Sudoku جدولی نمی‌سازد که به آن‌ها ضرورت داشته باشد، پس هر جدول بازی را می‌توان با نُه تخنیک همین صفحه تمام کرد."
+          ],
+          [
+            "نامزد چیست؟",
+            "رقمی که هنوز می‌تواند در یک حجرهٔ خالی گذاشته شود، چون هنوز چیزی در سطر، ستون یا خانهٔ آن را رد نمی‌کند. یادداشت‌های بازی همان نامزدها هستند. هر تخنیکی فراتر از تک‌گزینه‌ها با نامزدها استدلال می‌کند، پس آن‌ها را کامل و دقیق نگه دارید."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "تک‌گزینهٔ آشکار",
+          "title": "تک‌گزینهٔ آشکار در سودوکو: حجره‌ای با یک نامزد",
+          "description": "تک‌گزینهٔ آشکار حجرهٔ خالی‌ای است که فقط یک رقم ممکن دارد. یاد بگیرید آن را تیز پیدا کنید، با یک مثال واقعی قدم به قدم و اشتباه‌های معمول.",
+          "h1": "تک‌گزینهٔ آشکار (Naked Single)",
+          "summary": "تک‌گزینهٔ آشکار حجرهٔ خالی‌ای است که دقیقاً یک نامزد دارد: هشت رقم دیگر از قبل در سطر، ستون یا خانهٔ آن هستند. رقم باقی‌مانده باید همان‌جا گذاشته شود. این ساده‌ترین تخنیک سودوکو است، همان که بیشتر از همه به کار می‌برید، و همان که رهنمایی Bare Sudoku با «اینجا فقط یک نامزد» اعلامش می‌کند.",
+          "when": [
+            "همیشه. تک‌گزینه‌های آشکار از اولین تا آخرین حرکت، در همهٔ سطح‌ها پیدا می‌شوند. در جدول‌های آسان و متوسط، آن‌ها همراه با تک‌گزینه‌های پنهان یگانه تخنیکی هستند که لازم دارید. در جدول‌های دشوارتر، هر حذفی که یک تخنیک پیشرفته انجام می‌دهد معمولاً یک تک‌گزینهٔ آشکار به جا می‌گذارد، پس بعد از هر قدم دنبالشان بگردید."
+          ],
+          "spot": [
+            "به حجره‌هایی نگاه کنید که همسایه‌های پرشدهٔ زیادی دارند: حجره‌ای در سطری که از قبل هفت رقم دارد، یا حجره‌ای که سطر، ستون و خانه‌اش روی هم هشت رقم متفاوت را پوشش می‌دهند. بدون یادداشت، رقم‌هایی را که از آن حجره دیده می‌شوند بشمارید. با یادداشت، تک‌گزینهٔ آشکار همان حجره‌ای است که یک نامزد نشان می‌دهد و به همین دلیل «پر کردن یادداشت‌ها» پیدا کردنشان را آسان می‌کند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "به حجرهٔ {cell} نگاه کنید. خالی است، پس هر رقمی را که از قبل در سطر، ستون و خانهٔ آن گذاشته شده فهرست کنید.",
+                "سطر {row} شامل {rowDigits} است. ستون {col} شامل {colDigits} است. خانهٔ {box} شامل {boxDigits} است.",
+                "این‌ها روی هم همهٔ رقم‌ها به جز {d} را رد می‌کنند، پس {d} یگانه نامزد باقی‌مانده در حجرهٔ {cell} است.",
+                "رقم {d} را در حجرهٔ {cell} بنویسید. بعد بررسی کنید که آیا رقم تازه تک‌گزینهٔ دیگری در همان سطر، ستون یا خانه می‌سازد."
+              ]
+            }
+          ],
+          "mistakes": [
+            "شمردن فقط سطر یا فقط خانه. هشت رقم ردشده معمولاً از هر سه واحد با هم می‌آیند.",
+            "فراموش کردن اینکه رقمی که همین حالا گذاشتید نامزدهای 20 همسایه‌اش را هم رد می‌کند؛ تک‌گزینه‌های آشکار تازه درست بعد از هر گذاشتن پیدا می‌شوند.",
+            "اشتباه گرفتن تک‌گزینهٔ آشکار با تک‌گزینهٔ پنهان: در تک‌گزینهٔ آشکار یک نامزد در حجره مانده است، در تک‌گزینهٔ پنهان یک حجره برای رقم در یک واحد مانده است."
+          ],
+          "faq": [
+            [
+              "تک‌گزینهٔ آشکار در سودوکو چیست؟",
+              "حجرهٔ خالی‌ای با دقیقاً یک نامزد. هشت رقم متفاوت از قبل در سطر، ستون و خانهٔ آن گذاشته شده‌اند، پس فقط رقم نهم جا می‌شود."
+            ],
+            [
+              "چرا به آن آشکار می‌گویند؟",
+              "چون وقتی یادداشت‌ها نوشته شده باشند، آن یگانه نامزد مستقیم در حجره دیده می‌شود؛ چیزی پنهانش نمی‌کند. در مقابل، تک‌گزینهٔ پنهان میان نامزدهای دیگر نشسته است و با نگاه به رقم، نه به حجره، پیدا می‌شود."
+            ],
+            [
+              "آیا می‌شود جدولی را فقط با تک‌گزینه‌های آشکار حل کرد؟",
+              "بسیاری از جدول‌های آسان را بله، اما بیشترشان به تک‌گزینه‌های پنهان هم ضرورت دارند. Bare Sudoku جدول‌های آسان و متوسط را با هر دو نوع تک‌گزینه قابل حل می‌داند؛ جدول‌های دشوار و ماهر دست‌کم به یک تخنیک دیگر ضرورت دارند."
+            ],
+            [
+              "آیا رهنمایی تک‌گزینه‌های آشکار را نشان می‌دهد؟",
+              "بله. وقتی گذاشتن بعدی یک تک‌گزینهٔ آشکار باشد، رهنمایی حجره را انتخاب می‌کند و همراه با رقم می‌گوید «اینجا فقط یک نامزد». برای گذاشتن آن، رهنمایی را دوباره بزنید."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "تک‌گزینهٔ پنهان",
+          "title": "تک‌گزینهٔ پنهان در سودوکو: یگانه جای یک رقم",
+          "description": "تک‌گزینهٔ پنهان یگانه حجره‌ای در یک سطر، ستون یا خانه است که رقمی هنوز می‌تواند در آن بنشیند. یاد بگیرید با بررسی رقم به رقم آن را پیدا کنید.",
+          "h1": "تک‌گزینهٔ پنهان (Hidden Single)",
+          "summary": "تک‌گزینهٔ پنهان رقمی است که در یک سطر، ستون یا خانه فقط یک حجرهٔ ممکن برایش مانده است، حتی اگر آن حجره نامزدهای دیگری هم نشان دهد. چون آن واحد باید این رقم را داشته باشد، رقم همان‌جا گذاشته می‌شود. رهنمایی Bare Sudoku آن را با «در این سطر یگانه جای برای 5»، یا در این ستون یا این خانه، اعلام می‌کند.",
+          "when": [
+            "هر وقت رقمی خوب پیش رفته باشد: وقتی رقمی پنج یا شش بار آمده باشد، خانه‌های باقی‌مانده بسیار محدودند و تک‌گزینهٔ پنهان اغلب حرکت بعدی است. تک‌گزینه‌های پنهان تخنیک اصلی جدول‌های آسان و متوسط‌اند و در همهٔ سطح‌ها ابزار اصلی باقی می‌مانند."
+          ],
+          "spot": [
+            "رقم به رقم بررسی کنید. یک رقم را بگیرید، خانه‌ای را پیدا کنید که آن را ندارد و هر حجره از آن خانه را که با نسخهٔ گذاشته‌شده‌ای از آن رقم در یک سطر یا ستون است خط بزنید. اگر یک حجره باقی ماند، یک تک‌گزینهٔ پنهان پیدا کرده‌اید. همین بررسی روی سطرها و ستون‌ها هم کار می‌دهد. در بازی، یک رقم گذاشته‌شده را لمس کنید: همهٔ نسخه‌هایش برجسته می‌شوند و حجره‌های آزاد به چشم می‌آیند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "خانهٔ {box} هنوز {d} ندارد، پس یکی از حجره‌های خالی‌اش باید آن را بگیرد. حجره‌های خالی {empties} هستند.",
+                "در همهٔ آن‌ها به جز {cell}، رقم {d} با یک {d} که از قبل در همان سطر یا ستون گذاشته شده بسته شده است، پس {d} آنجا نامزد نیست.",
+                "پس حجرهٔ {cell} یگانه جای {d} در خانهٔ {box} است. رقم {d} را آنجا بنویسید، حتی اگر {cell} هنوز نامزدهای دیگری نشان دهد."
+              ]
+            }
+          ],
+          "mistakes": [
+            "گذاشتن رقم در حجره‌ای که فقط احتمالاً درست است: همهٔ حجره‌های خالی دیگر آن واحد را بررسی کنید، نه فقط حجره‌های واضح را.",
+            "از دست دادن یک تک‌گزینهٔ پنهان چون حجره چند نامزد نشان می‌دهد. نامزدهای دیگر مهم نیستند؛ مهم این است که رقم در آن واحد جای دیگری ندارد.",
+            "بررسی فقط خانه‌ها. سطرها و ستون‌ها هم به همان اندازه تک‌گزینهٔ پنهان می‌سازند، به‌خصوص نزدیک پایان."
+          ],
+          "faq": [
+            [
+              "تک‌گزینهٔ پنهان در سودوکو چیست؟",
+              "رقمی که فقط در یک حجره از یک سطر، ستون یا خانه می‌تواند گذاشته شود. آن واحد باید این رقم را داشته باشد، پس تکلیف حجره روشن است حتی اگر هنوز نامزدهای دیگری داشته باشد."
+            ],
+            [
+              "فرق تک‌گزینهٔ پنهان و تک‌گزینهٔ آشکار چیست؟",
+              "تک‌گزینهٔ آشکار دربارهٔ یک حجره است: یک نامزد مانده است. تک‌گزینهٔ پنهان دربارهٔ یک رقم است: یک حجره در یک واحد مانده است. هر دو رقمی را با یقین می‌گذارند."
+            ],
+            [
+              "پیدا کردن کدام آسان‌تر است؟",
+              "بدون یادداشت، تک‌گزینه‌های پنهان معمولاً آسان‌ترند، چون می‌توانید صفحه را رقم به رقم بررسی کنید. با یادداشت‌های کامل، تک‌گزینه‌های آشکار آسان‌ترین‌اند، چون حجره‌ای با یک نامزد فوراً به چشم می‌آید."
+            ],
+            [
+              "رهنمایی تک‌گزینهٔ پنهان را چطور توصیف می‌کند؟",
+              "با «یگانه جای برای» آن رقم در این سطر، این ستون یا این خانه، و حجره را انتخاب می‌کند. برای گذاشتن آن، رهنمایی را دوباره بزنید."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "نامزدهای قفل‌شده",
+          "title": "نامزدهای قفل‌شده در سودوکو: اشاره و تصاحب",
+          "description": "نامزدهای قفل‌شده: وقتی همهٔ نامزدهای یک رقم در یک خانه در یک سطر یا ستون باشند، یا برعکس، رقم از جاهای دیگر حذف می‌شود. با دو مثال واقعی.",
+          "h1": "نامزدهای قفل‌شده (Locked Candidates)",
+          "summary": "نامزدهای قفل‌شده اولین تخنیکی است که به جای گذاشتن رقم، نامزد حذف می‌کند. دو شکل دارد. اشاره: در یک خانه، همهٔ نامزدهای یک رقم در یک سطر یا ستون قرار دارند، پس رقم از بقیهٔ آن خط حذف می‌شود. تصاحب: در یک سطر یا ستون، همهٔ نامزدهای یک رقم در یک خانه قرار دارند، پس رقم از بقیهٔ آن خانه حذف می‌شود. رهنمایی Bare Sudoku گذاشتنی را که این تخنیک ممکن می‌سازد «نامزدهای قفل‌شده» می‌نامد.",
+          "when": [
+            "وقتی تک‌گزینه‌ها در یک جدول دشوار تمام شد، این اولین چیزی است که باید امتحان کنید. دست‌کم برای رقمی که بررسی می‌کنید یادداشت کامل لازم است. نامزدهای قفل‌شده زیاد پیش می‌آیند: بیشتر جدول‌های دشوار به آن‌ها ضرورت دارند و جدول‌های ماهر در میان الگوهای بزرگ‌تر از آن‌ها استفاده می‌کنند."
+          ],
+          "spot": [
+            "برای اشاره، به هر خانه و هر رقمی که ندارد نگاه کنید: اگر حجره‌های نامزد آن رقم در یک سطر یا ستون قرار دارند، ببینید آیا همان رقم در ادامهٔ آن خط، بیرون از خانه، نامزد است یا نه. برای تصاحب، در طول یک سطر یا ستون نگاه کنید: اگر همهٔ نامزدهای یک رقم درون یک خانه‌اند، بقیهٔ آن خانه را می‌توان پاک کرد. در بازی، دکمهٔ یک رقم را بزنید تا همهٔ نامزدهایش برجسته شوند؛ خطی از دو یا سه یادداشت برجسته درون یک خانه همان الگوست."
+          ],
+          "examples": [
+            {
+              "h": "اشاره",
+              "steps": [
+                "در خانهٔ {box}، رقم {d} فقط این حجره‌های نامزد را دارد: {cells}. همهٔ آن‌ها در سطر {row} هستند.",
+                "خانهٔ {box} به یک {d} ضرورت دارد، پس {d} سطر {row} درون خانهٔ {box} قرار می‌گیرد، در هر کدام از آن حجره‌ها که باشد.",
+                "سطر {row} نمی‌تواند {d} دومی داشته باشد، پس {d} را از حجره‌های سطر {row} که بیرون از خانه‌اند حذف کنید: {elim}."
+              ]
+            },
+            {
+              "h": "تصاحب",
+              "steps": [
+                "در سطر {row}، رقم {d} فقط می‌تواند در {cells} باشد و همهٔ آن‌ها درون خانهٔ {box} قرار دارند.",
+                "سطر {row} باید {d} داشته باشد، پس {d} خانهٔ {box} حتماً در سطر {row} است و سطر {row} آن را تصاحب می‌کند. حجره‌های دیگر خانهٔ {box} نمی‌توانند {d} داشته باشند.",
+                "رقم {d} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف رقم درون خانه به جای بیرون آن در حالت اشاره، یا برعکس در حالت تصاحب. حذف‌ها همیشه در حجره‌هایی است که در خط هستند اما در خانه نیستند، یا در خانه هستند اما در خط نیستند.",
+            "به کار بردن قاعده وقتی نامزدها در دو سطر خانه پخش‌اند. همهٔ حجره‌های نامزد آن رقم در خانه باید در یک خط باشند.",
+            "فراموش کردن جست‌وجوی تک‌گزینه‌ای که حذف می‌سازد. نامزدهای قفل‌شده کم پیش می‌آید که خودشان رقمی بگذارند؛ زمینهٔ یک تک‌گزینه را آماده می‌کنند."
+          ],
+          "faq": [
+            [
+              "نامزدهای قفل‌شده در سودوکو چیست؟",
+              "نامزدهای یک رقم که به محل تقاطع یک خانه و یک خط محدود شده‌اند. چون خانه، یا خط، باید رقم را درون همان تقاطع داشته باشد، رقم را می‌توان از بقیهٔ خط، یا از بقیهٔ خانه، حذف کرد."
+            ],
+            [
+              "فرق اشاره و تصاحب چیست؟",
+              "اشاره از خانه شروع می‌شود: نامزدهای رقم در خانه در امتداد یک سطر یا ستون اشاره می‌کنند، پس رقم از بقیهٔ آن خط حذف می‌شود. تصاحب از سطر یا ستون شروع می‌شود: همهٔ نامزدهای خط برای آن رقم در یک خانه‌اند، پس خط رقم را تصاحب می‌کند و رقم از بقیهٔ خانه حذف می‌شود."
+            ],
+            [
+              "آیا به نامزدهای قفل‌شده حذف تقاطعی هم می‌گویند؟",
+              "بله. نام‌های دیگر، کاهش خانه و خط برای شکل تصاحب و جفت‌ها یا سه‌تایی‌های اشاره‌گر برای شکل اشاره است. Bare Sudoku برای هر دو یک نام به کار می‌برد."
+            ],
+            [
+              "کدام سطح به نامزدهای قفل‌شده ضرورت دارد؟",
+              "دشوار. جدولی که به نامزدهای قفل‌شده یا زیرمجموعه‌ها ضرورت دارد اما به چیزی دشوارتر نه، دشوار ارزیابی می‌شود؛ جدول‌های ماهر به یک ماهی یا بال هم ضرورت دارند."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "جفت و سه‌تایی آشکار",
+          "title": "جفت و سه‌تایی آشکار در سودوکو: چطور کار می‌کنند",
+          "description": "جفت و سه‌تایی آشکار: دو یا سه حجره در یک واحد که همان دو یا سه نامزد را دارند. یاد بگیرید چطور پیدایشان کنید و چه چیزی را حذف کنید، با مثال واقعی.",
+          "h1": "جفت و سه‌تایی آشکار (Naked Pair)",
+          "summary": "جفت آشکار دو حجره در یک سطر، ستون یا خانه است که دقیقاً همان دو نامزد را دارند. آن دو رقم باید در همین دو حجره گذاشته شوند، پس می‌توان آن‌ها را از همهٔ حجره‌های دیگر آن واحد حذف کرد. سه‌تایی آشکار همین فکر با سه حجره و سه رقم است؛ هر حجره ممکن است دو تا یا هر سه را نشان دهد. رهنمایی Bare Sudoku گذاشتنی را که از آن به دست می‌آید «جفت یا سه‌تایی» می‌نامد.",
+          "when": [
+            "وقتی یادداشت‌ها کامل‌اند و تک‌گزینه‌ها و نامزدهای قفل‌شده تمام شده‌اند. جفت‌های آشکار در جدول‌های دشوار بسیار زیاد پیش می‌آیند و سه‌تایی‌های آشکار کمتر. ارزش دارد هر دو را در هر واحدی که هنوز پنج حجرهٔ خالی یا بیشتر دارد بررسی کنید."
+          ],
+          "spot": [
+            "دنبال حجره‌هایی با فقط دو نامزد بگردید و حجرهٔ دیگری در همان واحد با همان دو نامزد پیدا کنید. برای سه‌تایی‌ها، به واحدهایی نگاه کنید که چند حجرهٔ دونامزدی و سه‌نامزدی دارند و ببینید آیا سه تا از آن‌ها روی هم فقط سه رقم متفاوت به کار می‌برند. وقتی یادداشت‌ها نوشته شده باشند، حجره‌هایی با نامزدهای کاملاً یکسان به آسانی دیده می‌شوند؛ «پر کردن یادداشت‌ها» در بازی این کار را با یک لمس انجام می‌دهد."
+          ],
+          "examples": [
+            {
+              "h": "جفت آشکار",
+              "steps": [
+                "حجره‌های {cellA} و {cellB} در {unit} دقیقاً همان دو نامزد را دارند: {d1} و {d2}.",
+                "یکی از آن‌ها باید {d1} باشد و دیگری {d2}. نمی‌دانیم کدام کدام است، اما هر دو رقم را همین دو حجره مصرف می‌کنند.",
+                "پس هیچ حجرهٔ دیگری در {unit} نمی‌تواند {d1} یا {d2} داشته باشد. این‌ها را حذف کنید: {elim}."
+              ]
+            },
+            {
+              "h": "سه‌تایی آشکار",
+              "steps": [
+                "سه حجره از {unit} همهٔ نامزدهایشان را از همان سه رقم، {digits}، می‌گیرند: {cells}.",
+                "این سه رقم باید به ترتیبی این سه حجره را پر کنند. لازم نیست هر حجره هر سه نامزد را نشان دهد؛ مهم این است که هیچ‌کدام از این سه حجره نامزدی بیرون از این مجموعه نداشته باشد.",
+                "رقم‌های {digits} را از همهٔ حجره‌های دیگر {unit} حذف کنید: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "گرفتن دو حجره که دو نامزد مشترک دارند اما نامزد سومی هم دارند. در جفت آشکار هر حجره باید دقیقاً همان دو نامزد را داشته باشد و نه چیز دیگر.",
+            "حذف رقم‌ها از خود حجره‌های جفت. جفت نامزدهایش را نگه می‌دارد؛ حذف‌ها در حجره‌های دیگر واحد انجام می‌شوند.",
+            "انتظار اینکه هر حجرهٔ سه‌تایی هر سه رقم را نشان دهد. حجره‌ای با دو تا از آن سه هم قبول است، تا وقتی هیچ حجره‌ای نامزدی بیرون از مجموعه نداشته باشد."
+          ],
+          "faq": [
+            [
+              "جفت آشکار در سودوکو چیست؟",
+              "دو حجره در یک واحد که هر دو دقیقاً همان دو نامزد را دارند. آن دو رقم در همین دو حجره قفل شده‌اند، پس می‌توان آن‌ها را از بقیهٔ واحد حذف کرد."
+            ],
+            [
+              "سه‌تایی آشکار چیست؟",
+              "سه حجره در یک واحد که نامزدهایشان روی هم فقط سه رقم است. هر حجره ممکن است دو یا سه تا از آن‌ها را داشته باشد. این سه رقم سه حجره را پر می‌کنند، پس می‌توان آن‌ها را از حجره‌های دیگر واحد حذف کرد."
+            ],
+            [
+              "آیا جفت آشکار رقمی می‌گذارد؟",
+              "به‌تنهایی نخیر. نامزد حذف می‌کند و این حذف معمولاً یک تک‌گزینهٔ آشکار یا پنهان به جا می‌گذارد. رهنمایی در Bare Sudoku آن تک‌گزینه را نشان می‌دهد و تخنیکی را که آن را ممکن ساخت نام می‌برد."
+            ],
+            [
+              "آیا یک جفت آشکار می‌تواند هم‌زمان در یک خانه و یک سطر باشد؟",
+              "بله. اگر دو حجره در یک سطر و یک خانه شریک باشند، جفت در هر دو واحد حذف انجام می‌دهد. Bare Sudoku آن‌ها را واحد به واحد بررسی می‌کند."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "جفت و سه‌تایی پنهان",
+          "title": "جفت و سه‌تایی پنهان در سودوکو: چطور پیدایشان کنیم",
+          "description": "جفت پنهان دو رقم است که در یک واحد فقط در همان دو حجره جا دارند، پس نامزدهای دیگر آن حجره‌ها حذف می‌شوند. پیدا کردن جفت و سه‌تایی پنهان را یاد بگیرید.",
+          "h1": "جفت و سه‌تایی پنهان (Hidden Pair)",
+          "summary": "جفت پنهان دو رقم است که در یک سطر، ستون یا خانه فقط در همان دو حجره نامزدند و هیچ جای دیگری نه. آن دو حجره باید همین دو رقم را بگیرند، پس هر نامزد دیگری در آن‌ها را می‌توان حذف کرد. سه‌تایی پنهان به همین شکل با سه رقم محدود به سه حجره کار می‌کند. بعد از حذف، این حجره‌ها یک جفت یا سه‌تایی آشکار نشان می‌دهند. رهنمایی Bare Sudoku گذاشتنی را که از آن به دست می‌آید «جفت یا سه‌تایی» می‌نامد.",
+          "when": [
+            "وقتی واحدی حجره‌هایی با نامزدهای زیاد دارد و تک‌گزینه‌ها تمام شده‌اند. جفت‌های پنهان درون حجره‌های پرازدحام پنهان می‌شوند و به همین دلیل ارزش دارد دقیقاً همان‌جایی دنبالشان بگردید که جفت‌های آشکار دیده نمی‌شوند. سه‌تایی‌های پنهان کمیاب‌اند؛ Bare Sudoku آن‌ها را بررسی می‌کند، اما بیشتر جدول‌های دشوار بدون آن‌ها حل می‌شوند."
+          ],
+          "spot": [
+            "رقم به رقم کار کنید، نه حجره به حجره. در یک واحد، حجره‌هایی را که هر رقم غایب می‌تواند در آن‌ها برود یادداشت کنید. اگر دو رقم هر کدام فقط دو حجرهٔ ممکن داشته باشند و این دو حجره یکی باشند، یک جفت پنهان پیدا کرده‌اید. در بازی، دکمهٔ یک رقم را بزنید تا نامزدهایش برجسته شوند؛ اگر دو رقم همان دو حجرهٔ یک واحد را روشن کنند و هیچ حجرهٔ دیگری از آن واحد را نه، الگو همین است."
+          ],
+          "examples": [
+            {
+              "h": "جفت پنهان",
+              "steps": [
+                "در {unit}، رقم‌های {d1} و {d2} هر کدام فقط دو حجرهٔ ممکن دارند و این دو حجره یکی‌اند: {cells}.",
+                "این دو حجره باید {d1} و {d2} را بگیرند، پس نامزدهای دیگرشان ناممکن‌اند.",
+                "این‌ها را حذف کنید: {elim}. حالا این دو حجره یک جفت آشکار نشان می‌دهند که ممکن است راه‌های بیشتری باز کند."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف دو رقم جفت از حجره‌های جفت. آنچه حذف می‌شود نامزدهای دیگر آن حجره‌هاست؛ رقم‌های جفت می‌مانند.",
+            "قبول کردن رقمی که در واحد حجرهٔ ممکن سومی هم دارد. هر دو رقم باید دقیقاً به همان دو حجره محدود باشند.",
+            "جست‌وجو فقط در خانه‌ها. جفت‌های پنهان در سطرها و ستون‌ها هم به همان اندازه پیدا می‌شوند."
+          ],
+          "faq": [
+            [
+              "جفت پنهان در سودوکو چیست؟",
+              "دو رقم که در یک واحد فقط در همان دو حجره می‌توانند گذاشته شوند. آن حجره‌ها باید همین رقم‌ها را بگیرند، پس نامزدهای دیگرشان حذف می‌شوند."
+            ],
+            [
+              "جفت پنهان چه فرقی با جفت آشکار دارد؟",
+              "جفت آشکار پیداست: دو حجره که فقط همان دو نامزد را نشان می‌دهند. جفت پنهان زیر نامزدهای اضافی آن دو حجره پوشیده است. با حذف این نامزدهای اضافی، جفت پنهان به جفت آشکار تبدیل می‌شود."
+            ],
+            [
+              "سه‌تایی پنهان چیست؟",
+              "سه رقم که به سه حجره از یک واحد محدودند. لازم نیست هر رقم در هر سه حجره بیاید؛ مهم این است که هیچ‌کدام از این سه رقم بیرون از این حجره‌ها نامزد نباشد."
+            ],
+            [
+              "آیا رهنمایی جفت‌های پنهان و آشکار را از هم جدا می‌کند؟",
+              "نخیر. Bare Sudoku هر دو را پیدا می‌کند و گذاشتنی را که از آن به دست می‌آید «جفت یا سه‌تایی» می‌نامد. این صفحه‌ها آن‌ها را جدا کرده‌اند چون طرز پیدا کردنشان فرق دارد."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing در سودوکو: این تخنیک چطور کار می‌کند",
+          "description": "X-Wing: رقمی با دقیقاً دو حجرهٔ نامزد در دو سطر که در همان دو ستون قرار دارند، از بقیهٔ آن ستون‌ها حذف می‌شود. با مثال واقعی قدم به قدم.",
+          "h1": "X-Wing",
+          "summary": "X-Wing الگویی از یک رقم و چهار حجره در گوشه‌های یک مستطیل است. اگر رقمی در هر یک از دو سطر دقیقاً دو حجرهٔ نامزد داشته باشد و این حجره‌ها در همان دو ستون باشند، رقم باید دو گوشهٔ روبه‌روی مستطیل را بگیرد. بنابراین می‌توان آن را از همهٔ حجره‌های دیگر آن دو ستون حذف کرد. با جابه‌جا کردن سطرها و ستون‌ها هم همین درست است. این اولین تخنیک سطح ماهر در Bare Sudoku است.",
+          "when": [
+            "وقتی تک‌گزینه‌ها، نامزدهای قفل‌شده و زیرمجموعه‌ها تمام شده‌اند. X-Wing معمول‌ترین الگوی سطح ماهر است و اغلب وقتی پیدا می‌شود که برای رقمی نامزدهای کمی مانده است، معمولاً وقتی چهار تا شش نسخه از آن گذاشته شده است. برای رقمی که بررسی می‌کنید یادداشت کامل لازم است."
+          ],
+          "spot": [
+            "رقمی را انتخاب کنید و دنبال سطرهایی بگردید که در آن‌ها دقیقاً دو حجرهٔ نامزد دارد. اگر دو سطر از این نوع همان دو ستون را داشته باشند، آن ستون‌ها را برای نامزدهای دیگر این رقم بررسی کنید: این‌ها همان حذف‌ها هستند. بعد با ستون‌ها به حیث پایه تکرار کنید. در بازی، دکمهٔ رقم را بزنید: همهٔ نامزدهایش برجسته می‌شوند و مستطیلی از چهار یادداشت برجسته به آسانی دیده می‌شود."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "رقم {d} در سطر {r1} دقیقاً دو حجرهٔ نامزد دارد و در سطر {r2} هم دقیقاً دو، و این حجره‌ها در همان دو ستون {c1} و {c2} قرار دارند: {cells}.",
+                "سطر {r1} رقم {d} خود را در ستون {c1} یا {c2} می‌گذارد و سطر {r2} در ستون دیگر. در هر حال، ستون‌های {c1} و {c2} هر کدام یک {d} از این دو سطر می‌گیرند.",
+                "پس {d} نمی‌تواند در هیچ جای دیگری از ستون‌های {c1} و {c2} بیاید. رقم {d} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "استفاده از سطری که سه حجرهٔ نامزد برای آن رقم دارد. هر سطر پایه باید دقیقاً دو حجره داشته باشد و هر دو در همان دو ستون مشترک باشند.",
+            "حذف رقم از سطرها به جای ستون‌ها. وقتی سطرها پایه‌اند، حذف‌ها در ستون‌هاست و برعکس.",
+            "فراموش کردن حالت جابه‌جاشده. X-Wing که روی ستون‌ها ساخته شود، در سطرها حذف می‌کند."
+          ],
+          "faq": [
+            [
+              "X-Wing در سودوکو چیست؟",
+              "رقمی که در هر یک از دو سطر دقیقاً دو حجرهٔ نامزد دارد، در همان دو ستون. رقم دو گوشهٔ روبه‌روی آن مستطیل را می‌گیرد، پس از بقیهٔ آن دو ستون حذف می‌شود. سطرها و ستون‌ها را می‌توان جابه‌جا کرد."
+            ],
+            [
+              "چرا X-Wing کار می‌کند؟",
+              "هر یک از دو سطر باید رقم را در یکی از دو ستون بگذارد و دو سطر نمی‌توانند از یک ستون استفاده کنند. پس هر دو ستون نسخهٔ خود از رقم را از همین سطرها می‌گیرند و هر نامزد دیگری در آن ستون‌ها ناممکن است."
+            ],
+            [
+              "آیا X-Wing یک ماهی است؟",
+              "بله. X-Wing ماهی با اندازهٔ دو است و Swordfish ماهی با اندازهٔ سه. Bare Sudoku هر دو را پیدا می‌کند."
+            ],
+            [
+              "X-Wing در کدام سطح می‌آید؟",
+              "ماهر. جدولی که به X-Wing، Y-Wing، Swordfish یا XYZ-Wing ضرورت داشته باشد، ماهر ارزیابی می‌شود."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing در سودوکو: این تخنیک چطور کار می‌کند",
+          "description": "Y-Wing (XY-Wing): یک محور با دو نامزد و دو بال که هر کدام در یکی از آن‌ها شریک‌اند، رقمی را از هر حجره‌ای که هر دو بال را می‌بیند حذف می‌کنند.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing که XY-Wing هم نامیده می‌شود، از سه حجره با دو نامزد استفاده می‌کند. محور نامزدهای X و Y را دارد. یک بال محور را می‌بیند و X و Z دارد؛ بال دیگر محور را می‌بیند و Y و Z دارد. محور هر چه باشد، یکی از بال‌ها باید Z باشد، پس Z را می‌توان از هر حجره‌ای که هر دو بال را می‌بیند حذف کرد. این یک تخنیک سطح ماهر در Bare Sudoku است.",
+          "when": [
+            "وقتی جدول چند حجره با دقیقاً دو نامزد دارد و هیچ ماهی‌ای در دسترس نیست. Y-Wing در جدول‌های ماهر زیاد پیش می‌آید و با دنبال کردن حجره‌های دونامزدی پیدا می‌شود: هر کدام می‌تواند محور یا بال باشد."
+          ],
+          "spot": [
+            "حجره‌هایی را که دقیقاً دو نامزد دارند فهرست کنید. هر کدام را محوری با نامزدهای X و Y فرض کنید و میان همسایه‌هایش دنبال حجره‌ای با X و رقم دیگری مثل Z، و حجره‌ای با Y و همان Z بگردید. این دو، بال‌ها هستند. بعد حجره‌هایی را پیدا کنید که هر دو بال را می‌بینند و Z دارند. توجه کنید که لازم نیست بال‌ها همدیگر را ببینند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} نامزدهای {x} و {y} را دارد. این حجره {wingA} را می‌بیند که {x} و {z} دارد، و {wingB} را که {y} و {z} دارد.",
+                "اگر {pivot} برابر {x} باشد، {wingA} رقم {x} را از دست می‌دهد و {z} می‌شود. اگر {pivot} برابر {y} باشد، {wingB} برابر {z} می‌شود. در هر حال یکی از دو بال {z} است.",
+                "حجره‌ای که هر دو بال را می‌بیند هیچ‌وقت نمی‌تواند {z} باشد. رقم {z} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "انتخاب بال‌هایی که هر دو محور را نمی‌بینند. هر بال باید با محور در یک سطر، ستون یا خانه شریک باشد.",
+            "حذف Z از حجره‌هایی که فقط یک بال را می‌بینند. حجره‌ای که از آن حذف می‌شود باید هر دو بال را ببیند.",
+            "حذف Z از محور. در Y-Wing محور Z ندارد؛ اگر داشته باشد، الگو یک XYZ-Wing است با قواعد متفاوت."
+          ],
+          "faq": [
+            [
+              "Y-Wing در سودوکو چیست؟",
+              "سه حجرهٔ دونامزدی: محوری با X و Y، بالی با X و Z که محور را می‌بیند و بالی با Y و Z که محور را می‌بیند. یکی از بال‌ها همیشه Z است، پس Z از حجره‌هایی که هر دو بال را می‌بینند حذف می‌شود."
+            ],
+            [
+              "آیا Y-Wing همان XY-Wing است؟",
+              "بله. این دو نام یک الگو را توصیف می‌کنند. Bare Sudoku آن را Y-Wing می‌نامد."
+            ],
+            [
+              "چرا یکی از بال‌ها باید Z باشد؟",
+              "اگر محور X باشد، بال اول X را از دست می‌دهد و Z می‌شود. اگر محور Y باشد، بال دوم Z می‌شود. محور یکی از این دوست، پس یکی از بال‌ها Z است."
+            ],
+            [
+              "Y-Wing از چند حجره حذف می‌کند؟",
+              "معمولاً یک یا دو حجره: فقط حجره‌هایی که هر دو بال را می‌بینند و هنوز Z دارند. همین برای ساختن یک تک‌گزینه کافی است."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish در سودوکو: این تخنیک چطور کار می‌کند",
+          "description": "Swordfish: رقمی که در سه سطر به سه ستون محدود است از بقیهٔ آن ستون‌ها حذف می‌شود. ماهی با اندازهٔ سه، با شرح یک مثال واقعی قدم به قدم.",
+          "h1": "Swordfish",
+          "summary": "Swordfish یک X-Wing با سه سطر و سه ستون است. اگر رقمی در هر یک از سه سطر حد اکثر سه حجرهٔ نامزد داشته باشد و همهٔ این حجره‌ها در همان سه ستون بیفتند، این سه سطر رقم را در آن ستون‌ها مصرف می‌کنند و رقم را می‌توان از همهٔ حجره‌های دیگر آن سه ستون حذف کرد. سطرها و ستون‌ها را می‌توان جابه‌جا کرد. Bare Sudoku بعد از Y-Wing، در جدول‌های ماهر، دنبال Swordfish می‌گردد.",
+          "when": [
+            "وقتی X-Wing و Y-Wing چیزی پیدا نمی‌کنند. Swordfish از X-Wing کمیاب‌تر است و به رقمی ضرورت دارد که نامزدهایش به‌طور پراکنده روی سه خط پخش شده باشند. برای آن رقم یادداشت‌های کامل و دقیق لازم است."
+          ],
+          "spot": [
+            "رقمی را انتخاب کنید و دنبال سطرهایی بگردید که دو یا سه حجرهٔ نامزد برای آن دارند. اگر سه سطر از این نوع روی هم فقط سه ستون را بپوشانند، آن ستون‌ها را برای نامزدهای دیگر این رقم بررسی کنید. لازم نیست هر سطر در هر ستون نامزد داشته باشد: یک Swordfish می‌تواند شش، هفت، هشت یا نُه حجره داشته باشد. در بازی، رقم را با دکمه‌اش برجسته کنید و دنبال سه سطری بگردید که نامزدهایشان در سه ستون ردیف شده‌اند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "رقم {d} در هر یک از سطرهای {rows} حد اکثر سه حجرهٔ نامزد دارد و همهٔ این حجره‌ها در ستون‌های {cols} قرار دارند: {cells}.",
+                "هر یک از سه سطر باید {d} خود را در یکی از سه ستون بگذارد و هیچ دو سطری نمی‌توانند از یک ستون استفاده کنند. پس سه ستون {d} خود را از همین سه سطر می‌گیرند.",
+                "هر نامزد {d} دیگری در ستون‌های {cols} ناممکن است. رقم {d} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "انتظار داشتن هر نُه حجره. Swordfish با دو نامزد در بعضی سطرها هم معتبر است، تا وقتی سه سطر فقط سه ستون را بپوشانند.",
+            "وارد کردن سطری با چهار حجرهٔ نامزد. هر سطر پایه باید حد اکثر سه حجره داشته باشد، همه درون همان سه ستون.",
+            "حذف در سطرهای پایه. وقتی سطرها پایه‌اند، حذف‌ها در سه ستون و بیرون از سطرهای پایه است."
+          ],
+          "faq": [
+            [
+              "Swordfish در سودوکو چیست؟",
+              "رقمی که نامزدهایش در سه سطر به سه ستون محدود است. سه سطر باید رقم را در آن سه ستون بگذارند، در هر ستون یکی، پس رقم از حجره‌های دیگر آن ستون‌ها حذف می‌شود."
+            ],
+            [
+              "Swordfish چه فرقی با X-Wing دارد؟",
+              "فقط در اندازه: X-Wing از دو سطر و دو ستون استفاده می‌کند و Swordfish از سه و سه. استدلال یکی است."
+            ],
+            [
+              "آیا Swordfish دقیقاً به نُه حجره ضرورت دارد؟",
+              "نخیر. هر سطر می‌تواند دو یا سه نامزد داشته باشد؛ الگو فقط لازم دارد که سه سطر روی هم بیش از سه ستون را به کار نبرند."
+            ],
+            [
+              "آیا ماهی با اندازهٔ چهار هم هست؟",
+              "بله، Jellyfish. Bare Sudoku از آن استفاده نمی‌کند، چون جدول‌هایش هیچ‌وقت به آن ضرورت ندارند."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing در سودوکو: این تخنیک چطور کار می‌کند",
+          "description": "XYZ-Wing: یک محور با سه نامزد و دو بال که در یکی از آن‌ها شریک‌اند، آن رقم را از هر حجره‌ای که هر سه را می‌بیند حذف می‌کنند. با مثال واقعی.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing یک Y-Wing است که محورش سه نامزد دارد. محور X، Y و Z دارد؛ یک بال محور را می‌بیند و X و Z دارد و بال دیگر محور را می‌بیند و Y و Z دارد. یکی از این سه حجره باید Z باشد، پس Z را می‌توان از هر حجره‌ای که هر سه را می‌بیند حذف کرد. چون خود محور ممکن است Z باشد، حجره‌ای که از آن حذف می‌شود باید علاوه بر هر دو بال، محور را هم ببیند و این آن را به خانه یا خطی که این حجره‌ها در آن شریک‌اند محدود می‌کند. این دشوارترین تخنیکی است که Bare Sudoku به کار می‌برد.",
+          "when": [
+            "فقط وقتی همه چیز دیگر ناکام شود. XYZ-Wing کمیاب‌ترین الگو در Bare Sudoku است و فقط در جدول‌های ماهر پیدا می‌شود. وقتی دنبالش بگردید که یک حجرهٔ سه‌نامزدی با یک حجرهٔ دونامزدی که در دو رقم با آن شریک است در یک خانه باشد."
+          ],
+          "spot": [
+            "از حجره‌هایی شروع کنید که دقیقاً سه نامزد دارند؛ هر کدام می‌تواند محور باشد. میان همسایه‌هایش دنبال دو حجرهٔ دونامزدی بگردید که نامزدهای هر دو از سه نامزد محور باشد و دقیقاً در یک رقم Z شریک باشند. بعد دنبال حجره‌هایی بگردید که محور و هر دو بال را می‌بینند و Z دارند. در عمل یک بال در خانهٔ محور است و دیگری در سطر یا ستون آن، و حجره‌هایی که از آن‌ها حذف می‌شود حجره‌های باقی‌ماندهٔ آن خانه در همان سطر یا ستون‌اند."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} سه نامزد دارد: {x}، {y} و {z}. این حجره {wingA} را با {x} و {z} و {wingB} را با {y} و {z} می‌بیند.",
+                "اگر {pivot} برابر {z} باشد، کار تمام است. اگر {x} باشد، {wingA} باید {z} باشد. اگر {y} باشد، {wingB} باید {z} باشد. در هر حال یکی از سه حجره {z} است.",
+                "حجره‌ای که هر سه را می‌بیند نمی‌تواند {z} باشد. رقم {z} را از {elim} حذف کنید."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف از حجره‌هایی که فقط دو بال را می‌بینند. برخلاف Y-Wing، محور ممکن است Z باشد، پس حجره باید محور را هم ببیند.",
+            "استفاده از بال‌هایی که نامزدهایشان هر دو در سه نامزد محور نیستند.",
+            "اشتباه گرفتن آن با Y-Wing: فرق در نامزد سوم محور است و همین تعیین می‌کند کدام حجره‌ها پاک می‌شوند."
+          ],
+          "faq": [
+            [
+              "XYZ-Wing در سودوکو چیست؟",
+              "محوری با نامزدهای X، Y و Z و دو بال، یکی با X و Z و یکی با Y و Z، که هر دو محور را می‌بینند. یکی از این سه حجره Z است، پس Z از حجره‌هایی که هر سه را می‌بینند حذف می‌شود."
+            ],
+            [
+              "XYZ-Wing چه فرقی با Y-Wing دارد؟",
+              "محور به جای دو نامزد سه نامزد دارد که Z هم در میان آن‌هاست. این باعث می‌شود محور هم جای ممکنی برای Z باشد، پس فقط حجره‌هایی که محور و هر دو بال را می‌بینند Z را از دست می‌دهند."
+            ],
+            [
+              "XYZ-Wing چقدر پیش می‌آید؟",
+              "به‌ندرت. در Bare Sudoku فقط جدول‌های ماهر ممکن است به آن ضرورت داشته باشند و بیشترشان ندارند. Bare Sudoku آن را آخر از همه، بعد از X-Wing، Y-Wing و Swordfish، بررسی می‌کند."
+            ],
+            [
+              "آیا WXYZ-Wing هم وجود دارد؟",
+              "بله، با محوری چهارنامزدی، اما Bare Sudoku از آن استفاده نمی‌کند. هر جدول بازی را می‌توان با نُه تخنیک این رهنما تمام کرد."
+            ]
+          ]
+        }
+      }
+    },
+    "haz": {
+      "learnHeading": "سودوکو ره یاد بگیر",
+      "learnText": "تازه سودوکو ره شروع کدی یا ده یگ جدول سخت گیر ماندی؟ دو رهنما قاعده‌ها و تمام تخنیک‌های حل ره که رهنمایی‌ها ازوا استفاده موکنه، هر کدام با یگ مثال واقعی، شرح میده.",
+      "howToLink": "سودوکو چطور بازی موشه",
+      "techniquesLink": "تخنیک‌های حل سودوکو",
+      "labels": {
+        "howTo": "طرز بازی",
+        "techniques": "تخنیک‌ها",
+        "play": "سودوکو بازی کو",
+        "prev": "تخنیک قبلی",
+        "next": "تخنیک بعدی",
+        "all": "تمام تخنیک‌ها",
+        "example": "مثال",
+        "steps": "قدم به قدم",
+        "when": "چی وقت به کار میایه",
+        "spot": "چطور پیدا موشه",
+        "mistakes": "غلطی‌های عام",
+        "inGame": "ده Bare Sudoku",
+        "level": "از ای سطح لازم استه: {level}",
+        "hint": "ده بازی، رهنمایی موگه: {text}",
+        "legend": "رقم‌های پررنگ از اول داده شده، رقم‌های آبی وقت حل کدو مانده شده و رقم‌های ریزه نامزدها استه. حجره‌های روشن الگو ره جور موکنه، نامزدهای خط‌خورده حذف موشه و نامزد داخل دایره رقمی استه که باید مانده شوه.",
+        "notation": "حجره‌ها به شکل r3c7 نوشته موشه: سطر 3، ستون 7. سطرها از بالا و ستون‌ها از چپ شمرده موشه و خانه‌ها از 1 تا 9، از بالای چپ، سطر به سطر.",
+        "row": "سطر {n}",
+        "column": "ستون {n}",
+        "box": "خانه {n}",
+        "elimItem": "{d} از {cell}",
+        "regions": "سطر 5، ستون 5 و خانه 5 ده شروع جدول",
+        "firstMove": "تک‌گزینه آشکار: {cell} فقط {d} شده میتانه",
+        "breadcrumb": "مسیر صفحه"
+      },
+      "howTo": {
+        "title": "سودوکو چطور بازی موشه: قاعده‌ها، صفحه و حرکت‌های اول",
+        "description": "یاد بگیر سودوکو چطور بازی موشه: قاعده‌ها، کار سطرها، ستون‌ها و خانه‌ها، چرا هر جدول یگ جواب داره، کار با یادداشت‌ها و حرکت‌های اول.",
+        "h1": "سودوکو چطور بازی موشه",
+        "summary": "سودوکو یگ معمای منطقی روی جدول 9×9 استه. هر حجره خالی ره با یگ رقم از 1 تا 9 پر کو، طوری که هر سطر، هر ستون و هر خانه 3×3 هر رقم ره دقیقاً یگ بار داشته باشه. بعضی رقم‌ها از اول داده شده؛ باقی ره خودت، هر دفعه یگ حجره قطعی، با استدلال پیدا موکنی و هیچ وقت ضرورت نیسته که حدس بزنی. ای رهنما صفحه بازی، قاعده‌ها، اصل یگ جواب، یادداشت‌ها و یگ راه ساده برای حرکت‌های اول ره شرح میده. تمام ای چیزها ره میتانی ده [Bare Sudoku](play) تمرین کنی که مفت استه و رهنمایی‌هایی داره که منطق ره شرح میده.",
+        "sections": [
+          {
+            "h": "قاعده‌های سودوکو چی استه؟",
+            "p": [
+              "فقط سه قاعده استه و هر سه ده اصل یگ قاعده استه که از سه طرف دیده موشه: هر سطر باید رقم‌های 1 تا 9 ره داشته باشه، هر ستون باید رقم‌های 1 تا 9 ره داشته باشه و هر خانه 3×3 باید رقم‌های 1 تا 9 ره داشته باشه. پس یگ رقم هیچ وقت ده یگ سطر، ستون یا خانه دو بار آمده نمیتانه.",
+              "رقم‌های داده‌شده که پررنگ نوشته شده، ثابت استه. کار تو پر کدو حجره‌های خالی استه. هیچ حساب و ترتیب ده کار نیسته: رقم‌ها فقط نُه نشانه جدا جدا استه. اگه با حرف‌ها یا شکل‌ها بازی موکدی هم هیچ چیز تغییر نموکد."
+            ]
+          },
+          {
+            "h": "صفحه بازی چطور ترتیب شده؟",
+            "p": [
+              "صفحه 81 حجره ده 9 سطر و 9 ستون داره. خط‌های ضخیم ازو ره به نُه خانه 3×3 تقسیم موکنه. هر حجره دقیقاً به یگ سطر، یگ ستون و یگ خانه تعلق داره و ای سه گروه، واحدهای امو حجره استه. 20 حجره دیگه که با یگ حجره ده یگ واحد شریک استه، همسایه‌های ازو گفته موشه؛ رقمی که ده یگ حجره مانده موشه، امو رقم ره ده هر 20 همسایه رد موکنه.",
+              "حجره‌ها به شکل r3c7 نوشته موشه: سطر 3، ستون 7. سطرها از بالا و ستون‌ها از چپ شمرده موشه و خانه‌ها از 1 تا 9، از بالای چپ، سطر به سطر. ای نشانه‌گذاری ده تمام رهنماهای تخنیک به کار موره و ارزش یاد گرفتو ره داره: r5c5 مرکز صفحه استه."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "چرا هر سودوکو دقیقاً یگ جواب داره؟",
+            "p": [
+              "یگ سودوکوی درست یگ جواب داره و امی چیز منطق ره کارآمد موکنه. هر دفعه که نشو بدی یگ رقم ده یگ واحد به جای دیگه رفته نمیتانه، امو رقم باید ده حجره باقی‌مانده بره، چون جواب وجود داره و یگانه استه. اگه یگ جدول دو جواب موداشت، هیچ استدلال ازوا ره از یگدیگه جدا کده نمیتانست و یگ جای مجبور به حدس زدو موشدی.",
+              "Bare Sudoku هر جدول ره روی دستگاه تو جور موکنه و بررسی موکنه که دقیقاً یگ جواب داشته باشه و حل‌کننده منطقی ازو بتانه ازو ره با تخنیک‌های سطح انتخاب‌شده تمام کنه. پس اگه گیر ماندی، همیشه یگ قدم بعدی برای پیدا کدو استه و رهنمایی ازو ره نشو میده."
+            ]
+          },
+          {
+            "h": "یگ جدول سودوکو ره چطور شروع کنی؟",
+            "p": [
+              "از تنگ‌ترین جای شروع کو. ای ترتیب ده تمام سطح‌ها کار میده:"
+            ],
+            "list": [
+              "یگ رقم ره انتخاب کو که غدر دفعه آمده، مثلاً شش یا هفت دفعه، و خانه‌هایی ره پیدا کو که هنوز ازو ره نداره. اکثر وقت ده یگ خانه فقط یگ حجره برای ازو میمانه: ای یگ [تک‌گزینه پنهان](hidden-single) استه.",
+              "دنبال حجره‌های شلوغ بپال. حجره‌ای که سطر، ستون و خانه ازو روی هم هشت رقم جدا جدا داره، فقط یگ نامزد برش میمانه: ای یگ [تک‌گزینه آشکار](naked-single) استه. حجره‌های سطرها یا خانه‌های تقریباً پر بهترین جای پالیدو استه.",
+              "هر رقمی که میمانی، یگ نامزد ره از 20 همسایه حذف موکنه، پس فوراً امو همسایه‌ها ره بررسی کو. تک‌گزینه‌ها اکثراً پشت سر هم میایه.",
+              "وقتی رقم‌هایی که آسو مانده موشه تمام شد، یادداشت بنویس: نامزدهای هر حجره خالی. بعد دنبال رقمی بپال که ده داخل یگ خانه به یگ خط محدود شده ([نامزدهای قفل‌شده](locked-candidates)) یا دو حجره که دقیقاً امو دو نامزد ره دارن ([جفت آشکار](naked-pairs)).",
+              "بعد از هر حذف دوباره به تک‌گزینه‌ها برگرد. حتی جدول‌های سطح ماهر بیشترش با تک‌گزینه‌ها حل موشه؛ تخنیک پیشرفته فقط راه تک‌گزینه بعدی ره واز موکنه."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "یادداشت‌ها چی استه و چی وقت باید ازوا استفاده کنی؟",
+            "p": [
+              "یادداشت‌ها، که ازوا ره نشانه پنسلی یا نامزد هم موگن، رقم‌های ریزه‌ای استه که ده یگ حجره خالی مینویسی تا ثبت کنی کدام رقم‌ها هنوز اونجه ممکن استه. ده جدول‌های آسو کم ضرورت موشه؛ از سطح سخت به بالا ضروری استه، چون تخنیک‌هایی مثل جفت‌ها، X-Wing و Y-Wing با نامزدها کار داره، نه با رقم‌های مانده‌شده.",
+              "یادداشت‌ها ره دقیق نگه دار: وقتی یگ رقم ره میمانی، ازو ره از یادداشت‌های هر 20 همسایه پاک کو. ده Bare Sudoku ای کار خودکار موشه و «یادداشت‌ها ره پر کو» با یگ لمس تمام نامزدها ره ده تمام حجره‌های خالی مینویسه، پس میتانی از یگ مجموعه پوره و درست نامزدها شروع کنی. یادداشت یگ حقیقت استه، نه یگ حدس: یعنی هنوز هیچ چیز ای رقم ره رد نموکنه."
+            ]
+          },
+          {
+            "h": "وقتی گیر ماندی چی کار کنی؟",
+            "p": [
+              "اول اساسات ره دوباره بررسی کو: هر سطر، ستون و خانه تقریباً پر منبع تک‌گزینه استه. بعد مطمئن شو که یادداشت‌ها پوره استه، چون نامزدی که جا مانده الگوها ره پنهان موکنه و نامزد کهنه الگوهای غلط جور موکنه. بعد [تخنیک‌ها](techniques) ره به ترتیب سختی مرور کو: نامزدهای قفل‌شده، جفت‌ها و سه‌تایی‌ها، X-Wing، Y-Wing، Swordfish و XYZ-Wing. هر کدام صفحه خود ره با یگ مثال واقعی داره.",
+              "اگه هیچ کدام کار نداد، از رهنمایی کمک بگیر. ده Bare Sudoku رهنمایی اول بررسی موکنه که آیا رقمی که ماندی غلط استه، بعد حجره بعدی ره که با منطق پر موشه پیدا موکنه و نام تخنیک ره موگه، پس حتی وقتی ازو استفاده موکنی چیزی یاد موگیری. برای ماندو رقم، رهنمایی ره باز بزن."
+            ]
+          },
+          {
+            "h": "ده Bare Sudoku رقم‌ها ره چطور وارد کنی؟",
+            "p": [
+              "یگ حجره ره لمس کو، بعد یگ رقم. یا اول رقم ره لمس کو: قفل موشه و هر حجره‌ای که لمس کنی ازو ره موگیره، که تیزترین راه برای ماندو ششم، هفتم و هشتم نسخه یگ رقم استه. برای آزاد کدو رقم، ازو ره دوباره لمس کو. دکمه «یادداشت» به نشانه‌های پنسلی موره، «پاک کو» حجره ره خالی موکنه، «پس» هر حرکت ره پس موگیره و غلطی‌ها به رنگ سرخ نشو داده موشه، مگر اینکه ای ره ده منو بند کنی.",
+              "با کیبورد، با کلیدهای جهت حرکت کو و با 1 تا 9 رقم وارد کو؛ Backspace پاک موکنه، N برای یادداشت، U برای پس، H برای رهنمایی، F برای پر کدو یادداشت‌ها و Escape برای منو استه. بازی خودش ذخیره موشه، بدون انترنت کار موکنه و نه اعلان داره نه حساب."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "آیا ده سودوکو هیچ وقت ضرورت استه که حدس بزنی؟",
+            "ده یگ جدول درست، نه. هر جدول Bare Sudoku دقیقاً یگ جواب داره و بررسی شده که فقط با منطق، تا حد تخنیک‌های سطح خود، حل موشه. اگه حس موکنی که باید حدس بزنی، یگ نامزد از یادداشت‌هایت جا مانده یا یگ تخنیک منتظر استه که پیدا شوه."
+          ],
+          [
+            "آیا یگ رقم ده یگ سطر، ستون یا خانه دو بار آمده میتانه؟",
+            "نه. تمام قاعده امی استه: هر کدام از نُه سطر، نُه ستون و نُه خانه هر رقم از 1 تا 9 ره دقیقاً یگ بار داره. اگه دو رقم مثل هم ده یگ واحد باشه، کم از کم یکی ازوا غلط استه."
+          ],
+          [
+            "فرق آسو، میانه، سخت و ماهر چی استه؟",
+            "سطح ره تخنیک‌هایی تعیین موکنه که جدول به ازوا ضرورت داره. آسو و میانه فقط با تک‌گزینه‌ها حل موشه و آسو با کم از کم 38 رقم داده‌شده شروع موشه. سخت به نامزدهای قفل‌شده یا جفت‌ها و سه‌تایی‌ها ضرورت داره. ماهر به X-Wing، Y-Wing، Swordfish یا XYZ-Wing ضرورت داره."
+          ],
+          [
+            "بهتر استه برای تمام حجره‌ها یادداشت بنویسی یا فقط برای بعضی؟",
+            "برای جدول‌های سخت و ماهر تمام شان ره پر کو: الگوهایی مثل جفت‌ها، X-Wing و Y-Wing فقط وقتی دیده موشه که تمام نامزدها نوشته شده باشه. ده آسو و میانه یادداشت اختیاری استه و بیشتر بازیکنا فقط دنبال تک‌گزینه‌ها موپالن."
+          ],
+          [
+            "حل یگ سودوکو چقدر وقت موگیره؟",
+            "یگ جدول آسو چند دقیقه وقت موگیره؛ جدول‌های ماهر شاید بیست دقیقه یا بیشتر وقت بگیره، بسته به اینکه الگوی پیشرفته ره چقدر زود ببینی. Bare Sudoku زمان‌سنج نشو میده، وقتی منو واز استه ازو ره متوقف موکنه و جدول برنده‌ها نداره، پس با سرعت خود بازی کو."
+          ],
+          [
+            "آیا سودوکو به حساب ضرورت داره؟",
+            "نه. رقم‌ها فقط برچسب استه؛ هیچ جمع یا شمار ده کار نیسته. هر نُه نشانه دیگه هم کار میداد و امی خاطر سودوکو یگ معمای منطقی استه، نه یگ معمای عددی."
+          ]
+        ]
+      },
+      "index": {
+        "title": "تخنیک‌های حل سودوکو با شرح و مثال",
+        "description": "هر نُه تخنیک حل سودوکو، از تک‌گزینه آشکار تا Swordfish و XYZ-Wing، به امو ترتیبی که رهنمایی‌های Bare Sudoku استفاده موکنه، هر کدام با مثال واقعی.",
+        "h1": "تخنیک‌های حل سودوکو",
+        "intro": [
+          "هر سودوکو ره میشه با یگ مجموعه ریزه از تخنیک‌های منطقی حل کد. ای فهرست نُه تخنیکی ره میاره که حل‌کننده Bare Sudoku و رهنمایی‌هایش استفاده موکنه، به امو ترتیبی که حل‌کننده ازوا ره امتحان موکنه: اول تک‌گزینه‌ها، بعد حذف‌ها ده داخل یگ واحد، بعد الگوهایی که چند سطر و ستون ره دربر موگیره. هر تخنیک صفحه خود ره داره، با تعریف، طرز پیدا کدو، یگ مثال واقعی از یگ جدول ساخته‌شده و غلطی‌های عام.",
+          "سطح یگ جدول ره سخت‌ترین تخنیکی تعیین موکنه که جدول به ازو ضرورت داره. جدول‌های آسو و میانه فقط به تک‌گزینه‌ها ضرورت داره، جدول‌های سخت به نامزدهای قفل‌شده یا جفت‌ها و سه‌تایی‌ها، و جدول‌های ماهر کم از کم به یگ ماهی یا بال. ده هر سطح، بیشتر کار ره تک‌گزینه‌ها موکنه؛ تخنیک پیشرفته یگ یا دو نامزد ره حذف موکنه و از اونجه تک‌گزینه‌ها کار ره ادامه میدن."
+        ],
+        "faq": [
+          [
+            "تخنیک‌های سودوکو ره به کدام ترتیب امتحان کنم؟",
+            "ساده‌ترین‌ها اول: تک‌گزینه آشکار، تک‌گزینه پنهان، نامزدهای قفل‌شده، جفت و سه‌تایی آشکار، جفت و سه‌تایی پنهان، X-Wing، Y-Wing، Swordfish، XYZ-Wing. Bare Sudoku دقیقاً به امی ترتیب ازوا ره امتحان موکنه و رهنمایی همیشه ساده‌ترین تخنیکی ره نام موگیره که کار ره پیش موبره."
+          ],
+          [
+            "آیا برای حل سودوکو به تمام ای تخنیک‌ها ضرورت دارم؟",
+            "برای جدول‌های آسو و میانه تک‌گزینه‌ها بس استه. جدول‌های سخت نامزدهای قفل‌شده و زیرمجموعه‌ها ره اضافه موکنه. جدول‌های ماهر کم از کم به یگ ماهی یا بال ضرورت داره، ولی معمولاً فقط یگ یا دو دفعه ده هر جدول."
+          ],
+          [
+            "آیا تخنیک‌های سخت‌تر از XYZ-Wing هم استه؟",
+            "بله، مثلاً زنجیره‌ها، آزمون‌های یگانگی و شبکه‌های اجباری. Bare Sudoku جدولی جور نموکنه که به ازوا ضرورت داشته باشه، پس هر جدول بازی ره میشه با نُه تخنیک امی صفحه تمام کد."
+          ],
+          [
+            "نامزد چی استه؟",
+            "رقمی که هنوز ده یگ حجره خالی آمده میتانه، چون هنوز هیچ چیز ده سطر، ستون یا خانه امو حجره ای رقم ره رد نموکنه. یادداشت‌های بازی امو نامزدها استه. هر تخنیکی که از تک‌گزینه‌ها بالاتر استه با نامزدها استدلال موکنه، پس ازوا ره پوره و دقیق نگه دار."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "تک‌گزینه آشکار",
+          "title": "تک‌گزینه آشکار ده سودوکو: حجره‌ای با یگ نامزد",
+          "description": "تک‌گزینه آشکار یگ حجره خالی استه که فقط یگ رقم ممکن داره. یاد بگیر که ازو ره تیز پیدا کنی، با یگ مثال واقعی قدم به قدم و غلطی‌های عام.",
+          "h1": "تک‌گزینه آشکار (Naked Single)",
+          "summary": "تک‌گزینه آشکار یگ حجره خالی استه که دقیقاً یگ نامزد داره: هشت رقم دیگه از پیش ده سطر، ستون یا خانه ازو استه. رقم باقی‌مانده باید امونجه بره. ای ساده‌ترین تخنیک سودوکو استه، امو که از همه زیادتر استفاده موکنی، و امو که رهنمایی Bare Sudoku ازو ره با «اینجه فقط یگ نامزد» نشو میده.",
+          "when": [
+            "همیشه. تک‌گزینه‌های آشکار از اولین تا آخرین حرکت، ده تمام سطح‌ها پیدا موشه. ده جدول‌های آسو و میانه، ازوا همرای تک‌گزینه‌های پنهان یگانه تخنیکی استه که ضرورت داری. ده جدول‌های سخت‌تر، هر حذفی که یگ تخنیک پیشرفته موکنه معمولاً یگ تک‌گزینه آشکار پشت سر خود میمانه، پس بعد از هر قدم دنبال ازوا بپال."
+          ],
+          "spot": [
+            "به حجره‌هایی سیل کو که همسایه‌های پرشده زیاد دارن: حجره‌ای ده سطری که از پیش هفت رقم داره، یا حجره‌ای که سطر، ستون و خانه ازو روی هم هشت رقم جدا جدا ره پوشش میده. بدون یادداشت، رقم‌هایی ره که از امو حجره دیده موشه بشمار. با یادداشت، تک‌گزینه آشکار امو حجره‌ای استه که یگ نامزد نشو میده، و امی خاطر «یادداشت‌ها ره پر کو» پیدا کدو ازوا ره آسو موکنه."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "به حجره {cell} سیل کو. خالی استه، پس هر رقمی ره که از پیش ده سطر، ستون و خانه ازو مانده شده فهرست کو.",
+                "سطر {row} شامل {rowDigits} استه. ستون {col} شامل {colDigits} استه. خانه {box} شامل {boxDigits} استه.",
+                "ای‌ها روی هم تمام رقم‌ها به جز {d} ره رد موکنه، پس {d} یگانه نامزد باقی‌مانده ده حجره {cell} استه.",
+                "رقم {d} ره ده حجره {cell} بنویس. بعد بررسی کو که آیا رقم نو یگ تک‌گزینه دیگه ده امو سطر، ستون یا خانه جور موکنه."
+              ]
+            }
+          ],
+          "mistakes": [
+            "شمردو فقط سطر یا فقط خانه. هشت رقم ردشده معمولاً از هر سه واحد یگجای میایه.",
+            "فراموش کدو ازی که رقمی که امی حالا ماندی، نامزدهای 20 همسایه خود ره هم رد موکنه؛ تک‌گزینه‌های آشکار نو درست بعد از هر ماندو پیدا موشه.",
+            "اشتباه گرفتو تک‌گزینه آشکار با تک‌گزینه پنهان: ده تک‌گزینه آشکار یگ نامزد ده حجره مانده، ده تک‌گزینه پنهان یگ حجره برای رقم ده یگ واحد مانده."
+          ],
+          "faq": [
+            [
+              "تک‌گزینه آشکار ده سودوکو چی استه؟",
+              "یگ حجره خالی با دقیقاً یگ نامزد. هشت رقم جدا جدا از پیش ده سطر، ستون و خانه ازو مانده شده، پس فقط رقم نهم جای موشه."
+            ],
+            [
+              "چرا ازو ره آشکار موگن؟",
+              "چون وقتی یادداشت‌ها نوشته شده باشه، امو یگانه نامزد مستقیم ده حجره دیده موشه؛ هیچ چیز ازو ره پنهان نموکنه. ده مقابل، تک‌گزینه پنهان ده بین نامزدهای دیگه شیشته و با سیل کدو به رقم، نه به حجره، پیدا موشه."
+            ],
+            [
+              "آیا میشه یگ جدول ره فقط با تک‌گزینه‌های آشکار حل کد؟",
+              "بسیاری جدول‌های آسو ره بله، ولی بیشتر ازوا به تک‌گزینه‌های پنهان هم ضرورت داره. Bare Sudoku جدول‌های آسو و میانه ره با هر دو نوع تک‌گزینه قابل حل حساب موکنه؛ جدول‌های سخت و ماهر کم از کم به یگ تخنیک دیگه ضرورت داره."
+            ],
+            [
+              "آیا رهنمایی تک‌گزینه‌های آشکار ره نشو میده؟",
+              "بله. وقتی ماندو بعدی یگ تک‌گزینه آشکار باشه، رهنمایی حجره ره انتخاب موکنه و همرای رقم موگه «اینجه فقط یگ نامزد». برای ماندو، رهنمایی ره باز بزن."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "تک‌گزینه پنهان",
+          "title": "تک‌گزینه پنهان ده سودوکو: یگانه جای یگ رقم",
+          "description": "تک‌گزینه پنهان یگانه حجره ده یگ سطر، ستون یا خانه استه که یگ رقم هنوز اونجه آمده میتانه. یاد بگیر که با بررسی رقم به رقم ازو ره پیدا کنی.",
+          "h1": "تک‌گزینه پنهان (Hidden Single)",
+          "summary": "تک‌گزینه پنهان رقمی استه که ده یگ سطر، ستون یا خانه فقط یگ حجره ممکن برش مانده، حتی اگه امو حجره نامزدهای دیگه هم نشو بده. چون امو واحد باید ای رقم ره داشته باشه، رقم امونجه موره. رهنمایی Bare Sudoku ازو ره با «ده ای سطر یگ جای برای 5»، یا ده ای ستون یا ای خانه، نشو میده.",
+          "when": [
+            "هر وقت یگ رقم خوب پیش رفته باشه: وقتی یگ رقم پنج یا شش دفعه آمده باشه، خانه‌های باقی‌مانده غدر محدود استه و تک‌گزینه پنهان اکثر وقت حرکت بعدی استه. تک‌گزینه‌های پنهان تخنیک اصلی جدول‌های آسو و میانه استه و ده تمام سطح‌ها ابزار اصلی باقی میمانه."
+          ],
+          "spot": [
+            "رقم به رقم بررسی کو. یگ رقم ره بگیر، خانه‌ای ره پیدا کو که ازو ره نداره و هر حجره امو خانه ره که با یگ نسخه مانده‌شده امو رقم ده یگ سطر یا ستون استه، خط بزن. اگه یگ حجره باقی ماند، یگ تک‌گزینه پنهان پیدا کدی. امی بررسی روی سطرها و ستون‌ها هم کار میده. ده بازی، یگ رقم مانده‌شده ره لمس کو: تمام نسخه‌های ازو روشن موشه و حجره‌های آزاد به چشم میایه."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "خانه {box} هنوز {d} نداره، پس یکی از حجره‌های خالی ازو باید ازو ره بگیره. حجره‌های خالی {empties} استه.",
+                "ده تمام ازوا به جز {cell}، رقم {d} با یگ {d} که از پیش ده امو سطر یا ستون مانده شده بسته شده، پس {d} اونجه نامزد نیسته.",
+                "پس حجره {cell} یگانه جای {d} ده خانه {box} استه. رقم {d} ره اونجه بنویس، حتی اگه {cell} هنوز نامزدهای دیگه نشو بده."
+              ]
+            }
+          ],
+          "mistakes": [
+            "ماندو رقم ده حجره‌ای که فقط شاید درست باشه: تمام حجره‌های خالی دیگه امو واحد ره بررسی کو، نه فقط حجره‌های واضح ره.",
+            "از دست دادو یگ تک‌گزینه پنهان چون حجره چند نامزد نشو میده. نامزدهای دیگه مهم نیسته؛ مهم ای استه که رقم ده امو واحد جای دیگه نداره.",
+            "بررسی فقط خانه‌ها. سطرها و ستون‌ها هم امو قدر تک‌گزینه پنهان جور موکنه، خصوصاً نزدیک آخر."
+          ],
+          "faq": [
+            [
+              "تک‌گزینه پنهان ده سودوکو چی استه؟",
+              "رقمی که فقط ده یگ حجره از یگ سطر، ستون یا خانه آمده میتانه. امو واحد باید ای رقم ره داشته باشه، پس تکلیف حجره روشن استه حتی اگه هنوز نامزدهای دیگه داشته باشه."
+            ],
+            [
+              "فرق تک‌گزینه پنهان و تک‌گزینه آشکار چی استه؟",
+              "تک‌گزینه آشکار ده باره یگ حجره استه: یگ نامزد مانده. تک‌گزینه پنهان ده باره یگ رقم استه: یگ حجره ده یگ واحد مانده. هر دو یگ رقم ره با یقین میمانه."
+            ],
+            [
+              "پیدا کدو کدام آسوتر استه؟",
+              "بدون یادداشت، تک‌گزینه‌های پنهان معمولاً آسوتر استه، چون میتانی صفحه ره رقم به رقم بررسی کنی. با یادداشت‌های پوره، تک‌گزینه‌های آشکار از همه آسوتر استه، چون حجره‌ای که یگ نامزد داره فوراً به چشم میایه."
+            ],
+            [
+              "رهنمایی تک‌گزینه پنهان ره چطور شرح میده؟",
+              "با «یگ جای برای» امو رقم ده ای سطر، ای ستون یا ای خانه، و حجره ره انتخاب موکنه. برای ماندو، رهنمایی ره باز بزن."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "نامزدهای قفل‌شده",
+          "title": "نامزدهای قفل‌شده ده سودوکو: اشاره و تصاحب",
+          "description": "نامزدهای قفل‌شده: وقتی تمام نامزدهای یگ رقم ده یگ خانه ده یگ سطر یا ستون باشه، یا برعکس، رقم از جاهای دیگه حذف موشه. با دو مثال واقعی.",
+          "h1": "نامزدهای قفل‌شده (Locked Candidates)",
+          "summary": "نامزدهای قفل‌شده اولین تخنیکی استه که به جای ماندو رقم، نامزد حذف موکنه. دو شکل داره. اشاره: ده یگ خانه، تمام نامزدهای یگ رقم ده یگ سطر یا ستون استه، پس رقم از باقی امو خط حذف موشه. تصاحب: ده یگ سطر یا ستون، تمام نامزدهای یگ رقم ده یگ خانه استه، پس رقم از باقی امو خانه حذف موشه. رهنمایی Bare Sudoku ماندویی ره که ای تخنیک ممکن موکنه «نامزدهای قفل‌شده» نام میده.",
+          "when": [
+            "وقتی تک‌گزینه‌ها ده یگ جدول سخت تمام شد، ای اولین چیزی استه که باید امتحان کنی. کم از کم برای رقمی که بررسی موکنی یادداشت پوره لازم استه. نامزدهای قفل‌شده زیاد پیش میایه: بیشتر جدول‌های سخت به ازوا ضرورت داره و جدول‌های ماهر ده بین الگوهای کلان‌تر ازوا ره استفاده موکنه."
+          ],
+          "spot": [
+            "برای اشاره، به هر خانه و هر رقمی که نداره سیل کو: اگه حجره‌های نامزد امو رقم ده یگ سطر یا ستون استه، سیل کو که آیا امو رقم ده ادامه امو خط، بیرون از خانه، نامزد استه یا نه. برای تصاحب، ده طول یگ سطر یا ستون سیل کو: اگه تمام نامزدهای یگ رقم ده داخل یگ خانه استه، باقی امو خانه ره میشه پاک کد. ده بازی، دکمه یگ رقم ره بزن تا تمام نامزدهای ازو روشن شوه؛ یگ خط از دو یا سه یادداشت روشن ده داخل یگ خانه امو الگو استه."
+          ],
+          "examples": [
+            {
+              "h": "اشاره",
+              "steps": [
+                "ده خانه {box}، رقم {d} فقط ای حجره‌های نامزد ره داره: {cells}. تمام ازوا ده سطر {row} استه.",
+                "خانه {box} به یگ {d} ضرورت داره، پس {d} سطر {row} ده داخل خانه {box} استه، ده هر کدام ازو حجره‌ها که بره.",
+                "سطر {row} {d} دوم داشته نمیتانه، پس {d} ره از حجره‌های سطر {row} که بیرون از خانه استه حذف کو: {elim}."
+              ]
+            },
+            {
+              "h": "تصاحب",
+              "steps": [
+                "ده سطر {row}، رقم {d} فقط ده {cells} آمده میتانه و تمام ازوا ده داخل خانه {box} استه.",
+                "سطر {row} باید {d} داشته باشه، پس {d} خانه {box} حتماً ده سطر {row} استه و سطر {row} ازو ره تصاحب موکنه. حجره‌های دیگه خانه {box} {d} داشته نمیتانه.",
+                "رقم {d} ره از {elim} حذف کو."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف رقم ده داخل خانه به جای بیرون ازو ده حالت اشاره، یا برعکس ده حالت تصاحب. حذف‌ها همیشه ده حجره‌هایی استه که ده خط استه ولی ده خانه نیسته، یا ده خانه استه ولی ده خط نیسته.",
+            "به کار بردو قاعده وقتی نامزدها ده دو سطر خانه پخش استه. تمام حجره‌های نامزد امو رقم ده خانه باید ده یگ خط باشه.",
+            "فراموش کدو پالیدو تک‌گزینه‌ای که حذف جور موکنه. نامزدهای قفل‌شده کم پیش میایه که خودشان یگ رقم بمانه؛ زمینه یگ تک‌گزینه ره تیار موکنه."
+          ],
+          "faq": [
+            [
+              "نامزدهای قفل‌شده ده سودوکو چی استه؟",
+              "نامزدهای یگ رقم که به جای تقاطع یگ خانه و یگ خط محدود شده. چون خانه، یا خط، باید رقم ره ده داخل امو تقاطع داشته باشه، رقم ره میشه از باقی خط، یا از باقی خانه، حذف کد."
+            ],
+            [
+              "فرق اشاره و تصاحب چی استه؟",
+              "اشاره از خانه شروع موشه: نامزدهای رقم ده خانه ده امتداد یگ سطر یا ستون اشاره موکنه، پس رقم از باقی امو خط حذف موشه. تصاحب از سطر یا ستون شروع موشه: تمام نامزدهای خط برای امو رقم ده یگ خانه استه، پس خط رقم ره تصاحب موکنه و رقم از باقی خانه حذف موشه."
+            ],
+            [
+              "آیا نامزدهای قفل‌شده ره حذف تقاطعی هم موگن؟",
+              "بله. نام‌های دیگه، کم کدو خانه و خط برای شکل تصاحب و جفت‌ها یا سه‌تایی‌های اشاره‌گر برای شکل اشاره استه. Bare Sudoku برای هر دو یگ نام استفاده موکنه."
+            ],
+            [
+              "کدام سطح به نامزدهای قفل‌شده ضرورت داره؟",
+              "سخت. جدولی که به نامزدهای قفل‌شده یا زیرمجموعه‌ها ضرورت داره ولی به چیزی سخت‌تر نه، سخت حساب موشه؛ جدول‌های ماهر به یگ ماهی یا بال هم ضرورت داره."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "جفت و سه‌تایی آشکار",
+          "title": "جفت و سه‌تایی آشکار ده سودوکو: چطور کار موکنه",
+          "description": "جفت و سه‌تایی آشکار: دو یا سه حجره ده یگ واحد که امو دو یا سه نامزد ره دارن. یاد بگیر چطور ازوا ره پیدا کنی و چی ره حذف کنی، با مثال واقعی.",
+          "h1": "جفت و سه‌تایی آشکار (Naked Pair)",
+          "summary": "جفت آشکار دو حجره ده یگ سطر، ستون یا خانه استه که دقیقاً امو دو نامزد ره دارن. امو دو رقم باید ده امی دو حجره بره، پس میشه ازوا ره از تمام حجره‌های دیگه امو واحد حذف کد. سه‌تایی آشکار امی فکر استه با سه حجره و سه رقم؛ هر حجره شاید دو تا یا هر سه ره نشو بده. رهنمایی Bare Sudoku ماندویی ره که ازی به دست میایه «جفت یا سه‌تایی» نام میده.",
+          "when": [
+            "وقتی یادداشت‌ها پوره استه و تک‌گزینه‌ها و نامزدهای قفل‌شده تمام شده. جفت‌های آشکار ده جدول‌های سخت غدر زیاد پیش میایه و سه‌تایی‌های آشکار کمتر. ارزش داره که هر دو ره ده هر واحدی که هنوز پنج حجره خالی یا بیشتر داره بررسی کنی."
+          ],
+          "spot": [
+            "دنبال حجره‌هایی بپال که فقط دو نامزد دارن و یگ حجره دیگه ده امو واحد با امو دو نامزد پیدا کو. برای سه‌تایی‌ها، به واحدهایی سیل کو که چند حجره دونامزدی و سه‌نامزدی دارن و سیل کو که آیا سه تا ازوا روی هم فقط سه رقم جدا جدا استفاده موکنه. وقتی یادداشت‌ها نوشته شده باشه، حجره‌هایی که نامزدهای کاملاً مثل هم دارن آسو دیده موشه؛ «یادداشت‌ها ره پر کو» ده بازی ای کار ره با یگ لمس موکنه."
+          ],
+          "examples": [
+            {
+              "h": "جفت آشکار",
+              "steps": [
+                "حجره‌های {cellA} و {cellB} ده {unit} دقیقاً امو دو نامزد ره دارن: {d1} و {d2}.",
+                "یکی ازوا باید {d1} باشه و دیگه‌اش {d2}. نموفامیم کدام کدام استه، ولی هر دو رقم ره امی دو حجره مصرف موکنه.",
+                "پس هیچ حجره دیگه ده {unit} {d1} یا {d2} داشته نمیتانه. ای‌ها ره حذف کو: {elim}."
+              ]
+            },
+            {
+              "h": "سه‌تایی آشکار",
+              "steps": [
+                "سه حجره از {unit} تمام نامزدهای خود ره از امو سه رقم، {digits}، موگیره: {cells}.",
+                "ای سه رقم باید به یگ ترتیب ای سه حجره ره پر کنه. ضرورت نیسته که هر حجره هر سه نامزد ره نشو بده؛ مهم ای استه که هیچ کدام ازی سه حجره نامزدی بیرون ازی مجموعه نداشته باشه.",
+                "رقم‌های {digits} ره از تمام حجره‌های دیگه {unit} حذف کو: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "گرفتو دو حجره که دو نامزد شریک دارن ولی یگ نامزد سوم هم دارن. ده جفت آشکار هر حجره باید دقیقاً امو دو نامزد ره داشته باشه و هیچ چیز دیگه نه.",
+            "حذف رقم‌ها از خود حجره‌های جفت. جفت نامزدهای خود ره نگه موداره؛ حذف‌ها ده حجره‌های دیگه واحد موشه.",
+            "انتظار ازی که هر حجره سه‌تایی هر سه رقم ره نشو بده. حجره‌ای با دو تا ازو سه هم قبول استه، تا وقتی هیچ حجره نامزدی بیرون از مجموعه نداشته باشه."
+          ],
+          "faq": [
+            [
+              "جفت آشکار ده سودوکو چی استه؟",
+              "دو حجره ده یگ واحد که هر دو دقیقاً امو دو نامزد ره دارن. امو دو رقم ده امی دو حجره قفل شده، پس میشه ازوا ره از باقی واحد حذف کد."
+            ],
+            [
+              "سه‌تایی آشکار چی استه؟",
+              "سه حجره ده یگ واحد که نامزدهای ازوا روی هم فقط سه رقم استه. هر حجره شاید دو یا سه تا ازوا ره داشته باشه. ای سه رقم سه حجره ره پر موکنه، پس میشه ازوا ره از حجره‌های دیگه واحد حذف کد."
+            ],
+            [
+              "آیا جفت آشکار یگ رقم ره میمانه؟",
+              "به تنهایی نه. نامزد حذف موکنه و ای حذف معمولاً یگ تک‌گزینه آشکار یا پنهان پشت سر خود میمانه. رهنمایی ده Bare Sudoku امو تک‌گزینه ره نشو میده و تخنیکی ره که ازو ره ممکن کد نام موگیره."
+            ],
+            [
+              "آیا یگ جفت آشکار میتانه یگ وقت ده یگ خانه و یگ سطر باشه؟",
+              "بله. اگه دو حجره ده یگ سطر و یگ خانه شریک باشه، جفت ده هر دو واحد حذف موکنه. Bare Sudoku ازوا ره واحد به واحد بررسی موکنه."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "جفت و سه‌تایی پنهان",
+          "title": "جفت و سه‌تایی پنهان ده سودوکو: چطور پیدا موشه",
+          "description": "جفت پنهان دو رقم استه که ده یگ واحد فقط ده امو دو حجره جای دارن، پس نامزدهای دیگه امو حجره‌ها حذف موشه. پیدا کدو جفت و سه‌تایی پنهان ره یاد بگیر.",
+          "h1": "جفت و سه‌تایی پنهان (Hidden Pair)",
+          "summary": "جفت پنهان دو رقم استه که ده یگ سطر، ستون یا خانه فقط ده امو دو حجره نامزد استه و ده هیچ جای دیگه نه. امو دو حجره باید امی دو رقم ره بگیره، پس هر نامزد دیگه ده ازوا ره میشه حذف کد. سه‌تایی پنهان به امی شکل با سه رقم که به سه حجره محدود استه کار موکنه. بعد از حذف، ای حجره‌ها یگ جفت یا سه‌تایی آشکار نشو میده. رهنمایی Bare Sudoku ماندویی ره که ازی به دست میایه «جفت یا سه‌تایی» نام میده.",
+          "when": [
+            "وقتی یگ واحد حجره‌هایی با نامزدهای زیاد داره و تک‌گزینه‌ها تمام شده. جفت‌های پنهان ده داخل حجره‌های شلوغ پنهان موشه، و امی خاطر ارزش داره که دقیقاً امونجه دنبال ازوا بپالی که جفت‌های آشکار دیده نموشه. سه‌تایی‌های پنهان کمیاب استه؛ Bare Sudoku ازوا ره بررسی موکنه، ولی بیشتر جدول‌های سخت بدون ازوا حل موشه."
+          ],
+          "spot": [
+            "رقم به رقم کار کو، نه حجره به حجره. ده یگ واحد، حجره‌هایی ره که هر رقم غایب ده ازوا رفته میتانه یادداشت کو. اگه دو رقم هر کدام فقط دو حجره ممکن داشته باشه و امو دو حجره یکی باشه، یگ جفت پنهان پیدا کدی. ده بازی، دکمه یگ رقم ره بزن تا نامزدهای ازو روشن شوه؛ اگه دو رقم امو دو حجره یگ واحد ره روشن کنه و هیچ حجره دیگه امو واحد ره نه، الگو امی استه."
+          ],
+          "examples": [
+            {
+              "h": "جفت پنهان",
+              "steps": [
+                "ده {unit}، رقم‌های {d1} و {d2} هر کدام فقط دو حجره ممکن دارن و امو دو حجره یکی استه: {cells}.",
+                "ای دو حجره باید {d1} و {d2} ره بگیره، پس نامزدهای دیگه ازوا ناممکن استه.",
+                "ای‌ها ره حذف کو: {elim}. حالی ای دو حجره یگ جفت آشکار نشو میده که شاید راه‌های بیشتر واز کنه."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف دو رقم جفت از حجره‌های جفت. چیزی که حذف موشه نامزدهای دیگه امو حجره‌ها استه؛ رقم‌های جفت میمانه.",
+            "قبول کدو رقمی که ده واحد یگ حجره ممکن سوم هم داره. هر دو رقم باید دقیقاً به امو دو حجره محدود باشه.",
+            "پالیدو فقط ده خانه‌ها. جفت‌های پنهان ده سطرها و ستون‌ها هم امو قدر پیدا موشه."
+          ],
+          "faq": [
+            [
+              "جفت پنهان ده سودوکو چی استه؟",
+              "دو رقم که ده یگ واحد فقط ده امو دو حجره آمده میتانه. امو حجره‌ها باید امی رقم‌ها ره بگیره، پس نامزدهای دیگه ازوا حذف موشه."
+            ],
+            [
+              "جفت پنهان چی فرق با جفت آشکار داره؟",
+              "جفت آشکار معلوم استه: دو حجره که فقط امو دو نامزد ره نشو میده. جفت پنهان زیر نامزدهای اضافی امو دو حجره پوشیده استه. با حذف ای نامزدهای اضافی، جفت پنهان به جفت آشکار تبدیل موشه."
+            ],
+            [
+              "سه‌تایی پنهان چی استه؟",
+              "سه رقم که به سه حجره از یگ واحد محدود استه. ضرورت نیسته که هر رقم ده هر سه حجره بیایه؛ مهم ای استه که هیچ کدام ازی سه رقم بیرون ازی حجره‌ها نامزد نباشه."
+            ],
+            [
+              "آیا رهنمایی جفت‌های پنهان و آشکار ره از هم جدا موکنه؟",
+              "نه. Bare Sudoku هر دو ره پیدا موکنه و ماندویی ره که ازوا به دست میایه «جفت یا سه‌تایی» نام میده. ای صفحه‌ها ازوا ره جدا کده، چون طرز پیدا کدو ازوا فرق داره."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing ده سودوکو: ای تخنیک چطور کار موکنه",
+          "description": "X-Wing: رقمی که ده دو سطر دقیقاً دو حجره نامزد داره و امو حجره‌ها ده امو دو ستون استه، از باقی امو ستون‌ها حذف موشه. با مثال واقعی قدم به قدم.",
+          "h1": "X-Wing",
+          "summary": "X-Wing یگ الگو از یگ رقم و چار حجره ده کنج‌های یگ مستطیل استه. اگه یگ رقم ده هر کدام از دو سطر دقیقاً دو حجره نامزد داشته باشه و ای حجره‌ها ده امو دو ستون باشه، رقم باید دو کنج روبه‌روی مستطیل ره بگیره. پس میشه ازو ره از تمام حجره‌های دیگه امو دو ستون حذف کد. با جابه‌جا کدو سطرها و ستون‌ها هم امی درست استه. ای اولین تخنیک سطح ماهر ده Bare Sudoku استه.",
+          "when": [
+            "وقتی تک‌گزینه‌ها، نامزدهای قفل‌شده و زیرمجموعه‌ها تمام شده. X-Wing عام‌ترین الگوی سطح ماهر استه و اکثر وقت پیدا موشه وقتی که برای یگ رقم نامزدهای کم مانده، معمولاً وقتی چار تا شش نسخه ازو مانده شده. برای رقمی که بررسی موکنی یادداشت پوره لازم استه."
+          ],
+          "spot": [
+            "یگ رقم ره انتخاب کو و دنبال سطرهایی بپال که ده ازوا دقیقاً دو حجره نامزد داره. اگه دو سطر ازی قسم امو دو ستون ره داشته باشه، امو ستون‌ها ره برای نامزدهای دیگه ای رقم بررسی کو: ای‌ها امو حذف‌ها استه. بعد با ستون‌ها به حیث پایه تکرار کو. ده بازی، دکمه رقم ره بزن: تمام نامزدهای ازو روشن موشه و یگ مستطیل از چار یادداشت روشن آسو دیده موشه."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "رقم {d} ده سطر {r1} دقیقاً دو حجره نامزد داره و ده سطر {r2} هم دقیقاً دو، و ای حجره‌ها ده امو دو ستون {c1} و {c2} استه: {cells}.",
+                "سطر {r1} رقم {d} خود ره ده ستون {c1} یا {c2} میمانه و سطر {r2} ده ستون دیگه. ده هر حال، ستون‌های {c1} و {c2} هر کدام یگ {d} ازی دو سطر موگیره.",
+                "پس {d} ده هیچ جای دیگه ستون‌های {c1} و {c2} آمده نمیتانه. رقم {d} ره از {elim} حذف کو."
+              ]
+            }
+          ],
+          "mistakes": [
+            "استفاده از سطری که سه حجره نامزد برای امو رقم داره. هر سطر پایه باید دقیقاً دو حجره داشته باشه و هر دو ده امو دو ستون شریک باشه.",
+            "حذف رقم از سطرها به جای ستون‌ها. وقتی سطرها پایه استه، حذف‌ها ده ستون‌ها استه و برعکس.",
+            "فراموش کدو حالت جابه‌جاشده. X-Wing که روی ستون‌ها جور شوه، ده سطرها حذف موکنه."
+          ],
+          "faq": [
+            [
+              "X-Wing ده سودوکو چی استه؟",
+              "رقمی که ده هر کدام از دو سطر دقیقاً دو حجره نامزد داره، ده امو دو ستون. رقم دو کنج روبه‌روی امو مستطیل ره موگیره، پس از باقی امو دو ستون حذف موشه. سطرها و ستون‌ها ره میشه جابه‌جا کد."
+            ],
+            [
+              "چرا X-Wing کار موکنه؟",
+              "هر کدام از دو سطر باید رقم ره ده یکی از دو ستون بمانه و دو سطر از یگ ستون استفاده کده نمیتانه. پس هر دو ستون نسخه خود از رقم ره از امی سطرها موگیره و هر نامزد دیگه ده امو ستون‌ها ناممکن استه."
+            ],
+            [
+              "آیا X-Wing یگ ماهی استه؟",
+              "بله. X-Wing ماهی با اندازه دو استه و Swordfish ماهی با اندازه سه. Bare Sudoku هر دو ره پیدا موکنه."
+            ],
+            [
+              "X-Wing ده کدام سطح میایه؟",
+              "ماهر. جدولی که به X-Wing، Y-Wing، Swordfish یا XYZ-Wing ضرورت داشته باشه، ماهر حساب موشه."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing ده سودوکو: ای تخنیک چطور کار موکنه",
+          "description": "Y-Wing (XY-Wing): یگ محور با دو نامزد و دو بال که هر کدام ده یکی ازوا شریک استه، یگ رقم ره از هر حجره‌ای که هر دو بال ره میبینه حذف موکنه.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing که ازو ره XY-Wing هم موگن، از سه حجره با دو نامزد استفاده موکنه. محور نامزدهای X و Y ره داره. یگ بال محور ره میبینه و X و Z داره؛ بال دیگه محور ره میبینه و Y و Z داره. محور هر چی که باشه، یکی از بال‌ها باید Z باشه، پس Z ره میشه از هر حجره‌ای که هر دو بال ره میبینه حذف کد. ای یگ تخنیک سطح ماهر ده Bare Sudoku استه.",
+          "when": [
+            "وقتی جدول چند حجره با دقیقاً دو نامزد داره و هیچ ماهی پیدا نموشه. Y-Wing ده جدول‌های ماهر زیاد پیش میایه و با دنبال کدو حجره‌های دونامزدی پیدا موشه: هر کدام شاید محور یا بال باشه."
+          ],
+          "spot": [
+            "حجره‌هایی ره که دقیقاً دو نامزد دارن فهرست کو. هر کدام ره یگ محور با نامزدهای X و Y فرض کو و ده بین همسایه‌های ازو دنبال یگ حجره با X و یگ رقم دیگه مثل Z، و یگ حجره با Y و امو Z بپال. ای دو، بال‌ها استه. بعد حجره‌هایی ره پیدا کو که هر دو بال ره میبینه و Z داره. دقت کو که ضرورت نیسته بال‌ها یگدیگه ره ببینه."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} نامزدهای {x} و {y} ره داره. ای حجره {wingA} ره میبینه که {x} و {z} داره، و {wingB} ره که {y} و {z} داره.",
+                "اگه {pivot} برابر {x} باشه، {wingA} رقم {x} ره از دست میده و {z} موشه. اگه {pivot} برابر {y} باشه، {wingB} برابر {z} موشه. ده هر حال یکی از دو بال {z} استه.",
+                "حجره‌ای که هر دو بال ره میبینه هیچ وقت {z} شده نمیتانه. رقم {z} ره از {elim} حذف کو."
+              ]
+            }
+          ],
+          "mistakes": [
+            "انتخاب بال‌هایی که هر دو محور ره نمیبینه. هر بال باید با محور ده یگ سطر، ستون یا خانه شریک باشه.",
+            "حذف Z از حجره‌هایی که فقط یگ بال ره میبینه. حجره‌ای که ازو حذف موشه باید هر دو بال ره ببینه.",
+            "حذف Z از محور. ده Y-Wing محور Z نداره؛ اگه داشته باشه، الگو یگ XYZ-Wing استه با قاعده‌های دیگه."
+          ],
+          "faq": [
+            [
+              "Y-Wing ده سودوکو چی استه؟",
+              "سه حجره دونامزدی: یگ محور با X و Y، یگ بال با X و Z که محور ره میبینه و یگ بال با Y و Z که محور ره میبینه. یکی از بال‌ها همیشه Z استه، پس Z از حجره‌هایی که هر دو بال ره میبینه حذف موشه."
+            ],
+            [
+              "آیا Y-Wing امو XY-Wing استه؟",
+              "بله. ای دو نام یگ الگو ره شرح میده. Bare Sudoku ازو ره Y-Wing موگه."
+            ],
+            [
+              "چرا یکی از بال‌ها باید Z باشه؟",
+              "اگه محور X باشه، بال اول X ره از دست میده و Z موشه. اگه محور Y باشه، بال دوم Z موشه. محور یکی ازی دو استه، پس یکی از بال‌ها Z استه."
+            ],
+            [
+              "Y-Wing از چند حجره حذف موکنه؟",
+              "معمولاً یگ یا دو حجره: فقط حجره‌هایی که هر دو بال ره میبینه و هنوز Z داره. امی برای جور کدو یگ تک‌گزینه بس استه."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish ده سودوکو: ای تخنیک چطور کار موکنه",
+          "description": "Swordfish: رقمی که ده سه سطر به سه ستون محدود استه، از باقی امو ستون‌ها حذف موشه. ماهی با اندازه سه، با شرح یگ مثال واقعی قدم به قدم.",
+          "h1": "Swordfish",
+          "summary": "Swordfish یگ X-Wing با سه سطر و سه ستون استه. اگه یگ رقم ده هر کدام از سه سطر حد اکثر سه حجره نامزد داشته باشه و تمام ای حجره‌ها ده امو سه ستون بیفته، ای سه سطر رقم ره ده امو ستون‌ها مصرف موکنه و رقم ره میشه از تمام حجره‌های دیگه امو سه ستون حذف کد. سطرها و ستون‌ها ره میشه جابه‌جا کد. Bare Sudoku بعد از Y-Wing، ده جدول‌های ماهر، دنبال Swordfish موپاله.",
+          "when": [
+            "وقتی X-Wing و Y-Wing هیچ چیز پیدا نموکنه. Swordfish از X-Wing کمیاب‌تر استه و به رقمی ضرورت داره که نامزدهای ازو پراگنده روی سه خط پخش شده باشه. برای امو رقم یادداشت‌های پوره و دقیق لازم استه."
+          ],
+          "spot": [
+            "یگ رقم ره انتخاب کو و دنبال سطرهایی بپال که دو یا سه حجره نامزد برای ازو دارن. اگه سه سطر ازی قسم روی هم فقط سه ستون ره بپوشانه، امو ستون‌ها ره برای نامزدهای دیگه ای رقم بررسی کو. ضرورت نیسته که هر سطر ده هر ستون نامزد داشته باشه: یگ Swordfish میتانه شش، هفت، هشت یا نُه حجره داشته باشه. ده بازی، رقم ره با دکمه ازو روشن کو و دنبال سه سطری بپال که نامزدهای ازوا ده سه ستون قطار شده."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "رقم {d} ده هر کدام از سطرهای {rows} حد اکثر سه حجره نامزد داره و تمام ای حجره‌ها ده ستون‌های {cols} استه: {cells}.",
+                "هر کدام از سه سطر باید {d} خود ره ده یکی از سه ستون بمانه و هیچ دو سطر از یگ ستون استفاده کده نمیتانه. پس سه ستون {d} خود ره از امی سه سطر موگیره.",
+                "هر نامزد {d} دیگه ده ستون‌های {cols} ناممکن استه. رقم {d} ره از {elim} حذف کو."
+              ]
+            }
+          ],
+          "mistakes": [
+            "انتظار داشتو هر نُه حجره. Swordfish با دو نامزد ده بعضی سطرها هم درست استه، تا وقتی سه سطر فقط سه ستون ره بپوشانه.",
+            "داخل کدو یگ سطر با چار حجره نامزد. هر سطر پایه باید حد اکثر سه حجره داشته باشه، تمام شان ده داخل امو سه ستون.",
+            "حذف ده سطرهای پایه. وقتی سطرها پایه استه، حذف‌ها ده سه ستون و بیرون از سطرهای پایه استه."
+          ],
+          "faq": [
+            [
+              "Swordfish ده سودوکو چی استه؟",
+              "رقمی که نامزدهای ازو ده سه سطر به سه ستون محدود استه. سه سطر باید رقم ره ده امو سه ستون بمانه، ده هر ستون یکی، پس رقم از حجره‌های دیگه امو ستون‌ها حذف موشه."
+            ],
+            [
+              "Swordfish چی فرق با X-Wing داره؟",
+              "فقط ده اندازه: X-Wing از دو سطر و دو ستون استفاده موکنه و Swordfish از سه و سه. استدلال یکی استه."
+            ],
+            [
+              "آیا Swordfish دقیقاً به نُه حجره ضرورت داره؟",
+              "نه. هر سطر میتانه دو یا سه نامزد داشته باشه؛ الگو فقط ای ره لازم داره که سه سطر روی هم از سه ستون بیشتر استفاده نکنه."
+            ],
+            [
+              "آیا ماهی با اندازه چار هم استه؟",
+              "بله، Jellyfish. Bare Sudoku ازو استفاده نموکنه، چون جدول‌های ازو هیچ وقت به ازو ضرورت نداره."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing ده سودوکو: ای تخنیک چطور کار موکنه",
+          "description": "XYZ-Wing: یگ محور با سه نامزد و دو بال که ده یکی ازوا شریک استه، امو رقم ره از هر حجره‌ای که هر سه ره میبینه حذف موکنه. با مثال واقعی.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing یگ Y-Wing استه که محور ازو سه نامزد داره. محور X، Y و Z داره؛ یگ بال محور ره میبینه و X و Z داره و بال دیگه محور ره میبینه و Y و Z داره. یکی ازی سه حجره باید Z باشه، پس Z ره میشه از هر حجره‌ای که هر سه ره میبینه حذف کد. چون خود محور شاید Z باشه، حجره‌ای که ازو حذف موشه باید غیر از هر دو بال، محور ره هم ببینه، و ای ازو ره به خانه یا خطی که ای حجره‌ها ده ازو شریک استه محدود موکنه. ای سخت‌ترین تخنیکی استه که Bare Sudoku استفاده موکنه.",
+          "when": [
+            "فقط وقتی که تمام چیزهای دیگه کار نکنه. XYZ-Wing کمیاب‌ترین الگو ده Bare Sudoku استه و فقط ده جدول‌های ماهر پیدا موشه. وقتی دنبال ازو بپال که یگ حجره سه‌نامزدی با یگ حجره دونامزدی که ده دو رقم با ازو شریک استه ده یگ خانه باشه."
+          ],
+          "spot": [
+            "از حجره‌هایی شروع کو که دقیقاً سه نامزد دارن؛ هر کدام شاید محور باشه. ده بین همسایه‌های ازو دنبال دو حجره دونامزدی بپال که نامزدهای هر دو از سه نامزد محور باشه و دقیقاً ده یگ رقم Z شریک باشه. بعد دنبال حجره‌هایی بپال که محور و هر دو بال ره میبینه و Z داره. ده عمل یگ بال ده خانه محور استه و دیگه‌اش ده سطر یا ستون ازو، و حجره‌هایی که ازوا حذف موشه حجره‌های باقی‌مانده امو خانه ده امو سطر یا ستون استه."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} سه نامزد داره: {x}، {y} و {z}. ای حجره {wingA} ره با {x} و {z} و {wingB} ره با {y} و {z} میبینه.",
+                "اگه {pivot} برابر {z} باشه، کار تمام استه. اگه {x} باشه، {wingA} باید {z} باشه. اگه {y} باشه، {wingB} باید {z} باشه. ده هر حال یکی از سه حجره {z} استه.",
+                "حجره‌ای که هر سه ره میبینه {z} شده نمیتانه. رقم {z} ره از {elim} حذف کو."
+              ]
+            }
+          ],
+          "mistakes": [
+            "حذف از حجره‌هایی که فقط دو بال ره میبینه. برخلاف Y-Wing، محور شاید Z باشه، پس حجره باید محور ره هم ببینه.",
+            "استفاده از بال‌هایی که نامزدهای ازوا هر دو ده سه نامزد محور نیسته.",
+            "اشتباه گرفتو ازو با Y-Wing: فرق ده نامزد سوم محور استه و امی تعیین موکنه که کدام حجره‌ها پاک موشه."
+          ],
+          "faq": [
+            [
+              "XYZ-Wing ده سودوکو چی استه؟",
+              "یگ محور با نامزدهای X، Y و Z و دو بال، یکی با X و Z و یکی با Y و Z، که هر دو محور ره میبینه. یکی ازی سه حجره Z استه، پس Z از حجره‌هایی که هر سه ره میبینه حذف موشه."
+            ],
+            [
+              "XYZ-Wing چی فرق با Y-Wing داره؟",
+              "محور به جای دو نامزد سه نامزد داره که Z هم ده بین ازوا استه. ای باعث موشه که محور هم یگ جای ممکن برای Z باشه، پس فقط حجره‌هایی که محور و هر دو بال ره میبینه Z ره از دست میده."
+            ],
+            [
+              "XYZ-Wing چقدر پیش میایه؟",
+              "کم. ده Bare Sudoku فقط جدول‌های ماهر شاید به ازو ضرورت داشته باشه و بیشتر ازوا نداره. Bare Sudoku ازو ره آخر از همه، بعد از X-Wing، Y-Wing و Swordfish، بررسی موکنه."
+            ],
+            [
+              "آیا WXYZ-Wing هم استه؟",
+              "بله، با یگ محور چارنامزدی، ولی Bare Sudoku ازو استفاده نموکنه. هر جدول بازی ره میشه با نُه تخنیک ای رهنما تمام کد."
+            ]
+          ]
+        }
+      }
+    },
+    "bal": {
+      "learnHeading": "سوڈوکو یات بگِر",
+      "learnText": "سوڈوکو تئی واستہ نۏکێن اِنت، یا یک گرانێن پزلے ءَ گیر بوتگئے؟ دو رہشونی قانون و ہر آ ٹیکنیک ءَ کہ اِشارہ کارمرز کننت، ہر یکے ءَ گوں یک راستێن مثالے ءَ شرح کننت.",
+      "howToLink": "سوڈوکو چۏن گوازی بیت",
+      "techniquesLink": "سوڈوکو حل کنگ ءِ ٹیکنیک",
+      "labels": {
+        "howTo": "گوازی ءِ راہ",
+        "techniques": "ٹیکنیک",
+        "play": "سوڈوکو گوازی کن",
+        "prev": "پێسرێن ٹیکنیک",
+        "next": "رندی ٹیکنیک",
+        "all": "سجّہێن ٹیکنیک",
+        "example": "مثال",
+        "steps": "گام پہ گام",
+        "when": "کدی کارمرز کنگ بیت",
+        "spot": "چۏن درگێجگ بیت",
+        "mistakes": "عامێن غلطی",
+        "inGame": "Bare Sudoku ءَ",
+        "level": "اے درجہ ءَ چہ ضرورت اِنت: {level}",
+        "hint": "گوازی ءَ اِشارہ گوشیت: {text}",
+        "legend": "بۏلڈ نمبر شروع ءَ دیگ بوتگ، نیلێن نمبر حل کنگ ءِ وہد ءَ ئێر کنگ بوتگ و کسانێن نمبر نامزد اَنت. روشنێن خانہ نقشہ ءَ جۏڑ کننت، کش جتگێن نامزد در کنگ بنت و دائرہ ءِ تہ ءَ بوتگێن نامزد ہما نمبر اِنت کہ باید اِنت ئێر کنگ ببیت.",
+        "notation": "خانہ r3c7 ءِ پێم ءَ نبشتہ بنت: رَست 3، ستون 7. رَست بُرزا چہ و ستون چپ ءَ چہ شمارگ بنت، و کبک 1 چہ 9 تان، چپ ءِ بُرزا چہ، رَست پہ رَست.",
+        "row": "رَست {n}",
+        "column": "ستون {n}",
+        "box": "کبک {n}",
+        "elimItem": "{cell} ءَ چہ {d}",
+        "regions": "پزل ءِ شروع ءَ رَست 5، ستون 5 و کبک 5",
+        "firstMove": "پدّرێن یکێن نامزد: {cell} بس {d} بوت کنت",
+        "breadcrumb": "صفحہ ءِ راہ"
+      },
+      "howTo": {
+        "title": "سوڈوکو چۏن گوازی بیت: قانون، گرڈ و اولی گام",
+        "description": "سوڈوکو ءِ گوازی ءَ یات بگِر: قانون، رَست، ستون و کبک چۏن کار کننت، پرچا ہر پزل ءِ یک حل اِنت، نبیسگ چۏن کارمرز بنت و اولی گام چۏن زورگ بنت.",
+        "h1": "سوڈوکو چۏن گوازی بیت",
+        "summary": "سوڈوکو 9×9 گرڈ ءِ سرا یک منطقی پزلے اِنت. ہر ہالیگێن خانہ ءَ 1 چہ 9 تان یک نمبرے ءَ پُر کن، اے پێم ءَ کہ ہر رَست، ہر ستون و ہر 3×3 کبک ءَ ہر نمبر بس یک بار بیت. لہتێن نمبر شروع ءَ دیگ بوتگ؛ باقی ءَ تو وت، ہر رند یک پکّائێن خانہ، منطق ءَ درگێجئے و ہچبر اندازہ کنگ ءِ ضرورت نہ بیت. اے رہشونی گرڈ، قانون، یکێن حل ءِ اصول، نبیسگ و اولی گامانی واستہ یک آسانێن راہ ءَ شرح کنت. اے سجّہێن چیزان تو [Bare Sudoku](play) ءَ مشق کرت کنئے، کہ مفت اِنت و آئی ءِ اِشارہ منطق ءَ شرح کننت.",
+        "sections": [
+          {
+            "h": "سوڈوکو ءِ قانون چے اَنت؟",
+            "p": [
+              "بس سئے قانون اَنت، و اے سئے ہما یک قانون اِنت کہ سئے نیمگ ءَ چہ چارگ بیت: ہر رَست ءَ باید اِنت 1 چہ 9 تان نمبر ببنت، ہر ستون ءَ باید اِنت 1 چہ 9 تان نمبر ببنت و ہر 3×3 کبک ءَ باید اِنت 1 چہ 9 تان نمبر ببنت. پمیشکا یک نمبرے ہچبر یک رَست، ستون یا کبک ءَ دو بار آتک نہ کنت.",
+              "دیگ بوتگێن نمبر، کہ بۏلڈ اَنت، ثابت اَنت. تئی کار ہالیگێن خانہانی پُر کنگ اِنت. ہچ ہساب و ہچ ترتیب نێست: نمبر بس نُہ جتائێن نشان اَنت. اگں گوں حرف یا شکلان گوازی بکنئے، ہچ چیز بدل نہ بیت."
+            ]
+          },
+          {
+            "h": "گرڈ چۏن جۏڑ اِنت؟",
+            "p": [
+              "گرڈ ءَ 9 رَست و 9 ستون ءَ 81 خانہ اَنت. پراہێن لکیر آئی ءَ نُہ 3×3 کبک ءَ بہر کننت. ہر خانہ پکّا یک رَست، یک ستون و یک کبک ءِ بہر اِنت، و اے سئے ٹۏلی آئی ءِ یونٹ اَنت. ہما 20 دگہ خانہ کہ گوں یک خانہ ءَ یک یونٹے ءَ ہوار اَنت، آئی ءِ ہمساہگ گوشگ بنت؛ یک خانہ ءَ ئێر کنگ بوتگێن نمبر ہمے نمبر ءَ ہر 20 ہمساہگ ءَ چہ رد کنت.",
+              "خانہ r3c7 ءِ پێم ءَ نبشتہ بنت: رَست 3، ستون 7. رَست بُرزا چہ و ستون چپ ءَ چہ شمارگ بنت، و کبک 1 چہ 9 تان، چپ ءِ بُرزا چہ، رَست پہ رَست. اے نبشتہ کنگ ءِ راہ ہر ٹیکنیک ءِ رہشونی ءَ کارمرز بیت و یات گِرگ ءِ ارزشت ءَ داریت: r5c5 گرڈ ءِ نیامجاہ اِنت."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "پرچا ہر سوڈوکو ءِ بس یک حل اِنت؟",
+            "p": [
+              "یک راستێن سوڈوکو ءِ یک حل اِنت، و ہمے منطق ءَ کارآمد کنت. ہر وہد کہ تو پێش بداری کہ یک نمبرے یک یونٹے ءَ دگہ جاہے ءَ شت نہ کنت، آ نمبر الّم پشت کپتگێن خانہ ءَ رئوت، پرچا کہ حل ہست و بس یکے. اگں یک پزلے ءِ دو حل ببنت، ہچ دلیلے آہان جتا کرت نہ کنت و تو یک جاہے ءَ الّم اندازہ کنئے.",
+              "Bare Sudoku ہر پزل ءَ تئی ڈیوائس ءِ سرا جۏڑ کنت و چاریت کہ آئی ءِ بس یک حل ببیت و آئی ءِ منطقی حل کنۏک آئی ءَ گچێن کنگ بوتگێن درجہ ءِ ٹیکنیکان ءَ سر کرت بکنت. پمیشکا اگں گیر بئے، مُدام یک رندی گامے درگێجگ ءِ واستہ ہست و اِشارہ آئی ءَ پێش داریت."
+            ]
+          },
+          {
+            "h": "سوڈوکو پزلے ءَ چۏن شروع کنئے؟",
+            "p": [
+              "ہما جاہ ءَ چہ شروع کن کہ چہ سجّہاں تنگتر اِنت. اے ترتیب ہر درجہ ءَ کار کنت:"
+            ],
+            "list": [
+              "یک نمبرے گچێن کن کہ باز بار آتکگ، پہ درور شش یا ہپت بار، و ہما کبکان شوہاز کن کہ انگت آئی ءَ نہ دارنت. باز وار یک کبکے ءَ آئی ءِ واستہ بس یک خانہ پشت کپیت: اے یک [چێرێن یکێن نامزد](hidden-single) اِنت.",
+              "ہما ہالیگێن خانہان شوہاز کن کہ آہانی چپ و چاگرد پُر اِنت. ہما خانہ کہ آئی ءِ رَست، ستون و کبک ءَ ہوار ہشت جتائێن نمبر ہست، آئی ءِ واستہ بس یک نامزد پشت کپیت: اے یک [پدّرێن یکێن نامزد](naked-single) اِنت. تقریباً پُرێن رَست یا کبکانی خانہ شوہاز کنگ ءِ واستہ چہ سجّہاں جوانێن جاہ اَنت.",
+              "ہر نمبر کہ ئێر کنئے، 20 ہمساہگ ءَ چہ یک نامزدے در کنت، پمیشکا ہمے دمان آ ہمساہگان بچار. یکێن نامزد باز وار یکے دومی ءِ رند ءَ کاینت.",
+              "وہدے آسانێن ئێر کنگ ہلاس بنت، نبیسگ بنبیس: ہر ہالیگێن خانہ ءِ نامزد. رندا یک نمبرے شوہاز کن کہ یک کبکے ءِ تہ ءَ یک لکیرے ءَ بند اِنت ([بندێن نامزد](locked-candidates))، یا دو خانہ کہ ہمے دو نامزد دارنت ([پدّرێن جۏڑی](naked-pairs)).",
+              "ہر در کنگ ءَ رند پدا یکێن نامزدان بچار. ماہر درجہ ءِ پزل ہم گیشتر یکێن نامزدان ءَ حل بنت؛ پێشرفتہ ٹیکنیک بس رندی یکێن نامزد ءِ راہ ءَ پاچ کنت."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "نبیسگ چے اَنت و کدی آہان کارمرز کنئے؟",
+            "p": [
+              "نبیسگ، کہ آہان پنسل ءِ نشان یا نامزد ہم گوشنت، ہما کسانێن نمبر اَنت کہ تو یک ہالیگێن خانہ ءَ نبیسئے تانکہ زانئے کجام نمبر انگت اودا بوت کننت. آسان پزلان ءَ آہانی ضرورت کم بیت؛ سک درجہ ءَ چہ بُرزا الّمی اَنت، پرچا کہ جۏڑی، X-Wing و Y-Wing پێمێن ٹیکنیک نامزدانی سرا کار کننت، ئێر کنگ بوتگێن نمبرانی سرا نہ.",
+              "نبیسگان راست بدار: وہدے یک نمبرے ئێر کنئے، آئی ءَ ہر 20 ہمساہگ ءِ نبیسگان چہ پاک کن. Bare Sudoku ءَ اے کار وت ءَ چہ بیت، و «نبیسگانی پُر کن» یک جنگ ءَ ہر ہالیگێن خانہ ءَ سجّہێن نامزدان نبیسیت، پمیشکا تو یک سرجم و راستێن نامزدانی ٹۏلی ءَ چہ شروع کرت کنئے. یک نبیسگ یک راستی اِنت، اندازہ نہ: معنا ایش اِنت کہ انگت ہچ چیز اے نمبر ءَ رد نہ کنت."
+            ]
+          },
+          {
+            "h": "گیر بئے گڑا چے بکنئے؟",
+            "p": [
+              "اول بُنیادی چیزان پدا بچار: ہر تقریباً پُرێن رَست، ستون و کبک یکێن نامزدانی سرچمّہ اِنت. رندا دلجم بہ کہ نبیسگ سرجم اَنت، پرچا کہ گار بوتگێن نامزد نقشہان چێر کنت و کوہنێن نامزد درۏگێن نقشہ جۏڑ کنت. رندا [ٹیکنیکان](techniques) گرانی ءِ ترتیب ءَ بچار: بندێن نامزد، جۏڑی و سئے، X-Wing، Y-Wing، Swordfish و XYZ-Wing. ہر یکے ءِ وتی صفحہ گوں یک راستێن مثالے ءَ ہست.",
+              "اگں ہچ چیز کار نہ کنت، اِشارہ بزور. Bare Sudoku ءَ اِشارہ اول چاریت کہ یک ئێر کنگ بوتگێن نمبرے غلط اِنت یا نہ، رندا رندی خانہ ءَ درگێجیت کہ منطق ءَ پُر بیت و ٹیکنیک ءِ نام ءَ گوشیت، پمیشکا وہدے آئی ءَ کارمرز کنئے ہم، چیزے یات گِرئے. نمبر ئێر کنگ ءِ واستہ اِشارہ ءَ پدا بجن."
+            ]
+          },
+          {
+            "h": "Bare Sudoku ءَ نمبر چۏن نبیسئے؟",
+            "p": [
+              "یک خانہ ءَ بجن، رندا یک نمبرے ءَ. یا اول نمبر ءَ بجن: آ بند بیت و ہر خانہ کہ بجنئے آ نمبر ءَ زوریت، کہ یک نمبرے ءِ ششمی، ہپتمی و ہشتمی نقل ئێر کنگ ءِ چہ سجّہاں تێزێن راہ اِنت. نمبر ءَ یلہ کنگ ءِ واستہ آئی ءَ پدا بجن. «نبیسگ» بٹن پنسل ءِ نشانان ءَ رئوت، «پاک کن» خانہ ءَ پاک کنت، «پدا» ہر گام ءَ پدا گردێنیت، و غلطی سُہرێن رنگ ءَ پێش دارگ بنت، اگں تو اے ءَ مینو ءَ بند مہ کنئے.",
+              "کی بۏرڈ ءَ، تیر ءِ کلیدان ءَ جاہ بدل کن و 1 چہ 9 تان نمبر نبیس؛ Backspace پاک کنت، N نبیسگ ءِ واستہ، U پدا ءِ واستہ، H اِشارہ ءِ واستہ، F نبیسگانی پُر کنگ ءِ واستہ و Escape مینو ءِ واستہ اِنت. گوازی وت ءَ چہ ذخیرہ بیت، بێ انٹرنیٹ کار کنت، و نہ اشتہار اِنت نہ حساب."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "سوڈوکو ءَ کدی اندازہ کنگ ضرورت بیت؟",
+            "یک راستێن پزلے ءَ نہ. Bare Sudoku ءِ ہر پزل ءِ بس یک حل اِنت و چارگ بوتگ کہ بس منطق ءَ، وتی درجہ ءِ ٹیکنیکان تان، حل بیت. اگں تئی دل ءَ کیت کہ اندازہ باید اِنت، یک نامزدے تئی نبیسگان چہ گار اِنت یا یک ٹیکنیکے ودار اِنت کہ درگێجگ ببیت."
+          ],
+          [
+            "یک نمبرے یک رَست، ستون یا کبک ءَ دو بار آتک کنت؟",
+            "نہ. سجّہێن قانون ہمیش اِنت: نُہ رَست، نُہ ستون و نُہ کبک ءَ چہ ہر یکے ءَ 1 چہ 9 تان ہر نمبر بس یک بار اِنت. اگں دو یکسانێن نمبر یک یونٹے ءَ ببنت، کم چہ کم آہان چہ یکے غلط اِنت."
+          ],
+          [
+            "آسان، میانگین، سک و ماہر ءِ فرق چے اِنت؟",
+            "درجہ ءَ ہما ٹیکنیک گیشێننت کہ پزل ءَ آہانی ضرورت اِنت. آسان و میانگین بس یکێن نامزدان ءَ حل بنت، و آسان کم چہ کم 38 دیگ بوتگێن نمبر ءَ شروع بیت. سک ءَ بندێن نامزد یا جۏڑی و سئے ءِ ضرورت اِنت. ماہر ءَ X-Wing، Y-Wing، Swordfish یا XYZ-Wing ءِ ضرورت اِنت."
+          ],
+          [
+            "سجّہێن خانہان ءَ نبیسگ نبشتہ کنگ گہتر اِنت یا بس لہتێنان ءَ؟",
+            "سک و ماہر پزلانی واستہ سجّہان پُر کن: جۏڑی، X-Wing و Y-Wing پێمێن نقشہ بس ہما وہد ءَ پدّر بنت کہ سجّہێن نامزد نبشتہ بوتگ اَنت. آسان و میانگین ءَ نبیسگ اختیاری اَنت و گیشتر گوازی کنۏک بس یکێن نامزدان شوہاز کننت."
+          ],
+          [
+            "یک سوڈوکو چنچو وہد زوریت؟",
+            "یک آسان پزلے لہتێن منٹ زوریت؛ ماہر پزل بیست منٹ یا گیشتر زورت کننت، اے ءِ سرا اِنت کہ تو پێشرفتہ نقشہ ءَ چنچو زوت گندئے. Bare Sudoku ٹائمر پێش داریت، وہدے مینو پاچ اِنت آئی ءَ اوشتارێنیت و لیڈربۏرڈ نێست، پمیشکا وتی تێزی ءَ گوازی کن."
+          ],
+          [
+            "سوڈوکو ءَ ہساب ءِ ضرورت اِنت؟",
+            "نہ. نمبر بس نام اَنت؛ نہ جمع کنگ اِنت نہ شمارگ. ہر نُہ نشان کار کرت کننت، و پمیشکا سوڈوکو یک منطقی پزلے اِنت، نمبری پزل نہ."
+          ]
+        ]
+      },
+      "index": {
+        "title": "سوڈوکو حل کنگ ءِ ٹیکنیک، مثالان گوں",
+        "description": "سوڈوکو حل کنگ ءِ سجّہێن نُہ ٹیکنیک، پدّرێن یکێن نامزد ءَ چہ Swordfish و XYZ-Wing تان، Bare Sudoku ءِ اِشارہانی ترتیب ءَ، ہر یکے گوں راستێن مثالے ءَ.",
+        "h1": "سوڈوکو حل کنگ ءِ ٹیکنیک",
+        "intro": [
+          "ہر سوڈوکو یک کسانێن منطقی ٹیکنیکانی ٹۏلی ءَ حل بوت کنت. اے لسٹ ہما نُہ ٹیکنیکان پێش داریت کہ Bare Sudoku ءِ حل کنۏک و آئی ءِ اِشارہ کارمرز کننت، ہما ترتیب ءَ کہ حل کنۏک آہان آزمائیت: اول یکێن نامزد، رندا یک یونٹے ءِ تہ ءَ در کنگ، رندا ہما نقشہ کہ لہتێن رَست و ستونان ءَ شنگ اَنت. ہر ٹیکنیک ءِ وتی صفحہ ہست، گوں تعریف، درگێجگ ءِ راہ، جۏڑ کنگ بوتگێن پزلے ءَ چہ یک راستێن مثال و عامێن غلطیان.",
+          "یک پزلے ءِ درجہ ءَ ہما چہ سجّہاں گرانێن ٹیکنیک گیشێنیت کہ پزل ءَ آئی ءِ ضرورت اِنت. آسان و میانگین پزلان ءَ بس یکێن نامزدانی ضرورت اِنت، سک پزلان ءَ بندێن نامزد یا جۏڑی و سئے ءِ، و ماہر پزلان ءَ کم چہ کم یک ماہیگ یا بالے ءِ. درجہ ہر چے ببیت، گیشتر کار یکێن نامزد کننت؛ پێشرفتہ ٹیکنیک یک یا دو نامزد ءَ در کنت و چہ اودا یکێن نامزد کار ءَ دێم ءَ برنت."
+        ],
+        "faq": [
+          [
+            "سوڈوکو ءِ ٹیکنیک کجام ترتیب ءَ آزمائگ ببنت؟",
+            "چہ سجّہاں آسانێن اول: پدّرێن یکێن نامزد، چێرێن یکێن نامزد، بندێن نامزد، پدّرێن جۏڑی و سئے، چێرێن جۏڑی و سئے، X-Wing، Y-Wing، Swordfish، XYZ-Wing. Bare Sudoku آہان ہمے ترتیب ءَ آزمائیت، و اِشارہ مُدام ہما چہ سجّہاں آسانێن ٹیکنیک ءِ نام ءَ گوشیت کہ کار ءَ دێم ءَ بارت."
+          ],
+          [
+            "سوڈوکو حل کنگ ءِ واستہ اے سجّہێن ٹیکنیکانی ضرورت اِنت؟",
+            "آسان و میانگین پزلانی واستہ یکێن نامزد بس اَنت. سک پزل بندێن نامزد و جۏڑی و سئے ءَ ہم لۏٹنت. ماہر پزلان ءَ کم چہ کم یک ماہیگ یا بالے ءِ ضرورت اِنت، بلے عام طور ءَ ہر پزل ءَ بس یک یا دو بار."
+          ],
+          [
+            "XYZ-Wing ءَ چہ گرانتر ٹیکنیک ہست اَنت؟",
+            "ہاں، پہ درور زنجیر، یکێنی ءِ آزمائش و مجبور کنۏکێن جال. Bare Sudoku ہچ پزلے جۏڑ نہ کنت کہ آہانی ضرورت ببیت، پمیشکا گوازی ءِ ہر پزل اے صفحہ ءِ نُہ ٹیکنیکان ءَ سر بوت کنت."
+          ],
+          [
+            "نامزد چے اِنت؟",
+            "یک نمبرے کہ انگت یک ہالیگێن خانہ ءَ آتک کنت، پرچا کہ آئی ءِ رَست، ستون یا کبک ءَ انگت ہچ چیز آئی ءَ رد نہ کنت. گوازی ءِ نبیسگ ہمے نامزد اَنت. یکێن نامزدان ءَ ابید ہر ٹیکنیک نامزدانی سرا دلیل کنت، پمیشکا آہان سرجم و راست بدار."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "پدّرێن یکێن نامزد",
+          "title": "سوڈوکو ءِ پدّرێن یکێن نامزد: بس یک نامزدێن خانہ",
+          "description": "پدّرێن یکێن نامزد ہما ہالیگێن خانہ اِنت کہ بس یک ممکنێن نمبر داریت. آئی ءِ زوت درگێجگ ءَ یات بگِر، گوں راستێن مثالے ءَ گام پہ گام و عامێن غلطیان.",
+          "h1": "پدّرێن یکێن نامزد (Naked Single)",
+          "summary": "پدّرێن یکێن نامزد ہما ہالیگێن خانہ اِنت کہ پکّا یک نامزد داریت: دگہ ہشت نمبر پێسرا آئی ءِ رَست، ستون یا کبک ءَ ہست اَنت. پشت کپتگێن نمبر الّم ہمودا رئوت. اے سوڈوکو ءِ چہ سجّہاں آسانێن ٹیکنیک اِنت، ہما کہ تو چہ سجّہاں گیشتر کارمرز کنئے، و ہما کہ Bare Sudoku ءِ اِشارہ آئی ءَ «ادا یک نامزد اِنت» گوشیت.",
+          "when": [
+            "مُدام. پدّرێن یکێن نامزد اولی گام ءَ چہ گُڈّی گام ءَ تان، ہر درجہ ءَ کاینت. آسان و میانگین پزلان ءَ، چێرێن یکێن نامزدانی ہمراہ، ہمے بس ٹیکنیک اِنت کہ تئی ضرورت اِنت. گرانتر پزلان ءَ، ہر در کنگ کہ پێشرفتہ ٹیکنیکے کنت، عام طور ءَ یک پدّرێن یکێن نامزدے پشت ءَ یلہ کنت، پمیشکا ہر گام ءَ رند آہان شوہاز کن."
+          ],
+          "spot": [
+            "ہما خانہان بچار کہ باز پُر بوتگێن ہمساہگ دارنت: ہما رَست ءِ خانہ کہ پێسرا ہپت نمبر داریت، یا ہما خانہ کہ آئی ءِ رَست، ستون و کبک ءَ ہوار ہشت جتائێن نمبر ہست. بێ نبیسگ، ہما نمبران بشمار کہ چہ اے خانہ ءَ گندگ بنت. گوں نبیسگ ءَ، پدّرێن یکێن نامزد ہما خانہ اِنت کہ بس یک نامزد پێش داریت، و پمیشکا «نبیسگانی پُر کن» آہانی درگێجگ ءَ آسان کنت."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "{cell} ءَ بچار. اے ہالیگ اِنت، پمیشکا ہر ہما نمبر ءَ کہ پێسرا آئی ءِ رَست، ستون و کبک ءَ ئێر کنگ بوتگ لسٹ کن.",
+                "رَست {row} ءَ {rowDigits} ہست. ستون {col} ءَ {colDigits} ہست. کبک {box} ءَ {boxDigits} ہست.",
+                "اے ہوار {d} ءَ ابید سجّہێن نمبران رد کننت، پمیشکا {d} ہما بس نامزد اِنت کہ {cell} ءَ پشت کپتگ.",
+                "{d} ءَ {cell} ءَ بنبیس. رندا بچار کہ نۏکێن نمبر ہمے رَست، ستون یا کبک ءَ دگہ یکێن نامزدے جۏڑ کنت یا نہ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "بس رَست یا بس کبک ءِ شمارگ. ہشت رد بوتگێن نمبر عام طور ءَ ہر سئے یونٹ ءَ چہ ہوار کاینت.",
+            "اے ءِ شمۏشگ کہ ہما نمبر کہ تو انّوں ئێر کرت، آئی ءِ 20 ہمساہگ ءَ چہ ہم نامزد رد کنت؛ نۏکێن پدّرێن یکێن نامزد ہر ئێر کنگ ءَ رند ہما دمان پدّر بنت.",
+            "پدّرێن یکێن نامزد ءِ ہور کنگ گوں چێرێن یکێن نامزد ءَ: پدّرێن یکێن نامزد ءَ خانہ ءِ تہ ءَ یک نامزد پشت کپتگ، چێرێن یکێن نامزد ءَ یک یونٹے ءَ نمبر ءِ واستہ یک خانہ پشت کپتگ."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ پدّرێن یکێن نامزد چے اِنت؟",
+              "یک ہالیگێن خانہ کہ پکّا یک نامزد داریت. ہشت جتائێن نمبر پێسرا آئی ءِ رَست، ستون و کبک ءَ ئێر کنگ بوتگ اَنت، پمیشکا بس نُہمی نمبر جاہ کپیت."
+            ],
+            [
+              "پرچا آئی ءَ پدّر گوشنت؟",
+              "پرچا کہ وہدے نبیسگ نبشتہ بوتگ اَنت، آ یکێن نامزد راست خانہ ءِ تہ ءَ گندگ بیت؛ ہچ چیز آئی ءَ چێر نہ کنت. آئی ءِ ہلاپ، چێرێن یکێن نامزد دگہ نامزدانی نیام ءَ نشتگ و نمبر ءِ چارگ ءَ درگێجگ بیت، خانہ ءِ چارگ ءَ نہ."
+            ],
+            [
+              "یک پزلے بس پدّرێن یکێن نامزدان ءَ حل بوت کنت؟",
+              "باز آسان پزل بوت کننت، بلے گیشتر ءَ چێرێن یکێن نامزد ہم لۏٹنت. Bare Sudoku آسان و میانگین پزلان ہما وہد ءَ منّیت کہ ہر دو پێمێن یکێن نامزدان ءَ حل ببنت؛ سک و ماہر پزلان ءَ کم چہ کم یک دگہ ٹیکنیکے ءِ ضرورت اِنت."
+            ],
+            [
+              "اِشارہ پدّرێن یکێن نامزدان پێش داریت؟",
+              "ہاں. وہدے رندی ئێر کنگ یک پدّرێن یکێن نامزدے ببیت، اِشارہ خانہ ءَ گچێن کنت و نمبر ءِ ہمراہ گوشیت «ادا یک نامزد اِنت». نمبر ئێر کنگ ءِ واستہ اِشارہ ءَ پدا بجن."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "چێرێن یکێن نامزد",
+          "title": "سوڈوکو ءِ چێرێن یکێن نامزد: نمبر ءِ بس یک جاہ",
+          "description": "چێرێن یکێن نامزد یک رَست، ستون یا کبک ءِ ہما بس خانہ اِنت کہ یک نمبرے انگت اودا رئوت کنت. نمبر پہ نمبر چارگ ءَ آئی ءِ درگێجگ ءَ یات بگِر.",
+          "h1": "چێرێن یکێن نامزد (Hidden Single)",
+          "summary": "چێرێن یکێن نامزد ہما نمبر اِنت کہ یک رَست، ستون یا کبک ءَ آئی ءِ واستہ بس یک ممکنێن خانہ پشت کپتگ، اگں آ خانہ دگہ نامزد پێش بداریت ہم. پرچا کہ یونٹ ءَ الّم اے نمبر بیت، نمبر ہمودا رئوت. Bare Sudoku ءِ اِشارہ آئی ءَ «ای رَست ءَ 5 ءِ واستہ یک جاہ»، یا ستون یا کبک ءَ، گوشیت.",
+          "when": [
+            "ہر وہد کہ یک نمبرے دێم ءَ شتگ: وہدے یک نمبرے پنچ یا شش بار آتکگ، پشت کپتگێن کبک باز تنگ اَنت و چێرێن یکێن نامزد باز وار رندی گام اِنت. چێرێن یکێن نامزد آسان و میانگین پزلانی اصلی ٹیکنیک اَنت و ہر درجہ ءَ کار ءِ مزنێن وسیلہ پشت کپنت."
+          ],
+          "spot": [
+            "نمبر پہ نمبر بچار. یک نمبرے بزور، ہما کبک ءَ درگێج کہ آ نمبر ءَ نہ داریت، و آ کبک ءِ ہر ہما خانہ ءَ کش بجن کہ گوں ئێر کنگ بوتگێن ہمے نمبر ءَ یک رَست یا ستون ءَ اِنت. اگں یک خانہ پشت کپیت، تو یک چێرێن یکێن نامزدے درگێتک. ہمے چارگ رَست و ستونان ءَ ہم کار کنت. گوازی ءَ، ئێر کنگ بوتگێن نمبرے ءَ بجن: آئی ءِ سجّہێن نقل روشن بنت و ہالیگێن خانہ پدّر بنت."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "کبک {box} ءَ انگت {d} نێست، پمیشکا آئی ءِ ہالیگێن خانہان چہ یکے ءَ الّم آئی ءَ داریت. ہالیگێن خانہ {empties} اَنت.",
+                "{cell} ءَ ابید ہر یکے ءَ، {d} گوں ہما {d} ءَ بند اِنت کہ پێسرا ہمے رَست یا ستون ءَ ئێر کنگ بوتگ، پمیشکا {d} اودا نامزد نہ اِنت.",
+                "گڑا {cell} کبک {box} ءَ {d} ءِ بس جاہ اِنت. {d} ءَ اودا بنبیس، اگں {cell} انگت دگہ نامزد پێش بداریت ہم."
+              ]
+            }
+          ],
+          "mistakes": [
+            "نمبر ءِ ئێر کنگ ہما خانہ ءَ کہ بس شاید راست اِنت: یونٹ ءِ ہر دگہ ہالیگێن خانہ ءَ بچار، بس ہما کہ زوت چمّ ءَ کاینت نہ.",
+            "یک چێرێن یکێن نامزدے ءِ گار کنگ پرچا کہ خانہ لہتێن نامزد پێش داریت. دگہ نامزد مہم نہ اَنت؛ مہم ایش اِنت کہ نمبر ءِ واستہ یونٹ ءَ دگہ جاہے نێست.",
+            "بس کبکانی چارگ. رَست و ستون ہم ہمے کدر چێرێن یکێن نامزد دینت، خاص گُڈّی ءِ نزّیک ءَ."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ چێرێن یکێن نامزد چے اِنت؟",
+              "یک نمبرے کہ یک رَست، ستون یا کبک ءِ بس یک خانہ ءَ رئوت کنت. یونٹ ءَ الّم اے نمبر بیت، پمیشکا خانہ ءِ کار گیشێنگ بیت، اگں انگت دگہ نامزد بداریت ہم."
+            ],
+            [
+              "چێرێن یکێن نامزد و پدّرێن یکێن نامزد ءِ فرق چے اِنت؟",
+              "پدّرێن یکێن نامزد یک خانہ ءِ بارو ءَ اِنت: یک نامزد پشت کپتگ. چێرێن یکێن نامزد یک نمبرے ءِ بارو ءَ اِنت: یک یونٹے ءَ یک خانہ پشت کپتگ. ہر دو یک نمبرے ءَ پکّائی ءَ ئێر کننت."
+            ],
+            [
+              "کجام ءِ درگێجگ آسانتر اِنت؟",
+              "بێ نبیسگ، چێرێن یکێن نامزد عام طور ءَ آسانتر اَنت، پرچا کہ تو گرڈ ءَ نمبر پہ نمبر چارت کنئے. گوں سرجمێن نبیسگان ءَ، پدّرێن یکێن نامزد چہ سجّہاں آسانتر اَنت، پرچا کہ یک نامزدێن خانہ ہما دمان چمّ ءَ کیت."
+            ],
+            [
+              "اِشارہ چێرێن یکێن نامزد ءَ چۏن بیان کنت؟",
+              "نمبر ءِ ہمراہ «... ءِ واستہ یک جاہ» گوشیت، اے رَست، اے ستون یا اے کبک ءَ، و خانہ ءَ گچێن کنت. نمبر ئێر کنگ ءِ واستہ اِشارہ ءَ پدا بجن."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "بندێن نامزد",
+          "title": "سوڈوکو ءِ بندێن نامزد: نشان دئیگ و وتی کنگ",
+          "description": "بندێن نامزد: وہدے یک کبکے ءَ یک نمبرے ءِ سجّہێن نامزد یک رَست یا ستون ءَ اَنت، یا اِشی ءِ ہلاپ، نمبر دگہ جاہان چہ در کنگ بیت. دو راستێن مثال.",
+          "h1": "بندێن نامزد (Locked Candidates)",
+          "summary": "بندێن نامزد اولی ٹیکنیک اِنت کہ نمبر ئێر کنگ ءِ بدل ءَ نامزد در کنت. اے ءِ دو دروشم اَنت. نشان دئیگ: یک کبکے ءَ یک نمبرے ءِ سجّہێن نامزد یک رَست یا ستون ءَ اَنت، پمیشکا نمبر آ لکیر ءِ باقی ءَ چہ در کنگ بیت. وتی کنگ: یک رَست یا ستون ءَ یک نمبرے ءِ سجّہێن نامزد یک کبکے ءَ اَنت، پمیشکا نمبر آ کبک ءِ باقی ءَ چہ در کنگ بیت. Bare Sudoku ءِ اِشارہ ہما ئێر کنگ ءَ کہ اے ٹیکنیک پاچ کنت «بندێن نامزد» نام دنت.",
+          "when": [
+            "وہدے یک سک پزلے ءَ یکێن نامزد ہلاس بنت، اے اولی چیز اِنت کہ آزمائگ لۏٹیت. کم چہ کم ہما نمبر ءِ واستہ کہ چارئے، سرجمێن نبیسگ ضرورت اَنت. بندێن نامزد باز کاینت: گیشتر سک پزلان ءَ آہانی ضرورت اِنت و ماہر پزل آہان مزنتر نقشہانی نیام ءَ کارمرز کننت."
+          ],
+          "spot": [
+            "نشان دئیگ ءِ واستہ، ہر کبک و ہر ہما نمبر ءَ بچار کہ آئی ءَ نێست: اگں آ نمبر ءِ نامزدێن خانہ یک رَست یا ستون ءَ اَنت، بچار کہ ہمے نمبر آ لکیر ءِ دێمتر، کبک ءَ ڈنّ، نامزد اِنت یا نہ. وتی کنگ ءِ واستہ، یک رَست یا ستون ءِ درّاجی ءَ بچار: اگں یک نمبرے ءِ سجّہێن نامزد یک کبکے ءِ تہ ءَ اَنت، آ کبک ءِ باقی پاک کنگ بوت کنت. گوازی ءَ، یک نمبرے ءِ کلید ءَ بجن تانکہ آئی ءِ سجّہێن نامزد روشن ببنت؛ یک کبکے ءِ تہ ءَ دو یا سئے روشنێن نبیسگانی یک لکیرے ہمے نقشہ اِنت."
+          ],
+          "examples": [
+            {
+              "h": "نشان دئیگ",
+              "steps": [
+                "کبک {box} ءَ، نمبر {d} ءِ بس اے نامزدێن خانہ اَنت: {cells}. سجّہێن رَست {row} ءَ اَنت.",
+                "کبک {box} ءَ یک {d} ءِ ضرورت اِنت، پمیشکا رَست {row} ءِ {d} کبک {box} ءِ تہ ءَ اِنت، آ خانہان چہ ہر یکے ءَ کہ برئوت.",
+                "رَست {row} ءَ دومی {d} بوت نہ کنت، پمیشکا {d} ءَ رَست {row} ءِ ہما خانہان چہ در کن کہ کبک ءَ ڈنّ اَنت: {elim}."
+              ]
+            },
+            {
+              "h": "وتی کنگ",
+              "steps": [
+                "رَست {row} ءَ، نمبر {d} بس {cells} ءَ رئوت کنت، و سجّہێن کبک {box} ءِ تہ ءَ اَنت.",
+                "رَست {row} ءَ الّم {d} بیت، پمیشکا کبک {box} ءِ {d} ءَ رَست {row} وتی کنت. کبک {box} ءِ دگہ خانہ {d} داشت نہ کننت.",
+                "{d} ءَ {elim} ءَ چہ در کن."
+              ]
+            }
+          ],
+          "mistakes": [
+            "نشان دئیگ ءِ حالت ءَ نمبر ءَ کبک ءِ تہ ءَ چہ در کنگ، آئی ءِ ڈنّ ءَ چہ نہ، یا وتی کنگ ءِ حالت ءَ اِشی ءِ ہلاپ. در کنگ مُدام ہما خانہان ءَ بنت کہ لکیر ءَ اَنت بلے کبک ءَ نہ اَنت، یا کبک ءَ اَنت بلے لکیر ءَ نہ اَنت.",
+            "قانون ءِ کارمرز وہدے کہ نامزد کبک ءِ دو رَست ءَ شنگ اَنت. کبک ءَ نمبر ءِ سجّہێن نامزدێن خانہ الّم یک لکیرے ءَ ببنت.",
+            "ہما یکێن نامزد ءِ شوہاز ءِ شمۏشگ کہ در کنگ جۏڑ کنت. بندێن نامزد کم وار وت نمبرے ئێر کننت؛ آ یک یکێن نامزدے ءِ راہ ءَ تیار کننت."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ بندێن نامزد چے اَنت؟",
+              "یک نمبرے ءِ نامزد کہ یک کبک و یک لکیرے ءِ یکجاہی ءَ بند اَنت. پرچا کہ کبک، یا لکیر، الّم ہمے یکجاہی ءِ تہ ءَ نمبر ءَ داریت، نمبر لکیر ءِ باقی ءَ، یا کبک ءِ باقی ءَ، چہ در کنگ بوت کنت."
+            ],
+            [
+              "نشان دئیگ و وتی کنگ ءِ فرق چے اِنت؟",
+              "نشان دئیگ کبک ءَ چہ شروع بیت: کبک ءَ نمبر ءِ نامزد یک رَست یا ستون ءِ نیمگ ءَ نشان دینت، پمیشکا نمبر آ لکیر ءِ باقی ءَ چہ در کنگ بیت. وتی کنگ رَست یا ستون ءَ چہ شروع بیت: لکیر ءِ سجّہێن نامزد اے نمبر ءِ واستہ یک کبکے ءَ اَنت، پمیشکا لکیر نمبر ءَ وتی کنت و نمبر کبک ءِ باقی ءَ چہ در کنگ بیت."
+            ],
+            [
+              "بندێن نامزد ءَ یکجاہی ءِ در کنگ ہم گوشنت؟",
+              "ہاں. دگہ نام، وتی کنگ ءِ دروشم ءِ واستہ کبک و لکیر ءِ کم کنگ، و نشان دئیگ ءِ دروشم ءِ واستہ نشان دئیۏکێن جۏڑی یا سئے اَنت. Bare Sudoku ہر دو ءِ واستہ یک نام کارمرز کنت."
+            ],
+            [
+              "کجام درجہ ءَ بندێن نامزدانی ضرورت اِنت؟",
+              "سک. ہما پزل کہ بندێن نامزد یا جۏڑی و سئے لۏٹیت بلے چہ اِشان گرانتر چیزے نہ، سک گیشێنگ بیت؛ ماہر پزلان ءَ یک ماہیگ یا بالے ءِ ضرورت ہم اِنت."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "پدّرێن جۏڑی و سئے",
+          "title": "سوڈوکو ءِ پدّرێن جۏڑی و سئے: چۏن کار کننت",
+          "description": "پدّرێن جۏڑی و سئے: یک یونٹے ءِ دو یا سئے خانہ کہ ہمے دو یا سئے نامزد دارنت. آہانی درگێجگ و چے در کنگ ءَ یات بگِر، گوں راستێن مثالان.",
+          "h1": "پدّرێن جۏڑی و سئے (Naked Pair)",
+          "summary": "پدّرێن جۏڑی یک رَست، ستون یا کبک ءِ دو خانہ اِنت کہ پکّا ہمے دو نامزد دارنت. آ دو نمبر الّم ہمے دو خانہ ءَ رئونت، پمیشکا آہان یونٹ ءِ ہر دگہ خانہ ءَ چہ در کرت کنئے. پدّرێن سئے ہمے فکر اِنت گوں سئے خانہ و سئے نمبر ءَ؛ ہر خانہ دو یا ہر سئیان پێش داشت کنت. Bare Sudoku ءِ اِشارہ چہ اِشی ءَ آتکگێن ئێر کنگ ءَ «جۏڑی یا سئے» نام دنت.",
+          "when": [
+            "وہدے نبیسگ سرجم اَنت و یکێن نامزد و بندێن نامزد ہلاس بوتگ اَنت. پدّرێن جۏڑی سک پزلان ءَ باز کاینت، پدّرێن سئے کمتر. ہر یونٹ ءَ کہ انگت پنچ یا گیشتر ہالیگێن خانہ دارنت، ہر دو ءِ چارگ ارزیت."
+          ],
+          "spot": [
+            "ہما خانہان شوہاز کن کہ بس دو نامزد دارنت، و ہمے یونٹ ءَ دگہ خانہ‌ئے درگێج کہ ہمے دو نامزد داریت. سئے ءِ واستہ، ہما یونٹان بچار کہ لہتێن دو و سئے نامزدێن خانہ دارنت، و بچار کہ آہان چہ سئے ہوار بس سئے جتائێن نمبر کارمرز کننت یا نہ. وہدے نبیسگ نبشتہ بوتگ اَنت، پورہ یکسانێن نامزدێن خانہ آسانی ءَ گندگ بنت؛ گوازی ءَ «نبیسگانی پُر کن» اے کار ءَ یک جنگ ءَ کنت."
+          ],
+          "examples": [
+            {
+              "h": "پدّرێن جۏڑی",
+              "steps": [
+                "{unit} ءَ {cellA} و {cellB} پکّا ہمے دو نامزد دارنت: {d1} و {d2}.",
+                "آہان چہ یکے الّم {d1} اِنت و دومی {d2}. ما نہ زانین کجام کجام اِنت، بلے ہر دو نمبر ہمے دو خانہ ءَ کار ءَ آتکگ اَنت.",
+                "پمیشکا {unit} ءِ ہچ دگہ خانہ {d1} یا {d2} داشت نہ کنت. اِشان در کن: {elim}."
+              ]
+            },
+            {
+              "h": "پدّرێن سئے",
+              "steps": [
+                "{unit} ءِ سئے خانہ وتی سجّہێن نامزدان ہمے سئے نمبران، {digits}، چہ زورنت: {cells}.",
+                "اے سئے نمبر الّم یک ترتیبے ءَ اے سئے خانہان پُر کننت. ضرورت نێست کہ ہر خانہ ہر سئے نامزدان پێش بداریت؛ مہم ایش اِنت کہ اے سئے خانہان چہ ہچ یکے ءِ نامزد اے ٹۏلی ءَ ڈنّ مہ بیت.",
+                "{digits} ءَ {unit} ءِ ہر دگہ خانہ ءَ چہ در کن: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "ہما دو خانہانی زورگ کہ دو نامزد ہوار دارنت بلے سئیمی نامزدے ہم دارنت. پدّرێن جۏڑی ءَ ہر خانہ ءَ الّم پکّا ہمے دو نامزد ببنت و دگہ ہچ.",
+            "نمبرانی در کنگ جۏڑی ءِ وتی خانہان چہ. جۏڑی وتی نامزدان داریت؛ در کنگ یونٹ ءِ دگہ خانہان ءَ بنت.",
+            "اے لۏٹگ کہ سئے ءِ ہر خانہ ہر سئے نمبران پێش بداریت. ہما خانہ کہ سئیان چہ دو داریت ہم درست اِنت، تانکہ ہچ خانہ ءِ نامزد ٹۏلی ءَ ڈنّ مہ بیت."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ پدّرێن جۏڑی چے اِنت؟",
+              "یک یونٹے ءِ دو خانہ کہ ہر دو پکّا ہمے دو نامزد دارنت. آ دو نمبر ہمے دو خانہ ءَ بند اَنت، پمیشکا آہان یونٹ ءِ باقی ءَ چہ در کرت کنئے."
+            ],
+            [
+              "پدّرێن سئے چے اِنت؟",
+              "یک یونٹے ءِ سئے خانہ کہ آہانی نامزد ہوار بس سئے نمبر اَنت. ہر خانہ اِشان چہ دو یا سئے داشت کنت. اے سئے نمبر سئے خانہان پُر کننت، پمیشکا آہان یونٹ ءِ دگہ خانہان چہ در کرت کنئے."
+            ],
+            [
+              "پدّرێن جۏڑی نمبرے ئێر کنت؟",
+              "وت ءَ نہ. آ نامزد در کنت، و اے در کنگ عام طور ءَ یک پدّرێن یا چێرێن یکێن نامزدے پشت ءَ یلہ کنت. Bare Sudoku ءِ اِشارہ ہما یکێن نامزد ءَ پێش داریت و ہما ٹیکنیک ءِ نام ءَ گوشیت کہ آئی ءَ ممکن کرتگ."
+            ],
+            [
+              "پدّرێن جۏڑی یک وہد ءَ یک کبک و یک رَستے ءَ بوت کنت؟",
+              "ہاں. اگں دو خانہ یک رَست و یک کبک ءَ ہوار اَنت، جۏڑی ہر دو یونٹ ءَ در کنت. Bare Sudoku آہان یونٹ پہ یونٹ چاریت."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "چێرێن جۏڑی و سئے",
+          "title": "سوڈوکو ءِ چێرێن جۏڑی و سئے: چۏن درگێجگ بنت",
+          "description": "چێرێن جۏڑی دو نمبر اَنت کہ یک یونٹے ءَ بس ہمے دو خانہ ءَ رئوت کننت، پمیشکا آ خانہانی دگہ نامزد در بنت. چێرێن جۏڑی و سئے ءِ درگێجگ ءَ یات بگِر.",
+          "h1": "چێرێن جۏڑی و سئے (Hidden Pair)",
+          "summary": "چێرێن جۏڑی دو نمبر اَنت کہ یک رَست، ستون یا کبک ءَ بس ہمے دو خانہ ءَ نامزد اَنت و دگہ ہچ جاہ ءَ نہ. آ دو خانہ الّم ہمے دو نمبران زورنت، پمیشکا آہانی ہر دگہ نامزد در کنگ بوت کنت. چێرێن سئے ہمے پێم ءَ گوں سئے نمبر ءَ کار کنت کہ سئے خانہ ءَ بند اَنت. در کنگ ءَ رند، اے خانہ یک پدّرێن جۏڑی یا سئے پێش دارنت. Bare Sudoku ءِ اِشارہ چہ اِشی ءَ آتکگێن ئێر کنگ ءَ «جۏڑی یا سئے» نام دنت.",
+          "when": [
+            "وہدے یک یونٹے ءَ باز نامزدێن خانہ ہست اَنت و یکێن نامزد ہلاس بوتگ اَنت. چێرێن جۏڑی پُرێن خانہانی تہ ءَ چێر بنت، پمیشکا آہان ہمودا شوہاز کنگ ارزیت کہ پدّرێن جۏڑی گندگ نہ بنت. چێرێن سئے کم اَنت؛ Bare Sudoku آہان چاریت، بلے گیشتر سک پزل بێ آہان حل بنت."
+          ],
+          "spot": [
+            "نمبر پہ نمبر کار کن، خانہ پہ خانہ نہ. یک یونٹے ءَ، ہر ہما نمبر ءِ واستہ کہ انگت ئێر کنگ نہ بوتگ، ہما خانہان بنبیس کہ آ اودا رئوت کنت. اگں دو نمبر ءِ ہر یکے ءِ بس دو ممکنێن خانہ ہست و ہمے دو خانہ یکے اَنت، تو یک چێرێن جۏڑی درگێتک. گوازی ءَ، یک نمبرے ءِ کلید ءَ بجن تانکہ آئی ءِ نامزد روشن ببنت؛ اگں دو نمبر یک یونٹے ءِ ہمے دو خانہان روشن کننت و آ یونٹ ءَ دگہ ہچ، ہمے نقشہ اِنت."
+          ],
+          "examples": [
+            {
+              "h": "چێرێن جۏڑی",
+              "steps": [
+                "{unit} ءَ، نمبر {d1} و {d2} ءِ ہر یکے ءِ بس دو ممکنێن خانہ ہست، و ہمے دو خانہ یکے اَنت: {cells}.",
+                "اے دو خانہ الّم {d1} و {d2} ءَ زورنت، پمیشکا آہانی دگہ نامزد ناممکن اَنت.",
+                "اِشان در کن: {elim}. انّوں اے دو خانہ یک پدّرێن جۏڑی پێش دارنت، کہ شاید گیشتر راہ پاچ بکنت."
+              ]
+            }
+          ],
+          "mistakes": [
+            "جۏڑی ءِ دو نمبرانی در کنگ جۏڑی ءِ خانہان چہ. ہما خانہانی دگہ نامزد در بنت؛ جۏڑی ءِ نمبر پشت کپنت.",
+            "ہما نمبر ءِ منّگ کہ یونٹ ءَ سئیمی ممکنێن خانہ ہم داریت. ہر دو نمبر الّم پکّا ہمے دو خانہ ءَ بند ببنت.",
+            "بس کبکان ءَ شوہاز. چێرێن جۏڑی رَست و ستونان ءَ ہم ہمے کدر کاینت."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ چێرێن جۏڑی چے اِنت؟",
+              "دو نمبر کہ یک یونٹے ءَ بس ہمے دو خانہ ءَ رئوت کننت. آ خانہ الّم ہمے نمبران زورنت، پمیشکا آہانی دگہ نامزد در کنگ بنت."
+            ],
+            [
+              "چێرێن جۏڑی و پدّرێن جۏڑی ءِ فرق چے اِنت؟",
+              "پدّرێن جۏڑی گندگ بیت: دو خانہ کہ بس ہمے دو نامزد پێش دارنت. چێرێن جۏڑی آ دو خانہانی گیشّێن نامزدانی چێر ءَ پۏشیدہ اِنت. اے گیشّێن نامزدانی در کنگ ءَ، چێرێن جۏڑی پدّرێن جۏڑی بیت."
+            ],
+            [
+              "چێرێن سئے چے اِنت؟",
+              "سئے نمبر کہ یک یونٹے ءِ سئے خانہ ءَ بند اَنت. ضرورت نێست کہ ہر نمبر ہر سئے خانہ ءَ بیت؛ مہم ایش اِنت کہ اے سئے نمبران چہ ہچ یکے ءِ نامزد اے خانہان ءَ ڈنّ مہ بیت."
+            ],
+            [
+              "اِشارہ چێرێن و پدّرێن جۏڑیان جتا کنت؟",
+              "نہ. Bare Sudoku ہر دو ءَ درگێجیت و چہ آہان آتکگێن ئێر کنگ ءَ «جۏڑی یا سئے» نام دنت. اے صفحہ آہان جتا کننت پرچا کہ آہانی درگێجگ ءِ راہ جتا اِنت."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "سوڈوکو ءَ X-Wing: اے ٹیکنیک چۏن کار کنت",
+          "description": "X-Wing: یک نمبرے کہ دو رَست ءَ پکّا دو نامزدێن خانہ داریت و آ خانہ ہمے دو ستون ءَ اَنت، آ ستونانی باقی ءَ چہ در کنگ بیت. راستێن مثال.",
+          "h1": "X-Wing",
+          "summary": "X-Wing یک نمبرے و یک مستطیلے ءِ کُنڈانی چار خانہ ءِ نقشہ اِنت. اگں یک نمبرے دو رَستانی ہر یکے ءَ پکّا دو نامزدێن خانہ بداریت، و آ خانہ ہمے دو ستون ءَ ببنت، نمبر الّم مستطیل ءِ دو دێم پہ دێمێن کُنڈان زوریت. پمیشکا آئی ءَ آ دو ستونانی ہر دگہ خانہ ءَ چہ در کرت کنئے. رَست و ستونانی بدل کنگ ءَ ہم ہمے راست اِنت. اے Bare Sudoku ءَ ماہر درجہ ءِ اولی ٹیکنیک اِنت.",
+          "when": [
+            "وہدے یکێن نامزد، بندێن نامزد و جۏڑی و سئے ہلاس بوتگ اَنت. X-Wing ماہر درجہ ءِ چہ سجّہاں عامێن نقشہ اِنت و باز وار ہما وہد ءَ کیت کہ یک نمبرے ءِ کم نامزد پشت کپتگ، عام طور ءَ وہدے آئی ءِ چار چہ شش تان نقل ئێر کنگ بوتگ اَنت. ہما نمبر ءِ واستہ کہ چارئے، سرجمێن نبیسگ ضرورت اَنت."
+          ],
+          "spot": [
+            "یک نمبرے گچێن کن و ہما رَستان شوہاز کن کہ آئی ءِ پکّا دو نامزدێن خانہ دارنت. اگں اے پێمێن دو رَست ہمے دو ستون ءَ دارنت، آ ستونان اے نمبر ءِ دگہ نامزدانی واستہ بچار: ہمے در کنگ اَنت. رندا ستونان بُنیاد کن و پدا بچار. گوازی ءَ، نمبر ءِ کلید ءَ بجن: آئی ءِ سجّہێن نامزد روشن بنت و چار روشنێن نبیسگانی مستطیل آسانی ءَ گندگ بیت."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "نمبر {d} ءِ رَست {r1} ءَ پکّا دو نامزدێن خانہ ہست و رَست {r2} ءَ ہم پکّا دو، و اے ہمے دو ستون، {c1} و {c2}، ءَ اَنت: {cells}.",
+                "رَست {r1} وتی {d} ءَ ستون {c1} یا {c2} ءَ ئێر کنت، و رَست {r2} دومی ستون ءَ. ہر پێم ءَ، ستون {c1} و {c2} ءِ ہر یکے اے دو رَستان چہ یک {d} زوریت.",
+                "پمیشکا {d} ستون {c1} و {c2} ءِ ہچ دگہ جاہے ءَ آتک نہ کنت. {d} ءَ {elim} ءَ چہ در کن."
+              ]
+            }
+          ],
+          "mistakes": [
+            "ہما رَست ءِ کارمرز کہ نمبر ءِ واستہ سئے نامزدێن خانہ داریت. ہر بُنیادی رَست ءَ الّم پکّا دو خانہ ببنت، و ہر دو ہمے دو ہوارێن ستون ءَ.",
+            "نمبر ءِ در کنگ رَستان چہ، ستونان چہ نہ. وہدے رَست بُنیاد اَنت، در کنگ ستونان ءَ بنت، و اِشی ءِ ہلاپ.",
+            "بدل بوتگێن دروشم ءِ شمۏشگ. ستونانی سرا جۏڑ بوتگێن X-Wing رَستان ءَ در کنت."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ X-Wing چے اِنت؟",
+              "یک نمبرے کہ دو رَستانی ہر یکے ءَ پکّا دو نامزدێن خانہ داریت، ہمے دو ستون ءَ. نمبر آ مستطیل ءِ دو دێم پہ دێمێن کُنڈان زوریت، پمیشکا دو ستونانی باقی ءَ چہ در کنگ بیت. رَست و ستون بدل کنگ بوت کننت."
+            ],
+            [
+              "X-Wing پرچا کار کنت؟",
+              "دو رَستانی ہر یکے الّم نمبر ءَ دو ستونان چہ یکے ءَ ئێر کنت، و دو رَست یک ستونے ءَ کارمرز کرت نہ کننت. پمیشکا ہر دو ستون وتی نمبر ءِ نقل ءَ ہمے رَستان چہ زورنت، و آ ستونان ءَ ہر دگہ نامزد ناممکن اِنت."
+            ],
+            [
+              "X-Wing یک ماہیگے اِنت؟",
+              "ہاں. X-Wing دو ءِ مزنی ءِ ماہیگ اِنت؛ Swordfish سئے ءِ مزنی ءِ ماہیگ. Bare Sudoku ہر دو ءَ درگێجیت."
+            ],
+            [
+              "X-Wing کجام درجہ ءَ کیت؟",
+              "ماہر. ہما پزل کہ X-Wing، Y-Wing، Swordfish یا XYZ-Wing ءَ لۏٹیت، ماہر گیشێنگ بیت."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "سوڈوکو ءَ Y-Wing: اے ٹیکنیک چۏن کار کنت",
+          "description": "Y-Wing (XY-Wing): دو نامزدێن یک محورے و دو بال کہ ہر یکے یک نامزدے ءَ گوں آئی ءَ ہوار اِنت، یک نمبرے ءَ ہر ہما خانہ ءَ چہ در کننت کہ ہر دو بالان گندیت.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing، کہ آئی ءَ XY-Wing ہم گوشنت، سئے دو نامزدێن خانہ کارمرز کنت. محور ءِ نامزد X و Y اَنت. یک بالے محور ءَ گندیت و X و Z داریت؛ دومی بال محور ءَ گندیت و Y و Z داریت. محور ہر چے ببیت، بالان چہ یکے الّم Z اِنت، پمیشکا Z ءَ ہر ہما خانہ ءَ چہ در کرت کنئے کہ ہر دو بالان گندیت. اے Bare Sudoku ءَ ماہر درجہ ءِ ٹیکنیکے اِنت.",
+          "when": [
+            "وہدے پزل ءَ لہتێن پکّا دو نامزدێن خانہ ہست اَنت و ہچ ماہیگے دست نہ کیت. Y-Wing ماہر پزلان ءَ باز کاینت و دو نامزدێن خانہانی رند ءَ گرگ ءَ درگێجگ بنت: ہر یکے محور یا بال بوت کنت."
+          ],
+          "spot": [
+            "ہما خانہانی لسٹ ءَ جۏڑ کن کہ پکّا دو نامزد دارنت. ہر یکے ءَ محورے بزان کہ نامزد X و Y داریت، و آئی ءِ ہمساہگانی نیام ءَ یک خانہ‌ئے شوہاز کن کہ X و دگہ نمبرے Z داریت، و یک خانہ‌ئے کہ Y و ہمے Z داریت. اے دو بال اَنت. رندا ہما خانہان درگێج کہ ہر دو بالان گندنت و Z دارنت. یات بدار کہ بالانی یکے دومی ءَ گندگ ضرورت نہ اِنت."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} ءِ نامزد {x} و {y} اَنت. آ {wingA} ءَ گندیت کہ {x} و {z} داریت، و {wingB} ءَ کہ {y} و {z} داریت.",
+                "اگں {pivot} {x} ببیت، {wingA} {x} ءَ گار کنت و {z} بیت. اگں {pivot} {y} ببیت، {wingB} {z} بیت. ہر حالت ءَ دو بالان چہ یکے {z} اِنت.",
+                "ہما خانہ کہ ہر دو بالان گندیت ہچبر {z} بوت نہ کنت. {z} ءَ {elim} ءَ چہ در کن."
+              ]
+            }
+          ],
+          "mistakes": [
+            "ہما بالانی گچێن کہ ہر دو محور ءَ نہ گندنت. ہر بال ءَ الّم گوں محور ءَ یک رَست، ستون یا کبک ءَ ہوار ببیت.",
+            "Z ءِ در کنگ ہما خانہان چہ کہ بس یک بالے ءَ گندنت. در کنگ بوتگێن خانہ الّم ہر دو بالان بگندیت.",
+            "Z ءِ در کنگ محور ءَ چہ. Y-Wing ءَ محور Z نہ داریت؛ اگں بداریت، نقشہ یک XYZ-Wing اِنت گوں دگہ قانونان."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ Y-Wing چے اِنت؟",
+              "سئے دو نامزدێن خانہ: یک محورے گوں X و Y ءَ، یک بالے گوں X و Z ءَ کہ محور ءَ گندیت، و یک بالے گوں Y و Z ءَ کہ محور ءَ گندیت. بالان چہ یکے مُدام Z اِنت، پمیشکا Z ہما خانہان چہ در کنگ بیت کہ ہر دو بالان گندنت."
+            ],
+            [
+              "Y-Wing و XY-Wing یکے اَنت؟",
+              "ہاں. دو نام یک نقشہ ءِ بیان اَنت. Bare Sudoku آئی ءَ Y-Wing گوشیت."
+            ],
+            [
+              "پرچا بالان چہ یکے الّم Z اِنت؟",
+              "اگں محور X ببیت، اولی بال X ءَ گار کنت و Z بیت. اگں محور Y ببیت، دومی بال Z بیت. محور اے دوان چہ یکے اِنت، پمیشکا بالان چہ یکے Z اِنت."
+            ],
+            [
+              "Y-Wing چنچو خانہ ءَ چہ در کنت؟",
+              "عام طور ءَ یک یا دو: بس ہما خانہ کہ ہر دو بالان گندنت و انگت Z دارنت. یک یکێن نامزدے جۏڑ کنگ ءِ واستہ ہمے بس اِنت."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "سوڈوکو ءَ Swordfish: اے ٹیکنیک چۏن کار کنت",
+          "description": "Swordfish: یک نمبرے کہ سئے رَست ءَ سئے ستون ءَ بند اِنت، آ ستونانی باقی ءَ چہ در کنگ بیت. سئے ءِ مزنی ءِ ماہیگ، گوں راستێن مثالے ءَ شرح.",
+          "h1": "Swordfish",
+          "summary": "Swordfish سئے رَست و سئے ستون ءِ یک X-Wing اِنت. اگں یک نمبرے سئے رَستانی ہر یکے ءَ گیش چہ گیش سئے نامزدێن خانہ بداریت، و اے سجّہێن خانہ ہمے سئے ستون ءَ بکپنت، اے سئے رَست آ ستونانی نمبر ءَ وتی کننت، و نمبر سئے ستونانی ہر دگہ خانہ ءَ چہ در کنگ بوت کنت. رَست و ستون بدل کنگ بوت کننت. Bare Sudoku ماہر پزلان ءَ Y-Wing ءَ رند Swordfish ءَ شوہاز کنت.",
+          "when": [
+            "وہدے X-Wing و Y-Wing ہچ چیز نہ درگێجنت. Swordfish چہ X-Wing ءَ کمتر کیت و آئی ءَ ہما نمبرے لۏٹیت کہ آئی ءِ نامزد سئے لکیر ءِ سرا شنگ اَنت. اے نمبر ءِ واستہ سرجم و راستێن نبیسگ ضرورت اَنت."
+          ],
+          "spot": [
+            "یک نمبرے گچێن کن و ہما رَستان شوہاز کن کہ آئی ءِ واستہ دو یا سئے نامزدێن خانہ دارنت. اگں اے پێمێن سئے رَستانی سجّہێن نامزد بس سئے ستون ءَ اَنت، آ ستونان اے نمبر ءِ دگہ نامزدانی واستہ بچار. ضرورت نێست کہ ہر رَست ءَ ہر ستون ءَ نامزد ببیت: یک Swordfish شش، ہپت، ہشت یا نُہ خانہ داشت کنت. گوازی ءَ، نمبر ءَ آئی ءِ کلید ءَ روشن کن و ہما سئے رَستان شوہاز کن کہ آہانی نامزد سئے ستون ءَ ریز اَنت."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "نمبر {d} ءِ رَست {rows} ءِ ہر یکے ءَ گیش چہ گیش سئے نامزدێن خانہ ہست، و اے سجّہێن خانہ ستون {cols} ءَ اَنت: {cells}.",
+                "سئے رَستانی ہر یکے الّم وتی {d} ءَ سئے ستونان چہ یکے ءَ ئێر کنت، و ہچ دو رَست یک ستونے ءَ کارمرز کرت نہ کننت. پمیشکا سئے ستون وتی {d} ءَ ہمے سئے رَستان چہ زورنت.",
+                "ستون {cols} ءَ ہر دگہ {d} نامزد ناممکن اِنت. {d} ءَ {elim} ءَ چہ در کن."
+              ]
+            }
+          ],
+          "mistakes": [
+            "سجّہێن نُہ خانہانی لۏٹگ. ہما Swordfish کہ لہتێن رَستان ءَ دو نامزد داریت ہم درست اِنت، تانکہ سئے رَستانی نامزد بس سئے ستون ءَ ببنت.",
+            "چار نامزدێن خانہ ءِ رَستے ءِ ہوار کنگ. ہر بُنیادی رَست ءَ الّم گیش چہ گیش سئے خانہ ببنت، سجّہ ہمے سئے ستون ءِ تہ ءَ.",
+            "بُنیادی رَستان ءَ در کنگ. وہدے رَست بُنیاد اَنت، در کنگ سئے ستونان ءَ، بُنیادی رَستان ءَ ڈنّ، بنت."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ Swordfish چے اِنت؟",
+              "یک نمبرے کہ آئی ءِ نامزد سئے رَست ءَ سئے ستون ءَ بند اَنت. سئے رَست الّم نمبر ءَ آ سئے ستون ءَ ئێر کننت، ہر ستون ءَ یکے، پمیشکا نمبر آ ستونانی دگہ خانہان چہ در کنگ بیت."
+            ],
+            [
+              "Swordfish و X-Wing ءِ فرق چے اِنت؟",
+              "بس مزنی ءَ: X-Wing دو رَست و دو ستون کارمرز کنت، Swordfish سئے و سئے. دلیل یکے اِنت."
+            ],
+            [
+              "Swordfish ءَ پکّا نُہ خانہ ءِ ضرورت اِنت؟",
+              "نہ. ہر رَست دو یا سئے نامزد داشت کنت؛ نقشہ بس اے لۏٹیت کہ سئے رَست ہوار چہ سئے ستون ءَ گیشتر کارمرز مہ کننت."
+            ],
+            [
+              "چار ءِ مزنی ءِ ماہیگے ہست؟",
+              "ہاں، Jellyfish. Bare Sudoku آئی ءَ کارمرز نہ کنت، پرچا کہ آئی ءِ پزلان ءَ ہچبر آئی ءِ ضرورت نہ بیت."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "سوڈوکو ءَ XYZ-Wing: اے ٹیکنیک چۏن کار کنت",
+          "description": "XYZ-Wing: سئے نامزدێن یک محورے و دو بال کہ یک نامزدے ءَ ہوار اَنت، آ نمبر ءَ ہر ہما خانہ ءَ چہ در کننت کہ ہر سئیان گندیت. راستێن مثال، گام پہ گام.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing یک Y-Wing اِنت کہ آئی ءِ محور سئے نامزد داریت. محور X، Y و Z داریت؛ یک بالے محور ءَ گندیت و X و Z داریت، دومی محور ءَ گندیت و Y و Z داریت. اے سئے خانہان چہ یکے الّم Z اِنت، پمیشکا Z ءَ ہر ہما خانہ ءَ چہ در کرت کنئے کہ ہر سئیان گندیت. پرچا کہ محور وت Z بوت کنت، در کنگ بوتگێن خانہ الّم ہر دو بالانی ہمراہ ءَ محور ءَ ہم بگندیت، و اے آئی ءَ ہما کبک یا لکیر ءَ بند کنت کہ اے خانہ ہوار دارنت. اے Bare Sudoku ءِ چہ سجّہاں گرانێن ٹیکنیک اِنت.",
+          "when": [
+            "بس وہدے کہ دگہ ہر چیز ناکام بیت. XYZ-Wing Bare Sudoku ءِ چہ سجّہاں کمێن نقشہ اِنت و بس ماہر پزلان ءَ کیت. آئی ءَ ہما وہد ءَ شوہاز کن کہ یک سئے نامزدێن خانہ گوں یک دو نامزدێن خانہ‌ئے کہ آئی ءِ دو نمبران ہوار داریت، یک کبکے ءَ بنت."
+          ],
+          "spot": [
+            "ہما خانہان چہ شروع کن کہ پکّا سئے نامزد دارنت؛ ہر یکے محور بوت کنت. آئی ءِ ہمساہگانی نیام ءَ دو دو نامزدێن خانہ شوہاز کن کہ ہر دوانی نامزد محور ءِ سئے نامزدان چہ اَنت و پکّا یک نمبر Z ءَ ہوار دارنت. رندا ہما خانہان شوہاز کن کہ محور و ہر دو بالان گندنت و Z دارنت. عمل ءَ یک بالے محور ءِ کبک ءَ اِنت و دومی آئی ءِ رَست یا ستون ءَ، و در کنگ بوتگێن خانہ ہما کبک ءِ پشت کپتگێن خانہ اَنت کہ ہمے رَست یا ستون ءَ اَنت."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "محور {pivot} ءِ سئے نامزد اَنت: {x}، {y} و {z}. آ {wingA} ءَ گوں {x} و {z} ءَ، و {wingB} ءَ گوں {y} و {z} ءَ گندیت.",
+                "اگں {pivot} {z} ببیت، کار ہلاس. اگں {x} ببیت، {wingA} الّم {z} اِنت. اگں {y} ببیت، {wingB} الّم {z} اِنت. ہر حالت ءَ سئے خانہان چہ یکے {z} اِنت.",
+                "ہما خانہ کہ ہر سئیان گندیت {z} بوت نہ کنت. {z} ءَ {elim} ءَ چہ در کن."
+              ]
+            }
+          ],
+          "mistakes": [
+            "ہما خانہان چہ در کنگ کہ بس دو بالان گندنت. Y-Wing ءِ ہلاپ، محور Z بوت کنت، پمیشکا خانہ الّم محور ءَ ہم بگندیت.",
+            "ہما بالانی کارمرز کہ آہانی ہر دو نامزد محور ءِ سئے نامزدانی تہ ءَ نہ اَنت.",
+            "اے ءِ ہور کنگ گوں Y-Wing ءَ: فرق محور ءِ سئیمی نامزد اِنت، و ہمے گیشێنیت کہ کجام خانہ پاک کنگ بوت کننت."
+          ],
+          "faq": [
+            [
+              "سوڈوکو ءَ XYZ-Wing چے اِنت؟",
+              "یک محورے گوں نامزد X، Y و Z ءَ و دو بال، یکے گوں X و Z ءَ و یکے گوں Y و Z ءَ، کہ ہر دو محور ءَ گندنت. اے سئے خانہان چہ یکے Z اِنت، پمیشکا Z ہما خانہان چہ در کنگ بیت کہ ہر سئیان گندنت."
+            ],
+            [
+              "XYZ-Wing و Y-Wing ءِ فرق چے اِنت؟",
+              "محور ءِ دو ءِ بدل ءَ سئے نامزد اَنت، Z ءَ ہوار. اے محور ءَ ہم Z ءِ ممکنێن جاہے کنت، پمیشکا بس ہما خانہ Z ءَ گار کننت کہ محور و ہر دو بالان گندنت."
+            ],
+            [
+              "XYZ-Wing چنچو وار کیت؟",
+              "کم. Bare Sudoku ءَ بس ماہر پزلان ءَ آئی ءِ ضرورت بوت کنت، و گیشتر ءَ نہ بیت. Bare Sudoku آئی ءَ چہ سجّہاں گُڈّا، X-Wing، Y-Wing و Swordfish ءَ رند، چاریت."
+            ],
+            [
+              "WXYZ-Wing ہم ہست؟",
+              "ہاں، گوں چار نامزدێن محورے ءَ، بلے Bare Sudoku آئی ءَ کارمرز نہ کنت. گوازی ءِ ہر پزل اے رہشونی ءِ نُہ ٹیکنیکان ءَ سر بوت کنت."
+            ]
+          ]
+        }
+      }
+    },
     "dng": {
       "learnHeading": "Щүэ шўдў",
       "learnText": "Ганган кэшы ван шўдў, хуэйзы зэ йигә нан ти шан ка җў ли? Лёнгә зынан җён чинчў гуйҗү хә тиши йунди мэй йигә җичё, мэй гә ду ю җыншыди лизы.",
