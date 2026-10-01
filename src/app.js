@@ -14,9 +14,20 @@ const L = JSON.parse($('i18n').textContent);
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 let meta = { t: 0, d: false };
+const ratingFormat = numberFormat(document.documentElement.lang);
+
+function numberFormat(lang) {
+  const options = { minimumFractionDigits: 1, maximumFractionDigits: 1 };
+  try { return new Intl.NumberFormat(lang, options); } catch (e) { return new Intl.NumberFormat('en', options); }
+}
 
 function levelName(level) {
   return strings[level < 4 ? level : S_MASTER];
+}
+
+function levelText() {
+  const name = levelName(game.level);
+  return game.rating > 0 ? name + ' ' + ratingFormat.format(game.rating / 10) : name;
 }
 
 function store(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
@@ -180,7 +191,7 @@ function renderTime() {
 }
 
 function render() {
-  $('level').textContent = generating ? levelName(pendingLevel) : game.active ? levelName(game.level) : '';
+  $('level').textContent = generating ? levelName(pendingLevel) : game.active ? levelText() : '';
   renderTime();
   const sel = game.selected;
   const selValue = (sel >= 0 && game.active ? game.value[sel] : 0) || game.sticky;
@@ -245,7 +256,7 @@ function render() {
   if (overlay) {
     const solved = game.active && game.solved;
     $('panel-title').textContent = solved ? strings[S_SOLVED] : strings[S_TITLE];
-    $('panel-sub').textContent = solved ? levelName(game.level) + '  ' + clock(game.time(now())) + '\n' + strings[S_NEW] : strings[S_NEW];
+    $('panel-sub').textContent = solved ? levelText() + '  ' + clock(game.time(now())) + '\n' + strings[S_NEW] : strings[S_NEW];
     $('errors-btn').textContent = strings[S_ERRORS] + ': ' + strings[game.showErrors ? S_ON : S_OFF];
     $('cancel-btn').hidden = !cancellable();
     $('restart-btn').hidden = !game.active;
@@ -301,6 +312,7 @@ function startGame(level) {
   setTimeout(() => {
     const puzzle = engine.generate(level);
     game.start(puzzle, engine.solution, level);
+    game.rating = engine.rating;
     meta = { t: now(), d: false };
     beacon({ e: 'start', k: level });
     generating = false;
@@ -478,6 +490,7 @@ function init() {
   let saved = null;
   try { saved = JSON.parse(fetchStored(KEY)); } catch (e) {}
   game.load(saved);
+  if (game.active) game.rating = engine.rate(game.given);
   meta = saved && saved.a ? { t: +saved.a.t || now(), d: !!saved.a.d } : { t: now(), d: game.solved };
   menuOpen = !game.active;
   if (game.active && !game.solved) game.resume(now());

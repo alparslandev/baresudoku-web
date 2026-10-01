@@ -138,6 +138,7 @@ class Sudoku {
     this.union = new Uint16Array(81);
     this.sv = new Uint8Array(81 * (MAX_NEST + 1));
     this.sc = new Uint16Array(81 * (MAX_NEST + 1));
+    this.rating = 0;
     this.solution = null;
   }
 
@@ -2083,6 +2084,7 @@ class Sudoku {
       const ok = r >= 0 && (level < 2 || (level === 2 ? this.rateOrder >= 1 : level === 3 ? this.rateOrder >= 3 : r >= MASTER_RATING));
       if (ok) {
         this.solution = full;
+        this.rating = r;
         return puzzle;
       }
     }
@@ -2105,6 +2107,7 @@ class Game {
     this.noteMode = false;
     this.showErrors = true;
     this.level = 0;
+    this.rating = 0;
     this.selected = NONE;
     this.sticky = 0;
     this.elapsed = 0;
@@ -2124,6 +2127,7 @@ class Game {
       this.solution[i] = full[i];
     }
     this.level = level;
+    this.rating = 0;
     this.active = true;
     this.restart();
   }
@@ -2371,6 +2375,7 @@ class Game {
       this.history = s.history.map(r => r.map(x => x | 0));
       this.record = [];
       this.level = level;
+      this.rating = 0;
       this.solved = !!s.solved;
       this.noteMode = !!s.noteMode;
       this.selected = selected;
