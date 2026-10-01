@@ -33,13 +33,17 @@ def check(code, name, values, keys):
 
 
 def main(argv):
-    if len(argv) != 1:
-        raise SystemExit("kullanim: master_merge.py master.json")
-    with open(argv[0], encoding="utf-8") as f:
+    replace = "--replace" in argv
+    paths = [a for a in argv if a != "--replace"]
+    if len(paths) != 1:
+        raise SystemExit("kullanim: master_merge.py [--replace] master.json")
+    with open(paths[0], encoding="utf-8") as f:
         master = json.load(f)
     keys, languages = i18n.load()
-    if KEY in keys:
-        raise SystemExit("%s anahtari zaten var" % KEY)
+    if KEY in keys and not replace:
+        raise SystemExit("%s anahtari zaten var, yenilemek icin --replace" % KEY)
+    if KEY not in keys and replace:
+        raise SystemExit("%s anahtari yok, --replace kullanilmaz" % KEY)
     missing = [code for code in languages if code not in master]
     if missing:
         raise SystemExit("eksik dil: " + " ".join(missing))
@@ -48,12 +52,17 @@ def main(argv):
         raise SystemExit("strings.json'da olmayan dil: " + " ".join(unknown))
     for code, values in languages.items():
         check(code, master[code], values, keys)
-    keys.append(KEY)
-    for code, values in languages.items():
-        values.append(master[code])
+    if replace:
+        at = keys.index(KEY) + 1
+        for code, values in languages.items():
+            values[at] = master[code]
+    else:
+        keys.append(KEY)
+        for code, values in languages.items():
+            values.append(master[code])
     with open(os.path.join(ROOT, "i18n", "strings.json"), "w", encoding="utf-8") as f:
         f.write(dump(keys, languages))
-    print("strings.json: %s anahtari %d dile eklendi" % (KEY, len(languages)))
+    print("strings.json: %s anahtari %d dilde %s" % (KEY, len(languages), "yenilendi" if replace else "eklendi"))
 
 
 if __name__ == "__main__":
