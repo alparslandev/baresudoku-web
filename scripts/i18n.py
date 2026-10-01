@@ -4,6 +4,7 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIXED = ["X-Wing", "Y-Wing", "Swordfish", "XYZ-Wing"]
+FIXED_EXTRA = ["Skyscraper", "2-String Kite", "W-Wing", "Unique Rectangle"]
 TITLE = "Bare Sudoku"
 RTL = ("ar", "fa", "he", "ur", "ps", "sd", "ug", "ckb", "yi", "dv", "azb", "ks", "arz", "pnb", "uz-Arab", "kk-Arab", "ky-Arab", "qxq", "kmz", "fa-AF", "haz", "bal", "khw", "scl", "bsk", "bft")
 
@@ -31,7 +32,7 @@ def load():
 def table(keys, values):
     body = values[1:]
     split = keys.index("language")
-    return body[:split] + FIXED + [TITLE] + body[split:]
+    return body[:split] + FIXED + [TITLE] + body[split:] + FIXED_EXTRA
 
 
 def web(keys, languages):

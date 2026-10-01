@@ -34,12 +34,12 @@ for (let level = 0; level < 4; level++) {
       const r = verifiedRate(e, puzzle, solution);
       if (level < 2) expect(r).toBe(0);
       else if (level === 2) expect(r >= 1 && r <= 2).toBe(true);
-      else expect(r >= 3 && r <= 6).toBe(true);
+      else expect(r >= 3 && r <= 10).toBe(true);
       clues.push(count(puzzle));
       const values = puzzle.slice();
       let steps = 0;
       while (count(values) < 81) {
-        expect(e.hint(values)).toBe(true);
+        expect(e.hint(values, puzzle)).toBe(true);
         expect(values[e.stepCell]).toBe(0);
         expect(solution[e.stepCell]).toBe(e.stepDigit);
         values[e.stepCell] = e.stepDigit;

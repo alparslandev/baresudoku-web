@@ -49,6 +49,7 @@ class Sudoku {
     this.lc = new Uint16Array(81);
     this.positions = new Uint16Array(10);
     this.lineMasks = new Uint16Array(9);
+    this.corners = new Uint8Array(4);
     this.count = 0;
     this.limit = 0;
     this.found = null;
@@ -336,18 +337,23 @@ class Sudoku {
     return changed;
   }
 
+  unitMask(cells, b) {
+    let m = 0;
+    for (let k = 0; k < 9; k++) if (this.lc[cells[k]] & b) m |= 1 << k;
+    return m;
+  }
+
+  fillLineMasks(b, t) {
+    for (let line = 0; line < 9; line++) this.lineMasks[line] = this.unitMask(UNITS[t * 9 + line], b);
+  }
+
   fish(size) {
-    const lc = this.lc, masks = this.lineMasks;
+    const masks = this.lineMasks;
     let changed = false;
     for (let d = 1; d <= 9; d++) {
       const b = bit(d);
       for (let t = 0; t < 2; t++) {
-        for (let line = 0; line < 9; line++) {
-          let m = 0;
-          const cells = UNITS[t * 9 + line];
-          for (let k = 0; k < 9; k++) if (lc[cells[k]] & b) m |= 1 << k;
-          masks[line] = m;
-        }
+        this.fillLineMasks(b, t);
         for (let l1 = 0; l1 < 9; l1++) {
           const m1 = masks[l1];
           if (!m1 || POP[m1] > size) continue;
@@ -439,6 +445,103 @@ class Sudoku {
     return false;
   }
 
+  skyscraper() {
+    const masks = this.lineMasks;
+    for (let d = 1; d <= 9; d++) {
+      const b = bit(d);
+      for (let t = 0; t < 2; t++) {
+        this.fillLineMasks(b, t);
+        for (let l1 = 0; l1 < 9; l1++) {
+          const m1 = masks[l1];
+          if (POP[m1] !== 2) continue;
+          for (let l2 = l1 + 1; l2 < 9; l2++) {
+            const m2 = masks[l2];
+            if (POP[m2] !== 2 || POP[m1 & m2] !== 1) continue;
+            const top1 = UNITS[t * 9 + l1][low(m1 & ~m2)];
+            const top2 = UNITS[t * 9 + l2][low(m2 & ~m1)];
+            if (this.clearSeeing(b, top1, top2, -1)) return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  twoStringKite() {
+    for (let d = 1; d <= 9; d++) {
+      const b = bit(d);
+      for (let r = 0; r < 9; r++) {
+        const rm = this.unitMask(UNITS[r], b);
+        if (POP[rm] !== 2) continue;
+        const r0 = UNITS[r][low(rm)], r1 = UNITS[r][low(rm & (rm - 1))];
+        for (let c = 0; c < 9; c++) {
+          const cm = this.unitMask(UNITS[9 + c], b);
+          if (POP[cm] !== 2) continue;
+          const c0 = UNITS[9 + c][low(cm)], c1 = UNITS[9 + c][low(cm & (cm - 1))];
+          if (r0 === c0 || r0 === c1 || r1 === c0 || r1 === c1) continue;
+          for (let i = 0; i < 2; i++) {
+            const inBox = i === 0 ? r0 : r1, rowEnd = i === 0 ? r1 : r0;
+            for (let j = 0; j < 2; j++) {
+              const boxMate = j === 0 ? c0 : c1, colEnd = j === 0 ? c1 : c0;
+              if (BOX[inBox] !== BOX[boxMate]) continue;
+              if (this.clearSeeing(b, rowEnd, colEnd, -1)) return true;
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  wWing() {
+    const lc = this.lc;
+    for (let p = 0; p < 81; p++) {
+      const m = lc[p];
+      if (POP[m] !== 2) continue;
+      for (let q = p + 1; q < 81; q++) {
+        if (lc[q] !== m || sees(p, q)) continue;
+        for (let rest = m; rest; rest &= rest - 1) {
+          const b = rest & -rest;
+          for (let u = 0; u < 27; u++) {
+            const um = this.unitMask(UNITS[u], b);
+            if (POP[um] !== 2) continue;
+            const e1 = UNITS[u][low(um)], e2 = UNITS[u][low(um & (um - 1))];
+            if (!(sees(e1, p) && sees(e2, q)) && !(sees(e1, q) && sees(e2, p))) continue;
+            if (this.clearSeeing(m & ~b, p, q, -1)) return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  uniqueRectangle() {
+    const lc = this.lc, corners = this.corners;
+    for (let r1 = 0; r1 < 9; r1++) {
+      for (let r2 = r1 + 1; r2 < 9; r2++) {
+        const sameBand = ((r1 / 3) | 0) === ((r2 / 3) | 0);
+        for (let c1 = 0; c1 < 9; c1++) {
+          for (let c2 = c1 + 1; c2 < 9; c2++) {
+            if (sameBand === (((c1 / 3) | 0) === ((c2 / 3) | 0))) continue;
+            corners[0] = r1 * 9 + c1;
+            corners[1] = r1 * 9 + c2;
+            corners[2] = r2 * 9 + c2;
+            corners[3] = r2 * 9 + c1;
+            for (let k = 0; k < 4; k++) {
+              const target = corners[k];
+              const m = lc[corners[(k + 1) & 3]];
+              if (POP[m] !== 2 || lc[corners[(k + 2) & 3]] !== m || lc[corners[(k + 3) & 3]] !== m) continue;
+              if ((lc[target] & m) !== m || lc[target] === m) continue;
+              lc[target] &= ~m;
+              return true;
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
+
   step() {
     if (this.singles()) return 0;
     if (this.lockedCandidates()) return 1;
@@ -447,6 +550,10 @@ class Sudoku {
     if (this.yWing()) return 4;
     if (this.fish(3)) return 5;
     if (this.xyzWing()) return 6;
+    if (this.skyscraper()) return 7;
+    if (this.twoStringKite()) return 8;
+    if (this.wWing()) return 9;
+    if (this.uniqueRectangle()) return 10;
     return -1;
   }
 
@@ -467,20 +574,28 @@ class Sudoku {
     return r >= 0 && r <= this.allowed;
   }
 
-  hint(values) {
+  hint(values, givens) {
     this.load(values);
     this.hintTech = 0;
     while (!this.complete() && !this.stuck()) {
       const t = this.step();
-      if (t < 0) return false;
+      if (t < 0) break;
       if (t === 0) return true;
       if (t > this.hintTech) this.hintTech = t;
+    }
+    this.load(givens);
+    this.hintTech = 0;
+    while (!this.complete() && !this.stuck()) {
+      const t = this.step();
+      if (t < 0) return false;
+      if (t > this.hintTech) this.hintTech = t;
+      if (t === 0 && !values[this.stepCell]) return true;
     }
     return false;
   }
 
   generate(level) {
-    this.allowed = level < 2 ? 0 : level === 2 ? 2 : 6;
+    this.allowed = level < 2 ? 0 : level === 2 ? 2 : 10;
     const minClues = level === 0 ? 38 : 0;
     for (;;) {
       const full = this.fullGrid();
@@ -722,7 +837,7 @@ class Game {
         return true;
       }
     }
-    if (!engine.hint(this.value)) return false;
+    if (!engine.hint(this.value, this.given)) return false;
     this.hintKind = HINT_PLACE;
     this.hintCell = engine.stepCell;
     this.hintDigit = engine.stepDigit;
