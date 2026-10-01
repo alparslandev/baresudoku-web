@@ -98940,6 +98940,2334 @@
         }
       }
     },
+    "sma": {
+      "learnHeading": "Lïerh sudokum",
+      "learnText": "Lea sudoku dutnjien orre, jallh ih maehtieh geerve sudokusne vijriesåbpoe? Göökte bïhkedassh njoelkedassh jïh gaajhkh teknihkh buerkiestieh mejtie raerieh nuhtjieh, fïerhte saetnies vuesiehtimmine.",
+      "howToLink": "Guktie sudokum stååkedidh",
+      "techniquesLink": "Sudokun loetehtimmieteknihkh",
+      "labels": {
+        "howTo": "Guktie stååkedidh",
+        "techniques": "Teknihkh",
+        "play": "Stååkedidh sudokum",
+        "prev": "Åvtebe teknihke",
+        "next": "Båetije teknihke",
+        "all": "Gaajhkh teknihkh",
+        "example": "Vuesiehtimmie",
+        "steps": "Laavhkeste laavhkan",
+        "when": "Gåessie nuhtjedh",
+        "spot": "Guktie dam gaavnedh",
+        "mistakes": "Daamtaj voelhkh",
+        "inGame": "Bare Sudokusne",
+        "level": "Daarpesje daltesistie: {level}",
+        "hint": "Speelesne raerie jeahta: {text}",
+        "legend": "Buejties låhkoeh leah vadtasovveme, plaave låhkoeh leah loetehtimmien tjïrrh bïejeme, smaave låhkoeh leah kandidaath. Tjoeveds sellh mynsterem darjoeh, rasstalamme kandidaath vaaltasuvvieh eret, jïh kandidaate gierhkien sisnie lea dïhte låhkoe maam edtjh bïejedh.",
+        "notation": "Sellh tjaalasuvvieh naemhtie: r3c7, raajroe 3, kolonne 7. Raajroeh bijjeste låhkesuvvieh, kolonnh gårroe bealeste, jïh boksh 1 raejeste 9 raajan bijjemes gårroe bealeste, raajroe raajroen mietie.",
+        "row": "raajroe {n}",
+        "column": "kolonne {n}",
+        "box": "bokse {n}",
+        "elimItem": "{d} selleste {cell}",
+        "regions": "Raajroe 5, kolonne 5 jïh bokse 5 sudokun aalkoelisnie",
+        "firstMove": "Aajne kandidaate: {cell} maahta ajve {d} årrodh",
+        "breadcrumb": "Navigasjovne"
+      },
+      "howTo": {
+        "title": "Guktie sudokum stååkedidh: njoelkedassh jïh voestes bïejemh",
+        "description": "Lïerh guktie sudokum stååkedidh: njoelkedassh, raajroeh, kolonnh jïh boksh, man åvteste ajve akte loetehtimmie, guktie meerhkh nuhtjedh jïh guktie aelkedh.",
+        "h1": "Guktie sudokum stååkedidh",
+        "summary": "Sudoku lea logihkespeele 9×9 speelelaavtesne. Dievhtieh fïerhtem gåaroes sellem aktine låhkojne 1 raejeste 9 raajan guktie fïerhtene raajrosne, fïerhtene kolonnesne jïh fïerhtene 3×3 boksesne fïerhte låhkoe aktene aejkien gååvnese. Naan låhkoeh aalkoelisnie vadtasovveme; mubpide datne logihkine gaavnh, akte vihties selle fïerhten aejkien, jïh ij gåessie daarpesjh guessedh. Daate bïhkedasse speelelaavtem, njoelkedassh, aajne loetehtimmien njoelkedassem, meerhkh jïh aelhkies vuekiem voestes bïejemidie buerkeste. Maahtah gaajhkem [Bare Sudokusne](play) hårjanidh, mij lea namhtah jïh mij raerieh åtna mah logihkem buerkiestieh.",
+        "sections": [
+          {
+            "h": "Mah leah sudokun njoelkedassh?",
+            "p": [
+              "Ajve golme njoelkedassh gååvnesieh, jïh dah leah seamma njoelkedasse golme bealeste vuajnoe: fïerhtene raajrosne tjuerieh låhkoeh 1 raejeste 9 raajan årrodh, fïerhtene kolonnesne tjuerieh låhkoeh 1 raejeste 9 raajan årrodh, jïh fïerhtene 3×3 boksesne tjuerieh låhkoeh 1 raejeste 9 raajan årrodh. Dan åvteste akte låhkoe ij gåessie maehtieh göökte aejkieh seamma raajrosne, kolonnesne jallh boksesne årrodh.",
+              "Vadtasovveme låhkoeh, mah leah buejties bokstaavigujmie, eah juhtieh. Dov barkoe lea gåaroes sellide dievhtedh. Ih daarpesjh rehkenidh, jïh låhkoej öörnege ij leah vihkeles: låhkoeh leah ajve uktsie ovmessie symbovlh. Maahtah aaj bokstaavigujmie jallh hammoejgujmie stååkedidh, jïh ij mij jarkele."
+            ]
+          },
+          {
+            "h": "Guktie speelelaavte öörnedamme?",
+            "p": [
+              "Speelelaavtesne leah 81 sellh, 9 raajrosne jïh 9 kolonnesne. Buejties linjah dam uktsie 3×3 boksese juekieh. Fïerhte selle lea aktene raajrosne, aktene kolonnesne jïh aktene boksesne, jïh daah golme leah sellen dåehkieh. Dah 20 jeatjah sellh mah sellijgujmie dåehkiem juekieh, leah dan kraannah; låhkoe mij sellese bïejeme, dam seamma låhkoem gaajhkijste 20 kraannijste eretvaalta.",
+              "Sellh tjaalasuvvieh naemhtie: r3c7, raajroe 3, kolonne 7. Raajroeh bijjeste låhkesuvvieh, kolonnh gårroe bealeste, jïh boksh 1 raejeste 9 raajan bijjemes gårroe bealeste, raajroe raajroen mietie. Daate tjaelemevuekie fïerhtene teknihkebïhkedassesne nuhtjesåvva jïh lea vyörtegs lïeredh: r5c5 lea speelelaavten gaskoe."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Man åvteste fïerhten sudokun lea ajve akte loetehtimmie?",
+            "p": [
+              "Riektes sudokun lea akte loetehtimmie, jïh dan åvteste logihke barka. Gosse maahtah vuesiehtidh ihke låhkoe ij maehtieh naan jeatjah sellese dåehkesne båetedh, dellie dïhte tjuara minngemes sellese båetedh, juktie loetehtimmie gååvnese jïh lea aajne. Jis sudokun göökte loetehtimmieh, ij naan ussjedimmie maehtieh dejtie joekehtidh, jïh akte aejkien tjoerh guessedh.",
+              "Bare Sudoku fïerhtem sudokum dov dïrregisnie dorje jïh goerede ihke dan lea juste akte loetehtimmie jïh ihke dan logihkeles loetehtæjja maahta dam veeljeme daltesen teknihkigujmie galhkedh. Dan åvteste, jis ih maehtieh vijriesåbpoe, akte båetije laavhke ahkedh gååvnese, jïh raerie dam vuesehte."
+            ]
+          },
+          {
+            "h": "Guktie sudokum aelkedh?",
+            "p": [
+              "Aelkieh desnie gusnie unnemes veeljemh. Daate öörnege fïerhtene daltesisnie barka:"
+            ],
+            "list": [
+              "Veeljh låhkoem mij joe gellie aejkieh gååvnese, vuesiehtimmien gaavhtan govhte jallh tjïjhtje aejkieh, jïh ohtsh boksh gusnie dïhte annje fååtese. Daamtaj ajve akte selle boksesne dïsse baatsa: dïhte lea [aajne sijjie](hidden-single).",
+              "Ohtsh sellide gusnie gellie låhkoeh birre. Selle, man raajrosne, kolonnesne jïh boksesne ektesne gaektsie ovmessie låhkoeh, dan ajve akte kandidaate baatsa: [aajne kandidaate](naked-single). Bööremes lea sellh ohtsedh mah measta dievhtamme raajrosne jallh boksesne.",
+              "Fïerhte låhkoe maam bïejh, kandidaatem 20 kraannijste eretvaalta, dan åvteste vuartesjh dejtie kraannide dallah. Aktegh daamtaj aktem mubpien mietie båetieh.",
+              "Gosse aelhkies bïejemh nåhkoeh, tjaelieh meerhkh: fïerhten gåaroes sellen kandidaath. Dellie ohtsh låhkoem mij boksen sisnie ajve aktene raajrosne jallh kolonnesne ([loeketamme kandidaath](locked-candidates)), jallh göökte sellh gusnie seamma göökte kandidaath ([tjïelke paarre](naked-pairs)).",
+              "Fïerhten eretvaaltemen mænngan vihth aktegh ohtsh. Åehpies sudokuh aaj jeenjemes aktegigujmie loetehtuvvieh; geerve teknihke ajve båetije laavhkem rïhpeste."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Mij leah meerhkh jïh gåessie dejtie nuhtjedh?",
+            "p": [
+              "Meerhkh, mah aaj kandidaath gohtjesuvvieh, leah smaave låhkoeh mejtie gåaroes sellese tjaalah juktie mujhtedh mah låhkoeh annje dïsse sjïehtieh. Aelhkies sudokusne dejtie vaenie aejkieh daarpesjh; Geerve daltesistie dah leah daerpies, juktie teknihkh goh paarrh, X-Wing jïh Y-Wing kandidaati bïjre leah, ij bïejeme låhkoej bïjre.",
+              "Meerhkh tjuerieh vihties årrodh: gosse låhkoem bïejh, vaeltieh dam eret gaajhki 20 kraanni meerhkijste. Bare Sudokusne daate automatihkeles dorjesåvva, jïh Dievhtedh meerhkh fïerhtem kandidaatem fïerhten gåaroes sellese aktine deadtaldahkine tjaala, guktie maahtah ellies jïh riektes kandidaatigujmie aelkedh. Meerhke lea fakta, ij guessedimmie: dïhte jeahta ihke ij mij annje vuesehth daate låhkoe ij maehtieh dïsse båetedh."
+            ]
+          },
+          {
+            "h": "Maam darjodh gosse ih maehtieh vijriesåbpoe?",
+            "p": [
+              "Voestegh vuartesjh vihth vihkeles aath: fïerhte measta dievhtamme raajroe, kolonne jïh bokse lea aktegi gaaltije. Dellie vuartesjh ihke meerhkh leah ellies, juktie kandidaate mij fååtese mynsterh tjïekede, jïh båeries kandidaate båajhtode mynsterh dorje. Dellie [teknihkh](techniques) aelhkemistie geervemasse vuartesjh: loeketamme kandidaath, paarrh jïh golmh, X-Wing, Y-Wing, Swordfish jïh XYZ-Wing. Fïerhten lea jïjtse bielie saetnies vuesiehtimmine.",
+              "Jis ij mij viehkehte, vaeltieh raeriem. Bare Sudokusne raerie voestegh goerede mejtie naan bïejeme låhkoe båajhtode, dellie båetije sellem gaavna mij logihkine dievhtesåvva jïh teknihkem nommehte, guktie aaj naakede lïerh gosse dam nuhtjh. Deadtaldahkh raeriem vihth låhkoem bïejedh."
+            ]
+          },
+          {
+            "h": "Guktie låhkojde Bare Sudokusne tjaeledh?",
+            "p": [
+              "Deadtaldahkh sellem, dellie låhkoem. Jallh deadtaldahkh voestegh låhkoem: dïhte loeketåvva, jïh fïerhte selle maam deadtaldahkh, dam låhkoem åadtjoe; daate lea varkemes vuekie låhkoem govhteden, tjïjhtjeden jïh gaektseden aejkien bïejedh. Deadtaldahkh låhkoem vihth dam luejhtedh. Meerhkh meerhkevuekiem aalka, Sjïehtedidh sellem gåaroes dorje, Bååstede fïerhten bïejemem bååstede vaalta, jïh voelhkh ruepsies vååjnoeh jis ih dam menyesne Jaskoe bïejh.",
+              "Tastatuvresne njuelietastigujmie juhtieh, tastigujmie 1 raejeste 9 raajan låhkoem tjaelieh, Backspace sjïehtede, N meerhkide aalka, U bååstede vaalta, H raeriem vadta, F meerhkide dievhte jïh Escape menyem rïhpeste. Speele jïjtje vöörhkie, nedtem ij daarpesjh, jïh ij leah reklaamh jïh ij kontoe."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Daarpesjh gåessie sudokusne guessedh?",
+            "Ij riektes sudokusne. Fïerhten Bare Sudokun lea juste akte loetehtimmie, jïh lea goeresovveme ihke dam ajve logihkine maahta loetehtidh, dan daltesen teknihkigujmie. Jis tuhtjh guessedh tjoerh, akte kandidaate dov meerhkijste fååtese jallh akte teknihke vuarta gaavnesovvedh."
+          ],
+          [
+            "Maahta låhkoe göökte aejkieh seamma raajrosne, kolonnesne jallh boksesne årrodh?",
+            "Ij. Daate lea abpe njoelkedasse: fïerhtene uktsie raajrosne, uktsie kolonnesne jïh uktsie boksesne fïerhte låhkoe 1 raejeste 9 raajan aktene aejkien gååvnese. Jis göökte seamma låhkoeh aktene dåehkesne, unnemes akte dejstie båajhtode."
+          ],
+          [
+            "Guktie Aelhkie, Gaskem, Geerve jïh Åehpies joekehtieh?",
+            "Teknihkh mejtie sudoku daarpesje, daltesem nænnoestieh. Aelhkie jïh Gaskem ajve aktegigujmie loetehtuvvieh, jïh Aelhkie unnemes 38 vadtasovveme låhkojne aalka. Geerve daarpesje loeketamme kandidaath jallh paarrh jïh golmh. Åehpies daarpesje X-Wing, Y-Wing, Swordfish jallh XYZ-Wing."
+          ],
+          [
+            "Lea buerebe fïerhten sellese meerhkh tjaeledh jallh ajve naan sellide?",
+            "Geerve jïh Åehpies sudokuine gaajhkide dievhtieh: mynsterh goh paarrh, X-Wing jïh Y-Wing ajve vååjnoeh gosse gaajhkh kandidaath tjaalasovveme. Aelhkie jïh Gaskem daltesisnie meerhkh eah leah daerpies, jïh jeenjemes stååkedæjjah ajve aktegh ohtsieh."
+          ],
+          [
+            "Man guhkiem akte sudoku vaalta?",
+            "Aelhkie sudoku naan minudth vaalta; Åehpies sudoku maahta göökteluhkie minudth jallh vielie vaeltedh, guktie varke geerve mynsterem vuejnh. Bare Sudoku tïjjem mööle, mohte ij gosse menyje lea rïhpeste, jïh ij leah gilpestallemelïstoe, dan åvteste stååkedh dov jïjtse tempojne."
+          ],
+          [
+            "Daarpesje sudoku rehkenimmiem?",
+            "Ij. Låhkoeh leah ajve nommh; ij mij lissiehtovvoe jallh låhkesåvva. Fïerhte uktsie symbovlh maehtieh sjïehtedh, jïh dan åvteste sudoku lea logihkespeele, ij låhkoespeele."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudokun loetehtimmieteknihkh vuesiehtimmiejgujmie",
+        "description": "Gaajhkh uktsie sudokun loetehtimmieteknihkh, aajne kandidaateste Swordfish jïh XYZ-Wing raajan, Bare Sudokun raeriej öörnegen mietie, fïerhte vuesiehtimmine.",
+        "h1": "Sudokun loetehtimmieteknihkh",
+        "intro": [
+          "Fïerhte sudoku maahta naan logihkeles teknihkigujmie loetehtovvedh. Daate lïstoe dejtie uktsie teknihkide vuesehte mejtie Bare Sudokun loetehtæjja jïh dan raerieh nuhtjieh, dan öörnegen mietie mij loetehtæjja dejtie pryövoe: voestegh aktegh, dellie eretvaaltemh aktene dåehkesne, dellie mynsterh mah gellie raajroej jïh kolonni tjïrrh jåhtieh. Fïerhten teknihken lea jïjtse bielie gusnie buerkiestimmie, guktie dam gaavnedh, saetnies vuesiehtimmie sjugniedamme sudokuste jïh daamtaj voelhkh.",
+          "Sudokun daltesem dïhte geervemes teknihke nænnoste maam daarpesje. Aelhkie jïh Gaskem sudokuh ajve aktegh daarpesjieh, Geerve sudokuh loeketamme kandidaath jallh paarrh jïh golmh daarpesjieh, jïh Åehpies sudokuh unnemes aktem gueliem jallh soejem daarpesjieh. Gaajhkine daltesine aktegh jeenjemes barkoem darjoeh; geerve teknihke aktem jallh göökte kandidaath eretvaalta, jïh dellie aktegh vihth barkoem jåerhkieh."
+        ],
+        "faq": [
+          [
+            "Mennie öörnegisnie edtjem sudokuteknihkh pryövedh?",
+            "Aelhkemes voestegh: aajne kandidaate, aajne sijjie, loeketamme kandidaath, tjïelke paarrh jïh golmh, tjïekeme paarrh jïh golmh, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku dejtie juste daennie öörnegisnie pryövoe, jïh raerie ahkedh dam aelhkemes teknihkem nommehte mij vijriesåbpoe viehkehte."
+          ],
+          [
+            "Daarpesjem gaajhkh daejtie teknihkide sudokum loetehtidh?",
+            "Aelhkie jïh Gaskem sudokuj gaavhtan aktegh nuekie. Geerve sudokuh loeketamme kandidaath jïh vueliedåehkieh lissiehtieh. Åehpies sudokuh unnemes aktem gueliem jallh soejem daarpesjieh, mohte daamtaj ajve akte jallh göökte aejkieh fïerhten sudokusne."
+          ],
+          [
+            "Gååvnesieh geervebe teknihkh goh XYZ-Wing?",
+            "Gååvnesieh, vuesiehtimmien gaavhtan kïedieh, aajnehkevoeten teesth jïh tjïrrehtimmievierhkieh. Bare Sudoku ij sudokuh dorjeh mah dejtie daarpesjieh, dan åvteste fïerhte speelen sudoku daan bielien uktsie teknihkigujmie galhkesåvva."
+          ],
+          [
+            "Mij lea kandidaate?",
+            "Låhkoe mij annje maahta gåaroes sellese båetedh, juktie ij mij dan raajrosne, kolonnesne jallh boksesne dam annje heerrede. Speelen meerhkh leah kandidaath. Fïerhte teknihke aktegi bijjelen kandidaati bïjre ussjede, dan åvteste meerhkide ellies jïh vihties åtnieh."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Aajne kandidaate",
+          "title": "Aajne kandidaate sudokusne: selle aktine kandidaatine",
+          "description": "Aajne kandidaate (naked single) lea gåaroes selle gusnie ajve akte låhkoe sjïehtie. Lïerh dejtie varke gaavnedh, vuesiehtimmine jïh daamtaj voelhkigujmie.",
+          "h1": "Aajne kandidaate (naked single)",
+          "summary": "Aajne kandidaate lea gåaroes selle gusnie juste akte kandidaate: dah jeatjah gaektsie låhkoeh joe dan raajrosne, kolonnesne jallh boksesne. Dïhte minngemes låhkoe tjuara dïsse båetedh. Daate lea sudokun aelhkemes teknihke, dïhte maam daamtajommes nuhtjh, jïh dïhte maam Bare Sudokun raerie naemhtie jeahta: „Ajve akte kandidaate daesnie“.",
+          "when": [
+            "Ahkedh. Aajne kandidaath voestes bïejemistie minngemes raajan båetieh, fïerhtene daltesisnie. Aelhkie jïh Gaskem sudokuine dah, aajne sijjiej ektesne, leah aajne teknihke maam daarpesjh. Geervebe sudokuine fïerhte eretvaalteme geerve teknihkeste daamtaj aajne kandidaatem baetsehte, dan åvteste vuartesjh dejtie fïerhten laavhken mænngan."
+          ],
+          "spot": [
+            "Vuartesjh sellide gusnie gellie kraannah joe dievhtamme: selle raajrosne gusnie joe tjïjhtje låhkoeh, jallh selle man raajroe, kolonne jïh bokse ektesne gaektsie ovmessie låhkoeh utnieh. Bielelen meerhkh, lohkh dejtie låhkojde mejtie sellestie vuejnh. Meerhkigujmie, aajne kandidaate lea ajve selle gusnie akte kandidaate vååjnoe, jïh dan åvteste Dievhtedh meerhkh viehkehte dejtie aelhkieslaakan gaavnedh."
+          ],
+          "examples": [
+            {
+              "h": "Vuesiehtimmie",
+              "steps": [
+                "Vuartesjh sellem {cell}. Dïhte lea gåaroes, dan åvteste tjaelieh gaajhkh låhkoeh mah joe dan raajrosne, kolonnesne jïh boksesne bïejeme.",
+                "Raajrosne {row} leah {rowDigits}. Kolonnesne {col} leah {colDigits}. Boksesne {box} leah {boxDigits}.",
+                "Ektesne dah gaajhkide låhkojde eretvaeltieh, ajve {d} ij, dan åvteste {d} lea aajne kandidaate mij sellesne {cell} baatsa.",
+                "Tjaelieh {d} sellese {cell}. Dellie vuartesjh mejtie orre låhkoe orre aktegem seamma raajrosne, kolonnesne jallh boksesne dorje."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ajve raajroem jallh ajve boksem lohkedh. Dah gaektsie eretvaalteme låhkoeh daamtaj gaajhkijste golme dåehkijste ektesne båetieh.",
+            "Åajaldehtedh ihke låhkoe maam varke bïejih, aaj kandidaatide dan 20 kraannijste eretvaalta; orre aajne kandidaath dallah fïerhten bïejemen mænngan båetieh.",
+            "Aajne kandidaatem jïh aajne sijjiem seahkoestidh: aajne kandidaatesne ajve akte kandidaate sellesne baatsa, aajne sijjesne ajve akte selle låhkose dåehkesne baatsa."
+          ],
+          "faq": [
+            [
+              "Mij lea aajne kandidaate sudokusne?",
+              "Gåaroes selle gusnie juste akte kandidaate. Gaektsie ovmessie låhkoeh joe dan raajrosne, kolonnesne jïh boksesne bïejeme, dan åvteste uktsede låhkoe lea aajne mij sjïehtie."
+            ],
+            [
+              "Man åvteste dam eangelsken gïelesne naked gohtje?",
+              "Juktie aajne kandidaate sellesne dallah vååjnoe gosse meerhkh tjaalasovveme; ij mij dam tjïekede. Aajne sijjie mubpien bielesne jeatjah kandidaati gaskesne, jïh dam gaavnh gosse låhkoem vuartesjh, ij sellem."
+            ],
+            [
+              "Maahta sudokum ajve aajne kandidaatigujmie loetehtidh?",
+              "Gellie Aelhkie sudokuh maehtieh, mohte jeenjemesh aaj aajne sijjieh daarpesjieh. Bare Sudoku Aelhkie jïh Gaskem sudokuh vuarjesje guktie dah maehtieh gåabpatahkigujmie aktegi slaajhtigujmie loetehtovvedh; Geerve jïh Åehpies sudokuh unnemes aktem jeatjah teknihkem daarpesjieh."
+            ],
+            [
+              "Vuesehte raerie aajne kandidaatide?",
+              "Vuesehte. Gosse båetije bïejeme lea aajne kandidaate, raerie sellem veeljie jïh jeahta „Ajve akte kandidaate daesnie“ låhkojne. Deadtaldahkh raeriem vihth låhkoem bïejedh."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Aajne sijjie",
+          "title": "Aajne sijjie sudokusne: låhkoen aajne sijjie",
+          "description": "Aajne sijjie (hidden single) lea aajne selle raajrosne, kolonnesne jallh boksesne gusnie låhkoe maahta årrodh. Lïerh dam gaavnedh, akte låhkoe fïerhten aejkien.",
+          "h1": "Aajne sijjie (hidden single)",
+          "summary": "Aajne sijjie lea låhkoe mij ajve aktem nuepies sellem raajrosne, kolonnesne jallh boksesne åtna, jalhts dïhte selle jeatjah kandidaatide vuesehte. Juktie dåehkie tjuara låhkoem utnedh, låhkoe dïsse båata. Bare Sudokun raerie dam naemhtie jeahta: „Aajne sijjie 5 daennie raajrosne“, kolonnesne jallh boksesne.",
+          "when": [
+            "Gosse låhkoe guhkiem båateme: gosse låhkoe vïjhte jallh govhte aejkieh gååvnese, dah jeatjah boksine unnebe sijjieh, jïh båetije bïejeme daamtaj aajne sijjie. Aajne sijjieh leah Aelhkie jïh Gaskem sudokuj vihkielommes teknihke, jïh fïerhtene daltesisnie vihkeles dïrrege."
+          ],
+          "spot": [
+            "Vuartesjh aktem låhkoem fïerhten aejkien. Vaeltieh låhkoem, gaavnh boksem gusnie ij gååvnesh, jïh rasstalh fïerhtem sellem dan boksesne mij raajroem jallh kolonnem bïejeme låhkojne juekie. Jis akte selle baatsa, aajne sijjiem gaavnih. Seamma vuekie raajroejne jïh kolonnine barka. Speelesne, deadtaldahkh bïejeme låhkoem: gaajhkh dan låhkoeh tjoevkesieh, guktie gåaroes sellh vååjnoeh."
+          ],
+          "examples": [
+            {
+              "h": "Vuesiehtimmie",
+              "steps": [
+                "Boksesne {box} ij annje {d}, dan åvteste akte dan gåaroes sellijste tjuara dam utnedh. Gåaroes sellh leah {empties}.",
+                "Gaajhkine dejstie, mohte ij {cell} sellesne, {d} ij maehtieh årrodh, juktie {d} joe seamma raajrosne jallh kolonnesne bïejeme; dan åvteste {d} ij leah kandidaate dennie.",
+                "Dellie {cell} lea låhkoen {d} aajne sijjie boksesne {box}. Tjaelieh {d} dïsse, jalhts {cell} annje jeatjah kandidaatide vuesehte."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Låhkoem sellese bïejedh mij ajve vuajnoe riektes: vuartesjh gaajhkh jeatjah gåaroes sellh dåehkesne, ij ajve dah vååjnoes.",
+            "Aajne sijjiem åajaldehtedh juktie selle gellie kandidaatide vuesehte. Jeatjah kandidaath eah leah vihkeles; vihkeles lea ihke låhkoen ij leah jeatjah sijjie dåehkesne.",
+            "Ajve boksh vuartesjidh. Raajroeh jïh kolonnh seamma daamtaj aajne sijjieh vadtieh, joekoen minngiegietjesne."
+          ],
+          "faq": [
+            [
+              "Mij lea aajne sijjie sudokusne?",
+              "Låhkoe mij ajve aktene raajroen, kolonnen jallh boksen sellesne maahta årrodh. Dåehkie tjuara låhkoem utnedh, dan åvteste selle lea nænnoestamme, jalhts annje jeatjah kandidaath åtna."
+            ],
+            [
+              "Mij lea joekoe aajne sijjien jïh aajne kandidaaten gaskem?",
+              "Aajne kandidaate lea sellen bïjre: akte kandidaate baatsa. Aajne sijjie lea låhkoen bïjre: akte selle dåehkesne baatsa. Gåabpatahkh låhkoem vihties bïejieh."
+            ],
+            [
+              "Mij lea aelhkebe gaavnedh?",
+              "Bielelen meerhkh, aajne sijjieh daamtaj aelhkebe juktie maahtah speelelaavtem vuartesjidh, akte låhkoe fïerhten aejkien. Ellies meerhkigujmie, aajne kandidaath leah aelhkemes, juktie selle aktine kandidaatine dallah vååjnoe."
+            ],
+            [
+              "Guktie raerie aajne sijjiem buerkeste?",
+              "Goh „Aajne sijjie“ låhkose daennie raajrosne, daennie kolonnesne jallh daennie boksesne, jïh selle veeljesåvva. Deadtaldahkh raeriem vihth låhkoem bïejedh."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Loeketamme kandidaath",
+          "title": "Loeketamme kandidaath sudokusne: tjuvliehtimmie jïh krïeveme",
+          "description": "Loeketamme kandidaath: jis låhkoen kandidaath boksesne aktene linjesne, jallh mubpelaakan, låhkoe jeatjah sijjine vaaltasåvva eret. Göökte vuesiehtimmieh.",
+          "h1": "Loeketamme kandidaath (locked candidates)",
+          "summary": "Loeketamme kandidaath lea voestes teknihke mij kandidaatide eretvaalta låhkoem bïejeme sijjeste. Göökte hammoeh gååvnesieh. Tjuvliehtimmie: boksesne gaajhkh låhkoen kandidaath aktene raajrosne jallh kolonnesne, dan åvteste låhkoe dan linjen jeatjah sellijste vaaltasåvva eret. Krïeveme: raajrosne jallh kolonnesne gaajhkh låhkoen kandidaath aktene boksesne, dan åvteste låhkoe dan boksen jeatjah sellijste vaaltasåvva eret. Bare Sudokun raerie bïejemem maam daate rïhpeste „Loeketamme kandidaath“ nommine vuesehte.",
+          "when": [
+            "Gosse aktegh Geerve sudokusne nåhkoeh, daam voestegh pryövh. Ellies meerhkh daarpesjieh unnemes dan låhkoen åvteste maam goerehth. Loeketamme kandidaath leah daamtaj: jeenjemes Geerve sudokuh dejtie daarpesjieh, jïh Åehpies sudokuh dejtie stuerebe mynsteri gaskem nuhtjieh."
+          ],
+          "spot": [
+            "Tjuvliehtimmien åvteste vuartesjh fïerhtem boksem jïh fïerhtem låhkoem mij boksesne fååtese: jis dan låhkoen kandidaatesellh aktene raajrosne jallh kolonnesne, vuartesjh mejtie seamma låhkoe aaj kandidaatine vijriesåbpoe dan linjesne boksen ålkolen. Krïevemen åvteste vuartesjh raajroem jallh kolonnem: jis låhkoen kandidaath gaajhkh aktene boksesne, maahtah låhkoem dan boksen jeatjah sellijste eretvaeltedh. Speelesne, deadtaldahkh låhkoedeadtaldahkem gaajhkide dan kandidaatide tjoevkesidh; linje göökte jallh golme tjoevkeds meerhkijste aktene boksesne lea mynstere."
+          ],
+          "examples": [
+            {
+              "h": "Tjuvliehtimmie",
+              "steps": [
+                "Boksesne {box} låhkoen {d} ajve daah kandidaatesellh: {cells}. Gaajhkh dah raajrosne {row}.",
+                "Boksese {box} tjuara {d} båetedh, dan åvteste raajroen {row} {d} lea boksen {box} sisnie, mennie dejstie sellijste gujht dïhte båata.",
+                "Raajrosne {row} ij maehtieh mubpie {d} årrodh, dan åvteste vaeltieh {d} eret raajroen {row} sellijste boksen ålkolen: {elim}."
+              ]
+            },
+            {
+              "h": "Krïeveme",
+              "steps": [
+                "Raajrosne {row} låhkoe {d} ajve maahta {cells} sellide båetedh, jïh gaajhkh dah leah boksen {box} sisnie.",
+                "Raajrosne {row} tjuara {d} årrodh, dan åvteste raajroe {row} boksen {box} {d} krïevie. Boksen {box} jeatjah sellh eah maehtieh {d} utnedh.",
+                "Vaeltieh {d} eret daejstie: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Låhkoem boksen sisnie eretvaeltedh boksen ålkolen sijjeste tjuvliehtimmesne, jallh mubpelaakan krïevemisnie. Eretvaaltemh ahkedh sellide mah linjesne, mohte eah boksesne, jallh boksesne, mohte eah linjesne.",
+            "Njoelkedassem nuhtjedh gosse kandidaath boksen göökte raajrosne. Gaajhkh låhkoen kandidaatesellh boksesne tjuerieh aktene linjesne årrodh.",
+            "Åajaldehtedh aktegem ohtsedh maam eretvaalteme dorje. Loeketamme kandidaath vaenie aejkieh jïjtje låhkoem bïejieh; dah aktegem ryöjredieh."
+          ],
+          "faq": [
+            [
+              "Mij leah loeketamme kandidaath sudokusne?",
+              "Låhkoen kandidaath mah ajve boksen jïh linjen ektiesijjesne. Juktie bokse, jallh linje, tjuara låhkoem dennie ektiesijjesne utnedh, låhkoe maahta linjen jeatjah sellijste jallh boksen jeatjah sellijste eretvaaltasovvedh."
+            ],
+            [
+              "Mij lea joekoe tjuvliehtimmien jïh krïevemen gaskem?",
+              "Tjuvliehtimmie boksistie aalka: låhkoen kandidaath boksesne aktem raajroem jallh kolonnem tjuvliehtieh, dan åvteste låhkoe dan linjen jeatjah sellijste vaaltasåvva eret. Krïeveme raajroste jallh kolonneste aalka: linjen kandidaath låhkose leah gaajhkh aktene boksesne, dan åvteste linje låhkoem krïevie jïh dïhte boksen jeatjah sellijste vaaltasåvva eret."
+            ],
+            [
+              "Gohtjesuvvieh loeketamme kandidaath aaj intersection removal?",
+              "Gohtjesuvvieh. Jeatjah nommh leah box-line reduction krïevemen hammose jïh pointing pairs jallh pointing triples tjuvliehtimmien hammose. Bare Sudoku aktem nommem gåabpatahkide nuhtjie."
+            ],
+            [
+              "Mennie daltesisnie loeketamme kandidaath daarpesjuvvieh?",
+              "Geerve. Sudoku mij loeketamme kandidaath jallh vueliedåehkieh daarpesje, mohte ij mij geervebe, Geerve daltesasse bïejesåvva; Åehpies sudokuh aaj gueliem jallh soejem daarpesjieh."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Tjïelke paarrh jïh golmh",
+          "title": "Tjïelke paarrh jïh golmh sudokusne: guktie dah barkoeh",
+          "description": "Tjïelke paarrh jïh golmh: göökte jallh golme sellh aktene dåehkesne gusnie seamma göökte jallh golme kandidaath. Lïerh dejtie vuejnedh jïh maam eretvaeltedh.",
+          "h1": "Tjïelke paarrh jïh golmh (naked pairs, naked triples)",
+          "summary": "Tjïelke paarre lea göökte sellh seamma raajrosne, kolonnesne jallh boksesne gusnie juste seamma göökte kandidaath. Dah göökte låhkoeh tjuerieh dejtie göökte sellide båetedh, dan åvteste dah maehtieh dåehkien gaajhkijste jeatjah sellijste eretvaaltasovvedh. Tjïelke golme lea seamma åssjaldahke golme sellijgujmie jïh golme låhkoejgujmie; fïerhte selle maahta göökte jallh gaajhkh golme dejstie vuesiehtidh. Bare Sudokun raerie bïejemem mij dejstie båata „Paarre jallh golme“ nommine vuesehte.",
+          "when": [
+            "Gosse meerhkh leah ellies jïh aktegh jïh loeketamme kandidaath nåhkeme. Tjïelke paarrh leah joekoen daamtaj Geerve sudokuine, tjïelke golmh vaenebe. Gåabpatahkh leah vyörtegs vuartesjidh fïerhtene dåehkesne gusnie annje vïjhte jallh vielie gåaroes sellh."
+          ],
+          "spot": [
+            "Ohtsh sellide gusnie ajve göökte kandidaath, jïh gaavnh jeatjah sellem seamma dåehkesne seamma göökte kandidaatigujmie. Golmi åvteste, vuartesjh dåehkide gusnie gellie sellh göökte jallh golme kandidaatigujmie, jïh vuartesjh mejtie golme dejstie ektesne ajve golme ovmessie låhkoeh nuhtjieh. Sellh juste seamma kandidaatigujmie leah aelhkie vuejnedh gosse meerhkh tjaalasovveme; speelesne Dievhtedh meerhkh dam aktine deadtaldahkine dorje."
+          ],
+          "examples": [
+            {
+              "h": "Tjïelke paarre",
+              "steps": [
+                "{unit}: {cellA} jïh {cellB} utnieh juste seamma göökte kandidaath, {d1} jïh {d2}.",
+                "Akte dejstie tjuara {d1} årrodh jïh mubpie {d2}. Ibie daejrieh mij lea mij, mohte daah göökte sellh gåabpatahkh låhkoeh utnieh.",
+                "Dan åvteste ij naan jeatjah selle dennie dåehkesne ({unit}) maehtieh {d1} jallh {d2} utnedh. Vaeltieh eret {elim}."
+              ]
+            },
+            {
+              "h": "Tjïelke golme",
+              "steps": [
+                "{unit}: golme sellh gaajhkh sijjen kandidaatide seamma golme låhkojste åadtjoeh, {digits}: {cells}.",
+                "Golme låhkoeh tjuerieh daejtie golme sellide naan öörnegisnie dievhtedh. Selle ij daarpesjh gaajhkh golme kandidaatide vuesiehtidh; vihkeles lea ihke ij naan dejstie golme sellijste kandidaatem åtna dan tjåanghkoen ålkolen.",
+                "Vaeltieh {digits} eret gaajhkijste jeatjah sellijste dennie dåehkesne ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Göökte sellh vaeltedh mah göökte kandidaatide juekieh mohte aaj goelmede utnieh. Tjïelke paarresne fïerhte selle tjuara juste dejtie göökte kandidaatide utnedh jïh ij mij jeatjah.",
+            "Låhkojde paarren jïjtse sellijste eretvaeltedh. Paarre sijjen kandidaatide åtna; eretvaaltemh dåehkien jeatjah sellide.",
+            "Krïevedh ihke fïerhte golmen selle gaajhkh golme låhkoeh vuesehte. Selle gusnie göökte golmeste, sjïehtie, gosse ij naan selle kandidaatem tjåanghkoen ålkolen åtna."
+          ],
+          "faq": [
+            [
+              "Mij lea tjïelke paarre sudokusne?",
+              "Göökte sellh aktene dåehkesne gusnie gåabpatahkine juste seamma göökte kandidaath. Dah göökte låhkoeh leah dejtie göökte sellide loeketamme, dan åvteste dah maehtieh dåehkien jeatjah sellijste eretvaaltasovvedh."
+            ],
+            [
+              "Mij lea tjïelke golme?",
+              "Golme sellh aktene dåehkesne mej kandidaath ektesne leah ajve golme låhkoeh. Fïerhte selle maahta göökte jallh golme dejstie utnedh. Golme låhkoeh golme sellide dievhtieh, dan åvteste dah maehtieh dåehkien jeatjah sellijste eretvaaltasovvedh."
+            ],
+            [
+              "Bïjje tjïelke paarre låhkoem?",
+              "Ij jïjtje. Dïhte kandidaatide eretvaalta, jïh eretvaalteme daamtaj aajne kandidaatem jallh aajne sijjiem baetsehte. Bare Sudokun raerie dam aktegem vuesehte jïh teknihkem nommehte mij dam nuepiem vedtieji."
+            ],
+            [
+              "Maahta tjïelke paarre seamma aejkien boksesne jïh raajrosne årrodh?",
+              "Maahta. Jis göökte sellh raajroem jïh boksem juekieh, paarre gåabpatahkine dåehkine eretvaalta. Bare Sudoku dejtie gïetedalla, aktem dåehkiem fïerhten aejkien."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Tjïekeme paarrh jïh golmh",
+          "title": "Tjïekeme paarrh jïh golmh sudokusne: guktie dejtie gaavnedh",
+          "description": "Tjïekeme paarre lea göökte låhkoeh mah ajve maehtieh seamma göökte sellide dåehkesne båetedh, dan åvteste dej sellij jeatjah kandidaath vaaltasuvvieh eret.",
+          "h1": "Tjïekeme paarrh jïh golmh (hidden pairs, hidden triples)",
+          "summary": "Tjïekeme paarre lea göökte låhkoeh mah aktene raajrosne, kolonnesne jallh boksesne leah kandidaath seamma göökte sellesne, jïh ij gusnie jeatjah. Dah göökte sellh tjuerieh dejtie göökte låhkojde utnedh, dan åvteste gaajhkh jeatjah kandidaath dejnie maehtieh eretvaaltasovvedh. Tjïekeme golme seamma vuekine barka golme låhkoejgujmie mah golme sellide loeketamme. Eretvaaltemen mænngan sellh tjïelke paarrem jallh golmem vuesiehtieh. Bare Sudokun raerie bïejemem mij dejstie båata „Paarre jallh golme“ nommine vuesehte.",
+          "when": [
+            "Gosse dåehkesne gellie sellh gellie kandidaatigujmie jïh aktegh nåhkeme. Tjïekeme paarrh dievhtamme sellide tjïekesieh, dan åvteste vyörtegs dejtie ohtsedh juste desnie gusnie tjïelke paarrh eah vååjnoeh. Tjïekeme golmh leah vaenie; Bare Sudoku aaj dejtie goerede, mohte jeenjemes Geerve sudokuh bielelen dejtie loetehtuvvieh."
+          ],
+          "spot": [
+            "Låhkoej mietie barkh, ij sellij mietie. Dåehkesne, tjaelieh sellide gusnie fïerhte fååtese låhkoe maahta båetedh. Jis göökte låhkojne fïerhtene ajve göökte nuepies sellh jïh dah leah seamma göökte sellh, dellie tjïekeme paarrem åtnah. Speelesne, deadtaldahkh låhkoedeadtaldahkem dan kandidaatide tjoevkesidh; jis göökte låhkoeh seamma göökte sellh dåehkesne tjoevkesieh jïh ij mij jeatjah, dellie daate lea mynstere."
+          ],
+          "examples": [
+            {
+              "h": "Tjïekeme paarre",
+              "steps": [
+                "{unit}: låhkojne {d1} jïh {d2} fïerhtene ajve göökte nuepies sellh, jïh dah leah seamma göökte: {cells}.",
+                "Dah göökte sellh tjuerieh {d1} jïh {d2} utnedh, dan åvteste dej jeatjah kandidaath eah maehtieh årrodh.",
+                "Vaeltieh eret {elim}. Daelie göökte sellh tjïelke paarrem vuesiehtieh, mij maahta vielie rïhpestidh."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Paarren göökte låhkojde paarren sellijste eretvaeltedh. Dej sellij jeatjah kandidaath vaaltasuvvieh eret; paarren låhkoeh baetsieh.",
+            "Låhkoem vaeltedh mij goelmede nuepies sellem dåehkesne åtna. Gåabpatahkh låhkoeh tjuerieh juste göökte sellide loeketamme årrodh.",
+            "Ajve boksine ohtsedh. Tjïekeme paarrh seamma daamtaj raajroejne jïh kolonnine gååvnesieh."
+          ],
+          "faq": [
+            [
+              "Mij lea tjïekeme paarre sudokusne?",
+              "Göökte låhkoeh mah ajve maehtieh seamma göökte sellide dåehkesne båetedh. Dah sellh tjuerieh dejtie låhkojde utnedh, dan åvteste dej jeatjah kandidaath vaaltasuvvieh eret."
+            ],
+            [
+              "Guktie tjïekeme paarre tjïelke paarreste joekehte?",
+              "Tjïelke paarre lea vååjnoes: göökte sellh mah ajve seamma göökte kandidaatide vuesiehtieh. Tjïekeme paarre lissie kandidaatigujmie göökte sellesne gåbtjesåvva. Gosse dejtie lissie kandidaatide eretvaalta, tjïekeme paarre tjïelke paarrine sjædta."
+            ],
+            [
+              "Mij lea tjïekeme golme?",
+              "Golme låhkoeh mah golme sellide dåehkesne loeketamme. Fïerhte låhkoe ij daarpesjh gaajhkine golme sellesne årrodh; vihkeles lea ihke ij naan dejstie golme låhkojste kandidaatem dej sellij ålkolen åtna."
+            ],
+            [
+              "Joekehte raerie tjïekeme jïh tjïelke paarrh?",
+              "Ij. Bare Sudoku gåabpatahkide gaavna jïh bïejemem mij dejstie båata „Paarre jallh golme“ nommine vuesehte. Daah bielieh dejtie joekehtieh juktie dah ovmessie vuekine gaavnesuvvieh."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing sudokusne: guktie teknihke barka",
+          "description": "X-Wing: låhkoe juste göökte kandidaatesellijgujmie göökte raajrosne, seamma göökte kolonnine, vaaltasåvva eret dej kolonni jeatjah sellijste. Vuesiehtimmie.",
+          "h1": "X-Wing",
+          "summary": "X-Wing lea mynstere aktine låhkojne jïh njieljine sellijgujmie aktene rektangelen njieljie tjïehkesne. Jis låhkoen juste göökte kandidaatesellh fïerhtene göökte raajrosne, jïh dah sellh leah seamma göökte kolonnine, låhkoe tjuara rektangelen göökte diagonaale tjïehkesne årrodh. Dan åvteste dïhte maahta dej göökte kolonni gaajhkijste jeatjah sellijste eretvaaltasovvedh. Seamma aaj barka kolonnigujmie raajroej sijjeste. Daate lea voestes Åehpies-teknihke Bare Sudokusne.",
+          "when": [
+            "Gosse aktegh, loeketamme kandidaath jïh vueliedåehkieh nåhkeme. X-Wing lea daamtajommes Åehpies-mynstere jïh daamtaj båata gosse låhkoen vaenie kandidaath baetsieh, daamtaj gosse njieljie raejeste govhte raajan dan låhkoeh joe bïejeme. Ellies meerhkh daarpesjieh dan låhkoen åvteste maam goerehth."
+          ],
+          "spot": [
+            "Veeljh låhkoem jïh ohtsh raajroeh gusnie dïhte juste göökte kandidaatesellh åtna. Jis göökte dagkerh raajroeh seamma göökte kolonnh juekieh, vuartesjh dejtie kolonnide låhkoen jeatjah kandidaati åvteste: dah leah eretvaaltemh. Dellie seamma darjoeh kolonnijste aelkien. Speelesne, deadtaldahkh låhkoedeadtaldahkem: gaajhkh dan kandidaath tjoevkesieh, jïh rektangele njieljie tjoevkeds meerhkijste lea aelhkie vuejnedh."
+          ],
+          "examples": [
+            {
+              "h": "Vuesiehtimmie",
+              "steps": [
+                "Låhkoen {d} juste göökte kandidaatesellh raajrosne {r1} jïh juste göökte raajrosne {r2}, jïh dah leah seamma göökte kolonnine, {c1} jïh {c2}: {cells}.",
+                "Raajroe {r1} dan {d} kolonnese {c1} jallh {c2} bïjje, jïh raajroe {r2} dan {d} mubpien sïjse. Gåabpatahkh vuekine kolonnh {c1} jïh {c2} fïerhte aktem {d} daejstie göökte raajrojste åadtjoeh.",
+                "Dan åvteste {d} ij maehtieh naan jeatjah sijjesne kolonnine {c1} jïh {c2} årrodh. Vaeltieh {d} eret daejstie: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Raajroem nuhtjedh gusnie låhkoen golme kandidaatesellh. Fïerhten maadtoeraajrosne tjuerieh juste göökte årrodh, jïh gåabpatahkh tjuerieh dejnie göökte juekeme kolonnine årrodh.",
+            "Låhkoem raajrojste eretvaeltedh kolonni sijjeste. Gosse raajroeh leah maadtoe, eretvaaltemh kolonnine, jïh mubpelaakan.",
+            "Mubpie vaarjoem åajaldehtedh. X-Wing mij kolonnijste aalka, raajroejne eretvaalta."
+          ],
+          "faq": [
+            [
+              "Mij lea X-Wing sudokusne?",
+              "Låhkoe mij juste göökte kandidaatesellh fïerhtene göökte raajrosne åtna, seamma göökte kolonnine. Låhkoe lea dan rektangelen göökte diagonaale tjïehkesne, dan åvteste dïhte dej göökte kolonni jeatjah sellijste vaaltasåvva eret. Maahtah aaj kolonnijste aelkedh."
+            ],
+            [
+              "Man åvteste X-Wing barka?",
+              "Fïerhte dejstie göökte raajrojste tjuara låhkoem aktese dejstie göökte kolonnijste bïejedh, jïh göökte raajroeh eah maehtieh seamma kolonnem nuhtjedh. Dan åvteste gåabpatahkh kolonnh sijjen låhkoem daejstie raajrojste åadtjoeh, jïh fïerhte jeatjah kandidaate dejnie kolonnine ij maehtieh årrodh."
+            ],
+            [
+              "Lea X-Wing guelie?",
+              "Lea. X-Wing lea guelie stoeredahkine göökte; Swordfish lea guelie stoeredahkine golme. Bare Sudoku gåabpatahkide gaavna."
+            ],
+            [
+              "Mennie daltesisnie X-Wing gååvnese?",
+              "Åehpies. Sudoku mij X-Wing, Y-Wing, Swordfish jallh XYZ-Wing daarpesje, Åehpies-daltesasse bïejesåvva."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing sudokusne: guktie teknihke barka",
+          "description": "Y-Wing (XY-Wing): gaskoeselle göökte kandidaatigujmie jïh göökte soejh mah aktem dejstie juekieh, låhkoem eretvaeltieh sellijste mah gåabpatahkide vuejnieh.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, mij aaj XY-Wing gohtjesåvva, golme sellh nuhtjie, fïerhtene göökte kandidaath. Gaskoesellesne kandidaath X jïh Y. Akte soeje gaskoesellem vuajna jïh X jïh Z åtna; mubpie soeje gaskoesellem vuajna jïh Y jïh Z åtna. Mij gaskoeselle gujht lea, akte soejijste tjuara Z årrodh, dan åvteste Z maahta fïerhten selleste eretvaaltasovvedh mij gåabpatahkide soejide vuajna. Bare Sudokusne daate lea Åehpies-teknihke.",
+          "when": [
+            "Gosse sudokusne gellie sellh juste göökte kandidaatigujmie jïh ij naan guelie gååvnese. Y-Wing daamtaj Åehpies sudokuine gååvnese jïh gaavnesåvva gosse sellide göökte kandidaatigujmie dåeriedh: fïerhte dejstie maahta gaskoeselle jallh soeje årrodh."
+          ],
+          "spot": [
+            "Tjaelieh sellide gusnie juste göökte kandidaath. Vaeltieh fïerhtem dejstie gaskoesellinie, kandidaatigujmie X jïh Y, jïh ohtsh dan kraanni gaskeste sellem gusnie X jïh mubpie låhkoe Z, jïh sellem gusnie Y jïh seamma Z. Dah göökte leah soejh. Dellie ohtsh sellide mah gåabpatahkide soejide vuejnieh jïh Z utnieh. Mujhtieh ihke soejh eah daarpesjh sinsitnide vuejnedh."
+          ],
+          "examples": [
+            {
+              "h": "Vuesiehtimmie",
+              "steps": [
+                "Gaskoeselle {pivot} kandidaatide {x} jïh {y} åtna. Dïhte {wingA} vuajna, mij {x} jïh {z} åtna, jïh {wingB}, mij {y} jïh {z} åtna.",
+                "Jis {pivot} lea {x}, {wingA} {x} måssa jïh {z} sjædta. Jis {pivot} lea {y}, {wingB} {z} sjædta. Fïerhten aejkien akte dejstie göökte soejijste lea {z}.",
+                "Selle mij gåabpatahkide soejide vuajna, ij gåessie maehtieh {z} årrodh. Vaeltieh {z} eret daejstie: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Soejh veeljedh mah eah gåabpatahkh gaskoesellem vuejnieh. Fïerhte soeje tjuara raajroem, kolonnem jallh boksem gaskoesellijgujmie juekedh.",
+            "Z eretvaeltedh sellijste mah ajve aktem soejem vuejnieh. Selle mestie eretvaaltasåvva, tjuara gåabpatahkide soejide vuejnedh.",
+            "Z gaskoeselleste eretvaeltedh. Y-Wingesne gaskoesellesne ij leah Z; jis lea, mynstere lea XYZ-Wing jeatjah njoelkedassigujmie."
+          ],
+          "faq": [
+            [
+              "Mij lea Y-Wing sudokusne?",
+              "Golme sellh göökte kandidaatigujmie: gaskoeselle X jïh Y, soeje X jïh Z mij gaskoesellem vuajna, jïh soeje Y jïh Z mij gaskoesellem vuajna. Akte soeje lea ahkedh Z, dan åvteste Z sellijste vaaltasåvva eret mah gåabpatahkide soejide vuejnieh."
+            ],
+            [
+              "Lea Y-Wing seamma goh XY-Wing?",
+              "Lea. Göökte nommh seamma mynsterem buerkiestieh. Bare Sudoku dam Y-Wing gohtje."
+            ],
+            [
+              "Man åvteste akte soeje tjuara Z årrodh?",
+              "Jis gaskoeselle lea X, voestes soeje X måssa jïh Z sjædta. Jis gaskoeselle lea Y, mubpie soeje Z sjædta. Gaskoeselle lea akte dejstie göökte, dan åvteste akte soeje lea Z."
+            ],
+            [
+              "Man gellie sellijste Y-Wing eretvaalta?",
+              "Daamtaj akte jallh göökte sellijste: ajve sellijste mah gåabpatahkide soejide vuejnieh jïh annje Z utnieh. Daate nuekie aktegem darjodh."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish sudokusne: guktie teknihke barka",
+          "description": "Swordfish: låhkoe mij golme raajrosne golme kolonnide loeketamme, vaaltasåvva eret dej kolonni jeatjah sellijste. Guelie stoeredahkine golme, vuesiehtimmine.",
+          "h1": "Swordfish",
+          "summary": "Swordfish lea X-Wing golme raajroejgujmie jïh golme kolonnigujmie. Jis låhkoen eanemes golme kandidaatesellh fïerhtene golme raajrosne, jïh gaajhkh dah sellh leah seamma golme kolonnine, dellie golme raajroeh låhkoem dejnie kolonnine nåhkehtieh, jïh låhkoe maahta golme kolonni gaajhkijste jeatjah sellijste eretvaaltasovvedh. Maahtah aaj kolonnijste aelkedh. Bare Sudoku Swordfish Y-Wingen mænngan ohtsede, Åehpies sudokuine.",
+          "when": [
+            "Gosse X-Wing jïh Y-Wing eah viehkehth. Swordfish ij leah dan daamtaj goh X-Wing, jïh daarpesje låhkoem mij ajve vaenie kandidaath golme linjine åtna. Ellies jïh vihties meerhkh daarpesjieh dan låhkoen åvteste."
+          ],
+          "spot": [
+            "Veeljh låhkoem jïh ohtsh raajroeh gusnie dïhte göökte jallh golme kandidaatesellh åtna. Jis golme dagkerh raajroej kandidaath ektesne ajve golme kolonnine, vuartesjh dejtie kolonnide låhkoen jeatjah kandidaati åvteste. Fïerhte raajroe ij daarpesjh kandidaatem fïerhtene kolonnesne utnedh: Swordfish maahta govhte, tjïjhtje, gaektsie jallh uktsie sellh utnedh. Speelesne, tjoevkesh låhkoem dan deadtaldahkine jïh ohtsh golme raajroeh mej kandidaath golme kolonnine leah."
+          ],
+          "examples": [
+            {
+              "h": "Vuesiehtimmie",
+              "steps": [
+                "Låhkoen {d} eanemes golme kandidaatesellh fïerhtene raajrosne {rows}, jïh gaajhkh dah sellh leah kolonnine {cols}: {cells}.",
+                "Fïerhte golme raajrojste tjuara dan {d} aktese golme kolonnijste bïejedh, jïh göökte raajroeh eah maehtieh seamma kolonnem nuhtjedh. Dan åvteste golme kolonnh sijjen {d} daejstie golme raajrojste åadtjoeh.",
+                "Ij naan jeatjah {d} kandidaate kolonnine {cols} maehtieh årrodh. Vaeltieh {d} eret daejstie: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Gaajhkh uktsie sellh krïevedh. Swordfish göökte kandidaatigujmie naan raajrosne lea annje riektes, gosse golme raajroeh ajve golme kolonnine.",
+            "Raajroem njieljie kandidaatesellijgujmie lissiehtidh. Fïerhte maadtoeraajroe maahta eanemes golme utnedh, gaajhkh golme kolonni sisnie.",
+            "Maadtoeraajrojne eretvaeltedh. Gosse raajroeh leah maadtoe, eretvaaltemh golme kolonnine, maadtoeraajroej ålkolen."
+          ],
+          "faq": [
+            [
+              "Mij lea Swordfish sudokusne?",
+              "Låhkoe man kandidaath golme raajrosne leah golme kolonnide loeketamme. Golme raajroeh tjuerieh låhkoem dejtie golme kolonnide bïejedh, akte fïerhtene, dan åvteste låhkoe dej kolonni jeatjah sellijste vaaltasåvva eret."
+            ],
+            [
+              "Guktie Swordfish X-Wingeste joekehte?",
+              "Ajve stoeredahkesne: X-Wing göökte raajroeh jïh göökte kolonnh nuhtjie, Swordfish golme jïh golme. Ussjedimmie lea seamma."
+            ],
+            [
+              "Daarpesje Swordfish juste uktsie sellh?",
+              "Ij. Fïerhte raajroe maahta göökte jallh golme kandidaath utnedh; mynstere ajve krïevie ihke golme raajroeh ektesne eah vielie goh golme kolonnh nuhtjieh."
+            ],
+            [
+              "Gååvnese guelie stoeredahkine njieljie?",
+              "Gååvnese, Jellyfish. Bare Sudoku dam ij nuhtjh, juktie dan sudokuh eah gåessie dam daarpesjh."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing sudokusne: guktie teknihke barka",
+          "description": "XYZ-Wing: gaskoeselle golme kandidaatigujmie jïh göökte soejh mah aktem låhkoem juekieh, dam eretvaeltieh sellijste mah gaajhkide golme vuejnieh. Vuesiehtimmie.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing lea Y-Wing gusnie gaskoesellesne golme kandidaath. Gaskoesellesne X, Y jïh Z; akte soeje gaskoesellem vuajna jïh X jïh Z åtna, mubpie gaskoesellem vuajna jïh Y jïh Z åtna. Akte dejstie golme sellijste tjuara Z årrodh, dan åvteste Z maahta fïerhten selleste eretvaaltasovvedh mij gaajhkide golme vuajna. Juktie gaskoeselle jïjtje maahta Z årrodh, selle mestie eretvaaltasåvva tjuara gaskoesellem jïh gåabpatahkide soejide vuejnedh, jïh dan åvteste dïhte ajve boksesne, raajrosne jallh kolonnesne mejtie sellh juekieh. Daate lea dïhte geervemes teknihke maam Bare Sudoku nuhtjie.",
+          "when": [
+            "Ajve gosse gaajhkh jeatjah eah viehkehth. XYZ-Wing lea Bare Sudokun vaenemes mynstere jïh ajve Åehpies sudokuine båata. Ohtsh dam gosse selle golme kandidaatigujmie lea boksesne selline göökte kandidaatigujmie mij göökte dan låhkojste åtna."
+          ],
+          "spot": [
+            "Aelkieh sellijste gusnie juste golme kandidaath; fïerhte dejstie maahta gaskoeselle årrodh. Dan kraanni gaskeste, ohtsh göökte sellh fïerhtene göökte kandidaatigujmie, gåabpatahkh gaskoesellen golme låhkojste, mah juste aktem låhkoem Z juekieh. Dellie ohtsh sellide mah gaskoesellem jïh gåabpatahkide soejide vuejnieh jïh Z utnieh. Daamtaj akte soeje lea gaskoesellen boksesne jïh mubpie dan raajrosne jallh kolonnesne, jïh eretvaaltemesellh leah dan boksen jeatjah sellh dennie raajrosne jallh kolonnesne."
+          ],
+          "examples": [
+            {
+              "h": "Vuesiehtimmie",
+              "steps": [
+                "Gaskoeselle {pivot} golme kandidaatide åtna: {x}, {y} jïh {z}. Dïhte {wingA} vuajna, mij {x} jïh {z} åtna, jïh {wingB}, mij {y} jïh {z} åtna.",
+                "Jis {pivot} lea {z}, dellie gaervies. Jis dïhte lea {x}, {wingA} tjuara {z} årrodh. Jis dïhte lea {y}, {wingB} tjuara {z} årrodh. Fïerhten aejkien akte golme sellijste lea {z}.",
+                "Selle mij gaajhkide golme vuajna, ij maehtieh {z} årrodh. Vaeltieh {z} eret daejstie: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sellijste eretvaeltedh mah ajve göökte soejide vuejnieh. Ij goh Y-Wingesne, gaskoeselle maahta Z årrodh, dan åvteste selle tjuara aaj gaskoesellem vuejnedh.",
+            "Soejh nuhtjedh mej kandidaath eah gåabpatahkh gaskoesellen golme kandidaati gaskesne.",
+            "Y-Wingine seahkoestidh: joekoe lea gaskoesellen goelmede kandidaatesne, jïh dïhte jarkele mah sellijste maahta eretvaeltedh."
+          ],
+          "faq": [
+            [
+              "Mij lea XYZ-Wing sudokusne?",
+              "Gaskoeselle kandidaatigujmie X, Y jïh Z, jïh göökte soejh, akte X jïh Z, mubpie Y jïh Z, mah gåabpatahkh gaskoesellem vuejnieh. Akte golme sellijste lea Z, dan åvteste Z sellijste vaaltasåvva eret mah gaajhkide golme vuejnieh."
+            ],
+            [
+              "Guktie XYZ-Wing Y-Wingeste joekehte?",
+              "Gaskoesellesne golme kandidaath göökte sijjeste, aaj Z. Dellie Z maahta gaskoesellesne årrodh, dan åvteste ajve sellh mah gaskoesellem jïh gåabpatahkide soejide vuejnieh, maehtieh Z massedh."
+            ],
+            [
+              "Man daamtaj XYZ-Wing gååvnese?",
+              "Vaenie aejkieh. Bare Sudokusne ajve Åehpies sudokuh maehtieh dam daarpesjidh, jïh jeenjemes eah daarpesjh. Bare Sudoku dam minngemosth goerede, X-Wingen, Y-Wingen jïh Swordfishen mænngan."
+            ],
+            [
+              "Gååvnese WXYZ-Wing?",
+              "Gååvnese, gaskoesellijgujmie mij njieljie kandidaath åtna, mohte Bare Sudoku dam ij nuhtjh. Fïerhte speelen sudoku maahta daan bïhkedassen uktsie teknihkigujmie galhkesovvedh."
+            ]
+          ]
+        }
+      }
+    },
+    "vro": {
+      "learnHeading": "Opi sudokut",
+      "learnText": "Olt sudokuga vahtsõnõ vai jäit rassõ mõistatusõ man kinni? Kats juhendit seletäseq reegliq ja kõik lahendamisõ tehnikaq, midä vihjeq tarvitasõq, egäüts päris näüdüsega.",
+      "howToLink": "Kuis sudokut mängitäs",
+      "techniquesLink": "Sudoku lahendamisõ tehnikaq",
+      "labels": {
+        "howTo": "Kuis mängitäs",
+        "techniques": "Tehnikaq",
+        "play": "Mängi sudokut",
+        "prev": "Mineväne tehnika",
+        "next": "Järgmäne tehnika",
+        "all": "Kõik tehnikaq",
+        "example": "Näüdüs",
+        "steps": "Samm-sammult",
+        "when": "Kunas tarvitaq",
+        "spot": "Kuis ärq tundaq",
+        "mistakes": "Hariliguq viaq",
+        "inGame": "Bare Sudokun",
+        "level": "Vaia alostõn tasõst: {level}",
+        "hint": "Mängun ütles vihje: {text}",
+        "legend": "Paksuq numbriq ommaq annõt, sinidseq numbriq ommaq lahendamisõ aigu paika pant, väikuq numbriq ommaq kandidaadiq. Vällä tõstõt ruuduq tegeseq mustri, läbi kriipsutõt kandidaadiq võetas är ja ringi seen kandidaat om number, miä tulõ paika panda.",
+        "notation": "Ruuduq kirotõdas kujol r3c7: 3. rida, 7. tulp. Riaq luetas ülevält, tulbaq vasakult ja kastiq 1 kooni 9 ülevält vasakult, rida ria perrä.",
+        "row": "{n}. rida",
+        "column": "{n}. tulp",
+        "box": "{n}. kast",
+        "elimItem": "{d} ruudust {cell}",
+        "regions": "5. rida, 5. tulp ja 5. kast mõistatusõ alostusõn",
+        "firstMove": "Üksik kandidaat: {cell} saa olla õnnõ {d}",
+        "breadcrumb": "Navigatsioon"
+      },
+      "howTo": {
+        "title": "Kuis sudokut mängitäs: reegliq, ruudustik, edimädseq käügiq",
+        "description": "Opi sudokut mängmä: reegliq, riaq, tulbaq ja kastiq, mille egäl mõistatusõl om üts lahendus, kuis märkmit tarvitaq ja kuis edimädseq käügiq tetä.",
+        "h1": "Kuis sudokut mängitäs",
+        "summary": "Sudoku om loogikamõistatus 9×9 ruudustigu pääl. Täüdä egä tühi ruut numbriga 1 kooni 9 nii, et egän rian, egän tulban ja egän 3×3 kastin olõs egä number täpsähe üts kõrd. Osa numbriid om alostusõn annõt; ülejäänüq tulõtat sa esi, üts kimmäs ruut kõrraga, ja arvama ei piäq sa kunagi. Taa juhend seletäs ruudustikku, reeglit, üte lahendusõ põhimõtõt, märkmit ja kerget plaani, kuis edimädseq käügiq tetä. Kõkkõ saat harjutaq [Bare Sudokun](play), miä om ilma rahalda ja kon vihjeq loogikat seletäseq.",
+        "sections": [
+          {
+            "h": "Miä ommaq sudoku reegliq?",
+            "p": [
+              "Reeglit om õnnõ kolm ja nä ommaq üts ja sama reegel, kaet kolmõst poolõst: egän rian piät olõma numbriq 1 kooni 9, egän tulban piät olõma numbriq 1 kooni 9 ja egän 3×3 kastin piät olõma numbriq 1 kooni 9. Tuuperäst ei saaq üts number kunagi olla kats kõrda üten rian, tulban vai kastin.",
+              "Annõt numbriq, miä ommaq paksu kirjaga, ei muutuq. Su tüü om tühjäq ruuduq täütäq. Arvutamist ega järekõrda ei olõq: numbriq ommaq õnnõ üheksä eri märki. Numbridõ asõmal sobisõq ka täheq vai kujoq ja midägi ei muutuq."
+            ]
+          },
+          {
+            "h": "Kuis om ruudustik kokko pant?",
+            "p": [
+              "Ruudustikun om 81 ruutu 9 rian ja 9 tulban. Paksuq jooneq jaotasõq tuu üheksäs 3×3 kastis. Egä ruut om täpsähe üten rian, üten tulban ja üten kastin, ja naaq kolm rühmä ommaq ruudu üksusõq. Ülejäänüq 20 ruutu, miä jagasõq ruuduga üksust, ommaq timä naabriq; ruutu pant number võtt tuu numbri kõigist 20 naabrist är.",
+              "Ruuduq kirotõdas kujol r3c7: 3. rida, 7. tulp. Riaq luetas ülevält, tulbaq vasakult ja kastiq 1 kooni 9 ülevält vasakult, rida ria perrä. Taad kirotamisõ viisi tarvitõdas egän tehnikajuhendin ja tuud tasus oppi: r5c5 om ruudustigu keskpaik."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Mille om egäl sudokul täpsähe üts lahendus?",
+            "p": [
+              "Kõrraligul sudokul om üts lahendus ja just tuu pand loogika tüüle. Ku sa saat näüdätä, et number ei saaq üksusõn kohegi muialõ minnä, piät tä minemä tuu ütte ruutu, miä om viil tühi, selle et lahendus om olõman ja tä om ainuma. Ku mõistatusõl om kats lahendust, sis ütski arotus näid lahki ei aaq ja ütel hetkel tulõ sul arvama naada.",
+              "Bare Sudoku tege egä mõistatusõ su masinan valmis ja kaes perrä, et tuul om täpsähe üts lahendus ja et timä loogiline lahendaja saa tuu valit tasõ tehnikidõga lõpuni. Nii et ku sa jäät kinni, om alati olõman järgmäne samm, midä löüdä, ja vihje näütäs tuud."
+            ]
+          },
+          {
+            "h": "Kuis sudokut alostaq?",
+            "p": [
+              "Alosta sääl, kon valikit om kõgõ veidemb. Taa järekõrd tüütäs egal tasõl:"
+            ],
+            "list": [
+              "Võta number, miä om joba mitu kõrda ruudustigun, ütleme kuus vai säidse kõrda, ja otsi kastiq, kost tä viil puudus. Sagõhõhe jääs kastin timä jaos õnnõ üts ruut: tuu om [käkit üksik](hidden-single).",
+              "Otsi ruutõ, mille ümbre om tihti numbrit. Ku ruudu rian, tulban ja kastin om kokko katõssa eri numbrit, jääs ruudulõ õnnõ üts kandidaat: tuu om [üksik kandidaat](naked-single). Kõgõ parõmb om kaiaq ruutõ, miä ommaq pia täüs rian vai kastin.",
+              "Egä paika pant number võtt kandidaadi 20 naabrist är, nii et kae noid naabrit kõrraga perrä. Üksiguq tulõvaq sagõhõhe ütstõõsõ perrä.",
+              "Ku kerget käüku inämb ei olõq, kirota märkmeq: egä tühjä ruudu kandidaadiq. Sõs otsi numbrit, minka kandidaadiq kastin ommaq üte ria vai tulba pääl ([lukun kandidaadiq](locked-candidates)), vai kats ruutu, kon om täpsähe samaq kats kandidaati ([paljas paar](naked-pairs)).",
+              "Egä kistutamisõ perän käü tagasi üksigidõ mano. Ka Asjatundja mõistatusõq lahendõdas suurõmbalt jaolt üksigidega; keerolinõ tehnika tege õnnõ tii järgmädsele vallalõ."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Miä ommaq märkmeq ja kunas näid tarvitaq?",
+            "p": [
+              "Märkmeq (ütelda ka pliiatsimärgiq vai kandidaadiq) ommaq väikuq numbriq, midä sa kirotat tühjä ruutu, et meeldä pitäq, miä numbriq sinnä viil sobisõq. Kergen mõistatusõn om näid harva vaia; Rassõ tasõst pääle ommaq nä väega vaia, selle et sääntseq tehnikaq nigu paariq, X-Wing ja Y-Wing puudutasõq kandidaatõ, mitte paika pant numbriid.",
+              "Hoia märkmeq täpseq: ku panõt numbri paika, kistuta tuu numbri märge kõigist 20 naabrist. Bare Sudokun käü taa esiperäst, ja Täüdä märkmeq kirotas üte putmisõga egä kandidaadi egä tühjä ruutu, nii et saat alostaq tävve ja õigõ kandidaatõ hulgaga. Märge om fakt, mitte arvaminõ: tuu tähendäs, et tuu numbri vasta ei olõq viil midägi."
+            ]
+          },
+          {
+            "h": "Midä tetä, ku jäät kinni?",
+            "p": [
+              "Edimält kae perrä põhiasjaq: egä pia täüs rida, tulp ja kast om üksigidõ läte. Sõs kae, et märkmeq olõsõq täüs, selle et puudujä kandidaat käkis mustriid ja vana kandidaat tege võltsit mustriid. Sõs käü [tehnikaq](techniques) läbi rassusõ perrä: lukun kandidaadiq, paariq ja kolmiguq, X-Wing, Y-Wing, Swordfish ja XYZ-Wing. Egäütel om uma leht päris näüdüsega.",
+              "Ku midägi ei avitaq, võta vihje. Bare Sudokun kaes vihje edimält perrä, kas mõni paika pant number om võlss, sõs löüd järgmädse ruudu, midä saa loogikaga täütä, ja nimetäs tehnika, nii et opit midägi ka sõs, ku vihjet tarvitat. Numbri paika pandmisõs putu vihjet vahtsõst."
+            ]
+          },
+          {
+            "h": "Kuis Bare Sudokun numbriq sisse panda?",
+            "p": [
+              "Putu ruutu, sõs numbrit. Vai putu edimält numbrit: tuu lätt lukku ja egä ruut, midä putut, saa tuu numbri; nii lätt kõgõ kipõmbalt, ku sama number tulõ panda kuvvõndat, säidsmendät ja katõssandat kõrda. Lukust vallalõ pästmises putu numbrit vahtsõst. Nupp Märkmeq pand pliiatsimärgiq käümä, Kistuta tege ruudu tühjäs, Tagasi võtt egä käügi tagasi ja viaq märgitäs verrevägä, ku sa tuud menüün kinni ei panõq.",
+              "Klaviatuuril liigu nuuliklahvõga, kirota number klahvõga 1 kooni 9, kistuta klahviga Backspace, N pand märkmeq käümä, U võtt tagasi, H and vihje, F täüdäs märkmeq ja Escape tege menüü vallalõ. Mäng salvõstas hindä esi, tüütäs võrguldaq ja tan ei olõq reklaamõ ega kontot."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Kas sudokun piät kunagi arvama?",
+            "Kõrraligun mõistatusõn ei. Egä Bare Sudoku mõistatusõl om täpsähe üts lahendus ja om kaet perrä, et tuu om lahendõtav õnnõ loogikaga, uma tasõ tehnikidõ abiga. Ku tundus, et piät arvama, puudus su märkmist mõni kandidaat vai uutas mõni tehnika löüdmist."
+          ],
+          [
+            "Kas number või olla üten rian, tulban vai kastin kats kõrda?",
+            "Ei. Tuu omgi kogo reegel: egän üheksän rian, üheksän tulban ja üheksän kastin om egä number 1 kooni 9 täpsähe üts kõrd. Ku kats ütesugust numbrit ommaq üten üksusõn, om vähämbält üts näist võlss."
+          ],
+          [
+            "Mink poolõst eräneseq Kerge, Keskmäne, Rassõ ja Asjatundja?",
+            "Tasõ määräs tuu, miä tehnikit mõistatus nõud. Kerge ja Keskmäne lahendõdas õnnõ üksigidega ja Kerge nakkas pääle vähämbält 38 annõt numbriga. Rassõ nõud lukun kandidaatõ vai paarõ ja kolmikit. Asjatundja nõud X-Wingi, Y-Wingi, Swordfishi vai XYZ-Wingi."
+          ],
+          [
+            "Kas märkmeq om parõmb täütä egän ruudun vai õnnõ mõnõn?",
+            "Rassõ ja Asjatundja mõistatusõn täüdä kõik: mustriq nigu paariq, X-Wing ja Y-Wing tulõvaq nätäväle õnnõ sõs, ku kõik kandidaadiq ommaq kirja pant. Kergel ja Keskmädsel tasõl ommaq märkmeq vapa valik ja inämbüs mängjit otsis õnnõ üksikit."
+          ],
+          [
+            "Kui kavva üts sudoku aigu võtt?",
+            "Kerge mõistatus võtt mõnõ minuti; Asjatundja mõistatus või võtta katskümmend minutit vai inämb, kuis kipõlt sa keerolidsõ mustri ärq tunnõt. Bare Sudoku näütäs taimerit, pand tuu kinni, ku menüü om vallalõ, ja edetabelit tan ei olõq, nii et mängi uma tempoga."
+          ],
+          [
+            "Kas sudoku nõud arvutamist?",
+            "Ei. Numbriq ommaq õnnõ sildiq; midägi kokko ei arvutõdaq. Numbridõ asõmal sobisõq ka muuq üheksä märki ja tuuperäst om sudoku loogikamõistatus, mitte numbrimõistatus."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku lahendamisõ tehnikaq: seletüseq ja näüdüseq",
+        "description": "Kõik üheksä sudoku lahendamisõ tehnikat, üksigust kandidaadist kooni Swordfishi ja XYZ-Wingini, Bare Sudoku vihjide järekõrran, egäüts päris näüdüsega.",
+        "h1": "Sudoku lahendamisõ tehnikaq",
+        "intro": [
+          "Egä sudoku saa ärq lahendõdaq õnnõ mõnõ loogilidsõ tehnikaga. Taa ülevaade nimetäs üheksä tehnikat, midä tarvitasõq Bare Sudoku lahendaja ja timä vihjeq, tuu järekõrra perrä, kuis lahendaja näid proovis: edimält üksiguq, sõs kistutamisõq üte üksusõ seen, sõs mustriq, miä ulatusõq üle mitmõ ria ja tulba. Egäl tehnikal om uma leht, kon om seletüs, kuis tuud ärq tundaq, päris näüdüs tett mõistatusõst ja hariliguq viaq.",
+          "Mõistatusõ tasõ määräs kõgõ rassõmb tehnika, midä tuu nõud. Kerge ja Keskmädse mõistatusõq nõudvaq õnnõ üksikit, Rassõq mõistatusõq nõudvaq lukun kandidaatõ vai paarõ ja kolmikit ja Asjatundja mõistatusõq vähämbält üte kala vai tiiva. Olõ-i vahet, miä tasõ: suurõmba tüü tegevä ärq üksiguq; keerolinõ tehnika võtt är kandidaadi vai kats ja sõs lääväq jälq üksiguq edesi."
+        ],
+        "faq": [
+          [
+            "Mink järekõrran sudoku tehnikit proovi?",
+            "Kergemb edimält: üksik kandidaat, käkit üksik, lukun kandidaadiq, paljaq paariq ja kolmiguq, käkit paariq ja kolmiguq, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku proovis näid täpsähe taan järekõrran ja vihje nimetäs alati kõgõ kergembä tehnika, miä edesi avitas."
+          ],
+          [
+            "Kas sudoku lahendamisõs ommaq kõik naaq tehnikaq vaia?",
+            "Kerge ja Keskmädse mõistatusõ jaos piisas üksigidest. Rassõq mõistatusõq tuuvaq mano lukun kandidaadiq ja alamhulgaq. Asjatundja mõistatusõq nõudvaq vähämbält üte kala vai tiiva, a harilikult õnnõ üts vai kats kõrda egän mõistatusõn."
+          ],
+          [
+            "Kas om ka XYZ-Wingist rassõmbit tehnikit?",
+            "Jah, näüdüses kettiq, ainulaadsusõ testiq ja sundvõrguq. Bare Sudoku ei tiiq mõistatuisi, miä näid nõudvaq, nii et egä mängu mõistatusõ saa lõpõtaq taa lehe üheksä tehnikaga."
+          ],
+          [
+            "Miä om kandidaat?",
+            "Number, miä või viil tühjä ruutu minnä, selle et timä rian, tulban vai kastin ei olõq viil midägi, miä tuud vällä kistutanuq. Mängu märkmeq ommaq kandidaadiq. Egä tehnika, miä om üksigist keerolidsõmb, arotas kandidaatõ pääle, nii et hoia märkmeq täüs ja täpseq."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Üksik kandidaat",
+          "title": "Üksik kandidaat sudokun: üte kandidaadiga ruut",
+          "description": "Üksik kandidaat (naked single) om tühi ruut, kohe sobis õnnõ üts number. Opi näid kipõlt löüdmä: päris näüdüs samm sammult ja hariliguq viaq.",
+          "h1": "Üksik kandidaat (naked single)",
+          "summary": "Üksik kandidaat om tühi ruut, kon om täpsähe üts kandidaat: ülejäänüq katõssa numbrit ommaq joba timä rian, tulban vai kastin. Tuu ainuma number piät minemä sinnä. Taa om sudoku kõgõ kergemb tehnika, tuu, midä sa kõgõ sagõhõmbahe tarvitat, ja tuu, minkast Bare Sudoku vihje ütles „Tan om õnnõ üts kandidaat“.",
+          "when": [
+            "Alati. Üksiguq kandidaadiq tulõvaq vällä edimädsest käügist viimätseni, egal tasõl. Kerge ja Keskmädse mõistatusõn ommaq nä kuun käkit üksigidega ainuma tehnika, midä vaia om. Rassõmban mõistatusõn jätt egä keerolidsõ tehnika kistutaminõ harilikult maaha üksigu kandidaadi, nii et kae näid egä sammu perän."
+          ],
+          "spot": [
+            "Kae ruutõ, minka naabrin om paljo numbrit: ruut rian, kon om joba säidse numbrit, vai ruut, minka rida, tulp ja kast katasõq kokko katõssa eri numbrit. Ku märkmit ei olõq, lugõ kokko numbriq, midä ruudust nät. Ku märkmeq ommaq kirja pant, om üksik kandidaat lihtsähe ruut, kon om nätä üts kandidaat; tuuperäst om näid pääle Täüdä märkmeq putmist kerge löüdä."
+          ],
+          "examples": [
+            {
+              "h": "Näüdüs",
+              "steps": [
+                "Kae ruutu {cell}. Tä om tühi, nii et pane kirja kõik numbriq, miä ommaq joba paika pant timä rian, tulban ja kastin.",
+                "{row}. rian om {rowDigits}. {col}. tulban om {colDigits}. {box}. kastin om {boxDigits}.",
+                "Kokko kistutasõq nä vällä kõik numbriq pääle {d}, nii et ruudun {cell} om perrä õnnõ kandidaat {d}.",
+                "Kirota {d} ruutu {cell}. Sõs kae, kas vahtsõnõ number tege tuusama ria, tulba vai kasti seen vahtsõ üksigu."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Õnnõ ria vai õnnõ kasti kaeminõ. Katõssa vällä jäetüt numbrit tulõvaq harilikult kõigist kolmõst üksusõst kuun.",
+            "Unõhtaminõ, et vast paika pant number võtt kandidaatõ är ka uma 20 naabri käest; vahtsõq üksiguq kandidaadiq tulõvaq rutto pääle egä paigutamist.",
+            "Üksigu kandidaadi ja käkit üksigu sassi aaminõ: üksigu kandidaadi man om ruudun perrä üts kandidaat, käkit üksigu man om numbrilõ üksusõn perrä üts ruut."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun üksik kandidaat?",
+              "Tühi ruut, kon om täpsähe üts kandidaat. Timä rian, tulban ja kastin om joba paika pant katõssa eri numbrit, nii et üheksäs number om ainuma, miä sobis."
+            ],
+            [
+              "Mille kutsutas tuud inglüse kiilen naked ehk paljas?",
+              "Selle et ku märkmeq ommaq kirja pant, om ainuma kandidaat ruudun otsõ nätä; midägi tuud ei käkiq. Käkit üksik om tõisi kandidaatõ vaihel ja timä löüdät, ku kaet numbrit, mitte ruutu."
+            ],
+            [
+              "Kas mõistatusõ lahendamisõs piisas üksigist kandidaatõst?",
+              "Mitmõ Kerge mõistatusõ jaos piisas, a inämbüs nõud ka käkit üksikit. Bare Sudoku pidä Kerget ja Keskmäst mõistatust lahendõtavas mõlõmbat sorti üksigidega; Rassõ ja Asjatundja mõistatusõq nõudvaq vähämbält üte tehnika viil."
+            ],
+            [
+              "Kas vihje näütäs üksikit kandidaatõ?",
+              "Jah. Ku järgmäne paigutus om üksik kandidaat, valis vihje ruudu ja ütles numbriga kuun „Tan om õnnõ üts kandidaat“. Numbri paika pandmisõs putu vihjet vahtsõst."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Käkit üksik",
+          "title": "Käkit üksik sudokun: numbri ainuma kotus",
+          "description": "Käkit üksik (hidden single) om ria, tulba vai kasti ainuma ruut, kohe number viil sobis. Opi näid löüdmä, kaedõn kõrraga õnnõ üte numbri pääle.",
+          "h1": "Käkit üksik (hidden single)",
+          "summary": "Käkit üksik om number, minkal om rian, tulban vai kastin perrä õnnõ üts võimalik ruut, olgu tuu ruudun nätä ka tõisi kandidaatõ. Selle et üksus piät tuud numbrit sisaldama, lätt number sinnä. Bare Sudoku vihje teedüstäs tuud nii: „Ainuma kotus 5 jaos taan riän“, vai tulban vai kastin.",
+          "when": [
+            "Egä kõrd, ku mõni number om joba kavvõlõ joudnuq: ku number om joba viis vai kuus kõrda paika pant, om ülejäänüin kastin timä jaos veidü ruumi ja järgmäne käük om sagõhõhe käkit üksik. Käkit üksiguq ommaq Kerge ja Keskmädse mõistatusõ põhitehnika ja jääväq egal tasõl kõgõ tähtsämbäs tüüriistas."
+          ],
+          "spot": [
+            "Kae kõrraga üte numbri pääle. Võta number, otsi kast, kon tuud ei olõq, ja kriipsuta läbi kõik tuu kasti ruuduq, miä ommaq tuu numbri mõnõ paika pant kopiiga üten rian vai tulban. Ku perrä jääs üts ruut, olt löüdnüq käkit üksigu. Niisama saat kaiaq ka egä rita ja tulpa. Mängun putu paika pant numbrit: kõik timä kopiiq tõstõtas vällä, nii et tühjäq ruuduq paistusõq silmä."
+          ],
+          "examples": [
+            {
+              "h": "Näüdüs",
+              "steps": [
+                "{box}. kastin ei olõq viil numbrit {d}, nii et üts timä tühjist ruudust piät tuu saama. Tühjäq ruuduq ommaq {empties}.",
+                "Egän näist, pääle ruudu {cell}, ei sobiq {d}, selle et tuusama ria vai tulba seen om joba {d} paika pant; nii et {d} ei olõq sääl kandidaat.",
+                "Nii jääs {cell} numbri {d} ainumas kotussõs {box}. kastin. Kirota {d} sinnä, olgu ruudun {cell} viil nätä tõisi kandidaatõ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Numbri paika pandminõ ruutu, miä om õnnõ arvatavalt õigõ: kae läbi üksusõ kõik tõõsõq tühjäq ruuduq, mitte õnnõ silmännähtäväq.",
+            "Käkit üksigu märkämäldä jätmine, selle et ruudun om nätä mitu kandidaati. Tõõsõq kandidaadiq ei olõq tähtsäq; tähtsä om tuu, et numbrilõ ei olõq üksusõn muud kotust.",
+            "Õnnõ kastõ läbi kaeminõ. Riaq ja tulbaq andvaq käkit üksikit sama sagõhõhe, kõgõ inämb lõpu poolõ."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun käkit üksik?",
+              "Number, miä saa minnä õnnõ ütte ria, tulba vai kasti ruutu. Üksus piät tuud numbrit sisaldama, nii et ruut om otsustõt, olgu tuul viil tõisi kandidaatõ."
+            ],
+            [
+              "Mink poolõst erines käkit üksik üksigust kandidaadist?",
+              "Üksigu kandidaadi man om küsümüs ruudun: tan om perrä üts kandidaat. Käkit üksigu man om küsümüs numbrin: tuul om üksusõn perrä üts ruut. Mõlõmbaq pandvaq numbri kimmähe paika."
+            ],
+            [
+              "Kumb om kergemb löüdä?",
+              "Ku märkmit ei olõq, om käkit üksikit harilikult kergemb löüdä, selle et sa saat ruudustigu läbi kaiaq üts number kõrraga. Ku kõik märkmeq ommaq kirja pant, ommaq üksiguq kandidaadiq kõgõ kergembäq, selle et üte kandidaadiga ruut paistus silmä."
+            ],
+            [
+              "Kuis vihje käkit üksikut kirjeldäs?",
+              "Kujol „Ainuma kotus“ numbri jaos taan rian, taan tulban vai taan kastin, ja ruut om valit. Numbri paika pandmisõs putu vihjet vahtsõst."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Lukun kandidaadiq",
+          "title": "Lukun kandidaadiq sudokun: näütämine ja hõivaminõ",
+          "description": "Lukun kandidaadiq: ku numbri kandidaadiq kastin ommaq üten rian vai tulban, vai vastapite, kistutõdas number muialt. Kats päris näüdüst.",
+          "h1": "Lukun kandidaadiq (locked candidates)",
+          "summary": "Lukun kandidaadiq om edimäne tehnika, miä numbri paika pandmisõ asõmal võtt kandidaatõ är. Tuul om kats vormi. Näütämine: kastin ommaq kõik numbri kandidaadiq üten rian vai tulban, nii et number kistutõdas tuu ria vai tulba ülejäänüst jaost. Hõivaminõ: rian vai tulban ommaq kõik numbri kandidaadiq üten kastin, nii et number kistutõdas tuu kasti ülejäänüst jaost. Bare Sudoku vihje panõ paigutusõlõ, miä taa tehnika võimalikus tege, sildi „Lukun kandidaadiq“.",
+          "when": [
+            "Ku Rassõn mõistatusõn saavaq üksiguq otsa, proovi edimält taad. Tuu nõud, et märkmeq olõsõq täüs vähämbält uuritava numbri jaos. Lukun kandidaadiq ommaq sagõhõq: inämbüs Rassõ tasõ mõistatusõst nõud näid ja Asjatundja mõistatusõq tarvitasõq näid suurõmbidõ mustridõ vaihel."
+          ],
+          "spot": [
+            "Näütämise jaos kae egä kasti ja egä numbrit, miä säält puudus: ku tuu numbri kandidaatruuduq ommaq üten rian vai tulban, kae, kas sama number om kandidaadin ka edesi tuu ria vai tulba pääl kastist väläh. Hõivamisõ jaos kae piteh rita vai tulpa: ku numbri kandidaadiq ommaq kõik üte kasti seen, saa tuu kasti ülejäänü jao puhtas tetä. Mängun putu numbriklahvi, et kõik timä kandidaadiq vällä tõsta; katõ vai kolmõ vällä tõstõt märkme joon üte kasti seen omgi muster."
+          ],
+          "examples": [
+            {
+              "h": "Näütämine",
+              "steps": [
+                "{box}. kastin om numbril {d} õnnõ naaq kandidaatruuduq: {cells}. Kõik nä ommaq {row}. rian.",
+                "{box}. kast piät saama numbri {d}, nii et {row}. ria {d} om kimmähe {box}. kastin, olgu tä ükskõik minkan naist ruudust.",
+                "{row}. rida ei saaq sisaldaq tõist numbrit {d}, nii et kistuta {d} noist {row}. ria ruutõst, miä ommaq kastist väläh: {elim}."
+              ]
+            },
+            {
+              "h": "Hõivaminõ",
+              "steps": [
+                "{row}. rian om numbril {d} kotust õnnõ {cells} ja kõik naaq ruuduq ommaq {box}. kastin.",
+                "{row}. rida piät sisaldama numbrit {d}, nii et {row}. rida hõivas {box}. kasti numbri {d}. {box}. kasti tõõsõq ruuduq ei saaq numbrit {d} sisaldaq.",
+                "Kistuta {d} ruutõst {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Numbri kistutaminõ näütämise man kasti seest, mitte väläh, vai hõivamisõ man vastapite. Kistutamisõq lääväq alati ruutõlõ, miä ommaq rian vai tulban, a mitte kastin, vai kastin, a mitte rian vai tulban.",
+            "Reegli tarvitaminõ, ku kandidaadiq ommaq kasti katõ ria pääl. Kõik numbri kandidaatruuduq kastin piät olõma üten rian vai tulban.",
+            "Unõhtaminõ otsiq üksikut, miä kistutaminõ tege. Lukun kandidaadiq pandvaq harva esi numbri paika; nä valmistasõq ette üksigu."
+          ],
+          "faq": [
+            [
+              "Miä ommaq sudokun lukun kandidaadiq?",
+              "Numbri kandidaadiq, miä ommaq kasti ja ria vai tulba ristmisõ kotusõn. Selle et kast vai tuu rida vai tulp piät numbri saama just taan ristmisõn, saa numbri kistutaq ria vai tulba ülejäänüst jaost vai kasti ülejäänüst jaost."
+            ],
+            [
+              "Mink poolõst erines näütämine hõivamisõst?",
+              "Näütämine nakkas kastist: numbri kandidaadiq kastin näütäseq piteh üte ria vai tulba, nii et number kistutõdas tuu ria vai tulba ülejäänüst jaost. Hõivaminõ nakkas riast vai tulbast: timä kandidaadiq tuu numbri jaos ommaq kõik üten kastin, nii et rida vai tulp hõivas numbri ja tuu kistutõdas kasti ülejäänüst jaost."
+            ],
+            [
+              "Kas lukun kandidaatõ kutsutas ka ristmisõ kistutamisõs?",
+              "Jah. Tõõsõq nimeq ommaq hõivamisõ vormi jaos kasti ja ria vähendämine ning näütämise vormi jaos näütäjäq paariq vai näütäjäq kolmiguq. Bare Sudoku tarvitas mõlõmba jaos üte nime."
+            ],
+            [
+              "Minkal tasõl ommaq lukun kandidaadiq vaia?",
+              "Rassõ. Mõistatus, miä nõud lukun kandidaatõ vai alamhulkõ, a midägi rassõmbat mitte, loetas Rassõs; Asjatundja mõistatusõq nõudvaq viil kala vai tiiba."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Paljaq paariq ja kolmiguq",
+          "title": "Paljaq paariq ja kolmiguq sudokun: kuis nä tüütäseq",
+          "description": "Paljaq paariq ja kolmiguq: kats vai kolm ruutu üten üksusõn, kon ommaq samaq kats vai kolm kandidaati. Opi näid märkämä ja tiiä, midä kistutaq.",
+          "h1": "Paljaq paariq ja kolmiguq (naked pairs, naked triples)",
+          "summary": "Paljas paar om kats ruutu üten rian, tulban vai kastin, kon ommaq täpsähe samaq kats kandidaati. Naaq kats numbrit piät minemä noihe kattõ ruutu, nii et näid saa kistutaq üksusõ kõigist tõisist ruutõst. Paljas kolmik om sama mõtõ kolmõ ruudu ja kolmõ numbriga; egän ruudun või olla nätä kats näist vai kõik kolm. Bare Sudoku vihje panõ tuust tulõvalõ paigutusõlõ sildi „Paar vai kolmik“.",
+          "when": [
+            "Ku märkmeq ommaq täüs ja üksiguq ja lukun kandidaadiq ommaq otsan. Paljaq paariq ommaq Rassõn mõistatusõn väega sagõhõq, paljaq kolmiguq harvõmbaq. Mõlõmbit tasus kaiaq egän üksusõn, kon om viil viis vai inämb tühjä ruutu."
+          ],
+          "spot": [
+            "Otsi ruutõ, kon om õnnõ kats kandidaati, ja otsi samast üksusõst tõõnõ ruut tuusama katõ kandidaadiga. Kolmikõ jaos kae üksust, kon om mitu katõ ja kolmõ kandidaadiga ruutu, ja kae, kas kolm näist tarvitasõq kokko õnnõ kolmõ eri numbrit. Täpsähe samma kandidaatõga ruutõ om kerge nätä, ku märkmeq ommaq kirja pant; mängun tege Täüdä märkmeq tuu üte putmisõga."
+          ],
+          "examples": [
+            {
+              "h": "Paljas paar",
+              "steps": [
+                "{unit} sisaldas ruutõ {cellA} ja {cellB}, kon ommaq täpsähe samaq kats kandidaati: {d1} ja {d2}.",
+                "Üts näist piät olõma {d1} ja tõõnõ {d2}. Mi ei tiiäq, kumb om kumb, a naaq kats ruutu tarvitasõq mõlõmba numbri ärq.",
+                "Nii et {unit} ei saaq üten tõisen ruudun sisaldaq numbrit {d1} ega {d2}. Kistuta {elim}."
+              ]
+            },
+            {
+              "h": "Paljas kolmik",
+              "steps": [
+                "{unit} sisaldas kolm ruutu, minka kõik kandidaadiq tulõvaq samast kolmõst numbrist {digits}: {cells}.",
+                "Naaq kolm numbrit piät mõnõ järekõrra perrä täütmä naaq kolm ruutu. Ruudun ei piäq olõma nätä kõiki kolmõ kandidaati; tähtsä om, et ütelgi kolmõst ruudust ei olõq kandidaati väljäpoolõ taad hulka.",
+                "Väljäpoolõ naid kolmõ ruutu ei saaq {unit} sisaldaq numbrit {digits}. Kistuta {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Katõ ruudu võtminõ, kon om kats ütist kandidaati, a ka kolmas. Palja paari man piät egän ruudun olõma täpsähe naaq kats kandidaati ja midägi muud.",
+            "Numbridõ kistutaminõ paari esi ruutõst. Paar jätt uma kandidaadiq alalõ; kistutamisõq lääväq üksusõ tõisilõ ruutõlõ.",
+            "Nõudminõ, et kolmigu egän ruudun olõs nätä kõik kolm numbrit. Ruut, kon om kats kolmõst, sobis, ku ütelgi ruudul ei olõq kandidaati väljäpoolõ hulka."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun paljas paar?",
+              "Kats ruutu üten üksusõn, kon mõlõmban om täpsähe samaq kats kandidaati. Naaq kats numbrit ommaq lukun noin katõn ruudun, nii et näid saa kistutaq üksusõ ülejäänüist ruutõst."
+            ],
+            [
+              "Miä om paljas kolmik?",
+              "Kolm ruutu üten üksusõn, minka kandidaadiq ommaq kokko õnnõ kolm numbrit. Egän ruudun või näist olla kats vai kolm. Naaq kolm numbrit täütväq kolm ruutu, nii et näid saa kistutaq üksusõ tõisist ruutõst."
+            ],
+            [
+              "Kas paljas paar pand numbri paika?",
+              "Esiperäst mitte. Tä kistutas kandidaatõ ja kistutaminõ jätt harilikult maaha üksigu kandidaadi vai käkit üksigu. Bare Sudoku vihje näütäs tuud üksikut ja nimetäs tehnika, miä tuu võimalikus tekk."
+            ],
+            [
+              "Kas paljas paar või olla kõrraga kastin ja rian?",
+              "Jah. Ku katõl ruudul om ütine rida ja ütine kast, kistutas paar mõlõmban üksusõn. Bare Sudoku võtt näid ette üts üksus kõrraga."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Käkit paariq ja kolmiguq",
+          "title": "Käkit paariq ja kolmiguq sudokun: kuis näid ärq tundaq",
+          "description": "Käkit paar om kats numbrit, miä saavaq üksusõn minnä õnnõ samma kattõ ruutu, nii et noidõ ruutõ muuq kandidaadiq kaosõq. Opi näid löüdmä.",
+          "h1": "Käkit paariq ja kolmiguq (hidden pairs, hidden triples)",
+          "summary": "Käkit paar om kats numbrit, miä ommaq üten rian, tulban vai kastin kandidaadiq samman katõn ruudun ja mitte kongi muial. Naaq kats ruutu piät saama naaq kats numbrit, nii et näide kõik tõõsõq kandidaadiq saa kistutaq. Käkit kolmik tüütäs samamuudu kolmõ numbriga, miä ommaq kinni kolmõn ruudun. Pääle kistutamist om ruutõn nätä paljas paar vai kolmik. Bare Sudoku vihje panõ tuust tulõvalõ paigutusõlõ sildi „Paar vai kolmik“.",
+          "when": [
+            "Ku üksusõn om paljo kandidaatõga ruutõ ja üksiguq ommaq otsan. Käkit paariq käkväq hinnäst täüs ruutõ sisse, tuuperäst tasus näid otsiq just sääl, kon paljit paarõ ei olõq nätä. Käkit kolmiguq ommaq harvaq; Bare Sudoku kaes ka näid perrä, a inämbüs Rassõ mõistatusõst lahenõs ilma noilda."
+          ],
+          "spot": [
+            "Tüütä numbri, mitte ruudu perrä. Pane üksusõn kirja ruuduq, kohe egä puudujä number saa minnä. Ku katõl numbril om kummalgi õnnõ kats võimalikku ruutu ja naaq ommaq samaq kats ruutu, om sul käkit paar. Mängun putu numbriklahvi, et timä kandidaadiq vällä tõsta; ku kats numbrit süttüseq üksusõn samman katõn ruudun ja mitte kongi muial, omgi taa muster."
+          ],
+          "examples": [
+            {
+              "h": "Käkit paar",
+              "steps": [
+                "{unit} pakk numbrilõ {d1} ja {d2} kummalõgi õnnõ kats võimalikku ruutu ja naaq ommaq samaq kats: {cells}.",
+                "Naaq kats ruutu piät saama numbriq {d1} ja {d2}, nii et näide tõõsõq kandidaadiq ei olõq võimaligu.",
+                "Kistuta {elim}. Nüüd om naan katõn ruudun nätä paljas paar, miä või tii edesi vallalõ tetä."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Paari katõ numbri kistutaminõ paari ruutõst. Kistutõdas noidõ ruutõ tõõsõq kandidaadiq; paari numbriq jääväq.",
+            "Numbri arvõssevõtminõ, minkal om üksusõn kolmas võimalik ruut. Mõlõmbaq numbriq piät olõma kinni täpsähe katõn ruudun.",
+            "Õnnõ kastõst otsminõ. Käkit paariq tulõvaq rian ja tulban ette sama sagõhõhe."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun käkit paar?",
+              "Kats numbrit, miä saavaq üksusõn minnä õnnõ samma kattõ ruutu. Naaq ruuduq piät saama naaq numbriq, nii et näide tõõsõq kandidaadiq kistutõdas."
+            ],
+            [
+              "Mink poolõst erines käkit paar paljast paarist?",
+              "Paljas paar om nätäv: kats ruutu, kon om nätä õnnõ samaq kats kandidaati. Käkit paari kattasõq katõn ruudun liisakandidaadiq. Noidõ liisõ kistutaminõ tege käkit paarist palja paari."
+            ],
+            [
+              "Miä om käkit kolmik?",
+              "Kolm numbrit, miä ommaq kinni üksusõ kolmõn ruudun. Egä number ei piäq olõma kõigin kolmõn ruudun; tähtsä om, et ütelgi kolmõst numbrist ei olõq kandidaati väljäpoolõ naid ruutõ."
+            ],
+            [
+              "Kas vihje tege vahet käkit ja palja paari vaihel?",
+              "Ei. Bare Sudoku löüd mõlõmbaq ja panõ tuust tulõvalõ paigutusõlõ sildi „Paar vai kolmik“. Taan juhendin ommaq nä eräle, selle et näid löütäs eri muudu."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing sudokun: kuis taa tehnika tüütäs",
+          "description": "X-Wing: ku numbril om katõn rian täpsähe kats kandidaatruutu samman katõn tulban, kistutõdas tä noidõ tulpõ ülejäänüst jaost. Päris näüdüs.",
+          "h1": "X-Wing",
+          "summary": "X-Wing om muster, kon om üts number ja neli ruutu ristküliku nulkõn. Ku numbril om katõst riast kummaski täpsähe kats kandidaatruutu ja naaq ruuduq ommaq samman katõn tulban, piät number olõma ristküliku katõn tõõnõtõõsõ vastan olõvan nulgan. Tuuperäst saa tuu kistutaq noidõ katõ tulba kõigist tõisist ruutõst. Sama tüütäs ka tulpõga riä asõmal. Taa om Bare Sudoku edimäne Asjatundja tasõ tehnika.",
+          "when": [
+            "Ku üksiguq, lukun kandidaadiq ja alamhulgaq ommaq otsan. X-Wing om kõgõ sagõhõmb Asjatundja muster ja tulõ sagõhõhe ette, ku numbril om veidü kandidaatõ perrä, harilikult sõs, ku neli kooni kuus timä kopiit om joba paika pant. Taa nõud uuritava numbri jaos täüs märkmit."
+          ],
+          "spot": [
+            "Vali number ja otsi rida, kon tuul om täpsähe kats kandidaatruutu. Ku kats sääntsit rida tulõvaq samman katõn tulban, kae noid tulpõ numbri tõisi kandidaatõ perrä: naaq ommagi kistutamisõq. Sõs kõrda sama nii, et alussõs ommaq tulbaq. Mängun putu numbriklahvi: kõik tuu numbri kandidaadiq tõstõtas vällä ja nelä vällä tõstõt märkme ristkülikku om kerge nätä."
+          ],
+          "examples": [
+            {
+              "h": "Näüdüs",
+              "steps": [
+                "Numbril {d} om {r1}. rian täpsähe kats kandidaatruutu ja {r2}. rian kah täpsähe kats ja naaq ommaq samman katõn tulban ({c1} ja {c2}): {cells}.",
+                "{r1}. rida pand uma {d} kas {c1}. vai {c2}. tulpa ja {r2}. rida uma {d} tõistõ näist. Egäl juhul saa {c1}. ja {c2}. tulp kumbki naist katõst riast üte numbri {d}.",
+                "Nii et {d} ei saaq olla {c1}. ja {c2}. tulban kongi muial. Kistuta {d} ruutõst {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ria tarvitaminõ, kon numbril om kolm kandidaatruutu. Egän alussõ rian piät olõma täpsähe kats ja mõlõmbaq piät olõma katõn ütitsen tulban.",
+            "Numbri kistutaminõ riäst, mitte tulbast. Ku alussõs ommaq riaq, kistutõdas tulban, ja vastapite.",
+            "Tagurpidi variandi unõhtaminõ. X-Wing, miä om tulpõ pääl, kistutas numbri riäst."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun X-Wing?",
+              "Number, minkal om katõst riast kummaski täpsähe kats kandidaatruutu samman katõn tulban. Number om ristküliku katõn vastastikku nulgan, nii et tuu kistutõdas katõ tulba ülejäänüst jaost. Riä ja tulba võit vaihtaq."
+            ],
+            [
+              "Mille X-Wing tüütäs?",
+              "Kumbki katõst riast piät pandma numbri ütte katõst tulbast ja naaq kats rida ei saaq tarvitaq samma tulpa. Nii saa kumbki tulp uma numbri just naist katõst riast ja kõik tõõsõq kandidaadiq noin katõn tulban ei olõq võimaligu."
+            ],
+            [
+              "Kas X-Wing om kala?",
+              "Jah. X-Wing om kala suurusõga kats; Swordfish om kala suurusõga kolm. Bare Sudoku löüd mõlõmbaq."
+            ],
+            [
+              "Minkal tasõl X-Wingiq ette tulõvaq?",
+              "Asjatundja. Mõistatus, miä nõud X-Wingi, Y-Wingi, Swordfishi vai XYZ-Wingi, loetas Asjatundja tasõs."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing sudokun: kuis taa tehnika tüütäs",
+          "description": "Y-Wing (XY-Wing): katõ kandidaadiga keskruut ja kats tiiba, minkal om kummalgi üts timä kandidaat, kistutasõq numbri ruutõst, miä nägeväq mõlõmbat tiiba.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, midä kutsutas ka XY-Wingis, tarvitas kolm ruutu, kon egän om kats kandidaati. Keskruudul ommaq kandidaadiq X ja Y. Üts tiib näge keskruutu ja tuul ommaq X ja Z; tõõnõ tiib näge keskruutu ja tuul ommaq Y ja Z. Ükskõik, kas keskruut om X vai Y, üts katõst tiivast piät olõma Z, nii et Z saa kistutaq egäst ruudust, miä näge mõlõmbat tiiba. Bare Sudokun om taa Asjatundja tasõ tehnika.",
+          "when": [
+            "Ku mõistatusõn om mitu täpsähe katõ kandidaadiga ruutu ja ütte kala ei olõq nätä. Y-Wingiq ommaq Asjatundja mõistatusõn sagõhõq ja näid löütäs katõ kandidaadiga ruutõ perrä minnen: egäüts näist om võimalik keskruut vai tiib."
+          ],
+          "spot": [
+            "Pane kirja ruuduq, kon om täpsähe kats kandidaati. Võta egäüts näist keskruudus kandidaatõga X ja Y ja otsi timä naabridõ seast ruutu, kon om X ja mõni tõõnõ number Z, ja ruutu, kon om Y ja tuusama Z. Naaq kats ommaq tiivaq. Sõs otsi ruuduq, miä nägeväq mõlõmbat tiiba ja kon om Z. Pane tähele, et tiivaq ei piäq ütstõist nägemä."
+          ],
+          "examples": [
+            {
+              "h": "Näüdüs",
+              "steps": [
+                "Keskruudul {pivot} ommaq kandidaadiq {x} ja {y}. Tä näge ruutu {wingA}, kon om {x} ja {z}, ja ruutu {wingB}, kon om {y} ja {z}.",
+                "Ku {pivot} om {x}, kaotas {wingA} kandidaadi {x} ja tuust saa {z}. Ku {pivot} om {y}, saa ruudust {wingB} {z}. Egäl juhul om üts katõst tiivast {z}.",
+                "Ruut, miä näge mõlõmbat tiiba, ei saaq kunagi olla {z}. Kistuta {z} ruutõst {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Tiibu valminõ, miä mõlõmbaq keskruutu ei näeq. Egäl tiival piät olõma keskruuduga ütine rida, tulp vai kast.",
+            "Z kistutaminõ ruutõst, miä nägeväq õnnõ üht tiiba. Ruut, kost kistutõdas, piät nägemä mõlõmbat tiiba.",
+            "Z kistutaminõ keskruudust. Y-Wingin ei olõq keskruudul Z-i; ku om, sõs om muster XYZ-Wing, minkal ommaq tõõsõq reegliq."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun Y-Wing?",
+              "Kolm katõ kandidaadiga ruutu: keskruut, kon om X ja Y, tiib, kon om X ja Z ja miä näge keskruutu, ja tiib, kon om Y ja Z ja miä näge keskruutu. Üts tiib om alati Z, nii et Z kistutõdas ruutõst, miä nägeväq mõlõmbat tiiba."
+            ],
+            [
+              "Kas Y-Wing ja XY-Wing om üts ja tuusama?",
+              "Jah. Mõlõmbaq nimeq kirjeldäseq samma mustrit. Bare Sudoku kutsus tuud Y-Wingis."
+            ],
+            [
+              "Mille piät üts tiib olõma Z?",
+              "Ku keskruut om X, kaotas edimäne tiib X-i ja tuust saa Z. Ku keskruut om Y, saa tõõsõst tiivast Z. Keskruut om üts naist katõst, nii et üts tiib om Z."
+            ],
+            [
+              "Mitmõst ruudust Y-Wing kistutas?",
+              "Harilikult ütest vai katõst: õnnõ noist ruutõst, miä nägeväq mõlõmbat tiiba ja kon om viil Z. Tuust piisas, et tetä üksik."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish sudokun: kuis taa tehnika tüütäs",
+          "description": "Swordfish: number, miä om kolmõn rian kinni kolmõn tulban, kistutõdas noidõ tulpõ ülejäänüst jaost. Kala suurusõga kolm, seletet päris näüdüsega.",
+          "h1": "Swordfish",
+          "summary": "Swordfish om X-Wing kolmõ ria ja kolmõ tulbaga. Ku numbril om kõigin kolmõn rian kõgõ inämb kolm kandidaatruutu ja kõik naaq ruuduq ommaq samman kolmõn tulban, tarvitasõq naaq kolm rida numbri noin kolmõn tulban ärq ja numbri saa kistutaq kolmõ tulba kõigist tõisist ruutõst. Riä ja tulba võit vaihtaq. Bare Sudoku otsis Swordfishi Asjatundja mõistatusõn pääle Y-Wingi.",
+          "when": [
+            "Ku X-Wing ja Y-Wing ei avitaq. Swordfishiq ommaq harvõmbaq ku X-Wingiq ja nõudvaq numbrit, minka kandidaadiq ommaq kolmõ ria pääle hõredalt laotunuq. Nä nõudvaq tuu numbri jaos täüs ja täpsit märkmit."
+          ],
+          "spot": [
+            "Vali number ja otsi rida, kon tuul om kats vai kolm kandidaatruutu. Ku kolm sääntsit rida katasõq kokko õnnõ kolm tulpa, kae noid tulpõ numbri tõisi kandidaatõ perrä. Egäl rial ei piäq egän tulban kandidaati olõma: Swordfishin või olla kuus, säidse, katõssa vai üheksä ruutu. Mängun tõsta number timä klahviga vällä ja otsi kolm rida, minka kandidaadiq asõtasõq kolmõ tulpa."
+          ],
+          "examples": [
+            {
+              "h": "Näüdüs",
+              "steps": [
+                "Numbril {d} om kõigin kolmõn rian ({rows}) kõgõ inämb kolm kandidaatruutu ja kõik naaq ruuduq ommaq kolmõn tulban ({cols}): {cells}.",
+                "Kõik kolm rida piät pandma uma {d} ütte kolmõst tulbast ja kats rida ei saaq tarvitaq samma tulpa. Nii saavaq kolm tulpa uma {d} just naist kolmõst riast.",
+                "Kolmõn tulban {cols} ei olõq ütegi tõõsõ {d} kandidaadi jaos ruumi. Kistuta {d} ruutõst {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kõigi üheksä ruudu nõudminõ. Swordfish, minka mõnõn rian om kats kandidaati, kehtis iks, ku kolm rida katasõq õnnõ kolm tulpa.",
+            "Nelä kandidaatruuduga ria mano võtminõ. Egän alussõ rian või olla kõgõ inämb kolm, kõik kolmõ tulba seen.",
+            "Kistutaminõ alussõ riäst. Ku alussõs ommaq riaq, kistutõdas kolmõn tulban, a mitte alussõ rian."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun Swordfish?",
+              "Number, minka kandidaadiq kolmõn rian ommaq kinni kolmõn tulban. Kolm rida piät pandma numbri noihe kolmõ tulpa, egähe üte, nii et number kistutõdas noidõ tulpõ tõisist ruutõst."
+            ],
+            [
+              "Mink poolõst erines Swordfish X-Wingist?",
+              "Õnnõ suurusõ poolõst: X-Wing tarvitas kats rida ja kats tulpa, Swordfish kolm ja kolm. Arotus om sama."
+            ],
+            [
+              "Kas Swordfish nõud täpsähe üheksät ruutu?",
+              "Ei. Egän rian või olla kats vai kolm kandidaati; muster nõud õnnõ, et kolm rida kokko ei tarvitasõq inämb ku kolm tulpa."
+            ],
+            [
+              "Kas om olõman kala suurusõga neli?",
+              "Jah, Jellyfish. Bare Sudoku tuud ei tarvitaq, selle et timä mõistatusõ jaos ei olõq tuud kunagi vaia."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing sudokun: kuis taa tehnika tüütäs",
+          "description": "XYZ-Wing: kolmõ kandidaadiga keskruut ja kats tiiba, minkal om üts ütine number, kistutasõq tuu egäst ruudust, miä näge kõiki kolmõ. Päris näüdüs.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing om Y-Wing, minka keskruudul om kolm kandidaati. Keskruudul ommaq X, Y ja Z; üts tiib näge keskruutu ja tuul ommaq X ja Z, tõõnõ näge keskruutu ja tuul ommaq Y ja Z. Üts kolmõst ruudust piät olõma Z, nii et Z saa kistutaq egäst ruudust, miä näge kõiki kolmõ. Selle et keskruut esi või olla Z, piät ruut, kost kistutõdas, nägemä nii keskruutu ku mõlõmbat tiiba, ja tuuperäst om tä kasti, ria vai tulba seen, miä om ruutõl ütine. Taa om kõgõ rassõmb tehnika, midä Bare Sudoku tarvitas.",
+          "when": [
+            "Õnnõ sõs, ku kõik muu ei avitaq. XYZ-Wingiq ommaq Bare Sudokun kõgõ harvõmb muster ja tulõvaq ette õnnõ Asjatundja mõistatusõn. Otsi näid, ku kolmõ kandidaadiga ruut om kastin kuun katõ kandidaadiga ruuduga, kon om kats timä numbrit."
+          ],
+          "spot": [
+            "Naka ruutõst, kon om täpsähe kolm kandidaati; egäüts näist om võimalik keskruut. Otsi timä naabridõ seast kats ruutu, kon om kummaski kats kandidaati, mõlõmbaq keskruudu kolmõ seast võet, ja kon om täpsähe üts ütine number Z. Sõs otsi ruutõ, miä nägeväq keskruutu ja mõlõmbat tiiba ja kon om Z. Harilikult om üts tiib keskruudu kastin ja tõõnõ timä rian vai tulban, ja ruuduq, kost kistutõdas, ommaq tuu kasti ülejäänüq ruuduq tuusaman rian vai tulban."
+          ],
+          "examples": [
+            {
+              "h": "Näüdüs",
+              "steps": [
+                "Keskruudul {pivot} om kolm kandidaati: {x}, {y} ja {z}. Tä näge ruutu {wingA}, kon om {x} ja {z}, ja ruutu {wingB}, kon om {y} ja {z}.",
+                "Ku {pivot} om {z}, om asi otsustõt. Ku tä om {x}, piät {wingA} olõma {z}. Ku tä om {y}, piät {wingB} olõma {z}. Egäl juhul om üts kolmõst ruudust {z}.",
+                "Ruut, miä näge kõiki kolmõ, ei saaq olla {z}. Kistuta {z} ruutõst {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kistutaminõ ruutõst, miä nägeväq õnnõ kats tiiba. Y-Wingist erinevält või keskruut olla Z, nii et ruut piät nägemä ka keskruutu.",
+            "Tiibu tarvitaminõ, minka kandidaadiq ei olõq mõlõmbaq keskruudu kolmõ kandidaadi seen.",
+            "Sassi aaminõ Y-Wingiga: vaih om keskruudu kolmandan kandidaadin ja tuu muut, miä ruutõ saa puhtas tetä."
+          ],
+          "faq": [
+            [
+              "Miä om sudokun XYZ-Wing?",
+              "Keskruut kandidaatõga X, Y ja Z ja kats tiiba, üts X-i ja Z-ga ja tõõnõ Y ja Z-ga, miä mõlõmbaq nägeväq keskruutu. Üts kolmõst ruudust om Z, nii et Z kistutõdas ruutõst, miä nägeväq kõiki kolmõ."
+            ],
+            [
+              "Mink poolõst erines XYZ-Wing Y-Wingist?",
+              "Keskruudul om katõ asõmal kolm kandidaati, näide seen Z. Tuu tege keskruudust Z-i võimaligu kotusõ, nii et Z-i saavaq kaota õnnõ ruuduq, miä nägeväq keskruutu ja mõlõmbat tiiba."
+            ],
+            [
+              "Kui sagõhõhe XYZ-Wing ette tulõ?",
+              "Harva. Bare Sudokun või taad vaia olla õnnõ Asjatundja mõistatusõn ja inämbüs näist taad ei nõvvaq. Bare Sudoku kaes taad perrä kõgõ perän, pääle X-Wingi, Y-Wingi ja Swordfishi."
+            ],
+            [
+              "Kas om olõman WXYZ-Wing?",
+              "Jah, nelä kandidaadiga keskruuduga, a Bare Sudoku tuud ei tarvitaq. Egä mängu mõistatusõ saa lõpõtaq taa juhendi üheksä tehnikaga."
+            ]
+          ]
+        }
+      }
+    },
+    "kv": {
+      "learnHeading": "Судоку велӧдӧм",
+      "learnText": "Судоку тіянлы выль либӧ сьӧкыд загадка вылын сувтінныд? Кык велӧдӧсын гӧгӧрвоӧдӧма правилӧяс да став решитан техника, кодъясӧн вӧдитчӧны индӧдъяс, быдӧн збыль примерӧн.",
+      "howToLink": "Кыдзи ворсны судокуӧн",
+      "techniquesLink": "Судоку решитан техникаяс",
+      "labels": {
+        "howTo": "Кыдзи ворсны",
+        "techniques": "Техникаяс",
+        "play": "Ворсны судокуӧн",
+        "prev": "Водзъя техника",
+        "next": "Мӧд техника",
+        "all": "Став техникаяс",
+        "example": "Пример",
+        "steps": "Воськов бӧрся воськов",
+        "when": "Кор вӧдитчыны",
+        "spot": "Кыдзи аддзыны",
+        "mistakes": "Тшӧкыд ӧшыбкаяс",
+        "inGame": "Bare Sudoku-ын",
+        "level": "Колӧ тшупӧдсянь: {level}",
+        "hint": "Ворсӧмын индӧд шуӧ: {text}",
+        "legend": "Кыз лыдпасъяс сетӧма заводитчигӧн, лӧз лыдпасъяс пуктӧма решитігӧн, ичӧт лыдпасъяс лоӧны кандидатъясӧн. Пасйӧм клеткаяс артмӧдӧны серпас, вомӧн кыскӧм кандидатъяс вештысьӧны, а гӧгралӧм кандидат лоӧ лыдпасӧн, кодӧс колӧ пуктыны.",
+        "notation": "Клеткаяс гижсьӧны r3c7 моз: 3-ӧд рад, 7-ӧд багана. Радъяс лыддьысьӧны вывсянь, баганаяс шуйгасянь, а ящикъяс 1-сянь 9-ӧдз шуйга вывса пельӧссянь, рад бӧрся рад.",
+        "row": "{n}-ӧд рад",
+        "column": "{n}-ӧд багана",
+        "box": "{n}-ӧд ящик",
+        "elimItem": "{d} {cell} клеткаысь",
+        "regions": "5-ӧд рад, 5-ӧд багана да 5-ӧд ящик загадка заводитчигӧн",
+        "firstMove": "Восьса ӧтка: {cell} клеткаын вермӧ сулавны сӧмын {d}",
+        "breadcrumb": "Навигация"
+      },
+      "howTo": {
+        "title": "Кыдзи ворсны судокуӧн: правилӧяс, сетка, медводдза ходъяс",
+        "description": "Тӧдмалӧй, кыдзи ворсны судокуӧн: правилӧяс, радъяс, баганаяс да ящикъяс, мыйла загадкалӧн ӧти решитӧм, кыдзи вӧдитчыны пасйӧдъясӧн да кысянь заводитны.",
+        "h1": "Кыдзи ворсны судокуӧн",
+        "summary": "Судоку шусьӧ логика загадкаӧн, кодӧс ворсӧны 9×9 сетка вылын. Тыртӧй быд тыртӧм клетка 1-сянь 9-ӧдз лыдпасӧн сідзи, медым быд радын, быд баганаын да быд 3×3 ящикын быд лыдпас вӧлі дзик ӧтчыд. Кутшӧмсюрӧ лыдпасъяс сетӧма заводитчигӧн; кольӧмаяссӧ ті аддзанныд логикаӧн, ӧти дзик тӧдса клетка бӧрся мӧдӧс, и гадайтны некор оз ков. Тайӧ велӧдӧсын висьталӧма сетка, правилӧяс, ӧти решитӧм йылысь принцип, пасйӧдъяс да медводдза воськовъяс вылӧ кокни стратегия. Ставсӧ позьӧ велӧдны [Bare Sudoku](play)-ын, коді дон босьттӧм да кодлӧн индӧдъяс гӧгӧрвоӧдӧны логика.",
+        "sections": [
+          {
+            "h": "Кутшӧм судокулӧн правилӧяс?",
+            "p": [
+              "Правилӧыс сӧмын куим, и найӧ ӧти правилӧ, коді видзӧдӧма куим боксянь: быд радын колӧ лоны 1-сянь 9-ӧдз лыдпасъяслы, быд баганаын колӧ лоны 1-сянь 9-ӧдз лыдпасъяслы, а быд 3×3 ящикын колӧ лоны 1-сянь 9-ӧдз лыдпасъяслы. Сідзкӧ ӧти лыдпас некор оз вермы кыкысь паныдасьны ӧти радын, баганаын либӧ ящикын.",
+              "Сетӧм лыдпасъяс, кодъяс гижӧма кыз шрифтӧн, оз вежсьыны. Тіян уджыд тыртны тыртӧм клеткаяс. Лыддьыны оз ков, и лыдпасъяслӧн ӧчередьыс абу тӧдчана: лыдпасъяс сӧмын ӧкмыс торъя пас. Позис эськӧ ворсны букваясӧн либӧ формаясӧн, и нинӧм оз вежсьы."
+            ]
+          },
+          {
+            "h": "Кыдзи лӧсьӧдӧма сетка?",
+            "p": [
+              "Сеткаын 81 клетка, 9 радын да 9 баганаын. Кыз визьяс юкӧны сійӧс ӧкмыс 3×3 ящик вылӧ. Быд клетка пырӧ дзик ӧти радӧ, ӧти баганаӧ да ӧти ящикӧ, и тайӧ куим чукӧрыс лоӧны клеткалӧн чукӧръясӧн. Мукӧд 20 клеткаыс, кодъяслӧн клеткакӧд ӧтувъя чукӧр, шусьӧны сылӧн орчча клеткаясӧн; клеткаӧ пуктӧм лыдпас вештӧ тайӧ лыдпассӧ став 20 орчча клеткаысь.",
+              "Клеткаяс гижсьӧны r3c7 моз: 3-ӧд рад, 7-ӧд багана. Радъяс лыддьысьӧны вывсянь, баганаяс шуйгасянь, а ящикъяс 1-сянь 9-ӧдз шуйга вывса пельӧссянь, рад бӧрся рад. Тайӧ гижанногӧн вӧдитчӧны быд техника йылысь велӧдӧсын, и сійӧс бур велӧдны: r5c5 сулалӧ сетка шӧрас."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Мыйла быд судокулӧн дзик ӧти решитӧм?",
+            "p": [
+              "Збыль судокулӧн ӧти решитӧм, и сы вӧсна логика и уджалӧ. Кор ті верманныд петкӧдлыны, мый лыдпас оз вермы чукӧрын сувтны некытчӧ мукӧдлаӧ, сійӧс колӧ пуктыны кольӧм клеткаӧ, ӧд решитӧм эм и сійӧ ӧтка. Загадкалӧн вӧлі кӧ кык решитӧм, некутшӧм мӧвпалӧм эськӧ оз вермы найӧс торйӧдны, и кутшӧмкӧ здукӧ ковмис эськӧ гадайтны.",
+              "Bare Sudoku быд загадкасӧ вӧчӧ тіян устройствоын да видлалӧ, медым сылӧн вӧлі дзик ӧти решитӧм и медым логика серти решитысь вермис помавны сійӧс бӧрйӧм тшупӧдлӧн техникаясӧн. Сідзкӧ, сувтінныд кӧ, пыр эм аддзана мӧд воськов, и индӧд сійӧс петкӧдлӧ."
+            ]
+          },
+          {
+            "h": "Кыдзи заводитны судоку?",
+            "p": [
+              "Заводитӧй сэтысь, кӧні вариантъяс медся этша. Тайӧ ӧчередь уджалӧ быд тшупӧдын:"
+            ],
+            "list": [
+              "Бӧрйӧй лыдпас, коді паныдасьӧ нин унаысь, шуам квайтысь либӧ сизимысь, и корсьӧй ящикъяс, кӧні сійӧ абу на. Тшӧкыда ящикас сы вылӧ кольччӧ сӧмын ӧти клетка: тайӧ [дзебӧм ӧтка](hidden-single).",
+              "Корсьӧй клеткаяс, кодъяс гӧгӧр уна лыдпас. Клеткалы, кодлӧн радын, баганаын да ящикын ӧтлаын кӧкъямыс торъя лыдпас, кольччӧ сӧмын ӧти кандидат: [восьса ӧтка](naked-single). Медбур корсьны клеткаяс матӧ тыр радъясын либӧ ящикъясын.",
+              "Быд пуктӧм лыдпас вештӧ кандидат 20 орчча клеткаысь, сідз мый пыр жӧ видлалӧй найӧс. Ӧткаяс тшӧкыда мунӧны ӧти мӧд бӧрся.",
+              "Кокни пуктӧмъяс кӧ помасьӧны, гижӧй пасйӧдъяс: быд тыртӧм клеткалӧн кандидатъяссӧ. Сэсся корсьӧй лыдпас, коді ящик пытшкын сулалӧ сӧмын ӧти радын либӧ баганаын ([игналӧм кандидатъяс](locked-candidates)), либӧ кык клетка ӧткодь кык кандидатӧн ([восьса гоз](naked-pairs)).",
+              "Быд вештӧм бӧрын бергӧдчӧй ӧткаяс дінӧ. Эксперт загадкаясыс тшӧтш унджыкысьсӧ решитсьӧны ӧткаясӧн; сьӧкыд техника сӧмын восьтӧ мӧд воськов."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Мый лоӧны пасйӧдъяс да кор наӧн вӧдитчыны?",
+            "p": [
+              "Пасйӧдъяс, кодъясӧс шуӧны тшӧтш карандаш пасъясӧн либӧ кандидатъясӧн, лоӧны ичӧт лыдпасъясӧн, кодъясӧс ті гижанныд тыртӧм клеткаӧ, медым тӧдны, кутшӧм лыдпасъяс сэтчӧ на лӧсялӧны. Кокни загадкаясын найӧ ковмӧны шоча; Сьӧкыд тшупӧдсянь найӧтӧг оз позь, ӧд гозъяс, X-Wing да Y-Wing кодь техникаяс уджалӧны кандидатъясӧн, а абу пуктӧм лыдпасъясӧн.",
+              "Видзӧй пасйӧдъяс веськыдӧн: лыдпас пуктігӧн вештӧй сійӧс став 20 орчча клеткаса пасйӧдъясысь. Bare Sudoku-ын тайӧ лоӧ ачыс, а «Тыртны пасйӧдъяс» ӧти личкӧмӧн гижӧ быд кандидат быд тыртӧм клеткаӧ, сідз мый позьӧ заводитны тыр да веськыд кандидатъяс чукӧрсянь. Пасйӧд лоӧ фактӧн, а абу гадайтӧмӧн: сійӧ петкӧдлӧ, мый тайӧ лыдпассӧ нинӧм на оз вешт."
+            ]
+          },
+          {
+            "h": "Мый вӧчны, сувтінныд кӧ?",
+            "p": [
+              "Медводз бара видлалӧй подувсӧ: быд матӧ тыр радын, баганаын да ящикын позьӧ аддзыны ӧткаяс. Сэсся видлалӧй, тыр-ӧ пасйӧдъяс, ӧд вошӧм кандидат дзебӧ серпасъяс, а важ кандидат вӧчӧ ылӧдлана серпасъяс. Сэсся видлӧй [техникаяс](techniques) сьӧкыдлун серти: игналӧм кандидатъяс, гозъяс да куимъяс, X-Wing, Y-Wing, Swordfish да XYZ-Wing. Быд техникалӧн аслас листбок збыль примерӧн.",
+              "Нинӧм оз отсав кӧ, босьтӧй индӧд. Bare Sudoku-ын индӧд медводз видлалӧ, эм-ӧ ӧшыбкаа пуктӧм лыдпас, сэсся аддзӧ мӧд клетка, кодӧс позьӧ тыртны логикаӧн, да шуӧ техникасӧ, сідз мый ті велӧданныд выльтор индӧдӧн вӧдитчигӧн тшӧтш. Лыдпас пуктӧм вылӧ личкӧй индӧд бара."
+            ]
+          },
+          {
+            "h": "Кыдзи Bare Sudoku-ын пуктыны лыдпасъяс?",
+            "p": [
+              "Личкӧй клетка, сэсся лыдпас. Либӧ медводз личкӧй лыдпас: сійӧ игнасьӧ, и быд клетка, кодӧс личканныд, сійӧс босьтӧ; тайӧ медся ӧдйӧ ног пуктыны лыдпаслысь квайтӧд, сизимӧд да кӧкъямысӧд экземпляр. Лыдпас мездыны бара сійӧс личкӧй. «Пасйӧдъяс» кнопка вуджӧдӧ карандаш пасъяс вылӧ, «Бырӧдны» сӧстӧммӧдӧ клетка, «Бӧр» бӧр вештӧ быд ход, а ӧшыбкаяс пасйысьӧны гӧрдӧн, кӧ тайӧс меню пыр абу кусӧдӧма.",
+              "Клавиатура вылын вуджӧй стрелка клавишаясӧн, гижӧй лыдпас 1-сянь 9-ӧдз клавишаясӧн, бырӧдӧй Backspace-ӧн; N пасйӧдъяс вылӧ, U бӧр вештӧм вылӧ, H индӧд вылӧ, F пасйӧдъяс тыртӧм вылӧ, а Escape меню вылӧ. Ворсӧм ачыс видзӧ асьсӧ, уджалӧ интернеттӧг, сэні абу реклама и аккаунт оз ков."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Колӧ-ӧ судокуын гадайтны?",
+            "Збыль загадкаын оз ков. Быд Bare Sudoku загадкалӧн дзик ӧти решитӧм, и видлалӧма, мый сійӧс позьӧ решитны сӧмын логикаӧн, аслас тшупӧдса техникаясӧн. Тіянлы кажитчӧ кӧ, мый колӧ гадайтны, сідзкӧ пасйӧдъясын абу кутшӧмкӧ кандидат либӧ кутшӧмкӧ техника виччысьӧ, медым сійӧс аддзисны."
+          ],
+          [
+            "Вермас-ӧ лыдпас кыкысь паныдасьны ӧти радын, баганаын либӧ ящикын?",
+            "Оз. Тайӧ и став правилӧыс: ӧкмыс радысь, ӧкмыс баганаысь да ӧкмыс ящикысь быдӧнын быд лыдпас 1-сянь 9-ӧдз эм дзик ӧтчыд. Ӧти чукӧрын кӧ кык ӧткодь лыдпас, кӧть ӧти найӧ пиысь абу веськыд."
+          ],
+          [
+            "Мыйӧн торъялӧны Кокни, Шӧркодь, Сьӧкыд да Эксперт?",
+            "Тшупӧдсӧ лӧсьӧдӧны техникаяс, кодъяс загадкалы колӧны. Кокни да Шӧркодь решитсьӧны сӧмын ӧткаясӧн, а Кокни заводитчӧ 38-ысь абу этшаджык сетӧм лыдпасӧн. Сьӧкыдлы колӧны игналӧм кандидатъяс либӧ гозъяс да куимъяс. Экспертлы колӧ X-Wing, Y-Wing, Swordfish либӧ XYZ-Wing."
+          ],
+          [
+            "Бурджык-ӧ тыртны пасйӧдъяс быд клеткаын али сӧмын мукӧдын?",
+            "Сьӧкыд да Эксперт загадкаясын тыртӧй ставсӧ: гозъяс, X-Wing да Y-Wing кодь серпасъяс тыдовтчӧны сӧмын сэки, кор гижӧма став кандидатсӧ. Кокни да Шӧркодь тшупӧдын пасйӧдъяс ас кӧсйӧм серти, и унджык ворсысь корсьӧ сӧмын ӧткаяс."
+          ],
+          [
+            "Мыйта кад босьтӧ судоку?",
+            "Кокни загадка босьтӧ некымын минут; Эксперт загадка вермас босьтны кызь минут либӧ дырджык, сы серти, кутшӧм ӧдйӧ ті казяланныд сьӧкыд серпас. Bare Sudoku петкӧдлӧ таймер, сувтӧдӧ сійӧс меню восьтӧм дырйи и рекордъяс таблица оз видз, сідз мый ворсӧй ас темпӧн."
+          ],
+          [
+            "Колӧ-ӧ судокуын арифметика?",
+            "Оз ков. Лыдпасъяс сӧмын пасъяс; нинӧм оз ӧтлаавны и оз лыддьыны. Кутшӧм кӧсъян ӧкмыс пас лӧсялас эськӧ, и сы вӧсна судоку логика загадка, а абу лыд загадка."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судоку решитан техникаяс: гӧгӧрвоӧдӧм да примеръяс",
+        "description": "Став ӧкмыс судоку решитан техника, восьса ӧткасянь Swordfish да XYZ-Wing-ӧдз, Bare Sudoku индӧдъяс ӧчередь серти, быдӧн збыль примерӧн.",
+        "h1": "Судоку решитан техникаяс",
+        "intro": [
+          "Быд судоку позьӧ решитны этша логика техникаясӧн. Тайӧ лыддьӧгын ӧкмыс техника, кодъясӧн вӧдитчӧны Bare Sudoku решитысь да сылӧн индӧдъяс, сійӧ ӧчередь серти, кыдзи решитысь найӧс видлӧ: медводз ӧткаяс, сэсся ӧти чукӧр пытшкын вештӧмъяс, сэсся серпасъяс, кодъяс нюжалӧны некымын рад да багана вомӧн. Быд техникалӧн аслас листбок, кӧні эм вежӧртас, кыдзи сійӧс аддзыны, вӧчӧм загадкаысь збыль пример да тшӧкыд ӧшыбкаяс.",
+          "Загадкалысь тшупӧдсӧ лӧсьӧдӧ медся сьӧкыд техника, коді сылы колӧ. Кокни да Шӧркодь загадкаяслы колӧны сӧмын ӧткаяс, Сьӧкыд загадкаяслы колӧны игналӧм кандидатъяс либӧ гозъяс да куимъяс, а Эксперт загадкаяслы кӧть ӧти чери либӧ борд. Кутшӧм кӧть тшупӧд, унджык уджсӧ вӧчӧны ӧткаяс; сьӧкыд техника вештӧ ӧти-кык кандидат, а сэсся ӧткаяс бара мунӧны водзӧ."
+        ],
+        "faq": [
+          [
+            "Кутшӧм ӧчередьын видлыны судоку техникаяс?",
+            "Медводз медся кокнияс: восьса ӧтка, дзебӧм ӧтка, игналӧм кандидатъяс, восьса гозъяс да куимъяс, дзебӧм гозъяс да куимъяс, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku видлӧ найӧс дзик тайӧ ӧчередьын, и индӧд пыр шуӧ медся кокни техникасӧ, коді отсалӧ мунны водзӧ."
+          ],
+          [
+            "Колӧны-ӧ став тайӧ техникаыс судоку решитӧм вылӧ?",
+            "Кокни да Шӧркодь загадкаяслы тырмӧны ӧткаяс. Сьӧкыд загадкаясын содӧны игналӧм кандидатъяс да ичӧтджык чукӧръяс. Эксперт загадкаяслы колӧ кӧть ӧти чери либӧ борд, но тшӧкыджык сӧмын ӧтчыд-кыкысь быд загадкаын."
+          ],
+          [
+            "Эм-ӧ XYZ-Wing-ысь сьӧкыдджык техникаяс?",
+            "Эм, шуам, чепьяс, ӧтка решитӧмлысь тестъяс да форсируйтан сеткаяс. Bare Sudoku оз вӧч найӧс корысь загадкаяс, сідз мый ворсӧмса быд загадка позьӧ помавны тайӧ листбокса ӧкмыс техникаӧн."
+          ],
+          [
+            "Мый сэтшӧм кандидат?",
+            "Лыдпас, коді на вермӧ сулавны тыртӧм клеткаын, ӧд сылӧн радын, баганаын либӧ ящикын нинӧм на сійӧс оз вешт. Ворсӧмса пасйӧдъяс лоӧны кандидатъясӧн. Ӧткаясысь сьӧкыдджык быд техника мӧвпалӧ кандидатъяс йылысь, сідз мый видзӧй найӧс тырӧн да веськыдӧн."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Восьса ӧтка",
+          "title": "Восьса ӧтка судокуын: ӧти кандидата клетка",
+          "description": "Восьса ӧтка (naked single) лоӧ тыртӧм клетка, кытчӧ лӧсялӧ сӧмын ӧти лыдпас. Велӧдчӧй ӧдйӧ аддзыны найӧс збыль примерӧн да тшӧкыд ӧшыбкаяс серти.",
+          "h1": "Восьса ӧтка (naked single)",
+          "summary": "Восьса ӧтка лоӧ тыртӧм клетка, кӧні дзик ӧти кандидат: мукӧд кӧкъямыс лыдпасыс эм нин сылӧн радын, баганаын либӧ ящикын. Кольӧм лыдпасыс колӧ пуктыны сэтчӧ. Тайӧ судокуын медся кокни техника, сійӧ, кодӧн ті вӧдитчанныд медся тшӧкыда, и сійӧ, код йылысь Bare Sudoku индӧд шуӧ «Татӧн сӧмын ӧти кандидат».",
+          "when": [
+            "Пыр. Восьса ӧткаяс паныдасьӧны медводдза ходсянь медбӧръяӧдз, быд тшупӧдын. Кокни да Шӧркодь загадкаясын тіянлы колӧны сӧмын найӧ да дзебӧм ӧткаяс. Сьӧкыдджык загадкаясын сьӧкыд техникаӧн быд вештӧм тшӧкыда кольӧ восьса ӧтка, сідз мый корсьӧй найӧс быд воськов бӧрын."
+          ],
+          "spot": [
+            "Видзӧдӧй клеткаяс вылӧ, кодъяс гӧгӧр уна пуктӧм лыдпас: клетка радын, кӧні эм нин сизим лыдпас, либӧ клетка, кодлӧн радын, баганаын да ящикын ӧтлаын кӧкъямыс торъя лыдпас. Пасйӧдъястӧг лыддьӧй лыдпасъяс, кодъясӧс клеткаысь аддзанныд. Пасйӧдъясӧн восьса ӧтка лоӧ сӧмын клетка ӧти тыдалана кандидатӧн, сы вӧсна «Тыртны пасйӧдъяс» отсалӧ найӧс кокниа аддзыны."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "Видзӧдӧй {cell} клетка вылӧ. Сійӧ тыртӧм, сідз мый гижӧй став лыдпассӧ, кодъяс пуктӧма нин сылӧн радӧ, баганаӧ да ящикӧ.",
+                "{row}-ӧд радын эм {rowDigits}. {col}-ӧд баганаын эм {colDigits}. {box}-ӧд ящикын эм {boxDigits}.",
+                "Ӧтлаын найӧ вештӧны став лыдпассӧ {d} кындзи, сідз мый {cell} клеткаын кольччӧ сӧмын ӧти кандидат, {d}.",
+                "Гижӧй {d} {cell} клеткаӧ. Сэсся видлалӧй, оз-ӧ выль лыдпас вӧч мӧд ӧтка сійӧ жӧ радын, баганаын либӧ ящикын."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Сӧмын радсӧ либӧ сӧмын ящиксӧ лыддьӧм. Кӧкъямыс вештӧм лыдпасыс тшӧкыда воӧны став куим чукӧрысь ӧтлаын.",
+            "Вунӧдӧм, мый ӧні на пуктӧм лыдпас тшӧтш вештӧ кандидатъяс аслас 20 орчча клеткаысь; выль восьса ӧткаяс петӧны быд пуктӧм бӧрын пыр жӧ.",
+            "Восьса ӧтка да дзебӧм ӧтка сорлалӧм: восьса ӧткалӧн клеткаын кольччӧ ӧти кандидат, дзебӧм ӧткалӧн лыдпаслы чукӧрын кольччӧ ӧти клетка."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм восьса ӧтка судокуын?",
+              "Тыртӧм клетка, кӧні дзик ӧти кандидат. Сылӧн радын, баганаын да ящикын пуктӧма нин кӧкъямыс торъя лыдпас, сідз мый ӧкмысӧд лыдпасыс ӧтнасӧ лӧсялӧ."
+            ],
+            [
+              "Мыйла сійӧс англия кывйын шуӧны naked?",
+              "Ӧд пасйӧдъяс гижӧм бӧрын ӧтка кандидатыс тыдалӧ клеткаас веськыда; нинӧм сійӧс оз дзеб. Дзебӧм ӧтка, мӧдарӧ, сулалӧ мукӧд кандидатъяс костын, и сійӧс аддзанныд лыдпас вылӧ видзӧдӧмӧн, а абу клетка вылӧ."
+            ],
+            [
+              "Позьӧ-ӧ решитны загадка сӧмын восьса ӧткаясӧн?",
+              "Уна Кокни загадкаӧс позьӧ, но унджыкыслы колӧны тшӧтш дзебӧм ӧткаяс. Bare Sudoku Кокни да Шӧркодь загадкаяс лыддьӧ кыкнан сикас ӧткаясӧн решитанаӧн; Сьӧкыд да Эксперт загадкаяслы колӧ кӧть ӧти мӧд техника."
+            ],
+            [
+              "Петкӧдлӧ-ӧ индӧд восьса ӧткаяс?",
+              "Петкӧдлӧ. Мӧд пуктӧмыс восьса ӧтка кӧ, индӧд бӧрйӧ клетка да лыдпаскӧд шуӧ «Татӧн сӧмын ӧти кандидат». Лыдпас пуктӧм вылӧ личкӧй индӧд бара."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Дзебӧм ӧтка",
+          "title": "Дзебӧм ӧтка судокуын: лыдпаслӧн ӧтка места",
+          "description": "Дзебӧм ӧтка (hidden single) лоӧ радын, баганаын либӧ ящикын ӧтка клетка, кытчӧ лыдпас на лӧсялӧ. Велӧдчӧй аддзыны найӧс, видзӧдӧмӧн ӧти лыдпас вылӧ.",
+          "h1": "Дзебӧм ӧтка (hidden single)",
+          "summary": "Дзебӧм ӧтка лоӧ лыдпас, кодлы радын, баганаын либӧ ящикын кольччӧ сӧмын ӧти позяна клетка, кӧть сійӧ клеткаын тыдалӧны мукӧд кандидатъяс. Чукӧрын колӧ лоны тайӧ лыдпаслы, сідз мый сійӧ мунӧ сэтчӧ. Bare Sudoku индӧд шуӧ сы йылысь «Тайӧ радас 5 ӧти сӧмын места», баганаын либӧ ящикын.",
+          "when": [
+            "Кор кутшӧмкӧ лыдпас ылӧ нин мунӧма: лыдпас кӧ паныдасьӧ вит либӧ квайтысь, кольӧм ящикъяс зэв дзескыдӧсь, и мӧд ходыс тшӧкыда дзебӧм ӧтка. Дзебӧм ӧткаяс лоӧны Кокни да Шӧркодь загадкаяслӧн медшӧр техникаӧн да быд тшупӧдын кольччӧны медколана уджалан кӧлуйӧн."
+          ],
+          "spot": [
+            "Видзӧдӧй ӧтпырйӧ ӧти лыдпас вылӧ. Босьтӧй лыдпас, аддзӧй ящик, кӧні сійӧ абу, да вомӧн кыскӧй сійӧ ящиклысь став клеткасӧ, кодъяс сулалӧны ӧти радын либӧ баганаын тайӧ лыдпаслӧн пуктӧм экземплярыскӧд. Ӧти клетка кӧ кольччӧ, ті аддзинныд дзебӧм ӧтка. Сійӧ жӧ ногӧн позьӧ видлавны радъяс да баганаяс. Ворсӧмын личкӧй пуктӧм лыдпас вылӧ: сылӧн став экземпляр пасйысьӧ, и прӧст клеткаяс тыдовтчӧны."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{box}-ӧд ящикын {d} абу на, сідз мый сылӧн тыртӧм клеткаяс пиысь ӧтиын колӧ лоны сылы. Тыртӧм клеткаяс: {empties}.",
+                "Найӧ пиысь быдӧнын, {cell} кындзи, {d} пуктыны оз позь, ӧд сійӧ жӧ радын либӧ баганаын пуктӧма нин {d}; сідз мый сэні {d} абу кандидат.",
+                "Сідзкӧ {cell} лоӧ {d} лыдпаслӧн ӧтка местаӧн {box}-ӧд ящикын. Гижӧй {d} сэтчӧ, кӧть {cell} клеткаын на тыдалӧны мукӧд кандидатъяс."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Лыдпас пуктыны клеткаӧ, коді сӧмын, буракӧ, веськыд: видлалӧй чукӧрлысь став мукӧд тыртӧм клеткасӧ, а абу сӧмын тыдалысьяссӧ.",
+            "Дзебӧм ӧтка казявтӧг кольны, ӧд клеткаын тыдалӧ уна кандидат. Мукӧд кандидатъяс абу тӧдчанаӧсь; тӧдчана сійӧ, мый лыдпаслы чукӧрын абу мукӧд места.",
+            "Сӧмын ящикъяс видлалӧм. Радъяс да баганаяс сетӧны дзебӧм ӧткаяс сы мында жӧ тшӧкыда, медъёна помас."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм дзебӧм ӧтка судокуын?",
+              "Лыдпас, коді вермӧ сулавны радлӧн, баганалӧн либӧ ящиклӧн сӧмын ӧти клеткаын. Чукӧрын колӧ лоны тайӧ лыдпаслы, сідз мый клеткаас колӧ пуктыны сійӧс, кӧть сэні на эм мукӧд кандидатъяс."
+            ],
+            [
+              "Мыйӧн торъялӧ дзебӧм ӧтка восьса ӧткаысь?",
+              "Восьса ӧтка клетка йылысь: кольччӧ ӧти кандидат. Дзебӧм ӧтка лыдпас йылысь: чукӧрын кольччӧ ӧти клетка. Кыкнанныс лыдпассӧ пуктӧны дзик тӧдӧмӧн."
+            ],
+            [
+              "Кодӧс кокниджык аддзыны?",
+              "Пасйӧдъястӧг дзебӧм ӧткаяс аддзыны тшӧкыда кокниджык, ӧд позьӧ видзӧдны сетка вылӧ ӧти лыдпас серти. Тыр пасйӧдъясӧн медся кокни восьса ӧткаяс, ӧд ӧти кандидата клетка пыр тыдалӧ."
+            ],
+            [
+              "Кыдзи индӧд гӧгӧрвоӧдӧ дзебӧм ӧтка?",
+              "«Ӧти сӧмын места» моз лыдпас вылӧ тайӧ радын, тайӧ баганаын либӧ тайӧ ящикын, бӧрйӧм клеткаӧн. Лыдпас пуктӧм вылӧ личкӧй индӧд бара."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Игналӧм кандидатъяс",
+          "title": "Игналӧм кандидатъяс судокуын: индалӧм да босьтӧм",
+          "description": "Игналӧм кандидатъяс: кор лыдпаслӧн кандидатъяс ящикын ӧти радын либӧ баганаын, либӧ мӧдарӧ, лыдпассӧ вештӧны мукӧдлаысь. Кык збыль пример.",
+          "h1": "Игналӧм кандидатъяс (locked candidates)",
+          "summary": "Игналӧм кандидатъяс лоӧ медводдза техникаӧн, коді лыдпас пуктӧм пыдди вештӧ кандидатъяс. Сылӧн кык форма. Индалӧм: ящикын лыдпаслӧн став кандидатыс ӧти радын либӧ баганаын, сідз мый лыдпассӧ вештӧны тайӧ визьлӧн мукӧд клеткаысь. Босьтӧм: радын либӧ баганаын лыдпаслӧн став кандидатыс ӧти ящикын, сідз мый лыдпассӧ вештӧны тайӧ ящиклӧн мукӧд клеткаысь. Bare Sudoku индӧд тайӧ техникаӧн восьтӧм пуктӧмсӧ пасйӧ «Игналӧм кандидатъяс» нимӧн.",
+          "when": [
+            "Сьӧкыд загадкаын ӧткаяс кӧ помасисны, медводз видлӧй тайӧс. Колӧны тыр пасйӧдъяс кӧть видлалан лыдпас кузя. Игналӧм кандидатъяс паныдасьӧны тшӧкыда: унджык Сьӧкыд загадкаяслы найӧ колӧны, а Эксперт загадкаясын наӧн вӧдитчӧны ыджыдджык серпасъяс костын."
+          ],
+          "spot": [
+            "Индалӧм могысь видзӧдӧй быд ящик да быд лыдпас вылӧ, коді сэн абу: тайӧ лыдпаслӧн кандидат клеткаяс кӧ ӧти радын либӧ баганаын, видлалӧй, эм-ӧ сійӧ жӧ лыдпас кандидатӧн тайӧ визь вывті ящиксьыс ӧтдорын. Босьтӧм могысь видзӧдӧй рад либӧ багана кузя: лыдпаслӧн став кандидатыс кӧ ӧти ящик пытшкын, тайӧ ящиклысь мукӧд клеткасӧ позьӧ сӧстӧммӧдны. Ворсӧмын личкӧй лыдпас кнопка, медым пасйыны сылысь став кандидатсӧ; ӧти ящик пытшкын кык либӧ куим пасйӧм пасйӧдлӧн визь и лоӧ серпасӧн."
+          ],
+          "examples": [
+            {
+              "h": "Индалӧм",
+              "steps": [
+                "{box}-ӧд ящикын {d} лыдпаслӧн сӧмын тайӧ кандидат клеткаясыс: {cells}. Ставныс найӧ {row}-ӧд радын.",
+                "{box}-ӧд ящикын колӧ лоны {d}, сідз мый {row}-ӧд радса {d} сулалӧ {box}-ӧд ящикын, кутшӧм клеткаӧ кӧть сійӧ усяс.",
+                "{row}-ӧд радын оз вермы лоны мӧд {d}, сідз мый вештӧй {d} {row}-ӧд радлӧн ящиксьыс ӧтдорса клеткаясысь: {elim}."
+              ]
+            },
+            {
+              "h": "Босьтӧм",
+              "steps": [
+                "{row}-ӧд радын {d} вермӧ сулавны сӧмын {cells} клеткаясын, и ставныс найӧ {box}-ӧд ящик пытшкын.",
+                "{row}-ӧд радын колӧ лоны {d}, сідз мый {row}-ӧд рад босьтӧ {box}-ӧд ящиклысь {d}. {box}-ӧд ящиклӧн мукӧд клеткаясын {d} оз вермы лоны.",
+                "Вештӧй {d} тайӧ клеткаясысь: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Индалӧм дырйи лыдпас вештӧм ящик пытшкысь, а абу сы ӧтдорысь, либӧ босьтӧм дырйи мӧдарӧ. Вештӧмъяс пыр мунӧны клеткаясӧ, кодъяс визь вылын, но абу ящикын, либӧ ящикын, но абу визь вылын.",
+            "Правилӧӧн вӧдитчӧм, кор кандидатъяс ящиклӧн кык радын. Лыдпаслӧн став кандидат клеткаыс ящикын колӧ сулавны ӧти визь вылын.",
+            "Вунӧдӧм корсьны ӧтка, кодӧс вештӧм вӧчӧ. Игналӧм кандидатъяс асьныс шоча пуктӧны лыдпас; найӧ лӧсьӧдӧны ӧтка."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм игналӧм кандидатъяс судокуын?",
+              "Лыдпаслӧн кандидатъяс, кодъяс игналӧма ящиклӧн да визьлӧн вомӧнасянінас. Ящикын, либӧ визь вылын, колӧ лоны лыдпаслы дзик тайӧ вомӧнасянінас, сідз мый лыдпассӧ позьӧ вештыны визьлӧн мукӧд клеткаысь либӧ ящиклӧн мукӧд клеткаысь."
+            ],
+            [
+              "Мыйӧн торъялӧ индалӧм босьтӧмысь?",
+              "Индалӧм заводитчӧ ящиксянь: ящикын лыдпаслӧн кандидатъяс индӧны ӧти рад либӧ багана кузя, сідз мый лыдпассӧ вештӧны тайӧ визьлӧн мукӧд клеткаысь. Босьтӧм заводитчӧ радсянь либӧ баганасянь: визьлӧн лыдпас вылӧ став кандидатыс ӧти ящикын, сідз мый визь босьтӧ лыдпассӧ, и сійӧс вештӧны ящиклӧн мукӧд клеткаысь."
+            ],
+            [
+              "Шуӧны-ӧ игналӧм кандидатъясӧс тшӧтш вомӧнасянінын вештӧмӧн?",
+              "Шуӧны. Мукӧд нимъяс: босьтан форма вылӧ ящик да визь чинтӧм, а индалан форма вылӧ индалысь гозъяс либӧ индалысь куимъяс. Bare Sudoku кыкнан форма вылӧ вӧдитчӧ ӧти нимӧн."
+            ],
+            [
+              "Кутшӧм тшупӧдын колӧны игналӧм кандидатъяс?",
+              "Сьӧкыд. Загадка, кодлы колӧны игналӧм кандидатъяс либӧ ичӧтджык чукӧръяс, но нинӧм сьӧкыдджык оз ков, лыддьысьӧ Сьӧкыдӧн; Эксперт загадкаяслы колӧ тшӧтш чери либӧ борд."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Восьса гозъяс да куимъяс",
+          "title": "Восьса гозъяс да куимъяс судокуын: кыдзи найӧ уджалӧны",
+          "description": "Восьса гозъяс да куимъяс: ӧти чукӧрын кык либӧ куим клетка ӧткодь кык либӧ куим кандидатӧн. Велӧдчӧй аддзыны найӧс да тӧдны, мый вештыны.",
+          "h1": "Восьса гозъяс да куимъяс (naked pairs, naked triples)",
+          "summary": "Восьса гоз лоӧ ӧти радын, баганаын либӧ ящикын кык клетка, кодъяслӧн дзик ӧткодь кык кандидат. Тайӧ кык лыдпаслы колӧ сулавны тайӧ кык клеткаын, сідз мый найӧс позьӧ вештыны чукӧрлӧн став мукӧд клеткаысь. Восьса куим лоӧ сійӧ жӧ мӧвп куим клеткаӧн да куим лыдпасӧн; быд клеткаын позьӧ аддзыны найӧ пиысь кыкӧс либӧ став куимнанныссӧ. Bare Sudoku индӧд сы бӧрын лоан пуктӧмсӧ пасйӧ «Гоз либӧ куим» нимӧн.",
+          "when": [
+            "Пасйӧдъяс кӧ тыр, а ӧткаяс да игналӧм кандидатъяс помасисны. Восьса гозъяс Сьӧкыд загадкаясын зэв тшӧкыда паныдасьӧны, восьса куимъяс шочджыка. Кыкнанныссӧ колӧ корсьны быд чукӧрын, кӧні на вит либӧ унджык тыртӧм клетка."
+          ],
+          "spot": [
+            "Корсьӧй клеткаяс сӧмын кык кандидатӧн да аддзӧй сійӧ жӧ чукӧрысь мӧд клетка сійӧ жӧ кык кандидатӧн. Куимъяс вылӧ видзӧдӧй чукӧръяс, кӧні уна клетка кык да куим кандидатӧн, и видлалӧй, оз-ӧ найӧ пиысь куимыс ӧтлаын вӧдитчыны сӧмын куим торъя лыдпасӧн. Дзик ӧткодь кандидата клеткаяс кокни аддзыны, кор пасйӧдъяс гижӧма; ворсӧмын «Тыртны пасйӧдъяс» вӧчӧ тайӧс ӧти личкӧмӧн."
+          ],
+          "examples": [
+            {
+              "h": "Восьса гоз",
+              "steps": [
+                "{cellA} да {cellB} клеткаяслӧн ({unit}) дзик ӧткодь кык кандидат: {d1} да {d2}.",
+                "Найӧ пиысь ӧтиыс колӧ лоны {d1}, мӧдыс {d2}. Кодыс кутшӧм, тӧдтӧм, но тайӧ кык клетка босьтӧны кыкнан лыдпассӧ.",
+                "Сідзкӧ мукӧд клеткаын ({unit}) оз вермы лоны {d1} либӧ {d2}. Вештӧй {elim}."
+              ]
+            },
+            {
+              "h": "Восьса куим",
+              "steps": [
+                "Куим клетка ({unit}) став кандидатсӧ босьтӧны ӧткодь куим лыдпасысь, {digits}: {cells}.",
+                "Куим лыдпаслы колӧ тыртны тайӧ куим клеткасӧ кутшӧмкӧ ӧчередьын. Клеткалы оз ков петкӧдлыны став куим кандидатсӧ; тӧдчана сійӧ, мый куим клетка пиысь ни ӧтиыслӧн абу кандидат тайӧ куим лыдпас ӧтдорын.",
+                "Вештӧй {digits} мукӧд став клеткаысь ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Босьтны кык клетка, кодъяслӧн ӧтувъя кык кандидат, но эм и коймӧд. Восьса гоз вылӧ быд клеткаын колӧ лоны дзик тайӧ кык кандидатлы да нинӧм мукӧдлы.",
+            "Лыдпасъяс вештӧм гозлӧн асьсӧ клеткаясысь. Гоз видзӧ ассьыс кандидатъяссӧ; вештӧмъяс мунӧны чукӧрлӧн мукӧд клеткаясӧ.",
+            "Корны, медым куимлӧн быд клеткаын тыдалісны став куим лыдпасыс. Куимысь кыкӧн клетка лӧсялӧ, ни ӧти клеткалӧн кӧ абу кандидат тайӧ куим лыдпас ӧтдорын."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм восьса гоз судокуын?",
+              "Ӧти чукӧрын кык клетка, кодъяс кыкнанныслӧн дзик ӧткодь кык кандидат. Тайӧ кык лыдпасыс игналӧма тайӧ кык клеткаӧ, сідз мый найӧс позьӧ вештыны чукӧрлӧн мукӧд клеткаысь."
+            ],
+            [
+              "Мый сэтшӧм восьса куим?",
+              "Ӧти чукӧрын куим клетка, кодъяслӧн кандидатъясыс ӧтлаын сӧмын куим лыдпас. Быд клеткаын вермас лоны найӧ пиысь кык либӧ куим. Куим лыдпас тыртӧны куим клетка, сідз мый найӧс позьӧ вештыны чукӧрлӧн мукӧд клеткаысь."
+            ],
+            [
+              "Пуктӧ-ӧ восьса гоз лыдпас?",
+              "Ачыс оз. Сійӧ вештӧ кандидатъяс, а вештӧм тшӧкыда кольӧ восьса либӧ дзебӧм ӧтка. Bare Sudoku индӧд петкӧдлӧ тайӧ ӧткасӧ да шуӧ техникасӧ, коді сійӧс вӧчис позянаӧн."
+            ],
+            [
+              "Вермас-ӧ восьса гоз ӧтпырйӧ лоны ящикын и радын?",
+              "Вермас. Кык клетка кӧ ӧти радын и ӧти ящикын, гоз вештӧ кыкнан чукӧрын. Bare Sudoku видлалӧ найӧс ӧти чукӧр бӧрся мӧдӧс."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Дзебӧм гозъяс да куимъяс",
+          "title": "Дзебӧм гозъяс да куимъяс судокуын: кыдзи найӧс аддзыны",
+          "description": "Дзебӧм гоз лоӧ кык лыдпас, кодъяс чукӧрын вермӧны сулавны сӧмын ӧти кык клеткаын, сідз мый налысь мукӧд кандидатъяссӧ вештӧны. Велӧдчӧй аддзыны найӧс.",
+          "h1": "Дзебӧм гозъяс да куимъяс (hidden pairs, hidden triples)",
+          "summary": "Дзебӧм гоз лоӧ кык лыдпас, кодъяс ӧти радын, баганаын либӧ ящикын лоӧны кандидатъясӧн сӧмын ӧти кык клеткаын и некӧн мукӧдлаын. Тайӧ кык клеткаын колӧ лоны тайӧ кык лыдпаслы, сідз мый налысь став мукӧд кандидатсӧ позьӧ вештыны. Дзебӧм куим уджалӧ сідз жӧ куим лыдпасӧн, кодъяс игналӧма куим клеткаӧ. Вештӧм бӧрын клеткаясын тыдалӧ восьса гоз либӧ куим. Bare Sudoku индӧд сы бӧрын лоан пуктӧмсӧ пасйӧ «Гоз либӧ куим» нимӧн.",
+          "when": [
+            "Кор чукӧрын уна кандидата клеткаяс, а ӧткаяс помасисны. Дзебӧм гозъяс дзебсьӧны тыр клеткаясын, сы вӧсна найӧс колӧ корсьны дзик сэні, кӧні восьса гозъяс оз тыдавны. Дзебӧм куимъяс шоча паныдасьӧны; Bare Sudoku найӧс тшӧтш корсьӧ, но унджык Сьӧкыд загадка решитсьӧ найӧтӧг."
+          ],
+          "spot": [
+            "Уджалӧй лыдпас серти, а абу клетка серти. Чукӧрын гижӧй клеткаяс, кытчӧ быд лыдпас, коді абу на чукӧрын, вермӧ сувтны. Кык лыдпаслӧн кӧ быдӧнлӧн сӧмын кык позяна клетка, и тайӧ ӧти кык клетка, тіян дзебӧм гоз. Ворсӧмын личкӧй лыдпас кнопка, медым пасйыны сылысь кандидатъяссӧ; кык лыдпас кӧ ӧзйӧны чукӧрын ӧти кык клеткаын и некӧн мукӧдлаын, тайӧ и лоӧ серпасӧн."
+          ],
+          "examples": [
+            {
+              "h": "Дзебӧм гоз",
+              "steps": [
+                "Чукӧрын ({unit}) {d1} да {d2} лыдпаслӧн быдӧнлӧн сӧмын кык позяна клетка, и тайӧ ӧти кык клетка: {cells}.",
+                "Тайӧ кык клеткаын колӧ лоны {d1} да {d2}, сідз мый налӧн мукӧд кандидатъяс оз позьны.",
+                "Вештӧй {elim}. Ӧні кык клеткаын тыдалӧ восьса гоз, коді вермас восьтыны водзӧ туй."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Гозлысь кык лыдпассӧ вештӧм гоз клеткаясысь. Тайӧ клеткаяслысь вештӧны мукӧд кандидатъяс; гоз лыдпасъяс кольччӧны.",
+            "Лыдпас босьтӧм, кодлӧн чукӧрын эм коймӧд позяна клетка. Кыкнан лыдпаслы колӧ лоны игналӧмаӧн дзик кык клеткаӧ.",
+            "Корсьӧм сӧмын ящикъясын. Дзебӧм гозъяс радъясын да баганаясын паныдасьӧны сы мында жӧ тшӧкыда."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм дзебӧм гоз судокуын?",
+              "Кык лыдпас, кодъяс чукӧрын вермӧны сулавны сӧмын ӧти кык клеткаын. Тайӧ клеткаяслы колӧ босьтны тайӧ лыдпасъяссӧ, сідз мый налысь мукӧд кандидатъяссӧ вештӧны."
+            ],
+            [
+              "Мыйӧн дзебӧм гоз торъялӧ восьса гозйысь?",
+              "Восьса гоз тыдалӧ: кык клетка, кӧні тыдалӧны сӧмын ӧткодь кык кандидат. Дзебӧм гозсӧ кык клеткаын вевттьӧны содтӧд кандидатъяс. Тайӧ содтӧдъяссӧ вештӧм вӧчӧ дзебӧм гозйысь восьса гоз."
+            ],
+            [
+              "Мый сэтшӧм дзебӧм куим?",
+              "Куим лыдпас, кодъяс игналӧма чукӧрлӧн куим клеткаӧ. Быд лыдпаслы оз ков паныдасьны став куим клеткаын; тӧдчана сійӧ, мый куим лыдпас пиысь ни ӧтиыслӧн абу кандидат тайӧ клеткаяс ӧтдорын."
+            ],
+            [
+              "Торйӧдӧ-ӧ индӧд дзебӧм да восьса гозъяс?",
+              "Оз. Bare Sudoku аддзӧ кыкнанныссӧ да сы бӧрын лоан пуктӧмсӧ пасйӧ «Гоз либӧ куим» нимӧн. Тані листбокъяс найӧс торйӧдӧны, ӧд найӧс аддзӧны торъя ногӧн."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing судокуын: кыдзи уджалӧ техника",
+          "description": "X-Wing: лыдпас, кодлӧн кык радын дзик кык кандидат клетка ӧти кык баганаын, вештысьӧ тайӧ баганаяслӧн мукӧд клеткаысь. Збыль пример.",
+          "h1": "X-Wing",
+          "summary": "X-Wing лоӧ серпас, кӧні ӧти лыдпас да нёль клетка прямоугольник пельӧсъясын. Лыдпаслӧн кӧ кык радысь быдӧнын дзик кык кандидат клетка, и тайӧ клеткаяс ӧти кык баганаын, лыдпаслы колӧ сулавны прямоугольниклӧн кык паныд пельӧсын. Сы вӧсна сійӧс позьӧ вештыны тайӧ кык баганалӧн став мукӧд клеткаысь. Сідз жӧ уджалӧ, радъяс да баганаяс вежлалӧм бӧрын. Тайӧ Bare Sudoku-ын медводдза Эксперт тшупӧдса техника.",
+          "when": [
+            "Ӧткаяс, игналӧм кандидатъяс да ичӧтджык чукӧръяс кӧ помасисны. X-Wing лоӧ медся тшӧкыд Эксперт серпасӧн да тшӧкыда паныдасьӧ, кор лыдпаслӧн кольччӧ этша кандидат, медсясӧ кор сылӧн нёльсянь квайтӧдз экземпляр пуктӧма нин. Колӧны видлалан лыдпас кузя тыр пасйӧдъяс."
+          ],
+          "spot": [
+            "Бӧрйӧй лыдпас да корсьӧй радъяс, кӧні сылӧн дзик кык кандидат клетка. Кык сэтшӧм радлӧн кӧ ӧткодь кык багана, видлалӧй тайӧ баганаясысь лыдпаслысь мукӧд кандидатъяс: найӧ и лоӧны вештӧмъясӧн. Сэсся вӧчӧй сійӧ жӧ, подувӧ босьтӧмӧн баганаяс. Ворсӧмын личкӧй лыдпас кнопка: сылӧн став кандидатыс пасйысьӧ, и нёль пасйӧм пасйӧдысь прямоугольник кокни казявны."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{d} лыдпаслӧн дзик кык кандидат клетка {r1}-ӧд радын и дзик кык {r2}-ӧд радын, и найӧ сулалӧны ӧти кык баганаын, {c1} да {c2}: {cells}.",
+                "{r1}-ӧд рад пуктӧ ассьыс {d} {c1}-ӧд либӧ {c2}-ӧд баганаӧ, а {r2}-ӧд рад ассьыс {d} мӧдӧ. Кыдз кӧть, {c1}-ӧд да {c2}-ӧд баганаяс быдӧн босьтӧны {d} тайӧ кык радысь.",
+                "Сідзкӧ {d} оз вермы лоны {c1}-ӧд да {c2}-ӧд баганаясын некӧн мукӧдлаын. Вештӧй {d} тайӧ клеткаясысь: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Рад босьтӧм, кӧні лыдпаслӧн куим кандидат клетка. Быд подув радын колӧ лоны дзик кыкӧн, и кыкнанныслы колӧ сулавны кык ӧтувъя баганаын.",
+            "Лыдпас вештӧм радъясысь, а абу баганаясысь. Подувын кӧ радъяс, вештӧмъяс баганаясын, и мӧдарӧ.",
+            "Вежлалӧм вариант вунӧдӧм. Баганаяс вылын лӧсьӧдӧм X-Wing вештӧ радъясын."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм X-Wing судокуын?",
+              "Лыдпас, кодлӧн кык радысь быдӧнын дзик кык кандидат клетка ӧти кык баганаын. Лыдпас сулалӧ тайӧ прямоугольниклӧн кык паныд пельӧсын, сідз мый сійӧс вештӧны кык баганалӧн мукӧд клеткаысь. Радъяс да баганаяс позьӧ вежлавны."
+            ],
+            [
+              "Мыйла X-Wing уджалӧ?",
+              "Кык радысь быдӧнлы колӧ пуктыны лыдпас кык баганаысь ӧтиӧ, и кык рад оз вермыны вӧдитчыны ӧти баганаӧн. Сідзкӧ кыкнан багана ассьыс лыдпассӧ босьтӧ тайӧ радъясысь, и тайӧ баганаясын быд мукӧд кандидат оз позь."
+            ],
+            [
+              "X-Wing чери-ӧ?",
+              "Чери. X-Wing лоӧ кык ыдждаа чериӧн; Swordfish лоӧ куим ыдждаа чериӧн. Bare Sudoku аддзӧ кыкнанныссӧ."
+            ],
+            [
+              "Кутшӧм тшупӧдын паныдасьӧ X-Wing?",
+              "Эксперт. Загадка, кодлы колӧ X-Wing, Y-Wing, Swordfish либӧ XYZ-Wing, лыддьысьӧ Экспертӧн."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing судокуын: кыдзи уджалӧ техника",
+          "description": "Y-Wing (XY-Wing): кык кандидата шӧр клетка да кык борд, кодъяслӧн сыкӧд ӧти ӧтувъя кандидат, вештӧны лыдпас клеткаясысь, кодъяс аддзӧны кыкнан бордсӧ.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, кодӧс шуӧны тшӧтш XY-Wing, вӧдитчӧ куим клеткаӧн, быдӧнын кык кандидат. Шӧр клеткалӧн кандидатъяс X да Y. Ӧти борд аддзӧ шӧр клетка да сылӧн X да Z; мӧд борд аддзӧ шӧр клетка да сылӧн Y да Z. Кутшӧм кӧть лоас шӧр клетка, ӧти бордлы колӧ лоны Z, сідз мый Z позьӧ вештыны быд клеткаысь, коді аддзӧ кыкнан бордсӧ. Bare Sudoku-ын тайӧ Эксперт тшупӧдса техника.",
+          "when": [
+            "Кор загадкаын уна дзик кык кандидата клетка, а чери абу. Y-Wing Эксперт загадкаясын тшӧкыда паныдасьӧ, и сійӧс аддзӧны кык кандидата клеткаяс бӧрся мунӧмӧн: быдӧн найӧ пиысь вермас лоны шӧр клеткаӧн либӧ бордӧн."
+          ],
+          "spot": [
+            "Гижӧй дзик кык кандидата клеткаяс. Быдӧс найӧ пиысь босьтӧй шӧр клеткаӧн X да Y кандидатъясӧн, да корсьӧй сылӧн орчча клеткаяс костысь клетка X да мукӧд Z лыдпасӧн, да клетка Y да сійӧ жӧ Z-ӧн. Тайӧ кыкыс и лоӧны бордъясӧн. Сэсся корсьӧй клеткаяс, кодъяс аддзӧны кыкнан бордсӧ да кодъясын эм Z. Тӧд вылын кутӧй, мый бордъяслы оз ков аддзыны ӧта-мӧдсӧ."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{pivot} шӧр клеткалӧн кандидатъяс {x} да {y}. Сійӧ аддзӧ {wingA} клетка, кӧні {x} да {z}, да {wingB} клетка, кӧні {y} да {z}.",
+                "{pivot} кӧ {x}, {wingA} воштӧ {x} да лоӧ {z}. {pivot} кӧ {y}, {wingB} лоӧ {z}. Кыдз кӧть, кык бордысь ӧтиыс {z}.",
+                "Клетка, коді аддзӧ кыкнан бордсӧ, некор оз вермы лоны {z}. Вештӧй {z} тайӧ клеткаясысь: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Бордъяс бӧрйӧм, кодъяс кыкнанныс оз аддзыны шӧр клетка. Быд бордлӧн колӧ лоны шӧр клеткакӧд ӧтувъя рад, багана либӧ ящик.",
+            "Z вештӧм клеткаясысь, кодъяс аддзӧны сӧмын ӧти борд. Клетка, кытысь вештанныд, колӧ аддзыны кыкнан бордсӧ.",
+            "Z вештӧм шӧр клеткаысь. Y-Wing-ын шӧр клеткаын Z абу; эм кӧ, серпасыс XYZ-Wing мукӧд правилӧясӧн."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм Y-Wing судокуын?",
+              "Куим кык кандидата клетка: шӧр клетка X да Y-ӧн, борд X да Z-ӧн, коді аддзӧ шӧр клетка, да борд Y да Z-ӧн, коді аддзӧ шӧр клетка. Ӧти борд пыр Z, сідз мый Z вештӧны клеткаясысь, кодъяс аддзӧны кыкнан бордсӧ."
+            ],
+            [
+              "Y-Wing да XY-Wing ӧти и сійӧ жӧ-ӧ?",
+              "Да. Кыкнан нимыс висьталӧ ӧти серпас йылысь. Bare Sudoku шуӧ сійӧс Y-Wing."
+            ],
+            [
+              "Мыйла ӧти бордлы колӧ лоны Z?",
+              "Шӧр клетка кӧ X, медводдза борд воштӧ X да лоӧ Z. Шӧр клетка кӧ Y, мӧд борд лоӧ Z. Шӧр клетка лоӧ кык лыдпас пиысь ӧтиӧн, сідз мый ӧти борд Z."
+            ],
+            [
+              "Кымын клеткаысь вештӧ Y-Wing?",
+              "Тшӧкыджык ӧти либӧ кык клеткаысь: сӧмын сэтшӧм клеткаясысь, кодъяс аддзӧны кыкнан бордсӧ да кӧні на эм Z. Тайӧ тырмӧ ӧтка вӧчӧм вылӧ."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish судокуын: кыдзи уджалӧ техника",
+          "description": "Swordfish: лыдпас, кодӧс куим радын игналӧма куим баганаӧ, вештысьӧ тайӧ баганаяслӧн мукӧд клеткаысь. Куим ыдждаа чери, збыль примерӧн.",
+          "h1": "Swordfish",
+          "summary": "Swordfish лоӧ X-Wing куим радӧн да куим баганаӧн. Лыдпаслӧн кӧ куим радысь быдӧнын медуна куим кандидат клетка, и став тайӧ клеткаыс ӧти куим баганаын, куим рад босьтӧны лыдпассӧ тайӧ баганаясын, и лыдпассӧ позьӧ вештыны куим баганалӧн став мукӧд клеткаысь. Радъяс да баганаяс позьӧ вежлавны. Bare Sudoku корсьӧ Swordfish Y-Wing бӧрын, Эксперт загадкаясын.",
+          "when": [
+            "Кор X-Wing да Y-Wing нинӧм оз аддзыны. Swordfish паныдасьӧ X-Wing-ысь шочджыка да корӧ лыдпас, кодлӧн кандидатъяс шочиника разалӧма куим визь вывті. Колӧны тайӧ лыдпас кузя тыр да веськыд пасйӧдъяс."
+          ],
+          "spot": [
+            "Бӧрйӧй лыдпас да корсьӧй радъяс, кӧні сылӧн кык либӧ куим кандидат клетка. Куим сэтшӧм рад кӧ ӧтлаын босьтӧны сӧмын куим багана, видлалӧй тайӧ баганаясысь лыдпаслысь мукӧд кандидатъяс. Быд радлы оз ков кандидат быд баганаын: Swordfish-ын вермас лоны квайт, сизим, кӧкъямыс либӧ ӧкмыс клетка. Ворсӧмын пасйӧй лыдпас сылӧн кнопкаӧн да корсьӧй куим рад, кодъяслӧн кандидатъяс сулалӧны куим баганаын."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{d} лыдпаслӧн {rows} радъясысь быдӧнын медуна куим кандидат клетка, и став тайӧ клеткаыс {cols} баганаясын: {cells}.",
+                "Куим радысь быдӧнлы колӧ пуктыны ассьыс {d} куим баганаысь ӧтиӧ, и кык рад оз вермыны вӧдитчыны ӧти баганаӧн. Сідзкӧ куим багана ассьыныс {d} босьтӧны тайӧ куим радысь.",
+                "{cols} баганаясын мукӧд {d} кандидат оз позь. Вештӧй {d} тайӧ клеткаясысь: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Став ӧкмыс клетка корӧм. Swordfish, кӧні мукӧд радын кык кандидат, сідзжӧ веськыд, куим рад кӧ босьтӧны сӧмын куим багана.",
+            "Нёль кандидат клеткаа рад пыртӧм. Быд подув радын вермас лоны медуна куим, ставныс куим багана пытшкын.",
+            "Подув радъясын вештӧм. Подувын кӧ радъяс, вештӧмъяс куим баганаын, подув радъяс ӧтдорын."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм Swordfish судокуын?",
+              "Лыдпас, кодлӧн куим радын кандидатъяс игналӧма куим баганаӧ. Куим радлы колӧ пуктыны лыдпас тайӧ куим баганаӧ, ӧтиӧс быдӧ, сідз мый лыдпассӧ вештӧны тайӧ баганаяслӧн мукӧд клеткаысь."
+            ],
+            [
+              "Мыйӧн Swordfish торъялӧ X-Wing-ысь?",
+              "Сӧмын ыджданас: X-Wing вӧдитчӧ кык радӧн да кык баганаӧн, Swordfish куимӧн да куимӧн. Мӧвпалӧмыс ӧткодь."
+            ],
+            [
+              "Колӧ-ӧ Swordfish-лы дзик ӧкмыс клетка?",
+              "Оз ков. Быд радын вермас лоны кык либӧ куим кандидат; серпас корӧ сӧмын, медым куим рад ӧтлаын вӧдитчисны куим баганаысь абу унджыкӧн."
+            ],
+            [
+              "Эм-ӧ нёль ыдждаа чери?",
+              "Эм, Jellyfish. Bare Sudoku сыӧн оз вӧдитчы, ӧд сылӧн загадкаяслы сійӧ некор оз ков."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing судокуын: кыдзи уджалӧ техника",
+          "description": "XYZ-Wing: куим кандидата шӧр клетка да кык борд ӧти ӧтувъя лыдпасӧн вештӧны тайӧ лыдпассӧ клеткаясысь, кодъяс аддзӧны став куимнанныссӧ. Пример.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing лоӧ Y-Wing, кӧні шӧр клеткалӧн куим кандидат. Шӧр клеткаын X, Y да Z; ӧти борд аддзӧ шӧр клетка да сылӧн X да Z, мӧд аддзӧ шӧр клетка да сылӧн Y да Z. Куим клеткаысь ӧтилы колӧ лоны Z, сідз мый Z позьӧ вештыны быд клеткаысь, коді аддзӧ став куимнанныссӧ. Шӧр клетка ачыс вермас лоны Z, сы вӧсна клетка, кытысь вештанныд, колӧ аддзыны и шӧр клетка, и кыкнан бордсӧ, а тайӧ игналӧ сійӧс ящикӧ, радӧ либӧ баганаӧ, коді клеткаяслӧн ӧтувъя. Тайӧ медся сьӧкыд техника, кодӧн вӧдитчӧ Bare Sudoku.",
+          "when": [
+            "Сӧмын сэки, кор мукӧд ставыс оз отсав. XYZ-Wing лоӧ Bare Sudoku-ын медся шоча паныдасьысь серпасӧн да петӧ сӧмын Эксперт загадкаясын. Корсьӧй сійӧс, кор куим кандидата клетка сулалӧ ящикын кык кандидата клеткакӧд, кодлӧн сыкӧд кык ӧтувъя лыдпас."
+          ],
+          "spot": [
+            "Заводитӧй дзик куим кандидата клеткаясысь; быдӧн найӧ пиысь вермас лоны шӧр клеткаӧн. Сылӧн орчча клеткаяс костысь корсьӧй кык клетка кык кандидатӧн быдӧнын, кыкнанныс шӧр клеткалӧн куим лыдпасысь, да дзик ӧти ӧтувъя Z лыдпасӧн. Сэсся корсьӧй клеткаяс, кодъяс аддзӧны шӧр клетка да кыкнан бордсӧ да кодъясын эм Z. Практикаын ӧти борд шӧр клеткалӧн ящикын, мӧдыс сылӧн радын либӧ баганаын, а вештан клеткаяс лоӧны тайӧ ящиклӧн кольӧм клеткаясӧн сійӧ жӧ радын либӧ баганаын."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{pivot} шӧр клеткалӧн куим кандидат: {x}, {y} да {z}. Сійӧ аддзӧ {wingA} клетка {x} да {z}-ӧн, да {wingB} клетка {y} да {z}-ӧн.",
+                "{pivot} кӧ {z}, ставыс дась. Сійӧ кӧ {x}, {wingA} клеткаын колӧ лоны {z}. Сійӧ кӧ {y}, {wingB} клеткаын колӧ лоны {z}. Кыдз кӧть, куим клеткаысь ӧтиыс {z}.",
+                "Клетка, коді аддзӧ став куимнанныссӧ, оз вермы лоны {z}. Вештӧй {z} тайӧ клеткаясысь: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Вештӧм клеткаясысь, кодъяс аддзӧны сӧмын кык бордсӧ. Y-Wing-ысь торъя, шӧр клетка вермас лоны Z, сідз мый клетка колӧ аддзыны и шӧр клетка.",
+            "Бордъясӧн вӧдитчӧм, кодъяслӧн кандидатъяс абу кыкнанныс шӧр клеткалӧн куим кандидат пиын.",
+            "Y-Wing-кӧд сорлалӧм: торъялӧмыс шӧр клеткалӧн коймӧд кандидатын, и сійӧ вежӧ, кутшӧм клеткаяс позьӧ сӧстӧммӧдны."
+          ],
+          "faq": [
+            [
+              "Мый сэтшӧм XYZ-Wing судокуын?",
+              "Шӧр клетка X, Y да Z кандидатъясӧн да кык борд, ӧти X да Z-ӧн, мӧд Y да Z-ӧн, кыкнанныс аддзӧны шӧр клетка. Куим клеткаысь ӧтиыс Z, сідз мый Z вештӧны клеткаясысь, кодъяс аддзӧны став куимнанныссӧ."
+            ],
+            [
+              "Мыйӧн XYZ-Wing торъялӧ Y-Wing-ысь?",
+              "Шӧр клеткалӧн кык пыдди куим кандидат, найӧ лыдын Z. Сы вӧсна Z вермас сулавны шӧр клеткаын, сідз мый Z-ӧс вермӧны воштыны сӧмын клеткаяс, кодъяс аддзӧны шӧр клетка да кыкнан бордсӧ."
+            ],
+            [
+              "Кутшӧм тшӧкыда паныдасьӧ XYZ-Wing?",
+              "Шоча. Bare Sudoku-ын сійӧ вермас ковны сӧмын Эксперт загадкаяслы, и унджыкыслы оз ков. Bare Sudoku видлалӧ сійӧс медбӧрын, X-Wing, Y-Wing да Swordfish бӧрын."
+            ],
+            [
+              "Эм-ӧ WXYZ-Wing?",
+              "Эм, нёль кандидата шӧр клеткаӧн, но Bare Sudoku сыӧн оз вӧдитчы. Ворсӧмса быд загадка позьӧ помавны тайӧ велӧдӧсса ӧкмыс техникаӧн."
+            ]
+          ]
+        }
+      }
+    },
+    "udm": {
+      "learnHeading": "Судоку дышетскон",
+      "learnText": "Судоку тӥледлы выль-а, яке секыт загадка вылын сылӥды-а? Кык дышетонын валэктэмын правилоос но вань сэрттон амалъёс, кудъёсыныз визь-кенешъёс пайдаланӥсько, котькудыз зэм примерен.",
+      "howToLink": "Кызьы судокуен шудоно",
+      "techniquesLink": "Судоку сэрттон амалъёс",
+      "labels": {
+        "howTo": "Кызьы шудоно",
+        "techniques": "Амалъёс",
+        "play": "Судокуен шудыны",
+        "prev": "Азьвыл амал",
+        "next": "Вуоно амал",
+        "all": "Вань амалъёс",
+        "example": "Пример",
+        "steps": "Вамыш бере вамыш",
+        "when": "Ку уже кутоно",
+        "spot": "Кызьы шедьтоно",
+        "mistakes": "Ӵем янгышъёс",
+        "inGame": "Bare Sudoku-ын",
+        "level": "Кулэ тубатысен: {level}",
+        "hint": "Шудонын визь-кенеш вера: {text}",
+        "legend": "Зӧк лыдпусъёс кутсконысен сётэмын, лыз лыдпусъёс сэрттыкуз пуктэмын, пичи лыдпусъёс кандидатъёс луо. Пусъем клеткаос суред кылдыто, ӵушылэм кандидатъёс палэнтӥсько, нош котырам кандидат пуктоно лыдпус луэ.",
+        "notation": "Клеткаос r3c7 сямен гожтӥсько: 3-тӥ чур, 7-тӥ столбец. Чуръёс вылысен лыдъясько, столбецъёс паллян палысен, нош коробкаос 1-ысен 9-озь паллян вылӥ сэрегысен, чур бере чур.",
+        "row": "{n}-тӥ чур",
+        "column": "{n}-тӥ столбец",
+        "box": "{n}-тӥ коробка",
+        "elimItem": "{d} {cell} клеткаысь",
+        "regions": "5-тӥ чур, 5-тӥ столбец но 5-тӥ коробка загадкалэн кутсконаз",
+        "firstMove": "Усьтэм одӥг: {cell} клеткаын {d} гинэ луыны быгатэ",
+        "breadcrumb": "Навигация"
+      },
+      "howTo": {
+        "title": "Кызьы судокуен шудоно: правилоос, сетка, нырысетӥ вамышъёс",
+        "description": "Тодэ басьтэлэ, кызьы судокуен шудоно: правилоос, чуръёс, столбецъёс но коробкаос, малы загадкалэн одӥг сэрттонэз, кызьы пусъёсты кутоно но кытысь кутсконо.",
+        "h1": "Кызьы судокуен шудоно",
+        "summary": "Судоку луэ 9×9 сетка вылын логической загадка. Котькуд буш клеткае 1-ысен 9-озь лыдпус гожтэлэ, мед котькуд чурын, котькуд столбецын но котькуд 3×3 коробкаын котькуд лыдпус огпол гинэ луоз. Куд-ог лыдпусъёс кутсконын сётэмын; мукетъёссэ логикаен шедьтоды, одӥг оскымон клетка бере мукетсэ, нош чакланы ноку но кулэ ӧвӧл. Та дышетон валэктэ сеткаез, правилоосты, одӥг сэрттон сярысь принципез, пусъёсты но нырысетӥ вамышъёс понна капчи стратегиез. Ваньзэ [Bare Sudoku](play)-ын дасяськыны луэ, со дунтэм но солэн визь-кенешъёсыз логиказэ валэкто.",
+        "sections": [
+          {
+            "h": "Судокулэн кыӵе правилоосыз?",
+            "p": [
+              "Правилоос куинь гинэ, нош соос одӥг правило, куинь пал ласянь учкемын: котькуд чурын 1-ысен 9-озь лыдпусъёс луыны кулэ, котькуд столбецын 1-ысен 9-озь лыдпусъёс луыны кулэ, котькуд 3×3 коробкаын 1-ысен 9-озь лыдпусъёс луыны кулэ. Соин ик одӥг лыдпус ноку но одӥг чурын, столбецын яке коробкаын кык пол луыны уг быгаты.",
+              "Сётэм лыдпусъёс, кудъёсыз зӧк шрифтэн гожтэмын, уг воштӥсько. Тӥляд ужды буш клеткаосты тырмытыны. Арифметика но радъян ӧвӧл: лыдпусъёс укмыс пӧртэм тамга гинэ. Букваосын яке формаосын но шудыны луысал, но номыр но уз воштӥськы."
+            ]
+          },
+          {
+            "h": "Кызьы сетка радъямын?",
+            "p": [
+              "Сеткаын 81 клетка, 9 чурын но 9 столбецын. Зӧк гожъёс сое укмыс 3×3 коробкае люко. Котькуд клетка одӥг гинэ чуре, одӥг столбеце но одӥг коробкае пыре, нош та куинь группа клеткалэн группаосыз луо. Мукет 20 клетка, кудъёсыз клеткаен огъя группае пыро, солэн бускель клеткаосыз шуисько; клеткае пуктэм лыдпус та лыдпусэз вань 20 бускель клеткаысь палэнтэ.",
+              "Клеткаос r3c7 сямен гожтӥсько: 3-тӥ чур, 7-тӥ столбец. Чуръёс вылысен лыдъясько, столбецъёс паллян палысен, нош коробкаос 1-ысен 9-озь паллян вылӥ сэрегысен, чур бере чур. Та гожтон сям котькуд амал сярысь дышетонын кутӥське, сое тодыны пайдаё: r5c5 сеткалэн шораз сылэ."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Малы котькуд судокулэн одӥг гинэ сэрттонэз?",
+            "p": [
+              "Зэм судокулэн одӥг сэрттонэз, соин ик логика ужа. Ку тӥ возьматыны быгатӥськоды, лыдпус группаын мукет интые пыраны уг быгаты шуыса, со кылем клеткае пыраны кулэ, малы ке шуоно сэрттон вань но со одӥг. Загадкалэн кык сэрттонэз ке, нокыӵе малпаськон соосты висъяны уг быгаты, нош кыӵе ке дыре чакланы кулэ луоз.",
+              "Bare Sudoku котькуд загадкаез тӥляд устройствоады кылдытэ но эскере, мед солэн одӥг гинэ сэрттонэз луоз но мед солэн логической сэрттӥсез сое быръем тубатлэн амалъёсыныз быдэстыны быгатоз. Озьыен, сылӥды ке, вуоно вамыш котьку вань, нош визь-кенеш сое возьматэ."
+            ]
+          },
+          {
+            "h": "Кызьы судокуез кутсконо?",
+            "p": [
+              "Кутскелэ отысен, кытын вариантъёс тужгес ӧжыт. Та радъян котькуд тубатын ужа:"
+            ],
+            "list": [
+              "Быръелэ лыдпус, кудӥз трос пол пумиське ини, шуом, куать яке сизьым пол, но утчалэ коробкаос, кытын со ӧвӧл на. Ӵем коробкаын со понна одӥг гинэ клетка кыле: со [ватэм одӥг](hidden-single).",
+              "Утчалэ клеткаос, кудъёсыз котыр трос лыдпус. Клеткалы, кудӥзлэн чураз, столбецаз но коробкаяз огазе тямыс пӧртэм лыдпус, одӥг гинэ кандидат кыле: [усьтэм одӥг](naked-single). Трос лыдпусъем чуръёсысь яке коробкаосысь клеткаосты утчаны тужгес умой.",
+              "Котькуд пуктэм лыдпус 20 бускель клеткаысь кандидатэз палэнтэ, соин ик соку ик соосты эскерелэ. Одӥгъёс ӵем одӥг бӧрсьы мукетыз кылдо.",
+              "Капчи пуктонъёс быдтэм ке, пусъёс гожтэлэ: котькуд буш клеткалэн кандидатъёсыз. Собере утчалэ лыдпус, кудӥз коробка пушкын одӥг чурын яке столбецын гинэ сылэ ([ворсам кандидатъёс](locked-candidates)), яке огкадь кык кандидатъем кык клетка ([усьтэм кык](naked-pairs)).",
+              "Котькуд палэнтон бере одӥгъёс доры берытскелэ. Эксперт загадкаос но ӵемгес одӥгъёсын сэрттӥсько; секыт амал вуоно вамышез усьтэ гинэ."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Мар со пусъёс но ку соосты уже кутоно?",
+            "p": [
+              "Пусъёс, кудъёсты карандаш пусъёс яке кандидатъёс шуыса но нимало, буш клеткае гожтэм пичи лыдпусъёс луо, мед тодыны, кыӵе лыдпусъёс отчы на тупало. Капчи загадкаосын соос шер кулэ луо; Секыт тубатысен соостэк уг луы, малы ке шуоно кыкъёс, X-Wing но Y-Wing кадь амалъёс кандидатъёсын ужало, пуктэм лыдпусъёсын ӧвӧл.",
+              "Пусъёс шонер мед луозы: лыдпус пуктыкуды сое вань 20 бускель клеткалэн пусъёсысь палэнтэлэ. Bare Sudoku-ын со асэрказ луэ, нош «Пусъёсты тырмытыны» одӥг зӥбонэн котькуд кандидатэз котькуд буш клеткае гожтэ, озьыен тыр но шонер кандидатъёсын кутскыны луэ. Пус луэ факт, нош чаклан ӧвӧл: со возьматэ, та лыдпусэз номыр но палэнтымтэ на шуыса."
+            ]
+          },
+          {
+            "h": "Мар лэсьтоно, сылӥды ке?",
+            "p": [
+              "Нырысь ик нош ик эскерелэ капчи интыосты: котькуд трос лыдпусъем чурын, столбецын но коробкаын одӥгъёс шедьтыны луэ. Собере эскерелэ, пусъёс тыр-а, малы ке шуоно ыштэм кандидат суредъёсты ватэ, нош вуж кандидат пӧяськись суредъёс кылдытэ. Собере [амалъёсты](techniques) секытлыксы радын учкелэ: ворсам кандидатъёс, кыкъёс но куиньёс, X-Wing, Y-Wing, Swordfish но XYZ-Wing. Котькуд амаллэн аслаз бамлыкез зэм примерен.",
+              "Номыр но уг юрттэ ке, визь-кенеш басьтэлэ. Bare Sudoku-ын визь-кенеш нырысь эскере, янгыш пуктэм лыдпус вань-а, собере логикаен тырмытыны луонлыко вуоно клеткаез шедьтэ но амаллэсь нимзэ вера, озьыен визь-кенешен пайдаланыкуды но выль тодон басьтоды. Лыдпус пуктон понна визь-кенешез нош ик зӥбелэ."
+            ]
+          },
+          {
+            "h": "Кызьы Bare Sudoku-ын лыдпусъёсты пуктоно?",
+            "p": [
+              "Клетка вылэ зӥбелэ, собере лыдпус вылэ. Яке нырысь лыдпус вылэ зӥбелэ: со ворсаське, нош котькуд клетка, кудӥз вылэ зӥбиськоды, сое басьтэ; со лыдпуслэсь куатетӥ, сизьыметӥ но тямысэтӥ экземпляръёссэ пуктон понна тужгес жог амал. Лыдпусэз мозмытон понна сое нош ик зӥбелэ. «Пусъёс» кнопка карандаш пусъёс вылэ вуттэ, «Ӵушыны» клеткаез ӵушэ, «Берыктыны» котькуд ходэз берыктэ, нош янгышъёс горд буёлэн пусъяськозы, менюын со кысэмын ӧвӧл ке.",
+              "Клавиатура вылын стрелкаосын вырелэ, 1-ысен 9-озь клавишаосын лыдпус гожтэлэ, Backspace-ен ӵушелэ; N пусъёс понна, U берыктон понна, H визь-кенеш понна, F пусъёсты тырмытон понна, нош Escape меню понна. Шудон асэрказ утиське, интернеттэк ужа, рекламаез но аккаунтэз ӧвӧл."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Судокуын чакланы кулэ-а?",
+            "Зэм загадкаын кулэ ӧвӧл. Котькуд Bare Sudoku загадкалэн одӥг гинэ сэрттонэз, нош эскерымын, сое логикаен гинэ, аслаз тубатлэн амалъёсыныз сэрттыны луэ шуыса. Чакланы кулэ кадь потэ ке, пусъёсысь кыӵе ке кандидат ӧвӧл яке кыӵе ке амал шедьтыны кулэ на."
+          ],
+          [
+            "Одӥг чурын, столбецын яке коробкаын лыдпус кык пол пумиськыны быгатэ-а?",
+            "Ӧвӧл. Со ик вань правилоез: укмыс чурлэн, укмыс столбецлэн но укмыс коробкалэн котькудаз 1-ысен 9-озь котькуд лыдпус огпол гинэ. Одӥг группаын кык огкадь лыдпус ке, соослэсь одӥгез ке но янгыш."
+          ],
+          [
+            "Капчи, Шоро-куспо, Секыт но Эксперт малын пӧртэмесь?",
+            "Тубатэз загадкалы кулэ амалъёс радъяло. Капчи но Шоро-куспо одӥгъёсын гинэ сэрттӥсько, нош Капчи 38-лэсь ӧжытгес ӧвӧл сётэм лыдпусэн кутске. Секытлы ворсам кандидатъёс яке кыкъёс но куиньёс кулэ. Экспертлы X-Wing, Y-Wing, Swordfish яке XYZ-Wing кулэ."
+          ],
+          [
+            "Котькуд клеткае пусъёс тырмытыны умойгес-а яке куд-огаз гинэ?",
+            "Секыт но Эксперт загадкаосын ваньзэ тырмытэлэ: кыкъёс, X-Wing но Y-Wing кадь суредъёс вань кандидатъёс гожтэмын ке гинэ адскыло. Капчи но Шоро-куспо тубатъёсын пусъёс ас малпамъя, нош уноез шудӥсьёс одӥгъёсты гинэ утчало."
+          ],
+          [
+            "Судоку кӧня дыр басьтэ?",
+            "Капчи загадка куд-ог минут басьтэ; Эксперт загадка кызь минут яке тросгес басьтыны быгатэ: со тӥ секыт суредэз кызьы жог адӟиськоды, отысь кылдэ. Bare Sudoku таймер возьматэ, меню усьтэм дыръя сое дугдытэ но рекордъёс таблица ӧвӧл, озьы ке шудэлэ ас темпады."
+          ],
+          [
+            "Судокулы арифметика кулэ-а?",
+            "Кулэ ӧвӧл. Лыдпусъёс тамгаос гинэ; номыр но уг ватсаськы, уг лыдъяськы. Кыӵе ке укмыс тамга но тупаса луысал, соин ик судоку логической загадка, лыдъя загадка ӧвӧл."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судоку сэрттон амалъёс: валэктонъёс но примеръёс",
+        "description": "Судоку сэрттон вань укмыс амалъёс, усьтэм одӥгысен Swordfish но XYZ-Wing-озь, Bare Sudoku визь-кенешъёслэн радзы ласянь, котькудыз зэм примерен.",
+        "h1": "Судоку сэрттон амалъёс",
+        "intro": [
+          "Котькуд судокуез ӧжыт логической амалъёсын сэрттыны луэ. Та лыдъяськонын укмыс амал, кудъёсын Bare Sudoku-лэн сэрттӥсез но солэн визь-кенешъёсыз пайдаланӥсько, сэрттӥсь соосты кызьы утча, со радъя: нырысь одӥгъёс, собере одӥг группа пушкын палэнтонъёс, собере суредъёс, кудъёсыз трос чуръёс но столбецъёс вамен вуо. Котькуд амаллэн аслаз бамлыкез вань, отын валэктон, кызьы сое шедьтоно, кылдытэм загадкаысь зэм пример но ӵем янгышъёс.",
+          "Загадкалэсь тубатсэ солы кулэ луись тужгес секыт амал радъя. Капчи но Шоро-куспо загадкаослы одӥгъёс гинэ кулэ, Секыт загадкаослы ворсам кандидатъёс яке кыкъёс но куиньёс кулэ, нош Эксперт загадкаослы одӥг чорыг яке бурд ке но. Кыӵе ке тубат луыны быгатэ, ужлэсь ятыр люкетсэ одӥгъёс лэсьто; секыт амал одӥг-кык кандидатэз палэнтэ, собере одӥгъёс нош ик азьлань мыно."
+        ],
+        "faq": [
+          [
+            "Кыӵе радын судоку амалъёсты эскероно?",
+            "Нырысь тужгес капчиосыз: усьтэм одӥг, ватэм одӥг, ворсам кандидатъёс, усьтэм кыкъёс но куиньёс, ватэм кыкъёс но куиньёс, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku соосты та радын ик эскере, нош визь-кенеш котьку азьлань мынон понна тужгес капчи амалэз нимаз вера."
+          ],
+          [
+            "Судоку сэрттон понна вань та амалъёс кулэ-а?",
+            "Капчи но Шоро-куспо загадкаослы одӥгъёс тырмо. Секыт загадкаосын ворсам кандидатъёс но пичигес группаос ватсасько. Эксперт загадкаослы одӥг чорыг яке бурд ке но кулэ, но ӵемысь котькуд загадкаын огпол яке кыкпол гинэ."
+          ],
+          [
+            "XYZ-Wing-лэсь секытгес амалъёс вань-а?",
+            "Вань, шуом, цепочкаос, одӥг сэрттонэз эскерон тестъёс но форсировать карись сеткаос. Bare Sudoku соос кулэ луись загадкаосты уг кылдыты, озьыен шудонысь котькуд загадкаез та бамлыкысь укмыс амалэн быдэстыны луэ."
+          ],
+          [
+            "Кандидат мар со?",
+            "Лыдпус, кудӥз буш клеткае на пуктыны луэ, малы ке шуоно солэн чураз, столбецаз яке коробкаяз номыр но сое палэнтымтэ на. Шудонысь пусъёс кандидатъёс луо. Одӥгъёслэсь секытгес котькуд амал кандидатъёс сярысь малпаське, соин ик пусъёс тыр но шонер мед луозы."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Усьтэм одӥг",
+          "title": "Усьтэм одӥг судокуын: одӥг кандидатъем клетка",
+          "description": "Усьтэм одӥг (naked single) луэ буш клетка, кытчы одӥг гинэ лыдпус тупа. Зэм примерен, вамышъёсын но ӵем янгышъёсын соосты жог шедьтыны дышетскелэ.",
+          "h1": "Усьтэм одӥг (naked single)",
+          "summary": "Усьтэм одӥг луэ буш клетка, кытын одӥг гинэ кандидат: мукет тямыс лыдпусъёс солэн чураз, столбецаз яке коробкаяз вань ини. Кылем лыдпус отчы пуктоно. Со судокуын тужгес капчи амал, тӥ сое тужгес ӵем уже кутӥськоды, нош Bare Sudoku-лэн визь-кенешез со сярысь «Татын одӥг гинэ кандидат» шуэ.",
+          "when": [
+            "Котьку. Усьтэм одӥгъёс нырысетӥ ходысен берпуметӥозь пумисько, котькуд тубатын. Капчи но Шоро-куспо загадкаосын тӥледлы соос но ватэм одӥгъёс гинэ кулэ. Секытгес загадкаосын секыт амалэн котькуд палэнтон ӵем усьтэм одӥгез кельтэ, соин ик котькуд вамыш бере соосты утчалэ."
+          ],
+          "spot": [
+            "Трос пуктэм лыдпусъем бускельёсын клеткаос вылэ учкелэ: сизьым лыдпус вань ини чурысь клетка, яке клетка, кудӥзлэн чураз, столбецаз но коробкаяз огазе тямыс пӧртэм лыдпус. Пусъёстэк клеткаысь адӟиськись лыдпусъёсты лыдъялэ. Пусъёсын усьтэм одӥг одӥг кандидатъем клетка гинэ луэ, соин ик «Пусъёсты тырмытыны» соосты капчиен шедьтыны юрттэ."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{cell} клетка вылэ учкелэ. Со буш, соин ик солэн чураз, столбецаз но коробкаяз пуктэм вань лыдпусъёсты гожтэлэ.",
+                "{row}-тӥ чурын {rowDigits} вань. {col}-тӥ столбецын {colDigits} вань. {box}-тӥ коробкаын {boxDigits} вань.",
+                "Огазе соос {d} сяна вань лыдпусъёсты палэнто, соин ик {cell} клеткаын {d} кандидат гинэ кыле.",
+                "{d} лыдпусэз {cell} клеткае гожтэлэ. Собере эскерелэ, выль лыдпус со ик чурын, столбецын яке коробкаын выль одӥгез кылдытэ-а."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Чурез гинэ яке коробкаез гинэ лыдъян. Палэнтэм тямыс лыдпус ӵем куинь группаысь ӵош лыкто.",
+            "Вунэтон, туж ӧжыт азьвыл пуктэм лыдпус но аслаз 20 бускель клеткаысьтыз кандидатъёсты палэнтэ шуыса; выль усьтэм одӥгъёс котькуд пуктон бере соку ик кылдо.",
+            "Усьтэм одӥгез но ватэм одӥгез сураны: усьтэм одӥглэн клеткаын одӥг кандидат кыле, ватэм одӥглэн лыдпуслы группаын одӥг клетка кыле."
+          ],
+          "faq": [
+            [
+              "Судокуын усьтэм одӥг мар со?",
+              "Одӥг гинэ кандидатъем буш клетка. Солэн чураз, столбецаз но коробкаяз тямыс пӧртэм лыдпус пуктэмын ини, соин ик укмысэтӥ лыдпус гинэ тупа."
+            ],
+            [
+              "Малы сое англи кылын naked шуо?",
+              "Малы ке шуоно пусъёс гожтэм бере одӥг кандидат клеткаын шара адске; номыр но сое уг ваты. Ватэм одӥг нош мукет кандидатъёс пӧлын сылэ, сое клетка вылэ ӧвӧл, лыдпус вылэ учкыса шедьтӥськоды."
+            ],
+            [
+              "Загадкаез усьтэм одӥгъёсын гинэ сэрттыны луэ-а?",
+              "Трос Капчи загадкаосты луэ, но уноезлы ватэм одӥгъёс но кулэ. Bare Sudoku Капчи но Шоро-куспо загадкаосты кыкназ сямъем одӥгъёсын сэрттымон шуыса лыдъя; Секыт но Эксперт загадкаослы одӥг мукет амал ке но кулэ."
+            ],
+            [
+              "Визь-кенеш усьтэм одӥгъёсты возьматэ-а?",
+              "Возьматэ. Вуоно пуктон усьтэм одӥг ке, визь-кенеш клеткаез быръе но лыдпусэн ӵош «Татын одӥг гинэ кандидат» шуэ. Лыдпус пуктон понна визь-кенешез нош ик зӥбелэ."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Ватэм одӥг",
+          "title": "Ватэм одӥг судокуын: лыдпуслэн одӥг гинэ интыез",
+          "description": "Ватэм одӥг (hidden single) луэ чурын, столбецын яке коробкаын одӥг гинэ клетка, кытчы лыдпус на тупа. Одӥг лыдпус вылэ учкыса соосты шедьтыны дышетскелэ.",
+          "h1": "Ватэм одӥг (hidden single)",
+          "summary": "Ватэм одӥг луэ лыдпус, кудӥзлы чурын, столбецын яке коробкаын одӥг гинэ луонлыко клетка кыле, со клеткаын мукет кандидатъёс адскыло ке но. Группаын та лыдпус луыны кулэ, соин ик со отчы пыре. Bare Sudoku-лэн визь-кенешез со сярысь «Та чуръяз 5 понна одӥг гинэ инты» шуэ, яке столбецын яке коробкаын.",
+          "when": [
+            "Кыӵе ке лыдпус кема азьланьтӥз ке: лыдпус вить яке куать пол пумиське ке, кылем коробкаос туж зӥбемесь, нош вуоно ход ӵем ватэм одӥг луэ. Ватэм одӥгъёс Капчи но Шоро-куспо загадкаослэн валтӥсь амалзы но котькуд тубатын тужгес кулэ ужан тӥрлык."
+          ],
+          "spot": [
+            "Одӥг лыдпус вылэ гинэ учкелэ. Лыдпус басьтэлэ, со ӧвӧл коробка шедьтэлэ, собере та коробкалэсь вань клеткаоссэ палэнэ кельтэлэ, кудъёсыз та лыдпуслэн пуктэм экземпляръёсыныз огъя чурын яке столбецын сыло. Одӥг клетка кыле ке, тӥ ватэм одӥгез шедьтӥды. Озьы ик чуръёсты но столбецъёсты учкыны луэ. Шудонын пуктэм лыдпус вылэ зӥбелэ: солэн вань экземпляръёсыз пусъяськозы, нош буш клеткаос адскозы."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{box}-тӥ коробкаын {d} ӧвӧл на, соин ик солэн буш клеткаосыз пӧлысь одӥгаз со луыны кулэ. Буш клеткаос: {empties}.",
+                "Соос пӧлысь котькудаз, {cell} сяна, {d} пуктыны уг луы, малы ке шуоно со ик чурын яке столбецын {d} пуктэмын ини; соин ик отын {d} кандидат ӧвӧл.",
+                "Озьыен {cell} луэ {d} лыдпуслэн {box}-тӥ коробкаын одӥг гинэ интыез. {d} лыдпусэз отчы гожтэлэ, {cell} клеткаын мукет кандидатъёс на адскыло ке но."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Лыдпусэз шонер луыны быгатӥсь гинэ клеткае пуктон: группалэсь вань мукет буш клеткаоссэ эскерелэ, адскись гинэосты ӧвӧл.",
+            "Клеткаын трос кандидат адске шуыса ватэм одӥгез вунэтон. Мукет кандидатъёс кулэесь ӧвӧл; кулэез со, лыдпуслы группаын мукет инты ӧвӧл шуыса.",
+            "Коробкаосты гинэ эскерон. Чуръёс но столбецъёс ватэм одӥгъёсты озьы ик ӵем сёто, нимысьтыз пумаз матын."
+          ],
+          "faq": [
+            [
+              "Судокуын ватэм одӥг мар со?",
+              "Лыдпус, кудӥз чурлэн, столбецлэн яке коробкалэн одӥг гинэ клеткаяз сылыны быгатэ. Группаын та лыдпус луыны кулэ, соин ик клеткае сое пуктоно, отын мукет кандидатъёс на вань ке но."
+            ],
+            [
+              "Ватэм одӥг усьтэм одӥглэсь малын пӧртэм?",
+              "Усьтэм одӥг клетка сярысь: одӥг кандидат кыле. Ватэм одӥг лыдпус сярысь: группаын одӥг клетка кыле. Кыкназы лыдпусэз оскыса пукто."
+            ],
+            [
+              "Кудзэ шедьтыны капчигес?",
+              "Пусъёстэк ватэм одӥгъёсты шедьтыны ӵемысь капчигес, малы ке шуоно сеткаез одӥг лыдпус вылэ учкыса эскерыны луэ. Тыр пусъёсын тужгес капчи усьтэм одӥгъёс, малы ке шуоно одӥг кандидатъем клетка соку ик адске."
+            ],
+            [
+              "Визь-кенеш ватэм одӥгез кызьы валэктэ?",
+              "Та чурын, та столбецын яке та коробкаын лыдпус понна «одӥг гинэ инты» шуыса, быръем клеткаен. Лыдпус пуктон понна визь-кенешез нош ик зӥбелэ."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Ворсам кандидатъёс",
+          "title": "Ворсам кандидатъёс судокуын: возьматон но басьтон",
+          "description": "Ворсам кандидатъёс: лыдпуслэн коробкаысь кандидатъёсыз одӥг чурын яке столбецын ке, яке мукетыз, лыдпус мукет интыосысь палэнтӥське. Кык зэм пример.",
+          "h1": "Ворсам кандидатъёс (locked candidates)",
+          "summary": "Ворсам кандидатъёс луэ нырысетӥ амал, кудӥз лыдпус пуктон интые кандидатъёсты палэнтэ. Солэн кык формаез. Возьматон: коробкаын лыдпуслэн вань кандидатъёсыз одӥг чурын яке столбецын, соин ик лыдпус та чурлэн яке столбецлэн мукет клеткаосысьтыз палэнтӥське. Басьтон: чурын яке столбецын лыдпуслэн вань кандидатъёсыз одӥг коробкаын, соин ик лыдпус та коробкалэн мукет клеткаосысьтыз палэнтӥське. Bare Sudoku-лэн визь-кенешез та амал усьтэм пуктонэз «Ворсам кандидатъёс» нимен пусъя.",
+          "when": [
+            "Секыт загадкаын одӥгъёс быдтэм ке, нырысь сое эскерелэ. Учкись лыдпус понна ке но тыр пусъёс кулэ. Ворсам кандидатъёс ӵем пумисько: уноез Секыт загадкаослы соос кулэ, нош Эксперт загадкаосын соосты бадӟымгес суредъёс куспын кутӥсько."
+          ],
+          "spot": [
+            "Возьматон понна котькуд коробка но отын ӧвӧл котькуд лыдпус вылэ учкелэ: та лыдпуслэн кандидат клеткаосыз одӥг чурын яке столбецын ке, эскерелэ, со ик лыдпус кандидат луыса та чур яке столбец кузя коробка палэнын вань-а. Басьтон понна чур яке столбец кузя учкелэ: лыдпуслэн вань кандидатъёсыз одӥг коробка пушкын ке, та коробкалэсь мукет клеткаоссэ ӵушыны луэ. Шудонын лыдпус кнопка вылэ зӥбелэ, солэн вань кандидатъёссэ пусъян понна; одӥг коробка пушкын кык яке куинь пусъем пуслэн гожез суред ик луэ."
+          ],
+          "examples": [
+            {
+              "h": "Возьматон",
+              "steps": [
+                "{box}-тӥ коробкаын {d} лыдпуслэн та кандидат клеткаосыз гинэ: {cells}. Соос ваньмыз {row}-тӥ чурын.",
+                "{box}-тӥ коробкалы {d} кулэ, соин ик {row}-тӥ чурысь {d} {box}-тӥ коробкаын сылэ, кыӵе клеткае ке но со пыре.",
+                "{row}-тӥ чурын кыктэтӥ {d} луыны уг быгаты, соин ик {row}-тӥ чурлэн коробка палэнысь клеткаосысьтыз {d} лыдпусэз палэнтэлэ: {elim}."
+              ]
+            },
+            {
+              "h": "Басьтон",
+              "steps": [
+                "{row}-тӥ чурын {d} {cells} клеткаосын гинэ сылыны быгатэ, нош соос ваньмыз {box}-тӥ коробка пушкын.",
+                "{row}-тӥ чурын {d} луыны кулэ, соин ик {row}-тӥ чур {box}-тӥ коробкалэсь {d} лыдпуссэ басьтэ. {box}-тӥ коробкалэн мукет клеткаосаз {d} луыны уг быгаты.",
+                "{d} лыдпусэз та клеткаосысь палэнтэлэ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Возьматон дыръя лыдпусэз коробка пушкысь палэнтон, солэн палэнысьтыз ӧвӧл, яке басьтон дыръя мукетыз сямен. Палэнтонъёс котьку клеткаосы мыно, кудъёсыз чур яке столбец вылын, но коробкаын ӧвӧл, яке коробкаын, но чур яке столбец вылын ӧвӧл.",
+            "Правилоез кутон, кандидатъёс коробкалэн кык чураз ке. Коробкаын лыдпуслэн вань кандидат клеткаосыз одӥг чурын яке столбецын сылыны кулэ.",
+            "Палэнтон кылдытӥсь одӥгез утчаны вунэтон. Ворсам кандидатъёс асьсэос шер лыдпус пукто; соос одӥгез дасяло."
+          ],
+          "faq": [
+            [
+              "Судокуын ворсам кандидатъёс мар со?",
+              "Лыдпуслэн кандидатъёсыз, кудъёсыз коробкалэн но чурлэн яке столбецлэн огъя интыяз ворсамын. Коробкаын, яке чурын яке столбецын, лыдпус та огъя интыын луыны кулэ, соин ик лыдпусэз чурлэн яке столбецлэн мукет клеткаосысьтыз яке коробкалэн мукет клеткаосысьтыз палэнтыны луэ."
+            ],
+            [
+              "Возьматон басьтонлэсь малын пӧртэм?",
+              "Возьматон коробкаысен кутске: коробкаын лыдпуслэн кандидатъёсыз одӥг чур яке столбец кузя возьмато, соин ик лыдпус та чурлэн яке столбецлэн мукет клеткаосысьтыз палэнтӥське. Басьтон чурысен яке столбецысен кутске: солэн лыдпус понна вань кандидатъёсыз одӥг коробкаын, соин ик чур яке столбец лыдпусэз басьтэ, нош со коробкалэн мукет клеткаосысьтыз палэнтӥське."
+            ],
+            [
+              "Ворсам кандидатъёсты огъя интыысь палэнтон но шуо-а?",
+              "Шуо. Мукет нимъёс: басьтон форма понна коробка но чур ӧжытатон, возьматон форма понна возьматӥсь кыкъёс яке возьматӥсь куиньёс. Bare Sudoku кыкназ форма понна одӥг нимез кутэ."
+            ],
+            [
+              "Ворсам кандидатъёс кыӵе тубатын кулэ?",
+              "Секыт. Загадка, кудӥзлы ворсам кандидатъёс яке пичигес группаос кулэ, нош секытгес номыр но уг кулэ, Секыт шуыса лыдъяське; Эксперт загадкаослы чорыг яке бурд но кулэ."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Усьтэм кыкъёс но куиньёс",
+          "title": "Усьтэм кыкъёс но куиньёс судокуын: кызьы соос ужало",
+          "description": "Усьтэм кыкъёс но куиньёс: одӥг группаын кык яке куинь клетка огкадь кык яке куинь кандидатэн. Соосты шедьтыны но мар палэнтоно тодыны дышетскелэ.",
+          "h1": "Усьтэм кыкъёс но куиньёс (naked pairs, naked triples)",
+          "summary": "Усьтэм кык луэ одӥг чурын, столбецын яке коробкаын кык клетка, кудъёслэн чик огкадь кык кандидатсы. Та кык лыдпус та кык клеткае пырыны кулэ, соин ик соосты группалэн вань мукет клеткаосысьтыз палэнтыны луэ. Усьтэм куинь луэ со ик малпан куинь клеткаен но куинь лыдпусэн; котькуд клеткаын соос пӧлысь кыкез яке куиньмызы адскыны быгато. Bare Sudoku-лэн визь-кенешез со бере луись пуктонэз «Кык яке куинь» нимен пусъя.",
+          "when": [
+            "Пусъёс тыр но одӥгъёс но ворсам кандидатъёс быдтэм ке. Усьтэм кыкъёс Секыт загадкаосын туж ӵем пумисько, усьтэм куиньёс шергес. Кыкназэс котькуд группаын эскероно, кытын вить яке тросгес буш клетка на."
+          ],
+          "spot": [
+            "Кык гинэ кандидатъем клеткаосты утчалэ но со ик группаысь со ик кык кандидатъем мукет клеткаез шедьтэлэ. Куиньёс понна кык но куинь кандидатъем трос клеткаосын группаос вылэ учкелэ но эскерелэ, соос пӧлысь куиньмыз огазе куинь пӧртэм лыдпус гинэ кутӥсько-а. Пусъёс гожтэм ке, чик огкадь кандидатъем клеткаосты адӟыны капчи; шудонын «Пусъёсты тырмытыны» сое одӥг зӥбонэн лэсьтэ."
+          ],
+          "examples": [
+            {
+              "h": "Усьтэм кык",
+              "steps": [
+                "{cellA} но {cellB} клеткаослэн ({unit}) чик огкадь кык кандидатсы: {d1} но {d2}.",
+                "Соос пӧлысь одӥгез {d1} луыны кулэ, мукетыз {d2}. Кудӥз кудӥз, тодмо ӧвӧл, но та кык клетка кыкназ лыдпуссэ басьто.",
+                "Озьыен мукет клеткаосын ({unit}) {d1} яке {d2} луыны уг быгато. {elim} палэнтэлэ."
+              ]
+            },
+            {
+              "h": "Усьтэм куинь",
+              "steps": [
+                "Куинь клетка ({unit}) вань кандидатъёссэс огкадь куинь лыдпусысь басьто, {digits}: {cells}.",
+                "Куинь лыдпус та куинь клеткаез кыӵе ке радын тырмытыны кулэ. Клетка вань куинь кандидатсэ возьматыны кулэ ӧвӧл; кулэез со, куинь клетка пӧлысь одӥгезлэн но та куинь лыдпус палэнысь кандидатэз ӧвӧл шуыса.",
+                "{digits} лыдпусъёсты мукет вань клеткаосысь палэнтэлэ ({unit}): {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Огъя кык кандидатъем, но куиньметӥ кандидатъем кык клеткаез басьтон. Усьтэм кык понна котькуд клеткаын та кык кандидат гинэ луыны кулэ, мукет номыр но.",
+            "Лыдпусъёсты кыклэн ас клеткаосысьтыз палэнтон. Кык аслаз кандидатъёссэ возе; палэнтонъёс группалэн мукет клеткаосаз мыно.",
+            "Куиньлэн котькуд клеткаяз вань куинь лыдпус адскыны кулэ шуон. Куиньысь кыкезъем клетка тупа, нокудӥ клеткалэн но та куинь лыдпус палэнысь кандидатэз ӧвӧл ке."
+          ],
+          "faq": [
+            [
+              "Судокуын усьтэм кык мар со?",
+              "Одӥг группаын кык клетка, кудъёслэн кыкназлэн чик огкадь кык кандидатсы. Та кык лыдпус та кык клеткае ворсамын, соин ик соосты группалэн мукет клеткаосысьтыз палэнтыны луэ."
+            ],
+            [
+              "Усьтэм куинь мар со?",
+              "Одӥг группаын куинь клетка, кудъёслэн кандидатъёссы огазе куинь лыдпус гинэ. Котькуд клеткаын соос пӧлысь кыкез яке куинез луыны быгатэ. Куинь лыдпус куинь клеткаез тырмыто, соин ик соосты группалэн мукет клеткаосысьтыз палэнтыны луэ."
+            ],
+            [
+              "Усьтэм кык лыдпус пуктэ-а?",
+              "Аслаз ӧвӧл. Со кандидатъёсты палэнтэ, нош палэнтон ӵем усьтэм яке ватэм одӥгез кельтэ. Bare Sudoku-лэн визь-кенешез та одӥгез возьматэ но сое луонлыко карем амалэз нимаз вера."
+            ],
+            [
+              "Усьтэм кык одӥг дыре коробкаын но чурын луыны быгатэ-а?",
+              "Быгатэ. Кык клетка одӥг чурын но одӥг коробкаын ке, кык кыкназ группаын палэнтэ. Bare Sudoku соосты одӥг группа бере мукетсэ эскере."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Ватэм кыкъёс но куиньёс",
+          "title": "Ватэм кыкъёс но куиньёс судокуын: кызьы соосты шедьтоно",
+          "description": "Ватэм кык луэ кык лыдпус, кудъёсыз группаын одӥг кык клеткае гинэ пырыны быгато, соин ик со клеткаослэсь мукет кандидатъёссэс палэнто. Шедьтыны дышетскелэ.",
+          "h1": "Ватэм кыкъёс но куиньёс (hidden pairs, hidden triples)",
+          "summary": "Ватэм кык луэ кык лыдпус, кудъёсыз одӥг чурын, столбецын яке коробкаын огкадь кык клеткаын гинэ кандидатъёс, мукет интыын ӧвӧл. Та кык клеткаын та кык лыдпус луыны кулэ, соин ик соослэсь вань мукет кандидатъёссэс палэнтыны луэ. Ватэм куинь озьы ик ужа куинь лыдпусэн, кудъёсыз куинь клеткае ворсамын. Палэнтон бере клеткаосын усьтэм кык яке куинь адске. Bare Sudoku-лэн визь-кенешез со бере луись пуктонэз «Кык яке куинь» нимен пусъя.",
+          "when": [
+            "Группаын трос кандидатъем клеткаос но одӥгъёс быдтэм ке. Ватэм кыкъёс тыр клеткаосын ватско, соин ик соосты отын ик утчано, кытын усьтэм кыкъёс уг адско. Ватэм куиньёс шер пумисько; Bare Sudoku соосты но утча, но уноез Секыт загадкаос соостэк сэрттӥсько."
+          ],
+          "spot": [
+            "Лыдпус ласянь ужалэ, клетка ласянь ӧвӧл. Группаын клеткаосты гожтэлэ, кытчы группаын ӧвӧл на котькуд лыдпус пырыны быгатэ. Кык лыдпуслэн котькудызлэн кык гинэ луонлыко клеткаез но соос огкадь кык клетка ке, тӥледлэн ватэм кык. Шудонын лыдпус кнопка вылэ зӥбелэ, солэн кандидатъёссэ пусъян понна; кык лыдпус группаын огкадь кык клеткаын гинэ ӝуало ке, со суред ик луэ."
+          ],
+          "examples": [
+            {
+              "h": "Ватэм кык",
+              "steps": [
+                "Группаын ({unit}) {d1} но {d2} лыдпусъёслэн котькудызлэн кык гинэ луонлыко клеткаез, нош соос огкадь кык клетка: {cells}.",
+                "Та кык клеткаын {d1} но {d2} луыны кулэ, соин ик соослэн мукет кандидатъёссы луыны уг быгато.",
+                "{elim} палэнтэлэ. Али кык клеткаын усьтэм кык адске, кудӥз азьлань сюрес усьтыны быгатэ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Кыклэсь кык лыдпуссэ кык клеткаосысь палэнтон. Та клеткаослэсь мукет кандидатъёссэс палэнто; кык лыдпусъёс кыло.",
+            "Группаын куиньметӥ луонлыко клеткаем лыдпусэз басьтон. Кыкназ лыдпус чик кык клеткае ворсамын луыны кулэ.",
+            "Коробкаосын гинэ утчан. Ватэм кыкъёс чуръёсын но столбецъёсын озьы ик ӵем пумисько."
+          ],
+          "faq": [
+            [
+              "Судокуын ватэм кык мар со?",
+              "Кык лыдпус, кудъёсыз группаын огкадь кык клеткае гинэ пырыны быгато. Та клеткаос та лыдпусъёсты басьтыны кулэ, соин ик соослэсь мукет кандидатъёссэс палэнто."
+            ],
+            [
+              "Ватэм кык усьтэм кыклэсь малын пӧртэм?",
+              "Усьтэм кык адске: огкадь кык кандидат гинэ возьматӥсь кык клетка. Ватэм кыкез кык клеткаын ватсам кандидатъёс шобырто. Та ватсамъёсты палэнтон ватэм кыкез усьтэм кыке пӧрмытэ."
+            ],
+            [
+              "Ватэм куинь мар со?",
+              "Группалэн куинь клеткаяз ворсам куинь лыдпус. Котькуд лыдпус вань куинь клеткаын пумиськыны кулэ ӧвӧл; кулэез со, куинь лыдпус пӧлысь одӥгезлэн но та клеткаос палэнын кандидатэз ӧвӧл шуыса."
+            ],
+            [
+              "Визь-кенеш ватэм но усьтэм кыкъёсты висъя-а?",
+              "Уг висъя. Bare Sudoku кыкназэс шедьтэ но со бере луись пуктонэз «Кык яке куинь» нимен пусъя. Татын бамлыкъёс соосты висъяло, малы ке шуоно соосты пӧртэм сямен шедьто."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing судокуын: кызьы амал ужа",
+          "description": "X-Wing: кык чурын огкадь кык столбецын чик кык кандидат клеткаем лыдпус та столбецъёслэн мукет клеткаосысьтызы палэнтӥське. Зэм пример.",
+          "h1": "X-Wing",
+          "summary": "X-Wing луэ суред, кытын одӥг лыдпус но прямоугольниклэн сэрегъёсаз ньыль клетка. Лыдпуслэн кык чурлэн котькудаз чик кык кандидат клеткаез ке, нош та клеткаос огкадь кык столбецын ке, лыдпус прямоугольниклэн кык пумит сэрегаз сылыны кулэ. Соин ик сое та кык столбецлэн вань мукет клеткаосысьтызы палэнтыны луэ. Чуръёсты но столбецъёсты интыен воштыса но озьы ик ужа. Со Bare Sudoku-ын нырысетӥ Эксперт тубатъем амал.",
+          "when": [
+            "Одӥгъёс, ворсам кандидатъёс но пичигес группаос быдтэм ке. X-Wing тужгес ӵем пумиськись Эксперт суред, нош со ӵем пумиське, ку лыдпуслэн ӧжыт кандидатъёсыз кылем, ӵемысь солэн ньылысен куатозь экземпляръёсыз пуктэмын ини ке. Учкись лыдпус понна тыр пусъёс кулэ."
+          ],
+          "spot": [
+            "Лыдпус быръелэ но чуръёсты утчалэ, кытын солэн чик кык кандидат клеткаез. Таӵе кык чурлэн огкадь кык столбецсы ке, та столбецъёсысь лыдпуслэсь мукет кандидатъёссэ эскерелэ: соос палэнтонъёс луо. Собере сое ик лэсьтэлэ, нигез интые столбецъёсты басьтыса. Шудонын лыдпус кнопка вылэ зӥбелэ: солэн вань кандидатъёсыз пусъясько, нош ньыль пусъем пуслэсь прямоугольникез адӟыны капчи."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{d} лыдпуслэн {r1}-тӥ чурын чик кык кандидат клеткаез но {r2}-тӥ чурын чик кык, нош соос огкадь кык столбецын, {c1} но {c2}: {cells}.",
+                "{r1}-тӥ чур аслэсьтыз {d} лыдпуссэ {c1}-тӥ яке {c2}-тӥ столбеце пуктэ, нош {r2}-тӥ чур аслэсьтыз {d} лыдпуссэ мукетаз. Кызьы ке но, {c1}-тӥ но {c2}-тӥ столбецъёс котькудыз та кык чурысь одӥг {d} басьто.",
+                "Озьыен {d} {c1}-тӥ но {c2}-тӥ столбецъёсын мукет интыын луыны уг быгаты. {d} лыдпусэз та клеткаосысь палэнтэлэ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Лыдпуслэн куинь кандидат клеткаез вань чурез кутон. Котькуд ниг чурын чик кык луыны кулэ, нош кыкназ кык огъя столбецын сылыны кулэ.",
+            "Лыдпусэз столбецъёсысь ӧвӧл, чуръёсысь палэнтон. Нигын чуръёс ке, палэнтонъёс столбецъёсын, нош мукетыз сямен но.",
+            "Воштэм вариантэз вунэтон. Столбецъёс вылэ лэсьтэм X-Wing чуръёсын палэнтэ."
+          ],
+          "faq": [
+            [
+              "Судокуын X-Wing мар со?",
+              "Лыдпус, кудӥзлэн кык чурлэн котькудаз огкадь кык столбецын чик кык кандидат клеткаез. Лыдпус та прямоугольниклэн кык пумит сэрегаз сылэ, соин ик сое кык столбецлэн мукет клеткаосысьтызы палэнто. Чуръёсты но столбецъёсты интыен воштыны луэ."
+            ],
+            [
+              "Малы X-Wing ужа?",
+              "Кык чурлэн котькудызлы лыдпусэз кык столбец пӧлысь одӥгаз пуктыны кулэ, нош кык чур одӥг столбецэз кутыны уг быгато. Озьыен кыкназ столбец аслэсьтыз лыдпуссэ та чуръёсысь басьтэ, нош та столбецъёсын котькуд мукет кандидат луыны уг быгаты."
+            ],
+            [
+              "X-Wing чорыг-а?",
+              "Чорыг. X-Wing кык быдӟалаъем чорыг; Swordfish куинь быдӟалаъем чорыг. Bare Sudoku кыкназэс шедьтэ."
+            ],
+            [
+              "Кыӵе тубатын X-Wing пумиське?",
+              "Эксперт. X-Wing, Y-Wing, Swordfish яке XYZ-Wing кулэ луись загадка Эксперт шуыса лыдъяське."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing судокуын: кызьы амал ужа",
+          "description": "Y-Wing (XY-Wing): кык кандидатъем шор клетка но кык бурд, кудъёсыз солэн одӥг кандидатэз ласянь огкадесь, кыкназ бурдэз адӟись клеткаосысь лыдпусэз палэнто.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, кудӥзэ XY-Wing но шуо, куинь клеткаен ужа, котькудаз кык кандидат. Шор клеткалэн кандидатъёсыз X но Y. Одӥг бурд шор клеткаез адӟе но солэн X но Z; мукет бурд шор клеткаез адӟе но солэн Y но Z. Шор клетка кыӵе ке луэ, одӥг бурд Z луыны кулэ, соин ик Z-ез кыкназ бурдэз адӟись котькуд клеткаысь палэнтыны луэ. Bare Sudoku-ын со Эксперт тубатъем амал.",
+          "when": [
+            "Загадкаын чик кык кандидатъем трос клетка, нош чорыг ӧвӧл ке. Y-Wing Эксперт загадкаосын ӵем пумиське, нош сое кык кандидатъем клеткаос сьӧры мыныса шедьто: соос пӧлысь котькудыз шор клетка яке бурд луыны быгатэ."
+          ],
+          "spot": [
+            "Чик кык кандидатъем клеткаосты гожтэлэ. Соос пӧлысь котькудзэ X но Y кандидатъем шор клетка шуыса басьтэлэ но солэн бускель клеткаосыз пӧлысь X но мукет Z лыдпусъем клетка, нош Y но со ик Z-ем клетка утчалэ. Та кыкез бурдъёс луо. Собере кыкназ бурдэз адӟись но Z-ем клеткаосты утчалэ. Тодэ вайелэ: бурдъёслы ог-огзэс адӟыны кулэ ӧвӧл."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{pivot} шор клеткалэн кандидатъёсыз {x} но {y}. Со {wingA} клеткаез адӟе, кытын {x} но {z}, но {wingB} клеткаез, кытын {y} но {z}.",
+                "{pivot} {x} луэ ке, {wingA} {x}-эз ыште но {z} луэ. {pivot} {y} луэ ке, {wingB} {z} луэ. Кызьы ке но, кык бурд пӧлысь одӥгез {z}.",
+                "Кыкназ бурдэз адӟись клетка ноку но {z} луыны уг быгаты. {z} лыдпусэз та клеткаосысь палэнтэлэ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Кыкназы шор клеткаез адӟымтэ бурдъёсты быръён. Котькуд бурдлэн шор клеткаен огъя чурез, столбецэз яке коробкаез луыны кулэ.",
+            "Z-ез одӥг бурдэз гинэ адӟись клеткаосысь палэнтон. Палэнтоно клетка кыкназ бурдэз адӟыны кулэ.",
+            "Z-ез шор клеткаысь палэнтон. Y-Wing-ын шор клеткаын Z ӧвӧл; вань ке, суред мукет правилоосын XYZ-Wing луэ."
+          ],
+          "faq": [
+            [
+              "Судокуын Y-Wing мар со?",
+              "Кык кандидатъем куинь клетка: X но Y-ем шор клетка, шор клеткаез адӟись X но Z-ем бурд, нош шор клеткаез адӟись Y но Z-ем бурд. Одӥг бурд котьку Z, соин ик Z-ез кыкназ бурдэз адӟись клеткаосысь палэнто."
+            ],
+            [
+              "Y-Wing но XY-Wing одӥг ик-а?",
+              "Одӥг ик. Кык ним одӥг суред сярысь вера. Bare Sudoku сое Y-Wing шуэ."
+            ],
+            [
+              "Малы одӥг бурд Z луыны кулэ?",
+              "Шор клетка X ке, нырысетӥ бурд X-эз ыште но Z луэ. Шор клетка Y ке, кыктэтӥ бурд Z луэ. Шор клетка соос пӧлысь одӥгез, соин ик одӥг бурд Z."
+            ],
+            [
+              "Y-Wing кӧня клеткаысь палэнтэ?",
+              "Ӵемысь одӥг яке кык клеткаысь: кыкназ бурдэз адӟись но Z-ез на возьись клеткаосысь гинэ. Со одӥгез кылдытыны тырмымон."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish судокуын: кызьы амал ужа",
+          "description": "Swordfish: куинь чурын куинь столбеце ворсам лыдпус та столбецъёслэн мукет клеткаосысьтызы палэнтӥське. Куинь быдӟалаъем чорыг, зэм примерен.",
+          "h1": "Swordfish",
+          "summary": "Swordfish луэ куинь чурен но куинь столбецэн X-Wing. Лыдпуслэн куинь чурлэн котькудаз куинь кандидат клеткаысь трос ӧвӧл ке, нош та клеткаос ваньмыз огкадь куинь столбецын ке, куинь чур та столбецъёсын лыдпусэз басьто, нош лыдпусэз куинь столбецлэн вань мукет клеткаосысьтызы палэнтыны луэ. Чуръёсты но столбецъёсты интыен воштыны луэ. Bare Sudoku Swordfish-ез Y-Wing бере, Эксперт загадкаосын утча.",
+          "when": [
+            "X-Wing но Y-Wing номыр но уг шедьто ке. Swordfish X-Wing-лэсь шергес пумиське но куинь чур вылын ӧжыт кандидатъем лыдпус куре. Та лыдпус понна тыр но шонер пусъёс кулэ."
+          ],
+          "spot": [
+            "Лыдпус быръелэ но чуръёсты утчалэ, кытын солэн кык яке куинь кандидат клеткаез. Таӵе куинь чур огазе куинь столбецэз гинэ кутӥсько ке, та столбецъёсысь лыдпуслэсь мукет кандидатъёссэ эскерелэ. Котькуд чурлы котькуд столбецын кандидат кулэ ӧвӧл: Swordfish-ын куать, сизьым, тямыс яке укмыс клетка луыны быгатэ. Шудонын лыдпусэз солэн кнопкаеныз пусъялэ но кандидатъёссы куинь столбецын сылӥсь куинь чурез утчалэ."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{d} лыдпуслэн {rows} чуръёслэн котькудаз куинь кандидат клеткаысь трос ӧвӧл, нош та клеткаос ваньмыз {cols} столбецъёсын: {cells}.",
+                "Куинь чурлэн котькудызлы аслэсьтыз {d} лыдпуссэ куинь столбец пӧлысь одӥгаз пуктыны кулэ, нош кык чур одӥг столбецэз кутыны уг быгато. Озьыен куинь столбец асьсэлэсь {d} лыдпуссэс та куинь чурысь басьто.",
+                "{cols} столбецъёсын мукет {d} кандидат луыны уг быгаты. {d} лыдпусэз та клеткаосысь палэнтэлэ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Вань укмыс клеткаез куран. Куд-ог чураз кык кандидатъем Swordfish но шонер, куинь чур куинь столбецэз гинэ кутӥсько ке.",
+            "Ньыль кандидат клеткаем чурез пыртон. Котькуд ниг чурын куинь клеткаысь трос луыны уг быгаты, ваньмыз куинь столбец пушкын.",
+            "Ниг чуръёсын палэнтон. Нигын чуръёс ке, палэнтонъёс куинь столбецын, ниг чуръёс палэнын."
+          ],
+          "faq": [
+            [
+              "Судокуын Swordfish мар со?",
+              "Лыдпус, кудӥзлэн куинь чурысь кандидатъёсыз куинь столбеце ворсамын. Куинь чурлы лыдпусэз та куинь столбеце пуктыны кулэ, котькудаз одӥгез, соин ик лыдпусэз та столбецъёслэн мукет клеткаосысьтызы палэнто."
+            ],
+            [
+              "Swordfish X-Wing-лэсь малын пӧртэм?",
+              "Быдӟалаез гинэ: X-Wing кык чурен но кык столбецэн ужа, Swordfish куинен но куинен. Малпаськон огкадь."
+            ],
+            [
+              "Swordfish-лы чик укмыс клетка кулэ-а?",
+              "Кулэ ӧвӧл. Котькуд чурын кык яке куинь кандидат луыны быгатэ; суред куинь чур огазе куинь столбецлэсь трос кутӥськымтэзэ гинэ куре."
+            ],
+            [
+              "Ньыль быдӟалаъем чорыг вань-а?",
+              "Вань, Jellyfish. Bare Sudoku сое уг куты, малы ке шуоно солэн загадкаосызлы со ноку но кулэ ӧвӧл."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing судокуын: кызьы амал ужа",
+          "description": "XYZ-Wing: куинь кандидатъем шор клетка но огъя лыдпусъем кык бурд та лыдпусэз куиньмызэс адӟись котькуд клеткаысь палэнто. Зэм пример, вамыш бере вамыш.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing луэ Y-Wing, кытын шор клеткалэн куинь кандидатэз. Шор клеткаын X, Y но Z; одӥг бурд шор клеткаез адӟе но солэн X но Z, мукетыз шор клеткаез адӟе но солэн Y но Z. Куинь клетка пӧлысь одӥгез Z луыны кулэ, соин ик Z-ез куиньмызэс адӟись котькуд клеткаысь палэнтыны луэ. Шор клетка ачиз Z луыны быгатэ, соин ик палэнтоно клетка шор клеткаез но, кыкназ бурдэз но адӟыны кулэ, нош со сое клеткаослэн огъя коробказы, чурзы яке столбецсы пушкы ворсэ. Со Bare Sudoku уже кутӥсь тужгес секыт амал.",
+          "when": [
+            "Мукет ваньмыз уг юрттэ ке гинэ. XYZ-Wing Bare Sudoku-ын тужгес шер пумиськись суред но Эксперт загадкаосын гинэ кылдэ. Сое утчалэ, куинь кандидатъем клетка коробкаын солэн кык лыдпусъем кык кандидатъем клеткаен ӵош сылэ ке."
+          ],
+          "spot": [
+            "Чик куинь кандидатъем клеткаосысен кутскелэ; соос пӧлысь котькудыз шор клетка луыны быгатэ. Солэн бускель клеткаосыз пӧлысь кык кандидатъем кык клеткаез утчалэ, кыкназ шор клеткалэн куинь лыдпусысь, нош чик одӥг огъя Z лыдпусэн. Собере шор клеткаез но кыкназ бурдэз адӟись но Z-ем клеткаосты утчалэ. Ӵемысь одӥг бурд шор клеткалэн коробкаяз, мукетыз солэн чураз яке столбецаз, нош палэнтоно клеткаос та коробкалэн со ик чурысь яке столбецысь кылем клеткаосыз луо."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{pivot} шор клеткалэн куинь кандидатэз: {x}, {y} но {z}. Со {x} но {z}-ем {wingA} клеткаез но {y} но {z}-ем {wingB} клеткаез адӟе.",
+                "{pivot} {z} ке, ужпум быдэстэмын. Со {x} ке, {wingA} клеткаын {z} луыны кулэ. Со {y} ке, {wingB} клеткаын {z} луыны кулэ. Кызьы ке но, куинь клетка пӧлысь одӥгез {z}.",
+                "Куиньмызэс адӟись клетка {z} луыны уг быгаты. {z} лыдпусэз та клеткаосысь палэнтэлэ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Кык бурдэз гинэ адӟись клеткаосысь палэнтон. Y-Wing-лэсь пӧртэм, шор клетка Z луыны быгатэ, соин ик клетка шор клеткаез но адӟыны кулэ.",
+            "Кандидатъёссы кыкназы шор клеткалэн куинь кандидатэз пӧлын ӧвӧл бурдъёсты кутон.",
+            "Y-Wing-ен сураны: пӧртэмлык шор клеткалэн куиньметӥ кандидатаз, нош со кыӵе клеткаосты ӵушыны луонэз воштэ."
+          ],
+          "faq": [
+            [
+              "Судокуын XYZ-Wing мар со?",
+              "X, Y но Z кандидатъем шор клетка но кык бурд, одӥгез X но Z-ен, мукетыз Y но Z-ен, кыкназы шор клеткаез адӟо. Куинь клетка пӧлысь одӥгез Z, соин ик Z-ез куиньмызэс адӟись клеткаосысь палэнто."
+            ],
+            [
+              "XYZ-Wing Y-Wing-лэсь малын пӧртэм?",
+              "Шор клеткалэн кык интые куинь кандидатэз, соос пӧлын Z. Соин ик Z шор клеткаын луыны быгатэ, озьыен Z-ез шор клеткаез но кыкназ бурдэз адӟись клеткаос гинэ ыштыны быгато."
+            ],
+            [
+              "XYZ-Wing кӧня ӵем пумиське?",
+              "Шер. Bare Sudoku-ын со Эксперт загадкаослы гинэ кулэ луыны быгатэ, нош уноезлы кулэ ӧвӧл. Bare Sudoku сое берло эскере, X-Wing, Y-Wing но Swordfish бере."
+            ],
+            [
+              "WXYZ-Wing вань-а?",
+              "Вань, ньыль кандидатъем шор клеткаен, но Bare Sudoku сое уг куты. Шудонысь котькуд загадкаез та дышетонысь укмыс амалэн быдэстыны луэ."
+            ]
+          ]
+        }
+      }
+    },
     "mhr": {
       "learnHeading": "Судокум тунемаш",
       "learnText": "Судоку дене икымше гана модыда але неле туштышто шогалын кодында? Кок умылтарымаш правил-влакым да ой-влакын кучылтмо чыла йӧным ончыкта, кажныже чын пример дене.",
