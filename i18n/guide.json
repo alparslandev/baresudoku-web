@@ -82,7 +82,7 @@
           {
             "h": "What should you do when you are stuck?",
             "p": [
-              "First recheck the basics: every nearly full row, column and box is a source of singles. Then make sure the notes are complete, because a missing candidate hides patterns and a stale one creates false ones. Then work through the [techniques](techniques) in order of difficulty: locked candidates, pairs and triples, X-Wing, Y-Wing, Swordfish and XYZ-Wing. Each has its own page with a real example.",
+              "First recheck the basics: every nearly full row, column and box is a source of singles. Then make sure the notes are complete, because a missing candidate hides patterns and a stale one creates false ones. Then work through the [techniques](techniques) in order of difficulty: locked candidates, pairs and triples, then advanced patterns such as X-Wing, Y-Wing and the Skyscraper. Each has its own page with a real example.",
               "If nothing works, take a hint. In Bare Sudoku the hint first checks whether a placed digit is wrong, then finds the next cell that can be filled by logic and names the technique, so you learn something even when you use it. Tap the hint again to place the digit."
             ]
           },
@@ -105,7 +105,7 @@
           ],
           [
             "What is the difference between Easy, Medium, Hard and Expert?",
-            "The level is set by the techniques the puzzle needs. Easy and Medium are solved with singles only, and Easy starts with at least 38 given digits. Hard needs locked candidates or pairs and triples. Expert needs X-Wing, Y-Wing, Swordfish or XYZ-Wing."
+            "The level is set by the techniques the puzzle needs. Easy and Medium are solved with singles only, and Easy starts with at least 38 given digits. Hard needs locked candidates or pairs and triples. Expert needs at least one advanced pattern, such as an X-Wing, a Y-Wing, a Skyscraper or a Unique Rectangle."
           ],
           [
             "Is it better to fill notes for every cell or only for some?",
@@ -123,24 +123,24 @@
       },
       "index": {
         "title": "Sudoku Solving Techniques Explained with Examples",
-        "description": "All nine Sudoku solving techniques, from naked singles to Swordfish and XYZ-Wing, in the order the Bare Sudoku hints use them, each with a real example.",
+        "description": "Sudoku solving techniques from naked singles to X-Wing, Skyscraper and Unique Rectangle, in the order the Bare Sudoku hints use them, each with a real example.",
         "h1": "Sudoku solving techniques",
         "intro": [
-          "Every Sudoku can be solved with a small set of logical techniques. This index lists the nine techniques that the Bare Sudoku solver and its hints use, in the order the solver tries them: singles first, then eliminations within one unit, then patterns that span several rows and columns. Each technique has its own page with a definition, how to spot it, a real example from a generated puzzle and the common mistakes.",
-          "The level of a puzzle is decided by the hardest technique it needs. Easy and Medium puzzles need only singles, Hard puzzles need locked candidates or pairs and triples, and Expert puzzles need at least one fish or wing. Whatever the level, singles do most of the work; the advanced technique removes a candidate or two and singles carry on from there."
+          "Every Sudoku can be solved with a small set of logical techniques. This index lists the techniques that the Bare Sudoku solver and its hints use, in the order the solver tries them: singles first, then eliminations within one unit, then patterns that span several rows, columns and boxes, including patterns that rely on the puzzle having exactly one solution. Each technique has its own page with a definition, how to spot it, a real example from a generated puzzle and the common mistakes.",
+          "The level of a puzzle is decided by the hardest technique it needs. Easy and Medium puzzles need only singles, Hard puzzles need locked candidates or pairs and triples, and Expert puzzles need at least one advanced pattern, such as a fish, a wing, a Skyscraper or a Unique Rectangle. Whatever the level, singles do most of the work; the advanced technique removes a candidate or two and singles carry on from there."
         ],
         "faq": [
           [
             "In which order should I try Sudoku techniques?",
-            "Cheapest first: naked singles, hidden singles, locked candidates, naked pairs and triples, hidden pairs and triples, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku tries them in exactly this order, and a hint always names the simplest technique that makes progress."
+            "Cheapest first, in the order of this index: singles, then locked candidates, then naked and hidden pairs and triples, then the advanced patterns, starting with X-Wing. Bare Sudoku tries its techniques in exactly this order and always applies the first one that makes progress; a hint names the hardest technique it needed to reach the next digit."
           ],
           [
             "Do I need all these techniques to solve Sudoku?",
-            "For Easy and Medium puzzles, singles are enough. Hard puzzles add locked candidates and subsets. Expert puzzles need at least one fish or wing, but usually only once or twice per puzzle."
+            "For Easy and Medium puzzles, singles are enough. Hard puzzles add locked candidates and subsets. Expert puzzles need at least one advanced pattern, such as a fish, a wing, a Skyscraper or a Unique Rectangle, but usually only once or twice per puzzle."
           ],
           [
-            "Are there harder techniques than XYZ-Wing?",
-            "Yes, for example chains, uniqueness tests and forcing nets. Bare Sudoku does not generate puzzles that need them, so every puzzle in the game can be finished with the nine techniques on this page."
+            "Are there harder techniques than the ones in this guide?",
+            "Yes. Players have described many more techniques for the hardest puzzles, and new ones keep appearing. Bare Sudoku generates only puzzles that the techniques in this guide can finish, so every puzzle in the game can be solved with what is described here."
           ],
           [
             "What is a candidate?",
@@ -292,7 +292,7 @@
             ],
             [
               "Which level needs locked candidates?",
-              "Hard. A puzzle that needs locked candidates or subsets but nothing harder is rated Hard; Expert puzzles need a fish or a wing as well."
+              "Hard. A puzzle that needs locked candidates or subsets but nothing harder is rated Hard; Expert puzzles also need an advanced pattern, such as a fish or a wing."
             ]
           ]
         },
@@ -403,7 +403,7 @@
           "h1": "X-Wing",
           "summary": "An X-Wing is a pattern of one digit and four cells at the corners of a rectangle. If the digit has exactly two candidate cells in each of two rows, and those cells lie in the same two columns, then the digit must occupy two opposite corners of the rectangle. It can therefore be removed from every other cell of those two columns. The same works with rows and columns swapped. It is the first Expert technique in Bare Sudoku.",
           "when": [
-            "When singles, locked candidates and subsets are exhausted. X-Wings are the most common Expert pattern and often appear when a digit has few candidates left, typically with four to six copies already placed. They need complete notes for the digit you examine."
+            "When singles, locked candidates and subsets are exhausted. The X-Wing is the first Expert pattern to look for and often appears when a digit has few candidates left, typically with four to six copies already placed. It needs complete notes for the digit you examine."
           ],
           "spot": [
             "Choose a digit and look for rows in which it has exactly two candidate cells. If two such rows share the same two columns, check those columns for other candidates of the digit: those are the eliminations. Then repeat with columns as the base. In the game, tap the digit key: every candidate for it is highlighted, and a rectangle of four highlighted notes is easy to see."
@@ -438,7 +438,7 @@
             ],
             [
               "Which level has X-Wings?",
-              "Expert. A puzzle that needs an X-Wing, Y-Wing, Swordfish or XYZ-Wing is rated Expert."
+              "Expert. Bare Sudoku rates a puzzle as Expert when it needs an X-Wing; other advanced patterns, such as the Y-Wing and the Skyscraper, are rated Expert as well."
             ]
           ]
         },
@@ -530,7 +530,7 @@
             ],
             [
               "Is there a fish of size four?",
-              "Yes, the Jellyfish. Bare Sudoku does not use it, because its puzzles never need one."
+              "Yes, the Jellyfish, with four rows and four columns. The reasoning is the same as for the X-Wing and the Swordfish, only with more lines."
             ]
           ]
         },
@@ -539,9 +539,9 @@
           "title": "XYZ-Wing in Sudoku: How the Technique Works",
           "description": "XYZ-Wing: a pivot with three candidates and two wings that share one of them force that digit out of every cell seeing all three. Real example, step by step.",
           "h1": "XYZ-Wing",
-          "summary": "An XYZ-Wing is a Y-Wing whose pivot has three candidates. The pivot has X, Y and Z; one wing sees the pivot and has X and Z, the other sees the pivot and has Y and Z. One of the three cells must be Z, so Z can be removed from every cell that sees all three. Because the pivot itself may be Z, the eliminated cell must see the pivot as well as both wings, which limits it to the box or line the cells share. It is the hardest technique Bare Sudoku uses.",
+          "summary": "An XYZ-Wing is a Y-Wing whose pivot has three candidates. The pivot has X, Y and Z; one wing sees the pivot and has X and Z, the other sees the pivot and has Y and Z. One of the three cells must be Z, so Z can be removed from every cell that sees all three. Because the pivot itself may be Z, the eliminated cell must see the pivot as well as both wings, which limits it to the box or line the cells share. It is an Expert technique in Bare Sudoku.",
           "when": [
-            "Only when everything else fails. XYZ-Wings are the rarest pattern in Bare Sudoku and appear only in Expert puzzles. Look for them when a three-candidate cell sits in a box with a two-candidate cell that shares two of its digits."
+            "When X-Wing, Y-Wing and Swordfish find nothing. XYZ-Wings are less common than Y-Wings. Look for them when a three-candidate cell sits in a box with a two-candidate cell that shares two of its digits."
           ],
           "spot": [
             "Start from cells with exactly three candidates; each is a possible pivot. Among its peers, look for two cells with two candidates each, both taken from the pivot's three, sharing exactly one digit Z. Then look for cells that see the pivot and both wings and contain Z. In practice one wing is in the pivot's box and the other in its row or column, and the eliminated cells are the remaining cells of that box in that row or column."
@@ -572,11 +572,11 @@
             ],
             [
               "How often does an XYZ-Wing appear?",
-              "Rarely. In Bare Sudoku only Expert puzzles can need one, and most do not. Bare Sudoku checks it last, after X-Wing, Y-Wing and Swordfish."
+              "Less often than a Y-Wing: most Expert puzzles in Bare Sudoku are solved without one. The solver looks for it after X-Wing, Y-Wing and Swordfish."
             ],
             [
               "Is there a WXYZ-Wing?",
-              "Yes, with a four-candidate pivot, but Bare Sudoku does not use it. Every puzzle in the game can be finished with the nine techniques of this guide."
+              "Yes, with a four-candidate pivot. Every puzzle in Bare Sudoku can be finished with the techniques described in this guide."
             ]
           ]
         },
