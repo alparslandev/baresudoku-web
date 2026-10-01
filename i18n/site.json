@@ -270,7 +270,7 @@
         "Sətir, sütun, blok və eyni rəqəm vurğusu; söndürülə bilən səhv işarəsi",
         "Avtomatik yadda saxlama, qaranlıq rejim, klaviatura və üfüqi düzülüş",
         "İlk ziyarətdən sonra oflayn işləyir, tətbiq mağazası lazım deyil",
-        "37 dil, hər biri öz səhifəsində"
+        "223 dil, hər biri öz səhifəsində"
       ],
       "androidHeading": "Android tətbiqi",
       "android": "Bare Sudoku həm də yerli Android tətbiqidir: versiya {version}, təxminən {size} KB, icazə yox, internet girişi yox, kitabxanasız təmiz Java. Google Play-də deyil; imzalanmış APK-nı GitHub Releases-dən yüklə və Android 8 və ya daha yenisinə quraşdır.",
@@ -345,7 +345,7 @@
         "Hervorhebung von Zeile, Spalte, Block und gleicher Ziffer; abschaltbare Fehlermarkierung",
         "Automatisches Speichern, Dunkelmodus, Tastatursteuerung und Querformat",
         "Funktioniert nach dem ersten Besuch offline, kein App-Store nötig",
-        "37 Sprachen, jede auf eigener Seite"
+        "223 Sprachen, jede auf eigener Seite"
       ],
       "androidHeading": "Android-App",
       "android": "Bare Sudoku gibt es auch als native Android-App: Version {version}, etwa {size} KB, keine Berechtigungen, kein Internetzugriff, reines Java ohne Bibliotheken. Sie ist nicht bei Google Play; lade die signierte APK von GitHub Releases und installiere sie auf Android 8 oder neuer.",
@@ -420,7 +420,7 @@
         "Mise en évidence de la ligne, de la colonne, du bloc et du même chiffre ; marquage des erreurs désactivable",
         "Sauvegarde automatique, mode sombre, clavier et affichage paysage",
         "Fonctionne hors ligne après la première visite, sans boutique d'applis",
-        "37 langues, chacune sur sa propre page"
+        "223 langues, chacune sur sa propre page"
       ],
       "androidHeading": "Application Android",
       "android": "Bare Sudoku existe aussi en application Android native : version {version}, environ {size} Ko, aucune permission, aucun accès Internet, du Java pur sans bibliothèque. Elle n'est pas sur Google Play : téléchargez l'APK signé depuis GitHub Releases et installez-le sur Android 8 ou plus récent.",
@@ -495,7 +495,7 @@
         "Resaltado de fila, columna, caja y mismo dígito; marcado de errores desactivable",
         "Guardado automático, modo oscuro, teclado y diseño horizontal",
         "Funciona sin conexión tras la primera visita, sin tienda de apps",
-        "37 idiomas, cada uno en su propia página"
+        "223 idiomas, cada uno en su propia página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku también es una app Android nativa: versión {version}, unos {size} KB, sin permisos, sin acceso a Internet, Java puro sin bibliotecas. No está en Google Play; descarga el APK firmado desde GitHub Releases e instálalo en Android 8 o superior.",
@@ -570,7 +570,7 @@
         "Destaque de linha, coluna, bloco e mesmo dígito; marcação de erros que pode ser desligada",
         "Salvamento automático, modo escuro, teclado e layout horizontal",
         "Funciona offline após a primeira visita, sem loja de apps",
-        "37 idiomas, cada um na sua própria página"
+        "223 idiomas, cada um na sua própria página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku também é um app Android nativo: versão {version}, cerca de {size} KB, sem permissões, sem acesso à internet, Java puro sem bibliotecas. Não está no Google Play; baixe o APK assinado no GitHub Releases e instale no Android 8 ou mais novo.",
@@ -645,7 +645,7 @@
         "Evidenziazione di riga, colonna, riquadro e stessa cifra; segnalazione errori disattivabile",
         "Salvataggio automatico, tema scuro, tastiera e layout orizzontale",
         "Funziona offline dopo la prima visita, senza store",
-        "37 lingue, ognuna con la propria pagina"
+        "223 lingue, ognuna con la propria pagina"
       ],
       "androidHeading": "App Android",
       "android": "Bare Sudoku è anche un'app Android nativa: versione {version}, circa {size} KB, nessun permesso, nessun accesso a Internet, Java puro senza librerie. Non è su Google Play: scarica l'APK firmato da GitHub Releases e installalo su Android 8 o successivo.",
@@ -720,7 +720,7 @@
         "Markering van rij, kolom, blok en hetzelfde cijfer; foutmarkering die je kunt uitzetten",
         "Automatisch opslaan, donkere modus, toetsenbord en liggende weergave",
         "Werkt offline na het eerste bezoek, geen app store nodig",
-        "37 talen, elk op een eigen pagina"
+        "223 talen, elk op een eigen pagina"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku is er ook als native Android-app: versie {version}, ongeveer {size} KB, geen machtigingen, geen internettoegang, pure Java zonder bibliotheken. Niet in Google Play; download de ondertekende APK van GitHub Releases en installeer hem op Android 8 of nieuwer.",
@@ -795,7 +795,7 @@
         "Podświetlanie wiersza, kolumny, bloku i tej samej cyfry; zaznaczanie błędów, które można wyłączyć",
         "Automatyczny zapis, tryb ciemny, klawiatura i układ poziomy",
         "Działa offline po pierwszej wizycie, bez sklepu z aplikacjami",
-        "37 języków, każdy na własnej stronie"
+        "223 języki, każdy na własnej stronie"
       ],
       "androidHeading": "Aplikacja na Androida",
       "android": "Bare Sudoku to także natywna aplikacja na Androida: wersja {version}, około {size} KB, bez uprawnień, bez dostępu do internetu, czysta Java bez bibliotek. Nie ma jej w Google Play; pobierz podpisany plik APK z GitHub Releases i zainstaluj na Androidzie 8 lub nowszym.",
@@ -870,7 +870,7 @@
         "Zvýraznění řádku, sloupce, bloku a stejné číslice; označování chyb lze vypnout",
         "Automatické ukládání, tmavý režim, klávesnice a rozložení na šířku",
         "Po první návštěvě funguje offline, bez obchodu s aplikacemi",
-        "37 jazyků, každý na vlastní stránce"
+        "223 jazyků, každý na vlastní stránce"
       ],
       "androidHeading": "Aplikace pro Android",
       "android": "Bare Sudoku existuje i jako nativní aplikace pro Android: verze {version}, asi {size} KB, žádná oprávnění, žádný přístup k internetu, čistá Java bez knihoven. Není na Google Play; stáhněte podepsané APK z GitHub Releases a nainstalujte je na Android 8 nebo novější.",
@@ -945,7 +945,7 @@
         "Zvýraznenie riadka, stĺpca, bloku a rovnakej číslice; označovanie chýb sa dá vypnúť",
         "Automatické ukladanie, tmavý režim, klávesnica a rozloženie na šírku",
         "Po prvej návšteve funguje offline, bez obchodu s aplikáciami",
-        "37 jazykov, každý na vlastnej stránke"
+        "223 jazykov, každý na vlastnej stránke"
       ],
       "androidHeading": "Aplikácia pre Android",
       "android": "Bare Sudoku existuje aj ako natívna aplikácia pre Android: verzia {version}, približne {size} KB, žiadne povolenia, žiadny prístup na internet, čistá Java bez knižníc. Nie je v Google Play; stiahnite podpísané APK z GitHub Releases a nainštalujte ho na Android 8 alebo novší.",
@@ -1020,7 +1020,7 @@
         "Sor, oszlop, blokk és azonos számjegy kiemelése; kikapcsolható hibajelölés",
         "Automatikus mentés, sötét mód, billentyűzet és fekvő elrendezés",
         "Az első látogatás után offline is működik, nem kell alkalmazásbolt",
-        "37 nyelv, mindegyik saját oldalon"
+        "223 nyelv, mindegyik saját oldalon"
       ],
       "androidHeading": "Android-alkalmazás",
       "android": "A Bare Sudoku natív Android-alkalmazásként is létezik: {version} verzió, körülbelül {size} KB, engedélyek nélkül, internet-hozzáférés nélkül, tiszta Java, könyvtárak nélkül. Nincs a Google Playen; töltsd le az aláírt APK-t a GitHub Releases oldalról, és telepítsd Android 8 vagy újabb rendszerre.",
@@ -1095,7 +1095,7 @@
         "Evidențierea rândului, coloanei, blocului și a aceleiași cifre; marcarea greșelilor se poate opri",
         "Salvare automată, mod întunecat, tastatură și așezare pe orizontală",
         "Funcționează offline după prima vizită, fără magazin de aplicații",
-        "37 de limbi, fiecare pe pagina ei"
+        "223 de limbi, fiecare pe pagina ei"
       ],
       "androidHeading": "Aplicație Android",
       "android": "Bare Sudoku există și ca aplicație Android nativă: versiunea {version}, aproximativ {size} KB, fără permisiuni, fără acces la internet, Java pur fără biblioteci. Nu este pe Google Play; descarcă APK-ul semnat de pe GitHub Releases și instalează-l pe Android 8 sau mai nou.",
@@ -1170,7 +1170,7 @@
         "Επισήμανση γραμμής, στήλης, μπλοκ και ίδιου ψηφίου· σήμανση λαθών που απενεργοποιείται",
         "Αυτόματη αποθήκευση, σκούρο θέμα, πληκτρολόγιο και οριζόντια διάταξη",
         "Λειτουργεί offline μετά την πρώτη επίσκεψη, χωρίς app store",
-        "37 γλώσσες, καθεμία στη δική της σελίδα"
+        "223 γλώσσες, καθεμία στη δική της σελίδα"
       ],
       "androidHeading": "Εφαρμογή Android",
       "android": "Το Bare Sudoku υπάρχει και ως εγγενής εφαρμογή Android: έκδοση {version}, περίπου {size} KB, χωρίς άδειες, χωρίς πρόσβαση στο internet, καθαρή Java χωρίς βιβλιοθήκες. Δεν είναι στο Google Play· κατέβασε το υπογεγραμμένο APK από το GitHub Releases και εγκατάστησέ το σε Android 8 ή νεότερο.",
@@ -1245,7 +1245,7 @@
         "Markering av rad, kolumn, ruta och samma siffra; felmarkering som kan stängas av",
         "Automatisk sparning, mörkt läge, tangentbord och liggande läge",
         "Fungerar offline efter första besöket, ingen appbutik behövs",
-        "37 språk, vart och ett på sin egen sida"
+        "223 språk, vart och ett på sin egen sida"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finns också som inbyggd Android-app: version {version}, cirka {size} KB, inga behörigheter, ingen internetåtkomst, ren Java utan bibliotek. Den finns inte på Google Play; ladda ner den signerade APK-filen från GitHub Releases och installera den på Android 8 eller senare.",
@@ -1320,7 +1320,7 @@
         "Fremhævning af række, kolonne, boks og samme ciffer; fejlmarkering, der kan slås fra",
         "Automatisk gem, mørk tilstand, tastatur og liggende layout",
         "Virker offline efter første besøg, ingen app store nødvendig",
-        "37 sprog, hvert på sin egen side"
+        "223 sprog, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku findes også som native Android-app: version {version}, cirka {size} KB, ingen tilladelser, ingen internetadgang, ren Java uden biblioteker. Den er ikke på Google Play; hent den signerede APK fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -1395,7 +1395,7 @@
         "Utheving av rad, kolonne, boks og samme siffer; feilmarkering som kan slås av",
         "Automatisk lagring, mørk modus, tastatur og liggende visning",
         "Fungerer frakoblet etter første besøk, ingen appbutikk nødvendig",
-        "37 språk, hvert på sin egen side"
+        "223 språk, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finnes også som egen Android-app: versjon {version}, omtrent {size} KB, ingen tillatelser, ingen internettilgang, ren Java uten biblioteker. Den er ikke på Google Play; last ned den signerte APK-filen fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -1470,7 +1470,7 @@
         "Rivin, sarakkeen, ruudun ja saman numeron korostus; virhemerkintä, jonka voi kytkeä pois",
         "Automaattinen tallennus, tumma tila, näppäimistö ja vaaka-asettelu",
         "Toimii offline ensimmäisen käynnin jälkeen, ei sovelluskauppaa",
-        "37 kieltä, jokainen omalla sivullaan"
+        "223 kieltä, jokainen omalla sivullaan"
       ],
       "androidHeading": "Android-sovellus",
       "android": "Bare Sudoku on myös natiivi Android-sovellus: versio {version}, noin {size} KB, ei käyttöoikeuksia, ei internetyhteyttä, puhdasta Javaa ilman kirjastoja. Se ei ole Google Playssa; lataa allekirjoitettu APK GitHub Releases -sivulta ja asenna se Android 8:aan tai uudempaan.",
@@ -1545,7 +1545,7 @@
         "Подсветка строки, столбца, блока и одинаковых цифр; отключаемая отметка ошибок",
         "Автосохранение, тёмная тема, клавиатура и горизонтальная раскладка",
         "После первого визита работает офлайн, магазин приложений не нужен",
-        "37 языков, у каждого своя страница"
+        "223 языка, у каждого своя страница"
       ],
       "androidHeading": "Приложение для Android",
       "android": "Bare Sudoku есть и как нативное приложение для Android: версия {version}, около {size} КБ, без разрешений, без доступа в интернет, чистая Java без библиотек. Его нет в Google Play; скачай подписанный APK со страницы GitHub Releases и установи на Android 8 или новее.",
@@ -1620,7 +1620,7 @@
         "Підсвічування рядка, стовпця, блоку та однакових цифр; позначення помилок можна вимкнути",
         "Автозбереження, темна тема, клавіатура та горизонтальна розкладка",
         "Після першого візиту працює офлайн, магазин застосунків не потрібен",
-        "37 мов, кожна на своїй сторінці"
+        "223 мови, кожна на своїй сторінці"
       ],
       "androidHeading": "Застосунок для Android",
       "android": "Bare Sudoku є і як нативний застосунок для Android: версія {version}, близько {size} КБ, без дозволів, без доступу до інтернету, чиста Java без бібліотек. Його немає в Google Play; завантаж підписаний APK зі сторінки GitHub Releases і встанови на Android 8 або новішу.",
@@ -1695,7 +1695,7 @@
         "Открояване на ред, колона, блок и еднаква цифра; отбелязване на грешки, което може да се изключи",
         "Автоматично запазване, тъмен режим, клавиатура и хоризонтално оформление",
         "Работи офлайн след първото посещение, без магазин за приложения",
-        "37 езика, всеки на своя страница"
+        "223 езика, всеки на своя страница"
       ],
       "androidHeading": "Приложение за Android",
       "android": "Bare Sudoku съществува и като нативно приложение за Android: версия {version}, около {size} КБ, без разрешения, без достъп до интернет, чиста Java без библиотеки. Няма го в Google Play; изтегли подписания APK от GitHub Releases и го инсталирай на Android 8 или по-нов.",
@@ -1770,7 +1770,7 @@
         "Isticanje reda, kolone, bloka i iste cifre; označavanje grešaka koje se može isključiti",
         "Automatsko čuvanje, tamni režim, tastatura i horizontalni raspored",
         "Radi oflajn posle prve posete, bez prodavnice aplikacija",
-        "37 jezika, svaki na svojoj stranici"
+        "223 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Play-u; preuzmi potpisani APK sa GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -1845,7 +1845,7 @@
         "Isticanje retka, stupca, bloka i iste znamenke; označavanje pogrešaka koje se može isključiti",
         "Automatsko spremanje, tamni način, tipkovnica i vodoravni raspored",
         "Radi offline nakon prvog posjeta, bez trgovine aplikacija",
-        "37 jezika, svaki na svojoj stranici"
+        "223 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Playu; preuzmi potpisani APK s GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -1920,7 +1920,7 @@
         "إبراز الصف والعمود والمربع والرقم نفسه؛ تعليم الأخطاء قابل للإيقاف",
         "حفظ تلقائي ووضع داكن ودعم لوحة المفاتيح وتخطيط أفقي",
         "يعمل دون اتصال بعد الزيارة الأولى، دون متجر تطبيقات",
-        "37 لغة، لكل منها صفحتها الخاصة"
+        "223 لغة، لكل منها صفحتها الخاصة"
       ],
       "androidHeading": "تطبيق أندرويد",
       "android": "Bare Sudoku متوفر أيضًا كتطبيق أندرويد أصلي: الإصدار {version}، نحو {size} كيلوبايت، بلا أذونات، بلا وصول إلى الإنترنت، جافا خالصة بلا مكتبات. ليس على Google Play؛ نزّل ملف APK الموقّع من GitHub Releases وثبّته على أندرويد 8 أو أحدث.",
@@ -2070,7 +2070,7 @@
         "הדגשת שורה, עמודה, תיבה ואותה ספרה; סימון טעויות שאפשר לכבות",
         "שמירה אוטומטית, מצב כהה, תמיכה במקלדת ופריסה לרוחב",
         "עובד בלי אינטרנט אחרי הביקור הראשון, בלי חנות אפליקציות",
-        "37 שפות, לכל אחת דף משלה"
+        "223 שפות, לכל אחת דף משלה"
       ],
       "androidHeading": "אפליקציית אנדרואיד",
       "android": "Bare Sudoku קיים גם כאפליקציית אנדרואיד מקורית: גרסה {version}, כ-{size} KB, בלי הרשאות, בלי גישה לאינטרנט, Java טהורה בלי ספריות. היא לא ב-Google Play; הורידו את קובץ ה-APK החתום מ-GitHub Releases והתקינו על אנדרואיד 8 ומעלה.",
@@ -2145,7 +2145,7 @@
         "पंक्ति, स्तंभ, बॉक्स और समान अंक की हाइलाइट; गलती का निशान जिसे बंद किया जा सकता है",
         "स्वतः सेव, डार्क मोड, कीबोर्ड समर्थन और लैंडस्केप लेआउट",
         "पहली बार खोलने के बाद ऑफ़लाइन चलता है, किसी ऐप स्टोर की ज़रूरत नहीं",
-        "37 भाषाएँ, हर एक का अपना पेज"
+        "223 भाषाएँ, हर एक का अपना पेज"
       ],
       "androidHeading": "Android ऐप",
       "android": "Bare Sudoku एक नेटिव Android ऐप के रूप में भी है: संस्करण {version}, लगभग {size} KB, कोई अनुमति नहीं, इंटरनेट की ज़रूरत नहीं, बिना किसी लाइब्रेरी की शुद्ध Java। यह Google Play पर नहीं है; GitHub Releases से हस्ताक्षरित APK डाउनलोड करें और Android 8 या नए पर इंस्टॉल करें।",
@@ -2295,7 +2295,7 @@
         "Sorotan baris, kolom, kotak, dan angka yang sama; penanda kesalahan bisa dimatikan",
         "Simpan otomatis, mode gelap, dukungan keyboard, dan tata letak lanskap",
         "Bisa offline setelah kunjungan pertama, tanpa toko aplikasi",
-        "37 bahasa, masing-masing di halamannya sendiri"
+        "223 bahasa, masing-masing di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga tersedia sebagai aplikasi Android native: versi {version}, sekitar {size} KB, tanpa izin, tanpa akses internet, Java murni tanpa pustaka. Tidak ada di Google Play; unduh APK bertanda tangan dari GitHub Releases dan pasang di Android 8 atau lebih baru.",
@@ -2370,7 +2370,7 @@
         "Sorotan baris, lajur, kotak dan digit yang sama; penanda kesilapan boleh dimatikan",
         "Simpan automatik, mod gelap, sokongan papan kekunci dan susun atur landskap",
         "Berfungsi luar talian selepas lawatan pertama, tanpa gedung aplikasi",
-        "37 bahasa, setiap satu di halamannya sendiri"
+        "223 bahasa, setiap satu di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga ada sebagai aplikasi Android asli: versi {version}, kira-kira {size} KB, tiada kebenaran, tiada akses internet, Java tulen tanpa pustaka. Tiada di Google Play; muat turun APK bertandatangan dari GitHub Releases dan pasang pada Android 8 atau lebih baharu.",
@@ -2445,7 +2445,7 @@
         "Tô sáng hàng, cột, ô vuông và cùng chữ số; đánh dấu lỗi có thể tắt",
         "Tự động lưu, chế độ tối, hỗ trợ bàn phím và bố cục ngang",
         "Hoạt động offline sau lần truy cập đầu tiên, không cần cửa hàng ứng dụng",
-        "37 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
+        "223 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
       ],
       "androidHeading": "Ứng dụng Android",
       "android": "Bare Sudoku cũng có ứng dụng Android gốc: phiên bản {version}, khoảng {size} KB, không quyền truy cập, không kết nối internet, Java thuần không thư viện. Không có trên Google Play; tải APK đã ký từ GitHub Releases và cài trên Android 8 trở lên.",
@@ -2520,7 +2520,7 @@
         "ไฮไลต์แถว คอลัมน์ กล่อง และตัวเลขเดียวกัน; เครื่องหมายผิดพลาดปิดได้",
         "บันทึกอัตโนมัติ โหมดมืด รองรับคีย์บอร์ด และเลย์เอาต์แนวนอน",
         "เล่นออฟไลน์ได้หลังเปิดครั้งแรก ไม่ต้องใช้แอปสโตร์",
-        "37 ภาษา แต่ละภาษามีหน้าของตัวเอง"
+        "223 ภาษา แต่ละภาษามีหน้าของตัวเอง"
       ],
       "androidHeading": "แอป Android",
       "android": "Bare Sudoku ยังมีเป็นแอป Android แบบเนทีฟ: เวอร์ชัน {version} ขนาดประมาณ {size} KB ไม่ขอสิทธิ์ใด ๆ ไม่ใช้อินเทอร์เน็ต เขียนด้วย Java ล้วนไม่มีไลบรารี ไม่มีใน Google Play; ดาวน์โหลด APK ที่ลงลายเซ็นแล้วจาก GitHub Releases และติดตั้งบน Android 8 ขึ้นไป",
@@ -2595,7 +2595,7 @@
         "行・列・ブロック・同じ数字のハイライト、オフにできる誤りの表示",
         "自動保存、ダークモード、キーボード操作、横向きレイアウト",
         "初回アクセス後はオフラインでも動作、アプリストア不要",
-        "37言語、それぞれ専用ページ"
+        "223言語、それぞれ専用ページ"
       ],
       "androidHeading": "Androidアプリ",
       "android": "Bare SudokuにはネイティブのAndroidアプリもあります。バージョン{version}、約{size} KB、権限なし、インターネット接続なし、ライブラリを使わない純粋なJava製。Google Playにはありません。GitHub Releasesから署名済みAPKをダウンロードし、Android 8以降にインストールしてください。",
@@ -2670,7 +2670,7 @@
         "행, 열, 박스, 같은 숫자 강조; 끌 수 있는 오류 표시",
         "자동 저장, 다크 모드, 키보드 지원, 가로 레이아웃",
         "첫 방문 후 오프라인 작동, 앱 스토어 불필요",
-        "37개 언어, 언어마다 전용 페이지"
+        "223개 언어, 언어마다 전용 페이지"
       ],
       "androidHeading": "Android 앱",
       "android": "Bare Sudoku는 네이티브 Android 앱으로도 제공됩니다. 버전 {version}, 약 {size} KB, 권한 없음, 인터넷 접근 없음, 라이브러리 없는 순수 Java. Google Play에는 없습니다. GitHub Releases에서 서명된 APK를 내려받아 Android 8 이상에 설치하세요.",
@@ -2745,7 +2745,7 @@
         "行、列、宫及相同数字高亮；可关闭的错误标记",
         "自动保存、深色模式、键盘操作、横屏布局",
         "首次访问后可离线使用，无需应用商店",
-        "37 种语言，每种语言都有独立页面"
+        "223 种语言，每种语言都有独立页面"
       ],
       "androidHeading": "Android 应用",
       "android": "Bare Sudoku 也有原生 Android 应用：版本 {version}，约 {size} KB，不需要任何权限，不联网，纯 Java 编写，不依赖任何库。它不在 Google Play 上架；请从 GitHub Releases 下载已签名的 APK，安装到 Android 8 或更高版本。",
@@ -2820,7 +2820,7 @@
         "列、欄、宮及相同數字醒目提示；可關閉的錯誤標記",
         "自動儲存、深色模式、鍵盤操作、橫向版面",
         "首次造訪後可離線使用，不需要應用程式商店",
-        "37 種語言，每種語言都有獨立頁面"
+        "223 種語言，每種語言都有獨立頁面"
       ],
       "androidHeading": "Android 應用程式",
       "android": "Bare Sudoku 也有原生 Android 應用程式：版本 {version}，約 {size} KB，不需要任何權限，不連網，純 Java 撰寫，不依賴任何函式庫。它不在 Google Play 上架；請從 GitHub Releases 下載已簽署的 APK，安裝到 Android 8 或更新版本。",
