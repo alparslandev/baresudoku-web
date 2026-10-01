@@ -84972,6 +84972,588 @@
         }
       }
     },
+    "scn": {
+      "learnHeading": "Ampara lu Sudoku",
+      "learnText": "Si novu a lu Sudoku, o ti bluccasti nta nu schema difficili? Dui guidi spièganu li regoli e ogni tècnica ca usanu li cunsigghi, ognuna cu n'esempiu veru.",
+      "howToLink": "Comu si joca a Sudoku",
+      "techniquesLink": "Tècnichi pi risòlviri lu Sudoku",
+      "labels": {
+        "howTo": "Comu si joca",
+        "techniques": "Tècnichi",
+        "play": "Joca a Sudoku",
+        "prev": "Tècnica pricidenti",
+        "next": "Tècnica appressu",
+        "all": "Tutti li tècnichi",
+        "example": "Esempiu",
+        "steps": "Passu passu",
+        "when": "Quannu usarla",
+        "spot": "Comu truvarla",
+        "mistakes": "Sbagghi cumuni",
+        "inGame": "Nta Bare Sudoku",
+        "level": "Servi a pàrtiri di lu livellu: {level}",
+        "hint": "Nta lu jocu, lu cunsigghiu dici: {text}",
+        "legend": "Li cifri in grassettu sunnu dati, li cifri blu foru misi mentri si risolvi, li cifri nichi sunnu candidati. Li caselli evidenziati fannu la figura, li candidati sbarrati si levanu e lu candidatu cu lu circhiu è la cifra di mèttiri.",
+        "notation": "Li caselli si scrivinu comu r3c7: riga 3, culonna 7. Li righi si cùntanu di supra, li culonni di manca e li quatri di 1 a 9 di l'àngulu supra a manca, riga pi riga.",
+        "row": "riga {n}",
+        "column": "culonna {n}",
+        "box": "quatru {n}",
+        "elimItem": "{d} di {cell}",
+        "regions": "Riga 5, culonna 5 e quatru 5 a lu principiu di nu schema",
+        "firstMove": "Nu sìngulu nudu: {cell} pò èssiri sulu {d}",
+        "breadcrumb": "Pircorsu di navigazzioni"
+      },
+      "howTo": {
+        "title": "Comu si joca a Sudoku: regoli, griglia e primi mossi",
+        "description": "Ampara a jucari a Sudoku: li regoli, comu funzionanu righi, culonni e quatri, picchì ogni schema havi na suluzioni sula, li noti e li primi mossi.",
+        "h1": "Comu si joca a Sudoku",
+        "summary": "Lu Sudoku è nu jocu di lòggica supra na griglia 9×9. Jinchi ogni casella vacanti cu na cifra di 1 a 9 di manera ca ogni riga, ogni culonna e ogni quatru 3×3 havi ogni cifra na vota sula. Quarchi cifra è data a lu principiu; lu restu lu ricavi tu, na casella sicura a la vota, e nun c'è mai bisognu di 'nzirtari. Sta guida spiega la griglia, li regoli, lu principiu di la suluzioni sula, li noti e na stratigìa sèmplici pi li primi mossi. Poi pruvari tuttu nta [Bare Sudoku](play), ca è gratis e havi cunsigghi ca spièganu la lòggica.",
+        "sections": [
+          {
+            "h": "Quali sunnu li regoli di lu Sudoku?",
+            "p": [
+              "Ci sunnu sulu tri regoli, e sunnu la stissa regola vista di tri lati: ogni riga havi a cuntèniri li cifri di 1 a 9, ogni culonna havi a cuntèniri li cifri di 1 a 9 e ogni quatru 3×3 havi a cuntèniri li cifri di 1 a 9. Dunca na cifra nun pò mai cumpàriri dui voti nta la stissa riga, culonna o quatru.",
+              "Li cifri dati, stampati in grassettu, sunnu fissi. Lu to travagghiu è inchiri li caselli vacanti. Nun c'è aritmètica e nun c'è ordini: li cifri sunnu sulu novi sìmmuli diversi. Putissi jucari cu lìttiri o cu furmi e nun canciassi nenti."
+            ]
+          },
+          {
+            "h": "Comu è urganizzata la griglia?",
+            "p": [
+              "La griglia havi 81 caselli nta 9 righi e 9 culonni. Linii grossi la dividinu nta novi quatri 3×3. Ogni casella apparteni a na riga sula, a na culonna sula e a nu quatru sulu, e sti tri gruppi sunnu li so unità. Li 20 àutri caselli ca spàrtinu n'unità cu na casella si chiamanu li so vicini; na cifra misa nta na casella esclusi dda cifra nta tutti li 20 vicini.",
+              "Li caselli si scrivinu comu r3c7: riga 3, culonna 7. Li righi si cùntanu di supra, li culonni di manca e li quatri di 1 a 9 di l'àngulu supra a manca, riga pi riga. Sta nutazzioni s'usa nta ogni guida di li tècnichi e vali la pena di amparàrisilla: r5c5 è lu centru di la griglia."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Picchì ogni Sudoku havi na suluzioni sula?",
+            "p": [
+              "Nu Sudoku fattu comu si devi havi na suluzioni sula, e chistu è chiddu ca fa funziunari la lòggica. Ogni vota ca poi dimustrari ca na cifra nun pò jiri a nudda àutra banna nta n'unità, havi a jiri nta la casella ca resta, picchì la suluzioni esisti ed è ùnica. Si nu schema avissi dui suluzioni, nuddu ragiunamentu li putissi distìnguiri e a un certu puntu avissi a 'nzirtari pi forza.",
+              "Bare Sudoku genera ogni schema nta lu to dispusitivu e cuntrolla ca havi na suluzioni sula e ca lu so risolutori lòggicu lu pò finiri cu li tècnichi di lu livellu scigghiutu. Dunca, si ti blocchi, c'è sempri nu passu appressu di truvari, e lu cunsigghiu ti lu mustra."
+            ]
+          },
+          {
+            "h": "Comu s'accumincia nu schema di Sudoku?",
+            "p": [
+              "Accumincia di chiddu ca è cchiù limitatu. St'ordini funziona a ogni livellu:"
+            ],
+            "list": [
+              "Scegghi na cifra ca già cumpari tanti voti, mettemu sei o setti, e trova li quatri ca ancora nun l'hannu. Spissu nta nu quatru resta sulu na casella pi idda: chistu è nu [sìngulu ammucciatu](hidden-single).",
+              "Cerca li caselli affuddati. Na casella ca nta la so riga, la so culonna e lu so quatru, misi nzèmmula, havi ottu cifri diversi, havi sulu un candidatu: nu [sìngulu nudu](naked-single). Li caselli nta righi o quatri quasi chini sunnu lu megghiu postu unni circari.",
+              "Ogni cifra ca metti leva un candidatu di 20 vicini, dunca cuntrolla subbitu sti vicini. Li sìnguli spissu vennu a catina.",
+              "Quannu li piazzamenti fàcili finìscinu, scrivi li noti: li candidati di ogni casella vacanti. Poi cerca na cifra ca nta nu quatru è chiusa nta na sula linia ([candidati bluccati](locked-candidates)) o dui caselli ca hannu li stissi dui candidati (na [cuppia nuda](naked-pairs)).",
+              "Torna a li sìnguli doppu ogni eliminazzioni. Puru li schemi Espertu si risolvinu pi lu cchiù cu sìnguli; la tècnica avanzata sulu sblocca lu prossimu."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Chi sunnu li noti e quannu s'hannu a usari?",
+            "p": [
+              "Li noti, chiamati puru signi a lapis o candidati, sunnu li cifri nichi ca scrivi nta na casella vacanti pi ricurdàriti quali cifri ponnu ancora jiri ddà. Nta li schemi fàcili raramenti servinu; di Difficili in susu sunnu essinziali, picchì tècnichi comu li cuppii, X-Wing e Y-Wing riguardanu li candidati, no li cifri misi.",
+              "Teni li noti giusti: quannu metti na cifra, levala di li noti di tutti li 20 vicini. Nta Bare Sudoku chistu succedi automaticamenti, e Inchi li noti scrivi ogni candidatu nta ogni casella vacanti cu un toccu, accussì poi accuminciari di nu gruppu di candidati cumpletu e currettu. Na nota è nu fattu, no nu tintativu: voli diri ca pi ora nenti esclusi sta cifra."
+            ]
+          },
+          {
+            "h": "Chi hai a fari quannu ti blocchi?",
+            "p": [
+              "Prima ricuntrolla li basi: ogni riga, culonna e quatru quasi chinu è na fonti di sìnguli. Poi assicùrati ca li noti sunnu cumpleti, picchì un candidatu ca manca ammuccia li figuri e unu vecchiu ni crea di fausi. Poi pruva li [tècnichi](techniques) in ordini di difficultà: candidati bluccati, cuppii e tirzini, X-Wing, Y-Wing, Swordfish e XYZ-Wing. Ognuna havi la so pàggina cu n'esempiu veru.",
+              "Si nenti funziona, pigghia nu cunsigghiu. Nta Bare Sudoku lu cunsigghiu prima cuntrolla si na cifra misa è sbagghiata, poi trova la prossima casella ca si pò inchiri cu la lòggica e dici lu nomu di la tècnica, accussì ampari quarchi cosa puru quannu l'usi. Tocca arrè lu cunsigghiu pi mèttiri la cifra."
+            ]
+          },
+          {
+            "h": "Comu si mettinu li cifri nta Bare Sudoku?",
+            "p": [
+              "Tocca na casella, poi na cifra. O tocca prima na cifra: resta bluccata, e ogni casella ca tocchi la riceve, ca è lu modu cchiù viloci pi mèttiri la sesta, la sèttima e l'ottava copia di na cifra. Tocca arrè la cifra pi sbluccàrila. Lu buttuni Noti passa a li signi a lapis, Cancella svacanta na casella, Annulla torna nnarrè quarsiasi mossa, e l'erruri sunnu signati in russu, a menu ca nun astuti sta funzioni nta lu menù.",
+              "Cu la tastera, usa li frecci pi moviriti, 1 a 9 pi mèttiri na cifra, Backspace pi cancillari, N pi li noti, U pi annullari, H pi nu cunsigghiu, F pi inchiri li noti ed Escape pi lu menù. Lu jocu si sarva di sulu, funziona offline e nun havi né pubblicità né account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Hai mai bisognu di 'nzirtari nta lu Sudoku?",
+            "No, nta nu schema fattu comu si devi. Ogni schema di Bare Sudoku havi na suluzioni sula ed è cuntrullatu ca si pò risòlviri sulu cu la lòggica, finu a li tècnichi di lu so livellu. Si ti pari ca hai a 'nzirtari, manca un candidatu nta li to noti o c'è na tècnica ca aspetta d'èssiri truvata."
+          ],
+          [
+            "Na cifra pò cumpàriri dui voti nta na riga, culonna o quatru?",
+            "No. Chista è tutta la regola: ognuna di li novi righi, novi culonni e novi quatri cunteni ogni cifra di 1 a 9 na vota sula. Si dui cifri uguali spàrtinu n'unità, armenu una di iddi è sbagghiata."
+          ],
+          [
+            "Chi diffirenza c'è tra Fàcili, Menzu, Difficili ed Espertu?",
+            "Lu livellu dipenni di li tècnichi ca servinu a lu schema. Fàcili e Menzu si risolvinu sulu cu sìnguli, e Fàcili accumincia cu armenu 38 cifri dati. Difficili voli candidati bluccati o cuppii e tirzini. Espertu voli X-Wing, Y-Wing, Swordfish o XYZ-Wing."
+          ],
+          [
+            "È megghiu inchiri li noti pi ogni casella o sulu pi quarchi casella?",
+            "Pi li schemi Difficili ed Espertu, inchili tutti: figuri comu li cuppii, X-Wing e Y-Wing cumparinu sulu quannu ogni candidatu è scrittu. Nta Fàcili e Menzu li noti sunnu facultativi e la maiuranza di li jucaturi cerca sulu li sìnguli."
+          ],
+          [
+            "Quantu dura nu Sudoku?",
+            "Nu schema Fàcili voli pochi minuti; li schemi Espertu ponnu vulìri vinti minuti o cchiù, secunnu quantu prestu vidi la figura avanzata. Bare Sudoku mustra nu cronòmetru, lu ferma mentri lu menù è apertu e nun teni classìfichi, dunca joca cu li to tempi."
+          ],
+          [
+            "Lu Sudoku voli l'aritmètica?",
+            "No. Li cifri sunnu sulu etichetti; nun c'è nenti di sumari o di cuntari. Quarsiasi novi sìmmuli jissiru beni, e pi chistu lu Sudoku è nu jocu di lòggica e no nu jocu di nùmmari."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tècnichi pi risòlviri lu Sudoku spiegati cu esempi",
+        "description": "Tutti li novi tècnichi pi risòlviri lu Sudoku, di li sìnguli nudi a Swordfish e XYZ-Wing, nta l'ordini di li cunsigghi di Bare Sudoku, cu esempi veri.",
+        "h1": "Tècnichi pi risòlviri lu Sudoku",
+        "intro": [
+          "Ogni Sudoku si pò risòlviri cu nu gruppu nicu di tècnichi lòggichi. St'ìndici elenca li novi tècnichi ca usanu lu risolutori di Bare Sudoku e li so cunsigghi, nta l'ordini ca lu risolutori li prova: prima li sìnguli, poi l'eliminazzioni dintra n'unità sula, poi li figuri ca pìgghianu cchiù righi e culonni. Ogni tècnica havi la so pàggina cu na difinizzioni, comu truvarla, n'esempiu veru di nu schema generatu e li sbagghi cumuni.",
+          "Lu livellu di nu schema dipenni di la tècnica cchiù difficili ca ci servi. Li schemi Fàcili e Menzu vonnu sulu sìnguli, li Difficili vonnu candidati bluccati o cuppii e tirzini, e li Espertu vonnu armenu un pisci o n'ala. Qualunqui sia lu livellu, li sìnguli fannu la maiuri parti di lu travagghiu; la tècnica avanzata leva un candidatu o dui e li sìnguli cuntìnuanu di ddà."
+        ],
+        "faq": [
+          [
+            "Nta quali ordini aju a pruvari li tècnichi di lu Sudoku?",
+            "Prima li cchiù sèmplici: sìnguli nudi, sìnguli ammucciati, candidati bluccati, cuppii e tirzini nudi, cuppii e tirzini ammucciati, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku li prova pricisamenti nta st'ordini, e nu cunsigghiu dici sempri lu nomu di la tècnica cchiù sèmplici ca fa avanzari."
+          ],
+          [
+            "Mi servinu tutti sti tècnichi pi risòlviri lu Sudoku?",
+            "Pi li schemi Fàcili e Menzu bastanu li sìnguli. Li schemi Difficili agghiùncinu li candidati bluccati e li sottuinsiemi. Li schemi Espertu vonnu armenu un pisci o n'ala, ma di sòlitu sulu una o dui voti pi schema."
+          ],
+          [
+            "Ci sunnu tècnichi cchiù difficili di XYZ-Wing?",
+            "Sì, pi esempiu li catini, li test di unicità e li reti di furzatura. Bare Sudoku nun genera schemi ca nn'hannu bisognu, dunca ogni schema di lu jocu si pò finiri cu li novi tècnichi di sta pàggina."
+          ],
+          [
+            "Chi è un candidatu?",
+            "Na cifra ca putissi ancora jiri nta na casella vacanti, picchì nenti nta la so riga, culonna o quatru l'esclusi ancora. Li noti di lu jocu sunnu candidati. Ogni tècnica oltri li sìnguli ragiuna supra li candidati, dunca tenili cumpleti e giusti."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Sìngulu nudu",
+          "title": "Sìngulu nudu nta lu Sudoku: la casella cu un candidatu",
+          "description": "Nu sìngulu nudu è na casella vacanti cu na sula cifra pussìbbili. Ampara a truvari li sìnguli nudi prestu, cu n'esempiu veru passu passu e li sbagghi sòliti.",
+          "h1": "Sìngulu nudu",
+          "summary": "Nu sìngulu nudu (naked single) è na casella vacanti ca havi un candidatu sulu: l'àutri ottu cifri sunnu già nta la so riga, culonna o quatru. La cifra ca resta havi a jiri ddà. È la tècnica di Sudoku cchiù sèmplici, chidda ca usi cchiù spissu, e chidda ca lu cunsigghiu di Bare Sudoku signala comu \"Sulu un candidatu ccà\".",
+          "when": [
+            "Sempri. Li sìnguli nudi cumparinu di la prima mossa a l'ùrtima, a ogni livellu. Nta li schemi Fàcili e Menzu sunnu, nzèmmula a li sìnguli ammucciati, l'ùnica tècnica ca ti servi. Nta li schemi cchiù difficili ogni eliminazzioni fatta di na tècnica avanzata di sòlitu lassa nu sìngulu nudu, dunca cèrcali doppu ogni passu."
+          ],
+          "spot": [
+            "Talìa li caselli cu tanti vicini già chini: na casella nta na riga ca havi già setti cifri, o na casella ca nta riga, culonna e quatru, misi nzèmmula, vidi ottu cifri diversi. Senza noti, cunta li cifri ca vidi di la casella. Cu li noti, nu sìngulu nudu è sèmplicimenti na casella ca mustra un candidatu sulu, e pi chistu Inchi li noti li fa truvari facili."
+          ],
+          "examples": [
+            {
+              "h": "Esempiu",
+              "steps": [
+                "Talìa {cell}. È vacanti, dunca fai la lista di ogni cifra già misa nta la so riga, nta la so culonna e nta lu so quatru.",
+                "La riga {row} havi {rowDigits}. La culonna {col} havi {colDigits}. Lu quatru {box} havi {boxDigits}.",
+                "Misi nzèmmula escludinu ogni cifra tranni {d}, dunca {d} è l'ùnicu candidatu ca resta nta {cell}.",
+                "Scrivi {d} nta {cell}. Poi cuntrolla si la cifra nova crea n'àutru sìngulu nta la stissa riga, culonna o quatru."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Cuntari sulu la riga o sulu lu quatru. L'ottu cifri esclusi di sòlitu vennu di tutti e tri l'unità nzèmmula.",
+            "Scurdàrisi ca na cifra misa un mumentu fa esclusi puru candidati nta li so 20 vicini; sìnguli nudi novi cumparinu subbitu doppu ogni piazzamentu.",
+            "Cunfùnniri nu sìngulu nudu cu nu sìngulu ammucciatu: nu sìngulu nudu havi un candidatu ca resta nta la casella, nu sìngulu ammucciatu havi na casella ca resta pi la cifra nta n'unità."
+          ],
+          "faq": [
+            [
+              "Chi è nu sìngulu nudu nta lu Sudoku?",
+              "Na casella vacanti cu un candidatu sulu. Ottu cifri diversi sunnu già misi nta la so riga, culonna e quatru, dunca la nona cifra è l'ùnica ca ci trasi."
+            ],
+            [
+              "Picchì si chiama nudu?",
+              "Picchì l'ùnicu candidatu si vidi direttamenti nta la casella appena li noti sunnu scritti; nenti l'ammuccia. Nu sìngulu ammucciatu, a lu cuntrariu, sta mmenzu a àutri candidati e si trova taliannu la cifra e no la casella."
+            ],
+            [
+              "Si pò risòlviri nu schema sulu cu sìnguli nudi?",
+              "Tanti schemi Fàcili sì, ma la maiuranza voli puru sìnguli ammucciati. Bare Sudoku classifica li schemi Fàcili e Menzu comu risolvìbbili cu sìnguli di tutti e dui li tipi; li schemi Difficili ed Espertu vonnu armenu n'àutra tècnica."
+            ],
+            [
+              "Lu cunsigghiu mustra li sìnguli nudi?",
+              "Sì. Quannu lu prossimu piazzamentu è nu sìngulu nudu, lu cunsigghiu scegghi la casella e dici \"Sulu un candidatu ccà\" cu la cifra. Tocca arrè lu cunsigghiu pi mèttirla."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Sìngulu ammucciatu",
+          "title": "Sìngulu ammucciatu nta lu Sudoku: l'ùnicu postu pi na cifra",
+          "description": "Nu sìngulu ammucciatu è l'ùnica casella nta na riga, culonna o quatru unni na cifra pò ancora jiri. Ampara a truvàrili taliannu na cifra a la vota.",
+          "h1": "Sìngulu ammucciatu",
+          "summary": "Nu sìngulu ammucciatu (hidden single) è na cifra ca havi na sula casella pussìbbili nta na riga, culonna o quatru, puru si dda casella pò mustrari àutri candidati. Siccomu l'unità havi a cuntèniri la cifra, la cifra va ddà. Lu cunsigghiu di Bare Sudoku lu signala comu \"Sulu un postu pi 5 nta sta riga\", culonna o quatru.",
+          "when": [
+            "Ogni vota ca na cifra è avanti assai: quannu na cifra cumpari cincu o sei voti, li quatri ca restanu sunnu assai limitati, e spissu la prossima mossa è nu sìngulu ammucciatu. Li sìnguli ammucciati sunnu la tècnica principali di li schemi Fàcili e Menzu e restanu lu cavaddu di battagghia a ogni livellu."
+          ],
+          "spot": [
+            "Talìa na cifra a la vota. Pigghia na cifra, trova nu quatru ca nun l'havi, e sbarra ogni casella di ddu quatru ca sparti na riga o na culonna cu na copia già misa di la cifra. Si resta na casella sula, hai truvatu nu sìngulu ammucciatu. Lu stissu cuntrollu funziona supra righi e culonni. Nta lu jocu, tocca na cifra misa: ogni so copia s'illumina, accussì li caselli lìbbiri si vìdinu subbitu."
+          ],
+          "examples": [
+            {
+              "h": "Esempiu",
+              "steps": [
+                "Lu quatru {box} nun havi ancora {d}, dunca una di li so caselli vacanti l'havi a tèniri. Li caselli vacanti sunnu {empties}.",
+                "Nta ognuna di iddi, tranni {cell}, {d} è bluccatu di nu {d} già misu nta la stissa riga o culonna, dunca {d} ddà nun è candidatu.",
+                "Accussì {cell} resta l'ùnicu postu pi {d} nta lu quatru {box}. Scrivi {d} ddà, puru si {cell} pò ancora mustrari àutri candidati."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Mèttiri la cifra nta na casella ca è sulu probabbilmenti chidda giusta: cuntrolla ogni àutra casella vacanti di l'unità, no sulu chiddi òvvii.",
+            "Pèrdiri nu sìngulu ammucciatu picchì la casella mustra cchiù candidati. L'àutri candidati nun cuntanu; chiddu ca cunta è ca la cifra nun havi àutru postu nta l'unità.",
+            "Taliari sulu li quatri. Li righi e li culonni dùnanu sìnguli ammucciati tantu spissu quantu li quatri, soprattuttu versu la fini."
+          ],
+          "faq": [
+            [
+              "Chi è nu sìngulu ammucciatu nta lu Sudoku?",
+              "Na cifra ca pò jiri sulu nta na casella di na riga, culonna o quatru. L'unità havi a cuntèniri la cifra, dunca la casella è dicisa puru si havi ancora àutri candidati."
+            ],
+            [
+              "Chi diffirenza c'è tra nu sìngulu ammucciatu e nu sìngulu nudu?",
+              "Nu sìngulu nudu riguarda na casella: resta un candidatu. Nu sìngulu ammucciatu riguarda na cifra: resta na casella nta n'unità. Tutti dui mettinu na cifra cu cirtizza."
+            ],
+            [
+              "Quali è cchiù facili di truvari?",
+              "Senza noti, li sìnguli ammucciati di sòlitu sunnu cchiù fàcili, picchì poi taliari la griglia na cifra a la vota. Cu li noti cumpleti, li sìnguli nudi sunnu li cchiù fàcili, picchì na casella cu un candidatu sulu si vidi subbitu."
+            ],
+            [
+              "Comu discrivi lu cunsigghiu nu sìngulu ammucciatu?",
+              "Comu \"Sulu un postu pi\" la cifra nta sta riga, nta sta culonna o nta stu quatru, cu la casella scigghiuta. Tocca arrè lu cunsigghiu pi mèttirla."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Candidati bluccati",
+          "title": "Candidati bluccati nta lu Sudoku: puntari e rivinnicari",
+          "description": "Candidati bluccati: quannu li candidati di na cifra nta nu quatru stannu tutti nta na riga o culonna, o lu cuntrariu, la cifra si leva àutrova. Dui esempi veri.",
+          "h1": "Candidati bluccati",
+          "summary": "Li candidati bluccati (locked candidates) sunnu la prima tècnica ca leva candidati inveci di mèttiri na cifra. Hannu dui formi. Puntamentu: nta nu quatru, tutti li candidati di na cifra stannu nta na riga o culonna, dunca la cifra si leva di lu restu di dda linia. Rivinnicazioni: nta na riga o culonna, tutti li candidati di na cifra stannu nta nu quatru, dunca la cifra si leva di lu restu di ddu quatru. Lu cunsigghiu di Bare Sudoku chiama \"Candidati bluccati\" lu piazzamentu ca sblocca.",
+          "when": [
+            "Quannu li sìnguli finìscinu nta nu schema Difficili, chista è la prima cosa di pruvari. Servinu noti cumpleti armenu pi la cifra ca esamini. Li candidati bluccati sunnu cumuni: la maiuranza di li schemi Difficili nn'hannu bisognu, e li schemi Espertu li usanu mmenzu a li figuri cchiù granni."
+          ],
+          "spot": [
+            "Pi lu puntamentu, talìa ogni quatru e ogni cifra ca ci manca: si li caselli candidati pi dda cifra stannu nta na sula riga o culonna, cuntrolla si la stissa cifra cumpari comu candidatu cchiù avanti nta dda linia, fora di lu quatru. Pi la rivinnicazioni, talìa longu na riga o culonna: si li candidati di na cifra sunnu tutti dintra nu quatru, la cifra si pò livari di lu restu di ddu quatru. Nta lu jocu, tocca lu tastu di na cifra pi illuminari ogni so candidatu; na linia di dui o tri noti illuminati dintra nu quatru è la figura."
+          ],
+          "examples": [
+            {
+              "h": "Puntamentu",
+              "steps": [
+                "Nta lu quatru {box}, la cifra {d} havi sulu sti caselli candidati: {cells}. Tutti stannu nta la riga {row}.",
+                "Lu quatru {box} havi bisognu di nu {d}, dunca lu {d} di la riga {row} è dintra lu quatru {box}, qualunqui sia la casella unni va a finiri.",
+                "La riga {row} nun pò tèniri nu secunnu {d}, dunca leva {d} di li caselli di la riga {row} fora di lu quatru: {elim}."
+              ]
+            },
+            {
+              "h": "Rivinnicazioni",
+              "steps": [
+                "Nta la riga {row}, la cifra {d} pò jiri sulu nta {cells}, e stannu tutti dintra lu quatru {box}.",
+                "La riga {row} havi a cuntèniri {d}, dunca lu {d} di lu quatru {box} è rivinnicatu di la riga {row}. L'àutri caselli di lu quatru {box} nun ponnu tèniri {d}.",
+                "Leva {d} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Livari la cifra dintra lu quatru inveci di fora nta lu casu di lu puntamentu, o lu cuntrariu nta lu casu di la rivinnicazioni. L'eliminazzioni vannu sempri a li caselli ca sunnu nta la linia ma no nta lu quatru, o nta lu quatru ma no nta la linia.",
+            "Applicari la regola quannu li candidati occùpanu dui righi di lu quatru. Tutti li caselli candidati pi la cifra nta lu quatru hannu a stari nta na sula linia.",
+            "Scurdàrisi di circari lu sìngulu ca l'eliminazzioni crea. Li candidati bluccati raramenti mettinu na cifra di sulu; prepàranu nu sìngulu."
+          ],
+          "faq": [
+            [
+              "Chi sunnu li candidati bluccati nta lu Sudoku?",
+              "Candidati di na cifra chiusi nta l'intirsizzioni di nu quatru e na linia. Siccomu lu quatru, o la linia, havi a cuntèniri la cifra dintra dda intirsizzioni, la cifra si pò livari di lu restu di la linia, o di lu restu di lu quatru."
+            ],
+            [
+              "Chi diffirenza c'è tra puntamentu e rivinnicazioni?",
+              "Lu puntamentu parti di nu quatru: li candidati di la cifra nta lu quatru pùntanu longu na riga o culonna, dunca la cifra si leva di lu restu di dda linia. La rivinnicazioni parti di na riga o culonna: li candidati di la linia pi dda cifra sunnu tutti nta nu quatru, dunca la linia si rivinnica la cifra e chista si leva di lu restu di lu quatru."
+            ],
+            [
+              "Li candidati bluccati si chiamanu puru eliminazzioni pi intirsizzioni?",
+              "Sì. Àutri nomi sunnu riduzzioni quatru-linia pi la forma di rivinnicazioni, e cuppii o tirzini ca pùntanu pi la forma di puntamentu. Bare Sudoku usa nu nomu sulu pi tutti dui."
+            ],
+            [
+              "Quali livellu voli candidati bluccati?",
+              "Difficili. Nu schema ca voli candidati bluccati o sottuinsiemi ma nenti di cchiù difficili è classificatu Difficili; li schemi Espertu vonnu puru un pisci o n'ala."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Cuppii e tirzini nudi",
+          "title": "Cuppii e tirzini nudi nta lu Sudoku: comu funzionanu",
+          "description": "Cuppii e tirzini nudi: dui o tri caselli di n'unità ca hannu li stissi dui o tri candidati. Ampara a truvàrili e chi livari, cu esempi veri passu passu.",
+          "h1": "Cuppii e tirzini nudi",
+          "summary": "Na cuppia nuda (naked pair) è fatta di dui caselli nta la stissa riga, culonna o quatru ca hannu esattamenti li stissi dui candidati. Li dui cifri hannu a jiri nta ddi dui caselli, dunca si ponnu livari di ogni àutra casella di l'unità. Na tirzina nuda è la stissa idea cu tri caselli e tri cifri; ogni casella pò mustrarinni dui o tutti e tri. Lu cunsigghiu di Bare Sudoku chiama \"Cuppia o tirzina\" lu piazzamentu ca nni veni.",
+          "when": [
+            "Quannu li noti sunnu cumpleti e li sìnguli e li candidati bluccati sunnu finuti. Li cuppii nudi sunnu assai cumuni nta li schemi Difficili, li tirzini nudi menu. Vali la pena di circàrili nta ogni unità ca havi ancora cincu o cchiù caselli vacanti."
+          ],
+          "spot": [
+            "Cerca caselli cu sulu dui candidati e trova n'àutra casella nta la stissa unità cu li stissi dui. Pi li tirzini, talìa l'unità cu cchiù caselli di dui e tri candidati e cuntrolla si tri di iddi, misi nzèmmula, usanu sulu tri cifri diversi. Li caselli cu esattamenti li stissi candidati si vìdinu facili appena li noti sunnu scritti; Inchi li noti nta lu jocu lu fa cu un toccu."
+          ],
+          "examples": [
+            {
+              "h": "Cuppia nuda",
+              "steps": [
+                "{cellA} e {cellB} nta {unit} hannu esattamenti li stissi dui candidati: {d1} e {d2}.",
+                "Una di iddi havi a èssiri {d1} e l'àutra {d2}. Nun sapemu quali, ma tutti dui li cifri sunnu pigghiati di sti dui caselli.",
+                "Dunca nudda àutra casella di {unit} pò tèniri {d1} o {d2}. Leva {elim}."
+              ]
+            },
+            {
+              "h": "Tirzina nuda",
+              "steps": [
+                "Tri caselli di {unit} pìgghianu tutti li so candidati di li stissi tri cifri, {digits}: {cells}.",
+                "Li tri cifri hannu a inchiri sti tri caselli nta quarchi ordini. Na casella nun havi a mustrari pi forza tutti e tri li candidati; chiddu ca cunta è ca nudda di li tri caselli havi un candidatu fora di lu gruppu.",
+                "Leva {digits} di ogni àutra casella di {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Pigghiari dui caselli ca spàrtinu dui candidati ma hannu puru nu terzu. Pi na cuppia nuda, ogni casella havi a aviri esattamenti li dui candidati e nenti àutru.",
+            "Livari li cifri di li caselli stissi di la cuppia. La cuppia teni li so candidati; l'eliminazzioni vannu a l'àutri caselli di l'unità.",
+            "Prutenniri ca ogni casella di na tirzina mustra tutti e tri li cifri. Na casella cu dui di li tri va beni, basta ca nudda casella havi un candidatu fora di lu gruppu."
+          ],
+          "faq": [
+            [
+              "Chi è na cuppia nuda nta lu Sudoku?",
+              "Dui caselli nta n'unità ca hannu tutti dui esattamenti li stissi dui candidati. Ddi dui cifri sunnu bluccati nta ddi dui caselli, dunca si ponnu livari di lu restu di l'unità."
+            ],
+            [
+              "Chi è na tirzina nuda?",
+              "Tri caselli nta n'unità ca, misi nzèmmula, hannu comu candidati sulu tri cifri. Ogni casella nni pò aviri dui o tri. Li tri cifri inchinu li tri caselli, dunca si ponnu livari di l'àutri caselli di l'unità."
+            ],
+            [
+              "Na cuppia nuda metti na cifra?",
+              "No di sula. Leva candidati, e l'eliminazzioni di sòlitu lassa nu sìngulu nudu o ammucciatu. Lu cunsigghiu di Bare Sudoku mustra ddu sìngulu e dici lu nomu di la tècnica ca l'ha fattu pussìbbili."
+            ],
+            [
+              "Na cuppia nuda pò stari nta nu quatru e nta na riga a lu stissu tempu?",
+              "Sì. Si li dui caselli spàrtinu na riga e nu quatru, la cuppia elimina nta tutti dui l'unità. Bare Sudoku li tratta n'unità a la vota."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Cuppii e tirzini ammucciati",
+          "title": "Cuppii e tirzini ammucciati nta lu Sudoku: comu truvàrili",
+          "description": "Na cuppia ammucciata: dui cifri ca ponnu jiri sulu nta li stissi dui caselli di n'unità, dunca l'àutri candidati si levanu. Ampara a truvàrili passu passu.",
+          "h1": "Cuppii e tirzini ammucciati",
+          "summary": "Na cuppia ammucciata (hidden pair) è fatta di dui cifri ca, dintra na riga, culonna o quatru, sunnu candidati nta li stissi dui caselli e a nudda àutra banna. Ddi dui caselli hannu a tèniri ddi dui cifri, dunca ogni àutru candidatu nta iddi si pò livari. Na tirzina ammucciata funziona di la stissa manera cu tri cifri chiusi nta tri caselli. Doppu l'eliminazzioni, li caselli mùstranu na cuppia o tirzina nuda. Lu cunsigghiu di Bare Sudoku chiama \"Cuppia o tirzina\" lu piazzamentu ca nni veni.",
+          "when": [
+            "Quannu n'unità havi caselli cu tanti candidati e li sìnguli sunnu finuti. Li cuppii ammucciati s'ammùccianu dintra caselli affuddati, e pi chistu vali la pena di circàrili pricisamenti unni li cuppii nudi nun si vìdinu. Li tirzini ammucciati sunnu rari; Bare Sudoku li cerca, ma la maiuranza di li schemi Difficili si risolvi senza."
+          ],
+          "spot": [
+            "Travàgghia pi cifra, no pi casella. Nta n'unità, signa li caselli unni pò jiri ogni cifra ca manca. Si dui cifri hannu ognuna sulu dui caselli pussìbbili e sunnu li stissi dui caselli, hai na cuppia ammucciata. Nta lu jocu, tocca lu tastu di na cifra pi illuminari li so candidati; si dui cifri illùminanu li stissi dui caselli di n'unità e nenti àutru nta idda, chista è la figura."
+          ],
+          "examples": [
+            {
+              "h": "Cuppia ammucciata",
+              "steps": [
+                "Nta {unit}, li cifri {d1} e {d2} hannu ognuna sulu dui caselli pussìbbili, e sunnu li stissi dui: {cells}.",
+                "Ddi dui caselli hannu a tèniri {d1} e {d2}, dunca li so àutri candidati sunnu impussìbbili.",
+                "Leva {elim}. Ora li dui caselli mùstranu na cuppia nuda, ca pò sbluccari àutru."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Livari li dui cifri di la cuppia di li caselli di la cuppia. Sunnu l'àutri candidati di ddi caselli ca si levanu; li cifri di la cuppia restanu.",
+            "Accittari na cifra ca havi na terza casella pussìbbili nta l'unità. Tutti dui li cifri hannu a èssiri limitati esattamenti a li dui caselli.",
+            "Circari sulu nta li quatri. Li cuppii ammucciati cumparinu tantu spissu puru nta li righi e nta li culonni."
+          ],
+          "faq": [
+            [
+              "Chi è na cuppia ammucciata nta lu Sudoku?",
+              "Dui cifri ca ponnu jiri sulu nta li stissi dui caselli di n'unità. Ddi caselli hannu a pigghiari ddi cifri, dunca li so àutri candidati si levanu."
+            ],
+            [
+              "Chi diffirenza c'è tra na cuppia ammucciata e na cuppia nuda?",
+              "Na cuppia nuda si vidi: dui caselli ca mùstranu sulu li stissi dui candidati. Na cuppia ammucciata è cummigghiata di candidati in cchiù nta li dui caselli. Livannu sti candidati in cchiù, na cuppia ammucciata addiventa na cuppia nuda."
+            ],
+            [
+              "Chi è na tirzina ammucciata?",
+              "Tri cifri chiusi nta tri caselli di n'unità. Nun è nicissariu ca ogni cifra cumpari nta tutti e tri li caselli; chiddu ca cunta è ca nudda di li tri cifri havi un candidatu fora di ddi caselli."
+            ],
+            [
+              "Lu cunsigghiu distingui li cuppii ammucciati di chiddi nudi?",
+              "No. Bare Sudoku li trova tutti dui e chiama \"Cuppia o tirzina\" lu piazzamentu ca nni veni. Sti pàggini li sèparanu picchì si trovanu di manera diversa."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing nta lu Sudoku: comu funziona la tècnica",
+          "description": "X-Wing: na cifra cu esattamenti dui caselli candidati nta dui righi, misi nta li stissi dui culonni, si leva di lu restu di ddi culonni. Cu n'esempiu veru.",
+          "h1": "X-Wing",
+          "summary": "N'X-Wing è na figura di na cifra e quattru caselli a l'àngoli di nu rettàngulu. Si la cifra havi esattamenti dui caselli candidati nta ognuna di dui righi, e sti caselli stannu nta li stissi dui culonni, allura la cifra havi a occupari dui àngoli opposti di lu rettàngulu. Dunca si pò livari di ogni àutra casella di ddi dui culonni. Funziona puru scanciannu righi e culonni. È la prima tècnica Espertu di Bare Sudoku.",
+          "when": [
+            "Quannu li sìnguli, li candidati bluccati e li sottuinsiemi sunnu finuti. L'X-Wing è la figura Espertu cchiù cumuni e cumpari spissu quannu na cifra havi pochi candidati, di sòlitu cu quattru a sei copii già misi. Servinu noti cumpleti pi la cifra ca esamini."
+          ],
+          "spot": [
+            "Scegghi na cifra e cerca li righi unni havi esattamenti dui caselli candidati. Si dui di sti righi spàrtinu li stissi dui culonni, cuntrolla ddi culonni pi àutri candidati di la cifra: chiddi sunnu l'eliminazzioni. Poi ripeti cu li culonni comu basi. Nta lu jocu, tocca lu tastu di la cifra: ogni so candidatu s'illumina, e nu rettàngulu di quattru noti illuminati si vidi facili."
+          ],
+          "examples": [
+            {
+              "h": "Esempiu",
+              "steps": [
+                "La cifra {d} havi esattamenti dui caselli candidati nta la riga {r1} e esattamenti dui nta la riga {r2}, e stannu nta li stissi dui culonni, {c1} e {c2}: {cells}.",
+                "La riga {r1} metti lu so {d} nta la culonna {c1} o {c2}, e la riga {r2} metti lu so {d} nta l'àutra. Comu va va, li culonni {c1} e {c2} ricevinu ognuna nu {d} di sti dui righi.",
+                "Dunca {d} nun pò cumpàriri a nudda àutra banna nta li culonni {c1} e {c2}. Leva {d} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Usari na riga ca havi tri caselli candidati pi la cifra. Ogni riga di basi havi a aviri esattamenti dui, e tutti dui nta li dui culonni cumuni.",
+            "Livari la cifra di li righi inveci ca di li culonni. Cu li righi comu basi, l'eliminazzioni sunnu nta li culonni, e viciversa.",
+            "Scurdàrisi la virsioni scanciata. N'X-Wing fattu supra li culonni elimina nta li righi."
+          ],
+          "faq": [
+            [
+              "Chi è n'X-Wing nta lu Sudoku?",
+              "Na cifra ca havi esattamenti dui caselli candidati nta ognuna di dui righi, nta li stissi dui culonni. La cifra occupa dui àngoli opposti di ddu rettàngulu, dunca si leva di lu restu di li dui culonni. Righi e culonni si ponnu scanciari."
+            ],
+            [
+              "Picchì funziona n'X-Wing?",
+              "Ognuna di li dui righi havi a mèttiri la cifra nta una di li dui culonni, e li dui righi nun ponnu usari la stissa culonna. Dunca li dui culonni ricevinu ognuna la so copia di la cifra di sti righi, e ogni àutru candidatu nta ddi culonni è impussìbbili."
+            ],
+            [
+              "N'X-Wing è nu pisci?",
+              "Sì. L'X-Wing è lu pisci di misura dui; lu Swordfish è lu pisci di misura tri. Bare Sudoku li trova tutti dui."
+            ],
+            [
+              "Quali livellu havi X-Wing?",
+              "Espertu. Nu schema ca voli n'X-Wing, Y-Wing, Swordfish o XYZ-Wing è classificatu Espertu."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing nta lu Sudoku: comu funziona la tècnica",
+          "description": "Y-Wing (XY-Wing): nu pernu cu dui candidati e dui ali ca nni spàrtinu unu càccianu na cifra di ogni casella ca vidi tutti dui l'ali. Cu esempiu.",
+          "h1": "Y-Wing",
+          "summary": "Nu Y-Wing, chiamatu puru XY-Wing, usa tri caselli cu dui candidati ognuna. Lu pernu havi li candidati X e Y. N'ala vidi lu pernu e havi X e Z; l'àutra ala vidi lu pernu e havi Y e Z. Qualunqui cosa sia lu pernu, una di l'ali havi a èssiri Z, dunca Z si pò livari di ogni casella ca vidi tutti dui l'ali. È na tècnica Espertu nta Bare Sudoku.",
+          "when": [
+            "Quannu nu schema havi cchiù caselli cu esattamenti dui candidati e nun c'è nuddu pisci dispunìbbili. Li Y-Wing sunnu cumuni nta li schemi Espertu e si trovanu siguennu li caselli cu dui candidati: ognuna è nu pussìbbili pernu o n'ala."
+          ],
+          "spot": [
+            "Fai la lista di li caselli cu esattamenti dui candidati. Pi ognuna, cunsidirala lu pernu cu li candidati X e Y, e cerca mmenzu a li so vicini na casella cu X e n'àutra cifra Z, e na casella cu Y e la stissa Z. Chiddi dui sunnu l'ali. Poi trova li caselli ca vìdinu tutti dui l'ali e cuntèninu Z. Nota ca l'ali nun hannu bisognu di vidìrisi tra iddi."
+          ],
+          "examples": [
+            {
+              "h": "Esempiu",
+              "steps": [
+                "Lu pernu {pivot} havi li candidati {x} e {y}. Vidi {wingA}, ca havi {x} e {z}, e {wingB}, ca havi {y} e {z}.",
+                "Si {pivot} è {x}, allura {wingA} perdi {x} e addiventa {z}. Si {pivot} è {y}, allura {wingB} addiventa {z}. Una di li dui ali è {z} nta ogni casu.",
+                "Na casella ca vidi tutti dui l'ali nun pò mai èssiri {z}. Leva {z} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Scègghiri ali ca nun vìdinu tutti dui lu pernu. Ogni ala havi a spartiri na riga, culonna o quatru cu lu pernu.",
+            "Livari Z di caselli ca vìdinu sulu n'ala. La casella eliminata havi a vidiri tutti dui l'ali.",
+            "Livari Z di lu pernu. Nta nu Y-Wing lu pernu nun cunteni Z; si lu cunteni, la figura è n'XYZ-Wing cu àutri regoli."
+          ],
+          "faq": [
+            [
+              "Chi è nu Y-Wing nta lu Sudoku?",
+              "Tri caselli cu dui candidati: nu pernu cu X e Y, n'ala cu X e Z ca vidi lu pernu, e n'ala cu Y e Z ca vidi lu pernu. N'ala è sempri Z, dunca Z si leva di li caselli ca vìdinu tutti dui l'ali."
+            ],
+            [
+              "Y-Wing è lu stissu di XY-Wing?",
+              "Sì. Li dui nomi discrivinu la stissa figura. Bare Sudoku la chiama Y-Wing."
+            ],
+            [
+              "Picchì n'ala havi a èssiri Z?",
+              "Si lu pernu è X, la prima ala perdi X e addiventa Z. Si lu pernu è Y, la secunna ala addiventa Z. Lu pernu è unu di li dui, dunca n'ala è Z."
+            ],
+            [
+              "Quantu caselli elimina nu Y-Wing?",
+              "Di sòlitu una o dui: sulu li caselli ca vìdinu tutti dui l'ali e hannu ancora Z. Basta pi criari nu sìngulu."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish nta lu Sudoku: comu funziona la tècnica",
+          "description": "Swordfish: na cifra chiusa nta tri culonni supra tri righi si leva di lu restu di ddi culonni. Lu pisci di misura tri, spiegatu cu n'esempiu veru.",
+          "h1": "Swordfish",
+          "summary": "Nu Swordfish è n'X-Wing cu tri righi e tri culonni. Si na cifra havi a lu massimu tri caselli candidati nta ognuna di tri righi, e tutti sti caselli cadinu nta li stissi tri culonni, allura li tri righi pìgghianu la cifra nta ddi culonni, e la cifra si pò livari di ogni àutra casella di li tri culonni. Righi e culonni si ponnu scanciari. Bare Sudoku cerca lu Swordfish doppu lu Y-Wing, nta li schemi Espertu.",
+          "when": [
+            "Quannu X-Wing e Y-Wing nun trovanu nenti. Li Swordfish sunnu menu cumuni di l'X-Wing e vonnu na cifra cu li candidati sparpagghiati pocu pocu supra tri linii. Vonnu noti cumpleti e giusti pi dda cifra."
+          ],
+          "spot": [
+            "Pigghia na cifra e cerca righi cu dui o tri caselli candidati pi idda. Si tri di sti righi cummògghianu sulu tri culonni in tuttu, cuntrolla ddi culonni pi àutri candidati di la cifra. Nun ogni riga havi bisognu di nu candidatu nta ogni culonna: nu Swordfish pò aviri sei, setti, ottu o novi caselli. Nta lu jocu, illumina la cifra cu lu so tastu e cerca tri righi ca hannu li candidati sulu nta tri culonni."
+          ],
+          "examples": [
+            {
+              "h": "Esempiu",
+              "steps": [
+                "La cifra {d} havi a lu massimu tri caselli candidati nta ognuna di li righi {rows}, e tutti sti caselli cadinu nta li culonni {cols}: {cells}.",
+                "Ognuna di li tri righi havi a mèttiri lu so {d} nta una di li tri culonni, e dui righi nun ponnu usari la stissa culonna. Dunca li tri culonni pìgghianu lu so {d} di sti tri righi.",
+                "Ogni àutru candidatu {d} nta li culonni {cols} è impussìbbili. Leva {d} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Prutenniri tutti li novi caselli. Nu Swordfish cu dui candidati nta quarchi riga è sempri vàlidu, basta ca li tri righi cummògghianu sulu tri culonni.",
+            "Mèttiri na riga cu quattru caselli candidati. Ogni riga di basi havi a aviri a lu massimu tri, tutti dintra li tri culonni.",
+            "Eliminari nta li righi di basi. Cu li righi comu basi, l'eliminazzioni sunnu nta li tri culonni, fora di li righi di basi."
+          ],
+          "faq": [
+            [
+              "Chi è nu Swordfish nta lu Sudoku?",
+              "Na cifra ca nta tri righi havi li candidati chiusi nta tri culonni. Li tri righi hannu a mèttiri la cifra nta ddi tri culonni, una pi ognuna, dunca la cifra si leva di l'àutri caselli di ddi culonni."
+            ],
+            [
+              "Chi diffirenza c'è tra nu Swordfish e n'X-Wing?",
+              "Sulu la misura: n'X-Wing usa dui righi e dui culonni, nu Swordfish tri e tri. Lu ragiunamentu è lu stissu."
+            ],
+            [
+              "Nu Swordfish voli esattamenti novi caselli?",
+              "No. Ogni riga pò aviri dui o tri candidati; la figura voli sulu ca li tri righi nzèmmula nun usanu cchiù di tri culonni."
+            ],
+            [
+              "C'è nu pisci di misura quattru?",
+              "Sì, lu Jellyfish. Bare Sudoku nun l'usa, picchì li so schemi nun nn'hannu mai bisognu."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing nta lu Sudoku: comu funziona la tècnica",
+          "description": "XYZ-Wing: nu pernu cu tri candidati e dui ali ca nni spàrtinu unu càccianu dda cifra di ogni casella ca li vidi tutti e tri. Esempiu veru, passu passu.",
+          "h1": "XYZ-Wing",
+          "summary": "N'XYZ-Wing è nu Y-Wing cu nu pernu di tri candidati. Lu pernu havi X, Y e Z; n'ala vidi lu pernu e havi X e Z, l'àutra vidi lu pernu e havi Y e Z. Una di li tri caselli havi a èssiri Z, dunca Z si pò livari di ogni casella ca li vidi tutti e tri. Siccomu lu pernu stissu pò èssiri Z, la casella eliminata havi a vidiri lu pernu e puru tutti dui l'ali, e chistu la limita a lu quatru o a la linia ca li caselli spàrtinu. È la tècnica cchiù difficili ca usa Bare Sudoku.",
+          "when": [
+            "Sulu quannu tuttu l'àutru fallisci. L'XYZ-Wing è la figura cchiù rara di Bare Sudoku e cumpari sulu nta li schemi Espertu. Cèrcalu quannu na casella cu tri candidati sta nta nu quatru cu na casella di dui candidati ca sparti dui di li so cifri."
+          ],
+          "spot": [
+            "Parti di li caselli cu esattamenti tri candidati; ognuna è nu pussìbbili pernu. Mmenzu a li so vicini, cerca dui caselli cu dui candidati ognuna, tutti pigghiati di li tri di lu pernu, ca spàrtinu esattamenti na cifra Z. Poi cerca li caselli ca vìdinu lu pernu e tutti dui l'ali e cuntèninu Z. Nta la pràtica n'ala sta nta lu quatru di lu pernu e l'àutra nta la so riga o culonna, e li caselli eliminati sunnu l'àutri caselli di ddu quatru nta dda riga o culonna."
+          ],
+          "examples": [
+            {
+              "h": "Esempiu",
+              "steps": [
+                "Lu pernu {pivot} havi tri candidati: {x}, {y} e {z}. Vidi {wingA} cu {x} e {z}, e {wingB} cu {y} e {z}.",
+                "Si {pivot} è {z}, finìu. Si è {x}, {wingA} havi a èssiri {z}. Si è {y}, {wingB} havi a èssiri {z}. Nta ogni casu una di li tri caselli è {z}.",
+                "Na casella ca li vidi tutti e tri nun pò èssiri {z}. Leva {z} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminari di caselli ca vìdinu sulu li dui ali. A diffirenza di nu Y-Wing, lu pernu pò èssiri Z, dunca la casella havi a vidiri puru lu pernu.",
+            "Usari ali cu candidati ca nun sunnu tutti dui cuntinuti nta li tri candidati di lu pernu.",
+            "Cunfùnnirlu cu nu Y-Wing: la diffirenza è lu terzu candidatu nta lu pernu, e cancia quali caselli si ponnu puliziari."
+          ],
+          "faq": [
+            [
+              "Chi è n'XYZ-Wing nta lu Sudoku?",
+              "Nu pernu cu li candidati X, Y e Z e dui ali, una cu X e Z e una cu Y e Z, tutti dui ca vìdinu lu pernu. Una di li tri caselli è Z, dunca Z si leva di li caselli ca li vìdinu tutti e tri."
+            ],
+            [
+              "Chi diffirenza c'è tra n'XYZ-Wing e nu Y-Wing?",
+              "Lu pernu havi tri candidati inveci di dui, e unu è Z. Chistu fa di lu pernu nu postu pussìbbili pi Z, dunca sulu li caselli ca vìdinu lu pernu e tutti dui l'ali ponnu pèrdiri Z."
+            ],
+            [
+              "Quantu spissu cumpari n'XYZ-Wing?",
+              "Raramenti. Nta Bare Sudoku sulu li schemi Espertu nni ponnu aviri bisognu, e la maiuranza no. Bare Sudoku lu cuntrolla pi ùrtimu, doppu X-Wing, Y-Wing e Swordfish."
+            ],
+            [
+              "Esisti nu WXYZ-Wing?",
+              "Sì, cu nu pernu di quattru candidati, ma Bare Sudoku nun l'usa. Ogni schema di lu jocu si pò finiri cu li novi tècnichi di sta guida."
+            ]
+          ]
+        }
+      }
+    },
     "nap": {
       "learnHeading": "Ampara 'o Sudoku",
       "learnText": "Si' nuovo d''o Sudoku, o si' rummaso bluccato ncopp'a nu schema difficile? Doje guide spiegano 'e regole e ogne tècneca 'e soluzione ca usano 'e cunziglie, ognuna cu n'esempio overo.",
@@ -89046,6 +89628,588 @@
         }
       }
     },
+    "fur": {
+      "learnHeading": "Impare il Sudoku",
+      "learnText": "Sêstu gnûf dal Sudoku o sêstu fer suntun scheme dificil? Dôs guidis a spieghin lis regulis e ogni tecniche che a doprin i conseis, ognune cuntun esempli vêr.",
+      "howToLink": "Cemût zuiâ a Sudoku",
+      "techniquesLink": "Tecnichis par risolvi il Sudoku",
+      "labels": {
+        "howTo": "Cemût zuiâ",
+        "techniques": "Tecnichis",
+        "play": "Zuie a Sudoku",
+        "prev": "Tecniche precedente",
+        "next": "Tecniche sucessive",
+        "all": "Dutis lis tecnichis",
+        "example": "Esempli",
+        "steps": "Pas par pas",
+        "when": "Cuant doprâle",
+        "spot": "Cemût cjatâle",
+        "mistakes": "Erôrs comuns",
+        "inGame": "In Bare Sudoku",
+        "level": "Al covente dal nivel: {level}",
+        "hint": "Tal zûc, il consei al dîs: {text}",
+        "legend": "Lis cifris in neret a son dadis, lis cifris blu a son stadis metudis intant che si risolveve, lis cifris piçulis a son candidâts. Lis caselis evidenziadis a formin la figure, i candidâts sbarâts a vegnin gjavâts e il candidât cun tun cercli al è la cifre di meti.",
+        "notation": "Lis caselis si scrivin come r3c7: rie 3, colone 7. Lis riis si contin dal alt, lis colonis di çampe e i cuadris di 1 a 9 dal angul in alt a çampe, rie par rie.",
+        "row": "rie {n}",
+        "column": "colone {n}",
+        "box": "cuadri {n}",
+        "elimItem": "{d} di {cell}",
+        "regions": "Rie 5, colone 5 e cuadri 5 al inizi di un scheme",
+        "firstMove": "Un singul nût: {cell} e pues jessi dome {d}",
+        "breadcrumb": "Percors di navigazion"
+      },
+      "howTo": {
+        "title": "Cemût zuiâ a Sudoku: regulis, gridele e primis mossis",
+        "description": "Impare a zuiâ a Sudoku: lis regulis, cemût che a funzionin riis, colonis e cuadris, parcè che ogni scheme al à une sole soluzion, lis notis e lis primis mossis.",
+        "h1": "Cemût zuiâ a Sudoku",
+        "summary": "Il Sudoku al è un zûc di logjiche suntune gridele 9×9. Jemple ogni casele vueide cuntune cifre di 1 a 9 in mût che ogni rie, ogni colone e ogni cuadri 3×3 a vedin ogni cifre juste une volte. Cualchi cifre e je dade tal principi; il rest tu lu deducis tu, une casele sigure ae volte, e no tu âs mai di induvinâ. Cheste guide e spieghe la gridele, lis regulis, il principi de soluzion uniche, lis notis e une strategjie semplice pes primis mossis. Tu puedis provâ dut in [Bare Sudoku](play), che al è gratis e al à conseis che a spieghin la logjiche.",
+        "sections": [
+          {
+            "h": "Cualis sono lis regulis dal Sudoku?",
+            "p": [
+              "A son dome trê regulis, e a son la stesse regule viodude di trê bandis: ogni rie e à di vê lis cifris di 1 a 9, ogni colone e à di vê lis cifris di 1 a 9 e ogni cuadri 3×3 al à di vê lis cifris di 1 a 9. Duncje une cifre no pues mai comparî dôs voltis te stesse rie, colone o cuadri.",
+              "Lis cifris dadis, stampadis in neret, a son fissis. Il to lavôr al è jemplâ lis caselis vueidis. Nol covente fâ conts e no esist un ordin: lis cifris a son dome nûf simbui diferents. Tu podaressis zuiâ cun letaris o cun formis e nol cambiarès nuie."
+            ]
+          },
+          {
+            "h": "Cemût ise organizade la gridele?",
+            "p": [
+              "La gridele e à 81 caselis in 9 riis e 9 colonis. Liniis grossis le dividin in nûf cuadris 3×3. Ogni casele e fâs part di une sole rie, une sole colone e un sôl cuadri, e chescj trê grups a son lis sôs unitâts. Lis altris 20 caselis che a condividin une unitât cuntune casele si clamin i siei vicins; une cifre metude intune casele e esclût chê cifre in ducj i 20 vicins.",
+              "Lis caselis si scrivin come r3c7: rie 3, colone 7. Lis riis si contin dal alt, lis colonis di çampe e i cuadris di 1 a 9 dal angul in alt a çampe, rie par rie. Cheste notazion e ven doprade in ogni guide su lis tecnichis e al vâl la pene di imparâle: r5c5 al è il centri de gridele."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Parcè ogni Sudoku aial une sole soluzion?",
+            "p": [
+              "Un Sudoku fat ben al à une sole soluzion, e al è chest che al fâs funzionâ la logjiche. Ogni volte che tu rivis a mostrâ che une cifre no pues lâ in nissun altri puest intune unitât, e scuen lâ te casele che e reste, parcè che la soluzion e esist e e je uniche. Se un scheme al ves dôs soluzions, nissun resonament nol podarès distinguilis e a un ciert pont tu varessis di induvinâ par fuarce.",
+              "Bare Sudoku al gjenere ogni scheme sul to dispositîf e al controle che al vedi une sole soluzion e che il so risolvidôr logjic al rivi a finîlu cu lis tecnichis dal nivel sielzût. Duncje, se tu ti blocis, al è simpri un pas sucessîf di cjatâ, e il consei tal mostre."
+            ]
+          },
+          {
+            "h": "Cemût si scomencie un scheme di Sudoku?",
+            "p": [
+              "Scomence di ce che al è plui limitât. Chest ordin al funzione a ogni nivel:"
+            ],
+            "list": [
+              "Sielç une cifre che e comparìs za tantis voltis, metìn sîs o siet, e cjate i cuadris che no le àn ancjemò. Dispès intun cuadri e reste dome une casele par jê: chel al è un [singul platât](hidden-single).",
+              "Cîr lis caselis plui cjariadis. Une casele che te sô rie, te sô colone e tal so cuadri, dutis insieme, e à vot cifris diferentis e à dome un candidât: un [singul nût](naked-single). Lis caselis in riis o cuadris cuasi plens a son il miôr puest dulà cirî.",
+              "Ogni cifre che tu metis e gjave un candidât di 20 vicins, duncje controle subit chei vicins. I singui a vegnin dispès in cjadene.",
+              "Cuant che lis mossis semplicis a finissin, scrîf lis notis: i candidâts di ogni casele vueide. Dopo cîr une cifre che intun cuadri e je sierade intune sole linie ([candidâts blocâts](locked-candidates)) o dôs caselis che a àn i stes doi candidâts (une [cubie nude](naked-pairs)).",
+              "Torne ai singui dopo ogni eliminazion. Ancje i schemis Espert si risolvin soredut cun singui; la tecniche avanzade e sbloche dome il prossim."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Ce sono lis notis e cuant doprâlis?",
+            "p": [
+              "Lis notis, clamadis ancje segns a lapis o candidâts, a son lis cifris piçulis che tu scrivis intune casele vueide par ricuardâ cualis cifris a puedin ancjemò lâ li. Tai schemis Facil a coventin di râr; di Dificil in sù a son essenziâls, parcè che tecnichis come lis cubiis, X-Wing e Y-Wing a lavorin sui candidâts, no su lis cifris metudis.",
+              "Ten lis notis justis: cuant che tu metis une cifre, gjavile des notis di ducj i 20 vicins. In Bare Sudoku chest al sucêt in automatic, e Jemple lis notis al scrîf ogni candidât in ogni casele vueide cuntun tocjade, cussì tu puedis partî di un insiemi di candidâts complet e coret. Une note e je un fat, no un tentatîf: e vûl dî che par cumò nuie nol esclût chê cifre."
+            ]
+          },
+          {
+            "h": "Ce fâ cuant che tu ti blocis?",
+            "p": [
+              "Prime torne a controlâ lis basis: ogni rie, colone e cuadri cuasi plen al è une sorzint di singui. Dopo controle che lis notis a sedin completis, parcè che un candidât che al mancje al plate lis figuris e un candidât vieli al cree figuris falsis. Po lavore su lis [tecnichis](techniques) in ordin di dificoltât: candidâts blocâts, cubiis e ternis, X-Wing, Y-Wing, Swordfish e XYZ-Wing. Ognune e à la sô pagjine cuntun esempli vêr.",
+              "Se nuie nol funzione, domande un consei. In Bare Sudoku il consei prime al controle se une cifre metude e je sbaliade, po al cjate la prossime casele che si pues jemplâ cu la logjiche e al dîs il non de tecniche, cussì tu imparis alc ancje cuant che tu lu dopris. Tocje di gnûf il consei par meti la cifre."
+            ]
+          },
+          {
+            "h": "Cemût meti lis cifris in Bare Sudoku?",
+            "p": [
+              "Tocje une casele, po une cifre. O tocje prime une cifre: e reste blocade, e ogni casele che tu tocjis le ricêf, e chest al è il mût plui svelt par meti la seste, la setime e la otave copie di une cifre. Tocje di gnûf la cifre par sblocâle. Il boton Notis al passe ai segns a lapis, Scancele al svuede une casele, Anule al tire indaûr cualsisei mosse, e i erôrs a vegnin segnâts in ros, a mancul che no tu distudis cheste funzion tal menù.",
+              "Cu la tastiere, dopre lis frecis par movi, di 1 a 9 par scrivi une cifre, Backspace par scancelâ, N pes notis, U par anulâ, H par un consei, F par jemplâ lis notis e Escape pal menù. Il zûc si salve di bessôl, al funzione offline e nol à ni publicitât ni account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Covential mai induvinâ tal Sudoku?",
+            "No intun scheme fat ben. Ogni scheme di Bare Sudoku al à une sole soluzion e al è controlât che si pues risolvilu dome cu la logjiche, fin aes tecnichis dal so nivel. Se tu âs la impression di vê di induvinâ, al mancje un candidât tes tôs notis o e je une tecniche che e spiete di jessi cjatade."
+          ],
+          [
+            "Une cifre podie comparî dôs voltis intune rie, colone o cuadri?",
+            "No. Dute la regule e je chi: ognune des nûf riis, des nûf colonis e dai nûf cuadris e conten ogni cifre di 1 a 9 juste une volte. Se dôs cifris compagnis a condividin une unitât, almancul une des dôs e je sbaliade."
+          ],
+          [
+            "Ce diference ise tra Facil, Mieç, Dificil e Espert?",
+            "Il nivel al dipent des tecnichis che al domande il scheme. Facil e Mieç si risolvin dome cun singui, e Facil al scomence cun almancul 38 cifris dadis. Dificil al domande candidâts blocâts o cubiis e ternis. Espert al domande X-Wing, Y-Wing, Swordfish o XYZ-Wing."
+          ],
+          [
+            "Isal miôr jemplâ lis notis par ogni casele o dome par cualchidune?",
+            "Pai schemis Dificil e Espert, jemplilis dutis: figuris come lis cubiis, X-Wing e Y-Wing a vegnin fûr dome cuant che ogni candidât al è scrit. Tai schemis Facil e Mieç lis notis a son facoltativis e la plui part dai zuiadôrs e cîr dome i singui."
+          ],
+          [
+            "Trop dural un Sudoku?",
+            "Un scheme Facil al dure pôcs minûts; i schemis Espert a puedin domandâ vincj minûts o plui, daûr di trop svelt che tu viodis la figure avanzade. Bare Sudoku al mostre un cronometri, lu ferme cuant che il menù al è viert e nol ten classifichis, duncje zuie cul to ritmi."
+          ],
+          [
+            "Il Sudoku domandial aritmetiche?",
+            "No. Lis cifris a son dome etichetis; no si à di zontâ ni di contâ nuie. Cualsisei nûf simbui a laressin ben, e par chest il Sudoku al è un zûc di logjiche e no un zûc di numars."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Tecnichis par risolvi il Sudoku spiegadis cun esemplis",
+        "description": "Dutis lis nûf tecnichis par risolvi il Sudoku, dai singui nûts a Swordfish e XYZ-Wing, tal ordin dai conseis di Bare Sudoku, ognune cuntun esempli vêr.",
+        "h1": "Tecnichis par risolvi il Sudoku",
+        "intro": [
+          "Ogni Sudoku si pues risolvi cuntun piçul grup di tecnichis logjichis. Chest indiç al elenche lis nûf tecnichis che a doprin il risolvidôr di Bare Sudoku e i siei conseis, tal ordin che il risolvidôr lis prove: prime i singui, po lis eliminazions dentri di une sole unitât, po lis figuris che a cjapin dentri plui riis e colonis. Ogni tecniche e à la sô pagjine cuntune definizion, cemût cjatâle, un esempli vêr di un scheme gjenerât e i erôrs plui comuns.",
+          "Il nivel di un scheme al ven decidût de tecniche plui dificile che i covente. I schemis Facil e Mieç a domandin dome singui, i Dificil a domandin candidâts blocâts o cubiis e ternis, e i Espert a domandin almancul un pes o une ale. Cualsisei che al sedi il nivel, i singui a fasin la plui part dal lavôr; la tecniche avanzade e gjave un candidât o doi e i singui a continuin di li."
+        ],
+        "faq": [
+          [
+            "In ce ordin varessio di provâ lis tecnichis dal Sudoku?",
+            "Prime lis plui semplicis: singui nûts, singui platâts, candidâts blocâts, cubiis e ternis nudis, cubiis e ternis platadis, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku lis prove propit in chest ordin, e un consei al dîs simpri il non de tecniche plui semplice che e fâs lâ indenant."
+          ],
+          [
+            "Mi coventino dutis chestis tecnichis par risolvi il Sudoku?",
+            "Pai schemis Facil e Mieç a bastin i singui. I schemis Dificil a zontin i candidâts blocâts e i sotinsiemis. I schemis Espert a domandin almancul un pes o une ale, ma di solit dome une o dôs voltis par scheme."
+          ],
+          [
+            "Esistino tecnichis plui dificilis di XYZ-Wing?",
+            "Sì, par esempli lis cjadenis, i tests di unicitât e lis rêts di fuarçament. Bare Sudoku nol gjenere schemis che lis domandin, duncje ogni scheme dal zûc si pues finîlu cu lis nûf tecnichis di cheste pagjine."
+          ],
+          [
+            "Ce isal un candidât?",
+            "Une cifre che e podarès ancjemò lâ intune casele vueide parcè che nuie te sô rie, colone o cuadri no le esclût ancjemò. Lis notis dal zûc a son candidâts. Ogni tecniche di là dai singui e resone sui candidâts, duncje tegniju complets e juscj."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Singul nût",
+          "title": "Singul nût tal Sudoku: la casele cuntun sôl candidât",
+          "description": "Un singul nût al è une casele vueide cuntune sole cifre pussibile. Impare a cjatâ i singui nûts in presse, cuntun esempli vêr pas par pas e i erôrs plui comuns.",
+          "h1": "Singul nût",
+          "summary": "Un singul nût (naked single) al è une casele vueide che e à juste un candidât: lis altris vot cifris a son za te sô rie, colone o cuadri. La cifre che e reste e à di lâ li. E je la tecniche di Sudoku plui semplice, chê che tu dopris plui dispès, e chê che il consei di Bare Sudoku al segnale come \"Dome un candidât achì\".",
+          "when": [
+            "Simpri. I singui nûts a comparissin de prime mosse ae ultime, a ogni nivel. Tai schemis Facil e Mieç a son, adun cui singui platâts, la uniche tecniche che ti covente. Tai schemis plui dificii ogni eliminazion fate di une tecniche avanzade di solit e lasse un singul nût, duncje cîrju dopo ogni pas."
+          ],
+          "spot": [
+            "Cjale lis caselis cun tancj vicins za plens: une casele intune rie che e à za siet cifris, o une casele che te rie, te colone e tal cuadri, dutis insieme, e viôt vot cifris diferentis. Cence notis, conte lis cifris che tu viodis de casele. Cu lis notis, un singul nût al è dome une casele che e mostre un sôl candidât, e par chest Jemple lis notis ju fâs cjatâ facilmentri."
+          ],
+          "examples": [
+            {
+              "h": "Esempli",
+              "steps": [
+                "Cjale {cell}. E je vueide, duncje fâs la liste di ogni cifre za metude te sô rie, te sô colone e tal so cuadri.",
+                "La rie {row} e à {rowDigits}. La colone {col} e à {colDigits}. Il cuadri {box} al à {boxDigits}.",
+                "Dutis insieme a esclusin ogni cifre fûr che {d}, duncje {d} al è l'unic candidât che al reste in {cell}.",
+                "Scrîf {d} in {cell}. Po controle se la gnove cifre e cree un altri singul te stesse rie, colone o cuadri."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Contâ dome la rie o dome il cuadri. Lis vot cifris esclududis a vegnin di solit des trê unitâts insieme.",
+            "Dismenteâsi che une cifre metude un moment prime e esclût ancje candidâts tai siei 20 vicins; gnûfs singui nûts a comparissin subit dopo ogni plaçament.",
+            "Confondi un singul nût cuntun singul platât: un singul nût al à un candidât che al reste te casele, un singul platât al à une casele che e reste pe cifre intune unitât."
+          ],
+          "faq": [
+            [
+              "Ce isal un singul nût tal Sudoku?",
+              "Une casele vueide cuntun sôl candidât. Vot cifris diferentis a son za metudis te sô rie, colone e cuadri, duncje la cifre che e reste e je la uniche che e va ben."
+            ],
+            [
+              "Parcè si clamial nût?",
+              "Parcè che l'unic candidât si lu viôt dret te casele apene che lis notis a son scritis; nuie nol plate. Un singul platât, invezit, al è in mieç di altris candidâts e si lu cjate cjalant la cifre e no la casele."
+            ],
+            [
+              "Si puedial risolvi un scheme dome cun singui nûts?",
+              "Tancj schemis Facil sì, ma la plui part a domandin ancje singui platâts. Bare Sudoku al classifiche i schemis Facil e Mieç come risolvibii cun singui di ducj i doi i tips; i schemis Dificil e Espert a domandin almancul un'altre tecniche."
+            ],
+            [
+              "Il consei mostrial i singui nûts?",
+              "Sì. Cuant che il prossim plaçament al è un singul nût, il consei al selezione la casele e al dîs \"Dome un candidât achì\" cu la cifre. Tocje di gnûf il consei par metile."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Singul platât",
+          "title": "Singul platât tal Sudoku: l'unic puest par une cifre",
+          "description": "Un singul platât al è la uniche casele intune rie, colone o cuadri dulà che une cifre e pues ancjemò lâ. Impare a cjatâju cjalant une cifre ae volte.",
+          "h1": "Singul platât",
+          "summary": "Un singul platât (hidden single) al è une cifre che e à une sole casele pussibile intune rie, colone o cuadri, ancje se chê casele e pues mostrâ altris candidâts. Za che la unitât e à di vê la cifre, la cifre e va li. Il consei di Bare Sudoku lu segnale come \"Dome un puest par 5 in cheste rie\", colone o cuadri.",
+          "when": [
+            "Ogni volte che une cifre e je ben indenant: cuant che une cifre e comparìs cinc o sîs voltis, i cuadris che a restin a son une vore limitâts, e dispès la prossime mosse e je un singul platât. I singui platâts a son la tecniche principâl dai schemis Facil e Mieç e a restin il cjaval di bataie a ogni nivel."
+          ],
+          "spot": [
+            "Cjale une cifre ae volte. Cjape une cifre, cjate un cuadri che no le à, e sbare ogni casele di chel cuadri che e condivît une rie o une colone cuntune copie za metude de cifre. Se e reste une sole casele, tu âs cjatât un singul platât. La stesse ricercje e funzione su riis e colonis. Tal zûc, tocje une cifre metude: ogni sô copie e ven evidenziade, cussì lis caselis libaris si viodin subit."
+          ],
+          "examples": [
+            {
+              "h": "Esempli",
+              "steps": [
+                "Il cuadri {box} nol à ancjemò {d}, duncje une des sôs caselis vueidis le à di tignî. Lis caselis vueidis a son {empties}.",
+                "In ognune di lôr fûr che {cell}, {d} al è blocât di un {d} za metût te stesse rie o colone, duncje li {d} nol è un candidât.",
+                "Cussì {cell} e reste l'unic puest par {d} tal cuadri {box}. Scrîf {d} li, ancje se {cell} e pues ancjemò mostrâ altris candidâts."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Meti la cifre intune casele che e je dome probabilmentri chê juste: controle ogni altre casele vueide de unitât, no dome chês plui evidentis.",
+            "Pierdi un singul platât parcè che la casele e mostre plui candidâts. I altris candidâts no contin; ce che al conte al è che la cifre no à altris puescj te unitât.",
+            "Cjalâ dome i cuadris. Lis riis e lis colonis a dan singui platâts tant dispès, soredut viers la fin."
+          ],
+          "faq": [
+            [
+              "Ce isal un singul platât tal Sudoku?",
+              "Une cifre che e pues lâ dome intune casele di une rie, colone o cuadri. La unitât e à di vê la cifre, duncje la casele e je decidude ancje se e à ancjemò altris candidâts."
+            ],
+            [
+              "Ce diference ise tra un singul platât e un singul nût?",
+              "Un singul nût al rivuarde une casele: al reste un candidât. Un singul platât al rivuarde une cifre: e reste une casele intune unitât. Ducj i doi a metin une cifre cun sigurece."
+            ],
+            [
+              "Cuâl isal plui facil di cjatâ?",
+              "Cence notis, i singui platâts di solit a son plui facii, parcè che tu puedis cjalâ la gridele une cifre ae volte. Cu lis notis completis, i singui nûts a son i plui facii, parcè che une casele cuntun sôl candidât si le viôt subit."
+            ],
+            [
+              "Cemût descrivial il consei un singul platât?",
+              "Come \"Dome un puest par\" la cifre in cheste rie, in cheste colone o in chest cuadri, cu la casele selezionade. Tocje di gnûf il consei par metile."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Candidâts blocâts",
+          "title": "Candidâts blocâts tal Sudoku: pontament e rivendicazion",
+          "description": "Candidâts blocâts: se i candidâts di une cifre intun cuadri a son ducj intune rie o colone, o al contrari, la cifre si gjave di altre bande. Doi esemplis veris.",
+          "h1": "Candidâts blocâts",
+          "summary": "I candidâts blocâts (locked candidates) a son la prime tecniche che e gjave candidâts invezit di meti une cifre. A àn dôs formis. Pontament: intun cuadri, ducj i candidâts di une cifre a son intune rie o colone, duncje la cifre si gjave dal rest di chê linie. Rivendicazion: intune rie o colone, ducj i candidâts di une cifre a son intun cuadri, duncje la cifre si gjave dal rest di chel cuadri. Il consei di Bare Sudoku al clame \"Candidâts blocâts\" il plaçament che a sblochin.",
+          "when": [
+            "Cuant che i singui a finissin intun scheme Dificil, cheste e je la prime robe di provâ. A coventin notis completis almancul pe cifre che tu esaminis. I candidâts blocâts a son comuns: la plui part dai schemis Dificil ju domandin, e i schemis Espert ju doprin tra une figure grande e chê altre."
+          ],
+          "spot": [
+            "Pal pontament, cjale ogni cuadri e ogni cifre che i mancje: se i candidâts par chê cifre a son intune sole rie o colone, controle se la stesse cifre e comparìs come candidât plui indenant su chê linie, fûr dal cuadri. Pe rivendicazion, cjale dilunc une rie o colone: se i candidâts di une cifre a son ducj dentri di un cuadri, la cifre si pues gjavâ dal rest di chel cuadri. Tal zûc, tocje il tast di une cifre par evidenziâ ducj i siei candidâts; une linie di dôs o trê notis evidenziadis dentri di un cuadri e je la figure."
+          ],
+          "examples": [
+            {
+              "h": "Pontament",
+              "steps": [
+                "Tal cuadri {box}, la cifre {d} e je candidade dome in chestis caselis: {cells}. Dutis a son te rie {row}.",
+                "Il cuadri {box} al à bisugne di un {d}, duncje il {d} de rie {row} al è dentri dal cuadri {box}, in cualsisei di chês caselis che al finissi.",
+                "La rie {row} no pues vê un secont {d}, duncje gjave {d} des caselis de rie {row} fûr dal cuadri: {elim}."
+              ]
+            },
+            {
+              "h": "Rivendicazion",
+              "steps": [
+                "Te rie {row}, la cifre {d} e pues lâ dome in {cells}, e dutis a son dentri dal cuadri {box}.",
+                "La rie {row} e à di vê {d}, duncje il {d} dal cuadri {box} al è rivendicât de rie {row}. Lis altris caselis dal cuadri {box} no puedin vê {d}.",
+                "Gjave {d} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Gjavâ la cifre dentri dal cuadri invezit che fûr tal câs dal pontament, o al contrari tal câs de rivendicazion. Lis eliminazions a van simpri aes caselis che a son te linie ma no tal cuadri, o tal cuadri ma no te linie.",
+            "Aplicâ la regule cuant che i candidâts a cjapin dôs riis dal cuadri. Ducj i candidâts de cifre tal cuadri a àn di jessi intune sole linie.",
+            "Dismenteâsi di cirî il singul che la eliminazion e cree. I candidâts blocâts di râr a metin une cifre di bessôi; a preparin un singul."
+          ],
+          "faq": [
+            [
+              "Ce sono i candidâts blocâts tal Sudoku?",
+              "Candidâts di une cifre sierâts te intersezion di un cuadri e di une linie. Za che il cuadri, o la linie, al à di vê la cifre dentri di chê intersezion, la cifre si pues gjavâ dal rest de linie, o dal rest dal cuadri."
+            ],
+            [
+              "Ce diference ise tra pontament e rivendicazion?",
+              "Il pontament al partìs di un cuadri: i candidâts de cifre tal cuadri a pontin dilunc une rie o colone, duncje la cifre si gjave dal rest di chê linie. La rivendicazion e partìs di une rie o colone: i candidâts de linie par chê cifre a son ducj intun cuadri, duncje la linie e rivendiche la cifre e cheste si gjave dal rest dal cuadri."
+            ],
+            [
+              "I candidâts blocâts si clamino ancje eliminazion par intersezion?",
+              "Sì. Altris nons a son riduzion cuadri-linie pe forme de rivendicazion e cubiis o ternis che a pontin pe forme dal pontament. Bare Sudoku al dopre un sôl non par dutis dôs."
+            ],
+            [
+              "Cuâl nivel domandial i candidâts blocâts?",
+              "Dificil. Un scheme che al domande candidâts blocâts o sotinsiemis ma nuie di plui dificil al è classificât Dificil; i schemis Espert a domandin ancje un pes o une ale."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Cubiis e ternis nudis",
+          "title": "Cubiis e ternis nudis tal Sudoku: cemût che a funzionin",
+          "description": "Cubiis e ternis nudis: dôs o trê caselis di une unitât che a àn i stes doi o trê candidâts. Impare a cjatâlis e ce gjavâ, cun esemplis veris pas par pas.",
+          "h1": "Cubiis e ternis nudis",
+          "summary": "Une cubie nude (naked pair) e je fate di dôs caselis te stesse rie, colone o cuadri che a àn juste i stes doi candidâts. Lis dôs cifris a àn di lâ in chês dôs caselis, duncje si pues gjavâlis di ogni altre casele de unitât. Une terne nude e je la stesse idee cun trê caselis e trê cifris; ogni casele e pues mostrâ dôs di lôr o dutis trê. Il consei di Bare Sudoku al clame \"Cubie o terne\" il plaçament che al ven fûr.",
+          "when": [
+            "Cuant che lis notis a son completis e i singui e i candidâts blocâts a son finîts. Lis cubiis nudis a son une vore comunis tai schemis Dificil, lis ternis nudis mancul. Al vâl la pene di cirîlis in ogni unitât che e à ancjemò cinc o plui caselis vueidis."
+          ],
+          "spot": [
+            "Cîr caselis cun dome doi candidâts e cjate un'altre casele te stesse unitât cui stes doi. Pes ternis, cjale lis unitâts cun plui caselis di doi e trê candidâts e controle se trê di lôr, dutis insieme, a doprin dome trê cifris diferentis. Lis caselis cun juste i stes candidâts si viodin facilmentri apene che lis notis a son scritis; Jemple lis notis tal zûc lu fâs cuntun tocjade."
+          ],
+          "examples": [
+            {
+              "h": "Cubie nude",
+              "steps": [
+                "{cellA} e {cellB} in {unit} a àn juste i stes doi candidâts: {d1} e {d2}.",
+                "Une di lôr e à di jessi {d1} e chê altre {d2}. No savìn cuale, ma lis dôs cifris a son dopradis di chestis dôs caselis.",
+                "Duncje nissune altre casele di {unit} no pues vê {d1} o {d2}. Gjave {elim}."
+              ]
+            },
+            {
+              "h": "Terne nude",
+              "steps": [
+                "Trê caselis di {unit} a cjapin ducj i lôr candidâts des stessis trê cifris, {digits}: {cells}.",
+                "Lis trê cifris a àn di jemplâ chestis trê caselis intun ordin o chel altri. Une casele no à di mostrâ par fuarce ducj i trê candidâts; ce che al conte al è che nissune des trê caselis no vedi un candidât fûr dal grup.",
+                "Gjave {digits} di ogni altre casele di {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Cjapâ dôs caselis che a condividin doi candidâts ma che a àn ancje un tierç. Par une cubie nude, ogni casele e à di vê juste i doi candidâts e nuie altri.",
+            "Gjavâ lis cifris des caselis de cubie stesse. La cubie e ten i siei candidâts; lis eliminazions a van aes altris caselis de unitât.",
+            "Pretindi che ogni casele di une terne e mostri dutis trê lis cifris. Une casele cun dôs des trê e va ben, basta che nissune casele no vedi un candidât fûr dal grup."
+          ],
+          "faq": [
+            [
+              "Ce ise une cubie nude tal Sudoku?",
+              "Dôs caselis intune unitât che a àn dutis dôs juste i stes doi candidâts. Chês dôs cifris a son blocadis in chês dôs caselis, duncje si pues gjavâlis dal rest de unitât."
+            ],
+            [
+              "Ce ise une terne nude?",
+              "Trê caselis intune unitât che, dutis insieme, a àn come candidâts dome trê cifris. Ogni casele e pues vê dôs o trê di chestis cifris. Lis trê cifris a jemplin lis trê caselis, duncje si pues gjavâlis des altris caselis de unitât."
+            ],
+            [
+              "Une cubie nude metie une cifre?",
+              "No di bessole. E gjave candidâts, e la eliminazion di solit e lasse un singul nût o platât. Il consei di Bare Sudoku al mostre chel singul e al dîs il non de tecniche che lu à rindût pussibil."
+            ],
+            [
+              "Une cubie nude podie jessi intun cuadri e intune rie tal stes timp?",
+              "Sì. Se lis dôs caselis a condividin une rie e un cuadri, la cubie e elimine in dutis dôs lis unitâts. Bare Sudoku lis trate une unitât ae volte."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Cubiis e ternis platadis",
+          "title": "Cubiis e ternis platadis tal Sudoku: cemût cjatâlis",
+          "description": "Une cubie platade: dôs cifris che a puedin lâ dome tes stessis dôs caselis di une unitât, duncje chês caselis a pierdin i altris candidâts. Impare a cjatâlis.",
+          "h1": "Cubiis e ternis platadis",
+          "summary": "Une cubie platade (hidden pair) e je fate di dôs cifris che, dentri di une rie, colone o cuadri, a son candidadis tes stessis dôs caselis e in nissun altri puest. Chês dôs caselis a àn di vê chês dôs cifris, duncje ogni altri candidât in lôr si pues gjavâlu. Une terne platade e funzione te stesse maniere cun trê cifris sieradis in trê caselis. Dopo la eliminazion, lis caselis a mostrin une cubie o une terne nude. Il consei di Bare Sudoku al clame \"Cubie o terne\" il plaçament che al ven fûr.",
+          "when": [
+            "Cuant che une unitât e à caselis cun tancj candidâts e i singui a son finîts. Lis cubiis platadis si platin dentri di caselis plenis, e par chest al vâl la pene di cirîlis propit dulà che lis cubiis nudis no si viodin. Lis ternis platadis a son raris; Bare Sudoku lis cîr, ma la plui part dai schemis Dificil si risolvin cence."
+          ],
+          "spot": [
+            "Lavore par cifre, no par casele. Intune unitât, segne lis caselis dulà che e pues lâ ogni cifre che e mancje. Se dôs cifris a àn ognune dome dôs caselis pussibilis e a son lis stessis dôs caselis, tu âs une cubie platade. Tal zûc, tocje il tast di une cifre par evidenziâ i siei candidâts; se dôs cifris a evidenziin lis stessis dôs caselis di une unitât e nuie altri in chê unitât, chê e je la figure."
+          ],
+          "examples": [
+            {
+              "h": "Cubie platade",
+              "steps": [
+                "In {unit}, lis cifris {d1} e {d2} a àn ognune dome dôs caselis pussibilis, e a son lis stessis dôs: {cells}.",
+                "Chês dôs caselis a àn di vê {d1} e {d2}, duncje i lôr altris candidâts a son impussibii.",
+                "Gjave {elim}. Cumò lis dôs caselis a mostrin une cubie nude, che e pues sblocâ alc altri."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Gjavâ lis dôs cifris de cubie des caselis de cubie. A son i altris candidâts di chês caselis che a van vie; lis cifris de cubie a restin.",
+            "Acetâ une cifre che e à une tierce casele pussibile te unitât. Dutis dôs lis cifris a àn di jessi limitadis juste aes dôs caselis.",
+            "Cirî dome tai cuadris. Lis cubiis platadis a capitin tant dispès ancje tes riis e tes colonis."
+          ],
+          "faq": [
+            [
+              "Ce ise une cubie platade tal Sudoku?",
+              "Dôs cifris che a puedin lâ dome tes stessis dôs caselis di une unitât. Chês caselis a àn di cjapâ chês cifris, duncje i lôr altris candidâts si gjavin."
+            ],
+            [
+              "Ce diference ise tra une cubie platade e une cubie nude?",
+              "Une cubie nude si viôt: dôs caselis che a mostrin dome i stes doi candidâts. Une cubie platade e je taponade di candidâts in plui tes dôs caselis. Gjavant chei candidâts in plui, une cubie platade e devente une cubie nude."
+            ],
+            [
+              "Ce ise une terne platade?",
+              "Trê cifris sieradis in trê caselis di une unitât. No covente che ogni cifre e comparissi in dutis trê lis caselis; ce che al conte al è che nissune des trê cifris no vedi un candidât fûr di chês caselis."
+            ],
+            [
+              "Il consei distinguial lis cubiis platadis di chês nudis?",
+              "No. Bare Sudoku lis cjate dutis dôs e al clame \"Cubie o terne\" il plaçament che al ven fûr. Chestis pagjinis lis separin parcè che si cjatin in mûts diferents."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing tal Sudoku: cemût che e funzione la tecniche",
+          "description": "X-Wing: une cifre cun juste dôs caselis candidadis in dôs riis, tes stessis dôs colonis, si gjave dal rest di chês colonis. Cuntun esempli vêr.",
+          "h1": "X-Wing",
+          "summary": "Un X-Wing al è une figure di une cifre e cuatri caselis sui cjantons di un retangul. Se la cifre e à juste dôs caselis candidadis in ognune di dôs riis, e chês caselis a son tes stessis dôs colonis, alore la cifre e à di ocupâ doi cjantons opuescj dal retangul. Duncje si pues gjavâle di ogni altre casele di chês dôs colonis. Al funzione ancje scambiant riis e colonis. E je la prime tecniche Espert di Bare Sudoku.",
+          "when": [
+            "Cuant che i singui, i candidâts blocâts e i sotinsiemis a son finîts. L'X-Wing al è la figure Espert plui comune e al comparìs dispès cuant che une cifre e à pôcs candidâts, di solit cun cuatri a sîs copiis za metudis. A coventin notis completis pe cifre che tu esaminis."
+          ],
+          "spot": [
+            "Sielç une cifre e cîr lis riis dulà che e à juste dôs caselis candidadis. Se dôs di chestis riis a condividin lis stessis dôs colonis, controle chês colonis par altris candidâts de cifre: chês a son lis eliminazions. Po torne a fâlu cu lis colonis come base. Tal zûc, tocje il tast de cifre: ogni so candidât al ven evidenziât, e un retangul di cuatri notis evidenziadis si lu viôt facilmentri."
+          ],
+          "examples": [
+            {
+              "h": "Esempli",
+              "steps": [
+                "La cifre {d} e à juste dôs caselis candidadis te rie {r1} e juste dôs te rie {r2}, e a son tes stessis dôs colonis, {c1} e {c2}: {cells}.",
+                "La rie {r1} e met il so {d} te colone {c1} o {c2}, e la rie {r2} e met il so {d} in chê altre. In ogni câs, lis colonis {c1} e {c2} a ricevin ognune un {d} di chestis dôs riis.",
+                "Duncje {d} nol pues comparî in nissun altri puest tes colonis {c1} e {c2}. Gjave {d} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Doprâ une rie che e à trê caselis candidadis pe cifre. Ogni rie di base e à di vê juste dôs, e dutis dôs tes dôs colonis comunis.",
+            "Gjavâ la cifre des riis invezit che des colonis. Cu lis riis come base, lis eliminazions a son tes colonis, e al contrari.",
+            "Dismenteâsi la version scambiade. Un X-Wing fat su lis colonis al elimine tes riis."
+          ],
+          "faq": [
+            [
+              "Ce isal un X-Wing tal Sudoku?",
+              "Une cifre che e à juste dôs caselis candidadis in ognune di dôs riis, tes stessis dôs colonis. La cifre e ocupe doi cjantons opuescj di chel retangul, duncje si gjave dal rest des dôs colonis. Riis e colonis si puedin scambiâ."
+            ],
+            [
+              "Parcè funzionial un X-Wing?",
+              "Ognune des dôs riis e à di meti la cifre intune des dôs colonis, e lis dôs riis no puedin doprâ la stesse colone. Duncje lis dôs colonis a ricevin ognune la lôr copie de cifre di chestis riis, e ogni altri candidât in chês colonis al è impussibil."
+            ],
+            [
+              "Un X-Wing isal un pes?",
+              "Sì. L'X-Wing al è il pes di dimension doi; il Swordfish al è il pes di dimension trê. Bare Sudoku ju cjate ducj i doi."
+            ],
+            [
+              "Cuâl nivel aial X-Wing?",
+              "Espert. Un scheme che al domande un X-Wing, Y-Wing, Swordfish o XYZ-Wing al è classificât Espert."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing tal Sudoku: cemût che e funzione la tecniche",
+          "description": "Y-Wing (XY-Wing): un pivot cun doi candidâts e dôs alis che a condividin un di chei a sburtin fûr une cifre des caselis che a viodin dutis dôs lis alis.",
+          "h1": "Y-Wing",
+          "summary": "Un Y-Wing, clamât ancje XY-Wing, al dopre trê caselis cun doi candidâts ognune. Il pivot al à i candidâts X e Y. Une ale e viôt il pivot e e à X e Z; chê altre ale e viôt il pivot e e à Y e Z. Ce che al sedi il pivot, une des alis e à di jessi Z, duncje Z si pues gjavâlu di ogni casele che e viôt dutis dôs lis alis. E je une tecniche Espert in Bare Sudoku.",
+          "when": [
+            "Cuant che un scheme al à plui caselis cun juste doi candidâts e nol è nissun pes disponibil. I Y-Wing a son comuns tai schemis Espert e si cjatin lant daûr des caselis cun doi candidâts: ognune e je un pussibil pivot o une pussibile ale."
+          ],
+          "spot": [
+            "Fâs la liste des caselis cun juste doi candidâts. Par ognune, tratile come il pivot cui candidâts X e Y, e cîr tra i siei vicins une casele cun X e un'altre cifre Z, e une casele cun Y e la stesse Z. Chês dôs a son lis alis. Po cjate lis caselis che a viodin dutis dôs lis alis e che a àn Z. Ten a ments che lis alis no àn bisugne di viodisi tra di lôr."
+          ],
+          "examples": [
+            {
+              "h": "Esempli",
+              "steps": [
+                "Il pivot {pivot} al à i candidâts {x} e {y}. Al viôt {wingA}, che e à {x} e {z}, e {wingB}, che e à {y} e {z}.",
+                "Se {pivot} al è {x}, alore {wingA} e pierd {x} e e devente {z}. Se {pivot} al è {y}, alore {wingB} e devente {z}. Une des dôs alis e je {z} in ogni câs.",
+                "Une casele che e viôt dutis dôs lis alis no pues mai jessi {z}. Gjave {z} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sielzi alis che no viodin dutis dôs il pivot. Ogni ale e à di condividi une rie, colone o cuadri cul pivot.",
+            "Gjavâ Z di caselis che a viodin dome une ale. La casele eliminade e à di viodi dutis dôs lis alis.",
+            "Gjavâ Z dal pivot. Intun Y-Wing il pivot nol à Z; se lu à, la figure e je un XYZ-Wing cun altris regulis."
+          ],
+          "faq": [
+            [
+              "Ce isal un Y-Wing tal Sudoku?",
+              "Trê caselis cun doi candidâts: un pivot cun X e Y, une ale cun X e Z che e viôt il pivot, e une ale cun Y e Z che e viôt il pivot. Une ale e je simpri Z, duncje Z si gjave des caselis che a viodin dutis dôs lis alis."
+            ],
+            [
+              "Y-Wing isal il stes di XY-Wing?",
+              "Sì. I doi nons a descrivin la stesse figure. Bare Sudoku le clame Y-Wing."
+            ],
+            [
+              "Parcè une ale aie di jessi Z?",
+              "Se il pivot al è X, la prime ale e pierd X e e devente Z. Se il pivot al è Y, la seconde ale e devente Z. Il pivot al è un dai doi, duncje une ale e je Z."
+            ],
+            [
+              "Tropis caselis eliminial un Y-Wing?",
+              "Di solit une o dôs: dome lis caselis che a viodin dutis dôs lis alis e che a àn ancjemò Z. Al baste par creâ un singul."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish tal Sudoku: cemût che e funzione la tecniche",
+          "description": "Swordfish: une cifre sierade in trê colonis su trê riis si gjave dal rest di chês colonis. Il pes di dimension trê, spiegât cuntun esempli vêr.",
+          "h1": "Swordfish",
+          "summary": "Un Swordfish al è un X-Wing cun trê riis e trê colonis. Se une cifre e à al massim trê caselis candidadis in ognune di trê riis, e dutis chês caselis a colin tes stessis trê colonis, alore lis trê riis a doprin la cifre in chês colonis, e la cifre si pues gjavâle di ogni altre casele des trê colonis. Riis e colonis si puedin scambiâ. Bare Sudoku al cîr il Swordfish dopo il Y-Wing, tai schemis Espert.",
+          "when": [
+            "Cuant che X-Wing e Y-Wing no cjatin nuie. I Swordfish a son mancul comuns dai X-Wing e a domandin une cifre cun pôcs candidâts sparniçâts su trê liniis. A domandin notis completis e justis par chê cifre."
+          ],
+          "spot": [
+            "Cjape une cifre e cîr riis cun dôs o trê caselis candidadis par jê. Se trê di chestis riis a cjapin dentri dome trê colonis in dut, controle chês colonis par altris candidâts de cifre. No ogni rie e à bisugne di un candidât in ogni colone: un Swordfish al pues vê sîs, siet, vot o nûf caselis. Tal zûc, evidenzie la cifre cul so tast e cîr trê riis che a àn i candidâts dome in trê colonis."
+          ],
+          "examples": [
+            {
+              "h": "Esempli",
+              "steps": [
+                "La cifre {d} e à al massim trê caselis candidadis in ognune des riis {rows}, e dutis chês caselis a colin tes colonis {cols}: {cells}.",
+                "Ognune des trê riis e à di meti il so {d} intune des trê colonis, e dôs riis no puedin doprâ la stesse colone. Duncje lis trê colonis a cjapin il lôr {d} di chestis trê riis.",
+                "Ogni altri candidât {d} tes colonis {cols} al è impussibil. Gjave {d} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Pretindi dutis lis nûf caselis. Un Swordfish cun doi candidâts in cualchi rie al è simpri valit, basta che lis trê riis a cjapin dentri dome trê colonis.",
+            "Meti dentri une rie cun cuatri caselis candidadis. Ogni rie di base e à di vê al massim trê, dutis dentri des trê colonis.",
+            "Eliminâ tes riis di base. Cu lis riis come base, lis eliminazions a son tes trê colonis, fûr des riis di base."
+          ],
+          "faq": [
+            [
+              "Ce isal un Swordfish tal Sudoku?",
+              "Une cifre che in trê riis e à i candidâts sierâts in trê colonis. Lis trê riis a àn di meti la cifre in chês trê colonis, une par ognune, duncje la cifre si gjave des altris caselis di chês colonis."
+            ],
+            [
+              "Ce diference ise tra un Swordfish e un X-Wing?",
+              "Dome la dimension: un X-Wing al dopre dôs riis e dôs colonis, un Swordfish trê e trê. Il resonament al è il stes."
+            ],
+            [
+              "Un Swordfish domandial juste nûf caselis?",
+              "No. Ogni rie e pues vê doi o trê candidâts; la figure e domande dome che lis trê riis dutis insieme no doprin plui di trê colonis."
+            ],
+            [
+              "Esistial un pes di dimension cuatri?",
+              "Sì, il Jellyfish. Bare Sudoku no lu dopre, parcè che i siei schemis no lu domandin mai."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing tal Sudoku: cemût che e funzione la tecniche",
+          "description": "XYZ-Wing: un pivot cun trê candidâts e dôs alis che a condividin un di chei a sburtin fûr chê cifre des caselis che lis viodin dutis trê. Esempli vêr.",
+          "h1": "XYZ-Wing",
+          "summary": "Un XYZ-Wing al è un Y-Wing cul pivot di trê candidâts. Il pivot al à X, Y e Z; une ale e viôt il pivot e e à X e Z, chê altre e viôt il pivot e e à Y e Z. Une des trê caselis e à di jessi Z, duncje Z si pues gjavâlu di ogni casele che lis viôt dutis trê. Za che il pivot stes al pues jessi Z, la casele eliminade e à di viodi il pivot e ancje dutis dôs lis alis, e chest le limite al cuadri o ae linie che lis caselis a condividin. E je la tecniche plui dificile che al dopre Bare Sudoku.",
+          "when": [
+            "Dome cuant che dut il rest nol funzione. L'XYZ-Wing al è la figure plui rare di Bare Sudoku e al comparìs dome tai schemis Espert. Cîrlu cuant che une casele cun trê candidâts e je intun cuadri cuntune casele di doi candidâts che e condivît dôs des sôs cifris."
+          ],
+          "spot": [
+            "Partìs des caselis cun juste trê candidâts; ognune e je un pussibil pivot. Tra i siei vicins, cîr dôs caselis cun doi candidâts ognune, ducj cjapâts dai trê dal pivot, che a condividin juste une cifre Z. Po cîr lis caselis che a viodin il pivot e dutis dôs lis alis e che a àn Z. In pratiche une ale e je tal cuadri dal pivot e chê altre te sô rie o colone, e lis caselis eliminadis a son lis altris caselis di chel cuadri in chê rie o colone."
+          ],
+          "examples": [
+            {
+              "h": "Esempli",
+              "steps": [
+                "Il pivot {pivot} al à trê candidâts: {x}, {y} e {z}. Al viôt {wingA} cun {x} e {z}, e {wingB} cun {y} e {z}.",
+                "Se {pivot} al è {z}, fat. Se al è {x}, {wingA} e à di jessi {z}. Se al è {y}, {wingB} e à di jessi {z}. In ogni câs une des trê caselis e je {z}.",
+                "Une casele che lis viôt dutis trê no pues jessi {z}. Gjave {z} di {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminâ di caselis che a viodin dome lis dôs alis. A diference di un Y-Wing, il pivot al pues jessi Z, duncje la casele e à di viodi ancje il pivot.",
+            "Doprâ alis cun candidâts che no son ducj contignûts tai trê candidâts dal pivot.",
+            "Confondilu cuntun Y-Wing: la diference e je il tierç candidât tal pivot, e al cambie cualis caselis che si puedin netâ."
+          ],
+          "faq": [
+            [
+              "Ce isal un XYZ-Wing tal Sudoku?",
+              "Un pivot cui candidâts X, Y e Z e dôs alis, une cun X e Z e une cun Y e Z, dutis dôs che a viodin il pivot. Une des trê caselis e je Z, duncje Z si gjave des caselis che lis viodin dutis trê."
+            ],
+            [
+              "Ce diference ise tra un XYZ-Wing e un Y-Wing?",
+              "Il pivot al à trê candidâts invezit di doi, e un di chei al è Z. Chest al fâs dal pivot un puest pussibil par Z, duncje dome lis caselis che a viodin il pivot e dutis dôs lis alis a puedin pierdi Z."
+            ],
+            [
+              "Trop dispès comparissial un XYZ-Wing?",
+              "Di râr. In Bare Sudoku dome i schemis Espert a puedin vê bisugne di un, e la plui part no. Bare Sudoku lu controle par ultin, dopo X-Wing, Y-Wing e Swordfish."
+            ],
+            [
+              "Esistial un WXYZ-Wing?",
+              "Sì, cuntun pivot di cuatri candidâts, ma Bare Sudoku no lu dopre. Ogni scheme dal zûc si pues finîlu cu lis nûf tecnichis di cheste guide."
+            ]
+          ]
+        }
+      }
+    },
     "lmo": {
       "learnHeading": "Impara el Sudoku",
       "learnText": "Te seet noeuv del Sudoku, o te seet blocaa in su on schema difìcil? Dò guid spieghen i regol e ogni tecnica de soluzion che dopren i consili, ognuna cont on esempi real.",
@@ -93115,6 +94279,588 @@
             [
               "Gifft dat en WXYZ-Wing?",
               "Jo, mit en Pivot mit veer Kandidaten, man Bare Sudoku bruukt em nich. Jedet Raadsel in't Speel lett sik mit de negen Techniken vun disse Anleitung to Enn lösen."
+            ]
+          ]
+        }
+      }
+    },
+    "li": {
+      "learnHeading": "Sudoku liere",
+      "learnText": "Nuuj in Sudoku, of zits se vas in e moeilike puzzel? Twee gidse lègke de regels oet en edere techniek die de hints gebroeke, allebei mit echte veurbeelde.",
+      "howToLink": "Wie sjpieltj me Sudoku",
+      "techniquesLink": "Technieke óm Sudoku op te losse",
+      "labels": {
+        "howTo": "Wie sjpieltj me",
+        "techniques": "Technieke",
+        "play": "Sjpeel Sudoku",
+        "prev": "Veurige techniek",
+        "next": "Volgende techniek",
+        "all": "Alle technieke",
+        "example": "Veurbeeld",
+        "steps": "Stap veur stap",
+        "when": "Wienie gebroeke",
+        "spot": "Wie herkins se 't",
+        "mistakes": "Dèks gemaakte foute",
+        "inGame": "In Bare Sudoku",
+        "level": "Nuudig vanaaf niveau: {level}",
+        "hint": "In 't spel zeet de hint: {text}",
+        "legend": "Vetgedrökte ciefers zeen gegeve, blauwe ciefers zeen tiedens 't oplosse geplaatst, kleine ciefers zeen kandidate. Gemarkeerde vekskes vörme 't patroon, doorgestreepte kandidate weure weggehaold en 'n kandidaat mit e cirkel is 't ciefer det se plaats.",
+        "notation": "Vekskes weure gesjreve es r3c7: rie 3, kolom 7. Rieje tels se van baove, kolomme van links en blokke van 1 toet 9 vanaaf linksbaove, rie veur rie.",
+        "row": "rie {n}",
+        "column": "kolom {n}",
+        "box": "blok {n}",
+        "elimItem": "{d} oet {cell}",
+        "regions": "Rie 5, kolom 5 en blok 5 aan 't begin van e puzzel",
+        "firstMove": "Ein naakte single: {cell} kin allein {d} zeen",
+        "breadcrumb": "Kruumelpaad"
+      },
+      "howTo": {
+        "title": "Wie sjpieltj me Sudoku: regels, roester en ierste zètte",
+        "description": "Lier Sudoku sjpeele: de regels, wie rieje, kolomme en blokke wirke, woeróm eder puzzel ein oplossing haet, wie se notities gebroeks en dien ierste zètte.",
+        "h1": "Wie sjpieltj me Sudoku",
+        "summary": "Sudoku is e logicapuzzel op e roester van 9×9. Völ eder laeg vekske mit e ciefer van 1 toet 9, zoea in det edere rie, edere kolom en eder 3×3-blok eder ciefer zjuus eine kieer haet. Sommige ciefers zeen bie 't begin al gegeve; de res beredeneers doe, vekske veur vekske en allein wat zeker is, en doe hoofs noets te raoje. Dees gids lèk 't roester oet, de regels, 't principe van de einigste oplossing, notities en e simpel strategie veur dien ierste zètte. Doe kins alles oefene in [Bare Sudoku](play), det gratis is en hints haet die de logica oetlègke.",
+        "sections": [
+          {
+            "h": "Wat zeen de regels van Sudoku?",
+            "p": [
+              "Der zeen mer drie regels, en 't is eigelik ein regel van drie kante bekeke: edere rie moot de ciefers 1 toet 9 höbbe, edere kolom moot de ciefers 1 toet 9 höbbe en eder 3×3-blok moot de ciefers 1 toet 9 höbbe. E ciefer kin dus noets twee kieer in dezelfde rie, kolom of blok staon.",
+              "De gegeve ciefers, vetgedrök, ligke vas. Dien opdrach is de laeg vekskes te völle. Der weurt neet gerekend en der is gein volgorde: de ciefers zeen gewoen nege versjillende symbole. Doe kos ouch mit letters of vörmkes sjpeele en der zouw nieks verangere."
+            ]
+          },
+          {
+            "h": "Wie is 't roester opgebouwd?",
+            "p": [
+              "'t Roester haet 81 vekskes in 9 rieje en 9 kolomme. Dikke liene deile 't in nege blokke van 3×3. Eder vekske huuert bie zjuus ein rie, ein kolom en ein blok, en die drie gróppe zeen zien einhede. De 20 anger vekskes die ein einheid mit e vekske deile, heite zien naobers; e ciefer det se in e vekske plaats, sluut det ciefer oet in alle 20 naobers.",
+              "Vekskes weure gesjreve es r3c7: rie 3, kolom 7. Rieje tels se van baove, kolomme van links en blokke van 1 toet 9 vanaaf linksbaove, rie veur rie. Dees notatie steit in eder techniekgids en 't is de meujte weerd óm ze te liere: r5c5 is 't midde van 't roester."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Woeróm haet eder Sudoku zjuus ein oplossing?",
+            "p": [
+              "E good Sudoku haet ein oplossing, en det is wat de logica laot wirke. Eder kieer det se kins aantuine det e ciefer nörges anders in ein einheid kin, moot 't in 't vekske det euverblief, want de oplossing besteit en is uniek. Es e puzzel twee oplossinge haw, kos gein enkel redenering ze oetein haole en zous se op e gegeve moment mótte raoje.",
+              "Bare Sudoku maak eder puzzel op dien toestel en contreleert det der zjuus ein oplossing is en det zien logische oplosser 'm kin aafmake mit de technieke van 't gekoze niveau. Es se vas zits, is der dus ummer e volgende stap te vinge, en de hint tuint dich dae."
+            ]
+          },
+          {
+            "h": "Wie begins se aan e Sudoku?",
+            "p": [
+              "Begin mit wat 't meiste vasligk. Dees volgorde wirk op eder niveau:"
+            ],
+            "list": [
+              "Kies e ciefer det al dèks veurkump, zeg zes of zeve kieer, en zeuk de blokke die 't nog misse. Dèks is der in e blok mer ein vekske veur euver: det is 'n [verbórge single](hidden-single).",
+              "Zeuk volle vekskes. E vekske woeveur rie, kolom en blok same ach versjillende ciefers höbbe, haet mer ein kandidaat euver: 'n [naakte single](naked-single). Vekskes in bekans volle rieje of blokke zeen de beste plaats óm te zeuke.",
+              "Eder ciefer det se plaats, haolt ein kandidaat weg oet 20 naobers, dus kiek die naobers mèteen nao. Singles kómme dèks achterein.",
+              "Es de gemekelike zètte op zeen, sjrief dan notities: de kandidate veur eder laeg vekske. Zeuk dan e ciefer det binne e blok in ein lien vasligk ([vasgezatte kandidate](locked-candidates)) of twee vekskes mit dezelfde twee kandidate (e [naak paar](naked-pairs)).",
+              "Gank nao eder eliminatie trök nao de singles. Zelfs Expert-puzzels weure veural mit singles opgelos; de geavanceerde techniek maak allein de volgende vrie."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Wat zeen notities en wienie gebroeks se ze?",
+            "p": [
+              "Notities, ouch potloodmerkes of kandidate geneump, zeen de kleine ciefers die se in e laeg vekske sjriefs óm bie te hawe welke ciefers dao nog kinne. In gemekelike puzzels höbs se ze zelde nuudig; vanaaf Moeilik zeen ze essentieel, want technieke wie pare, X-Wing en Y-Wing gaon euver kandidate, neet euver geplaatste ciefers.",
+              "Hawt de notities korrek: es se e ciefer plaats, haol 't dan weg oet de notities van alle 20 naobers. In Bare Sudoku gebeurt det automatisch, en Notities invölle sjrief mit ein tik eder kandidaat in eder laeg vekske, zoedet se kins beginne mit e volledige en korrekte set kandidate. E notitie is e feit, gein gok: 't beteikent det nog nieks dit ciefer oetsluut."
+            ]
+          },
+          {
+            "h": "Wat doos se es se vas zits?",
+            "p": [
+              "Kiek ierst de basis nog ins nao: edere bekans volle rie, kolom en blok is 'n bron van singles. Zörg dan det de notities volledig zeen, want e missende kandidaat versjtöp patrone en 'n verawwerde kandidaat maak valse patrone. Wirk dan de [technieke](techniques) aaf in volgorde van moeilikheid: vasgezatte kandidate, pare en drietalle, X-Wing, Y-Wing, Swordfish en XYZ-Wing. Eder techniek haet 'n eige pagina mit e echt veurbeeld.",
+              "Es nieks wirk, vraog dan e hint. In Bare Sudoku kiek de hint ierst of e geplaats ciefer verkeerd is, vint dan 't volgende vekske det mit logica gevöld kin weure en neump de techniek, zoedet se get liers ouch es se 'm gebroeks. Tik nog ins op de hint óm 't ciefer te plaatse."
+            ]
+          },
+          {
+            "h": "Wie veurs se ciefers in in Bare Sudoku?",
+            "p": [
+              "Tik op e vekske, dan op e ciefer. Of tik ierst op e ciefer: 't weurt vasgezat, en eder vekske det se aantiks krigk 't, wat de snelste manier is óm 't zesde, zevende en achste exemplaar van e ciefer te plaatse. Tik nog ins op 't ciefer óm 't los te laote. De knop Notities sjakelt nao potloodmerkes, Wisse maak e vekske laeg, Óngedaon make dreit eder zèt trök, en foute weure rood gemarkeerd, behauve es se det in 't menu oetzèts.",
+              "Op e toetsebord gebroeks se de pieltoetse óm te bewege, 1 toet 9 óm e ciefer in te veure, Backspace óm te wisse, N veur notities, U veur óngedaon make, H veur e hint, F óm notities in te völle en Escape veur 't menu. 't Spel sjlaot zichzelf op, wirk offline en haet gein reclame en gein account."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Mos se bie Sudoku ooit raoje?",
+            "Neet in e good puzzel. Eder puzzel van Bare Sudoku haet zjuus ein oplossing en is gecontreleerd det 'r allein mit logica op te losse is, toet de technieke van zien niveau. Es 't veult wie of se mos raoje, mis der e kandidaat in dien notities of wach der nog 'n techniek det se mos vinge."
+          ],
+          [
+            "Kin e ciefer twee kieer in ein rie, kolom of blok staon?",
+            "Nee. Det is de hiele regel: eder van de nege rieje, nege kolomme en nege blokke haet eder ciefer van 1 toet 9 zjuus eine kieer. Es twee gelieke ciefers ein einheid deile, is minstens ein van beie verkeerd."
+          ],
+          [
+            "Wat is 't versjil tösse Gemekelik, Middel, Moeilik en Expert?",
+            "'t Niveau weurt bepaald door de technieke die de puzzel nuudig haet. Gemekelik en Middel weure allein mit singles opgelos, en Gemekelik begint mit minstens 38 gegeve ciefers. Moeilik vraog vasgezatte kandidate of pare en drietalle. Expert vraog X-Wing, Y-Wing, Swordfish of XYZ-Wing."
+          ],
+          [
+            "Is 't better óm notities veur eder vekske in te völle of mer veur e paar?",
+            "Bie Moeilik- en Expert-puzzels: völ ze allemaol in, want patrone wie pare, X-Wing en Y-Wing kómme pas te veursjien es eder kandidaat dao steit. Bie Gemekelik en Middel zeen notities neet verplich en de meiste sjpeelers zeuke gewoen nao singles."
+          ],
+          [
+            "Wie lang deurt e Sudoku?",
+            "E Gemekelik-puzzel deurt e paar minute; Expert-puzzels kinne twintig minute of langer dore, aafhenkelik van wie snel se 't geavanceerde patroon zuus. Bare Sudoku tuint 'n timer, zèt 'm stil zoelang 't menu ope steit en hawt gein ranglies bie, dus sjpeel in dien eige tempo."
+          ],
+          [
+            "Mos se veur Sudoku kinne rekene?",
+            "Nee. De ciefers zeen mer labels; der weurt nieks opgeteld of geteld. Eder nege symbole zouwe wirke, en daorum is Sudoku e logicapuzzel en gein getallepuzzel."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku-oplostechnieke oetgelag mit veurbeelde",
+        "description": "Alle nege Sudoku-oplostechnieke, van naakte singles toet Swordfish en XYZ-Wing, in de volgorde van de hints van Bare Sudoku, eder mit e echt veurbeeld.",
+        "h1": "Sudoku-oplostechnieke",
+        "intro": [
+          "Eder Sudoku is op te losse mit e klein set logische technieke. Dees euverzich geuf de nege technieke die de oplosser van Bare Sudoku en zien hints gebroeke, in de volgorde woe-in de oplosser ze perbeert: ierst singles, dan eliminaties binne ein einheid, dan patrone die euver meerdere rieje en kolomme loupe. Eder techniek haet 'n eige pagina mit 'n definitie, wie se 'm herkins, e echt veurbeeld oet e gegenereerde puzzel en de dèks gemaakte foute.",
+          "'t Niveau van e puzzel weurt bepaald door de moeilikste techniek die 'r nuudig haet. Gemekelik- en Middel-puzzels höbbe allein singles nuudig, Moeilik-puzzels vasgezatte kandidate of pare en drietalle, en Expert-puzzels minstens ein vès of vleugel. Wat 't niveau ouch is, de singles doon 't meiste wirk; de geavanceerde techniek haolt ein of twee kandidate weg en de singles gaon dao wiejer."
+        ],
+        "faq": [
+          [
+            "In welke volgorde mos se Sudoku-technieke perbere?",
+            "De gemekelikste ierst: naakte singles, verbórge singles, vasgezatte kandidate, naakte pare en drietalle, verbórge pare en drietalle, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku perbeert ze in zjuus dees volgorde, en e hint neump ummer de simpelste techniek die wiejer helpt."
+          ],
+          [
+            "Höb ich al dees technieke nuudig óm Sudoku op te losse?",
+            "Veur Gemekelik- en Middel-puzzels zeen singles genóg. Moeilik-puzzels doon dao vasgezatte kandidate en deilgróppe bie. Expert-puzzels höbbe minstens ein vès of vleugel nuudig, mer meistal mer ein of twee kieer per puzzel."
+          ],
+          [
+            "Zeen der moeilikere technieke es XYZ-Wing?",
+            "Jao, bieveurbeeld kettinge, uniekheidstests en forcing nets. Bare Sudoku maak gein puzzels die dao óm vraoge, dus eder puzzel in 't spel kin weure aafgemaak mit de nege technieke op dees pagina."
+          ],
+          [
+            "Wat is e kandidaat?",
+            "E ciefer det nog in e laeg vekske kin, ómdet nieks in zien rie, kolom of blok 't nog oetsluut. Notities in 't spel zeen kandidate. Eder techniek boete de singles redeneert euver kandidate, dus hawt ze volledig en korrek."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Naakte single",
+          "title": "Naakte single in Sudoku: 't vekske mit ein kandidaat",
+          "description": "'n Naakte single is e laeg vekske mit mer ein meugelik ciefer. Lier naakte singles snel te vinge, mit e echt veurbeeld stap veur stap en de gewoenlikste foute.",
+          "h1": "Naakte single",
+          "summary": "'n Naakte single is e laeg vekske det zjuus ein kandidaat haet: de anger ach ciefers staon al in zien rie, kolom of blok. 't Ciefer det euverblief moot dao kómme. 't Is de simpelste Sudoku-techniek, die se 't meiste gebroeks, en die de hint van Bare Sudoku mèlt es \"Mer ein kandidaat hie\".",
+          "when": [
+            "Ummer. Naakte singles kómme veur van de ierste toet de lèste zèt, op eder niveau. In Gemekelik- en Middel-puzzels zeen ze, same mit verbórge singles, de einigste techniek die se nuudig höbs. In moeilikere puzzels liet eder eliminatie van 'n geavanceerde techniek meistal 'n naakte single achter, dus kiek dao nao eder stap nao."
+          ],
+          "spot": [
+            "Kiek nao vekskes mit väöl gevölde naobers: e vekske in 'n rie die al zeve ciefers haet, of e vekske woeveur rie, kolom en blok same ach versjillende ciefers dèkke. Zónger notities tels se de ciefers die se vanoet 't vekske zuus. Mit notities is 'n naakte single gewoen e vekske mit ein kandidaat, en daorum maak Notities invölle ze gemekelik te vinge."
+          ],
+          "examples": [
+            {
+              "h": "Veurbeeld",
+              "steps": [
+                "Kiek nao {cell}. 't Is laeg, dus maak 'n lies van eder ciefer det al in zien rie, zien kolom en zien blok steit.",
+                "Rie {row} haet {rowDigits}. Kolom {col} haet {colDigits}. Blok {box} haet {boxDigits}.",
+                "Same sluute ze eder ciefer oet behauve {d}, dus {d} is de einigste kandidaat die in {cell} euverblief.",
+                "Sjrief {d} in {cell}. Kiek dan of 't nuuj ciefer 'n anger single maak in dezelfde rie, kolom of blok."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Allein de rie of allein 't blok telle. De ach oetgeslote ciefers kómme meistal oet alle drie einhede same.",
+            "Vergete det e ciefer det se zjuus geplaatst höbs ouch kandidate oetsluut in zien 20 naobers; nuuj naakte singles kómme mèteen nao eder plaatsing.",
+            "'n Naakte single verwarre mit 'n verbórge single: bie 'n naakte single blief der ein kandidaat in 't vekske euver, bie 'n verbórge single blief der ein vekske veur 't ciefer in ein einheid euver."
+          ],
+          "faq": [
+            [
+              "Wat is 'n naakte single in Sudoku?",
+              "E laeg vekske mit zjuus ein kandidaat. Ach versjillende ciefers staon al in zien rie, kolom en blok, dus 't negende ciefer is 't einigste det past."
+            ],
+            [
+              "Woeróm heit det naak?",
+              "Ómdet de einige kandidaat direk in 't vekske te zeen is es de notities dao staon; nieks versjtöp 'm. 'n Verbórge single steit juus tösse anger kandidate en vins se door nao 't ciefer te kieke in plaats van nao 't vekske."
+            ],
+            [
+              "Kin e puzzel allein mit naakte singles opgelos weure?",
+              "Väöl Gemekelik-puzzels wel, mer de meiste höbbe ouch verbórge singles nuudig. Bare Sudoku beoordeilt Gemekelik- en Middel-puzzels es oplosbaar mit beie soorte singles; Moeilik- en Expert-puzzels höbbe minstens ein anger techniek nuudig."
+            ],
+            [
+              "Tuint de hint naakte singles?",
+              "Jao. Es de volgende plaatsing 'n naakte single is, selecteert de hint 't vekske en zeet \"Mer ein kandidaat hie\" mit 't ciefer. Tik nog ins op de hint óm 't te plaatse."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Verbórge single",
+          "title": "Verbórge single in Sudoku: de einigste plaats veur e ciefer",
+          "description": "'n Verbórge single is 't einigste vekske in 'n rie, kolom of blok woe e ciefer nog kin. Lier verbórge singles te zeen door ein ciefer tegeliek te bekieke.",
+          "h1": "Verbórge single",
+          "summary": "'n Verbórge single is e ciefer det in 'n rie, kolom of blok mer ein meugelik vekske euver haet, ouch es det vekske nog anger kandidate tuint. Ómdet de einheid 't ciefer moot höbbe, geit 't dao in. De hint van Bare Sudoku mèlt det es \"Einigste plaats veur 5 in dees rie\", kolom of blok.",
+          "when": [
+            "Ummer es e ciefer al wied is: es e ciefer vief of zes kieer steit, zeen de euverige blokke sterk beperk, en dèks is de volgende zèt 'n verbórge single. Verbórge singles zeen de belangriekste techniek van Gemekelik- en Middel-puzzels en blieve op eder niveau 't wirkpeerd."
+          ],
+          "spot": [
+            "Bekiek ein ciefer tegeliek. Pak e ciefer, zeuk e blok det 't neet haet, en streep eder vekske in det blok door det 'n rie of kolom deilt mit e geplaats exemplaar van det ciefer. Blief der ein vekske euver, dan höbs se 'n verbórge single gevónge. Dezelfde scan wirk op rieje en kolomme. Tik in 't spel op e geplaats ciefer: eder exemplaar dervan lich op, zoedet de vrie vekskes opvalle."
+          ],
+          "examples": [
+            {
+              "h": "Veurbeeld",
+              "steps": [
+                "Blok {box} haet nog gein {d}, dus ein van zien laeg vekskes moot 't höbbe. De laeg vekskes zeen {empties}.",
+                "In edereine dervan behauve {cell} weurt {d} geblokkeerd door 'n {d} die al in dezelfde rie of kolom steit, dus {d} is dao gein kandidaat.",
+                "Dus is {cell} de einigste plaats veur {d} in blok {box}. Sjrief {d} dao, ouch es {cell} nog anger kandidate tuint."
+              ]
+            }
+          ],
+          "mistakes": [
+            "'t Ciefer in e vekske zètte det allein misjien 't góije is: kiek eder anger laeg vekske van de einheid nao, neet allein de veur de hand liggende.",
+            "'n Verbórge single misse ómdet 't vekske meerdere kandidate tuint. De anger kandidate doon neet ter zake; 't geit d'rum det 't ciefer gein anger plaats in de einheid haet.",
+            "Allein blokke bekieke. Rieje en kolomme levere krek zoe dèks verbórge singles op, zeker tegen 't ind."
+          ],
+          "faq": [
+            [
+              "Wat is 'n verbórge single in Sudoku?",
+              "E ciefer det mer in ein vekske van 'n rie, kolom of blok kin. De einheid moot 't ciefer höbbe, dus 't vekske ligk vas, ouch es 't nog anger kandidate haet."
+            ],
+            [
+              "Wat is 't versjil tösse 'n verbórge single en 'n naakte single?",
+              "'n Naakte single geit euver e vekske: ein kandidaat euver. 'n Verbórge single geit euver e ciefer: ein vekske euver in 'n einheid. Allebei plaatse ze e ciefer mit zekerheid."
+            ],
+            [
+              "Wat is gemekeliker te vinge?",
+              "Zónger notities zeen verbórge singles meistal gemekeliker, ómdet se 't roester ein ciefer tegeliek kins aafzeuke. Mit volledige notities zeen naakte singles 't gemekelikste, want e vekske mit ein kandidaat vilt mèteen op."
+            ],
+            [
+              "Wie besjrief de hint 'n verbórge single?",
+              "Es \"Einigste plaats veur\" 't ciefer in dees rie, dees kolom of dit blok, mit 't vekske geselecteerd. Tik nog ins op de hint óm 't te plaatse."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Vasgezatte kandidate",
+          "title": "Vasgezatte kandidate in Sudoku: wieze en opeise",
+          "description": "Vasgezatte kandidate: es de kandidate van e ciefer in e blok allemaol in ein rie of kolom ligke, of ómgekierd, valt 't ciefer elders weg. Twee echte veurbeelde.",
+          "h1": "Vasgezatte kandidate",
+          "summary": "Vasgezatte kandidate (locked candidates) is de ierste techniek die kandidate weghaolt in plaats van e ciefer te plaatse. 't Haet twee vörme. Wieze: in e blok ligke alle kandidate veur e ciefer in ein rie of kolom, dus 't ciefer weurt weggehaold oet de res van die lien. Opeise: in 'n rie of kolom ligke alle kandidate veur e ciefer in ein blok, dus 't ciefer weurt weggehaold oet de res van det blok. De hint van Bare Sudoku neump de plaatsing die dit vriemaak \"Vasgezatte kandidate\".",
+          "when": [
+            "Es de singles op zeen in 'n Moeilik-puzzel, is dit 't ierste wat se perbeers. 't Vraog volledige notities, minstens veur 't ciefer det se bekieks. Vasgezatte kandidate kómme dèks veur: de meiste Moeilik-puzzels höbbe ze nuudig, en Expert-puzzels gebroeke ze tösse de groter patrone door."
+          ],
+          "spot": [
+            "Veur wieze bekieks se eder blok en eder ciefer det dao nog mis: es de kandidate veur det ciefer in ein rie of kolom ligke, kiek dan of 't ciefer wiejer langs die lien boete 't blok es kandidaat veurkump. Veur opeise kieks se langs 'n rie of kolom: es de kandidate veur e ciefer allemaol binne ein blok ligke, kin 't ciefer oet de res van det blok weg. Tik in 't spel op de toets van e ciefer óm al zien kandidate te markere; 'n rie van twee of drie gemarkeerde notities binne ein blok is 't patroon."
+          ],
+          "examples": [
+            {
+              "h": "Wieze",
+              "steps": [
+                "In blok {box} haet ciefer {d} allein dees kandidaatvekskes: {cells}. Ze ligke allemaol in rie {row}.",
+                "Blok {box} haet 'n {d} nuudig, dus de {d} van rie {row} ligk binne blok {box}, in welk van die vekskes 't ouch terechkump.",
+                "Rie {row} kin gein twiede {d} höbbe, dus haol {d} weg oet de vekskes van rie {row} boete 't blok: {elim}."
+              ]
+            },
+            {
+              "h": "Opeise",
+              "steps": [
+                "In rie {row} kin ciefer {d} allein in {cells}, en die ligke allemaol binne blok {box}.",
+                "Rie {row} moot {d} höbbe, dus de {d} van blok {box} weurt opgeeis door rie {row}. De anger vekskes van blok {box} kinne gein {d} höbbe.",
+                "Haol {d} weg oet {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "'t Ciefer binne 't blok weghaole in plaats van dao boete bie wieze, of ómgekierd bie opeise. De eliminaties gaon ummer nao de vekskes die wel in de lien mer neet in 't blok ligke, of wel in 't blok mer neet in de lien.",
+            "De regel toepasse es de kandidate euver twee rieje van 't blok verspreid ligke. Alle kandidaatvekskes veur 't ciefer in 't blok mote in ein lien ligke.",
+            "Vergete nao de single te zeuke die de eliminatie oplievert. Vasgezatte kandidate plaatse zelde zelf e ciefer; ze zètte 'n single klaor."
+          ],
+          "faq": [
+            [
+              "Wat zeen vasgezatte kandidate in Sudoku?",
+              "Kandidate veur e ciefer die opgesloete zitte in 't snijvlak van e blok en 'n lien. Ómdet 't blok, of de lien, 't ciefer binne det snijvlak moot höbbe, kin 't ciefer weg oet de res van de lien, of de res van 't blok."
+            ],
+            [
+              "Wat is 't versjil tösse wieze en opeise?",
+              "Wieze begint bie e blok: de kandidate van 't ciefer in 't blok wieze langs ein rie of kolom, dus 't ciefer geit weg oet de res van die lien. Opeise begint bie 'n rie of kolom: de kandidate van die lien veur 't ciefer ligke allemaol in ein blok, dus de lien eis 't ciefer op en 't geit weg oet de res van 't blok."
+            ],
+            [
+              "Heite vasgezatte kandidate ouch snijvlakeliminatie?",
+              "Jao. Anger name zeen blok-lien-reductie veur de opeisvörm en wiezende pare of wiezende drietalle veur de wiesvörm. Bare Sudoku gebroek ein naam veur allebei."
+            ],
+            [
+              "Op welk niveau höbs se vasgezatte kandidate nuudig?",
+              "Moeilik. E puzzel die vasgezatte kandidate of deilgróppe nuudig haet, mer nieks moeilikers, weurt es Moeilik ingedeild; Expert-puzzels höbbe ouch nog ein vès of vleugel nuudig."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Naakte pare en drietalle",
+          "title": "Naakte pare en drietalle in Sudoku: zoe wirke ze",
+          "description": "Naakte pare en drietalle: twee of drie vekskes in ein einheid mit dezelfde twee of drie kandidate. Lier ze te herkinne en wat se weghaols, mit echte veurbeelde.",
+          "h1": "Naakte pare en drietalle",
+          "summary": "E naak paar is twee vekskes in dezelfde rie, kolom of blok die zjuus dezelfde twee kandidate höbbe. De twee ciefers mote in die twee vekskes, dus ze kinne weg oet eder anger vekske van de einheid. E naak drietal is 't zelfde idee mit drie vekskes en drie ciefers; eder vekske kin twee of alle drie tuine. De hint van Bare Sudoku neump de plaatsing die dao oet volg \"Paar of drietal\".",
+          "when": [
+            "Es de notities volledig zeen en singles en vasgezatte kandidate op zeen. Naakte pare kómme in Moeilik-puzzels hiel dèks veur, naakte drietalle minder. Allebei zeen 't weerd óm te zeuke in eder einheid mit nog vief of mie laeg vekskes."
+          ],
+          "spot": [
+            "Zeuk vekskes mit mer twee kandidate en vin e anger vekske in dezelfde einheid mit dezelfde twee. Veur drietalle bekieks se einhede mit meerdere vekskes van twee en drie kandidate en kieks se of drie dervan same mer drie versjillende ciefers gebroeke. Vekskes mit zjuus dezelfde kandidate valle gemekelik op es de notities dao staon; Notities invölle in 't spel deit det mit ein tik."
+          ],
+          "examples": [
+            {
+              "h": "Naak paar",
+              "steps": [
+                "{cellA} en {cellB} in {unit} höbbe zjuus dezelfde twee kandidate: {d1} en {d2}.",
+                "Ein dervan moot {d1} zeen en de anger {d2}. Veer weite neet welk, mer beie ciefers weure door dees twee vekskes opgebroek.",
+                "Gein anger vekske in {unit} kin dus {d1} of {d2} höbbe. Haol {elim} weg."
+              ]
+            },
+            {
+              "h": "Naak drietal",
+              "steps": [
+                "Drie vekskes in {unit} haole al hun kandidate oet dezelfde drie ciefers, {digits}: {cells}.",
+                "De drie ciefers mote dees drie vekskes in de ein of anger volgorde völle. E vekske hoof neet alle drie kandidate te tuine; 't geit d'rum det gein van de drie vekskes 'n kandidaat boete de set haet.",
+                "Haol {digits} weg oet eder anger vekske van {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Twee vekskes numme die twee kandidate deile mer ouch nog 'n derde höbbe. Bie e naak paar moot eder vekske zjuus de twee kandidate höbbe en anders nieks.",
+            "De ciefers weghaole oet de vekskes van 't paar zelf. 't Paar hawt zien kandidate; de eliminaties gaon nao de anger vekskes van de einheid.",
+            "Eise det eder vekske van e drietal alle drie de ciefers tuint. E vekske mit twee van de drie is good, zoelang gein vekske 'n kandidaat boete de set haet."
+          ],
+          "faq": [
+            [
+              "Wat is e naak paar in Sudoku?",
+              "Twee vekskes in ein einheid die allebei zjuus dezelfde twee kandidate höbbe. Die twee ciefers zitte vas in die twee vekskes, dus ze kinne weg oet de res van de einheid."
+            ],
+            [
+              "Wat is e naak drietal?",
+              "Drie vekskes in ein einheid woevan de kandidate same mer drie ciefers zeen. Eder vekske kin dao twee of drie van höbbe. De drie ciefers völle de drie vekskes, dus ze kinne weg oet de anger vekskes van de einheid."
+            ],
+            [
+              "Plaats e naak paar e ciefer?",
+              "Neet op zichzelf. 't Haolt kandidate weg, en det liet meistal 'n naakte of verbórge single achter. De hint in Bare Sudoku tuint die single en neump de techniek die 'm meugelik maakde."
+            ],
+            [
+              "Kin e naak paar tegeliek in e blok en 'n rie ligke?",
+              "Jao. Es de twee vekskes 'n rie en e blok deile, eliminieert 't paar in beie einhede. Bare Sudoku behandelt ze ein einheid tegeliek."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Verbórge pare en drietalle",
+          "title": "Verbórge pare en drietalle in Sudoku: zoe vins se ze",
+          "description": "E verbórge paar: twee ciefers die allein in dezelfde twee vekskes van 'n einheid kinne, dus de anger kandidate dao valle weg. Lier ze stap veur stap te vinge.",
+          "h1": "Verbórge pare en drietalle",
+          "summary": "E verbórge paar is twee ciefers die binne ein rie, kolom of blok allein in dezelfde twee vekskes kandidaat zeen en nörges anders. Die twee vekskes mote die twee ciefers höbbe, dus eder anger kandidaat dao in kin weg. E verbórge drietal wirk op dezelfde manier mit drie ciefers die in drie vekskes opgesloete zitte. Nao 't weghaole tuine de vekskes e naak paar of drietal. De hint van Bare Sudoku neump de plaatsing die dao oet volg \"Paar of drietal\".",
+          "when": [
+            "Es 'n einheid vekskes mit väöl kandidate haet en de singles op zeen. Verbórge pare zitte versjtöp in volle vekskes, en daorum loent 't óm ze te zeuke krek dao woe gein naakte pare te zeen zeen. Verbórge drietalle zeen zeldzaam; Bare Sudoku zeuk dao wel nao, mer de meiste Moeilik-puzzels weure zónger opgelos."
+          ],
+          "spot": [
+            "Wirk per ciefer, neet per vekske. Noteer in 'n einheid de vekskes woe eder missend ciefer kin. Es twee ciefers eder mer twee meugelike vekskes höbbe en 't zeen dezelfde twee vekskes, dan höbs se e verbórge paar. Tik in 't spel op de toets van e ciefer óm zien kandidate te markere; es twee ciefers dezelfde twee vekskes van 'n einheid oplichte en anders nieks dao in, is det 't patroon."
+          ],
+          "examples": [
+            {
+              "h": "Verbórge paar",
+              "steps": [
+                "In {unit} höbbe de ciefers {d1} en {d2} eder mer twee meugelike vekskes, en 't zeen dezelfde twee: {cells}.",
+                "Die twee vekskes mote {d1} en {d2} höbbe, dus hun anger kandidate zeen ónmeugelik.",
+                "Haol {elim} weg. Noe tuine de twee vekskes e naak paar, wat nog mie kin losmake."
+              ]
+            }
+          ],
+          "mistakes": [
+            "De twee ciefers van 't paar weghaole oet de vekskes van 't paar. 't Zeen de anger kandidate van die vekskes die weg mote; de ciefers van 't paar blieve.",
+            "E ciefer accepteren det nog e derde meugelik vekske in de einheid haet. Beie ciefers mote zjuus tot de twee vekskes beperk zeen.",
+            "Allein in blokke zeuke. Verbórge pare kómme krek zoe dèks veur in rieje en kolomme."
+          ],
+          "faq": [
+            [
+              "Wat is e verbórge paar in Sudoku?",
+              "Twee ciefers die allein in dezelfde twee vekskes van 'n einheid kinne. Die vekskes mote die ciefers krige, dus hun anger kandidate weure weggehaold."
+            ],
+            [
+              "Wat is 't versjil tösse e verbórge paar en e naak paar?",
+              "E naak paar is te zeen: twee vekskes die allein dezelfde twee kandidate tuine. E verbórge paar weurt toegedèk door extra kandidate in de twee vekskes. Es se die extra's weghaols, weurt e verbórge paar e naak paar."
+            ],
+            [
+              "Wat is e verbórge drietal?",
+              "Drie ciefers die opgesloete zitte in drie vekskes van 'n einheid. Neet eder ciefer hoof in alle drie vekskes te staon; 't geit d'rum det gein van de drie ciefers 'n kandidaat boete die vekskes haet."
+            ],
+            [
+              "Maak de hint versjil tösse verbórge en naakte pare?",
+              "Nee. Bare Sudoku vint allebei en neump de plaatsing die dao oet volg \"Paar of drietal\". De pagina's hie haole ze oetein ómdet se ze op 'n anger manier vins."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing in Sudoku: zoe wirk de techniek",
+          "description": "X-Wing: e ciefer mit zjuus twee kandidaatvekskes in twee rieje, in dezelfde twee kolomme, valt weg oet de res van die kolomme. Mit e echt veurbeeld.",
+          "h1": "X-Wing",
+          "summary": "'n X-Wing is e patroon van ein ciefer en veer vekskes op de veer punte van 'n rechhook. Es 't ciefer in twee rieje eder zjuus twee kandidaatvekskes haet, en die vekskes ligke in dezelfde twee kolomme, dan moot 't ciefer twee tegenoverligkende punte van de rechhook bezètte. 't Kin dus weg oet eder anger vekske van die twee kolomme. Mit rieje en kolomme ómgedreid wirk 't ouch. 't Is de ierste Expert-techniek in Bare Sudoku.",
+          "when": [
+            "Es singles, vasgezatte kandidate en deilgróppe op zeen. X-Wings zeen 't meis veurkómmend Expert-patroon en versjiene dèks es e ciefer nog mer weinig kandidate haet, meistal es der al veer toet zes exemplare van staon. Ze vraoge volledige notities veur 't ciefer det se bekieks."
+          ],
+          "spot": [
+            "Kies e ciefer en zeuk rieje woe-in 't zjuus twee kandidaatvekskes haet. Es twee van die rieje dezelfde twee kolomme deile, kiek dan in die kolomme nao anger kandidate van 't ciefer: det zeen de eliminaties. Doe 't daonao nog ins mit kolomme es basis. Tik in 't spel op de toets van 't ciefer: eder kandidaat dervan lich op, en 'n rechhook van veer gemarkeerde notities zuus se gemekelik."
+          ],
+          "examples": [
+            {
+              "h": "Veurbeeld",
+              "steps": [
+                "Ciefer {d} haet zjuus twee kandidaatvekskes in rie {r1} en zjuus twee in rie {r2}, en die ligke in dezelfde twee kolomme, {c1} en {c2}: {cells}.",
+                "Rie {r1} zèt zien {d} in kolom {c1} of {c2}, en rie {r2} zèt zien {d} in de anger. Hoe 't ouch oetvilt, kolom {c1} en {c2} krige eder ein {d} oet dees twee rieje.",
+                "Dus kin {d} nörges anders in kolom {c1} en {c2} staon. Haol {d} weg oet {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "'n Rie gebroeke die drie kandidaatvekskes veur 't ciefer haet. Eder basisrie moot zjuus twee höbbe, en allebei in de twee gedeilde kolomme.",
+            "'t Ciefer oet de rieje weghaole in plaats van oet de kolomme. Mit rieje es basis ligke de eliminaties in de kolomme, en ómgekierd.",
+            "De ómgedreide versie vergete. 'n X-Wing op kolomme eliminieert in rieje."
+          ],
+          "faq": [
+            [
+              "Wat is 'n X-Wing in Sudoku?",
+              "E ciefer det in twee rieje eder zjuus twee kandidaatvekskes haet, in dezelfde twee kolomme. 't Ciefer bezèt twee tegenoverligkende punte van die rechhook, dus 't geit weg oet de res van de twee kolomme. Rieje en kolomme kinne ómgedreid weure."
+            ],
+            [
+              "Woeróm wirk 'n X-Wing?",
+              "Eder van de twee rieje moot 't ciefer in ein van de twee kolomme zètte, en de twee rieje kinne neet dezelfde kolom gebroeke. Dus krige de twee kolomme eder hun exemplaar van 't ciefer oet dees rieje, en eder anger kandidaat in die kolomme is ónmeugelik."
+            ],
+            [
+              "Is 'n X-Wing e vès?",
+              "Jao. De X-Wing is de vès van maot twee; Swordfish is de vès van maot drie. Bare Sudoku vint allebei."
+            ],
+            [
+              "Op welk niveau kómme X-Wings veur?",
+              "Expert. E puzzel die 'n X-Wing, Y-Wing, Swordfish of XYZ-Wing nuudig haet, weurt es Expert ingedeild."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: zoe wirk de techniek",
+          "description": "Y-Wing (XY-Wing): 'n spil mit twee kandidate en twee vleugels die eder ein dervan deile, drieve e ciefer oet eder vekske det beie vleugels zuut. Mit veurbeeld.",
+          "h1": "Y-Wing",
+          "summary": "'n Y-Wing, ouch XY-Wing geneump, gebroek drie vekskes mit eder twee kandidate. De spil haet de kandidate X en Y. Ein vleugel zuut de spil en haet X en Z; de anger vleugel zuut de spil en haet Y en Z. Wat de spil ouch is, ein van de vleugels moot Z zeen, dus Z kin weg oet eder vekske det beie vleugels zuut. 't Is 'n Expert-techniek in Bare Sudoku.",
+          "when": [
+            "Es e puzzel meerdere vekskes mit zjuus twee kandidate haet en der gein vès te vinge is. Y-Wings kómme dèks veur in Expert-puzzels en weure gevónge door de vekskes mit twee kandidate te volge: eder dervan is 'n meugelike spil of vleugel."
+          ],
+          "spot": [
+            "Maak 'n lies van de vekskes mit zjuus twee kandidate. Behandel eder es spil mit kandidate X en Y, en zeuk tösse zien naobers e vekske mit X en e anger ciefer Z, en e vekske mit Y en dezelfde Z. Die twee zeen de vleugels. Zeuk dan vekskes die beie vleugels zeen en Z bevatte. Let op: de vleugels hoove mekaar neet te zeen."
+          ],
+          "examples": [
+            {
+              "h": "Veurbeeld",
+              "steps": [
+                "De spil {pivot} haet de kandidate {x} en {y}. Hae zuut {wingA}, mit {x} en {z}, en {wingB}, mit {y} en {z}.",
+                "Es {pivot} {x} is, verlüs {wingA} {x} en weurt {z}. Es {pivot} {y} is, weurt {wingB} {z}. In eder geval is ein van de twee vleugels {z}.",
+                "E vekske det beie vleugels zuut, kin noets {z} zeen. Haol {z} weg oet {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Vleugels kieze die neet allebei de spil zeen. Eder vleugel moot 'n rie, kolom of blok mit de spil deile.",
+            "Z weghaole oet vekskes die mer ein vleugel zeen. 't Vekske woe se Z oet weghaols moot beie vleugels zeen.",
+            "Z weghaole oet de spil. In 'n Y-Wing haet de spil gein Z; haet hae dat wel, dan is 't patroon 'n XYZ-Wing mit anger regels."
+          ],
+          "faq": [
+            [
+              "Wat is 'n Y-Wing in Sudoku?",
+              "Drie vekskes mit twee kandidate: 'n spil mit X en Y, 'n vleugel mit X en Z die de spil zuut, en 'n vleugel mit Y en Z die de spil zuut. Ein vleugel is ummer Z, dus Z geit weg oet vekskes die beie vleugels zeen."
+            ],
+            [
+              "Is Y-Wing 't zelfde es XY-Wing?",
+              "Jao. De twee name besjrieve 't zelfde patroon. Bare Sudoku neump 't Y-Wing."
+            ],
+            [
+              "Woeróm moot ein vleugel Z zeen?",
+              "Es de spil X is, verlüs de ierste vleugel X en weurt Z. Es de spil Y is, weurt de twiede vleugel Z. De spil is ein van beie, dus ein vleugel is Z."
+            ],
+            [
+              "Wieväöl vekskes eliminieert 'n Y-Wing?",
+              "Meistal ein of twee: allein de vekskes die beie vleugels zeen en nog Z höbbe. Det is genóg óm 'n single te make."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish in Sudoku: zoe wirk de techniek",
+          "description": "Swordfish: e ciefer det in drie rieje opgesloete zit in drie kolomme, valt weg oet de res van die kolomme. De vès van maot drie, mit e echt veurbeeld.",
+          "h1": "Swordfish",
+          "summary": "'n Swordfish is 'n X-Wing mit drie rieje en drie kolomme. Es e ciefer in drie rieje eder hoegstens drie kandidaatvekskes haet, en al die vekskes valle in dezelfde drie kolomme, dan gebroeke de drie rieje 't ciefer in die kolomme op, en kin 't ciefer weg oet eder anger vekske van de drie kolomme. Rieje en kolomme kinne ómgedreid weure. Bare Sudoku zeuk nao Swordfish nao de Y-Wing, in Expert-puzzels.",
+          "when": [
+            "Es X-Wing en Y-Wing nieks vinge. Swordfish kump minder dèks veur es X-Wing en vraog e ciefer woevan de kandidate dun euver drie liene verspreid ligke. 't Vraog volledige en korrekte notities veur det ciefer."
+          ],
+          "spot": [
+            "Kies e ciefer en zeuk rieje mit twee of drie kandidaatvekskes dao veur. Es drie van die rieje same mer drie kolomme dèkke, kiek dan in die kolomme nao anger kandidate van 't ciefer. Neet eder rie hoof in eder kolom 'n kandidaat te höbbe: 'n Swordfish kin zes, zeve, ach of nege vekskes höbbe. Markeer in 't spel 't ciefer mit zien toets en zeuk drie rieje woevan de kandidate in drie kolomme ligke."
+          ],
+          "examples": [
+            {
+              "h": "Veurbeeld",
+              "steps": [
+                "Ciefer {d} haet hoegstens drie kandidaatvekskes in eder van de rieje {rows}, en al die vekskes valle in de kolomme {cols}: {cells}.",
+                "Eder van de drie rieje moot zien {d} in ein van de drie kolomme zètte, en gein twee rieje kinne dezelfde kolom gebroeke. Dus krige de drie kolomme hun {d} oet dees drie rieje.",
+                "Eder anger kandidaat {d} in de kolomme {cols} is ónmeugelik. Haol {d} weg oet {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Alle nege vekskes eise. 'n Swordfish mit twee kandidate in sommige rieje is gewoen geldig, zoelang de drie rieje mer drie kolomme dèkke.",
+            "'n Rie mit veer kandidaatvekskes mitnumme. Eder basisrie moot hoegstens drie höbbe, allemaol binne de drie kolomme.",
+            "In de basisrieje elimineren. Mit rieje es basis ligke de eliminaties in de drie kolomme, boete de basisrieje."
+          ],
+          "faq": [
+            [
+              "Wat is 'n Swordfish in Sudoku?",
+              "E ciefer woevan de kandidate in drie rieje opgesloete zitte in drie kolomme. De drie rieje mote 't ciefer in die drie kolomme zètte, ein per kolom, dus 't ciefer geit weg oet de anger vekskes van die kolomme."
+            ],
+            [
+              "Wat is 't versjil tösse 'n Swordfish en 'n X-Wing?",
+              "Allein de maot: 'n X-Wing gebroek twee rieje en twee kolomme, 'n Swordfish drie en drie. De redenering is dezelfde."
+            ],
+            [
+              "Haet 'n Swordfish zjuus nege vekskes nuudig?",
+              "Nee. Eder rie kin twee of drie kandidate höbbe; 't patroon vraog allein det de drie rieje same neet mie es drie kolomme gebroeke."
+            ],
+            [
+              "Besteit der 'n vès van maot veer?",
+              "Jao, de Jellyfish. Bare Sudoku gebroek 'm neet, ómdet zien puzzels 'm noets nuudig höbbe."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: zoe wirk de techniek",
+          "description": "XYZ-Wing: 'n spil mit drie kandidate en twee vleugels die ein dervan deile, drieve det ciefer oet eder vekske det alle drie zuut. Echt veurbeeld stap veur stap.",
+          "h1": "XYZ-Wing",
+          "summary": "'n XYZ-Wing is 'n Y-Wing woevan de spil drie kandidate haet. De spil haet X, Y en Z; ein vleugel zuut de spil en haet X en Z, de anger zuut de spil en haet Y en Z. Ein van de drie vekskes moot Z zeen, dus Z kin weg oet eder vekske det alle drie zuut. Ómdet de spil zelf Z kin zeen, moot 't vekske woe Z oet weg geit de spil en beie vleugels zeen, en det beperk 't tot 't blok of de lien die de vekskes deile. 't Is de moeilikste techniek die Bare Sudoku gebroek.",
+          "when": [
+            "Allein es al 't anger mislök. XYZ-Wings zeen 't zeldzaamste patroon in Bare Sudoku en kómme allein in Expert-puzzels veur. Zeuk ze es e vekske mit drie kandidate in e blok ligk mit e vekske mit twee kandidate det twee van zien ciefers deilt."
+          ],
+          "spot": [
+            "Begin bie vekskes mit zjuus drie kandidate; eder is 'n meugelike spil. Zeuk tösse zien naobers twee vekskes mit eder twee kandidate, allebei oet de drie van de spil, die zjuus ein ciefer Z deile. Zeuk dan vekskes die de spil en beie vleugels zeen en Z bevatte. In de praktiek ligk ein vleugel in 't blok van de spil en de anger in zien rie of kolom, en zeen de vekskes woe Z oet weg geit de euverige vekskes van det blok in die rie of kolom."
+          ],
+          "examples": [
+            {
+              "h": "Veurbeeld",
+              "steps": [
+                "De spil {pivot} haet drie kandidate: {x}, {y} en {z}. Hae zuut {wingA} mit {x} en {z}, en {wingB} mit {y} en {z}.",
+                "Es {pivot} {z} is, klaor. Es hae {x} is, moot {wingA} {z} zeen. Es hae {y} is, moot {wingB} {z} zeen. In eder geval is ein van de drie vekskes {z}.",
+                "E vekske det alle drie zuut, kin gein {z} zeen. Haol {z} weg oet {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Elimineren in vekskes die allein de twee vleugels zeen. Angers es bie 'n Y-Wing kin de spil Z zeen, dus 't vekske moot ouch de spil zeen.",
+            "Vleugels gebroeke woevan de kandidate neet allebei binne de drie kandidate van de spil valle.",
+            "'t Verwarre mit 'n Y-Wing: 't versjil is de derde kandidaat in de spil, en det verangert welke vekskes se kins opruume."
+          ],
+          "faq": [
+            [
+              "Wat is 'n XYZ-Wing in Sudoku?",
+              "'n Spil mit kandidate X, Y en Z en twee vleugels, ein mit X en Z en ein mit Y en Z, die allebei de spil zeen. Ein van de drie vekskes is Z, dus Z geit weg oet vekskes die alle drie zeen."
+            ],
+            [
+              "Wat is 't versjil tösse 'n XYZ-Wing en 'n Y-Wing?",
+              "De spil haet drie kandidate in plaats van twee, inclusief Z. Daodoor kin Z ouch in de spil terechkómme, dus allein vekskes die de spil en beie vleugels zeen kinne Z kwiet raoke."
+            ],
+            [
+              "Wie dèks kump 'n XYZ-Wing veur?",
+              "Zelde. In Bare Sudoku kinne allein Expert-puzzels ein nuudig höbbe, en de meiste neet. Bare Sudoku kiek d'r es lèste nao, nao X-Wing, Y-Wing en Swordfish."
+            ],
+            [
+              "Besteit der 'n WXYZ-Wing?",
+              "Jao, mit 'n spil van veer kandidate, mer Bare Sudoku gebroek 'm neet. Eder puzzel in 't spel kin weure aafgemaak mit de nege technieke van dees gids."
             ]
           ]
         }
