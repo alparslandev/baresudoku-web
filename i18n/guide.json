@@ -75078,6 +75078,588 @@
         }
       }
     },
+    "ak": {
+      "learnHeading": "Sua Sudoku",
+      "learnText": "Woyɛ foforo wɔ Sudoku mu, anaa asɛmmisa a ɛyɛ den bi asi wo kwan? Akwankyerɛ mmienu kyerɛkyerɛ mmara no ne ɔkwan biara a nkyerɛkyerɛmu no fa so mu, na emu biara wɔ nhwɛsoɔ ankasa.",
+      "howToLink": "Sɛnea wodi Sudoku",
+      "techniquesLink": "Akwan a wɔfa so di Sudoku ho dwuma",
+      "labels": {
+        "howTo": "Sɛnea wodi",
+        "techniques": "Akwan",
+        "play": "Di Sudoku",
+        "prev": "Ɔkwan a atwam",
+        "next": "Ɔkwan a edi so",
+        "all": "Akwan nyinaa",
+        "example": "Nhwɛsoɔ",
+        "steps": "Anammɔn anammɔn",
+        "when": "Bere a wode bedi dwuma",
+        "spot": "Sɛnea wobehu",
+        "mistakes": "Mfomso a ɛtaa ba",
+        "inGame": "Wɔ Bare Sudoku mu",
+        "level": "Ɛhia fi agyinaeɛ yi so: {level}",
+        "hint": "Wɔ agodie no mu, nkyerɛkyerɛmu no ka sɛ: {text}",
+        "legend": "Nɔma a wɔakyerɛw no duruduru no na wɔde ama, nɔma bruu no na wɔde too hɔ bere a na woredi ho dwuma, na nɔma nketewa no ne nea ɛfata. Dan a ahyerɛn no na ɛyɛ nhyehyɛe no, nea ɛfata a wɔatwa mu no na wɔyi fi hɔ, na nea ɛfata a wɔatwa kurukuruwa ahyia ho no ne nɔma a wode bɛto hɔ.",
+        "notation": "Wɔkyerɛw dan te sɛ r3c7: nsantee 3, kɔlɔm 7. Wofi soro na ɛkan nsantee, wofi benkum na ɛkan kɔlɔm, na wofi benkum soro na ɛkan adaka 1 kosi 9, nsantee nsantee.",
+        "row": "nsantee {n}",
+        "column": "kɔlɔm {n}",
+        "box": "adaka {n}",
+        "elimItem": "{d} fi {cell} mu",
+        "regions": "Nsantee 5, kɔlɔm 5 ne adaka 5 wɔ asɛmmisa no mfiase",
+        "firstMove": "Biako a ɛda adi: {cell} betumi ayɛ {d} nko ara",
+        "breadcrumb": "Baabi a wowɔ"
+      },
+      "howTo": {
+        "title": "Sɛnea Wodi Sudoku: Mmara, Pon no ne Anammɔn a Edi Kan",
+        "description": "Sua sɛnea wodi Sudoku: mmara no, sɛnea nsantee, kɔlɔm ne adaka yɛ adwuma, nea enti asɛmmisa biara wɔ ano biako, nsɛm a wɔakyerɛw ne anammɔn a edi kan.",
+        "h1": "Sɛnea wodi Sudoku",
+        "summary": "Sudoku yɛ adwene asɛmmisa a ɛwɔ 9×9 grid so. Hyɛ dan hunu biara ma de nɔma fi 1 kosi 9 sɛnea ɛbɛyɛ a nsantee biara, kɔlɔm biara ne 3×3 adaka biara bɛkura nɔma biara pɛnkoro pɛ. Wɔde nɔma bi ma wɔ mfiase; wode adwene hwehwɛ nea aka no, dan biako a wunim no pɛpɛɛpɛ bere biara, na ɛnhia sɛ wususu da. Akwankyerɛ yi kyerɛkyerɛ pon no, mmara no, ano biako nnyinasoɔ no, nsɛm a wɔakyerɛw ne ɔkwan mmerɛw bi a wobɛfa so ayɛ wo anammɔn a edi kan mu. Wobɛtumi ayɛ ne nyinaa ho adwuma wɔ [Bare Sudoku](play) mu, a wontua hwee na ne nkyerɛkyerɛmu kyerɛkyerɛ adwene a ɛwɔ akyi no mu.",
+        "sections": [
+          {
+            "h": "Sudoku mmara ne dɛn?",
+            "p": [
+              "Mmara mmiɛnsa pɛ na ɛwɔ hɔ, na ɛyɛ mmara biako a wohwɛ no fi afa mmiɛnsa: ɛsɛ sɛ nsantee biara kura nɔma 1 kosi 9, ɛsɛ sɛ kɔlɔm biara kura nɔma 1 kosi 9, na ɛsɛ sɛ 3×3 adaka biara kura nɔma 1 kosi 9. Enti nɔma biara ntumi mpue mprenu wɔ nsantee, kɔlɔm anaa adaka koro mu da.",
+              "Nɔma a wɔde ama no, a wɔakyerɛw no duruduru no, ntumi nsesa. Wo adwuma ne sɛ wobɛhyɛ dan hunu no ma. Akontaabu biara nni mu, na nɔma no ntoatoaso nso nhia: nɔma no yɛ agyiraeɛ akron a ɛnsɛ kɛkɛ. Sɛ wode nkyerɛwde anaa nsɛsodeɛ di agorɔ no a, biribiara rensesa."
+            ]
+          },
+          {
+            "h": "Ɔkwan bɛn so na wɔahyehyɛ pon no?",
+            "p": [
+              "Pon no wɔ dan 81 wɔ nsantee 9 ne kɔlɔm 9 mu. Nsensanee akɛse kyekyɛ mu yɛ no 3×3 adaka akron. Dan biara wɔ nsantee biako pɛ, kɔlɔm biako pɛ ne adaka biako pɛ mu, na saa akuw mmiɛnsa yi ne ne akuw. Dan 20 foforo a ɛne dan bi wɔ kuw koro mu no, wɔfrɛ wɔn ne mfɛfo; sɛ wode nɔma bi to dan bi mu a, ɛyi saa nɔma no fi ne mfɛfo 20 no nyinaa so.",
+              "Wɔkyerɛw dan te sɛ r3c7: nsantee 3, kɔlɔm 7. Wofi soro na ɛkan nsantee, wofi benkum na ɛkan kɔlɔm, na wofi benkum soro na ɛkan adaka 1 kosi 9, nsantee nsantee. Wɔde saa kyerɛwbea yi di dwuma wɔ ɔkwan biara ho akwankyerɛ mu, na ɛfata sɛ wusua: r5c5 ne pon no mfinimfini."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Adɛn nti na Sudoku biara wɔ ano biako pɛ?",
+            "p": [
+              "Sudoku pa wɔ ano biako, na ɛno na ɛma adwene yɛ adwuma. Bere biara a wobɛtumi akyerɛ sɛ nɔma bi ntumi nkɔ baabi foforo wɔ kuw bi mu no, ɛsɛ sɛ ɛkɔ dan a aka no mu, efisɛ ano no wɔ hɔ na ɛyɛ biako pɛ. Sɛ asɛmmisa bi wɔ ano mmienu a, adwene biara rentumi nkyerɛ nsonsonoe a ɛda wɔn ntam, na ɛbɛhyɛ wo ma woasusu bere bi.",
+              "Bare Sudoku yɛ asɛmmisa biara wɔ wo mfiri so, na ɛhwɛ sɛ ɛwɔ ano biako pɛ ne sɛ ne nea ɔde adwene di ho dwuma no betumi de agyinaeɛ a woapaw no akwan awie. Enti sɛ ɛsi wo kwan a, anammɔn a edi so bi wɔ hɔ bere biara a wobɛhwehwɛ, na nkyerɛkyerɛmu no kyerɛ."
+            ]
+          },
+          {
+            "h": "Ɔkwan bɛn so na wofi Sudoku asɛmmisa ase?",
+            "p": [
+              "Fi baabi a akwan sua sen biara ase. Saa nhyehyɛe yi yɛ adwuma wɔ agyinaeɛ biara so:"
+            ],
+            "list": [
+              "Paw nɔma bi a apue mpɛn pii dedaw, te sɛ mprensia anaa mpɛn ason, na hwehwɛ adaka a ennya nnyaa no. Mpɛn pii no, dan biako pɛ na aka ama no wɔ adaka bi mu: ɛno ne [biako a ahintaw](hidden-single).",
+              "Hwehwɛ dan a nea atwa ho ahyia ayɛ ma. Dan a ne nsantee, ne kɔlɔm ne n'adaka bom kura nɔma nwɔtwe a ɛnsɛ no, nea ɛfata biako pɛ na aka ama no: [biako a ɛda adi](naked-single). Dan a ɛwɔ nsantee anaa adaka a ayɛ kakra ama mu ne baabi pa a wobɛhwɛ.",
+              "Nɔma biara a wode to hɔ yi nea ɛfata biako fi ne mfɛfo 20 mu, enti hwɛ saa mfɛfo no ntɛm ara. Biako taa ba toatoa so.",
+              "Sɛ nɔma a ɛyɛ mmerɛw sɛ wode bɛto hɔ no sa a, kyerɛw nsɛm no: nea ɛfata ma dan hunu biara. Afei hwehwɛ nɔma bi a wɔde ato nsantee anaa kɔlɔm biako mu wɔ adaka bi mu ([nea wɔato mu](locked-candidates)) anaa dan mmienu a wɔn nea ɛfata mmienu no yɛ pɛ ([mmienu a ɛda adi](naked-pairs)).",
+              "Woyi nea ɛfata biara a, san hwehwɛ biako. Mpo Ɔbenfo nsɛmmisa no, biako na wɔde di dodow no ara ho dwuma; ɔkwan a ɛkɔ anim no bue nea edi so no kwan kɛkɛ."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Dɛn ne nsɛm a wɔakyerɛw, na bere bɛn na ɛsɛ sɛ wode di dwuma?",
+            "p": [
+              "Nsɛm a wɔakyerɛw, a wɔsan frɛ no pɛnsere nsɛnkyerɛnne anaa nea ɛfata, ne nɔma nketewa a wokyerɛw wɔ dan hunu mu de kyerɛ nɔma a ebetumi akɔ hɔ. Wɔ nsɛmmisa a ɛyɛ mmerɛw mu no, ɛntaa nhia wo; efi Ɛyɛ den kɔ soro no, ɛho hia yiye, efisɛ akwan te sɛ mmienu, X-Wing ne Y-Wing fa nea ɛfata ho, ɛnyɛ nɔma a wɔde ato hɔ.",
+              "Ma wo nsɛm a wɔakyerɛw no nyɛ nokware: sɛ wode nɔma bi to hɔ a, yi fi ne mfɛfo 20 no nyinaa nsɛm mu. Wɔ Bare Sudoku mu no, eyi yɛ ne ho, na Hyɛ nsɛm a wɔakyerɛw ma kyerɛw nea ɛfata biara gu dan hunu biara mu wɔ mia biako mu, enti wobɛtumi afi nea ɛfata a edi mu na ɛyɛ nokware ase. Asɛm a wɔakyerɛw yɛ nokwasɛm, ɛnyɛ nsusuwii: ɛkyerɛ sɛ biribiara nnya nyii saa nɔma yi mfii hɔ."
+            ]
+          },
+          {
+            "h": "Dɛn na ɛsɛ sɛ woyɛ sɛ ɛsi wo kwan a?",
+            "p": [
+              "Di kan san hwɛ nneɛma titiriw no: nsantee, kɔlɔm ne adaka biara a ayɛ kakra ama no yɛ baabi a biako fi ba. Afei hwɛ sɛ wo nsɛm a wɔakyerɛw no di mu, efisɛ nea ɛfata a ɛyera hintaw nhyehyɛe, na nea ɛfata a ɛnsɛ hɔ bio bɔ nhyehyɛe a ɛnyɛ nokware. Afei fa [akwan](techniques) no so sɛnea wɔn den te: nea wɔato mu, mmienu ne mmiɛnsa, X-Wing, Y-Wing, Swordfish ne XYZ-Wing. Emu biara wɔ ne krataafa a nhwɛsoɔ ankasa wɔ so.",
+              "Sɛ biribiara anyɛ yiye a, fa nkyerɛkyerɛmu. Wɔ Bare Sudoku mu no, nkyerɛkyerɛmu no di kan hwɛ sɛ nɔma bi a wode ato hɔ nyɛ nokware, afei ɛhwehwɛ dan a edi so a wobɛtumi de adwene ahyɛ ma na ɛbɔ ɔkwan no din, enti wusua biribi mpo bere a wode di dwuma. Mia nkyerɛkyerɛmu no bio na ɛde nɔma no ato hɔ."
+            ]
+          },
+          {
+            "h": "Ɔkwan bɛn so na wode nɔma hyɛ Bare Sudoku mu?",
+            "p": [
+              "Mia dan bi, afei mia nɔma bi. Anaa di kan mia nɔma: ɛto mu, na dan biara a wobɛmia no nya no, na ɛno ne ɔkwan a ɛyɛ ntɛm sen biara a wode bɛto nɔma bi a ɛto so asia, ason ne awotwe no. Mia nɔma no bio na ɛbue. Nsɛm a wɔakyerɛw bɔtɔm no dan kɔ pɛnsere nsɛnkyerɛnne so, Popa pepa dan bi, San kɔ sane anammɔn biara, na wɔde kɔkɔɔ kyerɛ mfomso gye sɛ wodum no wɔ menu no mu.",
+              "Wɔ keyboard so no, fa agyan nsafe no kɔ baabiara, 1 kosi 9 de hyɛ nɔma, Backspace de popa, N ma nsɛm a wɔakyerɛw, U ma san kɔ, H ma nkyerɛkyerɛmu, F de hyɛ nsɛm a wɔakyerɛw ma, ne Escape ma menu no. Agodie no kora ne ho so, ɛyɛ adwuma a intanɛt nni hɔ, dawurubɔ biara nni mu, na ɛnhia sɛ wobue akawnt."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Ɛho hia sɛ wususu wɔ Sudoku mu da?",
+            "Ɛnhia wɔ asɛmmisa pa mu. Bare Sudoku asɛmmisa biara wɔ ano biako pɛ, na wɔahwɛ sɛ wobɛtumi de adwene nko ara adi ho dwuma, de akɔsi n'agyinaeɛ akwan so. Sɛ wote nka sɛ ɛsɛ sɛ wususu a, nea ɛfata bi ayera wɔ wo nsɛm a wɔakyerɛw mu, anaa ɔkwan bi retwɛn sɛ wobɛhu no."
+          ],
+          [
+            "Nɔma bi betumi apue mprenu wɔ nsantee, kɔlɔm anaa adaka mu?",
+            "Dabi. Ɛno ne mmara no nyinaa: nsantee akron, kɔlɔm akron ne adaka akron no mu biara kura nɔma biara fi 1 kosi 9 pɛnkoro pɛ. Sɛ nɔma mmienu a ɛsɛ wɔ kuw koro mu a, anyɛ yiye koraa no emu biako nyɛ nokware."
+          ],
+          [
+            "Nsonsonoe bɛn na ɛda Ɛyɛ mmerɛw, Mfinimfini, Ɛyɛ den ne Ɔbenfo ntam?",
+            "Akwan a asɛmmisa no hia na ɛkyerɛ n'agyinaeɛ. Ɛyɛ mmerɛw ne Mfinimfini de biako nko ara na wodi ho dwuma, na Ɛyɛ mmerɛw de nɔma 38 anaa nea ɛboro saa a wɔde ama na ɛfi ase. Ɛyɛ den hia nea wɔato mu anaa mmienu ne mmiɛnsa. Ɔbenfo hia X-Wing, Y-Wing, Swordfish anaa XYZ-Wing."
+          ],
+          [
+            "Ɛyɛ papa sɛ wobɛhyɛ nsɛm a wɔakyerɛw ama dan biara anaa ebi nko ara?",
+            "Wɔ Ɛyɛ den ne Ɔbenfo nsɛmmisa mu no, hyɛ ne nyinaa ma: nhyehyɛe te sɛ mmienu, X-Wing ne Y-Wing da adi bere a wɔakyerɛw nea ɛfata biara nko ara. Wɔ Ɛyɛ mmerɛw ne Mfinimfini mu no, nsɛm a wɔakyerɛw yɛ wo pɛ, na agodifo dodow no ara hwehwɛ biako kɛkɛ."
+          ],
+          [
+            "Bere bɛn na Sudoku gye?",
+            "Ɛyɛ mmerɛw asɛmmisa gye simma kakraa bi; Ɔbenfo nsɛmmisa betumi agye simma aduonu anaa nea ɛboro saa, ɛgyina sɛnea wuhu nhyehyɛe a ɛkɔ anim no ntɛm so. Bare Sudoku kyerɛ dɔnhwerew, ɛgyina no bere a menu no abue, na ɛnkora akansifo din, enti di agorɔ no wɔ w'ankasa wo ahoɔhare so."
+          ],
+          [
+            "Sudoku hia akontaabu?",
+            "Dabi. Nɔma no yɛ din kɛkɛ; ɛnhia sɛ wobɔ ka anaa wokan biribi. Agyiraeɛ akron biara bɛyɛ adwuma, na ɛno nti na Sudoku yɛ adwene asɛmmisa sen nɔma asɛmmisa."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Akwan a Wɔfa so Di Sudoku Ho Dwuma ne Nhwɛsoɔ",
+        "description": "Sudoku akwan akron nyinaa, efi biako a ɛda adi kosi Swordfish ne XYZ-Wing, sɛnea Bare Sudoku nkyerɛkyerɛmu fa so no, na emu biara wɔ nhwɛsoɔ ankasa.",
+        "h1": "Akwan a wɔfa so di Sudoku ho dwuma",
+        "intro": [
+          "Wobɛtumi de adwene akwan kakraa bi adi Sudoku biara ho dwuma. Saa krataafa yi bobɔ akwan akron a Bare Sudoku dwumayɛfo ne ne nkyerɛkyerɛmu de di dwuma no din, sɛnea dwumayɛfo no sɔ hwɛ no: biako di kan, afei nea wɔyi fi nea ɛfata mu wɔ kuw biako mu, afei nhyehyɛe a etrɛw nsantee ne kɔlɔm pii so. Ɔkwan biara wɔ ne krataafa a nkyerɛase, sɛnea wobehu no, nhwɛsoɔ ankasa a efi asɛmmisa a wɔayɛ mu ne mfomso a ɛtaa ba wɔ so.",
+          "Ɔkwan a ɛyɛ den sen biara a asɛmmisa bi hia na ɛkyerɛ n'agyinaeɛ. Ɛyɛ mmerɛw ne Mfinimfini nsɛmmisa hia biako nko ara, Ɛyɛ den nsɛmmisa hia nea wɔato mu anaa mmienu ne mmiɛnsa, na Ɔbenfo nsɛmmisa hia apataa anaa ntaban biako anyɛ yiye koraa. Agyinaeɛ biara a ɛyɛ no, biako na ɛyɛ adwuma no dodow; ɔkwan a ɛkɔ anim no yi nea ɛfata biako anaa mmienu, na biako toa so fi hɔ."
+        ],
+        "faq": [
+          [
+            "Nhyehyɛe bɛn so na ɛsɛ sɛ mesɔ Sudoku akwan no hwɛ?",
+            "Nea ɛyɛ mmerɛw di kan: biako a ɛda adi, biako a ahintaw, nea wɔato mu, mmienu ne mmiɛnsa a ɛda adi, mmienu ne mmiɛnsa a ahintaw, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku sɔ hwɛ saa nhyehyɛe yi pɛpɛɛpɛ, na nkyerɛkyerɛmu bɔ ɔkwan a ɛyɛ mmerɛw sen biara a ɛde nkɔso ba no din daa."
+          ],
+          [
+            "Mehia saa akwan yi nyinaa ansa na matumi adi Sudoku ho dwuma?",
+            "Wɔ Ɛyɛ mmerɛw ne Mfinimfini nsɛmmisa mu no, biako dɔɔso. Ɛyɛ den nsɛmmisa de nea wɔato mu ne mmienu ne mmiɛnsa ka ho. Ɔbenfo nsɛmmisa hia apataa anaa ntaban biako anyɛ yiye koraa, nanso mpɛn pii no, ɛyɛ pɛnkoro anaa mprenu pɛ wɔ asɛmmisa biara mu."
+          ],
+          [
+            "Akwan bi wɔ hɔ a ɛyɛ den sen XYZ-Wing?",
+            "Aane, te sɛ nkɔnsɔnkɔnsɔn, ano biako ho sɔhwɛ ne nhama a ɛhyɛ (forcing nets). Bare Sudoku nyɛ nsɛmmisa a ɛhia saa akwan yi, enti asɛmmisa biara a ɛwɔ agodie no mu, wobɛtumi de akwan akron a ɛwɔ saa krataafa yi so no awie."
+          ],
+          [
+            "Dɛn ne nea ɛfata?",
+            "Nɔma a ebetumi akɔ dan hunu bi mu efisɛ biribiara a ɛwɔ ne nsantee, ne kɔlɔm anaa n'adaka mu nnya nyii no mfii hɔ. Nsɛm a wɔakyerɛw wɔ agodie no mu yɛ nea ɛfata. Ɔkwan biara a ɛboro biako so de adwene fa nea ɛfata ho, enti ma ɛnyɛ nea edi mu na ɛyɛ nokware."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Biako a ɛda adi",
+          "title": "Biako a Ɛda Adi wɔ Sudoku mu: Dan a Nea Ɛfata Biako Wom",
+          "description": "Biako a ɛda adi yɛ dan hunu a nɔma biako pɛ na ebetumi akɔ mu. Sua sɛnea wobehu no ntɛm, nhwɛsoɔ ankasa anammɔn anammɔn ne mfomso a ɛtaa ba.",
+          "h1": "Biako a ɛda adi (naked single)",
+          "summary": "Biako a ɛda adi yɛ dan hunu a nea ɛfata biako pɛ wom: nɔma nwɔtwe foforo no wɔ ne nsantee, ne kɔlɔm anaa n'adaka mu dedaw. Nɔma a aka no na ɛsɛ sɛ ɛkɔ hɔ. Ɛno ne Sudoku ɔkwan a ɛyɛ mmerɛw sen biara, nea wode di dwuma pii sen biara, na Bare Sudoku nkyerɛkyerɛmu ka ho asɛm sɛ \"Nea ɔfata biako pɛ wɔ ha\".",
+          "when": [
+            "Bere biara. Biako a ɛda adi pue fi anammɔn a edi kan kosi nea etwa to, wɔ agyinaeɛ biara so. Wɔ Ɛyɛ mmerɛw ne Mfinimfini nsɛmmisa mu no, ɛne biako a ahintaw ne akwan nko ara a wuhia. Wɔ nsɛmmisa a ɛyɛ den mu no, nea ɔkwan a ɛkɔ anim biara yi fi hɔ taa gyaw biako a ɛda adi, enti hwɛ ma no anammɔn biara akyi."
+          ],
+          "spot": [
+            "Hwɛ dan a ne mfɛfo pii wɔ nɔma dedaw: dan a ɛwɔ nsantee a nɔma ason wom dedaw mu, anaa dan a ne nsantee, ne kɔlɔm ne n'adaka bom kura nɔma nwɔtwe a ɛnsɛ. Sɛ wonni nsɛm a wɔakyerɛw a, kan nɔma a wuhu fi dan no so. Sɛ wowɔ nsɛm a wɔakyerɛw a, biako a ɛda adi yɛ dan a ɛkyerɛ nea ɛfata biako pɛ, na ɛno nti na Hyɛ nsɛm a wɔakyerɛw ma ma ɛyɛ mmerɛw sɛ wobehu no."
+          ],
+          "examples": [
+            {
+              "h": "Nhwɛsoɔ",
+              "steps": [
+                "Hwɛ {cell}. Ɛyɛ hunu, enti kyerɛw nɔma biara a wɔde ato ne nsantee, ne kɔlɔm ne n'adaka mu dedaw.",
+                "Nsantee {row} kura {rowDigits}. Kɔlɔm {col} kura {colDigits}. Adaka {box} kura {boxDigits}.",
+                "Wɔbom yi nɔma biara fi hɔ gye {d}, enti {d} ne nea ɛfata biako pɛ a aka wɔ {cell}.",
+                "Kyerɛw {d} wɔ {cell}. Afei hwɛ sɛ nɔma foforo no de biako foforo aba nsantee, kɔlɔm anaa adaka koro no mu."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wobɛkan nsantee no nko ara anaa adaka no nko ara. Nɔma nwɔtwe a wɔyi fi hɔ no taa fi akuw mmiɛnsa no nyinaa mu.",
+            "Werɛ befi wo sɛ nɔma a wode too hɔ seesei ara nso yi nea ɛfata fi ne mfɛfo 20 mu; biako a ɛda adi foforo pue ntɛm ara wode nɔma biara to hɔ akyi.",
+            "Wobɛfra biako a ɛda adi ne biako a ahintaw: biako a ɛda adi wɔ nea ɛfata biako a aka wɔ dan no mu, biako a ahintaw wɔ dan biako a aka ma nɔma no wɔ kuw bi mu."
+          ],
+          "faq": [
+            [
+              "Dɛn ne biako a ɛda adi wɔ Sudoku mu?",
+              "Dan hunu a nea ɛfata biako pɛ wom. Wɔde nɔma nwɔtwe a ɛnsɛ ato ne nsantee, ne kɔlɔm ne n'adaka mu dedaw, enti nɔma a ɛto so akron no nko ara na ɛfata."
+            ],
+            [
+              "Adɛn nti na wɔfrɛ no \"a ɛda adi\"?",
+              "Efisɛ sɛ wɔkyerɛw nsɛm no wie a, nea ɛfata biako no da adi wɔ dan no mu tẽẽ; biribiara nhintaw no. Biako a ahintaw de, ɛtena nea ɛfata foforo ntam, na wohwɛ nɔma no na ɛnyɛ dan no na wohu no."
+            ],
+            [
+              "Wobɛtumi de biako a ɛda adi nko ara adi asɛmmisa bi ho dwuma?",
+              "Ɛyɛ mmerɛw nsɛmmisa pii de, aane, nanso dodow no ara hia biako a ahintaw nso. Bare Sudoku kyerɛ sɛ Ɛyɛ mmerɛw ne Mfinimfini nsɛmmisa yɛ nea wobɛtumi de biako ahorow mmienu no adi ho dwuma; Ɛyɛ den ne Ɔbenfo nsɛmmisa hia ɔkwan foforo biako anyɛ yiye koraa."
+            ],
+            [
+              "Nkyerɛkyerɛmu no kyerɛ biako a ɛda adi?",
+              "Aane. Sɛ nɔma a edi so a wode bɛto hɔ yɛ biako a ɛda adi a, nkyerɛkyerɛmu no paw dan no na ɛka sɛ \"Nea ɔfata biako pɛ wɔ ha\" ne nɔma no. Mia nkyerɛkyerɛmu no bio na ɛde ato hɔ."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Biako a ahintaw",
+          "title": "Biako a Ahintaw wɔ Sudoku mu: Baabi Biako Pɛ ma Nɔma Bi",
+          "description": "Biako a ahintaw ne dan biako pɛ a nɔma bi betumi akɔ wɔ nsantee, kɔlɔm anaa adaka mu. Sua sɛnea wobehu no denam nɔma biako biako a wohwɛ so.",
+          "h1": "Biako a ahintaw (hidden single)",
+          "summary": "Biako a ahintaw yɛ nɔma a dan biako pɛ na aka a ebetumi akɔ mu wɔ nsantee, kɔlɔm anaa adaka bi mu, sɛ dan no kyerɛ nea ɛfata foforo mpo a. Esiane sɛ ɛsɛ sɛ kuw no kura nɔma no nti, ɛkɔ hɔ. Bare Sudoku nkyerɛkyerɛmu ka ho asɛm sɛ \"Baabi biako pɛ a 5 bɛtumi akɔ wɔ saa nkyekyɛmu yi mu\", anaa kɔlum anaa adaka.",
+          "when": [
+            "Bere biara a nɔma bi akɔ anim yiye: sɛ nɔma bi apue mprenum anaa mprensia a, adaka a aka no akwan ayɛ teaa, na biako a ahintaw taa yɛ anammɔn a edi so. Biako a ahintaw ne Ɛyɛ mmerɛw ne Mfinimfini nsɛmmisa ɔkwan titiriw, na ɛkɔ so yɛ adwuma kɛse wɔ agyinaeɛ biara so."
+          ],
+          "spot": [
+            "Hwɛ nɔma biako biako. Fa nɔma bi, hwehwɛ adaka a ɛnni hɔ, na twa dan biara a ɛwɔ saa adaka no mu a ɛne nɔma no bi a wɔde ato hɔ wɔ nsantee anaa kɔlɔm koro mu no so. Sɛ dan biako pɛ na aka a, woahu biako a ahintaw. Saa hwɛ koro yi ara yɛ adwuma wɔ nsantee ne kɔlɔm mu. Wɔ agodie no mu no, mia nɔma bi a wɔde ato hɔ: ne nyinaa hyerɛn, enti dan a ɛda hɔ kwa no da adi."
+          ],
+          "examples": [
+            {
+              "h": "Nhwɛsoɔ",
+              "steps": [
+                "Adaka {box} nnya nni {d}, enti ɛsɛ sɛ ne dan hunu no mu biako kura. Dan hunu no ne {empties}.",
+                "Wɔ emu biara mu gye {cell}, {d} a wɔde ato nsantee anaa kɔlɔm koro mu dedaw siw {d} kwan, enti {d} nyɛ nea ɛfata wɔ hɔ.",
+                "Ɛno gyaw {cell} sɛ baabi biako pɛ a {d} betumi akɔ wɔ adaka {box} mu. Kyerɛw {d} wɔ hɔ, sɛ {cell} da so kyerɛ nea ɛfata foforo mpo a."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wode nɔma no bɛto dan a ebia ɛyɛ nea ɛfata kɛkɛ mu: hwɛ dan hunu foforo biara a ɛwɔ kuw no mu, ɛnyɛ nea ɛda adi pefee no nko ara.",
+            "Wobɛpa biako a ahintaw efisɛ dan no kyerɛ nea ɛfata pii. Nea ɛfata foforo no nhia; nea ɛhia ne sɛ nɔma no nni baabi foforo wɔ kuw no mu.",
+            "Wobɛhwɛ adaka nko ara. Nsantee ne kɔlɔm nso ma biako a ahintaw pii saa ara, titiriw wɔ awiei."
+          ],
+          "faq": [
+            [
+              "Dɛn ne biako a ahintaw wɔ Sudoku mu?",
+              "Nɔma a ebetumi akɔ dan biako pɛ mu wɔ nsantee, kɔlɔm anaa adaka bi mu. Ɛsɛ sɛ kuw no kura nɔma no, enti dan no asɛm asi pi, sɛ nea ɛfata foforo da so wɔ mu mpo a."
+            ],
+            [
+              "Nsonsonoe bɛn na ɛda biako a ahintaw ne biako a ɛda adi ntam?",
+              "Biako a ɛda adi fa dan ho: nea ɛfata biako na aka. Biako a ahintaw fa nɔma ho: dan biako na aka wɔ kuw bi mu. Wɔn mmienu nyinaa de nɔma to hɔ a akyinnye biara nni ho."
+            ],
+            [
+              "Ɛhe na ɛyɛ mmerɛw sɛ wobehu?",
+              "Sɛ wonni nsɛm a wɔakyerɛw a, biako a ahintaw taa yɛ mmerɛw, efisɛ wobɛtumi ahwɛ pon no ama nɔma biako biako. Sɛ nsɛm a wɔakyerɛw no di mu a, biako a ɛda adi na ɛyɛ mmerɛw sen biara, efisɛ dan a nea ɛfata biako wom no da adi."
+            ],
+            [
+              "Ɔkwan bɛn so na nkyerɛkyerɛmu no ka biako a ahintaw ho asɛm?",
+              "Ɛka sɛ \"Baabi biako pɛ a\" nɔma no \"bɛtumi akɔ\" wɔ saa nkyekyɛmu, saa kɔlum anaa saa adaka yi mu, na wapaw dan no. Mia nkyerɛkyerɛmu no bio na ɛde ato hɔ."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Nea wɔato mu",
+          "title": "Nea Wɔato Mu wɔ Sudoku mu: Ɛkyerɛ ne Ɛfa Ma Ne Ho",
+          "description": "Nea wɔato mu: sɛ nɔma bi nea ɛfata nyinaa wɔ adaka bi mu da nsantee anaa kɔlɔm biako mu, anaa ne nea ɛbɔ abira, wɔyi nɔma no fi baabi foforo.",
+          "h1": "Nea wɔato mu (locked candidates)",
+          "summary": "Nea wɔato mu ne ɔkwan a edi kan a ɛyi nea ɛfata fi hɔ mmom sen sɛ ɛde nɔma bɛto hɔ. Ɛwɔ ɔkwan mmienu. Ɛkyerɛ (pointing): wɔ adaka bi mu, nɔma bi nea ɛfata nyinaa da nsantee anaa kɔlɔm biako mu, enti wɔyi nɔma no fi saa nsantee anaa kɔlɔm no nkae mu. Ɛfa ma ne ho (claiming): wɔ nsantee anaa kɔlɔm bi mu, nɔma bi nea ɛfata nyinaa da adaka biako mu, enti wɔyi nɔma no fi saa adaka no nkae mu. Bare Sudoku nkyerɛkyerɛmu de \"Nea wɔato mu\" kyerɛ nɔma a ɛma wotumi de to hɔ no.",
+          "when": [
+            "Sɛ biako asa wɔ Ɛyɛ den asɛmmisa mu a, eyi ne nea edi kan a ɛsɛ sɛ wosɔ hwɛ. Ɛhia nsɛm a wɔakyerɛw a edi mu, anyɛ yiye koraa ma nɔma a worehwɛ no. Nea wɔato mu taa ba: Ɛyɛ den nsɛmmisa dodow no ara hia, na Ɔbenfo nsɛmmisa de di dwuma wɔ nhyehyɛe akɛse no ntam."
+          ],
+          "spot": [
+            "Wɔ ɛkyerɛ mu no, hwɛ adaka biara ne nɔma biara a ɛnni mu: sɛ saa nɔma no dan a ɛfata no da nsantee anaa kɔlɔm biako mu a, hwɛ sɛ nɔma koro no ara yɛ nea ɛfata wɔ saa nsantee anaa kɔlɔm no so wɔ adaka no akyi. Wɔ ɛfa ma ne ho mu no, hwɛ nsantee anaa kɔlɔm bi so: sɛ nɔma bi nea ɛfata nyinaa wɔ adaka biako mu a, wobɛtumi apopa no afi adaka no nkae mu. Wɔ agodie no mu no, mia nɔma nsafe bi na ne nea ɛfata nyinaa ahyerɛn; nsɛm mmienu anaa mmiɛnsa a ahyerɛn a ɛda nsensanee biako so wɔ adaka biako mu ne nhyehyɛe no."
+          ],
+          "examples": [
+            {
+              "h": "Ɛkyerɛ",
+              "steps": [
+                "Wɔ adaka {box} mu, nɔma {d} wɔ dan a ɛfata yi nko ara: {cells}. Ne nyinaa da nsantee {row} mu.",
+                "Adaka {box} hia {d}, enti nsantee {row} {d} no wɔ adaka {box} mu, ɛmfa ho dan a ɛbɛtɔ mu.",
+                "Nsantee {row} ntumi nkura {d} a ɛto so mmienu, enti yi {d} fi nsantee {row} dan a ɛwɔ adaka no akyi no mu: {elim}."
+              ]
+            },
+            {
+              "h": "Ɛfa ma ne ho",
+              "steps": [
+                "Wɔ nsantee {row} mu, {d} betumi akɔ {cells} nko ara, na ne nyinaa wɔ adaka {box} mu.",
+                "Ɛsɛ sɛ nsantee {row} kura {d}, enti nsantee {row} fa adaka {box} {d} no ma ne ho. Adaka {box} dan foforo no ntumi nkura {d}.",
+                "Yi {d} fi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wobɛyi nɔma no afi adaka no mu sen sɛ wobɛyi afi n'akyi wɔ ɛkyerɛ mu, anaa nea ɛbɔ abira wɔ ɛfa ma ne ho mu. Bere biara, nea wɔyi no kɔ dan a ɛwɔ nsantee anaa kɔlɔm no mu nanso ɛnni adaka no mu, anaa dan a ɛwɔ adaka no mu nanso ɛnni nsantee anaa kɔlɔm no mu.",
+            "Wode mmara no bɛdi dwuma bere a nea ɛfata no trɛw adaka no nsantee mmienu so. Ɛsɛ sɛ nɔma no dan a ɛfata nyinaa wɔ adaka no mu da nsantee anaa kɔlɔm biako mu.",
+            "Werɛ befi wo sɛ wobɛhwehwɛ biako a nea woyi no de ba. Nea wɔato mu ntaa mfa nɔma nto hɔ ankasa; ɛsiesie biako ma."
+          ],
+          "faq": [
+            [
+              "Dɛn ne nea wɔato mu wɔ Sudoku mu?",
+              "Nɔma bi nea ɛfata a wɔato mu wɔ baabi a adaka ne nsantee anaa kɔlɔm hyia. Esiane sɛ ɛsɛ sɛ adaka no, anaa nsantee anaa kɔlɔm no, kura nɔma no wɔ saa hyiabea no nti, wobɛtumi ayi nɔma no afi nsantee anaa kɔlɔm no nkae mu, anaa adaka no nkae mu."
+            ],
+            [
+              "Nsonsonoe bɛn na ɛda ɛkyerɛ ne ɛfa ma ne ho ntam?",
+              "Ɛkyerɛ fi adaka ase: nɔma no nea ɛfata wɔ adaka no mu kyerɛ nsantee anaa kɔlɔm biako so, enti wɔyi nɔma no fi saa nsantee anaa kɔlɔm no nkae mu. Ɛfa ma ne ho fi nsantee anaa kɔlɔm ase: nea ɛfata ma nɔma no wɔ saa nsantee anaa kɔlɔm no mu nyinaa wɔ adaka biako mu, enti ɛfa nɔma no ma ne ho, na wɔyi no fi adaka no nkae mu."
+            ],
+            [
+              "Wɔsan frɛ nea wɔato mu sɛ nea wɔyi wɔ hyiabea (intersection removal)?",
+              "Aane. Din foforo ne adaka ne nsensanee so tew (box-line reduction) ma ɛfa ma ne ho, ne mmienu anaa mmiɛnsa a ɛkyerɛ (pointing pairs, pointing triples) ma ɛkyerɛ. Bare Sudoku de din biako ma ne mmienu nyinaa."
+            ],
+            [
+              "Agyinaeɛ bɛn na ɛhia nea wɔato mu?",
+              "Ɛyɛ den. Asɛmmisa a ɛhia nea wɔato mu anaa mmienu ne mmiɛnsa nanso ɛnhia biribi a ɛyɛ den sen saa no, wɔkyerɛ sɛ ɛyɛ Ɛyɛ den; Ɔbenfo nsɛmmisa hia apataa anaa ntaban nso."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Mmienu ne mmiɛnsa a ɛda adi",
+          "title": "Mmienu ne Mmiɛnsa a Ɛda Adi wɔ Sudoku mu: Sɛnea Ɛyɛ Adwuma",
+          "description": "Mmienu ne mmiɛnsa a ɛda adi: dan mmienu anaa mmiɛnsa wɔ kuw bi mu a wɔkyɛ nea ɛfata koro. Sua sɛnea wobehu wɔn ne nea wobɛyi, nhwɛsoɔ ankasa.",
+          "h1": "Mmienu ne mmiɛnsa a ɛda adi (naked pair, naked triple)",
+          "summary": "Mmienu a ɛda adi yɛ dan mmienu a ɛwɔ nsantee, kɔlɔm anaa adaka koro mu a wɔn nea ɛfata mmienu no yɛ pɛ pɛɛ. Ɛsɛ sɛ nɔma mmienu no kɔ saa dan mmienu no mu, enti wobɛtumi ayi wɔn afi kuw no dan foforo biara mu. Mmiɛnsa a ɛda adi yɛ adwene koro no ara wɔ dan mmiɛnsa ne nɔma mmiɛnsa mu; dan biara betumi akyerɛ emu mmienu anaa mmiɛnsa no nyinaa. Bare Sudoku nkyerɛkyerɛmu de \"Mmienu anaa mmiɛnsa\" kyerɛ nɔma a efi mu ba no.",
+          "when": [
+            "Bere a nsɛm a wɔakyerɛw no adi mu na biako ne nea wɔato mu asa. Mmienu a ɛda adi taa ba wɔ Ɛyɛ den nsɛmmisa mu yiye, mmiɛnsa a ɛda adi nnɔɔso saa. Ɛfata sɛ wohwɛ wɔn mmienu nyinaa wɔ kuw biara a dan hunu anum anaa nea ɛboro saa da so wɔ mu."
+          ],
+          "spot": [
+            "Hwehwɛ dan a nea ɛfata mmienu pɛ wom, na hwehwɛ dan foforo wɔ kuw koro no mu a nea ɛfata mmienu koro no ara wom. Wɔ mmiɛnsa mu no, hwɛ kuw a dan pii a nea ɛfata mmienu ne mmiɛnsa wom wɔ mu, na hwɛ sɛ emu mmiɛnsa bom de nɔma mmiɛnsa a ɛnsɛ nko ara di dwuma. Sɛ wɔakyerɛw nsɛm no a, ɛyɛ mmerɛw sɛ wobehu dan a wɔn nea ɛfata yɛ pɛ pɛɛ; wɔ agodie no mu no, Hyɛ nsɛm a wɔakyerɛw ma yɛ saa wɔ mia biako mu."
+          ],
+          "examples": [
+            {
+              "h": "Mmienu a ɛda adi",
+              "steps": [
+                "{cellA} ne {cellB} a ɛwɔ {unit} mu no wɔ nea ɛfata mmienu koro pɛɛ: {d1} ne {d2}.",
+                "Ɛsɛ sɛ emu biako yɛ {d1} na biako no yɛ {d2}. Yennim nea ɛyɛ dea, nanso saa dan mmienu yi de nɔma mmienu no nyinaa adi dwuma.",
+                "Enti dan foforo biara a ɛwɔ {unit} mu ntumi nkura {d1} anaa {d2}. Yi {elim}."
+              ]
+            },
+            {
+              "h": "Mmiɛnsa a ɛda adi",
+              "steps": [
+                "Dan mmiɛnsa a ɛwɔ {unit} mu nya wɔn nea ɛfata nyinaa fi nɔma mmiɛnsa koro, {digits}, mu: {cells}.",
+                "Ɛsɛ sɛ nɔma mmiɛnsa no hyɛ saa dan mmiɛnsa yi ma wɔ nhyehyɛe bi so. Ɛnhia sɛ dan biara kyerɛ nea ɛfata mmiɛnsa no nyinaa; nea ɛhia ne sɛ dan mmiɛnsa no mu biara nni nea ɛfata a ɛnka saa nɔma mmiɛnsa no ho.",
+                "Yi {digits} fi dan foforo biara a ɛwɔ {unit} mu: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wobɛfa dan mmienu a wɔkyɛ nea ɛfata mmienu nanso nea ɛto so mmiɛnsa nso wom. Wɔ mmienu a ɛda adi mu no, ɛsɛ sɛ dan biara kura nea ɛfata mmienu no pɛɛ na biribi foforo nka ho.",
+            "Wobɛyi nɔma no afi mmienu no ankasa dan mu. Mmienu no kora ne nea ɛfata; nea wɔyi no kɔ kuw no dan foforo mu.",
+            "Wobɛhwehwɛ sɛ mmiɛnsa no dan biara kyerɛ nɔma mmiɛnsa no nyinaa. Dan a emu mmienu wom no yɛ, sɛ dan biara nni nea ɛfata a ɛnka nɔma mmiɛnsa no ho a."
+          ],
+          "faq": [
+            [
+              "Dɛn ne mmienu a ɛda adi wɔ Sudoku mu?",
+              "Dan mmienu wɔ kuw biako mu a wɔn mmienu nyinaa wɔ nea ɛfata mmienu koro pɛɛ. Wɔato saa nɔma mmienu no mu wɔ saa dan mmienu no mu, enti wobɛtumi ayi wɔn afi kuw no nkae mu."
+            ],
+            [
+              "Dɛn ne mmiɛnsa a ɛda adi?",
+              "Dan mmiɛnsa wɔ kuw biako mu a wɔn nea ɛfata bom yɛ nɔma mmiɛnsa pɛ. Dan biara betumi akura emu mmienu anaa mmiɛnsa. Nɔma mmiɛnsa no hyɛ dan mmiɛnsa no ma, enti wobɛtumi ayi wɔn afi kuw no dan foforo mu."
+            ],
+            [
+              "Mmienu a ɛda adi de nɔma to hɔ?",
+              "Ɛnyɛ ɛno ankasa. Eyi nea ɛfata, na nea woyi no taa gyaw biako a ɛda adi anaa biako a ahintaw. Nkyerɛkyerɛmu a ɛwɔ Bare Sudoku mu kyerɛ saa biako no na ɛbɔ ɔkwan a ɛmaa ɛyɛɛ yiye no din."
+            ],
+            [
+              "Mmienu a ɛda adi betumi awɔ adaka ne nsantee mu bere koro mu?",
+              "Aane. Sɛ dan mmienu no wɔ nsantee koro ne adaka koro mu a, mmienu no yi nea ɛfata wɔ akuw mmienu no nyinaa mu. Bare Sudoku hwɛ wɔn kuw biako biako."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Mmienu ne mmiɛnsa a ahintaw",
+          "title": "Mmienu ne Mmiɛnsa a Ahintaw wɔ Sudoku mu: Sɛnea Wobehu",
+          "description": "Mmienu a ahintaw yɛ nɔma mmienu a ebetumi akɔ dan mmienu koro mu wɔ kuw bi mu, enti wɔyi wɔn nea ɛfata foforo. Sua sɛnea wobehu wɔn anammɔn anammɔn.",
+          "h1": "Mmienu ne mmiɛnsa a ahintaw (hidden pair, hidden triple)",
+          "summary": "Mmienu a ahintaw yɛ nɔma mmienu a, wɔ nsantee, kɔlɔm anaa adaka biako mu, ɛyɛ nea ɛfata wɔ dan mmienu koro mu nko ara na ɛnni baabi foforo. Ɛsɛ sɛ saa dan mmienu no kura saa nɔma mmienu no, enti wobɛtumi ayi nea ɛfata foforo biara a ɛwɔ wɔn mu. Mmiɛnsa a ahintaw yɛ adwuma saa ara wɔ nɔma mmiɛnsa a wɔato mu wɔ dan mmiɛnsa mu. Woyi wie a, dan no kyerɛ mmienu anaa mmiɛnsa a ɛda adi. Bare Sudoku nkyerɛkyerɛmu de \"Mmienu anaa mmiɛnsa\" kyerɛ nɔma a efi mu ba no.",
+          "when": [
+            "Bere a kuw bi wɔ dan a nea ɛfata pii wom na biako asa. Mmienu a ahintaw hintaw dan a ahyɛ ma mu, na ɛno nti na ɛfata sɛ wohwehwɛ wɔn wɔ baabi pɛɛ a mmienu a ɛda adi nni hɔ. Mmiɛnsa a ahintaw nnɔɔso; Bare Sudoku hwehwɛ wɔn, nanso wodi Ɛyɛ den nsɛmmisa dodow no ara ho dwuma a wonhia wɔn."
+          ],
+          "spot": [
+            "Fa nɔma so, ɛnyɛ dan so. Wɔ kuw bi mu no, hyɛ dan a nɔma biara a ɛnni hɔ betumi akɔ mu no nsow. Sɛ nɔma mmienu mu biara wɔ dan mmienu pɛ a ebetumi akɔ mu, na ɛyɛ dan mmienu koro no ara a, woanya mmienu a ahintaw. Wɔ agodie no mu no, mia nɔma nsafe bi na ne nea ɛfata ahyerɛn; sɛ nɔma mmienu hyerɛn dan mmienu koro wɔ kuw bi mu na biribi foforo nhyerɛn wɔ mu a, ɛno ne nhyehyɛe no."
+          ],
+          "examples": [
+            {
+              "h": "Mmienu a ahintaw",
+              "steps": [
+                "Wɔ {unit} mu, nɔma {d1} ne {d2} mu biara wɔ dan mmienu pɛ a ebetumi akɔ mu, na ɛyɛ dan mmienu koro no ara: {cells}.",
+                "Ɛsɛ sɛ saa dan mmienu no kura {d1} ne {d2}, enti wɔn nea ɛfata foforo ntumi nyɛ yiye.",
+                "Yi {elim}. Seesei dan mmienu no kyerɛ mmienu a ɛda adi, na ebetumi abue akwan foforo."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wobɛyi nɔma mmienu no afi mmienu no dan mu. Saa dan no nea ɛfata foforo no na wɔyi; mmienu no nɔma tena hɔ.",
+            "Wobɛgye nɔma bi a ɛwɔ dan a ɛto so mmiɛnsa a ebetumi akɔ mu wɔ kuw no mu atom. Ɛsɛ sɛ nɔma mmienu no nyinaa ka dan mmienu no pɛɛ ho.",
+            "Wobɛhwɛ adaka mu nko ara. Mmienu a ahintaw pue wɔ nsantee ne kɔlɔm mu pii saa ara."
+          ],
+          "faq": [
+            [
+              "Dɛn ne mmienu a ahintaw wɔ Sudoku mu?",
+              "Nɔma mmienu a ebetumi akɔ dan mmienu koro pɛ mu wɔ kuw bi mu. Ɛsɛ sɛ saa dan no gye saa nɔma no, enti wɔyi wɔn nea ɛfata foforo."
+            ],
+            [
+              "Ɔkwan bɛn so na mmienu a ahintaw ne mmienu a ɛda adi sono?",
+              "Mmienu a ɛda adi de, wotumi hu no: dan mmienu a ɛkyerɛ nea ɛfata mmienu koro pɛ. Mmienu a ahintaw de, nea ɛfata foforo a ɛwɔ dan mmienu no mu akata so. Sɛ woyi saa nea ɛfata foforo no a, mmienu a ahintaw dan yɛ mmienu a ɛda adi."
+            ],
+            [
+              "Dɛn ne mmiɛnsa a ahintaw?",
+              "Nɔma mmiɛnsa a wɔato mu wɔ dan mmiɛnsa mu wɔ kuw bi mu. Ɛnhia sɛ nɔma biara pue wɔ dan mmiɛnsa no nyinaa mu; nea ɛhia ne sɛ nɔma mmiɛnsa no mu biara nni nea ɛfata wɔ saa dan no akyi."
+            ],
+            [
+              "Nkyerɛkyerɛmu no kyerɛ nsonsonoe a ɛda mmienu a ahintaw ne nea ɛda adi ntam?",
+              "Dabi. Bare Sudoku hu wɔn mmienu nyinaa na ɛde \"Mmienu anaa mmiɛnsa\" kyerɛ nɔma a efi mu ba no. Krataafa a ɛwɔ ha no tetew wɔn mu efisɛ wohu wɔn wɔ akwan ahorow so."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing wɔ Sudoku mu: Sɛnea Ɔkwan no Yɛ Adwuma",
+          "description": "X-Wing: nɔma bi a ɛwɔ dan mmienu pɛ a ɛfata wɔ nsantee mmienu mu, a ɛda kɔlɔm mmienu koro mu, wɔyi no fi saa kɔlɔm no nkae mu. Nhwɛsoɔ ankasa.",
+          "h1": "X-Wing",
+          "summary": "X-Wing yɛ nhyehyɛe a ɛwɔ nɔma biako ne dan anan a ɛwɔ ahinanan bi kɔna so. Sɛ nɔma no wɔ dan mmienu pɛ a ɛfata wɔ nsantee mmienu mu biara mu, na saa dan no da kɔlɔm mmienu koro mu a, ɛsɛ sɛ nɔma no tena ahinanan no kɔna mmienu a ɛhwɛ wɔn ho anim. Enti wobɛtumi ayi no afi saa kɔlɔm mmienu no dan foforo biara mu. Sɛ wosesa nsantee ne kɔlɔm a, ɛyɛ adwuma saa ara. Ɛno ne Ɔbenfo ɔkwan a edi kan wɔ Bare Sudoku mu.",
+          "when": [
+            "Bere a biako, nea wɔato mu ne mmienu ne mmiɛnsa nyinaa asa. X-Wing ne Ɔbenfo nhyehyɛe a ɛtaa ba sen biara, na ɛtaa pue bere a nɔma bi nea ɛfata kakraa bi na aka, mpɛn pii no bere a wɔde emu anan kosi asia ato hɔ dedaw. Ɛhia nsɛm a wɔakyerɛw a edi mu ma nɔma a worehwɛ no."
+          ],
+          "spot": [
+            "Paw nɔma bi na hwehwɛ nsantee a ɛwɔ dan mmienu pɛ a ɛfata ma no. Sɛ saa nsantee mmienu kyɛ kɔlɔm mmienu koro a, hwɛ sɛ nɔma no wɔ nea ɛfata foforo wɔ saa kɔlɔm no mu: ɛno ne nea wobɛyi. Afei yɛ saa ara bio de kɔlɔm yɛ fapem. Wɔ agodie no mu no, mia nɔma no nsafe: ne nea ɛfata nyinaa hyerɛn, na ɛyɛ mmerɛw sɛ wobehu ahinanan a nsɛm anan a ahyerɛn wom."
+          ],
+          "examples": [
+            {
+              "h": "Nhwɛsoɔ",
+              "steps": [
+                "Nɔma {d} wɔ dan mmienu pɛ a ɛfata wɔ nsantee {r1} mu ne mmienu pɛ wɔ nsantee {r2} mu, na ɛda kɔlɔm mmienu koro, {c1} ne {c2}, mu: {cells}.",
+                "Nsantee {r1} de ne {d} to kɔlɔm {c1} anaa {c2} mu, na nsantee {r2} de ne {d} to biako a aka no mu. Ɛmfa ho nea ɛbɛyɛ, kɔlɔm {c1} ne {c2} mu biara nya {d} fi saa nsantee mmienu yi mu.",
+                "Enti {d} ntumi mpue baabi foforo wɔ kɔlɔm {c1} ne {c2} mu. Yi {d} fi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wode nsantee a ɛwɔ dan mmiɛnsa a ɛfata ma nɔma no bedi dwuma. Ɛsɛ sɛ fapem nsantee biara wɔ mmienu pɛ, na ɛsɛ sɛ ne mmienu nyinaa wɔ kɔlɔm mmienu a wɔkyɛ no mu.",
+            "Wobɛyi nɔma no afi nsantee no mu sen sɛ wobɛyi afi kɔlɔm no mu. Sɛ nsantee ne fapem a, nea wɔyi no wɔ kɔlɔm no mu, na nea ɛbɔ abira nso saa ara.",
+            "Werɛ befi wo nea wɔasesa no. X-Wing a wɔde kɔlɔm ayɛ fapem yi nea ɛfata wɔ nsantee mu."
+          ],
+          "faq": [
+            [
+              "Dɛn ne X-Wing wɔ Sudoku mu?",
+              "Nɔma bi a ɛwɔ dan mmienu pɛ a ɛfata wɔ nsantee mmienu mu biara mu, wɔ kɔlɔm mmienu koro mu. Nɔma no tena saa ahinanan no kɔna mmienu a ɛhwɛ wɔn ho anim, enti wɔyi no fi kɔlɔm mmienu no nkae mu. Wobɛtumi asesa nsantee ne kɔlɔm."
+            ],
+            [
+              "Adɛn nti na X-Wing yɛ adwuma?",
+              "Ɛsɛ sɛ nsantee mmienu no mu biara de nɔma no to kɔlɔm mmienu no mu biako mu, na nsantee mmienu no ntumi mfa kɔlɔm koro. Enti kɔlɔm mmienu no mu biara nya ne nɔma no fi saa nsantee yi mu, na nea ɛfata foforo biara a ɛwɔ saa kɔlɔm no mu ntumi nyɛ yiye."
+            ],
+            [
+              "X-Wing yɛ apataa?",
+              "Aane. X-Wing ne apataa a ne kɛse yɛ mmienu; Swordfish ne apataa a ne kɛse yɛ mmiɛnsa. Bare Sudoku hu wɔn mmienu nyinaa."
+            ],
+            [
+              "Agyinaeɛ bɛn na X-Wing wɔ?",
+              "Ɔbenfo. Asɛmmisa a ɛhia X-Wing, Y-Wing, Swordfish anaa XYZ-Wing no, wɔkyerɛ sɛ ɛyɛ Ɔbenfo."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing wɔ Sudoku mu: Sɛnea Ɔkwan no Yɛ Adwuma",
+          "description": "Y-Wing (XY-Wing): dan titiriw a nea ɛfata mmienu wom ne ntaban mmienu a emu biara kyɛ emu biako yi nɔma bi fi dan biara a ehu ntaban mmienu no mu.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, a wɔsan frɛ no XY-Wing, de dan mmiɛnsa a emu biara wɔ nea ɛfata mmienu di dwuma. Dan titiriw no wɔ nea ɛfata X ne Y. Ntaban biako hu dan titiriw no na ɛwɔ X ne Z; ntaban foforo no hu dan titiriw no na ɛwɔ Y ne Z. Biribiara a dan titiriw no bɛyɛ no, ɛsɛ sɛ ntaban no mu biako yɛ Z, enti wobɛtumi ayi Z afi dan biara a ehu ntaban mmienu no nyinaa mu. Ɛyɛ Ɔbenfo ɔkwan wɔ Bare Sudoku mu.",
+          "when": [
+            "Bere a asɛmmisa bi wɔ dan pii a nea ɛfata mmienu pɛ wom na apataa biara nni hɔ. Y-Wing taa ba wɔ Ɔbenfo nsɛmmisa mu, na wohu no denam dan a nea ɛfata mmienu wom a wodi akyi so: emu biara betumi ayɛ dan titiriw anaa ntaban."
+          ],
+          "spot": [
+            "Kyerɛw dan a nea ɛfata mmienu pɛ wom. Emu biara, fa no sɛ dan titiriw a ne nea ɛfata yɛ X ne Y, na hwehwɛ ne mfɛfo mu dan a X ne nɔma foforo Z wom, ne dan a Y ne Z koro no ara wom. Saa mmienu no ne ntaban no. Afei hwehwɛ dan a ehu ntaban mmienu no nyinaa na Z wom. Hyɛ no nsow sɛ ɛnhia sɛ ntaban no hu wɔn ho wɔn ho."
+          ],
+          "examples": [
+            {
+              "h": "Nhwɛsoɔ",
+              "steps": [
+                "Dan titiriw {pivot} wɔ nea ɛfata {x} ne {y}. Ehu {wingA}, a {x} ne {z} wom, ne {wingB}, a {y} ne {z} wom.",
+                "Sɛ {pivot} yɛ {x} a, {wingA} hwere {x} na ɛyɛ {z}. Sɛ {pivot} yɛ {y} a, {wingB} yɛ {z}. Biribiara a ɛbɛba no, ntaban mmienu no mu biako yɛ {z}.",
+                "Dan a ehu ntaban mmienu no nyinaa ntumi nyɛ {z} da. Yi {z} fi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wobɛpaw ntaban a wɔn mmienu nyinaa nhu dan titiriw no. Ɛsɛ sɛ ntaban biara ne dan titiriw no kyɛ nsantee, kɔlɔm anaa adaka.",
+            "Wobɛyi Z afi dan a ehu ntaban biako pɛ mu. Ɛsɛ sɛ dan a woyi fi mu no hu ntaban mmienu no nyinaa.",
+            "Wobɛyi Z afi dan titiriw no mu. Wɔ Y-Wing mu no, Z nni dan titiriw no mu; sɛ ɛwɔ mu a, nhyehyɛe no yɛ XYZ-Wing a ne mmara yɛ soronko."
+          ],
+          "faq": [
+            [
+              "Dɛn ne Y-Wing wɔ Sudoku mu?",
+              "Dan mmiɛnsa a nea ɛfata mmienu wɔ emu biara mu: dan titiriw a X ne Y wom, ntaban a X ne Z wom a ehu dan titiriw no, ne ntaban a Y ne Z wom a ehu dan titiriw no. Ntaban biako yɛ Z bere biara, enti wɔyi Z fi dan a ehu ntaban mmienu no nyinaa mu."
+            ],
+            [
+              "Y-Wing ne XY-Wing yɛ biako?",
+              "Aane. Din mmienu no ka nhyehyɛe koro ho asɛm. Bare Sudoku frɛ no Y-Wing."
+            ],
+            [
+              "Adɛn nti na ɛsɛ sɛ ntaban biako yɛ Z?",
+              "Sɛ dan titiriw no yɛ X a, ntaban a edi kan no hwere X na ɛyɛ Z. Sɛ dan titiriw no yɛ Y a, ntaban a ɛto so mmienu no yɛ Z. Dan titiriw no yɛ emu biako, enti ntaban biako yɛ Z."
+            ],
+            [
+              "Dan ahe na Y-Wing yi nea ɛfata fi mu?",
+              "Mpɛn pii no biako anaa mmienu: dan a ehu ntaban mmienu no nyinaa na Z da so wom nko ara. Ɛno dɔɔso sɛ ɛde biako bɛba."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish wɔ Sudoku mu: Sɛnea Ɔkwan no Yɛ Adwuma",
+          "description": "Swordfish: nɔma bi a wɔato mu wɔ kɔlɔm mmiɛnsa mu wɔ nsantee mmiɛnsa so, wɔyi no fi saa kɔlɔm no nkae mu. Apataa a ne kɛse yɛ mmiɛnsa ne nhwɛsoɔ ankasa.",
+          "h1": "Swordfish",
+          "summary": "Swordfish yɛ X-Wing a ɛwɔ nsantee mmiɛnsa ne kɔlɔm mmiɛnsa. Sɛ nɔma bi wɔ dan mmiɛnsa a ɛfata anaa nea ɛnnɔɔso saa wɔ nsantee mmiɛnsa mu biara mu, na saa dan no nyinaa wɔ kɔlɔm mmiɛnsa koro mu a, nsantee mmiɛnsa no de saa kɔlɔm no nɔma no nyinaa di dwuma, na wobɛtumi ayi nɔma no afi kɔlɔm mmiɛnsa no dan foforo biara mu. Wobɛtumi asesa nsantee ne kɔlɔm. Bare Sudoku hwehwɛ Swordfish wɔ Y-Wing akyi, wɔ Ɔbenfo nsɛmmisa mu.",
+          "when": [
+            "Bere a X-Wing ne Y-Wing nhu hwee. Swordfish ntaa mma sɛ X-Wing, na ɛhia nɔma bi a ne nea ɛfata apete kakraa bi wɔ nsantee anaa kɔlɔm mmiɛnsa so. Ɛhia nsɛm a wɔakyerɛw a edi mu na ɛyɛ nokware ma saa nɔma no."
+          ],
+          "spot": [
+            "Paw nɔma bi na hwehwɛ nsantee a ɛwɔ dan mmienu anaa mmiɛnsa a ɛfata ma no. Sɛ saa nsantee mmiɛnsa bi kata kɔlɔm mmiɛnsa pɛ so nyinaa a, hwɛ sɛ nɔma no wɔ nea ɛfata foforo wɔ saa kɔlɔm no mu. Ɛnhia sɛ nsantee biara wɔ nea ɛfata wɔ kɔlɔm biara mu: Swordfish betumi awɔ dan asia, ason, nwɔtwe anaa akron. Wɔ agodie no mu no, fa nɔma no nsafe ma ɛnhyerɛn, na hwehwɛ nsantee mmiɛnsa a wɔn nea ɛfata da kɔlɔm mmiɛnsa mu."
+          ],
+          "examples": [
+            {
+              "h": "Nhwɛsoɔ",
+              "steps": [
+                "Nɔma {d} wɔ dan mmiɛnsa a ɛfata anaa nea ɛnnɔɔso saa wɔ nsantee {rows} mu biara mu, na saa dan no nyinaa wɔ kɔlɔm {cols} mu: {cells}.",
+                "Ɛsɛ sɛ nsantee mmiɛnsa no mu biara de ne {d} to kɔlɔm mmiɛnsa no mu biako mu, na nsantee mmienu biara ntumi mfa kɔlɔm koro. Enti kɔlɔm mmiɛnsa no nya wɔn {d} fi saa nsantee mmiɛnsa yi mu.",
+                "{d} biara a ɛfata foforo wɔ kɔlɔm {cols} mu ntumi nyɛ yiye. Yi {d} fi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wobɛhwehwɛ dan akron no nyinaa. Swordfish a nea ɛfata mmienu pɛ wɔ nsantee bi mu no da so yɛ adwuma, sɛ nsantee mmiɛnsa no kata kɔlɔm mmiɛnsa pɛ so a.",
+            "Wode nsantee a ɛwɔ dan anan a ɛfata bɛka ho. Ɛsɛ sɛ fapem nsantee biara wɔ mmiɛnsa anaa nea ɛnnɔɔso saa, na ne nyinaa wɔ kɔlɔm mmiɛnsa no mu.",
+            "Wobɛyi nea ɛfata afi fapem nsantee no mu. Sɛ nsantee ne fapem a, nea wɔyi no wɔ kɔlɔm mmiɛnsa no mu, fapem nsantee no akyi."
+          ],
+          "faq": [
+            [
+              "Dɛn ne Swordfish wɔ Sudoku mu?",
+              "Nɔma bi a ne nea ɛfata wɔ nsantee mmiɛnsa mu wɔ kɔlɔm mmiɛnsa mu nko ara. Ɛsɛ sɛ nsantee mmiɛnsa no de nɔma no to saa kɔlɔm mmiɛnsa no mu, biako biako, enti wɔyi nɔma no fi saa kɔlɔm no dan foforo mu."
+            ],
+            [
+              "Ɔkwan bɛn so na Swordfish ne X-Wing sono?",
+              "Ne kɛse nko ara: X-Wing de nsantee mmienu ne kɔlɔm mmienu di dwuma, Swordfish de mmiɛnsa ne mmiɛnsa. Adwene a ɛwɔ akyi no yɛ pɛ."
+            ],
+            [
+              "Swordfish hia dan akron pɛpɛɛpɛ?",
+              "Dabi. Nsantee biara betumi awɔ nea ɛfata mmienu anaa mmiɛnsa; nea nhyehyɛe no hia ara ne sɛ nsantee mmiɛnsa no bom mfa kɔlɔm a ɛboro mmiɛnsa."
+            ],
+            [
+              "Apataa a ne kɛse yɛ anan wɔ hɔ?",
+              "Aane, Jellyfish. Bare Sudoku mfa nni dwuma, efisɛ ne nsɛmmisa nhia bi da."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing wɔ Sudoku mu: Sɛnea Ɔkwan no Yɛ Adwuma",
+          "description": "XYZ-Wing: dan titiriw a nea ɛfata mmiɛnsa wom ne ntaban mmienu a ɛkyɛ emu biako yi saa nɔma no fi dan biara a ehu mmiɛnsa no nyinaa mu. Nhwɛsoɔ ankasa.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing yɛ Y-Wing a ne dan titiriw wɔ nea ɛfata mmiɛnsa. Dan titiriw no wɔ X, Y ne Z; ntaban biako hu dan titiriw no na ɛwɔ X ne Z, na foforo no hu dan titiriw no na ɛwɔ Y ne Z. Ɛsɛ sɛ dan mmiɛnsa no mu biako yɛ Z, enti wobɛtumi ayi Z afi dan biara a ehu mmiɛnsa no nyinaa mu. Esiane sɛ dan titiriw no ankasa betumi ayɛ Z nti, ɛsɛ sɛ dan a woyi fi mu no hu dan titiriw no ne ntaban mmienu no nyinaa, na ɛno ma ɛka adaka anaa nsantee anaa kɔlɔm a dan no kyɛ no ho nko ara. Ɛno ne ɔkwan a ɛyɛ den sen biara a Bare Sudoku de di dwuma.",
+          "when": [
+            "Bere a biribiara foforo anyɛ yiye nko ara. XYZ-Wing ne nhyehyɛe a ɛnnɔɔso sen biara wɔ Bare Sudoku mu na ɛpue wɔ Ɔbenfo nsɛmmisa mu nko ara. Hwehwɛ no bere a dan a nea ɛfata mmiɛnsa wom ne dan a nea ɛfata mmienu wom a ɛkyɛ ne nɔma mmienu wɔ adaka koro mu."
+          ],
+          "spot": [
+            "Fi dan a nea ɛfata mmiɛnsa pɛ wom ase; emu biara betumi ayɛ dan titiriw. Wɔ ne mfɛfo mu no, hwehwɛ dan mmienu a nea ɛfata mmienu wɔ emu biara mu, a ne nyinaa fi dan titiriw no mmiɛnsa no mu, na wɔkyɛ nɔma Z biako pɛ. Afei hwehwɛ dan a ehu dan titiriw no ne ntaban mmienu no nyinaa na Z wom. Wɔ adwumayɛ mu no, ntaban biako wɔ dan titiriw no adaka mu na foforo no wɔ ne nsantee anaa ne kɔlɔm mu, na dan a woyi fi mu no ne saa adaka no dan a aka a ɛwɔ saa nsantee anaa kɔlɔm no mu."
+          ],
+          "examples": [
+            {
+              "h": "Nhwɛsoɔ",
+              "steps": [
+                "Dan titiriw {pivot} wɔ nea ɛfata mmiɛnsa: {x}, {y} ne {z}. Ehu {wingA} a {x} ne {z} wom, ne {wingB} a {y} ne {z} wom.",
+                "Sɛ {pivot} yɛ {z} a, ɛno ara ne no. Sɛ ɛyɛ {x} a, ɛsɛ sɛ {wingA} yɛ {z}. Sɛ ɛyɛ {y} a, ɛsɛ sɛ {wingB} yɛ {z}. Biribiara a ɛbɛba no, dan mmiɛnsa no mu biako yɛ {z}.",
+                "Dan a ehu mmiɛnsa no nyinaa ntumi nyɛ {z}. Yi {z} fi {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Wobɛyi afi dan a ehu ntaban mmienu no nko ara mu. Ɛnte sɛ Y-Wing, dan titiriw no betumi ayɛ Z, enti ɛsɛ sɛ dan no hu dan titiriw no nso.",
+            "Wode ntaban a wɔn nea ɛfata nyinaa nni dan titiriw no nea ɛfata mmiɛnsa no mu bedi dwuma.",
+            "Wobɛfra no ne Y-Wing: nsonsonoe no ne nea ɛfata a ɛto so mmiɛnsa a ɛwɔ dan titiriw no mu, na ɛsesa dan a wobɛtumi apopa."
+          ],
+          "faq": [
+            [
+              "Dɛn ne XYZ-Wing wɔ Sudoku mu?",
+              "Dan titiriw a nea ɛfata X, Y ne Z wom ne ntaban mmienu, biako a X ne Z wom ne biako a Y ne Z wom, a wɔn mmienu nyinaa hu dan titiriw no. Dan mmiɛnsa no mu biako yɛ Z, enti wɔyi Z fi dan a ehu mmiɛnsa no nyinaa mu."
+            ],
+            [
+              "Ɔkwan bɛn so na XYZ-Wing ne Y-Wing sono?",
+              "Dan titiriw no wɔ nea ɛfata mmiɛnsa mmom sen mmienu, na Z ka ho. Ɛno ma dan titiriw no yɛ baabi a Z betumi akɔ, enti dan a ehu dan titiriw no ne ntaban mmienu no nyinaa nko ara na ebetumi ahwere Z."
+            ],
+            [
+              "Mpɛn ahe na XYZ-Wing pue?",
+              "Ɛnnɔɔso. Wɔ Bare Sudoku mu no, Ɔbenfo nsɛmmisa nko ara na ebetumi ahia bi, na dodow no ara nhia. Bare Sudoku hwɛ no akyiri koraa, X-Wing, Y-Wing ne Swordfish akyi."
+            ],
+            [
+              "WXYZ-Wing wɔ hɔ?",
+              "Aane, a ne dan titiriw wɔ nea ɛfata anan, nanso Bare Sudoku mfa nni dwuma. Asɛmmisa biara a ɛwɔ agodie no mu, wobɛtumi de akwan akron a ɛwɔ saa akwankyerɛ yi mu awie."
+            ]
+          ]
+        }
+      }
+    },
     "ee": {
       "learnHeading": "Srɔ̃ Sudoku",
       "learnText": "Èle Sudoku dzem gɔme, alo nyabiase sesẽ aɖe te ɖe ŋuwò? Mɔfiame eve ɖe sewo kple gbɔkpɔmɔnu ɖe sia ɖe si fiafiawo zãna la me, eye kpɔɖeŋu vavã le wo dometɔ ɖe sia ɖe me.",
@@ -81475,6 +82057,1170 @@
             [
               "WXYZ-Wing дуй?",
               "Ду, биъ кандидат болчу бӀогӀамца, амма Bare Sudoku иза ца лелайо. Ловзарехь хӀора хӀетал-метал хӀокху куьйгаллин исс кепаца чекхдаккха мега."
+            ]
+          ]
+        }
+      }
+    },
+    "ab": {
+      "learnHeading": "Асудоку аҵара",
+      "learnText": "Асудоку ҿыцны уалагама, ма иуадаҩу асудоку уаанкылама? Ҩ-напхгарак аԥҟарақәеи абжьгарақәа рҟны иахархәо аҭыԥҵәаратә ҟазарақәа зегьи аарыԥшуеит, ҵабыргытәи аҿырԥштәқәа рыла.",
+      "howToLink": "Асудоку шԥахәмаруа",
+      "techniquesLink": "Асудоку аҭыԥҵәара аҟазарақәа",
+      "labels": {
+        "howTo": "Ишхәмаруа",
+        "techniques": "Аҟазарақәа",
+        "play": "Асудоку ахәмарра",
+        "prev": "Аԥхьатәи аҟазара",
+        "next": "Анаҩстәи аҟазара",
+        "all": "Аҟазарақәа зегьы",
+        "example": "Аҿырԥштәы",
+        "steps": "Ашьаҿа ашьаҿала",
+        "when": "Ианахархәатәу",
+        "spot": "Ишԥшаатәу",
+        "mistakes": "Ирацәаны иҟалауа агхақәа",
+        "inGame": "Bare Sudoku аҟны",
+        "level": "Аҩаӡара: {level} инаркны",
+        "hint": "Ахәмарраҿы абжьгара иаҳәоит: {text}",
+        "legend": "Ижәпоу ахыԥхьаӡарақәа алагамҭаз иҟоуп, ажәҩангәыԥштә ахыԥхьаӡарақәа аҭыԥҵәара аан иҭаҵоуп, ахыԥхьаӡарақәа хәыҷқәа акандидатқәа роуп. Иалкаау аклеткақәа асахьа аԥырҵоит, аҵәаҳәа зхыху акандидатқәа ианыхуп, агьежь иалоу акандидат иҭаҵатәу ахыԥхьаӡара ауп.",
+        "notation": "Аклеткақәа r3c7 ҳәа иҩуп: 3-тәи ацәаҳәа, 7-тәи аиҵаҳәа. Ацәаҳәақәа хыхьынтәи иԥхьаӡоуп, аиҵаҳәақәа армарахьынтәи, аҭыԥҟақәа 1 инаркны 9-нӡа хыхьтәи армарахьтәи акәакь аҟынтә, ацәаҳәа ацәаҳәала.",
+        "row": "{n}-тәи ацәаҳәа",
+        "column": "{n}-тәи аиҵаҳәа",
+        "box": "{n}-тәи аҭыԥҟа",
+        "elimItem": "{cell} аҟынтә {d}",
+        "regions": "5-тәи ацәаҳәа, 5-тәи аиҵаҳәа, 5-тәи аҭыԥҟа асудоку алагамҭаз",
+        "firstMove": "Иаарту заҵәык: {cell} аҟны {d} мацара иҟалар ауеит",
+        "breadcrumb": "Анавигациа"
+      },
+      "howTo": {
+        "title": "Асудоку шԥахәмаруа: аԥҟарақәа, асетка, раԥхьатәи ашьаҿақәа",
+        "description": "Асудоку шԥахәмаруа: аԥҟарақәа, ацәаҳәақәеи аиҵаҳәақәеи аҭыԥҟақәеи, асудоку аҭыԥҵәара заҵәык ахьамоу, азгәаҭақәа рхархәара, раԥхьатәи ашьаҿақәа.",
+        "h1": "Асудоку шԥахәмаруа",
+        "summary": "Асудоку 9×9 асетка иқәу алогикатә хәмарроуп. Аклетка иҭацәу цыԥхьаӡа 1 инаркны 9-нӡа ахыԥхьаӡара аҭаҵатәуп, ацәаҳәа цыԥхьаӡа, аиҵаҳәа цыԥхьаӡа, 3×3 аҭыԥҟа цыԥхьаӡа ахыԥхьаӡара цыԥхьаӡа знык мацара алаланы. Алагамҭаз ахыԥхьаӡарақәа рхәҭак ыҟоуп; егьырҭ алогикала иуԥшаауеит, аклеткақәа акы-акала, ииашаны, агәаанагара зынӡа аҭахӡам. Ари анапхгара асетка, аԥҟарақәа, аҭыԥҵәара заҵәык апринцип, азгәаҭақәа, раԥхьатәи ашьаҿақәа рзы имариоу астратегиа рзы иазааҭгылоит. Убри зегьы [Bare Sudoku](play) аҿы иуҵар ауеит: хәыда-ԥсадоуп, абжьгарақәагьы алогика аарыԥшуеит.",
+        "sections": [
+          {
+            "h": "Асудоку аԥҟарақәа закәи?",
+            "p": [
+              "Аԥҟарақәа хԥа мацара ыҟоуп, урҭгьы хырхарҭа хԥак рыҟнытә иубо ԥҟарак ауп: ацәаҳәа цыԥхьаӡа 1 инаркны 9-нӡа ахыԥхьаӡарақәа зегьы алазароуп, аиҵаҳәа цыԥхьаӡа 1 инаркны 9-нӡа ахыԥхьаӡарақәа зегьы алазароуп, 3×3 аҭыԥҟа цыԥхьаӡа 1 инаркны 9-нӡа ахыԥхьаӡарақәа зегьы алазароуп. Убри аҟынтә ахыԥхьаӡара ацәаҳәа, аиҵаҳәа ма аҭыԥҟа акы аҟны ҩынтә иҟалар ауам.",
+              "Алагамҭаз иҟоу ахыԥхьаӡарақәа, ижәпаны иҩу, иԥсахтәым. Уусура аклеткақәа иҭацәу рҭаҵара ауп. Аԥхьаӡара ыҟаӡам, аиқәыршәарагьы ыҟаӡам: ахыԥхьаӡарақәа еиуеиԥшым асимволқәа жәба роуп. Анбанқәа ма асахьақәа рыла ухәмарыргьы, акгьы иԥсахуамызт."
+            ]
+          },
+          {
+            "h": "Асетка шԥеиқәыршәоу?",
+            "p": [
+              "Асетка 81 клеткак амоуп, 9 цәаҳәаки 9 иҵаҳәаки рыла. Ижәпоу аҵәаҳәақәа уи 3×3 аҭыԥҟақәа жәба рахь ишоит. Аклетка цыԥхьаӡа ацәаҳәа акы, аиҵаҳәа акы, аҭыԥҟа акы мацара иреиуоуп, абарҭ агәыԥқәа хԥа уи агәыԥқәа роуп. Аклетка агәыԥ иацзеиԥшу егьырҭ 20 клеткак уи аҩызцәа ҳәа ирышьҭоуп; аклетка иҭаҵоу ахыԥхьаӡара уи аҩызцәа 20 зегьы рҟынтә ари ахыԥхьаӡара аҭнахуеит.",
+              "Аклеткақәа r3c7 ҳәа иҩуп: 3-тәи ацәаҳәа, 7-тәи аиҵаҳәа. Ацәаҳәақәа хыхьынтәи иԥхьаӡоуп, аиҵаҳәақәа армарахьынтәи, аҭыԥҟақәа 1 инаркны 9-нӡа хыхьтәи армарахьтәи акәакь аҟынтә, ацәаҳәа ацәаҳәала. Ари аҩышьа аҟазарақәа ранапхгарақәа зегьы рҟны иахархәоуп, иҵатәуп: r5c5 асетка агәҭа ауп."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Асудоку цыԥхьаӡа аҭыԥҵәара заҵәык ахьамоу избан?",
+            "p": [
+              "Иашоу асудоку аҭыԥҵәара заҵәык амоуп, убри ауп алогика аус ахьауа. Ахыԥхьаӡара агәыԥ аҟны даҽа ҭыԥк шамам анаарԥшуа, уи иаанхаз аклетка иҭаҵазароуп, избанзар аҭыԥҵәара ыҟоуп, иарагьы заҵәыкуп. Асудоку ҩ-ҭыԥҵәарак амазҭгьы, алогика урҭ еиҩнашьуамызт, иарбанзаалак ашьаҿа аҟны агәаанагара уақәшәон.",
+              "Bare Sudoku асудоку цыԥхьаӡа уаппарат аҿы иаԥнаҵоит, иагәанаҭоит аҭыԥҵәара заҵәык шамоу, иара алогикатә ҭыԥҵәага иалху аҩаӡара аҟазарақәа рыла ишахыргало. Убри аҟынтә уаанкылазар, анаҩстәи ашьаҿа еснагь ыҟоуп, абжьгарагьы иаанарԥшуеит."
+            ]
+          },
+          {
+            "h": "Асудоку шԥалагатәу?",
+            "p": [
+              "Аҭыԥқәа ахьмаҷу аҟынтә уалага. Ари аиқәыршәара аҩаӡара цыԥхьаӡа аҿы аус ауеит:"
+            ],
+            "list": [
+              "Ирацәаны иҭаҵоу ахыԥхьаӡара алх, иаҳҳәап фынтә ма быжьынтә, нас уи змам аҭыԥҟақәа рыԥшаа. Ирацәаны аҭыԥҟа аҟны уи азы аклетка акы мацара ауп иаанхо: уи [иҵәаху заҵәык](hidden-single) ауп.",
+              "Иҭәханы иҟоу аҭыԥқәа рҟны аклеткақәа рыԥшаа. Аклетка ацәаҳәеи, аиҵаҳәеи, аҭыԥҟеи еицны еиуеиԥшым ахыԥхьаӡарақәа ааба рымазар, акандидат заҵәык ауп иаанхо: [иаарту заҵәык](naked-single). Иҭәханы иҟоу ацәаҳәақәа ма аҭыԥҟақәа рҟны иҟоу аклеткақәа ахәаԥшразы иреиӷьу аҭыԥуп.",
+              "Иуҭаҵо ахыԥхьаӡара цыԥхьаӡа 20 аҩызцәа рҟынтә акандидат акы аҭнахуеит, убри аҟынтә урҭ аҩызцәа уаҟәыхны иргәаҭа. Заҵәыкқәа ҵасла еишьҭагыланы иаауеит.",
+              "Имариоу аҭаҵарақәа анҵәалак, азгәаҭақәа иҩ: аклетка иҭацәу цыԥхьаӡа акандидатқәа. Нас аҭыԥҟа аҩнуҵҟа ацәаҳәа ма аиҵаҳәа акы иаркыу ахыԥхьаӡара ([иаркыу акандидатқәа](locked-candidates)) ма акандидатқәа ҩба еиԥшқәа змоу ҩ-клеткак ([иаарту ҩба](naked-pairs)) рыԥшаа.",
+              "Ианыхра цыԥхьаӡа ашьҭахь заҵәыкқәа рахь ухынҳә. Аҟазауаҩ асудокуқәагьы реиҳарак заҵәыкқәа рыла иҭыԥҵәоуп; иуадаҩу аҟазара анаҩстәи заҵәык аартуеит мацара."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Азгәаҭақәа закәи, ианахархәатәу?",
+            "p": [
+              "Азгәаҭақәа, акарандаш ала адыргақәа ма акандидатқәа ҳәагьы изышьҭоу, аклетка иҭацәу иҭауҩуа ахыԥхьаӡарақәа хәыҷқәа роуп, уаҟа уажәыгьы иҟалар зылшо ахыԥхьаӡарақәа рызгәаҭаразы. Имариоу асудокуқәа рҟны ҵасла иаҭахым; Иуадаҩу инаркны ихымԥадатәиуп, избанзар ҩба-ҩбала, X-Wing, Y-Wing ҳәа иҟоу аҟазарақәа акандидатқәа ирызкуп, иҭаҵоу ахыԥхьаӡарақәа акәым.",
+              "Азгәаҭақәа иашаны иҟазааит: ахыԥхьаӡара анҭауҵо, 20 аҩызцәа рзгәаҭақәа зегьы рҟынтә уи ианых. Bare Sudoku аҟны ари иарамацара иҟалоит, Азгәаҭақәа рҭаҵара акәшарак ала аклетка иҭацәу цыԥхьаӡа акандидатқәа зегьы аҭанаҵоит, убри аҟынтә акандидатқәа ихарҭәаау, иашоу аҟынтә уалагар ауеит. Азгәаҭа агәаанагара акәым, иҵабыргу ауп: иаанагоит уажәраанӡа акгьы ари ахыԥхьаӡара шаҭымхыц."
+            ]
+          },
+          {
+            "h": "Уаанкылазар иуҟаҵатәу закәи?",
+            "p": [
+              "Раԥхьа ахадатәқәа еиҭа иргәаҭа: ацәаҳәа, аиҵаҳәа, аҭыԥҟа иҭәханы иҟоу цыԥхьаӡа заҵәыкқәа рхыҵхырҭоуп. Нас иргәаҭа азгәаҭақәа ихарҭәааны ишыҟоу, избанзар иаӡыз акандидат асахьақәа ирҵәахуеит, иажәыз акандидат иагхоу асахьақәа аԥнаҵоит. Нас [аҟазарақәа](techniques) рыуадаҩра аиқәыршәара ала ирхыс: иаркыу акандидатқәа, ҩба-ҩбала, хԥа-хԥала, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Аҟазара цыԥхьаӡа абӷьыц ахаҭа амоуп ҵабыргытәи аҿырԥштәы ала.",
+              "Акгьы аус ауамзар, абжьгара ахархәа. Bare Sudoku аҟны абжьгара раԥхьа иагәанаҭоит иҭаҵоу ахыԥхьаӡарақәа руак иашамзар, нас алогикала иҭаҵатәу анаҩстәи аклетка аԥнашаауеит, аҟазарагьы ахьӡ аҳәоит, убри аҟынтә абжьгара уахархәозаргьы, акы уҵоит. Ахыԥхьаӡара аҭаҵаразы абжьгара еиҭа акәша."
+            ]
+          },
+          {
+            "h": "Bare Sudoku аҟны ахыԥхьаӡарақәа шԥаҭаҵатәу?",
+            "p": [
+              "Аклетка акәша, нас ахыԥхьаӡара. Ма раԥхьа ахыԥхьаӡара акәша: уи иаркхоит, нас уакәшо аклетка цыԥхьаӡа иҭанаҵоит; ари ахыԥхьаӡара афбатәи, абыжьбатәи, аабатәи аҭаҵаразы иаҳа ирласу амҩоуп. Иаартхарц азы ахыԥхьаӡара еиҭа иакәша. Азгәаҭақәа ақнопка акарандаш ахь ииасуеит, Аныхра аклетка ацқьоит, Ахынҳәра ашьаҿа цыԥхьаӡа аҟәыхуеит, агхақәа ҟаԥшьла иазгәаҭоуп, амениу аҟны иаҿумыхзар.",
+              "Аклавиатура аҟны: ахырхарҭатә клавишақәа аиасразы, 1 инаркны 9-нӡа ахыԥхьаӡара аҭаҵаразы, Backspace аныхразы, N азгәаҭақәа рзы, U ахынҳәразы, H абжьгаразы, F азгәаҭақәа рҭаҵаразы, Escape амениу азы. Ахәмарра иарамацара иаиқәнархоит, офлаин аус ауеит, ареклама амаӡам, аккаунтгьы аҭахӡам."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Асудоку аҟны агәаанагара аҭахума?",
+            "Иашоу асудоку аҟны аҭахӡам. Bare Sudoku асудоку цыԥхьаӡа аҭыԥҵәара заҵәык амоуп, иагәаҭоуп алогика мацара ала, аҩаӡара аҟазарақәа рыла ишаҭыԥҵәатәу. Агәаанагара аҭахуп ҳәа угәы иаанагозар, азгәаҭақәа рҟны акандидат акы ыҟам, ма аҟазара акы ԥшаатәуп."
+          ],
+          [
+            "Ахыԥхьаӡара ацәаҳәа, аиҵаҳәа ма аҭыԥҟа аҟны ҩынтә иҟалар ауама?",
+            "Мап. Убри ауп аԥҟара зегьы: ацәаҳәақәа жәба, аиҵаҳәақәа жәба, аҭыԥҟақәа жәба руак цыԥхьаӡа 1 инаркны 9-нӡа ахыԥхьаӡара цыԥхьаӡа знык мацара алоуп. Ахыԥхьаӡарақәа ҩба еиԥшу агәыԥ акы аҟны иҟазар, мачзаргьы урҭ руак иашам."
+          ],
+          [
+            "Имариоуи, Абжьаратәии, Иуадаҩуи, Аҟазауаҩи еиҩызшьо закәи?",
+            "Аҩаӡара асудоку иаҭаху аҟазарақәа ирыдҳәалоуп. Имариоуи Абжьаратәии заҵәыкқәа мацара рыла иҭыԥҵәоуп, Имариоу алагамҭаз мачзаргьы 38 хыԥхьаӡарак амоуп. Иуадаҩу иаҭахуп иаркыу акандидатқәа ма ҩба-ҩбала, хԥа-хԥала. Аҟазауаҩ иаҭахуп X-Wing, Y-Wing, Swordfish ма XYZ-Wing."
+          ],
+          [
+            "Азгәаҭақәа аклеткақәа зегьы рзы иҭаҵатәума, ма ҳәарада аклеткақәа рзы мацара?",
+            "Иуадаҩуи Аҟазауаҩи рзы зегьы иҭаҵа: ҩба-ҩбала, X-Wing, Y-Wing ҳәа иҟоу асахьақәа ааԥшуеит акандидатқәа зегьы ианҭаҩу мацара. Имариоуи Абжьаратәии рҟны азгәаҭақәа уҭахызар иуҩуеит, ахәмарцәа реиҳараҩык заҵәыкқәа мацара рыԥшаауеит."
+          ],
+          [
+            "Асудоку шаҟа аамҭа аҭахуп?",
+            "Имариоу асудоку минуҭқәак аҭахуп; Аҟазауаҩ асудокуқәа ҩажәа минуҭк ма еиҳаны иаҭахызар ауеит, иуадаҩу асахьа ирласны ишыуԥшаауа ала. Bare Sudoku асааҭ аанарԥшуеит, амениу аартызар иаанкылоит, арейтинг ахьӡынҵа амаӡам, убри аҟынтә уара иуҭаху аиԥш ухәмар."
+          ],
+          [
+            "Асудоку аҟны аматематика аҭахума?",
+            "Мап. Ахыԥхьаӡарақәа адыргақәа мацара роуп; еицҵара ма аԥхьаӡара аҭахӡам. Иарбанзаалак асимволқәа жәба аус руан, убри азоуп асудоку ахыԥхьаӡаратә хәмарра акәымкәа алогикатә хәмарра ахьакәу."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Асудоку аҭыԥҵәара аҟазарақәа аҿырԥштәқәа рыла",
+        "description": "Асудоку аҭыԥҵәара аҟазарақәа жәба зегьы, иаарту заҵәык инаркны Swordfish, XYZ-Wing рҟынӡа, Bare Sudoku абжьгарақәа ишырхәо аиқәыршәара ала, аҿырԥштәқәа рыла.",
+        "h1": "Асудоку аҭыԥҵәара аҟазарақәа",
+        "intro": [
+          "Асудоку цыԥхьаӡа алогикатә ҟазарақәа маҷк рыла иҭыԥҵәатәуп. Ари ахьӡынҵа Bare Sudoku аҭыԥҵәагеи абжьгарақәеи рҟны иахархәо аҟазарақәа жәба аанарԥшуеит, аҭыԥҵәага ишыргәанаҭо аиқәыршәара ала: раԥхьа заҵәыкқәа, нас агәыԥ акы аҩнуҵҟа ианыхрақәа, нас ацәаҳәақәеи аиҵаҳәақәеи жәпакы ирхысуа асахьақәа. Аҟазара цыԥхьаӡа абӷьыц ахаҭа амоуп: аҳәаақәҵара, ишԥшаатәу, иаԥҵоу асудоку аҟынтәи ҵабыргытәи аҿырԥштәы, ирацәаны иҟалауа агхақәа.",
+          "Асудоку аҩаӡара ақәнаргылоит иаҭаху аҟазара зегь реиҳа иуадаҩу. Имариоуи Абжьаратәии асудокуқәа заҵәыкқәа мацара рҭахуп, Иуадаҩу асудокуқәа иаркыу акандидатқәа ма ҩба-ҩбала, хԥа-хԥала рҭахуп, Аҟазауаҩ асудокуқәа мачзаргьы аԥсыӡ ма аҵәыжәҩа акы рҭахуп. Аҩаӡара иарбанзаалакгьы, аус адуҟа заҵәыкқәа иҟарҵоит; иуадаҩу аҟазара акандидат акы ма ҩба ианнахуеит, нас заҵәыкқәа ихнаргалоит."
+        ],
+        "faq": [
+          [
+            "Асудоку аҟазарақәа иарбан аиқәыршәара ала исзыргәаҭатәу?",
+            "Иаҳа имариоу раԥхьа: иаарту заҵәык, иҵәаху заҵәык, иаркыу акандидатқәа, иаарту ҩбеи хԥеи, иҵәаху ҩбеи хԥеи, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ари аиқәыршәара ҵәҟьа ала иргәанаҭоит, абжьгарагьы еснагь аԥхьаҟа ицо иаҳа имариоу аҟазара ахьӡ аҳәоит."
+          ],
+          [
+            "Асудоку аҭыԥҵәаразы абарҭ аҟазарақәа зегьы сҭахума?",
+            "Имариоуи Абжьаратәии асудокуқәа рзы заҵәыкқәа азхоит. Иуадаҩу асудокуқәа иаркыу акандидатқәеи ҩба-ҩбала, хԥа-хԥалеи ирацҵоит. Аҟазауаҩ асудокуқәа мачзаргьы аԥсыӡ ма аҵәыжәҩа акы рҭахуп, аха ҵасла асудоку акы аҟны знык ма ҩынтә мацара."
+          ],
+          [
+            "XYZ-Wing аасҭа иуадаҩу аҟазарақәа ыҟоума?",
+            "Ааи, иаҳҳәап, ацепқәа, аҭыԥҵәара заҵәык аԥышәарақәа, forcing nets ҳәа изышьҭоу. Bare Sudoku урҭ зҭаху асудокуқәа аԥнаҵом, убри аҟынтә ахәмарраҿы асудоку цыԥхьаӡа ари абӷьыц иану аҟазарақәа жәба рыла ихыркәшар ауеит."
+          ],
+          [
+            "Акандидат закәи?",
+            "Аклетка иҭацәу иҭаҵазар зылшо ахыԥхьаӡара, избанзар уи ацәаҳәа, аиҵаҳәа ма аҭыԥҟа аҟны уажәраанӡа акгьы иаҭнамхыц. Ахәмарраҿы азгәаҭақәа акандидатқәа роуп. Заҵәыкқәа ирыхьысуа аҟазара цыԥхьаӡа акандидатқәа ирызхәыцуеит, убри аҟынтә урҭ ихарҭәааны, иашаны иҟазааит."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Иаарту заҵәык",
+          "title": "Иаарту заҵәык асудоку аҟны: акандидат заҵәык змоу аклетка",
+          "description": "Иаарту заҵәык ахыԥхьаӡара акы мацара зҭаҵатәу аклетка иҭацәу ауп. Ирласны ишԥшаатәу уҵа, аҿырԥштәы ашьаҿа ашьаҿала, ирацәаны иҟалауа агхақәа.",
+          "h1": "Иаарту заҵәык (naked single)",
+          "summary": "Иаарту заҵәык акандидат заҵәык змоу аклетка иҭацәу ауп: егьырҭ ахыԥхьаӡарақәа ааба уи ацәаҳәа, аиҵаҳәа ма аҭыԥҟа аҟны иҟоуп. Иаанхаз ахыԥхьаӡара уаҟа иҭаҵазароуп. Ари асудоку аҟазара зегь реиҳа имариоу, зегь реиҳа ирацәаны иахархәо ауп, Bare Sudoku абжьгарагьы \"Араҟа акандидат заҵәык ауп\" ҳәа иазнаҳәоит.",
+          "when": [
+            "Еснагь. Иаарту заҵәыкқәа раԥхьатәи ашьаҿа инаркны аҵыхәтәантәи аҟынӡа ааԥшуеит, аҩаӡара цыԥхьаӡа аҿы. Имариоуи Абжьаратәии асудокуқәа рҟны, иҵәаху заҵәыкқәа ирыцны, иуҭаху аҟазара заҵәык ауп. Иуадаҩу асудокуқәа рҟны иуадаҩу аҟазара ианахуа акандидат цыԥхьаӡа ҵасла иаарту заҵәык ааннажьуеит, убри аҟынтә ашьаҿа цыԥхьаӡа ашьҭахь урҭ рыԥшаа."
+          ],
+          "spot": [
+            "Аҩызцәа ирацәаны иҭаҵоу аклеткақәа рахь уахәаԥш: ахыԥхьаӡарақәа быжьба змоу ацәаҳәа иалоу аклетка, ма ацәаҳәеи аиҵаҳәеи аҭыԥҟеи еицны еиуеиԥшым ахыԥхьаӡарақәа ааба змоу аклетка. Азгәаҭақәа ыҟамзар, аклетка аҟынтә иубо ахыԥхьаӡарақәа иԥхьаӡа. Азгәаҭақәа ыҟазар, иаарту заҵәык акандидат заҵәык аазырԥшуа аклетка ауп, убри азоуп Азгәаҭақәа рҭаҵара урҭ рыԥшаара ахьарымариуа."
+          ],
+          "examples": [
+            {
+              "h": "Аҿырԥштәы",
+              "steps": [
+                "{cell} уахәаԥш. Иҭацәуп, убри аҟынтә уи ацәаҳәа, аиҵаҳәа, аҭыԥҟа рҟны иҭаҵоу ахыԥхьаӡарақәа зегьы иҩ.",
+                "{row}-тәи ацәаҳәа аҟны иҟоуп {rowDigits}. {col}-тәи аиҵаҳәа аҟны иҟоуп {colDigits}. {box}-тәи аҭыԥҟа аҟны иҟоуп {boxDigits}.",
+                "Еицны {d} ада ахыԥхьаӡарақәа зегьы аҭырхуеит, убри аҟынтә {cell} аҟны иаанхаз акандидат заҵәык {d} ауп.",
+                "{cell} аҟны {d} иҭаҵа. Нас иргәаҭа ахыԥхьаӡара ҿыц ари ацәаҳәа, аиҵаҳәа ма аҭыԥҟа аҟны даҽа заҵәык аԥнаҵама ҳәа."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ацәаҳәа мацара ма аҭыԥҟа мацара аԥхьаӡара. Иаҭырхуа ахыԥхьаӡарақәа ааба ҵасла агәыԥқәа хԥагьы рҟынтә иаауеит.",
+            "Уажәы иуҭаҵаз ахыԥхьаӡарагьы 20 аҩызцәа рҟынтә акандидатқәа шаҭнахуа ахашҭра; иаарту заҵәыкқәа ҿыцқәа аҭаҵара цыԥхьаӡа ашьҭахь иаразнак иааԥшуеит.",
+            "Иаарту заҵәыки иҵәаху заҵәыки реилагара: иаарту заҵәык аклетка аҟны акандидат акы ауп иаанхаз, иҵәаху заҵәык агәыԥ аҟны ахыԥхьаӡаразы аклетка акы ауп иаанхаз."
+          ],
+          "faq": [
+            [
+              "Иаарту заҵәык асудоку аҟны закәи?",
+              "Акандидат заҵәык змоу аклетка иҭацәу. Уи ацәаҳәа, аиҵаҳәа, аҭыԥҟа рҟны еиуеиԥшым ахыԥхьаӡарақәа ааба уажәнатә иҭаҵоуп, убри аҟынтә ажәбатәи ахыԥхьаӡара мацара ауп иақәшәо."
+            ],
+            [
+              "Избан иаарту ҳәа изышьҭоу?",
+              "Избанзар азгәаҭақәа анҭаҩлак, акандидат заҵәык аклетка аҟны иаартны иубоит; акгьы иаҵәахуам. Иҵәаху заҵәык, иаҿагыланы, егьырҭ акандидатқәа ирылоуп, аклетка акәымкәа ахыԥхьаӡара уахәаԥшны иуԥшаауеит."
+            ],
+            [
+              "Асудоку иаарту заҵәыкқәа мацара рыла иҭыԥҵәар ауама?",
+              "Имариоу асудокуқәа ирацәаны ауеит, аха урҭ реиҳарак иҵәаху заҵәыкқәагьы рҭахуп. Bare Sudoku Имариоуи Абжьаратәии асудокуқәа заҵәыкқәа ахкы ҩбагьы рыла иҭыԥҵәар ауеит ҳәа иахәнаԥшуеит; Иуадаҩуи Аҟазауаҩи асудокуқәа мачзаргьы даҽа ҟазарак рҭахуп."
+            ],
+            [
+              "Абжьгара иаарту заҵәыкқәа аанарԥшуама?",
+              "Ааи. Анаҩстәи аҭаҵара иаарту заҵәык акәзар, абжьгара аклетка алнахуеит, ахыԥхьаӡара ацны \"Араҟа акандидат заҵәык ауп\" ҳәа аҳәоит. Аҭаҵаразы абжьгара еиҭа акәша."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Иҵәаху заҵәык",
+          "title": "Иҵәаху заҵәык асудоку аҟны: ахыԥхьаӡаразы аҭыԥ заҵәык",
+          "description": "Иҵәаху заҵәык ацәаҳәа, аиҵаҳәа ма аҭыԥҟа аҟны ахыԥхьаӡара ахьҭаҵатәу аклетка заҵәык ауп. Ахыԥхьаӡарақәа акы-акала урыхәаԥшуа урҭ рыԥшаара уҵа.",
+          "h1": "Иҵәаху заҵәык (hidden single)",
+          "summary": "Иҵәаху заҵәык ацәаҳәа, аиҵаҳәа ма аҭыԥҟа аҟны иҟалар зылшо аклетка акы мацара иаанхаз ахыԥхьаӡара ауп, уи аклетка даҽа кандидатқәак аанарԥшуазаргьы. Агәыԥ ари ахыԥхьаӡара алазароуп, убри аҟынтә уаҟа иҭаҵатәуп. Bare Sudoku абжьгара \"Ари ацәаҳәаҿы 5 аҭыԥ заҵәык\" ҳәа иазнаҳәоит, ма аиҵаҳәаҿы, ма аҭыԥҟаҿы.",
+          "when": [
+            "Ахыԥхьаӡара акы ԥхьаҟа ианцо: ахыԥхьаӡара хәынтә ма фынтә иааԥшлак, иаанхаз аҭыԥҟақәа рҟны аҭыԥ маҷуп, анаҩстәи ашьаҿагьы ҵасла иҵәаху заҵәык ауп. Иҵәаху заҵәыкқәа Имариоуи Абжьаратәии асудокуқәа рхада ҟазара роуп, аҩаӡара цыԥхьаӡа аҿгьы аус адуҟа урҭ ирыдуп."
+          ],
+          "spot": [
+            "Ахыԥхьаӡарақәа акы-акала ирыхәаԥш. Ахыԥхьаӡара акы алх, уи змам аҭыԥҟа аԥшаа, нас уи аҭыԥҟа аклеткақәа рҟынтә ари ахыԥхьаӡара иҭаҵоу ацәаҳәа ма аиҵаҳәа иалоу зегьы ақәга. Аклетка акы аанхозар, иҵәаху заҵәык уԥшааит. Ари ахәаԥшра ацәаҳәақәеи аиҵаҳәақәеи рҟынгьы аус ауеит. Ахәмарраҿы иҭаҵоу ахыԥхьаӡара акәша: иаҩызоу ахыԥхьаӡарақәа зегьы иалкаахоит, убри аҟынтә иҭацәу аклеткақәа ааԥшуеит."
+          ],
+          "examples": [
+            {
+              "h": "Аҿырԥштәы",
+              "steps": [
+                "{box}-тәи аҭыԥҟа аҟны {d} уажәыгьы ыҟам, убри аҟынтә уи аклеткақәа иҭацәу руак иҭаҵазароуп. Иҭацәу аклеткақәа: {empties}.",
+                "{cell} ада урҭ зегьы рҟны {d} амҩа аркуеит ацәаҳәа ма аиҵаҳәа акы аҟны уажәнатә иҭаҵоу {d}, убри аҟынтә уаҟа {d} акандидатӡам.",
+                "{box}-тәи аҭыԥҟа аҟны {d} азы аҭыԥ заҵәык {cell} ауп. {d} уаҟа иҭаҵа, {cell} даҽа кандидатқәак аанарԥшуазаргьы."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ахыԥхьаӡара иҟалап ҳәа мацара иубо аклетка аҭаҵара: агәыԥ аҟны иҭацәу аклеткақәа зегьы иргәаҭа, иаадырԥшны иҟоу мацара акәымкәа.",
+            "Аклетка акандидатқәа ирацәаны аанарԥшуеит ҳәа иҵәаху заҵәык умбара. Егьырҭ акандидатқәа акгьы рыԥсым; иаԥсоу ахыԥхьаӡара агәыԥ аҟны даҽа ҭыԥк ахьамам ауп.",
+            "Аҭыԥҟақәа мацара ирыхәаԥшра. Ацәаҳәақәеи аиҵаҳәақәеи иҵәаху заҵәыкқәа убасҵәҟьа ирацәаны ирыҭоит, иаҳа аҵыхәтәаны."
+          ],
+          "faq": [
+            [
+              "Иҵәаху заҵәык асудоку аҟны закәи?",
+              "Ацәаҳәа, аиҵаҳәа ма аҭыԥҟа аҟны аклетка акы мацара иҭаҵар зылшо ахыԥхьаӡара. Агәыԥ ари ахыԥхьаӡара алазароуп, убри аҟынтә аклетка иаҭаҵатәу удыруеит, даҽа кандидатқәак амазаргьы."
+            ],
+            [
+              "Иҵәаху заҵәыки иаарту заҵәыки еиҩызшьо закәи?",
+              "Иаарту заҵәык аклетка иазкуп: акандидат акы ауп иаанхаз. Иҵәаху заҵәык ахыԥхьаӡара иазкуп: агәыԥ аҟны аклетка акы ауп иаанхаз. Ҩбагьы ахыԥхьаӡара ҵабыргны иҭарҵоит."
+            ],
+            [
+              "Иаҳа имариаӡаны иԥшаатәу иарбану?",
+              "Азгәаҭақәа ыҟамзар, иҵәаху заҵәыкқәа ҵасла иаҳа ирмариуп, избанзар асетка ахыԥхьаӡара акы-акала урыхәаԥшыр ауеит. Азгәаҭақәа ихарҭәаау ыҟазар, иаарту заҵәыкқәа зегь реиҳа ирмариуп, избанзар акандидат заҵәык змоу аклетка ааԥшуеит."
+            ],
+            [
+              "Абжьгара иҵәаху заҵәык шԥаанарԥшуа?",
+              "Аклетка алхны, \"Ари ацәаҳәаҿы\", \"Ари аиҵаҳәаҿы\" ма \"Ари аҭыԥҟаҿы\" ахыԥхьаӡара \"аҭыԥ заҵәык\" ҳәа. Аҭаҵаразы абжьгара еиҭа акәша."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Иаркыу акандидатқәа",
+          "title": "Иаркыу акандидатқәа асудоку аҟны: аарԥшреи ааныкылареи",
+          "description": "Иаркыу акандидатқәа: аҭыԥҟа аҟны ахыԥхьаӡара акандидатқәа ацәаҳәа ма аиҵаҳәа акы иалазар, ма иаҿагыланы, ахыԥхьаӡара даҽа ҭыԥқәак рҟынтә ианыхуп.",
+          "h1": "Иаркыу акандидатқәа (locked candidates)",
+          "summary": "Иаркыу акандидатқәа ахыԥхьаӡара аҭаҵара акәымкәа акандидатқәа ианызхуа раԥхьатәи аҟазара ауп. Ҩ-формак амоуп. Аарԥшра (pointing): аҭыԥҟа аҟны ахыԥхьаӡара акандидатқәа зегьы ацәаҳәа ма аиҵаҳәа акы иалоуп, убри аҟынтә ахыԥхьаӡара ари ацәаҳәа ма аиҵаҳәа иаанхаз аҟынтә ианыхуп. Ааныкылара (claiming): ацәаҳәа ма аиҵаҳәа аҟны ахыԥхьаӡара акандидатқәа зегьы аҭыԥҟа акы иалоуп, убри аҟынтә ахыԥхьаӡара ари аҭыԥҟа иаанхаз аҟынтә ианыхуп. Bare Sudoku абжьгара иаанаарту аҭаҵара \"Иаркыу акандидатқәа\" ҳәа азнаҩуеит.",
+          "when": [
+            "Иуадаҩу асудоку аҟны заҵәыкқәа анҵәалак, раԥхьа ари ауп иргәаҭатәу. Мачзаргьы иугәаҭо ахыԥхьаӡаразы азгәаҭақәа ихарҭәааны иҟазароуп. Иаркыу акандидатқәа ирацәаны иҟоуп: Иуадаҩу асудокуқәа реиҳарак ирҭахуп, Аҟазауаҩ асудокуқәа рҟынгьы иаҳа иуадаҩу асахьақәа рыбжьара иахархәоуп."
+          ],
+          "spot": [
+            "Аарԥшразы, аҭыԥҟа цыԥхьаӡеи уи иалам ахыԥхьаӡара цыԥхьаӡеи рахь уахәаԥш: ари ахыԥхьаӡара акандидат клеткақәа ацәаҳәа ма аиҵаҳәа акы иалазар, иргәаҭа ари ацәаҳәа ма аиҵаҳәа аҟны аҭыԥҟа анҭыҵ ари ахыԥхьаӡара акандидатс ишыҟоу. Ааныкыларазы, ацәаҳәа ма аиҵаҳәа ахь уахәаԥш: ахыԥхьаӡара акандидатқәа зегьы аҭыԥҟа акы иалазар, ари аҭыԥҟа иаанхаз аҟынтә ианыхыр ауеит. Ахәмарраҿы ахыԥхьаӡара аклавиша акәша, уи акандидатқәа зегьы алкаахарц; аҭыԥҟа акы аҩнуҵҟа ацәаҳәа акы иқәу иалкаау азгәаҭақәа ҩба ма хԥа асахьа ауп."
+          ],
+          "examples": [
+            {
+              "h": "Аарԥшра",
+              "steps": [
+                "{box}-тәи аҭыԥҟа аҟны {d} абарҭ акандидат клеткақәа мацара амоуп: {cells}. Урҭ зегьы {row}-тәи ацәаҳәа иалоуп.",
+                "{box}-тәи аҭыԥҟа {d} аҭахуп, убри аҟынтә {row}-тәи ацәаҳәа {d} {box}-тәи аҭыԥҟа аҩнуҵҟа иҟоуп, абарҭ аклеткақәа руак иарбанзаалак иҭашәаргьы.",
+                "{row}-тәи ацәаҳәа аҩбатәи {d} амазар ауам, убри аҟынтә {d} аҭыԥҟа анҭыҵ иҟоу {row}-тәи ацәаҳәа аклеткақәа рҟынтә ианых: {elim}."
+              ]
+            },
+            {
+              "h": "Ааныкылара",
+              "steps": [
+                "{row}-тәи ацәаҳәа аҟны {d} {cells} рҟны мацара иҟалар ауеит, урҭ зегьы {box}-тәи аҭыԥҟа иалоуп.",
+                "{row}-тәи ацәаҳәа {d} алазароуп, убри аҟынтә {box}-тәи аҭыԥҟа {d} {row}-тәи ацәаҳәа иаанакылоит. {box}-тәи аҭыԥҟа егьырҭ аклеткақәа {d} рымазар ауам.",
+                "{d} ианых абарҭ аклеткақәа рҟынтә: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Аарԥшра аан ахыԥхьаӡара аҭыԥҟа анҭыҵ акәымкәа аҩнуҵҟа ианыхра, ма Ааныкылара аан иаҿагыланы. Ианыхрақәа еснагь ацәаҳәа ма аиҵаҳәа иалоу аха аҭыԥҟа иалам, ма аҭыԥҟа иалоу аха ацәаҳәа ма аиҵаҳәа иалам аклеткақәа рахь ицоит.",
+            "Акандидатқәа аҭыԥҟа ацәаҳәақәа ҩба ирылазар аԥҟара ахархәара. Аҭыԥҟа аҟны ахыԥхьаӡара акандидат клеткақәа зегьы ацәаҳәа ма аиҵаҳәа акы иалазароуп.",
+            "Ианыхра иаԥнаҵо заҵәык аԥшаара ахашҭра. Иаркыу акандидатқәа ихала ахыԥхьаӡара ҵасла иҭарҵом; заҵәык азыҟарҵоит."
+          ],
+          "faq": [
+            [
+              "Иаркыу акандидатқәа асудоку аҟны закәи?",
+              "Аҭыԥҟеи ацәаҳәа ма аиҵаҳәеи реиқәшәарҭа иалаку ахыԥхьаӡара акандидатқәа. Аҭыԥҟа, ма ацәаҳәа ма аиҵаҳәа, ари ахыԥхьаӡара ари аиқәшәарҭа аҟны иамазароуп, убри аҟынтә ахыԥхьаӡара ацәаҳәа ма аиҵаҳәа иаанхаз, ма аҭыԥҟа иаанхаз аҟынтә ианыхыр ауеит."
+            ],
+            [
+              "Аарԥшреи Ааныкылареи еиҩызшьо закәи?",
+              "Аарԥшра аҭыԥҟа аҟынтә иалагоит: аҭыԥҟа аҟны ахыԥхьаӡара акандидатқәа ацәаҳәа ма аиҵаҳәа акы иқәуп, убри аҟынтә ахыԥхьаӡара уи иаанхаз аҟынтә ианыхуп. Ааныкылара ацәаҳәа ма аиҵаҳәа аҟынтә иалагоит: уаҟа ахыԥхьаӡара акандидатқәа зегьы аҭыԥҟа акы иалоуп, убри аҟынтә ацәаҳәа ма аиҵаҳәа ахыԥхьаӡара аанакылоит, уи аҭыԥҟа иаанхаз аҟынтә ианыхуп."
+            ],
+            [
+              "Иаркыу акандидатқәа аиқәшәарҭа аҟынтә аныхра (intersection removal) ҳәагьы ирышьҭоума?",
+              "Ааи. Даҽа хьӡқәак: Ааныкылара азы аҭыԥҟеи ацәаҳәеи рҟынтә аиҵахара (box-line reduction), Аарԥшра азы иаазырԥшуа ҩбақәа ма хԥақәа (pointing pairs, pointing triples). Bare Sudoku ҩбагьы рзы хьӡык ахнаҵоит."
+            ],
+            [
+              "Иаркыу акандидатқәа иарбан аҩаӡара иаҭаху?",
+              "Иуадаҩу. Иаркыу акандидатқәа ма ҩба-ҩбала, хԥа-хԥала зҭаху, аха иаҳа иуадаҩу зҭахым асудоку Иуадаҩу ҳәа иахәнаԥшуп; Аҟазауаҩ асудокуқәа убасгьы аԥсыӡ ма аҵәыжәҩа рҭахуп."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Иаарту ҩбеи хԥеи",
+          "title": "Иаарту ҩбеи хԥеи асудоку аҟны: аус шыруа",
+          "description": "Иаарту ҩбеи хԥеи: агәыԥ акы аҟны акандидатқәа ҩба ма хԥа еиԥшқәа змоу аклеткақәа. Урҭ рыԥшаареи ианыхтәу акандидатқәеи уҵа, ҵабыргытәи аҿырԥштәқәа рыла.",
+          "h1": "Иаарту ҩбеи хԥеи (naked pair, naked triple)",
+          "summary": "Иаарту ҩба ацәаҳәа, аиҵаҳәа ма аҭыԥҟа акы аҟны акандидатқәа ҩба еиԥшқәа змоу ҩ-клеткак роуп. Ахыԥхьаӡарақәа ҩба абарҭ ҩ-клеткак рҟны иҟазароуп, убри аҟынтә агәыԥ егьырҭ аклеткақәа зегьы рҟынтә ианыхыр ауеит. Иаарту хԥа ари ахәыцра ауп, х-клеткаки ахыԥхьаӡарақәа хԥеи рыла; аклетка цыԥхьаӡа урҭ ҩба ма хԥагьы аанарԥшыр ауеит. Bare Sudoku абжьгара иаԥнаҵо аҭаҵара \"Ҩба ма хԥа\" ҳәа азнаҩуеит.",
+          "when": [
+            "Азгәаҭақәа ахарҭәаара ашьҭахь, заҵәыкқәеи иаркыу акандидатқәеи анҵәалак. Иаарту ҩбақәа Иуадаҩу асудокуқәа рҟны ирацәаны иҟоуп, иаарту хԥақәа иаҳа имаҷуп. Иҭацәу аклеткақәа хәба ма еиҳаны змоу агәыԥ цыԥхьаӡа аҟны ҩбагьы ргәаҭара иаԥсоуп."
+          ],
+          "spot": [
+            "Акандидатқәа ҩба мацара змоу аклеткақәа рыԥшаа, нас агәыԥ акы аҟны ари ҩба змоу даҽа клеткак аԥшаа. Хԥақәа рзы, акандидатқәа ҩба ма хԥа змоу аклеткақәа жәпакы змоу агәыԥқәа рахь уахәаԥш, урҭ рахьтә хԥа еицны еиуеиԥшым ахыԥхьаӡарақәа хԥа мацара шрымоу иргәаҭа. Азгәаҭақәа анҭаҩлак, еиԥшу акандидатқәа змоу аклеткақәа имариаӡаны иубоит; ахәмарраҿы Азгәаҭақәа рҭаҵара ари акәшарак ала иҟанаҵоит."
+          ],
+          "examples": [
+            {
+              "h": "Иаарту ҩба",
+              "steps": [
+                "{unit} аҟны аклеткақәа {cellA}, {cellB} акандидатқәа ҩба еиԥшқәа рымоуп: {d1}, {d2}.",
+                "Урҭ руак {d1} ауп, егьи {d2} ауп. Иарбану ҳаздырам, аха абарҭ ҩ-клеткак ахыԥхьаӡарақәа ҩбагьы ркуп.",
+                "Убри аҟынтә {unit} аҟны даҽа клеткак {d1} ма {d2} амазар ауам. Ианых: {elim}."
+              ]
+            },
+            {
+              "h": "Иаарту хԥа",
+              "steps": [
+                "{unit} аҟны х-клеткак рыкандидатқәа зегьы ахыԥхьаӡарақәа хԥа, {digits}, рҟынтә иаауеит: {cells}.",
+                "Ахыԥхьаӡарақәа хԥа абарҭ х-клеткак иарбанзаалак аиқәыршәара ала иҭаҵазароуп. Аклетка акандидатқәа хԥагьы аанарԥшзароуп ҳәа аҭахӡам; иаԥсоу х-клеткак руакгьы ари ахыԥхьаӡарақәа хԥа анҭыҵ акандидат ахьамам ауп.",
+                "{unit} егьырҭ аклеткақәа зегьы рҟынтә {digits} ианых: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Акандидатқәа ҩба еиԥшқәа змоу, аха ахԥатәи акандидатгьы змоу ҩ-клеткак ралхра. Иаарту ҩба азы аклетка цыԥхьаӡа ари акандидатқәа ҩба мацара амазароуп.",
+            "Ахыԥхьаӡарақәа аҩба ахаҭа аклеткақәа рҟынтә рыныхра. Аҩба акандидатқәа аанакылоит; ианыхрақәа агәыԥ егьырҭ аклеткақәа рахь ицоит.",
+            "Ахԥа аклетка цыԥхьаӡа ахыԥхьаӡарақәа хԥагьы аанарԥшзароуп ҳәа аҳәара. Урҭ рахьтә ҩба змоу аклетка иашоуп, аклетка акгьы ари ахыԥхьаӡарақәа хԥа анҭыҵ акандидат амамзар."
+          ],
+          "faq": [
+            [
+              "Иаарту ҩба асудоку аҟны закәи?",
+              "Агәыԥ акы аҟны акандидатқәа ҩба еиԥшқәа змоу ҩ-клеткак. Абарҭ ахыԥхьаӡарақәа ҩба абарҭ ҩ-клеткак рҟны иаркуп, убри аҟынтә агәыԥ иаанхаз аҟынтә ианыхыр ауеит."
+            ],
+            [
+              "Иаарту хԥа закәи?",
+              "Агәыԥ акы аҟны акандидатқәа еицны ахыԥхьаӡарақәа хԥа мацара змоу х-клеткак. Аклетка цыԥхьаӡа урҭ ҩба ма хԥа амазар ауеит. Ахыԥхьаӡарақәа хԥа абарҭ х-клеткак ирҭәуеит, убри аҟынтә агәыԥ егьырҭ аклеткақәа рҟынтә ианыхыр ауеит."
+            ],
+            [
+              "Иаарту ҩба ахыԥхьаӡара аҭанаҵома?",
+              "Ихала акәым. Акандидатқәа ианнахуеит, ари аныхрагьы ҵасла иаарту ма иҵәаху заҵәык ааннажьуеит. Bare Sudoku абжьгара ари заҵәык аанарԥшуеит, иазыҟазҵаз аҟазара ахьӡгьы аҳәоит."
+            ],
+            [
+              "Иаарту ҩба аҭыԥҟеи ацәаҳәеи рҟны иаразнак иҟалар ауама?",
+              "Ааи. Ҩ-клеткак ацәаҳәеи аҭыԥҟеи еицырзеиԥшзар, аҩба агәыԥқәа ҩбагьы рҟны акандидатқәа ианнахуеит. Bare Sudoku агәыԥқәа акы-акала игәанаҭоит."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Иҵәаху ҩбеи хԥеи",
+          "title": "Иҵәаху ҩбеи хԥеи асудоку аҟны: ишԥшаатәу",
+          "description": "Иҵәаху ҩба агәыԥ акы аҟны ҩ-клеткак еиԥшқәа рҟны мацара иҟалар зылшо ахыԥхьаӡарақәа ҩба роуп, урҭ егьырҭ акандидатқәа ианыхуп. Ашьаҿа ашьаҿала уҵа.",
+          "h1": "Иҵәаху ҩбеи хԥеи (hidden pair, hidden triple)",
+          "summary": "Иҵәаху ҩба ацәаҳәа, аиҵаҳәа ма аҭыԥҟа акы аҟны ҩ-клеткак еиԥшқәа рҟны мацара акандидатс иҟоу, даҽа ҭыԥк ахьыҟам ахыԥхьаӡарақәа ҩба роуп. Абарҭ ҩ-клеткак абарҭ ахыԥхьаӡарақәа ҩба рымазароуп, убри аҟынтә урҭ рҟны егьырҭ акандидатқәа зегьы ианыхыр ауеит. Иҵәаху хԥа убас аус ауеит, х-клеткак ирықәку ахыԥхьаӡарақәа хԥа рыла. Аныхра ашьҭахь аклеткақәа иаарту ҩба ма хԥа аанарԥшуеит. Bare Sudoku абжьгара иаԥнаҵо аҭаҵара \"Ҩба ма хԥа\" ҳәа азнаҩуеит.",
+          "when": [
+            "Агәыԥ акандидатқәа ирацәаны змоу аклеткақәа анамоу, заҵәыкқәагьы анҵәалак. Иҵәаху ҩбақәа иҭәу аклеткақәа рҟны иҵәахуп, убри азоуп иаарту ҩбақәа ахьымбо аҭыԥ аҟны урҭ рыԥшаара ахьаԥсоу. Иҵәаху хԥақәа маҷуп; Bare Sudoku иргәанаҭоит, аха Иуадаҩу асудокуқәа реиҳарак урҭ рыда иҭыԥҵәоуп."
+          ],
+          "spot": [
+            "Ахыԥхьаӡара ала аус ау, аклетка ала акәымкәа. Агәыԥ аҟны иалам ахыԥхьаӡара цыԥхьаӡа ахьҭаҵазар зылшо аклеткақәа азгәаҭа. Ахыԥхьаӡарақәа ҩба руак цыԥхьаӡа иҟалар ахьалшо ҩ-клеткак мацара амазар, урҭгьы ҩ-клеткак еиԥшқәа рокәзар, иҵәаху ҩба уԥшааит. Ахәмарраҿы ахыԥхьаӡара аклавиша акәша, уи акандидатқәа алкаахарц; ахыԥхьаӡарақәа ҩба агәыԥ аҟны ҩ-клеткак еиԥшқәа мацара иалыркаазар, уи ауп асахьа."
+          ],
+          "examples": [
+            {
+              "h": "Иҵәаху ҩба",
+              "steps": [
+                "{unit} аҟны ахыԥхьаӡарақәа {d1}, {d2} руак цыԥхьаӡа иҟалар ахьалшо ҩ-клеткак мацара амоуп, урҭгьы ҩ-клеткак еиԥшқәа роуп: {cells}.",
+                "Абарҭ ҩ-клеткак {d1}, {d2} рымазароуп, убри аҟынтә урҭ егьырҭ акандидатқәа иҟалар ауам.",
+                "Ианых: {elim}. Уажәы ҩ-клеткак иаарту ҩба аанарԥшуеит, уигьы даҽа ҭыԥқәак аартыр ауеит."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Аҩба ахыԥхьаӡарақәа аҩба аклеткақәа рҟынтә рыныхра. Ианыхтәу абарҭ аклеткақәа егьырҭ акандидатқәа роуп; аҩба ахыԥхьаӡарақәа аанхоит.",
+            "Агәыԥ аҟны ахԥатәи аклетка иҟалар ахьалшо ахыԥхьаӡара адкылара. Ахыԥхьаӡарақәа ҩбагьы ҩ-клеткак мацара рҟны иҟазароуп.",
+            "Аҭыԥҟақәа мацара рҟны аԥшаара. Иҵәаху ҩбақәа ацәаҳәақәеи аиҵаҳәақәеи рҟынгьы убасҵәҟьа ирацәаны иҟоуп."
+          ],
+          "faq": [
+            [
+              "Иҵәаху ҩба асудоку аҟны закәи?",
+              "Агәыԥ акы аҟны ҩ-клеткак еиԥшқәа рҟны мацара иҟалар зылшо ахыԥхьаӡарақәа ҩба. Абарҭ аклеткақәа абарҭ ахыԥхьаӡарақәа рымазароуп, убри аҟынтә урҭ егьырҭ акандидатқәа ианыхуп."
+            ],
+            [
+              "Иҵәаху ҩбеи иаарту ҩбеи еиҩызшьо закәи?",
+              "Иаарту ҩба убоит: акандидатқәа ҩба еиԥшқәа мацара аазырԥшуа ҩ-клеткак. Иҵәаху ҩба аклеткақәа ҩба рҟны иҟоу иацлоу акандидатқәа ирҵәахуеит. Урҭ ианыху, иҵәаху ҩба иаарту ҩбахоит."
+            ],
+            [
+              "Иҵәаху хԥа закәи?",
+              "Агәыԥ акы аҟны х-клеткак ирықәку ахыԥхьаӡарақәа хԥа. Ахыԥхьаӡара цыԥхьаӡа х-клеткак зегьы рҟны иҟазароуп ҳәа аҭахӡам; иаԥсоу ахыԥхьаӡарақәа хԥа руакгьы абарҭ аклеткақәа анҭыҵ акандидат ахьамам ауп."
+            ],
+            [
+              "Абжьгара иҵәаху ҩбеи иаарту ҩбеи еиҩнашьоума?",
+              "Мап. Bare Sudoku ҩбагьы иаԥнашаауеит, иаԥнаҵо аҭаҵара \"Ҩба ма хԥа\" ҳәа азнаҩуеит. Ара абӷьыцқәа урҭ еиҩдыршоит, избанзар еиуеиԥшым амҩақәа рыла иԥшаауп."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing асудоку аҟны: аҟазара аус шауа",
+          "description": "X-Wing: ҩ-цәаҳәак рҟны акандидат клеткақәа ҩба-ҩба змоу ахыԥхьаӡара, урҭ ҩ-иҵаҳәак еиԥшқәа ирылазар, ари аиҵаҳәақәа иаанхаз аҟынтә ианыхуп. Аҿырԥштәы.",
+          "h1": "X-Wing",
+          "summary": "X-Wing ахыԥхьаӡара акы, аԥшькәакь акәакьқәа рҟны иҟоу аклеткақәа ԥшьба рыла иҟоу асахьа ауп. Ахыԥхьаӡара ҩ-цәаҳәак руак цыԥхьаӡа аҟны акандидат клеткақәа ҩба мацара амазар, урҭгьы ҩ-иҵаҳәак еиԥшқәа ирылазар, ахыԥхьаӡара аԥшькәакь еиҿагылоу акәакьқәа ҩба рҟны иҟазароуп. Убри аҟынтә ари аиҵаҳәақәа ҩба егьырҭ аклеткақәа зегьы рҟынтә ианыхыр ауеит. Ацәаҳәақәеи аиҵаҳәақәеи ԥсахны убасгьы аус ауеит. Bare Sudoku аҟны Аҟазауаҩ раԥхьатәи аҟазара ауп.",
+          "when": [
+            "Заҵәыкқәа, иаркыу акандидатқәа, ҩба-ҩбала, хԥа-хԥала анҵәалак. X-Wing Аҟазауаҩ асахьа зегь реиҳа ирацәаны иҟоу ауп, ахыԥхьаӡара акандидатқәа маҷны ианаанхалак иааԥшуеит, ҵасла уи ԥшьынтә инаркны фынтә аҟынӡа иҭаҵахьазар. Иугәаҭо ахыԥхьаӡаразы азгәаҭақәа ихарҭәаау аҭахуп."
+          ],
+          "spot": [
+            "Ахыԥхьаӡара алх, нас уи азы акандидат клеткақәа ҩба мацара змоу ацәаҳәақәа рыԥшаа. Убас иҟоу ҩ-цәаҳәак ҩ-иҵаҳәак еиԥшқәа рымазар, ари аиҵаҳәақәа рҟны ахыԥхьаӡара егьырҭ акандидатқәа иргәаҭа: урҭ роуп ианыхтәу. Нас аиҵаҳәақәа ашьаҭас иҟаҵаны ари еиҭаҟаҵа. Ахәмарраҿы ахыԥхьаӡара аклавиша акәша: уи акандидатқәа зегьы иалкаахоит, иалкаау азгәаҭақәа ԥшьба змоу аԥшькәакь имариаӡаны иубоит."
+          ],
+          "examples": [
+            {
+              "h": "Аҿырԥштәы",
+              "steps": [
+                "{d} {r1}-тәи ацәаҳәа аҟны акандидат клеткақәа ҩба мацара амоуп, {r2}-тәи ацәаҳәа аҟынгьы ҩба мацара, урҭгьы ҩ-иҵаҳәак еиԥшқәа, {c1}, {c2}, ирылоуп: {cells}.",
+                "{r1}-тәи ацәаҳәа {d} {c1}-тәи ма {c2}-тәи аиҵаҳәа аҟны иаҭанаҵоит, {r2}-тәи ацәаҳәа {d} егьи аҟны иаҭанаҵоит. Иарбанзаалак аҟны {c1}-тәи, {c2}-тәи аиҵаҳәақәа руак цыԥхьаӡа абарҭ ҩ-цәаҳәак рҟынтә {d} аиуеит.",
+                "Убри аҟынтә {d} {c1}-тәи, {c2}-тәи аиҵаҳәақәа рҟны даҽа ҭыԥк аҟны иҟалар ауам. {d} ианых: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ахыԥхьаӡаразы акандидат клеткақәа хԥа змоу ацәаҳәа ахархәара. Ашьаҭатә цәаҳәа цыԥхьаӡа ҩба мацара амазароуп, ҩбагьы еицырзеиԥшу ҩ-иҵаҳәак рҟны иҟазароуп.",
+            "Ахыԥхьаӡара аиҵаҳәақәа рҟынтә акәымкәа ацәаҳәақәа рҟынтә аныхра. Ацәаҳәақәа ашьаҭас ианыҟоу, ианыхрақәа аиҵаҳәақәа рҟны иҟоуп, иаҿагыланы убасгьы.",
+            "Иԥсаху аформа ахашҭра. Аиҵаҳәақәа рҟны иаԥҵоу X-Wing ацәаҳәақәа рҟны акандидатқәа ианнахуеит."
+          ],
+          "faq": [
+            [
+              "X-Wing асудоку аҟны закәи?",
+              "Ҩ-цәаҳәак руак цыԥхьаӡа аҟны, ҩ-иҵаҳәак еиԥшқәа рҟны, акандидат клеткақәа ҩба мацара змоу ахыԥхьаӡара. Ахыԥхьаӡара ари аԥшькәакь еиҿагылоу акәакьқәа ҩба рҟны иҟоуп, убри аҟынтә аиҵаҳәақәа ҩба иаанхаз аҟынтә ианыхуп. Ацәаҳәақәеи аиҵаҳәақәеи рыԥсахра ауеит."
+            ],
+            [
+              "X-Wing аус ахьауа избан?",
+              "Ацәаҳәақәа ҩба руак цыԥхьаӡа ахыԥхьаӡара аиҵаҳәақәа ҩба руак аҟны иаҭанаҵароуп, ацәаҳәақәа ҩбагьы аиҵаҳәа акы ахь иҭарҵар ауам. Убри аҟынтә аиҵаҳәақәа ҩба руак цыԥхьаӡа ахыԥхьаӡара абарҭ ацәаҳәақәа рҟынтә иаиуеит, урҭ аиҵаҳәақәа рҟны егьырҭ акандидатқәа зегьы иҟалар ауам."
+            ],
+            [
+              "X-Wing аԥсыӡ ауп?",
+              "Ааи. X-Wing ашәагаа ҩба змоу аԥсыӡ ауп; Swordfish ашәагаа хԥа змоу аԥсыӡ ауп. Bare Sudoku ҩбагьы иаԥнашаауеит."
+            ],
+            [
+              "X-Wing иарбан аҩаӡараҿы иҟоу?",
+              "Аҟазауаҩ. X-Wing, Y-Wing, Swordfish ма XYZ-Wing зҭаху асудоку Аҟазауаҩ ҳәа иахәнаԥшуп."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing асудоку аҟны: аҟазара аус шауа",
+          "description": "Y-Wing (XY-Wing): акандидатқәа ҩба змоу агәҭеи урҭ руак змоу аҵәыжәҩақәа ҩбеи ахыԥхьаӡара аҵәыжәҩақәа ҩбагьы зыбо аклетка цыԥхьаӡа аҟынтә иаҭырхуеит.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, XY-Wing ҳәагьы изышьҭоу, акандидатқәа ҩба-ҩба змоу х-клеткак рыла иҟоуп. Агәҭа акандидатқәа X, Y амоуп. Аҵәыжәҩа акы агәҭа абоит, X, Z амоуп; егьи аҵәыжәҩа агәҭа абоит, Y, Z амоуп. Агәҭа иарбанзаалак акәзаргьы, аҵәыжәҩақәа руак Z акәзароуп, убри аҟынтә аҵәыжәҩақәа ҩбагьы зыбо аклетка цыԥхьаӡа аҟынтә Z ианыхыр ауеит. Bare Sudoku аҟны Аҟазауаҩ аҟазара ауп.",
+          "when": [
+            "Асудоку акандидатқәа ҩба мацара змоу аклеткақәа жәпакы анамоу, аԥсыӡгьы аныҟам. Y-Wing Аҟазауаҩ асудокуқәа рҟны ирацәаны иҟоуп, акандидатқәа ҩба змоу аклеткақәа рышьҭала иԥшаауп: урҭ руак цыԥхьаӡа агәҭа ма аҵәыжәҩа акәзар ауеит."
+          ],
+          "spot": [
+            "Акандидатқәа ҩба мацара змоу аклеткақәа иҩ. Урҭ руак цыԥхьаӡа агәҭас иԥхьаӡа, акандидатқәа X, Y рыла, нас уи аҩызцәа рыбжьара X, даҽа хыԥхьаӡарак Z змоу аклетка, Y, ари Z змоу аклеткагьы рыԥшаа. Урҭ ҩба роуп аҵәыжәҩақәа. Нас аҵәыжәҩақәа ҩбагьы зыбо, Z змоу аклеткақәа рыԥшаа. Аҵәыжәҩақәа ахаҭақәа еибабар аҭахӡам."
+          ],
+          "examples": [
+            {
+              "h": "Аҿырԥштәы",
+              "steps": [
+                "Агәҭа {pivot} акандидатқәа {x}, {y} амоуп. Уи {wingA} абоит, {x}, {z} змоу, {wingB}-гьы абоит, {y}, {z} змоу.",
+                "{pivot} {x} акәзар, {wingA} {x} ацәыӡуеит, {z}-хоит. {pivot} {y} акәзар, {wingB} {z}-хоит. Иарбанзаалак аҟны аҵәыжәҩақәа руак {z} ауп.",
+                "Аҵәыжәҩақәа ҩбагьы зыбо аклетка {z} акәзар ауам. {z} ианых: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Агәҭа ҩбагьы ирымбо аҵәыжәҩақәа ралхра. Аҵәыжәҩа цыԥхьаӡа агәҭеи ацәаҳәа, аиҵаҳәа ма аҭыԥҟа акы еицырзеиԥшзароуп.",
+            "Аҵәыжәҩа акы мацара зыбо аклеткақәа рҟынтә Z аныхра. Ианыху аклетка аҵәыжәҩақәа ҩбагьы абазароуп.",
+            "Агәҭа аҟынтә Z аныхра. Y-Wing аҟны агәҭа Z амаӡам; иамазар, асахьа XYZ-Wing ауп, даҽа ԥҟарақәак змоу."
+          ],
+          "faq": [
+            [
+              "Y-Wing асудоку аҟны закәи?",
+              "Акандидатқәа ҩба-ҩба змоу х-клеткак: X, Y змоу агәҭа, X, Z змоу агәҭа зыбо аҵәыжәҩа, Y, Z змоу агәҭа зыбо аҵәыжәҩа. Аҵәыжәҩа акы еснагь Z ауп, убри аҟынтә аҵәыжәҩақәа ҩбагьы зыбо аклеткақәа рҟынтә Z ианыхуп."
+            ],
+            [
+              "Y-Wing XY-Wing иаҩызоума?",
+              "Ааи. Ахьӡқәа ҩбагьы асахьа акы иазкуп. Bare Sudoku Y-Wing ҳәа иашьҭоит."
+            ],
+            [
+              "Аҵәыжәҩа акы Z акәзароуп избан?",
+              "Агәҭа X акәзар, актәи аҵәыжәҩа X ацәыӡуеит, Z-хоит. Агәҭа Y акәзар, аҩбатәи аҵәыжәҩа Z-хоит. Агәҭа урҭ руак ауп, убри аҟынтә аҵәыжәҩа акы Z ауп."
+            ],
+            [
+              "Y-Wing клеткак шаҟа ианнахуа?",
+              "Ҵасла акы ма ҩба: аҵәыжәҩақәа ҩбагьы зыбо, Z уажәыгьы змоу аклеткақәа мацара. Уи заҵәык аԥҵаразы иазхоит."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish асудоку аҟны: аҟазара аус шауа",
+          "description": "Swordfish: х-цәаҳәак рҟны х-иҵаҳәак ирықәку ахыԥхьаӡара ари аиҵаҳәақәа иаанхаз аҟынтә ианыхуп. Ашәагаа хԥа змоу аԥсыӡ, ҵабыргытәи аҿырԥштәы ала.",
+          "h1": "Swordfish",
+          "summary": "Swordfish х-цәаҳәаки х-иҵаҳәаки змоу X-Wing ауп. Ахыԥхьаӡара х-цәаҳәак руак цыԥхьаӡа аҟны хԥа иреиҳамкәа акандидат клеткақәа амазар, урҭ зегьы х-иҵаҳәак еиԥшқәа ирылазар, ацәаҳәақәа хԥа ари аиҵаҳәақәа рҟны ахыԥхьаӡара ркуеит, ахыԥхьаӡарагьы аиҵаҳәақәа хԥа егьырҭ аклеткақәа зегьы рҟынтә ианыхыр ауеит. Ацәаҳәақәеи аиҵаҳәақәеи рыԥсахра ауеит. Bare Sudoku Swordfish Y-Wing ашьҭахь игәанаҭоит, Аҟазауаҩ асудокуқәа рҟны.",
+          "when": [
+            "X-Wing, Y-Wing акгьы анырымԥшаауа. Swordfish X-Wing аасҭа иаҳа имаҷуп, акандидатқәа х-цәаҳәак ма х-иҵаҳәак рҟны маҷны иҟоу ахыԥхьаӡара аҭахуп. Ари ахыԥхьаӡаразы азгәаҭақәа ихарҭәаау, иашоу аҭахуп."
+          ],
+          "spot": [
+            "Ахыԥхьаӡара алх, уи азы акандидат клеткақәа ҩба ма хԥа змоу ацәаҳәақәа рыԥшаа. Убас иҟоу х-цәаҳәак еицны х-иҵаҳәак мацара ркуазар, ари аиҵаҳәақәа рҟны ахыԥхьаӡара егьырҭ акандидатқәа иргәаҭа. Ацәаҳәа цыԥхьаӡа аиҵаҳәа цыԥхьаӡа аҟны акандидат амазароуп ҳәа аҭахӡам: Swordfish аклеткақәа фба, быжьба, ааба ма жәба амазар ауеит. Ахәмарраҿы ахыԥхьаӡара аклавиша ала иалкаа, акандидатқәа х-иҵаҳәак рҟны ишеиқәшәо х-цәаҳәак рыԥшаа."
+          ],
+          "examples": [
+            {
+              "h": "Аҿырԥштәы",
+              "steps": [
+                "{d} {rows} ацәаҳәақәа руак цыԥхьаӡа аҟны хԥа иреиҳамкәа акандидат клеткақәа амоуп, урҭ зегьы {cols} аиҵаҳәақәа ирылоуп: {cells}.",
+                "Ацәаҳәақәа хԥа руак цыԥхьаӡа {d} аиҵаҳәақәа хԥа руак аҟны иаҭанаҵароуп, ацәаҳәақәа ҩба аиҵаҳәа акы ахь иҭарҵар ауам. Убри аҟынтә аиҵаҳәақәа хԥа {d} абарҭ ацәаҳәақәа хԥа рҟынтә ироуеит.",
+                "{cols} аиҵаҳәақәа рҟны даҽа {d} акандидат иҟалар ауам. {d} ианых: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Аклеткақәа жәба зегьы аҭахуп ҳәа аҳәара. Ацәаҳәақәа руак-руак рҟны акандидатқәа ҩба змоу Swordfish иашоуп, ацәаҳәақәа хԥа х-иҵаҳәак мацара ркуазар.",
+            "Акандидат клеткақәа ԥшьба змоу ацәаҳәа алаҵара. Ашьаҭатә цәаҳәа цыԥхьаӡа хԥа иреиҳамкәа амазароуп, зегьы аиҵаҳәақәа хԥа рҟны.",
+            "Ашьаҭатә цәаҳәақәа рҟны аныхра. Ацәаҳәақәа ашьаҭас ианыҟоу, ианыхрақәа аиҵаҳәақәа хԥа рҟны иҟоуп, ашьаҭатә цәаҳәақәа анҭыҵ."
+          ],
+          "faq": [
+            [
+              "Swordfish асудоку аҟны закәи?",
+              "Х-цәаҳәак рҟны акандидатқәа х-иҵаҳәак ирықәку ахыԥхьаӡара. Ацәаҳәақәа хԥа ахыԥхьаӡара абарҭ аиҵаҳәақәа хԥа рҟны иаҭарҵароуп, акы-акала, убри аҟынтә ахыԥхьаӡара ари аиҵаҳәақәа егьырҭ аклеткақәа рҟынтә ианыхуп."
+            ],
+            [
+              "Swordfish-и X-Wing-и еиҩызшьо закәи?",
+              "Ашәагаа мацара: X-Wing ҩ-цәаҳәаки ҩ-иҵаҳәаки рыла иҟоуп, Swordfish х-цәаҳәаки х-иҵаҳәаки рыла. Ахәыцра еиԥшуп."
+            ],
+            [
+              "Swordfish аклеткақәа жәба ҵәҟьа аҭахума?",
+              "Мап. Ацәаҳәа цыԥхьаӡа акандидатқәа ҩба ма хԥа амазар ауеит; асахьа иаҭаху ацәаҳәақәа хԥа еицны хԥа иреиҳау аиҵаҳәақәа шрымам ауп."
+            ],
+            [
+              "Ашәагаа ԥшьба змоу аԥсыӡ ыҟоума?",
+              "Ааи, Jellyfish. Bare Sudoku аҟны уи ахархәара ыҟаӡам, избанзар уи асудокуқәа зны иаҳагьы иаҭахым."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing асудоку аҟны: аҟазара аус шауа",
+          "description": "XYZ-Wing: акандидатқәа хԥа змоу агәҭеи урҭ руак еицырзеиԥшу аҵәыжәҩақәа ҩбеи ари ахыԥхьаӡара хԥагьы зыбо аклетка цыԥхьаӡа аҟынтә иаҭырхуеит.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing агәҭа акандидатқәа хԥа змоу Y-Wing ауп. Агәҭа X, Y, Z амоуп; аҵәыжәҩа акы агәҭа абоит, X, Z амоуп, егьи агәҭа абоит, Y, Z амоуп. Х-клеткак руак Z акәзароуп, убри аҟынтә хԥагьы зыбо аклетка цыԥхьаӡа аҟынтә Z ианыхыр ауеит. Агәҭа ахаҭа Z акәзар ауеит, убри аҟынтә ианыху аклетка агәҭеи аҵәыжәҩақәа ҩбеи абазароуп, уигьы аклеткақәа еицырзеиԥшу аҭыԥҟа ма ацәаҳәа ма аиҵаҳәа аҟны мацара иҟанаҵоит. Bare Sudoku аҟны иахархәо аҟазарақәа зегь реиҳа иуадаҩу ауп.",
+          "when": [
+            "Даҽакгьы аус анауамзар мацара. XYZ-Wing Bare Sudoku аҟны асахьа зегь реиҳа имаҷу ауп, Аҟазауаҩ асудокуқәа рҟны мацара иааԥшуеит. Акандидатқәа хԥа змоу аклеткеи уи ахыԥхьаӡарақәа ҩба змоу, акандидатқәа ҩба змоу аклеткеи аҭыԥҟа акы аҟны ианыҟоу, уи аԥшаа."
+          ],
+          "spot": [
+            "Акандидатқәа хԥа мацара змоу аклеткақәа рҟынтә уалага; урҭ руак цыԥхьаӡа агәҭа акәзар ауеит. Уи аҩызцәа рыбжьара акандидатқәа ҩба-ҩба змоу ҩ-клеткак рыԥшаа, урҭ акандидатқәа агәҭа ахԥа рҟынтә иаагоуп, еицырзеиԥшугьы ахыԥхьаӡара Z акы мацара ауп. Нас агәҭеи аҵәыжәҩақәа ҩбеи зыбо, Z змоу аклеткақәа рыԥшаа. Ҵасла аҵәыжәҩа акы агәҭа аҭыԥҟа аҟны иҟоуп, егьи уи ацәаҳәа ма аиҵаҳәа аҟны, ианыху аклеткақәагьы ари аҭыԥҟа ари ацәаҳәа ма аиҵаҳәа аҟны иаанхаз аклеткақәа роуп."
+          ],
+          "examples": [
+            {
+              "h": "Аҿырԥштәы",
+              "steps": [
+                "Агәҭа {pivot} акандидатқәа хԥа амоуп: {x}, {y}, {z}. Уи {wingA} абоит, {x}, {z} змоу, {wingB}-гьы абоит, {y}, {z} змоу.",
+                "{pivot} {z} акәзар, уи ауп. {x} акәзар, {wingA} {z} акәзароуп. {y} акәзар, {wingB} {z} акәзароуп. Иарбанзаалак аҟны х-клеткак руак {z} ауп.",
+                "Хԥагьы зыбо аклетка {z} акәзар ауам. {z} ианых: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Аҵәыжәҩақәа ҩба мацара зыбо аклеткақәа рҟынтә аныхра. Y-Wing аҟны акәымкәа, ара агәҭа Z акәзар ауеит, убри аҟынтә аклетка агәҭагьы абазароуп.",
+            "Акандидатқәа агәҭа акандидатқәа хԥа ирылам аҵәыжәҩақәа рхархәара.",
+            "Y-Wing ацеилагара: аиҩшара агәҭа ахԥатәи акандидат ауп, уигьы ианыхтәу аклеткақәа аԥсахуеит."
+          ],
+          "faq": [
+            [
+              "XYZ-Wing асудоку аҟны закәи?",
+              "Акандидатқәа X, Y, Z змоу агәҭеи аҵәыжәҩақәа ҩбеи: акы X, Z амоуп, егьи Y, Z амоуп, ҩбагьы агәҭа рбоит. Х-клеткак руак Z ауп, убри аҟынтә хԥагьы зыбо аклеткақәа рҟынтә Z ианыхуп."
+            ],
+            [
+              "XYZ-Wing-и Y-Wing-и еиҩызшьо закәи?",
+              "Агәҭа акандидатқәа ҩба акәымкәа хԥа амоуп, Z ацны. Убри агәҭа Z ахьыҟалар ауа аҭыԥны иҟанаҵоит, убри аҟынтә агәҭеи аҵәыжәҩақәа ҩбеи зыбо аклеткақәа мацара ауп Z зцәыӡыр зылшо."
+            ],
+            [
+              "XYZ-Wing шаҟантә иааԥшуа?",
+              "Маҷны. Bare Sudoku аҟны Аҟазауаҩ асудокуқәа мацара иаҭахызар ауеит, урҭ реиҳарак иаҭахым. Bare Sudoku уи аҵыхәтәаны игәанаҭоит, X-Wing, Y-Wing, Swordfish рышьҭахь."
+            ],
+            [
+              "WXYZ-Wing ыҟоума?",
+              "Ааи, акандидатқәа ԥшьба змоу агәҭа ала, аха Bare Sudoku аҟны уи ахархәара ыҟаӡам. Ахәмарраҿы асудоку цыԥхьаӡа ари анапхгара иану аҟазарақәа жәба рыла ихыркәшар ауеит."
+            ]
+          ]
+        }
+      }
+    },
+    "kbd": {
+      "learnHeading": "Судоку зэгъащӏэ",
+      "learnText": "Судокум щӏэуэ ухыхьа, хьэмэрэ судоку гугъу гуэрым ущыувыӏа? Гъуазитӏым хабзэхэри чэнджэщхэм къагъэсэбэп ӏэмал псори зэхагъэкӏ, дэтхэнэми щапхъэ пэж иӏэу.",
+      "howToLink": "Судоку дауэ джэгу",
+      "techniquesLink": "Судокур зэрызэфӏэбгъэкӏ ӏэмалхэр",
+      "labels": {
+        "howTo": "Дауэ джэгу",
+        "techniques": "Ӏэмалхэр",
+        "play": "Судоку джэгун",
+        "prev": "Ипэ ӏэмалыр",
+        "next": "Къыкӏэлъыкӏуэ ӏэмалыр",
+        "all": "Ӏэмал псори",
+        "example": "Щапхъэ",
+        "steps": "Лъэбакъуэ-лъэбакъуэкӏэ",
+        "when": "Сыт щыгъуэ бгъэсэбэпын",
+        "spot": "Дауэ къэбгъуэтын",
+        "mistakes": "Куэдрэ къэхъу щыуагъэхэр",
+        "inGame": "Bare Sudoku-м",
+        "level": "Ткӏуэпсыр: {level} щегъэжьауэ",
+        "hint": "Джэгум чэнджэщым жеӏэ: {text}",
+        "legend": "Бжыгъэ гъумхэр япэ щыӏэщ, бжыгъэ щхъуантӏэхэр зэфӏэбгъэкӏ щӏыкӏэ гъэуващ, бжыгъэ цӏыкӏухэр кандидатхэщ. Гъэнэхуа клеткэхэм сурэтыр яухуэ, тетхыкӏа кандидатхэр хэхащ, хъурейм ит кандидатыр гъэувын хуей бжыгъэрщ.",
+        "notation": "Клеткэхэр r3c7 хуэдэу тхащ: сатыр 3, бгъуагъ 7. Сатырхэр ищхьэмкӏэ къыщыщӏэдзауэ ябж, бгъуагъхэр сэмэгумкӏэ къыщыщӏэдзауэ, пхъуантэхэри 1-м щегъэжьауэ 9-м нэс ищхьэ сэмэгу къуагъым къыщыщӏэдзауэ, сатыр-сатыру.",
+        "row": "сатыр {n}",
+        "column": "бгъуагъ {n}",
+        "box": "пхъуантэ {n}",
+        "elimItem": "{cell}-м щыщ {d}",
+        "regions": "Сатыр 5, бгъуагъ 5, пхъуантэ 5 судокур щыщӏидзэм",
+        "firstMove": "Зы закъуэ нахуэ: {cell}-р {d} фӏэкӏа хъунукъым",
+        "breadcrumb": "Навигацэ"
+      },
+      "howTo": {
+        "title": "Судоку дауэ джэгу: хабзэхэр, сеткэр, япэ лъэбакъуэхэр",
+        "description": "Судоку дауэ джэгу: хабзэхэр, сатырхэр, бгъуагъхэр, пхъуантэхэр, судоку къэс зэфӏэкӏыпӏэ зы закъуэ зэриӏэр, тхыгъэхэр, япэ лъэбакъуэхэр.",
+        "h1": "Судоку дауэ джэгу",
+        "summary": "Судокур 9×9 сеткэм тет логикэ джэгущ. Клеткэ нэщӏ къэс 1-м щегъэжьауэ 9-м нэс бжыгъэ итхэ, сатыр къэсым, бгъуагъ къэсым, 3×3 пхъуантэ къэсым бжыгъэ къэс зэ закъуэ хэту. Бжыгъэ зыбжанэ япэ щыӏэщ; адрейхэр логикэкӏэ къэбгъуэт, клеткэхэр зырызу, шэч хэмылъу, гугъэкӏэ бжыгъэ зэи хэплъхьэн хуейкъым. Мы гъуазэм сеткэр, хабзэхэр, зэфӏэкӏыпӏэ закъуэм и принципыр, тхыгъэхэр, япэ лъэбакъуэхэм папщӏэ стратегие тынши къегъэлъагъуэ. Ар псори [Bare Sudoku](play)-м щызэбгъэщӏэфынущ: пщӏэншэщ, чэнджэщхэми логикэр къагъэлъагъуэ.",
+        "sections": [
+          {
+            "h": "Судокум и хабзэхэр сыт хуэдэ?",
+            "p": [
+              "Хабзищ къудей щыӏэщ, ахэри лъэныкъуищым къикӏыу плъагъу хабзэ закъуэщ: сатыр къэсым 1-м щегъэжьауэ 9-м нэс бжыгъэхэр хэтын хуейщ, бгъуагъ къэсым 1-м щегъэжьауэ 9-м нэс бжыгъэхэр хэтын хуейщ, 3×3 пхъуантэ къэсым 1-м щегъэжьауэ 9-м нэс бжыгъэхэр хэтын хуейщ. Аращи, бжыгъэр сатыр, бгъуагъ е пхъуантэ закъуэм тӏэу хэтыфынукъым.",
+              "Япэ щыӏэ бжыгъэхэр, гъуму тхахэр, зэхъуэкӏыркъым. Уи лэжьыгъэр клеткэ нэщӏхэр гъэнщӏынырщ. Бжыгъэ зэхэлъхьэн щыӏэкъым, зэкӏэлъыкӏуэкӏи щыӏэкъым: бжыгъэхэр нэщэнэ зэмыщхь бгъу къудейщ. Хьэрфхэмкӏэ е сурэтхэмкӏэ уджэгуами, зыри зэхъуэкӏынутэкъым."
+            ]
+          },
+          {
+            "h": "Сеткэр дауэ зэхэлъ?",
+            "p": [
+              "Сеткэм 81 клеткэ иӏэщ, сатыр 9-рэ бгъуагъ 9-рэ. Линие гъумхэм ар 3×3 пхъуантэ 9-у зэпаудыр. Клеткэ къэс сатыр закъуэ, бгъуагъ закъуэ, пхъуантэ закъуэ хохьэ, а гупищыр и гупхэрщ. Клеткэм гуп зэрыхэт адрей клеткэ 20-м и гъунэгъухэ жаӏэ; клеткэм бгъэува бжыгъэм а бжыгъэр и гъунэгъу 20-ми къахегъэкӏ.",
+              "Клеткэхэр r3c7 хуэдэу тхащ: сатыр 3, бгъуагъ 7. Сатырхэр ищхьэмкӏэ къыщыщӏэдзауэ ябж, бгъуагъхэр сэмэгумкӏэ къыщыщӏэдзауэ, пхъуантэхэри 1-м щегъэжьауэ 9-м нэс ищхьэ сэмэгу къуагъым къыщыщӏэдзауэ, сатыр-сатыру. Мы тхыкӏэр ӏэмал гъуазэ псоми щагъэсэбэп, зэгъэщӏэн хуейщ: r5c5 сеткэм и курыкупсэрщ."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Судоку къэс зэфӏэкӏыпӏэ зы закъуэ щӏиӏэр сыт?",
+            "p": [
+              "Судоку пэжым зэфӏэкӏыпӏэ зы закъуэ иӏэщ, ари логикэр зэрылажьэрщ. Гупым бжыгъэр нэгъуэщӏ щӏыпӏэ зэрыщымыхъунур къыщыбгъэлъагъуэкӏэ, ар къэна клеткэм итын хуейщ, сыту жыпӏэмэ зэфӏэкӏыпӏэр щыӏэщ, зы закъуэщи. Судокум зэфӏэкӏыпӏитӏ иӏэтэмэ, зы гупсысэкӏэми ахэр зэхигъэкӏыфынутэкъым, зэгуэрым гугъэкӏэ бжыгъэ хэплъхьэн хуей хъунут.",
+              "Bare Sudoku-м судоку къэс уи ӏэмэпсымэм къыщегъэщӏ, икӏи иплъыж зэфӏэкӏыпӏэ зы закъуэ зэриӏэр, и логикэ зэфӏэгъэкӏыгъуэм къыхэпха ткӏуэпсым и ӏэмалхэмкӏэ зэрызэфӏигъэкӏыфынур. Аращи, ущыувыӏамэ, къыкӏэлъыкӏуэ лъэбакъуэ сыт щыгъуи щыӏэщ, чэнджэщми къегъэлъагъуэ."
+            ]
+          },
+          {
+            "h": "Судокур дауэ щӏэбдзэн?",
+            "p": [
+              "Щӏыпӏэ нэхъ мащӏэ здэщыӏэм щыщӏэдзэ. Мы зэкӏэлъыкӏуэкӏэр ткӏуэпс къэсым щолажьэ:"
+            ],
+            "list": [
+              "Куэдрэ тет бжыгъэ къыхэх, жытӏэнщи хэ е блэ, итӏанэ ар зыхэмыт пхъуантэхэр къэгъуэт. Куэдрэ пхъуантэм абы папщӏэ клеткэ зы закъуэ къонэ: ар [зы закъуэ щэху](hidden-single) жыхуаӏэрщ.",
+              "Гъэнщӏэным хуэкӏуэ клеткэхэм лъыхъуэ. И сатырымрэ и бгъуагъымрэ и пхъуантэмрэ зэгъусэу бжыгъэ зэмыщхь 8 зиӏэ клеткэм кандидат зы закъуэ къонэ: [зы закъуэ нахуэ](naked-single). Гъэнщӏэным хуэкӏуэ сатырхэм е пхъуантэхэм хэт клеткэхэрщ уеплъыну нэхъ щӏыпӏэ нэхъыфӏыр.",
+              "Бгъэува бжыгъэ къэс гъунэгъу 20-м кандидат зырыз къахегъэкӏ, аращи а гъунэгъухэм занщӏэу еплъ. Зы закъуэхэр куэдрэ зыр зым кӏэлъыкӏуэу къокӏ.",
+              "Бжыгъэ тынш гъэувынхэр щиухкӏэ, тхыгъэхэр итхэ: клеткэ нэщӏ къэс и кандидатхэр. Итӏанэ пхъуантэм и кӏуэцӏкӏэ сатыр е бгъуагъ закъуэм ибыдыхьа бжыгъэ ([кандидат гъэбыдахэр](locked-candidates)) е кандидат зэщхьитӏ зиӏэ клеткитӏ ([тӏурытӏ нахуэ](naked-pairs)) лъыхъуэ.",
+              "Хэхыныгъэ къэс иужь зы закъуэхэм къегъэзэж. Iэзэ судокухэри нэхъыбэм зы закъуэхэмкӏэ зэфӏокӏ; ӏэмал гугъум къыкӏэлъыкӏуэ зы закъуэр къызэӏуех къудейщ."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Тхыгъэхэр сыт, сыт щыгъуэ бгъэсэбэпын хуей?",
+            "p": [
+              "Тхыгъэхэр, къэрэндаш нэщэнэхэр е кандидатхэр жыхуаӏэхэр, клеткэ нэщӏым иптхэ бжыгъэ цӏыкӏухэрщ, абы иджыри итыфыну бжыгъэхэр гъэнэхуэн папщӏэ. Тынш судокухэм ахэр куэдрэ ухуэныкъуэркъым; Гугъу щегъэжьауэ ахэр уимыӏэу хъуркъым, сыту жыпӏэмэ тӏурытӏ, X-Wing, Y-Wing хуэдэ ӏэмалхэр кандидатхэм теухуащ, гъэува бжыгъэхэм теухуакъым.",
+              "Тхыгъэхэр пэжу хъумэ: бжыгъэ щыбгъэувкӏэ, ар гъунэгъу 20-м я тхыгъэхэм къахэх. Bare Sudoku-м ар езыр-езыру къохъу, Тхыгъэхэр гъэнщӏын зэ тедзэкӏэ клеткэ нэщӏ къэс кандидат псори иритхэ, аращи кандидат гуп псоуэ, пэжу щыӏэм къыщыщӏэбдзэфынущ. Тхыгъэр гугъэкӏэ хэлъхьакъым, пэжщ: абы и мыхьэнэр иджыри зыми а бжыгъэр къызэрыхимыгъэкӏарщ."
+            ]
+          },
+          {
+            "h": "Ущыувыӏам сыт пщӏэн хуейр?",
+            "p": [
+              "Япэ лъабжьэр аргуэру еплъыж: гъэнщӏэным хуэкӏуэ сатыр, бгъуагъ, пхъуантэ къэс зы закъуэхэр къыщыкӏ щӏыпӏэщ. Итӏанэ тхыгъэхэр псори зэритыр еплъ, сыту жыпӏэмэ кандидат кӏуэдам сурэтхэр егъэпщкӏу, кандидат жьы хъуам сурэт пцӏыхэр къегъэщӏ. Итӏанэ [ӏэмалхэм](techniques) я гугъуагъым тету зэкӏэлъыкӏуэу хэплъэ: кандидат гъэбыдахэр, тӏурытӏ, щырыщ, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Дэтхэнэми и напэкӏуэцӏ щхьэхуэ иӏэщ щапхъэ пэж хэту.",
+              "Зыри къемыхъулӏэмэ, чэнджэщыр къэгъэсэбэп. Bare Sudoku-м чэнджэщым япэ иплъыж бгъэува бжыгъэ гуэр пэжкъыммэ, итӏанэ логикэкӏэ гъэнщӏыф къыкӏэлъыкӏуэ клеткэр къегъуэт, ӏэмалым и цӏэри жеӏэ, аращи ар бгъэсэбэпми зыгуэр зэбгъащӏэ. Бжыгъэр гъэувын папщӏэ чэнджэщым аргуэру тедзэ."
+            ]
+          },
+          {
+            "h": "Bare Sudoku-м бжыгъэхэр дауэ иптхэ?",
+            "p": [
+              "Клеткэм тедзэ, итӏанэ бжыгъэм. Е япэ бжыгъэм тедзэ: ар мэбыдэ, итӏанэ птедзэ клеткэ къэс ар иретхэ; ар бжыгъэм и еханэ, ебланэ, еянэ гъэувыным нэхъ псынщӏэ щӏыкӏэрщ. Ар зэӏухыжын папщӏэ бжыгъэм аргуэру тедзэ. Тхыгъэхэр кнопкэм къэрэндаш тхыгъэм уегъэкӏуэ, Гъэкӏуэдын клеткэр егъэкъабзэ, Къэгъэзэжын лъэбакъуэ къэс къегъэзэж, щыуагъэхэр плъыжькӏэ къагъэлъагъуэ, менюм ар Икӏ щумыщӏмэ.",
+              "Клавиатурэм: шабзэ клавишхэр кӏуэным, 1-м щегъэжьауэ 9-м нэс бжыгъэ итхэным, Backspace гъэкӏуэдыным, N тхыгъэхэм, U къэгъэзэжыным, H чэнджэщым, F тхыгъэхэр гъэнщӏыным, Escape менюм папщӏэщ. Джэгур езыр-езыру захъумэ, офлайн мэлажьэ, рекламэ иӏэкъым, аккаунти хуейкъым."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Судокум гугъэкӏэ бжыгъэ хэплъхьэн хуей щыхъу щыӏэ?",
+            "Судоку пэжым хуейкъым. Bare Sudoku-м и судоку къэс зэфӏэкӏыпӏэ зы закъуэ иӏэщ, икӏи логикэ къудейкӏэ, и ткӏуэпсым и ӏэмалхэм нэс, зэрызэфӏэкӏыфыр иплъыжащ. Гугъэкӏэ хэплъхьэн хуейуэ уи гугъэмэ, уи тхыгъэхэм кандидат гуэр яхэткъым, е ӏэмал гуэр къэбгъуэтын хуейщ."
+          ],
+          [
+            "Бжыгъэр сатыр, бгъуагъ е пхъуантэ закъуэм тӏэу хэтыфынукъэ?",
+            "Хьэуэ. Абы и закъуэщ хабзэр: сатыр 9-м, бгъуагъ 9-м, пхъуантэ 9-м ящыщ дэтхэнэми 1-м щегъэжьауэ 9-м нэс бжыгъэ къэс зэ закъуэ хэтщ. Гуп закъуэм бжыгъэ зэщхьитӏ хэтмэ, ахэм языхэзыр пэжкъым."
+          ],
+          [
+            "Тынш, Курыт, Гугъу, Iэзэ зэрызэщхьэщыкӏыр сыт?",
+            "Ткӏуэпсыр судокум хуэныкъуэ ӏэмалхэм елъытащ. Тыншымрэ Курытымрэ зы закъуэхэмкӏэ къудей зэфӏокӏ, Тыншым япэ бжыгъэ 38-м нэхърэ нэхъ мымащӏэ иӏэщ. Гугъум кандидат гъэбыдахэр е тӏурытӏ, щырыщ хуейщ. Iэзэм X-Wing, Y-Wing, Swordfish е XYZ-Wing хуейщ."
+          ],
+          [
+            "Тхыгъэхэр клеткэ псоми иптхэн хуейщ, хьэмэрэ зыбжанэм къудей?",
+            "Гугъумрэ Iэзэмрэ псори итхэ: тӏурытӏ, X-Wing, Y-Wing хуэдэ сурэтхэр кандидат псори щытхам деж къудей нахуэ мэхъу. Тыншымрэ Курытымрэ тхыгъэхэр уи фӏэфӏмэ иптхэнущ, джэгуакӏуэ нэхъыбэм зы закъуэхэм къудей лъыхъуэ."
+          ],
+          [
+            "Судокум зыхуэдиз зэман текӏуадэрэ?",
+            "Тынш судокум дакъикъэ зыбжанэ текӏуадэ; Iэзэ судокухэм дакъикъэ 20 е нэхъыбэ текӏуэдэфынущ, сурэт гугъур псынщӏэу къызэрыбгъуэтым елъытауэ. Bare Sudoku-м сыхьэт къегъэлъагъуэ, менюр зэӏухам деж егъэувыӏэ, рейтинг тхылъи иӏэкъым, аращи уи фӏэфӏ хуэдэу джэгу."
+          ],
+          [
+            "Судокум математикэ хуейкъэ?",
+            "Хьэуэ. Бжыгъэхэр нэщэнэ къудейщ; зэхэлъхьэн е бжыжын щыӏэкъым. Нэщэнэ 9 сыт хуэдэми лэжьэнут, абы щхьэкӏэщ судокур бжыгъэ джэгуу щымытыр, логикэ джэгуу щытыр."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судокур зэрызэфӏэбгъэкӏ ӏэмалхэр щапхъэхэмкӏэ",
+        "description": "Судокур зэрызэфӏэбгъэкӏ ӏэмали 9-р, зы закъуэ нахуэм щегъэжьауэ Swordfish, XYZ-Wing нэс, Bare Sudoku-м и чэнджэщхэм къызэрагъэсэбэп зэкӏэлъыкӏуэкӏэм тету.",
+        "h1": "Судокур зэрызэфӏэбгъэкӏ ӏэмалхэр",
+        "intro": [
+          "Судоку къэс логикэ ӏэмал мащӏэкӏэ зэфӏэбгъэкӏыфынущ. Мы напэкӏуэцӏым Bare Sudoku-м и зэфӏэгъэкӏыгъуэмрэ и чэнджэщхэмрэ къагъэсэбэп ӏэмал 9-р щызэхэтлъхьащ, зэфӏэгъэкӏыгъуэм зэреплъ зэкӏэлъыкӏуэкӏэм тету: япэ зы закъуэхэр, итӏанэ гуп закъуэм и кӏуэцӏкӏэ хэхынхэр, итӏанэ сатыр, бгъуагъ куэдым зэпаупщӏ сурэтхэр. Ӏэмал къэс и напэкӏуэцӏ щхьэхуэ иӏэщ: гъэбелджылыныгъэ, дауэ къэбгъуэтын, къагъэщӏа судоку щыщ щапхъэ пэж, куэдрэ къэхъу щыуагъэхэр.",
+          "Судокум и ткӏуэпсыр абы хуэныкъуэ ӏэмал нэхъ гугъум елъытащ. Тынш, Курыт судокухэм зы закъуэхэр къудей хуейщ, Гугъу судокухэм кандидат гъэбыдахэр е тӏурытӏ, щырыщ хуейщ, Iэзэ судокухэм бдзэжьей е дамэ зы нэхъ мымащӏэ хуейщ. Ткӏуэпсыр сыт хуэдэми, лэжьыгъэм и нэхъыбэр зы закъуэхэм ягъэзащӏэ; ӏэмал гугъум кандидат зы е тӏу хех, итӏанэ зы закъуэхэм пащэ."
+        ],
+        "faq": [
+          [
+            "Судокум и ӏэмалхэр сыт хуэдэ зэкӏэлъыкӏуэкӏэкӏэ сплъын хуей?",
+            "Нэхъ тыншыр япэ: зы закъуэ нахуэ, зы закъуэ щэху, кандидат гъэбыдахэр, тӏурытӏ, щырыщ нахуэ, тӏурытӏ, щырыщ щэху, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku-м а зэкӏэлъыкӏуэкӏэ дыдэм тету йоплъ, чэнджэщми сыт щыгъуи ипэкӏэ узыгъакӏуэ ӏэмал нэхъ тыншым и цӏэр жеӏэ."
+          ],
+          [
+            "Судокур зэфӏэзгъэкӏын папщӏэ мы ӏэмал псори сыхуейуэ ара?",
+            "Тынш, Курыт судокухэм зы закъуэхэр яхурикъущ. Гугъу судокухэм кандидат гъэбыдахэмрэ тӏурытӏ, щырыщхэмрэ къыхохьэ. Iэзэ судокухэм бдзэжьей е дамэ зы нэхъ мымащӏэ хуейщ, ауэ нэхъыбэм судоку закъуэм зэ е тӏэу къудей."
+          ],
+          [
+            "XYZ-Wing нэхърэ нэхъ гугъу ӏэмалхэр щыӏэ?",
+            "Нтӏэ, жытӏэнщи, кӏапсэхэр, зэфӏэкӏыпӏэ закъуэм и уплъэкӏунхэр, forcing nets жыхуаӏэхэр. Bare Sudoku-м ахэр зыхуей судоку къигъэщӏкъым, аращи джэгум хэт судоку къэс мы напэкӏуэцӏым ит ӏэмал 9-мкӏэ зэфӏэбгъэкӏыфынущ."
+          ],
+          [
+            "Кандидатыр сыт?",
+            "Клеткэ нэщӏым итыфыну бжыгъэщ, сыту жыпӏэмэ и сатырым, и бгъуагъым е и пхъуантэм иджыри зыми ар къахимыгъэкӏащ. Джэгум и тхыгъэхэр кандидатхэрщ. Зы закъуэхэм нэхърэ нэхъ гугъу ӏэмал къэс кандидатхэм тету мэгупсысэ, аращи ахэр псори пэжу хъумэ."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Зы закъуэ нахуэ",
+          "title": "Зы закъуэ нахуэ судокум: кандидат зы закъуэ зиӏэ клеткэр",
+          "description": "Зы закъуэ нахуэр бжыгъэ зы закъуэ фӏэкӏа итыфыну клеткэ нэщӏщ. Ахэр псынщӏэу къэгъуэтыкӏэр, щапхъэ пэж лъэбакъуэ-лъэбакъуэкӏэ, щыуагъэ куэдрэ къэхъухэр.",
+          "h1": "Зы закъуэ нахуэ (naked single)",
+          "summary": "Зы закъуэ нахуэр кандидат зы закъуэ зиӏэ клеткэ нэщӏщ: адрей бжыгъэ 8-р и сатырым, и бгъуагъым е и пхъуантэм иджыпсту хэтщ. Къэна бжыгъэр абы итын хуейщ. Ар судокум и ӏэмал нэхъ тынш дыдэрщ, нэхъ куэдрэ къагъэсэбэпращ, Bare Sudoku-м и чэнджэщым \"Мыбдеж кандидат зы закъуэщ\" жеӏэ.",
+          "when": [
+            "Сыт щыгъуи. Зы закъуэ нахуэхэр япэ лъэбакъуэм щегъэжьауэ кӏэм нэс къокӏ, ткӏуэпс къэсым. Тынш, Курыт судокухэм, зы закъуэ щэхухэм ядэкӏуэу, уэ узыхуей ӏэмал закъуэрщ. Нэхъ гугъу судокухэм ӏэмал гугъум хих кандидат къэс нэхъыбэм зы закъуэ нахуэ къегъанэ, аращи лъэбакъуэ къэс иужь ахэм лъыхъуэ."
+          ],
+          "spot": [
+            "Гъунэгъу куэд гъэува зиӏэ клеткэхэм еплъ: бжыгъэ 7 зиӏэ сатырым хэт клеткэ, е и сатырымрэ и бгъуагъымрэ и пхъуантэмрэ зэгъусэу бжыгъэ зэмыщхь 8 зиӏэ клеткэ. Тхыгъэ щымыӏэмэ, клеткэм къыщыплъагъу бжыгъэхэр бжы. Тхыгъэхэр щыӏэмэ, зы закъуэ нахуэр кандидат зы закъуэ къэзыгъэлъагъуэ клеткэрщ, аращ Тхыгъэхэр гъэнщӏын ахэр къэгъуэтын тынш щӏищӏыр."
+          ],
+          "examples": [
+            {
+              "h": "Щапхъэ",
+              "steps": [
+                "{cell}-м еплъ. Ар нэщӏщ, аращи и сатырым, и бгъуагъым, и пхъуантэм иджыпсту ит бжыгъэ псори итхэ.",
+                "Сатыр {row}-м {rowDigits} хэтщ. Бгъуагъ {col}-м {colDigits} хэтщ. Пхъуантэ {box}-м {boxDigits} хэтщ.",
+                "Зэгъусэу {d} нэмыщӏ бжыгъэ псори къахагъэкӏ, аращи {cell}-м къэна кандидат закъуэр {d}-рщ.",
+                "{cell}-м {d} итхэ. Итӏанэ бжыгъэ щӏэм а сатырым, бгъуагъым е пхъуантэм нэгъуэщӏ зы закъуэ къигъэщӏа еплъ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Сатыр закъуэр е пхъуантэ закъуэр къудей убжын. Къахэха бжыгъэ 8-р нэхъыбэм гупищми къыхокӏ.",
+            "Иджыпсту бгъэува бжыгъэми и гъунэгъу 20-м кандидатхэр къызэрахигъэкӏыр щыгъупщэн; бжыгъэ къэс бгъэува иужь занщӏэу зы закъуэ нахуэ щӏэхэр къокӏ.",
+            "Зы закъуэ нахуэмрэ зы закъуэ щэхумрэ зэхэгъэзэрыхьын: зы закъуэ нахуэм клеткэм кандидат зы къыхонэ, зы закъуэ щэхум гупым бжыгъэм папщӏэ клеткэ зы къыхонэ."
+          ],
+          "faq": [
+            [
+              "Судокум зы закъуэ нахуэр сыт?",
+              "Кандидат зы закъуэ зиӏэ клеткэ нэщӏщ. И сатырым, и бгъуагъым, и пхъуантэм бжыгъэ зэмыщхь 8 иджыпсту итщ, аращи ебгъуанэ бжыгъэр къудейщ абы хуэкӏуэр."
+            ],
+            [
+              "Сыт щхьэкӏэ нахуэ жыхуаӏэр?",
+              "Сыту жыпӏэмэ тхыгъэхэр щытхам иужь кандидат закъуэр клеткэм занщӏэу нахуэу итщ; зыми ар егъэпщкӏуркъым. Зы закъуэ щэхур, абы и пӏэкӏэ, адрей кандидатхэм яхэтщ, клеткэм умыплъэу бжыгъэм уеплъурэ къэбгъуэт."
+            ],
+            [
+              "Судокур зы закъуэ нахуэхэмкӏэ къудей зэфӏэбгъэкӏыфынукъэ?",
+              "Тынш судоку куэдыр хъунущ, ауэ абыхэм я нэхъыбэм зы закъуэ щэхухэри хуейщ. Bare Sudoku-м Тынш, Курыт судокухэр зы закъуэ лӏэужьитӏымкӏи зэфӏэкӏыфу къелъытэ; Гугъу, Iэзэ судокухэм нэгъуэщӏ ӏэмал зы нэхъ мымащӏэ хуейщ."
+            ],
+            [
+              "Чэнджэщым зы закъуэ нахуэхэр къегъэлъагъуэ?",
+              "Нтӏэ. Къыкӏэлъыкӏуэ гъэувыныр зы закъуэ нахуэмэ, чэнджэщым клеткэр къыхех, бжыгъэри и гъусэу \"Мыбдеж кандидат зы закъуэщ\" жеӏэ. Гъэувын папщӏэ чэнджэщым аргуэру тедзэ."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Зы закъуэ щэху",
+          "title": "Зы закъуэ щэху судокум: бжыгъэм и щӏыпӏэ закъуэр",
+          "description": "Зы закъуэ щэхур сатырым, бгъуагъым е пхъуантэм бжыгъэр иджыри щитыфыну клеткэ закъуэрщ. Бжыгъэхэм зырызу уеплъурэ ахэр къэгъуэтыкӏэр зэгъащӏэ.",
+          "h1": "Зы закъуэ щэху (hidden single)",
+          "summary": "Зы закъуэ щэхур сатырым, бгъуагъым е пхъуантэм клеткэ зы закъуэ фӏэкӏа щимыӏэж бжыгъэщ, а клеткэм нэгъуэщӏ кандидатхэр къигъэлъагъуэми. Гупым а бжыгъэр хэтын хуейщи, абы итщ. Bare Sudoku-м и чэнджэщым ар \"Мы сатырым 5 щӏыпӏэ зы закъуэ\" жиӏэу къегъэлъагъуэ, е бгъуагъым, е пхъуантэм.",
+          "when": [
+            "Бжыгъэр ипэкӏэ куэд щыкӏуам: бжыгъэр тхуэ е хэ къыщыкӏкӏэ, къэна пхъуантэхэм щӏыпӏэ мащӏэ яӏэщ, къыкӏэлъыкӏуэ лъэбакъуэри нэхъыбэм зы закъуэ щэхущ. Зы закъуэ щэхухэр Тынш, Курыт судокухэм я ӏэмал нэхъыщхьэщ, ткӏуэпс къэсми лэжьыгъэм и нэхъыбэр ящӏэ."
+          ],
+          "spot": [
+            "Бжыгъэхэм зырызу еплъ. Бжыгъэ къыхэх, ар зыхэмыт пхъуантэ къэгъуэт, итӏанэ а пхъуантэм и клеткэхэм ящыщу а бжыгъэр зыхэт сатыр е бгъуагъ зыхуэкӏуэ псори тетхыкӏ. Клеткэ закъуэ къэнамэ, зы закъуэ щэху къэбгъуэтащ. А еплъыкӏэ дыдэр сатырхэми бгъуагъхэми щолажьэ. Джэгум бгъэува бжыгъэм тедзэ: абы хуэдэ бжыгъэ псори нэху мэхъу, аращи клеткэ нэщӏхэр нэрылъагъу мэхъу."
+          ],
+          "examples": [
+            {
+              "h": "Щапхъэ",
+              "steps": [
+                "Пхъуантэ {box}-м иджыри {d} хэткъым, аращи и клеткэ нэщӏхэм языхэзым ар итын хуейщ. Клеткэ нэщӏхэр: {empties}.",
+                "{cell} нэмыщӏ ахэм псоми {d} итыфынукъым: а сатырым е бгъуагъым {d} иджыпсту итщ, аращи абы {d} кандидаткъым.",
+                "Абы къыхэкӏыу пхъуантэ {box}-м {d} папщӏэ щӏыпӏэ закъуэу {cell} къонэ. {d} абы итхэ, {cell}-м нэгъуэщӏ кандидатхэр иджыри къигъэлъагъуэми."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Бжыгъэр пэжу къыщӏэкӏынкӏэ хъуну къудей клеткэм итхэн: гупым и адрей клеткэ нэщӏ псоми еплъ, нахуэхэм къудей умыплъэу.",
+            "Клеткэм кандидат куэд къызэригъэлъагъуэм щхьэкӏэ зы закъуэ щэхур умылъагъун. Адрей кандидатхэм мыхьэнэ яӏэкъым; мыхьэнэ зиӏэр бжыгъэм гупым нэгъуэщӏ щӏыпӏэ зэримыӏэрщ.",
+            "Пхъуантэхэм къудей уеплъын. Сатырхэми бгъуагъхэми зы закъуэ щэху апхуэдизрэ къыхокӏ, кӏэм нэс нэхъыбэжу."
+          ],
+          "faq": [
+            [
+              "Судокум зы закъуэ щэхур сыт?",
+              "Сатырым, бгъуагъым е пхъуантэм клеткэ закъуэм къудей итыфыну бжыгъэщ. Гупым а бжыгъэр хэтын хуейщи, клеткэм итыну бжыгъэр убзыхуащ, нэгъуэщӏ кандидатхэр иӏэми."
+            ],
+            [
+              "Зы закъуэ щэхумрэ зы закъуэ нахуэмрэ зэрызэщхьэщыкӏыр сыт?",
+              "Зы закъуэ нахуэр клеткэм теухуащ: кандидат зы къонэ. Зы закъуэ щэхур бжыгъэм теухуащ: гупым клеткэ зы къонэ. Тӏуми шэч хэмылъу бжыгъэ ягъэув."
+            ],
+            [
+              "Дэтхэнэр нэхъ тыншу къэбгъуэтрэ?",
+              "Тхыгъэ щымыӏэмэ, зы закъуэ щэхухэр нэхъыбэм нэхъ тыншщ, сыту жыпӏэмэ сеткэм бжыгъэ зырызу уеплъыфынущ. Тхыгъэхэр псори щытхамэ, зы закъуэ нахуэхэр нэхъ тынш дыдэщ, сыту жыпӏэмэ кандидат зы закъуэ зиӏэ клеткэр нэрылъагъущ."
+            ],
+            [
+              "Чэнджэщым зы закъуэ щэхур дауэ къегъэлъагъуэ?",
+              "Клеткэр къыхихауэ, \"Мы сатырым\", \"Мы бгъуагъым\" е \"Мы пхъуантэм\" бжыгъэм \"щӏыпӏэ зы закъуэ\" жиӏэу. Гъэувын папщӏэ чэнджэщым аргуэру тедзэ."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Кандидат гъэбыдахэр",
+          "title": "Кандидат гъэбыдахэр судокум: къэгъэлъэгъуэнрэ зыхуэщӏыжынрэ",
+          "description": "Кандидат гъэбыдахэр: пхъуантэм бжыгъэм и кандидат псори сатыр е бгъуагъ закъуэм итмэ, е къызэрыгъэзэкӏауэ, бжыгъэр нэгъуэщӏ щӏыпӏэхэм къыхах. Щапхъитӏ.",
+          "h1": "Кандидат гъэбыдахэр (locked candidates)",
+          "summary": "Кандидат гъэбыдахэр бжыгъэ игъэувын и пӏэкӏэ кандидатхэр къыхэзых япэ ӏэмалщ. Абы теплъитӏ иӏэщ. Къэгъэлъэгъуэн (pointing): пхъуантэм бжыгъэм и кандидат псори сатыр е бгъуагъ закъуэм итщ, аращи бжыгъэр а сатырым е бгъуагъым и къэнэжам къыхах. Зыхуэщӏыжын (claiming): сатырым е бгъуагъым бжыгъэм и кандидат псори пхъуантэ закъуэм итщ, аращи бжыгъэр а пхъуантэм и къэнэжам къыхах. Bare Sudoku-м и чэнджэщым ар къызэӏуиха гъэувыныр \"Кандидат гъэбыдахэр\" жиӏэу егъэнэхуэ.",
+          "when": [
+            "Гугъу судокум зы закъуэхэр щиухкӏэ, япэу пплъыжын хуейр мыращ. Нэхъ мащӏэ дыдэу уеплъ бжыгъэм папщӏэ тхыгъэхэр псори щытхэн хуейщ. Кандидат гъэбыдахэр куэдрэ къохъу: Гугъу судокухэм я нэхъыбэм ахэр хуейщ, Iэзэ судокухэми сурэт нэхъ инхэм я зэхуакум щагъэсэбэп."
+          ],
+          "spot": [
+            "Къэгъэлъэгъуэным папщӏэ, пхъуантэ къэсымрэ абы хэмыт бжыгъэ къэсымрэ еплъ: а бжыгъэм и кандидат клеткэхэр сатыр е бгъуагъ закъуэм итмэ, а сатырым е бгъуагъым пхъуантэм хэмыт щӏыпӏэм а бжыгъэр кандидату итми еплъ. Зыхуэщӏыжыным папщӏэ, сатырым е бгъуагъым еплъ: бжыгъэм и кандидат псори пхъуантэ закъуэм итмэ, а пхъуантэм и къэнэжам ар къыхэпхыфынущ. Джэгум бжыгъэ клавишым тедзэ, абы и кандидат псори нахуэ хъун папщӏэ; пхъуантэ закъуэм и кӏуэцӏкӏэ сатыр закъуэм ит тхыгъитӏ е тхыгъищ нахуэрщ сурэтыр."
+          ],
+          "examples": [
+            {
+              "h": "Къэгъэлъэгъуэн",
+              "steps": [
+                "Пхъуантэ {box}-м {d} мы кандидат клеткэхэр къудей иӏэщ: {cells}. Ахэр псори сатыр {row}-м хэтщ.",
+                "Пхъуантэ {box}-м {d} хуейщ, аращи сатыр {row}-м и {d}-р пхъуантэ {box}-м и кӏуэцӏкӏэ итщ, а клеткэхэм ящыщу дэтхэнэм итми.",
+                "Сатыр {row}-м етӏуанэ {d} иӏэфынукъым, аращи {d} пхъуантэм хэмыт сатыр {row}-м и клеткэхэм къахэх: {elim}."
+              ]
+            },
+            {
+              "h": "Зыхуэщӏыжын",
+              "steps": [
+                "Сатыр {row}-м {d} {cells} къудейм итыфынущ, ахэри псори пхъуантэ {box}-м хэтщ.",
+                "Сатыр {row}-м {d} хэтын хуейщ, аращи пхъуантэ {box}-м и {d}-р сатыр {row}-м зыхуещӏыж. Пхъуантэ {box}-м и адрей клеткэхэм {d} итыфынукъым.",
+                "{d} мы клеткэхэм къахэх: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Къэгъэлъэгъуэным бжыгъэр пхъуантэм хэмыт щӏыпӏэм и пӏэкӏэ пхъуантэм и кӏуэцӏым къыхэхын, е зыхуэщӏыжыным къызэрыгъэзэкӏауэ. Хэхынхэр сыт щыгъуи сатырым е бгъуагъым хэт, ауэ пхъуантэм хэмыт клеткэхэм, е пхъуантэм хэт, ауэ сатырым е бгъуагъым хэмыт клеткэхэм яхуэкӏуэ.",
+            "Кандидатхэр пхъуантэм и сатыритӏым щыхэткӏэ хабзэр къэгъэсэбэпын. Пхъуантэм бжыгъэм и кандидат клеткэ псори сатыр е бгъуагъ закъуэм итын хуейщ.",
+            "Хэхыным къигъэщӏ зы закъуэм лъыхъуэн щыгъупщэн. Кандидат гъэбыдахэм езыр-езыру бжыгъэ зэзэмызэ фӏэкӏа ягъэувкъым; зы закъуэ хуагъэхьэзыр."
+          ],
+          "faq": [
+            [
+              "Судокум кандидат гъэбыдахэр сыт?",
+              "Пхъуантэмрэ сатыр е бгъуагъымрэ я зэхуэзэпӏэм ибыдыхьа бжыгъэм и кандидатхэрщ. Пхъуантэм, е сатырым е бгъуагъым, а бжыгъэр а зэхуэзэпӏэм иӏэн хуейщи, бжыгъэр сатырым е бгъуагъым и къэнэжам, е пхъуантэм и къэнэжам къыхэпхыфынущ."
+            ],
+            [
+              "Къэгъэлъэгъуэнымрэ зыхуэщӏыжынымрэ зэрызэщхьэщыкӏыр сыт?",
+              "Къэгъэлъэгъуэныр пхъуантэм къыщожьэ: пхъуантэм бжыгъэм и кандидатхэм сатыр е бгъуагъ закъуэ къагъэлъагъуэ, аращи бжыгъэр а сатырым е бгъуагъым и къэнэжам къыхах. Зыхуэщӏыжыныр сатырым е бгъуагъым къыщожьэ: абы бжыгъэм и кандидат псори пхъуантэ закъуэм итщ, аращи сатырым е бгъуагъым бжыгъэр зыхуещӏыж, ари пхъуантэм и къэнэжам къыхах."
+            ],
+            [
+              "Кандидат гъэбыдахэм зэхуэзэпӏэм къыхэхын (intersection removal) жаӏэу ара?",
+              "Нтӏэ. Нэгъуэщӏ цӏэхэри щыӏэщ: зыхуэщӏыжыным папщӏэ пхъуантэмрэ сатырымрэ я гъэмэщӏэн (box-line reduction), къэгъэлъэгъуэным папщӏэ къэзыгъэлъагъуэ тӏурытӏ е щырыщ (pointing pairs, pointing triples). Bare Sudoku-м тӏуми зы цӏэ яфӏещ."
+            ],
+            [
+              "Кандидат гъэбыдахэр сыт хуэдэ ткӏуэпсым хуейщ?",
+              "Гугъум. Кандидат гъэбыдахэр е тӏурытӏ, щырыщ зыхуейуэ, ауэ нэхъ гугъу зыхуэмейуэ судокур Гугъуу къалъытэ; Iэзэ судокухэм абыхэм нэмыщӏ бдзэжьей е дамэ хуейщ."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Тӏурытӏ, щырыщ нахуэ",
+          "title": "Тӏурытӏ, щырыщ нахуэ судокум: зэрылажьэр",
+          "description": "Тӏурытӏ, щырыщ нахуэ: гуп закъуэм кандидат зэщхьитӏ е зэщхьищ зиӏэ клеткитӏ е клеткищ. Ахэр къэгъуэтыкӏэмрэ къыхэпхын хуеймрэ щапхъэ пэжхэмкӏэ зэгъащӏэ.",
+          "h1": "Тӏурытӏ, щырыщ нахуэ (naked pair, naked triple)",
+          "summary": "Тӏурытӏ нахуэр сатыр, бгъуагъ е пхъуантэ закъуэм хэт, кандидат зэщхьитӏ дыдэ зиӏэ клеткитӏщ. А бжыгъитӏыр а клеткитӏым итын хуейщи, гупым и адрей клеткэ псоми къахэпхыфынущ. Щырыщ нахуэр а гупсысэ дыдэрщ клеткищрэ бжыгъищрэкӏэ; клеткэ къэс абыхэм ящыщу тӏу е щыри къигъэлъагъуэфынущ. Bare Sudoku-м и чэнджэщым къикӏ гъэувыныр \"Тӏу е щы\" жиӏэу егъэнэхуэ.",
+          "when": [
+            "Тхыгъэхэр псори щытхам, зы закъуэхэмрэ кандидат гъэбыдахэмрэ щиухам иужь. Тӏурытӏ нахуэхэр Гугъу судокухэм куэдрэ хэтщ, щырыщ нахуэхэр нэхъ мащӏэщ. Клеткэ нэщӏ 5 е нэхъыбэ зиӏэ гуп къэсым тӏуми уеплъыныр щхьэпэщ."
+          ],
+          "spot": [
+            "Кандидатитӏ къудей зиӏэ клеткэхэм лъыхъуэ, итӏанэ гуп зэхуэдэм а тӏур зиӏэ нэгъуэщӏ клеткэ къэгъуэт. Щырыщым папщӏэ, кандидатитӏ е кандидатищ зиӏэ клеткэ зыбжанэ зыхэт гупхэм еплъ, абыхэм ящыщ щым зэгъусэу бжыгъэ зэмыщхьищ къудей яӏэу ара еплъ. Тхыгъэхэр щытхам деж кандидат зэщхь дыдэ зиӏэ клеткэхэр тыншу плъагъу; джэгум Тхыгъэхэр гъэнщӏын ар зэ тедзэкӏэ ещӏ."
+          ],
+          "examples": [
+            {
+              "h": "Тӏурытӏ нахуэ",
+              "steps": [
+                "{unit}-м хэт {cellA}, {cellB} клеткэхэм кандидат зэщхьитӏ дыдэ яӏэщ: {d1}, {d2}.",
+                "Абыхэм языр {d1}-щ, адрейр {d2}-щ. Дэтхэнэр ара тщӏэркъым, ауэ а клеткитӏым бжыгъитӏри яубыдащ.",
+                "Аращи {unit}-м и нэгъуэщӏ клеткэ зыми {d1} е {d2} итыфынукъым. Къыхэх: {elim}."
+              ]
+            },
+            {
+              "h": "Щырыщ нахуэ",
+              "steps": [
+                "{unit}-м и клеткищым я кандидат псори бжыгъищ зэхуэдэм, {digits}, къыхэкӏщ: {cells}.",
+                "Бжыгъищым а клеткищыр зэкӏэлъыкӏуэкӏэ гуэркӏэ ягъэнщӏын хуейщ. Клеткэм кандидатищри къигъэлъагъуэн хуейкъым; мыхьэнэ зиӏэр клеткищым языхэзми а бжыгъищым хэмыт кандидат зэримыӏэрщ.",
+                "{unit}-м и адрей клеткэ псоми {digits} къахэх: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Кандидатитӏ зэхуэдэ зиӏэ, ауэ ещанэ кандидати зиӏэ клеткитӏ къыхэхын. Тӏурытӏ нахуэм папщӏэ клеткэ къэс а кандидатитӏыр дыдэр иӏэн хуейщ, нэгъуэщӏ зыри хэмыту.",
+            "Тӏурытӏым и езы клеткэхэм бжыгъэхэр къахэхын. Тӏурытӏым и кандидатхэр къонэ; хэхынхэр гупым и адрей клеткэхэм яхуэкӏуэ.",
+            "Щырыщым и клеткэ къэс бжыгъищри къигъэлъагъуэн хуейуэ убжын. Абыхэм ящыщ тӏу зиӏэ клеткэри хъунущ, клеткэ зыми а бжыгъищым хэмыт кандидат имыӏэмэ."
+          ],
+          "faq": [
+            [
+              "Судокум тӏурытӏ нахуэр сыт?",
+              "Гуп закъуэм хэт, кандидат зэщхьитӏ дыдэ зиӏэ клеткитӏщ. А бжыгъитӏыр а клеткитӏым ибыдыхьащи, гупым и къэнэжам къыхэпхыфынущ."
+            ],
+            [
+              "Щырыщ нахуэр сыт?",
+              "Гуп закъуэм хэт, я кандидатхэр зэгъусэу бжыгъищ къудей хъу клеткищщ. Клеткэ къэс абыхэм ящыщ тӏу е щы иӏэфынущ. Бжыгъищым клеткищыр ягъэнщӏ, аращи гупым и адрей клеткэхэм къахэпхыфынущ."
+            ],
+            [
+              "Тӏурытӏ нахуэм бжыгъэ егъэувкъэ?",
+              "Езыр-езыру егъэувкъым. Кандидатхэр къыхех, а хэхыныгъэм нэхъыбэм зы закъуэ нахуэ е щэху къегъанэ. Bare Sudoku-м и чэнджэщым а зы закъуэр къегъэлъагъуэ, ар къэзыгъэхъуа ӏэмалым и цӏэри жеӏэ."
+            ],
+            [
+              "Тӏурытӏ нахуэр зэуэ пхъуантэми сатырми хэтыфынукъэ?",
+              "Нтӏэ. Клеткитӏыр сатыр зэхуэдэми пхъуантэ зэхуэдэми хэтмэ, тӏурытӏым гупитӏми кандидатхэр къыщехых. Bare Sudoku-м гупхэм зырызу йоплъ."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Тӏурытӏ, щырыщ щэху",
+          "title": "Тӏурытӏ, щырыщ щэху судокум: дауэ къэбгъуэтын",
+          "description": "Тӏурытӏ щэхур гупым и клеткитӏ зэхуэдэм къудей итыфыну бжыгъитӏщ, аращи а клеткэхэм я адрей кандидатхэр къыхах. Ахэр къэгъуэтыкӏэр лъэбакъуэкӏэ зэгъащӏэ.",
+          "h1": "Тӏурытӏ, щырыщ щэху (hidden pair, hidden triple)",
+          "summary": "Тӏурытӏ щэхур сатыр, бгъуагъ е пхъуантэ закъуэм клеткитӏ зэхуэдэм къудей кандидату ит, нэгъуэщӏ щӏыпӏэ зимыӏэ бжыгъитӏщ. А клеткитӏым а бжыгъитӏыр итын хуейщи, абыхэм я адрей кандидат псори къыхэпхыфынущ. Щырыщ щэхури апхуэдэу мэлажьэ, клеткищым ибыдыхьа бжыгъищкӏэ. Хэхыным иужь клеткэхэм тӏурытӏ е щырыщ нахуэ къагъэлъагъуэ. Bare Sudoku-м и чэнджэщым къикӏ гъэувыныр \"Тӏу е щы\" жиӏэу егъэнэхуэ.",
+          "when": [
+            "Гупым кандидат куэд зиӏэ клеткэхэр хэтмэ, зы закъуэхэри щиухам. Тӏурытӏ щэхухэр клеткэ гъэнщӏахэм щопщкӏу, аращ тӏурытӏ нахуэхэр щымылъагъуэ щӏыпӏэм ахэм щылъыхъуэн хуейр. Щырыщ щэхухэр мащӏэщ; Bare Sudoku-м ахэм йоплъ, ауэ Гугъу судокухэм я нэхъыбэр абыхэм ямыгъусэу зэфӏокӏ."
+          ],
+          "spot": [
+            "Бжыгъэкӏэ лажьэ, клеткэкӏэ мыхъуу. Гупым хэмыт бжыгъэ къэс итыфыну клеткэхэр гъэнэхуэ. Бжыгъитӏым ящыщ дэтхэнэми итыфыну клеткитӏ къудей иӏэмэ, ахэри клеткитӏ зэхуэдэмэ, тӏурытӏ щэху къэбгъуэтащ. Джэгум бжыгъэ клавишым тедзэ, абы и кандидатхэр нахуэ хъун папщӏэ; бжыгъитӏым гупым клеткитӏ зэхуэдэр къудей нахуэ ящӏмэ, сурэтыр аращ."
+          ],
+          "examples": [
+            {
+              "h": "Тӏурытӏ щэху",
+              "steps": [
+                "{unit}-м {d1}, {d2} бжыгъэхэм ящыщ дэтхэнэми итыфыну клеткитӏ къудей иӏэщ, ахэри клеткитӏ зэхуэдэщ: {cells}.",
+                "А клеткитӏым {d1}, {d2} итын хуейщ, аращи абыхэм я адрей кандидатхэр хъунукъым.",
+                "Къыхэх: {elim}. Иджы клеткитӏым тӏурытӏ нахуэ къагъэлъагъуэ, абы нэгъуэщӏхэри къызэӏуихыфынущ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тӏурытӏым и бжыгъитӏыр тӏурытӏым и клеткэхэм къахэхын. Къыхэпхын хуейр а клеткэхэм я адрей кандидатхэрщ; тӏурытӏым и бжыгъэхэр къонэ.",
+            "Гупым ещанэ клеткэ итыфыну бжыгъэ къэщтэн. Бжыгъитӏри клеткитӏым къудей ибыдыхьауэ щытын хуейщ.",
+            "Пхъуантэхэм къудей лъыхъуэн. Тӏурытӏ щэхухэр сатырхэми бгъуагъхэми апхуэдизрэ къыхокӏ."
+          ],
+          "faq": [
+            [
+              "Судокум тӏурытӏ щэхур сыт?",
+              "Гупым и клеткитӏ зэхуэдэм къудей итыфыну бжыгъитӏщ. А клеткэхэм а бжыгъэхэр итын хуейщи, абыхэм я адрей кандидатхэр къыхах."
+            ],
+            [
+              "Тӏурытӏ щэхумрэ тӏурытӏ нахуэмрэ зэрызэщхьэщыкӏыр сыт?",
+              "Тӏурытӏ нахуэр плъагъу: кандидат зэщхьитӏ къудей къэзыгъэлъагъуэ клеткитӏщ. Тӏурытӏ щэхур клеткитӏым хэт кандидат щхьэхуэхэм егъэпщкӏу. А щхьэхуэхэр къыхэпхмэ, тӏурытӏ щэхур тӏурытӏ нахуэ мэхъу."
+            ],
+            [
+              "Щырыщ щэхур сыт?",
+              "Гупым и клеткищым ибыдыхьа бжыгъищщ. Бжыгъэ къэс клеткищми хэтын хуейкъым; мыхьэнэ зиӏэр бжыгъищым языхэзми а клеткэхэм нэмыщӏ щӏыпӏэ кандидату зэрыщымытырщ."
+            ],
+            [
+              "Чэнджэщым тӏурытӏ щэхумрэ нахуэмрэ зэхегъэкӏ?",
+              "Хьэуэ. Bare Sudoku-м тӏури къегъуэт, къикӏ гъэувыныр \"Тӏу е щы\" жиӏэу егъэнэхуэ. Мы напэкӏуэцӏхэм ахэр зэхагъэкӏ, сыту жыпӏэмэ ахэр щӏыкӏэ зэмыщхькӏэ къагъуэт."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing судокум: ӏэмалыр зэрылажьэр",
+          "description": "X-Wing: сатыритӏым дэтхэнэми кандидат клеткитӏ къудей щиӏэ бжыгъэр, ахэр бгъуагъитӏ зэхуэдэм хэтмэ, а бгъуагъхэм и къэнэжам къыхах. Щапхъэ пэж.",
+          "h1": "X-Wing",
+          "summary": "X-Wing бжыгъэ закъуэмрэ плӏимэм и къуагъхэм ит клеткиплӏымрэ щызэхэт сурэтщ. Бжыгъэм сатыритӏым дэтхэнэми кандидат клеткитӏ къудей щиӏэмэ, ахэри бгъуагъитӏ зэхуэдэм хэтмэ, бжыгъэр плӏимэм и зэпэщыт къуагъитӏым итын хуейщ. Аращи а бгъуагъитӏым и адрей клеткэ псоми ар къахэпхыфынущ. Сатырхэмрэ бгъуагъхэмрэ зэхъуэкӏауэ апхуэдэуи мэлажьэ. Ар Bare Sudoku-м и Iэзэ ӏэмал япэрщ.",
+          "when": [
+            "Зы закъуэхэр, кандидат гъэбыдахэр, тӏурытӏ, щырыщ щиухкӏэ. X-Wing Iэзэ сурэт нэхъ куэдрэ къэхъурщ, бжыгъэм кандидат мащӏэ къыщыхуэнэм къокӏ, нэхъыбэм ар плӏэ щегъэжьауэ хэ нэс гъэувауэ щытмэ. Уеплъ бжыгъэм папщӏэ тхыгъэхэр псори щытхэн хуейщ."
+          ],
+          "spot": [
+            "Бжыгъэ къыхэх, итӏанэ абы папщӏэ кандидат клеткитӏ къудей зиӏэ сатырхэм лъыхъуэ. Апхуэдэ сатыритӏым бгъуагъитӏ зэхуэдэ яӏэмэ, а бгъуагъхэм бжыгъэм и адрей кандидатхэр итми еплъ: ахэрщ къыхэпхынухэр. Итӏанэ бгъуагъхэр лъабжьэу пщтэри аргуэру ещӏ. Джэгум бжыгъэ клавишым тедзэ: абы и кандидат псори нахуэ мэхъу, тхыгъиплӏ нахуэ зиӏэ плӏимэри тыншу плъагъу."
+          ],
+          "examples": [
+            {
+              "h": "Щапхъэ",
+              "steps": [
+                "{d}-м сатыр {r1}-м кандидат клеткитӏ къудей иӏэщ, сатыр {r2}-ми тӏу къудей, ахэри бгъуагъитӏ зэхуэдэм, {c1}, {c2}, хэтщ: {cells}.",
+                "Сатыр {r1}-м и {d}-р бгъуагъ {c1}-м е {c2}-м ирегъэув, сатыр {r2}-м и {d}-р адрейм ирегъэув. Сытми, бгъуагъ {c1}-ми {c2}-ми а сатыритӏым я {d} зырыз къахуокӏуэ.",
+                "Аращи {d} бгъуагъ {c1}-ми {c2}-ми нэгъуэщӏ щӏыпӏэ итыфынукъым. {d} къыхэх: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Бжыгъэм папщӏэ кандидат клеткищ зиӏэ сатыр къэгъэсэбэпын. Лъабжьэ сатыр къэс тӏу дыдэ иӏэн хуейщ, тӏури бгъуагъитӏ зэхуэдэм хэтын хуейщ.",
+            "Бжыгъэр бгъуагъхэм и пӏэкӏэ сатырхэм къыхэхын. Сатырхэр лъабжьэу щыщытым деж хэхынхэр бгъуагъхэм щыщӏэкӏщ, къызэрыгъэзэкӏауэ апхуэдэщ.",
+            "Зэхъуэкӏа теплъэр щыгъупщэн. Бгъуагъхэм теухуа X-Wing сатырхэм кандидатхэр къыщехых."
+          ],
+          "faq": [
+            [
+              "Судокум X-Wing сыт?",
+              "Сатыритӏым дэтхэнэми, бгъуагъитӏ зэхуэдэм, кандидат клеткитӏ къудей щиӏэ бжыгъэщ. Бжыгъэр а плӏимэм и зэпэщыт къуагъитӏым итщ, аращи бгъуагъитӏым и къэнэжам къыхах. Сатырхэмрэ бгъуагъхэмрэ зэхъуэкӏыфынущ."
+            ],
+            [
+              "X-Wing сыт щхьэкӏэ мэлажьэ?",
+              "Сатыритӏым дэтхэнэми бжыгъэр бгъуагъитӏым языхэзым иригъэувэн хуейщ, сатыритӏым бгъуагъ зэхуэдэ къагъэсэбэпыфынукъым. Аращи бгъуагъитӏым дэтхэнэми бжыгъэр а сатырхэм къахуокӏуэ, а бгъуагъхэм ит адрей кандидат псори хъунукъым."
+            ],
+            [
+              "X-Wing бдзэжьейуэ ара?",
+              "Нтӏэ. X-Wing инагъыр тӏу зиӏэ бдзэжьейщ; Swordfish инагъыр щы зиӏэ бдзэжьейщ. Bare Sudoku-м тӏури къегъуэт."
+            ],
+            [
+              "X-Wing сыт хуэдэ ткӏуэпсым хэт?",
+              "Iэзэм. X-Wing, Y-Wing, Swordfish е XYZ-Wing зыхуей судокур Iэзэу къалъытэ."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing судокум: ӏэмалыр зэрылажьэр",
+          "description": "Y-Wing (XY-Wing): кандидатитӏ зиӏэ курыкупсэмрэ абы и кандидат зырыз зиӏэ дамитӏымрэ дамитӏри зылъагъу клеткэ къэсым бжыгъэ гуэр къыхагъэкӏ.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, XY-Wing жыхуаӏэри, кандидатитӏ-кандидатитӏ зиӏэ клеткищым къыхэкӏ сурэтщ. Курыкупсэм X, Y кандидатхэр иӏэщ. Зы дамэм курыкупсэр елъагъу, X, Z иӏэщ; адрей дамэм курыкупсэр елъагъу, Y, Z иӏэщ. Курыкупсэр сыт хуэдэ хъуми, дамэхэм языр Z хъун хуейщ, аращи дамитӏри зылъагъу клеткэ къэсым Z къыхэпхыфынущ. Bare Sudoku-м ар Iэзэ ӏэмалщ.",
+          "when": [
+            "Судокум кандидатитӏ къудей зиӏэ клеткэ куэд хэтмэ, бдзэжьейри щымыӏэмэ. Y-Wing Iэзэ судокухэм куэдрэ хэтщ, кандидатитӏ зиӏэ клеткэхэм уакӏэлъыплъурэ къэбгъуэт: дэтхэнэри курыкупсэ е дамэ хъуфынущ."
+          ],
+          "spot": [
+            "Кандидатитӏ къудей зиӏэ клеткэхэр итхэ. Дэтхэнэри X, Y кандидатхэр зиӏэ курыкупсэу къэлъытэ, итӏанэ и гъунэгъухэм яхэту X-рэ нэгъуэщӏ бжыгъэ Z-рэ зиӏэ клеткэрэ Y-рэ а Z дыдэмрэ зиӏэ клеткэрэ къэгъуэт. А тӏурщ дамэхэр. Итӏанэ дамитӏри зылъагъу, Z зыхэт клеткэхэр къэгъуэт. Гу лъытэ: дамэхэр зэрылъагъун хуейкъым."
+          ],
+          "examples": [
+            {
+              "h": "Щапхъэ",
+              "steps": [
+                "Курыкупсэ {pivot}-м {x}, {y} кандидатхэр иӏэщ. Ар {x}, {z} зиӏэ {wingA}-ми, {y}, {z} зиӏэ {wingB}-ми елъагъу.",
+                "{pivot}-р {x}-мэ, {wingA}-м {x} фӏокӏуэд, {z} мэхъу. {pivot}-р {y}-мэ, {wingB}-р {z} мэхъу. Сытми, дамитӏым языр {z}-щ.",
+                "Дамитӏри зылъагъу клеткэр зэи {z} хъунукъым. {z} къыхэх: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Курыкупсэр тӏуми ямылъагъу дамэхэр къыхэхын. Дамэ къэс курыкупсэм сатыр, бгъуагъ е пхъуантэ зэхуэдэ иӏэн хуейщ.",
+            "Дамэ закъуэ къудей зылъагъу клеткэхэм Z къахэхын. Къыхэпх клеткэм дамитӏри илъагъун хуейщ.",
+            "Курыкупсэм Z къыхэхын. Y-Wing-м курыкупсэм Z иӏэкъым; иӏэмэ, сурэтыр XYZ-Wing-щ, хабзэ щхьэхуэхэр иӏэу."
+          ],
+          "faq": [
+            [
+              "Судокум Y-Wing сыт?",
+              "Кандидатитӏ-кандидатитӏ зиӏэ клеткищщ: X, Y зиӏэ курыкупсэ, курыкупсэр зылъагъу X, Z зиӏэ дамэ, курыкупсэр зылъагъу Y, Z зиӏэ дамэ. Зы дамэр сыт щыгъуи Z-щ, аращи дамитӏри зылъагъу клеткэхэм Z къахах."
+            ],
+            [
+              "Y-Wing-мрэ XY-Wing-мрэ зыщ?",
+              "Нтӏэ. Цӏитӏри сурэт зэхуэдэм теухуащ. Bare Sudoku-м ар Y-Wing фӏещ."
+            ],
+            [
+              "Зы дамэр Z хъун хуейр сыт щхьэкӏэ?",
+              "Курыкупсэр X-мэ, япэ дамэм X фӏокӏуэд, Z мэхъу. Курыкупсэр Y-мэ, етӏуанэ дамэр Z мэхъу. Курыкупсэр абыхэм языхэзщ, аращи зы дамэр Z-щ."
+            ],
+            [
+              "Y-Wing клеткэ дапщэм кандидатхэр къыщехых?",
+              "Нэхъыбэм зы е тӏу: дамитӏри зылъагъу, Z иджыри зыхэт клеткэхэм къудей. Ар зы закъуэ къэгъэщӏыным хурикъуэщ."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish судокум: ӏэмалыр зэрылажьэр",
+          "description": "Swordfish: сатырищым бгъуагъищым ибыдыхьа бжыгъэр а бгъуагъхэм и къэнэжам къыхах. Инагъыр щы зиӏэ бдзэжьейр щапхъэ пэжкӏэ зэхэгъэкӏащ.",
+          "h1": "Swordfish",
+          "summary": "Swordfish сатырищрэ бгъуагъищрэ зиӏэ X-Wing-щ. Бжыгъэм сатырищым дэтхэнэми кандидат клеткищ нэхърэ нэхъыбэ щимыӏэмэ, ахэр псори бгъуагъищ зэхуэдэм хэтмэ, сатырищым а бгъуагъхэм бжыгъэр щаубыд, бжыгъэри бгъуагъищым и адрей клеткэ псоми къахэпхыфынущ. Сатырхэмрэ бгъуагъхэмрэ зэхъуэкӏыфынущ. Bare Sudoku-м Swordfish Y-Wing иужькӏэ йоплъ, Iэзэ судокухэм.",
+          "when": [
+            "X-Wing, Y-Wing зыри къамыгъуэтым. Swordfish X-Wing нэхърэ нэхъ мащӏэщ, сатырищым е бгъуагъищым кандидатхэр мащӏэу щызэбгрыжа бжыгъэ хуейщ. А бжыгъэм папщӏэ тхыгъэхэр псори пэжу щытхэн хуейщ."
+          ],
+          "spot": [
+            "Бжыгъэ къыхэх, абы папщӏэ кандидат клеткитӏ е клеткищ зиӏэ сатырхэм лъыхъуэ. Апхуэдэ сатырищым зэгъусэу бгъуагъищ къудей яубыдмэ, а бгъуагъхэм бжыгъэм и адрей кандидатхэр итми еплъ. Сатыр къэс бгъуагъ къэсым кандидат иӏэн хуейкъым: Swordfish-м клеткэ 6, 7, 8 е 9 иӏэфынущ. Джэгум бжыгъэр и клавишкӏэ гъэнахуэ, я кандидатхэр бгъуагъищым щызэхуэзэ сатырищым лъыхъуэ."
+          ],
+          "examples": [
+            {
+              "h": "Щапхъэ",
+              "steps": [
+                "{d}-м сатыр {rows}-хэм дэтхэнэми кандидат клеткищ нэхърэ нэхъыбэ иӏэкъым, ахэр псори бгъуагъ {cols}-хэм хэтщ: {cells}.",
+                "Сатырищым дэтхэнэми и {d}-р бгъуагъищым языхэзым иригъэувэн хуейщ, сатыритӏым бгъуагъ зэхуэдэ къагъэсэбэпыфынукъым. Аращи бгъуагъищым я {d}-р а сатырищым къахуокӏуэ.",
+                "Бгъуагъ {cols}-хэм нэгъуэщӏ {d} кандидат хъунукъым. {d} къыхэх: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Клеткэ 9-ри хуейуэ убжын. Сатыр гуэрхэм кандидатитӏ щиӏэ Swordfish-ри пэжщ, сатырищым бгъуагъищ къудей яубыдмэ.",
+            "Кандидат клеткиплӏ зиӏэ сатыр хэгъэхьэн. Лъабжьэ сатыр къэс клеткищ нэхърэ нэхъыбэ иӏэн хуейкъым, псори бгъуагъищым хэту.",
+            "Лъабжьэ сатырхэм кандидатхэр къахэхын. Сатырхэр лъабжьэу щыщытым деж хэхынхэр бгъуагъищым щыщӏэкӏщ, лъабжьэ сатырхэм хэмыту."
+          ],
+          "faq": [
+            [
+              "Судокум Swordfish сыт?",
+              "Сатырищым и кандидатхэр бгъуагъищым ибыдыхьа бжыгъэщ. Сатырищым бжыгъэр а бгъуагъищым зырызу иригъэувэн хуейщ, аращи бжыгъэр а бгъуагъхэм и адрей клеткэхэм къахах."
+            ],
+            [
+              "Swordfish-мрэ X-Wing-мрэ зэрызэщхьэщыкӏыр сыт?",
+              "Инагъым къудей: X-Wing сатыритӏрэ бгъуагъитӏрэкӏэ мэлажьэ, Swordfish щырэ щырэкӏэ. Гупсысэкӏэр зэхуэдэщ."
+            ],
+            [
+              "Swordfish-м клеткэ 9 дыдэ хуейщ?",
+              "Хьэуэ. Сатыр къэс кандидатитӏ е кандидатищ иӏэфынущ; сурэтым хуейр сатырищым зэгъусэу бгъуагъищ нэхърэ нэхъыбэ ямыубыдынырщ."
+            ],
+            [
+              "Инагъыр плӏы зиӏэ бдзэжьей щыӏэ?",
+              "Нтӏэ, Jellyfish. Bare Sudoku-м ар къигъэсэбэпкъым, сыту жыпӏэмэ и судокухэм ар зэи хуейкъым."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing судокум: ӏэмалыр зэрылажьэр",
+          "description": "XYZ-Wing: кандидатищ зиӏэ курыкупсэмрэ абы и зы кандидат зэдай зиӏэ дамитӏымрэ щыри зылъагъу клеткэ къэсым а бжыгъэр къыхагъэкӏ. Щапхъэ пэж.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing курыкупсэм кандидатищ щиӏэ Y-Wing-щ. Курыкупсэм X, Y, Z иӏэщ; зы дамэм курыкупсэр елъагъу, X, Z иӏэщ, адрейм курыкупсэр елъагъу, Y, Z иӏэщ. Клеткищым языр Z хъун хуейщ, аращи щыри зылъагъу клеткэ къэсым Z къыхэпхыфынущ. Курыкупсэр езыр Z хъуфынущи, къыхэпх клеткэм курыкупсэри дамитӏри илъагъун хуейщ, ари клеткэхэм зэдаӏэ пхъуантэм е сатырым е бгъуагъым къудей хуеубзыху. Ар Bare Sudoku-м къигъэсэбэп ӏэмалхэм я нэхъ гугъу дыдэрщ.",
+          "when": [
+            "Адрей псори къемыхъулӏэм деж къудей. XYZ-Wing Bare Sudoku-м и сурэт нэхъ мащӏэ дыдэрщ, Iэзэ судокухэм къудей къыхокӏ. Кандидатищ зиӏэ клеткэмрэ абы и бжыгъитӏ зиӏэ кандидатитӏ клеткэмрэ пхъуантэ зэхуэдэм щыхэткӏэ, абы лъыхъуэ."
+          ],
+          "spot": [
+            "Кандидатищ къудей зиӏэ клеткэхэм щыщӏэдзэ; дэтхэнэри курыкупсэ хъуфынущ. И гъунэгъухэм яхэту кандидатитӏ зырыз зиӏэ клеткитӏ къэгъуэт, я кандидатхэр псори курыкупсэм и щым щыщу, зэдаӏэр зы бжыгъэ Z къудейуэ. Итӏанэ курыкупсэри дамитӏри зылъагъу, Z зыхэт клеткэхэр къэгъуэт. Нэхъыбэм зы дамэр курыкупсэм и пхъуантэм хэтщ, адрейр и сатырым е и бгъуагъым, къыхэпх клеткэхэри а пхъуантэм а сатырым е бгъуагъым къыщыхуэна клеткэхэрщ."
+          ],
+          "examples": [
+            {
+              "h": "Щапхъэ",
+              "steps": [
+                "Курыкупсэ {pivot}-м кандидатищ иӏэщ: {x}, {y}, {z}. Ар {x}, {z} зиӏэ {wingA}-ми, {y}, {z} зиӏэ {wingB}-ми елъагъу.",
+                "{pivot}-р {z}-мэ, арщ. {x}-мэ, {wingA}-р {z} хъун хуейщ. {y}-мэ, {wingB}-р {z} хъун хуейщ. Сытми, клеткищым языр {z}-щ.",
+                "Щыри зылъагъу клеткэр {z} хъунукъым. {z} къыхэх: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Дамитӏыр къудей зылъагъу клеткэхэм къахэхын. Y-Wing-м хуэмыдэу, мыбдеж курыкупсэр Z хъуфынущи, клеткэм курыкупсэри илъагъун хуейщ.",
+            "Я кандидатхэр курыкупсэм и кандидатищым псори хэмыт дамэхэр къэгъэсэбэпын.",
+            "Ар Y-Wing-м хэгъэзэрыхьын: зэщхьэщыкӏыныгъэр курыкупсэм и ещанэ кандидатырщ, ари къыхэпхыфыну клеткэхэр зэрехъуэкӏ."
+          ],
+          "faq": [
+            [
+              "Судокум XYZ-Wing сыт?",
+              "X, Y, Z кандидатхэр зиӏэ курыкупсэрэ дамитӏрэщ, зым X, Z иӏэщ, адрейм Y, Z, тӏуми курыкупсэр ялъагъу. Клеткищым языр Z-щ, аращи щыри зылъагъу клеткэхэм Z къахах."
+            ],
+            [
+              "XYZ-Wing-мрэ Y-Wing-мрэ зэрызэщхьэщыкӏыр сыт?",
+              "Курыкупсэм кандидатитӏ и пӏэкӏэ щы иӏэщ, Z хэту. Абы курыкупсэр Z итыфыну щӏыпӏэ ещӏ, аращи курыкупсэри дамитӏри зылъагъу клеткэхэм къудей Z фӏэкӏуэдыфынущ."
+            ],
+            [
+              "XYZ-Wing дапщэщ къыхэкӏыр?",
+              "Зэзэмызэщ. Bare Sudoku-м Iэзэ судокухэм къудей ар хуейуэ хъуфынущ, абыхэм я нэхъыбэми хуейкъым. Bare Sudoku-м ар иужь дыдэу йоплъ, X-Wing, Y-Wing, Swordfish иужькӏэ."
+            ],
+            [
+              "WXYZ-Wing щыӏэ?",
+              "Нтӏэ, кандидатиплӏ зиӏэ курыкупсэкӏэ, ауэ Bare Sudoku-м ар къигъэсэбэпкъым. Джэгум хэт судоку къэс мы гъуазэм ит ӏэмал 9-мкӏэ зэфӏэбгъэкӏыфынущ."
             ]
           ]
         }
