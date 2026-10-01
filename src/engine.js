@@ -34,10 +34,10 @@ const digit = m => 32 - Math.clz32(m & -m);
 const low = m => 31 - Math.clz32(m & -m);
 const SEE = new Uint8Array(6561);
 for (let i = 0; i < 81; i++) for (let j = 0; j < 81; j++) SEE[i * 81 + j] = sees(i, j) ? 1 : 0;
-const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56];
+const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56, 65, 66, 68, 70, 73, 70, 75, 78, 80, 82];
 const TECH_COUNT = TECH_BASE.length;
 const MASTER_RATING = 65;
-const LEVELS = 4;
+const LEVELS = 5;
 const TECH_ORDER = new Uint8Array(TECH_COUNT);
 let EXPERT_LIMIT = 0;
 {
@@ -46,6 +46,15 @@ let EXPERT_LIMIT = 0;
   for (let r = 0; r < 128; r++) for (let id = 11; id < TECH_COUNT; id++) if (TECH_BASE[id] === r) TECH_ORDER[n++] = id;
   for (let id = 0; id < TECH_COUNT; id++) if (TECH_BASE[id] < MASTER_RATING) EXPERT_LIMIT++;
 }
+const NODES = 1215;
+const STATES = NODES * 2;
+const MAX_LINKS = 131072;
+const MAX_ALS = 1024;
+const MAX_ALS_LINKS = 131072;
+const PEER_SET = new Int32Array(243);
+for (let c = 0; c < 81; c++) for (const p of PEERS[c]) PEER_SET[c * 3 + ((p / 27) | 0)] |= 1 << (p % 27);
+const positionIn = (c, u) => u < 9 ? COL[c] : u < 18 ? ROW[c] : (ROW[c] % 3) * 3 + COL[c] % 3;
+const chainBonus = links => links > 4 ? Math.min(10, (links - 4) >> 1) : 0;
 function candidates(values, cell) {
   let used = 0;
   const peers = PEERS[cell];
@@ -73,6 +82,7 @@ class Sudoku {
     this.hintTech = 0;
     this.hintRating = 0;
     this.techLimit = TECH_COUNT;
+    this.techOff = new Uint8Array(TECH_COUNT);
     this.stepRating = 0;
     this.stepOrder = 0;
     this.rateOrder = 0;
@@ -82,6 +92,46 @@ class Sudoku {
     this.cellList = new Uint8Array(81);
     this.quad = new Uint8Array(4);
     this.others = new Uint8Array(9);
+    this.unitPos = new Uint16Array(243);
+    this.digitCells = new Int32Array(27);
+    this.groupCount = 0;
+    this.groupFirst = new Int16Array(11);
+    this.groupDigit = new Uint8Array(486);
+    this.groupCells = new Uint8Array(1458);
+    this.groupSize = new Uint8Array(486);
+    this.groupBox = new Uint8Array(486);
+    this.groupLine = new Uint8Array(486);
+    this.groupSeen = new Int32Array(1458);
+    this.groupAt = new Int16Array(486);
+    this.linkStart = new Int32Array(STATES + 1);
+    this.linkTo = new Int32Array(MAX_LINKS);
+    this.mark = new Int32Array(STATES);
+    this.markValue = 0;
+    this.depth = new Int32Array(STATES);
+    this.parent = new Int32Array(STATES);
+    this.queue = new Int32Array(STATES);
+    this.elimTry = new Uint16Array(81);
+    this.elimBest = new Uint16Array(81);
+    this.inter = new Uint8Array(3);
+    this.lineRest = new Uint8Array(6);
+    this.boxRest = new Uint8Array(6);
+    this.lineUnion = new Uint16Array(64);
+    this.boxUnion = new Uint16Array(64);
+    this.alsCount = 0;
+    this.alsDigits = new Uint16Array(MAX_ALS);
+    this.alsCells = new Int32Array(MAX_ALS * 3);
+    this.alsDigitCells = new Int32Array(MAX_ALS * 27);
+    this.alsSeen = new Int32Array(MAX_ALS * 27);
+    this.alsLinkStart = new Int32Array(MAX_ALS + 1);
+    this.alsLinkTo = new Int32Array(MAX_ALS_LINKS);
+    this.alsLinkMask = new Uint16Array(MAX_ALS_LINKS);
+    this.petals = new Int32Array(MAX_ALS * 9);
+    this.petalStart = new Int32Array(10);
+    this.alsMark = new Int32Array(MAX_ALS * 9);
+    this.alsMarkValue = 0;
+    this.alsFirst = new Uint16Array(MAX_ALS * 9);
+    this.alsDepth = new Int32Array(MAX_ALS * 9);
+    this.alsQueue = new Int32Array(MAX_ALS * 9);
     this.solution = null;
   }
 
@@ -1043,6 +1093,608 @@ class Sudoku {
     return false;
   }
 
+  prepareUnits() {
+    const lc = this.lc;
+    for (let u = 0; u < 27; u++) for (let d = 1; d <= 9; d++) this.unitPos[u * 9 + d - 1] = this.unitMask(UNITS[u], bit(d));
+    this.digitCells.fill(0);
+    for (let c = 0; c < 81; c++) for (let rest = lc[c]; rest; rest &= rest - 1) this.digitCells[low(rest) * 3 + ((c / 27) | 0)] |= 1 << (c % 27);
+  }
+
+  prepareGroups() {
+    const lc = this.lc;
+    let n = 0;
+    this.groupAt.fill(-1);
+    for (let d = 1; d <= 9; d++) {
+      const b = bit(d);
+      this.groupFirst[d] = n;
+      for (let box = 0; box < 9; box++) {
+        const top = ((box / 3) | 0) * 3, left = (box % 3) * 3;
+        for (let seg = 0; seg < 6; seg++) {
+          let size = 0;
+          for (let k = 0; k < 3; k++) {
+            const c = seg < 3 ? (top + seg) * 9 + left + k : (top + k) * 9 + left + seg - 3;
+            if (lc[c] & b) this.groupCells[n * 3 + size++] = c;
+          }
+          if (size < 2) continue;
+          this.groupDigit[n] = d;
+          this.groupSize[n] = size;
+          this.groupBox[n] = box;
+          this.groupLine[n] = seg < 3 ? top + seg : 9 + left + seg - 3;
+          for (let w = 0; w < 3; w++) {
+            let seen = -1;
+            for (let k = 0; k < size; k++) seen &= PEER_SET[this.groupCells[n * 3 + k] * 3 + w];
+            this.groupSeen[n * 3 + w] = seen;
+          }
+          this.groupAt[(d - 1) * 54 + box * 6 + seg] = n;
+          n++;
+        }
+      }
+    }
+    this.groupFirst[10] = n;
+    this.groupCount = n;
+  }
+
+  restNode(u, d, rest, grouped) {
+    if (!rest) return -1;
+    const cells = UNITS[u];
+    if (POP[rest] === 1) return cells[low(rest)] * 9 + d - 1;
+    if (!grouped) return -1;
+    const first = cells[low(rest)];
+    let sameBox = true, sameRow = true, sameCol = true;
+    for (let m = rest & (rest - 1); m; m &= m - 1) {
+      const c = cells[low(m)];
+      if (BOX[c] !== BOX[first]) sameBox = false;
+      if (ROW[c] !== ROW[first]) sameRow = false;
+      if (COL[c] !== COL[first]) sameCol = false;
+    }
+    if (!sameBox || (!sameRow && !sameCol)) return -1;
+    const g = this.groupAt[(d - 1) * 54 + BOX[first] * 6 + (sameRow ? ROW[first] % 3 : 3 + COL[first] % 3)];
+    return g >= 0 && this.groupSize[g] === POP[rest] ? 729 + g : -1;
+  }
+
+  addLink(n, state) {
+    if (n >= MAX_LINKS) return n;
+    this.linkTo[n] = state;
+    return n + 1;
+  }
+
+  linked(from, to, state) {
+    for (let k = from; k < to; k++) if (this.linkTo[k] === state) return true;
+    return false;
+  }
+
+  seesGroup(c, g) {
+    return (this.groupSeen[g * 3 + ((c / 27) | 0)] & (1 << (c % 27))) !== 0;
+  }
+
+  groupWithin(h, g) {
+    for (let i = 0; i < this.groupSize[h]; i++) if (!this.seesGroup(this.groupCells[h * 3 + i], g)) return false;
+    return true;
+  }
+
+  buildLinks(id) {
+    const lc = this.lc, start = this.linkStart;
+    const grouped = id === 31, units = id !== 28, bivalue = id !== 27, mates = id >= 29;
+    let n = 0;
+    for (let node = 0; node < NODES; node++) {
+      start[node * 2] = n;
+      if (node < 729) {
+        const c = (node / 9) | 0, d = node % 9 + 1, b = bit(d);
+        const alive = (lc[c] & b) !== 0;
+        if (alive && units) {
+          const first = n;
+          for (let k = 0; k < 3; k++) {
+            const u = k === 0 ? ROW[c] : k === 1 ? 9 + COL[c] : 18 + BOX[c];
+            const target = this.restNode(u, d, this.unitPos[u * 9 + d - 1] & ~(1 << positionIn(c, u)), grouped);
+            if (target >= 0 && !this.linked(first, n, target * 2 + 1)) n = this.addLink(n, target * 2 + 1);
+          }
+        }
+        if (alive && bivalue && POP[lc[c]] === 2) n = this.addLink(n, (c * 9 + low(lc[c] & ~b)) * 2 + 1);
+        start[node * 2 + 1] = n;
+        if (!alive) continue;
+        const peers = PEERS[c];
+        for (let k = 0; k < 20; k++) if (lc[peers[k]] & b) n = this.addLink(n, (peers[k] * 9 + d - 1) * 2);
+        if (mates) for (let rest = lc[c] & ~b; rest; rest &= rest - 1) n = this.addLink(n, (c * 9 + low(rest)) * 2);
+        if (grouped) for (let g = this.groupFirst[d]; g < this.groupFirst[d + 1]; g++) if (this.seesGroup(c, g)) n = this.addLink(n, (729 + g) * 2);
+      } else {
+        const g = node - 729;
+        const alive = g < this.groupCount;
+        const d = alive ? this.groupDigit[g] : 0;
+        if (alive) {
+          const first = n;
+          for (let k = 0; k < 2; k++) {
+            const u = k === 0 ? this.groupLine[g] : 18 + this.groupBox[g];
+            let own = 0;
+            for (let i = 0; i < this.groupSize[g]; i++) own |= 1 << positionIn(this.groupCells[g * 3 + i], u);
+            const target = this.restNode(u, d, this.unitPos[u * 9 + d - 1] & ~own, true);
+            if (target >= 0 && !this.linked(first, n, target * 2 + 1)) n = this.addLink(n, target * 2 + 1);
+          }
+        }
+        start[node * 2 + 1] = n;
+        if (!alive) continue;
+        for (let p = 0; p < 81; p++) if ((lc[p] & bit(d)) && this.seesGroup(p, g)) n = this.addLink(n, (p * 9 + d - 1) * 2);
+        for (let h = this.groupFirst[d]; h < this.groupFirst[d + 1]; h++) if (h !== g && this.groupWithin(h, g)) n = this.addLink(n, (729 + h) * 2);
+      }
+    }
+    start[STATES] = n;
+  }
+
+  nodeDigit(node) {
+    return node < 729 ? node % 9 + 1 : this.groupDigit[node - 729];
+  }
+
+  seenWord(node, w) {
+    return node < 729 ? PEER_SET[((node / 9) | 0) * 3 + w] : this.groupSeen[(node - 729) * 3 + w];
+  }
+
+  targets(s, n, write) {
+    const lc = this.lc, elim = this.elimTry;
+    const ds = this.nodeDigit(s), dn = this.nodeDigit(n);
+    let any = false;
+    if (write) elim.fill(0);
+    if (ds === dn) {
+      for (let w = 0; w < 3; w++) {
+        let m = this.seenWord(s, w) & this.seenWord(n, w) & this.digitCells[(ds - 1) * 3 + w];
+        if (!m) continue;
+        if (!write) return true;
+        any = true;
+        for (; m; m &= m - 1) elim[w * 27 + low(m)] |= bit(ds);
+      }
+    }
+    if (s < 729 && n < 729) {
+      const sc = (s / 9) | 0, nc = (n / 9) | 0;
+      if (sc === nc) {
+        const rest = lc[sc] & ~bit(ds) & ~bit(dn);
+        if (rest) {
+          if (!write) return true;
+          any = true;
+          elim[sc] |= rest;
+        }
+      } else if (ds !== dn && SEE[sc * 81 + nc]) {
+        if (lc[sc] & bit(dn)) {
+          if (!write) return true;
+          any = true;
+          elim[sc] |= bit(dn);
+        }
+        if (lc[nc] & bit(ds)) {
+          if (!write) return true;
+          any = true;
+          elim[nc] |= bit(ds);
+        }
+      }
+    } else if (ds !== dn && (s < 729 || n < 729)) {
+      const single = s < 729 ? s : n, group = s < 729 ? n - 729 : s - 729;
+      const c = (single / 9) | 0, dg = this.groupDigit[group];
+      if ((lc[c] & bit(dg)) && this.seesGroup(c, group)) {
+        if (!write) return true;
+        any = true;
+        elim[c] |= bit(dg);
+      }
+    }
+    return any;
+  }
+
+  weakElims(x, y) {
+    const xc = (x / 9) | 0, yc = (y / 9) | 0, xd = x % 9, yd = y % 9;
+    if (xc === yc) {
+      this.elimTry[xc] |= this.lc[xc] & ~(1 << xd) & ~(1 << yd);
+      return;
+    }
+    for (let w = 0; w < 3; w++) {
+      for (let m = PEER_SET[xc * 3 + w] & PEER_SET[yc * 3 + w] & this.digitCells[xd * 3 + w]; m; m &= m - 1) this.elimTry[w * 27 + low(m)] |= 1 << xd;
+    }
+  }
+
+  loopTargets(s, end) {
+    const n = end >> 1;
+    if (n === s) return false;
+    const sc = (s / 9) | 0, nc = (n / 9) | 0, sd = s % 9, nd = n % 9;
+    if (sc === nc ? sd === nd : sd !== nd || !SEE[sc * 81 + nc]) return false;
+    this.elimTry.fill(0);
+    this.weakElims(n, s);
+    for (let st = end; this.parent[st] >= 0; st = this.parent[st]) {
+      const pa = this.parent[st];
+      if ((pa & 1) && !(st & 1)) this.weakElims(pa >> 1, st >> 1);
+    }
+    for (let c = 0; c < 81; c++) if (this.elimTry[c]) return true;
+    return false;
+  }
+
+  chainFrom(s, loop, limit) {
+    const mark = this.mark, depth = this.depth, parent = this.parent, queue = this.queue, start = this.linkStart, to = this.linkTo;
+    if (++this.markValue >= 0x7fffffff) {
+      mark.fill(0);
+      this.markValue = 1;
+    }
+    const stamp = this.markValue;
+    const origin = s * 2;
+    mark[origin] = stamp;
+    depth[origin] = 0;
+    parent[origin] = -1;
+    let head = 0, tail = 0;
+    queue[tail++] = origin;
+    while (head < tail) {
+      const st = queue[head++];
+      const d = depth[st] + 1;
+      if (d >= limit) break;
+      for (let k = start[st]; k < start[st + 1]; k++) {
+        const ch = to[k];
+        if (mark[ch] === stamp) continue;
+        mark[ch] = stamp;
+        depth[ch] = d;
+        parent[ch] = st;
+        queue[tail++] = ch;
+        if (!(ch & 1)) continue;
+        if (loop ? this.loopTargets(s, ch) : this.targets(s, ch >> 1, false) && this.targets(s, ch >> 1, true)) {
+          this.elimBest.set(this.elimTry);
+          return d;
+        }
+      }
+    }
+    return 0;
+  }
+
+  chains(id) {
+    this.prepareUnits();
+    if (id === 31) this.prepareGroups();
+    else this.groupCount = 0;
+    this.buildLinks(id);
+    const loop = id === 29 ? 1 : 0;
+    const none = 0x7fffffff;
+    let best = none;
+    const nodes = 729 + this.groupCount;
+    for (let s = 0; s < nodes; s++) {
+      if (this.linkStart[s * 2] === this.linkStart[s * 2 + 1]) continue;
+      const found = this.chainFrom(s, loop === 1, best - loop);
+      if (found) best = found + loop;
+    }
+    if (best === none) return false;
+    for (let c = 0; c < 81; c++) this.lc[c] &= ~this.elimBest[c];
+    this.stepRating = TECH_BASE[id] + chainBonus(best);
+    return true;
+  }
+
+  sueDeCoq() {
+    const lc = this.lc, inter = this.inter, lineRest = this.lineRest, boxRest = this.boxRest, lineUnion = this.lineUnion, boxUnion = this.boxUnion;
+    for (let box = 0; box < 9; box++) {
+      for (let t = 0; t < 2; t++) {
+        for (let i = 0; i < 3; i++) {
+          const line = t === 0 ? ((box / 3) | 0) * 3 + i : 9 + (box % 3) * 3 + i;
+          let ni = 0, nl = 0, nb = 0;
+          for (let k = 0; k < 9; k++) {
+            const c = UNITS[line][k];
+            if (!lc[c]) continue;
+            if (BOX[c] === box) inter[ni++] = c;
+            else lineRest[nl++] = c;
+          }
+          if (ni < 2) continue;
+          for (let k = 0; k < 9; k++) {
+            const c = UNITS[18 + box][k];
+            if (lc[c] && (t === 0 ? ROW[c] !== line : COL[c] !== line - 9)) boxRest[nb++] = c;
+          }
+          lineUnion[0] = 0;
+          for (let a = 1; a < (1 << nl); a++) lineUnion[a] = lineUnion[a & (a - 1)] | lc[lineRest[low(a)]];
+          boxUnion[0] = 0;
+          for (let a = 1; a < (1 << nb); a++) boxUnion[a] = boxUnion[a & (a - 1)] | lc[boxRest[low(a)]];
+          for (let cs = 3; cs < (1 << ni); cs++) {
+            const size = POP[cs];
+            if (size < 2) continue;
+            let v = 0;
+            for (let j = 0; j < ni; j++) if (cs & (1 << j)) v |= lc[inter[j]];
+            if (POP[v] < size + 2) continue;
+            for (let a = 1; a < (1 << nl); a++) {
+              const va = lineUnion[a];
+              if (!(va & v)) continue;
+              for (let d = 1; d < (1 << nb); d++) {
+                const vd = boxUnion[d];
+                if ((va & vd) || !(vd & v)) continue;
+                if (POP[v | va | vd] !== size + POP[a] + POP[d]) continue;
+                if (this.sueDrop(line, box, cs, ni, a, nl, d, nb, va | (v & ~vd), vd | (v & ~va))) return true;
+              }
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  sueDrop(line, box, cs, ni, a, nl, d, nb, lineDigits, boxDigits) {
+    const keep = this.elimTry;
+    keep.fill(0);
+    for (let j = 0; j < ni; j++) if (cs & (1 << j)) keep[this.inter[j]] = 1;
+    for (let j = 0; j < nl; j++) if (a & (1 << j)) keep[this.lineRest[j]] = 2;
+    for (let j = 0; j < nb; j++) if (d & (1 << j)) keep[this.boxRest[j]] = 3;
+    let changed = false;
+    for (let k = 0; k < 9; k++) {
+      const c = UNITS[line][k];
+      if (keep[c] !== 1 && keep[c] !== 2 && this.drop(c, lineDigits)) changed = true;
+    }
+    for (let k = 0; k < 9; k++) {
+      const c = UNITS[18 + box][k];
+      if (keep[c] !== 1 && keep[c] !== 3 && this.drop(c, boxDigits)) changed = true;
+    }
+    return changed;
+  }
+
+  collectAls() {
+    const lc = this.lc;
+    let n = 0;
+    for (let u = 0; u < 27 && n < MAX_ALS; u++) {
+      const cells = UNITS[u];
+      let free = 0;
+      for (let k = 0; k < 9; k++) if (lc[cells[k]]) free |= 1 << k;
+      for (let s = 1; s < 512 && n < MAX_ALS; s++) {
+        if ((s & free) !== s) continue;
+        let m = 0, rows = 0, cols = 0;
+        for (let k = 0; k < 9; k++) {
+          if (!(s & (1 << k))) continue;
+          const c = cells[k];
+          m |= lc[c];
+          rows |= 1 << ROW[c];
+          cols |= 1 << COL[c];
+        }
+        if (POP[m] !== POP[s] + 1) continue;
+        if (u >= 9 && POP[rows] === 1) continue;
+        if (u >= 18 && POP[cols] === 1) continue;
+        this.alsDigits[n] = m;
+        this.alsCells[n * 3] = 0;
+        this.alsCells[n * 3 + 1] = 0;
+        this.alsCells[n * 3 + 2] = 0;
+        for (let k = 0; k < 9; k++) {
+          const c = cells[k];
+          if (s & (1 << k)) this.alsCells[n * 3 + ((c / 27) | 0)] |= 1 << (c % 27);
+        }
+        for (let d = 0; d < 9; d++) {
+          const at = (n * 9 + d) * 3;
+          let w0 = 0, w1 = 0, w2 = 0, s0 = -1, s1 = -1, s2 = -1;
+          for (let k = 0; k < 9; k++) {
+            const c = cells[k];
+            if (!(s & (1 << k)) || !(lc[c] & (1 << d))) continue;
+            if (c < 27) w0 |= 1 << c;
+            else if (c < 54) w1 |= 1 << (c - 27);
+            else w2 |= 1 << (c - 54);
+            s0 &= PEER_SET[c * 3];
+            s1 &= PEER_SET[c * 3 + 1];
+            s2 &= PEER_SET[c * 3 + 2];
+          }
+          const present = (w0 | w1 | w2) !== 0;
+          this.alsDigitCells[at] = w0;
+          this.alsDigitCells[at + 1] = w1;
+          this.alsDigitCells[at + 2] = w2;
+          this.alsSeen[at] = present ? s0 : 0;
+          this.alsSeen[at + 1] = present ? s1 : 0;
+          this.alsSeen[at + 2] = present ? s2 : 0;
+        }
+        n++;
+      }
+    }
+    this.alsCount = n;
+  }
+
+  alsOverlap(i, j) {
+    return ((this.alsCells[i * 3] & this.alsCells[j * 3]) | (this.alsCells[i * 3 + 1] & this.alsCells[j * 3 + 1]) | (this.alsCells[i * 3 + 2] & this.alsCells[j * 3 + 2])) !== 0;
+  }
+
+  alsHas(i, c) {
+    return (this.alsCells[i * 3 + ((c / 27) | 0)] & (1 << (c % 27))) !== 0;
+  }
+
+  restrictedCommon(i, j) {
+    let rcc = 0;
+    for (let rest = this.alsDigits[i] & this.alsDigits[j]; rest; rest &= rest - 1) {
+      const d = low(rest), a = (i * 9 + d) * 3, b = (j * 9 + d) * 3;
+      if ((this.alsDigitCells[b] & ~this.alsSeen[a]) | (this.alsDigitCells[b + 1] & ~this.alsSeen[a + 1]) | (this.alsDigitCells[b + 2] & ~this.alsSeen[a + 2])) continue;
+      rcc |= 1 << d;
+    }
+    return rcc;
+  }
+
+  linkAls() {
+    let n = 0;
+    for (let i = 0; i < this.alsCount; i++) {
+      this.alsLinkStart[i] = n;
+      for (let j = 0; j < this.alsCount; j++) {
+        if (i === j || !(this.alsDigits[i] & this.alsDigits[j]) || this.alsOverlap(i, j)) continue;
+        const rcc = this.restrictedCommon(i, j);
+        if (!rcc || n >= MAX_ALS_LINKS) continue;
+        this.alsLinkTo[n] = j;
+        this.alsLinkMask[n] = rcc;
+        n++;
+      }
+    }
+    this.alsLinkStart[this.alsCount] = n;
+  }
+
+  dropSeen(i, j, d) {
+    let changed = false;
+    for (let w = 0; w < 3; w++) {
+      for (let m = this.alsSeen[(i * 9 + d) * 3 + w] & this.alsSeen[(j * 9 + d) * 3 + w] & this.digitCells[d * 3 + w]; m; m &= m - 1) {
+        if (this.drop(w * 27 + low(m), 1 << d)) changed = true;
+      }
+    }
+    return changed;
+  }
+
+  alsXz() {
+    this.prepareUnits();
+    this.collectAls();
+    for (let i = 0; i < this.alsCount; i++) {
+      for (let j = i + 1; j < this.alsCount; j++) {
+        const common = this.alsDigits[i] & this.alsDigits[j];
+        if (POP[common] < 2 || this.alsOverlap(i, j)) continue;
+        const rcc = this.restrictedCommon(i, j);
+        if (!rcc) continue;
+        let changed = false;
+        if (POP[rcc] === 1) {
+          for (let rest = common & ~rcc; rest; rest &= rest - 1) if (this.dropSeen(i, j, low(rest))) changed = true;
+        } else {
+          for (let rest = rcc; rest; rest &= rest - 1) if (this.dropSeen(i, j, low(rest))) changed = true;
+          for (let rest = this.alsDigits[i] & ~rcc; rest; rest &= rest - 1) if (this.dropSeen(i, i, low(rest))) changed = true;
+          for (let rest = this.alsDigits[j] & ~rcc; rest; rest &= rest - 1) if (this.dropSeen(j, j, low(rest))) changed = true;
+        }
+        if (changed) return true;
+      }
+    }
+    return false;
+  }
+
+  alsXyWing() {
+    this.prepareUnits();
+    this.collectAls();
+    this.linkAls();
+    const start = this.alsLinkStart, to = this.alsLinkTo, mask = this.alsLinkMask;
+    for (let c = 0; c < this.alsCount; c++) {
+      for (let p = start[c]; p < start[c + 1]; p++) {
+        const a = to[p];
+        for (let q = p + 1; q < start[c + 1]; q++) {
+          const b = to[q];
+          const common = this.alsDigits[a] & this.alsDigits[b];
+          if (!common || this.alsOverlap(a, b)) continue;
+          for (let xs = mask[p]; xs; xs &= xs - 1) {
+            const x = xs & -xs;
+            for (let ys = mask[q] & ~x; ys; ys &= ys - 1) {
+              const y = ys & -ys;
+              let changed = false;
+              for (let zs = common & ~x & ~y; zs; zs &= zs - 1) if (this.dropSeen(a, b, low(zs))) changed = true;
+              if (changed) return true;
+            }
+          }
+        }
+      }
+    }
+    return false;
+  }
+
+  deathBlossom() {
+    this.prepareUnits();
+    this.collectAls();
+    for (let stem = 0; stem < 81; stem++) {
+      const sm = this.lc[stem];
+      if (POP[sm] < 2) continue;
+      let n = 0, k = 0;
+      for (let rest = sm; rest; rest &= rest - 1) {
+        const d = low(rest);
+        this.petalStart[k++] = n;
+        for (let i = 0; i < this.alsCount; i++) {
+          if (!(this.alsDigits[i] & (1 << d)) || this.alsHas(i, stem)) continue;
+          if (!(this.alsSeen[(i * 9 + d) * 3 + ((stem / 27) | 0)] & (1 << (stem % 27)))) continue;
+          this.petals[n++] = i;
+        }
+      }
+      this.petalStart[k] = n;
+      for (let z = 0; z < 9; z++) {
+        if (sm & (1 << z)) continue;
+        if (this.blossom(0, k, z, this.digitCells[z * 3], this.digitCells[z * 3 + 1], this.digitCells[z * 3 + 2], 0, 0, 0)) return true;
+      }
+    }
+    return false;
+  }
+
+  blossom(k, count, z, s0, s1, s2, u0, u1, u2) {
+    if (k === count) {
+      let changed = false;
+      for (let m = s0; m; m &= m - 1) if (this.drop(low(m), 1 << z)) changed = true;
+      for (let m = s1; m; m &= m - 1) if (this.drop(27 + low(m), 1 << z)) changed = true;
+      for (let m = s2; m; m &= m - 1) if (this.drop(54 + low(m), 1 << z)) changed = true;
+      return changed;
+    }
+    for (let p = this.petalStart[k]; p < this.petalStart[k + 1]; p++) {
+      const i = this.petals[p];
+      if (!(this.alsDigits[i] & (1 << z))) continue;
+      const c0 = this.alsCells[i * 3], c1 = this.alsCells[i * 3 + 1], c2 = this.alsCells[i * 3 + 2];
+      if ((c0 & u0) | (c1 & u1) | (c2 & u2)) continue;
+      const at = (i * 9 + z) * 3;
+      const t0 = s0 & this.alsSeen[at], t1 = s1 & this.alsSeen[at + 1], t2 = s2 & this.alsSeen[at + 2];
+      if (!(t0 | t1 | t2)) continue;
+      if (this.blossom(k + 1, count, z, t0, t1, t2, u0 | c0, u1 | c1, u2 | c2)) return true;
+    }
+    return false;
+  }
+
+  alsChain() {
+    this.prepareUnits();
+    this.collectAls();
+    this.linkAls();
+    const none = 0x7fffffff;
+    let best = none;
+    for (let a = 0; a < this.alsCount; a++) {
+      const found = this.alsChainFrom(a, best);
+      if (found) best = found;
+    }
+    if (best === none) return false;
+    for (let c = 0; c < 81; c++) this.lc[c] &= ~this.elimBest[c];
+    this.stepRating = TECH_BASE[36] + chainBonus(2 * best - 1);
+    return true;
+  }
+
+  alsChainFrom(a, limit) {
+    const mark = this.alsMark, first = this.alsFirst, depth = this.alsDepth, queue = this.alsQueue;
+    const start = this.alsLinkStart, to = this.alsLinkTo, mask = this.alsLinkMask;
+    if (++this.alsMarkValue >= 0x7fffffff) {
+      mark.fill(0);
+      this.alsMarkValue = 1;
+    }
+    const stamp = this.alsMarkValue;
+    let head = 0, tail = 0;
+    for (let p = start[a]; p < start[a + 1]; p++) {
+      if (2 >= limit) break;
+      const b = to[p];
+      for (let xs = mask[p]; xs; xs &= xs - 1) {
+        const x = low(xs), st = b * 9 + x;
+        if (mark[st] !== stamp) {
+          mark[st] = stamp;
+          first[st] = 0;
+          depth[st] = 2;
+          queue[tail++] = st;
+        }
+        first[st] |= 1 << x;
+      }
+    }
+    while (head < tail) {
+      const st = queue[head++];
+      const b = (st / 9) | 0, x = st % 9, k = depth[st];
+      if (k >= limit) break;
+      if (b !== a && this.alsChainTargets(a, b, x, first[st])) {
+        this.elimBest.set(this.elimTry);
+        return k;
+      }
+      if (k + 1 >= limit) continue;
+      for (let p = start[b]; p < start[b + 1]; p++) {
+        const c = to[p];
+        if (c === a) continue;
+        for (let ys = mask[p] & ~(1 << x); ys; ys &= ys - 1) {
+          const y = low(ys), next = c * 9 + y;
+          if (mark[next] !== stamp) {
+            mark[next] = stamp;
+            first[next] = 0;
+            depth[next] = k + 1;
+            queue[tail++] = next;
+          }
+          if (depth[next] === k + 1) first[next] |= first[st];
+        }
+      }
+    }
+    return 0;
+  }
+
+  alsChainTargets(a, b, x, firsts) {
+    const common = this.alsDigits[a] & this.alsDigits[b] & ~(1 << x);
+    let any = false;
+    for (let zs = common; zs; zs &= zs - 1) {
+      const z = low(zs);
+      if (!(firsts & ~(1 << z))) continue;
+      for (let w = 0; w < 3; w++) {
+        if (this.alsSeen[(a * 9 + z) * 3 + w] & this.alsSeen[(b * 9 + z) * 3 + w] & this.digitCells[z * 3 + w]) {
+          if (!any) this.elimTry.fill(0);
+          any = true;
+          for (let m = this.alsSeen[(a * 9 + z) * 3 + w] & this.alsSeen[(b * 9 + z) * 3 + w] & this.digitCells[z * 3 + w]; m; m &= m - 1) this.elimTry[w * 27 + low(m)] |= 1 << z;
+        }
+      }
+    }
+    return any;
+  }
+
   apply(id) {
     switch (id) {
       case 0: return this.singles();
@@ -1072,6 +1724,16 @@ class Sudoku {
       case 24: return this.rectangles(6);
       case 25: return this.rectangles(7);
       case 26: return this.bugPlusOne();
+      case 27:
+      case 28:
+      case 29:
+      case 30:
+      case 31: return this.chains(id);
+      case 32: return this.sueDeCoq();
+      case 33: return this.alsXz();
+      case 34: return this.alsXyWing();
+      case 35: return this.deathBlossom();
+      case 36: return this.alsChain();
     }
     return false;
   }
@@ -1079,6 +1741,7 @@ class Sudoku {
   step() {
     for (let k = 0; k < this.techLimit; k++) {
       const id = TECH_ORDER[k];
+      if (this.techOff[id]) continue;
       this.stepRating = TECH_BASE[id];
       if (this.apply(id)) {
         this.stepOrder = k;
