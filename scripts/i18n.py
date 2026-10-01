@@ -82,7 +82,7 @@ TITLE_MAX = 65
 DESCRIPTION_MIN = 120
 DESCRIPTION_MIN_DENSE = 50
 DESCRIPTION_MAX = 160
-REQUIRE_ALL_GUIDE = False
+REQUIRE_ALL_GUIDE = True
 PLACEHOLDER = re.compile(r"\{([A-Za-z0-9]+)\}")
 LINK = re.compile(r"\[([^\]]+)\]\(([a-z0-9-]+)\)")
 
