@@ -5,6 +5,7 @@
     "build": "python3 scripts/build.py",
     "dev": "wrangler dev",
     "test": "bun test",
+    "stress": "bun scripts/stress.js",
     "deploy": "bun test && python3 scripts/build.py && wrangler d1 migrations apply baresudoku --remote && wrangler deploy && python3 scripts/indexnow.py",
     "indexnow": "python3 scripts/indexnow.py"
   },
