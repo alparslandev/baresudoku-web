@@ -101268,6 +101268,2334 @@
         }
       }
     },
+    "ff": {
+      "learnHeading": "Ekkito sudoku",
+      "learnText": "A fuɗɗii sudoku jooni, walla a haɓɓaama e tiitol saɗtungol? Kollirɗe ɗiɗi ina faccira sarɗiiji ɗii e kala feere ɓoltugol nde tinndinɗe ɗee kuutortoo, kala e yeru goonga.",
+      "howToLink": "Hol no sudoku fijetee",
+      "techniquesLink": "Peeje ɓoltugol sudoku",
+      "labels": {
+        "howTo": "No fijetee",
+        "techniques": "Peeje",
+        "play": "Fij sudoku",
+        "prev": "Feere ɓennunde",
+        "next": "Feere jokkiinde",
+        "all": "Peeje fof",
+        "example": "Yeru",
+        "steps": "Seɗɗa seɗɗa",
+        "when": "Hol nde huutortee nde",
+        "spot": "Hol no yiytirtee nde",
+        "mistakes": "Juumɗe ɓurɗe heewde",
+        "inGame": "E Bare Sudoku",
+        "level": "Ina waɗɗii gila tolno: {level}",
+        "hint": "E fijo ngoo, tinndinol ngol ina wiya: {text}",
+        "legend": "Limooje teddiɗe ko hokkaaɗe e fuɗɗoode, limooje bulaaje ko ɗe waɗaa tuma ɓoltugol, limooje tokooje ko kandidaaji. Kaaseeji jalbinaaɗi ina mahda mbaadi ndii, kandidaaji diidaaɗi ina ittee, kandidaa taaraaɗo ko limoore waɗeteende.",
+        "notation": "Kaaseeji ina winndee no r3c7: saakre 3, tiinde 7. Saakreeji ina limee gila dow, tiindeeji gila nano, bakkereeji kadi gila 1 haa 9 iwde dow nano, saakre e saakre.",
+        "row": "saakre {n}",
+        "column": "tiinde {n}",
+        "box": "bakkere {n}",
+        "elimItem": "{d} nder {cell}",
+        "regions": "Saakre 5, tiinde 5 e bakkere 5 e fuɗɗoode tiitol",
+        "firstMove": "Gooto feeñɗo: {cell} waawi wonde {d} tan",
+        "breadcrumb": "Laawol hello"
+      },
+      "howTo": {
+        "title": "Hol no sudoku fijetee: sarɗiiji, laylol e golle adiiɗe",
+        "description": "Ekkito no sudoku fijetee: sarɗiiji, saakreeji, tiindeeji e bakkereeji, ko waɗi kala tiitol woodi peewal gootal, winndanɗe e golle adiiɗe.",
+        "h1": "Hol no sudoku fijetee",
+        "summary": "Sudoku ko tiitol miijo e laylol 9×9. Hebbin kala kaasel ɓolngel e limoore gila 1 haa 9 haa kala saakre, kala tiinde e kala bakkere 3×3 jogoo kala limoore laawol gootol tan. Limooje goɗɗe ina hokkaa e fuɗɗoode; keddiiɗe ɗee a heɓa ɗe e miijo, kaasel e kaasel, e hoolaare, a hatojinaa sikkude abadaa. Ndee kollirde ina faccira laylol ngol, sarɗiiji ɗii, sarɗi peewal gootal, winndanɗe e feere newnde ngam golle adiiɗe. A waawi ekkitaade ɗum fof e [Bare Sudoku](play), fijo mehum mo tinndinɗe mum ina faccira miijo ngoo.",
+        "sections": [
+          {
+            "h": "Hol ko woni sarɗiiji sudoku?",
+            "p": [
+              "Sarɗiiji ɗii ko tati tan, ɗi fof ko sarɗi gootol yi'aangol e fannuuji tati: kala saakre ina waɗɗii jogaade limooje 1 haa 9, kala tiinde ina waɗɗii jogaade limooje 1 haa 9, kala bakkere 3×3 ina waɗɗii jogaade limooje 1 haa 9. Ndeen limoore waawaa feeñde laabi ɗiɗi e saakre wootere, tiinde wootere walla bakkere wootere abadaa.",
+              "Limooje hokkaaɗe ɗee, winndaaɗe ko teddi, ina tabi; a waylataa ɗe. Golle maa ko hebbinde kaaseeji ɓolɗi ɗii. Alaa hiisa, alaa doggol: limooje ɗee ko maale jeenay ceertuɗe tan. A waawi fijde e alkule walla e mbaadiiji, hay huunde waylataake."
+            ]
+          },
+          {
+            "h": "Hol no laylol ngol tafiraa?",
+            "p": [
+              "Laylol ngol ina jogii kaaseeji 81 e saakreeji 9 e tiindeeji 9. Diidi teddi ina sendira ngol e bakkereeji 3×3 jeenay. Kala kaasel ina jeyaa e saakre wootere, tiinde wootere e bakkere wootere tan, pelle tati ɗee ko pelle mum. Kaaseeji 20 goɗɗi renndooɗi fedde e kaasel ina noddee ɓadiiɓe mum; limoore waɗaande e kaasel ina itta ndeen limoore e ɓadiiɓe mum 20 fof.",
+              "Kaaseeji ina winndee no r3c7: saakre 3, tiinde 7. Saakreeji ina limee gila dow, tiindeeji gila nano, bakkereeji kadi gila 1 haa 9 iwde dow nano, saakre e saakre. Ndee mbaadi winndugol ina huutoree e kala kollirde feere, ina moƴƴi ekkitaade ndi: r5c5 ko hakkunde laylol ngol."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Ko waɗi kala sudoku woodi peewal gootal tan?",
+            "p": [
+              "Sudoku moƴƴo ina jogii peewal gootal, ɗum ngoni ko waɗata miijo ina golla. Kala nde a hollii wonde limoore waawaa yahde nokku goɗɗo e fedde, ina waɗɗii nde yahde e kaasel heddiingel, sabu peewal ngal ina woodi, ina wootii. Si tiitol ina jogii peewe ɗiɗi, hay miijo ɗuuɗɗo waawaa senndude ɗe, a fooɗoto sikkude e sahaa woɗɗo.",
+              "Bare Sudoku ina mahda kala tiitol e kaɓirgal maa, ina ƴeewa wonde ina jogii peewal gootal tan, e wonde ɓoltoowo miijo mum ina waawi timminde ngol e peeje tolno cuɓaaɗo ngoo. Ndeen, si a haɓɓaama, taaɓal garoowal ina woodi tuma kala, tinndinol ngol ina holla ɗum."
+            ]
+          },
+          {
+            "h": "Hol no fuɗɗortee tiitol sudoku?",
+            "p": [
+              "Fuɗɗo e ko ɓuri haɓeede. Ngol doggol ina golla e kala tolno:"
+            ],
+            "list": [
+              "Suɓo limoore feeñnde laabi keewɗi, wano jeegom walla jeeɗiɗi, yiytu bakkereeji ɗi nde alaa e mum tawo. Ko heewi, kaasel gootel tan heddotoo nde e bakkere: ɗum ko [gooto suuɗiiɗo](hidden-single).",
+              "Ƴeewto kaaseeji ɓadiiɓe mum keewi limooje. Kaasel ngel saakre mum, tiinde mum e bakkere mum jogii limooje jeetati ceertuɗe ina heddii kandidaa gooto tan: [gooto feeñɗo](naked-single). Kaaseeji e saakreeji walla bakkereeji ɓadiiɗi hebbude ko ɓuri moƴƴude ƴeewteede.",
+              "Kala limoore nde waɗɗaa ina itta kandidaa e ɓadiiɓe 20, ndeen ƴeewto ɓadiiɓe ɓee e sahaa oo. Gooto ina heewi jokkondirde.",
+              "Nde waɗɗe newɗe ɗee timmi, winndu winndanɗe: kandidaaji kala kaasel ɓolngel. Refti yiylo limoore haɓaande e diidol gootol nder bakkere ([kandidaaji sokaaɗi](locked-candidates)) walla kaaseeji ɗiɗi renndooɗi kandidaaji ɗiɗi gootuɗi ([ɗiɗi feeñɗi](naked-pairs)).",
+              "Rutto e peeje gooto caggal kala ittugol. Hay tiitoli Ganndo ina ɓoltee ko ɓuri heewde e peeje gooto; feere saɗtunde ndee ina udditana gooto garoowo tan."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Hol ko woni winndanɗe, hol nde huutortee ɗe?",
+            "p": [
+              "Winndanɗe, ɗe noddirtee kadi maale kereyon walla kandidaaji, ko limooje tokooje ɗe winndata e kaasel ɓolngel ngam siftorde limooje ɗe ina waawi tawo wonde ɗoon. E tiitoli newɗi a hatojinaa ɗe sahaa heewɗo; gila Saɗtiɗum faade dow ɗe ina waɗɗii, sabu peeje wano ɗiɗi, X-Wing e Y-Wing ko kandidaaji ɗe ƴeewata, wonaa limooje waɗaaɗe.",
+              "Reen winndanɗe ɗee e gooŋɗinde: nde waɗɗaa limoore, momtu nde e winndanɗe ɓadiiɓe 20 fof. E Bare Sudoku ɗum ina waɗa hoore mum, Hebbin winndanɗe kadi ina winnda kala kandidaa e kala kaasel ɓolngel e ɗoɓɓannde wootere, ndeen a waawi fuɗɗaade e kandidaaji timmuɗi, gooŋɗuɗi. Winndannde ko goonga, wonaa sikke: ina firta wonde hay huunde ittaani ndee limoore tawo."
+            ]
+          },
+          {
+            "h": "Hol ko waɗetee so a haɓɓaama?",
+            "p": [
+              "Adan ƴeewto kadi ko ɓuri hoyude: kala saakre, tiinde walla bakkere ɓadiinde hebbude ko iwdi gooto. Refti hoolo wonde winndanɗe ɗee timmii, sabu kandidaa majjuɗo ina suuɗa mbaadiiji, kandidaa ɓooyɗo kadi ina tagda mbaadiiji fenaande. Refti ƴeewto [peeje](techniques) ɗee e doggol saɗtude: kandidaaji sokaaɗi, ɗiɗi e tati, X-Wing, Y-Wing, Swordfish e XYZ-Wing. Kala e majje woodi hello mum e yeru goonga.",
+              "Si hay huunde golliraani, ƴettu tinndinol. E Bare Sudoku, tinndinol ngol ina ƴeewa adan si limoore waɗaande ko juumre, refti ina yiyta kaasel gaɗɗel ngel waawi hebbineede e miijo, ina innda feere ndee, ndeen a ekkitoto huunde hay so a huutorii ngol. Ɗoɓɓu tinndinol ngol kadi ngam waɗde limoore ndee."
+            ]
+          },
+          {
+            "h": "Hol no limooje naatnirtee e Bare Sudoku?",
+            "p": [
+              "Ɗoɓɓu kaasel, refti limoore. Walla ɗoɓɓu limoore ko adii: nde ina sokee, kala kaasel ngel ɗoɓɓataa ina heɓa nde; ɗum ko laawol ɓurngol yaawde ngam waɗde limoore laabi jeegoɓo, jeeɗiɗaɓo e jeetataɓo. Ɗoɓɓu limoore ndee kadi ngam udditde nde. Butoŋ Winndanɗe ina wayla e maale kereyon, Momtu ina momta kaasel, Rutto ina rutta kala dirtol, juumɗe kadi ina maalee e boɗeere si a ñifaani ɗum e cuɓirgol.",
+              "E tappirde, huutoro kuɓɓe kure ngam dirtinde, 1 haa 9 ngam naatnude limoore, Backspace ngam momtude, N ngam winndanɗe, U ngam ruttude, H ngam tinndinol, F ngam hebbinde winndanɗe e Escape ngam cuɓirgol. Fijo ngoo ina danndoo hoore mum, ina golla ɓaawo enternet, alaa jaaynde, alaa konte."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Mbela ina waɗɗii sikkude e sudoku?",
+            "Alaa e tiitol moƴƴol. Kala tiitol Bare Sudoku ina jogii peewal gootal tan, ina ƴeewaa wonde ina ɓoltee e miijo tan, haa e peeje tolno mum. Si a sikkii ina waɗɗii sikkude, kandidaa ina majji e winndanɗe maa walla feere ina fadi yiyteede."
+          ],
+          [
+            "Mbela limoore ina waawi feeñde laabi ɗiɗi e saakre, tiinde walla bakkere?",
+            "Alaa. Ɗum ko sarɗi ngoo fof: kala e saakreeji jeenay, tiindeeji jeenay e bakkereeji jeenay ina jogii kala limoore gila 1 haa 9 laawol gootol tan. Si limooje ɗiɗi nanndooje ina e fedde wootere, hay wootere e majje ko juumre."
+          ],
+          [
+            "Hol ko seerndi Newiɗum, Hakkunde, Saɗtiɗum e Ganndo?",
+            "Tolno ngoo ina tabitinee e peeje ɗe tiitol ngol hatojini. Newiɗum e Hakkunde ina ɓoltee e peeje gooto tan, Newiɗum kadi ina fuɗɗoo e limooje hokkaaɗe 38 walla ko ɓuri. Saɗtiɗum ina hatojini kandidaaji sokaaɗi walla ɗiɗi e tati. Ganndo ina hatojini X-Wing, Y-Wing, Swordfish walla XYZ-Wing."
+          ],
+          [
+            "Ina ɓuri moƴƴude hebbinde winndanɗe e kala kaasel walla e goɗɗi tan?",
+            "E tiitoli Saɗtiɗum e Ganndo, hebbin ɗe fof: mbaadiiji wano ɗiɗi, X-Wing e Y-Wing feeñataa si wonaa kala kandidaa winndaama. E Newiɗum e Hakkunde, winndanɗe ɗee ko cuɓagol, ko ɓuri heewde e fijooɓe ina yiyloo peeje gooto tan."
+          ],
+          [
+            "Sudoku ina ƴetta sahaa hoto foti?",
+            "Tiitol Newiɗum ina ƴetta hojomaaji seeɗa; tiitoli Ganndo ina waawi ƴettude hojomaaji noogaas walla ko ɓuri, fawaade e no yaawrataa yiytude mbaadi saɗtundi ndii. Bare Sudoku ina holla kiisorde sahaa, ina darna nde tuma nde cuɓirgol udditii, alaa doggol ɓurɓe, ndeen fij e yaawre maa."
+          ],
+          [
+            "Sudoku ina hatojini hiisa?",
+            "Alaa. Limooje ɗee ko maale tan; alaa ɓeydugol walla limgol. Kala maale jeenay ina golla, ɗum ko waɗi sudoku ko tiitol miijo, wonaa tiitol limooje."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Peeje ɓoltugol sudoku faccinaaɗe e yeru",
+        "description": "Peeje ɓoltugol sudoku jeenay ɗee fof, gila gooto feeñɗo haa Swordfish e XYZ-Wing, e doggol tinndinɗe Bare Sudoku, kala e yeru goonga.",
+        "h1": "Peeje ɓoltugol sudoku",
+        "intro": [
+          "Kala sudoku ina waawi ɓolteede e peeje miijo seeɗa. Ndee hello ina holla peeje jeenay ɗe ɓoltoowo Bare Sudoku e tinndinɗe mum kuutortoo, e doggol ngol ɓoltoowo oo ƴeewrata ɗe: peeje gooto adan, refti ittugol nder fedde wootere, refti mbaadiiji ɗi saakreeji e tiindeeji keewɗi jokkondiri. Kala feere woodi hello mum e firo mayre, no yiytirtee nde, yeru goonga iwde e tiitol mahaangol e juumɗe ɓurɗe heewde.",
+          "Tolno tiitol ina tabitinee e feere ɓurnde saɗtude nde hatojini. Tiitoli Newiɗum e Hakkunde ina hatojini peeje gooto tan, tiitoli Saɗtiɗum ina hatojini kandidaaji sokaaɗi walla ɗiɗi e tati, tiitoli Ganndo ina hatojini hay seeɗa liingu walla wiɗifere. Hay tolno hol no woni, peeje gooto ina waɗa ko ɓuri heewde e golle; feere saɗtunde ina itta kandidaa gooto walla ɗiɗi, peeje gooto ina jokka gila ɗoon."
+        ],
+        "faq": [
+          [
+            "Hol doggol ngol mi ƴeewrata peeje sudoku?",
+            "Ko ɓuri newude adan: gooto feeñɗo, gooto suuɗiiɗo, kandidaaji sokaaɗi, ɗiɗi e tati feeñɗi, ɗiɗi e tati suuɗiiɗi, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku ina ƴeewa ɗe e ngol doggol tigi, tinndinol kadi ina innda tuma kala feere ɓurnde newude nde yawnata golle."
+          ],
+          [
+            "Mbela mi hatojini peeje ɗee fof ngam ɓoltude sudoku?",
+            "E tiitoli Newiɗum e Hakkunde, peeje gooto ina yonii. Tiitoli Saɗtiɗum ina ɓeyda kandidaaji sokaaɗi e ɗiɗi e tati. Tiitoli Ganndo ina hatojini hay seeɗa liingu walla wiɗifere, kono ko heewi laawol gootol walla ɗiɗi tan e kala tiitol."
+          ],
+          [
+            "Mbela peeje ɓurɗe XYZ-Wing saɗtude ina woodi?",
+            "Eey, wano ceŋle, ƴeewte gootaagal e caɓɓe doolnugol. Bare Sudoku mahataa tiitoli hatojinooji ɗe, ndeen kala tiitol e fijo ngoo ina waawi timmineede e peeje jeenay ɗe ngoni e ndee hello."
+          ],
+          [
+            "Hol ko woni kandidaa?",
+            "Limoore ina waawi tawo yahde e kaasel ɓolngel sabu hay huunde e saakre mum, tiinde mum walla bakkere mum ittaani nde tawo. Winndanɗe e fijo ngoo ko kandidaaji. Kala feere ɓennoore peeje gooto ina miijoo e kandidaaji, ndeen reen ɗe timmuɗe e gooŋɗuɗe."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Gooto feeñɗo",
+          "title": "Gooto feeñɗo e sudoku: kaasel jogiingel kandidaa gooto",
+          "description": "Gooto feeñɗo ko kaasel ɓolngel jogiingel limoore wootere tan ndee waawi. Ekkito yiytude ɗum law, e yeru goonga seɗɗa seɗɗa e juumɗe ɓurɗe heewde.",
+          "h1": "Gooto feeñɗo (naked single)",
+          "summary": "Gooto feeñɗo ko kaasel ɓolngel jogiingel kandidaa gooto tan: limooje jeetati goɗɗe ɗee ina feeñi e saakre mum, tiinde mum walla bakkere mum. Limoore heddiinde ndee ina waɗɗii yahde ɗoon. Ko feere ɓurnde newude e sudoku, ko nde ɓuri huutoreede, ko nde tinndinol Bare Sudoku hollirta «Ɗoo woodi kandidaa gooto tan».",
+          "when": [
+            "Tuma kala. Gooto feeñɗo ina feeñoo gila dirtol adanol haa sakkitorol, e kala tolno. E tiitoli Newiɗum e Hakkunde, kanko e gooto suuɗiiɗo ko peeje tan ɗe hatojinaa. E tiitoli ɓurɗi saɗtude, kala ittugol waɗaangol e feere saɗtunde ina acca gooto feeñɗo caggal mum ko heewi, ndeen ƴeewto ɗum caggal kala taaɓal."
+          ],
+          "spot": [
+            "Ƴeewto kaaseeji ɗi ɓadiiɓe mum keewi limooje: kaasel e saakre jogiinde limooje jeeɗiɗi tawo, walla kaasel ngel saakre mum, tiinde mum e bakkere mum mbaɗndi limooje jeetati ceertuɗe. Si alaa winndanɗe, lim limooje ɗe yi'ataa gila e kaasel ngel. E winndanɗe, gooto feeñɗo ko kaasel hollowngel kandidaa gooto tan, ɗum ko waɗi Hebbin winndanɗe ina newna yiytude ɗe."
+          ],
+          "examples": [
+            {
+              "h": "Yeru",
+              "steps": [
+                "Ƴeew {cell}. Ngel ko ɓolngel, ndeen lim kala limoore waɗaande e saakre mum, tiinde mum e bakkere mum.",
+                "Saakre {row} ina jogii {rowDigits}. Tiinde {col} ina jogii {colDigits}. Bakkere {box} ina jogii {boxDigits}.",
+                "Ɗe fof ina itta kala limoore si wonaa {d}, ndeen {d} ko kandidaa gooto heddiiɗo e {cell}.",
+                "Winndu {d} e {cell}. Refti ƴeew si limoore hesere ndee ina tagda gooto goɗɗo e ndee saakre, tiinde walla bakkere."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Limde saakre tan walla bakkere tan. Limooje jeetati ittaaɗe ɗee ko heewi iwata e pelle tati ɗee fof.",
+            "Yejjitde wonde limoore nde waɗɗaa jooni jooni ina itta kandidaaji e ɓadiiɓe mum 20; gooto feeñɗo hesɗo ina feeñoo tuma caggal kala waɗgol.",
+            "Jillondirde gooto feeñɗo e gooto suuɗiiɗo: gooto feeñɗo ko kandidaa gooto heddiiɗo e kaasel, gooto suuɗiiɗo ko kaasel gootel heddiingel limoore e fedde."
+          ],
+          "faq": [
+            [
+              "Hol ko woni gooto feeñɗo e sudoku?",
+              "Kaasel ɓolngel jogiingel kandidaa gooto tan. Limooje jeetati ceertuɗe ina waɗaa e saakre mum, tiinde mum e bakkere mum, ndeen limoore jeenayaɓere ndee tan ina waawi yahde ɗoon."
+            ],
+            [
+              "Ko waɗi ina noddiree feeñɗo?",
+              "Sabu kandidaa gooto oo ina yi'oo e kaasel ngel tigi so winndanɗe ɗee winndaama; hay huunde suuɗaa mo. Gooto suuɗiiɗo, kono, ina hakkunde kandidaaji goɗɗi, ina yiytee e ƴeewde limoore ndee, wonaa kaasel ngel."
+            ],
+            [
+              "Mbela tiitol ina waawi ɓolteede e gooto feeñɗo tan?",
+              "Tiitoli Newiɗum keewɗi ina waawi, kono ko ɓuri heewde e majji ina hatojini gooto suuɗiiɗo kadi. Bare Sudoku ina tolna tiitoli Newiɗum e Hakkunde ko ɓoltotooɗi e peeje gooto ɗiɗi ɗee; tiitoli Saɗtiɗum e Ganndo ina hatojini hay seeɗa feere ɓeydiinde."
+            ],
+            [
+              "Mbela tinndinol ina holla gooto feeñɗo?",
+              "Eey. So waɗgol garoowol ko gooto feeñɗo, tinndinol ngol ina suɓa kaasel ngel, ina wiya «Ɗoo woodi kandidaa gooto tan» e limoore ndee. Ɗoɓɓu tinndinol ngol kadi ngam waɗde nde."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Gooto suuɗiiɗo",
+          "title": "Gooto suuɗiiɗo e sudoku: nokku gooto tan wonande limoore",
+          "description": "Gooto suuɗiiɗo ko kaasel gootel tan e saakre, tiinde walla bakkere ɗo limoore waawi yahde tawo. Ekkito yiytude ɗum e ƴeewde limoore e limoore.",
+          "h1": "Gooto suuɗiiɗo (hidden single)",
+          "summary": "Gooto suuɗiiɗo ko limoore jogiinde kaasel gootel tan ngel waawi yahde e saakre, tiinde walla bakkere, hay so kaasel ngel ina holla kandidaaji goɗɗi. Sabu fedde ndee ina waɗɗii jogaade ndee limoore, nde ina yahra ɗoon. Tinndinol Bare Sudoku ina hollira ɗum «Nokku gooto tan wonande 5 e saakre ndee», tiinde ndee walla bakkere ndee.",
+          "when": [
+            "Kala nde limoore yawnii no feewi: so limoore feeñii laabi joy walla jeegom, bakkereeji heddiiɗi ina haɓaa no feewi, ko heewi taaɓal garoowal ko gooto suuɗiiɗo. Gooto suuɗiiɗo ko feere mawnde tiitoli Newiɗum e Hakkunde, ina heddoo kadi kaɓirgal golle mawngal e kala tolno."
+          ],
+          "spot": [
+            "Ƴeew limoore e limoore. Ƴettu limoore, yiytu bakkere nde alaa e mayre, diidu kala kaasel e ndee bakkere renndoowngel saakre walla tiinde e limoore nanndunde nde waɗaande. Si kaasel gootel heddii, a yiytii gooto suuɗiiɗo. Ndee ƴeewndo ina golla kadi e saakreeji e tiindeeji. E fijo ngoo, ɗoɓɓu limoore waɗaande: kala limoore nanndunde e mayre ina jalbinee, ndeen kaaseeji ɓolɗi ɗii ina feeña."
+          ],
+          "examples": [
+            {
+              "h": "Yeru",
+              "steps": [
+                "Bakkere {box} alaa {d} tawo, ndeen gootel e kaaseeji mayre ɓolɗi ina waɗɗii jogaade nde. Kaaseeji ɓolɗi ɗii ko {empties}.",
+                "E kala e majji si wonaa {cell}, {d} ina haɗaa sabu {d} waɗaande e saakre walla tiinde wootere e mum, ndeen {d} wonaa kandidaa ɗoon.",
+                "Ɗum acci {cell} ko nokku gooto tan wonande {d} e bakkere {box}. Winndu {d} ɗoon, hay so {cell} ina holla kandidaaji goɗɗi tawo."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Waɗde limoore ndee e kaasel ngel sikkaa tan ko ngel: ƴeewto kala kaasel ɓolngel goɗngel e fedde ndee, wonaa ɗi feeñuɗi tan.",
+            "Majjinde gooto suuɗiiɗo sabu kaasel ngel ina holla kandidaaji keewɗi. Kandidaaji goɗɗi ɗii alaa nafa; ko woni nafa ko limoore ndee alaa nokku goɗɗo e fedde ndee.",
+            "Ƴeewde bakkereeji tan. Saakreeji e tiindeeji ina addana gooto suuɗiiɗo no bakkereeji ni, ko ɓuri fof e gasirde."
+          ],
+          "faq": [
+            [
+              "Hol ko woni gooto suuɗiiɗo e sudoku?",
+              "Limoore waawnde yahde e kaasel gootel tan e saakre, tiinde walla bakkere. Fedde ndee ina waɗɗii jogaade ndee limoore, ndeen kaasel ngel ina tabitii hay so ina jogii kandidaaji goɗɗi."
+            ],
+            [
+              "Hol ko seerndi gooto suuɗiiɗo e gooto feeñɗo?",
+              "Gooto feeñɗo ko fii kaasel: kandidaa gooto heddii. Gooto suuɗiiɗo ko fii limoore: kaasel gootel heddii e fedde. Ɗiɗo fof ina waɗa limoore e hoolaare."
+            ],
+            [
+              "Hol ɓurɗo newude yiyteede?",
+              "Si alaa winndanɗe, gooto suuɗiiɗo ina ɓuri newude ko heewi sabu a waawi ƴeewde laylol ngol limoore e limoore. E winndanɗe timmuɗe, gooto feeñɗo ko ɓurɗo newude, sabu kaasel jogiingel kandidaa gooto ina feeña law."
+            ],
+            [
+              "Hol no tinndinol sifortoo gooto suuɗiiɗo?",
+              "Ko «Nokku gooto tan wonande» limoore ndee e saakre ndee, tiinde ndee walla bakkere ndee, kaasel ngel kadi ina suɓaa. Ɗoɓɓu tinndinol ngol kadi ngam waɗde nde."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Kandidaaji sokaaɗi",
+          "title": "Kandidaaji sokaaɗi e sudoku: joofgol e jeygol",
+          "description": "Kandidaaji sokaaɗi: so kandidaaji limoore e bakkere fof ina e saakre walla tiinde wootere, walla ko lornii, limoore ndee ina ittee ka woɗɗi. Yeru ɗiɗi.",
+          "h1": "Kandidaaji sokaaɗi (locked candidates)",
+          "summary": "Kandidaaji sokaaɗi ko feere adannde nde ittata kandidaaji e nokku waɗde limoore. Ina jogii mbaadiiji ɗiɗi. Joofgol: e bakkere, kandidaaji limoore fof ina e saakre walla tiinde wootere, ndeen limoore ndee ina ittee e kaaseeji heddiiɗi ngol diidol. Jeygol: e saakre walla tiinde, kandidaaji limoore fof ina e bakkere wootere, ndeen limoore ndee ina ittee e kaaseeji heddiiɗi ndee bakkere. Tinndinol Bare Sudoku ina maalda waɗgol ngol nde udditi «Kandidaaji sokaaɗi».",
+          "when": [
+            "Nde peeje gooto timmi e tiitol Saɗtiɗum, ɗum ko ko adii ƴeewteede. Ina hatojini winndanɗe timmuɗe hay seeɗa wonande limoore nde ƴeewataa. Kandidaaji sokaaɗi ina heewi: ko ɓuri heewde e tiitoli Saɗtiɗum ina hatojini ɗi, tiitoli Ganndo kadi ina huutora ɗi hakkunde mbaadiiji mawɗi."
+          ],
+          "spot": [
+            "Ngam joofgol, ƴeew kala bakkere e kala limoore majjunde e mayre: si kaaseeji kandidaaji ndee limoore ina e saakre walla tiinde wootere, ƴeew si ndee limoore ina feeñi ko kandidaa e ngol diidol yaasi bakkere ndee. Ngam jeygol, ƴeew e saakre walla tiinde: si kandidaaji limoore fof ina nder bakkere wootere, kaaseeji heddiiɗi ndee bakkere ina waawi laɓɓineede. E fijo ngoo, ɗoɓɓu butoŋ limoore ngam jalbinde kala kandidaa mayre; diidol winndanɗe ɗiɗi walla tati jalbinaaɗe nder bakkere wootere ko mbaadi ndii."
+          ],
+          "examples": [
+            {
+              "h": "Joofgol",
+              "steps": [
+                "E bakkere {box}, limoore {d} ina jogii ɗii kaaseeji kandidaaji tan: {cells}. Ɗi fof ina e saakre {row}.",
+                "Bakkere {box} ina hatojini {d}, ndeen {d} saakre {row} ina nder bakkere {box}, hay ko hol kaasel e ɗeen ɗo nde yahrata.",
+                "Saakre {row} waawaa jogaade {d} ɗiɗaɓere, ndeen itt {d} e kaaseeji saakre {row} ɗi ngonaa e bakkere ndee: {elim}."
+              ]
+            },
+            {
+              "h": "Jeygol",
+              "steps": [
+                "E saakre {row}, limoore {d} ina waawi yahde e {cells} tan, ɗi fof kadi ina nder bakkere {box}.",
+                "Saakre {row} ina waɗɗii jogaade {d}, ndeen {d} bakkere {box} ko saakre {row} jeyi nde. Kaaseeji goɗɗi bakkere {box} waawaa jogaade {d}.",
+                "Itt {d} e {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ittude limoore ndee nder bakkere e nokku ittude nde yaasi mayre e joofgol, walla ko lornii e jeygol. Ittuɗe ɗee ina yahra tuma kala e kaaseeji ɗi ngoni e diidol ngol kono ngonaa e bakkere ndee, walla ɗi ngoni e bakkere ndee kono ngonaa e diidol ngol.",
+            "Huutorde sarɗi ngoo tuma nde kandidaaji ɗii ina sanki e saakreeji ɗiɗi bakkere ndee. Kaaseeji kandidaaji limoore ndee fof e bakkere ndee ina waɗɗii wonde e diidol gootol.",
+            "Yejjitde yiylaade gooto mo ittugol ngol tagdi. Kandidaaji sokaaɗi ina waɗa limoore e hoore mum seeɗa; ɗi ina hebbila gooto."
+          ],
+          "faq": [
+            [
+              "Hol ko woni kandidaaji sokaaɗi e sudoku?",
+              "Kandidaaji limoore haɓaaɗi e nokku ɗo bakkere e diidol kawrata. Sabu bakkere ndee, walla diidol ngol, ina waɗɗii jogaade limoore ndee e ngoon nokku, limoore ndee ina waawi itteede e heddiiɗe diidol ngol, walla heddiiɗe bakkere ndee."
+            ],
+            [
+              "Hol ko seerndi joofgol e jeygol?",
+              "Joofgol ina fuɗɗoo e bakkere: kandidaaji limoore ndee e bakkere ndee ina joofa e saakre walla tiinde wootere, ndeen limoore ndee ina ittee e heddiiɗe ngol diidol. Jeygol ina fuɗɗoo e saakre walla tiinde: kandidaaji diidol ngol wonande limoore ndee fof ina e bakkere wootere, ndeen diidol ngol ina jeya limoore ndee, nde ina ittee e heddiiɗe bakkere ndee."
+            ],
+            [
+              "Mbela kandidaaji sokaaɗi ina noddiree kadi ittugol e kawrital (intersection removal)?",
+              "Eey. Innde goɗɗe ko ustugol bakkere e diidol (box-line reduction) wonande mbaadi jeygol, e ɗiɗi walla tati joofooɗi (pointing pairs, pointing triples) wonande mbaadi joofgol. Bare Sudoku ina huutora innde wootere wonande ɗi fof."
+            ],
+            [
+              "Hol tolno hatojinngo kandidaaji sokaaɗi?",
+              "Saɗtiɗum. Tiitol hatojinngol kandidaaji sokaaɗi walla ɗiɗi e tati, kono hatojinaa ko ɓuri ɗum saɗtude, ina tolnee Saɗtiɗum; tiitoli Ganndo ina hatojini liingu walla wiɗifere kadi."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Ɗiɗi e tati feeñɗi",
+          "title": "Ɗiɗi e tati feeñɗi e sudoku: no ɗi gollirta",
+          "description": "Ɗiɗi e tati feeñɗi: kaaseeji ɗiɗi walla tati e fedde jogiiɗi kandidaaji ɗiɗi walla tati nanndooji. Ekkito yiytude ɗi e ko ittetee, e yeru goonga.",
+          "h1": "Ɗiɗi e tati feeñɗi (naked pair, naked triple)",
+          "summary": "Ɗiɗi feeñɗi ko kaaseeji ɗiɗi e saakre, tiinde walla bakkere wootere jogiiɗi kandidaaji ɗiɗi nanndooji tigi. Limooje ɗiɗi ɗee ina waɗɗii yahde e ɗeen kaaseeji ɗiɗi, ndeen ina waawi itteede e kala kaasel goɗngel e fedde ndee. Tati feeñɗi ko miijo gootal e kaaseeji tati e limooje tati; kala kaasel ina waawi hollude ɗiɗi walla tati fof e majje. Tinndinol Bare Sudoku ina maalda waɗgol iwngol e mum «Ɗiɗi walla tati».",
+          "when": [
+            "Caggal nde winndanɗe timmi, peeje gooto e kandidaaji sokaaɗi kadi timmi. Ɗiɗi feeñɗi ina heewi no feewi e tiitoli Saɗtiɗum, tati feeñɗi ko ɓuri seeɗa. Ina moƴƴi ƴeewde ɗi fof e kala fedde jogiinde kaaseeji ɓolɗi joy walla ko ɓuri."
+          ],
+          "spot": [
+            "Yiylo kaaseeji jogiiɗi kandidaaji ɗiɗi tan, yiytu kaasel goɗngel e fedde wootere jogiingel ɗeen ɗiɗi tigi. Ngam tati, ƴeew pelle jogiiɗe kaaseeji keewɗi ɗi kandidaaji ɗiɗi e tati, ƴeew si tati e majji ina huutora limooje tati ceertuɗe tan. Kaaseeji jogiiɗi kandidaaji nanndooji tigi ina newi yiyteede so winndanɗe winndaama; Hebbin winndanɗe e fijo ngoo ina waɗa ɗum e ɗoɓɓannde wootere."
+          ],
+          "examples": [
+            {
+              "h": "Ɗiɗi feeñɗi",
+              "steps": [
+                "{cellA} e {cellB} e {unit} ina jogii kandidaaji ɗiɗi nanndooji tigi: {d1} e {d2}.",
+                "Gootel e majji ina waɗɗii wonde {d1}, goɗngel ngel {d2}. Min anndaa hol ngel, kono limooje ɗiɗi ɗee fof ina ƴettaa e ɗeen kaaseeji ɗiɗi.",
+                "Ndeen alaa kaasel goɗngel e {unit} waawngel jogaade {d1} walla {d2}. Itt {elim}."
+              ]
+            },
+            {
+              "h": "Tati feeñɗi",
+              "steps": [
+                "Kaaseeji tati e {unit} ina ƴetta kandidaaji mum fof e limooje tati gootuɗe, {digits}: {cells}.",
+                "Limooje tati ɗee ina waɗɗii hebbinde ɗeen kaaseeji tati e doggol woɗɗo. Kaasel hatojinaa hollude kandidaaji tati ɗii fof; ko woni nafa ko alaa kaasel e tati ɗii jogiingel kandidaa yaasi ngol renndo.",
+                "Itt {digits} e kala kaasel goɗngel e {unit}: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ƴettude kaaseeji ɗiɗi renndooɗi kandidaaji ɗiɗi kono jogii kadi tataɓo. Ngam ɗiɗi feeñɗi, kala kaasel ina waɗɗii jogaade ɗeen kandidaaji ɗiɗi tigi, hay huunde goɗɗum.",
+            "Ittude limooje ɗee e kaaseeji ɗiɗi ɗii ɗoon. Ɗiɗi ɗii ina reena kandidaaji mum; ittuɗe ɗee ina yahra e kaaseeji goɗɗi fedde ndee.",
+            "Ɗaɓɓude kala kaasel tati ɗii hollude limooje tati ɗee fof. Kaasel jogiingel ɗiɗi e tati ɗee ina moƴƴi, tawa alaa kaasel jogiingel kandidaa yaasi ngol renndo."
+          ],
+          "faq": [
+            [
+              "Hol ko woni ɗiɗi feeñɗi e sudoku?",
+              "Kaaseeji ɗiɗi e fedde wootere jogiiɗi fof kandidaaji ɗiɗi nanndooji tigi. Ɗeen limooje ɗiɗi ina sokaa e ɗeen kaaseeji ɗiɗi, ndeen ina waawi itteede e heddiiɗe fedde ndee."
+            ],
+            [
+              "Hol ko woni tati feeñɗi?",
+              "Kaaseeji tati e fedde wootere ɗi kandidaaji mum fof renndaaɗi ko limooje tati tan. Kala kaasel ina waawi jogaade ɗiɗi walla tati e majje. Limooje tati ɗee ina hebbina kaaseeji tati ɗii, ndeen ina waawi itteede e kaaseeji goɗɗi fedde ndee."
+            ],
+            [
+              "Mbela ɗiɗi feeñɗi ina waɗa limoore?",
+              "Wonaa e hoore mum. Ina itta kandidaaji, ittugol ngol kadi ina acca ko heewi gooto feeñɗo walla gooto suuɗiiɗo. Tinndinol e Bare Sudoku ina holla ngoon gooto, ina innda feere nde newni ɗum."
+            ],
+            [
+              "Mbela ɗiɗi feeñɗi ina waawi wonde e bakkere e saakre e sahaa gootal?",
+              "Eey. Si kaaseeji ɗiɗi ɗii ina renndi saakre e bakkere, ɗiɗi ɗii ina itta e pelle ɗiɗi ɗee fof. Bare Sudoku ina ƴeewa ɗe fedde e fedde."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Ɗiɗi e tati suuɗiiɗi",
+          "title": "Ɗiɗi e tati suuɗiiɗi e sudoku: no yiytirtee ɗi",
+          "description": "Ɗiɗi suuɗiiɗi ko limooje ɗiɗi waawooje yahde e kaaseeji ɗiɗi gootuɗi tan e fedde, ndeen kandidaaji goɗɗi ina ittee. Ekkito yiytude ɗi seɗɗa seɗɗa.",
+          "h1": "Ɗiɗi e tati suuɗiiɗi (hidden pair, hidden triple)",
+          "summary": "Ɗiɗi suuɗiiɗi ko limooje ɗiɗi, nder saakre, tiinde walla bakkere wootere, ɗe ngoni kandidaaji e kaaseeji ɗiɗi gootuɗi tan, alaa nokku goɗɗo. Ɗeen kaaseeji ɗiɗi ina waɗɗii jogaade ɗeen limooje ɗiɗi, ndeen kala kandidaa goɗɗo e majji ina waawi itteede. Tati suuɗiiɗi ina golla no ɗum ni e limooje tati haɓaaɗe e kaaseeji tati. Caggal ittugol, kaaseeji ɗii ina holla ɗiɗi walla tati feeñɗi. Tinndinol Bare Sudoku ina maalda waɗgol iwngol e mum «Ɗiɗi walla tati».",
+          "when": [
+            "Nde fedde jogii kaaseeji keewɗi kandidaaji, peeje gooto kadi timmii. Ɗiɗi suuɗiiɗi ina suuɗoo nder kaaseeji heewɗi, ɗum ko waɗi ina moƴƴi yiylaade ɗi tigi ɗo ɗiɗi feeñɗi yi'ataake. Tati suuɗiiɗi ina seeɗa; Bare Sudoku ina ƴeewa ɗi, kono ko ɓuri heewde e tiitoli Saɗtiɗum ina ɓoltee ɓaawo majji."
+          ],
+          "spot": [
+            "Golla limoore e limoore, wonaa kaasel e kaasel. E fedde, winndu kaaseeji ɗo kala limoore majjunde waawi yahde. Si limooje ɗiɗi, kala e majje jogii kaaseeji ɗiɗi tan, ɗeen kaaseeji kadi ko ɗi gootuɗi, a yiytii ɗiɗi suuɗiiɗi. E fijo ngoo, ɗoɓɓu butoŋ limoore ngam jalbinde kandidaaji mayre; si limooje ɗiɗi ina jalbina kaaseeji ɗiɗi gootuɗi e fedde, hay huunde goɗɗum e mayre, ɗum ko mbaadi ndii."
+          ],
+          "examples": [
+            {
+              "h": "Ɗiɗi suuɗiiɗi",
+              "steps": [
+                "E {unit}, limooje {d1} e {d2} ina jogii kala e majje kaaseeji ɗiɗi tan, ɗeen kadi ko kaaseeji ɗiɗi gootuɗi: {cells}.",
+                "Ɗeen kaaseeji ɗiɗi ina waɗɗii jogaade {d1} e {d2}, ndeen kandidaaji majji goɗɗi waawaa wonde goonga.",
+                "Itt {elim}. Jooni kaaseeji ɗiɗi ɗii ina holla ɗiɗi feeñɗi, ɗum ina waawi udditde goɗɗum kadi."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ittude limooje ɗiɗi ɗee e kaaseeji ɗiɗi ɗii. Ko kandidaaji goɗɗi ɗeen kaaseeji ittetee; limooje ɗiɗi ɗee ina heddoo.",
+            "Jaɓde limoore jogiinde kaasel tataɓel e fedde ndee. Limooje ɗiɗi ɗee fof ina waɗɗii haɓeede e ɗeen kaaseeji ɗiɗi tigi.",
+            "Ƴeewde bakkereeji tan. Ɗiɗi suuɗiiɗi ina feeñoo e saakreeji e tiindeeji no bakkereeji ni."
+          ],
+          "faq": [
+            [
+              "Hol ko woni ɗiɗi suuɗiiɗi e sudoku?",
+              "Limooje ɗiɗi waawooje yahde e kaaseeji ɗiɗi gootuɗi tan e fedde. Ɗeen kaaseeji ina waɗɗii ƴettude ɗeen limooje, ndeen kandidaaji majji goɗɗi ina ittee."
+            ],
+            [
+              "Hol ko seerndi ɗiɗi suuɗiiɗi e ɗiɗi feeñɗi?",
+              "Ɗiɗi feeñɗi ina yi'oo: kaaseeji ɗiɗi hollooɗi kandidaaji ɗiɗi nanndooji tan. Ɗiɗi suuɗiiɗi ina suuɗaa e kandidaaji ɓeydaaɗi e kaaseeji ɗiɗi ɗii. Ittude ɗeen ɓeydaaɗi ina wayla ɗiɗi suuɗiiɗi ɗiɗi feeñɗi."
+            ],
+            [
+              "Hol ko woni tati suuɗiiɗi?",
+              "Limooje tati haɓaaɗe e kaaseeji tati e fedde. Kala limoore hatojinaa feeñde e kaaseeji tati ɗii fof; ko woni nafa ko alaa limoore e tati ɗee jogiinde kandidaa yaasi ɗeen kaaseeji."
+            ],
+            [
+              "Mbela tinndinol ina senndira ɗiɗi suuɗiiɗi e ɗiɗi feeñɗi?",
+              "Alaa. Bare Sudoku ina yiyta ɗi fof, ina maalda waɗgol iwngol e mum «Ɗiɗi walla tati». Hello ɗee ina senndira ɗi sabu ina yiytiree laabi ceertuɗi."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing e sudoku: no feere ndee gollirta",
+          "description": "X-Wing: limoore jogiinde kaaseeji kandidaaji ɗiɗi tigi e saakreeji ɗiɗi, e tiindeeji ɗiɗi gootuɗi, ina ittee e heddiiɗe ɗeen tiindeeji. Yeru goonga.",
+          "h1": "X-Wing",
+          "summary": "X-Wing ko mbaadi limoore wootere e kaaseeji nay ɗo saakreeji ɗiɗi e tiindeeji ɗiɗi kawrata. Si limoore ndee ina jogii kaaseeji kandidaaji ɗiɗi tigi e kala e saakreeji ɗiɗi, ɗeen kaaseeji kadi ina e tiindeeji ɗiɗi gootuɗi, limoore ndee ina waɗɗii wonde e kaaseeji ɗiɗi e nay ɗii ɗi ngonaa e saakre wootere walla tiinde wootere. Ndeen ina waawi itteede e kala kaasel goɗngel e ɗeen tiindeeji ɗiɗi. Ko wano non kadi so saakreeji e tiindeeji ina lornaa. Ko feere Ganndo adannde e Bare Sudoku.",
+          "when": [
+            "Nde peeje gooto, kandidaaji sokaaɗi e ɗiɗi e tati timmi. X-Wing ko mbaadi Ganndo ɓurndi heewde, ina feeñoo ko heewi nde limoore heddii kandidaaji seeɗa, ko heewi tuma nde limoore ndee waɗaa laabi nay haa jeegom tawo. Ina hatojini winndanɗe timmuɗe wonande limoore nde ƴeewataa."
+          ],
+          "spot": [
+            "Suɓo limoore, yiylo saakreeji ɗo nde jogii kaaseeji kandidaaji ɗiɗi tigi. Si saakreeji ɗiɗi nii ina renndi tiindeeji ɗiɗi gootuɗi, ƴeew ɗeen tiindeeji ngam kandidaaji ndee limoore goɗɗi: ɗeen ko ittuɗe ɗee. Refti waɗ ɗum kadi tawa feere ndee tuugii e tiindeeji. E fijo ngoo, ɗoɓɓu butoŋ limoore ndee: kala kandidaa mayre ina jalbinee, winndanɗe nay jalbinaaɗe e saakreeji ɗiɗi e tiindeeji ɗiɗi ina newi yiyteede."
+          ],
+          "examples": [
+            {
+              "h": "Yeru",
+              "steps": [
+                "Limoore {d} ina jogii kaaseeji kandidaaji ɗiɗi tigi e saakre {r1}, ɗiɗi tigi kadi e saakre {r2}, ɗi ina potti e tiindeeji ɗiɗi gootuɗi, {c1} e {c2}: {cells}.",
+                "Saakre {r1} ina waɗa {d} mayre e tiinde {c1} walla {c2}, saakre {r2} kadi ina waɗa {d} mayre e tiinde nde heddii. Hay ko hol no wa'i, tiinde {c1} e tiinde {c2} ina heɓa kala {d} wootere iwde e ɗeen saakreeji ɗiɗi.",
+                "Ndeen {d} waawaa feeñde nokku goɗɗo e tiindeeji {c1} e {c2}. Itt {d} e {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Huutorde saakre jogiinde kaaseeji kandidaaji tati wonande limoore ndee. Kala saakre tuugorde ina waɗɗii jogaade ɗiɗi tigi, ɗi fof e tiindeeji ɗiɗi renndaaɗi.",
+            "Ittude limoore ndee e saakreeji e nokku tiindeeji. So feere ndee tuugii e saakreeji, ittuɗe ɗee ina e tiindeeji, ko lornii kadi.",
+            "Yejjitde mbaadi lornaandi ndii. X-Wing tuugiiɗo e tiindeeji ina itta e saakreeji."
+          ],
+          "faq": [
+            [
+              "Hol ko woni X-Wing e sudoku?",
+              "Limoore jogiinde kaaseeji kandidaaji ɗiɗi tigi e kala e saakreeji ɗiɗi, e tiindeeji ɗiɗi gootuɗi. Limoore ndee ina wona e kaaseeji ɗiɗi e nay ɗii ɗi ngonaa e saakre wootere walla tiinde wootere, ndeen ina ittee e heddiiɗe tiindeeji ɗiɗi ɗee. Saakreeji e tiindeeji ina waawi lornaade."
+            ],
+            [
+              "Ko waɗi X-Wing ina golla?",
+              "Kala e saakreeji ɗiɗi ɗii ina waɗɗii waɗde limoore ndee e wootere e tiindeeji ɗiɗi ɗii, saakreeji ɗiɗi ɗii kadi waawaa huutorde tiinde wootere. Ndeen kala e tiindeeji ɗiɗi ɗii ina heɓa limoore mayre iwde e ɗeen saakreeji, kala kandidaa goɗɗo e ɗeen tiindeeji waawaa wonde goonga."
+            ],
+            [
+              "Mbela X-Wing ko liingu?",
+              "Eey. X-Wing ko liingu ngu ɓeto mum ko ɗiɗi; Swordfish ko liingu ngu ɓeto mum ko tati. Bare Sudoku ina yiyta ɗi fof."
+            ],
+            [
+              "Hol tolno jogiingo X-Wing?",
+              "Ganndo. Tiitol hatojinngol X-Wing, Y-Wing, Swordfish walla XYZ-Wing ina tolnee Ganndo."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing e sudoku: no feere ndee gollirta",
+          "description": "Y-Wing (XY-Wing): jokkorde jogiinde kandidaaji ɗiɗi e wiɗife ɗiɗi renndooɗe gootel e majji ina itta limoore e kala kaasel yi'oowngel wiɗife ɗee fof.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, mo noddirtee kadi XY-Wing, ina huutora kaaseeji tati jogiiɗi kandidaaji ɗiɗi kala. Jokkorde ndee ina jogii kandidaaji X e Y. Wiɗifere wootere ina yi'a jokkorde ndee, ina jogii X e Z; wiɗifere goɗnde ina yi'a jokkorde ndee, ina jogii Y e Z. Hay ko hol ko jokkorde ndee wonata, wootere e wiɗife ɗee ina waɗɗii wonde Z, ndeen Z ina waawi itteede e kala kaasel yi'oowngel wiɗife ɗiɗi ɗee fof. Ko feere Ganndo e Bare Sudoku.",
+          "when": [
+            "Nde tiitol jogii kaaseeji keewɗi ɗi kandidaaji ɗiɗi tigi, alaa liingu yi'aaka. Y-Wing ina heewi e tiitoli Ganndo, ina yiytee e jokkude kaaseeji kandidaaji ɗiɗi: kala e majji ina waawi wonde jokkorde walla wiɗifere."
+          ],
+          "spot": [
+            "Winndu kaaseeji jogiiɗi kandidaaji ɗiɗi tigi. Kala e majji, sikku ko jokkorde jogiinde X e Y, yiylo e ɓadiiɓe mum kaasel jogiingel X e limoore goɗnde Z, e kaasel jogiingel Y e ndeen Z. Ɗeen ɗiɗi ko wiɗife ɗee. Refti yiytu kaaseeji yi'ooɗi wiɗife ɗiɗi ɗee fof, jogii Z. Anndu wonde wiɗife ɗee hatojinaa yiyondirde."
+          ],
+          "examples": [
+            {
+              "h": "Yeru",
+              "steps": [
+                "Jokkorde {pivot} ina jogii kandidaaji {x} e {y}. Ina yi'a {wingA}, jogiingel {x} e {z}, e {wingB}, jogiingel {y} e {z}.",
+                "Si {pivot} ko {x}, {wingA} ina waasa {x}, ina wona {z}. Si {pivot} ko {y}, {wingB} ina wona {z}. Wootere e wiɗife ɗiɗi ɗee ko {z} e kala laawol.",
+                "Kaasel yi'oowngel wiɗife ɗiɗi ɗee fof waawaa wonde {z} abadaa. Itt {z} e {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Suɓaade wiɗife ɗe ngonaa ɗe fof yi'ooɗe jokkorde ndee. Kala wiɗifere ina waɗɗii renndude saakre, tiinde walla bakkere e jokkorde ndee.",
+            "Ittude Z e kaaseeji yi'ooɗi wiɗifere wootere tan. Kaasel ittetee ngel ina waɗɗii yiyde wiɗife ɗiɗi ɗee fof.",
+            "Ittude Z e jokkorde ndee. Jokkorde ndee jogaaki Z e Y-Wing; si ina jogii, mbaadi ndii ko XYZ-Wing jogiiɗo sarɗiiji goɗɗi."
+          ],
+          "faq": [
+            [
+              "Hol ko woni Y-Wing e sudoku?",
+              "Kaaseeji tati jogiiɗi kandidaaji ɗiɗi: jokkorde jogiinde X e Y, wiɗifere jogiinde X e Z yi'oonde jokkorde ndee, e wiɗifere jogiinde Y e Z yi'oonde jokkorde ndee. Wiɗifere wootere ko Z tuma kala, ndeen Z ina ittee e kaaseeji yi'ooɗi wiɗife ɗiɗi ɗee fof."
+            ],
+            [
+              "Mbela Y-Wing e XY-Wing ko gootum?",
+              "Eey. Innde ɗiɗi ɗee ina sifa mbaadi wootere. Bare Sudoku ina noddira ndi Y-Wing."
+            ],
+            [
+              "Ko waɗi wiɗifere wootere ina waɗɗii wonde Z?",
+              "Si jokkorde ndee ko X, wiɗifere adannde ndee ina waasa X, ina wona Z. Si jokkorde ndee ko Y, wiɗifere ɗiɗaɓere ndee ina wona Z. Jokkorde ndee ko gootum e ɗiɗi ɗii, ndeen wiɗifere wootere ko Z."
+            ],
+            [
+              "Kaaseeji no foti Y-Wing ittata?",
+              "Ko heewi gootel walla ɗiɗi: kaaseeji yi'ooɗi wiɗife ɗiɗi ɗee fof tan, jogii Z tawo. Ɗum ina yonii ngam tagde gooto."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish e sudoku: no feere ndee gollirta",
+          "description": "Swordfish: limoore haɓaande e tiindeeji tati nder saakreeji tati ina ittee e heddiiɗe ɗeen tiindeeji. Liingu ɓeto tati, faccinaaɗo e yeru goonga.",
+          "h1": "Swordfish",
+          "summary": "Swordfish ko X-Wing e saakreeji tati e tiindeeji tati. Si limoore ina jogii kaaseeji kandidaaji tati walla ko ustii e kala e saakreeji tati, kaaseeji ɗii fof kadi ina e tiindeeji tati gootuɗi, saakreeji tati ɗii ina ƴetta limoore ndee e ɗeen tiindeeji, limoore ndee ina waawi itteede e kala kaasel goɗngel e tiindeeji tati ɗii. Saakreeji e tiindeeji ina waawi lornaade. Bare Sudoku ina yiyloo Swordfish caggal Y-Wing, e tiitoli Ganndo.",
+          "when": [
+            "Nde X-Wing e Y-Wing yiytaani hay huunde. Swordfish ina ɓuri X-Wing seeɗude, ina hatojini limoore nde kandidaaji mayre sankii seeɗa seeɗa e diidi tati. Ina hatojini winndanɗe timmuɗe, gooŋɗuɗe wonande ndeen limoore."
+          ],
+          "spot": [
+            "Suɓo limoore, yiylo saakreeji jogiiɗi kaaseeji kandidaaji ɗiɗi walla tati wonande mayre. Si kandidaaji saakreeji tati nii fof ina e tiindeeji tati tan, ƴeew ɗeen tiindeeji ngam kandidaaji ndee limoore goɗɗi. Hatojinaa kala saakre jogaade kandidaa e kala tiinde: Swordfish ina waawi jogaade kaaseeji jeegom, jeeɗiɗi, jeetati walla jeenay. E fijo ngoo, jalbin limoore ndee e butoŋ mayre, yiylo saakreeji tati ɗi kandidaaji mum potti e tiindeeji tati."
+          ],
+          "examples": [
+            {
+              "h": "Yeru",
+              "steps": [
+                "Limoore {d} ina jogii kaaseeji kandidaaji tati walla ko ustii e kala e saakreeji {rows}, kaaseeji ɗii fof kadi ina e tiindeeji {cols}: {cells}.",
+                "Kala e saakreeji tati ɗii ina waɗɗii waɗde {d} mayre e wootere e tiindeeji tati ɗii, saakreeji ɗiɗi kadi waawaa huutorde tiinde wootere. Ndeen tiindeeji tati ɗii ina heɓa {d} majji iwde e ɗeen saakreeji tati.",
+                "Kala kandidaa {d} goɗɗo e tiindeeji {cols} waawaa wonde goonga. Itt {d} e {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ɗaɓɓude kaaseeji jeenay ɗii fof. Swordfish jogiiɗo kandidaaji ɗiɗi e saakreeji goɗɗi ina moƴƴi tawo, tawa saakreeji tati ɗii ina e tiindeeji tati tan.",
+            "Naatnude saakre jogiinde kaaseeji kandidaaji nay. Kala saakre tuugorde ina waɗɗii jogaade tati walla ko ustii, ɗi fof nder tiindeeji tati ɗii.",
+            "Ittude e saakreeji tuugorɗe ɗee. So feere ndee tuugii e saakreeji, ittuɗe ɗee ina e tiindeeji tati ɗii, yaasi saakreeji tuugorɗe ɗee."
+          ],
+          "faq": [
+            [
+              "Hol ko woni Swordfish e sudoku?",
+              "Limoore nde kandidaaji mayre e saakreeji tati haɓaa e tiindeeji tati. Saakreeji tati ɗii ina waɗɗii waɗde limoore ndee e ɗeen tiindeeji tati, wootere e kala, ndeen limoore ndee ina ittee e kaaseeji goɗɗi ɗeen tiindeeji."
+            ],
+            [
+              "Hol ko seerndi Swordfish e X-Wing?",
+              "Ɓeto tan: X-Wing ina huutora saakreeji ɗiɗi e tiindeeji ɗiɗi, Swordfish tati e tati. Miijo ngoo ko gootum."
+            ],
+            [
+              "Mbela Swordfish ina hatojini kaaseeji jeenay tigi?",
+              "Alaa. Kala saakre ina waawi jogaade kandidaaji ɗiɗi walla tati; mbaadi ndii ina ɗaɓɓi tan saakreeji tati ɗii fof nde huutoraa ko ɓuri tiindeeji tati."
+            ],
+            [
+              "Mbela liingu ngu ɓeto mum ko nay ina woodi?",
+              "Eey, Jellyfish. Bare Sudoku huutortaa ngu, sabu tiitoli mum hatojinaa ngu abadaa."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing e sudoku: no feere ndee gollirta",
+          "description": "XYZ-Wing: jokkorde jogiinde kandidaaji tati e wiɗife ɗiɗi renndooɗe gootel ina itta ndeen limoore e kala kaasel yi'oowngel tati ɗii. Yeru goonga.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing ko Y-Wing mo jokkorde mum jogii kandidaaji tati. Jokkorde ndee ina jogii X, Y e Z; wiɗifere wootere ina yi'a jokkorde ndee, ina jogii X e Z, goɗnde ndee ina yi'a jokkorde ndee, ina jogii Y e Z. Gootel e kaaseeji tati ɗii ina waɗɗii wonde Z, ndeen Z ina waawi itteede e kala kaasel yi'oowngel tati ɗii fof. Sabu jokkorde ndee e hoore mayre ina waawi wonde Z, kaasel ittetee ngel ina waɗɗii yiyde jokkorde ndee e wiɗife ɗiɗi ɗee fof, ɗum ina haɓa ngel e bakkere walla diidol ngol kaaseeji ɗii renndi. Ko feere ɓurnde saɗtude e ɗe Bare Sudoku huutortoo.",
+          "when": [
+            "Si hay huunde goɗɗum golliraani tan. XYZ-Wing ko mbaadi ɓurndi seeɗude e Bare Sudoku, ina feeñoo e tiitoli Ganndo tan. Yiylo ɗum nde kaasel kandidaaji tati ina e bakkere wootere e kaasel kandidaaji ɗiɗi renndoowngel ɗiɗi e limooje mum."
+          ],
+          "spot": [
+            "Fuɗɗo e kaaseeji jogiiɗi kandidaaji tati tigi; kala e majji ina waawi wonde jokkorde. E ɓadiiɓe mum, yiylo kaaseeji ɗiɗi jogiiɗi kandidaaji ɗiɗi kala, iwɗi fof e tati jokkorde ndee, renndooɗi limoore wootere tigi Z. Refti yiylo kaaseeji yi'ooɗi jokkorde ndee e wiɗife ɗiɗi ɗee, jogii Z. E kuugal, wiɗifere wootere ina e bakkere jokkorde ndee, goɗnde ndee e saakre mayre walla tiinde mayre, kaaseeji ittetee ɗii ko kaaseeji heddiiɗi ndeen bakkere e ndeen saakre walla tiinde."
+          ],
+          "examples": [
+            {
+              "h": "Yeru",
+              "steps": [
+                "Jokkorde {pivot} ina jogii kandidaaji tati: {x}, {y} e {z}. Ina yi'a {wingA} jogiingel {x} e {z}, e {wingB} jogiingel {y} e {z}.",
+                "Si {pivot} ko {z}, ɗum timmii. Si ko {x}, {wingA} ina waɗɗii wonde {z}. Si ko {y}, {wingB} ina waɗɗii wonde {z}. E kala laawol gootel e kaaseeji tati ɗii ko {z}.",
+                "Kaasel yi'oowngel tati ɗii fof waawaa wonde {z}. Itt {z} e {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ittude e kaaseeji yi'ooɗi wiɗife ɗiɗi ɗee tan. Wonaa no Y-Wing nii, jokkorde ndee ina waawi wonde Z, ndeen kaasel ngel ina waɗɗii yiyde jokkorde ndee kadi.",
+            "Huutorde wiɗife ɗe kandidaaji mum ngonaa fof nder kandidaaji tati jokkorde ndee.",
+            "Jillondirde ɗum e Y-Wing: ceerndugol ngol ko kandidaa tataɓo e jokkorde ndee, ina wayla kaaseeji ɗi laɓɓinetee."
+          ],
+          "faq": [
+            [
+              "Hol ko woni XYZ-Wing e sudoku?",
+              "Jokkorde jogiinde kandidaaji X, Y e Z e wiɗife ɗiɗi, wootere jogii X e Z, goɗnde jogii Y e Z, ɗe fof ina yi'a jokkorde ndee. Gootel e kaaseeji tati ɗii ko Z, ndeen Z ina ittee e kaaseeji yi'ooɗi tati ɗii fof."
+            ],
+            [
+              "Hol ko seerndi XYZ-Wing e Y-Wing?",
+              "Jokkorde ndee ina jogii kandidaaji tati e nokku ɗiɗi, Z ina e majji. Ɗum ina waɗa jokkorde ndee nokku ɗo Z waawi wonde, ndeen kaaseeji yi'ooɗi jokkorde ndee e wiɗife ɗiɗi ɗee fof tan ina waawi waasde Z."
+            ],
+            [
+              "XYZ-Wing ina feeñoo laabi no foti?",
+              "Seeɗa. E Bare Sudoku, tiitoli Ganndo tan ina waawi hatojinde ɗum, ko ɓuri heewde e majji kadi hatojinaa ɗum. Bare Sudoku ina ƴeewa ɗum sakkitorde, caggal X-Wing, Y-Wing e Swordfish."
+            ],
+            [
+              "Mbela WXYZ-Wing ina woodi?",
+              "Eey, e jokkorde jogiinde kandidaaji nay, kono Bare Sudoku huutortaa ɗum. Kala tiitol e fijo ngoo ina waawi timmineede e peeje jeenay ɗe ndee kollirde."
+            ]
+          ]
+        }
+      }
+    },
+    "bm": {
+      "learnHeading": "Sudoku kalan",
+      "learnText": "I bɛ ka sudoku daminɛ wa, walima i jɔlen bɛ ɲininkali gɛlɛn dɔ la wa? Ɲɛfɔlisɛbɛn fila bɛ sariyaw ɲɛfɔ ani ɲɛnabɔ fɛɛrɛ bɛɛ min ladilikanw bɛ kɛ, kelen-kelen bɛɛ ni misali lakika ye.",
+      "howToLink": "Sudoku bɛ tulon cogo di",
+      "techniquesLink": "Sudoku ɲɛnabɔ fɛɛrɛw",
+      "labels": {
+        "howTo": "Tulon cogo",
+        "techniques": "Fɛɛrɛw",
+        "play": "Sudoku tulon kɛ",
+        "prev": "Fɛɛrɛ tɛmɛnen",
+        "next": "Fɛɛrɛ nata",
+        "all": "Fɛɛrɛ bɛɛ",
+        "example": "Misali",
+        "steps": "Dɔɔnin-dɔɔnin",
+        "when": "A bɛ kɛ tuma min na",
+        "spot": "A bɛ ye cogo min na",
+        "mistakes": "Fili minnu bɛ kɛ tuma caman",
+        "inGame": "Bare Sudoku la",
+        "level": "A bɛ wajibiya ka daminɛ hakɛ nin na: {level}",
+        "hint": "Tulon kɔnɔ, ladilikan b'a fɔ: {text}",
+        "legend": "Jate girinw ye jate dilenw ye, jate bulamanw bilala ɲɛnabɔ waati la, jate fitininw ye suganditaw ye. Kɛnɛ manamanalenw bɛ cogoya dilan, sugandita jɔsilenw bɛ bɔ, sugandita kurukurulen ye jate ye min ka kan ka bila.",
+        "notation": "Kɛnɛw bɛ sɛbɛn i n'a fɔ r3c7: layini 3, kolɔn 7. Layiniw bɛ jate ka bɔ sanfɛ, kolɔnw ka bɔ numanyanfan fɛ, kɛsuw 1 fo 9 ka bɔ sanfɛ numanyanfan fɛ, layini ni layini.",
+        "row": "layini {n}",
+        "column": "kolɔn {n}",
+        "box": "kɛsu {n}",
+        "elimItem": "{d} ka bɔ {cell} la",
+        "regions": "Layini 5, kolɔn 5 ani kɛsu 5 ɲininkali daminɛ na",
+        "firstMove": "Kelen jiralen: {d} dɔrɔn de bɛ se ka don {cell} la",
+        "breadcrumb": "Ɲɛ sira"
+      },
+      "howTo": {
+        "title": "Sudoku tulon cogo: sariyaw, kɛnɛba ani taama fɔlɔw",
+        "description": "Sudoku tulon cogo kalan: sariyaw, layiniw, kolɔnw ani kɛsuw, mun na ɲininkali bɛɛ ɲɛnabɔcogo ye kelen ye, sɛbɛnw kɛcogo ani taama fɔlɔw.",
+        "h1": "Sudoku bɛ tulon cogo di",
+        "summary": "Sudoku ye hakili ɲininkali ye kɛnɛba 9×9 kan. Kɛnɛ lankolon bɛɛ fa ni jate ye ka bɔ 1 fo 9 walasa layini kelen-kelen bɛɛ, kolɔn kelen-kelen bɛɛ ani kɛsu 3×3 kelen-kelen bɛɛ ka jate bɛɛ sɔrɔ siɲɛ kelen dɔrɔn. Jate dɔw bɛ di daminɛ na; i bɛ tɔw sɔrɔ ni hakili ye, kɛnɛ kelen-kelen, ni dannaya ye, i man kan ka fɛn bila kunfɛ abada. Nin ɲɛfɔli bɛ kɛnɛba, sariyaw, ɲɛnabɔcogo kelen sariya, sɛbɛnw ani fɛɛrɛ nɔgɔman dɔ ɲɛfɔ taama fɔlɔw kama. I bɛ se ka o bɛɛ kalan [Bare Sudoku](play) la, min ye fu ye, ani a ladilikanw bɛ hakilina ɲɛfɔ.",
+        "sections": [
+          {
+            "h": "Sudoku sariyaw ye mun ye?",
+            "p": [
+              "Sariya saba dɔrɔn de bɛ yen, u bɛɛ ye sariya kelen ye min bɛ filɛ ka bɔ fan saba fɛ: layini kelen-kelen bɛɛ ka kan ka jate 1 fo 9 sɔrɔ, kolɔn kelen-kelen bɛɛ ka kan ka jate 1 fo 9 sɔrɔ, kɛsu 3×3 kelen-kelen bɛɛ ka kan ka jate 1 fo 9 sɔrɔ. O la, jate tɛ se ka bɔ siɲɛ fila layini kelen, kolɔn kelen walima kɛsu kelen kɔnɔ abada.",
+              "Jate dilenw, minnu sɛbɛnnen bɛ ni girinya ye, olu tɛ yɛlɛma. I ka baara ye ka kɛnɛ lankolonw fa. Jatekalan si tɛ, jate si ma bonya ni tɔ ye: jatew ye taamasiyɛn kɔnɔntɔn danfaralenw dɔrɔn ye. I tun bɛ se ka tulon kɛ ni lɛtiriw walima jaaw ye, foyi tun tɛna yɛlɛma."
+            ]
+          },
+          {
+            "h": "Kɛnɛba labɛnnen bɛ cogo di?",
+            "p": [
+              "Kɛnɛba kɔnɔ kɛnɛ 81 bɛ yen, layini 9 ani kolɔn 9 la. Sira bɛlɛbɛlɛw b'a tila kɛsu 3×3 kɔnɔntɔn ye. Kɛnɛ kelen-kelen bɛɛ ye layini kelen, kolɔn kelen ani kɛsu kelen dɔrɔn ta ye, o kulu saba ye a ka kuluw ye. Kɛnɛ 20 tɔ minnu ni kɛnɛ bɛ kulu kelen na, olu bɛ wele a sigiɲɔgɔnw; jate min bilalen bɛ kɛnɛ dɔ la, o jate bɛ bɔ a sigiɲɔgɔn 20 bɛɛ la.",
+              "Kɛnɛw bɛ sɛbɛn i n'a fɔ r3c7: layini 3, kolɔn 7. Layiniw bɛ jate ka bɔ sanfɛ, kolɔnw ka bɔ numanyanfan fɛ, kɛsuw 1 fo 9 ka bɔ sanfɛ numanyanfan fɛ, layini ni layini. Nin sɛbɛncogo bɛ kɛ fɛɛrɛ ɲɛfɔli bɛɛ la, a ka ɲi k'a kalan: r5c5 ye kɛnɛba cɛmancɛ ye."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Mun na sudoku bɛɛ ɲɛnabɔcogo ye kelen dɔrɔn ye?",
+            "p": [
+              "Sudoku ɲuman ɲɛnabɔcogo ye kelen ye, o de bɛ hakili baara kɛ. Ni i y'a jira ko jate tɛ se ka don yɔrɔ wɛrɛ la kulu dɔ kɔnɔ, a ka kan ka don kɛnɛ tɔ la, katuguni ɲɛnabɔcogo bɛ yen, a ye kelen ye. Ni ɲininkali tun ɲɛnabɔcogo ye fila ye, miiriya si tun tɛna se k'u danfara, i tun bɛna wajibiya ka fɛn bila kunfɛ waati dɔ la.",
+              "Bare Sudoku bɛ ɲininkali bɛɛ dilan i ka minɛn kan, k'a lajɛ ko a ɲɛnabɔcogo ye kelen dɔrɔn ye, ani ko a ka hakili ɲɛnabɔlan bɛ se k'a ban ni hakɛ sugandilen fɛɛrɛw ye. O la, ni i jɔlen don, sen nata dɔ bɛ yen tuma bɛɛ, ladilikan b'o jira."
+            ]
+          },
+          {
+            "h": "Sudoku ɲininkali bɛ daminɛ cogo di?",
+            "p": [
+              "A daminɛ ni min dancɛlen don ka tɛmɛ. Nin cogoya bɛ baara kɛ hakɛ bɛɛ la:"
+            ],
+            "list": [
+              "Jate dɔ sugandi min bɛ yen siɲɛ caman kaban, i n'a fɔ siɲɛ wɔɔrɔ walima wolonwula, ka kɛsuw ɲini minnu m'o sɔrɔ fɔlɔ. Tuma caman na, kɛnɛ kelen dɔrɔn de bɛ to a ye kɛsu kɔnɔ: o ye [kelen dogolen](hidden-single) ye.",
+              "Kɛnɛ minnu lamini fara, olu filɛ. Kɛnɛ min ka layini, a ka kolɔn ani a ka kɛsu bɛ jate seegin danfaralenw sɔrɔ ɲɔgɔn fɛ, sugandita kelen dɔrɔn de bɛ to o la: [kelen jiralen](naked-single). Kɛnɛ minnu bɛ layiniw walima kɛsuw la minnu fara ka surun, olu de ka ɲi ka filɛ ka tɛmɛ.",
+              "Jate o jate i bɛ bila, o bɛ sugandita kelen bɔ sigiɲɔgɔn 20 la, o la o sigiɲɔgɔnw lajɛ o yɔrɔnin bɛɛ. Kelenw bɛ tugu ɲɔgɔn na tuma caman.",
+              "Ni bilali nɔgɔnw banna, sɛbɛnw sɛbɛn: kɛnɛ lankolon kelen-kelen bɛɛ ka suganditaw. O kɔfɛ, jate ɲini min datugulen bɛ layini walima kolɔn kelen na kɛsu kɔnɔ ([sugandita datugulenw](locked-candidates)) walima kɛnɛ fila minnu bɛ sugandita fila kelenw sɔrɔ ([fila jiralen](naked-pairs)).",
+              "Bɔli o bɔli kɔfɛ, i segin kelenw ma. Hali Dɔnnikɛla ɲininkaliw fana bɛ ɲɛnabɔ kelenw de fɛ tuma caman; fɛɛrɛ gɛlɛn bɛ kelen nata dɔrɔn de da yɛlɛ."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Sɛbɛnw ye mun ye, u bɛ kɛ tuma jumɛn?",
+            "p": [
+              "Sɛbɛnw, minnu bɛ wele fana ko kalamu taamasiyɛnw walima suganditaw, olu ye jate fitininw ye minnu bɛ sɛbɛn kɛnɛ lankolon kɔnɔ walasa ka jate minnu bɛ se ka don yen hali bi, olu mara. Ɲininkali nɔgɔnw na, u tɛ wajibi tuma caman; ka bɔ Gɛlɛn na ka taa a sanfɛ, u ka kan kosɛbɛ, katuguni fɛɛrɛw i n'a fɔ filaw, X-Wing ani Y-Wing bɛ suganditaw de lajɛ, jate bilalenw tɛ.",
+              "Sɛbɛnw labɛn ka ɲɛ: ni i ye jate bila, a jɔsi sigiɲɔgɔn 20 bɛɛ ka sɛbɛnw na. Bare Sudoku la o bɛ kɛ a yɛrɛ ma, Sɛbɛnw fa bɛ sugandita bɛɛ sɛbɛn kɛnɛ lankolon bɛɛ la digi kelen na, o la i bɛ se ka daminɛ ni suganditaw dafalenw, bɛnnenw ye. Sɛbɛn ye tiɲɛ ye, a tɛ kunfɛ sugandili ye: a kɔrɔ ye ko foyi ma nin jate bali fɔlɔ."
+            ]
+          },
+          {
+            "h": "Ni i jɔlen don, i ka kan ka mun kɛ?",
+            "p": [
+              "Fɔlɔ, fɛn nɔgɔnw lajɛ tugun: layini, kolɔn ani kɛsu o kɛsu min fara ka surun, o ye kelenw sɔrɔyɔrɔ ye. O kɔfɛ, a lajɛ ko sɛbɛnw dafalen don, katuguni sugandita min dɛsɛra bɛ cogoyaw dogo, sugandita kɔrɔ min tun ka kan ka bɔ, o bɛ cogoya nkalonmaw dilan. O kɔfɛ, [fɛɛrɛw](techniques) lajɛ u gɛlɛya ɲɔgɔn kɔ: sugandita datugulenw, filaw ani sabaw, X-Wing, Y-Wing, Swordfish ani XYZ-Wing. U kelen-kelen bɛɛ ka ɲɛ b'a yɛrɛ ye ni misali lakika ye.",
+              "Ni foyi ma baara kɛ, ladilikan ta. Bare Sudoku la, ladilikan b'a lajɛ fɔlɔ ni jate bilalen dɔ filila, o kɔfɛ a bɛ kɛnɛ nata ɲini min bɛ se ka fa ni hakili ye, ka fɛɛrɛ tɔgɔ fɔ, o la i bɛ fɛn dɔ kalan hali ni i b'a kɛ. Ladilikan digi tugun walasa ka jate bila."
+            ]
+          },
+          {
+            "h": "Jatew bɛ don Bare Sudoku la cogo di?",
+            "p": [
+              "Kɛnɛ digi, ka sɔrɔ ka jate digi. Walima jate digi fɔlɔ: a bɛ datugu, kɛnɛ o kɛnɛ i bɛ digi, o b'a sɔrɔ; o ye sira teliman ye ka jate dɔ wɔɔrɔnan, wolonwulanan ani seeginnan bila. Jate digi tugun walasa k'a dayɛlɛ. Sɛbɛnw butɔn bɛ i yɛlɛma ka taa kalamu taamasiyɛnw na, Jɔsi bɛ kɛnɛ jɔsi, Kɔsegin bɛ taama o taama segin kɔ, filiw bɛ jira ni bilen ye ni i m'o dabila menu kɔnɔ.",
+              "Walanba kan, biɲɛ butɔnw kɛ ka lamaga, 1 fo 9 ka jate don, Backspace ka jɔsi, N sɛbɛnw kama, U kɔsegin kama, H ladilikan kama, F sɛbɛnw fali kama ani Escape menu kama. Tulon b'a yɛrɛ mara, a bɛ baara kɛ ɛntɛrinɛti kɔ, kanjɛrɛ tɛ, jatebɔ tɛ."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Yala kunfɛ sugandili ka kan sudoku la wa?",
+            "Ɲininkali ɲuman na, ayi. Bare Sudoku ɲininkali bɛɛ ɲɛnabɔcogo ye kelen dɔrɔn ye, a lajɛlen don ko a bɛ se ka ɲɛnabɔ ni hakili dɔrɔn ye, ka se a hakɛ fɛɛrɛw ma. Ni a b'i la ko i ka kan ka fɛn bila kunfɛ, sugandita dɔ dɛsɛlen bɛ i ka sɛbɛnw na walima fɛɛrɛ dɔ bɛ makɔnɔ ka sɔrɔ."
+          ],
+          [
+            "Yala jate bɛ se ka bɔ siɲɛ fila layini, kolɔn walima kɛsu kɔnɔ wa?",
+            "Ayi. Sariya bɛɛ ye o ye: layini kɔnɔntɔn, kolɔn kɔnɔntɔn ani kɛsu kɔnɔntɔn kelen-kelen bɛɛ bɛ jate bɛɛ sɔrɔ ka bɔ 1 fo 9 siɲɛ kelen dɔrɔn. Ni jate fila kelenw bɛ kulu kelen kɔnɔ, u la kelen kɔni filila."
+          ],
+          [
+            "Danfara jumɛn bɛ Nɔgɔn, Cɛmancɛ, Gɛlɛn ani Dɔnnikɛla cɛ?",
+            "Hakɛ bɛ latigɛ ni fɛɛrɛ minnu ka kan ɲininkali ma. Nɔgɔn ani Cɛmancɛ bɛ ɲɛnabɔ kelenw dɔrɔn de fɛ, Nɔgɔn bɛ daminɛ ni jate dilen 38 ye walima ka tɛmɛ o kan. Gɛlɛn ka kan ni sugandita datugulenw walima filaw ani sabaw ye. Dɔnnikɛla ka kan ni X-Wing, Y-Wing, Swordfish walima XYZ-Wing ye."
+          ],
+          [
+            "Yala a ka fisa ka sɛbɛnw fa kɛnɛ bɛɛ la walima dɔw dɔrɔn la?",
+            "Gɛlɛn ani Dɔnnikɛla ɲininkaliw la, u bɛɛ fa: cogoyaw i n'a fɔ filaw, X-Wing ani Y-Wing tɛ ye fo ni sugandita bɛɛ sɛbɛnnen don. Nɔgɔn ani Cɛmancɛ la, sɛbɛnw ye i sago ye, tulonkɛla caman bɛ kelenw dɔrɔn ɲini."
+          ],
+          [
+            "Sudoku bɛ waati hakɛ jumɛn ta?",
+            "Nɔgɔn ɲininkali bɛ miniti damadɔ ta; Dɔnnikɛla ɲininkaliw bɛ se ka miniti mugan ta walima ka tɛmɛ o kan, i bɛ cogoya gɛlɛn ye ka teli cogo min na. Bare Sudoku bɛ waatijatelan jira, a b'a jɔ ni menu dayɛlɛlen don, a tɛ se sɔrɔbagaw lisi mara, o la tulon kɛ i yɛrɛ ka teliya la."
+          ],
+          [
+            "Yala sudoku ka kan ni jatekalan ye wa?",
+            "Ayi. Jatew ye tɔgɔw dɔrɔn de ye; farali walima jateli si tɛ yen. Taamasiyɛn kɔnɔntɔn o kɔnɔntɔn bɛ se ka baara kɛ, o de kosɔn sudoku ye hakili ɲininkali ye, a tɛ jate ɲininkali ye."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku ɲɛnabɔ fɛɛrɛw ɲɛfɔlen ni misaliw ye",
+        "description": "Sudoku ɲɛnabɔ fɛɛrɛ kɔnɔntɔn bɛɛ, ka bɔ kelen jiralen na fo Swordfish ani XYZ-Wing, Bare Sudoku ladilikanw ka ɲɔgɔn kɔ la, kelen-kelen bɛɛ ni misali ye.",
+        "h1": "Sudoku ɲɛnabɔ fɛɛrɛw",
+        "intro": [
+          "Sudoku bɛɛ bɛ se ka ɲɛnabɔ ni hakili fɛɛrɛ damadɔ ye. Nin lisi bɛ fɛɛrɛ kɔnɔntɔn jira minnu Bare Sudoku ɲɛnabɔlan ani a ladilikanw bɛ kɛ, ɲɛnabɔlan b'u lajɛ ɲɔgɔn kɔ min na: kelenw fɔlɔ, o kɔfɛ bɔliw kulu kelen kɔnɔ, o kɔfɛ cogoyaw minnu bɛ layini ani kolɔn caman minɛ. Fɛɛrɛ kelen-kelen bɛɛ ka ɲɛ b'a yɛrɛ ye, a kɔrɔ, a yecogo, misali lakika ka bɔ ɲininkali dilannen dɔ la ani fili minnu bɛ kɛ tuma caman.",
+          "Ɲininkali hakɛ bɛ latigɛ ni fɛɛrɛ gɛlɛnba ye min ka kan a ma. Nɔgɔn ani Cɛmancɛ ɲininkaliw ka kan ni kelenw dɔrɔn ye, Gɛlɛn ɲininkaliw ka kan ni sugandita datugulenw walima filaw ani sabaw ye, Dɔnnikɛla ɲininkaliw ka kan ni jɛgɛ walima kaman kelen ye a dɔgɔyalenba. Hakɛ mana kɛ min o min ye, kelenw de bɛ baara caman kɛ; fɛɛrɛ gɛlɛn bɛ sugandita kelen walima fila bɔ, kelenw bɛ taa a fɛ ka bɔ yen."
+        ],
+        "faq": [
+          [
+            "Ne ka kan ka sudoku fɛɛrɛw lajɛ ɲɔgɔn kɔ jumɛn na?",
+            "Nɔgɔnman fɔlɔ: kelen jiralen, kelen dogolen, sugandita datugulenw, fila ani saba jiralenw, fila ani saba dogolenw, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku b'u lajɛ o ɲɔgɔn kɔ yɛrɛ la, ladilikan bɛ fɛɛrɛ nɔgɔnba tɔgɔ fɔ tuma bɛɛ min bɛ baara taa ɲɛ."
+          ],
+          [
+            "Yala ne mago bɛ nin fɛɛrɛw bɛɛ la walasa ka sudoku ɲɛnabɔ wa?",
+            "Nɔgɔn ani Cɛmancɛ ɲininkaliw kama, kelenw bɛ se. Gɛlɛn ɲininkaliw bɛ sugandita datugulenw ani filaw ni sabaw fara a kan. Dɔnnikɛla ɲininkaliw ka kan ni jɛgɛ walima kaman kelen ye a dɔgɔyalenba, nka siɲɛ kelen walima fila dɔrɔn tuma caman ɲininkali kelen kɔnɔ."
+          ],
+          [
+            "Yala fɛɛrɛ gɛlɛnw bɛ yen ka tɛmɛ XYZ-Wing kan wa?",
+            "Ɔwɔ, i n'a fɔ cɛnɛw, kelenya kɔrɔbɔliw ani wajibiya jɔw. Bare Sudoku tɛ ɲininkali dilan minnu mago b'olu la, o la tulon kɔnɔ ɲininkali bɛɛ bɛ se ka ban ni nin ɲɛ in fɛɛrɛ kɔnɔntɔn ye."
+          ],
+          [
+            "Sugandita ye mun ye?",
+            "Jate min bɛ se ka don kɛnɛ lankolon dɔ la hali bi, katuguni foyi m'a bali fɔlɔ a ka layini, a ka kolɔn walima a ka kɛsu kɔnɔ. Tulon kɔnɔ sɛbɛnw ye suganditaw ye. Fɛɛrɛ o fɛɛrɛ min bɛ tɛmɛ kelenw kan, o bɛ miiri suganditaw de kan, o la u mara ka dafa ani ka bɛn."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Kelen jiralen",
+          "title": "Kelen jiralen sudoku la: kɛnɛ min sugandita ye kelen ye",
+          "description": "Kelen jiralen ye kɛnɛ lankolon ye min na jate kelen dɔrɔn bɛ se ka don. A sɔrɔcogo teliman kalan, ni misali lakika ye dɔɔnin-dɔɔnin ani fili caman.",
+          "h1": "Kelen jiralen (naked single)",
+          "summary": "Kelen jiralen ye kɛnɛ lankolon ye min sugandita ye kelen dɔrɔn ye: jate seegin tɔw bɛ a ka layini, a ka kolɔn walima a ka kɛsu kɔnɔ kaban. Jate tɔ ka kan ka don yen. O ye sudoku fɛɛrɛ nɔgɔnba ye, i bɛ min kɛ ka caya, Bare Sudoku ladilikan b'a jira ko «Sugandita kelen dɔrɔn bɛ yan».",
+          "when": [
+            "Tuma bɛɛ. Kelen jiralenw bɛ ye ka bɔ taama fɔlɔ la fo a laban, hakɛ bɛɛ la. Nɔgɔn ani Cɛmancɛ ɲininkaliw la, olu ni kelen dogolenw dɔrɔn de ye fɛɛrɛ ye i mago bɛ min na. Ɲininkali gɛlɛnw na, fɛɛrɛ gɛlɛn bɛ bɔli o bɔli kɛ, o bɛ kelen jiralen dɔ to a kɔfɛ tuma caman, o la u ɲini sen o sen kɔfɛ."
+          ],
+          "spot": [
+            "Kɛnɛw filɛ minnu sigiɲɔgɔnw la jate caman bilalen bɛ: kɛnɛ min bɛ layini dɔ la jate wolonwula bɛ min kɔnɔ kaban, walima kɛnɛ min ka layini, kolɔn ani kɛsu bɛ jate seegin danfaralenw minɛ ɲɔgɔn fɛ. Ni sɛbɛnw tɛ, i bɛ se ka jate minnu ye ka bɔ kɛnɛ in na, olu jate. Ni sɛbɛnw bɛ, kelen jiralen ye kɛnɛ dɔrɔn ye min bɛ sugandita kelen jira, o de kosɔn Sɛbɛnw fa b'a nɔgɔya k'u sɔrɔ."
+          ],
+          "examples": [
+            {
+              "h": "Misali",
+              "steps": [
+                "{cell} filɛ. A lankolon don, o la jate o jate bilalen bɛ a ka layini, a ka kolɔn ani a ka kɛsu kɔnɔ, olu sɛbɛn.",
+                "Layini {row} bɛ {rowDigits} sɔrɔ. Kolɔn {col} bɛ {colDigits} sɔrɔ. Kɛsu {box} bɛ {boxDigits} sɔrɔ.",
+                "U bɛɛ ɲɔgɔn fɛ, u bɛ jate bɛɛ bali fo {d}, o la {d} ye sugandita kelen ye min tora {cell} la.",
+                "{d} sɛbɛn {cell} la. O kɔfɛ, a lajɛ ni jate kura ye kelen wɛrɛ dilan o layini, kolɔn walima kɛsu kelen in kɔnɔ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Layini dɔrɔn walima kɛsu dɔrɔn jateli. Jate seegin balilenw bɛ bɔ kulu saba bɛɛ de la ɲɔgɔn fɛ tuma caman.",
+            "Ka ɲinɛ ko jate min i ye bila sisan, o fana bɛ suganditaw bɔ a sigiɲɔgɔn 20 la; kelen jiralen kuraw bɛ bɔ yen bilali o bilali kɔfɛ yɔrɔnin kelen.",
+            "Kelen jiralen ni kelen dogolen ɲagami: kelen jiralen ye sugandita kelen ye min tora kɛnɛ kɔnɔ, kelen dogolen ye kɛnɛ kelen ye min tora jate ye kulu kɔnɔ."
+          ],
+          "faq": [
+            [
+              "Kelen jiralen ye mun ye sudoku la?",
+              "Kɛnɛ lankolon min sugandita ye kelen dɔrɔn ye. Jate seegin danfaralenw bilalen bɛ a ka layini, a ka kolɔn ani a ka kɛsu kɔnɔ kaban, o la jate kɔnɔntɔnnan dɔrɔn de bɛ bɛn."
+            ],
+            [
+              "Mun na a bɛ wele ko jiralen?",
+              "Katuguni ni sɛbɛnw sɛbɛnna, sugandita kelen in bɛ ye kɛnɛ kɔnɔ yɛrɛ; foyi t'a dogo. Kelen dogolen kɔni, o bɛ sugandita wɛrɛw cɛ, a bɛ sɔrɔ ni i ye jate filɛ, kɛnɛ tɛ."
+            ],
+            [
+              "Yala ɲininkali bɛ se ka ɲɛnabɔ ni kelen jiralenw dɔrɔn ye wa?",
+              "Nɔgɔn ɲininkali caman bɛ se, nka u caman mago bɛ kelen dogolenw fana na. Bare Sudoku bɛ Nɔgɔn ani Cɛmancɛ ɲininkaliw jate ko u bɛ ɲɛnabɔ ni kelen suguya fila ye; Gɛlɛn ani Dɔnnikɛla ɲininkaliw ka kan ni fɛɛrɛ wɛrɛ kelen ye a dɔgɔyalenba."
+            ],
+            [
+              "Yala ladilikan bɛ kelen jiralenw jira wa?",
+              "Ɔwɔ. Ni bilali nata ye kelen jiralen ye, ladilikan bɛ kɛnɛ sugandi k'a fɔ ko «Sugandita kelen dɔrɔn bɛ yan» ni jate ye. Ladilikan digi tugun walasa k'a bila."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Kelen dogolen",
+          "title": "Kelen dogolen sudoku la: jate ka yɔrɔ kelen dɔrɔn",
+          "description": "Kelen dogolen ye kɛnɛ kelen dɔrɔn ye layini, kolɔn walima kɛsu kɔnɔ jate bɛ se ka don yɔrɔ min na. A sɔrɔcogo kalan ni jate kelen-kelen lajɛli ye.",
+          "h1": "Kelen dogolen (hidden single)",
+          "summary": "Kelen dogolen ye jate ye min ka kɛnɛ kelen dɔrɔn de tora a ye layini, kolɔn walima kɛsu kɔnɔ, hali ni o kɛnɛ bɛ sugandita wɛrɛw jira. Katuguni kulu ka kan ka o jate sɔrɔ, a bɛ don yen. Bare Sudoku ladilikan b'a jira ko «Yɔrɔ kelen dɔrɔn bɛ 5 ye nin layini in na», walima nin kolɔn in walima nin kɛsu in.",
+          "when": [
+            "Tuma o tuma jate dɔ taara ɲɛ kosɛbɛ: ni jate dɔ bɛ yen siɲɛ duuru walima wɔɔrɔ, kɛsu tɔw dancɛlen don kosɛbɛ, sen nata ye kelen dogolen ye tuma caman. Kelen dogolenw ye Nɔgɔn ani Cɛmancɛ ɲininkaliw fɛɛrɛ kunba ye, u bɛ to baarakɛminɛn kunba ye hakɛ bɛɛ la."
+          ],
+          "spot": [
+            "Jate kelen-kelen lajɛ. Jate dɔ ta, kɛsu dɔ ɲini min t'a sɔrɔ, ka o kɛsu kɛnɛ o kɛnɛ bɔ a la min ni o jate bilalen dɔ bɛ layini walima kolɔn kelen na. Ni kɛnɛ kelen dɔrɔn tora, i ye kelen dogolen sɔrɔ. Lajɛli kelen in bɛ baara kɛ layiniw ni kolɔnw fana la. Tulon kɔnɔ, jate bilalen dɔ digi: a ɲɔgɔn bɛɛ bɛ manamana, o la kɛnɛ lankolonw bɛ jɛya."
+          ],
+          "examples": [
+            {
+              "h": "Misali",
+              "steps": [
+                "Kɛsu {box} ma {d} sɔrɔ fɔlɔ, o la a ka kɛnɛ lankolonw dɔ ka kan k'a sɔrɔ. Kɛnɛ lankolonw ye {empties} ye.",
+                "U bɛɛ la fo {cell}, {d} balilen don {d} fɛ min bilalen bɛ layini walima kolɔn kelen na, o la {d} tɛ sugandita ye yen.",
+                "O la {cell} dɔrɔn de tora {d} ye kɛsu {box} kɔnɔ. {d} sɛbɛn yen, hali ni {cell} bɛ sugandita wɛrɛw jira hali bi."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Jate bilali kɛnɛ dɔ la min bɛ iko a ka ɲi: kulu kɔnɔ kɛnɛ lankolon tɔw bɛɛ lajɛ, a tɛ minnu bɛ ye dɔrɔn.",
+            "Kelen dogolen tɛmɛni katuguni kɛnɛ bɛ sugandita caman jira. Sugandita wɛrɛw nafa tɛ; min nafa ka bon, o ye ko jate tɛ yɔrɔ wɛrɛ sɔrɔ kulu kɔnɔ.",
+            "Kɛsuw dɔrɔn lajɛli. Layiniw ni kolɔnw fana bɛ kelen dogolenw di tuma caman, kɛrɛnkɛrɛnnenya la laban fɛ."
+          ],
+          "faq": [
+            [
+              "Kelen dogolen ye mun ye sudoku la?",
+              "Jate min bɛ se ka don layini, kolɔn walima kɛsu ka kɛnɛ kelen dɔrɔn de la. Kulu ka kan ka o jate sɔrɔ, o la kɛnɛ latigɛlen don hali ni sugandita wɛrɛw b'a la."
+            ],
+            [
+              "Danfara jumɛn bɛ kelen dogolen ni kelen jiralen cɛ?",
+              "Kelen jiralen bɛ kɛnɛ dɔ ko de la: sugandita kelen tora. Kelen dogolen bɛ jate dɔ ko de la: kɛnɛ kelen tora kulu kɔnɔ. U fila bɛɛ bɛ jate bila ni dannaya ye."
+            ],
+            [
+              "Jumɛn sɔrɔli ka nɔgɔn?",
+              "Ni sɛbɛnw tɛ, kelen dogolenw sɔrɔli ka nɔgɔn tuma caman katuguni i bɛ se ka kɛnɛba lajɛ jate kelen-kelen. Ni sɛbɛnw dafalen don, kelen jiralenw de ka nɔgɔn ka tɛmɛ, katuguni kɛnɛ min sugandita ye kelen ye, o bɛ ye joona."
+            ],
+            [
+              "Ladilikan bɛ kelen dogolen ɲɛfɔ cogo di?",
+              "A b'a fɔ ko «Yɔrɔ kelen dɔrɔn bɛ» jate ye nin layini in, nin kolɔn in walima nin kɛsu in na, kɛnɛ sugandilen don. Ladilikan digi tugun walasa k'a bila."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Sugandita datugulenw",
+          "title": "Sugandita datugulenw sudoku la: jirali ani minɛli",
+          "description": "Sugandita datugulenw: ni jate dɔ ka suganditaw bɛɛ bɛ kɛsu kɔnɔ layini walima kolɔn kelen na, walima a ɲɔgɔn, jate bɛ bɔ yɔrɔ wɛrɛw la. Misali fila.",
+          "h1": "Sugandita datugulenw (locked candidates)",
+          "summary": "Sugandita datugulenw ye fɛɛrɛ fɔlɔ ye min tɛ jate bila, nka a bɛ suganditaw bɔ. Cogo fila b'a la. Jirali: kɛsu dɔ kɔnɔ, jate dɔ ka suganditaw bɛɛ bɛ layini walima kolɔn kelen na, o la jate bɛ bɔ o layini walima kolɔn tɔ la. Minɛli: layini walima kolɔn dɔ kɔnɔ, jate dɔ ka suganditaw bɛɛ bɛ kɛsu kelen kɔnɔ, o la jate bɛ bɔ o kɛsu tɔ la. Bare Sudoku ladilikan bɛ bilali min da a bɛ yɛlɛ, o tɔgɔ da ko «Sugandita datugulenw».",
+          "when": [
+            "Ni kelenw banna Gɛlɛn ɲininkali dɔ la, i ka kan k'a lajɛ fɔlɔ. A ka kan ni sɛbɛnw dafalenw ye, a dɔgɔyalenba i bɛ jate min lajɛ, o kama. Sugandita datugulenw ka ca: Gɛlɛn ɲininkali caman mago b'u la, Dɔnnikɛla ɲininkaliw b'u kɛ cogoya belebelebaw cɛ."
+          ],
+          "spot": [
+            "Jirali kama, kɛsu kelen-kelen bɛɛ ani jate o jate tɛ a kɔnɔ, olu filɛ: ni o jate ka sugandita kɛnɛw bɛ layini walima kolɔn kelen na, a lajɛ ni o jate bɛ sugandita ye o layini walima kolɔn kan kɛsu kɔfɛ. Minɛli kama, layini walima kolɔn dɔ filɛ: ni jate dɔ ka suganditaw bɛɛ bɛ kɛsu kelen kɔnɔ, o kɛsu tɔ bɛ se ka saniya. Tulon kɔnɔ, jate butɔn digi walasa a ka sugandita bɛɛ ka manamana; sɛbɛn fila walima saba manamanalenw minnu bɛ sira kelen kan kɛsu kelen kɔnɔ, o ye cogoya ye."
+          ],
+          "examples": [
+            {
+              "h": "Jirali",
+              "steps": [
+                "Kɛsu {box} kɔnɔ, jate {d} ka sugandita kɛnɛw ye nin dɔrɔn ye: {cells}. U bɛɛ bɛ layini {row} la.",
+                "Kɛsu {box} ka kan ka {d} sɔrɔ, o la layini {row} ka {d} bɛ kɛsu {box} kɔnɔ, a mana don o kɛnɛw la kelen o kelen na.",
+                "Layini {row} tɛ se ka {d} filanan sɔrɔ, o la {d} bɔ layini {row} kɛnɛw la minnu bɛ kɛsu kɔfɛ: {elim}."
+              ]
+            },
+            {
+              "h": "Minɛli",
+              "steps": [
+                "Layini {row} kɔnɔ, jate {d} bɛ se ka don {cells} dɔrɔn de la, u bɛɛ bɛ kɛsu {box} kɔnɔ.",
+                "Layini {row} ka kan ka {d} sɔrɔ, o la kɛsu {box} ka {d} minɛna layini {row} fɛ. Kɛsu {box} kɛnɛ tɔw tɛ se ka {d} sɔrɔ.",
+                "{d} bɔ {elim} la."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Jate bɔli kɛsu kɔnɔ, o nɔ na k'a bɔ kɛsu kɔfɛ jirali la, walima a ɲɔgɔn minɛli la. Bɔliw bɛ kɛ tuma bɛɛ kɛnɛw la minnu bɛ layini walima kolɔn kan nka u tɛ kɛsu kɔnɔ, walima minnu bɛ kɛsu kɔnɔ nka u tɛ layini walima kolɔn kan.",
+            "Sariya kɛli ni suganditaw jɛnsɛnnen bɛ kɛsu ka layini fila la. Jate ka sugandita kɛnɛ bɛɛ kɛsu kɔnɔ ka kan ka kɛ sira kelen kan.",
+            "Ka ɲinɛ ka kelen ɲini min bɔli ye dilan. Sugandita datugulenw yɛrɛ tɛ jate bila tuma caman; u bɛ kelen labɛn."
+          ],
+          "faq": [
+            [
+              "Sugandita datugulenw ye mun ye sudoku la?",
+              "Jate dɔ ka suganditaw minnu datugulen bɛ kɛsu ni layini walima kolɔn dɔ ɲɔgɔn kunbɛnyɔrɔ la. Katuguni kɛsu, walima layini, ka kan ka jate sɔrɔ o yɔrɔ la, jate bɛ se ka bɔ layini tɔ la, walima kɛsu tɔ la."
+            ],
+            [
+              "Danfara jumɛn bɛ jirali ni minɛli cɛ?",
+              "Jirali bɛ daminɛ kɛsu la: jate ka suganditaw kɛsu kɔnɔ bɛ layini walima kolɔn kelen jira, o la jate bɛ bɔ o sira tɔ la. Minɛli bɛ daminɛ layini walima kolɔn na: o sira ka suganditaw jate in kama bɛɛ bɛ kɛsu kelen kɔnɔ, o la sira bɛ jate minɛ, a bɛ bɔ kɛsu tɔ la."
+            ],
+            [
+              "Yala sugandita datugulenw bɛ wele fana ko ɲɔgɔn kunbɛnyɔrɔ bɔli (intersection removal) wa?",
+              "Ɔwɔ. Tɔgɔ wɛrɛw ye kɛsu ni sira dɔgɔyali (box-line reduction) ye minɛli cogo kama, ani fila walima saba jirabagaw (pointing pairs, pointing triples) jirali cogo kama. Bare Sudoku bɛ tɔgɔ kelen dɔrɔn kɛ u fila bɛɛ ye."
+            ],
+            [
+              "Hakɛ jumɛn mago bɛ sugandita datugulenw na?",
+              "Gɛlɛn. Ɲininkali min mago bɛ sugandita datugulenw walima filaw ani sabaw la, nka a mago tɛ fɛn gɛlɛn wɛrɛ la, o bɛ jate Gɛlɛn ye; Dɔnnikɛla ɲininkaliw mago bɛ jɛgɛ walima kaman na fana."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Fila ani saba jiralenw",
+          "title": "Fila ani saba jiralenw sudoku la: u bɛ baara kɛ cogo min",
+          "description": "Fila ani saba jiralenw: kɛnɛ fila walima saba kulu kelen kɔnɔ minnu bɛ sugandita fila walima saba kelenw sɔrɔ. U sɔrɔcogo ani min bɛ bɔ, misali la.",
+          "h1": "Fila ani saba jiralenw (naked pair, naked triple)",
+          "summary": "Fila jiralen ye kɛnɛ fila ye layini, kolɔn walima kɛsu kelen kɔnɔ minnu sugandita fila ye kelen ye pewu. O jate fila ka kan ka don o kɛnɛ fila la, o la u bɛ se ka bɔ kulu kɛnɛ tɔ bɛɛ la. Saba jiralen ye hakilina kelen in ye kɛnɛ saba ni jate saba la; kɛnɛ kelen-kelen bɛɛ bɛ se ka u la fila walima u saba bɛɛ jira. Bare Sudoku ladilikan bɛ bilali min bɔra o la, o tɔgɔ da ko «Fila walima saba».",
+          "when": [
+            "Ni sɛbɛnw dafalen don, ni kelenw ani sugandita datugulenw banna. Fila jiralenw ka ca kosɛbɛ Gɛlɛn ɲininkaliw la, saba jiralenw man ca ten. A ka ɲi k'u bɛɛ ɲini kulu o kulu la kɛnɛ lankolon duuru walima ka tɛmɛ o kan tora min kɔnɔ."
+          ],
+          "spot": [
+            "Kɛnɛw ɲini minnu sugandita ye fila dɔrɔn ye, ka kɛnɛ wɛrɛ ɲini o kulu kelen kɔnɔ min bɛ o fila kelenw sɔrɔ. Saba kama, kuluw filɛ kɛnɛ caman bɛ minnu kɔnɔ sugandita fila ni saba bɛ minnu na, k'a lajɛ ni u la saba ɲɔgɔn fɛ bɛ jate saba danfaralenw dɔrɔn de kɛ. Kɛnɛ minnu suganditaw ye kelen ye pewu, olu yeli ka nɔgɔn ni sɛbɛnw sɛbɛnnen don; Sɛbɛnw fa tulon kɔnɔ b'o kɛ digi kelen na."
+          ],
+          "examples": [
+            {
+              "h": "Fila jiralen",
+              "steps": [
+                "{cellA} ni {cellB} minnu bɛ {unit} kɔnɔ, u sugandita fila ye kelen ye pewu: {d1} ani {d2}.",
+                "U la kelen ka kan ka kɛ {d1} ye, tɔ kelen {d2}. An t'a dɔn min ye min ye, nka jate fila bɛɛ tara o kɛnɛ fila fɛ.",
+                "O la, kɛnɛ wɛrɛ si tɛ se ka {d1} walima {d2} sɔrɔ {unit} kɔnɔ. {elim} bɔ."
+              ]
+            },
+            {
+              "h": "Saba jiralen",
+              "steps": [
+                "{unit} kɛnɛ saba bɛ u ka sugandita bɛɛ ta jate saba kelenw de la, {digits}: {cells}.",
+                "Jate saba ka kan ka o kɛnɛ saba fa cogo dɔ la. Kɛnɛ man kan ka sugandita saba bɛɛ jira; min nafa ka bon, o ye ko kɛnɛ saba si tɛ sugandita sɔrɔ min tɛ o jate saba la.",
+                "{digits} bɔ {unit} kɛnɛ tɔ bɛɛ la: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kɛnɛ fila tali minnu bɛ sugandita fila sɔrɔ ɲɔgɔn fɛ, nka sugandita sabanan fana b'u la. Fila jiralen kama, kɛnɛ kelen-kelen bɛɛ ka kan ka o sugandita fila dɔrɔn de sɔrɔ, fɛn wɛrɛ tɛ.",
+            "Jatew bɔli fila kɛnɛw yɛrɛ la. Fila bɛ a ka suganditaw mara; bɔliw bɛ kɛ kulu kɛnɛ tɔw la.",
+            "K'a ɲini ko saba kɛnɛ kelen-kelen bɛɛ ka jate saba bɛɛ jira. Kɛnɛ min bɛ jate saba la fila sɔrɔ, o ka ɲi, ni kɛnɛ si tɛ sugandita sɔrɔ min tɛ o jate saba la."
+          ],
+          "faq": [
+            [
+              "Fila jiralen ye mun ye sudoku la?",
+              "Kɛnɛ fila kulu kelen kɔnɔ, u fila bɛɛ sugandita fila ye kelen ye pewu. O jate fila datugulen don o kɛnɛ fila la, o la u bɛ se ka bɔ kulu tɔ la."
+            ],
+            [
+              "Saba jiralen ye mun ye?",
+              "Kɛnɛ saba kulu kelen kɔnɔ, minnu ka suganditaw ɲɔgɔn fɛ ye jate saba dɔrɔn ye. Kɛnɛ kelen-kelen bɛɛ bɛ se ka u la fila walima saba sɔrɔ. Jate saba bɛ kɛnɛ saba fa, o la u bɛ se ka bɔ kulu kɛnɛ tɔw la."
+            ],
+            [
+              "Yala fila jiralen bɛ jate bila wa?",
+              "A yɛrɛ tɛ. A bɛ suganditaw bɔ, bɔli bɛ kelen jiralen walima kelen dogolen to tuma caman. Bare Sudoku ladilikan bɛ o kelen jira ka fɛɛrɛ tɔgɔ fɔ min y'a sababu ye."
+            ],
+            [
+              "Yala fila jiralen bɛ se ka kɛ kɛsu ni layini kɔnɔ waati kelen wa?",
+              "Ɔwɔ. Ni kɛnɛ fila bɛ layini kelen ni kɛsu kelen na, fila bɛ bɔli kɛ kulu fila bɛɛ la. Bare Sudoku b'u lajɛ kulu kelen-kelen."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Fila ani saba dogolenw",
+          "title": "Fila ani saba dogolenw sudoku la: u sɔrɔcogo",
+          "description": "Fila dogolen ye jate fila ye minnu bɛ se ka don kulu kɔnɔ kɛnɛ fila kelenw dɔrɔn na, o la o kɛnɛw sugandita tɔw bɛ bɔ. U sɔrɔcogo kalan dɔɔnin-dɔɔnin.",
+          "h1": "Fila ani saba dogolenw (hidden pair, hidden triple)",
+          "summary": "Fila dogolen ye jate fila ye minnu, layini, kolɔn walima kɛsu kelen kɔnɔ, ye suganditaw ye kɛnɛ fila kelenw dɔrɔn na, yɔrɔ wɛrɛ tɛ. O kɛnɛ fila ka kan ka o jate fila sɔrɔ, o la sugandita tɔ bɛɛ bɛ se ka bɔ u la. Saba dogolen bɛ baara kɛ ten kelen, ni jate saba datugulenw ye kɛnɛ saba la. Bɔli kɔfɛ, kɛnɛw bɛ fila walima saba jiralen jira. Bare Sudoku ladilikan bɛ bilali min bɔra o la, o tɔgɔ da ko «Fila walima saba».",
+          "when": [
+            "Ni kɛnɛ minnu sugandita ka ca bɛ kulu dɔ kɔnɔ, ni kelenw banna. Fila dogolenw bɛ dogo kɛnɛ falenw kɔnɔ, o de kosɔn a ka ɲi k'u ɲini yɔrɔ yɛrɛ la fila jiralenw tɛ ye min na. Saba dogolenw man ca; Bare Sudoku b'u lajɛ, nka Gɛlɛn ɲininkali caman bɛ ɲɛnabɔ u kɔ."
+          ],
+          "spot": [
+            "Baara kɛ jate kelen-kelen, kɛnɛ kelen-kelen tɛ. Kulu dɔ kɔnɔ, jate o jate dɛsɛlen don, a bɛ se ka don kɛnɛ minnu na, olu sɛbɛn. Ni jate fila, u kelen-kelen bɛɛ ka kɛnɛ ye fila dɔrɔn ye, ni o kɛnɛ fila ye kelenw ye, i ye fila dogolen sɔrɔ. Tulon kɔnɔ, jate butɔn digi walasa a ka suganditaw ka manamana; ni jate fila bɛ kulu dɔ kɛnɛ fila kelenw manamana, fɛn wɛrɛ tɛ a la, o ye cogoya ye."
+          ],
+          "examples": [
+            {
+              "h": "Fila dogolen",
+              "steps": [
+                "{unit} kɔnɔ, jate {d1} ni {d2} kelen-kelen bɛɛ ka kɛnɛ ye fila dɔrɔn ye, u ye kɛnɛ fila kelenw ye: {cells}.",
+                "O kɛnɛ fila ka kan ka {d1} ni {d2} sɔrɔ, o la u ka sugandita tɔw tɛ se ka kɛ.",
+                "{elim} bɔ. Sisan, kɛnɛ fila bɛ fila jiralen jira, o bɛ se ka fɛn wɛrɛw da yɛlɛ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Fila jate fila bɔli fila kɛnɛw la. O kɛnɛw ka sugandita tɔw de bɛ bɔ; fila jatew bɛ to.",
+            "Jate dɔ minɛli min ka kɛnɛ sabanan bɛ kulu kɔnɔ. Jate fila bɛɛ ka kan ka dan o kɛnɛ fila kelenw dɔrɔn na.",
+            "Kɛsuw dɔrɔn lajɛli. Fila dogolenw bɛ sɔrɔ layiniw ni kolɔnw fana na tuma caman."
+          ],
+          "faq": [
+            [
+              "Fila dogolen ye mun ye sudoku la?",
+              "Jate fila minnu bɛ se ka don kulu dɔ kɛnɛ fila kelenw dɔrɔn na. O kɛnɛw ka kan ka o jatew ta, o la u ka sugandita tɔw bɛ bɔ."
+            ],
+            [
+              "Fila dogolen ni fila jiralen danfara ye mun ye?",
+              "Fila jiralen bɛ ye: kɛnɛ fila minnu bɛ sugandita fila kelenw dɔrɔn jira. Sugandita farankanw bɛ fila dogolen dogo kɛnɛ fila la. Ni o farankanw bɔra, fila dogolen bɛ kɛ fila jiralen ye."
+            ],
+            [
+              "Saba dogolen ye mun ye?",
+              "Jate saba minnu danna kulu dɔ kɛnɛ saba la. Jate kelen-kelen bɛɛ man kan ka bɔ kɛnɛ saba bɛɛ la; min nafa ka bon, o ye ko jate saba si ka sugandita tɛ o kɛnɛw kɔfɛ."
+            ],
+            [
+              "Yala ladilikan bɛ fila dogolenw ni fila jiralenw danfara wa?",
+              "Ayi. Bare Sudoku b'u fila bɛɛ sɔrɔ ka bilali min bɔra o la, o tɔgɔ da ko «Fila walima saba». Ɲɛ ninnu b'u danfara katuguni u sɔrɔcogo tɛ kelen ye."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "X-Wing sudoku la: fɛɛrɛ bɛ baara kɛ cogo min",
+          "description": "X-Wing: jate min sugandita kɛnɛ ye fila dɔrɔn ye layini fila kɔnɔ, kolɔn fila kelenw na, o bɛ bɔ o kolɔnw kɛnɛ tɔw la. Misali lakika.",
+          "h1": "X-Wing",
+          "summary": "X-Wing ye jate kelen cogoya ye kɛnɛ naani la, layini fila ni kolɔn fila bɛ ɲɔgɔn kunbɛn yɔrɔ minnu na. Ni jate in ka sugandita kɛnɛ ye fila dɔrɔn ye layini fila kelen-kelen bɛɛ la, ni o kɛnɛw bɛ kolɔn fila kelenw na, jate ka kan ka kɛ o kɛnɛ naani la fila la minnu tɛ layini kelen walima kolɔn kelen na. O la, a bɛ se ka bɔ o kolɔn fila kɛnɛ tɔ bɛɛ la. Ni layiniw ni kolɔnw falen-falenna, a bɛ kɛ ten kelen. O ye Dɔnnikɛla fɛɛrɛ fɔlɔ ye Bare Sudoku la.",
+          "when": [
+            "Ni kelenw, sugandita datugulenw ani filaw ni sabaw banna. X-Wing ye Dɔnnikɛla cogoya ye min ka ca ni tɔw ye, a bɛ bɔ tuma caman ni jate dɔ ka sugandita damadɔ dɔrɔn tora, a ka c'a la ni o jate bilalen don siɲɛ naani fo wɔɔrɔ. A ka kan ni sɛbɛnw dafalenw ye i bɛ jate min lajɛ, o kama."
+          ],
+          "spot": [
+            "Jate dɔ sugandi, ka layiniw ɲini a ka sugandita kɛnɛ ye fila dɔrɔn ye minnu na. Ni o layini fila bɛ kolɔn fila kelenw sɔrɔ, o kolɔnw lajɛ ka o jate ka sugandita wɛrɛw ɲini: olu de ye bɔliw ye. O kɔfɛ, a kɛ tugun ka kolɔnw kɛ jusigilan ye. Tulon kɔnɔ, jate butɔn digi: a ka sugandita bɛɛ bɛ manamana, sɛbɛn naani manamanalenw layini fila ni kolɔn fila la, olu yeli ka nɔgɔn."
+          ],
+          "examples": [
+            {
+              "h": "Misali",
+              "steps": [
+                "Jate {d} ka sugandita kɛnɛ ye fila dɔrɔn ye layini {r1} la, fila dɔrɔn fana layini {r2} la, u bɛ kolɔn fila kelenw na, {c1} ni {c2}: {cells}.",
+                "Layini {r1} b'a ka {d} bila kolɔn {c1} walima {c2} la, layini {r2} b'a ka {d} bila tɔ kelen na. Cogo o cogo, kolɔn {c1} ni kolɔn {c2} kelen-kelen bɛɛ bɛ {d} kelen sɔrɔ o layini fila la.",
+                "O la {d} tɛ se ka kɛ yɔrɔ wɛrɛ la kolɔn {c1} ni {c2} kɔnɔ. {d} bɔ {elim} la."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Layini dɔ kɛli min ka sugandita kɛnɛ ye saba ye jate in kama. Jusigilan layini kelen-kelen bɛɛ ka kan ka fila dɔrɔn sɔrɔ, u fila bɛɛ ka kɛ kolɔn fila ɲɔgɔnnaw la.",
+            "Jate bɔli layiniw la o nɔ na k'a bɔ kolɔnw la. Ni layiniw ye jusigilan ye, bɔliw bɛ kolɔnw de la, a ɲɔgɔn fana bɛ ten.",
+            "Ka ɲinɛ cogoya falen-falenen kɔ. X-Wing min jɔlen bɛ kolɔnw kan, o bɛ bɔli kɛ layiniw la."
+          ],
+          "faq": [
+            [
+              "X-Wing ye mun ye sudoku la?",
+              "Jate min ka sugandita kɛnɛ ye fila dɔrɔn ye layini fila kelen-kelen bɛɛ la, kolɔn fila kelenw na. Jate bɛ o kɛnɛ naani la fila minɛ minnu tɛ layini kelen walima kolɔn kelen na, o la a bɛ bɔ kolɔn fila tɔ la. Layiniw ni kolɔnw bɛ se ka falen-falen."
+            ],
+            [
+              "Mun na X-Wing bɛ baara kɛ?",
+              "Layini fila kelen-kelen bɛɛ ka kan ka jate bila kolɔn fila la kelen na, layini fila tɛ se ka kolɔn kelen kɛ. O la kolɔn fila kelen-kelen bɛɛ bɛ a ka jate sɔrɔ o layiniw de la, sugandita tɔ bɛɛ o kolɔnw kɔnɔ tɛ se ka kɛ."
+            ],
+            [
+              "Yala X-Wing ye jɛgɛ ye wa?",
+              "Ɔwɔ. X-Wing ye jɛgɛ ye min bonya ye fila ye; Swordfish ye jɛgɛ ye min bonya ye saba ye. Bare Sudoku b'u fila bɛɛ sɔrɔ."
+            ],
+            [
+              "X-Wing bɛ hakɛ jumɛn na?",
+              "Dɔnnikɛla. Ɲininkali min mago bɛ X-Wing, Y-Wing, Swordfish walima XYZ-Wing la, o bɛ jate Dɔnnikɛla ye."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing sudoku la: fɛɛrɛ bɛ baara kɛ cogo min",
+          "description": "Y-Wing (XY-Wing): jukɛnɛ min sugandita ye fila ye ani kaman fila minnu bɛ u la kelen sɔrɔ, olu bɛ jate bɔ kɛnɛ o kɛnɛ la min bɛ kaman fila bɛɛ ye.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, min bɛ wele fana ko XY-Wing, o bɛ kɛnɛ saba kɛ minnu kelen-kelen bɛɛ sugandita ye fila ye. Jukɛnɛ sugandita ye X ni Y ye. Kaman kelen bɛ jukɛnɛ ye, X ni Z b'a la; kaman tɔ bɛ jukɛnɛ ye, Y ni Z b'a la. Jukɛnɛ mana kɛ min o min ye, kaman kelen ka kan ka kɛ Z ye, o la Z bɛ se ka bɔ kɛnɛ o kɛnɛ la min bɛ kaman fila bɛɛ ye. O ye Dɔnnikɛla fɛɛrɛ ye Bare Sudoku la.",
+          "when": [
+            "Ni kɛnɛ caman bɛ ɲininkali la minnu sugandita ye fila dɔrɔn ye, ni jɛgɛ si tɛ sɔrɔ. Y-Wing ka ca Dɔnnikɛla ɲininkaliw la, a bɛ sɔrɔ ni i ye sugandita fila kɛnɛw tugu: u kelen-kelen bɛɛ bɛ se ka kɛ jukɛnɛ walima kaman ye."
+          ],
+          "spot": [
+            "Kɛnɛw sɛbɛn minnu sugandita ye fila dɔrɔn ye. U kelen-kelen bɛɛ jate jukɛnɛ ye min sugandita ye X ni Y ye, ka kɛnɛ dɔ ɲini a sigiɲɔgɔnw cɛ, X ni jate wɛrɛ Z bɛ min na, ani kɛnɛ dɔ Y ni o Z kelen bɛ min na. O fila ye kamanw ye. O kɔfɛ, kɛnɛw ɲini minnu bɛ kaman fila bɛɛ ye, Z bɛ minnu na. A dɔn ko kamanw man kan ka ɲɔgɔn ye."
+          ],
+          "examples": [
+            {
+              "h": "Misali",
+              "steps": [
+                "Jukɛnɛ {pivot} sugandita ye {x} ni {y} ye. A bɛ {wingA} ye, {x} ni {z} bɛ min na, ani {wingB}, {y} ni {z} bɛ min na.",
+                "Ni {pivot} ye {x} ye, {wingA} bɛ {x} bɔnɛ, a bɛ kɛ {z} ye. Ni {pivot} ye {y} ye, {wingB} bɛ kɛ {z} ye. Cogo o cogo, kaman fila la kelen ye {z} ye.",
+                "Kɛnɛ min bɛ kaman fila bɛɛ ye, o tɛ se ka kɛ {z} ye abada. {z} bɔ {elim} la."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kamanw sugandili minnu fila bɛɛ tɛ jukɛnɛ ye. Kaman kelen-kelen bɛɛ ka kan ka layini, kolɔn walima kɛsu kelen sɔrɔ ni jukɛnɛ ye.",
+            "Z bɔli kɛnɛw la minnu bɛ kaman kelen dɔrɔn ye. Kɛnɛ min bɛ bɔli sɔrɔ, o ka kan ka kaman fila bɛɛ ye.",
+            "Z bɔli jukɛnɛ la. Y-Wing la, Z tɛ jukɛnɛ na; ni a b'a la, cogoya ye XYZ-Wing ye, min sariyaw tɛ kelen ye."
+          ],
+          "faq": [
+            [
+              "Y-Wing ye mun ye sudoku la?",
+              "Kɛnɛ saba minnu sugandita ye fila ye: jukɛnɛ X ni Y bɛ min na, kaman X ni Z bɛ min na ka jukɛnɛ ye, ani kaman Y ni Z bɛ min na ka jukɛnɛ ye. Kaman kelen ye Z ye tuma bɛɛ, o la Z bɛ bɔ kɛnɛw la minnu bɛ kaman fila bɛɛ ye."
+            ],
+            [
+              "Yala Y-Wing ni XY-Wing ye kelen ye wa?",
+              "Ɔwɔ. Tɔgɔ fila bɛ cogoya kelen de ɲɛfɔ. Bare Sudoku b'a wele ko Y-Wing."
+            ],
+            [
+              "Mun na kaman kelen ka kan ka kɛ Z ye?",
+              "Ni jukɛnɛ ye X ye, kaman fɔlɔ bɛ X bɔnɛ, a bɛ kɛ Z ye. Ni jukɛnɛ ye Y ye, kaman filanan bɛ kɛ Z ye. Jukɛnɛ ye o fila la kelen ye, o la kaman kelen ye Z ye."
+            ],
+            [
+              "Y-Wing bɛ bɔli kɛ kɛnɛ joli la?",
+              "Tuma caman kelen walima fila: kɛnɛ minnu bɛ kaman fila bɛɛ ye, Z bɛ minnu na hali bi, olu dɔrɔn. O bɛ se ka kelen dilan."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Swordfish sudoku la: fɛɛrɛ bɛ baara kɛ cogo min",
+          "description": "Swordfish: jate min danna kolɔn saba la layini saba kɔnɔ, o bɛ bɔ o kolɔnw kɛnɛ tɔw la. Jɛgɛ min bonya ye saba ye, ɲɛfɔlen ni misali lakika ye.",
+          "h1": "Swordfish",
+          "summary": "Swordfish ye X-Wing ye min bɛ layini saba ni kolɔn saba kɛ. Ni jate dɔ ka sugandita kɛnɛw tɛ tɛmɛ saba kan layini saba kelen-kelen bɛɛ la, ni o kɛnɛw bɛɛ bɛ kolɔn saba kelenw na, layini saba bɛ jate ta o kolɔnw kɔnɔ, o la jate bɛ se ka bɔ kolɔn saba kɛnɛ tɔ bɛɛ la. Layiniw ni kolɔnw bɛ se ka falen-falen. Bare Sudoku bɛ Swordfish ɲini Y-Wing kɔfɛ, Dɔnnikɛla ɲininkaliw la.",
+          "when": [
+            "Ni X-Wing ni Y-Wing ma foyi sɔrɔ. Swordfish man ca ka tɛmɛ X-Wing kan, a ka kan ni jate ye min ka suganditaw jɛnsɛnnen bɛ dɔɔnin-dɔɔnin layini walima kolɔn saba kan. A ka kan ni sɛbɛnw dafalenw, bɛnnenw ye o jate kama."
+          ],
+          "spot": [
+            "Jate dɔ sugandi, ka layiniw ɲini sugandita kɛnɛ fila walima saba bɛ a ye minnu na. Ni o layini saba ka suganditaw bɛɛ bɛ kolɔn saba dɔrɔn de la, o kolɔnw lajɛ ka o jate ka sugandita wɛrɛw ɲini. Layini kelen-kelen bɛɛ man kan ka sugandita sɔrɔ kolɔn kelen-kelen bɛɛ la: Swordfish bɛ se ka kɛnɛ wɔɔrɔ, wolonwula, seegin walima kɔnɔntɔn sɔrɔ. Tulon kɔnɔ, jate manamana ni a butɔn ye, ka layini saba ɲini minnu ka suganditaw bɛ kolɔn saba kan."
+          ],
+          "examples": [
+            {
+              "h": "Misali",
+              "steps": [
+                "Jate {d} ka sugandita kɛnɛw tɛ tɛmɛ saba kan layini {rows} kelen-kelen bɛɛ la, o kɛnɛw bɛɛ bɛ kolɔn {cols} la: {cells}.",
+                "Layini saba kelen-kelen bɛɛ ka kan k'a ka {d} bila kolɔn saba la kelen na, layini fila tɛ se ka kolɔn kelen kɛ. O la kolɔn saba bɛ u ka {d} sɔrɔ o layini saba de la.",
+                "{d} sugandita wɛrɛ o wɛrɛ kolɔn {cols} kɔnɔ, o tɛ se ka kɛ. {d} bɔ {elim} la."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Kɛnɛ kɔnɔntɔn bɛɛ ɲinini. Swordfish min sugandita ye fila ye layini dɔw la, o fana bɛnnen don, ni layini saba bɛ kolɔn saba dɔrɔn de kɛ.",
+            "Layini dɔ farali a kan min sugandita kɛnɛ ye naani ye. Jusigilan layini kelen-kelen bɛɛ ka kan ka saba sɔrɔ walima min dɔgɔ ni o ye, u bɛɛ kolɔn saba kɔnɔ.",
+            "Bɔli kɛli jusigilan layiniw la. Ni layiniw ye jusigilan ye, bɔliw bɛ kolɔn saba la, jusigilan layiniw kɔfɛ."
+          ],
+          "faq": [
+            [
+              "Swordfish ye mun ye sudoku la?",
+              "Jate min ka suganditaw layini saba kɔnɔ danna kolɔn saba la. Layini saba ka kan ka jate bila o kolɔn saba la, kelen-kelen, o la jate bɛ bɔ o kolɔnw kɛnɛ tɔw la."
+            ],
+            [
+              "Swordfish ni X-Wing danfara ye mun ye?",
+              "A bonya dɔrɔn: X-Wing bɛ layini fila ni kolɔn fila kɛ, Swordfish bɛ saba ni saba kɛ. Miiriya ye kelen ye."
+            ],
+            [
+              "Yala Swordfish ka kan ni kɛnɛ kɔnɔntɔn yɛrɛ ye wa?",
+              "Ayi. Layini kelen-kelen bɛɛ bɛ se ka sugandita fila walima saba sɔrɔ; cogoya b'a ɲini dɔrɔn ko layini saba ɲɔgɔn fɛ kana tɛmɛ kolɔn saba kan."
+            ],
+            [
+              "Yala jɛgɛ min bonya ye naani ye, o bɛ yen wa?",
+              "Ɔwɔ, Jellyfish. Bare Sudoku t'a kɛ, katuguni a ka ɲininkaliw mago t'a la abada."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing sudoku la: fɛɛrɛ bɛ baara kɛ cogo min",
+          "description": "XYZ-Wing: jukɛnɛ min sugandita ye saba ye ani kaman fila minnu bɛ u la kelen sɔrɔ, olu bɛ o jate bɔ kɛnɛ o kɛnɛ la min bɛ u saba bɛɛ ye. Misali.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing ye Y-Wing ye min jukɛnɛ sugandita ye saba ye. Jukɛnɛ bɛ X, Y ani Z sɔrɔ; kaman kelen bɛ jukɛnɛ ye, X ni Z b'a la, tɔ kelen bɛ jukɛnɛ ye, Y ni Z b'a la. Kɛnɛ saba la kelen ka kan ka kɛ Z ye, o la Z bɛ se ka bɔ kɛnɛ o kɛnɛ la min bɛ u saba bɛɛ ye. Katuguni jukɛnɛ yɛrɛ bɛ se ka kɛ Z ye, kɛnɛ min bɛ bɔli sɔrɔ, o ka kan ka jukɛnɛ ye ani kaman fila bɛɛ, o b'a dan kɛsu walima sira la kɛnɛw bɛ min sɔrɔ ɲɔgɔn fɛ. O ye fɛɛrɛ gɛlɛnba ye Bare Sudoku bɛ min kɛ.",
+          "when": [
+            "Ni fɛn tɔ bɛɛ ma se dɔrɔn. XYZ-Wing ye cogoya ye min man ca ka tɛmɛ tɔw bɛɛ kan Bare Sudoku la, a bɛ bɔ Dɔnnikɛla ɲininkaliw dɔrɔn de la. A ɲini ni kɛnɛ min sugandita ye saba ye, o bɛ kɛsu kelen kɔnɔ ni kɛnɛ dɔ ye min sugandita ye fila ye, a ka jate fila bɛ o fila ye."
+          ],
+          "spot": [
+            "A daminɛ kɛnɛw la minnu sugandita ye saba dɔrɔn ye; u kelen-kelen bɛɛ bɛ se ka kɛ jukɛnɛ ye. A sigiɲɔgɔnw cɛ, kɛnɛ fila ɲini minnu kelen-kelen bɛɛ sugandita ye fila ye, u bɛɛ tara jukɛnɛ ka saba la, u bɛ jate kelen dɔrɔn Z sɔrɔ ɲɔgɔn fɛ. O kɔfɛ, kɛnɛw ɲini minnu bɛ jukɛnɛ ni kaman fila bɛɛ ye, Z bɛ minnu na. Kɛcogo la, kaman kelen bɛ jukɛnɛ ka kɛsu kɔnɔ, tɔ kelen bɛ a ka layini walima a ka kolɔn na, bɔli kɛnɛw ye o kɛsu kɛnɛ tɔw ye minnu bɛ o layini walima kolɔn na."
+          ],
+          "examples": [
+            {
+              "h": "Misali",
+              "steps": [
+                "Jukɛnɛ {pivot} sugandita ye saba ye: {x}, {y} ani {z}. A bɛ {wingA} ye, {x} ni {z} b'a la, ani {wingB}, {y} ni {z} b'a la.",
+                "Ni {pivot} ye {z} ye, a banna. Ni a ye {x} ye, {wingA} ka kan ka kɛ {z} ye. Ni a ye {y} ye, {wingB} ka kan ka kɛ {z} ye. Cogo o cogo, kɛnɛ saba la kelen ye {z} ye.",
+                "Kɛnɛ min bɛ u saba bɛɛ ye, o tɛ se ka kɛ {z} ye. {z} bɔ {elim} la."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Bɔli kɛli kɛnɛw la minnu bɛ kaman fila dɔrɔn ye. A tɛ i n'a fɔ Y-Wing: jukɛnɛ bɛ se ka kɛ Z ye, o la kɛnɛ ka kan ka jukɛnɛ fana ye.",
+            "Kamanw kɛli minnu suganditaw fila bɛɛ tɛ jukɛnɛ ka sugandita saba kɔnɔ.",
+            "A ɲagami ni Y-Wing ye: danfara ye sugandita sabanan ye jukɛnɛ na, a bɛ kɛnɛ minnu bɛ se ka saniya, olu yɛlɛma."
+          ],
+          "faq": [
+            [
+              "XYZ-Wing ye mun ye sudoku la?",
+              "Jukɛnɛ min sugandita ye X, Y ani Z ye ani kaman fila, kelen na X ni Z, tɔ kelen na Y ni Z, u fila bɛɛ bɛ jukɛnɛ ye. Kɛnɛ saba la kelen ye Z ye, o la Z bɛ bɔ kɛnɛw la minnu bɛ u saba bɛɛ ye."
+            ],
+            [
+              "XYZ-Wing ni Y-Wing danfara ye mun ye?",
+              "Jukɛnɛ sugandita ye saba ye, a tɛ fila ye, Z bɛ u la. O bɛ jukɛnɛ kɛ yɔrɔ ye Z bɛ se ka don min na, o la kɛnɛ minnu bɛ jukɛnɛ ni kaman fila bɛɛ ye, olu dɔrɔn de bɛ se ka Z bɔnɛ."
+            ],
+            [
+              "XYZ-Wing bɛ bɔ tuma joli?",
+              "A man ca. Bare Sudoku la, Dɔnnikɛla ɲininkaliw dɔrɔn de mago bɛ se ka kɛ a la, u caman mago t'a la. Bare Sudoku b'a lajɛ laban na, X-Wing, Y-Wing ani Swordfish kɔfɛ."
+            ],
+            [
+              "Yala WXYZ-Wing bɛ yen wa?",
+              "Ɔwɔ, ni jukɛnɛ ye min sugandita ye naani ye, nka Bare Sudoku t'a kɛ. Tulon kɔnɔ ɲininkali bɛɛ bɛ se ka ban ni nin ɲɛfɔli fɛɛrɛ kɔnɔntɔn ye."
+            ]
+          ]
+        }
+      }
+    },
+    "uz-Cyrl": {
+      "learnHeading": "Судокуни ўрганинг",
+      "learnText": "Судокуни энди бошлаяпсизми ёки қийин бошқотирмада тўхтаб қолдингизми? Икки қўлланма қоидаларни ва маслаҳатлар фойдаланадиган барча ечиш усулларини ҳақиқий мисоллар билан тушунтиради.",
+      "howToLink": "Судоку қандай ўйналади",
+      "techniquesLink": "Судоку ечиш усуллари",
+      "labels": {
+        "howTo": "Қандай ўйналади",
+        "techniques": "Усуллар",
+        "play": "Судоку ўйнаш",
+        "prev": "Олдинги усул",
+        "next": "Кейинги усул",
+        "all": "Барча усуллар",
+        "example": "Мисол",
+        "steps": "Қадамма-қадам",
+        "when": "Қачон қўлланади",
+        "spot": "Қандай топилади",
+        "mistakes": "Кўп учрайдиган хатолар",
+        "inGame": "Bare Sudoku'да",
+        "level": "Керакли даража: {level}",
+        "hint": "Ўйинда маслаҳат шундай дейди: {text}",
+        "legend": "Қалин рақамлар берилган, кўк рақамлар ечиш жараёнида қўйилган, кичик рақамлар номзодлар. Ажратилган катаклар нақшни ҳосил қилади, устидан чизилган номзодлар олиб ташланади, айлана ичидаги номзод эса қўйиладиган рақам.",
+        "notation": "Катаклар r3c7 кўринишида ёзилади: 3-қатор, 7-устун. Қаторлар юқоридан, устунлар чапдан саналади, квадратлар эса чап юқори бурчакдан бошлаб қаторма-қатор 1 дан 9 гача рақамланади.",
+        "row": "{n}-қатор",
+        "column": "{n}-устун",
+        "box": "{n}-квадрат",
+        "elimItem": "{cell} катагидан {d}",
+        "regions": "Бошқотирма бошидаги 5-қатор, 5-устун ва 5-квадрат",
+        "firstMove": "Ягона номзод: {cell} катаги фақат {d} бўлиши мумкин",
+        "breadcrumb": "Саҳифа йўли"
+      },
+      "howTo": {
+        "title": "Судоку қандай ўйналади: қоидалар, майдон ва илк юришлар",
+        "description": "Судоку қандай ўйналади: қоидалар, қатор, устун ва квадратлар, нега ҳар бир бошқотирманинг битта ечими бор, қайдлардан фойдаланиш ва илк юришлар.",
+        "h1": "Судоку қандай ўйналади",
+        "summary": "Судоку 9×9 тўрда ўйналадиган мантиқий бошқотирма. Ҳар бир бўш катакни 1 дан 9 гача рақам билан тўлдиринг: ҳар бир қатор, ҳар бир устун ва ҳар бир 3×3 квадратда ҳар бир рақам айнан бир марта бўлиши керак. Баъзи рақамлар бошида берилади; қолганини ҳар сафар битта аниқ катакни топиб, бирма-бир чиқарасиз ва ҳеч қачон тахмин қилишингиз шарт эмас. Бу қўлланма майдонни, қоидаларни, ягона ечим тамойилини, қайдларни ва илк юришлар учун оддий стратегияни тушунтиради. Ҳаммасини бепул ва мантиқни тушунтирувчи маслаҳатлари бор [Bare Sudoku](play) ўйинида машқ қилишингиз мумкин.",
+        "sections": [
+          {
+            "h": "Судоку қоидалари қандай?",
+            "p": [
+              "Қоида атиги учта, ва улар битта қоиданинг уч томондан кўриниши: ҳар бир қаторда 1 дан 9 гача рақамлар бўлиши, ҳар бир устунда 1 дан 9 гача рақамлар бўлиши ва ҳар бир 3×3 квадратда 1 дан 9 гача рақамлар бўлиши керак. Шунинг учун битта рақам бир қаторда, устунда ёки квадратда ҳеч қачон икки марта учрамайди.",
+              "Қалин ҳарф билан берилган рақамлар ўзгармайди. Сизнинг вазифангиз бўш катакларни тўлдириш. Бу ерда арифметика ҳам, тартиб ҳам йўқ: рақамлар шунчаки тўққизта турли рамз. Ҳарфлар ёки шакллар билан ўйнасангиз ҳам, ҳеч нарса ўзгармас эди."
+            ]
+          },
+          {
+            "h": "Майдон қандай тузилган?",
+            "p": [
+              "Майдонда 9 қатор ва 9 устунга жойлашган 81 та катак бор. Қалин чизиқлар уни тўққизта 3×3 квадратга ажратади. Ҳар бир катак айнан битта қаторга, битта устунга ва битта квадратга тегишли, бу уч гуруҳ унинг бирликлари дейилади. Катак билан умумий бирликка эга бошқа 20 та катак унинг қўшнилари дейилади; катакка қўйилган рақам шу рақамни барча 20 та қўшнида истисно қилади.",
+              "Катаклар r3c7 кўринишида ёзилади: 3-қатор, 7-устун. Қаторлар юқоридан, устунлар чапдан саналади, квадратлар эса чап юқори бурчакдан бошлаб қаторма-қатор 1 дан 9 гача рақамланади. Бу ёзув тизими ҳар бир усул қўлланмасида ишлатилади, шунинг учун уни ўрганиб олиш фойдали: r5c5 майдоннинг маркази."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Нега ҳар бир судокунинг айнан битта ечими бор?",
+            "p": [
+              "Тўғри тузилган судокунинг битта ечими бўлади, мантиқнинг ишлаши ҳам шунга боғлиқ. Бирор рақам бирликда бошқа ҳеч қаерга туша олмаслигини кўрсата олсангиз, у қолган катакка тушиши шарт, чунки ечим мавжуд ва у ягона. Агар бошқотирманинг иккита ечими бўлса, ҳеч қандай мулоҳаза уларни ажрата олмас ва қайсидир пайтда тахмин қилишга мажбур бўлар эдингиз.",
+              "Bare Sudoku ҳар бир бошқотирмани қурилмангизда яратади ва унинг айнан битта ечими борлигини ҳамда мантиқий ечувчиси уни танланган даража усуллари билан охирига етказа олишини текширади. Шунинг учун тўхтаб қолсангиз, ҳар доим топиладиган кейинги қадам бор ва маслаҳат уни кўрсатади."
+            ]
+          },
+          {
+            "h": "Судокуни қандай бошлаш керак?",
+            "p": [
+              "Энг чекланган жойдан бошланг. Бу тартиб ҳар қандай даражада иш беради:"
+            ],
+            "list": [
+              "Кўп марта, масалан олти-етти марта учрайдиган рақамни танланг ва уни ҳали ўз ичига олмаган квадратларни топинг. Кўпинча квадратда унга фақат битта катак қолади: бу [яширин ягона](hidden-single).",
+              "Атрофи тўла катакларга қаранг. Қатори, устуни ва квадрати биргаликда саккизта турли рақамни ўз ичига олган катакда фақат битта номзод қолади: бу [ягона номзод](naked-single). Деярли тўлган қатор ва квадратлардаги катаклар қидириш учун энг яхши жой.",
+              "Қўйган ҳар бир рақамингиз 20 та қўшнидан битта номзодни олиб ташлайди, шунинг учун ўша қўшниларни дарҳол текширинг. Ягоналар кўпинча кетма-кет чиқади.",
+              "Осон қўйишлар тугагач, қайдларни ёзинг: ҳар бир бўш катакнинг номзодларини. Сўнг квадрат ичида битта чизиққа чекланган рақамни ([қулфланган номзодлар](locked-candidates)) ёки бир хил икки номзодга эга икки катакни ([очиқ жуфт](naked-pairs)) қидиринг.",
+              "Ҳар бир олиб ташлашдан кейин ягоналарга қайтинг. Ҳатто Эксперт бошқотирмалари ҳам асосан ягоналар билан ечилади; мураккаб усул фақат кейингисига йўл очади."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Қайдлар нима ва улардан қачон фойдаланиш керак?",
+            "p": [
+              "Қайдлар, уларни қалам белгилари ёки номзодлар деб ҳам аташади, бўш катакка у ерда қайси рақамлар ҳали мумкинлигини белгилаб қўйиш учун ёзиладиган кичик рақамлар. Осон бошқотирмаларда улар камдан-кам керак бўлади; Қийин даражадан бошлаб улар жуда муҳим, чунки жуфтлар, X-Wing ва Y-Wing каби усуллар қўйилган рақамлар билан эмас, номзодлар билан ишлайди.",
+              "Қайдларни аниқ сақланг: рақам қўйганингизда, уни барча 20 та қўшнининг қайдларидан ўчиринг. Bare Sudoku'да бу автоматик тарзда бўлади, Қайдларни тўлдириш эса бир босишда ҳар бир бўш катакка барча номзодларни ёзади, шунинг учун тўлиқ ва тўғри номзодлар тўпламидан бошлашингиз мумкин. Қайд тахмин эмас, факт: у бу рақамни ҳозирча ҳеч нарса истисно қилмаганини билдиради."
+            ]
+          },
+          {
+            "h": "Тўхтаб қолсангиз нима қилиш керак?",
+            "p": [
+              "Аввал асосларни қайта текширинг: деярли тўлган ҳар бир қатор, устун ва квадрат ягоналар манбаи. Сўнг қайдлар тўлиқ эканига ишонч ҳосил қилинг, чунки етишмаётган номзод нақшларни яширади, эскирган номзод эса сохта нақшлар яратади. Кейин [усулларни](techniques) қийинлик тартибида синаб кўринг: қулфланган номзодлар, жуфтлар ва учликлар, X-Wing, Y-Wing, Swordfish ва XYZ-Wing. Уларнинг ҳар бирининг ҳақиқий мисолли алоҳида саҳифаси бор.",
+              "Ҳеч нарса ёрдам бермаса, маслаҳат олинг. Bare Sudoku'да маслаҳат аввал қўйилган рақамлар орасида хатоси бор-йўқлигини текширади, сўнг мантиқ билан тўлдириш мумкин бўлган кейинги катакни топади ва усулнинг номини айтади, шунинг учун ундан фойдаланганда ҳам ниманидир ўрганасиз. Рақамни қўйиш учун маслаҳатни яна босинг."
+            ]
+          },
+          {
+            "h": "Bare Sudoku'да рақамлар қандай киритилади?",
+            "p": [
+              "Катакка, сўнг рақамга тегинг. Ёки аввал рақамга тегинг: у қулфланади ва сиз теккан ҳар бир катакка ёзилади, бу рақамнинг олтинчи, еттинчи ва саккизинчи нусхасини қўйишнинг энг тез йўли. Қулфни очиш учун рақамга яна тегинг. Қайдлар тугмаси қалам белгиларига ўтказади, Ўчириш катакни тозалайди, Қайтариш исталган юришни бекор қилади, хатолар эса менюда ўчирмасангиз қизил ранг билан белгиланади.",
+              "Клавиатурада ҳаракатланиш учун стрелка тугмаларидан, рақам киритиш учун 1 дан 9 гача тугмалардан, ўчириш учун Backspace, қайдлар учун N, қайтариш учун U, маслаҳат учун H, қайдларни тўлдириш учун F ва меню учун Escape тугмасидан фойдаланинг. Ўйин ўзини ўзи сақлайди, интернетсиз ишлайди, унда реклама ҳам, ҳисоб ҳам йўқ."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Судокуда тахмин қилиш керакми?",
+            "Тўғри тузилган бошқотирмада керак эмас. Ҳар бир Bare Sudoku бошқотирмасининг айнан битта ечими бор ва у фақат мантиқ билан, ўз даражаси усуллари доирасида ечилиши текширилган. Агар тахмин қилиш керакдек туюлса, қайдларингизда битта номзод етишмаяпти ёки топилишини кутаётган усул бор."
+          ],
+          [
+            "Битта рақам қаторда, устунда ёки квадратда икки марта учраши мумкинми?",
+            "Йўқ. Бутун қоида шу: тўққизта қатор, тўққизта устун ва тўққизта квадратнинг ҳар бирида 1 дан 9 гача ҳар бир рақам айнан бир марта бўлади. Агар иккита бир хил рақам битта бирликда турган бўлса, улардан камида биттаси нотўғри."
+          ],
+          [
+            "Осон, Ўрта, Қийин ва Эксперт ўртасида қандай фарқ бор?",
+            "Даражани бошқотирма талаб қиладиган усуллар белгилайди. Осон ва Ўрта фақат ягоналар билан ечилади, Осон эса камида 38 та берилган рақам билан бошланади. Қийин учун қулфланган номзодлар ёки жуфтлар ва учликлар керак. Эксперт учун X-Wing, Y-Wing, Swordfish ёки XYZ-Wing керак."
+          ],
+          [
+            "Қайдларни барча катакларга ёзган маъқулми ёки фақат баъзиларига?",
+            "Қийин ва Эксперт бошқотирмаларда ҳаммасини тўлдиринг: жуфтлар, X-Wing ва Y-Wing каби нақшлар фақат барча номзодлар ёзилганда кўринади. Осон ва Ўрта даражада қайдлар ихтиёрий, аксарият ўйинчилар шунчаки ягоналарни қидиради."
+          ],
+          [
+            "Битта судоку қанча вақт олади?",
+            "Осон бошқотирма бир неча дақиқа олади; Эксперт бошқотирмалари мураккаб нақшни қанчалик тез пайқашингизга қараб йигирма дақиқа ёки ундан ҳам кўпроқ вақт олиши мумкин. Bare Sudoku таймерни кўрсатади, меню очиқ турганда уни тўхтатади ва рейтинг жадвалини юритмайди, шунинг учун ўз суръатингизда ўйнанг."
+          ],
+          [
+            "Судоку учун арифметика керакми?",
+            "Йўқ. Рақамлар шунчаки номлар; қўшиш ҳам, санаш ҳам йўқ. Исталган тўққизта рамз иш берар эди, шунинг учун судоку рақамли эмас, мантиқий бошқотирма."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судоку ечиш усуллари: мисоллар билан тушунтириш",
+        "description": "Ягона номзоддан Swordfish ва XYZ-Wing'гача бўлган тўққизта судоку ечиш усули Bare Sudoku маслаҳатлари тартибида, ҳар бири ҳақиқий мисол билан.",
+        "h1": "Судоку ечиш усуллари",
+        "intro": [
+          "Ҳар қандай судокуни кичик мантиқий усуллар тўплами билан ечиш мумкин. Бу рўйхатда Bare Sudoku ечувчиси ва унинг маслаҳатлари фойдаланадиган тўққизта усул ечувчи уларни синаб кўрадиган тартибда келтирилган: аввал ягоналар, сўнг битта бирлик ичидаги олиб ташлашлар, кейин бир нечта қатор ва устунни қамраб оладиган нақшлар. Ҳар бир усулнинг таърифи, уни қандай топиш, яратилган бошқотирмадан олинган ҳақиқий мисоли ва кўп учрайдиган хатолари бор алоҳида саҳифаси мавжуд.",
+          "Бошқотирманинг даражасини у талаб қиладиган энг қийин усул белгилайди. Осон ва Ўрта бошқотирмаларга фақат ягоналар керак, Қийин бошқотирмаларга қулфланган номзодлар ёки жуфтлар ва учликлар керак, Эксперт бошқотирмаларига эса камида битта балиқ ёки қанот керак. Даража қандай бўлмасин, ишнинг катта қисмини ягоналар бажаради; мураккаб усул бир-иккита номзодни олиб ташлайди, кейин яна ягоналар давом эттиради."
+        ],
+        "faq": [
+          [
+            "Судоку усулларини қандай тартибда синаш керак?",
+            "Энг осонидан бошланг: ягона номзод, яширин ягона, қулфланган номзодлар, очиқ жуфтлар ва учликлар, яширин жуфтлар ва учликлар, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku уларни айнан шу тартибда синайди ва маслаҳат ҳар доим олдинга силжитадиган энг оддий усулнинг номини айтади."
+          ],
+          [
+            "Судокуни ечиш учун бу усулларнинг ҳаммаси керакми?",
+            "Осон ва Ўрта бошқотирмалар учун ягоналар етарли. Қийин бошқотирмаларга қулфланган номзодлар ҳамда жуфтлар ва учликлар қўшилади. Эксперт бошқотирмаларига камида битта балиқ ёки қанот керак, лекин одатда битта бошқотирмада бир-икки марта холос."
+          ],
+          [
+            "XYZ-Wing'дан ҳам қийинроқ усуллар борми?",
+            "Ҳа, масалан занжирлар, ягоналик тестлари ва мажбурлаш тўрлари. Bare Sudoku уларни талаб қиладиган бошқотирмалар яратмайди, шунинг учун ўйиндаги ҳар бир бошқотирмани шу саҳифадаги тўққизта усул билан охирига етказиш мумкин."
+          ],
+          [
+            "Номзод нима?",
+            "Бўш катакка ҳали тушиши мумкин бўлган рақам, чунки унинг қатори, устуни ёки квадратида уни ҳозирча ҳеч нарса истисно қилмайди. Ўйиндаги қайдлар номзодлардир. Ягоналардан кейинги ҳар бир усул номзодлар асосида мулоҳаза юритади, шунинг учун уларни тўлиқ ва аниқ сақланг."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Ягона номзод",
+          "title": "Судокуда ягона номзод (naked single): битта номзодли катак",
+          "description": "Ягона номзод (naked single): фақат битта рақам туша оладиган бўш катак. Уларни тез топишни ҳақиқий мисолда қадамма-қадам ўрганинг ва хатолардан қочинг.",
+          "h1": "Ягона номзод (naked single)",
+          "summary": "Ягона номзод бу айнан битта номзоди бор бўш катак: қолган саккизта рақам унинг қатори, устуни ёки квадратида аллақачон бор. Қолган рақам айнан шу ерга тушади. Бу энг оддий ва энг кўп ишлатиладиган судоку усули, Bare Sudoku маслаҳати эса уни «Бу катакда фақат битта номзод» деб хабар қилади.",
+          "when": [
+            "Ҳар доим. Ягона номзодлар биринчи юришдан охиргисигача, ҳар қандай даражада учрайди. Осон ва Ўрта бошқотирмаларда яширин ягоналар билан бирга улар сизга керак бўладиган ягона усул. Қийинроқ бошқотирмаларда мураккаб усул бажарган ҳар бир олиб ташлаш одатда ортидан ягона номзод қолдиради, шунинг учун ҳар бир қадамдан кейин уларни текширинг."
+          ],
+          "spot": [
+            "Қўшниларида рақамлар кўп бўлган катакларга қаранг: аллақачон еттита рақами бор қатордаги катакка ёки қатори, устуни ва квадрати биргаликда саккизта турли рақамни қамраб олган катакка. Қайдларсиз катакдан кўринадиган рақамларни санаб чиқинг. Қайдлар билан ягона номзод шунчаки битта номзод кўрсатаётган катак, шунинг учун Қайдларни тўлдириш уларни топишни осонлаштиради."
+          ],
+          "examples": [
+            {
+              "h": "Мисол",
+              "steps": [
+                "{cell} катагига қаранг. У бўш, шунинг учун унинг қатори, устуни ва квадратида аллақачон қўйилган ҳар бир рақамни санаб чиқинг.",
+                "{row}-қаторда {rowDigits} бор. {col}-устунда {colDigits} бор. {box}-квадратда {boxDigits} бор.",
+                "Улар биргаликда {d} рақамидан бошқа барча рақамларни истисно қилади, шунинг учун {cell} катагида қолган ягона номзод {d}.",
+                "{cell} катагига {d} рақамини ёзинг. Сўнг янги рақам ўша қатор, устун ёки квадратда яна бир ягона ҳосил қилган-қилмаганини текширинг."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Фақат қаторни ёки фақат квадратни санаш. Истисно қилинган саккизта рақам одатда учала бирликдан биргаликда тўпланади.",
+            "Ҳозиргина қўйган рақамингиз ҳам ўзининг 20 та қўшнисидан номзодларни олиб ташлашини унутиш; янги ягона номзодлар ҳар бир қўйишдан кейин дарҳол пайдо бўлади.",
+            "Ягона номзодни яширин ягона билан адаштириш: ягона номзодда катакда битта номзод қолади, яширин ягонада эса бирликда рақам учун битта катак қолади."
+          ],
+          "faq": [
+            [
+              "Судокуда ягона номзод (naked single) нима?",
+              "Айнан битта номзоди бор бўш катак. Унинг қатори, устуни ва квадратида саккизта турли рақам аллақачон турибди, шунинг учун фақат тўққизинчи рақам сиғади."
+            ],
+            [
+              "Нега инглизчада naked, яъни очиқ деб аталади?",
+              "Чунки қайдлар ёзилгач, ягона номзод катакда бевосита кўриниб туради; уни ҳеч нарса яширмайди. Яширин ягона эса бошқа номзодлар орасида туради ва катакка эмас, рақамга қараб топилади."
+            ],
+            [
+              "Бошқотирмани фақат ягона номзодлар билан ечиш мумкинми?",
+              "Кўплаб Осон бошқотирмаларни ечиш мумкин, лекин уларнинг аксариятига яширин ягоналар ҳам керак. Bare Sudoku Осон ва Ўрта бошқотирмаларни иккала турдаги ягоналар билан ечиладиган деб баҳолайди; Қийин ва Эксперт бошқотирмаларига камида яна битта усул керак."
+            ],
+            [
+              "Маслаҳат ягона номзодларни кўрсатадими?",
+              "Ҳа. Кейинги қўйиш ягона номзод бўлса, маслаҳат катакни танлайди ва рақам билан бирга «Бу катакда фақат битта номзод» дейди. Уни қўйиш учун маслаҳатни яна босинг."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Яширин ягона",
+          "title": "Яширин ягона (hidden single): рақамнинг ягона жойи",
+          "description": "Яширин ягона (hidden single): қатор, устун ёки квадратда рақам туша оладиган ягона катак. Рақамларни бирма-бир кўздан кечириб, уни топишни ўрганинг.",
+          "h1": "Яширин ягона (hidden single)",
+          "summary": "Яширин ягона бу қатор, устун ёки квадратда фақат битта мумкин бўлган катаги қолган рақам, гарчи ўша катакда бошқа номзодлар кўриниб турса ҳам. Бирликда бу рақам бўлиши шарт бўлгани учун у ўша ерга тушади. Bare Sudoku маслаҳати уни «Бу қаторда 5 учун ягона жой» деб хабар қилади, устун ва квадрат учун ҳам худди шундай.",
+          "when": [
+            "Рақам анча илгарилаб кетганда: рақам беш-олти марта учраганда, қолган квадратлар жуда чекланади ва кейинги юриш кўпинча яширин ягона бўлади. Яширин ягоналар Осон ва Ўрта бошқотирмаларнинг асосий усули ва ҳар қандай даражада асосий иш қуроли бўлиб қолади."
+          ],
+          "spot": [
+            "Рақамларни бирма-бир кўздан кечиринг. Битта рақамни олинг, уни ўз ичига олмаган квадратни топинг ва ўша квадратда шу рақамнинг қўйилган нусхаси билан умумий қатор ёки устунга эга ҳар бир катакни чизиб ташланг. Битта катак қолса, яширин ягонани топдингиз. Худди шундай кўздан кечириш қатор ва устунларда ҳам ишлайди. Ўйинда қўйилган рақамга тегинг: унинг барча нусхалари ажратиб кўрсатилади, шунинг учун бўш катаклар дарҳол кўзга ташланади."
+          ],
+          "examples": [
+            {
+              "h": "Мисол",
+              "steps": [
+                "{box}-квадратда ҳали {d} йўқ, шунинг учун унинг бўш катакларидан бири уни олиши керак. Бўш катаклар: {empties}.",
+                "{cell} катагидан бошқа ҳаммасида {d} рақамини ўша қатор ёки устунда аллақачон қўйилган {d} тўсиб туради, шунинг учун у ерларда {d} номзод эмас.",
+                "Демак, {box}-квадратда {d} учун ягона жой сифатида {cell} қолади. {cell} катагида бошқа номзодлар кўриниб турса ҳам, {d} рақамини ўша ерга ёзинг."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Рақамни фақат тўғри бўлиши эҳтимол бўлган катакка қўйиш: фақат кўзга ташланганларини эмас, бирликдаги бошқа барча бўш катакларни текширинг.",
+            "Катакда бир нечта номзод кўрингани учун яширин ягонани ўтказиб юбориш. Бошқа номзодларнинг аҳамияти йўқ; муҳими, рақамнинг бирликда бошқа жойи йўқлиги.",
+            "Фақат квадратларни кўздан кечириш. Қатор ва устунлар ҳам яширин ягоналарни худди шунчалик тез-тез беради, айниқса охирига яқин."
+          ],
+          "faq": [
+            [
+              "Судокуда яширин ягона (hidden single) нима?",
+              "Қатор, устун ёки квадратнинг фақат битта катагига тушиши мумкин бўлган рақам. Бирликда бу рақам бўлиши шарт, шунинг учун катакда бошқа номзодлар бўлса ҳам, у аниқ бўлади."
+            ],
+            [
+              "Яширин ягона ва ягона номзод ўртасида қандай фарқ бор?",
+              "Ягона номзод катакка тааллуқли: битта номзод қолган. Яширин ягона рақамга тааллуқли: бирликда битта катак қолган. Иккаласи ҳам рақамни аниқ қўяди."
+            ],
+            [
+              "Қайси бирини топиш осонроқ?",
+              "Қайдларсиз одатда яширин ягоналар осонроқ, чунки майдонни ҳар сафар битта рақам бўйича кўздан кечириш мумкин. Тўлиқ қайдлар билан ягона номзодлар энг осон, чунки битта номзодли катак дарҳол кўзга ташланади."
+            ],
+            [
+              "Маслаҳат яширин ягонани қандай тасвирлайди?",
+              "Катакни танлаб, рақам учун шу қаторда, шу устунда ёки шу квадратда «ягона жой» деб, масалан «Бу қаторда 5 учун ягона жой». Уни қўйиш учун маслаҳатни яна босинг."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Қулфланган номзодлар",
+          "title": "Судокуда қулфланган номзодлар: ишора ва эгаллаш",
+          "description": "Қулфланган номзодлар: рақамнинг квадратдаги номзодлари битта қатор ёки устунда ётса ёки аксинча бўлса, рақам бошқа жойдан олиб ташланади. Икки мисол.",
+          "h1": "Қулфланган номзодлар",
+          "summary": "Қулфланган номзодлар рақам қўйиш ўрнига номзодларни олиб ташлайдиган биринчи усул. Унинг икки шакли бор. Ишора: квадратда рақамнинг барча номзодлари битта қатор ёки устунда ётади, шунинг учун рақам ўша чизиқнинг қолган қисмидан олиб ташланади. Эгаллаш: қатор ёки устунда рақамнинг барча номзодлари битта квадратда ётади, шунинг учун рақам ўша квадратнинг қолган қисмидан олиб ташланади. Bare Sudoku маслаҳати бу усул очиб берган қўйишни «Қулфланган номзодлар» деб белгилайди.",
+          "when": [
+            "Қийин бошқотирмада ягоналар тугаганда, биринчи навбатда шуни синаб кўринг. Камида кўриб чиқилаётган рақам учун тўлиқ қайдлар керак. Қулфланган номзодлар кўп учрайди: Қийин бошқотирмаларнинг аксариятига улар керак, Эксперт бошқотирмалари эса улардан катта нақшлар орасида фойдаланади."
+          ],
+          "spot": [
+            "Ишора учун ҳар бир квадратга ва унда йўқ ҳар бир рақамга қаранг: агар ўша рақамнинг номзод катаклари битта қатор ёки устунда турса, ўша чизиқ бўйлаб квадратдан ташқарида ҳам шу рақам номзод сифатида бор-йўқлигини текширинг. Эгаллаш учун қатор ёки устун бўйлаб қаранг: агар рақамнинг номзодлари тўлиқ битта квадрат ичида бўлса, ўша квадратнинг қолган қисмини тозалаш мумкин. Ўйинда рақам тугмасига тегсангиз, унинг барча номзодлари ажратиб кўрсатилади; битта квадрат ичидаги икки-учта ажратилган қайддан иборат чизиқ сиз излаётган нақш бўлади."
+          ],
+          "examples": [
+            {
+              "h": "Ишора",
+              "steps": [
+                "{box}-квадратда {d} рақамининг фақат қуйидаги номзод катаклари бор: {cells}. Уларнинг ҳаммаси {row}-қаторда ётади.",
+                "{box}-квадратга {d} керак, шунинг учун {row}-қаторнинг {d} рақами ўша катаклардан қайси бирига тушмасин, {box}-квадрат ичида бўлади.",
+                "{row}-қаторда иккинчи {d} бўла олмайди, шунинг учун {d} рақамини {row}-қаторнинг квадратдан ташқаридаги катакларидан олиб ташланг: {elim}."
+              ]
+            },
+            {
+              "h": "Эгаллаш",
+              "steps": [
+                "{row}-қаторда {d} рақами фақат {cells} катакларига тушиши мумкин ва уларнинг ҳаммаси {box}-квадрат ичида.",
+                "{row}-қаторда {d} бўлиши шарт, шунинг учун {box}-квадратнинг {d} рақамини {row}-қатор эгаллайди. {box}-квадратнинг бошқа катакларида {d} бўла олмайди.",
+                "{d} рақамини қуйидаги катаклардан олиб ташланг: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ишорада рақамни квадратдан ташқаридан эмас, ичидан олиб ташлаш, эгаллашда эса аксинча. Олиб ташлашлар ҳар доим чизиқда бўлиб, квадратда бўлмаган ёки квадратда бўлиб, чизиқда бўлмаган катакларга тегишли.",
+            "Номзодлар квадратнинг икки қаторига тарқалган ҳолда қоидани қўллаш. Квадратдаги рақамнинг барча номзод катаклари битта чизиқда ётиши керак.",
+            "Олиб ташлаш ҳосил қилган ягонани қидиришни унутиш. Қулфланган номзодлар ўзи камдан-кам рақам қўяди; улар ягонага замин тайёрлайди."
+          ],
+          "faq": [
+            [
+              "Судокуда қулфланган номзодлар нима?",
+              "Квадрат ва чизиқ кесишмасига чекланган рақам номзодлари. Квадрат, ёки чизиқ, бу рақамни ўша кесишмада ўз ичига олиши шарт бўлгани учун рақамни чизиқнинг қолган қисмидан ёки квадратнинг қолган қисмидан олиб ташлаш мумкин."
+            ],
+            [
+              "Ишора ва эгаллаш ўртасида қандай фарқ бор?",
+              "Ишора квадратдан бошланади: рақамнинг квадратдаги номзодлари битта қатор ёки устун бўйлаб ишора қилади, шунинг учун рақам ўша чизиқнинг қолган қисмидан олиб ташланади. Эгаллаш қатор ёки устундан бошланади: чизиқнинг шу рақам учун номзодлари тўлиқ битта квадратда, шунинг учун чизиқ рақамни эгаллайди ва у квадратнинг қолган қисмидан олиб ташланади."
+            ],
+            [
+              "Қулфланган номзодларни кесишма орқали олиб ташлаш деб ҳам аташадими?",
+              "Ҳа. Бошқа номлари: эгаллаш шакли учун квадрат ва чизиқ орқали қисқартириш, ишора шакли учун ишора қилувчи жуфт ёки ишора қилувчи учлик. Bare Sudoku иккаласи учун битта номдан фойдаланади."
+            ],
+            [
+              "Қайси даражага қулфланган номзодлар керак?",
+              "Қийин. Қулфланган номзодларни ёки жуфтлар ва учликларни талаб қиладиган, лекин ундан қийинроғини талаб қилмайдиган бошқотирма Қийин деб баҳоланади; Эксперт бошқотирмаларига қўшимча равишда балиқ ёки қанот керак."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Очиқ жуфтлар ва учликлар",
+          "title": "Судокуда очиқ жуфтлар ва учликлар: қандай ишлайди",
+          "description": "Очиқ жуфтлар ва учликлар: бирликда бир хил икки ёки уч номзодга эга катаклар. Уларни топишни ва нимани олиб ташлашни ҳақиқий мисолларда ўрганинг.",
+          "h1": "Очиқ жуфтлар ва учликлар (naked pair, naked triple)",
+          "summary": "Очиқ жуфт бу битта қатор, устун ёки квадратда айнан бир хил икки номзодга эга икки катак. Бу икки рақам ўша икки катакка тушиши шарт, шунинг учун уларни бирликнинг бошқа барча катакларидан олиб ташлаш мумкин. Очиқ учлик худди шу ғоя, фақат учта катак ва учта рақам билан; ҳар бир катак улардан иккитасини ёки учаласини кўрсатиши мумкин. Bare Sudoku маслаҳати натижада чиққан қўйишни «Жуфт ёки учлик» деб белгилайди.",
+          "when": [
+            "Қайдлар тўлиқ бўлиб, ягоналар ва қулфланган номзодлар тугаганда. Очиқ жуфтлар Қийин бошқотирмаларда жуда кўп учрайди, очиқ учликлар камроқ. Иккаласини ҳам ҳали бешта ёки ундан кўп бўш катаги бор ҳар бир бирликда текширишга арзийди."
+          ],
+          "spot": [
+            "Фақат иккита номзоди бор катакларни қидиринг ва худди шу бирликда айнан ўша икки номзодга эга яна бир катакни топинг. Учликлар учун икки ва уч номзодли бир нечта катаги бор бирликларга қаранг ва улардан учтаси биргаликда фақат учта турли рақамдан фойдаланадими, шуни текширинг. Қайдлар ёзилгач, айнан бир хил номзодларга эга катакларни кўриш осон; ўйиндаги Қайдларни тўлдириш буни бир босишда бажаради."
+          ],
+          "examples": [
+            {
+              "h": "Очиқ жуфт",
+              "steps": [
+                "{unit}даги {cellA} ва {cellB} катакларида айнан бир хил икки номзод бор: {d1} ва {d2}.",
+                "Улардан бири {d1}, иккинчиси {d2} бўлиши керак. Қайси бири эканини билмаймиз, лекин иккала рақамни ҳам шу икки катак банд қилган.",
+                "Демак, {unit}даги бошқа ҳеч бир катакда {d1} ёки {d2} бўла олмайди. Олиб ташланг: {elim}."
+              ]
+            },
+            {
+              "h": "Очиқ учлик",
+              "steps": [
+                "{unit}даги учта катак барча номзодларини бир хил учта рақамдан, {digits}, олади: {cells}.",
+                "Учта рақам бу учта катакни қандайдир тартибда тўлдириши шарт. Катак учала номзодни ҳам кўрсатиши шарт эмас; муҳими, учта катакнинг ҳеч бирида тўпламдан ташқари номзод йўқлиги.",
+                "{digits} рақамларини {unit}даги бошқа барча катаклардан олиб ташланг: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Икки номзоди умумий, лекин учинчи номзоди ҳам бор икки катакни олиш. Очиқ жуфт учун ҳар бир катакда айнан ўша икки номзод бўлиши ва бошқа ҳеч нарса бўлмаслиги керак.",
+            "Рақамларни жуфтнинг ўз катакларидан олиб ташлаш. Жуфт ўз номзодларини сақлайди; олиб ташлашлар бирликнинг бошқа катакларига тегишли.",
+            "Учликнинг ҳар бир катаги учала рақамни кўрсатишини талаб қилиш. Ҳеч бир катакда тўпламдан ташқари номзод бўлмаса, учтадан иккитаси бор катак ҳам яроқли."
+          ],
+          "faq": [
+            [
+              "Судокуда очиқ жуфт (naked pair) нима?",
+              "Битта бирликдаги иккаласида ҳам айнан бир хил икки номзод бор икки катак. Бу икки рақам ўша икки катакка қулфланган, шунинг учун уларни бирликнинг қолган қисмидан олиб ташлаш мумкин."
+            ],
+            [
+              "Очиқ учлик (naked triple) нима?",
+              "Битта бирликдаги номзодлари биргаликда фақат учта рақамдан иборат учта катак. Ҳар бир катакда улардан иккитаси ёки учаласи бўлиши мумкин. Учта рақам учта катакни тўлдиради, шунинг учун уларни бирликнинг бошқа катакларидан олиб ташлаш мумкин."
+            ],
+            [
+              "Очиқ жуфт рақам қўядими?",
+              "Ўзи қўймайди. У номзодларни олиб ташлайди ва олиб ташлаш одатда ягона номзод ёки яширин ягона қолдиради. Bare Sudoku'даги маслаҳат ўша ягонани кўрсатади ва уни мумкин қилган усулнинг номини айтади."
+            ],
+            [
+              "Очиқ жуфт бир вақтнинг ўзида ҳам квадратда, ҳам қаторда бўлиши мумкинми?",
+              "Ҳа. Агар икки катакнинг қатори ҳам, квадрати ҳам умумий бўлса, жуфт иккала бирликда ҳам номзодларни олиб ташлайди. Bare Sudoku уларни бирликма-бирлик кўриб чиқади."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Яширин жуфтлар ва учликлар",
+          "title": "Судокуда яширин жуфтлар ва учликлар: қандай топилади",
+          "description": "Яширин жуфт (hidden pair): бирликда фақат бир хил икки катакка туша оладиган икки рақам, шунинг учун у катакларнинг бошқа номзодлари олиб ташланади.",
+          "h1": "Яширин жуфтлар ва учликлар (hidden pair, hidden triple)",
+          "summary": "Яширин жуфт бу битта қатор, устун ёки квадрат ичида фақат бир хил икки катакда номзод бўлган ва бошқа ҳеч қаерда бўлмаган икки рақам. Ўша икки катакда ўша икки рақам бўлиши шарт, шунинг учун улардаги бошқа барча номзодларни олиб ташлаш мумкин. Яширин учлик ҳам худди шундай ишлайди: учта катакка чекланган учта рақам. Олиб ташлашдан кейин катакларда очиқ жуфт ёки учлик кўринади. Bare Sudoku маслаҳати натижада чиққан қўйишни «Жуфт ёки учлик» деб белгилайди.",
+          "when": [
+            "Бирликда кўп номзодли катаклар бўлиб, ягоналар тугаганда. Яширин жуфтлар гавжум катаклар ичида яширинади, шунинг учун уларни айнан очиқ жуфтлар кўринмайдиган жойда қидиришга арзийди. Яширин учликлар кам учрайди; Bare Sudoku уларни ҳам текширади, лекин Қийин бошқотирмаларнинг аксарияти уларсиз ечилади."
+          ],
+          "spot": [
+            "Катак бўйича эмас, рақам бўйича ишланг. Бирликда етишмаётган ҳар бир рақам қайси катакларга тушиши мумкинлигини қайд этинг. Агар икки рақамнинг ҳар бирида фақат иккита мумкин бўлган катак бўлса ва улар бир хил икки катак бўлса, яширин жуфтни топдингиз. Ўйинда рақам тугмасига тегсангиз, унинг номзодлари ажратиб кўрсатилади; агар икки рақам бирликнинг бир хил икки катагини ёритса ва унда бошқа ҳеч нарсани ёритмаса, нақш шу."
+          ],
+          "examples": [
+            {
+              "h": "Яширин жуфт",
+              "steps": [
+                "{unit}да {d1} ва {d2} рақамларининг ҳар бирида фақат иккита мумкин бўлган катак бор ва улар бир хил икки катак: {cells}.",
+                "Бу икки катакда {d1} ва {d2} бўлиши шарт, шунинг учун уларнинг бошқа номзодлари имконсиз.",
+                "Олиб ташланг: {elim}. Энди икки катак очиқ жуфтни кўрсатади, бу яна йўл очиши мумкин."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Жуфтнинг икки рақамини жуфт катакларидан олиб ташлаш. Ўша катакларнинг бошқа номзодлари олиб ташланади; жуфт рақамлари қолади.",
+            "Бирликда учинчи мумкин бўлган катаги бор рақамни қабул қилиш. Иккала рақам ҳам айнан ўша икки катак билан чекланган бўлиши керак.",
+            "Фақат квадратларга қараш. Яширин жуфтлар қатор ва устунларда ҳам худди шунчалик тез-тез учрайди."
+          ],
+          "faq": [
+            [
+              "Судокуда яширин жуфт (hidden pair) нима?",
+              "Бирликда фақат бир хил икки катакка тушиши мумкин бўлган икки рақам. Ўша катаклар шу рақамларни олиши шарт, шунинг учун уларнинг бошқа номзодлари олиб ташланади."
+            ],
+            [
+              "Яширин жуфт очиқ жуфтдан нимаси билан фарқ қилади?",
+              "Очиқ жуфт кўриниб туради: фақат бир хил икки номзодни кўрсатадиган икки катак. Яширин жуфтни икки катакдаги ортиқча номзодлар ёпиб туради. Ўша ортиқчаларни олиб ташлаш яширин жуфтни очиқ жуфтга айлантиради."
+            ],
+            [
+              "Яширин учлик (hidden triple) нима?",
+              "Бирликнинг учта катагига чекланган учта рақам. Ҳар бир рақам учала катакда ҳам бўлиши шарт эмас; муҳими, учта рақамнинг ҳеч бирида ўша катаклардан ташқари номзод йўқлиги."
+            ],
+            [
+              "Маслаҳат яширин ва очиқ жуфтларни фарқлайдими?",
+              "Йўқ. Bare Sudoku иккаласини ҳам топади ва натижада чиққан қўйишни «Жуфт ёки учлик» деб белгилайди. Бу саҳифалар уларни алоҳида кўриб чиқади, чунки улар турли йўллар билан топилади."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Судокуда X-Wing: усул қандай ишлайди",
+          "description": "X-Wing: икки қаторда айнан иккитадан номзод катаги бор ва бир хил икки устунда текисланган рақам ўша устунларнинг қолган қисмидан олиб ташланади. Мисол.",
+          "h1": "X-Wing",
+          "summary": "X-Wing битта рақам ва тўртбурчак бурчакларидаги тўртта катакдан иборат нақш. Агар рақамнинг икки қаторнинг ҳар бирида айнан иккита номзод катаги бўлса ва бу катаклар бир хил икки устунда ётса, рақам тўртбурчакнинг қарама-қарши икки бурчагини эгаллаши шарт. Шунинг учун уни ўша икки устуннинг бошқа барча катакларидан олиб ташлаш мумкин. Қатор ва устунлар ўрни алмаштирилганда ҳам худди шундай ишлайди. Бу Bare Sudoku'даги биринчи Эксперт усули.",
+          "when": [
+            "Ягоналар, қулфланган номзодлар ҳамда жуфтлар ва учликлар тугаганда. X-Wing энг кўп учрайдиган Эксперт нақши ва кўпинча рақамнинг номзодлари кам қолганда, одатда унинг тўрт-олтита нусхаси қўйилган пайтда пайдо бўлади. Кўриб чиқилаётган рақам учун тўлиқ қайдлар керак."
+          ],
+          "spot": [
+            "Рақамни танланг ва унда айнан иккита номзод катаги бор қаторларни қидиринг. Агар шундай икки қатор бир хил икки устунга тўғри келса, ўша устунларда шу рақамнинг бошқа номзодларини текширинг: олиб ташланадиганлар шулар. Сўнг асос сифатида устунларни олиб такрорланг. Ўйинда рақам тугмасига тегинг: унинг барча номзодлари ажратиб кўрсатилади ва тўртта ажратилган қайддан иборат тўртбурчакни кўриш осон."
+          ],
+          "examples": [
+            {
+              "h": "Мисол",
+              "steps": [
+                "{d} рақамининг {r1}-қаторда айнан иккита ва {r2}-қаторда ҳам айнан иккита номзод катаги бор, ва улар бир хил икки устунда, {c1}- ва {c2}-устунларда текисланган: {cells}.",
+                "{r1}-қатор ўз {d} рақамини {c1}- ёки {c2}-устунга қўяди, {r2}-қатор эса иккинчисига. Қандай бўлмасин, {c1}- ва {c2}-устунларнинг ҳар бири шу икки қатордан биттадан {d} олади.",
+                "Шунинг учун {d} рақами {c1}- ва {c2}-устунларнинг бошқа ҳеч бир жойида бўла олмайди. {d} рақамини қуйидаги катаклардан олиб ташланг: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Рақам учун учта номзод катаги бор қатордан фойдаланиш. Ҳар бир асосий қаторда айнан иккита бўлиши ва иккаласи ҳам умумий икки устунда жойлашиши керак.",
+            "Рақамни устунлардан эмас, қаторлардан олиб ташлаш. Асос қаторлар бўлса, олиб ташлашлар устунларда бўлади ва аксинча.",
+            "Алмаштирилган вариантини унутиш. Устунларга қурилган X-Wing қаторлардан олиб ташлайди."
+          ],
+          "faq": [
+            [
+              "Судокуда X-Wing нима?",
+              "Икки қаторнинг ҳар бирида, бир хил икки устунда, айнан иккитадан номзод катаги бор рақам. Рақам ўша тўртбурчакнинг қарама-қарши икки бурчагини эгаллайди, шунинг учун у икки устуннинг қолган қисмидан олиб ташланади. Қатор ва устунлар ўрнини алмаштириш мумкин."
+            ],
+            [
+              "X-Wing нега ишлайди?",
+              "Икки қаторнинг ҳар бири рақамни икки устундан бирига қўйиши шарт, икки қатор эса битта устундан фойдалана олмайди. Шунинг учун икки устуннинг ҳар бири рақамнинг ўз нусхасини шу қаторлардан олади ва ўша устунлардаги бошқа барча номзодлар имконсиз."
+            ],
+            [
+              "X-Wing балиқми?",
+              "Ҳа. X-Wing икки ўлчамли балиқ; Swordfish уч ўлчамли балиқ. Bare Sudoku иккаласини ҳам топади."
+            ],
+            [
+              "Қайси даражада X-Wing учрайди?",
+              "Эксперт. X-Wing, Y-Wing, Swordfish ёки XYZ-Wing талаб қиладиган бошқотирма Эксперт деб баҳоланади."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Судокуда Y-Wing: усул қандай ишлайди",
+          "description": "Y-Wing (XY-Wing): икки номзодли таянч ва улардан бирини баҳам кўрадиган икки қанот рақамни иккала қанотни кўрадиган ҳар бир катакдан чиқаради. Мисол.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, уни XY-Wing деб ҳам аташади, ҳар бирида иккитадан номзод бор учта катакдан фойдаланади. Таянчнинг номзодлари X ва Y. Битта қанот таянчни кўради ва унда X ва Z бор; иккинчи қанот таянчни кўради ва унда Y ва Z бор. Таянч нима бўлишидан қатъи назар, қанотлардан бири Z бўлиши шарт, шунинг учун Z рақамини иккала қанотни кўрадиган ҳар бир катакдан олиб ташлаш мумкин. Bare Sudoku'да бу Эксперт усули.",
+          "when": [
+            "Бошқотирмада айнан иккита номзоди бор бир нечта катак бўлиб, ҳеч қандай балиқ топилмаганда. Y-Wing Эксперт бошқотирмаларида кўп учрайди ва икки номзодли катакларни кузатиш орқали топилади: уларнинг ҳар бири таянч ёки қанот бўлиши мумкин."
+          ],
+          "spot": [
+            "Айнан иккита номзоди бор катакларни рўйхатга олинг. Уларнинг ҳар бирини X ва Y номзодли таянч деб ҳисобланг ва унинг қўшнилари орасидан X ва бошқа бир Z рақами бор катакни ҳамда Y ва ўша Z бор катакни қидиринг. Бу иккиси қанотлар. Сўнг иккала қанотни кўрадиган ва Z бор катакларни топинг. Эътибор беринг, қанотлар бир-бирини кўриши шарт эмас."
+          ],
+          "examples": [
+            {
+              "h": "Мисол",
+              "steps": [
+                "{pivot} таянчининг номзодлари {x} ва {y}. У {x} ва {z} бор {wingA} катагини ҳамда {y} ва {z} бор {wingB} катагини кўради.",
+                "Агар {pivot} катаги {x} бўлса, {wingA} катаги {x} номзодини йўқотади ва {z} бўлади. Агар {pivot} катаги {y} бўлса, {wingB} катаги {z} бўлади. Ҳар қандай ҳолатда икки қанотдан бири {z}.",
+                "Иккала қанотни кўрадиган катак ҳеч қачон {z} бўла олмайди. {z} рақамини қуйидаги катаклардан олиб ташланг: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Таянчни иккаласи ҳам кўрмайдиган қанотларни танлаш. Ҳар бир қанот таянч билан умумий қатор, устун ёки квадратга эга бўлиши керак.",
+            "Z рақамини фақат битта қанотни кўрадиган катаклардан олиб ташлаш. Олиб ташланадиган катак иккала қанотни кўриши шарт.",
+            "Z рақамини таянчдан олиб ташлаш. Y-Wing'да таянчда Z бўлмайди; агар бўлса, бу бошқа қоидаларга эга XYZ-Wing нақши."
+          ],
+          "faq": [
+            [
+              "Судокуда Y-Wing нима?",
+              "Икки номзодли учта катак: X ва Y бор таянч, таянчни кўрадиган X ва Z бор қанот ҳамда таянчни кўрадиган Y ва Z бор қанот. Битта қанот ҳар доим Z бўлади, шунинг учун Z иккала қанотни кўрадиган катаклардан олиб ташланади."
+            ],
+            [
+              "Y-Wing ва XY-Wing бир нарсами?",
+              "Ҳа. Икки ном бир хил нақшни тасвирлайди. Bare Sudoku уни Y-Wing деб атайди."
+            ],
+            [
+              "Нега битта қанот Z бўлиши шарт?",
+              "Таянч X бўлса, биринчи қанот X номзодини йўқотади ва Z бўлади. Таянч Y бўлса, иккинчи қанот Z бўлади. Таянч шу иккисидан бири, демак битта қанот Z."
+            ],
+            [
+              "Y-Wing нечта катакдан номзод олиб ташлайди?",
+              "Одатда битта ёки иккита катакдан: фақат иккала қанотни кўрадиган ва ҳали Z бор катаклардан. Бу ягона ҳосил қилиш учун етарли."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Судокуда Swordfish: усул қандай ишлайди",
+          "description": "Swordfish: учта қаторда учта устунга чекланган рақам ўша устунларнинг қолган қисмидан олиб ташланади. Уч ўлчамли балиқ, ҳақиқий мисол билан.",
+          "h1": "Swordfish",
+          "summary": "Swordfish бу учта қатор ва учта устундан иборат X-Wing. Агар рақамнинг учта қаторнинг ҳар бирида кўпи билан учта номзод катаги бўлса ва бу катакларнинг ҳаммаси бир хил учта устунга тушса, учта қатор ўша устунлардаги рақамни тўлиқ банд қилади ва рақамни учта устуннинг бошқа барча катакларидан олиб ташлаш мумкин. Қатор ва устунлар ўрнини алмаштириш мумкин. Bare Sudoku Эксперт бошқотирмаларида Swordfish'ни Y-Wing'дан кейин текширади.",
+          "when": [
+            "X-Wing ва Y-Wing ҳеч нарса топмаганда. Swordfish X-Wing'га қараганда камроқ учрайди ва номзодлари учта чизиққа сийрак тақсимланган рақамни талаб қилади. Бунинг учун ўша рақам бўйича тўлиқ ва аниқ қайдлар керак."
+          ],
+          "spot": [
+            "Рақамни танланг ва унда шу рақам учун икки ёки учта номзод катаги бор қаторларни қидиринг. Агар шундай учта қатор жами фақат учта устунни қамраб олса, ўша устунларда рақамнинг бошқа номзодларини текширинг. Ҳар бир қаторда ҳар бир устунда номзод бўлиши шарт эмас: Swordfish олти, етти, саккиз ёки тўққизта катакдан иборат бўлиши мумкин. Ўйинда рақамни ўз тугмаси билан ажратиб кўрсатинг ва номзодлари учта устунда текисланган учта қаторни қидиринг."
+          ],
+          "examples": [
+            {
+              "h": "Мисол",
+              "steps": [
+                "{d} рақамининг {rows}-қаторларнинг ҳар бирида кўпи билан учта номзод катаги бор ва бу катакларнинг ҳаммаси {cols}-устунларга тушади: {cells}.",
+                "Учта қаторнинг ҳар бири ўз {d} рақамини учта устундан бирига қўйиши шарт, икки қатор эса битта устундан фойдалана олмайди. Шунинг учун учта устун ўз {d} рақамини шу учта қатордан олади.",
+                "{cols}-устунлардаги ҳар қандай бошқа {d} номзоди имконсиз. {d} рақамини қуйидаги катаклардан олиб ташланг: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тўққизта катакнинг ҳаммасини талаб қилиш. Баъзи қаторларида иккита номзод бор Swordfish ҳам, учта қатор фақат учта устунни қамраб олса, яроқли.",
+            "Тўртта номзод катаги бор қаторни қўшиш. Ҳар бир асосий қаторда кўпи билан учта бўлиши керак, ҳаммаси учта устун ичида.",
+            "Асосий қаторлардан олиб ташлаш. Асос қаторлар бўлса, олиб ташлашлар учта устунда, асосий қаторлардан ташқарида бўлади."
+          ],
+          "faq": [
+            [
+              "Судокуда Swordfish нима?",
+              "Учта қатордаги номзодлари учта устунга чекланган рақам. Учта қатор рақамни ўша учта устунга биттадан қўйиши шарт, шунинг учун рақам ўша устунларнинг бошқа катакларидан олиб ташланади."
+            ],
+            [
+              "Swordfish X-Wing'дан нимаси билан фарқ қилади?",
+              "Фақат ўлчами билан: X-Wing икки қатор ва икки устундан, Swordfish учта қатор ва учта устундан фойдаланади. Мулоҳаза бир хил."
+            ],
+            [
+              "Swordfish учун айнан тўққизта катак керакми?",
+              "Йўқ. Ҳар бир қаторда икки ёки учта номзод бўлиши мумкин; нақш фақат учта қатор биргаликда учтадан ортиқ устундан фойдаланмаслигини талаб қилади."
+            ],
+            [
+              "Тўрт ўлчамли балиқ борми?",
+              "Ҳа, Jellyfish. Bare Sudoku ундан фойдаланмайди, чунки унинг бошқотирмаларига у ҳеч қачон керак бўлмайди."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Судокуда XYZ-Wing: усул қандай ишлайди",
+          "description": "XYZ-Wing: уч номзодли таянч ва улардан бирини баҳам кўрадиган икки қанот ўша рақамни учаласини кўрадиган ҳар бир катакдан чиқаради. Ҳақиқий мисол.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing бу таянчида учта номзод бор Y-Wing. Таянчда X, Y ва Z бор; битта қанот таянчни кўради ва унда X ва Z бор, иккинчиси таянчни кўради ва унда Y ва Z бор. Учта катакдан бири Z бўлиши шарт, шунинг учун Z рақамини учаласини кўрадиган ҳар бир катакдан олиб ташлаш мумкин. Таянчнинг ўзи Z бўлиши мумкинлиги сабабли, олиб ташланадиган катак иккала қанот билан бирга таянчни ҳам кўриши керак, бу эса уни катакларнинг умумий квадрати ёки чизиғи билан чеклайди. Бу Bare Sudoku фойдаланадиган энг қийин усул.",
+          "when": [
+            "Фақат бошқа ҳамма нарса натижа бермаганда. XYZ-Wing Bare Sudoku'даги энг кам учрайдиган нақш ва фақат Эксперт бошқотирмаларида пайдо бўлади. Уч номзодли катак ўзининг икки рақами бор икки номзодли катак билан битта квадратда турса, уни қидиринг."
+          ],
+          "spot": [
+            "Айнан учта номзоди бор катаклардан бошланг; уларнинг ҳар бири таянч бўлиши мумкин. Унинг қўшнилари орасидан ҳар бирида иккитадан номзод бор, иккаласи ҳам таянчнинг учта номзодидан олинган ва айнан битта умумий Z рақамига эга икки катакни қидиринг. Сўнг таянчни ҳам, иккала қанотни ҳам кўрадиган ва Z бор катакларни топинг. Амалда битта қанот таянчнинг квадратида, иккинчиси унинг қатори ёки устунида бўлади, олиб ташланадиган катаклар эса ўша квадратнинг ўша қатор ёки устундаги қолган катаклари."
+          ],
+          "examples": [
+            {
+              "h": "Мисол",
+              "steps": [
+                "{pivot} таянчининг учта номзоди бор: {x}, {y} ва {z}. У {x} ва {z} бор {wingA} катагини ҳамда {y} ва {z} бор {wingB} катагини кўради.",
+                "{pivot} катаги {z} бўлса, масала ҳал. {x} бўлса, {wingA} катаги {z} бўлиши шарт. {y} бўлса, {wingB} катаги {z} бўлиши шарт. Ҳар қандай ҳолатда учта катакдан бири {z}.",
+                "Учаласини кўрадиган катак {z} бўла олмайди. {z} рақамини қуйидаги катаклардан олиб ташланг: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Фақат икки қанотни кўрадиган катаклардан олиб ташлаш. Y-Wing'дан фарқли равишда бу ерда таянч Z бўлиши мумкин, шунинг учун катак таянчни ҳам кўриши керак.",
+            "Номзодларининг иккаласи ҳам таянчнинг учта номзоди ичида бўлмаган қанотлардан фойдаланиш.",
+            "Уни Y-Wing билан адаштириш: фарқ таянчдаги учинчи номзодда, ва у қайси катакларни тозалаш мумкинлигини ўзгартиради."
+          ],
+          "faq": [
+            [
+              "Судокуда XYZ-Wing нима?",
+              "X, Y ва Z номзодли таянч ва икки қанот: бирида X ва Z, иккинчисида Y ва Z, иккаласи ҳам таянчни кўради. Учта катакдан бири Z, шунинг учун Z учаласини кўрадиган катаклардан олиб ташланади."
+            ],
+            [
+              "XYZ-Wing Y-Wing'дан нимаси билан фарқ қилади?",
+              "Таянчда иккита эмас, учта номзод бор, улардан бири Z. Бу таянчни Z учун мумкин бўлган жойга айлантиради, шунинг учун фақат таянчни ҳам, иккала қанотни ҳам кўрадиган катаклар Z рақамидан маҳрум бўлиши мумкин."
+            ],
+            [
+              "XYZ-Wing қанчалик тез-тез учрайди?",
+              "Кам. Bare Sudoku'да уни фақат Эксперт бошқотирмалари талаб қилиши мумкин, уларнинг аксариятига эса у керак эмас. Bare Sudoku уни энг охирида, X-Wing, Y-Wing ва Swordfish'дан кейин текширади."
+            ],
+            [
+              "WXYZ-Wing борми?",
+              "Ҳа, таянчида тўртта номзод бўлади, лекин Bare Sudoku ундан фойдаланмайди. Ўйиндаги ҳар бир бошқотирмани шу қўлланмадаги тўққизта усул билан охирига етказиш мумкин."
+            ]
+          ]
+        }
+      }
+    },
+    "uz-Arab": {
+      "learnHeading": "سودوکونی اۉرگنینگ",
+      "learnText": "سودوکونی اېندی باشله‌یاپسیزمی یاکی قییین جومباقده تۉختب قالدینگیزمی؟ ایککی قۉللنمه قاعده‌لرنی و مصلحتلر فایدلنه‌دیگن بارچه یېچیش اوصوللرینی حقیقی مثاللر بیلن توشونتیره‌دی.",
+      "howToLink": "سودوکو قندی اۉینله‌دی",
+      "techniquesLink": "سودوکو یېچیش اوصوللری",
+      "labels": {
+        "howTo": "قندی اۉینله‌دی",
+        "techniques": "اوصوللر",
+        "play": "سودوکو اۉیناش",
+        "prev": "آلدینگی اوصول",
+        "next": "کېینگی اوصول",
+        "all": "بارچه اوصوللر",
+        "example": "مثال",
+        "steps": "قدمه-قدم",
+        "when": "قچان قۉللنه‌دی",
+        "spot": "قندی تاپیله‌دی",
+        "mistakes": "کۉپ اوچره‌یدیگن خطالر",
+        "inGame": "Bare Sudoku ده",
+        "level": "کېرکلی درجه: {level}",
+        "hint": "اۉیینده مصلحت شوندی دېیدی: {text}",
+        "legend": "قلین رقملر بېریلگن، کۉک رقملر یېچیش جریانیده قۉییلگن، کیچیک رقملر نامزدلر. اجرتیلگن کتکلر نقشنی حاصل قیله‌دی، اوستیدن چیزیلگن نامزدلر آلیب تشلنه‌دی، ایلنه ایچیده‌گی نامزد اېسه قۉییله‌دیگن رقم.",
+        "notation": "کتکلر r3c7 کۉرینیشیده یازیله‌دی: 3-قطار، 7-ستون. قطارلر یوقاریدن، ستونلر چپدن سنله‌دی، مربعلر اېسه چپ یوقاری بورچکدن باشلب قطارمه-قطار 1 دن 9 گچه رقملنه‌دی.",
+        "row": "{n}-قطار",
+        "column": "{n}-ستون",
+        "box": "{n}-مربع",
+        "elimItem": "{cell} کتگیدن {d}",
+        "regions": "جومباق باشیده‌گی 5-قطار، 5-ستون و 5-مربع",
+        "firstMove": "یگانه نامزد: {cell} کتگی فقط {d} بۉلیشی ممکن",
+        "breadcrumb": "صفحه یۉلی"
+      },
+      "howTo": {
+        "title": "سودوکو قندی اۉینله‌دی: قاعده‌لر، میدان و ایلک یوریشلر",
+        "description": "سودوکو قندی اۉینله‌دی: قاعده‌لر، قطار، ستون و مربعلر، نېگه هر بیر جومباقنینگ فقط بیته یېچیمی بار، یازوولردن قندی فایدلنیش و ایلک یوریشلر.",
+        "h1": "سودوکو قندی اۉینله‌دی",
+        "summary": "سودوکو 9×9 جدولده اۉینله‌دیگن منطقی جومباق. هر بیر بۉش کتکنی 1 دن 9 گچه رقم بیلن تۉلدیرینگ: هر بیر قطار، هر بیر ستون و هر بیر 3×3 مربعده هر بیر رقم عینن بیر مرته بۉلیشی کېرک. بعضی رقملر باشیده بېریله‌دی؛ قالگنینی هر سفر بیته انیق کتکنی تاپیب، بیرمه-بیر چیقره‌سیز و هېچ قچان تخمین قیلیشینگیز شرط اېمس. بو قۉللنمه میداننی، قاعده‌لرنی، یگانه یېچیم قاعده‌سینی، یازوولرنی و ایلک یوریشلر اوچون ساده اوصولنی توشونتیره‌دی. همه‌سینی بېپول و منطقنی توشونتیره‌دیگن مصلحتلری بار [Bare Sudoku](play) اۉیینیده مشق قیلیشینگیز ممکن.",
+        "sections": [
+          {
+            "h": "سودوکو قاعده‌لری قندی؟",
+            "p": [
+              "قاعده اتیگی اوچته، و اولر بیته قاعده‌نینگ اوچ تاماندن کۉرینیشی: هر بیر قطارده 1 دن 9 گچه رقملر بۉلیشی، هر بیر ستونده 1 دن 9 گچه رقملر بۉلیشی و هر بیر 3×3 مربعده 1 دن 9 گچه رقملر بۉلیشی کېرک. شونینگ اوچون بیته رقم بیر قطارده، ستونده یاکی مربعده هېچ قچان ایککی مرته اوچره‌میدی.",
+              "قلین حرف بیلن بېریلگن رقملر اۉزگرمیدی. سیزنینگ وظیفه‌نگیز بۉش کتکلرنی تۉلدیریش. بو یېرده حساب‌کتاب هم، ترتیب هم یۉق: رقملر شونچکی تۉققیزته تورلی رمز. حرفلر یاکی شکللر بیلن اۉینسنگیز هم، هېچ نرسه اۉزگرمس اېدی."
+            ]
+          },
+          {
+            "h": "میدان قندی توزیلگن؟",
+            "p": [
+              "میدانده 9 قطار و 9 ستونگه جایلشگن 81 ته کتک بار. قلین چیزیقلر اونی تۉققیزته 3×3 مربعگه اجرته‌دی. هر بیر کتک عینن بیته قطارگه، بیته ستونگه و بیته مربعگه تېگیشلی، بو اوچ گروه اونینگ بیرلیکلری دېییله‌دی. کتک بیلن عمومی بیرلیککه اېگه باشقه 20 ته کتک اونینگ قۉشنیلری دېییله‌دی؛ کتککه قۉییلگن رقم شو رقمنی بارچه 20 ته قۉشنیده استثنا قیله‌دی.",
+              "کتکلر r3c7 کۉرینیشیده یازیله‌دی: 3-قطار، 7-ستون. قطارلر یوقاریدن، ستونلر چپدن سنله‌دی، مربعلر اېسه چپ یوقاری بورچکدن باشلب قطارمه-قطار 1 دن 9 گچه رقملنه‌دی. بو بېلگیلش اوصولی هر بیر اوصول قۉللنمه‌سیده ایشلتیله‌دی، شونینگ اوچون اونی اۉرگنیب آلیش فایده‌لی: r5c5 میداننینگ مرکزی."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "نېگه هر بیر سودوکونینگ عینن بیته یېچیمی بار؟",
+            "p": [
+              "تۉغری توزیلگن سودوکونینگ بیته یېچیمی بۉله‌دی، منطقنینگ ایشلشی هم شونگه باغلیق. بیرار رقم بیرلیکده باشقه هېچ قیېرگه توشه آلمسلیگینی کۉرسته آلسنگیز، او قالگن کتککه توشیشی شرط، چونکی یېچیم موجود و او یگانه. اگر جومباقنینگ ایککیته یېچیمی بۉلسه، هېچ قندی ملاحظه اولرنی اجرته آلمس و قیسیدیر پیتده تخمین قیلیشگه مجبور بۉلر اېدینگیز.",
+              "Bare Sudoku هر بیر جومباقنی قوریلمه‌نگیزده یرته‌دی و اونینگ عینن بیته یېچیمی بارلیگینی همده منطقی یېچووچیسی اونی تنلنگن درجه اوصوللری بیلن آخیریگه یېتکزه آلیشینی تېکشیره‌دی. شونینگ اوچون تۉختب قالسنگیز، هر دایم تاپیله‌دیگن کېینگی قدم بار و مصلحت اونی کۉرسته‌دی."
+            ]
+          },
+          {
+            "h": "سودوکونی قندی باشلش کېرک؟",
+            "p": [
+              "اېنگ چېکلنگن جایدن باشلنگ. بو ترتیب هر قندی درجه‌ده ایش بېره‌دی:"
+            ],
+            "list": [
+              "کۉپ مرته، مثلاً آلتی-یېتتی مرته اوچره‌یدیگن رقمنی تنلنگ و اونی هلی اۉز ایچیگه آلمگن مربعلرنی تاپینگ. کۉپینچه مربعده اونگه فقط بیته کتک قاله‌دی: بو [یشیرین یگانه](hidden-single).",
+              "اطرافی تۉله کتکلرگه قرنگ. قطاری، ستونی و مربعی بیرگلیکده سککیزته تورلی رقمنی اۉز ایچیگه آلگن کتکده فقط بیته نامزد قاله‌دی: بو [یگانه نامزد](naked-single). دېیرلی تۉلگن قطار و مربعلرده‌گی کتکلر قیدیریش اوچون اېنگ یخشی جای.",
+              "قۉیگن هر بیر رقمینگیز 20 ته قۉشنیدن بیته نامزدنی آلیب تشله‌یدی، شونینگ اوچون اۉشه قۉشنیلرنی درحال تېکشیرینگ. یگانه‌لر کۉپینچه کېتمه-کېت چیقه‌دی.",
+              "آسان قۉییشلر توگه‌گچ، یازوولرنی یازینگ: هر بیر بۉش کتکنینگ نامزدلرینی. سۉنگ مربع ایچیده بیته چیزیققه چېکلنگن رقمنی ([قولفلنگن نامزدلر](locked-candidates)) یاکی بیر خیل ایککی نامزدگه اېگه ایککی کتکنی ([آچیق جوفت](naked-pairs)) قیدیرینگ.",
+              "هر بیر آلیب تشلشدن کېین یگانه‌لرگه قیتینگ. حتی ماهر جومباقلری هم اساسن یگانه‌لر بیلن یېچیله‌دی؛ مرکّب اوصول فقط کېینگیسیگه یۉل آچه‌دی."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "یازوولر نیمه و اولردن قچان فایدلنیش کېرک؟",
+            "p": [
+              "یازوولر، اولرنی قلم بېلگیلری یاکی نامزدلر دېب هم اتشه‌دی، بۉش کتککه او یېرده قیسی رقملر هلی ممکنلیگینی بېلگیلب قۉییش اوچون یازیله‌دیگن کیچیک رقملر. آسان جومباقلرده اولر کمدن-کم کېرک بۉله‌دی؛ قییین درجه‌دن باشلب اولر جوده مهم، چونکی جوفتلر، X-Wing و Y-Wing کبی اوصوللر قۉییلگن رقملر بیلن اېمس، نامزدلر بیلن ایشله‌یدی.",
+              "یازوولرنی انیق ساقلنگ: رقم قۉیگنینگیزده، اونی بارچه 20 ته قۉشنینینگ یازوولریدن اۉچیرینگ. Bare Sudoku ده بو اوتوماتیک طرزده بۉله‌دی، یازوولرنی تۉلدیریش اېسه بیر باسیشده هر بیر بۉش کتککه بارچه نامزدلرنی یازه‌دی، شونینگ اوچون تۉلیق و تۉغری نامزدلر تۉپلمیدن باشلشینگیز ممکن. یازوو تخمین اېمس، حقیقت: او بو رقمنی حاضرچه هېچ نرسه استثنا قیلمگنینی بیلدیره‌دی."
+            ]
+          },
+          {
+            "h": "تۉختب قالسنگیز نیمه قیلیش کېرک؟",
+            "p": [
+              "اوّل اساسلرنی قیته تېکشیرینگ: دېیرلی تۉلگن هر بیر قطار، ستون و مربع یگانه‌لر منبعی. سۉنگ یازوولر تۉلیق اېکنیگه ایشانچ حاصل قیلینگ، چونکی یېتیشمه‌یاتگن نامزد نقشلرنی یشیره‌دی، اېسکیرگن نامزد اېسه ساخته نقشلر یرته‌دی. کېین [اوصوللرنی](techniques) قییینلیک ترتیبیده سینب کۉرینگ: قولفلنگن نامزدلر، جوفتلر و اوچلیکلر، X-Wing، Y-Wing، Swordfish و XYZ-Wing. اولرنینگ هر بیرینینگ حقیقی مثاللی علاحده صفحه‌سی بار.",
+              "هېچ نرسه یاردم بېرمسه، مصلحت آلینگ. Bare Sudoku ده مصلحت اوّل قۉییلگن رقملر آره‌سیده خطاسی بار-یۉقلیگینی تېکشیره‌دی، سۉنگ منطق بیلن تۉلدیریش ممکن بۉلگن کېینگی کتکنی تاپه‌دی و اوصولنینگ آتینی ایته‌دی، شونینگ اوچون اوندن فایدلنگنده هم نیمه‌نیدیر اۉرگنه‌سیز. رقمنی قۉییش اوچون مصلحتنی ینه باسینگ."
+            ]
+          },
+          {
+            "h": "Bare Sudoku ده رقملر قندی کیریتیله‌دی؟",
+            "p": [
+              "کتککه، سۉنگ رقمگه تېگینگ. یاکی اوّل رقمگه تېگینگ: او قولفلنه‌دی و سیز تېگگن هر بیر کتککه یازیله‌دی، بو رقمنینگ آلتینچی، یېتتینچی و سککیزینچی نسخه‌سینی قۉییشنینگ اېنگ تېز یۉلی. قولفنی آچیش اوچون رقمگه ینه تېگینگ. یازوولر تُگمه‌سی قلم بېلگیلریگه اۉتکزه‌دی، اۉچیریش کتکنی تازه‌له‌یدی، قیتریش ایستلگن یوریشنی بېکار قیله‌دی، خطالر اېسه مېنیوده اۉچیرمسنگیز قیزیل رنگ بیلن بېلگیلنه‌دی.",
+              "کلاویاتوراده حرکتلنیش اوچون یۉنلیش تُگمه‌لریدن، رقم کیریتیش اوچون 1 دن 9 گچه تُگمه‌لردن، اۉچیریش اوچون Backspace، یازوولر اوچون N، قیتریش اوچون U، مصلحت اوچون H، یازوولرنی تۉلدیریش اوچون F و مېنیو اوچون Escape تُگمه‌سیدن فایدلنینگ. اۉیین اۉزینی اۉزی ساقله‌یدی، اینترنتسیز ایشله‌یدی، اونده اعلان هم، حساب هم یۉق."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "سودوکوده تخمین قیلیش کېرکمی؟",
+            "تۉغری توزیلگن جومباقده کېرک اېمس. هر بیر Bare Sudoku جومباغینینگ عینن بیته یېچیمی بار و او فقط منطق بیلن، اۉز درجه‌سی اوصوللری دایره‌سیده یېچیلیشی تېکشیریلگن. اگر تخمین قیلیش کېرکدېک توییلسه، یازوولرینگیزده بیته نامزد یېتیشمه‌یاپتی یاکی تاپیلیشینی کوته‌یاتگن اوصول بار."
+          ],
+          [
+            "بیته رقم قطارده، ستونده یاکی مربعده ایککی مرته اوچره‌شی ممکنمی؟",
+            "یۉق. بوتون قاعده شو: تۉققیزته قطار، تۉققیزته ستون و تۉققیزته مربعنینگ هر بیریده 1 دن 9 گچه هر بیر رقم عینن بیر مرته بۉله‌دی. اگر ایککیته بیر خیل رقم بیته بیرلیکده تورگن بۉلسه، اولردن کمیده بیته‌سی نادرست."
+          ],
+          [
+            "آسان، اۉرته، قییین و ماهر آره‌سیده قندی فرق بار؟",
+            "درجه‌نی جومباق طلب قیله‌دیگن اوصوللر بېلگیله‌یدی. آسان و اۉرته فقط یگانه‌لر بیلن یېچیله‌دی، آسان اېسه کمیده 38 ته بېریلگن رقم بیلن باشلنه‌دی. قییین اوچون قولفلنگن نامزدلر یاکی جوفتلر و اوچلیکلر کېرک. ماهر اوچون X-Wing، Y-Wing، Swordfish یاکی XYZ-Wing کېرک."
+          ],
+          [
+            "یازوولرنی بارچه کتکلرگه یازگن معقولمی یاکی فقط بعضیلریگه؟",
+            "قییین و ماهر جومباقلرده همه‌سینی تۉلدیرینگ: جوفتلر، X-Wing و Y-Wing کبی نقشلر فقط بارچه نامزدلر یازیلگنده کۉرینه‌دی. آسان و اۉرته درجه‌ده یازوولر اختیاری، اکثریت اۉیینچیلر شونچکی یگانه‌لرنی قیدیره‌دی."
+          ],
+          [
+            "بیته سودوکو قنچه وقت آله‌دی؟",
+            "آسان جومباق بیر نېچه دقیقه آله‌دی؛ ماهر جومباقلری مرکّب نقشنی قنچه‌لیک تېز پیقشینگیزگه قرب ییگیرمه دقیقه یاکی اوندن هم کۉپراق وقت آلیشی ممکن. Bare Sudoku تایمېرنی کۉرسته‌دی، مېنیو آچیق تورگنده اونی تۉختته‌دی و رېیتینگ جدولینی یوریتمیدی، شونینگ اوچون اۉز سرعتینگیزده اۉینهنگ."
+          ],
+          [
+            "سودوکو اوچون حساب‌کتاب کېرکمی؟",
+            "یۉق. رقملر شونچکی ناملر؛ قۉشیش هم، سنش هم یۉق. ایستلگن تۉققیزته رمز ایش بېرر اېدی، شونینگ اوچون سودوکو رقملی اېمس، منطقی جومباق."
+          ]
+        ]
+      },
+      "index": {
+        "title": "سودوکو یېچیش اوصوللری: مثاللر بیلن توشونتیریش",
+        "description": "یگانه نامزددن Swordfish و XYZ-Wing گچه بۉلگن تۉققیزته سودوکو یېچیش اوصولی Bare Sudoku مصلحتلری ترتیبیده، هر بیری حقیقی مثال بیلن.",
+        "h1": "سودوکو یېچیش اوصوللری",
+        "intro": [
+          "هر قندی سودوکونی کیچیک منطقی اوصوللر تۉپلمی بیلن یېچیش ممکن. بو رۉیختده Bare Sudoku یېچووچیسی و اونینگ مصلحتلری فایدلنه‌دیگن تۉققیزته اوصول یېچووچی اولرنی سینب کۉره‌دیگن ترتیبده کېلتیریلگن: اوّل یگانه‌لر، سۉنگ بیته بیرلیک ایچیده‌گی آلیب تشلشلر، کېین بیر نېچه‌ته قطار و ستوننی قمرب آله‌دیگن نقشلر. هر بیر اوصولنینگ تعریفی، اونی قندی تاپیش، یرتیلگن جومباقدن آلینگن حقیقی مثالی و کۉپ اوچره‌یدیگن خطالری بار علاحده صفحه‌سی موجود.",
+          "جومباقنینگ درجه‌سینی او طلب قیله‌دیگن اېنگ قییین اوصول بېلگیله‌یدی. آسان و اۉرته جومباقلرگه فقط یگانه‌لر کېرک، قییین جومباقلرگه قولفلنگن نامزدلر یاکی جوفتلر و اوچلیکلر کېرک، ماهر جومباقلریگه اېسه کمیده بیته بالیق یاکی قنات کېرک. درجه قندی بۉلمسین، ایشنینگ کته قسمینی یگانه‌لر بجره‌دی؛ مرکّب اوصول بیر-ایککیته نامزدنی آلیب تشله‌یدی، کېین ینه یگانه‌لر دوام اېتتیره‌دی."
+        ],
+        "faq": [
+          [
+            "سودوکو اوصوللرینی قندی ترتیبده سیناش کېرک؟",
+            "اېنگ آسانیدن باشلنگ: یگانه نامزد، یشیرین یگانه، قولفلنگن نامزدلر، آچیق جوفتلر و اوچلیکلر، یشیرین جوفتلر و اوچلیکلر، X-Wing، Y-Wing، Swordfish، XYZ-Wing. Bare Sudoku اولرنی عینن شو ترتیبده سینه‌یدی و مصلحت هر دایم آلدینگه سیلجیته‌دیگن اېنگ ساده اوصولنینگ آتینی ایته‌دی."
+          ],
+          [
+            "سودوکونی یېچیش اوچون بو اوصوللرنینگ همه‌سی کېرکمی؟",
+            "آسان و اۉرته جومباقلر اوچون یگانه‌لر یېترلی. قییین جومباقلرگه قولفلنگن نامزدلر همده جوفتلر و اوچلیکلر قۉشیله‌دی. ماهر جومباقلریگه کمیده بیته بالیق یاکی قنات کېرک، لېکن عادتده بیته جومباقده بیر-ایککی مرته خلاص."
+          ],
+          [
+            "XYZ-Wing دن هم قییینراق اوصوللر بارمی؟",
+            "هه، مثلاً زنجیرلر، یگانه‌لیک تېستلری و مجبورلش تۉرلری. Bare Sudoku اولرنی طلب قیله‌دیگن جومباقلر یرتمیدی، شونینگ اوچون اۉیینده‌گی هر بیر جومباقنی شو صفحه‌ده‌گی تۉققیزته اوصول بیلن آخیریگه یېتکزیش ممکن."
+          ],
+          [
+            "نامزد نیمه؟",
+            "بۉش کتککه هلی توشیشی ممکن بۉلگن رقم، چونکی اونینگ قطاری، ستونی یاکی مربعیده اونی حاضرچه هېچ نرسه استثنا قیلمیدی. اۉیینده‌گی یازوولر نامزدلردیر. یگانه‌لردن کېینگی هر بیر اوصول نامزدلر اساسیده ملاحظه یوریته‌دی، شونینگ اوچون اولرنی تۉلیق و انیق ساقلنگ."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "یگانه نامزد",
+          "title": "سودوکوده یگانه نامزد (naked single): بیته نامزدلی کتک",
+          "description": "یگانه نامزد (naked single): فقط بیته رقم توشه آله‌دیگن بۉش کتک. اولرنی تېز تاپیشنی حقیقی مثالده قدمه-قدم اۉرگنینگ و خطالردن قاچینگ.",
+          "h1": "یگانه نامزد (naked single)",
+          "summary": "یگانه نامزد بو عینن بیته نامزدی بار بۉش کتک: قالگن سککیزته رقم اونینگ قطاری، ستونی یاکی مربعیده آلدیندن بار. قالگن رقم عینن شو یېرگه توشه‌دی. بو اېنگ ساده و اېنگ کۉپ ایشلتیله‌دیگن سودوکو اوصولی، Bare Sudoku مصلحتی اېسه اونی «بو کتکده فقط بیته نامزد» دېب خبر قیله‌دی.",
+          "when": [
+            "هر دایم. یگانه نامزدلر بیرینچی یوریشدن آخیرگیسیگچه، هر قندی درجه‌ده اوچره‌یدی. آسان و اۉرته جومباقلرده یشیرین یگانه‌لر بیلن بیرگه اولر سیزگه کېرک بۉله‌دیگن یگانه اوصول. قییینراق جومباقلرده مرکّب اوصول بجرگن هر بیر آلیب تشلش عادتده آرتیدن یگانه نامزد قالدیره‌دی، شونینگ اوچون هر بیر قدمدن کېین اولرنی تېکشیرینگ."
+          ],
+          "spot": [
+            "قۉشنیلریده رقملر کۉپ بۉلگن کتکلرگه قرنگ: آلدیندن یېتتیته رقمی بار قطارده‌گی کتککه یاکی قطاری، ستونی و مربعی بیرگلیکده سککیزته تورلی رقمنی قمرب آلگن کتککه. یازوولرسیز کتکدن کۉرینه‌دیگن رقملرنی سنب چیقینگ. یازوولر بیلن یگانه نامزد شونچکی بیته نامزد کۉرسته‌یاتگن کتک، شونینگ اوچون یازوولرنی تۉلدیریش اولرنی تاپیشنی آسانلشتیره‌دی."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "{cell} کتگیگه قرنگ. او بۉش، شونینگ اوچون اونینگ قطاری، ستونی و مربعیده آلدیندن قۉییلگن هر بیر رقمنی سنب چیقینگ.",
+                "{row}-قطارده {rowDigits} بار. {col}-ستونده {colDigits} بار. {box}-مربعده {boxDigits} بار.",
+                "اولر بیرگلیکده {d} رقمیدن باشقه بارچه رقملرنی استثنا قیله‌دی، شونینگ اوچون {cell} کتگیده قالگن یگانه نامزد {d}.",
+                "{cell} کتگیگه {d} رقمینی یازینگ. سۉنگ یېنگی رقم اۉشه قطار، ستون یاکی مربعده ینه بیر یگانه حاصل قیلگن-قیلمگنینی تېکشیرینگ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "فقط قطارنی یاکی فقط مربعنی سنش. استثنا قیلینگن سککیزته رقم عادتده اوچه‌له بیرلیکدن بیرگلیکده تۉپلنه‌دی.",
+            "حاضرگینه قۉیگن رقمینگیز هم اۉزینینگ 20 ته قۉشنیسیدن نامزدلرنی آلیب تشلشینی اونوتیش؛ یېنگی یگانه نامزدلر هر بیر قۉییشدن کېین درحال پیدا بۉله‌دی.",
+            "یگانه نامزدنی یشیرین یگانه بیلن ادشتیریش: یگانه نامزدده کتکده بیته نامزد قاله‌دی، یشیرین یگانه‌ده اېسه بیرلیکده رقم اوچون بیته کتک قاله‌دی."
+          ],
+          "faq": [
+            [
+              "سودوکوده یگانه نامزد (naked single) نیمه؟",
+              "عینن بیته نامزدی بار بۉش کتک. اونینگ قطاری، ستونی و مربعیده سککیزته تورلی رقم آلدیندن توریبدی، شونینگ اوچون فقط تۉققیزینچی رقم سیغه‌دی."
+            ],
+            [
+              "نېگه اینگلیزچه‌ده naked، یعنی آچیق دېب اتله‌دی؟",
+              "چونکی یازوولر یازیلگچ، یگانه نامزد کتکده بېواسطه کۉرینیب توره‌دی؛ اونی هېچ نرسه یشیرمیدی. یشیرین یگانه اېسه باشقه نامزدلر آره‌سیده توره‌دی و کتککه اېمس، رقمگه قرب تاپیله‌دی."
+            ],
+            [
+              "جومباقنی فقط یگانه نامزدلر بیلن یېچیش ممکنمی؟",
+              "کۉپلب آسان جومباقلرنی یېچیش ممکن، لېکن اولرنینگ اکثریتیگه یشیرین یگانه‌لر هم کېرک. Bare Sudoku آسان و اۉرته جومباقلرنی ایککه‌له تورده‌گی یگانه‌لر بیلن یېچیله‌دیگن دېب باهاله‌یدی؛ قییین و ماهر جومباقلریگه کمیده ینه بیته اوصول کېرک."
+            ],
+            [
+              "مصلحت یگانه نامزدلرنی کۉرسته‌دیمی؟",
+              "هه. کېینگی قۉییش یگانه نامزد بۉلسه، مصلحت کتکنی تنله‌یدی و رقم بیلن بیرگه «بو کتکده فقط بیته نامزد» دېیدی. اونی قۉییش اوچون مصلحتنی ینه باسینگ."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "یشیرین یگانه",
+          "title": "یشیرین یگانه (hidden single): رقمنینگ یگانه جایی",
+          "description": "یشیرین یگانه (hidden single): قطار، ستون یاکی مربعده رقم توشه آله‌دیگن یگانه کتک. رقملرنی بیرمه-بیر کۉزدن کېچیریب، اونی تاپیشنی اۉرگنینگ.",
+          "h1": "یشیرین یگانه (hidden single)",
+          "summary": "یشیرین یگانه بو قطار، ستون یاکی مربعده فقط بیته ممکن بۉلگن کتگی قالگن رقم، گرچه اۉشه کتکده باشقه نامزدلر کۉرینیب تورسه هم. بیرلیکده بو رقم بۉلیشی شرط بۉلگنی اوچون او اۉشه یېرگه توشه‌دی. Bare Sudoku مصلحتی اونی «بو قطارده 5 اوچون یگانه جای» دېب خبر قیله‌دی، ستون و مربع اوچون هم خودّی شوندی.",
+          "when": [
+            "رقم انچه ایلگریلب کېتگنده: رقم بېش-آلتی مرته اوچره‌گنده، قالگن مربعلر جوده چېکلنه‌دی و کېینگی یوریش کۉپینچه یشیرین یگانه بۉله‌دی. یشیرین یگانه‌لر آسان و اۉرته جومباقلرنینگ اساسی اوصولی و هر قندی درجه‌ده اساسی ایش قورالی بۉلیب قاله‌دی."
+          ],
+          "spot": [
+            "رقملرنی بیرمه-بیر کۉزدن کېچیرینگ. بیته رقمنی آلینگ، اونی اۉز ایچیگه آلمگن مربعنی تاپینگ و اۉشه مربعده شو رقمنینگ قۉییلگن نسخه‌سی بیلن عمومی قطار یاکی ستونگه اېگه هر بیر کتکنی چیزیب تشلنگ. بیته کتک قالسه، یشیرین یگانه‌نی تاپدینگیز. خودّی شوندی کۉزدن کېچیریش قطار و ستونلرده هم ایشله‌یدی. اۉیینده قۉییلگن رقمگه تېگینگ: اونینگ بارچه نسخه‌لری اجرتیب کۉرستیله‌دی، شونینگ اوچون بۉش کتکلر درحال کۉزگه تشلنه‌دی."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "{box}-مربعده هلی {d} یۉق، شونینگ اوچون اونینگ بۉش کتکلریدن بیری اونی آلیشی کېرک. بۉش کتکلر: {empties}.",
+                "{cell} کتگیدن باشقه همه‌سیده {d} رقمینی اۉشه قطار یاکی ستونده آلدیندن قۉییلگن {d} تۉسیب توره‌دی، شونینگ اوچون او یېرلرده {d} نامزد اېمس.",
+                "دېمک، {box}-مربعده {d} اوچون یگانه جای صفتیده {cell} قاله‌دی. {cell} کتگیده باشقه نامزدلر کۉرینیب تورسه هم، {d} رقمینی اۉشه یېرگه یازینگ."
+              ]
+            }
+          ],
+          "mistakes": [
+            "رقمنی فقط تۉغری بۉلیشی احتمال بۉلگن کتککه قۉییش: فقط کۉزگه تشلنگنلرینی اېمس، بیرلیکده‌گی باشقه بارچه بۉش کتکلرنی تېکشیرینگ.",
+            "کتکده بیر نېچه‌ته نامزد کۉرینگنی اوچون یشیرین یگانه‌نی اۉتکزیب یوبریش. باشقه نامزدلرنینگ اهمیتی یۉق؛ مهمی، رقمنینگ بیرلیکده باشقه جایی یۉقلیگی.",
+            "فقط مربعلرنی کۉزدن کېچیریش. قطار و ستونلر هم یشیرین یگانه‌لرنی خودّی شونچه‌لیک تېز-تېز بېره‌دی، ایینیقسه آخیریگه یقین."
+          ],
+          "faq": [
+            [
+              "سودوکوده یشیرین یگانه (hidden single) نیمه؟",
+              "قطار، ستون یاکی مربعنینگ فقط بیته کتگیگه توشیشی ممکن بۉلگن رقم. بیرلیکده بو رقم بۉلیشی شرط، شونینگ اوچون کتکده باشقه نامزدلر بۉلسه هم، او انیق بۉله‌دی."
+            ],
+            [
+              "یشیرین یگانه و یگانه نامزد آره‌سیده قندی فرق بار؟",
+              "یگانه نامزد کتککه تعلّقلی: بیته نامزد قالگن. یشیرین یگانه رقمگه تعلّقلی: بیرلیکده بیته کتک قالگن. ایککه‌له‌سی هم رقمنی انیق قۉیه‌دی."
+            ],
+            [
+              "قیسی بیرینی تاپیش آسانراق؟",
+              "یازوولرسیز عادتده یشیرین یگانه‌لر آسانراق، چونکی میداننی هر سفر بیته رقم بۉییچه کۉزدن کېچیریش ممکن. تۉلیق یازوولر بیلن یگانه نامزدلر اېنگ آسان، چونکی بیته نامزدلی کتک درحال کۉزگه تشلنه‌دی."
+            ],
+            [
+              "مصلحت یشیرین یگانه‌نی قندی تصویرله‌یدی؟",
+              "کتکنی تنلب، رقم اوچون شو قطارده، شو ستونده یاکی شو مربعده «یگانه جای» دېب، مثلاً «بو قطارده 5 اوچون یگانه جای». اونی قۉییش اوچون مصلحتنی ینه باسینگ."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "قولفلنگن نامزدلر",
+          "title": "سودوکوده قولفلنگن نامزدلر: اشاره و اېگللش",
+          "description": "قولفلنگن نامزدلر: رقمنینگ مربعده‌گی نامزدلری بیته قطار یاکی ستونده یاتسه یاکی عکسینچه بۉلسه، رقم باشقه جایدن آلیب تشلنه‌دی. ایککی مثال.",
+          "h1": "قولفلنگن نامزدلر",
+          "summary": "قولفلنگن نامزدلر رقم قۉییش اۉرنیگه نامزدلرنی آلیب تشله‌یدیگن بیرینچی اوصول. اونینگ ایککی شکلی بار. اشاره: مربعده رقمنینگ بارچه نامزدلری بیته قطار یاکی ستونده یاته‌دی، شونینگ اوچون رقم اۉشه چیزیقنینگ قالگن قسمیدن آلیب تشلنه‌دی. اېگللش: قطار یاکی ستونده رقمنینگ بارچه نامزدلری بیته مربعده یاته‌دی، شونینگ اوچون رقم اۉشه مربعنینگ قالگن قسمیدن آلیب تشلنه‌دی. Bare Sudoku مصلحتی بو اوصول آچیب بېرگن قۉییشنی «قولفلنگن نامزدلر» دېب بېلگیله‌یدی.",
+          "when": [
+            "قییین جومباقده یگانه‌لر توگه‌گنده، بیرینچی نوبتده شونی سینب کۉرینگ. کمیده کۉریب چیقیله‌یاتگن رقم اوچون تۉلیق یازوولر کېرک. قولفلنگن نامزدلر کۉپ اوچره‌یدی: قییین جومباقلرنینگ اکثریتیگه اولر کېرک، ماهر جومباقلری اېسه اولردن کته نقشلر آره‌سیده فایدلنه‌دی."
+          ],
+          "spot": [
+            "اشاره اوچون هر بیر مربعگه و اونده یۉق هر بیر رقمگه قرنگ: اگر اۉشه رقمنینگ نامزد کتکلری بیته قطار یاکی ستونده تورسه، اۉشه چیزیق بۉیلب مربعدن تشقریده هم شو رقم نامزد صفتیده بار-یۉقلیگینی تېکشیرینگ. اېگللش اوچون قطار یاکی ستون بۉیلب قرنگ: اگر رقمنینگ نامزدلری تۉلیق بیته مربع ایچیده بۉلسه، اۉشه مربعنینگ قالگن قسمینی تازه‌لش ممکن. اۉیینده رقم تُگمه‌سیگه تېگسنگیز، اونینگ بارچه نامزدلری اجرتیب کۉرستیله‌دی؛ بیته مربع ایچیده‌گی ایککی-اوچته اجرتیلگن یازوودن عبارت چیزیق سیز ایزله‌یاتگن نقش بۉله‌دی."
+          ],
+          "examples": [
+            {
+              "h": "اشاره",
+              "steps": [
+                "{box}-مربعده {d} رقمینینگ فقط قوییده‌گی نامزد کتکلری بار: {cells}. اولرنینگ همه‌سی {row}-قطارده یاته‌دی.",
+                "{box}-مربعگه {d} کېرک، شونینگ اوچون {row}-قطارنینگ {d} رقمی اۉشه کتکلردن قیسی بیریگه توشمسین، {box}-مربع ایچیده بۉله‌دی.",
+                "{row}-قطارده ایککینچی {d} بۉله آلمیدی، شونینگ اوچون {d} رقمینی {row}-قطارنینگ مربعدن تشقریده‌گی کتکلریدن آلیب تشلنگ: {elim}."
+              ]
+            },
+            {
+              "h": "اېگللش",
+              "steps": [
+                "{row}-قطارده {d} رقمی فقط {cells} کتکلریگه توشیشی ممکن و اولرنینگ همه‌سی {box}-مربع ایچیده.",
+                "{row}-قطارده {d} بۉلیشی شرط، شونینگ اوچون {box}-مربعنینگ {d} رقمینی {row}-قطار اېگلله‌یدی. {box}-مربعنینگ باشقه کتکلریده {d} بۉله آلمیدی.",
+                "{d} رقمینی قوییده‌گی کتکلردن آلیب تشلنگ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "اشاره‌ده رقمنی مربعدن تشقریدن اېمس، ایچیدن آلیب تشلش، اېگللشده اېسه عکسینچه. آلیب تشلشلر هر دایم چیزیقده بۉلیب، مربعده بۉلمگن یاکی مربعده بۉلیب، چیزیقده بۉلمگن کتکلرگه تېگیشلی.",
+            "نامزدلر مربعنینگ ایککی قطاریگه ترقلگن حالده قاعده‌نی قۉللش. مربعده‌گی رقمنینگ بارچه نامزد کتکلری بیته چیزیقده یاتیشی کېرک.",
+            "آلیب تشلش حاصل قیلگن یگانه‌نی قیدیریشنی اونوتیش. قولفلنگن نامزدلر اۉزی کمدن-کم رقم قۉیه‌دی؛ اولر یگانه‌گه زمین تیارله‌یدی."
+          ],
+          "faq": [
+            [
+              "سودوکوده قولفلنگن نامزدلر نیمه؟",
+              "مربع و چیزیق کېسیشمه‌سیگه چېکلنگن رقم نامزدلری. مربع، یاکی چیزیق، بو رقمنی اۉشه کېسیشمه‌ده اۉز ایچیگه آلیشی شرط بۉلگنی اوچون رقمنی چیزیقنینگ قالگن قسمیدن یاکی مربعنینگ قالگن قسمیدن آلیب تشلش ممکن."
+            ],
+            [
+              "اشاره و اېگللش آره‌سیده قندی فرق بار؟",
+              "اشاره مربعدن باشلنه‌دی: رقمنینگ مربعده‌گی نامزدلری بیته قطار یاکی ستون بۉیلب اشاره قیله‌دی، شونینگ اوچون رقم اۉشه چیزیقنینگ قالگن قسمیدن آلیب تشلنه‌دی. اېگللش قطار یاکی ستوندن باشلنه‌دی: چیزیقنینگ شو رقم اوچون نامزدلری تۉلیق بیته مربعده، شونینگ اوچون چیزیق رقمنی اېگلله‌یدی و او مربعنینگ قالگن قسمیدن آلیب تشلنه‌دی."
+            ],
+            [
+              "قولفلنگن نامزدلرنی کېسیشمه آرقلی آلیب تشلش دېب هم اتشه‌دیمی؟",
+              "هه. باشقه آتلری: اېگللش شکلی اوچون مربع و چیزیق آرقلی قیسقرتیریش، اشاره شکلی اوچون اشاره قیلووچی جوفت یاکی اشاره قیلووچی اوچلیک. Bare Sudoku ایککه‌له‌سی اوچون بیته آتدن فایدلنه‌دی."
+            ],
+            [
+              "قیسی درجه‌گه قولفلنگن نامزدلر کېرک؟",
+              "قییین. قولفلنگن نامزدلرنی یاکی جوفتلر و اوچلیکلرنی طلب قیله‌دیگن، لېکن اوندن قییینراغینی طلب قیلمیدیگن جومباق قییین دېب باهالنه‌دی؛ ماهر جومباقلریگه قۉشیمچه روشده بالیق یاکی قنات کېرک."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "آچیق جوفتلر و اوچلیکلر",
+          "title": "سودوکوده آچیق جوفتلر و اوچلیکلر: قندی ایشله‌یدی",
+          "description": "آچیق جوفتلر و اوچلیکلر: بیرلیکده بیر خیل ایککی یاکی اوچ نامزدگه اېگه کتکلر. اولرنی تاپیشنی و نیمه‌نی آلیب تشلشنی حقیقی مثاللرده اۉرگنینگ.",
+          "h1": "آچیق جوفتلر و اوچلیکلر (naked pair, naked triple)",
+          "summary": "آچیق جوفت بو بیته قطار، ستون یاکی مربعده عینن بیر خیل ایککی نامزدگه اېگه ایککی کتک. بو ایککی رقم اۉشه ایککی کتککه توشیشی شرط، شونینگ اوچون اولرنی بیرلیکنینگ باشقه بارچه کتکلریدن آلیب تشلش ممکن. آچیق اوچلیک خودّی شو غایه، فقط اوچته کتک و اوچته رقم بیلن؛ هر بیر کتک اولردن ایککیته‌سینی یاکی اوچه‌له‌سینی کۉرستیشی ممکن. Bare Sudoku مصلحتی نتیجه‌ده چیققن قۉییشنی «جوفت یاکی اوچلیک» دېب بېلگیله‌یدی.",
+          "when": [
+            "یازوولر تۉلیق بۉلیب، یگانه‌لر و قولفلنگن نامزدلر توگه‌گنده. آچیق جوفتلر قییین جومباقلرده جوده کۉپ اوچره‌یدی، آچیق اوچلیکلر کمراق. ایککه‌له‌سینی هم هلی بېشته یاکی اوندن کۉپ بۉش کتگی بار هر بیر بیرلیکده تېکشیریشگه ارزییدی."
+          ],
+          "spot": [
+            "فقط ایککیته نامزدی بار کتکلرنی قیدیرینگ و خودّی شو بیرلیکده عینن اۉشه ایککی نامزدگه اېگه ینه بیر کتکنی تاپینگ. اوچلیکلر اوچون ایککی و اوچ نامزدلی بیر نېچه‌ته کتگی بار بیرلیکلرگه قرنگ و اولردن اوچته‌سی بیرگلیکده فقط اوچته تورلی رقمدن فایدلنه‌دیمی، شونی تېکشیرینگ. یازوولر یازیلگچ، عینن بیر خیل نامزدلرگه اېگه کتکلرنی کۉریش آسان؛ اۉیینده‌گی یازوولرنی تۉلدیریش بونی بیر باسیشده بجره‌دی."
+          ],
+          "examples": [
+            {
+              "h": "آچیق جوفت",
+              "steps": [
+                "{unit}ده‌گی {cellA} و {cellB} کتکلریده عینن بیر خیل ایککی نامزد بار: {d1} و {d2}.",
+                "اولردن بیری {d1}، ایککینچیسی {d2} بۉلیشی کېرک. قیسی بیری اېکنینی بیلمیمیز، لېکن ایککه‌له رقمنی هم شو ایککی کتک بند قیلگن.",
+                "دېمک، {unit}ده‌گی باشقه هېچ بیر کتکده {d1} یاکی {d2} بۉله آلمیدی. آلیب تشلنگ: {elim}."
+              ]
+            },
+            {
+              "h": "آچیق اوچلیک",
+              "steps": [
+                "{unit}ده‌گی اوچته کتک بارچه نامزدلرینی بیر خیل اوچته رقمدن، {digits}، آله‌دی: {cells}.",
+                "اوچته رقم بو اوچته کتکنی قندیدیر ترتیبده تۉلدیریشی شرط. کتک اوچه‌له نامزدنی هم کۉرستیشی شرط اېمس؛ مهمی، اوچته کتکنینگ هېچ بیریده تۉپلمدن تشقری نامزد یۉقلیگی.",
+                "{digits} رقملرینی {unit}ده‌گی باشقه بارچه کتکلردن آلیب تشلنگ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "ایککی نامزدی عمومی، لېکن اوچینچی نامزدی هم بار ایککی کتکنی آلیش. آچیق جوفت اوچون هر بیر کتکده عینن اۉشه ایککی نامزد بۉلیشی و باشقه هېچ نرسه بۉلمسلیگی کېرک.",
+            "رقملرنی جوفتنینگ اۉز کتکلریدن آلیب تشلش. جوفت اۉز نامزدلرینی ساقله‌یدی؛ آلیب تشلشلر بیرلیکنینگ باشقه کتکلریگه تېگیشلی.",
+            "اوچلیکنینگ هر بیر کتگی اوچه‌له رقمنی کۉرستیشینی طلب قیلیش. هېچ بیر کتکده تۉپلمدن تشقری نامزد بۉلمسه، اوچته‌دن ایککیته‌سی بار کتک هم یراقلی."
+          ],
+          "faq": [
+            [
+              "سودوکوده آچیق جوفت (naked pair) نیمه؟",
+              "بیته بیرلیکده‌گی ایککه‌له‌سیده هم عینن بیر خیل ایککی نامزد بار ایککی کتک. بو ایککی رقم اۉشه ایککی کتککه قولفلنگن، شونینگ اوچون اولرنی بیرلیکنینگ قالگن قسمیدن آلیب تشلش ممکن."
+            ],
+            [
+              "آچیق اوچلیک (naked triple) نیمه؟",
+              "بیته بیرلیکده‌گی نامزدلری بیرگلیکده فقط اوچته رقمدن عبارت اوچته کتک. هر بیر کتکده اولردن ایککیته‌سی یاکی اوچه‌له‌سی بۉلیشی ممکن. اوچته رقم اوچته کتکنی تۉلدیره‌دی، شونینگ اوچون اولرنی بیرلیکنینگ باشقه کتکلریدن آلیب تشلش ممکن."
+            ],
+            [
+              "آچیق جوفت رقم قۉیه‌دیمی؟",
+              "اۉزی قۉیمیدی. او نامزدلرنی آلیب تشله‌یدی و آلیب تشلش عادتده یگانه نامزد یاکی یشیرین یگانه قالدیره‌دی. Bare Sudoku ده‌گی مصلحت اۉشه یگانه‌نی کۉرسته‌دی و اونی ممکن قیلگن اوصولنینگ آتینی ایته‌دی."
+            ],
+            [
+              "آچیق جوفت بیر وقتنینگ اۉزیده هم مربعده، هم قطارده بۉلیشی ممکنمی؟",
+              "هه. اگر ایککی کتکنینگ قطاری هم، مربعی هم عمومی بۉلسه، جوفت ایککه‌له بیرلیکده هم نامزدلرنی آلیب تشله‌یدی. Bare Sudoku اولرنی بیرلیکمه-بیرلیک کۉریب چیقه‌دی."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "یشیرین جوفتلر و اوچلیکلر",
+          "title": "سودوکوده یشیرین جوفتلر و اوچلیکلر: قندی تاپیله‌دی",
+          "description": "یشیرین جوفت (hidden pair): بیرلیکده فقط بیر خیل ایککی کتککه توشه آله‌دیگن ایککی رقم، شونینگ اوچون او کتکلرنینگ باشقه نامزدلری آلیب تشلنه‌دی.",
+          "h1": "یشیرین جوفتلر و اوچلیکلر (hidden pair, hidden triple)",
+          "summary": "یشیرین جوفت بو بیته قطار، ستون یاکی مربع ایچیده فقط بیر خیل ایککی کتکده نامزد بۉلگن و باشقه هېچ قیېرده بۉلمگن ایککی رقم. اۉشه ایککی کتکده اۉشه ایککی رقم بۉلیشی شرط، شونینگ اوچون اولرده‌گی باشقه بارچه نامزدلرنی آلیب تشلش ممکن. یشیرین اوچلیک هم خودّی شوندی ایشله‌یدی: اوچته کتککه چېکلنگن اوچته رقم. آلیب تشلشدن کېین کتکلرده آچیق جوفت یاکی اوچلیک کۉرینه‌دی. Bare Sudoku مصلحتی نتیجه‌ده چیققن قۉییشنی «جوفت یاکی اوچلیک» دېب بېلگیله‌یدی.",
+          "when": [
+            "بیرلیکده کۉپ نامزدلی کتکلر بۉلیب، یگانه‌لر توگه‌گنده. یشیرین جوفتلر گوجوم کتکلر ایچیده یشیرینه‌دی، شونینگ اوچون اولرنی عینن آچیق جوفتلر کۉرینمیدیگن جایده قیدیریشگه ارزییدی. یشیرین اوچلیکلر کم اوچره‌یدی؛ Bare Sudoku اولرنی هم تېکشیره‌دی، لېکن قییین جومباقلرنینگ اکثریتی اولرسیز یېچیله‌دی."
+          ],
+          "spot": [
+            "کتک بۉییچه اېمس، رقم بۉییچه ایشلنگ. بیرلیکده یېتیشمه‌یاتگن هر بیر رقم قیسی کتکلرگه توشیشی ممکنلیگینی قید اېتینگ. اگر ایککی رقمنینگ هر بیریده فقط ایککیته ممکن بۉلگن کتک بۉلسه و اولر بیر خیل ایککی کتک بۉلسه، یشیرین جوفتنی تاپدینگیز. اۉیینده رقم تُگمه‌سیگه تېگسنگیز، اونینگ نامزدلری اجرتیب کۉرستیله‌دی؛ اگر ایککی رقم بیرلیکنینگ بیر خیل ایککی کتگینی یاریتسه و اونده باشقه هېچ نرسه‌نی یاریتمسه، نقش شو."
+          ],
+          "examples": [
+            {
+              "h": "یشیرین جوفت",
+              "steps": [
+                "{unit}ده {d1} و {d2} رقملرینینگ هر بیریده فقط ایککیته ممکن بۉلگن کتک بار و اولر بیر خیل ایککی کتک: {cells}.",
+                "بو ایککی کتکده {d1} و {d2} بۉلیشی شرط، شونینگ اوچون اولرنینگ باشقه نامزدلری امکانسیز.",
+                "آلیب تشلنگ: {elim}. اېندی ایککی کتک آچیق جوفتنی کۉرسته‌دی، بو ینه یۉل آچیشی ممکن."
+              ]
+            }
+          ],
+          "mistakes": [
+            "جوفتنینگ ایککی رقمینی جوفت کتکلریدن آلیب تشلش. اۉشه کتکلرنینگ باشقه نامزدلری آلیب تشلنه‌دی؛ جوفت رقملری قاله‌دی.",
+            "بیرلیکده اوچینچی ممکن بۉلگن کتگی بار رقمنی قبول قیلیش. ایککه‌له رقم هم عینن اۉشه ایککی کتک بیلن چېکلنگن بۉلیشی کېرک.",
+            "فقط مربعلرگه قرش. یشیرین جوفتلر قطار و ستونلرده هم خودّی شونچه‌لیک تېز-تېز اوچره‌یدی."
+          ],
+          "faq": [
+            [
+              "سودوکوده یشیرین جوفت (hidden pair) نیمه؟",
+              "بیرلیکده فقط بیر خیل ایککی کتککه توشیشی ممکن بۉلگن ایککی رقم. اۉشه کتکلر شو رقملرنی آلیشی شرط، شونینگ اوچون اولرنینگ باشقه نامزدلری آلیب تشلنه‌دی."
+            ],
+            [
+              "یشیرین جوفت آچیق جوفتدن نیمه‌سی بیلن فرق قیله‌دی؟",
+              "آچیق جوفت کۉرینیب توره‌دی: فقط بیر خیل ایککی نامزدنی کۉرسته‌دیگن ایککی کتک. یشیرین جوفتنی ایککی کتکده‌گی آرتیقچه نامزدلر یاپیب توره‌دی. اۉشه آرتیقچه‌لرنی آلیب تشلش یشیرین جوفتنی آچیق جوفتگه ایلنتیره‌دی."
+            ],
+            [
+              "یشیرین اوچلیک (hidden triple) نیمه؟",
+              "بیرلیکنینگ اوچته کتگیگه چېکلنگن اوچته رقم. هر بیر رقم اوچه‌له کتکده هم بۉلیشی شرط اېمس؛ مهمی، اوچته رقمنینگ هېچ بیریده اۉشه کتکلردن تشقری نامزد یۉقلیگی."
+            ],
+            [
+              "مصلحت یشیرین و آچیق جوفتلرنی فرقله‌یدیمی؟",
+              "یۉق. Bare Sudoku ایککه‌له‌سینی هم تاپه‌دی و نتیجه‌ده چیققن قۉییشنی «جوفت یاکی اوچلیک» دېب بېلگیله‌یدی. بو صفحه‌لر اولرنی علاحده کۉریب چیقه‌دی، چونکی اولر تورلی یۉللر بیلن تاپیله‌دی."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "سودوکوده X-Wing: اوصول قندی ایشله‌یدی",
+          "description": "X-Wing: ایککی قطارده عینن ایککیته‌دن نامزد کتگی بار و بیر خیل ایککی ستونده تېکیسلنگن رقم اۉشه ستونلرنینگ قالگن قسمیدن آلیب تشلنه‌دی. مثال.",
+          "h1": "X-Wing",
+          "summary": "X-Wing بیته رقم و تۉرتبورچک بورچکلریده‌گی تۉرتته کتکدن عبارت نقش. اگر رقمنینگ ایککی قطارنینگ هر بیریده عینن ایککیته نامزد کتگی بۉلسه و بو کتکلر بیر خیل ایککی ستونده یاتسه، رقم تۉرتبورچکنینگ قره‌مه-قرشی ایککی بورچگینی اېگللشی شرط. شونینگ اوچون اونی اۉشه ایککی ستوننینگ باشقه بارچه کتکلریدن آلیب تشلش ممکن. قطار و ستونلر اۉرنی الماشتیریلگنده هم خودّی شوندی ایشله‌یدی. بو Bare Sudoku ده‌گی بیرینچی ماهر اوصولی.",
+          "when": [
+            "یگانه‌لر، قولفلنگن نامزدلر همده جوفتلر و اوچلیکلر توگه‌گنده. X-Wing اېنگ کۉپ اوچره‌یدیگن ماهر نقشی و کۉپینچه رقمنینگ نامزدلری کم قالگنده، عادتده اونینگ تۉرت-آلتیته نسخه‌سی قۉییلگن پیتده پیدا بۉله‌دی. کۉریب چیقیله‌یاتگن رقم اوچون تۉلیق یازوولر کېرک."
+          ],
+          "spot": [
+            "رقمنی تنلنگ و اونده عینن ایککیته نامزد کتگی بار قطارلرنی قیدیرینگ. اگر شوندی ایککی قطار بیر خیل ایککی ستونگه تۉغری کېلسه، اۉشه ستونلرده شو رقمنینگ باشقه نامزدلرینی تېکشیرینگ: آلیب تشلنه‌دیگنلر شولر. سۉنگ اساس صفتیده ستونلرنی آلیب تکرارلنگ. اۉیینده رقم تُگمه‌سیگه تېگینگ: اونینگ بارچه نامزدلری اجرتیب کۉرستیله‌دی و تۉرتته اجرتیلگن یازوودن عبارت تۉرتبورچکنی کۉریش آسان."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "{d} رقمینینگ {r1}-قطارده عینن ایککیته و {r2}-قطارده هم عینن ایککیته نامزد کتگی بار، و اولر بیر خیل ایککی ستونده، {c1}- و {c2}-ستونلرده تېکیسلنگن: {cells}.",
+                "{r1}-قطار اۉز {d} رقمینی {c1}- یاکی {c2}-ستونگه قۉیه‌دی، {r2}-قطار اېسه ایککینچیسیگه. قندی بۉلمسین، {c1}- و {c2}-ستونلرنینگ هر بیری شو ایککی قطاردن بیته‌دن {d} آله‌دی.",
+                "شونینگ اوچون {d} رقمی {c1}- و {c2}-ستونلرنینگ باشقه هېچ بیر جاییده بۉله آلمیدی. {d} رقمینی قوییده‌گی کتکلردن آلیب تشلنگ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "رقم اوچون اوچته نامزد کتگی بار قطاردن فایدلنیش. هر بیر اساسی قطارده عینن ایککیته بۉلیشی و ایککه‌له‌سی هم عمومی ایککی ستونده جایلشیشی کېرک.",
+            "رقمنی ستونلردن اېمس، قطارلردن آلیب تشلش. اساس قطارلر بۉلسه، آلیب تشلشلر ستونلرده بۉله‌دی و عکسینچه.",
+            "الماشتیریلگن وریانتینی اونوتیش. ستونلرگه قوریلگن X-Wing قطارلردن آلیب تشله‌یدی."
+          ],
+          "faq": [
+            [
+              "سودوکوده X-Wing نیمه؟",
+              "ایککی قطارنینگ هر بیریده، بیر خیل ایککی ستونده، عینن ایککیته‌دن نامزد کتگی بار رقم. رقم اۉشه تۉرتبورچکنینگ قره‌مه-قرشی ایککی بورچگینی اېگلله‌یدی، شونینگ اوچون او ایککی ستوننینگ قالگن قسمیدن آلیب تشلنه‌دی. قطار و ستونلر اۉرنینی الماشتیریش ممکن."
+            ],
+            [
+              "X-Wing نېگه ایشله‌یدی؟",
+              "ایککی قطارنینگ هر بیری رقمنی ایککی ستوندن بیریگه قۉییشی شرط، ایککی قطار اېسه بیته ستوندن فایدلنه آلمیدی. شونینگ اوچون ایککی ستوننینگ هر بیری رقمنینگ اۉز نسخه‌سینی شو قطارلردن آله‌دی و اۉشه ستونلرده‌گی باشقه بارچه نامزدلر امکانسیز."
+            ],
+            [
+              "X-Wing بالیقمی؟",
+              "هه. X-Wing ایککی اۉلچملی بالیق؛ Swordfish اوچ اۉلچملی بالیق. Bare Sudoku ایککه‌له‌سینی هم تاپه‌دی."
+            ],
+            [
+              "قیسی درجه‌ده X-Wing اوچره‌یدی؟",
+              "ماهر. X-Wing، Y-Wing، Swordfish یاکی XYZ-Wing طلب قیله‌دیگن جومباق ماهر دېب باهالنه‌دی."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "سودوکوده Y-Wing: اوصول قندی ایشله‌یدی",
+          "description": "Y-Wing (XY-Wing): ایککی نامزدلی تینچ و اولردن بیرینی بهم کۉره‌دیگن ایککی قنات رقمنی ایککه‌له قناتنی کۉره‌دیگن هر بیر کتکدن چیقره‌دی. مثال.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing، اونی XY-Wing دېب هم اتشه‌دی، هر بیریده ایککیته‌دن نامزد بار اوچته کتکدن فایدلنه‌دی. تینچنینگ نامزدلری X و Y. بیته قنات تینچنی کۉره‌دی و اونده X و Z بار؛ ایککینچی قنات تینچنی کۉره‌دی و اونده Y و Z بار. تینچ نیمه بۉلیشیدن قطع نظر، قناتلردن بیری Z بۉلیشی شرط، شونینگ اوچون Z رقمینی ایککه‌له قناتنی کۉره‌دیگن هر بیر کتکدن آلیب تشلش ممکن. Bare Sudoku ده بو ماهر اوصولی.",
+          "when": [
+            "جومباقده عینن ایککیته نامزدی بار بیر نېچه‌ته کتک بۉلیب، هېچ قندی بالیق تاپیلمگنده. Y-Wing ماهر جومباقلریده کۉپ اوچره‌یدی و ایککی نامزدلی کتکلرنی کوزتیش آرقلی تاپیله‌دی: اولرنینگ هر بیری تینچ یاکی قنات بۉلیشی ممکن."
+          ],
+          "spot": [
+            "عینن ایککیته نامزدی بار کتکلرنی رۉیختگه آلینگ. اولرنینگ هر بیرینی X و Y نامزدلی تینچ دېب حسابلنگ و اونینگ قۉشنیلری آره‌سیدن X و باشقه بیر Z رقمی بار کتکنی همده Y و اۉشه Z بار کتکنی قیدیرینگ. بو ایککیسی قناتلر. سۉنگ ایککه‌له قناتنی کۉره‌دیگن و Z بار کتکلرنی تاپینگ. اعتبار بېرینگ، قناتلر بیر-بیرینی کۉریشی شرط اېمس."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "{pivot} تینچینینگ نامزدلری {x} و {y}. او {x} و {z} بار {wingA} کتگینی همده {y} و {z} بار {wingB} کتگینی کۉره‌دی.",
+                "اگر {pivot} کتگی {x} بۉلسه، {wingA} کتگی {x} نامزدینی یۉقاته‌دی و {z} بۉله‌دی. اگر {pivot} کتگی {y} بۉلسه، {wingB} کتگی {z} بۉله‌دی. هر قندی حالتده ایککی قناتدن بیری {z}.",
+                "ایککه‌له قناتنی کۉره‌دیگن کتک هېچ قچان {z} بۉله آلمیدی. {z} رقمینی قوییده‌گی کتکلردن آلیب تشلنگ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "تینچنی ایککه‌له‌سی هم کۉرمیدیگن قناتلرنی تنلش. هر بیر قنات تینچ بیلن عمومی قطار، ستون یاکی مربعگه اېگه بۉلیشی کېرک.",
+            "Z رقمینی فقط بیته قناتنی کۉره‌دیگن کتکلردن آلیب تشلش. آلیب تشلنه‌دیگن کتک ایککه‌له قناتنی کۉریشی شرط.",
+            "Z رقمینی تینچدن آلیب تشلش. Y-Wing ده تینچده Z بۉلمیدی؛ اگر بۉلسه، بو باشقه قاعده‌لرگه اېگه XYZ-Wing نقشی."
+          ],
+          "faq": [
+            [
+              "سودوکوده Y-Wing نیمه؟",
+              "ایککی نامزدلی اوچته کتک: X و Y بار تینچ، تینچنی کۉره‌دیگن X و Z بار قنات همده تینچنی کۉره‌دیگن Y و Z بار قنات. بیته قنات هر دایم Z بۉله‌دی، شونینگ اوچون Z ایککه‌له قناتنی کۉره‌دیگن کتکلردن آلیب تشلنه‌دی."
+            ],
+            [
+              "Y-Wing و XY-Wing بیر نرسه‌می؟",
+              "هه. ایککی آت بیر خیل نقشنی تصویرله‌یدی. Bare Sudoku اونی Y-Wing دېب اته‌یدی."
+            ],
+            [
+              "نېگه بیته قنات Z بۉلیشی شرط؟",
+              "تینچ X بۉلسه، بیرینچی قنات X نامزدینی یۉقاته‌دی و Z بۉله‌دی. تینچ Y بۉلسه، ایککینچی قنات Z بۉله‌دی. تینچ شو ایککیسیدن بیری، دېمک بیته قنات Z."
+            ],
+            [
+              "Y-Wing نېچه‌ته کتکدن نامزد آلیب تشله‌یدی؟",
+              "عادتده بیته یاکی ایککیته کتکدن: فقط ایککه‌له قناتنی کۉره‌دیگن و هلی Z بار کتکلردن. بو یگانه حاصل قیلیش اوچون یېترلی."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "سودوکوده Swordfish: اوصول قندی ایشله‌یدی",
+          "description": "Swordfish: اوچته قطارده اوچته ستونگه چېکلنگن رقم اۉشه ستونلرنینگ قالگن قسمیدن آلیب تشلنه‌دی. اوچ اۉلچملی بالیق، حقیقی مثال بیلن.",
+          "h1": "Swordfish",
+          "summary": "Swordfish بو اوچته قطار و اوچته ستوندن عبارت X-Wing. اگر رقمنینگ اوچته قطارنینگ هر بیریده کۉپی بیلن اوچته نامزد کتگی بۉلسه و بو کتکلرنینگ همه‌سی بیر خیل اوچته ستونگه توشسه، اوچته قطار اۉشه ستونلرده‌گی رقمنی تۉلیق بند قیله‌دی و رقمنی اوچته ستوننینگ باشقه بارچه کتکلریدن آلیب تشلش ممکن. قطار و ستونلر اۉرنینی الماشتیریش ممکن. Bare Sudoku ماهر جومباقلریده Swordfish نی Y-Wing دن کېین تېکشیره‌دی.",
+          "when": [
+            "X-Wing و Y-Wing هېچ نرسه تاپمگنده. Swordfish X-Wing گه قرگنده کمراق اوچره‌یدی و نامزدلری اوچته چیزیققه سیرک تقسیملنگن رقمنی طلب قیله‌دی. بونینگ اوچون اۉشه رقم بۉییچه تۉلیق و انیق یازوولر کېرک."
+          ],
+          "spot": [
+            "رقمنی تنلنگ و اونده شو رقم اوچون ایککی یاکی اوچته نامزد کتگی بار قطارلرنی قیدیرینگ. اگر شوندی اوچته قطار جمعی فقط اوچته ستوننی قمرب آلسه، اۉشه ستونلرده رقمنینگ باشقه نامزدلرینی تېکشیرینگ. هر بیر قطارده هر بیر ستونده نامزد بۉلیشی شرط اېمس: Swordfish آلتی، یېتتی، سککیز یاکی تۉققیزته کتکدن عبارت بۉلیشی ممکن. اۉیینده رقمنی اۉز تُگمه‌سی بیلن اجرتیب کۉرستینگ و نامزدلری اوچته ستونده تېکیسلنگن اوچته قطارنی قیدیرینگ."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "{d} رقمینینگ {rows}-قطارلرنینگ هر بیریده کۉپی بیلن اوچته نامزد کتگی بار و بو کتکلرنینگ همه‌سی {cols}-ستونلرگه توشه‌دی: {cells}.",
+                "اوچته قطارنینگ هر بیری اۉز {d} رقمینی اوچته ستوندن بیریگه قۉییشی شرط، ایککی قطار اېسه بیته ستوندن فایدلنه آلمیدی. شونینگ اوچون اوچته ستون اۉز {d} رقمینی شو اوچته قطاردن آله‌دی.",
+                "{cols}-ستونلرده‌گی هر قندی باشقه {d} نامزدی امکانسیز. {d} رقمینی قوییده‌گی کتکلردن آلیب تشلنگ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "تۉققیزته کتکنینگ همه‌سینی طلب قیلیش. بعضی قطارلریده ایککیته نامزد بار Swordfish هم، اوچته قطار فقط اوچته ستوننی قمرب آلسه، یراقلی.",
+            "تۉرتته نامزد کتگی بار قطارنی قۉشیش. هر بیر اساسی قطارده کۉپی بیلن اوچته بۉلیشی کېرک، همه‌سی اوچته ستون ایچیده.",
+            "اساسی قطارلردن آلیب تشلش. اساس قطارلر بۉلسه، آلیب تشلشلر اوچته ستونده، اساسی قطارلردن تشقریده بۉله‌دی."
+          ],
+          "faq": [
+            [
+              "سودوکوده Swordfish نیمه؟",
+              "اوچته قطارده‌گی نامزدلری اوچته ستونگه چېکلنگن رقم. اوچته قطار رقمنی اۉشه اوچته ستونگه بیته‌دن قۉییشی شرط، شونینگ اوچون رقم اۉشه ستونلرنینگ باشقه کتکلریدن آلیب تشلنه‌دی."
+            ],
+            [
+              "Swordfish X-Wing دن نیمه‌سی بیلن فرق قیله‌دی؟",
+              "فقط اۉلچمی بیلن: X-Wing ایککی قطار و ایککی ستوندن، Swordfish اوچته قطار و اوچته ستوندن فایدلنه‌دی. ملاحظه بیر خیل."
+            ],
+            [
+              "Swordfish اوچون عینن تۉققیزته کتک کېرکمی؟",
+              "یۉق. هر بیر قطارده ایککی یاکی اوچته نامزد بۉلیشی ممکن؛ نقش فقط اوچته قطار بیرگلیکده اوچته‌دن آرتیق ستوندن فایدلنمسلیگینی طلب قیله‌دی."
+            ],
+            [
+              "تۉرت اۉلچملی بالیق بارمی؟",
+              "هه، Jellyfish. Bare Sudoku اوندن فایدلنمیدی، چونکی اونینگ جومباقلریگه او هېچ قچان کېرک بۉلمیدی."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "سودوکوده XYZ-Wing: اوصول قندی ایشله‌یدی",
+          "description": "XYZ-Wing: اوچ نامزدلی تینچ و اولردن بیرینی بهم کۉره‌دیگن ایککی قنات اۉشه رقمنی اوچه‌له‌سینی کۉره‌دیگن هر بیر کتکدن چیقره‌دی. حقیقی مثال.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing بو تینچیده اوچته نامزد بار Y-Wing. تینچده X، Y و Z بار؛ بیته قنات تینچنی کۉره‌دی و اونده X و Z بار، ایککینچیسی تینچنی کۉره‌دی و اونده Y و Z بار. اوچته کتکدن بیری Z بۉلیشی شرط، شونینگ اوچون Z رقمینی اوچه‌له‌سینی کۉره‌دیگن هر بیر کتکدن آلیب تشلش ممکن. تینچنینگ اۉزی Z بۉلیشی ممکنلیگی سببلی، آلیب تشلنه‌دیگن کتک ایککه‌له قنات بیلن بیرگه تینچنی هم کۉریشی کېرک، بو اېسه اونی کتکلرنینگ عمومی مربعی یاکی چیزیغی بیلن چېکله‌یدی. بو Bare Sudoku فایدلنه‌دیگن اېنگ قییین اوصول.",
+          "when": [
+            "فقط باشقه همه نرسه نتیجه بېرمگنده. XYZ-Wing Bare Sudoku ده‌گی اېنگ کم اوچره‌یدیگن نقش و فقط ماهر جومباقلریده پیدا بۉله‌دی. اوچ نامزدلی کتک اۉزینینگ ایککی رقمی بار ایککی نامزدلی کتک بیلن بیته مربعده تورسه، اونی قیدیرینگ."
+          ],
+          "spot": [
+            "عینن اوچته نامزدی بار کتکلردن باشلنگ؛ اولرنینگ هر بیری تینچ بۉلیشی ممکن. اونینگ قۉشنیلری آره‌سیدن هر بیریده ایککیته‌دن نامزد بار، ایککه‌له‌سی هم تینچنینگ اوچته نامزدیدن آلینگن و عینن بیته عمومی Z رقمیگه اېگه ایککی کتکنی قیدیرینگ. سۉنگ تینچنی هم، ایککه‌له قناتنی هم کۉره‌دیگن و Z بار کتکلرنی تاپینگ. عملده بیته قنات تینچنینگ مربعیده، ایککینچیسی اونینگ قطاری یاکی ستونیده بۉله‌دی، آلیب تشلنه‌دیگن کتکلر اېسه اۉشه مربعنینگ اۉشه قطار یاکی ستونده‌گی قالگن کتکلری."
+          ],
+          "examples": [
+            {
+              "h": "مثال",
+              "steps": [
+                "{pivot} تینچینینگ اوچته نامزدی بار: {x}، {y} و {z}. او {x} و {z} بار {wingA} کتگینی همده {y} و {z} بار {wingB} کتگینی کۉره‌دی.",
+                "{pivot} کتگی {z} بۉلسه، مسئله حل. {x} بۉلسه، {wingA} کتگی {z} بۉلیشی شرط. {y} بۉلسه، {wingB} کتگی {z} بۉلیشی شرط. هر قندی حالتده اوچته کتکدن بیری {z}.",
+                "اوچه‌له‌سینی کۉره‌دیگن کتک {z} بۉله آلمیدی. {z} رقمینی قوییده‌گی کتکلردن آلیب تشلنگ: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "فقط ایککی قناتنی کۉره‌دیگن کتکلردن آلیب تشلش. Y-Wing دن فرقلی روشده بو یېرده تینچ Z بۉلیشی ممکن، شونینگ اوچون کتک تینچنی هم کۉریشی کېرک.",
+            "نامزدلرینینگ ایککه‌له‌سی هم تینچنینگ اوچته نامزدی ایچیده بۉلمگن قناتلردن فایدلنیش.",
+            "اونی Y-Wing بیلن ادشتیریش: فرق تینچده‌گی اوچینچی نامزدده، و او قیسی کتکلرنی تازه‌لش ممکنلیگینی اۉزگرتیره‌دی."
+          ],
+          "faq": [
+            [
+              "سودوکوده XYZ-Wing نیمه؟",
+              "X، Y و Z نامزدلی تینچ و ایککی قنات: بیریده X و Z، ایککینچیسیده Y و Z، ایککه‌له‌سی هم تینچنی کۉره‌دی. اوچته کتکدن بیری Z، شونینگ اوچون Z اوچه‌له‌سینی کۉره‌دیگن کتکلردن آلیب تشلنه‌دی."
+            ],
+            [
+              "XYZ-Wing Y-Wing دن نیمه‌سی بیلن فرق قیله‌دی؟",
+              "تینچده ایککیته اېمس، اوچته نامزد بار، اولردن بیری Z. بو تینچنی Z اوچون ممکن بۉلگن جایگه ایلنتیره‌دی، شونینگ اوچون فقط تینچنی هم، ایککه‌له قناتنی هم کۉره‌دیگن کتکلر Z رقمیدن محروم بۉلیشی ممکن."
+            ],
+            [
+              "XYZ-Wing قنچه‌لیک تېز-تېز اوچره‌یدی؟",
+              "کم. Bare Sudoku ده اونی فقط ماهر جومباقلری طلب قیلیشی ممکن، اولرنینگ اکثریتیگه اېسه او کېرک اېمس. Bare Sudoku اونی اېنگ آخیریده، X-Wing، Y-Wing و Swordfish دن کېین تېکشیره‌دی."
+            ],
+            [
+              "WXYZ-Wing بارمی؟",
+              "هه، تینچیده تۉرتته نامزد بۉله‌دی، لېکن Bare Sudoku اوندن فایدلنمیدی. اۉیینده‌گی هر بیر جومباقنی شو قۉللنمه‌ده‌گی تۉققیزته اوصول بیلن آخیریگه یېتکزیش ممکن."
+            ]
+          ]
+        }
+      }
+    },
     "kk-Arab": {
       "learnHeading": "سۋدوكۋدى ۇيرەنۋ",
       "learnText": "سۋدوكۋدى جاڭا باستادىڭىز با، الدە قيىن جۇمباقتا توقتاپ قالدىڭىز با؟ ەكى نۇسقاۋلىق ەرەجەلەردى جانە كەڭەستەر قولداناتىن بارلىق شەشۋ تاسىلدەرىن ناقتى مىسالدارمەن تۇسىندىرەدى.",
