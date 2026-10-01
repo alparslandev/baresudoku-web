@@ -1,7 +1,7 @@
 import { test, expect } from "bun:test";
-const { Sudoku, Game, candidates, bit, PEERS, HINT_WRONG, HINT_PLACE, NONE } = require("../src/engine.js");
+const { Sudoku, Game, candidates, bit, PEERS, HINT_WRONG, HINT_PLACE, NONE, TECH_BASE, TECH_COUNT, TECH_ORDER, MASTER_RATING, EXPERT_LIMIT, LEVELS } = require("../src/engine.js");
 
-const LEVELS = ["Kolay", "Orta", "Zor", "Uzman"];
+const LEVEL_NAMES = ["Kolay", "Orta", "Zor", "Uzman", "Usta"];
 const count = values => values.filter(v => v !== 0).length;
 
 function verifiedRate(e, puzzle, solution) {
@@ -11,7 +11,8 @@ function verifiedRate(e, puzzle, solution) {
     expect(e.stuck()).toBe(false);
     const t = e.step();
     expect(t).toBeGreaterThanOrEqual(0);
-    if (t > max) max = t;
+    expect(e.stepRating).toBeGreaterThanOrEqual(TECH_BASE[t]);
+    if (e.stepRating > max) max = e.stepRating;
     for (let i = 0; i < 81; i++) {
       if (e.lv[i]) expect(e.lv[i]).toBe(solution[i]);
       else expect(e.lc[i] & bit(solution[i])).not.toBe(0);
@@ -20,8 +21,23 @@ function verifiedRate(e, puzzle, solution) {
   return max;
 }
 
-for (let level = 0; level < 4; level++) {
-  test(`${LEVELS[level]}: teklik, derece, eleme dogrulugu, ipucu yuruyusu`, () => {
+test("teknik kaydi: kimlik sirasi, derece sirasi, uzman siniri", () => {
+  expect(TECH_ORDER.length).toBe(TECH_COUNT);
+  expect(new Set(TECH_ORDER).size).toBe(TECH_COUNT);
+  for (let k = 0; k < 11; k++) expect(TECH_ORDER[k]).toBe(k);
+  for (let k = 12; k < TECH_COUNT; k++) {
+    const a = TECH_ORDER[k - 1], b = TECH_ORDER[k];
+    expect(TECH_BASE[a] < TECH_BASE[b] || (TECH_BASE[a] === TECH_BASE[b] && a < b)).toBe(true);
+  }
+  for (let k = 0; k < TECH_COUNT; k++) expect(TECH_BASE[TECH_ORDER[k]] < MASTER_RATING).toBe(k < EXPERT_LIMIT);
+  expect(LEVEL_NAMES.length).toBeGreaterThanOrEqual(LEVELS);
+  const i18n = require("fs").readFileSync(require("path").join(__dirname, "..", "scripts", "i18n.py"), "utf8");
+  const extra = JSON.parse(i18n.match(/^FIXED_EXTRA = (\[.*\])$/m)[1]);
+  expect(extra.length).toBe(TECH_COUNT - 7);
+});
+
+for (let level = 0; level < LEVELS; level++) {
+  test(`${LEVEL_NAMES[level]}: teklik, derece, eleme dogrulugu, ipucu yuruyusu`, () => {
     const e = new Sudoku();
     const n = 25;
     const start = performance.now();
@@ -32,14 +48,18 @@ for (let level = 0; level < 4; level++) {
       expect(e.countSolutions(puzzle, 2)).toBe(1);
       expect(e.found).toEqual(solution);
       const r = verifiedRate(e, puzzle, solution);
-      if (level < 2) expect(r).toBe(0);
-      else if (level === 2) expect(r >= 1 && r <= 2).toBe(true);
-      else expect(r >= 3 && r <= 10).toBe(true);
+      expect(e.rate(puzzle)).toBe(r);
+      const order = e.rateOrder;
+      if (level < 2) expect(r).toBe(TECH_BASE[0]);
+      else if (level === 2) expect(order >= 1 && order <= 2).toBe(true);
+      else if (level === 3) expect(order >= 3 && r < MASTER_RATING).toBe(true);
+      else expect(r).toBeGreaterThanOrEqual(MASTER_RATING);
       clues.push(count(puzzle));
       const values = puzzle.slice();
       let steps = 0;
       while (count(values) < 81) {
         expect(e.hint(values, puzzle)).toBe(true);
+        expect(e.hintTech >= 0 && e.hintTech < TECH_COUNT).toBe(true);
         expect(values[e.stepCell]).toBe(0);
         expect(solution[e.stepCell]).toBe(e.stepDigit);
         values[e.stepCell] = e.stepDigit;
@@ -47,7 +67,7 @@ for (let level = 0; level < 4; level++) {
       }
     }
     const ms = (performance.now() - start) / n;
-    console.log(`${LEVELS[level]}: ${n} bulmaca, ort ipucu ${(clues.reduce((a, b) => a + b, 0) / n).toFixed(1)}, ${ms.toFixed(1)} ms/bulmaca`);
+    console.log(`${LEVEL_NAMES[level]}: ${n} bulmaca, ort ipucu ${(clues.reduce((a, b) => a + b, 0) / n).toFixed(1)}, ${ms.toFixed(1)} ms/bulmaca`);
   });
 }
 

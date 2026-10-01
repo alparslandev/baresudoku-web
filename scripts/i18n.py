@@ -4,7 +4,7 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FIXED = ["X-Wing", "Y-Wing", "Swordfish", "XYZ-Wing"]
-FIXED_EXTRA = ["Skyscraper", "2-String Kite", "W-Wing", "Unique Rectangle"]
+FIXED_EXTRA = ["Skyscraper", "2-String Kite", "W-Wing", "Unique Rectangle", "Naked Quad", "Hidden Quad", "Jellyfish", "Finned X-Wing", "Finned Swordfish", "Finned Jellyfish", "Empty Rectangle", "Remote Pair", "WXYZ-Wing", "Unique Rectangle Type 2", "Unique Rectangle Type 3", "Unique Rectangle Type 4", "Unique Rectangle Type 5", "Unique Rectangle Type 6", "Hidden Rectangle", "BUG+1"]
 TITLE = "Bare Sudoku"
 RTL = ("ar", "fa", "he", "ur", "ps", "sd", "ug", "ckb", "yi", "dv", "azb", "ks", "arz", "pnb", "uz-Arab", "kk-Arab", "ky-Arab", "qxq", "kmz", "fa-AF", "haz", "bal", "khw", "scl", "bsk", "bft")
 
