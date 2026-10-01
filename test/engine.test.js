@@ -34,6 +34,19 @@ test("teknik kaydi: kimlik sirasi, derece sirasi, uzman siniri", () => {
   const i18n = require("fs").readFileSync(require("path").join(__dirname, "..", "scripts", "i18n.py"), "utf8");
   const extra = JSON.parse(i18n.match(/^FIXED_EXTRA = (\[.*\])$/m)[1]);
   expect(extra.length).toBe(TECH_COUNT - 7);
+  const app = require("fs").readFileSync(require("path").join(__dirname, "..", "src", "app.js"), "utf8");
+  const constant = name => +app.match(new RegExp("\\b" + name + " = (\\d+)"))[1];
+  expect(app).toContain("S_MASTER = S_TECH_EXTRA + TECH_COUNT - 7");
+  const run = Bun.spawnSync(["python3", "scripts/i18n.py", "table", "en"], { cwd: require("path").join(__dirname, "..") });
+  expect(run.exitCode).toBe(0);
+  const table = JSON.parse(run.stdout.toString());
+  expect(table[constant("S_TECH")]).toBe("Locked candidates");
+  expect(table[constant("S_TECH") + 2]).toBe("X-Wing");
+  expect(table[constant("S_TITLE")]).toBe("Bare Sudoku");
+  expect(table[constant("S_RESTART")]).toBe("Restart");
+  expect(table.slice(constant("S_TECH_EXTRA"), constant("S_TECH_EXTRA") + extra.length)).toEqual(extra);
+  const master = constant("S_TECH_EXTRA") + TECH_COUNT - 7;
+  expect(table.length === master || (table.length === master + 1 && table[master] === "Master")).toBe(true);
 });
 
 for (let level = 0; level < LEVELS; level++) {

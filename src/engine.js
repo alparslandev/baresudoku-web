@@ -2362,7 +2362,7 @@ class Game {
       const given = digits(s.given), solution = digits(s.solution), value = digits(s.value);
       if (!Array.isArray(s.notes) || s.notes.length !== 81 || !Array.isArray(s.history)) return false;
       const level = s.level | 0, selected = s.selected | 0, elapsed = +s.elapsed;
-      if (level < 0 || level > 3 || selected < NONE || selected > 80 || !(elapsed >= 0)) return false;
+      if (level < 0 || level >= LEVELS || selected < NONE || selected > 80 || !(elapsed >= 0)) return false;
       for (const r of s.history) if (!Array.isArray(r) || r.length % 3 !== 0) return false;
       this.given = given;
       this.solution = solution;
