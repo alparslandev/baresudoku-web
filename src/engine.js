@@ -34,7 +34,7 @@ const digit = m => 32 - Math.clz32(m & -m);
 const low = m => 31 - Math.clz32(m & -m);
 const SEE = new Uint8Array(6561);
 for (let i = 0; i < 81; i++) for (let j = 0; j < 81; j++) SEE[i * 81 + j] = sees(i, j) ? 1 : 0;
-const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56, 65, 66, 68, 70, 73, 70, 75, 78, 80, 82];
+const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56, 65, 66, 68, 70, 73, 70, 75, 78, 80, 82, 84, 85, 86, 90, 95];
 const TECH_COUNT = TECH_BASE.length;
 const MASTER_RATING = 65;
 const LEVELS = 5;
@@ -55,6 +55,7 @@ const PEER_SET = new Int32Array(243);
 for (let c = 0; c < 81; c++) for (const p of PEERS[c]) PEER_SET[c * 3 + ((p / 27) | 0)] |= 1 << (p % 27);
 const positionIn = (c, u) => u < 9 ? COL[c] : u < 18 ? ROW[c] : (ROW[c] % 3) * 3 + COL[c] % 3;
 const chainBonus = links => links > 4 ? Math.min(10, (links - 4) >> 1) : 0;
+const MAX_NEST = 8;
 function candidates(values, cell) {
   let used = 0;
   const peers = PEERS[cell];
@@ -132,6 +133,11 @@ class Sudoku {
     this.alsFirst = new Uint16Array(MAX_ALS * 9);
     this.alsDepth = new Int32Array(MAX_ALS * 9);
     this.alsQueue = new Int32Array(MAX_ALS * 9);
+    this.offMask = new Uint16Array(81);
+    this.onMask = new Uint16Array(81);
+    this.union = new Uint16Array(81);
+    this.sv = new Uint8Array(81 * (MAX_NEST + 1));
+    this.sc = new Uint16Array(81 * (MAX_NEST + 1));
     this.solution = null;
   }
 
@@ -1695,6 +1701,269 @@ class Sudoku {
     return any;
   }
 
+  reachConsistent(node) {
+    const mark = this.mark, queue = this.queue, start = this.linkStart, to = this.linkTo, off = this.offMask, on = this.onMask, lc = this.lc;
+    if (++this.markValue >= 0x7fffffff) {
+      mark.fill(0);
+      this.markValue = 1;
+    }
+    const stamp = this.markValue;
+    const origin = node * 2 + 1;
+    mark[origin] = stamp;
+    let head = 0, tail = 0;
+    queue[tail++] = origin;
+    while (head < tail) {
+      const st = queue[head++];
+      for (let k = start[st]; k < start[st + 1]; k++) {
+        const ch = to[k];
+        if (mark[ch] === stamp) continue;
+        if (mark[ch ^ 1] === stamp) return false;
+        mark[ch] = stamp;
+        queue[tail++] = ch;
+      }
+    }
+    off.fill(0);
+    on.fill(0);
+    for (let k = 0; k < tail; k++) {
+      const st = queue[k], n = st >> 1, c = (n / 9) | 0, b = 1 << (n % 9);
+      if (st & 1) on[c] |= b;
+      else off[c] |= b;
+    }
+    for (let c = 0; c < 81; c++) if (lc[c] && !(lc[c] & ~off[c])) return false;
+    for (let u = 0; u < 27; u++) {
+      let have = 0, left = 0;
+      for (let k = 0; k < 9; k++) {
+        const c = UNITS[u][k];
+        have |= lc[c];
+        left |= lc[c] & ~off[c];
+      }
+      if (have & ~left) return false;
+    }
+    return true;
+  }
+
+  nishio() {
+    this.prepareUnits();
+    this.groupCount = 0;
+    this.buildLinks(30);
+    const elim = this.elimBest;
+    elim.fill(0);
+    let any = false;
+    for (let node = 0; node < 729; node++) {
+      const c = (node / 9) | 0, b = 1 << (node % 9);
+      if (!(this.lc[c] & b) || this.reachConsistent(node)) continue;
+      elim[c] |= b;
+      any = true;
+    }
+    if (!any) return false;
+    for (let c = 0; c < 81; c++) this.lc[c] &= ~elim[c];
+    return true;
+  }
+
+  joinStatic() {
+    const lc = this.lc, on = this.onMask, off = this.offMask, union = this.union;
+    for (let q = 0; q < 81; q++) union[q] |= on[q] ? on[q] : lc[q] & ~off[q];
+  }
+
+  narrow() {
+    const lc = this.lc, union = this.union;
+    let changed = false;
+    for (let q = 0; q < 81; q++) {
+      if (!(lc[q] & ~union[q])) continue;
+      lc[q] &= union[q];
+      changed = true;
+    }
+    return changed;
+  }
+
+  cellForcing() {
+    this.prepareUnits();
+    this.groupCount = 0;
+    this.buildLinks(30);
+    for (let c = 0; c < 81; c++) {
+      const m = this.lc[c];
+      if (POP[m] < 2) continue;
+      this.union.fill(0);
+      let branches = 0;
+      for (let rest = m; rest; rest &= rest - 1) {
+        if (!this.reachConsistent(c * 9 + low(rest))) continue;
+        branches++;
+        this.joinStatic();
+      }
+      if (branches && this.narrow()) return true;
+    }
+    return false;
+  }
+
+  unitForcing() {
+    this.prepareUnits();
+    this.groupCount = 0;
+    this.buildLinks(30);
+    for (let u = 0; u < 27; u++) {
+      for (let d = 1; d <= 9; d++) {
+        const m = this.unitPos[u * 9 + d - 1];
+        if (POP[m] < 2) continue;
+        this.union.fill(0);
+        let branches = 0;
+        for (let rest = m; rest; rest &= rest - 1) {
+          if (!this.reachConsistent(UNITS[u][low(rest)] * 9 + d - 1)) continue;
+          branches++;
+          this.joinStatic();
+        }
+        if (branches && this.narrow()) return true;
+      }
+    }
+    return false;
+  }
+
+  assign(at, c, d) {
+    const sc = this.sc, keep = ~bit(d), peers = PEERS[c];
+    this.sv[at + c] = d;
+    sc[at + c] = 0;
+    for (let k = 0; k < 20; k++) sc[at + peers[k]] &= keep;
+  }
+
+  settle(level) {
+    const at = level * 81, sv = this.sv, sc = this.sc;
+    for (;;) {
+      let progress = false;
+      for (let c = 0; c < 81; c++) {
+        if (sv[at + c]) continue;
+        const m = sc[at + c];
+        if (!m) return false;
+        if (POP[m] === 1) {
+          this.assign(at, c, digit(m));
+          progress = true;
+        }
+      }
+      for (let u = 0; u < 27; u++) {
+        const cells = UNITS[u];
+        let once = 0, twice = 0, placed = 0;
+        for (let k = 0; k < 9; k++) {
+          const c = cells[k];
+          if (sv[at + c]) {
+            const b = bit(sv[at + c]);
+            if (placed & b) return false;
+            placed |= b;
+            continue;
+          }
+          const m = sc[at + c];
+          twice |= once & m;
+          once |= m;
+        }
+        if ((once | placed) !== ALL) return false;
+        for (let single = once & ~twice & ~placed; single; single &= single - 1) {
+          const b = single & -single;
+          for (let k = 0; k < 9; k++) {
+            const c = cells[k];
+            if (sv[at + c] || !(sc[at + c] & b)) continue;
+            this.assign(at, c, digit(b));
+            progress = true;
+            break;
+          }
+        }
+      }
+      if (!progress) return true;
+    }
+  }
+
+  branch(level, from, cell, d) {
+    const at = level * 81, sv = this.sv, sc = this.sc;
+    if (from < 0) {
+      sv.set(this.lv, at);
+      sc.set(this.lc, at);
+    } else {
+      sv.copyWithin(at, from * 81, from * 81 + 81);
+      sc.copyWithin(at, from * 81, from * 81 + 81);
+    }
+    if (!(sc[at + cell] & bit(d))) return false;
+    this.assign(at, cell, d);
+    return this.settleNested(level);
+  }
+
+  settleNested(level) {
+    if (!this.settle(level)) return false;
+    if (level === 0) return true;
+    const at = level * 81, sc = this.sc;
+    let changed = true;
+    while (changed) {
+      changed = false;
+      for (let q = 0; q < 81; q++) {
+        for (let rest = sc[at + q]; rest; rest &= rest - 1) {
+          const b = rest & -rest;
+          if (!(sc[at + q] & b) || this.branch(level - 1, level, q, low(b) + 1)) continue;
+          sc[at + q] &= ~b;
+          changed = true;
+          if (!this.settle(level)) return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  joinDynamic() {
+    const sv = this.sv, sc = this.sc, union = this.union;
+    for (let q = 0; q < 81; q++) union[q] |= sv[q] ? bit(sv[q]) : sc[q];
+  }
+
+  dynamicNet() {
+    const lc = this.lc, elim = this.elimBest;
+    elim.fill(0);
+    let any = false;
+    for (let c = 0; c < 81; c++) {
+      for (let rest = lc[c]; rest; rest &= rest - 1) {
+        if (this.branch(0, -1, c, low(rest) + 1)) continue;
+        elim[c] |= rest & -rest;
+        any = true;
+      }
+    }
+    if (any) {
+      for (let c = 0; c < 81; c++) lc[c] &= ~elim[c];
+      return true;
+    }
+    for (let c = 0; c < 81; c++) {
+      if (POP[lc[c]] < 2) continue;
+      this.union.fill(0);
+      let branches = 0;
+      for (let rest = lc[c]; rest; rest &= rest - 1) {
+        if (!this.branch(0, -1, c, low(rest) + 1)) continue;
+        branches++;
+        this.joinDynamic();
+      }
+      if (branches && this.narrow()) return true;
+    }
+    for (let u = 0; u < 27; u++) {
+      for (let d = 1; d <= 9; d++) {
+        const m = this.unitMask(UNITS[u], bit(d));
+        if (POP[m] < 2) continue;
+        this.union.fill(0);
+        let branches = 0;
+        for (let rest = m; rest; rest &= rest - 1) {
+          if (!this.branch(0, -1, UNITS[u][low(rest)], d)) continue;
+          branches++;
+          this.joinDynamic();
+        }
+        if (branches && this.narrow()) return true;
+      }
+    }
+    return false;
+  }
+
+  nestedNet() {
+    const lc = this.lc;
+    for (let level = 1; level <= MAX_NEST; level++) {
+      for (let c = 0; c < 81; c++) {
+        for (let rest = lc[c]; rest; rest &= rest - 1) {
+          if (this.branch(level, -1, c, low(rest) + 1)) continue;
+          lc[c] &= ~(rest & -rest);
+          this.stepRating = TECH_BASE[41] + level - 1;
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
   apply(id) {
     switch (id) {
       case 0: return this.singles();
@@ -1734,6 +2003,11 @@ class Sudoku {
       case 34: return this.alsXyWing();
       case 35: return this.deathBlossom();
       case 36: return this.alsChain();
+      case 37: return this.nishio();
+      case 38: return this.cellForcing();
+      case 39: return this.unitForcing();
+      case 40: return this.dynamicNet();
+      case 41: return this.nestedNet();
     }
     return false;
   }
