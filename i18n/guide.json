@@ -101268,6 +101268,2334 @@
         }
       }
     },
+    "slr": {
+      "learnHeading": "Sudoku öğren",
+      "learnText": "Sudokuga yeñimisiñ, ya ağır bir bulmacada takıldıñmı? İki rehber kurallarni ve işaretlerniñ kullandığı her çözüm teknikini gerçek misaller ile añlatır.",
+      "howToLink": "Sudoku nece oynanır",
+      "techniquesLink": "Sudoku çözüm teknikleri",
+      "labels": {
+        "howTo": "Nece oynanır",
+        "techniques": "Teknikler",
+        "play": "Sudoku oyna",
+        "prev": "Evvelki teknik",
+        "next": "Soñraki teknik",
+        "all": "Bütün teknikler",
+        "example": "Misal",
+        "steps": "Adım adım",
+        "when": "Ne vakıt kullanılır",
+        "spot": "Nece tapılır",
+        "mistakes": "Çok yapılan yañlışlar",
+        "inGame": "Bare Sudoku'da",
+        "level": "Gerek olan derece: {level}",
+        "hint": "Oyunda işaret böyle der: {text}",
+        "legend": "Kalın sayılar berilen, kök sayılar çözerken koyulan, kiçik sayılar namzetler. Belgili haneler şekilni yapar, üsti çizilen namzetler silinir, dayire içindeki namzet koyulacak sayı.",
+        "notation": "Haneler r3c7 şeklinde yazılır: 3. satır, 7. sütün. Satırlar yukarıdan, sütünler soldan sayılır; kutılar sol yukarıdan başlayıp satır satır 1'den 9'ga sayılır.",
+        "row": "{n}. satır",
+        "column": "{n}. sütün",
+        "box": "{n}. kutı",
+        "elimItem": "{cell} hanesinden {d}",
+        "regions": "Bulmacanıñ başında 5. satır, 5. sütün ve 5. kutı",
+        "firstMove": "Tek namzet: {cell} yalñız {d} olabilir",
+        "breadcrumb": "Sayfa yolı"
+      },
+      "howTo": {
+        "title": "Sudoku Nece Oynanır: Kurallar, Cedvel ve İlk Hamleler",
+        "description": "Sudoku nece oynanır: kurallar, satır, sütün ve kutılar, her bulmacanıñ neçün bir çözümi bar, notlar nece kullanılır ve ilk hamleler nece yapılır.",
+        "h1": "Sudoku nece oynanır",
+        "summary": "Sudoku 9×9 cedvelde oynanan bir mantık bulmacası. Her boş hanege 1'den 9'ga bir sayı yazarsıñ: her satırda, her sütünde ve her 3×3 kutıda her sayı tam bir kere olmalı. Bazı sayılar baştan berilir; kalanını her seferinde kesin olan bir haneni taparak çıkarırsıñ ve hiç tahmin etmeñ gerek olmaz. Bu rehber cedvelni, kurallarni, tek çözüm prensipini, notlarni ve ilk hamleler üçün basit bir yolni añlatır. Hepsini pulsız olan ve mantıkni añlatan işaretleri bar [Bare Sudoku](play)'da deneyebilirsiñ.",
+        "sections": [
+          {
+            "h": "Sudokunıñ kuralları ne?",
+            "p": [
+              "Yalñız üç kural bar ve üçi de bir kuralnıñ üç taraftan görünüşi: her satırda 1'den 9'ga bütün sayılar olmalı, her sütünde 1'den 9'ga bütün sayılar olmalı, her 3×3 kutıda 1'den 9'ga bütün sayılar olmalı. Onıñ üçün bir sayı bir satırda, sütünde ya kutıda hiç iki kere olamaz.",
+              "Kalın yazılan berilen sayılar sabit. Seniñ işiñ boş hanelerni doldurmak. Hesap da, sıra da yok: sayılar yalñız dokuz başka belgi. Harfler ya şekiller ile oynasañ da hiçbir şey değişmezdi."
+            ]
+          },
+          {
+            "h": "Cedvelniñ düzeni nece?",
+            "p": [
+              "Cedvelde 9 satır ve 9 sütünde 81 hane bar. Kalın çizgiler onı dokuz 3×3 kutıga böler. Her hane tam bir satırga, bir sütünge ve bir kutıga aittir; bu üç topar haneniñ birimleri. Bir hane ile birim paylaşan başka 20 hanege onıñ koñşıları deyilir; bir hanege koyulan sayı o sayıni 20 koñşınıñ hepsinden çıkarır.",
+              "Haneler r3c7 şeklinde yazılır: 3. satır, 7. sütün. Satırlar yukarıdan, sütünler soldan sayılır; kutılar sol yukarıdan başlayıp satır satır 1'den 9'ga sayılır. Bu yazış her teknik rehberinde kullanılır, öğrenmege değer: r5c5 cedvelniñ ortası."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Neçün her sudokunıñ tam bir çözümi bar?",
+            "p": [
+              "Doğru bir sudokunıñ bir çözümi bar, mantıkni işleten de bu. Bir sayınıñ bir birimde başka hiçbir yerge gidemeyeceğini gösterebilseñ, o sayı kalan hanege gitmeli, çünki çözüm bar ve tek. Bir bulmacanıñ iki çözümi olsa, hiçbir düşünüş ikisini ayıramazdı ve bir yerde tahmin etmege mecbur kalırdıñ.",
+              "Bare Sudoku her bulmacani cihazıñda üretir ve onıñ tam bir çözümi olduğunı, mantık çözücüsiniñ onı seçilen dereceniñ teknikleri ile bitirebildigini tekşirir. Yani takılsañ, tapılacak bir soñraki adım her zaman bar ve işaret onı gösterir."
+            ]
+          },
+          {
+            "h": "Sudokuga nece başlanır?",
+            "p": [
+              "En sıkışık yerden başla. Bu sıra her derecede işe yarar:"
+            ],
+            "list": [
+              "Çok kere, diyelim altı ya yedi kere görünen bir sayı seç ve onı hâlâ içermeyen kutılarni tap. Çok vakıt kutıda onıñ üçün yalñız bir hane kalır: bu bir [gizli tek](hidden-single).",
+              "Kalabalık hanelerge bak. Satırı, sütüni ve kutısı birlikte sekiz başka sayı içeren bir hanede yalñız bir namzet kalır: bu bir [tek namzet](naked-single). Az kalsın dolu satır ve kutılardaki haneler bakmak üçün en iyi yer.",
+              "Koyduğuñ her sayı 20 koñşıdan bir namzetni siler, onıñ üçün o koñşılarni hemen tekşir. Tekler çok vakıt zincir gibi gelir.",
+              "Kolay koymalar bitince notlarni yaz: her boş haneniñ namzetleri. Soñra bir kutınıñ içinde tek bir çizgige sıkışan bir sayı ([kilitli namzetler](locked-candidates)) ya aynı iki namzetni paylaşan iki hane (bir [açık cüt](naked-pairs)) ara.",
+              "Her silmeden soñra teklerge dön. Usta bulmacalar bile çoğunlukla tekler ile çözülür; ileri teknik yalñız soñraki tekniñ yolını açar."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Notlar ne ve ne vakıt kullanılır?",
+            "p": [
+              "Notlar, kalem belgileri ya namzetler de deyilir, bir boş hanege orada hangi sayılar hâlâ mümkin olduğunı yazmak üçün koyduğuñ kiçik sayılar. Asan bulmacalarda olar az gerek olur; Ağır dereceden yukarı olar şart, çünki cüt, X-Wing ve Y-Wing gibi teknikler koyulan sayılar ile değil, namzetler ile işler.",
+              "Notlarni doğru tut: bir sayı koyunca onı 20 koñşınıñ notlarından sil. Bare Sudoku'da bu özi olur, Notlarni doldur da bir dokunuş ile her boş hanege her namzetni yazar, şöyle eksiksiz ve doğru namzetler ile başlarsıñ. Not tahmin değil, bir gerçek: henüz hiçbir şey bu sayıni çıkarmadı demek."
+            ]
+          },
+          {
+            "h": "Takılsañ ne yapmalı?",
+            "p": [
+              "Evvel esaslarni yene gözden geçir: az kalsın dolu her satır, sütün ve kutı teklerniñ kaynağı. Soñra notlarıñ eksiksiz olduğunı tekşir, çünki eksik bir namzet şekillerni gizler, eskimiş bir namzet de yalan şekiller yaratır. Soñra [teknikleri](techniques) zorluk sırası ile dene: kilitli namzetler, cüt ve üçlükler, X-Wing, Y-Wing, Swordfish ve XYZ-Wing. Her biriniñ gerçek misalli öz sayfası bar.",
+              "Hiçbiri işe yaramasa, işaret al. Bare Sudoku'da işaret evvel koyulan bir sayı yañlışmı, onı tekşirir, soñra mantık ile doldurulabilen soñraki haneni tapar ve teknikniñ adını söyler; şöyle işaret kullansañ da bir şey öğrenirsiñ. Sayıni koymak üçün işaretge yene bas."
+            ]
+          },
+          {
+            "h": "Bare Sudoku'da sayılar nece girilir?",
+            "p": [
+              "Bir hanege, soñra bir sayıga dokun. Ya evvel sayıga dokun: sayı kilitlenir ve dokunduğuñ her hanege yazılır; bu bir sayınıñ altıncı, yedinci ve sekizinci nüshasını koymanıñ en tez yolı. Bırakmak üçün sayıga yene dokun. Not düğmesi kalem belgilerine geçer, Sil haneni temizler, Geri al her hamleni geri alır ve menüde kapatmasañ yañlışlar kızıl ile belgilenir.",
+              "Klavyede ok düğmeleri ile gez, 1'den 9'ga sayı gir, Backspace ile sil, N not, U geri al, H işaret, F notlarni doldur, Escape menü. Oyun özini saklar, internetsiz işler; reklamı da, hesabı da yok."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Sudokuda hiç tahmin etmek gerekmi?",
+            "Doğru bir bulmacada gerek yok. Her Bare Sudoku bulmacasınıñ tam bir çözümi bar ve derecesiniñ teknikleri ile yalñız mantık ile çözülebildigi tekşirilir. Tahmin etmeñ gerek gibi hissetseñ, notlarıñda bir namzet eksik ya tapılmayı bekleyen bir teknik bar."
+          ],
+          [
+            "Bir sayı bir satırda, sütünde ya kutıda iki kere olabilirmi?",
+            "Yok. Bütün kural bu: dokuz satırnıñ, dokuz sütünniñ ve dokuz kutınıñ her biri 1'den 9'ga her sayıni tam bir kere içerir. Aynı iki sayı bir birimde olsa, en az biri yañlış."
+          ],
+          [
+            "Asan, Orta, Ağır ve Usta arasında ne fark bar?",
+            "Dereceni bulmacanıñ istediği teknikler belirler. Asan ve Orta yalñız tekler ile çözülür, Asan da en az 38 berilen sayı ile başlar. Ağır kilitli namzetler ya cüt ve üçlükler ister. Usta X-Wing, Y-Wing, Swordfish ya XYZ-Wing ister."
+          ],
+          [
+            "Notlarni her hanege yazmak mı iyi, yalñız bazılarına mı?",
+            "Ağır ve Usta bulmacalarda hepsini doldur: cüt, X-Wing ve Y-Wing gibi şekiller yalñız her namzet yazılı olsa görünür. Asan ve Orta'da notlar isteğe bağlı, oyuncularnıñ çoğı yalñız tek arar."
+          ],
+          [
+            "Bir sudoku ne kadar sürer?",
+            "Asan bir bulmaca birkaç dakika sürer; Usta bulmacalar ileri şekilni ne kadar tez tapmañga bağlı olarak yirmi dakika ya daha çok sürebilir. Bare Sudoku vakıtni gösterir, menü açık olsa onı durdurur ve reyting cedveli tutmaz, öz hızıñda oyna."
+          ],
+          [
+            "Sudoku üçün hesap gerekmi?",
+            "Yok. Sayılar yalñız etiket; toplama da, sayma da yok. Herhangi dokuz belgi de işlerdi, sudokunıñ sayı bulmacası değil, mantık bulmacası olmasınıñ sebebi bu."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Sudoku Çözüm Teknikleri: Misaller ile Añlatma",
+        "description": "Tek namzetten Swordfish ve XYZ-Wing'ge dokuz sudoku çözüm tekniginiñ hepsi, Bare Sudoku işaretleriniñ kullandığı sıra ile, her biri gerçek bir misal ile.",
+        "h1": "Sudoku çözüm teknikleri",
+        "intro": [
+          "Her sudoku kiçik bir mantık teknikleri toplamı ile çözülebilir. Bu liste Bare Sudoku çözücüsiniñ ve işaretleriniñ kullandığı dokuz teknikni çözücüniñ deneme sırası ile sayar: evvel tekler, soñra bir birim içindeki silmeler, soñra birkaç satır ve sütünge yayılan şekiller. Her teknikniñ tanımı, nece tapılacağı, üretilen bir bulmacadan gerçek bir misali ve çok yapılan yañlışları olan öz sayfası bar.",
+          "Bulmacanıñ derecesini istediği en ağır teknik belirler. Asan ve Orta bulmacalar yalñız tek ister, Ağır bulmacalar kilitli namzetler ya cüt ve üçlükler ister, Usta bulmacalar en az bir balık ya kanat ister. Derece ne olsa olsun, işniñ çoğunı tekler yapar; ileri teknik bir iki namzetni siler ve tekler oradan devam eder."
+        ],
+        "faq": [
+          [
+            "Sudoku tekniklerini hangi sıra ile denemeli?",
+            "En ucuzından başla: tek namzet, gizli tek, kilitli namzetler, açık cüt ve üçlük, gizli cüt ve üçlük, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku tam bu sıra ile dener, işaret de her zaman ilerleten en basit teknikniñ adını berir."
+          ],
+          [
+            "Sudoku çözmek üçün bu tekniklerniñ hepsi gerekmi?",
+            "Asan ve Orta bulmacalar üçün tekler yeter. Ağır bulmacalar kilitli namzetlerni ve alt toplamlarni ekler. Usta bulmacalar en az bir balık ya kanat ister, ama çok vakıt bir bulmacada yalñız bir iki kere."
+          ],
+          [
+            "XYZ-Wing'den ağır teknikler barmı?",
+            "Ebet, meselen zincirler, teklik testleri ve zorlama ağları. Bare Sudoku olarni isteyen bulmaca üretmez, onıñ üçün oyundaki her bulmaca bu sayfadaki dokuz teknik ile bitirilebilir."
+          ],
+          [
+            "Namzet ne?",
+            "Satırında, sütününde ya kutısında henüz hiçbir şey onı çıkarmadığı üçün bir boş hanege hâlâ gidebilen sayı. Oyundaki notlar namzetler. Teklerden ötedeki her teknik namzetler üstine düşünür, onıñ üçün olarni eksiksiz ve doğru tut."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Tek namzet",
+          "title": "Sudokuda Tek Namzet (Naked Single): Bir Namzetli Hane",
+          "description": "Tek namzet (naked single), yalñız bir sayı gidebilen boş hane. Tek namzetlerni tez tapmani gerçek bir misal ile adım adım öğren, çok yapılan yañlışlardan kaç.",
+          "h1": "Tek namzet (naked single)",
+          "summary": "Tek namzet (naked single), tam bir namzeti olan boş hane: başka sekiz sayı onıñ satırında, sütününde ya kutısında zaten bar. Kalan sayı oraga gitmeli. Bu en basit ve en çok kullanılan sudoku teknigi, Bare Sudoku işareti de onı \"Bunda bir namzet bar\" diye bildirir.",
+          "when": [
+            "Her zaman. Tek namzetler ilk hamleden soñkısına kadar, her derecede görünür. Asan ve Orta bulmacalarda gizli tekler ile birlikte gerek olan yalñız teknik bu. Daha ağır bulmacalarda ileri bir teknikniñ her silmesi çok vakıt arkasında bir tek namzet kaldırır, onıñ üçün her adımdan soñra olarni tekşir."
+          ],
+          "spot": [
+            "Koñşıları çok dolu hanelerge bak: zaten yedi sayısı olan bir satırdaki hane, ya satırı, sütüni ve kutısı birlikte sekiz başka sayıni kaplayan hane. Notsuz, haneden görebildiğiñ sayılarni say. Notlar ile tek namzet sadece bir namzet gösteren hane; Notlarni doldur olarni kolay tapılır yapar, sebebi bu."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{cell} hanesine bak. O boş, onıñ üçün satırında, sütününde ve kutısında zaten koyulan her sayıni yaz.",
+                "{row}. satırda {rowDigits} bar. {col}. sütünde {colDigits} bar. {box}. kutıda {boxDigits} bar.",
+                "Birlikte olar {d} dışındaki her sayıni çıkarır, yani {cell} hanesinde kalan tek namzet {d}.",
+                "{cell} hanesine {d} yaz. Soñra yeñi sayı aynı satırda, sütünde ya kutıda başka bir tek yarattımı, onı tekşir."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Yalñız satırni ya yalñız kutıni saymak. Çıkarılan sekiz sayı çok vakıt üç birimden birlikte gelir.",
+            "Az evvel koyduğuñ sayınıñ da 20 koñşısından namzet çıkardığını unutmak; yeñi tek namzetler her koymadan hemen soñra çıkar.",
+            "Tek namzetni gizli tek ile karıştırmak: tek namzette hanede bir namzet kalır, gizli tekte birimde sayı üçün bir hane kalır."
+          ],
+          "faq": [
+            [
+              "Sudokuda tek namzet (naked single) ne?",
+              "Tam bir namzeti olan boş hane. Satırında, sütününde ve kutısında sekiz başka sayı zaten koyulgan, onıñ üçün dokuzuncı sayı sığan yalñız sayı."
+            ],
+            [
+              "İñglizcede neçün naked, yani açık deyilir?",
+              "Çünki notlar yazılınca tek namzet doğrudan hanede görünür; hiçbir şey onı gizlemez. Gizli tek ise başka namzetler arasında durur ve hanege değil, sayıga bakıp tapılır."
+            ],
+            [
+              "Bir bulmaca yalñız tek namzetler ile çözülebilirmi?",
+              "Çok Asan bulmaca çözülebilir, ama çoğı gizli tek de ister. Bare Sudoku Asan ve Orta bulmacalarni iki türlü tek ile çözülebilen diye dereceler; Ağır ve Usta bulmacalar en az bir teknik daha ister."
+            ],
+            [
+              "İşaret tek namzetlerni gösterirmi?",
+              "Ebet. Soñraki koyma bir tek namzet olsa, işaret haneni seçer ve sayı ile birlikte \"Bunda bir namzet bar\" der. Koymak üçün işaretge yene bas."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Gizli tek",
+          "title": "Sudokuda Gizli Tek (Hidden Single): Sayınıñ Tek Yeri",
+          "description": "Gizli tek (hidden single), bir satırda, sütünde ya kutıda bir sayınıñ gidebileceği tek hane. Sayılarni birer birer tarayıp tapmani gerçek misal ile öğren.",
+          "h1": "Gizli tek (hidden single)",
+          "summary": "Gizli tek (hidden single), bir satırda, sütünde ya kutıda yalñız bir mümkin hanesi kalan sayı, o hane başka namzetler gösterse de. Birim o sayıni içermeli, onıñ üçün sayı oraga gider. Bare Sudoku işareti onı \"Bu satırda 5 üçün bir yer\", sütünde ya kutıda diye bildirir.",
+          "when": [
+            "Bir sayı çok ilerleyince: bir sayı beş altı kere görününce kalan kutılar çok sıkışık olur, soñraki hamle de çok vakıt bir gizli tek. Gizli tekler Asan ve Orta bulmacalarnıñ esas teknigi ve her derecede işniñ yükini taşımaga devam eder."
+          ],
+          "spot": [
+            "Sayılarni birer birer tara. Bir sayı al, onı içermeyen bir kutı tap ve o kutıda bu sayınıñ koyulan bir nüshası ile satır ya sütün paylaşan her haneniñ üstini çiz. Bir hane kalsa, gizli tekni taptıñ. Aynı tarama satır ve sütünlerde de işler. Oyunda koyulan bir sayıga dokun: onıñ her nüshası belgilenir, şöyle boş haneler göze çarpar."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{box}. kutıda henüz {d} yok, onıñ üçün boş hanelerinden biri onı almalı. Boş haneler: {empties}.",
+                "{cell} dışında hepsinde {d}, aynı satırga ya sütünge zaten koyulan bir {d} ile tıkalı, yani {d} orada namzet değil.",
+                "Şöyle {box}. kutıda {d} üçün tek yer {cell} kalır. {cell} hâlâ başka namzetler gösterse de oraga {d} yaz."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sayıni yalñız belki doğru olan bir hanege koymak: yalñız göze çarpanlarni değil, birimdeki başka her boş haneni tekşir.",
+            "Hane birkaç namzet gösterdiği üçün gizli tekni kaçırmak. Başka namzetler önemli değil; önemli olan sayınıñ birimde başka yeri olmaması.",
+            "Yalñız kutılarni taramak. Satır ve sütünler de o kadar sık gizli tek berir, hususan soñga yakın."
+          ],
+          "faq": [
+            [
+              "Sudokuda gizli tek (hidden single) ne?",
+              "Bir satırnıñ, sütünniñ ya kutınıñ yalñız bir hanesine gidebilen sayı. Birim o sayıni içermeli, onıñ üçün hanede başka namzetler olsa da hane kesinleşir."
+            ],
+            [
+              "Gizli tek ile tek namzet arasında ne fark bar?",
+              "Tek namzet hane ile ilgili: bir namzet kalır. Gizli tek sayı ile ilgili: birimde bir hane kalır. İkisi de sayıni kesin koyar."
+            ],
+            [
+              "Hangisini tapmak kolay?",
+              "Notsuz gizli tekler çok vakıt kolay, çünki cedvelni her seferinde bir sayı üçün tarayabilirsiñ. Eksiksiz notlar ile tek namzetler en kolay, çünki bir namzetli hane göze çarpar."
+            ],
+            [
+              "İşaret gizli tekni nece añlatır?",
+              "Hane seçili olarak \"Bu satırda\", \"Bu sütünde\" ya \"Bu kutıda ... üçün bir yer\" diye. Koymak üçün işaretge yene bas."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Kilitli namzetler",
+          "title": "Sudokuda Kilitli Namzetler: Gösterme ve Sahiplenme",
+          "description": "Kilitli namzetler: bir sayınıñ kutıdaki namzetleri bir satırda ya sütünde toplansa, ya tersi, sayı başka yerlerden silinir. İki gerçek misal, adım adım.",
+          "h1": "Kilitli namzetler",
+          "summary": "Kilitli namzetler sayı koymak yerine namzet silen ilk teknik. Onıñ iki şekli bar. Gösterme: bir kutıda bir sayınıñ bütün namzetleri bir satırda ya sütünde durur, onıñ üçün sayı o çizginiñ kalanından silinir. Sahiplenme: bir satırda ya sütünde bir sayınıñ bütün namzetleri bir kutıda durur, onıñ üçün sayı o kutınıñ kalanından silinir. Bare Sudoku işareti açtığı koymani \"Kilitli namzetler\" diye belgiler.",
+          "when": [
+            "Ağır bir bulmacada tekler bitince evvel denenecek şey bu. En az tekşirdiğiñ sayı üçün eksiksiz not ister. Kilitli namzetler çok görülür: Ağır bulmacalarnıñ çoğı olarni ister, Usta bulmacalar da büyük şekiller arasında kullanır."
+          ],
+          "spot": [
+            "Gösterme üçün her kutıga ve kutıda eksik olan her sayıga bak: o sayınıñ namzet haneleri bir satırda ya sütünde dursa, aynı sayı o çizgi boyunca kutınıñ dışında namzet olarak görünürmi, onı tekşir. Sahiplenme üçün bir satır ya sütün boyunca bak: bir sayınıñ namzetleri hepsi bir kutınıñ içinde olsa, o kutınıñ kalanı temizlenebilir. Oyunda bir sayı düğmesine dokunsañ, o sayınıñ her namzeti belgilenir; bir kutınıñ içinde iki üç belgili nottan bir çizgi aradığıñ şekil."
+          ],
+          "examples": [
+            {
+              "h": "Gösterme",
+              "steps": [
+                "{box}. kutıda {d} sayınıñ yalñız şu namzet haneleri bar: {cells}. Hepsi {row}. satırda durur.",
+                "{box}. kutıga bir {d} gerek, onıñ üçün {row}. satırnıñ {d} sayısı, bu hanelerniñ hangisine düşse düşsün, {box}. kutınıñ içinde.",
+                "{row}. satır ikinci bir {d} alamaz, onıñ üçün {row}. satırnıñ kutı dışındaki hanelerinden {d} sayıni sil: {elim}."
+              ]
+            },
+            {
+              "h": "Sahiplenme",
+              "steps": [
+                "{row}. satırda {d} sayısı yalñız {cells} hanelerine gidebilir ve hepsi {box}. kutınıñ içinde.",
+                "{row}. satır {d} içermeli, onıñ üçün {box}. kutınıñ {d} sayısını {row}. satır sahiplenir. {box}. kutınıñ başka haneleri {d} alamaz.",
+                "Şu hanelerden {d} sayıni sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Göstermede sayıni kutınıñ dışından değil içinden silmek, sahiplenmede ise tersi. Silmeler her zaman çizgide olup kutıda olmayan ya kutıda olup çizgide olmayan hanelerge gider.",
+            "Namzetler kutınıñ iki satırına yayılgan olsa da kuralni kullanmak. Kutıda sayınıñ bütün namzet haneleri bir çizgide durmalı.",
+            "Silmeniñ yarattığı tekni aramayı unutmak. Kilitli namzetler özi az vakıt sayı koyar; olar bir tekni hazırlar."
+          ],
+          "faq": [
+            [
+              "Sudokuda kilitli namzetler ne?",
+              "Bir kutı ile bir çizginiñ kesişmesine sıkışan sayı namzetleri. Kutı, ya çizgi, sayıni o kesişmede içermeli, onıñ üçün sayı çizginiñ kalanından, ya kutınıñ kalanından silinebilir."
+            ],
+            [
+              "Gösterme ile sahiplenme arasında ne fark bar?",
+              "Gösterme kutıdan başlar: sayınıñ kutıdaki namzetleri bir satır ya sütün boyunca gösterir, onıñ üçün sayı o çizginiñ kalanından silinir. Sahiplenme satır ya sütünden başlar: çizginiñ o sayı üçün namzetleri hepsi bir kutıda, onıñ üçün çizgi sayıni sahiplenir ve sayı kutınıñ kalanından silinir."
+            ],
+            [
+              "Kilitli namzetlerge kesişme silmesi de deyilirmi?",
+              "Ebet. Başka adlar: sahiplenme şekli üçün kutı-çizgi azaltması, gösterme şekli üçün gösteren cüt ya gösteren üçlük. Bare Sudoku ikisi üçün bir ad kullanır."
+            ],
+            [
+              "Hangi derece kilitli namzetler ister?",
+              "Ağır. Kilitli namzetler ya alt toplamlar isteyen ama daha ağırını istemeyen bulmaca Ağır diye derecelenir; Usta bulmacalar bunun üstine bir balık ya kanat da ister."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Açık cüt ve üçlük",
+          "title": "Sudokuda Açık Cüt ve Üçlük (Naked Pair): Nece İşler",
+          "description": "Açık cüt ve üçlük (naked pair, naked triple): bir birimde aynı iki ya üç namzetni paylaşan haneler. Olarni tapmani ve neni sileceğiñni misaller ile öğren.",
+          "h1": "Açık cüt ve üçlük (naked pair, naked triple)",
+          "summary": "Açık cüt (naked pair), aynı satırda, sütünde ya kutıda tam aynı iki namzeti olan iki hane. İki sayı o iki hanege gitmeli, onıñ üçün birimniñ başka her hanesinden silinebilir. Açık üçlük (naked triple) üç hane ve üç sayı ile aynı fikir; her hane olarnıñ ikisini ya üçini gösterebilir. Bare Sudoku işareti çıkan koymani \"Cüt ya üçlük\" diye belgiler.",
+          "when": [
+            "Notlar eksiksiz olsa, tekler ile kilitli namzetler de bitse. Açık cütler Ağır bulmacalarda çok görülür, açık üçlükler daha az. Hâlâ beş ya daha çok boş hanesi olan her birimde ikisine de bakmaga değer."
+          ],
+          "spot": [
+            "Yalñız iki namzeti olan hanelerni ara ve aynı birimde aynı iki namzeti olan başka bir hane tap. Üçlükler üçün içinde birkaç iki ve üç namzetli hane olan birimlerge bak ve olarnıñ üçi birlikte yalñız üç başka sayı kullanırmı, onı tekşir. Notlar yazılınca tam aynı namzetleri olan hanelerni görmek kolay; oyunda Notlarni doldur bunı bir dokunuş ile yapar."
+          ],
+          "examples": [
+            {
+              "h": "Açık cüt",
+              "steps": [
+                "{unit} içindeki {cellA} ve {cellB} hanelerniñ tam aynı iki namzeti bar: {d1} ve {d2}.",
+                "Biri {d1}, öbüri {d2} olmalı. Hangisi olduğunı bilmeyiz, ama iki sayı da bu iki hane ile tükenir.",
+                "Yani {unit} içinde başka hiçbir hane {d1} ya {d2} alamaz. Sil: {elim}."
+              ]
+            },
+            {
+              "h": "Açık üçlük",
+              "steps": [
+                "{unit} içindeki üç hane bütün namzetlerini aynı üç sayıdan, {digits}, alır: {cells}.",
+                "Üç sayı bu üç haneni bir sıra ile doldurmalı. Bir haneniñ üç namzetniñ hepsini göstermesi gerek değil; önemli olan üç haneniñ hiçbiriniñ toplam dışında namzeti olmaması.",
+                "{unit} içindeki başka her haneden {digits} sayılarni sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "İki namzetni paylaşan ama üçünci bir namzeti de olan iki haneni almak. Açık cüt üçün her hanede tam o iki namzet olmalı, başka hiçbir şey olmamalı.",
+            "Sayılarni cütniñ öz hanelerinden silmek. Cüt namzetlerini saklar; silmeler birimniñ başka hanelerine gider.",
+            "Üçlükniñ her hanesi üç sayınıñ hepsini göstersin diye beklemek. Hiçbir hanede toplam dışında namzet olmasa, üçten ikisini gösteren hane de yarar."
+          ],
+          "faq": [
+            [
+              "Sudokuda açık cüt (naked pair) ne?",
+              "Bir birimde ikisiniñ de tam aynı iki namzeti olan iki hane. O iki sayı o iki hanege kilitlenmiş, onıñ üçün birimniñ kalanından silinebilir."
+            ],
+            [
+              "Açık üçlük (naked triple) ne?",
+              "Bir birimde namzetleri birlikte yalñız üç sayı olan üç hane. Her hane olarnıñ ikisini ya üçini taşıyabilir. Üç sayı üç haneni doldurur, onıñ üçün birimniñ başka hanelerinden silinebilir."
+            ],
+            [
+              "Açık cüt sayı koyarmı?",
+              "Özi koymaz. Namzet siler, silme de çok vakıt bir tek namzet ya gizli tek kaldırır. Bare Sudoku'da işaret o tekni gösterir ve onı mümkin yapan teknikniñ adını berir."
+            ],
+            [
+              "Açık cüt bir vakıtta hem kutıda hem satırda olabilirmi?",
+              "Ebet. İki hane bir satırni ve bir kutıni paylaşsa, cüt iki birimde de siler. Bare Sudoku birimlerni birer birer ele alır."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Gizli cüt ve üçlük",
+          "title": "Sudokuda Gizli Cüt ve Üçlük (Hidden Pair): Nece Tapılır",
+          "description": "Gizli cüt (hidden pair): bir birimde yalñız aynı iki hanege gidebilen iki sayı; o hanelerniñ başka namzetleri silinir. Gerçek bir misal ile tapmani öğren.",
+          "h1": "Gizli cüt ve üçlük (hidden pair, hidden triple)",
+          "summary": "Gizli cüt (hidden pair), bir satır, sütün ya kutı içinde aynı iki hanede namzet olan ve başka hiçbir yerde olmayan iki sayı. O iki hane o iki sayıni almalı, onıñ üçün olarnıñ içindeki başka her namzet silinebilir. Gizli üçlük (hidden triple) üç hanege sıkışan üç sayı ile aynı yol ile işler. Silmeden soñra haneler bir açık cüt ya üçlük gösterir. Bare Sudoku işareti çıkan koymani \"Cüt ya üçlük\" diye belgiler.",
+          "when": [
+            "Bir birimde çok namzetli haneler bar ve tekler bitse. Gizli cütler kalabalık hanelerniñ içinde saklanır, onıñ üçün tam açık cütler görünmeyen yerde olarni aramaga değer. Gizli üçlükler az; Bare Sudoku olarni da tekşirir, ama Ağır bulmacalarnıñ çoğı olarsız çözülür."
+          ],
+          "spot": [
+            "Hanege göre değil, sayıga göre çalış. Bir birimde eksik her sayınıñ gidebileceği hanelerni belgile. İki sayınıñ her biriniñ yalñız iki mümkin hanesi bar ve olar aynı iki hane olsa, bir gizli cüt taptıñ. Oyunda bir sayı düğmesine dokunsañ, onıñ namzetleri belgilenir; iki sayı bir birimde aynı iki haneni yaksa ve birimde başka hiçbir şeyni yakmasa, şekil bu."
+          ],
+          "examples": [
+            {
+              "h": "Gizli cüt",
+              "steps": [
+                "{unit} içinde {d1} ve {d2} sayılarnıñ her biriniñ yalñız iki mümkin hanesi bar ve olar aynı iki hane: {cells}.",
+                "O iki hane {d1} ve {d2} almalı, onıñ üçün olarnıñ başka namzetleri mümkin değil.",
+                "Sil: {elim}. Endi iki hane bir açık cüt gösterir, bu da daha çok yol açabilir."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Cütniñ iki sayısını cüt hanelerinden silmek. Gidenler o hanelerniñ başka namzetleri; cüt sayıları kalır.",
+            "Birimde üçünci bir mümkin hanesi olan sayıni kabul etmek. İki sayı da tam o iki hane ile sınırlı olmalı.",
+            "Yalñız kutılarga bakmak. Gizli cütler satır ve sütünlerde de o kadar sık görülür."
+          ],
+          "faq": [
+            [
+              "Sudokuda gizli cüt (hidden pair) ne?",
+              "Bir birimde yalñız aynı iki hanege gidebilen iki sayı. O haneler o sayılarni almalı, onıñ üçün olarnıñ başka namzetleri silinir."
+            ],
+            [
+              "Gizli cüt açık cütten nece ayrılır?",
+              "Açık cüt görünür: yalñız aynı iki namzetni gösteren iki hane. Gizli cüt iki hanedeki artık namzetler ile örtülü. O artıklarni silmek gizli cütni açık cütge çevirir."
+            ],
+            [
+              "Gizli üçlük (hidden triple) ne?",
+              "Bir birimniñ üç hanesine sıkışan üç sayı. Her sayınıñ üç hanede de görünmesi gerek değil; önemli olan üç sayınıñ hiçbiriniñ o hanelerniñ dışında namzeti olmaması."
+            ],
+            [
+              "İşaret gizli ve açık cütlerni ayırırmı?",
+              "Yok. Bare Sudoku ikisini de tapar ve çıkan koymani \"Cüt ya üçlük\" diye belgiler. Buradaki sayfalar olarni ayırır, çünki olar başka yollar ile tapılır."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Sudokuda X-Wing: Teknik Nece İşler",
+          "description": "X-Wing: iki satırda tam iki namzet hanesi olan ve aynı iki sütünde sıralanan sayı o sütünlerniñ kalanından silinir. Gerçek misal ile adım adım.",
+          "h1": "X-Wing",
+          "summary": "X-Wing bir sayı ve bir dörtköşeniñ köşelerindeki dört haneden olan bir şekil. Sayınıñ iki satırnıñ her birinde tam iki namzet hanesi bar ve bu haneler aynı iki sütünde dursa, sayı dörtköşeniñ karşılıklı iki köşesini almalı. Onıñ üçün o iki sütünniñ başka her hanesinden silinebilir. Satır ve sütün yer değiştirse de aynı yol işler. Bare Sudoku'da bu ilk Usta teknigi.",
+          "when": [
+            "Tekler, kilitli namzetler ve alt toplamlar bitince. X-Wing en çok görülen Usta şekli ve çok vakıt bir sayınıñ az namzeti kalsa, adetçe dörtten altıga kadar nüshası koyulgan olsa görünür. Tekşirdiğiñ sayı üçün eksiksiz not ister."
+          ],
+          "spot": [
+            "Bir sayı seç ve o sayınıñ tam iki namzet hanesi olan satırlarni ara. Böyle iki satır aynı iki sütünni paylaşsa, o sütünlerde sayınıñ başka namzetlerini tekşir: silmeler olar. Soñra sütünlerni esas alıp yene yap. Oyunda sayı düğmesine dokun: o sayınıñ her namzeti belgilenir, dört belgili nottan dörtköşe kolay görünür."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{d} sayınıñ {r1}. satırda tam iki, {r2}. satırda da tam iki namzet hanesi bar ve olar aynı iki sütünde, {c1} ve {c2}, sıralanır: {cells}.",
+                "{r1}. satır {d} sayısını {c1}. ya {c2}. sütünge koyar, {r2}. satır ise öbürine. Her halda {c1}. ve {c2}. sütünlerniñ her biri bu iki satırdan bir {d} alır.",
+                "Yani {d} {c1}. ve {c2}. sütünlerde başka hiçbir yerde olamaz. Şu hanelerden {d} sayıni sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Sayı üçün üç namzet hanesi olan satırni kullanmak. Her esas satırda tam iki olmalı ve ikisi de paylaşılan iki sütünde olmalı.",
+            "Sayıni sütünler yerine satırlardan silmek. Esas satırlar olsa, silmeler sütünlerde, tersi de öyle.",
+            "Ters çevrilen halini unutmak. Sütünler üstine kurulan X-Wing satırlarda siler."
+          ],
+          "faq": [
+            [
+              "Sudokuda X-Wing ne?",
+              "İki satırnıñ her birinde, aynı iki sütünde tam iki namzet hanesi olan sayı. Sayı o dörtköşeniñ karşılıklı iki köşesini alır, onıñ üçün iki sütünniñ kalanından silinir. Satır ve sütün yer değiştirebilir."
+            ],
+            [
+              "X-Wing neçün işler?",
+              "İki satırnıñ her biri sayıni iki sütünniñ birine koymalı ve iki satır aynı sütünni kullanamaz. Onıñ üçün iki sütünniñ her biri sayınıñ öz nüshasını bu satırlardan alır, o sütünlerdeki başka her namzet de mümkin değil."
+            ],
+            [
+              "X-Wing bir balıkmı?",
+              "Ebet. X-Wing iki ölçülü balık; Swordfish üç ölçülü balık. Bare Sudoku ikisini de tapar."
+            ],
+            [
+              "Hangi derecede X-Wing bar?",
+              "Usta. X-Wing, Y-Wing, Swordfish ya XYZ-Wing isteyen bulmaca Usta diye derecelenir."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Sudokuda Y-Wing: Teknik Nece İşler",
+          "description": "Y-Wing (XY-Wing): iki namzetli eksen ve olarnıñ birini paylaşan iki kanat, iki kanatni da gören her haneden bir sayıni çıkarır. Gerçek misal, adım adım.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, XY-Wing de deyilir, her biri iki namzetli üç hane kullanır. Eksen haneniñ namzetleri X ve Y. Bir kanat eksenni görür ve X ile Z taşır; öbür kanat eksenni görür ve Y ile Z taşır. Eksen ne olsa olsun, kanatlarnıñ biri Z olmalı, onıñ üçün Z iki kanatni da gören her haneden silinebilir. Bare Sudoku'da bu bir Usta teknigi.",
+          "when": [
+            "Bulmacada tam iki namzetli birkaç hane bar ve hiçbir balık yok olsa. Y-Wing Usta bulmacalarda çok görülür ve iki namzetli hanelerni izleyip tapılır: her biri mümkin bir eksen ya kanat."
+          ],
+          "spot": [
+            "Tam iki namzeti olan hanelerni sırala. Her birini X ve Y namzetli eksen say ve onıñ koñşıları arasında X ile başka bir Z sayısını taşıyan bir hane ve Y ile aynı Z'ni taşıyan bir hane ara. Bu ikisi kanatlar. Soñra iki kanatni da gören ve Z içeren hanelerni tap. Kanatlarnıñ birbirini görmesi gerek değil."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "Eksen {pivot} haneniñ namzetleri {x} ve {y}. O, {x} ile {z} taşıyan {wingA} haneni ve {y} ile {z} taşıyan {wingB} haneni görür.",
+                "{pivot} {x} olsa, {wingA} {x} namzetini yitirir ve {z} olur. {pivot} {y} olsa, {wingB} {z} olur. Her halda iki kanatnıñ biri {z}.",
+                "İki kanatni da gören hane hiç {z} olamaz. Şu hanelerden {z} sayıni sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "İkisi de eksenni görmeyen kanatlar seçmek. Her kanat eksen ile bir satır, sütün ya kutı paylaşmalı.",
+            "Z'ni yalñız bir kanatni gören hanelerden silmek. Silinen hane iki kanatni da görmeli.",
+            "Z'ni eksenden silmek. Y-Wing'de eksen Z içermez; içerse, şekil başka kuralları olan XYZ-Wing."
+          ],
+          "faq": [
+            [
+              "Sudokuda Y-Wing ne?",
+              "İki namzetli üç hane: X ve Y taşıyan eksen, eksenni gören X ve Z taşıyan bir kanat ve eksenni gören Y ve Z taşıyan bir kanat. Bir kanat her zaman Z, onıñ üçün Z iki kanatni da gören hanelerden silinir."
+            ],
+            [
+              "Y-Wing ile XY-Wing aynı şeymi?",
+              "Ebet. İki ad aynı şekilni añlatır. Bare Sudoku onı Y-Wing diye adlandırır."
+            ],
+            [
+              "Neçün bir kanat Z olmalı?",
+              "Eksen X olsa, birinci kanat X'ni yitirir ve Z olur. Eksen Y olsa, ikinci kanat Z olur. Eksen ikisiniñ biri, onıñ üçün bir kanat Z."
+            ],
+            [
+              "Y-Wing kaç haneden siler?",
+              "Çok vakıt bir ya iki: yalñız iki kanatni da gören ve hâlâ Z içeren haneler. Bir tek yaratmak üçün bu yeter."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Sudokuda Swordfish: Teknik Nece İşler",
+          "description": "Swordfish: üç satır boyunca üç sütünge sıkışan sayı o sütünlerniñ kalanından silinir. Üç ölçülü balık, gerçek bir misal ile adım adım añlatılır.",
+          "h1": "Swordfish",
+          "summary": "Swordfish üç satır ve üç sütünli bir X-Wing. Bir sayınıñ üç satırnıñ her birinde en çok üç namzet hanesi bar ve bu hanelerniñ hepsi aynı üç sütünge düşse, üç satır o sayıni o sütünlerde tüketir ve sayı üç sütünniñ başka her hanesinden silinebilir. Satır ve sütün yer değiştirebilir. Bare Sudoku Usta bulmacalarda Swordfish'ni Y-Wing'den soñra tekşirir.",
+          "when": [
+            "X-Wing ve Y-Wing hiçbir şey tapmasa. Swordfish X-Wing'den az görülür ve namzetleri üç çizgige seyrek yayılan bir sayı ister. O sayı üçün eksiksiz ve doğru not ister."
+          ],
+          "spot": [
+            "Bir sayı seç ve o sayı üçün iki ya üç namzet hanesi olan satırlarni ara. Böyle üç satır toplamda yalñız üç sütünni kaplasa, o sütünlerde sayınıñ başka namzetlerini tekşir. Her satırnıñ her sütünde namzeti olması gerek değil: Swordfish altı, yedi, sekiz ya dokuz haneli olabilir. Oyunda sayıni düğmesi ile belgile ve namzetleri üç sütünde sıralanan üç satır ara."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "{d} sayınıñ {rows}. satırlarnıñ her birinde en çok üç namzet hanesi bar ve bu hanelerniñ hepsi {cols}. sütünlerge düşer: {cells}.",
+                "Üç satırnıñ her biri {d} sayısını üç sütünniñ birine koymalı ve iki satır aynı sütünni kullanamaz. Yani üç sütün {d} sayılarını bu üç satırdan alır.",
+                "{cols}. sütünlerdeki başka her {d} namzeti mümkin değil. Şu hanelerden {d} sayıni sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Dokuz haneniñ hepsini istemek. Bazı satırlarda iki namzeti olan Swordfish de, üç satır yalñız üç sütünni kaplasa, yene doğru.",
+            "Dört namzet hanesi olan satırni katmak. Her esas satırda en çok üç olmalı, hepsi üç sütünniñ içinde.",
+            "Esas satırlarda silmek. Esas satırlar olsa, silmeler esas satırlarnıñ dışında, üç sütünde."
+          ],
+          "faq": [
+            [
+              "Sudokuda Swordfish ne?",
+              "Üç satırdaki namzetleri üç sütünge sıkışan sayı. Üç satır sayıni o üç sütünge birer kere koymalı, onıñ üçün sayı o sütünlerniñ başka hanelerinden silinir."
+            ],
+            [
+              "Swordfish X-Wing'den nece ayrılır?",
+              "Yalñız ölçüde: X-Wing iki satır ve iki sütün kullanır, Swordfish üç ve üç. Düşünüş aynı."
+            ],
+            [
+              "Swordfish üçün tam dokuz hane gerekmi?",
+              "Yok. Her satırda iki ya üç namzet olabilir; şekil yalñız üç satırnıñ birlikte üçten çok sütün kullanmamasını ister."
+            ],
+            [
+              "Dört ölçülü balık barmı?",
+              "Ebet, Jellyfish. Bare Sudoku onı kullanmaz, çünki onıñ bulmacaları onı hiç istemez."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Sudokuda XYZ-Wing: Teknik Nece İşler",
+          "description": "XYZ-Wing: üç namzetli eksen ve olarnıñ birini paylaşan iki kanat, o sayıni üçini de gören her haneden çıkarır. Gerçek misal ile adım adım añlatılır.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing ekseni üç namzetli bir Y-Wing. Eksen X, Y ve Z taşır; bir kanat eksenni görür ve X ile Z taşır, öbüri eksenni görür ve Y ile Z taşır. Üç haneniñ biri Z olmalı, onıñ üçün Z üçini de gören her haneden silinebilir. Eksenniñ özi Z olabileceği üçün silinen hane iki kanat ile birlikte eksenni de görmeli, bu da onı hanelerniñ paylaştığı kutı ya çizgi ile sınırlar. Bu Bare Sudoku'nıñ kullandığı en ağır teknik.",
+          "when": [
+            "Yalñız başka her şey işe yaramasa. XYZ-Wing Bare Sudoku'daki en az görülen şekil ve yalñız Usta bulmacalarda görünür. Üç namzetli bir hane, onıñ sayılarnıñ ikisini paylaşan iki namzetli bir hane ile bir kutıda dursa, onı ara."
+          ],
+          "spot": [
+            "Tam üç namzeti olan hanelerden başla; her biri mümkin bir eksen. Onıñ koñşıları arasında ikişer namzetli, ikisi de eksenniñ üç namzetinden alınan ve tam bir Z sayısını paylaşan iki hane ara. Soñra eksenni ve iki kanatni gören ve Z içeren hanelerni tap. Amelde kanatlarnıñ biri eksenniñ kutısında, öbüri onıñ satırında ya sütününde olur, silinen haneler de o kutınıñ o satırdaki ya sütündeki kalan haneleri."
+          ],
+          "examples": [
+            {
+              "h": "Misal",
+              "steps": [
+                "Eksen {pivot} haneniñ üç namzeti bar: {x}, {y} ve {z}. O, {x} ile {z} taşıyan {wingA} haneni ve {y} ile {z} taşıyan {wingB} haneni görür.",
+                "{pivot} {z} olsa, iş bitti. {x} olsa, {wingA} {z} olmalı. {y} olsa, {wingB} {z} olmalı. Her halda üç haneniñ biri {z}.",
+                "Üçini de gören hane {z} olamaz. Şu hanelerden {z} sayıni sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Yalñız iki kanatni gören hanelerden silmek. Y-Wing'den başka olarak eksen Z olabilir, onıñ üçün hane eksenni de görmeli.",
+            "Namzetleri eksenniñ üç namzetiniñ içinde olmayan kanatlar kullanmak.",
+            "Onı Y-Wing ile karıştırmak: fark eksendeki üçünci namzet, bu da hangi hanelerniñ temizlenebileceğini değiştirir."
+          ],
+          "faq": [
+            [
+              "Sudokuda XYZ-Wing ne?",
+              "X, Y ve Z namzetli eksen ve biri X ile Z, öbüri Y ile Z taşıyan, ikisi de eksenni gören iki kanat. Üç haneniñ biri Z, onıñ üçün Z üçini de gören hanelerden silinir."
+            ],
+            [
+              "XYZ-Wing Y-Wing'den nece ayrılır?",
+              "Eksenniñ iki değil, Z ile birlikte üç namzeti bar. Bu eksenni Z üçün mümkin bir yer yapar, onıñ üçün yalñız eksenni ve iki kanatni gören haneler Z'ni yitirebilir."
+            ],
+            [
+              "XYZ-Wing ne kadar sık görülür?",
+              "Az. Bare Sudoku'da yalñız Usta bulmacalar onı isteyebilir, çoğı istemez. Bare Sudoku onı en soñda, X-Wing, Y-Wing ve Swordfish'ten soñra tekşirir."
+            ],
+            [
+              "WXYZ-Wing barmı?",
+              "Ebet, dört namzetli eksen ile, ama Bare Sudoku onı kullanmaz. Oyundaki her bulmaca bu rehberniñ dokuz teknigi ile bitirilebilir."
+            ]
+          ]
+        }
+      }
+    },
+    "sty": {
+      "learnHeading": "Судокуны өйрән",
+      "learnText": "Судокуда яңамы син, яки кыйын табышмакта тукталып калдыңмы? Ике кулланма кагыйдәләрне һәм кинәшләр куллана торган һәр цишү алымын цын мисаллар пелән аңлата.",
+      "howToLink": "Судокуны ницек уйнарга",
+      "techniquesLink": "Судоку цишү алымнары",
+      "labels": {
+        "howTo": "Ницек уйнарга",
+        "techniques": "Алымнар",
+        "play": "Судоку уйна",
+        "prev": "Алдагы алым",
+        "next": "Киләсе алым",
+        "all": "Пөтен алымнар",
+        "example": "Мисал",
+        "steps": "Адымлап",
+        "when": "Кайцан кулланырга",
+        "spot": "Ницек табарга",
+        "mistakes": "Еш ясала торган ялгышлар",
+        "inGame": "Bare Sudoku'та",
+        "level": "Кирәк пулган дәрәжә: {level}",
+        "hint": "Уенда кинәш болай ти: {text}",
+        "legend": "Калын саннар пашта пирелгән, зәңгәр саннар цишкәндә куелган, вак саннар кандидатлар. Яктыртылган күзәнәкләр үрнәкне тәшкил итә, сызылган кандидатлар сөртелә, түгәрәккә алынган кандидат куелырга тиеш сан.",
+        "notation": "Күзәнәкләр r3c7 рәвешендә языла: 3 нце юл, 7 нце пагана. Юллар өстән, паганалар сулдан санала; шакмаклар сул өске поцмактан пашлап, юл пуенца 1'дән 9'га кадәр санала.",
+        "row": "{n} нце юл",
+        "column": "{n} нце пагана",
+        "box": "{n} нце шакмак",
+        "elimItem": "{cell} күзәнәгеннән {d}",
+        "regions": "Табышмак пашында 5 нце юл, 5 нце пагана һәм 5 нце шакмак",
+        "firstMove": "Пер генә кандидат: {cell} тик {d} пула ала",
+        "breadcrumb": "Навигация юлы"
+      },
+      "howTo": {
+        "title": "Судоку ницек уйнала: кагыйдәләр, цилтәр, перенце адымнар",
+        "description": "Судоку ницек уйнала: кагыйдәләр, юл, пагана һәм шакмаклар, ни өцен һәр табышмакның пер цишелеше пар, язмалар һәм перенце йөрешләр ницек ясала.",
+        "h1": "Судокуны ницек уйнарга",
+        "summary": "Судоку 9×9 цилтәрдә уйнала торган логик табышмак. Һәр пуш күзәнәкне 1'дән 9'га кадәр пер сан пелән тултырасың: һәр юлда, һәр паганада һәм һәр 3×3 шакмакта һәр сан нәкъ пер тапкыр пулырга тиеш. Кайпер саннар пашта пирелгән; калганнарын һәр тапкыр пер төгәл күзәнәк табып цыгарасың, һәм перкайцан цамаларга кирәкми. Пу кулланма цилтәрне, кагыйдәләрне, пер цишелеш принцибын, язмаларны һәм перенце йөрешләр өцен гади пер юлны аңлата. Пөтенесен тә пушлай һәм логиканы аңлатуцы кинәшләре пулган [Bare Sudoku](play)'та сынап карый аласың.",
+        "sections": [
+          {
+            "h": "Судоку кагыйдәләре нинди?",
+            "p": [
+              "Пары өц кагыйдә пар, һәм алар өц яктан күренгән пер үк кагыйдә: һәр юлда 1'дән 9'га кадәр саннар пулырга тиеш, һәр паганада 1'дән 9'га кадәр саннар пулырга тиеш, һәр 3×3 шакмакта 1'дән 9'га кадәр саннар пулырга тиеш. Шуңа күрә пер сан пер үк юлда, паганада яки шакмакта перкайцан ике тапкыр кабатланмый.",
+              "Калын итеп язылган пирелгән саннар үзгәрми. Синең эшең пуш күзәнәкләрне тултыру. Арифметика та, тәртип тә юк: саннар тик тугыс төрле тамга. Хәрефләр яки сурәтләр пелән уйнасаң да, пернәрсә тә үзгәрмәс иде."
+            ]
+          },
+          {
+            "h": "Цилтәр ницек төзелгән?",
+            "p": [
+              "Цилтәрдә 9 юл һәм 9 паганада 81 күзәнәк пар. Калын сызыклар аны тугыс 3×3 шакмакка пүлә. Һәр күзәнәк нәкъ пер юлга, пер паганага һәм пер шакмакка карый; пу өц төркем күзәнәкнең перәмлекләре тип атала. Күзәнәк пелән перәмлек уртаклашкан калган 20 күзәнәк аның күршеләре тип атала; күзәнәккә куелган сан пу санны 20 күршенең пөтенесеннән тә цыгарып ташлый.",
+              "Күзәнәкләр r3c7 рәвешендә языла: 3 нце юл, 7 нце пагана. Юллар өстән, паганалар сулдан санала; шакмаклар сул өске поцмактан пашлап, юл пуенца 1'дән 9'га кадәр санала. Пу язу һәр алым кулланмасында кулланыла, аны өйрәнергә кирәк: r5c5 цилтәрнең үзәге."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Ни өцен һәр судокуның нәкъ пер цишелеше пар?",
+            "p": [
+              "Төрес судокуның пер цишелеше пар, һәм логиканы эшләткән нәрсә нәкъ шул. Пер санның перәмлектә пашка пер урынга да керә алмаганын күрсәтә алсаң, ул калган күзәнәккә керергә тиеш, цөнки цишелеш пар һәм ул пер генә. Табышмакның ике цишелеше пулса, пернинди фикер йөртү та аларны аера алмас иде һәм кайцандыр цамаларга мәйбүр пулыр идең.",
+              "Bare Sudoku һәр табышмакны синең йиһазыңда ясый һәм аның нәкъ пер цишелеше пулуын, логик цишүцесенең аны сайланган дәрәжә алымнары пелән тәмамлый алуын тикшерә. Шуңа күрә тукталып калсаң, табасы киләсе адым һәрвакыт пар, һәм кинәш аны күрсәтә."
+            ]
+          },
+          {
+            "h": "Судоку табышмагын ницек пашларга?",
+            "p": [
+              "Иң кысылган урыннан пашла. Пу тәртип һәр дәрәжәдә эшли:"
+            ],
+            "list": [
+              "Инде күп тапкыр, әйтик алты яки йиде тапкыр күренгән санны сайла һәм аны әле тотмаган шакмакларны тап. Еш кына шакмакта аның өцен пер генә күзәнәк кала: пу [яшерен ялгызак](hidden-single).",
+              "Тыгыз күзәнәкләргә кара. Юлы, паганасы һәм шакмагы пергә сигес төрле сан тоткан күзәнәктә пер генә кандидат кала: пу [пер генә кандидат](naked-single). Тулыга якын юл һәм шакмаклардагы күзәнәкләр карау өцен иң яхшы урын.",
+              "Һәр куйган сан 20 күршедән пер кандидатны сөртә, шуңа күрә ул күршеләрне шунда ук тикшер. Ялгызаклар еш кына цылбыр пулып килә.",
+              "Йиңел урнаштырулар петкәц, язмаларны яз: һәр пуш күзәнәкнең кандидатларын. Аннары шакмак эцендә пер сызыкка кысылган санны ([пикләнгән кандидатлар](locked-candidates)) яки пер үк ике кандидатны уртаклашкан ике күзәнәкне (пер [ацык пар](naked-pairs)) эзләп кара.",
+              "Һәр сөртүдән соң ялгызакларга кайт. Оста табышмаклар да күпцелек ялгызаклар пелән цишелә; катлаулы алым тик киләсе ялгызакка юл аца."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Язмалар нәрсә һәм аларны кайцан кулланырга?",
+            "p": [
+              "Язмалар, аларны карандаш тамгалары яки кандидатлар тип тә атыйлар, пуш күзәнәккә анда кайсы саннар әле мөмкин икәнен теркәр өцен язган вак саннар. Ансат табышмакларда алар сирәк кирәк; Кыйын дәрәжәдән пашлап алар мәйбүри, цөнки пар, X-Wing һәм Y-Wing кебек алымнар куелган саннар пелән түгел, кандидатлар пелән эш итә.",
+              "Язмаларны төгәл тот: сан куйгац, аны 20 күршенең язмаларыннан сөрт. Bare Sudoku'та пу үсеннән эшләнә, ә Язмаларны тултыру пер пасу пелән һәр пуш күзәнәккә һәр кандидатны яза, шулай итеп син тулы һәм төрес кандидатлар пелән пашлыйсың. Язма цамалау түгел, ә факт: пу санны әле пернәрсә тә цыгарып ташламаган тигән сүс."
+            ]
+          },
+          {
+            "h": "Тукталып калсаң нишләргә?",
+            "p": [
+              "Пашта нигезләрне тагын тикшер: тулыга якын һәр юл, пагана һәм шакмак ялгызаклар цыганагы. Аннары язмаларның тулы пулуына ышан, цөнки югалган кандидат үрнәкләрне яшерә, ә искергән кандидат ялган үрнәкләр тудыра. Аннары [алымнарны](techniques) кыенлык тәртибендә сынап кара: пикләнгән кандидатлар, парлар һәм өцлекләр, X-Wing, Y-Wing, Swordfish һәм XYZ-Wing. Һәрперсенең цын мисаллы үс пите пар.",
+              "Пернәрсә тә пулышмаса, кинәш ал. Bare Sudoku'та кинәш пашта куелган сан ялгыш түгелме икәнен тикшерә, аннары логика пелән тултырып пулган киләсе күзәнәкне таба һәм алымның исемен әйтә, шулай итеп кинәш кулланганда да пер нәрсә өйрәнәсең. Санны куяр өцен кинәшкә тагын пас."
+            ]
+          },
+          {
+            "h": "Bare Sudoku'та саннарны ницек кертергә?",
+            "p": [
+              "Күзәнәккә, аннары санга пас. Яки пашта санга пас: сан пикләнә һәм син паскан һәр күзәнәккә языла; пу санның алтынцы, йиденце һәм сигесенце данәсен куюның иң тиз юлы. Санны ыцкындыру өцен аңа тагын пас. Язмалар төймәсе карандаш тамгаларына күцә, Сөртү күзәнәкне цистарта, Кире кайтару теләсә нинди йөрешне кире ала, ә ялгышлар, менюда сүндермәсәң, кызыл пелән пилгеләнә.",
+              "Клавиатурада уклар пелән күцеп йөр, 1'дән 9'га кадәр сан керт, Backspace пелән сөрт, N язмалар, U кире кайтару, H кинәш, F язмаларны тултыру, Escape меню. Уен үсен үсе саклый, интернетсыс эшли, рекламасы та, аккаунты та юк."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Судокуда кайцан та пулса цамаларга кирәкме?",
+            "Төрес табышмакта кирәкми. Һәр Bare Sudoku табышмагының нәкъ пер цишелеше пар, һәм аның үс дәрәжәсе алымнары пелән тик логика ярдәмендә цишелүе тикшерелә. Цамаларга кирәк тип тойсаң, язмаларыңда пер кандидат йитми яки табылуны көткән пер алым пар."
+          ],
+          [
+            "Пер сан юлда, паганада яки шакмакта ике тапкыр пула аламы?",
+            "Юк. Пөтен кагыйдә шул: тугыс юлның, тугыс пагананың һәм тугыс шакмакның һәрперсе 1'дән 9'га кадәр һәр санны нәкъ пер тапкыр тота. Пер перәмлектә ике пертөрле сан пулса, аларның кимендә персе ялгыш."
+          ],
+          [
+            "Ансат, Урта, Кыйын һәм Оста арасында нинди аерма пар?",
+            "Дәрәжәне табышмакка кирәк пулган алымнар пилгели. Ансат һәм Урта тик ялгызаклар пелән цишелә, ә Ансат кимендә 38 пирелгән сан пелән пашлана. Кыйынга пикләнгән кандидатлар яки парлар һәм өцлекләр кирәк. Остага X-Wing, Y-Wing, Swordfish яки XYZ-Wing кирәк."
+          ],
+          [
+            "Язмаларны һәр күзәнәккә язу яхшыракмы, әллә кайперләренә генәме?",
+            "Кыйын һәм Оста табышмакларда пөтенесен тултыр: парлар, X-Wing һәм Y-Wing кебек үрнәкләр һәр кандидат язылгац кына күренә. Ансат һәм Уртада язмалар ихтыяри, һәм күп уйнауцылар тик ялгызаклар эзли."
+          ],
+          [
+            "Пер судоку күпме вакыт ала?",
+            "Ансат табышмак пер ницә минут ала; Оста табышмаклар катлаулы үрнәкне ницек тиз күрүеңә карап егерме минут яки күпрәк ала ала. Bare Sudoku вакытны күрсәтә, меню ацык цакта аны туктата һәм рейтинг таблицасы алып пармый, шуңа күрә үс тизлегеңдә уйна."
+          ],
+          [
+            "Судокуга арифметика кирәкме?",
+            "Юк. Саннар тик тамгалар; кушу та, санау та юк. Теләсә нинди тугыс тамга пулса да эшләр иде, һәм шуңа күрә судоку сан табышмагы түгел, ә логик табышмак."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судоку цишү алымнары: мисаллар пелән аңлатма",
+        "description": "Пер генә кандидаттан Swordfish һәм XYZ-Wing'ка кадәр тугыс судоку цишү алымы, Bare Sudoku кинәшләре куллана торган тәртиптә, һәрперсе цын мисал пелән.",
+        "h1": "Судоку цишү алымнары",
+        "intro": [
+          "Һәр судокуны пер кецкенә логик алымнар йыйылмасы пелән цишеп пула. Пу исемлек Bare Sudoku цишүцесе һәм аның кинәшләре куллана торган тугыс алымны цишүце сынап карый торган тәртиптә санап цыга: пашта ялгызаклар, аннары пер перәмлек эцендәге сөртүләр, аннары перницә юл һәм паганага йәелгән үрнәкләр. Һәр алымның тасвирламасы, аны ницек табарга, ясалган табышмактан цын мисал һәм еш ясала торган ялгышлар пулган үс пите пар.",
+          "Табышмакның дәрәжәсен аңа кирәк пулган иң кыйын алым пилгели. Ансат һәм Урта табышмакларга тик ялгызаклар кирәк, Кыйын табышмакларга пикләнгән кандидатлар яки парлар һәм өцлекләр кирәк, ә Оста табышмакларга кимендә пер палык яки канат кирәк. Дәрәжә нинди генә пулмасын, эшнең күпцелеген ялгызаклар пашкара; катлаулы алым пер-ике кандидатны сөртә, һәм аннары ялгызаклар эшне дәвам итә."
+        ],
+        "faq": [
+          [
+            "Судоку алымнарын нинди тәртиптә сынап карарга?",
+            "Иң арзаныннан пашла: пер генә кандидат, яшерен ялгызак, пикләнгән кандидатлар, ацык парлар һәм өцлекләр, яшерен парлар һәм өцлекләр, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku аларны нәкъ шул тәртиптә сынап карый, һәм кинәш һәрвакыт алга этәргән иң гади алымның исемен әйтә."
+          ],
+          [
+            "Судоку цишү өцен пу алымнарның пөтенесе кирәкме?",
+            "Ансат һәм Урта табышмаклар өцен ялгызаклар йитә. Кыйын табышмакларга пикләнгән кандидатлар һәм парлар-өцлекләр өстәлә. Оста табышмакларга кимендә пер палык яки канат кирәк, ләкин гадәттә пер табышмакта пер-ике тапкыр гына."
+          ],
+          [
+            "XYZ-Wing'тан кыенрак алымнар пармы?",
+            "Әйе, мәсәлән, цылбырлар, пергенәлек сынаулары һәм мәйбүр итү цилтәрләре. Bare Sudoku аларны таләп иткән табышмаклар ясамый, шуңа күрә уендагы һәр табышмакны пу питтәге тугыс алым пелән тәмамлап пула."
+          ],
+          [
+            "Кандидат нәрсә ул?",
+            "Пуш күзәнәккә әле керә алган сан, цөнки аның юлында, паганасында яки шакмагында аны әлегә пернәрсә тә цыгарып ташламый. Уендагы язмалар кандидатлар пулып тора. Ялгызаклардан тыш һәр алым кандидатлар турында фикер йөртә, шуңа күрә аларны тулы һәм төгәл тот."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Пер генә кандидат",
+          "title": "Пер генә кандидат (naked single): пер кандидатлы күзәнәк",
+          "description": "Пер генә кандидат (naked single) пер генә сан керә ала торган пуш күзәнәк. Аны тиз табарга цын мисалда адымлап өйрән һәм еш ясала торган ялгышлардан саклан.",
+          "h1": "Пер генә кандидат (naked single)",
+          "summary": "Пер генә кандидат (naked single) нәкъ пер кандидаты пулган пуш күзәнәк: калган сигес сан аның юлында, паганасында яки шакмагында инде пар. Калган сан шунда керергә тиеш. Пу иң гади, иң еш кулланыла торган судоку алымы, һәм Bare Sudoku кинәше аны \"Мында пер генә кандидат\" тип хәбәр итә.",
+          "when": [
+            "Һәрвакыт. Пер генә кандидатлар перенце йөрештән соңгысына кадәр, һәр дәрәжәдә оцрый. Ансат һәм Урта табышмакларда алар яшерен ялгызаклар пелән пергә кирәк пулган пердәнпер алым. Кыенрак табышмакларда катлаулы алым ясаган һәр сөртү гадәттә артыннан пер генә кандидат калдыра, шуңа күрә һәр адымнан соң аларны тикшер."
+          ],
+          "spot": [
+            "Күршеләре күп тулган күзәнәкләргә кара: инде йиде саны пулган юлдагы күзәнәк яки юлы, паганасы һәм шакмагы пергә сигес төрле санны каплаган күзәнәк. Язмаларсыс күзәнәктән күренгән саннарны сана. Язмалар пелән пер генә кандидат пер генә кандидат күрсәткән күзәнәк кына, шуңа күрә Язмаларны тултыру аларны табуны йиңеләйтә."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{cell} күзәнәгенә кара. Ул пуш, шуңа күрә аның юлында, паганасында һәм шакмагында инде куелган һәр санны санап цык.",
+                "{row} нце юлда {rowDigits} пар. {col} нце паганада {colDigits} пар. {box} нце шакмакта {boxDigits} пар.",
+                "Пергә алар {d} саныннан пашка һәр санны цыгарып ташлый, шуңа күрә {cell} күзәнәгендә пер генә кандидат кала: {d}.",
+                "{cell} күзәнәгенә {d} яз. Аннары яңа сан шул ук юлда, паганада яки шакмакта тагын пер ялгызак тудырмадымы, тикшер."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тик юлны яки тик шакмакны санау. Цыгарылган сигес сан гадәттә өц перәмлектән пергә килә.",
+            "Яңа гына куйган санның да 20 күршесеннән кандидатларны цыгарганын оныту; яңа пер генә кандидатлар һәр куюдан соң шунда ук пәйда пула.",
+            "Пер генә кандидатны яшерен ялгызак пелән путаштыру: пер генә кандидатта күзәнәктә пер кандидат кала, яшерен ялгызакта перәмлектә сан өцен пер күзәнәк кала."
+          ],
+          "faq": [
+            [
+              "Судокуда пер генә кандидат (naked single) нәрсә ул?",
+              "Нәкъ пер кандидаты пулган пуш күзәнәк. Аның юлында, паганасында һәм шакмагында сигес төрле сан инде куелган, шуңа күрә туры килгән пердәнпер сан тугысынцы сан."
+            ],
+            [
+              "Ни өцен ул инглисцә naked, ягъни ялангац, тип атала?",
+              "Цөнки язмалар язылгац, пердәнпер кандидат турыдан-туры күзәнәктә күренә; аны пернәрсә тә яшерми. Ә яшерен ялгызак пашка кандидатлар арасында тора һәм күзәнәккә түгел, санга карап табыла."
+            ],
+            [
+              "Табышмакны тик пер генә кандидатлар пелән цишеп пуламы?",
+              "Күп Ансат табышмакларны пула, ләкин аларның күпцелегенә яшерен ялгызаклар да кирәк. Bare Sudoku Ансат һәм Урта табышмакларны ике төр ялгызак пелән цишелә торган итеп пәяли; Кыйын һәм Оста табышмакларга тагын кимендә пер алым кирәк."
+            ],
+            [
+              "Кинәш пер генә кандидатларны күрсәтәме?",
+              "Әйе. Киләсе кую пер генә кандидат пулса, кинәш күзәнәкне сайлый һәм сан пелән пергә \"Мында пер генә кандидат\" ти. Куяр өцен кинәшкә тагын пас."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Яшерен ялгызак",
+          "title": "Яшерен ялгызак (hidden single): сан өцен пер генә урын",
+          "description": "Яшерен ялгызак (hidden single) юлда, паганада яки шакмакта санның керә алган пердәнпер күзәнәге. Саннарны перәм-перәм карап, аны табарга өйрән.",
+          "h1": "Яшерен ялгызак (hidden single)",
+          "summary": "Яшерен ялгызак (hidden single) юлда, паганада яки шакмакта пер генә мөмкин күзәнәге калган сан, хәтта ул күзәнәк пашка кандидатлар күрсәтсә дә. Перәмлек ул санны тотарга тиеш, шуңа күрә сан шунда керә. Bare Sudoku кинәше аны \"Пу юлда 5 өцен пер генә урын\" тип, паганада яки шакмакта да шулай хәбәр итә.",
+          "when": [
+            "Пер сан шактый алга киткәндә: сан пиш-алты тапкыр күренгәц, калган шакмаклар пик кысылган, һәм киләсе йөреш еш кына яшерен ялгызак. Яшерен ялгызаклар Ансат һәм Урта табышмакларның төп алымы һәм һәр дәрәжәдә эшнең авырлыгын күтәрүне дәвам итә."
+          ],
+          "spot": [
+            "Саннарны перәм-перәм карап цык. Пер сан ал, аны тотмаган шакмакны тап һәм шул шакмакта санның куелган данәсе пелән юл яки пагана уртаклашкан һәр күзәнәкне сызып куй. Пер күзәнәк калса, яшерен ялгызакны таптың. Шул ук карау юллар һәм паганаларда да эшли. Уенда куелган санга пас: аның һәр данәсе яктыртыла, һәм пуш күзәнәкләр ацык күренә."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{box} нце шакмакта әле {d} юк, шуңа күрә аның пуш күзәнәкләренең персе аны алырга тиеш. Пуш күзәнәкләр: {empties}.",
+                "{cell} күзәнәгеннән пашка һәрперсендә {d} санын шул ук юлда яки паганада инде куелган {d} тыя, шуңа күрә анда {d} кандидат түгел.",
+                "Шулай итеп {box} нце шакмакта {d} өцен пердәнпер урын {cell} пулып кала. {cell} әле пашка кандидатлар күрсәтсә дә, анда {d} яз."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Санны тик ихтимал төрес күзәнәккә кую: ацык күренгәннәрен генә түгел, перәмлектәге пашка һәр пуш күзәнәкне тикшер.",
+            "Күзәнәк ницә кандидат күрсәткәнгә яшерен ялгызакны күрмәү. Пашка кандидатларның әһәмияте юк; мөһиме, санның перәмлектә пашка урыны юк.",
+            "Тик шакмакларны карау. Юллар һәм паганалар да яшерен ялгызакларны шул ук ешлыкта пирә, аеруча ахырга таба."
+          ],
+          "faq": [
+            [
+              "Судокуда яшерен ялгызак (hidden single) нәрсә ул?",
+              "Юлның, пагананың яки шакмакның пер генә күзәнәгенә керә алган сан. Перәмлек ул санны тотарга тиеш, шуңа күрә күзәнәктә пашка кандидатлар пулса да, күзәнәк төгәлләнә."
+            ],
+            [
+              "Яшерен ялгызак пелән пер генә кандидат арасында нинди аерма пар?",
+              "Пер генә кандидат күзәнәккә карый: анда пер кандидат кала. Яшерен ялгызак санга карый: перәмлектә аның өцен пер күзәнәк кала. Икесе тә санны төгәл куя."
+            ],
+            [
+              "Кайсысын табу йиңелрәк?",
+              "Язмаларсыс яшерен ялгызаклар гадәттә йиңелрәк, цөнки цилтәрне һәр тапкыр пер сан өцен карап цыгып пула. Тулы язмалар пелән пер генә кандидатлар иң йиңеле, цөнки пер кандидатлы күзәнәк шунда ук күзгә ташлана."
+            ],
+            [
+              "Кинәш яшерен ялгызакны ницек сурәтли?",
+              "Күзәнәкне сайлап, \"Пу юлда\", \"Пу паганада\" яки \"Пу шакмакта ... өцен пер генә урын\" тип. Куяр өцен кинәшкә тагын пас."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Пикләнгән кандидатлар",
+          "title": "Судокуда пикләнгән кандидатлар: күрсәтү һәм үсләштерү",
+          "description": "Пикләнгән кандидатлар: санның шакмактагы кандидатлары пер юлда яки паганада пулса, яки киресенцә, сан пашка урыннардан сөртелә. Ике цын мисал.",
+          "h1": "Пикләнгән кандидатлар",
+          "summary": "Пикләнгән кандидатлар сан куймыйца, кандидатларны сөртә торган перенце алым. Аның ике формасы пар. Күрсәтү: шакмакта санның пөтен кандидатлары пер юлда яки паганада ята, шуңа күрә сан шул сызыкның калган өлешеннән сөртелә. Үсләштерү: юлда яки паганада санның пөтен кандидатлары пер шакмакта ята, шуңа күрә сан шул шакмакның калган өлешеннән сөртелә. Bare Sudoku кинәше ул ацкан куюны \"Пикләнгән кандидатлар\" тип тамгалый.",
+          "when": [
+            "Кыйын табышмакта ялгызаклар петкәц, пашта пуны сынап кара. Пу кимендә тикшерелә торган сан өцен тулы язмалар таләп итә. Пикләнгән кандидатлар еш оцрый: Кыйын табышмакларның күпцелегенә алар кирәк, ә Оста табышмаклар аларны зур үрнәкләр арасында куллана."
+          ],
+          "spot": [
+            "Күрсәтү өцен һәр шакмакка һәм анда йитмәгән һәр санга кара: шул санның кандидат күзәнәкләре пер юлда яки паганада урнашса, шул ук сан ул сызык пуенца шакмактан тыш кандидат пулып оцрыймы, тикшер. Үсләштерү өцен юл яки пагана пуенца кара: санның кандидатлары пөтенесе пер шакмак эцендә пулса, ул шакмакның калган өлешен цистартып пула. Уенда сан төймәсенә пассаң, аның һәр кандидаты яктыртыла; пер шакмак эцендә ике-өц яктыртылган язмадан торган сызык нәкъ шул үрнәк."
+          ],
+          "examples": [
+            {
+              "h": "Күрсәтү",
+              "steps": [
+                "{box} нце шакмакта {d} санының пары шушы кандидат күзәнәкләре пар: {cells}. Аларның пөтенесе {row} нце юлда ята.",
+                "{box} нце шакмакка {d} кирәк, шуңа күрә {row} нце юлның {d} саны, ул кайсы күзәнәккә генә төшмәсен, {box} нце шакмак эцендә.",
+                "{row} нце юлда икенце {d} пула алмый, шуңа күрә {row} нце юлның шакмактан тыш күзәнәкләреннән {d} санын сөрт: {elim}."
+              ]
+            },
+            {
+              "h": "Үсләштерү",
+              "steps": [
+                "{row} нце юлда {d} саны тик {cells} күзәнәкләренә генә керә ала, һәм алар пөтенесе {box} нце шакмак эцендә.",
+                "{row} нце юлда {d} пулырга тиеш, шуңа күрә {box} нце шакмакның {d} санын {row} нце юл үсләштерә. {box} нце шакмакның пашка күзәнәкләрендә {d} пула алмый.",
+                "{d} санын шушы күзәнәкләрдән сөрт: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Күрсәтүдә санны шакмактан тыш түгел, шакмак эценнән сөртү, ә үсләштерүдә киресенцә. Сөртүләр һәрвакыт сызыкта пулып шакмакта пулмаган яки шакмакта пулып сызыкта пулмаган күзәнәкләргә кагыла.",
+            "Кандидатлар шакмакның ике юлына таралганда кагыйдәне куллану. Шакмакта санның пөтен кандидат күзәнәкләре пер сызыкта ятарга тиеш.",
+            "Сөртү тудырган ялгызакны эзләргә оныту. Пикләнгән кандидатлар үсләре сирәк сан куя; алар ялгызакка юл әсерли."
+          ],
+          "faq": [
+            [
+              "Судокуда пикләнгән кандидатлар нәрсә ул?",
+              "Шакмак пелән сызыкның кисешүенә кысылган сан кандидатлары. Шакмак, яки сызык, ул санны шул кисешүдә тотарга тиеш, шуңа күрә санны сызыкның, яки шакмакның, калган өлешеннән сөртеп пула."
+            ],
+            [
+              "Күрсәтү пелән үсләштерү арасында нинди аерма пар?",
+              "Күрсәтү шакмактан пашлана: санның шакмактагы кандидатлары пер юл яки пагана пуенца күрсәтә, шуңа күрә сан ул сызыкның калган өлешеннән сөртелә. Үсләштерү юлдан яки паганадан пашлана: сызыкның ул сан өцен кандидатлары пөтенесе пер шакмакта, шуңа күрә сызык санны үсләштерә һәм сан шакмакның калган өлешеннән сөртелә."
+            ],
+            [
+              "Пикләнгән кандидатларны кисешү пелән сөртү тип тә атыйлармы?",
+              "Әйе. Пашка исемнәр: үсләштерү формасы өцен шакмак-сызык кыскарту, күрсәтү формасы өцен күрсәтүце парлар яки күрсәтүце өцлекләр. Bare Sudoku икесе өцен тә пер исем куллана."
+            ],
+            [
+              "Кайсы дәрәжәгә пикләнгән кандидатлар кирәк?",
+              "Кыйынга. Пикләнгән кандидатлар яки парлар-өцлекләр кирәк пулган, ләкин моннан кыенрагы кирәк пулмаган табышмак Кыйын тип пәяләнә; Оста табышмакларга моңа өстәп палык яки канат та кирәк."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Ацык парлар һәм өцлекләр",
+          "title": "Ацык парлар һәм өцлекләр (naked pairs): ницек эшли",
+          "description": "Ацык парлар һәм өцлекләр (naked pair, naked triple): перәмлектә пер үк ике яки өц кандидатлы күзәнәкләр. Аларны табарга һәм нәрсә сөртергә өйрән.",
+          "h1": "Ацык парлар һәм өцлекләр (naked pair, naked triple)",
+          "summary": "Ацык пар (naked pair) пер үк юлда, паганада яки шакмакта нәкъ пер үк ике кандидатлы ике күзәнәк. Ул ике сан шул ике күзәнәккә керергә тиеш, шуңа күрә аларны перәмлекнең пашка һәр күзәнәгеннән сөртеп пула. Ацык өцлек (naked triple) өц күзәнәк һәм өц сан пелән шул ук фикер; һәр күзәнәк аларның икесен яки өцесен тә күрсәтә ала. Bare Sudoku кинәше килеп цыккан куюны \"Пар яки өцлек\" тип тамгалый.",
+          "when": [
+            "Язмалар тулы пулганда, ялгызаклар һәм пикләнгән кандидатлар петкәц. Ацык парлар Кыйын табышмакларда пик еш оцрый, ацык өцлекләр сирәгрәк. Әле пиш яки күпрәк пуш күзәнәге пулган һәр перәмлектә икесен тә тикшерергә кирәк."
+          ],
+          "spot": [
+            "Тик ике кандидатлы күзәнәкләрне эзлә һәм шул ук перәмлектә шул ук ике кандидатлы пашка күзәнәкне тап. Өцлекләр өцен ницә ике һәм өц кандидатлы күзәнәге пулган перәмлекләргә кара һәм аларның өцесе пергә тик өц төрле сан кулланамы, тикшер. Язмалар язылгац, нәкъ пер үк кандидатлы күзәнәкләрне күрү йиңел; уенда Язмаларны тултыру пуны пер пасу пелән эшли."
+          ],
+          "examples": [
+            {
+              "h": "Ацык пар",
+              "steps": [
+                "{unit} эцендәге {cellA} һәм {cellB} күзәнәкләренең нәкъ пер үк ике кандидаты пар: {d1} һәм {d2}.",
+                "Аларның персе {d1}, икенцесе {d2} пулырга тиеш. Кайсы кайсы икәнен пелмибес, ләкин ике сан тә шушы ике күзәнәккә алынган.",
+                "Шуңа күрә {unit} эцендә пашка пер күзәнәк тә {d1} яки {d2} ала алмый. Сөрт: {elim}."
+              ]
+            },
+            {
+              "h": "Ацык өцлек",
+              "steps": [
+                "{unit} эцендәге өц күзәнәк пөтен кандидатларын пер үк өц саннан, {digits}, ала: {cells}.",
+                "Өц сан шушы өц күзәнәкне ниндидер тәртиптә тултырырга тиеш. Күзәнәк өц кандидатны да күрсәтергә тиеш түгел; мөһиме, өц күзәнәкнең пер-персендә тә йыйылмадан тыш кандидат юк.",
+                "{unit} эцендәге пашка һәр күзәнәктән {digits} саннарын сөрт: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ике кандидатны уртаклашкан, ләкин өценце кандидаты та пулган ике күзәнәкне алу. Ацык пар өцен һәр күзәнәктә нәкъ шул ике кандидат пулырга тиеш, пашка пернәрсә тә түгел.",
+            "Саннарны парның үс күзәнәкләреннән сөртү. Пар үс кандидатларын саклый; сөртүләр перәмлекнең пашка күзәнәкләренә кагыла.",
+            "Өцлекнең һәр күзәнәге өц санны да күрсәтүен таләп итү. Пер күзәнәктә тә йыйылмадан тыш кандидат пулмаса, өцтән икесен күрсәткән күзәнәк тә ярый."
+          ],
+          "faq": [
+            [
+              "Судокуда ацык пар (naked pair) нәрсә ул?",
+              "Пер перәмлектә икесенең дә нәкъ пер үк ике кандидаты пулган ике күзәнәк. Ул ике сан шул ике күзәнәккә пикләнгән, шуңа күрә аларны перәмлекнең калган өлешеннән сөртеп пула."
+            ],
+            [
+              "Ацык өцлек (naked triple) нәрсә ул?",
+              "Пер перәмлектә кандидатлары пергә тик өц сан пулган өц күзәнәк. Һәр күзәнәктә аларның икесе яки өцесе пула ала. Өц сан өц күзәнәкне тултыра, шуңа күрә аларны перәмлекнең пашка күзәнәкләреннән сөртеп пула."
+            ],
+            [
+              "Ацык пар сан куямы?",
+              "Үсе генә куймый. Ул кандидатларны сөртә, һәм сөртү гадәттә пер генә кандидат яки яшерен ялгызак калдыра. Bare Sudoku'та кинәш шул ялгызакны күрсәтә һәм аны мөмкин иткән алымның исемен әйтә."
+            ],
+            [
+              "Ацык пар пер үк вакытта шакмакта да, юлда да пула аламы?",
+              "Әйе. Ике күзәнәк юлны да, шакмакны да уртаклашса, пар ике перәмлектә тә сөртә. Bare Sudoku перәмлекләрне перәм-перәм карый."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Яшерен парлар һәм өцлекләр",
+          "title": "Яшерен парлар һәм өцлекләр (hidden pairs): ницек табарга",
+          "description": "Яшерен пар (hidden pair): перәмлектә тик пер үк ике күзәнәккә генә керә алган ике сан; ул күзәнәкләрнең пашка кандидатлары сөртелә. Цын мисал пелән өйрән.",
+          "h1": "Яшерен парлар һәм өцлекләр (hidden pair, hidden triple)",
+          "summary": "Яшерен пар (hidden pair) юл, пагана яки шакмак эцендә пер үк ике күзәнәктә кандидат пулган һәм пашка пер урында да пулмаган ике сан. Ул ике күзәнәк шул ике санны алырга тиеш, шуңа күрә алардагы пашка һәр кандидатны сөртеп пула. Яшерен өцлек (hidden triple) өц күзәнәккә кысылган өц сан пелән шулай ук эшли. Сөртүдән соң күзәнәкләр ацык пар яки өцлек күрсәтә. Bare Sudoku кинәше килеп цыккан куюны \"Пар яки өцлек\" тип тамгалый.",
+          "when": [
+            "Перәмлектә күп кандидатлы күзәнәкләр пулганда һәм ялгызаклар петкәц. Яшерен парлар тулы күзәнәкләр эцендә посып ята, шуңа күрә аларны нәкъ ацык парлар күренмәгән урында эзләргә кирәк. Яшерен өцлекләр сирәк; Bare Sudoku аларны да тикшерә, ләкин Кыйын табышмакларның күпцелеге аларсыс цишелә."
+          ],
+          "spot": [
+            "Күзәнәк пуенца түгел, сан пуенца эшлә. Перәмлектә йитмәгән һәр санның керә алган күзәнәкләрен пилгелә. Ике санның һәрперсенең тик ике мөмкин күзәнәге пулса һәм алар пер үк ике күзәнәк пулса, син яшерен пар таптың. Уенда сан төймәсенә пассаң, аның кандидатлары яктыртыла; ике сан перәмлектә пер үк ике күзәнәкне яктыртса һәм анда пашка пернәрсәне тә яктыртмаса, үрнәк шул."
+          ],
+          "examples": [
+            {
+              "h": "Яшерен пар",
+              "steps": [
+                "{unit} эцендә {d1} һәм {d2} саннарының һәрперсенең тик ике мөмкин күзәнәге пар, һәм алар пер үк ике күзәнәк: {cells}.",
+                "Ул ике күзәнәк {d1} һәм {d2} алырга тиеш, шуңа күрә аларның пашка кандидатлары мөмкин түгел.",
+                "Сөрт: {elim}. Хәзер ике күзәнәк ацык пар күрсәтә, һәм пу тагын пашка юллар ацарга мөмкин."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Парның ике санын пар күзәнәкләреннән сөртү. Ул күзәнәкләрнең пашка кандидатлары сөртелә; пар саннары кала.",
+            "Перәмлектә өценце мөмкин күзәнәге пулган санны кабул итү. Ике сан та нәкъ шул ике күзәнәк пелән цикләнгән пулырга тиеш.",
+            "Тик шакмакларга карау. Яшерен парлар юлларда һәм паганаларда да шул ук ешлыкта оцрый."
+          ],
+          "faq": [
+            [
+              "Судокуда яшерен пар (hidden pair) нәрсә ул?",
+              "Перәмлектә тик пер үк ике күзәнәккә генә керә алган ике сан. Ул күзәнәкләр шул саннарны алырга тиеш, шуңа күрә аларның пашка кандидатлары сөртелә."
+            ],
+            [
+              "Яшерен пар ацык пардан ницек аерыла?",
+              "Ацык пар күренеп тора: тик пер үк ике кандидатны күрсәткән ике күзәнәк. Яшерен пар ике күзәнәктәге артык кандидатлар астында яшеренгән. Ул артыкларны сөртү яшерен парны ацык парга әйләндерә."
+            ],
+            [
+              "Яшерен өцлек (hidden triple) нәрсә ул?",
+              "Перәмлекнең өц күзәнәгенә кысылган өц сан. Һәр сан өц күзәнәктә тә пулырга тиеш түгел; мөһиме, өц санның пер-персенең тә ул күзәнәкләрдән тыш кандидаты юк."
+            ],
+            [
+              "Кинәш яшерен һәм ацык парларны аерамы?",
+              "Юк. Bare Sudoku икесен тә таба һәм килеп цыккан куюны \"Пар яки өцлек\" тип тамгалый. Монда питләр аларны аера, цөнки алар төрле юллар пелән табыла."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Судокуда X-Wing: алым ницек эшли",
+          "description": "X-Wing: ике юлда нәкъ ике кандидат күзәнәге пулган һәм пер үк ике паганада тезелгән сан шул паганаларның калган өлешеннән сөртелә. Цын мисал.",
+          "h1": "X-Wing",
+          "summary": "X-Wing пер сан һәм турыпоцмакның поцмакларындагы түрт күзәнәктән торган үрнәк. Әгәр санның ике юлның һәрперсендә нәкъ ике кандидат күзәнәге пулса һәм ул күзәнәкләр пер үк ике паганада урнашса, сан турыпоцмакның капма-каршы ике поцмагын алырга тиеш. Шуңа күрә аны шул ике пагананың пашка һәр күзәнәгеннән сөртеп пула. Юллар һәм паганалар урыннарын алмаштырса да, шул ук эшли. Пу Bare Sudoku'тагы перенце Оста алымы.",
+          "when": [
+            "Ялгызаклар, пикләнгән кандидатлар һәм парлар-өцлекләр петкәц. X-Wing иң еш оцрый торган Оста үрнәге һәм гадәттә санның кандидатлары сирәгәйгәц, гадәттә аның түрттән алтыга кадәр данәсе куелгац күренә. Тикшерелә торган сан өцен тулы язмалар кирәк."
+          ],
+          "spot": [
+            "Сан сайла һәм ул сан өцен нәкъ ике кандидат күзәнәге пулган юлларны эзлә. Андый ике юл пер үк ике паганада пулса, шул паганаларда санның пашка кандидатларын тикшер: сөртүләр нәкъ шулар. Аннары паганаларны нигез итеп алып кабатла. Уенда сан төймәсенә пас: аның һәр кандидаты яктыртыла, һәм түрт яктыртылган язмадан торган турыпоцмак йиңел күренә."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{d} санының {r1} нце юлда нәкъ ике һәм {r2} нце юлда нәкъ ике кандидат күзәнәге пар, һәм алар пер үк ике паганада, {c1} һәм {c2}, тезелгән: {cells}.",
+                "{r1} нце юл үс {d} санын {c1} яки {c2} нце паганага куя, ә {r2} нце юл икенцесенә. Ницек кенә пулмасын, {c1} һәм {c2} нце паганаларның һәрперсе шушы ике юлдан пер {d} ала.",
+                "Шуңа күрә {d} {c1} һәм {c2} нце паганаларда пашка пер урында да пула алмый. {d} санын шушы күзәнәкләрдән сөрт: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Сан өцен өц кандидат күзәнәге пулган юлны куллану. Һәр нигез юлда нәкъ ике пулырга тиеш, һәм икесе тә уртак ике паганада ятарга тиеш.",
+            "Санны паганалардан түгел, юллардан сөртү. Нигез юллар пулса, сөртүләр паганаларда, һәм киресенцә.",
+            "Алмаштырылган вариантны оныту. Паганаларга нигезләнгән X-Wing юлларда сөртә."
+          ],
+          "faq": [
+            [
+              "Судокуда X-Wing нәрсә ул?",
+              "Ике юлның һәрперсендә, пер үк ике паганада нәкъ ике кандидат күзәнәге пулган сан. Сан шул турыпоцмакның капма-каршы ике поцмагын ала, шуңа күрә ул ике пагананың калган өлешеннән сөртелә. Юллар һәм паганалар урын алмаша ала."
+            ],
+            [
+              "X-Wing ни өцен эшли?",
+              "Ике юлның һәрперсе санны ике пагананың персенә куярга тиеш, һәм ике юл пер үк пагананы куллана алмый. Шуңа күрә ике пагананың һәрперсе санның үс данәсен шушы юллардан ала, һәм ул паганалардагы пашка һәр кандидат мөмкин түгел."
+            ],
+            [
+              "X-Wing палыкмы?",
+              "Әйе. X-Wing ике үлцәмле палык; Swordfish өц үлцәмле палык. Bare Sudoku икесен тә таба."
+            ],
+            [
+              "Кайсы дәрәжәдә X-Wing пар?",
+              "Остада. X-Wing, Y-Wing, Swordfish яки XYZ-Wing кирәк пулган табышмак Оста тип пәяләнә."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Судокуда Y-Wing: алым ницек эшли",
+          "description": "Y-Wing (XY-Wing): ике кандидатлы күцәр һәм аның пер кандидатын уртаклашкан ике канат ике канатны та күргән һәр күзәнәктән санны цыгара. Цын мисал.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, аны XY-Wing тип тә атыйлар, һәрперсе ике кандидатлы өц күзәнәк куллана. Күцәрнең кандидатлары X һәм Y. Пер канат күцәрне күрә һәм X пелән Z тота; икенце канат күцәрне күрә һәм Y пелән Z тота. Күцәр нәрсә генә пулмасын, канатларның персе Z пулырга тиеш, шуңа күрә Z ике канатны та күргән һәр күзәнәктән сөртеп пула. Пу Bare Sudoku'та Оста алымы.",
+          "when": [
+            "Табышмакта нәкъ ике кандидатлы ницә күзәнәк пулганда һәм пер палык та юк цакта. Y-Wing Оста табышмакларда еш оцрый һәм ике кандидатлы күзәнәкләрне күзәтеп табыла: һәрперсе мөмкин күцәр яки канат."
+          ],
+          "spot": [
+            "Нәкъ ике кандидатлы күзәнәкләрне исемлеккә яз. Һәрперсен X һәм Y кандидатлы күцәр итеп ал һәм аның күршеләре арасында X һәм пашка пер Z санын тоткан күзәнәкне, һәм Y һәм шул ук Z'ны тоткан күзәнәкне эзлә. Ул икесе канатлар. Аннары ике канатны та күргән һәм Z тоткан күзәнәкләрне тап. Канатлар пер-персен күрергә тиеш түгел."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{pivot} күцәренең кандидатлары {x} һәм {y}. Ул {x} пелән {z} тоткан {wingA} күзәнәген һәм {y} пелән {z} тоткан {wingB} күзәнәген күрә.",
+                "{pivot} {x} пулса, {wingA} {x} кандидатын югалта һәм {z} пула. {pivot} {y} пулса, {wingB} {z} пула. Һәр оцракта ике канатның персе {z}.",
+                "Ике канатны та күргән күзәнәк перкайцан {z} пула алмый. {z} санын шушы күзәнәкләрдән сөрт: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Икесе тә күцәрне күрмәгән канатлар сайлау. Һәр канат күцәр пелән юл, пагана яки шакмак уртаклашырга тиеш.",
+            "Z'ны тик пер канатны күргән күзәнәкләрдән сөртү. Сөртелгән күзәнәк ике канатны та күрергә тиеш.",
+            "Z'ны күцәрдән сөртү. Y-Wing'та күцәрдә Z юк; пулса, үрнәк пашка кагыйдәле XYZ-Wing пула."
+          ],
+          "faq": [
+            [
+              "Судокуда Y-Wing нәрсә ул?",
+              "Ике кандидатлы өц күзәнәк: X һәм Y тоткан күцәр, күцәрне күргән X һәм Z тоткан канат, һәм күцәрне күргән Y һәм Z тоткан канат. Пер канат һәрвакыт Z, шуңа күрә Z ике канатны та күргән күзәнәкләрдән сөртелә."
+            ],
+            [
+              "Y-Wing һәм XY-Wing пер үк нәрсәме?",
+              "Әйе. Ике исем пер үк үрнәкне сурәтли. Bare Sudoku аны Y-Wing тип атый."
+            ],
+            [
+              "Ни өцен пер канат Z пулырга тиеш?",
+              "Күцәр X пулса, перенце канат X'ны югалта һәм Z пула. Күцәр Y пулса, икенце канат Z пула. Күцәр шул икесенең персе, шуңа күрә пер канат Z."
+            ],
+            [
+              "Y-Wing ницә күзәнәктән сөртә?",
+              "Гадәттә перәү яки икәү: тик ике канатны та күргән һәм әле Z тоткан күзәнәкләр. Ялгызак тудырыр өцен пу йитә."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Судокуда Swordfish: алым ницек эшли",
+          "description": "Swordfish: өц юл пуенца өц паганага кысылган сан шул паганаларның калган өлешеннән сөртелә. Өц үлцәмле палык, цын мисал пелән адымлап аңлатыла.",
+          "h1": "Swordfish",
+          "summary": "Swordfish өц юллы һәм өц паганалы X-Wing. Әгәр санның өц юлның һәрперсендә күп тигәндә өц кандидат күзәнәге пулса һәм ул күзәнәкләрнең пөтенесе пер үк өц паганага туры килсә, өц юл ул паганаларда санны тулысынца куллана, һәм санны өц пагананың пашка һәр күзәнәгеннән сөртеп пула. Юллар һәм паганалар урын алмаша ала. Bare Sudoku Оста табышмакларда Swordfish'ны Y-Wing'тан соң тикшерә.",
+          "when": [
+            "X-Wing һәм Y-Wing пернәрсә тә тапмаганда. Swordfish X-Wing'ка караганда сирәгрәк оцрый һәм кандидатлары өц сызыкка сирәк таралган сан таләп итә. Шул сан өцен тулы һәм төгәл язмалар кирәк."
+          ],
+          "spot": [
+            "Сан сайла һәм ул сан өцен ике яки өц кандидат күзәнәге пулган юлларны эзлә. Андый өц юл пергә тик өц пагананы капласа, шул паганаларда санның пашка кандидатларын тикшер. Һәр юлның һәр паганада кандидаты пулырга тиеш түгел: Swordfish алты, йиде, сигес яки тугыс күзәнәкле пула ала. Уенда санны үс төймәсе пелән яктырт һәм кандидатлары өц паганада тезелгән өц юл эзлә."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{d} санының {rows} нце юлларның һәрперсендә күп тигәндә өц кандидат күзәнәге пар, һәм ул күзәнәкләрнең пөтенесе {cols} нце паганаларга туры килә: {cells}.",
+                "Өц юлның һәрперсе үс {d} санын өц пагананың персенә куярга тиеш, һәм ике юл пер үк пагананы куллана алмый. Шуңа күрә өц пагана үс {d} саннарын шушы өц юлдан ала.",
+                "{cols} нце паганалардагы пашка һәр {d} кандидаты мөмкин түгел. {d} санын шушы күзәнәкләрдән сөрт: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тугыс күзәнәкнең пөтенесен таләп итү. Кайпер юлларда ике кандидатлы Swordfish та, өц юл тик өц пагананы капласа, төрес пулып кала.",
+            "Түрт кандидат күзәнәге пулган юлны кертү. Һәр нигез юлда күп тигәндә өц пулырга тиеш, пөтенесе өц пагана эцендә.",
+            "Нигез юлларда сөртү. Нигез юллар пулса, сөртүләр нигез юллардан тыш, өц паганада."
+          ],
+          "faq": [
+            [
+              "Судокуда Swordfish нәрсә ул?",
+              "Өц юлдагы кандидатлары өц паганага кысылган сан. Өц юл санны шул өц паганага пер тапкырдан куярга тиеш, шуңа күрә сан ул паганаларның пашка күзәнәкләреннән сөртелә."
+            ],
+            [
+              "Swordfish X-Wing'тан ницек аерыла?",
+              "Тик үлцәме пелән: X-Wing ике юл һәм ике пагана куллана, Swordfish өц һәм өц. Фикер йөртү пер үк."
+            ],
+            [
+              "Swordfish өцен нәкъ тугыс күзәнәк кирәкме?",
+              "Юк. Һәр юлда ике яки өц кандидат пула ала; үрнәк тик өц юлның пергә өцтән артык пагана кулланмавын таләп итә."
+            ],
+            [
+              "Түрт үлцәмле палык пармы?",
+              "Әйе, Jellyfish. Bare Sudoku аны кулланмый, цөнки аның табышмакларына ул перкайцан кирәк пулмый."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Судокуда XYZ-Wing: алым ницек эшли",
+          "description": "XYZ-Wing: өц кандидатлы күцәр һәм аның пер кандидатын уртаклашкан ике канат ул санны өцесен тә күргән һәр күзәнәктән цыгара. Цын мисал, адымлап.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing күцәрендә өц кандидат пулган Y-Wing. Күцәрдә X, Y һәм Z; пер канат күцәрне күрә һәм X пелән Z тота, икенцесе күцәрне күрә һәм Y пелән Z тота. Өц күзәнәкнең персе Z пулырга тиеш, шуңа күрә Z өцесен тә күргән һәр күзәнәктән сөртеп пула. Күцәр үсе Z пула алганга, сөртелә торган күзәнәк ике канат пелән пергә күцәрне дә күрергә тиеш, һәм пу аны күзәнәкләр уртаклашкан шакмак яки сызык пелән цикли. Пу Bare Sudoku куллана торган иң кыйын алым.",
+          "when": [
+            "Тик пашка пернәрсә тә пулышмаганда. XYZ-Wing Bare Sudoku'та иң сирәк үрнәк һәм тик Оста табышмакларда оцрый. Өц кандидатлы күзәнәк аның ике санын уртаклашкан ике кандидатлы күзәнәк пелән пер шакмакта торса, аны эзлә."
+          ],
+          "spot": [
+            "Нәкъ өц кандидатлы күзәнәкләрдән пашла; һәрперсе мөмкин күцәр. Аның күршеләре арасында ике кандидатлы, кандидатлары күцәрнең өц кандидатыннан алынган һәм нәкъ пер Z санын уртаклашкан ике күзәнәк эзлә. Аннары күцәрне һәм ике канатны күргән һәм Z тоткан күзәнәкләрне тап. Гамәлдә пер канат күцәрнең шакмагында, икенцесе аның юлында яки паганасында ята, ә сөртелә торган күзәнәкләр шул шакмакның шул юлдагы яки паганадагы калган күзәнәкләре."
+          ],
+          "examples": [
+            {
+              "h": "Мисал",
+              "steps": [
+                "{pivot} күцәренең өц кандидаты пар: {x}, {y} һәм {z}. Ул {x} пелән {z} тоткан {wingA} күзәнәген һәм {y} пелән {z} тоткан {wingB} күзәнәген күрә.",
+                "{pivot} {z} пулса, эш петте. {x} пулса, {wingA} {z} пулырга тиеш. {y} пулса, {wingB} {z} пулырга тиеш. Һәр оцракта өц күзәнәкнең персе {z}.",
+                "Өцесен тә күргән күзәнәк {z} пула алмый. {z} санын шушы күзәнәкләрдән сөрт: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тик ике канатны күргән күзәнәкләрдән сөртү. Y-Wing'тан аермалы пуларак, күцәр Z пула ала, шуңа күрә күзәнәк күцәрне дә күрергә тиеш.",
+            "Кандидатлары күцәрнең өц кандидаты эцендә пулмаган канатлар куллану.",
+            "Аны Y-Wing пелән путаштыру: аерма күцәрдәге өценце кандидатта, һәм ул кайсы күзәнәкләрне цистартып пулуны үзгәртә."
+          ],
+          "faq": [
+            [
+              "Судокуда XYZ-Wing нәрсә ул?",
+              "X, Y һәм Z кандидатлы күцәр һәм ике канат: персе X пелән Z, икенцесе Y пелән Z тота, икесе тә күцәрне күрә. Өц күзәнәкнең персе Z, шуңа күрә Z өцесен тә күргән күзәнәкләрдән сөртелә."
+            ],
+            [
+              "XYZ-Wing Y-Wing'тан ницек аерыла?",
+              "Күцәрдә ике түгел, Z'ны да кертеп, өц кандидат. Пу күцәрне Z өцен мөмкин урын итә, шуңа күрә тик күцәрне һәм ике канатны күргән күзәнәкләр генә Z'ны югалта ала."
+            ],
+            [
+              "XYZ-Wing никадәр еш оцрый?",
+              "Сирәк. Bare Sudoku'та аны тик Оста табышмаклар таләп итә ала, һәм аларның күпцелеге таләп итми. Bare Sudoku аны иң соңыннан, X-Wing, Y-Wing һәм Swordfish'тан соң тикшерә."
+            ],
+            [
+              "WXYZ-Wing пармы?",
+              "Әйе, түрт кандидатлы күцәр пелән, ләкин Bare Sudoku аны кулланмый. Уендагы һәр табышмакны пу кулланманың тугыс алымы пелән тәмамлап пула."
+            ]
+          ]
+        }
+      }
+    },
+    "cjs": {
+      "learnHeading": "Судокуға ӱӧрен",
+      "learnText": "Судокуда наа ба сен, эмезе қатығ тапчаңда тоқтап қалдың ба? Ийги чарыдыг чоруқтарды паза кӧргӱстер қолданчатқан полған на шешер эп-арғаны чын примерлер пыла чарыдып перча.",
+      "howToLink": "Судокуны қайде ойнарға",
+      "techniquesLink": "Судоку шешер эп-арғалар",
+      "labels": {
+        "howTo": "Қайде ойнарға",
+        "techniques": "Эп-арғалар",
+        "play": "Судоку ойна",
+        "prev": "Алдындағы эп-арға",
+        "next": "Соонғы эп-арға",
+        "all": "Пӱдӱн эп-арғалар",
+        "example": "Пример",
+        "steps": "Базым базымнаң",
+        "when": "Қачан қолданарға",
+        "spot": "Қайде табарға",
+        "mistakes": "Кӧп туштапчатқан чазығлар",
+        "inGame": "Bare Sudoku-де",
+        "level": "Керек кемел: {level}",
+        "hint": "Ойунда кӧргӱс мынаң тепча: {text}",
+        "legend": "Қалың сандар пастап пирилген, кӧк сандар шешкен ӧйде салылған, кичиг сандар кандидаттар. Чарытылған клеткалар кепти тургузупча, сызылған кандидаттар алып тасталча, тоғалақ ичиндеги кандидат салар сан.",
+        "notation": "Клетканы r3c7 тиг тепчалар: 3-чи қат, 7-чи колонка. Қаттар ӱстӱнең, колонкалар солаңнаң саналча; кӧзенектер сол ӱстӱнең паштап қат пойынча 1-дең 9-ға четире саналча.",
+        "row": "{n}-чи қат",
+        "column": "{n}-чи колонка",
+        "box": "{n}-чи кӧзенек",
+        "elimItem": "{cell} клетказынаң {d}",
+        "regions": "Тапчаңның пажында 5-чи қат, 5-чи колонка паза 5-чи кӧзенек",
+        "firstMove": "Чалғыс кандидат: {cell} тек {d} полар",
+        "breadcrumb": "Навигация"
+      },
+      "howTo": {
+        "title": "Судокуны қайде ойнарға: чоруқтар, сетка, пастағы базымнар",
+        "description": "Судокуны қайде ойнарға: чоруқтар, қат, колонка паза кӧзенектер, ноға полған на тапчаңның пир ле шешими пар, пилдиглер паза пастағы базымнар.",
+        "h1": "Судокуны қайде ойнарға",
+        "summary": "Судоку 9×9 сеткадағы логика тапчаңы. Полған на пош клеткаға 1-дең 9-ға четире пир сан салзың: полған на қатта, полған на колонкада паза полған на 3×3 кӧзенекте полған на сан тӧп пир қатап полар керек. Пирее сандар пастап пирилген; артқанын пир чарт клетканы табып шығарзың, паза сағынып табары қачан да керек чоқ. Пу чарыдыг сетканы, чоруқтарды, пир шешим чоруғун, пилдиглерди паза пастағы базымнар ӱчӱн оңай чолду чарыдыпча. Пӱдӱнин тегин паза логиканы чарыдып перчатқан кӧргӱстерлиг [Bare Sudoku](play)-де кӧрип поларзың.",
+        "sections": [
+          {
+            "h": "Судокуның чоруқтары қандығ?",
+            "p": [
+              "Чоруқ ӱш ле, паза олар ӱш чақтаң кӧрген пир ле чоруқ: полған на қатта 1-дең 9-ға четире сандар полар керек, полған на колонкада 1-дең 9-ға четире сандар полар керек, полған на 3×3 кӧзенекте 1-дең 9-ға четире сандар полар керек. Аның ӱчӱн пир сан пир қатта, колонкада эмезе кӧзенекте ийги қатап қачан да полбас.",
+              "Қалың сандар пирилген, олар ӧскерилбес. Сениң ижиң пош клеткаларды толдурары. Мында арифметика даа, тизик даа чоқ: сандар тоғус пашқа-пашқа пилдиг ле. Буквалар эмезе кептер пыла ойназаң даа, неме даа ӧскерилбес эди."
+            ]
+          },
+          {
+            "h": "Сетка қайде тургузулған?",
+            "p": [
+              "Сеткада 9 қат паза 9 колонкада 81 клетка пар. Қалың сызықтар аны тоғус 3×3 кӧзенекке ӱлепча. Полған на клетка тӧп пир қатқа, пир колонкаға паза пир кӧзенекке кирча; пу ӱш группа клетканың пӧлӱктери полча. Клетка пыла пӧлӱк ӱлешкен пашқа 20 клетканы аның қоңшылары тепчалар; клеткаға салылған сан пу санды 20 қоңшының пӱдӱнинең алып тастапча.",
+              "Клетканы r3c7 тиг тепчалар: 3-чи қат, 7-чи колонка. Қаттар ӱстӱнең, колонкалар солаңнаң саналча; кӧзенектер сол ӱстӱнең паштап қат пойынча 1-дең 9-ға четире саналча. Пу пилдиглеш полған на эп-арға чарыдығында қолданылча, аны ӱӧренери тузалығ: r5c5 сетканың ортазы."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Ноға полған на судокуның тӧп пир шешими пар?",
+            "p": [
+              "Чазығ чоқ судокуның пир ле шешими пар, паза логиканы иштедип турған неме ол. Пир сан пӧлӱкте пашқа черге кирип полбазын кӧргӱзип ползаң, ол артқан клеткаға кирер керек, ноға дезе шешим пар паза ол пир ле. Тапчаңның ийги шешими полза, қандығ даа сағыш оларды айрып полбас эди, паза кажы-пир черде сағынып табарға кӱштелер эдиң.",
+              "Bare Sudoku полған на тапчаңды сениң устройствоңда эдипча паза аның тӧп пир шешими полғанын, логика пыла шешчаң программазы аны таланған кемелдиң эп-арғалары пыла тоозып полғанын тексерча. Аның ӱчӱн тоқтап қалзаң, табар соонғы базым қачан даа пар, паза кӧргӱс аны кӧргӱзипча."
+            ]
+          },
+          {
+            "h": "Судоку тапчаңын қайде паштаарға?",
+            "p": [
+              "Эң тар черден пашта. Пу тизик полған на кемелде иштепча:"
+            ],
+            "list": [
+              "Кӧп қатап, айтса алты эмезе четти қатап кӧрӱнген санды тал паза аны ам даа тутпаан кӧзенектерди тап. Кӧп сапта кӧзенекте аның ӱчӱн пир ле клетка артча: пу [чажыт чалғыс](hidden-single).",
+              "Тығыс клеткаларға кӧр. Қаты, колонказы паза кӧзенеги пиле сегиз пашқа-пашқа сан тутчатқан клеткада пир ле кандидат артча: пу [чалғыс кандидат](naked-single). Толуға чуук қат паза кӧзенектердеги клеткалар кӧрерге эң эптиг чер.",
+              "Салған полған на саның 20 қоңшыдаң пир кандидатты алып тастапча, аның ӱчӱн ол қоңшыларды ол ле тексер. Чалғыстар кӧп сапта пирден пирге келча.",
+              "Оңай салыштар тоозылза, пилдиглерди сал: полған на пош клетканың кандидаттарын. Аннаң кӧзенек ичинде пир сызыққа қысылған санды ([чабылған кандидаттар](locked-candidates)) эмезе ол ле ийги кандидатты ӱлешкен ийги клетканы (пир [ачық ийги](naked-pairs)) изде.",
+              "Полған на алып тасташтың соонда чалғыстарға айлан. Мастер тапчаңнар даа кӧбизи чалғыстар пыла шешилча; қатығ эп-арға соонғы чалғысқа чол ле ачча."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Пилдиглер деп не паза оларды қачан қолданарға?",
+            "p": [
+              "Пилдиглер, оларды қарандаш пилдиглери эмезе кандидаттар даа тепчалар, пош клеткаға анда қайзы сандар ам даа полып полғанын пилдилерге салған кичиг сандар. Уғаа тапчаңнарда олар сирек керек; Қатығ кемелдең пеер олар чоқ полбас, ноға дезе ийгилер, X-Wing паза Y-Wing чилиг эп-арғалар салылған сандар пыла эмес, кандидаттар пыла иштепча.",
+              "Пилдиглерди чазығ чоқ тут: сан салзаң, аны 20 қоңшының пилдиглеринең алып таста. Bare Sudoku-де пу поозы полча, паза Пилдиглерди толдур пир пазып полған на пош клеткаға полған на кандидатты салча, аның ӱчӱн сен толу паза чазығ чоқ кандидаттар пыла паштапзың. Пилдиг сағынып табары эмес, чарт неме: ам даа пу санды неме даа чоқ этпеен деп ол."
+            ]
+          },
+          {
+            "h": "Тоқтап қалзаң, не этерге?",
+            "p": [
+              "Пастап негизти қатап тексер: толуға чуук полған на қат, колонка паза кӧзенек чалғыстарның тӧзи. Аннаң пилдиглериң толу полғанын тексер, ноға дезе чоқ полған кандидат кептерди чажырча, а ескирген кандидат чалған кептер эдипча. Аннаң [эп-арғаларды](techniques) қатығ полғанына кӧре тизик пыла кӧр: чабылған кандидаттар, ийгилер паза ӱштер, X-Wing, Y-Wing, Swordfish паза XYZ-Wing. Полған на эп-арғаның чын примерлиг поос страницазы пар.",
+              "Неме даа полыбаза, кӧргӱс ал. Bare Sudoku-де кӧргӱс пастап салылған сан чазығ ба тексерча, аннаң логика пыла толдурып полчатқан соонғы клетканы табыпча паза эп-арғаның адын айтча, аның ӱчӱн кӧргӱсти қолданзаң даа неме ӱӧренерзиң. Санды салар ӱчӱн кӧргӱсти қатап пас."
+            ]
+          },
+          {
+            "h": "Bare Sudoku-де сандарды қайде киргизерге?",
+            "p": [
+              "Клетканы, аннаң санды пас. Эмезе паштап санды пас: сан чабылча паза сен пасқан полған на клеткаға кирча; пу пир санды алтынчы, четтинчи паза сегизинчи қатап саларының эң тӱрген чолу. Санды пошадарға аны қатап пас. Пилдиглер кнопказы қарандаш пилдиглерине кечча, Чоғал клетканы арығлапча, Нандыра полған на салышты нандырча, а чазығлар, менюда чаппазаң, қызыл пыла пилдиленча.",
+              "Клавиатурада оқ кнопкалары пыла чӧр, 1-дең 9-ға четире сан кир, Backspace пыла чоғал, N пилдиглер, U нандыра, H кӧргӱс, F пилдиглерди толдур, Escape меню. Ойун поозын поозы сақтапча, интернет чоқ иштепча, рекламазы даа, аккаунты даа чоқ."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Судокуда сағынып табары қачан даа керек пе?",
+            "Чазығ чоқ тапчаңда керек чоқ. Полған на Bare Sudoku тапчаңының тӧп пир шешими пар паза аның кемелиниң эп-арғалары пыла логика ла пыла шешилгени тексерилген. Сағынып табарға керек полған чилиг полза, пилдиглериңде пир кандидат чоқ эмезе ам даа табылбаан пир эп-арға пар."
+          ],
+          [
+            "Пир сан қатта, колонкада эмезе кӧзенекте ийги қатап полып полар ба?",
+            "Чоқ. Пӱдӱн чоруқ пу: тоғус қаттың, тоғус колонканың паза тоғус кӧзенектиң полған на пирӧзи 1-дең 9-ға четире полған на санды тӧп пир қатап тутча. Пир пӧлӱкте ийги тӧӧй сан полза, олардың пирӧзи чазығ."
+          ],
+          [
+            "Уғаа, Ортам, Қатығ паза Мастер кемелдериниң айрызы не?",
+            "Кемел тапчаңға керек эп-арғаларға кӧре полча. Уғаа паза Ортам чалғыстар ла пыла шешилча, Уғаа тапчаң 38 пирилген сандаң аз эмес пыла паштапча. Қатығ кемелге чабылған кандидаттар эмезе ийгилер паза ӱштер керек. Мастерге X-Wing, Y-Wing, Swordfish эмезе XYZ-Wing керек."
+          ],
+          [
+            "Пилдиглерди полған на клеткаға салар эптиг бе, эмезе пирее клеткаларға ла ба?",
+            "Қатығ паза Мастер тапчаңнарда пӱдӱнин толдур: ийгилер, X-Wing паза Y-Wing чилиг кептер полған на кандидат салылза ла кӧрӱнча. Уғаа паза Ортам кемелде пилдиглер керек полбас даа, кӧп ойнаачылар чалғыстарды ла издепча."
+          ],
+          [
+            "Пир судоку қанча ӧй алча?",
+            "Уғаа тапчаң пир қанча минута алча; Мастер тапчаңнар қатығ кепти қайде тӱрген кӧргениңге кӧре чээрби минута эмезе аннаң кӧп алып полар. Bare Sudoku ӧйди кӧргӱзипча, меню ачық полза аны тоқтатча паза рейтинг тутпас, аның ӱчӱн поос тӱргениңге кӧре ойна."
+          ],
+          [
+            "Судокуға арифметика керек пе?",
+            "Чоқ. Сандар пилдиг ле; қожары даа, санары даа чоқ. Қандығ даа тоғус пилдиг иштеп полар эди, аның ӱчӱн судоку сан тапчаңы эмес, логика тапчаңы полча."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судоку шешер эп-арғалар: примерлер пыла чарыдыг",
+        "description": "Чалғыс кандидаттаң Swordfish паза XYZ-Wing-ке четире тоғус судоку шешер эп-арға, Bare Sudoku кӧргӱстериниң тизиги пыла, полған на эп-арға чын пример пыла.",
+        "h1": "Судоку шешер эп-арғалар",
+        "intro": [
+          "Полған на судокуну логиканың пир кичиг эп-арғалар чыындызы пыла шешип полар. Пу тизим Bare Sudoku шешчаң программазы паза аның кӧргӱстери қолданчатқан тоғус эп-арғаны программа оларды кӧрчатқан тизик пыла кӧргӱзипча: пастап чалғыстар, аннаң пир пӧлӱк ичиндеги алып тасташтар, аннаң пир қанча қат паза колонкаға чайылған кептер. Полған на эп-арғаның поос страницазы пар: анда чарыдыг, аны қайде табарға, эдилген тапчаңнаң чын пример паза кӧп туштапчатқан чазығлар.",
+          "Тапчаңның кемелин аңа керек эң қатығ эп-арға тургузупча. Уғаа паза Ортам тапчаңнарға чалғыстар ла керек, Қатығ тапчаңнарға чабылған кандидаттар эмезе ийгилер паза ӱштер керек, а Мастер тапчаңнарға кем дегенде пир палық эмезе қанат керек. Кемел қандығ даа полза, иштиң кӧбизин чалғыстар эдипча; қатығ эп-арға пир-ийги кандидатты алып тастапча, аннаң чалғыстар ишти улаңча."
+        ],
+        "faq": [
+          [
+            "Судоку эп-арғаларын қандығ тизик пыла кӧрерге?",
+            "Эң оңайынаң пашта: чалғыс кандидат, чажыт чалғыс, чабылған кандидаттар, ачық ийгилер паза ӱштер, чажыт ийгилер паза ӱштер, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku оларды тӧп пу тизик пыла кӧрча, паза кӧргӱс қачан даа алдыға апарчатқан эң оңай эп-арғаның адын айтча."
+          ],
+          [
+            "Судоку шешерге пу эп-арғалардың пӱдӱни керек пе?",
+            "Уғаа паза Ортам тапчаңнарға чалғыстар четча. Қатығ тапчаңнарға чабылған кандидаттар паза ийгилер-ӱштер қожулча. Мастер тапчаңнарға кем дегенде пир палық эмезе қанат керек, но кӧп сапта пир тапчаңда пир-ийги қатап ла."
+          ],
+          [
+            "XYZ-Wing-тең қатығ эп-арғалар пар ба?",
+            "Ийе, айтса цепочкалар, пир ле шешим тесттери паза кӱштеп айдатқан сеткалар. Bare Sudoku оларды керек этчатқан тапчаңнар этпес, аның ӱчӱн ойундағы полған на тапчаңды пу страницадағы тоғус эп-арға пыла тоозып полар."
+          ],
+          [
+            "Кандидат деп не?",
+            "Пош клеткаға ам даа кирип полчатқан сан, ноға дезе аның қатында, колонказында эмезе кӧзенегинде аны неме даа ам даа чоқ этпеен. Ойундағы пилдиглер кандидаттар полча. Чалғыстардаң пашқа полған на эп-арға кандидаттар пыла сағынча, аның ӱчӱн оларды толу паза чазығ чоқ тут."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Чалғыс кандидат",
+          "title": "Чалғыс кандидат (naked single): пир кандидатлығ клетка",
+          "description": "Чалғыс кандидат (naked single) пир ле сан кирип полчатқан пош клетка. Аны тӱрген табарға чын пример пыла базым базымнаң ӱӧрен, кӧп чазығлардаң сақтан.",
+          "h1": "Чалғыс кандидат (naked single)",
+          "summary": "Чалғыс кандидат (naked single) тӧп пир кандидатлығ пош клетка: пашқа сегиз сан аның қатында, колонказында эмезе кӧзенегинде пар. Артқан сан анда кирер керек. Пу эң оңай паза эң кӧп қолданчатқан судоку эп-арғазы, Bare Sudoku кӧргӱзи аны \"Мында пир ле кандидат\" тиг айтча.",
+          "when": [
+            "Қачан даа. Чалғыс кандидаттар пастағы базымнаң соонғызына четире, полған на кемелде туштапча. Уғаа паза Ортам тапчаңнарда олар чажыт чалғыстар пыла пиле керек эп-арға ла полча. Қатығ тапчаңнарда қатығ эп-арға эткен полған на алып тасташ кӧп сапта соонда пир чалғыс кандидат арттырча, аның ӱчӱн полған на базымнаң соонда оларды тексер."
+          ],
+          "spot": [
+            "Қоңшылары кӧп толған клеткаларға кӧр: четти сандығ қаттағы клетка эмезе қаты, колонказы паза кӧзенеги пиле сегиз пашқа-пашқа санды туткан клетка. Пилдиглер чоқ полза, клеткадаң кӧрӱнчатқан сандарды сана. Пилдиглер пыла чалғыс кандидат пир ле кандидат кӧргӱскен клетка, аның ӱчӱн Пилдиглерди толдур оларды табарын оңайлапча."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{cell} клетказына кӧр. Ол пош, аның ӱчӱн аның қатында, колонказында паза кӧзенегинде салылған полған на санды сана.",
+                "{row}-чи қатта {rowDigits} пар. {col}-чи колонкада {colDigits} пар. {box}-чи кӧзенекте {boxDigits} пар.",
+                "Пиле олар {d} санынаң пашқа полған на санды чоқ этча, аның ӱчӱн {cell} клетказында артқан чалғыс кандидат {d}.",
+                "{cell} клетказына {d} сал. Аннаң наа сан ол ле қатта, колонкада эмезе кӧзенекте пашқа чалғыс эткен бе, тексер."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Қатты ла эмезе кӧзенекти ле санаары. Чоқ этилген сегиз сан кӧп сапта ӱш пӧлӱктең пиле келча.",
+            "Ам ла салған саның даа 20 қоңшыдаң кандидаттарды алып тастағанын ундуп салары; наа чалғыс кандидаттар полған на салыштың соонда ол ле кӧрӱнча.",
+            "Чалғыс кандидатты чажыт чалғыс пыла пудурары: чалғыс кандидатта клеткада пир кандидат артча, чажыт чалғыста пӧлӱкте сан ӱчӱн пир клетка артча."
+          ],
+          "faq": [
+            [
+              "Судокуда чалғыс кандидат (naked single) деп не?",
+              "Тӧп пир кандидатлығ пош клетка. Аның қатында, колонказында паза кӧзенегинде сегиз пашқа-пашқа сан салылған, аның ӱчӱн тоғузунчы сан ла анда кирча."
+            ],
+            [
+              "Ноға англис тилинде naked, тӧп айтса ачық, тепчалар?",
+              "Ноға дезе пилдиглер салылза, чалғыс кандидат клеткада ол ле кӧрӱнча; аны неме даа чажырбас. А чажыт чалғыс пашқа кандидаттар ортозында турча паза клеткаға эмес, санға кӧрип табылча."
+            ],
+            [
+              "Тапчаңды чалғыс кандидаттар ла пыла шешип полар ба?",
+              "Кӧп Уғаа тапчаңнарды полар, но кӧбизине чажыт чалғыстар даа керек. Bare Sudoku Уғаа паза Ортам тапчаңнарды ийги тӱрлӱг чалғыстар пыла шешилчатқан тиг сананча; Қатығ паза Мастер тапчаңнарға кем дегенде пир эп-арға қожа керек."
+            ],
+            [
+              "Кӧргӱс чалғыс кандидаттарды кӧргӱзер бе?",
+              "Ийе. Соонғы салыш чалғыс кандидат полза, кӧргӱс клетканы талча паза сан пыла пиле \"Мында пир ле кандидат\" тепча. Салар ӱчӱн кӧргӱсти қатап пас."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Чажыт чалғыс",
+          "title": "Чажыт чалғыс (hidden single): сан ӱчӱн пир ле чер",
+          "description": "Чажыт чалғыс (hidden single) қатта, колонкада эмезе кӧзенекте сан кирип полчатқан чалғыс клетка. Аны сандарды пирден тексерип табарға ӱӧрен.",
+          "h1": "Чажыт чалғыс (hidden single)",
+          "summary": "Чажыт чалғыс (hidden single) қатта, колонкада эмезе кӧзенекте пир ле клетказы артқан сан, ол клетка пашқа кандидаттар кӧргӱссе даа. Пӧлӱк ол санды тудар керек, аның ӱчӱн сан анда кирча. Bare Sudoku кӧргӱзи аны \"Пу қатта 5 ӱчӱн пир ле чер\" тиг, колонкада эмезе кӧзенекте даа ынча айтча.",
+          "when": [
+            "Сан ырақ алдыға парза: сан пеш-алты қатап кӧрӱнзе, артқан кӧзенектер тар полча, паза соонғы базым кӧп сапта чажыт чалғыс. Чажыт чалғыстар Уғаа паза Ортам тапчаңнарның тӧс эп-арғазы паза полған на кемелде иштиң аар чӱгӱн апарча."
+          ],
+          "spot": [
+            "Сандарды пирден тексер. Пир санды ал, аны тутпаан кӧзенекти тап паза ол кӧзенекте пу санның салылған пирӧзи пыла қат эмезе колонка ӱлешкен полған на клетканы сыз. Пир клетка артса, чажыт чалғысты таптың. Ол ле тексериш қаттарда паза колонкаларда даа иштепча. Ойунда салылған санды пас: аның полған на пирӧзи чарытылча, аның ӱчӱн пош клеткалар чарт кӧрӱнча."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{box}-чи кӧзенекте ам даа {d} чоқ, аның ӱчӱн аның пош клеткаларының пирӧзи аны алар керек. Пош клеткалар: {empties}.",
+                "{cell} клетказынаң пашқа полған на клеткада {d} санын ол ле қатқа эмезе колонкаға салылған {d} тоқтатча, аның ӱчӱн анда {d} кандидат эмес.",
+                "Ынча {box}-чи кӧзенекте {d} ӱчӱн чалғыс чер {cell} артча. {cell} ам даа пашқа кандидаттар кӧргӱссе даа, анда {d} сал."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Санды тек чазығ чоқ полып полар клеткаға салары: чарт кӧрӱнчатқандарын ла эмес, пӧлӱктеги пашқа полған на пош клетканы тексер.",
+            "Клетка пир қанча кандидат кӧргӱскени ӱчӱн чажыт чалғысты кӧрбезери. Пашқа кандидаттар керек эмес; керек неме, санның пӧлӱкте пашқа чери чоғы.",
+            "Кӧзенектерди ле тексерери. Қаттар паза колонкалар даа чажыт чалғыстарды ынча ла кӧп перча, тӧп айтса пӧдӱлерге чуук."
+          ],
+          "faq": [
+            [
+              "Судокуда чажыт чалғыс (hidden single) деп не?",
+              "Қаттың, колонканың эмезе кӧзенектиң пир ле клетказына кирип полчатқан сан. Пӧлӱк ол санды тудар керек, аның ӱчӱн клеткада пашқа кандидаттар полза даа, клетка чарт полча."
+            ],
+            [
+              "Чажыт чалғыс паза чалғыс кандидаттың айрызы не?",
+              "Чалғыс кандидат клетка ӱчӱн: анда пир кандидат артча. Чажыт чалғыс сан ӱчӱн: пӧлӱкте аның ӱчӱн пир клетка артча. Ийгизи даа санды чарт салча."
+            ],
+            [
+              "Қайзызын табары оңай?",
+              "Пилдиглер чоқ полза, чажыт чалғыстар кӧп сапта оңай, ноға дезе сетканы пир сан ӱчӱн тексерип полар. Толу пилдиглер пыла чалғыс кандидаттар эң оңай, ноға дезе пир кандидатлығ клетка ол ле кӧрӱнча."
+            ],
+            [
+              "Кӧргӱс чажыт чалғысты қайде айтча?",
+              "Клетканы талып, \"Пу қатта\", \"Пу колонкада\" эмезе \"Пу кӧзенекте ... ӱчӱн пир ле чер\" тиг. Салар ӱчӱн кӧргӱсти қатап пас."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Чабылған кандидаттар",
+          "title": "Чабылған кандидаттар: кӧргӱзӱ паза поозына алыш",
+          "description": "Чабылған кандидаттар: санның кӧзенектеги кандидаттары пир қатта эмезе колонкада полза, эмезе тескерези, сан пашқа черлердең алып тасталча. Ийги чын пример.",
+          "h1": "Чабылған кандидаттар",
+          "summary": "Чабылған кандидаттар сан салбайн, кандидаттарды алып тастачатқан пастағы эп-арға. Аның ийги кеби пар. Кӧргӱзӱ: кӧзенекте санның пӱдӱн кандидаттары пир қатта эмезе колонкада турча, аның ӱчӱн сан ол сызықтың артқан клеткаларынаң алып тасталча. Поозына алыш: қатта эмезе колонкада санның пӱдӱн кандидаттары пир кӧзенекте турча, аның ӱчӱн сан ол кӧзенектиң артқан клеткаларынаң алып тасталча. Bare Sudoku кӧргӱзи ол ачқан салышты \"Чабылған кандидаттар\" тиг пилдилепча.",
+          "when": [
+            "Қатығ тапчаңда чалғыстар тоозылза, пастап пуну кӧр. Кем дегенде тексерчатқан сан ӱчӱн толу пилдиглер керек. Чабылған кандидаттар кӧп туштапча: Қатығ тапчаңнарның кӧбизине олар керек, а Мастер тапчаңнар оларды улуғ кептер ортозында қолданча."
+          ],
+          "spot": [
+            "Кӧргӱзӱ ӱчӱн полған на кӧзенекке паза анда чоқ полған на санға кӧр: ол санның кандидат клеткалары пир қатта эмезе колонкада турза, ол ле сан ол сызық пойынча кӧзенектиң тыжында кандидат полып кӧрӱнча ба, тексер. Поозына алыш ӱчӱн қат эмезе колонка пойынча кӧр: санның кандидаттары пӱдӱни пир кӧзенек ичинде полза, ол кӧзенектиң артқан черин арығлап полар. Ойунда сан кнопказын пасзаң, аның полған на кандидаты чарытылча; пир кӧзенек ичинде ийги-ӱш чарытылған пилдигтең турған сызық пу кеп полча."
+          ],
+          "examples": [
+            {
+              "h": "Кӧргӱзӱ",
+              "steps": [
+                "{box}-чи кӧзенекте {d} санының пу кандидат клеткалары ла пар: {cells}. Олардың пӱдӱни {row}-чи қатта турча.",
+                "{box}-чи кӧзенекке {d} керек, аның ӱчӱн {row}-чи қаттың {d} саны, ол қайзы клеткаға тӱшсе даа, {box}-чи кӧзенек ичинде.",
+                "{row}-чи қатта ийгинчи {d} полып полбас, аның ӱчӱн {row}-чи қаттың кӧзенектең тыштағы клеткаларынаң {d} санын алып таста: {elim}."
+              ]
+            },
+            {
+              "h": "Поозына алыш",
+              "steps": [
+                "{row}-чи қатта {d} саны {cells} клеткаларына ла кирип полар, паза олардың пӱдӱни {box}-чи кӧзенек ичинде.",
+                "{row}-чи қатта {d} полар керек, аның ӱчӱн {box}-чи кӧзенектиң {d} санын {row}-чи қат поозына алча. {box}-чи кӧзенектиң пашқа клеткаларында {d} полып полбас.",
+                "{d} санын пу клеткалардаң алып таста: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Кӧргӱзӱде санды кӧзенектиң тыжынаң эмес, ичинең алып тастары, а поозына алышта тескерези. Алып тасташтар қачан даа сызықта полған, но кӧзенекте полбаан, эмезе кӧзенекте полған, но сызықта полбаан клеткаларға тӱшча.",
+            "Кандидаттар кӧзенектиң ийги қатына чайылза даа чоруқты қолданары. Кӧзенекте санның пӱдӱн кандидат клеткалары пир сызықта турар керек.",
+            "Алып тасташ эткен чалғысты издеерге ундуп салары. Чабылған кандидаттар поозы сирек сан салча; олар чалғысқа чол тимнепча."
+          ],
+          "faq": [
+            [
+              "Судокуда чабылған кандидаттар деп не?",
+              "Кӧзенек паза сызықтың кежилижине қысылған сан кандидаттары. Кӧзенек, эмезе сызық, ол санды ол кежилиште тудар керек, аның ӱчӱн санды сызықтың, эмезе кӧзенектиң, артқан черинең алып тастап полар."
+            ],
+            [
+              "Кӧргӱзӱ паза поозына алыштың айрызы не?",
+              "Кӧргӱзӱ кӧзенектең паштапча: санның кӧзенектеги кандидаттары пир қат эмезе колонка пойынча кӧргӱзипча, аның ӱчӱн сан ол сызықтың артқан черинең алып тасталча. Поозына алыш қаттаң эмезе колонкадаң паштапча: сызықтың ол сан ӱчӱн кандидаттары пӱдӱни пир кӧзенекте, аның ӱчӱн сызық санды поозына алча паза сан кӧзенектиң артқан черинең алып тасталча."
+            ],
+            [
+              "Чабылған кандидаттарды кежилиш алып тастажы тиг даа тепчалар ба?",
+              "Ийе. Пашқа аттар: поозына алыш ӱчӱн кӧзенек-сызық қысқартызы, кӧргӱзӱ ӱчӱн кӧргӱскен ийгилер эмезе кӧргӱскен ӱштер. Bare Sudoku ийгизи ӱчӱн пир ат қолданча."
+            ],
+            [
+              "Қайзы кемелге чабылған кандидаттар керек?",
+              "Қатығ кемелге. Чабылған кандидаттар эмезе ийгилер-ӱштер керек, но аннаң қатығы керек эмес тапчаң Қатығ тиг сананча; Мастер тапчаңнарға аның ӱстӱне палық эмезе қанат керек."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Ачық ийгилер паза ӱштер",
+          "title": "Ачық ийгилер паза ӱштер (naked pairs): қайде иштепча",
+          "description": "Ачық ийгилер паза ӱштер (naked pair, naked triple): пӧлӱкте ол ле ийги эмезе ӱш кандидатлығ клеткалар. Оларды табарға паза не алып тастарға ӱӧрен.",
+          "h1": "Ачық ийгилер паза ӱштер (naked pair, naked triple)",
+          "summary": "Ачық ийги (naked pair) ол ле қатта, колонкада эмезе кӧзенекте тӧп ол ле ийги кандидатлығ ийги клетка. Ол ийги сан ол ийги клеткаға кирер керек, аның ӱчӱн оларды пӧлӱктиң пашқа полған на клетказынаң алып тастап полар. Ачық ӱш (naked triple) ӱш клетка паза ӱш сан пыла ол ле сағыш; полған на клетка олардың ийгизин эмезе ӱжӱн кӧргӱзип полар. Bare Sudoku кӧргӱзи шыққан салышты \"Ийги эмезе ӱш\" тиг пилдилепча.",
+          "when": [
+            "Пилдиглер толу полза, чалғыстар паза чабылған кандидаттар тоозылза. Ачық ийгилер Қатығ тапчаңнарда кӧп туштапча, ачық ӱштер сирегирек. Ам даа пеш эмезе аннаң кӧп пош клеткалығ полған на пӧлӱкте ийгизин даа тексерери тузалығ."
+          ],
+          "spot": [
+            "Ийги ле кандидатлығ клеткаларды изде паза ол ле пӧлӱкте ол ле ийги кандидатлығ пашқа клетканы тап. Ӱштер ӱчӱн пир қанча ийги паза ӱш кандидатлығ клеткалығ пӧлӱктерге кӧр паза олардың ӱжӱ пиле ӱш ле пашқа-пашқа сан қолданча ба, тексер. Пилдиглер салылза, тӧп ол ле кандидаттығ клеткаларды кӧрери оңай; ойунда Пилдиглерди толдур пуну пир пазып эдипча."
+          ],
+          "examples": [
+            {
+              "h": "Ачық ийги",
+              "steps": [
+                "{unit} ичиндеги {cellA} паза {cellB} клеткаларының тӧп ол ле ийги кандидаты пар: {d1} паза {d2}.",
+                "Олардың пирӧзи {d1}, пашқазы {d2} полар керек. Қайзы қайзы полғанын пилбеспис, но ийги сан даа пу ийги клеткаға пирилген.",
+                "Аның ӱчӱн {unit} ичинде пашқа клетка {d1} эмезе {d2} алып полбас. Алып таста: {elim}."
+              ]
+            },
+            {
+              "h": "Ачық ӱш",
+              "steps": [
+                "{unit} ичиндеги ӱш клетка пӱдӱн кандидаттарын ол ле ӱш сандаң, {digits}, алча: {cells}.",
+                "Ӱш сан пу ӱш клетканы кажы-пир тизик пыла толдурар керек. Клетка ӱш кандидатты даа кӧргӱзер керек эмес; керек неме, ӱш клетканың пирӧзинде даа чыынды тыжындағы кандидат чоқ.",
+                "{unit} ичиндеги пашқа полған на клеткадаң {digits} сандарын алып таста: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ийги кандидатты ӱлешкен, но ӱжӱнчӱ кандидаты даа полған ийги клетканы алары. Ачық ийги ӱчӱн полған на клеткада тӧп ол ийги кандидат полар керек, пашқа неме чоқ.",
+            "Сандарды ийгиниң поос клеткаларынаң алып тастары. Ийги поос кандидаттарын сақтапча; алып тасташтар пӧлӱктиң пашқа клеткаларына тӱшча.",
+            "Ӱштиң полған на клетказы ӱш санды даа кӧргӱзерин керек этери. Пир клеткада даа чыынды тыжындағы кандидат чоқ полза, ӱштең ийгизин кӧргӱскен клетка даа чарап."
+          ],
+          "faq": [
+            [
+              "Судокуда ачық ийги (naked pair) деп не?",
+              "Пир пӧлӱкте ийгизиниң даа тӧп ол ле ийги кандидаты полған ийги клетка. Ол ийги сан ол ийги клеткаға чабылған, аның ӱчӱн оларды пӧлӱктиң артқан черинең алып тастап полар."
+            ],
+            [
+              "Ачық ӱш (naked triple) деп не?",
+              "Пир пӧлӱкте кандидаттары пиле ӱш ле сан полған ӱш клетка. Полған на клеткада олардың ийгизи эмезе ӱжӱ полып полар. Ӱш сан ӱш клетканы толдурча, аның ӱчӱн оларды пӧлӱктиң пашқа клеткаларынаң алып тастап полар."
+            ],
+            [
+              "Ачық ийги сан салча ба?",
+              "Поозы салбас. Ол кандидаттарды алып тастапча, паза алып тасташ кӧп сапта чалғыс кандидат эмезе чажыт чалғыс арттырча. Bare Sudoku-де кӧргӱс ол чалғысты кӧргӱзипча паза аны эткен эп-арғаның адын айтча."
+            ],
+            [
+              "Ачық ийги пир ӧйде кӧзенекте даа, қатта даа полып полар ба?",
+              "Ийе. Ийги клетка қатты даа, кӧзенекти даа ӱлешсе, ийги ийги пӧлӱкте даа алып тастапча. Bare Sudoku пӧлӱктерди пирден кӧрча."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Чажыт ийгилер паза ӱштер",
+          "title": "Чажыт ийгилер паза ӱштер (hidden pairs): қайде табарға",
+          "description": "Чажыт ийги (hidden pair): пӧлӱкте ол ле ийги клеткаға ла кирип полчатқан ийги сан; ол клеткалардың пашқа кандидаттары алып тасталча. Чын пример пыла ӱӧрен.",
+          "h1": "Чажыт ийгилер паза ӱштер (hidden pair, hidden triple)",
+          "summary": "Чажыт ийги (hidden pair) қат, колонка эмезе кӧзенек ичинде ол ле ийги клеткада кандидат полған паза пашқа черде полбаан ийги сан. Ол ийги клетка ол ийги санды алар керек, аның ӱчӱн олардағы пашқа полған на кандидатты алып тастап полар. Чажыт ӱш (hidden triple) ӱш клеткаға қысылған ӱш сан пыла ынча ла иштепча. Алып тасташтың соонда клеткалар ачық ийги эмезе ӱш кӧргӱзипча. Bare Sudoku кӧргӱзи шыққан салышты \"Ийги эмезе ӱш\" тиг пилдилепча.",
+          "when": [
+            "Пӧлӱкте кӧп кандидатлығ клеткалар полза паза чалғыстар тоозылза. Чажыт ийгилер толу клеткалар ичинде чажынча, аның ӱчӱн оларды тӧп ачық ийгилер кӧрӱнбеен черде издеери тузалығ. Чажыт ӱштер сирек; Bare Sudoku оларды даа тексерча, но Қатығ тапчаңнарның кӧбизи олар чоқ даа шешилча."
+          ],
+          "spot": [
+            "Клетка пойынча эмес, сан пойынча иште. Пӧлӱкте чоқ полған на санның кирип полчатқан клеткаларын пилдиле. Ийги санның полған на пирӧзиниң ийги ле полчатқан клетказы полза паза олар ол ле ийги клетка полза, сен чажыт ийги таптың. Ойунда сан кнопказын пасзаң, аның кандидаттары чарытылча; ийги сан пӧлӱкте ол ле ийги клетканы чарытса паза анда пашқа неме чарытпаза, кеп пу полча."
+          ],
+          "examples": [
+            {
+              "h": "Чажыт ийги",
+              "steps": [
+                "{unit} ичинде {d1} паза {d2} сандарының полған на пирӧзиниң ийги ле полчатқан клетказы пар, паза олар ол ле ийги клетка: {cells}.",
+                "Ол ийги клетка {d1} паза {d2} алар керек, аның ӱчӱн олардың пашқа кандидаттары полып полбас.",
+                "Алып таста: {elim}. Ам ийги клетка ачық ийги кӧргӱзипча, паза пу пашқа чолдар ачып полар."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ийгиниң ийги санын ийги клеткаларынаң алып тастары. Ол клеткалардың пашқа кандидаттары алып тасталча; ийги сандары артча.",
+            "Пӧлӱкте ӱжӱнчӱ полчатқан клеткалығ санды алары. Ийги сан даа тӧп ол ийги клетка пыла чабылған полар керек.",
+            "Кӧзенектерге ле кӧрери. Чажыт ийгилер қаттарда паза колонкаларда даа ынча ла кӧп туштапча."
+          ],
+          "faq": [
+            [
+              "Судокуда чажыт ийги (hidden pair) деп не?",
+              "Пӧлӱкте ол ле ийги клеткаға ла кирип полчатқан ийги сан. Ол клеткалар ол сандарды алар керек, аның ӱчӱн олардың пашқа кандидаттары алып тасталча."
+            ],
+            [
+              "Чажыт ийги ачық ийгиден қайде айрылча?",
+              "Ачық ийги кӧрӱнча: ол ле ийги кандидатты ла кӧргӱскен ийги клетка. Чажыт ийги ийги клеткадағы артық кандидаттар алтында чажырылған. Ол артықтарды алып тастары чажыт ийгини ачық ийгиге айландырча."
+            ],
+            [
+              "Чажыт ӱш (hidden triple) деп не?",
+              "Пӧлӱктиң ӱш клетказына қысылған ӱш сан. Полған на сан ӱш клеткада даа кӧрӱнер керек эмес; керек неме, ӱш санның пирӧзинде даа ол клеткалардың тыжында кандидат чоқ."
+            ],
+            [
+              "Кӧргӱс чажыт паза ачық ийгилерди айрыпча ба?",
+              "Чоқ. Bare Sudoku ийгизин даа табыпча паза шыққан салышты \"Ийги эмезе ӱш\" тиг пилдилепча. Мындағы страницалар оларды айрыпча, ноға дезе олар пашқа-пашқа чолдар пыла табылча."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Судокуда X-Wing: эп-арға қайде иштепча",
+          "description": "X-Wing: ийги қатта тӧп ийги кандидат клеткалығ паза ол ле ийги колонкада турған сан ол колонкалардың артқан черинең алып тасталча. Чын пример.",
+          "h1": "X-Wing",
+          "summary": "X-Wing пир сан паза тӧрт пулуңның пулуңнарындағы тӧрт клеткадаң турған кеп. Санның ийги қаттың полған на пирӧзинде тӧп ийги кандидат клетказы полза паза ол клеткалар ол ле ийги колонкада турза, сан тӧрт пулуңның удур-тедир ийги пулуңун алар керек. Аның ӱчӱн аны ол ийги колонканың пашқа полған на клетказынаң алып тастап полар. Қаттар паза колонкалар черлерин алыштырза даа, ынча ла иштепча. Пу Bare Sudoku-деги пастағы Мастер эп-арғазы.",
+          "when": [
+            "Чалғыстар, чабылған кандидаттар паза ийгилер-ӱштер тоозылза. X-Wing эң кӧп туштапчатқан Мастер кеби, паза кӧп сапта санның кандидаттары сирек полза, айтса аның тӧрттең алтыға четире пирӧзи салылза кӧрӱнча. Тексерчатқан сан ӱчӱн толу пилдиглер керек."
+          ],
+          "spot": [
+            "Сан тал паза ол сан ӱчӱн тӧп ийги кандидат клеткалығ қаттарды изде. Андығ ийги қат ол ле ийги колонкада полза, ол колонкаларда санның пашқа кандидаттарын тексер: алып тасташтар олар полча. Аннаң колонкаларды тӧс эдип алып қатап эт. Ойунда сан кнопказын пас: аның полған на кандидаты чарытылча, паза тӧрт чарытылған пилдигтең тӧрт пулуң оңай кӧрӱнча."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{d} санының {r1}-чи қатта тӧп ийги паза {r2}-чи қатта тӧп ийги кандидат клетказы пар, паза олар ол ле ийги колонкада, {c1} паза {c2}, турча: {cells}.",
+                "{r1}-чи қат поос {d} санын {c1}-чи эмезе {c2}-чи колонкаға салча, а {r2}-чи қат пашқазына. Қандығ даа полза, {c1}-чи паза {c2}-чи колонкалардың полған на пирӧзи пу ийги қаттаң пир {d} алча.",
+                "Аның ӱчӱн {d} {c1}-чи паза {c2}-чи колонкаларда пашқа черде полып полбас. {d} санын пу клеткалардаң алып таста: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Сан ӱчӱн ӱш кандидат клеткалығ қатты қолданары. Полған на тӧс қатта тӧп ийги полар керек, паза ийгизи даа ортақ ийги колонкада турар керек.",
+            "Санды колонкалардаң эмес, қаттардаң алып тастары. Тӧс қаттар полза, алып тасташтар колонкаларда, паза тескерези.",
+            "Алыштырылған кебин ундуп салары. Колонкаларда тургузулған X-Wing қаттарда алып тастапча."
+          ],
+          "faq": [
+            [
+              "Судокуда X-Wing деп не?",
+              "Ийги қаттың полған на пирӧзинде, ол ле ийги колонкада тӧп ийги кандидат клеткалығ сан. Сан ол тӧрт пулуңның удур-тедир ийги пулуңун алча, аның ӱчӱн ийги колонканың артқан черинең алып тасталча. Қаттар паза колонкалар черлерин алыштырып полар."
+            ],
+            [
+              "Ноға X-Wing иштепча?",
+              "Ийги қаттың полған на пирӧзи санды ийги колонканың пирӧзине салар керек, паза ийги қат ол ле колонканы қолданып полбас. Аның ӱчӱн ийги колонканың полған на пирӧзи поос санын пу қаттардаң алча, паза ол колонкалардағы пашқа полған на кандидат полып полбас."
+            ],
+            [
+              "X-Wing палық па?",
+              "Ийе. X-Wing ийги кемчелиг палық; Swordfish ӱш кемчелиг палық. Bare Sudoku ийгизин даа табыпча."
+            ],
+            [
+              "Қайзы кемелде X-Wing пар?",
+              "Мастерде. X-Wing, Y-Wing, Swordfish эмезе XYZ-Wing керек тапчаң Мастер тиг сананча."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Судокуда Y-Wing: эп-арға қайде иштепча",
+          "description": "Y-Wing (XY-Wing): ийги кандидатлығ ӧзек паза аның пир кандидатын ӱлешкен ийги қанат ийги қанатты даа кӧрчатқан полған на клеткадаң санды шығарча. Пример.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, аны XY-Wing тиг даа тепчалар, полған на пирӧзи ийги кандидатлығ ӱш клетканы қолданча. Ӧзектиң кандидаттары X паза Y. Пир қанат ӧзекти кӧрча паза X пыла Z тутча; пашқа қанат ӧзекти кӧрча паза Y пыла Z тутча. Ӧзек не даа полза, қанаттардың пирӧзи Z полар керек, аның ӱчӱн Z ийги қанатты даа кӧрчатқан полған на клеткадаң алып тастап полар. Пу Bare Sudoku-де Мастер эп-арғазы.",
+          "when": [
+            "Тапчаңда тӧп ийги кандидатлығ пир қанча клетка полза паза палық чоқ полза. Y-Wing Мастер тапчаңнарда кӧп туштапча паза ийги кандидатлығ клеткалардың соонаң парып табылча: полған на пирӧзи ӧзек эмезе қанат полып полар."
+          ],
+          "spot": [
+            "Тӧп ийги кандидатлығ клеткаларды тизимге сал. Полған на пирӧзин X паза Y кандидатлығ ӧзек тиг ал паза аның қоңшылары ортозында X паза пашқа пир Z санын тутчатқан клетканы, паза Y паза ол ле Z санын тутчатқан клетканы изде. Ол ийгизи қанаттар. Аннаң ийги қанатты даа кӧрчатқан паза Z тутчатқан клеткаларды тап. Қанаттар пирӧзи пирӧзин кӧрер керек эмес."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{pivot} ӧзегиниң кандидаттары {x} паза {y}. Ол {x} пыла {z} тутчатқан {wingA} клетказын паза {y} пыла {z} тутчатқан {wingB} клетказын кӧрча.",
+                "{pivot} {x} полза, {wingA} {x} кандидатын чидирча паза {z} полча. {pivot} {y} полза, {wingB} {z} полча. Қандығ даа полза, ийги қанаттың пирӧзи {z}.",
+                "Ийги қанатты даа кӧрчатқан клетка қачан да {z} полып полбас. {z} санын пу клеткалардаң алып таста: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ӧзекти кӧрбеен қанаттарды талары. Полған на қанат ӧзек пыла қат, колонка эмезе кӧзенек ӱлежер керек.",
+            "Z-ти пир ле қанатты кӧрчатқан клеткалардаң алып тастары. Алып тасталчатқан клетка ийги қанатты даа кӧрер керек.",
+            "Z-ти ӧзектең алып тастары. Y-Wing-те ӧзекте Z чоқ; полза, кеп пашқа чоруқтығ XYZ-Wing полча."
+          ],
+          "faq": [
+            [
+              "Судокуда Y-Wing деп не?",
+              "Ийги кандидатлығ ӱш клетка: X паза Y тутчатқан ӧзек, ӧзекти кӧрчатқан X паза Z тутчатқан қанат, паза ӧзекти кӧрчатқан Y паза Z тутчатқан қанат. Пир қанат қачан даа Z, аның ӱчӱн Z ийги қанатты даа кӧрчатқан клеткалардаң алып тасталча."
+            ],
+            [
+              "Y-Wing паза XY-Wing пир ле неме бе?",
+              "Ийе. Ийги ат ол ле кепти айтча. Bare Sudoku аны Y-Wing тепча."
+            ],
+            [
+              "Ноға пир қанат Z полар керек?",
+              "Ӧзек X полза, пастағы қанат X-ти чидирча паза Z полча. Ӧзек Y полза, ийгинчи қанат Z полча. Ӧзек олардың пирӧзи, аның ӱчӱн пир қанат Z."
+            ],
+            [
+              "Y-Wing қанча клеткадаң алып тастапча?",
+              "Кӧп сапта пир эмезе ийги: ийги қанатты даа кӧрчатқан паза ам даа Z тутчатқан клеткалар ла. Чалғыс эдерге пу четча."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Судокуда Swordfish: эп-арға қайде иштепча",
+          "description": "Swordfish: ӱш қат пойынча ӱш колонкаға қысылған сан ол колонкалардың артқан черинең алып тасталча. Ӱш кемчелиг палық, чын пример пыла чарыдылған.",
+          "h1": "Swordfish",
+          "summary": "Swordfish ӱш қаттығ паза ӱш колонкалығ X-Wing. Санның ӱш қаттың полған на пирӧзинде ӱштең кӧп эмес кандидат клетказы полза паза ол клеткалардың пӱдӱни ол ле ӱш колонкаға тӱшсе, ӱш қат ол колонкаларда санды пӱдӱнинче алча, паза санды ӱш колонканың пашқа полған на клетказынаң алып тастап полар. Қаттар паза колонкалар черлерин алыштырып полар. Bare Sudoku Мастер тапчаңнарда Swordfish-ти Y-Wing-тең соонда тексерча.",
+          "when": [
+            "X-Wing паза Y-Wing неме даа таппаза. Swordfish X-Wing-тең сирек туштапча паза кандидаттары ӱш сызыққа сирек чайылған сан керек этча. Ол сан ӱчӱн толу паза чазығ чоқ пилдиглер керек."
+          ],
+          "spot": [
+            "Сан тал паза ол сан ӱчӱн ийги эмезе ӱш кандидат клеткалығ қаттарды изде. Андығ ӱш қат пиле ӱш ле колонканы алза, ол колонкаларда санның пашқа кандидаттарын тексер. Полған на қаттың полған на колонкада кандидаты полар керек эмес: Swordfish алты, четти, сегиз эмезе тоғус клеткалығ полып полар. Ойунда санды поос кнопказы пыла чарыт паза кандидаттары ӱш колонкада турчатқан ӱш қатты изде."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{d} санының {rows}-чи қаттардың полған на пирӧзинде ӱштең кӧп эмес кандидат клетказы пар, паза ол клеткалардың пӱдӱни {cols}-чи колонкаларға тӱшча: {cells}.",
+                "Ӱш қаттың полған на пирӧзи поос {d} санын ӱш колонканың пирӧзине салар керек, паза ийги қат ол ле колонканы қолданып полбас. Аның ӱчӱн ӱш колонка поос {d} сандарын пу ӱш қаттаң алча.",
+                "{cols}-чи колонкалардағы пашқа полған на {d} кандидаты полып полбас. {d} санын пу клеткалардаң алып таста: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тоғус клетканың пӱдӱнин керек этери. Пирее қаттарда ийги кандидатлығ Swordfish даа, ӱш қат ӱш ле колонканы алза, чазығ чоқ.",
+            "Тӧрт кандидат клеткалығ қатты қожары. Полған на тӧс қатта ӱштең кӧп эмес полар керек, пӱдӱни ӱш колонка ичинде.",
+            "Тӧс қаттарда алып тастары. Тӧс қаттар полза, алып тасташтар тӧс қаттардың тыжында, ӱш колонкада."
+          ],
+          "faq": [
+            [
+              "Судокуда Swordfish деп не?",
+              "Ӱш қаттағы кандидаттары ӱш колонкаға қысылған сан. Ӱш қат санды ол ӱш колонкаға пир қатаптаң салар керек, аның ӱчӱн сан ол колонкалардың пашқа клеткаларынаң алып тасталча."
+            ],
+            [
+              "Swordfish X-Wing-тең қайде айрылча?",
+              "Кемчезинең ле: X-Wing ийги қат паза ийги колонка қолданча, Swordfish ӱш паза ӱш. Сағыш ол ле."
+            ],
+            [
+              "Swordfish ӱчӱн тӧп тоғус клетка керек пе?",
+              "Чоқ. Полған на қатта ийги эмезе ӱш кандидат полып полар; кеп ӱш қат пиле ӱштең кӧп колонка қолданбазын ла керек этча."
+            ],
+            [
+              "Тӧрт кемчелиг палық пар ба?",
+              "Ийе, Jellyfish. Bare Sudoku аны қолданбас, ноға дезе аның тапчаңнарына ол қачан да керек эмес."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Судокуда XYZ-Wing: эп-арға қайде иштепча",
+          "description": "XYZ-Wing: ӱш кандидатлығ ӧзек паза аның пир кандидатын ӱлешкен ийги қанат ол санды ӱжӱн даа кӧрчатқан полған на клеткадаң шығарча. Чын пример пыла.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing ӧзеги ӱш кандидатлығ Y-Wing. Ӧзек X, Y паза Z тутча; пир қанат ӧзекти кӧрча паза X пыла Z тутча, пашқазы ӧзекти кӧрча паза Y пыла Z тутча. Ӱш клетканың пирӧзи Z полар керек, аның ӱчӱн Z ӱжӱн даа кӧрчатқан полған на клеткадаң алып тастап полар. Ӧзек поозы Z полып полғаны ӱчӱн, алып тасталчатқан клетка ийги қанат пыла пиле ӧзекти даа кӧрер керек, паза пу аны клеткалар ӱлешкен кӧзенек эмезе сызық пыла чабча. Пу Bare Sudoku қолданчатқан эң қатығ эп-арға.",
+          "when": [
+            "Пашқа неме даа полыбаза ла. XYZ-Wing Bare Sudoku-деги эң сирек кеп паза Мастер тапчаңнарда ла кӧрӱнча. Ӱш кандидатлығ клетка аның ийги санын ӱлешкен ийги кандидатлығ клетка пыла пир кӧзенекте турза, аны изде."
+          ],
+          "spot": [
+            "Тӧп ӱш кандидатлығ клеткалардаң пашта; полған на пирӧзи ӧзек полып полар. Аның қоңшылары ортозында ийги кандидатлығ, кандидаттары ӧзектиң ӱш кандидатынаң алылған паза тӧп пир Z санын ӱлешкен ийги клетканы изде. Аннаң ӧзекти паза ийги қанатты кӧрчатқан паза Z тутчатқан клеткаларды тап. Чынында пир қанат ӧзектиң кӧзенегинде, пашқазы аның қатында эмезе колонказында турча, а алып тасталчатқан клеткалар ол кӧзенектиң ол қаттағы эмезе колонкадағы артқан клеткалары."
+          ],
+          "examples": [
+            {
+              "h": "Пример",
+              "steps": [
+                "{pivot} ӧзегиниң ӱш кандидаты пар: {x}, {y} паза {z}. Ол {x} пыла {z} тутчатқан {wingA} клетказын паза {y} пыла {z} тутчатқан {wingB} клетказын кӧрча.",
+                "{pivot} {z} полза, иш тоозылды. {x} полза, {wingA} {z} полар керек. {y} полза, {wingB} {z} полар керек. Қандығ даа полза, ӱш клетканың пирӧзи {z}.",
+                "Ӱжӱн даа кӧрчатқан клетка {z} полып полбас. {z} санын пу клеткалардаң алып таста: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ийги қанатты ла кӧрчатқан клеткалардаң алып тастары. Y-Wing-тең пашқа, ӧзек Z полып полар, аның ӱчӱн клетка ӧзекти даа кӧрер керек.",
+            "Кандидаттары ӧзектиң ӱш кандидатының ичинде чоқ қанаттарды қолданары.",
+            "Аны Y-Wing пыла пудурары: айрызы ӧзектеги ӱжӱнчӱ кандидат, паза ол қайзы клеткаларды арығлап полғанын ӧскертча."
+          ],
+          "faq": [
+            [
+              "Судокуда XYZ-Wing деп не?",
+              "X, Y паза Z кандидатлығ ӧзек паза ийги қанат: пирӧзи X пыла Z, пашқазы Y пыла Z тутча, ийгизи даа ӧзекти кӧрча. Ӱш клетканың пирӧзи Z, аның ӱчӱн Z ӱжӱн даа кӧрчатқан клеткалардаң алып тасталча."
+            ],
+            [
+              "XYZ-Wing Y-Wing-тең қайде айрылча?",
+              "Ӧзекте ийги эмес, Z пыла пиле ӱш кандидат пар. Пу ӧзекти Z ӱчӱн полып полчатқан чер эдипча, аның ӱчӱн ӧзекти паза ийги қанатты кӧрчатқан клеткалар ла Z-ти чидирип полар."
+            ],
+            [
+              "XYZ-Wing қанча кӧп туштапча?",
+              "Сирек. Bare Sudoku-де аны Мастер тапчаңнар ла керек эдип полар, паза олардың кӧбизи керек этпес. Bare Sudoku аны эң соонда, X-Wing, Y-Wing паза Swordfish-тең соонда тексерча."
+            ],
+            [
+              "WXYZ-Wing пар ба?",
+              "Ийе, тӧрт кандидатлығ ӧзек пыла, но Bare Sudoku аны қолданбас. Ойундағы полған на тапчаңды пу чарыдығның тоғус эп-арғазы пыла тоозып полар."
+            ]
+          ]
+        }
+      }
+    },
+    "dlg": {
+      "learnHeading": "Судокуну үөрэт",
+      "learnText": "Судокуга һаӈа дуо, эбэтэр ыарахан таабырыӈӈа тохтоон хаалбыккын дуо? Икки ыйынньык быраабылалары уонна һүбэлэр туттар хас биирдии ньымаларын дьиӈнээх холобурдарынан кэпсиир.",
+      "howToLink": "Судокуну хайдах оонньуохха",
+      "techniquesLink": "Судокуну быһаарар ньымалар",
+      "labels": {
+        "howTo": "Хайдах оонньуохха",
+        "techniques": "Ньымалар",
+        "play": "Судоку оонньоо",
+        "prev": "Иннинээҕи ньыма",
+        "next": "Кэлэр ньыма",
+        "all": "Бары ньымалар",
+        "example": "Холобур",
+        "steps": "Хардыы хардыынан",
+        "when": "Хаһан туттуохха",
+        "spot": "Хайдах булуохха",
+        "mistakes": "Элбэхтик тахсар алҕастар",
+        "inGame": "Bare Sudoku-га",
+        "level": "Наада таһым: {level}",
+        "hint": "Оонньууга һүбэ маннык диир: {text}",
+        "legend": "Халыӈ һыыппаралар бэриллибиттэр, күөх һыыппаралар быһаарыы кэмигэр ууруллубуттар, кыра һыыппаралар кандидаттар. Һырдатыллыбыт клеткалар ойууну оӈороллор, үрдүлэрэ тардыллыбыт кандидаттар сотуллаллар, төгүрүк иһинээҕи кандидат уурулуохтаах һыыппара.",
+        "notation": "Клеткалар r3c7 курдук һуруллаллар: 3-с уһтуруока, 7-с колуонка. Уһтуруокалар үөһэттэн, колуонкалар хаӈастан ааҕыллаллар; дьааһыктар хаӈас үөһэттэн һаҕалаан уһтуруоканан 1-тэн 9-ка диэри ааҕыллаллар.",
+        "row": "{n}-с уһтуруока",
+        "column": "{n}-с колуонка",
+        "box": "{n}-с дьааһык",
+        "elimItem": "{cell} клеткаттан {d}",
+        "regions": "Таабырын һаҕаланыытыгар 5-с уһтуруока, 5-с колуонка уонна 5-с дьааһык",
+        "firstMove": "Биир кандидат: {cell} клетка {d} эрэ буолуон һөп",
+        "breadcrumb": "Навигация"
+      },
+      "howTo": {
+        "title": "Судокуну хайдах оонньуохха: быраабылалар, бастакы хардыылар",
+        "description": "Судокуну хайдах оонньуохха: быраабылалар, уһтуруока, колуонка уонна дьааһык, тоҕо таабырын биир быһаарыылааҕый, бэлиэлэр уонна бастакы хардыылар.",
+        "h1": "Судокуну хайдах оонньуохха",
+        "summary": "Судоку 9×9 сиэткэҕэ оонньонор логика таабырына. Хас биирдии кураанах клетканы 1-тэн 9-ка диэри һыыппаранан толороҕун: хас биирдии уһтуруокаҕа, хас биирдии колуонкаҕа уонна хас биирдии 3×3 дьааһыкка хас биирдии һыыппара чопчу биирдэ баар буолуохтаах. Һорох һыыппаралар һаҕаланыытыгар бэриллибиттэр; атыттарын биир-биир чуолкай клетканы булан таһаараҕын, онон хаһан да таайар наадата һуох. Бу ыйынньык сиэткэни, быраабылалары, биир быһаарыы принцибын, бэлиэлэри уонна бастакы хардыылар судургу ньыматын кэпсиир. Барытын босхо уонна логиканы быһаарар һүбэлээх [Bare Sudoku](play)-га боруобалаан көрүөххүн һөп.",
+        "sections": [
+          {
+            "h": "Судоку быраабылалара ханныктарый?",
+            "p": [
+              "Быраабыла үс эрэ, уонна бу үс өттүттэн көстөр биир быраабыла: хас биирдии уһтуруокаҕа 1-тэн 9-ка диэри һыыппаралар баар буолуохтаахтар, хас биирдии колуонкаҕа 1-тэн 9-ка диэри һыыппаралар баар буолуохтаахтар, хас биирдии 3×3 дьааһыкка 1-тэн 9-ка диэри һыыппаралар баар буолуохтаахтар. Онон биир һыыппара биир уһтуруокаҕа, колуонкаҕа эбэтэр дьааһыкка хаһан да иккитэ көстүбэт.",
+              "Халыӈ гына һуруллубут бэриллибит һыыппаралар уларыйбаттар. Эн үлэӈ кураанах клеткалары толоруу. Манна арифметика да, бэрээдэк да һуох: һыыппаралар тоҕус араас бэлиэ эрэ. Буукубаларынан эбэтэр формаларынан оонньоотоххуна да, туох да уларыйыа һуох этэ."
+            ]
+          },
+          {
+            "h": "Сиэткэ хайдах оӈоһуллубутуй?",
+            "p": [
+              "Сиэткэҕэ 9 уһтуруокаҕа уонна 9 колуонкаҕа 81 клетка баар. Халыӈ линиялар ону тоҕус 3×3 дьааһыкка араараллар. Хас биирдии клетка чопчу биир уһтуруокаҕа, биир колуонкаҕа уонна биир дьааһыкка киирэр; бу үс бөлөх клетка бөлөхтөрө диэн ааттанар. Клеткалыын бөлөҕү үллэстэр атын 20 клетканы кини ыаллара диэн ааттыыллар; клеткаҕа уурбут һыыппараӈ бу һыыппараны 20 ыалыттан барыттан сотор.",
+              "Клеткалар r3c7 курдук һуруллаллар: 3-с уһтуруока, 7-с колуонка. Уһтуруокалар үөһэттэн, колуонкалар хаӈастан ааҕыллаллар; дьааһыктар хаӈас үөһэттэн һаҕалаан уһтуруоканан 1-тэн 9-ка диэри ааҕыллаллар. Бу бэлиэлээһин хас биирдии ньыма ыйынньыгар туттуллар, ону үөрэтэр туһалаах: r5c5 сиэткэ ортото."
+            ],
+            "figure": "regions"
+          },
+          {
+            "h": "Тоҕо хас биирдии судоку чопчу биир быһаарыылааҕый?",
+            "p": [
+              "Һөптөөх судоку биир эрэ быһаарыылаах, логиканы үлэлэтэр да ол. Һыыппара бөлөххө атын ханна да киирэр кыаҕа һуоҕун көрдөрөр буоллаххына, кини хаалбыт клеткаҕа киириэхтээх, тоҕо диэтэххэ быһаарыы баар уонна кини биир эрэ. Таабырын икки быһаарыылаах буоллар, ханнык да толкуй кинилэри араарыа һуох этэ, онон ханна эмэ таайарга күһэллиэ этиӈ.",
+              "Bare Sudoku хас биирдии таабырыны эн тэрилгэр оӈорор уонна кини чопчу биир быһаарыылааҕын, логика быһаарааччыта кинини талыллыбыт таһым ньымаларынан бүтэрэр кыахтааҕын тургутар. Онон тохтоон хааллаххына, булуллуохтаах кэлэр хардыы мэлдьи баар, һүбэ ону көрдөрөр."
+            ]
+          },
+          {
+            "h": "Судоку таабырынын хайдах һаҕалыахха?",
+            "p": [
+              "Һаамай кыараҕас һиртэн һаҕалаа. Бу бэрээдэк хас биирдии таһымӈа үлэлиир:"
+            ],
+            "list": [
+              "Элбэхтик, холобур, алтата эбэтэр һэттэтэ көстүбүт һыыппараны тал уонна кинини өссө тутпатах дьааһыктары бул. Үксүгэр дьааһыкка кини иһин биир эрэ клетка хаалар: бу [кистэлэӈ соҕотох](hidden-single).",
+              "Ыга симиллибит клеткаларга көр. Уһтуруоката, колуонката уонна дьааһыга бииргэ аҕыс араас һыыппаралаах клеткаҕа биир эрэ кандидат хаалар: бу [биир кандидат](naked-single). Толорго чугас уһтуруокалар уонна дьааһыктар клеткалара көрөргө һаамай үчүгэй һир.",
+              "Хас биирдии уурбут һыыппараӈ 20 ыалтан биир кандидаты сотор, онон ол ыаллары тута тургут. Соҕотохтор үксүгэр биир-биир батыһа кэлэллэр.",
+              "Чэпчэки ууруулар бүттэхтэринэ, бэлиэлэри һуруй: хас биирдии кураанах клетка кандидаттарын. Онтон дьааһык иһигэр биир линияҕа хатаммыт һыыппараны ([хатаммыт кандидаттар](locked-candidates)) эбэтэр биир икки кандидаты үллэстэр икки клетканы (биир [аһаҕас пара](naked-pairs)) көрдөө.",
+              "Хас биирдии сотуу кэннэ соҕотохторго төнүн. Уһулуччу таабырыннар даҕаны үксүн соҕотохторунан быһаарыллаллар; ыарахан ньыма кэлэр соҕотоххо һуолу арыйар эрэ."
+            ],
+            "figure": "firstMove"
+          },
+          {
+            "h": "Бэлиэлэр тугуй уонна кинилэри хаһан туттуохха?",
+            "p": [
+              "Бэлиэлэр, кинилэри харандаас бэлиэлэрэ эбэтэр кандидаттар диэн эмиэ ааттыыллар, кураанах клеткаҕа онно ханнык һыыппаралар өссө кыахтаахтарын бэлиэтииргэ һуруйар кыра һыыппараларыӈ. Чэпчэки таабырыннарга кинилэр һэдэхтик наадалар; Ыарахан таһымтан ыла кинилэр һуох буолбаттар, тоҕо диэтэххэ пара, X-Wing уонна Y-Wing курдук ньымалар уурбут һыыппаралары буолбакка, кандидаттары кытта үлэлииллэр.",
+              "Бэлиэлэри һөптөөх тут: һыыппараны уурдаххына, кинини 20 ыал бэлиэлэриттэн сот. Bare Sudoku-га бу бэйэтэ буолар, оттон Бэлиэлэри толор биир баттааһынынан хас биирдии кураанах клеткаҕа хас биирдии кандидаты һуруйар, онон толору уонна һөптөөх кандидаттартан һаҕалыыгын. Бэлиэ таайыы буолбатах, чахчы: бу һыыппараны өссө туох да сотпотох диэн."
+            ]
+          },
+          {
+            "h": "Тохтоон хааллахха туох гыныахха?",
+            "p": [
+              "Бастаан төрүттэри хатаан тургут: толорго чугас хас биирдии уһтуруока, колуонка уонна дьааһык соҕотохтор төрдүлэрэ. Онтон бэлиэлэриӈ толору буолалларын тургут, тоҕо диэтэххэ һүппүт кандидат ойуулары кистиир, оттон эргэрбит кандидат һымыйа ойуулары оӈорор. Онтон [ньымалары](techniques) ыараханнарын бэрээдэгинэн боруобалаа: хатаммыт кандидаттар, паралар уонна үстэр, X-Wing, Y-Wing, Swordfish уонна XYZ-Wing. Хас биирдиилэрэ дьиӈнээх холобурдаах бэйэтин һирэйдээх.",
+              "Туох да көмөлөспөтөҕүнэ, һүбэ ыл. Bare Sudoku-га һүбэ бастаан уурбут һыыппараӈ һыыһата һуоҕун тургутар, онтон логиканан толоруллар кэлэр клетканы булар уонна ньыма аатын этэр, онон һүбэни туттаргар даҕаны туох эмэни үөрэнэҕин. Һыыппараны уурарга һүбэни хатаан баттаа."
+            ]
+          },
+          {
+            "h": "Bare Sudoku-га һыыппаралары хайдах киллэриэххэ?",
+            "p": [
+              "Клетканы, онтон һыыппараны баттаа. Эбэтэр бастаан һыыппараны баттаа: һыыппара хатанар уонна эн баттаабыт хас биирдии клеткаҕар киирэр; бу биир һыыппараны алтыс, һэттис уонна ахсыс төгүлүн уурар һаамай түргэн ньымата. Һыыппараны босхолуурга кинини хатаан баттаа. Бэлиэлэр кнопката харандаас бэлиэлэригэр көһөрөр, Сот клетканы ыраастыыр, Төннөр ханнык баҕарар хардыыны төннөрөр, оттон алҕастар, менюга араарбатаххына, кыһылынан бэлиэтэнэллэр.",
+              "Клавиатураҕа стрелкаларынан хамнан, 1-тэн 9-ка диэри һыыппараны киллэр, Backspace-нан сот, N бэлиэлэр, U төннөр, H һүбэ, F бэлиэлэри толор, Escape меню. Оонньуу бэйэтэ бэйэтин харайар, интернет һуох үлэлиир, рекламата да, аккаунта да һуох."
+            ]
+          }
+        ],
+        "faq": [
+          [
+            "Судокуга хаһан эмэ таайар наада дуо?",
+            "Һөптөөх таабырыӈӈа наадата һуох. Хас биирдии Bare Sudoku таабырына чопчу биир быһаарыылаах уонна кини таһымын ньымаларынан логика эрэ көмөтүнэн быһаарыллара тургутуллар. Таайыахха наада курдук буоллаҕына, бэлиэлэргэр биир кандидат тиийбэт эбэтэр булуллуон кэтэһэр биир ньыма баар."
+          ],
+          [
+            "Биир һыыппара уһтуруокаҕа, колуонкаҕа эбэтэр дьааһыкка иккитэ баар буолуон һөп дуо?",
+            "Һуох. Быраабыла барыта бу: тоҕус уһтуруока, тоҕус колуонка уонна тоҕус дьааһык хас биирдиилэрэ 1-тэн 9-ка диэри хас биирдии һыыппараны чопчу биирдэ тутар. Биир бөлөххө икки биир тэӈ һыыппара баар буоллаҕына, кинилэртэн биирдэстэрэ һыыһа."
+          ],
+          [
+            "Чэпчэки, Орто, Ыарахан уонна Уһулуччу таһымнар туох араастаахтарый?",
+            "Таһым таабырыӈӈа наада ньымалартан тутулуктаах. Чэпчэки уонна Орто соҕотохторунан эрэ быһаарыллаллар, оттон Чэпчэки таабырын 38-тан итэҕэһэ һуох бэриллибит һыыппаралаах һаҕаланар. Ыараханӈа хатаммыт кандидаттар эбэтэр паралар уонна үстэр наадалар. Уһулуччуга X-Wing, Y-Wing, Swordfish эбэтэр XYZ-Wing наада."
+          ],
+          [
+            "Бэлиэлэри хас биирдии клеткаҕа һуруйар ордук дуо, эбэтэр һорохторугар эрэ дуо?",
+            "Ыарахан уонна Уһулуччу таабырыннарга барытын толор: паралар, X-Wing уонна Y-Wing курдук ойуулар хас биирдии кандидат һуруллубутуна эрэ көстөллөр. Чэпчэки уонна Орто таһымӈа бэлиэлэр баҕа өттүнэн, элбэх оонньооччу соҕотохтору эрэ көрдүүр."
+          ],
+          [
+            "Биир судоку төһө бириэмэни ылар?",
+            "Чэпчэки таабырын хас да мүнүүтэни ылар; Уһулуччу таабырыннар ыарахан ойууну төһө түргэнник көрөргүттэн тутулуктанан һүүрбэ мүнүүтэни эбэтэр онтон ордугу ылыахтарын һөп. Bare Sudoku бириэмэни көрдөрөр, меню аһаҕас буоллаҕына кинини тохтотор уонна рейтинг тутпат, онон бэйэӈ түргэнниккинэн оонньоо."
+          ],
+          [
+            "Судокуга арифметика наада дуо?",
+            "Һуох. Һыыппаралар бэлиэ эрэ; эбии да, ааҕыы да һуох. Ханнык баҕарар тоҕус бэлиэ үлэлиэ этэ, онон судоку һыыппара таабырына буолбатах, логика таабырына."
+          ]
+        ]
+      },
+      "index": {
+        "title": "Судокуну быһаарар ньымалар: холобурдарынан кэпсээн",
+        "description": "Биир кандидаттан Swordfish уонна XYZ-Wing диэри тоҕус судоку ньымата, Bare Sudoku һүбэлэрэ туттар бэрээдэктэринэн, хас биирдиилэрэ дьиӈнээх холобурдаах.",
+        "h1": "Судокуну быһаарар ньымалар",
+        "intro": [
+          "Хас биирдии судокуну логика кыра ньымаларын бөлөҕүнэн быһаарыахха һөп. Бу испииһэк Bare Sudoku быһаарааччыта уонна кини һүбэлэрэ туттар тоҕус ньыматын быһаарааччы кинилэри боруобалыыр бэрээдэгинэн көрдөрөр: бастаан соҕотохтор, онтон биир бөлөх иһинээҕи сотуулар, онтон хас да уһтуруокаҕа уонна колуонкаҕа тарҕаммыт ойуулар. Хас биирдии ньыма бэйэтин һирэйдээх: онно быһаарыы, кинини хайдах булуохха, оӈоһуллубут таабырынтан дьиӈнээх холобур уонна элбэхтик тахсар алҕастар.",
+          "Таабырын таһымын кииниэхэ наада һаамай ыарахан ньыма быһаарар. Чэпчэки уонна Орто таабырыннарга соҕотохтор эрэ наадалар, Ыарахан таабырыннарга хатаммыт кандидаттар эбэтэр паралар уонна үстэр наадалар, оттон Уһулуччу таабырыннарга аҕыйаатаҕына биир балык эбэтэр кынат наада. Таһым ханныга да буоллун, үлэ үксүн соҕотохтор оӈороллор; ыарахан ньыма биир-икки кандидаты сотор, онтон соҕотохтор үлэни салгыыллар."
+        ],
+        "faq": [
+          [
+            "Судоку ньымаларын ханнык бэрээдэгинэн боруобалыахха?",
+            "Һаамай чэпчэкититтэн һаҕалаа: биир кандидат, кистэлэӈ соҕотох, хатаммыт кандидаттар, аһаҕас паралар уонна үстэр, кистэлэӈ паралар уонна үстэр, X-Wing, Y-Wing, Swordfish, XYZ-Wing. Bare Sudoku кинилэри чопчу бу бэрээдэгинэн боруобалыыр, оттон һүбэ мэлдьи иннин диэки илдьэр һаамай судургу ньыма аатын этэр."
+          ],
+          [
+            "Судокуну быһаарарга бу ньымалар бары наадалар дуо?",
+            "Чэпчэки уонна Орто таабырыннарга соҕотохтор тиийэллэр. Ыарахан таабырыннарга хатаммыт кандидаттар уонна паралар-үстэр эбиллэллэр. Уһулуччу таабырыннарга аҕыйаатаҕына биир балык эбэтэр кынат наада, ол эрээри үксүгэр биир таабырыӈӈа биирдэ-иккитэ эрэ."
+          ],
+          [
+            "XYZ-Wing-тэн ыарахан ньымалар бааллар дуо?",
+            "Оннук, холобур, һиэптэр, биир быһаарыы тесттэрэ уонна күһэйэр һитимнэр. Bare Sudoku кинилэри наадыйар таабырыннары оӈорбот, онон оонньуу хас биирдии таабырынын бу һирэйдээҕи тоҕус ньыманан бүтэриэххэ һөп."
+          ],
+          [
+            "Кандидат тугуй?",
+            "Кураанах клеткаҕа өссө киириэн һөп һыыппара, тоҕо диэтэххэ кини уһтуруокатыгар, колуонкатыгар эбэтэр дьааһыгар кинини өссө туох да сотпотох. Оонньуу бэлиэлэрэ кандидаттар буолаллар. Соҕотохтортон атын хас биирдии ньыма кандидаттары кытта толкуйдуур, онон кинилэри толору уонна һөптөөх тут."
+          ]
+        ]
+      },
+      "tech": {
+        "naked-single": {
+          "name": "Биир кандидат",
+          "title": "Биир кандидат (naked single): биир кандидаттаах клетка",
+          "description": "Биир кандидат (naked single) диэн биир эрэ һыыппара киириэн һөп кураанах клетката. Кинини түргэнник булары дьиӈнээх холобурунан хардыы хардыынан үөрэт.",
+          "h1": "Биир кандидат (naked single)",
+          "summary": "Биир кандидат (naked single) диэн чопчу биир кандидаттаах кураанах клетка: атын аҕыс һыыппара кини уһтуруокатыгар, колуонкатыгар эбэтэр дьааһыгар хайыы-үйэ бааллар. Хаалбыт һыыппара онно киириэхтээх. Бу һаамай судургу уонна һаамай элбэхтик туттуллар судоку ньымата, Bare Sudoku һүбэтэ кинини \"Манна биир эрэ кандидат\" диэн биллэрэр.",
+          "when": [
+            "Мэлдьи. Биир кандидаттар бастакы хардыыттан бүтэһиккэ диэри, хас биирдии таһымӈа көстөллөр. Чэпчэки уонна Орто таабырыннарга кинилэр кистэлэӈ соҕотохтору кытта бииргэ наада соҕотох ньыма буолаллар. Ыарахан таабырыннарга ыарахан ньыма оӈорбут хас биирдии сотуута үксүгэр кэнниттэн биир кандидаты хаалларар, онон хас биирдии хардыы кэннэ кинилэри тургут."
+          ],
+          "spot": [
+            "Ыаллара элбэх һыыппаралаах клеткаларга көр: хайыы-үйэ һэттэ һыыппаралаах уһтуруока клеткатыгар эбэтэр уһтуруоката, колуонката уонна дьааһыга бииргэ аҕыс араас һыыппараны хабар клеткаҕа. Бэлиэтэ һуох клеткаттан көстөр һыыппаралары аах. Бэлиэлэрдээх биир кандидат диэн биир эрэ кандидаты көрдөрөр клетка, онон Бэлиэлэри толор кинилэри булары чэпчэтэр."
+          ],
+          "examples": [
+            {
+              "h": "Холобур",
+              "steps": [
+                "{cell} клеткаҕа көр. Кини кураанах, онон кини уһтуруокатыгар, колуонкатыгар уонна дьааһыгар хайыы-үйэ уурбут хас биирдии һыыппараны испииһэктээ.",
+                "{row}-с уһтуруокаҕа {rowDigits} баар. {col}-с колуонкаҕа {colDigits} баар. {box}-с дьааһыкка {boxDigits} баар.",
+                "Бииргэ кинилэр {d} һыыппараттан атын хас биирдии һыыппараны сотоллор, онон {cell} клеткаҕа хаалбыт соҕотох кандидат {d}.",
+                "{cell} клеткаҕа {d} һуруй. Онтон һаӈа һыыппара ол уһтуруокаҕа, колуонкаҕа эбэтэр дьааһыкка атын соҕотоҕу оӈорбутун тургут."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Уһтуруоканы эрэ эбэтэр дьааһыгы эрэ ааҕыы. Сотуллубут аҕыс һыыппара үксүгэр үс бөлөхтөн бииргэ кэлэр.",
+            "Аҕыйах иннинэ уурбут һыыппараӈ эмиэ 20 ыалыттан кандидаттары сотторун умнуу; һаӈа биир кандидаттар хас биирдии ууруу кэннэ тута көстөллөр.",
+            "Биир кандидаты кистэлэӈ соҕотоҕу кытта булкуйуу: биир кандидакка клеткаҕа биир кандидат хаалар, кистэлэӈ соҕотоххо бөлөххө һыыппара иһин биир клетка хаалар."
+          ],
+          "faq": [
+            [
+              "Судокуга биир кандидат (naked single) диэн тугуй?",
+              "Чопчу биир кандидаттаах кураанах клетка. Кини уһтуруокатыгар, колуонкатыгар уонна дьааһыгар аҕыс араас һыыппара хайыы-үйэ уурулуннулар, онон тоҕуһус һыыппара эрэ һөп түбэһэр."
+            ],
+            [
+              "Тоҕо кинини англиялыы naked, ол аата һыгынньах, диэн ааттыыллар?",
+              "Тоҕо диэтэххэ бэлиэлэр һуруллубуттарын кэннэ соҕотох кандидат клеткаҕа быһа көстөр; кинини туох да кистээбэт. Оттон кистэлэӈ соҕотох атын кандидаттар ортолоругар турар уонна клеткаҕа буолбакка, һыыппараҕа көрөн булуллар."
+            ],
+            [
+              "Таабырыны биир кандидаттарынан эрэ быһаарыахха һөп дуо?",
+              "Элбэх Чэпчэки таабырыннары һөп, ол эрээри үксүлэригэр кистэлэӈ соҕотохтор эмиэ наадалар. Bare Sudoku Чэпчэки уонна Орто таабырыннары соҕотохтор икки көрүӈнэринэн быһаарыллаллар диэн һыаналыыр; Ыарахан уонна Уһулуччу таабырыннарга аҕыйаатаҕына өссө биир ньыма наада."
+            ],
+            [
+              "Һүбэ биир кандидаттары көрдөрөр дуо?",
+              "Оннук. Кэлэр ууруу биир кандидат буоллаҕына, һүбэ клетканы талар уонна һыыппараны кытта \"Манна биир эрэ кандидат\" диир. Уурарга һүбэни хатаан баттаа."
+            ]
+          ]
+        },
+        "hidden-single": {
+          "name": "Кистэлэӈ соҕотох",
+          "title": "Кистэлэӈ соҕотох (hidden single): һыыппара соҕотох миэстэтэ",
+          "description": "Кистэлэӈ соҕотох (hidden single) диэн уһтуруокаҕа, колуонкаҕа эбэтэр дьааһыкка һыыппара киириэн һөп соҕотох клетката. Кинини хайдах булары үөрэт.",
+          "h1": "Кистэлэӈ соҕотох (hidden single)",
+          "summary": "Кистэлэӈ соҕотох (hidden single) диэн уһтуруокаҕа, колуонкаҕа эбэтэр дьааһыкка биир эрэ кыахтаах клетката хаалбыт һыыппара, ол клетка атын кандидаттары көрдөрдөҕүнэ да. Бөлөх ол һыыппараны тутуохтаах, онон һыыппара онно киирэр. Bare Sudoku һүбэтэ кинини \"Бу уһтуруокаҕа 5 биир эрэ миэстэ\" диэн, колуонкаҕа эбэтэр дьааһыкка эмиэ оннук биллэрэр.",
+          "when": [
+            "Һыыппара улаханнык иннин диэки барбыт буоллаҕына: һыыппара биэс-алта төгүл көстүбүтүн кэннэ хаалбыт дьааһыктар бэрт кыараҕас буолаллар, онон кэлэр хардыы үксүгэр кистэлэӈ соҕотох. Кистэлэӈ соҕотохтор Чэпчэки уонна Орто таабырыннар һүрүн ньымалара уонна хас биирдии таһымӈа үлэ ыарахан өттүн илдьэ һылдьаллар."
+          ],
+          "spot": [
+            "Һыыппаралары биир-биир көр. Биир һыыппараны ыл, кинини тутпат дьааһыгы бул уонна ол дьааһыкка бу һыыппара уурбут биирдэһин кытта уһтуруоканы эбэтэр колуонканы үллэстэр хас биирдии клетканы сотон кэбис. Биир клетка хааллаҕына, кистэлэӈ соҕотоҕу буллуӈ. Ол көрүү уһтуруокаларга уонна колуонкаларга эмиэ үлэлиир. Оонньууга уурбут һыыппараны баттаа: кини хас биирдии биирдэһэ һырдатыллар, онон кураанах клеткалар чуолкайдык көстөллөр."
+          ],
+          "examples": [
+            {
+              "h": "Холобур",
+              "steps": [
+                "{box}-с дьааһыкка {d} өссө һуох, онон кини кураанах клеткаларыттан биирдэстэрэ кинини ылыахтаах. Кураанах клеткалар: {empties}.",
+                "{cell} клеткаттан атын барыларыгар {d} һыыппараны ол уһтуруокаҕа эбэтэр колуонкаҕа хайыы-үйэ уурбут {d} бобор, онон онно {d} кандидат буолбатах.",
+                "Онон {box}-с дьааһыкка {d} иһин соҕотох миэстэ {cell} буолан хаалар. {cell} өссө атын кандидаттары көрдөрдөҕүнэ да, онно {d} һуруй."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Һыыппараны баҕар һөптөөх буолуон һөп клеткаҕа эрэ уурии: чуолкайдык көстөрдөрүн эрэ буолбакка, бөлөх атын хас биирдии кураанах клеткатын тургут.",
+            "Клетка хас да кандидаты көрдөрөрүн иһин кистэлэӈ соҕотоҕу көрбөккө хаалыы. Атын кандидаттар һуолталара һуох; һуолталааҕа, һыыппара бөлөххө атын миэстэтэ һуоҕа.",
+            "Дьааһыктары эрэ көрүү. Уһтуруокалар уонна колуонкалар кистэлэӈ соҕотохтору оннук да элбэхтик биэрэллэр, ордук бүтүүтүгэр чугаһаатаҕына."
+          ],
+          "faq": [
+            [
+              "Судокуга кистэлэӈ соҕотох (hidden single) диэн тугуй?",
+              "Уһтуруока, колуонка эбэтэр дьааһык биир эрэ клеткатыгар киириэн һөп һыыппара. Бөлөх ол һыыппараны тутуохтаах, онон клеткаҕа атын кандидаттар баар буолларын да, клетка чуолкайданар."
+            ],
+            [
+              "Кистэлэӈ соҕотох уонна биир кандидат туох араастаахтарый?",
+              "Биир кандидат клетка туһунан: онно биир кандидат хаалар. Кистэлэӈ соҕотох һыыппара туһунан: бөлөххө кини иһин биир клетка хаалар. Иккиэн һыыппараны чуолкайдык уураллар."
+            ],
+            [
+              "Ханныгын булар чэпчэкий?",
+              "Бэлиэтэ һуох кистэлэӈ соҕотохтор үксүгэр чэпчэки, тоҕо диэтэххэ сиэткэни хас биирдии һыыппараҕа туспа көрүөххэ һөп. Толору бэлиэлэрдээх биир кандидаттар һаамай чэпчэки, тоҕо диэтэххэ биир кандидаттаах клетка тута харахха быраҕыллар."
+            ],
+            [
+              "Һүбэ кистэлэӈ соҕотоҕу хайдах кэпсиир?",
+              "Клетканы талан, \"Бу уһтуруокаҕа\", \"Бу колуонкаҕа\" эбэтэр \"Бу дьааһыкка ... биир эрэ миэстэ\" диэн. Уурарга һүбэни хатаан баттаа."
+            ]
+          ]
+        },
+        "locked-candidates": {
+          "name": "Хатаммыт кандидаттар",
+          "title": "Хатаммыт кандидаттар: ыйыы уонна бэйэтигэр ылыы",
+          "description": "Хатаммыт кандидаттар: һыыппара дьааһыктааҕы кандидаттара биир уһтуруокаҕа эбэтэр колуонкаҕа буоллахтарына, эбэтэр төттөрүтүн, һыыппара атын һиртэн сотуллар.",
+          "h1": "Хатаммыт кандидаттар",
+          "summary": "Хатаммыт кандидаттар диэн һыыппараны уурбакка, кандидаттары сотор бастакы ньыма. Кини икки көрүӈнээх. Ыйыы: дьааһыкка һыыппара бары кандидаттара биир уһтуруокаҕа эбэтэр колуонкаҕа һыталлар, онон һыыппара ол линия атын клеткаларыттан сотуллар. Бэйэтигэр ылыы: уһтуруокаҕа эбэтэр колуонкаҕа һыыппара бары кандидаттара биир дьааһыкка һыталлар, онон һыыппара ол дьааһык атын клеткаларыттан сотуллар. Bare Sudoku һүбэтэ кини арыйбыт уурууларын \"Хатаммыт кандидаттар\" диэн бэлиэтиир.",
+          "when": [
+            "Ыарахан таабырыӈӈа соҕотохтор бүттэхтэринэ, бастаан маны боруобалаа. Аҕыйаатаҕына тургутуллар һыыппара иһин толору бэлиэлэр наадалар. Хатаммыт кандидаттар элбэхтик көстөллөр: Ыарахан таабырыннар үксүлэригэр кинилэр наадалар, оттон Уһулуччу таабырыннар кинилэри улахан ойуулар икки ардыларыгар туһаналлар."
+          ],
+          "spot": [
+            "Ыйыы иһин хас биирдии дьааһыкка уонна онно тиийбэт хас биирдии һыыппараҕа көр: ол һыыппара кандидат клеткалара биир уһтуруокаҕа эбэтэр колуонкаҕа һыттахтарына, ол линия устун дьааһык таһыгар ол һыыппара кандидат буолан көстөрүн тургут. Бэйэтигэр ылыы иһин уһтуруока эбэтэр колуонка устун көр: һыыппара кандидаттара бары биир дьааһык иһигэр буоллахтарына, ол дьааһык атын клеткаларын ыраастыахха һөп. Оонньууга һыыппара кнопкатын баттаатаххына, кини хас биирдии кандидата һырдатыллар; биир дьааһык иһигэр икки-үс һырдатыллыбыт бэлиэттэн турар линия бу ойуу буолар."
+          ],
+          "examples": [
+            {
+              "h": "Ыйыы",
+              "steps": [
+                "{box}-с дьааһыкка {d} һыыппара маннык кандидат клеткалардаах эрэ: {cells}. Кинилэр бары {row}-с уһтуруокаҕа һыталлар.",
+                "{box}-с дьааһыкка {d} наада, онон {row}-с уһтуруока {d} һыыппарата, ханнык клеткаҕа да түстэр, {box}-с дьааһык иһигэр баар.",
+                "{row}-с уһтуруокаҕа иккис {d} буолуон кыаллыбат, онон {row}-с уһтуруока дьааһык таһынааҕы клеткаларыттан {d} һыыппараны сот: {elim}."
+              ]
+            },
+            {
+              "h": "Бэйэтигэр ылыы",
+              "steps": [
+                "{row}-с уһтуруокаҕа {d} һыыппара {cells} клеткаларга эрэ киириэн һөп, уонна кинилэр бары {box}-с дьааһык иһигэр бааллар.",
+                "{row}-с уһтуруокаҕа {d} баар буолуохтаах, онон {box}-с дьааһык {d} һыыппаратын {row}-с уһтуруока бэйэтигэр ылар. {box}-с дьааһык атын клеткаларыгар {d} буолуон кыаллыбат.",
+                "{d} һыыппараны маннык клеткалартан сот: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Ыйыыга һыыппараны дьааһык таһыттан буолбакка, иһиттэн сотуу, оттон бэйэтигэр ылыыга төттөрүтүн. Сотуулар мэлдьи линияҕа баар, ол эрээри дьааһыкка һуох, эбэтэр дьааһыкка баар, ол эрээри линияҕа һуох клеткаларга түһэллэр.",
+            "Кандидаттар дьааһык икки уһтуруокатыгар тарҕаммыттарын да быраабыланы туттуу. Дьааһыкка һыыппара бары кандидат клеткалара биир линияҕа һытыахтаахтар.",
+            "Сотуу оӈорбут соҕотоҕун көрдүүрү умнуу. Хатаммыт кандидаттар бэйэлэрэ һэдэхтик һыыппараны уураллар; кинилэр соҕотоххо һуол бэлэмнииллэр."
+          ],
+          "faq": [
+            [
+              "Судокуга хатаммыт кандидаттар диэн тугуй?",
+              "Дьааһык уонна линия кэрсиһиилэригэр хатаммыт һыыппара кандидаттара. Дьааһык, эбэтэр линия, ол һыыппараны ол кэрсиһиигэ тутуохтаах, онон һыыппараны линия, эбэтэр дьааһык, атын клеткаларыттан сотуохха һөп."
+            ],
+            [
+              "Ыйыы уонна бэйэтигэр ылыы туох араастаахтарый?",
+              "Ыйыы дьааһыктан һаҕаланар: һыыппара дьааһыктааҕы кандидаттара биир уһтуруока эбэтэр колуонка устун ыйаллар, онон һыыппара ол линия атын клеткаларыттан сотуллар. Бэйэтигэр ылыы уһтуруокаттан эбэтэр колуонкаттан һаҕаланар: линия ол һыыппараҕа кандидаттара бары биир дьааһыкка, онон линия һыыппараны бэйэтигэр ылар уонна һыыппара дьааһык атын клеткаларыттан сотуллар."
+            ],
+            [
+              "Хатаммыт кандидаттары кэрсиһии сотуута диэн эмиэ ааттыыллар дуо?",
+              "Оннук. Атын ааттар: бэйэтигэр ылыыга дьааһык-линия кыччатыыта, ыйыыга ыйар паралар эбэтэр ыйар үстэр. Bare Sudoku иккиэннэригэр биир ааты туттар."
+            ],
+            [
+              "Ханнык таһымӈа хатаммыт кандидаттар наадалар?",
+              "Ыараханӈа. Хатаммыт кандидаттар эбэтэр паралар-үстэр наадалаах, ол эрээри онтон ыарахана наадата һуох таабырын Ыарахан диэн һыаналанар; Уһулуччу таабырыннарга ону таһынан балык эбэтэр кынат наада."
+            ]
+          ]
+        },
+        "naked-pairs": {
+          "name": "Аһаҕас паралар уонна үстэр",
+          "title": "Аһаҕас паралар уонна үстэр (naked pairs): хайдах үлэлииллэр",
+          "description": "Аһаҕас паралар уонна үстэр (naked pair, naked triple): бөлөххө биир икки эбэтэр үс кандидаттаах клеткалар. Кинилэри булары уонна тугу сотору үөрэт.",
+          "h1": "Аһаҕас паралар уонна үстэр (naked pair, naked triple)",
+          "summary": "Аһаҕас пара (naked pair) диэн биир уһтуруокаҕа, колуонкаҕа эбэтэр дьааһыкка чопчу биир икки кандидаттаах икки клетка. Ол икки һыыппара ол икки клеткаҕа киириэхтээхтэр, онон кинилэри бөлөх атын хас биирдии клеткатыттан сотуохха һөп. Аһаҕас үс (naked triple) диэн үс клетка уонна үс һыыппаранан ол һанаа; хас биирдии клетка кинилэртэн иккитин эбэтэр үһүн көрдөрүөн һөп. Bare Sudoku һүбэтэ тахсыбыт уурууну \"Пара эбэтэр үс\" диэн бэлиэтиир.",
+          "when": [
+            "Бэлиэлэр толору буоллахтарына, соҕотохтор уонна хатаммыт кандидаттар бүттэхтэринэ. Аһаҕас паралар Ыарахан таабырыннарга элбэхтик көстөллөр, аһаҕас үстэр һэдэхтэр. Өссө биэс эбэтэр онтон элбэх кураанах клеткалаах хас биирдии бөлөххө иккиэннэрин тургутар туһалаах."
+          ],
+          "spot": [
+            "Икки эрэ кандидаттаах клеткалары көрдөө уонна ол бөлөххө ол икки кандидаттаах атын клетканы бул. Үстэр иһин хас да икки уонна үс кандидаттаах клеткалаах бөлөхтөргө көр уонна кинилэртэн үһэ бииргэ үс эрэ араас һыыппараны туттарын тургут. Бэлиэлэр һуруллубуттарын кэннэ чопчу биир кандидаттаах клеткалары көрөр чэпчэки; оонньууга Бэлиэлэри толор ону биир баттааһынынан оӈорор."
+          ],
+          "examples": [
+            {
+              "h": "Аһаҕас пара",
+              "steps": [
+                "{unit} иһигэр {cellA} уонна {cellB} клеткалар чопчу биир икки кандидаттаахтар: {d1} уонна {d2}.",
+                "Кинилэртэн биирэ {d1}, атына {d2} буолуохтаах. Ханныга ханныгын билбэппит, ол эрээри икки һыыппара иккиэн бу икки клеткаҕа барбыттар.",
+                "Онон {unit} иһигэр атын туох да клетка {d1} эбэтэр {d2} буолуон кыаллыбат. Сот: {elim}."
+              ]
+            },
+            {
+              "h": "Аһаҕас үс",
+              "steps": [
+                "{unit} иһигэр үс клетка бары кандидаттарын биир үс һыыппараттан, {digits}, ылаллар: {cells}.",
+                "Үс һыыппара бу үс клетканы ханнык эмэ бэрээдэгинэн толоруохтаахтар. Клетка үс кандидаты бүтүннүү көрдөрүөхтээх буолбатах; һуолталааҕа, үс клеткаттан биирдэстэригэр да бу үс һыыппараттан атын кандидат һуоҕа.",
+                "{unit} иһигэр атын хас биирдии клеткаттан {digits} һыыппаралары сот: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Икки кандидаты үллэстэр, ол эрээри үһүс кандидаттаах икки клетканы ылыы. Аһаҕас пара иһин хас биирдии клеткаҕа чопчу ол икки кандидат эрэ баар буолуохтаах.",
+            "Һыыппаралары пара бэйэтин клеткаларыттан сотуу. Пара бэйэтин кандидаттарын харыстыыр; сотуулар бөлөх атын клеткаларыгар түһэллэр.",
+            "Үс хас биирдии клеткатыттан үс һыыппараны бүтүннүү көрдөрөрүн эрэйии. Биир да клеткаҕа ол үс һыыппараттан атын кандидат һуох буоллаҕына, үстэн иккитин көрдөрөр клетка эмиэ һөп."
+          ],
+          "faq": [
+            [
+              "Судокуга аһаҕас пара (naked pair) диэн тугуй?",
+              "Биир бөлөххө иккиэн чопчу биир икки кандидаттаах икки клетка. Ол икки һыыппара ол икки клеткаҕа хатаммыттар, онон кинилэри бөлөх атын клеткаларыттан сотуохха һөп."
+            ],
+            [
+              "Аһаҕас үс (naked triple) диэн тугуй?",
+              "Биир бөлөххө кандидаттара бииргэ үс эрэ һыыппара буолар үс клетка. Хас биирдии клеткаҕа кинилэртэн иккитэ эбэтэр үһэ баар буолуон һөп. Үс һыыппара үс клетканы толороллор, онон кинилэри бөлөх атын клеткаларыттан сотуохха һөп."
+            ],
+            [
+              "Аһаҕас пара һыыппараны уурар дуо?",
+              "Бэйэтэ уурбат. Кини кандидаттары сотор, оттон сотуу үксүгэр биир кандидаты эбэтэр кистэлэӈ соҕотоҕу хаалларар. Bare Sudoku-га һүбэ ол соҕотоҕу көрдөрөр уонна ону кыаллар гыммыт ньыма аатын этэр."
+            ],
+            [
+              "Аһаҕас пара биир кэмӈэ дьааһыкка да, уһтуруокаҕа да буолуон һөп дуо?",
+              "Оннук. Икки клетка уһтуруоканы да, дьааһыгы да үллэстэр буоллахтарына, пара икки бөлөххө иккиэннэригэр сотор. Bare Sudoku бөлөхтөрү биир-биир көрөр."
+            ]
+          ]
+        },
+        "hidden-pairs": {
+          "name": "Кистэлэӈ паралар уонна үстэр",
+          "title": "Кистэлэӈ паралар уонна үстэр (hidden pairs): хайдах булуохха",
+          "description": "Кистэлэӈ пара (hidden pair): бөлөххө биир икки клеткаҕа эрэ киириэн һөп икки һыыппара; ол клеткалар атын кандидаттара сотуллаллар. Дьиӈнээх холобурунан үөрэт.",
+          "h1": "Кистэлэӈ паралар уонна үстэр (hidden pair, hidden triple)",
+          "summary": "Кистэлэӈ пара (hidden pair) диэн уһтуруока, колуонка эбэтэр дьааһык иһигэр биир икки клеткаҕа кандидат буолар уонна атын ханна да һуох икки һыыппара. Ол икки клетка ол икки һыыппараны ылыахтаахтар, онон кинилэр иһинээҕи атын хас биирдии кандидаты сотуохха һөп. Кистэлэӈ үс (hidden triple) үс клеткаҕа хатаммыт үс һыыппаранан оннук үлэлиир. Сотуу кэннэ клеткалар аһаҕас пара эбэтэр үс көрдөрөллөр. Bare Sudoku һүбэтэ тахсыбыт уурууну \"Пара эбэтэр үс\" диэн бэлиэтиир.",
+          "when": [
+            "Бөлөххө элбэх кандидаттаах клеткалар баар буоллахтарына уонна соҕотохтор бүттэхтэринэ. Кистэлэӈ паралар толору клеткалар иһигэр кистэнэллэр, онон кинилэри чопчу аһаҕас паралар көстүбэт һирдэригэр көрдүүр туһалаах. Кистэлэӈ үстэр һэдэхтэр; Bare Sudoku кинилэри эмиэ тургутар, ол эрээри Ыарахан таабырыннар үксүлэрэ кинилэрэ һуох быһаарыллаллар."
+          ],
+          "spot": [
+            "Клетканан буолбакка, һыыппаранан үлэлээ. Бөлөххө тиийбэт хас биирдии һыыппара киириэн һөп клеткаларын бэлиэтээ. Икки һыыппара хас биирдиилэрэ икки эрэ кыахтаах клеткалаах буоллахтарына уонна ол биир икки клетка буоллаҕына, эн кистэлэӈ пара буллуӈ. Оонньууга һыыппара кнопкатын баттаатаххына, кини кандидаттара һырдатыллаллар; икки һыыппара бөлөххө биир икки клетканы һырдатар уонна онно атын тугу да һырдаппат буоллаҕына, ойуу бу."
+          ],
+          "examples": [
+            {
+              "h": "Кистэлэӈ пара",
+              "steps": [
+                "{unit} иһигэр {d1} уонна {d2} һыыппаралар хас биирдиилэрэ икки эрэ кыахтаах клеткалаахтар, уонна ол биир икки клетка: {cells}.",
+                "Ол икки клетка {d1} уонна {d2} ылыахтаахтар, онон кинилэр атын кандидаттара кыаллыбаттар.",
+                "Сот: {elim}. Билигин икки клетка аһаҕас пара көрдөрөр, бу өссө атын һуоллары арыйыан һөп."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Пара икки һыыппаратын пара клеткаларыттан сотуу. Ол клеткалар атын кандидаттара сотуллаллар; пара һыыппаралара хаалаллар.",
+            "Бөлөххө үһүс кыахтаах клеткалаах һыыппараны ылыы. Икки һыыппара иккиэн чопчу ол икки клеткаҕа хааччахтаммыт буолуохтаахтар.",
+            "Дьааһыктарга эрэ көрүү. Кистэлэӈ паралар уһтуруокаларга уонна колуонкаларга эмиэ оннук элбэхтик көстөллөр."
+          ],
+          "faq": [
+            [
+              "Судокуга кистэлэӈ пара (hidden pair) диэн тугуй?",
+              "Бөлөххө биир икки клеткаҕа эрэ киириэн һөп икки һыыппара. Ол клеткалар ол һыыппаралары ылыахтаахтар, онон кинилэр атын кандидаттара сотуллаллар."
+            ],
+            [
+              "Кистэлэӈ пара аһаҕас параттан туох араастаах?",
+              "Аһаҕас пара көстөр: биир икки кандидаты эрэ көрдөрөр икки клетка. Кистэлэӈ пара икки клеткаҕа баар элбэх кандидаттар анныларыгар кистэммит. Ол элбэх кандидаттары сотуу кистэлэӈ параны аһаҕас параҕа кубулутар."
+            ],
+            [
+              "Кистэлэӈ үс (hidden triple) диэн тугуй?",
+              "Бөлөх үс клеткатыгар хатаммыт үс һыыппара. Хас биирдии һыыппара үс клеткаҕа барытыгар көстүөхтээх буолбатах; һуолталааҕа, үс һыыппараттан биирдэстэрэ да ол клеткалар таһыгар кандидата һуоҕа."
+            ],
+            [
+              "Һүбэ кистэлэӈ уонна аһаҕас паралары араарар дуо?",
+              "Һуох. Bare Sudoku иккиэннэрин булар уонна тахсыбыт уурууну \"Пара эбэтэр үс\" диэн бэлиэтиир. Манна һирэйдэр кинилэри араараллар, тоҕо диэтэххэ кинилэр атын-атын ньыманан булуллаллар."
+            ]
+          ]
+        },
+        "x-wing": {
+          "name": "X-Wing",
+          "title": "Судокуга X-Wing: ньыма хайдах үлэлиирий",
+          "description": "X-Wing: икки уһтуруокаҕа чопчу икки кандидат клеткалаах уонна биир икки колуонкаҕа турар һыыппара ол колуонкалар атын клеткаларыттан сотуллар. Холобур.",
+          "h1": "X-Wing",
+          "summary": "X-Wing диэн биир һыыппара уонна түөрт муннуктаах муннуктарыгар турар түөрт клеткаттан турар ойуу. Һыыппара икки уһтуруока хас биирдиитигэр чопчу икки кандидат клеткалаах буоллаҕына уонна ол клеткалар биир икки колуонкаҕа турдахтарына, һыыппара түөрт муннуктаах утарыта турар икки муннугун ылыахтаах. Онон кинини ол икки колуонка атын хас биирдии клеткатыттан сотуохха һөп. Уһтуруокалар уонна колуонкалар миэстэлэрин атастаһыннахтарына да, оннук үлэлиир. Бу Bare Sudoku-га бастакы Уһулуччу ньыма.",
+          "when": [
+            "Соҕотохтор, хатаммыт кандидаттар уонна паралар-үстэр бүттэхтэринэ. X-Wing һаамай элбэхтик көстөр Уһулуччу ойуу, үксүгэр һыыппара кандидаттара аҕыйаатахтарына, холобур, кини түөртэн алтаҕа диэри биирдэһэ уурулуннаҕына көстөр. Тургутуллар һыыппара иһин толору бэлиэлэр наадалар."
+          ],
+          "spot": [
+            "Һыыппараны тал уонна ол һыыппара иһин чопчу икки кандидат клеткалаах уһтуруокалары көрдөө. Оннук икки уһтуруока биир икки колуонкаҕа буоллахтарына, ол колуонкаларга һыыппара атын кандидаттарын тургут: сотуулар кинилэр буолаллар. Онтон колуонкалары төрүт оӈостон хатылаа. Оонньууга һыыппара кнопкатын баттаа: кини хас биирдии кандидата һырдатыллар, онон түөрт һырдатыллыбыт бэлиэттэн түөрт муннуктаах чэпчэкитик көстөр."
+          ],
+          "examples": [
+            {
+              "h": "Холобур",
+              "steps": [
+                "{d} һыыппара {r1}-с уһтуруокаҕа чопчу икки уонна {r2}-с уһтуруокаҕа чопчу икки кандидат клеткалаах, уонна кинилэр биир икки колуонкаҕа, {c1} уонна {c2}, тураллар: {cells}.",
+                "{r1}-с уһтуруока бэйэтин {d} һыыппаратын {c1}-с эбэтэр {c2}-с колуонкаҕа уурар, оттон {r2}-с уһтуруока атыныгар. Хайдах да буоллун, {c1}-с уонна {c2}-с колуонкалар хас биирдиилэрэ бу икки уһтуруокаттан биир {d} ылаллар.",
+                "Онон {d} {c1}-с уонна {c2}-с колуонкаларга атын ханна да буолуон кыаллыбат. {d} һыыппараны маннык клеткалартан сот: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Һыыппара иһин үс кандидат клеткалаах уһтуруоканы туттуу. Хас биирдии төрүт уһтуруокаҕа чопчу икки буолуохтаах, уонна иккиэн уопсай икки колуонкаҕа туруохтаахтар.",
+            "Һыыппараны колуонкалартан буолбакка, уһтуруокалартан сотуу. Төрүт уһтуруокалар буоллахтарына, сотуулар колуонкаларга, уонна төттөрүтүн.",
+            "Атастаһыннарыллыбыт көрүӈүн умнуу. Колуонкаларга тутуллубут X-Wing уһтуруокаларга сотор."
+          ],
+          "faq": [
+            [
+              "Судокуга X-Wing диэн тугуй?",
+              "Икки уһтуруока хас биирдиитигэр, биир икки колуонкаҕа чопчу икки кандидат клеткалаах һыыппара. Һыыппара ол түөрт муннуктаах утарыта турар икки муннугун ылар, онон икки колуонка атын клеткаларыттан сотуллар. Уһтуруокалар уонна колуонкалар миэстэлэрин атастаһыахтарын һөп."
+            ],
+            [
+              "Тоҕо X-Wing үлэлиирий?",
+              "Икки уһтуруока хас биирдиитэ һыыппараны икки колуонкаттан биирдэһигэр ууруохтаах, уонна икки уһтуруока биир колуонканы туттуон кыаллыбат. Онон икки колуонка хас биирдиитэ һыыппара бэйэтин биирдэһин бу уһтуруокалартан ылар, уонна ол колуонкалардааҕы атын хас биирдии кандидат кыаллыбат."
+            ],
+            [
+              "X-Wing балык дуо?",
+              "Оннук. X-Wing икки кээмэйдээх балык; Swordfish үс кээмэйдээх балык. Bare Sudoku иккиэннэрин булар."
+            ],
+            [
+              "Ханнык таһымӈа X-Wing баар?",
+              "Уһулуччуга. X-Wing, Y-Wing, Swordfish эбэтэр XYZ-Wing наадалаах таабырын Уһулуччу диэн һыаналанар."
+            ]
+          ]
+        },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Судокуга Y-Wing: ньыма хайдах үлэлиирий",
+          "description": "Y-Wing (XY-Wing): икки кандидаттаах киин уонна кини биир кандидатын үллэстэр икки кынат иккиэннэрин көрөр хас биирдии клеткаттан һыыппараны сотоллор. Холобур.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, кинини XY-Wing диэн эмиэ ааттыыллар, хас биирдиилэрэ икки кандидаттаах үс клетканы туттар. Киин клетка кандидаттара X уонна Y. Биир кынат киини көрөр уонна X уонна Z тутар; атын кынат киини көрөр уонна Y уонна Z тутар. Киин туох да буоллун, кынаттартан биирэ Z буолуохтаах, онон Z икки кынаты иккиэннэрин көрөр хас биирдии клеткаттан сотуллуон һөп. Бу Bare Sudoku-га Уһулуччу ньыма.",
+          "when": [
+            "Таабырыӈӈа чопчу икки кандидаттаах хас да клетка баар буоллаҕына уонна биир да балык һуох буоллаҕына. Y-Wing Уһулуччу таабырыннарга элбэхтик көстөр уонна икки кандидаттаах клеткалары батыһан булуллар: хас биирдиилэрэ киин эбэтэр кынат буолуон һөп."
+          ],
+          "spot": [
+            "Чопчу икки кандидаттаах клеткалары испииһэктээ. Хас биирдиитин X уонна Y кандидаттаах киин диэн ыл уонна кини ыаллара ортолоругар X уонна атын Z һыыппаралаах клетканы, уонна Y уонна ол Z-тээх клетканы көрдөө. Ол иккиэн кынаттар. Онтон икки кынаты иккиэннэрин көрөр уонна Z тутар клеткалары бул. Кынаттар бэйэ-бэйэлэрин көрүөхтээх буолбатахтар."
+          ],
+          "examples": [
+            {
+              "h": "Холобур",
+              "steps": [
+                "{pivot} киин кандидаттара {x} уонна {y}. Кини {x} уонна {z} тутар {wingA} клетканы уонна {y} уонна {z} тутар {wingB} клетканы көрөр.",
+                "{pivot} {x} буоллаҕына, {wingA} {x} кандидатын һүтэрэр уонна {z} буолар. {pivot} {y} буоллаҕына, {wingB} {z} буолар. Хайдах да буоллун, икки кынаттан биирэ {z}.",
+                "Икки кынаты иккиэннэрин көрөр клетка хаһан да {z} буолуон кыаллыбат. {z} һыыппараны маннык клеткалартан сот: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Киини иккиэн көрбөт кынаттары талыы. Хас биирдии кынат киини кытта уһтуруоканы, колуонканы эбэтэр дьааһыгы үллэстиэхтээх.",
+            "Z-и биир эрэ кынаты көрөр клеткалартан сотуу. Сотуллар клетка икки кынаты иккиэннэрин көрүөхтээх.",
+            "Z-и киинтэн сотуу. Y-Wing-ка кииӈӈэ Z һуох; баар буоллаҕына, ойуу атын быраабылалаах XYZ-Wing буолар."
+          ],
+          "faq": [
+            [
+              "Судокуга Y-Wing диэн тугуй?",
+              "Икки кандидаттаах үс клетка: X уонна Y тутар киин, киини көрөр X уонна Z тутар кынат, уонна киини көрөр Y уонна Z тутар кынат. Биир кынат мэлдьи Z, онон Z икки кынаты иккиэннэрин көрөр клеткалартан сотуллар."
+            ],
+            [
+              "Y-Wing уонна XY-Wing биир дуо?",
+              "Оннук. Икки аат биир ойууну ааттыыр. Bare Sudoku кинини Y-Wing диир."
+            ],
+            [
+              "Тоҕо биир кынат Z буолуохтааҕый?",
+              "Киин X буоллаҕына, бастакы кынат X-и һүтэрэр уонна Z буолар. Киин Y буоллаҕына, иккис кынат Z буолар. Киин кинилэртэн биирэ, онон биир кынат Z."
+            ],
+            [
+              "Y-Wing хас клеткаттан сотор?",
+              "Үксүгэр биир эбэтэр икки: икки кынаты иккиэннэрин көрөр уонна өссө Z тутар клеткалартан эрэ. Соҕотоҕу оӈорорго ол тиийэр."
+            ]
+          ]
+        },
+        "swordfish": {
+          "name": "Swordfish",
+          "title": "Судокуга Swordfish: ньыма хайдах үлэлиирий",
+          "description": "Swordfish: үс уһтуруока устун үс колуонкаҕа хатаммыт һыыппара ол колуонкалар атын клеткаларыттан сотуллар. Үс кээмэйдээх балык, дьиӈнээх холобурунан.",
+          "h1": "Swordfish",
+          "summary": "Swordfish диэн үс уһтуруокалаах уонна үс колуонкалаах X-Wing. Һыыппара үс уһтуруока хас биирдиитигэр үстэн элбэҕэ һуох кандидат клеткалаах буоллаҕына уонна ол клеткалар бары биир үс колуонкаҕа түстэхтэринэ, үс уһтуруока ол колуонкаларга һыыппараны бүтүннүү туттар, онон һыыппараны үс колуонка атын хас биирдии клеткатыттан сотуохха һөп. Уһтуруокалар уонна колуонкалар миэстэлэрин атастаһыахтарын һөп. Bare Sudoku Уһулуччу таабырыннарга Swordfish-ы Y-Wing кэнниттэн тургутар.",
+          "when": [
+            "X-Wing уонна Y-Wing туох да булбатахтарына. Swordfish X-Wing-тан һэдэхтик көстөр уонна кандидаттара үс линияҕа һэдэхтик тарҕаммыт һыыппараны эрэйэр. Ол һыыппара иһин толору уонна һөптөөх бэлиэлэр наадалар."
+          ],
+          "spot": [
+            "Һыыппараны тал уонна ол һыыппара иһин икки эбэтэр үс кандидат клеткалаах уһтуруокалары көрдөө. Оннук үс уһтуруока бииргэ үс эрэ колуонканы хабар буоллахтарына, ол колуонкаларга һыыппара атын кандидаттарын тургут. Хас биирдии уһтуруока хас биирдии колуонкаҕа кандидаттаах буолуохтаах буолбатах: Swordfish алта, һэттэ, аҕыс эбэтэр тоҕус клеткалаах буолуон һөп. Оонньууга һыыппараны кини кнопкатынан һырдат уонна кандидаттара үс колуонкаҕа турар үс уһтуруоканы көрдөө."
+          ],
+          "examples": [
+            {
+              "h": "Холобур",
+              "steps": [
+                "{d} һыыппара {rows}-с уһтуруокалар хас биирдиилэригэр үстэн элбэҕэ һуох кандидат клеткалаах, уонна ол клеткалар бары {cols}-с колуонкаларга түһэллэр: {cells}.",
+                "Үс уһтуруока хас биирдиитэ бэйэтин {d} һыыппаратын үс колуонкаттан биирдэһигэр ууруохтаах, уонна икки уһтуруока биир колуонканы туттуон кыаллыбат. Онон үс колуонка бэйэлэрин {d} һыыппараларын бу үс уһтуруокаттан ылаллар.",
+                "{cols}-с колуонкалардааҕы атын хас биирдии {d} кандидат кыаллыбат. {d} һыыппараны маннык клеткалартан сот: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Тоҕус клетканы бүтүннүү эрэйии. Һорох уһтуруокаларга икки кандидаттаах Swordfish эмиэ, үс уһтуруока үс эрэ колуонканы хаптаҕына, һөптөөх.",
+            "Түөрт кандидат клеткалаах уһтуруоканы киллэрии. Хас биирдии төрүт уһтуруокаҕа үстэн элбэҕэ һуох буолуохтаах, бары үс колуонка иһигэр.",
+            "Төрүт уһтуруокаларга сотуу. Төрүт уһтуруокалар буоллахтарына, сотуулар төрүт уһтуруокалар таһыгар, үс колуонкаҕа."
+          ],
+          "faq": [
+            [
+              "Судокуга Swordfish диэн тугуй?",
+              "Үс уһтуруокалардааҕы кандидаттара үс колуонкаҕа хатаммыт һыыппара. Үс уһтуруока һыыппараны ол үс колуонкаҕа биирдии ууруохтаах, онон һыыппара ол колуонкалар атын клеткаларыттан сотуллар."
+            ],
+            [
+              "Swordfish X-Wing-тан туох араастаах?",
+              "Кээмэйинэн эрэ: X-Wing икки уһтуруоканы уонна икки колуонканы туттар, Swordfish үһү уонна үһү. Толкуй биир."
+            ],
+            [
+              "Swordfish иһин чопчу тоҕус клетка наада дуо?",
+              "Һуох. Хас биирдии уһтуруокаҕа икки эбэтэр үс кандидат буолуон һөп; ойуу үс уһтуруока бииргэ үстэн элбэх колуонканы туттубаттарын эрэ эрэйэр."
+            ],
+            [
+              "Түөрт кээмэйдээх балык баар дуо?",
+              "Оннук, Jellyfish. Bare Sudoku кинини туттубат, тоҕо диэтэххэ кини таабырыннарыгар ол хаһан да наадата һуох."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Судокуга XYZ-Wing: ньыма хайдах үлэлиирий",
+          "description": "XYZ-Wing: үс кандидаттаах киин уонна кини биир кандидатын үллэстэр икки кынат ол һыыппараны үһүөннэрин көрөр хас биирдии клеткаттан сотоллор. Холобур.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing диэн киинэ үс кандидаттаах Y-Wing. Киин X, Y уонна Z тутар; биир кынат киини көрөр уонна X уонна Z тутар, атына киини көрөр уонна Y уонна Z тутар. Үс клеткаттан биирэ Z буолуохтаах, онон Z үһүөннэрин көрөр хас биирдии клеткаттан сотуллуон һөп. Киин бэйэтэ Z буолуон һөп буолан, сотуллар клетка икки кынаты кытта бииргэ киини эмиэ көрүөхтээх, бу кинини клеткалар үллэстэр дьааһыктарыгар эбэтэр линияларыгар хааччахтыыр. Бу Bare Sudoku туттар һаамай ыарахан ньымата.",
+          "when": [
+            "Атын туох да көмөлөспөтөҕүнэ эрэ. XYZ-Wing Bare Sudoku-га һаамай һэдэх ойуу уонна Уһулуччу таабырыннарга эрэ көстөр. Үс кандидаттаах клетка кини икки һыыппаратын үллэстэр икки кандидаттаах клетканы кытта биир дьааһыкка турар буоллаҕына, кинини көрдөө."
+          ],
+          "spot": [
+            "Чопчу үс кандидаттаах клеткалартан һаҕалаа; хас биирдиилэрэ киин буолуон һөп. Кини ыаллара ортолоругар икки кандидаттаах, кандидаттара киин үс кандидатыттан ылыллыбыт уонна чопчу биир Z һыыппараны үллэстэр икки клетканы көрдөө. Онтон киини уонна икки кынаты көрөр уонна Z тутар клеткалары бул. Дьиӈинэн биир кынат киин дьааһыгар, атына кини уһтуруокатыгар эбэтэр колуонкатыгар турар, оттон сотуллар клеткалар ол дьааһык ол уһтуруокатааҕы эбэтэр колуонкатааҕы хаалбыт клеткалара."
+          ],
+          "examples": [
+            {
+              "h": "Холобур",
+              "steps": [
+                "{pivot} киин үс кандидаттаах: {x}, {y} уонна {z}. Кини {x} уонна {z} тутар {wingA} клетканы уонна {y} уонна {z} тутар {wingB} клетканы көрөр.",
+                "{pivot} {z} буоллаҕына, үлэ бүттэ. {x} буоллаҕына, {wingA} {z} буолуохтаах. {y} буоллаҕына, {wingB} {z} буолуохтаах. Хайдах да буоллун, үс клеткаттан биирэ {z}.",
+                "Үһүөннэрин көрөр клетка {z} буолуон кыаллыбат. {z} һыыппараны маннык клеткалартан сот: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Икки кынаты эрэ көрөр клеткалартан сотуу. Y-Wing-тан атына, киин Z буолуон һөп, онон клетка киини эмиэ көрүөхтээх.",
+            "Кандидаттара киин үс кандидатын иһигэр һуох кынаттары туттуу.",
+            "Кинини Y-Wing-ы кытта булкуйуу: араастара киин үһүс кандидата, уонна ол ханнык клеткалары ыраастыахха һөбүн уларытар."
+          ],
+          "faq": [
+            [
+              "Судокуга XYZ-Wing диэн тугуй?",
+              "X, Y уонна Z кандидаттаах киин уонна икки кынат: биирэ X уонна Z, атына Y уонна Z тутар, иккиэн киини көрөллөр. Үс клеткаттан биирэ Z, онон Z үһүөннэрин көрөр клеткалартан сотуллар."
+            ],
+            [
+              "XYZ-Wing Y-Wing-тан туох араастаах?",
+              "Киин икки буолбакка, Z-тээх бииргэ үс кандидаттаах. Бу киини Z иһин кыахтаах миэстэ оӈорор, онон киини уонна икки кынаты көрөр клеткалар эрэ Z-и һүтэриэхтэрин һөп."
+            ],
+            [
+              "XYZ-Wing төһө элбэхтик көстөрүй?",
+              "Һэдэхтик. Bare Sudoku-га кинини Уһулуччу таабырыннар эрэ эрэйиэхтэрин һөп, оттон кинилэр үксүлэрэ эрэйбэттэр. Bare Sudoku кинини һаамай бүтэһигэр, X-Wing, Y-Wing уонна Swordfish кэнниттэн тургутар."
+            ],
+            [
+              "WXYZ-Wing баар дуо?",
+              "Оннук, түөрт кандидаттаах киинниин, ол эрээри Bare Sudoku кинини туттубат. Оонньуу хас биирдии таабырынын бу ыйынньык тоҕус ньыматынан бүтэриэххэ һөп."
+            ]
+          ]
+        }
+      }
+    },
     "dng": {
       "learnHeading": "Щүэ шўдў",
       "learnText": "Ганган кэшы ван шўдў, хуэйзы зэ йигә нан ти шан ка җў ли? Лёнгә зынан җён чинчў гуйҗү хә тиши йунди мэй йигә җичё, мэй гә ду ю җыншыди лизы.",
