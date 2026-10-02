@@ -46,6 +46,7 @@ button:disabled{color:var(--muted);cursor:default}
 #panel h2{margin:0;text-align:center;font-size:1.5rem}
 #panel p{margin:0 0 4px;text-align:center;color:var(--muted)}
 #panel button,#panel select{height:44px;font-size:1rem}
+#panel .btn{height:44px;font-size:1rem;background:var(--card);border-radius:12px;color:inherit;text-decoration:none;display:flex;align-items:center;justify-content:center}
 #panel select{border:0;border-radius:12px;background:var(--card);color:inherit;padding:0 12px;width:100%;font:inherit}
 #panel label{display:flex;flex-direction:column;gap:4px;font-size:.8rem;color:var(--muted);margin-top:4px}
 #about{max-width:560px;margin:0 auto;padding:32px 16px 48px;line-height:1.5;user-select:text;-webkit-user-select:text}

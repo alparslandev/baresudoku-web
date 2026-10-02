@@ -61,6 +61,14 @@ def privacy_url(code):
     return SITE + privacy_path(code)
 
 
+def daily_path(code):
+    return i18n.path(code) + "daily/"
+
+
+def daily_url(code):
+    return SITE + daily_path(code)
+
+
 def store_link():
     return ' · <a href="%s">App Store</a>' % APP_STORE_URL if APP_STORE_URL else ""
 
@@ -132,6 +140,27 @@ def content(code, entry, languages, version, size, lastmod, web, learn):
     return "\n".join(parts)
 
 
+def daily_content(code, entry, daily_codes, play_label):
+    parts = ['<section id="about">', "<h1>%s</h1>" % esc(entry["dailyH1"]), "<p>%s</p>" % esc(entry["dailyIntro"])]
+    parts.append('<p><a href="%s">%s</a></p>' % (i18n.path(code), esc(play_label)))
+    parts.append('<nav aria-label="%s">%s</nav>' % (esc(entry["languagesLabel"]), "".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (daily_path(c), c, c, esc(daily_codes[c])) for c in daily_codes)))
+    parts.append("</section>")
+    return "\n".join(parts)
+
+
+def daily_jsonld(code, entry, lastmod):
+    graph = [
+        {"@type": "WebSite", "@id": WEBSITE_ID, "url": SITE + "/", "name": NAME, "publisher": {"@id": PERSON_ID}},
+        {"@type": "Person", "@id": PERSON_ID, "name": AUTHOR, "alternateName": "alparslandev", "url": AUTHOR_URL, "sameAs": SAME_AS},
+        {
+            "@type": "WebPage", "@id": daily_url(code) + "#webpage", "url": daily_url(code), "name": entry["dailyTitle"], "description": entry["dailyDescription"],
+            "inLanguage": code, "dateModified": lastmod, "isPartOf": {"@id": WEBSITE_ID}, "about": {"@id": GAME_ID},
+            "primaryImageOfPage": {"@type": "ImageObject", "contentUrl": OG_IMAGE, "width": 1200, "height": 630},
+        },
+    ]
+    return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+
+
 def offer():
     return {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
 
@@ -180,24 +209,27 @@ def jsonld(code, entry, languages, version, size, lastmod, web):
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
 
 
-def page(template, css, table, code, entry, languages, version, size, lastmod, web, learn):
+def page(template, css, table, code, entry, languages, version, size, lastmod, web, learn, daily_codes, mode="play", play_label=""):
     def f(text):
         return esc(fill(text, version, size))
-    alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, url_of(c)) for c in languages]
-    alternates.append('<link rel="alternate" hreflang="x-default" href="%s/">' % SITE)
+    daily = mode == "daily"
+    codes = daily_codes if daily else languages
+    resolve = daily_url if daily else url_of
+    alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, resolve(c)) for c in codes]
+    alternates.append('<link rel="alternate" hreflang="x-default" href="%s">' % resolve("en"))
     options = "".join('<option value="%s">%s</option>' % (c, esc(languages[c][0])) for c in languages)
-    local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code]}
+    local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code], "mode": mode, "daily": daily_path(code) if code in daily_codes else ""}
     values = {
         "{{LANG}}": code,
         "{{DIR}}": "rtl" if code in i18n.RTL else "ltr",
-        "{{TITLE}}": f(entry["title"]),
-        "{{DESCRIPTION}}": f(entry["description"]),
-        "{{URL}}": url_of(code),
+        "{{TITLE}}": f(entry["dailyTitle"] if daily else entry["title"]),
+        "{{DESCRIPTION}}": f(entry["dailyDescription"] if daily else entry["description"]),
+        "{{URL}}": resolve(code),
         "{{ALTERNATES}}": "\n".join(alternates),
         "{{OG_LOCALE}}": og_locale(code),
         "{{OG_ALT}}": f(entry["ogAlt"]),
-        "{{JSONLD}}": jsonld(code, entry, languages, version, size, lastmod, web),
-        "{{CONTENT}}": content(code, entry, languages, version, size, lastmod, web, learn),
+        "{{JSONLD}}": daily_jsonld(code, entry, lastmod) if daily else jsonld(code, entry, languages, version, size, lastmod, web),
+        "{{CONTENT}}": daily_content(code, entry, daily_codes, play_label) if daily else content(code, entry, languages, version, size, lastmod, web, learn),
         "{{WEB_VERSION}}": web,
         "{{CSS}}": css,
         "{{OPTIONS}}": options,
@@ -289,8 +321,8 @@ def urlset(codes, resolve, lastmod_of):
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s</urlset>\n' % "".join(urls)
 
 
-def sitemap_files(languages, guide_languages, lastmod, guide_dates):
-    files = {"sitemap-play.xml": urlset(languages, i18n.path, lambda c: lastmod), "sitemap-privacy.xml": urlset(languages, privacy_path, lambda c: lastmod)}
+def sitemap_files(languages, guide_languages, lastmod, guide_dates, daily_codes):
+    files = {"sitemap-play.xml": urlset(languages, i18n.path, lambda c: lastmod), "sitemap-daily.xml": urlset(list(daily_codes), daily_path, lambda c: lastmod), "sitemap-privacy.xml": urlset(languages, privacy_path, lambda c: lastmod)}
     for name, resolve, codes in guide.sitemap_groups(guide_languages):
         files["sitemap-%s.xml" % name] = urlset(codes, resolve, lambda c: guide_dates[c][1])
     newest = max([lastmod] + [d[1] for d in guide_dates.values()])
@@ -431,6 +463,8 @@ def main():
     size = kilobytes(apk_bytes)
     web = web_version()
     table = {code: i18n.table(keys, languages[code]) for code in languages}
+    daily_codes = {code: languages[code][0] for code in languages if i18n.has_daily(site[code])}
+    play_index = i18n.index_of(keys, "play")
     script = "%s\n%s\n" % (read("src", "engine.js").strip(), read("src", "app.js").strip())
     css = read("src", "style.css").strip()
     template = read("src", "index.html")
@@ -441,10 +475,12 @@ def main():
     write(dist, "app.js", script)
     total = 0
     for code in languages:
-        out = page(template, css, table, code, site[code], languages, version, size, lastmod, web, guides.get(code))
+        out = page(template, css, table, code, site[code], languages, version, size, lastmod, web, guides.get(code), daily_codes)
         digest.update(out.encode("utf-8"))
         total += len(out.encode("utf-8"))
         write(dist, os.path.join(i18n.path(code).strip("/"), "index.html"), out)
+    for code in daily_codes:
+        write(dist, os.path.join(daily_path(code).strip("/"), "index.html"), page(template, css, table, code, site[code], languages, version, size, lastmod, web, None, daily_codes, "daily", table[code][play_index]))
     privacy_template = read("src", "privacy.html")
     for code in languages:
         write(dist, os.path.join(privacy_path(code).strip("/"), "index.html"), privacy_page(privacy_template, css, code, site[code], languages, lastmod))
@@ -455,7 +491,7 @@ def main():
     write(dist, "sw.js", read("src", "sw.js").replace("{{HASH}}", digest.hexdigest()[:10]))
     shutil.copytree(os.path.join(ROOT, "static"), dist, dirs_exist_ok=True)
     icons.write(dist)
-    sitemaps = sitemap_files(languages, guides, lastmod, guide_dates)
+    sitemaps = sitemap_files(languages, guides, lastmod, guide_dates, daily_codes)
     write(dist, "_headers", headers_file([name for name in sitemaps if name != "sitemap.xml"]))
     write(dist, "_redirects", redirects_file(removed_languages()))
     write(dist, "robots.txt", robots_file())
@@ -467,7 +503,9 @@ def main():
     write(dist, os.path.join(".well-known", "security.txt"), security_file(expires))
     write(dist, indexnow.KEY + ".txt", indexnow.KEY)
     check_placeholders(dist)
-    print("dist hazir: %d dil sayfasi + gizlilik sayfalari + %d rehber sayfasi (%d dil), sayfa basina ~%d bayt, web %s, Android %s (%d KB), guncelleme %s" % (len(languages), guide_count, len(guides), total // len(languages), web, version, size, lastmod))
+    print("dist hazir: %d dil sayfasi + %d gunluk sayfa + gizlilik sayfalari + %d rehber sayfasi (%d dil), sayfa basina ~%d bayt, web %s, Android %s (%d KB), guncelleme %s" % (len(languages), len(daily_codes), guide_count, len(guides), total // len(languages), web, version, size, lastmod))
+    if i18n.PADDED:
+        print("Ingilizce ile doldurulan oyun metinleri: %d dil, anahtarlar %s" % (len(i18n.PADDED), ", ".join(sorted(set(k for keys_ in i18n.PADDED.values() for k in keys_)))))
 
 
 if __name__ == "__main__":
