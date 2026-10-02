@@ -465,7 +465,47 @@
       "androidSource": "Android mənbə kodu",
       "updated": "Yenilənib",
       "languagesLabel": "Dillər",
-      "ogAlt": "Bare Sudoku loqosu və Pulsuz onlayn sudoku, reklamsız yazısı"
+      "ogAlt": "Bare Sudoku loqosu və Pulsuz onlayn sudoku, reklamsız yazısı",
+      "dailyTitle": "Gündəlik Sudoku: Hər gün yeni tapmaca, pulsuz və reklamsız",
+      "dailyDescription": "Hər gün beş səviyyədə yeni sudoku, hamı üçün eyni tapmaca. Bu günün tapmacasını Asan'dan Usta'ya həll et, vaxtını paylaş. Reklam yox, qeydiyyat yox.",
+      "dailyH1": "Gündəlik Sudoku",
+      "dailyIntro": "Hər gün hər səviyyə üçün yeni tapmaca, dünyadakı hər oyunçu üçün eyni. Həll et, sonra vaxtını dostlarınla paylaş. Gündəlik tapmaca cihazında tarixin əsasında yaradılır; buna görə oflayn da işləyir və dünənin tapmacası gecə yarısında yox olur.",
+      "solver": {
+        "title": "Sudoku Həlledicisi: Texnikalarla Addım-addım Həll",
+        "description": "İstənilən sudokuyu yapıştırın və ya yazın, həlli addım-addım alın. Hər addım texnikasını göstərir, tuntiklər ilə X-Wing və zəncir daxil.",
+        "h1": "Sudoku həlledicisi, addım-addım",
+        "intro": "Verilen rəqəmləri şəbəkəyə yazın və ya 81 simvol yapıştırın (rəqəmlər; boş hücrələr üçün 0 və ya nöqtə). Sonrakı addım bir anda bir hərəkəti onun arxasındakı texnika ilə göstərir; Həll hər addımı siyahıya alır və tapmacaların səviyyəsi və reytinqi ilə bitir. Həlledicι brauzerinizda işləyir, heçbir şey yüklənmir, oyunun ipuçları ilə eyni məntiqdən istifadə edir, buna görə hər addım çıxarışdır, heçbir zaman fərziyyə deyil.",
+        "link": "Sudoku həlledicisi",
+        "paste": "Tapmacay yapıştırın: 81 rəqəm, boş hücrələr üçün 0 və ya .",
+        "next": "Sonrakı addım",
+        "solve": "Həll et",
+        "clear": "Sil",
+        "example": "Misal",
+        "edit": "Redaktə et",
+        "noSolution": "Bu tapmacaların həlli yoxdur. Verilen rəqəmləri yoxlayın.",
+        "manySolutions": "Bu tapmacaların birdən çox həlli var. Verilen rəqəm əlavə edin.",
+        "tooFew": "Ən azı 17 verilen rəqəm daxil edin.",
+        "stuck": "Həlledicinin sonrakı addım üçün texnikası yoxdur.",
+        "done": "Həll olundu",
+        "placed": "{d} ni {cell} ə qoyun",
+        "removed": "{d} ni {cells} dən çıxarın",
+        "rating": "reytinq {r}",
+        "steps": "{n} addım",
+        "faq": [
+          [
+            "Həlledicι hansı texnikaları istifadə edir?",
+            "Oyunun ipuçları ilə eyni texnikaları, eyni sırada sınaq edin: tuntiklər, kilidlənmiş namizədlər, cütlər və üçlüklər, balıqlar, qanatlar, bənzərsizlik nəqşləri, zəncir, demək olar ki kilidlənmiş dəstlər və məcburi şəbəkələr. Hər addım mantiqal çıxarışdır, heçbir zaman fərziyyə deyil, ən çətin addım reytinqi əvvəlliyinə qoyur."
+          ],
+          [
+            "Hər hansı sudoku üçün işləyirmi?",
+            "Tam olaraq bir həlli olan hər tapmaca üçün. Heç bir həlli olmayan və ya bir neçə həlli olan tapmaçalar həll edilmişdən əvvəl bildirilir, tapmacada ən azı 17 verilen rəqəm olmalıdır."
+          ],
+          [
+            "Mənim tapmacam yüklənirmi?",
+            "Yox. Həlledicι tamamilə brauzerinizda işləyir, oflayn da. Tapmacayı onun 81 rəqəmini ünvana ?p= sifətində əlavə edərək paylaşa bilərsiniz."
+          ]
+        ]
+      }
     },
     "de": {
       "title": "Bare Sudoku: Kostenloses Sudoku online, ohne Werbung, ohne Anmeldung",
@@ -540,7 +580,47 @@
       "androidSource": "Android-Quellcode",
       "updated": "Aktualisiert",
       "languagesLabel": "Sprachen",
-      "ogAlt": "Bare Sudoku Logo mit den Worten Kostenloses Sudoku online, ohne Werbung"
+      "ogAlt": "Bare Sudoku Logo mit den Worten Kostenloses Sudoku online, ohne Werbung",
+      "dailyTitle": "Tägliches Sudoku: Neues Rätsel täglich, kostenlos und werbefrei",
+      "dailyDescription": "Jeden Tag ein neues Sudoku, für alle das gleiche Rätsel. Löse von Leicht bis Meister und teile deine Zeit. Kostenlos, werbefrei, ohne Anmeldung.",
+      "dailyH1": "Tägliches Sudoku",
+      "dailyIntro": "Jeden Tag gibt es pro Stufe ein neues Rätsel, für jeden Spieler auf der Welt das gleiche. Löse es, und teile deine Zeit mit Freunden. Das tägliche Rätsel wird auf deinem Gerät aus dem Datum erzeugt, läuft daher auch offline und ist um Mitternacht verschwunden.",
+      "solver": {
+        "title": "Sudoku-Löser: Schritt-für-Schritt-Lösung mit Techniken",
+        "description": "Gib ein Sudoku ein oder füge es ein, löse es Schritt für Schritt. Jeder Zug nennt seine Technik: Singles, X-Wing, Ketten und mehr, mit dem Schwierigkeitsgrad.",
+        "h1": "Sudoku-Löser, Schritt für Schritt",
+        "intro": "Gib die bekannten Felder in das Gitter ein oder füge 81 Zeichen ein (Ziffern; 0 oder Punkt für leere Felder). Nächster Schritt zeigt einen Zug nach dem anderen mit der dahinter stehenden Technik; Lösen listet alle Schritte auf und endet mit der Stufe und dem Schwierigkeitsgrad des Rätsels. Der Löser läuft in deinem Browser, es wird nichts hochgeladen, und er benutzt die gleiche Logik wie die Tipps im Spiel - also ist jeder Schritt eine Schlussfolgerung, nie eine Vermutung.",
+        "link": "Sudoku-Löser",
+        "paste": "Rätsel einfügen: 81 Ziffern, 0 oder . für leere Felder",
+        "next": "Nächster Schritt",
+        "solve": "Lösen",
+        "clear": "Löschen",
+        "example": "Beispiel",
+        "edit": "Bearbeiten",
+        "noSolution": "Dieses Rätsel hat keine Lösung. Überprüfe die bekannten Felder.",
+        "manySolutions": "Dieses Rätsel hat mehr als eine Lösung. Füge bekannte Felder hinzu.",
+        "tooFew": "Gib mindestens 17 bekannte Felder ein.",
+        "stuck": "Der Löser hat keine Technik für den nächsten Schritt.",
+        "done": "Gelöst",
+        "placed": "Setze {d} in {cell}",
+        "removed": "Entferne {d} aus {cells}",
+        "rating": "Schwierigkeitsgrad {r}",
+        "steps": "{n} Schritte",
+        "faq": [
+          [
+            "Welche Techniken benutzt der Löser?",
+            "Die gleichen wie die Tipps im Spiel, in der gleichen Reihenfolge versucht: Singles, gesperrte Kandidaten, Paare und Tripel, Fische, Flügel, Eindeutigkeitsmuster, Ketten, fast gesperrte Mengen und Erzwingungsnetze. Jeder Schritt ist eine logische Schlussfolgerung, nie eine Vermutung, und der schwierigste Schritt legt den Schwierigkeitsgrad fest."
+          ],
+          [
+            "Funktioniert es für jedes Sudoku?",
+            "Für jedes Rätsel mit genau einer Lösung. Rätsel ohne Lösung oder mit mehreren werden gemeldet, statt gelöst zu werden, und ein Rätsel benötigt mindestens 17 bekannte Felder."
+          ],
+          [
+            "Wird mein Rätsel hochgeladen?",
+            "Nein. Der Löser läuft komplett in deinem Browser, auch offline. Du kannst ein Rätsel teilen, indem du seine 81 Ziffern als ?p= in die Adresszeile einfügst."
+          ]
+        ]
+      }
     },
     "fr": {
       "title": "Bare Sudoku : Sudoku gratuit en ligne, sans pub, sans inscription",
@@ -615,7 +695,47 @@
       "androidSource": "Code source Android",
       "updated": "Mis à jour",
       "languagesLabel": "Langues",
-      "ogAlt": "Logo Bare Sudoku avec les mots Sudoku gratuit en ligne, sans pub"
+      "ogAlt": "Logo Bare Sudoku avec les mots Sudoku gratuit en ligne, sans pub",
+      "dailyTitle": "Sudoku quotidien: grille du jour gratuite et sans pub",
+      "dailyDescription": "Un nouveau sudoku chaque jour, la même grille pour tous. Résolvez du Facile au Maître et partagez votre temps. Gratuit, sans pub, sans inscription.",
+      "dailyH1": "Sudoku quotidien",
+      "dailyIntro": "Chaque jour une nouvelle grille par niveau, la même pour tous les joueurs du monde. Résolvez-la, puis partagez votre temps avec vos amis. La grille quotidienne est générée sur votre appareil à partir de la date, elle fonctionne aussi hors ligne et disparaît à minuit.",
+      "solver": {
+        "title": "Solveur Sudoku : solution étape par étape avec techniques",
+        "description": "Entrez ou collez un sudoku et obtenez la solution étape par étape. Chaque coup nomme sa technique : singletons, X-Wing, chaînes et plus, avec la difficulté.",
+        "h1": "Solveur sudoku, étape par étape",
+        "intro": "Entrez les chiffres connus dans la grille ou collez 81 caractères (chiffres; 0 ou point pour vide). L'étape suivante montre un coup à la fois avec la technique; Résoudre liste tous les coups et donne le niveau et la difficulté de la grille. Le solveur tourne dans votre navigateur, rien n'est envoyé, et il utilise la même logique que les indices du jeu - chaque coup est une déduction, jamais une supposition.",
+        "link": "Solveur sudoku",
+        "paste": "Collez une grille : 81 chiffres, 0 ou . pour vide",
+        "next": "Étape suivante",
+        "solve": "Résoudre",
+        "clear": "Effacer",
+        "example": "Exemple",
+        "edit": "Modifier",
+        "noSolution": "Cette grille n'a pas de solution. Vérifiez les chiffres connus.",
+        "manySolutions": "Cette grille a plusieurs solutions. Ajoutez des chiffres connus.",
+        "tooFew": "Entrez au moins 17 chiffres connus.",
+        "stuck": "Le solveur ne trouve pas la technique suivante.",
+        "done": "Résolu",
+        "placed": "Placer {d} en {cell}",
+        "removed": "Retirer {d} de {cells}",
+        "rating": "difficulté {r}",
+        "steps": "{n} coups",
+        "faq": [
+          [
+            "Quelles techniques le solveur utilise-t-il ?",
+            "Les mêmes que les indices du jeu, dans le même ordre : singletons, candidats bloqués, paires et triplets, poissons, ailes, motifs d'unicité, chaînes, ensembles presque fermés et réseaux de forçage. Chaque coup est une déduction logique, jamais une supposition, et le coup le plus dur fixe la difficulté."
+          ],
+          [
+            "Fonctionne-t-il pour tous les sudokus ?",
+            "Pour toute grille avec exactement une solution. Les grilles sans solution ou avec plusieurs sont signalées au lieu d'être résolues, et une grille a besoin d'au moins 17 chiffres connus."
+          ],
+          [
+            "Ma grille est-elle envoyée ?",
+            "Non. Le solveur tourne entièrement dans votre navigateur, hors ligne aussi. Vous pouvez partager une grille en ajoutant ses 81 chiffres à l'adresse comme ?p=."
+          ]
+        ]
+      }
     },
     "es": {
       "title": "Bare Sudoku: Sudoku gratis online, sin anuncios, sin registro",
@@ -690,7 +810,47 @@
       "androidSource": "Código de Android",
       "updated": "Actualizado",
       "languagesLabel": "Idiomas",
-      "ogAlt": "Logo de Bare Sudoku con las palabras Sudoku gratis online, sin anuncios"
+      "ogAlt": "Logo de Bare Sudoku con las palabras Sudoku gratis online, sin anuncios",
+      "dailyTitle": "Sudoku diario: nuevo puzle cada día, gratis y sin anuncios",
+      "dailyDescription": "Un nuevo sudoku cada día, el mismo puzle para todos. Resuelve de Fácil a Maestro y comparte tu tiempo. Gratis, sin anuncios, sin registro.",
+      "dailyH1": "Sudoku diario",
+      "dailyIntro": "Cada día un nuevo puzle por nivel, el mismo para todos los jugadores del mundo. Resuélvelo y comparte tu tiempo con amigos. El puzle diario se genera en tu dispositivo a partir de la fecha, funciona sin conexión también y desaparece a medianoche.",
+      "solver": {
+        "title": "Resolvedor de Sudoku: solución paso a paso con técnicas",
+        "description": "Pega o escribe un sudoku y obtén la solución paso a paso. Cada movimiento nombra su técnica: singles, X-Wing, cadenas y más, con la dificultad.",
+        "h1": "Resolvedor de sudoku, paso a paso",
+        "intro": "Escribe los números dados en la cuadrícula o pega 81 caracteres (dígitos; 0 o punto para vacío). El siguiente paso muestra un movimiento a la vez con la técnica; Resuelve lista todos los pasos y da el nivel y dificultad. El resolvedor funciona en tu navegador, nada se envía, y usa la misma lógica que las pistas del juego - cada paso es una deducción, nunca una adivinanza.",
+        "link": "Resolvedor de sudoku",
+        "paste": "Pega un puzle: 81 dígitos, 0 o . para vacío",
+        "next": "Siguiente paso",
+        "solve": "Resolver",
+        "clear": "Borrar",
+        "example": "Ejemplo",
+        "edit": "Editar",
+        "noSolution": "Este puzle no tiene solución. Comprueba los números dados.",
+        "manySolutions": "Este puzle tiene más de una solución. Añade números dados.",
+        "tooFew": "Introduce al menos 17 números dados.",
+        "stuck": "El resolvedor no tiene técnica para el siguiente paso.",
+        "done": "Resuelto",
+        "placed": "Coloca {d} en {cell}",
+        "removed": "Quita {d} de {cells}",
+        "rating": "dificultad {r}",
+        "steps": "{n} pasos",
+        "faq": [
+          [
+            "¿Qué técnicas usa el resolvedor?",
+            "Las mismas que las pistas del juego, en el mismo orden: singles, candidatos bloqueados, pares y tríos, peces, alas, patrones de unicidad, cadenas, conjuntos casi cerrados y redes de forzamiento. Cada paso es una deducción lógica, nunca una adivinanza, y el paso más difícil establece la dificultad."
+          ],
+          [
+            "¿Funciona para cualquier sudoku?",
+            "Para cualquier puzle con exactamente una solución. Los puzles sin solución o con varias se reportan en lugar de resolverse, y un puzle necesita al menos 17 números dados."
+          ],
+          [
+            "¿Se envía mi puzle?",
+            "No. El resolvedor funciona completamente en tu navegador, incluso sin conexión. Puedes compartir un puzle añadiendo sus 81 dígitos a la dirección como ?p=."
+          ]
+        ]
+      }
     },
     "pt": {
       "title": "Bare Sudoku: Sudoku grátis online, sem anúncios, sem cadastro",
@@ -765,7 +925,47 @@
       "androidSource": "Código do Android",
       "updated": "Atualizado",
       "languagesLabel": "Idiomas",
-      "ogAlt": "Logo do Bare Sudoku com as palavras Sudoku grátis online, sem anúncios"
+      "ogAlt": "Logo do Bare Sudoku com as palavras Sudoku grátis online, sem anúncios",
+      "dailyTitle": "Sudoku diário: novo puzzle todos os dias, grátis e sem anúncios",
+      "dailyDescription": "Um novo sudoku cada dia, o mesmo puzzle para todos. Resolva de Fácil a Mestre e compartilhe seu tempo. Grátis, sem anúncios, sem cadastro.",
+      "dailyH1": "Sudoku diário",
+      "dailyIntro": "Cada dia um novo puzzle por nível, igual para todos os jogadores do mundo. Resolva e compartilhe seu tempo com amigos. O puzzle diário é gerado no seu aparelho a partir da data, funciona também offline e desaparece à meia-noite.",
+      "solver": {
+        "title": "Resolvedor de Sudoku: solução passo a passo com técnicas",
+        "description": "Cole ou digite um sudoku e obtenha a solução passo a passo. Cada movimento nomeia sua técnica: singles, X-Wing, cadeias e mais, com a dificuldade.",
+        "h1": "Resolvedor de sudoku, passo a passo",
+        "intro": "Digite os números dados na grade ou cole 81 caracteres (dígitos; 0 ou ponto para vazio). O próximo passo mostra um movimento por vez com a técnica; Resolver lista todos os passos e dá o nível e dificuldade. O resolvedor roda no seu navegador, nada é enviado, e usa a mesma lógica das dicas do jogo - cada passo é uma dedução, nunca um palpite.",
+        "link": "Resolvedor de sudoku",
+        "paste": "Cole um puzzle: 81 dígitos, 0 ou . para vazio",
+        "next": "Próximo passo",
+        "solve": "Resolver",
+        "clear": "Apagar",
+        "example": "Exemplo",
+        "edit": "Editar",
+        "noSolution": "Este puzzle não tem solução. Verifique os números dados.",
+        "manySolutions": "Este puzzle tem mais de uma solução. Adicione números dados.",
+        "tooFew": "Digite pelo menos 17 números dados.",
+        "stuck": "O resolvedor não tem técnica para o próximo passo.",
+        "done": "Resolvido",
+        "placed": "Coloque {d} em {cell}",
+        "removed": "Remova {d} de {cells}",
+        "rating": "dificuldade {r}",
+        "steps": "{n} passos",
+        "faq": [
+          [
+            "Que técnicas o resolvedor usa?",
+            "As mesmas das dicas do jogo, na mesma ordem: singles, candidatos bloqueados, pares e trios, peixes, asas, padrões de unicidade, cadeias, conjuntos quase fechados e redes de forçamento. Cada passo é uma dedução lógica, nunca um palpite, e o passo mais difícil define a dificuldade."
+          ],
+          [
+            "Funciona para qualquer sudoku?",
+            "Para qualquer puzzle com exatamente uma solução. Puzzles sem solução ou com várias são reportados em vez de resolvidos, e um puzzle precisa de pelo menos 17 números dados."
+          ],
+          [
+            "Meu puzzle é enviado?",
+            "Não. O resolvedor funciona completamente no seu navegador, offline também. Você pode compartilhar um puzzle adicionando seus 81 dígitos ao endereço como ?p=."
+          ]
+        ]
+      }
     },
     "it": {
       "title": "Bare Sudoku: Sudoku gratis online, senza pubblicità, senza registrazione",
@@ -840,7 +1040,47 @@
       "androidSource": "Codice Android",
       "updated": "Aggiornato",
       "languagesLabel": "Lingue",
-      "ogAlt": "Logo di Bare Sudoku con le parole Sudoku gratis online, senza pubblicità"
+      "ogAlt": "Logo di Bare Sudoku con le parole Sudoku gratis online, senza pubblicità",
+      "dailyTitle": "Sudoku giornaliero: nuovo schema ogni giorno, gratis e senza ads",
+      "dailyDescription": "Un nuovo sudoku ogni giorno, lo stesso schema per tutti. Risolvi da Facile a Maestro e condividi il tuo tempo. Gratis, senza pubblicità, senza iscrizione.",
+      "dailyH1": "Sudoku giornaliero",
+      "dailyIntro": "Ogni giorno un nuovo schema per livello, lo stesso per tutti i giocatori del mondo. Risolvilo e condividi il tuo tempo con gli amici. Lo schema giornaliero viene generato sul tuo dispositivo dalla data, funziona anche offline e scompare a mezzanotte.",
+      "solver": {
+        "title": "Risolutore Sudoku: soluzione passo dopo passo con tecniche",
+        "description": "Incolla o scrivi un sudoku e ottieni la soluzione passo dopo passo. Ogni mossa nomina la sua tecnica: singoli, X-Wing, catene e altro, con la difficoltà.",
+        "h1": "Risolutore sudoku, passo dopo passo",
+        "intro": "Scrivi i numeri dati nella griglia o incolla 81 caratteri (cifre; 0 o punto per vuoto). Il passo successivo mostra una mossa alla volta con la tecnica; Risolvi elenca tutti i passi e dà il livello e la difficoltà. Il risolutore funziona nel tuo browser, nulla viene caricato, e usa la stessa logica dei suggerimenti del gioco - ogni passo è una deduzione, mai un'indovina.",
+        "link": "Risolutore sudoku",
+        "paste": "Incolla uno schema: 81 cifre, 0 o . per vuoto",
+        "next": "Passo successivo",
+        "solve": "Risolvi",
+        "clear": "Cancella",
+        "example": "Esempio",
+        "edit": "Modifica",
+        "noSolution": "Questo schema non ha soluzione. Controlla i numeri dati.",
+        "manySolutions": "Questo schema ha più di una soluzione. Aggiungi numeri dati.",
+        "tooFew": "Inserisci almeno 17 numeri dati.",
+        "stuck": "Il risolutore non ha una tecnica per il passo successivo.",
+        "done": "Risolto",
+        "placed": "Posiziona {d} in {cell}",
+        "removed": "Rimuovi {d} da {cells}",
+        "rating": "difficoltà {r}",
+        "steps": "{n} passi",
+        "faq": [
+          [
+            "Quali tecniche usa il risolutore?",
+            "Le stesse dei suggerimenti del gioco, nello stesso ordine: singoli, candidati bloccati, coppie e triple, pesci, ali, schemi di unicità, catene, insiemi quasi chiusi e reti di forzatura. Ogni passo è una deduzione logica, mai un'indovina, e il passo più difficile imposta la difficoltà."
+          ],
+          [
+            "Funziona per qualsiasi sudoku?",
+            "Per qualsiasi schema con esattamente una soluzione. Gli schemi senza soluzione o con più soluzioni vengono segnalati invece di essere risolti, e uno schema ha bisogno di almeno 17 numeri dati."
+          ],
+          [
+            "Il mio schema viene caricato?",
+            "No. Il risolutore funziona completamente nel tuo browser, anche offline. Puoi condividere uno schema aggiungendo le sue 81 cifre all'indirizzo come ?p=."
+          ]
+        ]
+      }
     },
     "nl": {
       "title": "Bare Sudoku: gratis sudoku online, zonder reclame, zonder account",
@@ -915,7 +1155,47 @@
       "androidSource": "Android-broncode",
       "updated": "Bijgewerkt",
       "languagesLabel": "Talen",
-      "ogAlt": "Bare Sudoku-logo met de woorden Gratis sudoku online, zonder reclame"
+      "ogAlt": "Bare Sudoku-logo met de woorden Gratis sudoku online, zonder reclame",
+      "dailyTitle": "Dagelijks Sudoku: elke dag een puzzel, gratis en reclamevrij",
+      "dailyDescription": "Elke dag een nieuw sudoku, dezelfde puzzel voor iedereen. Los van Makkelijk tot Meester op en deel je tijd. Gratis, geen reclame, geen account.",
+      "dailyH1": "Dagelijks Sudoku",
+      "dailyIntro": "Elke dag een nieuwe puzzel per niveau, hetzelfde voor alle spelers ter wereld. Los het op en deel je tijd met vrienden. De dagelijkse puzzel wordt op je apparaat gegenereerd op basis van de datum, werkt dus ook offline en verdwijnt om middernacht.",
+      "solver": {
+        "title": "Sudoku-oplosser: stap voor stap met technieken",
+        "description": "Plak of typ een sudoku en krijg de oplossing stap voor stap. Elke zet noemt zijn techniek: singles, X-Wing, ketens en meer, met de moeilijkheid.",
+        "h1": "Sudoku-oplosser, stap voor stap",
+        "intro": "Typ de gegeven cijfers in het raster of plak 81 tekens (cijfers; 0 of punt voor leeg). Volgende stap toont één zet tegelijk met de techniek; Oplos geeft alle stappen en het niveau en de moeilijkheid. De oplosser draait in je browser, niets wordt verzonden, en gebruikt dezelfde logica als de hints in het spel - elke stap is een gevolgtrekking, nooit een gok.",
+        "link": "Sudoku-oplosser",
+        "paste": "Plak een puzzel: 81 cijfers, 0 of . voor leeg",
+        "next": "Volgende stap",
+        "solve": "Oplossen",
+        "clear": "Wissen",
+        "example": "Voorbeeld",
+        "edit": "Wijzigen",
+        "noSolution": "Deze puzzel heeft geen oplossing. Controleer de gegeven cijfers.",
+        "manySolutions": "Deze puzzel heeft meer dan één oplossing. Voeg gegeven cijfers toe.",
+        "tooFew": "Voer minstens 17 gegeven cijfers in.",
+        "stuck": "De oplosser heeft geen techniek voor de volgende stap.",
+        "done": "Opgelost",
+        "placed": "Plaats {d} in {cell}",
+        "removed": "Verwijder {d} uit {cells}",
+        "rating": "moeilijkheid {r}",
+        "steps": "{n} stappen",
+        "faq": [
+          [
+            "Welke technieken gebruikt de oplosser?",
+            "Dezelfde als de hints in het spel, in dezelfde volgorde: singles, geblokkeerde kandidaten, paren en drietallen, vissen, vleugels, unieke patronen, ketens, bijna gesloten sets en afwingingsnetwerken. Elke stap is een logische gevolgtrekking, nooit een gok, en de moeilijkste stap bepaalt de moeilijkheid."
+          ],
+          [
+            "Werkt het voor elke sudoku?",
+            "Voor elke puzzel met precies één oplossing. Puzzels zonder oplossing of met meerdere worden gemeld in plaats van opgelost, en een puzzel heeft minstens 17 gegeven cijfers nodig."
+          ],
+          [
+            "Wordt mijn puzzel verzonden?",
+            "Nee. De oplosser draait volledig in je browser, ook offline. Je kunt een puzzel delen door zijn 81 cijfers als ?p= aan het adres toe te voegen."
+          ]
+        ]
+      }
     },
     "pl": {
       "title": "Bare Sudoku: darmowe sudoku online, bez reklam, bez rejestracji",
@@ -990,7 +1270,47 @@
       "androidSource": "Kod Androida",
       "updated": "Aktualizacja",
       "languagesLabel": "Języki",
-      "ogAlt": "Logo Bare Sudoku ze słowami Darmowe sudoku online, bez reklam"
+      "ogAlt": "Logo Bare Sudoku ze słowami Darmowe sudoku online, bez reklam",
+      "dailyTitle": "Codzienne sudoku: nowa zagadka każdego dnia, bez reklam",
+      "dailyDescription": "Nowe sudoku co dzień na pięciu poziomach, ta sama dla każdego. Rozwiąż od Łatwej do Mistrz i podziel swoim czasem. Bez reklam, bez rejestracji.",
+      "dailyH1": "Codzienne sudoku",
+      "dailyIntro": "Każdego dnia pojawia się jedna nowa zagadka na poziom, taka sama dla każdego gracza na świecie. Rozwiąż ją, a potem podziel się swoim czasem ze znajomymi. Codzienne sudoku jest generowane na Twoim urządzeniu z daty, więc działa również offline, a wczorajsza zagadka znika o północy.",
+      "solver": {
+        "title": "Solwer sudoku: rozwiązanie krok po kroku z technikami",
+        "description": "Wklej lub wpisz sudoku i uzyskaj rozwiązanie krok po kroku. Każdy ruch nazywa swoją technikę, od singli do X-Wing i łańcuchów, wraz z oceną trudności.",
+        "h1": "Solwer sudoku, krok po kroku",
+        "intro": "Wpisz cyfry danej zagadki do siatki lub wklej 81 znaków (cyfry; 0 lub kropka dla pustych pól). Następny krok pokazuje jeden ruch naraz z techniką za nim; Rozwiąż wyświetla każdy krok i kończy się poziomem i oceną puzzle'a. Solwer działa w przeglądarce, nic nie jest wysyłane, i używa tej samej logiki co podpowiedzi w grze, więc każdy krok to dedukcja, nigdy zgadywanie.",
+        "link": "Solwer sudoku",
+        "paste": "Wklej zagadkę: 81 cyfr, 0 lub . dla pustych pól",
+        "next": "Następny krok",
+        "solve": "Rozwiąż",
+        "clear": "Wyczyść",
+        "example": "Przykład",
+        "edit": "Edytuj",
+        "noSolution": "Ta zagadka nie ma rozwiązania. Sprawdź cyfry dane.",
+        "manySolutions": "Ta zagadka ma więcej niż jedno rozwiązanie. Dodaj cyfry.",
+        "tooFew": "Wpisz co najmniej 17 cyfr danych.",
+        "stuck": "Solwer nie ma techniki dla następnego kroku.",
+        "done": "Rozwiązane",
+        "placed": "Wstaw {d} w {cell}",
+        "removed": "Usuń {d} z {cells}",
+        "rating": "ocena {r}",
+        "steps": "{n} kroków",
+        "faq": [
+          [
+            "Jakie techniki używa solwer?",
+            "Te same, co podpowiedzi w grze, w tej samej kolejności: single, zakluczone kandydaty, pary i trójki, ryby, skrzydła, wzory unikatowości, łańcuchy, prawie zablokowane zbiory i sieci wymuszające. Każdy krok to dedukcja logiczna, nigdy zgadywanie, a najtrudniejszy krok określa ocenę."
+          ],
+          [
+            "Czy działa dla każdego sudoku?",
+            "Dla każdej zagadki z dokładnie jednym rozwiązaniem. Zagadki bez rozwiązania lub z kilkoma są raportowane zamiast rozwiązywane, a zagadka musi mieć co najmniej 17 cyfr danych."
+          ],
+          [
+            "Czy moja zagadka jest wysyłana?",
+            "Nie. Solwer działa całkowicie w przeglądarce, również offline. Możesz udostępnić zagadkę, dodając jej 81 cyfr do adresu jako ?p=."
+          ]
+        ]
+      }
     },
     "cs": {
       "title": "Bare Sudoku: sudoku online zdarma, bez reklam, bez registrace",
@@ -1065,7 +1385,47 @@
       "androidSource": "Zdrojový kód pro Android",
       "updated": "Aktualizováno",
       "languagesLabel": "Jazyky",
-      "ogAlt": "Logo Bare Sudoku se slovy Sudoku online zdarma, bez reklam"
+      "ogAlt": "Logo Bare Sudoku se slovy Sudoku online zdarma, bez reklam",
+      "dailyTitle": "Denní Sudoku: Nová Hádanka Každý Den, Zdarma a Bez Reklam",
+      "dailyDescription": "Každý den nová sudoku v pěti úrovních, stejná hádanka pro všechny. Vyřešte dnešní hádanku od Lehké po Mistra a sdílejte svůj čas. Bez reklam, bez registrace.",
+      "dailyH1": "Denní Sudoku",
+      "dailyIntro": "Každý den přichází jedna nová hádanka na každou úroveň, stejná pro každého hráče na světě. Vyřešte ji a pak se podělte o svůj čas s přáteli. Denní hádanka se generuje na vašem zařízení z data, takže funguje i offline a včerejší hádanka zmizí v půlnoc.",
+      "solver": {
+        "title": "Sudoku Řešitel: Řešení Krok za Krokem s Technikami",
+        "description": "Vložte nebo zadejte jakékoliv Sudoku a získejte řešení krok za krokem. Každý tah jmenuje svou techniku, od singlů po X-Wing a řetězce, s obtížností.",
+        "h1": "Sudoku řešitel, krok za krokem",
+        "intro": "Zadejte čísla do mřížky nebo vložte 81 znaků (číslice; 0 nebo tečka pro prázdné buňky). Další krok zobrazuje jeden tah najednou s technikou za ním; Vyřešit uvádí každý krok a skončí úrovní hádanky a jejím ratingem. Řešitel běží ve vašem prohlížeči, nic se nenahraje a používá stejnou logiku jako nápovědy ve hře, takže každý krok je dedukce, nikdy hádání.",
+        "link": "Sudoku řešitel",
+        "paste": "Vložit hádanku: 81 číslic, 0 nebo . pro prázdné buňky",
+        "next": "Další krok",
+        "solve": "Vyřešit",
+        "clear": "Vyčistit",
+        "example": "Příklad",
+        "edit": "Upravit",
+        "noSolution": "Tato hádanka nemá řešení. Zkontrolujte čísla.",
+        "manySolutions": "Tato hádanka má více řešení. Přidejte čísla.",
+        "tooFew": "Zadejte alespoň 17 čísel.",
+        "stuck": "Řešitel nemá techniku na další krok.",
+        "done": "Vyřešeno",
+        "placed": "Vložit {d} do {cell}",
+        "removed": "Odebrat {d} z {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} kroků",
+        "faq": [
+          [
+            "Které techniky řešitel používá?",
+            "Stejné jako nápovědy ve hře, vyzkoušené ve stejném pořadí: singlů, uzamčených kandidátů, párů a trojic, ryb, křídel, vzorů jedinečnosti, řetězců, téměř uzamčených množin a vynucovacích sítí. Každý krok je logická dedukce, nikdy hádání, a nejtěžší krok nastavuje rating."
+          ],
+          [
+            "Funguje to pro každou Sudoku?",
+            "Pro jakoukoli hádanku s přesně jedním řešením. Hádanky bez řešení nebo s více řešeními se hlásí místo řešení a hádanka potřebuje alespoň 17 čísel."
+          ],
+          [
+            "Nahraje se moje hádanka?",
+            "Ne. Řešitel běží zcela ve vašem prohlížeči, offline také. Hádanku si můžete sdílet přidáním jejích 81 číslic do adresy jako ?p=."
+          ]
+        ]
+      }
     },
     "sk": {
       "title": "Bare Sudoku: sudoku online zadarmo, bez reklám, bez registrácie",
@@ -1140,7 +1500,47 @@
       "androidSource": "Zdrojový kód pre Android",
       "updated": "Aktualizované",
       "languagesLabel": "Jazyky",
-      "ogAlt": "Logo Bare Sudoku so slovami Sudoku online zadarmo, bez reklám"
+      "ogAlt": "Logo Bare Sudoku so slovami Sudoku online zadarmo, bez reklám",
+      "dailyTitle": "Denné Sudoku: Nový Hlavolam Každý Deň, Zadarmo a Bez Reklám",
+      "dailyDescription": "Nové sudoku v piatich úrovniach, rovnaký hlavolam pre všetkých. Vyriešte ho od Ľahkej po Majstra a zdieľajte svoj čas. Bez reklám, bez registrácie.",
+      "dailyH1": "Denné Sudoku",
+      "dailyIntro": "Každý deň príde jeden nový hlavolam na každú úroveň, rovnaký pre každého hráča na svete. Vyriešte ho a potom sa podelte o svoj čas s priateľmi. Denný hlavolam sa generuje na vašom zariadení z dátumu, takže funguje aj offline a včerajší hlavolam zmizne o polnoci.",
+      "solver": {
+        "title": "Sudoku Riešiteľ: Riešenie Krok za Krokom s Technikami",
+        "description": "Vložte alebo zadajte ľubovoľné Sudoku a získajte riešenie krok za krokom. Každý ťah pomenúva svoju techniku, od singlov po X-Wing a reťazce, s obtížnosťou.",
+        "h1": "Sudoku riešiteľ, krok za krokom",
+        "intro": "Zadajte číslice do mriežky alebo vložte 81 znakov (číslice; 0 alebo bodka pre prázdne bunky). Ďalší krok zobrazuje jeden ťah naraz s technikou za ním; Vyriešiť uvádza každý krok a skončí úrovňou hlavolamu a jeho ratingom. Riešiteľ beží vo vašom prehliadači, nič sa nenahrá a používa rovnakú logiku ako nápovedy v hre, takže každý krok je dedukcia, nikdy hádanie.",
+        "link": "Sudoku riešiteľ",
+        "paste": "Vložiť hlavolam: 81 číslic, 0 alebo . pre prázdne bunky",
+        "next": "Ďalší krok",
+        "solve": "Vyriešiť",
+        "clear": "Vyčistiť",
+        "example": "Príklad",
+        "edit": "Upraviť",
+        "noSolution": "Tento hlavolam nemá riešenie. Skontrolujte číslice.",
+        "manySolutions": "Tento hlavolam má viac riešení. Pridajte číslice.",
+        "tooFew": "Zadajte aspoň 17 číslic.",
+        "stuck": "Riešiteľ nemá techniku na ďalší krok.",
+        "done": "Vyriešené",
+        "placed": "Vložiť {d} do {cell}",
+        "removed": "Odstrániť {d} z {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} krokov",
+        "faq": [
+          [
+            "Ktoré techniky riešiteľ používa?",
+            "Rovnaké ako nápovedy v hre, skúšané v rovnakom poradí: singlí, uzamknutých kandidátov, párov a trojíc, rýb, krídel, vzorov jedinečnosti, reťazcov, takmer uzamknutých množín a vynucovacích sietí. Každý krok je logická dedukcia, nikdy hádanie, a najtažší krok nastavuje rating."
+          ],
+          [
+            "Funguje to pre každé Sudoku?",
+            "Pre ľubovoľný hlavolam s presne jedným riešením. Hlavolamy bez riešenia alebo s viacerými riešeniami sa hlásia miesto riešenia a hlavolam potrebuje aspoň 17 číslic."
+          ],
+          [
+            "Nahrá sa môj hlavolam?",
+            "Nie. Riešiteľ beží úplne vo vašom prehliadači, offline tiež. Hlavolam si môžete zdieľať pridaním jeho 81 číslic do adresy ako ?p=."
+          ]
+        ]
+      }
     },
     "hu": {
       "title": "Bare Sudoku: ingyenes online sudoku, reklám és regisztráció nélkül",
@@ -1215,7 +1615,47 @@
       "androidSource": "Android forráskód",
       "updated": "Frissítve",
       "languagesLabel": "Nyelvek",
-      "ogAlt": "Bare Sudoku logó az Ingyenes online sudoku, reklám nélkül felirattal"
+      "ogAlt": "Bare Sudoku logó az Ingyenes online sudoku, reklám nélkül felirattal",
+      "dailyTitle": "Napi Sudoku: Új Feladat Minden Nap, Ingyenes és Reklammentes",
+      "dailyDescription": "Napi sudoku öt szinten, mindenki számára ugyanaz a feladat. Oldd meg Könnytől Mesterig és oszd meg az időd. Nincs reklám, nincs regisztráció.",
+      "dailyH1": "Napi Sudoku",
+      "dailyIntro": "Minden nap jön egy új feladat szintenként, ugyanaz a világ összes játékosának. Oldd meg, majd oszd meg az időd a barátaiddal. A napi feladat az eszközödön a dátumból jön létre, így offline is működik, és a tegnapi feladat éjfélkor eltűnik.",
+      "solver": {
+        "title": "Sudoku Megoldó: Lépésről Lépésre Megoldás Technikákkal",
+        "description": "Illessz be vagy írj Sudokut és kapj megoldást lépésről lépésre. Minden lépés megnevezi technikáját az X-Wing és láncokig, besorolással.",
+        "h1": "Sudoku megoldó, lépésről lépésre",
+        "intro": "Írja be az adottakat a rácsba vagy illesszen be 81 karaktert (számjegyek; üres cellához 0 vagy pont). Következő lépés mutat egy lépést egy időben a mögötti technikával; Megoldás felsorolja az összes lépést és véget ér a feladat szintjével és besorolásával. A megoldó a böngészőjében fut, semmi nem töltődik fel, és ugyanazt a logikát használja, mint a játék tippjei, tehát minden lépés dedukció, sohasem találgatás.",
+        "link": "Sudoku megoldó",
+        "paste": "Feladat beillesztése: 81 számjegy, 0 vagy . üres cellához",
+        "next": "Következő lépés",
+        "solve": "Megoldás",
+        "clear": "Törlés",
+        "example": "Példa",
+        "edit": "Szerkesztés",
+        "noSolution": "Ennek a feladatnak nincs megoldása. Ellenőrizze az adottakat.",
+        "manySolutions": "Ennek a feladatnak több megoldása van. Adjon hozzá adottakat.",
+        "tooFew": "Adjon meg legalább 17 adottat.",
+        "stuck": "A megoldónak nincs technikája a következő lépéshez.",
+        "done": "Megoldva",
+        "placed": "{d} beírása: {cell}",
+        "removed": "{d} eltávolítása: {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} lépés",
+        "faq": [
+          [
+            "Milyen technikákat használ a megoldó?",
+            "Ugyanazokat, mint a játék tippjei, ugyanabban a sorrendben: egyes jelöltek, zárt jelöltek, párok és hármasok, halak, szárnyak, egyediségi minták, láncok, szinte zárt halmazok és kényszerhálók. Minden lépés logikai dedukció, sohasem találgatás, és a legnehezebb lépés határozza meg a besorolást."
+          ],
+          [
+            "Minden Sudokuhoz működik?",
+            "Minden olyan feladathoz, amelynek pontosan egy megoldása van. Az olyan feladatok, amelyeknek nincs vagy több megoldásuk van, jelentésként jelennek meg megoldás helyett, és egy feladatnak legalább 17 adottra van szüksége."
+          ],
+          [
+            "Feltöltésre kerül a feladatom?",
+            "Nem. A megoldó teljes egészében a böngészőjében fut, offline is. Egy feladatot megoszthat úgy, hogy a 81 számjegyét az URL-hez adja ?p=."
+          ]
+        ]
+      }
     },
     "ro": {
       "title": "Bare Sudoku: sudoku gratuit online, fără reclame, fără cont",
@@ -1290,7 +1730,47 @@
       "androidSource": "Cod sursă Android",
       "updated": "Actualizat",
       "languagesLabel": "Limbi",
-      "ogAlt": "Logo Bare Sudoku cu textul Sudoku gratuit online, fără reclame"
+      "ogAlt": "Logo Bare Sudoku cu textul Sudoku gratuit online, fără reclame",
+      "dailyTitle": "Sudoku Zilei: Puzzle Nou, Gratuit și Fără Reclame",
+      "dailyDescription": "Sudoku nou zilnic la cinci niveluri, același puzzle pentru toți. Rezolvă de la Ușor la Maestru și distribuie scorul. Fără reclame, fără cont.",
+      "dailyH1": "Sudoku zilei",
+      "dailyIntro": "În fiecare zi vine un puzzle nou la fiecare nivel, același pentru toți jucătorii din lume. Rezolvă-l, apoi distribuie-ți scorul cu prietenii. Puzzle-ul zilei se generează pe dispozitivul tău din dată, deci funcționează și offline, și puzzle-ul de ieri dispare la miezul nopții.",
+      "solver": {
+        "title": "Rezolvitor Sudoku: Soluție Pas cu Pas cu Tehnici",
+        "description": "Lipește sau tastează orice Sudoku și obține soluția pas cu pas. Fiecare mutare numește tehnica sa, de la single-uri la X-Wing și lanțuri, cu dificultatea.",
+        "h1": "Rezolvitor Sudoku, pas cu pas",
+        "intro": "Tastează cifrele în grilă sau lipește 81 de caractere (cifre; 0 sau punct pentru celule goale). Pasul următor arată o mutare la rând cu tehnica din spate; Rezolvă listează fiecare pas și se termină cu nivelul și dificultatea puzzle-ului. Rezolvitorul rulează în browser-ul tău, nimic nu se încarcă, și folosește aceeași logică ca indiciile din joc, deci fiecare pas este o deducție, niciodată o ghicire.",
+        "link": "Rezolvitor Sudoku",
+        "paste": "Lipește puzzle: 81 de cifre, 0 sau . pentru celule goale",
+        "next": "Pasul următor",
+        "solve": "Rezolvă",
+        "clear": "Șterge",
+        "example": "Exemplu",
+        "edit": "Editează",
+        "noSolution": "Acest puzzle nu are soluție. Verifică cifrele.",
+        "manySolutions": "Acest puzzle are mai multe soluții. Adaugă cifre.",
+        "tooFew": "Introduce cel puțin 17 cifre.",
+        "stuck": "Rezolvitorul nu are tehnică pentru pasul următor.",
+        "done": "Rezolvat",
+        "placed": "Plasează {d} în {cell}",
+        "removed": "Elimină {d} din {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} pași",
+        "faq": [
+          [
+            "Ce tehnici folosește rezolvitorul?",
+            "Aceleași ca indiciile din joc, încercate în aceeași ordine: single-uri, candidați blocați, perechi și triplete, pești, aripi, modele de unicitate, lanțuri, mulțimi aproape blocate și rețele forțate. Fiecare pas este o deducție logică, niciodată o ghicire, și pasul cel mai greu stabilește dificultatea."
+          ],
+          [
+            "Funcționează pentru orice Sudoku?",
+            "Pentru orice puzzle cu exact o soluție. Puzzle-urile fără soluție sau cu mai multe sunt raportate în loc să fie rezolvate, și un puzzle are nevoie de cel puțin 17 cifre."
+          ],
+          [
+            "Puzzle-ul meu este încărcat?",
+            "Nu. Rezolvitorul rulează în întregime în browser-ul tău, offline de asemenea. Puteți partaja un puzzle adăugând 81 de cifre la adresă ca ?p=."
+          ]
+        ]
+      }
     },
     "el": {
       "title": "Bare Sudoku: δωρεάν sudoku online, χωρίς διαφημίσεις, χωρίς εγγραφή",
@@ -1365,7 +1845,47 @@
       "androidSource": "Κώδικας Android",
       "updated": "Ενημέρωση",
       "languagesLabel": "Γλώσσες",
-      "ogAlt": "Λογότυπο Bare Sudoku με τις λέξεις Δωρεάν sudoku online, χωρίς διαφημίσεις"
+      "ogAlt": "Λογότυπο Bare Sudoku με τις λέξεις Δωρεάν sudoku online, χωρίς διαφημίσεις",
+      "dailyTitle": "Sudoku Ημέρας: Γρίφος Κάθε Μέρα, Δωρεάν",
+      "dailyDescription": "Sudoku κάθε μέρα σε πέντε επίπεδα, ίδιος για όλους. Λύστε από Εύκολο ως Μάστερ και μοιραστείτε χρόνο. Χωρίς διαφημίσεις, χωρίς εγγραφή.",
+      "dailyH1": "Sudoku της Ημέρας",
+      "dailyIntro": "Κάθε μέρα έρχεται ένας νέος γρίφος ανά επίπεδο, ο ίδιος για κάθε παίκτη στον κόσμο. Λύστε τον, στη συνέχεια μοιραστείτε το χρόνο σας με φίλους. Ο ημερήσιος γρίφος δημιουργείται στη συσκευή σας από την ημερομηνία, οπότε λειτουργεί και offline, και ο χθεσινός γρίφος εξαφανίζεται τα μεσάνυχτα.",
+      "solver": {
+        "title": "Επίλυση Sudoku: Λύση Βήμα-προς-Βήμα με Τεχνικές",
+        "description": "Επικολλήστε ή γράψτε Sudoku για λύση βήμα-προς-βήμα. Κάθε κίνηση δείχνει την τεχνική: singles ως X-Wing, αλυσίδες, βαθμό.",
+        "h1": "Επίλυση Sudoku, βήμα-προς-βήμα",
+        "intro": "Πληκτρολογήστε τα δεδομένα στο πλέγμα ή επικολλήστε 81 χαρακτήρες (ψηφία· 0 ή τελεία για κενά κελιά). Το επόμενο βήμα δείχνει μία κίνηση κάθε φορά με την τεχνική πίσω της· Επίλυση παραθέτει κάθε βήμα και τελειώνει με το επίπεδο του γρίφου και το βαθμό του. Ο επίλυσης τρέχει στον browser σας, τίποτα δεν ανεβαίνει, και χρησιμοποιεί την ίδια λογική με τις συμβουλές του παιχνιδιού, οπότε κάθε βήμα είναι αφαίρεση, ποτέ μαντεία.",
+        "link": "Επίλυση Sudoku",
+        "paste": "Επικολλήστε γρίφο: 81 ψηφία, 0 ή . για κενά κελιά",
+        "next": "Επόμενο βήμα",
+        "solve": "Επίλυση",
+        "clear": "Εκκαθάριση",
+        "example": "Παράδειγμα",
+        "edit": "Επεξεργασία",
+        "noSolution": "Αυτός ο γρίφος δεν έχει λύση. Ελέγξτε τα δεδομένα.",
+        "manySolutions": "Αυτός ο γρίφος έχει περισσότερες από μία λύσεις. Προσθέστε δεδομένα.",
+        "tooFew": "Εισάγετε τουλάχιστον 17 δεδομένα.",
+        "stuck": "Ο επίλυσης δεν έχει τεχνική για το επόμενο βήμα.",
+        "done": "Λύθηκε",
+        "placed": "Τοποθετήστε {d} σε {cell}",
+        "removed": "Αφαιρέστε {d} από {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} βήματα",
+        "faq": [
+          [
+            "Ποιες τεχνικές χρησιμοποιεί ο επίλυσης;",
+            "Τις ίδιες με τις συμβουλές του παιχνιδιού, δοκιμάζονται με την ίδια σειρά: singles, κλειδωμένοι υποψήφιοι, ζεύγη και τριάδες, ψάρια, φτερά, μοτίβα μοναδικότητας, αλυσίδες, σχεδόν κλειδωμένα σύνολα και δίκτυα αναγκασμού. Κάθε βήμα είναι λογική αφαίρεση, ποτέ μαντεία, και το δυσκολότερο βήμα καθορίζει το βαθμό."
+          ],
+          [
+            "Λειτουργεί για κάθε Sudoku;",
+            "Για οποιοδήποτε γρίφο με ακριβώς μία λύση. Γρίφοι χωρίς λύση ή με περισσότερες λύσεις αναφέρονται αντί να επιλύονται, και ένας γρίφος χρειάζεται τουλάχιστον 17 δεδομένα."
+          ],
+          [
+            "Ανεβαίνει ο γρίφος μου;",
+            "Όχι. Ο επίλυσης τρέχει εντελώς στον browser σας, offline επίσης. Μπορείτε να μοιραστείτε ένα γρίφο προσθέτοντας τα 81 ψηφία του στη διεύθυνση ως ?p=."
+          ]
+        ]
+      }
     },
     "sv": {
       "title": "Bare Sudoku: gratis sudoku online, utan reklam, utan konto",
@@ -1440,7 +1960,47 @@
       "androidSource": "Android-källkod",
       "updated": "Uppdaterad",
       "languagesLabel": "Språk",
-      "ogAlt": "Bare Sudoku-logotyp med orden Gratis sudoku online, utan reklam"
+      "ogAlt": "Bare Sudoku-logotyp med orden Gratis sudoku online, utan reklam",
+      "dailyTitle": "Daglig Sudoku: En Ny Pussel Varje Dag, Gratis och Reklamfri",
+      "dailyDescription": "En ny Sudoku varje dag på fem nivåer, samma pussel för alla. Lösa dagens pussel, från Lätt till Mästare, och dela din tid. Ingen reklam, inget konto.",
+      "dailyH1": "Daglig Sudoku",
+      "dailyIntro": "Varje dag kommer en ny pussel per nivå, samma för varje spelare i världen. Lös den och dela sedan din tid med vänner. Daglig pussel genereras på din enhet från datumet, så det fungerar offline också, och gårdagens pussel är borta vid midnatt.",
+      "solver": {
+        "title": "Sudoku-lösare: Steg-för-steg-lösning med tekniker",
+        "description": "Klistra in eller skriv en Sudoku och få lösningen steg för steg. Varje drag visar sin teknik, från singlar till X-Wing, med svårighetsgrad.",
+        "h1": "Sudoku-lösare, steg för steg",
+        "intro": "Skriv de givna i rutnätet eller klistra in 81 tecken (siffror, med 0 eller punkt för tomma celler). Nästa steg visar ett drag i taget med tekniken bakom det; Lös listar varje steg och slutar med pusslets nivå och rating. Lösaren körs i din webbläsare, ingenting laddas upp, och den använder samma logik som spelets tips, så varje steg är ett avdrag, aldrig en gissning.",
+        "link": "Sudoku-lösare",
+        "paste": "Klistra in pussel: 81 siffror, 0 eller . för tomma celler",
+        "next": "Nästa steg",
+        "solve": "Lös",
+        "clear": "Rensa",
+        "example": "Exempel",
+        "edit": "Redigera",
+        "noSolution": "Det här pusslet har ingen lösning. Kontrollera de givna.",
+        "manySolutions": "Det här pusslet har mer än en lösning. Lägg till givna.",
+        "tooFew": "Ange minst 17 givna.",
+        "stuck": "Lösaren har ingen teknik för nästa steg.",
+        "done": "Löst",
+        "placed": "Placera {d} i {cell}",
+        "removed": "Ta bort {d} från {cells}",
+        "rating": "betyg {r}",
+        "steps": "{n} steg",
+        "faq": [
+          [
+            "Vilka tekniker använder lösaren?",
+            "Samma som spelets tips, provade i samma ordning: singlar, låsta kandidater, par och trippel, fiskar, vingar, unikitetsmönster, kedjor, nästan låsta uppsättningar och tvingande nät. Varje steg är ett logiskt avdrag, aldrig en gissning, och det svåraste steget bestämmer betyget."
+          ],
+          [
+            "Fungerar det för någon Sudoku?",
+            "För vilken pussel som helst med exakt en lösning. Pussel utan lösning eller med flera rapporteras istället för lösta, och ett pussel kräver minst 17 givna."
+          ],
+          [
+            "Laddas mitt pussel upp?",
+            "Nej. Lösaren körs helt i din webbläsare, offline också. Du kan dela ett pussel genom att lägga till dess 81 siffror på adressen som ?p=."
+          ]
+        ]
+      }
     },
     "da": {
       "title": "Bare Sudoku: gratis sudoku online, uden reklamer, uden konto",
@@ -1515,7 +2075,47 @@
       "androidSource": "Android-kildekode",
       "updated": "Opdateret",
       "languagesLabel": "Sprog",
-      "ogAlt": "Bare Sudoku-logo med ordene Gratis sudoku online, uden reklamer"
+      "ogAlt": "Bare Sudoku-logo med ordene Gratis sudoku online, uden reklamer",
+      "dailyTitle": "Daglig Sudoku: En Ny Opgave Hver Dag, Gratis og Uden Reklamer",
+      "dailyDescription": "En ny Sudoku hver dag på fem niveauer, samme opgave for alle. Løs dagens opgave, fra Let til Mester, og del din tid. Ingen reklamer, ingen konto.",
+      "dailyH1": "Daglig Sudoku",
+      "dailyIntro": "Hver dag kommer en ny opgave pr. niveau, samme for hver spiller i verden. Løs den og del derefter din tid med venner. Den daglige opgave genereres på din enhed ud fra datoen, så den virker også offline, og gårsdagens opgave er væk ved midnat.",
+      "solver": {
+        "title": "Sudoku-løser: Trin-for-trin-løsning med teknikker",
+        "description": "Indsæt eller skriv enhver Sudoku og få løsningen trin for trin. Hvert træk navngiver sin teknik, fra singles til X-Wing og kæder, med sværhedsgrad.",
+        "h1": "Sudoku-løser, trin for trin",
+        "intro": "Skriv de givne tal ind i gitteret eller indsæt 81 tegn (tal, med 0 eller prik for tomme celler). Næste trin viser ét træk ad gangen med teknikken bag det; Løs viser hvert trin og slutter med opgavens niveau og rating. Løseren kører i din browser, intet uploades, og den bruger samme logik som spillets hints, så hvert trin er en slutning, aldrig et gæt.",
+        "link": "Sudoku-løser",
+        "paste": "Indsæt opgave: 81 tal, 0 eller . for tomme celler",
+        "next": "Næste trin",
+        "solve": "Løs",
+        "clear": "Slet",
+        "example": "Eksempel",
+        "edit": "Rediger",
+        "noSolution": "Denne opgave har ingen løsning. Kontroller de givne tal.",
+        "manySolutions": "Denne opgave har mere end én løsning. Tilføj givne tal.",
+        "tooFew": "Angiv mindst 17 givne tal.",
+        "stuck": "Løseren har ingen teknik til næste trin.",
+        "done": "Løst",
+        "placed": "Placer {d} i {cell}",
+        "removed": "Fjern {d} fra {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} trin",
+        "faq": [
+          [
+            "Hvilke teknikker bruger løseren?",
+            "De samme som spillets hints, prøvet i samme rækkefølge: singles, låste kandidater, par og tripler, fisk, vinger, unikhedsmønstre, kæder, næsten låste sæt og tvangnet. Hvert trin er en logisk slutning, aldrig et gæt, og det sværeste trin sætter ratingen."
+          ],
+          [
+            "Virker det for enhver Sudoku?",
+            "For enhver opgave med præcis én løsning. Opgaver uden løsning eller med flere rapporteres i stedet for løst, og en opgave kræver mindst 17 givne tal."
+          ],
+          [
+            "Uploades min opgave?",
+            "Nej. Løseren kører helt i din browser, også offline. Du kan dele en opgave ved at tilføje dens 81 tal til adressen som ?p=."
+          ]
+        ]
+      }
     },
     "nb": {
       "title": "Bare Sudoku: gratis sudoku på nett, uten reklame, uten konto",
@@ -1590,7 +2190,47 @@
       "androidSource": "Android-kildekode",
       "updated": "Oppdatert",
       "languagesLabel": "Språk",
-      "ogAlt": "Bare Sudoku-logo med ordene Gratis sudoku på nett, uten reklame"
+      "ogAlt": "Bare Sudoku-logo med ordene Gratis sudoku på nett, uten reklame",
+      "dailyTitle": "Daglig Sudoku: Et Nytt Brett Hver Dag, Gratis og Uten Reklame",
+      "dailyDescription": "Et nytt Sudoku hver dag på fem nivåer, samme brett for alle. Løs dagens brett, fra Lett til Mester, og del tiden din. Ingen reklame, ingen konto.",
+      "dailyH1": "Daglig Sudoku",
+      "dailyIntro": "Hver dag kommer ett nytt brett per nivå, samme for hver spiller i verden. Løs det og del siden tiden din med venner. Det daglige brettet genereres på enheten din fra datoen, så det fungerer frakoblet også, og gårsdagens brett er borte ved midnatt.",
+      "solver": {
+        "title": "Sudoku-løser: Trinn-for-trinn-løsning med teknikker",
+        "description": "Lim inn eller skriv et Sudoku og få løsningen trinn for trinn. Hvert trekk viser sin teknikk, fra singler til X-Wing, med vanskelighetsgrad.",
+        "h1": "Sudoku-løser, trinn for trinn",
+        "intro": "Skriv de gitte tallene inn i rutenettet eller lim inn 81 tegn (tall, med 0 eller punkt for tomme celler). Neste trinn viser ett trekk om gangen med teknikken bak det; Løs viser hvert trinn og ender med nivået og vurderingen av brettet. Løseren kjører i nettleseren din, ingenting lastes opp, og den bruker samme logikk som hintsene i spillet, så hvert trinn er en deduksjon, aldri gjetting.",
+        "link": "Sudoku-løser",
+        "paste": "Lim inn brett: 81 tall, 0 eller . for tomme celler",
+        "next": "Neste trinn",
+        "solve": "Løs",
+        "clear": "Slett",
+        "example": "Eksempel",
+        "edit": "Rediger",
+        "noSolution": "Dette brettet har ingen løsning. Kontroller de gitte tallene.",
+        "manySolutions": "Dette brettet har mer enn én løsning. Legg til gitte tall.",
+        "tooFew": "Skriv inn minst 17 gitte tall.",
+        "stuck": "Løseren har ingen teknikk for neste trinn.",
+        "done": "Løst",
+        "placed": "Plasser {d} i {cell}",
+        "removed": "Fjern {d} fra {cells}",
+        "rating": "vurdering {r}",
+        "steps": "{n} trinn",
+        "faq": [
+          [
+            "Hvilke teknikker bruker løseren?",
+            "De samme som hintsene i spillet, prøvd i samme rekkefølge: singler, låste kandidater, par og tripler, fisk, vinger, unike mønstre, kjeder, nesten låste sett og tvangnet. Hvert trinn er en logisk deduksjon, aldri gjetting, og det vanskeligste trinnet setter vurderingen."
+          ],
+          [
+            "Virker det for ethvert Sudoku?",
+            "For ethvert brett med nøyaktig én løsning. Brett uten løsning eller med flere rapporteres i stedet for løst, og et brett krever minst 17 gitte tall."
+          ],
+          [
+            "Lastes brettet mitt opp?",
+            "Nei. Løseren kjører helt i nettleseren din, frakoblet også. Du kan dele ett brett ved å legge til dets 81 tall på adressen som ?p=."
+          ]
+        ]
+      }
     },
     "fi": {
       "title": "Bare Sudoku: ilmainen sudoku netissä, ei mainoksia, ei tiliä",
@@ -1665,7 +2305,47 @@
       "androidSource": "Android-lähdekoodi",
       "updated": "Päivitetty",
       "languagesLabel": "Kielet",
-      "ogAlt": "Bare Sudoku -logo ja teksti Ilmainen sudoku netissä, ei mainoksia"
+      "ogAlt": "Bare Sudoku -logo ja teksti Ilmainen sudoku netissä, ei mainoksia",
+      "dailyTitle": "Paivittainen Sudoku: Uusi palapeli, ilmainen ja ilman mainoksia",
+      "dailyDescription": "Uusi Sudoku paivittain viidella tasolla, sama palapeli kaikille. Ratkaise paivantasapeli helposta Mestariin ja jaa aikasi. Ei mainoksia, ei rekisterointia.",
+      "dailyH1": "Paivittainen Sudoku",
+      "dailyIntro": "Joka paiva tulee yksi uusi palapeli per taso, sama kaikille pelaajille maailmassa. Ratkaise se ja jaa sitten aikasi kavereiden kanssa. Paivittainen palapeli luodaan laitteellasi paivamaarasta, joten se toimii myos offline-tilassa, ja eilisen palapeli on poissa puoliyolla.",
+      "solver": {
+        "title": "Sudoku-ratkaisija: vaiheittainen ratkaisu tekniikoin",
+        "description": "Liita tai kirjoita Sudoku ja saa ratkaisu vaihe vaiheelta. Jokainen siirto näyttää tekniikkansa singleista X-Wingiin, vaikeusasteineen.",
+        "h1": "Sudoku-ratkaisija, vaihe vaiheelta",
+        "intro": "Kirjoita annetut numerot ruudukkoon tai liita 81 merkkia (numerot, 0 tai piste tyhjille soluille). Seuraava vaihe nayttaa yhden siirron kerrallaan tekniikalla taustalla; Ratkaise listaa jokaisen vaiheen ja paattyy palapelin tasoon ja arvioon. Ratkaisija toimii selaimessasi, mitaan ei lataudeta, ja se kayttaa samaa logiiikkaa kuin pelin vihjeet, joten jokainen vaihe on paatelmaa, ei koskaan arvausta.",
+        "link": "Sudoku-ratkaisija",
+        "paste": "Liita palapeli: 81 numeroa, 0 tai . tyhjille soluille",
+        "next": "Seuraava vaihe",
+        "solve": "Ratkaise",
+        "clear": "Tyhjenna",
+        "example": "Esimerkki",
+        "edit": "Muokkaa",
+        "noSolution": "Talla palapeilla ei ole ratkaisua. Tarkista annetut numerot.",
+        "manySolutions": "Talla palapeilla on useampi kuin yksi ratkaisu. Lisaa annettuja numeroita.",
+        "tooFew": "Syota vähintaan 17 annettua numeroa.",
+        "stuck": "Ratkaisijalla ei ole tekniikkaa seuraavaan vaiheeseen.",
+        "done": "Ratkaistu",
+        "placed": "Sijoita {d} kohtaan {cell}",
+        "removed": "Poista {d} kohteista {cells}",
+        "rating": "arvio {r}",
+        "steps": "{n} vaihetta",
+        "faq": [
+          [
+            "Mitka tekniikkat ratkaisija kayttaa?",
+            "Samat kuin pelin vihjeet, kokeiltuna samassa jarjestyksessa: singleit, lukitut ehdokkaat, parit ja kolmikot, kalat, siivet, ainutlaatuisuuskuviot, ketjut, lähes lukitut joukot ja pakotetut verkot. Jokainen vaihe on looginen paatelmä, ei koskaan arvaus, ja vaikein vaihe asettaa arvion."
+          ],
+          [
+            "Toimiiko se kaikille Sudokuille?",
+            "Kaikille palapeille, joissa on tasan yksi ratkaisu. Palapelit ilman ratkaisua tai useammalla kuin yhdella ilmoitetaan ratkaisujen sijasta, ja palapeili vaatii vähintaan 17 annettua numeroa."
+          ],
+          [
+            "Ladataanko palapeliini?",
+            "Ei. Ratkaisija toimii kokonaan selaimessasi, myos offline-tilassa. Voit jaa palapelin lisäämällä sen 81 numeroa osoitteeseen muodossa ?p=."
+          ]
+        ]
+      }
     },
     "ru": {
       "title": "Bare Sudoku: бесплатное судоку онлайн, без рекламы, без регистрации",
@@ -1740,7 +2420,47 @@
       "androidSource": "Код Android",
       "updated": "Обновлено",
       "languagesLabel": "Языки",
-      "ogAlt": "Логотип Bare Sudoku и надпись Бесплатное судоку онлайн, без рекламы"
+      "ogAlt": "Логотип Bare Sudoku и надпись Бесплатное судоку онлайн, без рекламы",
+      "dailyTitle": "Судоку дня: новый пазл каждый день, бесплатно",
+      "dailyDescription": "Новое судоку каждый день на пяти уровнях, один пазл для всех. Решите сегодняшний пазл от лёгкого до Мастера и поделитесь временем. Без рекламы, без регистрации.",
+      "dailyH1": "Судоку дня",
+      "dailyIntro": "Каждый день приходит один новый пазл на каждый уровень, один для всех игроков мира. Решите его, потом поделитесь временем с друзьями. Судоку дня генерируется на вашем устройстве из даты, поэтому работает оффлайн, и вчерашний пазл исчезает в полночь.",
+      "solver": {
+        "title": "Решатель судоку: пошаговое решение с техниками",
+        "description": "Вставьте или введите судоку и получите решение пошагово. Каждый ход называет свою технику, от синглов до X-Wing и цепочек, с оценкой сложности.",
+        "h1": "Решатель судоку, пошагово",
+        "intro": "Введите заданные цифры в сетку или вставьте 81 символ (цифры; 0 или точка для пустых ячеек). Следующий шаг показывает один ход за раз с техникой за ним; Решить выводит каждый шаг и заканчивается уровнем и рейтингом пазла. Решатель работает в браузере, ничего не загружается, и использует ту же логику, что и подсказки в игре, поэтому каждый шаг это дедукция, никогда не угадывание.",
+        "link": "Решатель судоку",
+        "paste": "Вставьте пазл: 81 цифра, 0 или . для пустых ячеек",
+        "next": "Следующий шаг",
+        "solve": "Решить",
+        "clear": "Очистить",
+        "example": "Пример",
+        "edit": "Редактировать",
+        "noSolution": "Этот пазл не имеет решения. Проверьте заданные цифры.",
+        "manySolutions": "Этот пазл имеет больше одного решения. Добавьте цифры.",
+        "tooFew": "Введите как минимум 17 заданных цифр.",
+        "stuck": "Решатель не имеет техники для следующего шага.",
+        "done": "Решено",
+        "placed": "Поместить {d} в {cell}",
+        "removed": "Убрать {d} из {cells}",
+        "rating": "рейтинг {r}",
+        "steps": "{n} шагов",
+        "faq": [
+          [
+            "Какие техники использует решатель?",
+            "Те же, что подсказки в игре, в том же порядке: синглы, заблокированные кандидаты, пары и тройки, рыбы, крылья, уникальные прямоугольники, цепочки, почти заблокированные наборы и форсирующие сети. Каждый шаг это логическая дедукция, никогда не угадывание, и самый сложный шаг определяет рейтинг."
+          ],
+          [
+            "Работает ли для любого судоку?",
+            "Для любого пазла с ровно одним решением. Пазлы без решения или с несколькими сообщаются вместо решения, и пазл должен иметь как минимум 17 заданных цифр."
+          ],
+          [
+            "Мой пазл загружается?",
+            "Нет. Решатель работает полностью в браузере, также оффлайн. Вы можете поделиться пазлом, добавив его 81 цифру в адрес как ?p=."
+          ]
+        ]
+      }
     },
     "uk": {
       "title": "Bare Sudoku: безкоштовне судоку онлайн, без реклами, без реєстрації",
@@ -1815,7 +2535,47 @@
       "androidSource": "Код Android",
       "updated": "Оновлено",
       "languagesLabel": "Мови",
-      "ogAlt": "Логотип Bare Sudoku і напис Безкоштовне судоку онлайн, без реклами"
+      "ogAlt": "Логотип Bare Sudoku і напис Безкоштовне судоку онлайн, без реклами",
+      "dailyTitle": "Судоку дня: нова головоломка щодня, безкоштовно",
+      "dailyDescription": "Нове судоку кожного дня на п'яти рівнях, одна для всіх. Розв'яжіть від легкої до Майстра й поділіться часом. Без реклами, без реєстрації.",
+      "dailyH1": "Судоку дня",
+      "dailyIntro": "Щодня приходить одна нова головоломка на кожен рівень, одна для всіх гравців світу. Розв'яжіть її, потім поділіться часом із друзями. Судоку дня генерується на вашому пристрої з дати, тому працює офлайн, і вчорашня головоломка зникає опівночі.",
+      "solver": {
+        "title": "Розв'язувач судоку: пошагове рішення з техніками",
+        "description": "Вставте чи введіть судоку й отримайте рішення покроково. Кожен хід називає свою техніку, від синглів до X-Wing і ланцюгів, з оцінкою складності.",
+        "h1": "Розв'язувач судоку, покроково",
+        "intro": "Введіть дані цифри в сітку чи вставте 81 символ (цифри; 0 або крапка для порожніх клітинок). Наступний крок показує один хід за раз з технікою за ним; Розв'язати виводить кожен крок і закінчується рівнем та рейтингом головоломки. Розв'язувач працює в браузері, нічого не завантажується, й використовує ту саму логіку, що й підказки в грі, тому кожен крок це дедукція, ніколи не вгадування.",
+        "link": "Розв'язувач судоку",
+        "paste": "Вставте головоломку: 81 цифра, 0 або . для порожніх клітинок",
+        "next": "Наступний крок",
+        "solve": "Розв'язати",
+        "clear": "Очистити",
+        "example": "Приклад",
+        "edit": "Редагувати",
+        "noSolution": "Ця головоломка не має рішення. Перевірте дані цифри.",
+        "manySolutions": "Ця головоломка має більше одного рішення. Додайте цифри.",
+        "tooFew": "Введіть щонайменше 17 даних цифр.",
+        "stuck": "Розв'язувач не має техніки для наступного кроку.",
+        "done": "Розв'язано",
+        "placed": "Поставити {d} в {cell}",
+        "removed": "Прибрати {d} з {cells}",
+        "rating": "рейтинг {r}",
+        "steps": "{n} кроків",
+        "faq": [
+          [
+            "Які техніки використовує розв'язувач?",
+            "Ті самі, що й підказки в грі, в тому ж порядку: синглі, заблоковані кандидати, пари й трійки, риби, крила, унікальні прямокутники, ланцюги, майже заблоковані набори й форсуючі мережі. Кожен крок це логічна дедукція, ніколи не вгадування, й найскладніший крок визначає рейтинг."
+          ],
+          [
+            "Працює для будь-якого судоку?",
+            "Для будь-якої головоломки з рівно одним рішенням. Головоломки без рішення чи з кількома повідомляються замість розв'язання, й головоломка повинна мати щонайменше 17 даних цифр."
+          ],
+          [
+            "Моя головоломка завантажується?",
+            "Ні. Розв'язувач працює повністю в браузері, також офлайн. Ви можете поділитися головоломкою, додавши її 81 цифру в адресу як ?p=."
+          ]
+        ]
+      }
     },
     "bg": {
       "title": "Bare Sudoku: безплатно судоку онлайн, без реклами, без регистрация",
@@ -1890,7 +2650,47 @@
       "androidSource": "Код за Android",
       "updated": "Обновено",
       "languagesLabel": "Езици",
-      "ogAlt": "Лого на Bare Sudoku с надпис Безплатно судоку онлайн, без реклами"
+      "ogAlt": "Лого на Bare Sudoku с надпис Безплатно судоку онлайн, без реклами",
+      "dailyTitle": "Дневно Судоку: Нова Задача Всеки Ден, Безплатно и Без Реклами",
+      "dailyDescription": "Ново судоку всеки ден на пет нива, една и съща задача за всички. Реши днешната задача от Лесно до Майстор и сподели времето си. Без реклами, без регистрация.",
+      "dailyH1": "Дневно Судоку",
+      "dailyIntro": "Всеки ден идва нова задача за всяко ниво, една и съща за всеки играч в света. Реши я, после сподели времето си с приятели. Дневната задача се генерира на твое устройство от датата, така че работи и офлайн, и вчерашната задача изчезва в полунощ.",
+      "solver": {
+        "title": "Решавач на Судоку: Решение Стъпка-по-Стъпка с Техники",
+        "description": "Залепи или напиши всяко Судоку и получи решението стъпка-по-стъпка. Всеки ход назвава своята техника, от единични кандидати до X-Wing и вериги, с трудност.",
+        "h1": "Решавач на Судоку, стъпка-по-стъпка",
+        "intro": "Напиши цифрите в решетката или залепи 81 символа (цифри; 0 или точка за празни клетки). Следващия ход показва един ход наведнъж с техниката зад него; Реши изброява всеки ход и завършва с ниво на задачата и трудност. Решавачът работи в браузъра ти, нищо не се качва, и използва същата логика като подсказките на игата, така че всеки ход е вывод, никога гадаене.",
+        "link": "Решавач на Судоку",
+        "paste": "Залепи задача: 81 цифри, 0 или . за празни клетки",
+        "next": "Следващия ход",
+        "solve": "Реши",
+        "clear": "Очисти",
+        "example": "Пример",
+        "edit": "Редактирай",
+        "noSolution": "Тази задача няма решение. Провери цифрите.",
+        "manySolutions": "Тази задача има повече от едно решение. Добави цифри.",
+        "tooFew": "Въведи поне 17 цифри.",
+        "stuck": "Решавачът няма техника за следващия ход.",
+        "done": "Решено",
+        "placed": "Постави {d} в {cell}",
+        "removed": "Премахни {d} от {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} хода",
+        "faq": [
+          [
+            "Какви техники използва решавачът?",
+            "Същите като подсказките на игата, опитани в същия ред: единични кандидати, заключени кандидати, двойки и тройки, риби, крила, модели на уникалност, вериги, почти заключени множества и принудни мрежи. Всеки ход е логически вывод, никога гадаене, и най-трудния ход определя трудността."
+          ],
+          [
+            "Работи ли за всяко Судоку?",
+            "За всяка задача с точно едно решение. Задачи без решение или с повече от едно се докладват вместо да се решат, и задачата трябва да има поне 17 цифри."
+          ],
+          [
+            "Качва ли се моята задача?",
+            "Не. Решавачът работи напълно в браузъра ти, офлайн също. Можеш да сподели задача, добавяйки нейните 81 цифри към адреса като ?p=."
+          ]
+        ]
+      }
     },
     "sr": {
       "title": "Bare Sudoku: besplatan sudoku onlajn, bez reklama, bez registracije",
@@ -1965,7 +2765,47 @@
       "androidSource": "Android izvorni kod",
       "updated": "Ažurirano",
       "languagesLabel": "Jezici",
-      "ogAlt": "Bare Sudoku logo sa rečima Besplatan sudoku onlajn, bez reklama"
+      "ogAlt": "Bare Sudoku logo sa rečima Besplatan sudoku onlajn, bez reklama",
+      "dailyTitle": "Dnevni Sudoku: Nova Zagonetka Besplatno, Bez Oglasa",
+      "dailyDescription": "Nova sudoku svakog dana na pet nivoa, ista za sve. Reši zagonetku od Lako do Majstor i podeli vreme. Bez oglasa, bez registracije.",
+      "dailyH1": "Dnevni Sudoku",
+      "dailyIntro": "Svaki dan dolazi nova zagonetka po nivou, ista za sve igrače u svetu. Reši je, zatim podeli vreme sa prijateljima. Dnevna zagonetka se generiše na tvoj uređaj po datumu; zato radi i bez interneta, a juče zagonetka nestaje u ponoć.",
+      "solver": {
+        "title": "Sudoku Rešavač: Rešenje Korak po Korak sa Tehnikama",
+        "description": "Zalepi ili otkucaj bilo koju sudoku i dobij rešenje korak po korak. Svaki potez imenuje svoju tehniku, od singlica do X-Wing-a i lanaca, sa procenom težine.",
+        "h1": "Sudoku rešavač, korak po korak",
+        "intro": "Otkucaj zadate cifre u mrežu ili zalepi 81 karakter (cifre; 0 ili tačka za prazne ćelije). Sledeći korak pokazuje jedan potez odjednom sa tehnikom iza njega; Reši nabraja svaki korak i završava sa nivoom i procenom zagonetke. Rešavač se pokreće u tvom pregledniku, ništa se ne učitava, i koristi istu logiku kao saveti u igri, pa je svaki korak zaključak, nikad nagađanje.",
+        "link": "Sudoku rešavač",
+        "paste": "Zalepi zagonetku: 81 cifra, 0 ili . za prazne ćelije",
+        "next": "Sledeći korak",
+        "solve": "Reši",
+        "clear": "Obriši",
+        "example": "Primer",
+        "edit": "Uredi",
+        "noSolution": "Ova zagonetka nema rešenja. Proveri zadate cifre.",
+        "manySolutions": "Ova zagonetka ima više od jednog rešenja. Dodaj zadate cifre.",
+        "tooFew": "Unesi najmanje 17 zadatih cifara.",
+        "stuck": "Rešavač nema tehniku za sledeći korak.",
+        "done": "Rešeno",
+        "placed": "Unesi {d} u {cell}",
+        "removed": "Ukloni {d} iz {cells}",
+        "rating": "procena {r}",
+        "steps": "{n} koraka",
+        "faq": [
+          [
+            "Koje tehnike koristi rešavač?",
+            "Iste kao saveti u igri, u istom redosledu: singlice, zaključane kandidate, parove i trojke, ribe, krila, jedinstvene obrasce, lance, gotovo zaključane skupove i prisilne mreže. Svaki korak je logički zaključak, nikad nagađanje, a najtežji korak određuje procenu."
+          ],
+          [
+            "Radi li sa svakom sudokuom?",
+            "Sa svakom zagonetkom koja ima tačno jedno rešenje. Zagonetke bez rešenja ili sa više rešenja se javljaju umesto rešavanja, a zagonetka mora da ima najmanje 17 zadatih cifara."
+          ],
+          [
+            "Šalje li se moja zagonetka negde?",
+            "Ne. Rešavač se pokreće potpuno u tvom pregledniku, i bez interneta. Zagonetku možeš podeliti dodavanjem 81 cifre adresi kao ?p=."
+          ]
+        ]
+      }
     },
     "hr": {
       "title": "Bare Sudoku: besplatan sudoku online, bez reklama, bez registracije",
@@ -2040,7 +2880,47 @@
       "androidSource": "Android izvorni kod",
       "updated": "Ažurirano",
       "languagesLabel": "Jezici",
-      "ogAlt": "Bare Sudoku logo s riječima Besplatan sudoku online, bez reklama"
+      "ogAlt": "Bare Sudoku logo s riječima Besplatan sudoku online, bez reklama",
+      "dailyTitle": "Dnevni Sudoku: Nova Zagonetka Besplatno, Bez Reklama",
+      "dailyDescription": "Nova sudoku svakog dana na pet razina, ista za sve. Riješi zagonetku od Lako do Majstor i podijeli vrijeme. Bez reklama, bez registracije.",
+      "dailyH1": "Dnevni Sudoku",
+      "dailyIntro": "Svaki dan dolazi nova zagonetka po razini, ista za sve igrače u svijetu. Riješi je, zatim podijeli vrijeme s prijateljima. Dnevna zagonetka se generiše na tvom uređaju prema datumu; zato radi i bez interneta, a jučerašnja zagonetka nestaje u ponoć.",
+      "solver": {
+        "title": "Sudoku Rješavač: Rješenje Korak po Korak s Tehnikama",
+        "description": "Zalijepi ili upiši bilo koju sudoku i dobij rješenje korak po korak. Svaki potez imena svoju tehniku, od singlica do X-Wing-a i lanaca, s procjenom težine.",
+        "h1": "Sudoku rješavač, korak po korak",
+        "intro": "Upiši zadane znamenke u mrežu ili zalijepi 81 znak (znamenke; 0 ili točka za prazne ćelije). Sljedeći korak prikazuje jedan potez odjednom s tehnikom iza njega; Riješi navodi svaki korak i završava s razinom i procjenom zagonetke. Rješavač se pokreće u tvom pregledniku, ništa se ne učitava, i koristi istu logiku kao savjeti u igri, pa je svaki korak zaključak, nikad nagađanje.",
+        "link": "Sudoku rješavač",
+        "paste": "Zalijepi zagonetku: 81 znamenka, 0 ili . za prazne ćelije",
+        "next": "Sljedeći korak",
+        "solve": "Riješi",
+        "clear": "Obriši",
+        "example": "Primjer",
+        "edit": "Uredi",
+        "noSolution": "Ova zagonetka nema rješenja. Provjeri zadane znamenke.",
+        "manySolutions": "Ova zagonetka ima više od jednog rješenja. Dodaj zadane znamenke.",
+        "tooFew": "Unesi najmanje 17 zadanih znamenki.",
+        "stuck": "Rješavač nema tehniku za sljedeći korak.",
+        "done": "Riješeno",
+        "placed": "Upiši {d} u {cell}",
+        "removed": "Ukloni {d} iz {cells}",
+        "rating": "procjena {r}",
+        "steps": "{n} koraka",
+        "faq": [
+          [
+            "Koje tehnike koristi rješavač?",
+            "Iste kao savjeti u igri, u istom redoslijedu: singlice, zaključane kandidate, parove i trojke, ribe, krila, jedinstvene obrasce, lance, gotovo zaključane skupove i prisilne mreže. Svaki korak je logički zaključak, nikad nagađanje, a najtežnji korak određuje procjenu."
+          ],
+          [
+            "Radi li sa svakom sudokuom?",
+            "Sa svakom zagonetkom koja ima točno jedno rješenje. Zagonetke bez rješenja ili s više rješenja se prijavljivanju umjesto rješavanja, a zagonetka trebada ima najmanje 17 zadanih znamenki."
+          ],
+          [
+            "Šalje li se moja zagonetka negdje?",
+            "Ne. Rješavač se pokreće potpuno u tvom pregledniku, i bez interneta. Zagonetku možeš podijeliti dodavanjem 81 znamenke adresi kao ?p=."
+          ]
+        ]
+      }
     },
     "ar": {
       "title": "Bare Sudoku: سودوكو مجاني أونلاين، بلا إعلانات، بلا تسجيل",
@@ -2115,7 +2995,47 @@
       "androidSource": "شيفرة أندرويد",
       "updated": "آخر تحديث",
       "languagesLabel": "اللغات",
-      "ogAlt": "شعار Bare Sudoku مع عبارة سودوكو مجاني أونلاين، بلا إعلانات"
+      "ogAlt": "شعار Bare Sudoku مع عبارة سودوكو مجاني أونلاين، بلا إعلانات",
+      "dailyTitle": "سودوكو يومي: لغز جديد كل يوم، مجاني وبلا إعلانات",
+      "dailyDescription": "سودوكو جديد كل يوم في خمسة مستويات، نفس اللغز للجميع. حل لغز اليوم من السهل إلى الأستاذ وشارك وقتك. بلا إعلانات، بلا تسجيل.",
+      "dailyH1": "سودوكو يومي",
+      "dailyIntro": "كل يوم يأتي لغز جديد واحد لكل مستوى، نفسه لكل لاعب في العالم. حله ثم شارك وقتك مع الأصدقاء. يتم توليد اللغز اليومي على جهازك من التاريخ، لذا يعمل بدون اتصال أيضًا، ولغز الأمس يختفي في منتصف الليل.",
+      "solver": {
+        "title": "محل سودوكو: حل خطوة بخطوة بالتقنيات",
+        "description": "ألصق أو اكتب أي سودوكو واحصل على الحل خطوة بخطوة. كل خطوة تسمي تقنيتها، من المرشح الوحيد إلى X-Wing والسلاسل، مع تصنيف الصعوبة.",
+        "h1": "محل سودوكو، خطوة بخطوة",
+        "intro": "اكتب الأرقام المعطاة في الشبكة أو ألصق 81 حرفًا (أرقام، 0 أو نقطة للخلايا الفارغة). تبرز الخطوة التالية حركة واحدة في كل مرة مع التقنية الكامنة وراءها؛ الحل يسرد كل خطوة وينتهي بمستوى اللغز وتصنيفه. يعمل الحل في المتصفح، لا يتم تحميل شيء، ويستخدم نفس منطق تلميحات اللعبة، لذا كل خطوة هي استنتاج، أبدًا تخمين.",
+        "link": "محل سودوكو",
+        "paste": "الصق لغزًا: 81 رقمًا، 0 أو . للخلايا الفارغة",
+        "next": "الخطوة التالية",
+        "solve": "حل",
+        "clear": "مسح",
+        "example": "مثال",
+        "edit": "تعديل",
+        "noSolution": "لا يوجد حل لهذا اللغز. تحقق من الأرقام المعطاة.",
+        "manySolutions": "لهذا اللغز أكثر من حل واحد. أضف أرقامًا معطاة.",
+        "tooFew": "أدخل على الأقل 17 رقمًا معطى.",
+        "stuck": "الحل ليس لديه تقنية للخطوة التالية.",
+        "done": "تم حله",
+        "placed": "ضع {d} في {cell}",
+        "removed": "أزل {d} من {cells}",
+        "rating": "تصنيف {r}",
+        "steps": "{n} خطوة",
+        "faq": [
+          [
+            "ما التقنيات التي يستخدمها الحل؟",
+            "نفس تقنيات تلميحات اللعبة، مجربة بنفس الترتيب: المرشح الواحد والمرشحون المحصورون والأزواج والثلاثيات والأسماك والأجنحة وأنماط التفرد والسلاسل والمجموعات شبه المحصورة وشبكات الإكراه. كل خطوة استنتاج منطقي، أبدًا تخمين، والخطوة الأصعب تحدد التصنيف."
+          ],
+          [
+            "هل يعمل مع أي سودوكو؟",
+            "مع أي لغز له حل واحد بالضبط. يتم الإبلاغ عن الألغاز التي لا تحتوي على حل أو بها عدة حلول بدلاً من حلها، ويحتاج اللغز إلى 17 أرقامًا معطاة على الأقل."
+          ],
+          [
+            "هل يتم تحميل لغزي؟",
+            "لا. يعمل الحل بالكامل في المتصفح، وبدون اتصال أيضًا. يمكنك مشاركة لغز بإضافة 81 رقمًا إلى العنوان بصيغة ?p=."
+          ]
+        ]
+      }
     },
     "fa": {
       "title": "Bare Sudoku: سودوکوی رایگان آنلاین، بدون تبلیغ، بدون ثبت‌نام",
@@ -2190,7 +3110,47 @@
       "androidSource": "کد اندروید",
       "updated": "به‌روزرسانی",
       "languagesLabel": "زبان‌ها",
-      "ogAlt": "لوگوی Bare Sudoku با عبارت سودوکوی رایگان آنلاین، بدون تبلیغ"
+      "ogAlt": "لوگوی Bare Sudoku با عبارت سودوکوی رایگان آنلاین، بدون تبلیغ",
+      "dailyTitle": "سودوکوی روزانه: جدول جدید هر روز، رایگان و بدون تبلیغ",
+      "dailyDescription": "سودوکوی جدید هر روز در پنج سطح، جدولی که برای همه یکی است. جدول امروز را از آسان تا استاد حل کنید و زمانتان را اشتراک کنید. بدون تبلیغ، بدون ثبت‌نام.",
+      "dailyH1": "سودوکوی روزانه",
+      "dailyIntro": "هر روز جدول جدیدی برای هر سطح می‌آید که برای هر بازی‌کننده در جهان یکی است. آن را حل کن و زمانت را با دوستان اشتراک کن. جدول روزانه در دستگاهت از تاریخ ساخته می‌شود؛ بنابراین آفلاین هم کار می‌کند و جدول دیروز در نیمهٔ شب حذف می‌شود.",
+      "solver": {
+        "title": "حل‌کنندهٔ سودوکو: حل مرحله‌به‌مرحله با تکنیک‌ها",
+        "description": "هر سودوکویی را بچسباند یا تایپ کنید و حل را مرحله‌به‌مرحله بگیرید. هر حرکت تکنیکش را می‌نامد، از تک‌گزینه‌ها تا X-Wing و زنجیرها، با درجهٔ سختی.",
+        "h1": "حل‌کنندهٔ سودوکو، مرحله‌به‌مرحله",
+        "intro": "اعداد داده‌شده را در جدول تایپ کن یا 81 حرف بچسبان (اعداد، 0 یا نقطه برای خانه‌های خالی). مرحلهٔ بعد یک حرکت را هر بار با تکنیک پشت سرش نشان می‌دهد؛ حل همهٔ مراحل را فهرست می‌کند و با سطح و درجهٔ جدول تمام می‌شود. حل‌کننده در مرورگر اجرا می‌شود، هیچ چیز بار نمی‌شود و منطق راهنمایی‌های بازی را می‌پیماید؛ بنابراین هر مرحله یک قیاس است، هرگز حدس نیست.",
+        "link": "حل‌کنندهٔ سودوکو",
+        "paste": "جدول بچسبان: 81 رقم، 0 یا . برای خانه‌های خالی",
+        "next": "مرحلهٔ بعد",
+        "solve": "حل کن",
+        "clear": "پاک کن",
+        "example": "مثال",
+        "edit": "ویرایش",
+        "noSolution": "این جدول حل ندارد. اعداد داده‌شده را بررسی کن.",
+        "manySolutions": "این جدول بیش از یک حل دارد. اعداد داده‌شده بیفزای.",
+        "tooFew": "حداقل 17 عدد داده‌شده وارد کن.",
+        "stuck": "حل‌کننده برای مرحلهٔ بعد تکنیکی ندارد.",
+        "done": "حل شد",
+        "placed": "{d} را در {cell} قرار بده",
+        "removed": "{d} را از {cells} برداشت",
+        "rating": "درجه {r}",
+        "steps": "{n} مرحله",
+        "faq": [
+          [
+            "حل‌کننده از چه تکنیک‌هایی استفاده می‌کند؟",
+            "همان تکنیک‌های راهنمایی‌های بازی، به‌کار رفتهٔ به‌ترتیب یکسان: تک‌گزینه‌ها، نامزدهای قفل‌شده، جفت و سه‌تایی‌ها، ماهی‌ها، بال‌ها، الگوهای تک‌تایی، زنجیرها، مجموعه‌های نزدیک‌به‌قفل‌شده و شبکه‌های اجبار. هر مرحله یک قیاس منطقی است، هرگز حدس نیست و مرحلهٔ سخت‌ترین درجه را می‌نویسد."
+          ],
+          [
+            "برای هر سودوکویی کار می‌کند؟",
+            "برای هر جدولی که دقیقاً یک حل دارد. جدول‌هایی که حل ندارند یا چند حل دارند، به‌جای حل‌شدن گزارش می‌شوند و جدول حداقل نیاز به 17 عدد داده‌شده دارد."
+          ],
+          [
+            "جدولم بار می‌شود؟",
+            "نه. حل‌کننده کاملاً در مرورگر اجرا می‌شود، آفلاین هم. می‌توانی جدول را با افزودن 81 رقمش به نشانی با ?p= اشتراک کنی."
+          ]
+        ]
+      }
     },
     "he": {
       "title": "Bare Sudoku: סודוקו חינם אונליין, בלי פרסומות, בלי הרשמה",
@@ -2265,7 +3225,47 @@
       "androidSource": "קוד האנדרואיד",
       "updated": "עודכן",
       "languagesLabel": "שפות",
-      "ogAlt": "הלוגו של Bare Sudoku עם המילים סודוקו חינם אונליין, בלי פרסומות"
+      "ogAlt": "הלוגו של Bare Sudoku עם המילים סודוקו חינם אונליין, בלי פרסומות",
+      "dailyTitle": "סודוקו יומי: חידה חדשה כל יום, חינם וללא פרסומות",
+      "dailyDescription": "סודוקו חדש כל יום בחמש רמות, אותה חידה לכולם. פתור את חידת היום מקל ועד מורה ושתף את הזמן שלך. ללא פרסומות, ללא הרשמה.",
+      "dailyH1": "סודוקו יומי",
+      "dailyIntro": "כל יום מגיעה חידה חדשה אחת לכל רמה, אותה לכל שחקן בעולם. פתור אותה ושתף את הזמן שלך עם חברים. החידה היומית נוצרת בהתקן שלך מהתאריך, כך שהיא עובדת גם ללא אינטרנט, וחידת אתמול נעלמת בחצות.",
+      "solver": {
+        "title": "פותר סודוקו: פתרון שלב אחר שלב עם טכניקות",
+        "description": "הדבק או הקלד כל סודוקו וקבל את הפתרון שלב אחר שלב. כל מהלך מציין את הטכניקה שלו, מיחידים ל-X-Wing ושרשרות, עם דרגת הקושי.",
+        "h1": "פותר סודוקו, שלב אחר שלב",
+        "intro": "הקלד את הנתונים בתוך הגריד או הדבק 81 תווים (ספרות, 0 או נקודה לתאים ריקים). השלב הבא מציג מהלך אחד בכל פעם עם הטכניקה שמאחוריו; פתור מפרט כל שלב ומסתיים ברמה וציון החידה. הפותר עובד בדפדפן שלך, שום דבר לא מתעלה, והוא משתמש באותו היגיון כמו הרמזים של המשחק, כך שכל שלב הוא הנמקה, לא תמיד ניחוש.",
+        "link": "פותר סודוקו",
+        "paste": "הדבק חידה: 81 ספרות, 0 או . לתאים ריקים",
+        "next": "השלב הבא",
+        "solve": "פתור",
+        "clear": "נקה",
+        "example": "דוגמה",
+        "edit": "ערוך",
+        "noSolution": "לחידה הזו אין פתרון. בדוק את הנתונים.",
+        "manySolutions": "לחידה הזו יש יותר מפתרון אחד. הוסף נתונים.",
+        "tooFew": "הכנס לפחות 17 נתונים.",
+        "stuck": "לפותר אין טכניקה לשלב הבא.",
+        "done": "נפתר",
+        "placed": "הצב {d} ב-{cell}",
+        "removed": "הסר {d} מ-{cells}",
+        "rating": "דרגה {r}",
+        "steps": "{n} שלבים",
+        "faq": [
+          [
+            "אילו טכניקות משתמש הפותר?",
+            "אותן טכניקות כמו הרמזים של המשחק, מנוסות באותו הסדר: יחידונים, מועמדים נעולים, זוגות ושלשות, דגים, כנפיים, דפוסי ייחודיות, שרשרות, קבוצות כמעט נעולות ורשתות כפיה. כל שלב הוא הנמקה לוגית, לא תמיד ניחוש, והשלב הקשה ביותר קובע את הדרגה."
+          ],
+          [
+            "הוא עובד עבור כל סודוקו?",
+            "עבור כל חידה שיש לה בדיוק פתרון אחד. חידות ללא פתרון או עם כמה פתרונות מדווחות במקום שנפתרו, וחידה צריכה 17 נתונים לפחות."
+          ],
+          [
+            "החידה שלי מתעלה?",
+            "לא. הפותר עובד לחלוטין בדפדפן שלך, גם בלי אינטרנט. אתה יכול לשתף חידה על ידי הוספת 81 הספרות שלה לכתובת כ-?p=."
+          ]
+        ]
+      }
     },
     "hi": {
       "title": "Bare Sudoku: मुफ़्त ऑनलाइन सुडोकू, बिना विज्ञापन, बिना साइन-अप",
@@ -2340,7 +3340,47 @@
       "androidSource": "Android सोर्स कोड",
       "updated": "अपडेट",
       "languagesLabel": "भाषाएँ",
-      "ogAlt": "Bare Sudoku का लोगो और शब्द मुफ़्त ऑनलाइन सुडोकू, बिना विज्ञापन"
+      "ogAlt": "Bare Sudoku का लोगो और शब्द मुफ़्त ऑनलाइन सुडोकू, बिना विज्ञापन",
+      "dailyTitle": "दैनिक सुडोकू: हर दिन नई पहेली, मुफ़्त और बिना विज्ञापन",
+      "dailyDescription": "हर दिन पाँच स्तरों पर नई सुडोकू, सभी के लिए समान पहेली। आज की पहेली को आसान से महारत तक हल करें और अपना समय शेयर करें। कोई विज्ञापन नहीं, कोई साइन-अप नहीं।",
+      "dailyH1": "दैनिक सुडोकू",
+      "dailyIntro": "हर दिन हर स्तर पर एक नई पहेली आती है, दुनिया के हर खिलाड़ी के लिए समान। इसे हल करें और अपना समय दोस्तों के साथ शेयर करें। दैनिक पहेली आपके डिवाइस पर तारीख़ से बनाई जाती है, इसलिए यह ऑफ़लाइन भी काम करती है, और कल की पहेली आधी रात को चली जाती है।",
+      "solver": {
+        "title": "सुडोकू समाधानकर्ता: तकनीकों के साथ चरण-दर-चरण समाधान",
+        "description": "किसी भी सुडोकू को पेस्ट करें या टाइप करें और चरण-दर-चरण समाधान पाएँ। हर कदम अपनी तकनीक बताता है, सिंगल से X-Wing तक, कठिनाई रेटिंग के साथ।",
+        "h1": "सुडोकू समाधानकर्ता, चरण-दर-चरण",
+        "intro": "दी गई संख्याओं को ग्रिड में टाइप करें या 81 वर्ण पेस्ट करें (अंक, खाली कोशिकाओं के लिए 0 या डॉट)। अगला चरण एक समय में एक कदम दिखाता है, इसके पीछे की तकनीक के साथ; समाधान करें सभी कदमों की सूची बनाता है और पहेली के स्तर और रेटिंग के साथ समाप्त होता है। समाधानकर्ता आपके ब्राउज़र में चलता है, कुछ भी अपलोड नहीं होता, और यह गेम के संकेतों के समान तर्क का उपयोग करता है, इसलिए हर कदम एक कटौती है, कभी अनुमान नहीं।",
+        "link": "सुडोकू समाधानकर्ता",
+        "paste": "पहेली पेस्ट करें: 81 अंक, खाली कोशिकाओं के लिए 0 या .",
+        "next": "अगला चरण",
+        "solve": "समाधान करें",
+        "clear": "साफ़ करें",
+        "example": "उदाहरण",
+        "edit": "संपादित करें",
+        "noSolution": "इस पहेली का कोई समाधान नहीं है। दी गई संख्याएँ जाँचें।",
+        "manySolutions": "इस पहेली के एक से ज़्यादा समाधान हैं। दी गई संख्याएँ जोड़ें।",
+        "tooFew": "कम से कम 17 दी गई संख्याएँ दर्ज करें।",
+        "stuck": "समाधानकर्ता के पास अगले चरण के लिए कोई तकनीक नहीं है।",
+        "done": "हल हो गया",
+        "placed": "{cell} में {d} रखें",
+        "removed": "{cells} से {d} हटाएँ",
+        "rating": "रेटिंग {r}",
+        "steps": "{n} चरण",
+        "faq": [
+          [
+            "समाधानकर्ता कौन सी तकनीकें उपयोग करता है?",
+            "गेम के संकेतों के समान, समान क्रम में आजमाई गई: सिंगल, बंद उम्मीदवार, जोड़े और तिकड़ी, मछलियाँ, पंख, विशिष्टता पैटर्न, श्रृंखलाएँ, लगभग बंद सेट और बाध्यकारी नेट। हर कदम एक तार्किक कटौती है, कभी अनुमान नहीं, और सबसे कठिन कदम रेटिंग निर्धारित करता है।"
+          ],
+          [
+            "क्या यह किसी भी सुडोकू के लिए काम करता है?",
+            "किसी भी पहेली के लिए जिसका बिल्कुल एक समाधान है। जिन पहेलियों का कोई समाधान नहीं है या कई हैं, वे हल होने के बजाय रिपोर्ट की जाती हैं, और एक पहेली में कम से कम 17 दी गई संख्याएँ ज़रूरी हैं।"
+          ],
+          [
+            "क्या मेरी पहेली अपलोड होती है?",
+            "नहीं। समाधानकर्ता पूरी तरह आपके ब्राउज़र में चलता है, ऑफ़लाइन भी। आप पहेली को उसके 81 अंक को पता में ?p= के रूप में जोड़कर शेयर कर सकते हैं।"
+          ]
+        ]
+      }
     },
     "bn": {
       "title": "Bare Sudoku: বিনামূল্যে অনলাইন সুডোকু, বিজ্ঞাপন ছাড়া, সাইন-আপ ছাড়া",
@@ -2415,7 +3455,47 @@
       "androidSource": "Android সোর্স কোড",
       "updated": "হালনাগাদ",
       "languagesLabel": "ভাষা",
-      "ogAlt": "Bare Sudoku-র লোগো এবং লেখা বিনামূল্যে অনলাইন সুডোকু, বিজ্ঞাপন ছাড়া"
+      "ogAlt": "Bare Sudoku-র লোগো এবং লেখা বিনামূল্যে অনলাইন সুডোকু, বিজ্ঞাপন ছাড়া",
+      "dailyTitle": "দৈনিক সুডোকু: প্রতিদিন নতুন ধাঁধা, বিনামূল্যে এবং বিজ্ঞাপন ছাড়া",
+      "dailyDescription": "প্রতিদিন পাঁচটি স্তরে নতুন সুডোকু, সকলের জন্য একই ধাঁধা। আজকের ধাঁধা সহজ থেকে দক্ষ পর্যন্ত সমাধান করুন এবং আপনার সময় শেয়ার করুন। বিজ্ঞাপন নেই, সাইন-আপ নেই।",
+      "dailyH1": "দৈনিক সুডোকু",
+      "dailyIntro": "প্রতিদিন প্রতিটি স্তরের জন্য একটি নতুন ধাঁধা আসে, বিশ্বের প্রতিটি খেলোয়াড়ের জন্য একই। এটি সমাধান করুন এবং আপনার সময় বন্ধুদের সাথে শেয়ার করুন। দৈনিক ধাঁধা আপনার ডিভাইসে তারিখ থেকে তৈরি হয়, তাই এটি অফলাইনেও কাজ করে, এবং গতকালের ধাঁধা মধ্যরাতে চলে যায়।",
+      "solver": {
+        "title": "সুডোকু সমাধানকারী: কৌশল সহ ধাপে ধাপে সমাধান",
+        "description": "যেকোনো সুডোকু পেস্ট বা টাইপ করুন এবং ধাপে ধাপে সমাধান পান। প্রতিটি পদক্ষেপ তার কৌশল বলে, সিঙ্গেল থেকে X-Wing এবং চেইন পর্যন্ত, অসুবিধার রেটিং সহ।",
+        "h1": "সুডোকু সমাধানকারী, ধাপে ধাপে",
+        "intro": "গ্রিডে প্রদত্ত সংখ্যা টাইপ করুন বা 81 টি অক্ষর পেস্ট করুন (অঙ্ক, খালি কোষের জন্য 0 বা বিন্দু)। পরবর্তী পদক্ষেপ এক সময়ে একটি পদক্ষেপ দেখায় এর পিছনের কৌশল সহ; সমাধান করুন সব পদক্ষেপ তালিকাভুক্ত করে এবং ধাঁধার স্তর এবং রেটিং দিয়ে শেষ হয়। সমাধানকারী আপনার ব্রাউজারে চলে, কিছুই আপলোড হয় না, এবং এটি গেমের ইঙ্গিতের মতো একই যুক্তি ব্যবহার করে, তাই প্রতিটি পদক্ষেপ একটি অনুমান, কখনও অনুমান নয়।",
+        "link": "সুডোকু সমাধানকারী",
+        "paste": "ধাঁধা পেস্ট করুন: 81 টি অঙ্ক, খালি কোষের জন্য 0 বা .",
+        "next": "পরবর্তী ধাপ",
+        "solve": "সমাধান করুন",
+        "clear": "মুছুন",
+        "example": "উদাহরণ",
+        "edit": "সম্পাদনা করুন",
+        "noSolution": "এই ধাঁধার কোনো সমাধান নেই। প্রদত্ত সংখ্যা পরীক্ষা করুন।",
+        "manySolutions": "এই ধাঁধার একাধিক সমাধান আছে। প্রদত্ত সংখ্যা যোগ করুন।",
+        "tooFew": "কমপক্ষে 17 টি প্রদত্ত সংখ্যা প্রবেশ করুন।",
+        "stuck": "সমাধানকারীর পরবর্তী পদক্ষেপের জন্য কোনো কৌশল নেই।",
+        "done": "সমাধান হয়েছে",
+        "placed": "{cell} তে {d} রাখুন",
+        "removed": "{cells} থেকে {d} সরান",
+        "rating": "রেটিং {r}",
+        "steps": "{n} ধাপ",
+        "faq": [
+          [
+            "সমাধানকারী কোন কৌশলগুলি ব্যবহার করে?",
+            "গেমের ইঙ্গিতের সমানগুলি, একই ক্রমে চেষ্টা করা: সিঙ্গেল, আবদ্ধ প্রার্থী, জোড়া এবং ত্রয়ী, মাছ, ডানা, অনন্যতা প্যাটার্ন, চেইন, প্রায় আবদ্ধ সেট এবং জোরপূর্বক নেট। প্রতিটি পদক্ষেপ একটি যুক্তিসঙ্গত অনুমান, কখনও অনুমান নয়, এবং কঠিনতম পদক্ষেপ রেটিং নির্ধারণ করে।"
+          ],
+          [
+            "এটি কোনো সুডোকুর জন্য কাজ করে?",
+            "যেকোনো ধাঁধার জন্য যার ঠিক একটি সমাধান আছে। যেসব ধাঁধার কোনো সমাধান নেই বা একাধিক সমাধান আছে, সেগুলি সমাধান করার পরিবর্তে রিপোর্ট করা হয়, এবং একটি ধাঁধার কমপক্ষে 17 টি প্রদত্ত সংখ্যা প্রয়োজন।"
+          ],
+          [
+            "আমার ধাঁধা আপলোড হয়?",
+            "না। সমাধানকারী সম্পূর্ণরূপে আপনার ব্রাউজারে চলে, অফলাইনেও। আপনি ধাঁধার 81 টি অঙ্ক ঠিকানায় ?p= হিসাবে যোগ করে একটি ধাঁধা শেয়ার করতে পারেন।"
+          ]
+        ]
+      }
     },
     "id": {
       "title": "Bare Sudoku: Sudoku online gratis, tanpa iklan, tanpa daftar",
@@ -2490,7 +3570,47 @@
       "androidSource": "Kode sumber Android",
       "updated": "Diperbarui",
       "languagesLabel": "Bahasa",
-      "ogAlt": "Logo Bare Sudoku dengan tulisan Sudoku online gratis, tanpa iklan"
+      "ogAlt": "Logo Bare Sudoku dengan tulisan Sudoku online gratis, tanpa iklan",
+      "dailyTitle": "Sudoku Harian: Teka-teki Baru Setiap Hari, Gratis",
+      "dailyDescription": "Sudoku baru setiap hari di lima level, teka-teki sama untuk semua. Pecahkan dari Mudah hingga Ahli Besar, bagikan waktu Anda. Tanpa iklan, tanpa pendaftaran.",
+      "dailyH1": "Sudoku Harian",
+      "dailyIntro": "Setiap hari ada satu teka-teki baru untuk setiap level, sama untuk setiap pemain di dunia. Pecahkannya, lalu bagikan waktu Anda dengan teman. Teka-teki harian dibuat di perangkat Anda dari tanggal, jadi juga bekerja offline, dan teka-teki kemarin hilang saat tengah malam.",
+      "solver": {
+        "title": "Pemecah Sudoku: Solusi Langkah demi Langkah dengan Teknik",
+        "description": "Tempel atau ketik sudoku apa pun dan dapatkan solusi langkah demi langkah. Setiap langkah menyebutkan tekniknya: dari single hingga X-Wing, rantai.",
+        "h1": "Pemecah sudoku, langkah demi langkah",
+        "intro": "Ketik angka yang diberikan ke dalam kisi atau tempel 81 karakter (angka; 0 atau titik untuk sel kosong). Langkah berikutnya menampilkan satu langkah sekaligus dengan teknik di baliknya; Pecahkan mencantumkan setiap langkah dan diakhiri dengan level dan peringkat teka-teki. Pemecah berjalan di browser Anda, tidak ada yang diunggah, dan menggunakan logika yang sama dengan petunjuk permainan, jadi setiap langkah adalah deduksi, tidak pernah menebak.",
+        "link": "Pemecah sudoku",
+        "paste": "Tempel teka-teki: 81 angka, 0 atau . untuk sel kosong",
+        "next": "Langkah berikutnya",
+        "solve": "Pecahkan",
+        "clear": "Hapus",
+        "example": "Contoh",
+        "edit": "Edit",
+        "noSolution": "Teka-teki ini tidak memiliki solusi. Periksa angka yang diberikan.",
+        "manySolutions": "Teka-teki ini memiliki lebih dari satu solusi. Tambahkan angka.",
+        "tooFew": "Masukkan setidaknya 17 angka yang diberikan.",
+        "stuck": "Pemecah tidak memiliki teknik untuk langkah berikutnya.",
+        "done": "Terpecahkan",
+        "placed": "Tempatkan {d} di {cell}",
+        "removed": "Hapus {d} dari {cells}",
+        "rating": "peringkat {r}",
+        "steps": "{n} langkah",
+        "faq": [
+          [
+            "Teknik apa yang digunakan pemecah?",
+            "Yang sama dengan petunjuk permainan, dicoba dalam urutan yang sama: single, kandidat terkunci, pasangan dan tripel, ikan, sayap, pola keunikan, rantai, set hampir terkunci, dan jaringan pemaksaan. Setiap langkah adalah deduksi logis, tidak pernah menebak, dan langkah terberat menentukan peringkat."
+          ],
+          [
+            "Apakah ini berfungsi untuk sudoku apa pun?",
+            "Untuk setiap teka-teki dengan tepat satu solusi. Teka-teki tanpa solusi atau dengan beberapa dilaporkan bukannya dipecahkan, dan teka-teki membutuhkan setidaknya 17 angka yang diberikan."
+          ],
+          [
+            "Apakah teka-teki saya diunggah?",
+            "Tidak. Pemecah berjalan sepenuhnya di browser Anda, offline juga. Anda dapat membagikan teka-teki dengan menambahkan 81 angkanya ke alamat sebagai ?p=."
+          ]
+        ]
+      }
     },
     "ms": {
       "title": "Bare Sudoku: Sudoku dalam talian percuma, tanpa iklan, tanpa daftar",
@@ -2565,7 +3685,47 @@
       "androidSource": "Kod sumber Android",
       "updated": "Dikemas kini",
       "languagesLabel": "Bahasa",
-      "ogAlt": "Logo Bare Sudoku dengan perkataan Sudoku dalam talian percuma, tanpa iklan"
+      "ogAlt": "Logo Bare Sudoku dengan perkataan Sudoku dalam talian percuma, tanpa iklan",
+      "dailyTitle": "Sudoku Harian: Teka-teki Baharu Setiap Hari, Percuma",
+      "dailyDescription": "Sudoku baharu setiap hari di lima tahap, teka-teki sama untuk semua. Selesaikan dari Mudah hingga Guru, kongsikan masa. Tiada iklan, tiada daftar.",
+      "dailyH1": "Sudoku Harian",
+      "dailyIntro": "Setiap hari ada satu teka-teki baharu untuk setiap tahap, sama untuk setiap pemain di seluruh dunia. Selesaikannya, kemudian kongsikan masa Anda dengan rakan. Teka-teki harian dijana di peranti Anda dari tarikh, jadi ia juga berfungsi luar talian, dan teka-teki semalam hilang pada tengah malam.",
+      "solver": {
+        "title": "Penyelesai Sudoku: Langkah demi Langkah dengan Teknik",
+        "description": "Tampal atau taipkan sudoku apa pun dan dapatkan penyelesaian langkah demi langkah. Setiap langkah menyebut tekniknya: daripada single hingga X-Wing, rantai.",
+        "h1": "Penyelesai sudoku, langkah demi langkah",
+        "intro": "Taipkan nombor yang diberikan ke dalam grid atau tampal 81 aksara (digit; 0 atau titik untuk sel kosong). Langkah seterusnya menunjukkan satu langkah sekaligus dengan teknik di belakangnya; Selesaikan menyenaraikan setiap langkah dan berakhir dengan tahap dan penilaian teka-teki. Penyelesai berjalan di pelayar Anda, tiada yang dimuat naik, dan menggunakan logik yang sama dengan petunjuk permainan, jadi setiap langkah adalah deduksi, tidak pernah meneka.",
+        "link": "Penyelesai sudoku",
+        "paste": "Tampal teka-teki: 81 digit, 0 atau . untuk sel kosong",
+        "next": "Langkah seterusnya",
+        "solve": "Selesaikan",
+        "clear": "Padam",
+        "example": "Contoh",
+        "edit": "Edit",
+        "noSolution": "Teka-teki ini tidak mempunyai penyelesaian. Semak nombor yang diberikan.",
+        "manySolutions": "Teka-teki ini mempunyai lebih daripada satu penyelesaian. Tambah nombor.",
+        "tooFew": "Masukkan sekurang-kurangnya 17 nombor yang diberikan.",
+        "stuck": "Penyelesai tidak mempunyai teknik untuk langkah seterusnya.",
+        "done": "Selesai",
+        "placed": "Letakkan {d} dalam {cell}",
+        "removed": "Buang {d} daripada {cells}",
+        "rating": "penilaian {r}",
+        "steps": "{n} langkah",
+        "faq": [
+          [
+            "Teknik apa yang digunakan penyelesai?",
+            "Yang sama dengan petunjuk permainan, dicuba dalam urutan yang sama: single, calon terkunci, pasangan dan tiga, ikan, sayap, corak keunikan, rantai, set hampir terkunci dan rangkaian pemaksaan. Setiap langkah adalah deduksi logik, tidak pernah meneka, dan langkah yang paling sukar menetapkan penilaian."
+          ],
+          [
+            "Adakah ia berfungsi untuk sudoku apa pun?",
+            "Untuk setiap teka-teki dengan tepat satu penyelesaian. Teka-teki tanpa penyelesaian atau dengan beberapa dilaporkan bukannya diselesaikan, dan teka-teki memerlukan sekurang-kurangnya 17 nombor yang diberikan."
+          ],
+          [
+            "Adakah teka-teki saya dimuat naik?",
+            "Tidak. Penyelesai berjalan sepenuhnya dalam pelayar Anda, luar talian juga. Anda boleh berkongsi teka-teki dengan menambah 81 digitnya ke alamat sebagai ?p=."
+          ]
+        ]
+      }
     },
     "vi": {
       "title": "Bare Sudoku: Sudoku online miễn phí, không quảng cáo, không đăng ký",
@@ -2640,7 +3800,47 @@
       "androidSource": "Mã nguồn Android",
       "updated": "Cập nhật",
       "languagesLabel": "Ngôn ngữ",
-      "ogAlt": "Logo Bare Sudoku với dòng chữ Sudoku online miễn phí, không quảng cáo"
+      "ogAlt": "Logo Bare Sudoku với dòng chữ Sudoku online miễn phí, không quảng cáo",
+      "dailyTitle": "Sudoku Hằng ngày: Câu đố mới mỗi ngày, miễn phí",
+      "dailyDescription": "Sudoku mới mỗi ngày ở năm cấp độ, cùng một câu đố cho tất cả. Giải câu đố hôm nay từ Dễ đến Đại sư, chia sẻ thời gian. Không quảng cáo, không đăng ký.",
+      "dailyH1": "Sudoku Hằng ngày",
+      "dailyIntro": "Mỗi ngày có một câu đố mới cho mỗi cấp độ, giống nhau cho mọi người chơi trên thế giới. Hãy giải nó, sau đó chia sẻ thời gian của bạn với bạn bè. Câu đố hằng ngày được tạo trên thiết bị của bạn từ ngày, nên nó cũng hoạt động ngoại tuyến, và câu đố hôm qua biến mất vào nửa đêm.",
+      "solver": {
+        "title": "Trình giải Sudoku: Giải pháp từng bước với kỹ thuật",
+        "description": "Dán hoặc nhập bất kỳ Sudoku nào và nhận giải pháp từng bước. Mỗi nước đi nêu tên kỹ thuật: từ single đến X-Wing, chuỗi.",
+        "h1": "Trình giải sudoku, từng bước",
+        "intro": "Nhập các số đã cho vào lưới hoặc dán 81 ký tự (chữ số; 0 hoặc dấu chấm cho ô trống). Bước tiếp theo hiển thị một nước đi cùng một lúc với kỹ thuật phía sau; Giải liệt kê từng bước và kết thúc bằng cấp độ và xếp hạng của câu đố. Trình giải chạy trong trình duyệt của bạn, không có gì được tải lên, và nó sử dụng logic tương tự như gợi ý trò chơi, vì vậy mỗi bước là suy luận, không bao giờ đoán.",
+        "link": "Trình giải sudoku",
+        "paste": "Dán câu đố: 81 chữ số, 0 hoặc . cho ô trống",
+        "next": "Bước tiếp theo",
+        "solve": "Giải",
+        "clear": "Xóa",
+        "example": "Ví dụ",
+        "edit": "Chỉnh sửa",
+        "noSolution": "Câu đố này không có lời giải. Kiểm tra các số đã cho.",
+        "manySolutions": "Câu đố này có nhiều hơn một lời giải. Thêm các số.",
+        "tooFew": "Nhập ít nhất 17 số đã cho.",
+        "stuck": "Trình giải không có kỹ thuật cho bước tiếp theo.",
+        "done": "Đã giải",
+        "placed": "Đặt {d} trong {cell}",
+        "removed": "Xóa {d} khỏi {cells}",
+        "rating": "xếp hạng {r}",
+        "steps": "{n} bước",
+        "faq": [
+          [
+            "Trình giải sử dụng những kỹ thuật nào?",
+            "Những cái giống như gợi ý trò chơi, được thử theo thứ tự giống nhau: single, ứng viên bị khóa, cặp và bộ ba, cá, cánh, mẫu tính duy nhất, chuỗi, tập hợp gần như bị khóa và mạng lưới bắt buộc. Mỗi bước là suy luận logic, không bao giờ đoán, và bước khó nhất quyết định xếp hạng."
+          ],
+          [
+            "Nó có hoạt động cho bất kỳ Sudoku nào không?",
+            "Cho bất kỳ câu đố nào có đúng một lời giải. Các câu đố không có lời giải hoặc có nhiều lời giải được báo cáo thay vì được giải, và một câu đố cần ít nhất 17 số đã cho."
+          ],
+          [
+            "Câu đố của tôi có được tải lên không?",
+            "Không. Trình giải chạy hoàn toàn trong trình duyệt của bạn, ngoại tuyến. Bạn có thể chia sẻ câu đố bằng cách thêm 81 chữ số của nó vào địa chỉ dưới dạng ?p=."
+          ]
+        ]
+      }
     },
     "th": {
       "title": "Bare Sudoku: ซูโดกุออนไลน์ฟรี ไม่มีโฆษณา ไม่ต้องสมัคร",
@@ -2715,7 +3915,47 @@
       "androidSource": "ซอร์สโค้ด Android",
       "updated": "อัปเดต",
       "languagesLabel": "ภาษา",
-      "ogAlt": "โลโก้ Bare Sudoku พร้อมข้อความ ซูโดกุออนไลน์ฟรี ไม่มีโฆษณา"
+      "ogAlt": "โลโก้ Bare Sudoku พร้อมข้อความ ซูโดกุออนไลน์ฟรี ไม่มีโฆษณา",
+      "dailyTitle": "ซูโดกุประจำวัน: บุคคลใหม่ทุกวัน ฟรี และไม่มีโฆษณา",
+      "dailyDescription": "ซูโดกุใหม่ทุกวันในห้าระดับ บุคคลเดียวกันสำหรับทุกคน แก้บุคคลของวันนี้ตั้งแต่ง่ายถึงอาจารย์ แล้วแชร์เวลาของคุณ ไม่มีโฆษณา ไม่ต้องสมัคร",
+      "dailyH1": "ซูโดกุประจำวัน",
+      "dailyIntro": "ทุกวันมาพร้อมบุคคลใหม่หนึ่งตัวต่อระดับ เดียวกันสำหรับผู้เล่นทุกคนในโลก แก้มัน แล้วแชร์เวลาของคุณกับเพื่อน บุคคลประจำวันสร้างขึ้นบนอุปกรณ์ของคุณจากวันที่ ดังนั้นจึงใช้ได้ออฟไลน์ด้วย และบุคคลเมื่อวานหายไปเมื่อเที่ยงคืน",
+      "solver": {
+        "title": "ตัวแก้ซูโดกุ: วิธีแก้ทีละขั้นตอนด้วยเทคนิค",
+        "description": "วางหรือพิมพ์ซูโดกุใด ๆ และรับวิธีแก้ทีละขั้นตอน การเคลื่อนไหวแต่ละครั้งตั้งชื่อเทคนิคของมัน จากซิงเกิลไปจนถึง X-Wing และโซ่ พร้อมอัตราความยากลำบาก",
+        "h1": "ตัวแก้ซูโดกุ ทีละขั้นตอน",
+        "intro": "พิมพ์ตัวเลขที่กำหนดลงในตารางหรือวางตัวอักษร 81 ตัว (ตัวเลข มี 0 หรือจุดสำหรับช่องว่าง) ขั้นตอนถัดไปแสดงการเคลื่อนไหวหนึ่งครั้งในแต่ละครั้งด้วยเทคนิคที่อยู่เบื้องหลัง แก้รายการทุกขั้นตอนและจบลงด้วยระดับและอัตราของบุคคล ตัวแก้ทำงานในเบราว์เซอร์ของคุณ ไม่มีสิ่งใดอัปโหลด และใช้ตรรกะเดียวกับคำใบ้ของเกม ดังนั้นทุกขั้นตอนจึงเป็นการหักเงิน ไม่เคยเดา",
+        "link": "ตัวแก้ซูโดกุ",
+        "paste": "วางบุคคล: 81 ตัวเลข 0 หรือ . สำหรับช่องว่าง",
+        "next": "ขั้นตอนถัดไป",
+        "solve": "แก้",
+        "clear": "ลบ",
+        "example": "ตัวอย่าง",
+        "edit": "แก้ไข",
+        "noSolution": "บุคคลนี้ไม่มีวิธีแก้ ตรวจสอบตัวเลขที่กำหนด",
+        "manySolutions": "บุคคลนี้มีวิธีแก้มากกว่าหนึ่งวิธี เพิ่มตัวเลขที่กำหนด",
+        "tooFew": "ป้อนตัวเลขที่กำหนดอย่างน้อย 17 ตัว",
+        "stuck": "ตัวแก้ไม่มีเทคนิคสำหรับขั้นตอนถัดไป",
+        "done": "แก้ได้แล้ว",
+        "placed": "วาง {d} ใน {cell}",
+        "removed": "ลบ {d} ออกจาก {cells}",
+        "rating": "อัตรา {r}",
+        "steps": "{n} ขั้นตอน",
+        "faq": [
+          [
+            "ตัวแก้ใช้เทคนิคใด",
+            "เหมือนกับคำใบ้ของเกม ลองในลำดับเดียวกัน ซิงเกิล ตัวเลือกที่ล็อก คู่และสาม ปลา ปีก รูปแบบความเป็นเอกลักษณ์ โซ่ ชุดที่ล็อกเกือบจะ และเครือข่ายบังคับ ทุกขั้นตอนเป็นการหักเงินอย่างมีตรรกะ ไม่เคยเดา และขั้นตอนที่ยากที่สุดจะกำหนดอัตรา"
+          ],
+          [
+            "ใช้ได้กับซูโดกุใด ๆ หรือไม่",
+            "สำหรับบุคคลใด ๆ ที่มีวิธีแก้เพียงหนึ่งวิธี บุคคลที่ไม่มีวิธีแก้หรือมีหลายวิธีจะถูกรายงานแทนที่จะแก้ได้ และบุคคลต้องมีตัวเลขที่กำหนดอย่างน้อย 17 ตัว"
+          ],
+          [
+            "บุคคลของฉันอัปโหลดหรือไม่",
+            "ไม่ ตัวแก้ทำงานอย่างสมบูรณ์ในเบราว์เซอร์ของคุณ ออฟไลน์ด้วย คุณสามารถแชร์บุคคลโดยเพิ่มตัวเลข 81 ตัวของมันลงในที่อยู่เป็น ?p="
+          ]
+        ]
+      }
     },
     "ja": {
       "title": "Bare Sudoku: 無料ナンプレ オンライン、広告なし、登録不要",
@@ -2790,7 +4030,47 @@
       "androidSource": "Android版ソースコード",
       "updated": "更新日",
       "languagesLabel": "言語",
-      "ogAlt": "Bare Sudokuのロゴと「無料ナンプレ オンライン、広告なし」の文字"
+      "ogAlt": "Bare Sudokuのロゴと「無料ナンプレ オンライン、広告なし」の文字",
+      "dailyTitle": "毎日ナンプレ：毎日新しい問題、無料",
+      "dailyDescription": "毎日5つのレベルで新しいナンプレ、全員同じ問題。今日の問題を簡単から達人まで解いて、タイムをシェア。広告なし、登録不要。",
+      "dailyH1": "毎日ナンプレ",
+      "dailyIntro": "毎日1つのレベルごとに新しい問題が出現し、世界中すべてのプレイヤーが同じ問題を解きます。解いたら友達とタイムをシェア。毎日の問題はデバイスの日付から生成されるのでオフラインでも動作し、昨日の問題は真夜中に消えます。",
+      "solver": {
+        "title": "ナンプレソルバー：技で段階的に解く",
+        "description": "ナンプレを貼り付けるか入力して、段階的に解答を取得。各ステップはその技を名前で呼び、シングルからX-Wingとチェーンまで、難易度評価付き。",
+        "h1": "ナンプレソルバー、段階的に",
+        "intro": "与えられた数字をグリッドに入力するか、81文字を貼り付けます（数字；空白に0または.）。次ステップは1つのステップずつ背後の技で表示；「解く」はすべてのステップをリストして問題のレベルと評価で終わります。ソルバーはブラウザで動作し、何もアップロードされず、ゲームのヒントと同じ論理を使うので、すべてのステップは演繹であり推測ではありません。",
+        "link": "ナンプレソルバー",
+        "paste": "問題を貼り付け：81の数字、空白に0または.",
+        "next": "次ステップ",
+        "solve": "解く",
+        "clear": "クリア",
+        "example": "例",
+        "edit": "編集",
+        "noSolution": "この問題は解がありません。与えられた数字を確認してください。",
+        "manySolutions": "この問題は複数の解があります。数字を追加してください。",
+        "tooFew": "最低17の与えられた数字を入力してください。",
+        "stuck": "ソルバーは次ステップの技がありません。",
+        "done": "解きました",
+        "placed": "{cell}に{d}を置く",
+        "removed": "{cells}から{d}を削除",
+        "rating": "評価{r}",
+        "steps": "{n}ステップ",
+        "faq": [
+          [
+            "ソルバーはどの技を使いますか？",
+            "ゲームのヒントと同じ技を、同じ順序で使います：シングル、ロック候補、ペアとトリプル、フィッシュ、ウイング、ユニーク性パターン、チェーン、ほぼロック集合と強制ネット。すべてのステップは論理的演繹であり、決して推測ではなく、最も難しいステップが評価を決めます。"
+          ],
+          [
+            "すべてのナンプレで動作しますか？",
+            "正確に1つの解を持つすべての問題で動作します。解がないまたは複数の問題は解かれずに報告され、問題は最低17の与えられた数字が必要です。"
+          ],
+          [
+            "私の問題はアップロードされますか？",
+            "いいえ。ソルバーはブラウザで完全に動作し、オフラインでも。問題をアドレスに81の数字を?p=として追加してシェアできます。"
+          ]
+        ]
+      }
     },
     "ko": {
       "title": "Bare Sudoku: 무료 온라인 스도쿠, 광고 없음, 가입 없음",
@@ -2865,7 +4145,47 @@
       "androidSource": "Android 소스 코드",
       "updated": "업데이트",
       "languagesLabel": "언어",
-      "ogAlt": "Bare Sudoku 로고와 무료 온라인 스도쿠, 광고 없음 문구"
+      "ogAlt": "Bare Sudoku 로고와 무료 온라인 스도쿠, 광고 없음 문구",
+      "dailyTitle": "일일 스도쿠: 매일 새로운 문제, 무료, 광고 없음",
+      "dailyDescription": "매일 다섯 난이도의 새로운 스도쿠, 모두 같은 문제. 오늘의 문제를 쉬움부터 달인까지 풀고 시간을 공유하세요. 광고 없음, 가입 없음.",
+      "dailyH1": "일일 스도쿠",
+      "dailyIntro": "매일 난이도별로 새로운 문제가 하나씩 나오고, 세계 모든 게이머가 같은 문제를 풉니다. 문제를 풀고 친구들과 시간을 공유하세요. 일일 문제는 기기의 날짜로 생성되므로 오프라인에서도 작동하고, 어제 문제는 자정이 되면 사라집니다.",
+      "solver": {
+        "title": "스도쿠 풀이: 기법으로 단계별 풀이",
+        "description": "스도쿠를 붙여넣거나 입력하면 단계별 풀이를 얻습니다. 각 수를 기법명으로 보여주며, 싱글부터 X-윙과 체인까지 난이도와 함께.",
+        "h1": "스도쿠 풀이, 단계별로",
+        "intro": "주어진 숫자를 격자에 입력하거나 81자를 붙여넣으세요(숫자, 빈 칸은 0 또는 점). 다음 단계는 한 수씩 기법과 함께 보여주고, 풀이는 모든 단계를 나열하고 문제의 난이도와 정도로 끝냅니다. 풀이기는 브라우저에서 실행되고 아무것도 업로드되지 않으며, 게임의 힌트와 같은 논리를 사용하므로 모든 단계는 연역이고 추측이 아닙니다.",
+        "link": "스도쿠 풀이",
+        "paste": "문제 붙여넣기: 81개 숫자, 빈 칸은 0 또는 .",
+        "next": "다음 단계",
+        "solve": "풀이",
+        "clear": "지우기",
+        "example": "예제",
+        "edit": "수정",
+        "noSolution": "이 문제는 풀이가 없습니다. 주어진 숫자를 확인하세요.",
+        "manySolutions": "이 문제는 여러 풀이를 가집니다. 주어진 숫자를 추가하세요.",
+        "tooFew": "최소 17개의 주어진 숫자를 입력하세요.",
+        "stuck": "풀이기에 다음 단계의 기법이 없습니다.",
+        "done": "풀렸음",
+        "placed": "{cell} 칸에 {d} 입력",
+        "removed": "{cells} 칸에서 {d} 제거",
+        "rating": "정도 {r}",
+        "steps": "{n} 단계",
+        "faq": [
+          [
+            "풀이기는 어떤 기법을 사용하나요?",
+            "게임의 힌트와 같은 기법들을 같은 순서로: 싱글, 잠긴 후보, 쌍과 삼중, 피시, 윙, 고유성 패턴, 체인, 거의 잠긴 집합과 강제 네트워크. 모든 단계는 논리적 연역이고 추측이 아니며, 가장 어려운 단계가 정도를 결정합니다."
+          ],
+          [
+            "모든 스도쿠에서 작동하나요?",
+            "정확히 하나의 풀이를 가진 모든 문제에서 작동합니다. 풀이가 없거나 여러 개인 문제는 풀이되는 대신 보고되며, 문제에는 최소 17개의 주어진 숫자가 필요합니다."
+          ],
+          [
+            "내 문제가 업로드되나요?",
+            "아니요. 풀이기는 브라우저에서 완전히 작동하고, 오프라인에서도 가능합니다. 문제의 81개 숫자를 주소에 ?p=로 추가하여 공유할 수 있습니다."
+          ]
+        ]
+      }
     },
     "zh-Hans": {
       "title": "Bare Sudoku：免费在线数独，无广告，无需注册",
@@ -2940,7 +4260,47 @@
       "androidSource": "Android 源代码",
       "updated": "更新于",
       "languagesLabel": "语言",
-      "ogAlt": "Bare Sudoku 标志与文字：免费在线数独，无广告"
+      "ogAlt": "Bare Sudoku 标志与文字：免费在线数独，无广告",
+      "dailyTitle": "每日数独：每日新题，免费无广告",
+      "dailyDescription": "每天五个难度各一道新的数独题目，所有人同题。从简单到大师解决今天的题目，分享你的时间。无广告，无需注册。",
+      "dailyH1": "每日数独",
+      "dailyIntro": "每天各难度各出一道新题，全球玩家同题。解完后与朋友分享你的时间。每日题目由你设备的日期生成，所以也支持离线，昨天的题目会在午夜消失。",
+      "solver": {
+        "title": "数独求解器：逐步讲解技巧",
+        "description": "粘贴或输入任何数独题目，逐步获得完整解答。每一步都详细说明所用的求解技巧，从基础技巧到X-Wing和链形推理，并给出难度评分。",
+        "h1": "数独求解器，逐步讲解",
+        "intro": "在网格中输入已知数字，或粘贴81个字符（数字；空格用0或.）。下一步逐一显示解题步骤和所用技巧；求解列出所有步骤并以题目难度和评分结尾。求解器在浏览器中运行，不上传任何数据，使用与游戏提示相同的逻辑，所以每一步都是演绎，绝不猜测。",
+        "link": "数独求解器",
+        "paste": "粘贴题目：81个数字，空格用0或.",
+        "next": "下一步",
+        "solve": "求解",
+        "clear": "清空",
+        "example": "示例",
+        "edit": "编辑",
+        "noSolution": "此题无解。请检查已知数字。",
+        "manySolutions": "此题有多个解。请添加数字。",
+        "tooFew": "至少输入17个已知数字。",
+        "stuck": "求解器没有适用的技巧。",
+        "done": "已解决",
+        "placed": "在{cell}中放入{d}",
+        "removed": "从{cells}中删除{d}",
+        "rating": "评分{r}",
+        "steps": "{n}步",
+        "faq": [
+          [
+            "求解器使用哪些技巧？",
+            "与游戏提示相同的技巧，按相同顺序：唯一候选数、区块摒除、数对数组、鱼形、翅膀形、唯一性规律、链、几乎锁定集和强制网。每一步都是逻辑演绎，绝不猜测，最难步骤决定评分。"
+          ],
+          [
+            "对所有数独都适用吗？",
+            "对恰好有一个解的所有题目适用。无解或多解的题目会被报告而不求解，题目至少需要17个已知数字。"
+          ],
+          [
+            "我的题目会被上传吗？",
+            "不会。求解器完全在浏览器中运行，离线也可以。你可以通过在地址栏加?p=和81个数字来分享题目。"
+          ]
+        ]
+      }
     },
     "zh-Hant": {
       "title": "Bare Sudoku：免費線上數獨，無廣告，免註冊",
@@ -3015,7 +4375,47 @@
       "androidSource": "Android 原始碼",
       "updated": "更新於",
       "languagesLabel": "語言",
-      "ogAlt": "Bare Sudoku 標誌與文字：免費線上數獨，無廣告"
+      "ogAlt": "Bare Sudoku 標誌與文字：免費線上數獨，無廣告",
+      "dailyTitle": "每日數獨：每日新題，免費無廣告",
+      "dailyDescription": "每天五個難度各一道新的數獨題目，所有人同題。從簡單到大師解決今天的題目，分享你的時間。無廣告，無需註冊。",
+      "dailyH1": "每日數獨",
+      "dailyIntro": "每天各難度各出一道新題，全球玩家同題。解完後與朋友分享你的時間。每日題目由你設備的日期生成，所以也支援離線，昨天的題目會在午夜消失。",
+      "solver": {
+        "title": "數獨求解器：逐步講解技巧",
+        "description": "貼上或輸入任何數獨題目，逐步獲得完整解答。每一步都詳細說明所用的求解技巧，從基礎技巧到X-Wing和鏈形推理，並給出難度評分。",
+        "h1": "數獨求解器，逐步講解",
+        "intro": "在網格中輸入已知數字，或貼上81個字符（數字；空格用0或.）。下一步逐一顯示解題步驟和所用技巧；求解列出所有步驟並以題目難度和評分結尾。求解器在瀏覽器中運行，不上傳任何數據，使用與遊戲提示相同的邏輯，所以每一步都是演繹，絕不猜測。",
+        "link": "數獨求解器",
+        "paste": "貼上題目：81個數字，空格用0或.",
+        "next": "下一步",
+        "solve": "求解",
+        "clear": "清空",
+        "example": "示例",
+        "edit": "編輯",
+        "noSolution": "此題無解。請檢查已知數字。",
+        "manySolutions": "此題有多個解。請添加數字。",
+        "tooFew": "至少輸入17個已知數字。",
+        "stuck": "求解器沒有適用的技巧。",
+        "done": "已解決",
+        "placed": "在{cell}中放入{d}",
+        "removed": "從{cells}中刪除{d}",
+        "rating": "評分{r}",
+        "steps": "{n}步",
+        "faq": [
+          [
+            "求解器使用哪些技巧？",
+            "與遊戲提示相同的技巧，按相同順序：唯一候選數、區塊摒除、數對數組、魚形、翅膀形、唯一性規律、鏈、幾乎鎖定集和強制網。每一步都是邏輯演繹，絕不猜測，最難步驟決定評分。"
+          ],
+          [
+            "對所有數獨都適用嗎？",
+            "對恰好有一個解的所有題目適用。無解或多解的題目會被報告而不求解，題目至少需要17個已知數字。"
+          ],
+          [
+            "我的題目會被上傳嗎？",
+            "不會。求解器完全在瀏覽器中運行，離線也可以。你可以通過在地址欄加?p=和81個數字來分享題目。"
+          ]
+        ]
+      }
     },
     "ur": {
       "title": "Bare Sudoku: مفت آن لائن سوڈوکو، بغیر اشتہار، بغیر رجسٹریشن",
@@ -3088,7 +4488,47 @@
       "androidSource": "اینڈرائیڈ سورس کوڈ",
       "updated": "تازہ کاری",
       "languagesLabel": "زبانیں",
-      "ogAlt": "Bare Sudoku کا لوگو اور الفاظ مفت آن لائن سوڈوکو، بغیر اشتہار"
+      "ogAlt": "Bare Sudoku کا لوگو اور الفاظ مفت آن لائن سوڈوکو، بغیر اشتہار",
+      "dailyTitle": "روزانہ سوڈوکو: ہر دن نیا بلما، مفت اور بغیر اشتہار",
+      "dailyDescription": "ہر دن پانچ درجوں میں نیا سوڈوکو، سب کے لیے ایک جیسا۔ آج کا بلما آسان سے لے کر استاد تک حل کریں اور وقت شیئر کریں۔ کوئی اشتہار نہیں، کوئی رجسٹریشن نہیں۔",
+      "dailyH1": "روزانہ سوڈوکو",
+      "dailyIntro": "ہر دن ہر درجے میں ایک نیا بلما آتا ہے، دنیا بھر کے ہر کھلاڑی کے لیے ایک جیسا۔ اسے حل کریں، پھر اپنا وقت دوستوں کے ساتھ شیئر کریں۔ روزانہ کا بلما آپ کے آلے میں تاریخ سے بنایا جاتا ہے، اس لیے یہ آف لائن بھی کام کرتا ہے اور گزرے دن کا بلما آدھی رات میں ختم ہو جاتا ہے۔",
+      "solver": {
+        "title": "سوڈوکو حل کار: تکنیکوں کے ساتھ مرحلہ وار حل",
+        "description": "کوئی بھی سوڈوکو لگائیں یا ٹائپ کریں اور حل مرحلہ وار حاصل کریں۔ ہر حرکت اپنی تکنیک کا نام بتاتی ہے: سنگلز سے X-Wing اور زنجیریں، مشکل ریٹنگ کے ساتھ۔",
+        "h1": "سوڈوکو حل کار، مرحلہ وار",
+        "intro": "دیے گئے ہندسوں کو ترتیب میں ٹائپ کریں یا 81 حروف لگائیں (ہندسے؛ خالی خانوں کے لیے 0 یا نقطہ)۔ اگلا مرحلہ ہر حرکت کو اس کی تکنیک کے ساتھ ایک وقت میں دکھاتا ہے؛ حل تمام مراحل کو درج کرتا ہے اور بلما کی سطح اور درجہ بندی دیتا ہے۔ حل کار آپ کے براؤزر میں چلتا ہے، کچھ نہیں اپ لوڈ ہوتا، اور یہ کھیل کے اشاروں جیسی ہی منطق استعمال کرتا ہے، لہذا ہر مرحلہ ایک نتیجہ ہے، کبھی اندازہ نہیں۔",
+        "link": "سوڈوکو حل کار",
+        "paste": "بلما لگائیں: 81 ہندسے، خالی خانوں کے لیے 0 یا نقطہ",
+        "next": "اگلا مرحلہ",
+        "solve": "حل کریں",
+        "clear": "صاف کریں",
+        "example": "مثال",
+        "edit": "ترمیم کریں",
+        "noSolution": "اس بلما کا کوئی حل نہیں۔ دیے گئے ہندسوں کو چیک کریں۔",
+        "manySolutions": "اس بلما کے ایک سے زیادہ حل ہیں۔ دیے گئے ہندسے شامل کریں۔",
+        "tooFew": "کم از کم 17 دیے گئے ہندسے درج کریں۔",
+        "stuck": "حل کار کے پاس اگلے مرحلے کے لیے کوئی تکنیک نہیں ہے۔",
+        "done": "حل ہو گیا",
+        "placed": "{cell} میں {d} ڈالیں",
+        "removed": "{cells} سے {d} ہٹائیں",
+        "rating": "درجہ {r}",
+        "steps": "{n} مراحل",
+        "faq": [
+          [
+            "حل کار کون سی تکنیکیں استعمال کرتا ہے؟",
+            "کھیل کے اشاروں جیسی ہی، ایک جیسی ترتیب میں: سنگلز، مقفل امیدوار، جوڑے اور تین، مچھلیاں، پروں، انفرادیت کے نمونے، زنجیریں، تقریباً مقفل سیٹ اور زبردستی ریٹ۔ ہر مرحلہ منطقی نتیجہ ہے، کبھی اندازہ نہیں، اور سب سے مشکل مرحلہ درجہ طے کرتا ہے۔"
+          ],
+          [
+            "کیا یہ ہر سوڈوکو میں کام کرتا ہے؟",
+            "بالکل ایک حل والے ہر بلما میں۔ کوئی حل نہ ہونے والے یا ایک سے زیادہ حل والے بلما حل کیے جانے کی جگہ رپورٹ کیے جاتے ہیں، اور بلما میں کم از کم 17 دیے گئے ہندسے ہونے ضروری ہیں۔"
+          ],
+          [
+            "کیا میرا بلما اپ لوڈ ہو رہا ہے؟",
+            "نہیں۔ حل کار مکمل طور پر آپ کے براؤزر میں چلتا ہے، آف لائن بھی۔ آپ کسی بلما کو اس کے 81 ہندسوں کو پتے میں ?p= کے طور پر شامل کر کے شیئر کر سکتے ہیں۔"
+          ]
+        ]
+      }
     },
     "ta": {
       "title": "Bare Sudoku: இலவச ஆன்லைன் சுடோகு, விளம்பரம் இல்லை, பதிவு தேவையில்லை",
@@ -3161,7 +4601,47 @@
       "androidSource": "Android மூலக் குறியீடு",
       "updated": "புதுப்பிப்பு",
       "languagesLabel": "மொழிகள்",
-      "ogAlt": "Bare Sudoku லோகோவும் இலவச ஆன்லைன் சுடோகு, விளம்பரம் இல்லை என்ற வாசகமும்"
+      "ogAlt": "Bare Sudoku லோகோவும் இலவச ஆன்லைன் சுடோகு, விளம்பரம் இல்லை என்ற வாசகமும்",
+      "dailyTitle": "நாள் சுடோகு: புதிய புதிர் ஒவ்வொரு நாள், இலவசம்",
+      "dailyDescription": "ஒவ்வொரு நாளும் ஐந்து நிலைகளில் புதிய சுடோகு, அனைவருக்கும் ஒரே புதிர். இன்றைய பதிலை தீர்ந்து வேகம் பகிரவும். விளம்பரம் இல்லை, பதிவு இல்லை.",
+      "dailyH1": "நாள் சுடோகு",
+      "dailyIntro": "ஒவ்வொரு நாளும் ஒவ்வொரு நிலைக்கும் ஒரு புதிய புதிர் வருகிறது, உலகெங்கிலும் உள்ள ஒவ்வொரு விளையாடியும் ஒரே புதிரைப் பெறுவர். அதை தீர்ந்து, உங்கள் நேரத்தை நண்பர்களுடன் பகிரவும். நாள் சுடோகு உங்கள் சாதனத்தில் தேதியிலிருந்து உருவாக்கப்படுவதால், இது ஆஃப்லைனிலும் வேலை செய்கிறது, மேலும் நேற்றைய புதிர் நள்ளிரவில் மறைந்துவிடுகிறது.",
+      "solver": {
+        "title": "சுடோகு தீர்ப்பாளர்: நுட்பங்களுடன் படிப்படியாக தீர்வு",
+        "description": "சுடோகு ஒட்டவும் அல்லது தட்டவும், தீர்வை படிப்படியாகப் பெறுங்கள். ஒவ்வொரு நகர்வும் நுட்பத்தைச் சொல்கிறது: சிங்கிள்கள் முதல் X-Wing, சங்கிலிகள்.",
+        "h1": "சுடோகு தீர்ப்பாளர், படிப்படியாக",
+        "intro": "கொடுக்கப்பட்ட எண்களை கட்டத்தில் தட்டவும் அல்லது 81 எழுத்துகளை ஒட்டவும் (எண்கள்; வெற்று கணங்களுக்கு 0 அல்லது புள்ளி). அடுத்த படி ஒவ்வொரு நகர்வையும் அதன் நுட்பத்துடன் ஒரு முறை காட்டுகிறது; தீர்க்கவும் ஒவ்வொரு படிநிலையையும் பட்டியல் செய்கிறது மற்றும் புதிரின் நிலை மற்றும் மதிப்பீடு முடிவடையும். தீர்ப்பாளர் உங்கள் உலாவியில் இயங்குகிறது, எதுவும் பதிவேற்றப்படவில்லை, மற்றும் இது விளையாட்டுத் துப்புகளின் அதே தর்க்கத்தைப் பயன்படுத்துகிறது, எனவே ஒவ்வொரு படிநிலையும் ஒரு கழிப்பு, ஒருபோதும் ஊகம் அல்ல.",
+        "link": "சுடோகு தீர்ப்பாளர்",
+        "paste": "புதிர் ஒட்டவும்: 81 எண்கள், வெற்று கணங்களுக்கு 0 அல்லது புள்ளி",
+        "next": "அடுத்த படி",
+        "solve": "தீர்க்கவும்",
+        "clear": "துப்புரவு",
+        "example": "உதாரணம்",
+        "edit": "திருத்துக",
+        "noSolution": "இந்தப் புதிருக்கு தீர்வு இல்லை. கொடுக்கப்பட்ட எண்களைச் சரிபார்க்கவும்.",
+        "manySolutions": "இந்தப் புதிருக்கு ஒன்றுக்கு மேற்பட்ட தீர்வுகள் உள்ளன. கொடுக்கப்பட்ட எண்களைச் சேர்க்கவும்.",
+        "tooFew": "குறைந்தபட்சம் 17 கொடுக்கப்பட்ட எண்களை உள்ளிடவும்.",
+        "stuck": "தீர்ப்பாளருக்கு அடுத்த படிக்கு நுட்பம் இல்லை.",
+        "done": "தீர்க்கப்பட்டது",
+        "placed": "{cell} இல் {d} வைக்கவும்",
+        "removed": "{cells} இலிருந்து {d} ஐ நீக்கவும்",
+        "rating": "மதிப்பீடு {r}",
+        "steps": "{n} படிநिலைகள்",
+        "faq": [
+          [
+            "தீர்ப்பாளர் எந்த நுட்பங்களைப் பயன்படுத்துகிறது?",
+            "விளையாட்டுத் துப்புகளின் அதே, அதே வரிசையில்: சிங்கிள்கள், பூட்டிய வேட்பாளர்கள், ஜோடிகள் மற்றும் மூன்று, மீன், சிறகுகள், தனிமைத்தன்மை வடிவங்கள், சங்கிலிகள், கிட்டத்தட்ட பூட்டிய செட் மற்றும் கட்டாயம் நெட்வொர்க். ஒவ்வொரு படிநிலையும் ஒரு தার্க்கிக கழிப்பு, ஒருபோதும் ஊகம் அல்ல, மற்றும் கடினமான படிநிலை மதிப்பீட்டை அமைக்கிறது."
+          ],
+          [
+            "இது எந்த சுடோகுவிலும் வேலை செய்கிறதா?",
+            "சரியாக ஒரு தீர்வு உள்ள ஒவ்வொரு புதிரிலும். தீர்வு இல்லாமல் அல்லது பல தீர்வுகள் உள்ள புதிர்கள் தீர்க்கப்பட்டதற்குப் பதிலாக அறிவிக்கப்படுகின்றன, மேலும் ஒரு புதிர்க்கு குறைந்தபட்சம் 17 கொடுக்கப்பட்ட எண்கள் இருக்க வேண்டும்."
+          ],
+          [
+            "என் புதிர் பதிவேற்றப்பட்டுள்ளதா?",
+            "இல்லை. தீர்ப்பாளர் முழுமையாக உங்கள் உலாவியில் இயங்குகிறது, ஆஃப்லைனும் கூட. அதன் 81 எண்களை முகவரியில் ?p= ஆக சேர்ப்பதன் மூலம் ஒரு புதிரை நீங்கள் பகிரலாம்."
+          ]
+        ]
+      }
     },
     "te": {
       "title": "Bare Sudoku: ఉచిత ఆన్‌లైన్ సుడోకు, ప్రకటనలు లేవు, నమోదు అవసరం లేదు",
@@ -3234,7 +4714,47 @@
       "androidSource": "Android సోర్స్ కోడ్",
       "updated": "నవీకరణ",
       "languagesLabel": "భాషలు",
-      "ogAlt": "Bare Sudoku లోగో మరియు ఉచిత ఆన్‌లైన్ సుడోకు, ప్రకటనలు లేవు అనే పదాలు"
+      "ogAlt": "Bare Sudoku లోగో మరియు ఉచిత ఆన్‌లైన్ సుడోకు, ప్రకటనలు లేవు అనే పదాలు",
+      "dailyTitle": "రోజువారీ సుడోకు: ప్రతిరోజు నూతన పజిల్, ఉచితం",
+      "dailyDescription": "ప్రతిరోజు ఐదు స్థాయిలలో నూతన సుడోకు, అందరికి ఒకేవిధమైనది. ఈ రోజు పజిల్‌ను పరిష్కరించి సమయం భాగస్వామ్యం చేయండి. ప్రకటనలు లేవు, నమోదు లేదు.",
+      "dailyH1": "రోజువారీ సుడోకు",
+      "dailyIntro": "ప్రతిరోజు ప్రతి స్థాయిలో ఒక్కటి నూతన పజిల్ వచ్చుతుంది, ప్రపంచ జనస్యకు ఒకేవిధమైనది. దానిని పరిష్కరించండి, ఆపై మీ సమయం స్నేహితులతో భాగస్వామ్యం చేయండి. రోజువారీ పజిల్ మీ పరికరంలో తేదీ నుండి ఉత్పత్తి చేయబడుతుంది, కాబట్టి ఇది ఆఫ్‌లైన్‌లో కూడా పనిచేస్తుంది, మరియు నిన్న పజిల్ అర్ధరాత్రిలో పోయిపోతుంది.",
+      "solver": {
+        "title": "సుడోకు సమాధానకారి: తంత్రాలతో దశకు దశ పరిష్కారం",
+        "description": "ఏదైనా సుడోకుని అంటించండి లేదా టైప్ చేయండి, పరిష్కారం దశకు దశ పొందండి. ప్రతి చలన దాని తంత్రం పేరు చెబుతుంది: సింగిల్‌ల నుండి X-Wing, శృంఖలాల వరకు.",
+        "h1": "సుడోకు సమాధానకారి, దశకు దశ",
+        "intro": "ఇచ్చిన సంఖ్యలను గ్రిడ్‌లో టైప్ చేయండి లేదా 81 అక్షరాలను అంటించండి (అంకెలు; ఖాళీ కణాలకు 0 లేదా చుక్క). తదుపరి దశ ప్రతి చలనను దాని తంత్రం ద్వారా సూచిస్తుంది; పరిష్కరించండి ప్రతి దశను జాబితా చేస్తుంది మరియు పజిల్ స్థాయి మరియు రేటింగ్‌ను ముగిస్తుంది. సమాధానకారి మీ బ్రౌజర్‌లో నడిస్తుంది, ఏమీ అపలోడ్ చేయబడదు, మరియు ఆట సూచనల ఆధారంగా ఒకే తర్కాన్ని ఉపయోగిస్తుంది, కాబట్టి ప్రతి దశ ఒక తీర్మానం, ఎన్నడూ ఊహ కాదు.",
+        "link": "సుడోకు సమాధానకారి",
+        "paste": "పజిల్ అంటించండి: 81 అంకెలు, ఖాళీ కణాలకు 0 లేదా చుక్క",
+        "next": "తదుపరి దశ",
+        "solve": "పరిష్కరించండి",
+        "clear": "శుభ్రపరచండి",
+        "example": "ఉదాహరణ",
+        "edit": "సవరించండి",
+        "noSolution": "ఈ పజిల్‌కు పరిష్కారం లేదు. ఇచ్చిన సంఖ్యలను తనిఖీ చేయండి.",
+        "manySolutions": "ఈ పజిల్‌కు ఒకటి కంటే ఎక్కువ పరిష్కారాలు ఉన్నాయి. ఇచ్చిన సంఖ్యలను జోడించండి.",
+        "tooFew": "కనీసం 17 ఇచ్చిన సంఖ్యలను ఎంటర్ చేయండి.",
+        "stuck": "సమాధానకారికి తదుపరి దశకు తంత్రం లేదు.",
+        "done": "పరిష్కరించారు",
+        "placed": "{cell} లో {d} ఉంచండి",
+        "removed": "{cells} నుండి {d} తొలగించండి",
+        "rating": "రేటింగ్ {r}",
+        "steps": "{n} దశలు",
+        "faq": [
+          [
+            "సమాధానకారి ఏ తంత్రాలను ఉపయోగిస్తుంది?",
+            "ఆట సూచనల ఆధారంగా ఒకే, ఒకేపర్లా క్రమంలో: సింగిల్‌లు, లాక్ చేసిన అభ్యర్థులు, జంటలు మరియు త్రిపువలు, చేపలు, రెక్కలు, ప్రత్యేకత నమూనాలు, శృంఖలాలు, దాదాపు లాక్ చేసిన సెట్‌లు, బలవంతపు నెట్‌లు. ప్రతి దశ తార్కిక తీర్మానం, ఎన్నడూ ఊహ కాదు; గమ్మత్తైన దశ రేటింగ్ నిర్ణయిస్తుంది."
+          ],
+          [
+            "ఇది ఏదైనా సుడోకుకు పనిచేస్తుందా?",
+            "సరిగ్గా ఒక పరిష్కారం ఉన్న ఏదైనా పజిల్‌కు. పరిష్కారం లేని లేదా అనేక పరిష్కారాలు ఉన్న పజిల్‌లు పరిష్కారం చేయబడటానికి బదులుగా నివేదించబడతాయి, మరియు పజిల్‌కు కనీసం 17 ఇచ్చిన సంఖ్యలు ఉండాలి."
+          ],
+          [
+            "నా పజిల్ అపలోడ్ చేయబడుతుందా?",
+            "లేదు. సమాధానకారి పూర్తిగా మీ బ్రౌజర్‌లో నడిస్తుంది, ఆఫ్‌లైన్‌లో కూడా. దాని 81 అంకెలను చిరునామాకు ?p= గా జోడించడం ద్వారా మీరు పజిల్‌ని భాగస్వామ్యం చేయవచ్చు."
+          ]
+        ]
+      }
     },
     "tl": {
       "title": "Bare Sudoku: Libreng Sudoku online, walang ads, walang sign-up",
@@ -3307,7 +4827,47 @@
       "androidSource": "Android source code",
       "updated": "Na-update",
       "languagesLabel": "Mga wika",
-      "ogAlt": "Logo ng Bare Sudoku na may mga salitang Libreng Sudoku online, walang ads"
+      "ogAlt": "Logo ng Bare Sudoku na may mga salitang Libreng Sudoku online, walang ads",
+      "dailyTitle": "Araw-araw na Sudoku: Bagong puzzle araw-araw, libre at walang ads",
+      "dailyDescription": "Bagong Sudoku araw-araw sa limang antas, parehong puzzle para sa lahat. Lutasin ngayon at ibahagi ang iyong oras. Walang ads, walang sign-up.",
+      "dailyH1": "Araw-araw na Sudoku",
+      "dailyIntro": "Araw-araw may bagong puzzle bawat antas, pareho para sa bawat manlalaro sa mundo. Lutasin ito, pagkatapos ibahagi ang iyong oras sa mga kaibigan. Ang araw-araw na puzzle ay nabuo sa iyong device mula sa petsa, kaya gumagana ito offline din, at ang puzzle ng kahapon ay nawala sa hatinggabi.",
+      "solver": {
+        "title": "Sudoku Solver: Hakbang-hakbang na solusyon sa mga teknik",
+        "description": "Ipasok ang anumang Sudoku at makuha ang solusyon hakbang-hakbang. Bawat galaw ay nagpapakita ng teknik, mula singles hanggang X-Wing, na may rating.",
+        "h1": "Sudoku solver, hakbang-hakbang",
+        "intro": "I-type ang mga naibigay sa grid o ipasok ang 81 character (mga digit, na may 0 o tuldok para sa walang laman na mga cell). Susunod na hakbang ay nagpapakita ng isang galaw sa isang pagkakataon na may teknik sa likod nito; Lutasin ang mga listahan bawat hakbang at nagtatapos sa antas at rating ng puzzle. Ang solver ay tumatakbo sa iyong browser, walang naipakita, at gumagamit ng parehong lohika bilang mga pahiwatig ng laro, kaya bawat hakbang ay isang deduksyon, hindi kailanman isang hula.",
+        "link": "Sudoku solver",
+        "paste": "Ipasok ang puzzle: 81 digit, 0 o . para sa walang laman na mga cell",
+        "next": "Susunod na hakbang",
+        "solve": "Lutasin",
+        "clear": "Burahin",
+        "example": "Halimbawa",
+        "edit": "I-edit",
+        "noSolution": "Ang puzzle na ito ay walang solusyon. Suriin ang mga naibigay.",
+        "manySolutions": "Ang puzzle na ito ay may mahigit isang solusyon. Magdagdag ng mga naibigay.",
+        "tooFew": "Magsaliksik ng hindi bababa sa 17 givens.",
+        "stuck": "Ang solver ay walang teknik para sa susunod na hakbang.",
+        "done": "Nalutas",
+        "placed": "Ilagay ang {d} sa {cell}",
+        "removed": "Alisin ang {d} mula sa {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} hakbang",
+        "faq": [
+          [
+            "Aling mga teknik ang ginagamit ng solver?",
+            "Ang parehong mga tulad ng mga pahiwatig ng laro, nasubukan sa parehong order: mga singles, naka-lock na mga kandidato, mga pares at tatlo, isda, pakpak, natatanging mga pattern, mga chain, halos naka-lock na mga set at pwersa ng mga net. Bawat hakbang ay isang lohikal na deduksyon, hindi kailanman isang hula, at ang pinakamahirap na hakbang ay nagtakda ng rating."
+          ],
+          [
+            "Gumagana ba ito para sa anumang Sudoku?",
+            "Para sa anumang puzzle na may eksaktong isang solusyon. Ang mga puzzle na walang solusyon o may ilang ay naiulat sa halip na nalutas, at ang puzzle ay nangangailangan ng hindi bababa sa 17 givens."
+          ],
+          [
+            "Naka-upload ba ang aking puzzle?",
+            "Hindi. Ang solver ay tumatakbo nang lubusan sa iyong browser, offline din. Maaari kang magbahagi ng puzzle sa pamamagitan ng pagdaragdag ng 81 digit nito sa address bilang ?p=."
+          ]
+        ]
+      }
     },
     "ca": {
       "title": "Bare Sudoku: Sudoku gratuït en línia, sense anuncis, sense registre",
@@ -3380,7 +4940,47 @@
       "androidSource": "Codi font d'Android",
       "updated": "Actualitzat",
       "languagesLabel": "Idiomes",
-      "ogAlt": "Logotip de Bare Sudoku amb les paraules Sudoku gratuït en línia, sense anuncis"
+      "ogAlt": "Logotip de Bare Sudoku amb les paraules Sudoku gratuït en línia, sense anuncis",
+      "dailyTitle": "Sudoku diàri: trencaclosques diari, gratuït i sense anuncis",
+      "dailyDescription": "Un sudoku nou cada dia a cinc nivells, el mateix per a tothom. Resol d'avui, de Fàcil a Mestre, i comparteix el teu temps. Sense anuncis, sense registre.",
+      "dailyH1": "Sudoku diàri",
+      "dailyIntro": "Cada dia comporta un trencaclosques nou per nivell, igual per a cada jugador del món. Resol-lo i comparteix el teu temps amb amics. El trencaclosques diàri es genera al teu dispositiu a partir de la data; funciona sense connexió i el d'ahir desapareix a mitjanit.",
+      "solver": {
+        "title": "Sudoku Solver: solució pas a pas amb tècniques",
+        "description": "Enganxa o escriu qualsevol sudoku i obtén la solució pas a pas. Cada moviment indica la tècnica, de les individuals a X-Wing i cadenes, amb el rating.",
+        "h1": "Sudoku solver, pas a pas",
+        "intro": "Escriu els dígits donats a la graella o enganxa 81 caràcters (dígits; 0 o punt per a celles buides). El següent pas mostra un moviment a la vegada amb la tècnica darrere; Resol llista cada pas i acaba amb el nivell i la qualificació del trencaclosques. El solver s'executa al teu navegador, res no s'envia i utilitza la mateixa lògica que les pistes del joc, per tant cada pas és una deducció, mai una conjectura.",
+        "link": "Sudoku solver",
+        "paste": "Enganxa un trencaclosques: 81 dígits, 0 o . per a celles buides",
+        "next": "Següent pas",
+        "solve": "Resol",
+        "clear": "Esborra",
+        "example": "Exemple",
+        "edit": "Edita",
+        "noSolution": "Aquest trencaclosques no té solució. Comprova els dígits donats.",
+        "manySolutions": "Aquest trencaclosques té més d'una solució. Afegeix dígits donats.",
+        "tooFew": "Entra almenys 17 dígits donats.",
+        "stuck": "El solver no té cap tècnica per al següent pas.",
+        "done": "Resolt",
+        "placed": "Posa {d} a {cell}",
+        "removed": "Elimina {d} de {cells}",
+        "rating": "qualificació {r}",
+        "steps": "{n} passos",
+        "faq": [
+          [
+            "Quines tècniques utilitza el solver?",
+            "Les mateixes que les pistes del joc, provades en el mateix ordre: individuals, candidats bloquejats, parelles i triples, peixos, ales, patrons d'unicitat, cadenes, conjunts gairebé bloquejats i xarxes forçades. Cada pas és una deducció lògica, mai una conjectura, i el pas més dur estableix la qualificació."
+          ],
+          [
+            "Funciona per a qualsevol sudoku?",
+            "Per a qualsevol trencaclosques amb exactament una solució. Els trencaclosques sense solució o amb diverses es notifiquen en lloc de resoldre's i un trencaclosques necessita almenys 17 dígits donats."
+          ],
+          [
+            "El meu trencaclosques s'envia?",
+            "No. El solver s'executa completament al teu navegador, sense connexió també. Pots compartir un trencaclosques afegint els seus 81 dígits a l'adreça com ?p=."
+          ]
+        ]
+      }
     },
     "sl": {
       "title": "Bare Sudoku: brezplačen sudoku na spletu, brez oglasov, brez registracije",
@@ -3453,7 +5053,47 @@
       "androidSource": "Izvorna koda za Android",
       "updated": "Posodobljeno",
       "languagesLabel": "Jeziki",
-      "ogAlt": "Logotip Bare Sudoku z besedami Brezplačen sudoku na spletu, brez oglasov"
+      "ogAlt": "Logotip Bare Sudoku z besedami Brezplačen sudoku na spletu, brez oglasov",
+      "dailyTitle": "Dnevni Sudoku: Nova Uganka Brezplačno, Brez Oglasov",
+      "dailyDescription": "Nova sudoku vsak dan na petih ravneh, ista za vse. Reši uganko od Lahko do Mojster in deli svoj čas. Brez oglasov, brez prijave.",
+      "dailyH1": "Dnevni Sudoku",
+      "dailyIntro": "Vsak dan prinese novo uganko na raven, enako za vse igralce na svetu. Reši jo, nato deli čas s prijatelji. Dnevna uganka se ustvari na tvoji napravi glede na datum; zato deluje tudi brez interneta in jutranja uganka je ob polnoči stara.",
+      "solver": {
+        "title": "Reševalnik Sudoku: Rešitev Korak za Korakom s Tehnikami",
+        "description": "Prilepи ali vnesi katero koli sudoku in dobi rešitev korak za korakom. Vsak poteza poimenov svojo tehniko, od singlov do X-Wing-a in verig, s težavnostjo ocene.",
+        "h1": "Reševalnik sudoku, korak za korakom",
+        "intro": "Vnesi dane števke v mrežo ali prilepi 81 znakov (števke; 0 ali pika za prazne celice). Naslednji korak pokaže en poteza naenkrat s tehniko za njim; Reši naredi seznam vsakega koraka in konča z ravnjo in oceno uganke. Reševalnik teče v tvem brskalniku, nič se ne naloži, in uporablja isto logiko kot namigi v igri, zato je vsak korak dedukcija, nikoli ugibanje.",
+        "link": "Reševalnik sudoku",
+        "paste": "Prilepi uganko: 81 števk, 0 ali . za prazne celice",
+        "next": "Naslednji korak",
+        "solve": "Reši",
+        "clear": "Izbriši",
+        "example": "Primer",
+        "edit": "Uredi",
+        "noSolution": "Ta uganka nima rešitve. Preverи dane števke.",
+        "manySolutions": "Ta uganka ima več kot eno rešitev. Dodaj dane števke.",
+        "tooFew": "Vnesi najmanj 17 danih števk.",
+        "stuck": "Reševalnik nima tehnike za naslednji korak.",
+        "done": "Rešeno",
+        "placed": "Vnesi {d} v {cell}",
+        "removed": "Odstrani {d} iz {cells}",
+        "rating": "ocena {r}",
+        "steps": "{n} korakov",
+        "faq": [
+          [
+            "Katere tehnike uporablja reševalnik?",
+            "Enake kot namigi v igri, v istem vrstnem redu: singlі, zaklenjeni kandidati, pari in trojke, ribe, krila, edinstvenost, verige, skoraj zaklenjeni nizi in prisilne mreže. Vsak korak je logična dedukcija, nikoli ugibanje, in najtežji korak nastavi oceno."
+          ],
+          [
+            "Deluje za katero koli sudoku?",
+            "Za vsako uganko, ki ima natanko eno rešitev. Uganke brez rešitve ali z več rešitvami se prijavijo namesto da bi jih rešili, in uganka mora imeti najmanj 17 danih števk."
+          ],
+          [
+            "Se moja uganka naloži nekam?",
+            "Ne. Reševalnik teče v celoti v tveм brskalniku, tudi brez interneta. Uganko lahko deliš z dodajanjem 81 števk naslovni vrstici kot ?p=."
+          ]
+        ]
+      }
     },
     "lt": {
       "title": "Bare Sudoku: nemokamas sudoku internete, be reklamų, be registracijos",
@@ -3526,7 +5166,47 @@
       "androidSource": "Android šaltinio kodas",
       "updated": "Atnaujinta",
       "languagesLabel": "Kalbos",
-      "ogAlt": "Bare Sudoku logotipas su žodžiais Nemokamas sudoku internete, be reklamų"
+      "ogAlt": "Bare Sudoku logotipas su žodžiais Nemokamas sudoku internete, be reklamų",
+      "dailyTitle": "Kasdieninis Sudoku: Naujas Galvosūkis Nemokamai, Be Reklam",
+      "dailyDescription": "Naujas sudoku penkiais lygiais, tas pats visiems. Išspęsk nuo Lengvo iki Meistro ir dalinkis laiku. Be reklam, be registracijos.",
+      "dailyH1": "Kasdieninis Sudoku",
+      "dailyIntro": "Kiekvieną dieną atsiranda naujas galvosūkis pagal lygį, tas pats visiems žaidėjams pasaulyje. Išspęsk jį, tada dalinkis laiku su draugais. Kasdieninis galvosūkis generuojamas tavo įrenginyje pagal datą; todėl veikia ir neprisijungus, o vakar galvosūkis išnyksta vidurnaktį.",
+      "solver": {
+        "title": "Sudoku Sprendėjas: Žingsnis po Žingsnio Sprendimas su Metodais",
+        "description": "Įklijuok arba įvelsk sudoku ir gauk sprendimą žingsnis po žingsnio. Kiekviena judama savą metodą, nuo vienečių iki X-Wing, su sunkumo įvertinimu.",
+        "h1": "Sudoku sprendėjas, žingsnis po žingsnio",
+        "intro": "Įvelsk nurodytas skaitmenis į tinklelį arba įklijuok 81 simbolį (skaitmenis; 0 arba tašką tuščioms ląstelėms). Kitas žingsnis parodo po vieną judamą su metodu paskui; Išspęsk rodo visus žingsnius ir baigiasi su galvosūkio lygiu ir įvertinimu. Sprendėjas veikia tavo naršyklėje, niekas neiškeliamas ir naudoja tą pačią logiką kaip žaidimo užuominai, todėl kiekvienas žingsnis yra išvada, ne atspėjimas.",
+        "link": "Sudoku sprendėjas",
+        "paste": "Įklijuok galvosūkį: 81 skaitmuo, 0 arba . tuščioms ląstelėms",
+        "next": "Kitas žingsnis",
+        "solve": "Išspęsk",
+        "clear": "Ištrinti",
+        "example": "Pavyzdys",
+        "edit": "Redaguoti",
+        "noSolution": "Šis galvosūkis neturi sprendimo. Patikrink nurodytus skaitmenis.",
+        "manySolutions": "Šis galvosūkis turi daugiau nei vieną sprendimą. Pridėk nurodytus skaitmenis.",
+        "tooFew": "Įvelsk mažiausiai 17 nurodytų skaitmenų.",
+        "stuck": "Sprendėjas neturi metodo kitam žingsniui.",
+        "done": "Išspręsta",
+        "placed": "Įvelsk {d} į {cell}",
+        "removed": "Pašalink {d} iš {cells}",
+        "rating": "įvertinimas {r}",
+        "steps": "{n} žingsniai",
+        "faq": [
+          [
+            "Kokius metodus naudoja sprendėjas?",
+            "Tuos pačius kaip žaidimo užuominai, ta pačia tvarka: vienečius, užrakintus kandidatus, poras ir trigubus, žuvis, sparnus, unikalumo schemas, grandines, beveik užrakintus rinkinius ir priimtus tinklus. Kiekvienas žingsnis yra loginė išvada, ne atspėjimas, ir sunkiausias žingsnis nustato įvertinimą."
+          ],
+          [
+            "Ar tai veikia su bet kuriuo sudoku?",
+            "Su bet kuriuo galvosūkiu, kuris turi tiksliai vieną sprendimą. Galvosūkiai be sprendimo ar su keliais sprendimais yra pranešami, o ne išsprendžiami, ir galvosūkis turi turėti mažiausiai 17 nurodytų skaitmenų."
+          ],
+          [
+            "Ar mano galvosūkis yra į diegtas?",
+            "Ne. Sprendėjas veikia visiškai tavo naršyklėje, taip pat neprisijungus. Galvosūkį gali dalintis pridėdamas 81 skaitmenį į adresą kaip ?p=."
+          ]
+        ]
+      }
     },
     "lv": {
       "title": "Bare Sudoku: bezmaksas sudoku tiešsaistē, bez reklāmām, bez reģistrācijas",
@@ -3599,7 +5279,47 @@
       "androidSource": "Android pirmkods",
       "updated": "Atjaunināts",
       "languagesLabel": "Valodas",
-      "ogAlt": "Bare Sudoku logotips ar vārdiem Bezmaksas sudoku tiešsaistē, bez reklāmām"
+      "ogAlt": "Bare Sudoku logotips ar vārdiem Bezmaksas sudoku tiešsaistē, bez reklāmām",
+      "dailyTitle": "Ikdienas Sudoku: Jauna Mīkla Bezmaksas, Bez Reklāmām",
+      "dailyDescription": "Jauna sudoku katru dienu piecus līmeņus, vienāda ikvienam. Atrisini mīklu no Vienkāršs līdz Meistars un koplietojies ar laiku. Bez reklāmām, bez reģistrācijas.",
+      "dailyH1": "Ikdienas Sudoku",
+      "dailyIntro": "Katru dienu parādās jauna mīkla līmenim, vienāda visiem spēlētājiem pasaulē. Atrisini to, tad koplietojies laiku ar draugiem. Ikdienas mīkla tiek ģenerēta tavā ierīcē pēc datuma; tāpēc darbojas arī bezsaistē, un vakardienas mīkla pazūd pusnaktī.",
+      "solver": {
+        "title": "Sudoku Risinātājs: Soli pa Solim Risinājums ar Paņēmieniem",
+        "description": "Ielīmē vai ievadi sudoku un saņem risinājumu soli pa solim. Katrs gājiens nosauc savu paņēmienu, no singliem līdz X-Wing un ķēdēm, ar grūtības vērtējumu.",
+        "h1": "Sudoku risinātājs, soli pa solim",
+        "intro": "Ievadi dotos ciparus režģī vai ielīmē 81 rakstzīmi (ciparus; 0 vai punktu tukšām šūnām). Nākamais solis parāda vienu gājienu uz reizi ar paņēmienu aiz tā; Atrisini uzrāda katru soli un beidzas ar mīklas līmeni un vērtējumu. Risinātājs darbojas tavā pārlūkā, nekas netiek augšupielādēts, un tas izmanto tādu pašu loģiku kā spēles mājieni, tāpēc katrs solis ir secinājums, nekad minējums.",
+        "link": "Sudoku risinātājs",
+        "paste": "Ielīmē mīklu: 81 cipars, 0 vai . tukšām šūnām",
+        "next": "Nākamais solis",
+        "solve": "Atrisini",
+        "clear": "Notīrīt",
+        "example": "Piemērs",
+        "edit": "Rediģēt",
+        "noSolution": "Šai mīklai nav risinājuma. Pārbaudi dotos ciparus.",
+        "manySolutions": "Šai mīklai ir vairāk nekā viens risinājums. Pievienojot dotos ciparus.",
+        "tooFew": "Ievadi vismaz 17 dotos ciparus.",
+        "stuck": "Risinātājam nav paņēmiena nākamajam solim.",
+        "done": "Atrisināts",
+        "placed": "Ievadi {d} {cell}",
+        "removed": "Noņem {d} no {cells}",
+        "rating": "vērtējums {r}",
+        "steps": "{n} soļi",
+        "faq": [
+          [
+            "Kādus paņēmienus izmanto risinātājs?",
+            "Tādus pašus kā spēles mājieni, tādā pašā secībā: singlus, bloķētus kandidātus, pārus un trijnieksus, zivis, spārnus, unikalitātes modeļus, ķēdes, gandrīz bloķētus komplektus un piespiešanas tīklus. Katrs solis ir loģisks secinājums, nekad minējums, un grūtākais solis nosaka vērtējumu."
+          ],
+          [
+            "Vai tas darbojas jebkuram Sudoku?",
+            "Jebkurai mīklai, kurai ir tieši viens risinājums. Mīklas bez risinājuma vai ar vairākiem risinājumiem tiek ziņotas tā vietā, lai tās atrisinātu, un mīklai jābūt vismaz 17 dotiem cipariem."
+          ],
+          [
+            "Vai mana mīkla tiek augšupielādēta?",
+            "Nē. Risinātājs darbojas pilnībā tavā pārlūkā, arī bezsaistē. Mīklu vari koplietot, pievienojot 81 ciparu adresei kā ?p=."
+          ]
+        ]
+      }
     },
     "ky": {
       "title": "Bare Sudoku: акысыз онлайн судоку, жарнамасыз, катталуусуз",
@@ -3672,7 +5392,47 @@
       "androidSource": "Android баштапкы коду",
       "updated": "Жаңыртылды",
       "languagesLabel": "Тилдер",
-      "ogAlt": "Bare Sudoku логотиби жана Акысыз онлайн судоку, жарнамасыз деген сөздөр"
+      "ogAlt": "Bare Sudoku логотиби жана Акысыз онлайн судоку, жарнамасыз деген сөздөр",
+      "dailyTitle": "Күндүк судоку: Ар күнү жаңы табышмак, акысыз жана жарнамасыз",
+      "dailyDescription": "Ар күнү беш деңгээлде жаңа судоку, ар кимге бирдей табышмак. Бүгүнкү табышмакты Жеңилдүүдөн Мастерге чейин чечип, убактыңды бөлүшүү. Жарнама жок, катталоо жок.",
+      "dailyH1": "Күндүк судоку",
+      "dailyIntro": "Ар күнү деңгээл сайын бир жаңы табышмак келет, дүнийөнүн ар бир ойнучусу үчүн бирдей. Чечип, анан убактыңды достоо менен бөлүшүү. Күндүк табышмак түзмөгүңүздө датадан жасалат; ошондуктан интернетсиз да иштейт жана кечээнки табышмак түнү жарымында кетет.",
+      "solver": {
+        "title": "Судоку Чешүүчү: Техникалар менен этап-этап чечүү",
+        "description": "Судокуну чалыштыр же жаз, чечүүнү этап-этап алгыла. Жүрүш техникасын айтат: жалгыз талапкерлерден X-Wing жана чынжырга чейин, кыйынчылык деңгээли менен.",
+        "h1": "Судоку чешүүчү, этап-этап",
+        "intro": "Берилген цифраларды сеткага жаз же 81 символ чалыштыр (цифралар; бош ячейка үчүн 0 же чекит). Келген этап жүрүштү артындагы техникасы менен бир-бир көрсөтөт; Чечүү бардык этаптарды тизмектейт жана табышмактын деңгээли жана рейтингин берет. Чешүүчү браузерде иштейт, эч нерсе жүктөлбөйт; оюндун кеңештери менен бирдей логиканы колдонот, ошол үчүн ар бир этап логикалык жыйынтык, эч качан божомол эмес.",
+        "link": "Судоку чешүүчү",
+        "paste": "Табышмак чалыштыр: 81 цифра, бош үчүн 0 же .",
+        "next": "Келген этап",
+        "solve": "Чеш",
+        "clear": "Тазалоо",
+        "example": "Мисал",
+        "edit": "Түзөтүү",
+        "noSolution": "Бул табышмактын чечүүсү жок. Берилген цифраларды текшер.",
+        "manySolutions": "Бул табышмактын бирден ашык чечүүсү бар. Берилген цифра кош.",
+        "tooFew": "Жок дегенде 17 берилген цифра кир.",
+        "stuck": "Чешүүчүнүн келген этап үчүн техникасы жок.",
+        "done": "Чечилди",
+        "placed": "{cell} ячейкасына {d} жаз",
+        "removed": "Бул ячейкалардан {d} талапкерин өчүрүү: {cells}",
+        "rating": "рейтинг {r}",
+        "steps": "{n} этап",
+        "faq": [
+          [
+            "Чешүүчү кайсы техникаларды колдонот?",
+            "Оюндун кеңештери менен бирдей техникаларды, ошол жерде иретте: жалгыз талапкерлер, бекитилген талапкерлер, жуптар жана үчтүктөр, балык, канаттар, уникалдуу үлгүлөр, чынжырлар, дээрлик бекитилген топтомдор жана туруктуу тордолор. Ар бир этап логикалык жыйынтык, эч качан божомол эмес; эң кыйын этап рейтингти белгилейт."
+          ],
+          [
+            "Ар бир судокуда иштейби?",
+            "Так бир чечүүсү бар ар бир табышмакта. Чечүүсү жок же бирден ашык чечүүсү бар табышмактар чечүүнүн ордуна кабарланат; табышмакта жок дегенде 17 берилген цифра болуу керек."
+          ],
+          [
+            "Табышмагым кайсы жакка жүктөлүүдө?",
+            "Жок. Чешүүчү толугу менен браузерде иштейт, интернетсиз да. Табышмакты дарегине ?p= менен 81 цифрасын кошуу менен бөлүшө аласыз."
+          ]
+        ]
+      }
     },
     "kk": {
       "title": "Bare Sudoku: тегін онлайн судоку, жарнамасыз, тіркелусіз",
@@ -3745,7 +5505,47 @@
       "androidSource": "Android бастапқы коды",
       "updated": "Жаңартылды",
       "languagesLabel": "Тілдер",
-      "ogAlt": "Bare Sudoku логотипі және Тегін онлайн судоку, жарнамасыз деген сөздер"
+      "ogAlt": "Bare Sudoku логотипі және Тегін онлайн судоку, жарнамасыз деген сөздер",
+      "dailyTitle": "Күнделік судоку: әр күні жаңа жұмбақ, тегін және жарнамасыз",
+      "dailyDescription": "Әр күні беш деңгейде жаңа судоку, барлығына бірдей жұмбақ. Бүгінгі жұмбақты Оңайдан Ұстаға дейін шешіп, уақытыңызды бөлісіңіз. Жарнама жоқ, тіркелу жоқ.",
+      "dailyH1": "Күнделік судоку",
+      "dailyIntro": "Әр күні әрбір деңгей үшін жаңа жұмбақ, әлем бойындағы әр ойыншы үшін бірдей. Шешіңіз, сосын уақытыңызды достарыңызпен бөлісіңіз. Күнделік жұмбақ сіздің құрылғысында күннен генерацияланады; сондықтан офлайнда да жұмыс істейді және өндігінің жұмбағы түске жасады.",
+      "solver": {
+        "title": "Судоку шешушісі: техникалармен қадам-қадам шешім",
+        "description": "Кез келген судокуды араластырыңыз немесе теріңіз, шешімді қадам-қадам алыңыз. Әрбір құрылымы техникасын көрсетеді, жалғыздар мен X-Wing және тізбектерге.",
+        "h1": "Судоку шешушісі, қадам-қадам",
+        "intro": "Берілген цифрларды тордың ішіне теріңіз немесе 81 таңбаны араластырыңыз (цифрлар; бос ұяшықтар үшін 0 немесе нүкте). Келесі қадам бір уақытта бір жүрісті оның артындағы техникамен көрсетеді; Шешу әрбір қадамды тізімге салады және жұмбақтың деңгейі мен бағасымен аяқталады. Шешушісі сіздің браузеріңізде жұмыс істейді, ештеңе жүктелмейді және ойынның кеңестеріндей логикаларды пайдаланады, сондықтан әрбір қадам қорытынды, ешқашан болжау емес.",
+        "link": "Судоку шешушісі",
+        "paste": "Жұмбақты араластырыңыз: 81 сан, бос ұяшықтар үшін 0 немесе .",
+        "next": "Келесі қадам",
+        "solve": "Шешу",
+        "clear": "Өшіру",
+        "example": "Мысал",
+        "edit": "Өңдеу",
+        "noSolution": "Бұл жұмбақтың шешімі жоқ. Берілген цифрларды тексеріңіз.",
+        "manySolutions": "Бұл жұмбақтың бірнеше шешімі бар. Берілген цифрлар қосыңыз.",
+        "tooFew": "Ең болмағанда 17 берілген сан енгізіңіз.",
+        "stuck": "Шешушісінде келесі қадам үшін техника жоқ.",
+        "done": "Шешілді",
+        "placed": "{d} санын {cell} ішіне орналастырыңыз",
+        "removed": "{d} санын {cells} ішінен ығысырыңыз",
+        "rating": "бағалау {r}",
+        "steps": "{n} қадам",
+        "faq": [
+          [
+            "Шешушісі қандай техникаларды пайдаланады?",
+            "Ойынның кеңестеріндей болатын техникаларды, сол тәртіпте сынап көрсетіңіз: жалғыздар, құлпылайтын ұмыт кәсіптерлер, жұптар және үштіктер, балықтар, қанатар, бірінші болу үлгілері, тізбектер, дерлік құлпылайтын жиынтықтар және мәжбүрлеу торлары. Әрбір қадам логикалық қорытынды, ешқашан болжау емес және ең қиын қадам бағалауды анықтайды."
+          ],
+          [
+            "Ол кез келген судокуда жұмыс істей ме?",
+            "Дәл бір шешімі бар кез келген жұмбақ үшін. Шешімі жоқ немесе бірнеше шешімі бар жұмбақтар шешілді емес бәрелік болып ескертіледі және жұмбақтың ең болмағанда 17 берілген сан болуы қажет."
+          ],
+          [
+            "Менің жұмбақым жүктелсін бе?",
+            "Жоқ. Шешушісі толығымен сіздің браузеріңізде жұмыс істейді, офлайнда да. Жұмбақты оның 81 цифрын мекенжайына ?p= ретінде қосу арқылы бөлісе аласыз."
+          ]
+        ]
+      }
     },
     "uz": {
       "title": "Bare Sudoku: bepul onlayn sudoku, reklamasiz, roʻyxatdan oʻtmasdan",
@@ -3818,7 +5618,47 @@
       "androidSource": "Android manba kodi",
       "updated": "Yangilandi",
       "languagesLabel": "Tillar",
-      "ogAlt": "Bare Sudoku logotipi va Bepul onlayn sudoku, reklamasiz soʻzlari"
+      "ogAlt": "Bare Sudoku logotipi va Bepul onlayn sudoku, reklamasiz soʻzlari",
+      "dailyTitle": "Kunlik Sudoku: har kuni yangi boshqoturma, bepul va reklamasiz",
+      "dailyDescription": "Har kuni besh darajada yangi sudoku, hamma uchun bir xil. Oson'dan Usta'ga yeching va vaqt ulashish. Reklama yo'q, roʻyxatdan oʻtish yo'q.",
+      "dailyH1": "Kunlik Sudoku",
+      "dailyIntro": "Har kuni har bir daraja uchun yangi boshqotirma, dunyodagi har bir o'yinchi uchun bir xil. Yeching, keyin vaqtingizni do'stlaringiz bilan ulashish. Kunlik boshqotirma sizning qurilmangizda sana bo'yicha yaratiladi; shuning uchun oflayn ham ishlaydi va kechasingning boshqotirmasi yarim tunda yo'q bo'ladi.",
+      "solver": {
+        "title": "Sudoku Yechimi: Usullar bilan qadam-qadam yechim",
+        "description": "Istalgan sudokuني joylashtiring yoki yozing va yechimni qadam-qadam oling. Har bir haraka uning usulini ko'rsatadi, individual'lardan X-Wing va zanjirlar gacha.",
+        "h1": "Sudoku yechimi, qadam-qadam",
+        "intro": "Berilgan raqamlarni panjara ichiga yozing yoki 81 ta belgini joylashtiring (raqamlar; bo'sh kataklar uchun 0 yoki nuqta). Keyingi qadam bir vaqtning o'zida bitta harakatni uning ortida kelgan usuli bilan ko'rsatadi; Yechish har bir qadamni ro'yxatga oladi va boshqotirmaning darajasi va bahosi bilan tugaydi. Yechuvchi sizning brauzeringizda ishlaydi, hech narsa yuqloadi, va o'yun maslahatlar bilan bir xil mantiqdan foydalanadi, shuning uchun har bir qadam chiqarish, hech qachon taxmin emas.",
+        "link": "Sudoku yechimi",
+        "paste": "Boshqotirmani joylashtiring: 81 ta raqam, bo'sh kataklar uchun 0 yoki .",
+        "next": "Keyingi qadam",
+        "solve": "Yechish",
+        "clear": "O'chirish",
+        "example": "Misol",
+        "edit": "Tahrirlash",
+        "noSolution": "Bu boshqotirmaning yechimi yo'q. Berilgan raqamlarni tekshiring.",
+        "manySolutions": "Bu boshqotirmaning bir nechta yechimlari bor. Berilgan raqamlar qo'shing.",
+        "tooFew": "Kamida 17 ta berilgan raqam kiriting.",
+        "stuck": "Yechuvchida keyingi qadam uchun usul yo'q.",
+        "done": "Yechildi",
+        "placed": "{d} ni {cell} ga joylashtiring",
+        "removed": "{d} ni {cells} dan olib tashlang",
+        "rating": "baho {r}",
+        "steps": "{n} qadam",
+        "faq": [
+          [
+            "Yechuvchi qaysi usullarni ishlatadi?",
+            "O'yun maslahatlar bilan bir xil bo'lgan usullarni, bir xil tartibda sinab ko'rish: individual'lar, qulflangan nomzodlar, juftliklar va uchliklar, baliqlar, qanotlar, o'ziga xos naqshlar, zanjirlar, deyarli qulflangan to'plamlar va majburiy tarmoqlar. Har bir qadam mantiqiy chiqarish, hech qachon taxmin emas va eng qiyin qadam baholashni belgilaydi."
+          ],
+          [
+            "U har qanday sudoku uchun ishlaydi?",
+            "Aynan bitta yechimga ega bo'lgan har qanday boshqotirma uchun. Yechimi bo'lmagan yoki bir nechta yechimlari bo'lgan boshqotirmalar yechildi deb bildirilmay, balki xabar beradi va boshqotirmada kamida 17 ta berilgan raqam bo'lishi kerak."
+          ],
+          [
+            "Mening boshqotirmam yuqlodiladimi?",
+            "Yo'q. Yechuvchi to'liq sizning brauzeringizda ishlaydi, oflayn ham. Boshqotirmani uning 81 ta raqamini manzilga ?p= sifatida qo'shish orqali ulashishingiz mumkin."
+          ]
+        ]
+      }
     },
     "tk": {
       "title": "Bare Sudoku: mugt onlaýn sudoku, mahabatsyz, hasaba alynmazdan",
@@ -3891,7 +5731,47 @@
       "androidSource": "Android çeşme kody",
       "updated": "Täzelendi",
       "languagesLabel": "Diller",
-      "ogAlt": "Bare Sudoku logotipi we Mugt onlaýn sudoku, mahabatsyz sözleri"
+      "ogAlt": "Bare Sudoku logotipi we Mugt onlaýn sudoku, mahabatsyz sözleri",
+      "dailyTitle": "Gündelik Sudoku: Her Gün Täze Tapmaça, Mugt we Mahabatsyz",
+      "dailyDescription": "Her gün bäş derejede täze sudoku, hemmä üçin bir tapmaça. Bugüniň tapmaçasyny Aňsatdan Ustaha çöz we wagtyňy payla. Mahabat ýok, hasap ýok.",
+      "dailyH1": "Gündelik Sudoku",
+      "dailyIntro": "Her gün dereje başyna bir täze tapmaça gelýär, dünyadaky hemmä oýunçy üçin bir tapmaça. Çöz, soňra wagtyňy dostlaryn bilen payla. Gündelik tapmaça enjamyňda sene-den döredilýär; şonuň üçin internet ýok-da işleýär we şeninden öň tapmaça gije jewe gidýär.",
+      "solver": {
+        "title": "Sudoku Çözüji: Adym-adym Çözme Usullary bilen",
+        "description": "Islendik sudokuny yapyşdyr ýa-da ýaz, çözümi adym-adym al. Her ýöräniş ulanylýan usulyni söýleýär: ýekeleri X-Wing we zinjirlerine çenli, kynlyk derejesi bilen.",
+        "h1": "Sudoku çözüji, adym-adym",
+        "intro": "Berilýän sanlaryny tor çizgisine ýaz ýa-da 81 harp yapyşdyr (sanlar; boş öýje üçin 0 ýa-da nogtasy). Geljek adym, hereketleri arkasyndaky usulyň bilen birer-birer görkezip geçýär; Çöz, ähli adymlary sanalyp çykaryk we tapmaçanyň derejesi bilen derejesini berýär. Çözüji brauzerde işleýär, hiç zat ýüklenmez; oýnunyň maslahatlaryna meňzeş logika ulanýar, ýagny her adym çykaryş bolup, hiç wagt çepme däl.",
+        "link": "Sudoku çözüji",
+        "paste": "Tapmaçany yapyşdyr: 81 san, boş öýje üçin 0 ýa-da .",
+        "next": "Geljek adym",
+        "solve": "Çöz",
+        "clear": "Arassala",
+        "example": "Mysal",
+        "edit": "Düzetme",
+        "noSolution": "Bu tapmaçanyň çözgüdi ýok. Berilýän sanlaryny barla.",
+        "manySolutions": "Bu tapmaçanyň birden köp çözgüdi bar. Berilýän san goş.",
+        "tooFew": "Iň az 17 berilýän san gir.",
+        "stuck": "Çözüjiniň geljek adym üçin usulyň ýok.",
+        "done": "Çözüldi",
+        "placed": "{cell} öýjüne {d} ýaz",
+        "removed": "Bu öýjelerinden {d} talanynyň öz arassala: {cells}",
+        "rating": "dereje {r}",
+        "steps": "{n} adym",
+        "faq": [
+          [
+            "Çözüji haýsy usullary ulanýar?",
+            "Oýnunyň maslahatlaryna meňzeş usullary, şonuň ýaly tertipde: ýekeler, kilitli talanylar, goz we üç, baly, ganatylar, ýekeçilge şekil, zinjirler, deňsiz-a-bit kilitli toplum we zorlamaly tor. Her adym logika çykaryş bolup, hiç wagt çepme däl; iň kyn adym derejeyi kesgitleýär."
+          ],
+          [
+            "Her sudokuda işleýär mi?",
+            "Takyk bir çözgüdi bolan her tapmaçada. Çözgüdi ýok ýa-da birden köp çözgüdi bolan tapmaçalar çözülmek ýerine habar berilip geçilýär; tapmaçada iň az 17 berilýän san bolmaly."
+          ],
+          [
+            "Tapmaçam bir ýere ýükleniyor mi?",
+            "Ýok. Çözüji doly brauzerde işleýär, internet ýok-da hem. Tapmaçany adresiň ?p= bilen 81 sanynyň ýa-da golemiş yapyşdyryp payla alyşsañ bolar."
+          ]
+        ]
+      }
     },
     "tt": {
       "title": "Bare Sudoku: бушлай онлайн судоку, рекламасыз, теркәлүсез",
@@ -3964,7 +5844,47 @@
       "androidSource": "Android чыганак коды",
       "updated": "Яңартылды",
       "languagesLabel": "Телләр",
-      "ogAlt": "Bare Sudoku логотибы һәм Бушлай онлайн судоку, рекламасыз дигән сүзләр"
+      "ogAlt": "Bare Sudoku логотибы һәм Бушлай онлайн судоку, рекламасыз дигән сүзләр",
+      "dailyTitle": "Көндәлек Судоку: Һәр Көнне Яңа Табышмак, Бушлай һәм Рекламасыз",
+      "dailyDescription": "Һәр көнне биш дәрәҗәдә яңа судоку, һәммә өчен бер табышмак. Бүген табышмакны Җиңелдән Мастарга кадәр чиш һәм вакытыңны уртаташ. Реклама юк, теркәлү юк.",
+      "dailyH1": "Көндәлек Судоку",
+      "dailyIntro": "Һәр көнне дәрәҗә буенча бер яңа табышмак килә, дөнядагы һәр уенчы өчен бер табышмак. Чиш, аннары вакытыңны дусларыңмен уртаташ. Көндәлек табышмак сайланмаңнан өндә төзелә; шуңа күрә интернет булмаса да эшли һәм тознең табышмагы төнче ярысы китә.",
+      "solver": {
+        "title": "Судоку Чишүче: Техникалар белән Адым-адым Чишелеш",
+        "description": "Судокуны урнаштыр яки языгыз, чишелешне адым-адым алыгыз. Һәр ход техникасын сөйли: бердәнберләр X-Wing'ка һәм чылбырларга кадәр, кыйнарлык дәрәҗәсе белән.",
+        "h1": "Судоку чишүче, адым-адым",
+        "intro": "Салынган сандарны тордай языгыз яки 81 символ урнаштырыгыз (сандар; буш яшьтәге өчен 0 яки нокта). Киләсе адым, ходларны аркасындагы техникасы белән бер-бер урын күрсәтә; Чиш, барлык адымларны исемләп һәм табышмакның дәрәҗәсе һәм рәйтингын бирә. Чишүче браузерда эшли, бернәрсә йөкләнмәсә; уеннын киңәшләренә охшаш логика кулланы, йәни һәр адым логик чыгарыш, беркайчан да фараз түгел.",
+        "link": "Судоку чишүче",
+        "paste": "Табышмак урнаштыр: 81 сан, буш яшьтәге өчен 0 яки .",
+        "next": "Киләсе адым",
+        "solve": "Чиш",
+        "clear": "Чистарт",
+        "example": "Мисал",
+        "edit": "Үзгәрт",
+        "noSolution": "Бу табышмакның чишелеше юк. Салынган сандарны тикләгез.",
+        "manySolutions": "Бу табышмакның берсәдән артык чишелеше бар. Салынган сан өсте.",
+        "tooFew": "Кимендә 17 салынган сан кертәгез.",
+        "stuck": "Чишүченең киләсе адым өчен техникасы юк.",
+        "done": "Чишелде",
+        "placed": "{cell} яшьтәсенә {d} языгыз",
+        "removed": "Бу яшьтәләрдән {d} кандидатын бетәргез: {cells}",
+        "rating": "рәйтинг {r}",
+        "steps": "{n} адым",
+        "faq": [
+          [
+            "Чишүче кайсы техникаларны куллана?",
+            "Уеннын киңәшләренә охшаш техникаларны, шул сорау буенча: бердәнберләр, бикләнгән кандидатлар, парлар һәм өчлекләр, балык, канатлар, ягын булмау үрнәкләре, чылбырлар, нәкъ бикләнгән күмәләр һәм мәҗбүри сәткәләр. Һәр адым логик чыгарыш, беркайчан да фараз түгел; иң авыр адым рәйтингны билгеләрәс."
+          ],
+          [
+            "Кайсы ук табышмак өчен эшли ми?",
+            "Нәкъ берәс чишелеше булган һәр табышмакта. Чишелеше булмаган яки берсәдән артык чишелеше булган табышмаклар чишергә урынына хәбәр итәләр; табышмакта кимендә 17 салынган сан булуы кирәк."
+          ],
+          [
+            "Табышмакым бир ераһа йөкләнә ми?",
+            "Юк. Чишүче тулысынча браузерда эшли, интернет булмаса да. Табышмакны адреска ?p= белән 81 сан өсте ясап уртаташа аласыз."
+          ]
+        ]
+      }
     },
     "ba": {
       "title": "Bare Sudoku: бушлай онлайн судоку, рекламаһыҙ, теркәлеүһеҙ",
@@ -4037,7 +5957,47 @@
       "androidSource": "Android сығанаҡ коды",
       "updated": "Яңыртылды",
       "languagesLabel": "Телдәр",
-      "ogAlt": "Bare Sudoku логотибы һәм Бушлай онлайн судоку, рекламаһыҙ тигән һүҙҙәр"
+      "ogAlt": "Bare Sudoku логотибы һәм Бушлай онлайн судоку, рекламаһыҙ тигән һүҙҙәр",
+      "dailyTitle": "Төндәлек судоку: Һәр Төндә Яңы йомаҡ, Бушлай һәм Рекламаһыҙ",
+      "dailyDescription": "Һәр төндә биш кимәлдә яңа судоку, һәммәгә бер йомаҡ. Бөгөндөң йомаҡын Еңелдән Мастарға кадәр сисе һәм ваҡытыңды уртаташ. Реклама юҡ, теркәлеү юҡ.",
+      "dailyH1": "Төндәлек судоку",
+      "dailyIntro": "Һәр төндә кимәл буйынса бер яңа йомаҡ килә, дөнья буйын һәр уйынсы өсөн бер йомаҡ. Сисе, анһа ваҡытыңды достарыңмен уртаташ. Төндәлек йомаҡ сәләнмәңдә датадан яһалған; шуға тиклем интернет булмаһа да эшләй һәм кисән йомаҡы төнə яҫы ҡайта.",
+      "solver": {
+        "title": "Судоку сисеүсе: техникалар менән ҡәҙәм-ҡәҙәм сисеү",
+        "description": "Судокуны урнаштыр йәки яз, сисеүне ҡәҙәм-ҡәҙәм алығыҙ. Һәр һыҙыш техникаһын айта: яңғыҙҙарҙан X-Wing һәм чынжырға кадәр, ауырлыҡ кимәле менән.",
+        "h1": "Судоку сисеүсе, ҡәҙәм-ҡәҙәм",
+        "intro": "Бирелгән цифраларҙы сеткаға яз йәки 81 таңба урнаштыр (цифралар; буш ябай үсөн 0 йәки нокта). Киләсе ҡәҙәм һыҙыштарҙы артындагы техникаһы менән бер-бер күрһәтә; Сисеү һәм бөтә ҡәҙәмдәрҙе исәмләй һәм йомаҡтың кимәле һәм рейтингын бирә. Сисеүсе браузерҙа эшләй, бер нәмә й юҡ; уйыны кәңәштәренә охшаш логика ҡуллана, йәғни һәр ҡәҙәм логик сығарыш, бер ҡасан да фараз түгел.",
+        "link": "Судоку сисеүсе",
+        "paste": "йомаҡ урнаштыр: 81 цифра, буш өсөн 0 йәки .",
+        "next": "Киләсе ҡәҙәм",
+        "solve": "Сисе",
+        "clear": "Сәф ит",
+        "example": "Мисал",
+        "edit": "Үҙгәрт",
+        "noSolution": "Был йомаҡтың сиселеше юҡ. Бирелгән цифраларҙы тикләгез.",
+        "manySolutions": "Был йомаҡтың берсәдән артыҡ сиселеше бар. Бирелгән цифра өсте.",
+        "tooFew": "Кимендә 17 бирелгән цифра кертәгез.",
+        "stuck": "Сисеүсенең киләсе ҡәҙәм өсөн техникаһы юҡ.",
+        "done": "Сиселде",
+        "placed": "{cell} ябайына {d} яз",
+        "removed": "Был ябайҙарҙан {d} кандидатын юйығыҙ: {cells}",
+        "rating": "рейтинг {r}",
+        "steps": "{n} ҡәҙәм",
+        "faq": [
+          [
+            "Сисеүсе ҡайһы техникаларҙы ҡуллана?",
+            "Уйын кәңәштәренә охшаш техникаларҙы, шул иҫәптә: яңғыҙҙар, бикләнгән кандидаттар, парҙар һәм өслөктәр, балыҡ, ҡанаттар, уникаль үлгөләр, чынжырлар, тиҡе-ҡалып бикләнгән купланмалар һәм мәжбүр торҙалар. Һәр ҡәҙәм логик сығарыш, бер ҡасан да фараз түгел; иң ауыр ҡәҙәм рейтингны билгеләй."
+          ],
+          [
+            "Һәр судокуҙа эшләй ми?",
+            "Теүәл бер сиселеше булған һәр йомаҡта. Сиселеше булмаған йәки берсәдән артыҡ сиселеше булған йомаҡтар сисергә урынына хәбәр итәләр; йомаҡта кимендә 17 бирелгән цифра булыуы кәрәк."
+          ],
+          [
+            "йомаҡым бер ераһа юҡләнә ми?",
+            "Юҡ. Сисеүсе тулысынса браузерҙа эшләй, интернет булмаһа да. йомаҡны адреска ?p= менән 81 цифраһын өсте яһап уртаташа аласыҙ."
+          ]
+        ]
+      }
     },
     "cv": {
       "title": "Bare Sudoku: тӳлевсӗр онлайн судоку, рекламасӑр, регистрацисӗр",
@@ -4110,7 +6070,47 @@
       "androidSource": "Android ҫӑл кочӗ",
       "updated": "Ҫӗнетнӗ",
       "languagesLabel": "Чӗлхесем",
-      "ogAlt": "Bare Sudoku логотипӗ тата Тӳлевсӗр онлайн судоку, рекламасӑр сӑмахсем"
+      "ogAlt": "Bare Sudoku логотипӗ тата Тӳлевсӗр онлайн судоку, рекламасӑр сӑмахсем",
+      "dailyTitle": "Кун судоку: Кун-кун Ҫӗнӗ тупсӑм, Тӳлевсӗр ӑнтав рекламасӑр",
+      "dailyDescription": "Кун-кун пӗш шайта ҫӗнӗ судоку, пургӑ валли пӗртӗшне тупсӑм. Паян тупсӑме Ҫӑмӑлтан Мастера ӑнлат та вӑхӑтне пайла. Реклама ҫук, регистрация ҫук.",
+      "dailyH1": "Кун судоку",
+      "dailyIntro": "Кун-кун шай сӑвӑнта пӗр ҫӗнӗ тупсӑм пулать, тӗл пуҫаршӑвӗнче кашни ойнакӗр валли пӗртӗшне. Тупӑр, теҫҫӗ вӑхӑтне достӑм-йӗрӱ менле пайла. Кун тупсӑме сӑлнӑм истелӗпе рулӑ; шапах офлайн ӗҫле та хакі пулать, пӗн-пӗнни тупсӑме вӑл пӱлӗ пӱл-ҫӗргӗ кӗтеллет.",
+      "solver": {
+        "title": "Судоку тупӑр: Велӑ-велӑ хурав техникӑпа",
+        "description": "Судокуне парнӑ вӑй йӑ теп, хуравне велӑ-велӑ пол. Кашни ҫанлӑк техниканы сӑлтавет: пӗчченсемпе X-Wing та чынжыр ҫьам, йывӑрлӑҫӑ марал менле.",
+        "h1": "Судоку тупӑр, велӑ-велӑ",
+        "intro": "Парнӑ цифра кадре теп йӑ 81 та пайлӑн парнӑ (цифра; сулӑ вырӑн валли 0 йӑ 0-та). Тепери велӑ ҫанлӑ кӑвӑмне техника менле парнӑ; Тупӑр кашни велӑ санлӑ та тупсӑмри марал та санӑ парать. Тупӑр браузерта ӗҫлет, нимӗ йӳклет мар та вӑйӑн сӗнӳпе охшаш логика ҫуклемен уҫӑ таса суслет та шӑпах велӑ манлӑ парма, тӗшмӗк мар.",
+        "link": "Судоку тупӑр",
+        "paste": "Тупсӑме парнӑ: 81 цифра, сулӑ валли 0 йӑ .",
+        "next": "Тепери велӑ",
+        "solve": "Тупӑр",
+        "clear": "Ҫута",
+        "example": "Образец",
+        "edit": "Рӗндмелле",
+        "noSolution": "Ку тупсӑмӑн хурав ҫук. Парнӑ цифра ювӑр.",
+        "manySolutions": "Ку тупсӑмӑн пӗртен вӗҫ хурав пур. Парнӑ цифра кӑвӑр.",
+        "tooFew": "Кӑшкӑрас 17 парнӑ цифра кирле.",
+        "stuck": "Тупӑр пелӗн велӑ валли техника ҫук.",
+        "done": "Тупӑнчӗ",
+        "placed": "{cell} вырӑнта {d} парнӑ",
+        "removed": "Ку вырӑнсенчен {d} кандидат шухӑш: {cells}",
+        "rating": "марал {r}",
+        "steps": "{n} велӑ",
+        "faq": [
+          [
+            "Тупӑр ҫӑват техника уҫӑта?",
+            "Вӑйӑ сӗнӳпе охшаш техникӑсем, шул реттесене: пӗчченсем, килӗшӗнӗ кандидатсем, мӑшӑр та виҫҫӗ, балыҫ, канатсем, ешне чаршӑ, чынжырсем, сӗҫҫе килӗшӗнӗ юплӑш та мӑ паннӑ юҫӑ. Кашни велӑ логикӑ вӗҫ та мар, нихҫан та тӗшмӗк мар та иҫе йывӑр велӑ маралӑ булать."
+          ],
+          [
+            "Кашни судокута пулать ми?",
+            "Шӑпах пӗр хуравлӑ тупсӑмта. Хурав ҫук йӑ пӗртен вӗҫ хурав булан тупсӑм тупӑнвӑр менле танӑ парать та кашни тупсӑмта кӑшкӑрас 17 парнӑ булла кирле."
+          ],
+          [
+            "Манӑ тупсӑм йӳклет ми?",
+            "Ҫук. Тупӑр пӗлтерӗш браузерта ӗҫлет та офлайн та. Тупсӑме адресӑпа ?p= килӗш 81 цифра пайлап пуштарса та пайла вӑйӑҫ та кунет."
+          ]
+        ]
+      }
     },
     "ug": {
       "title": "Bare Sudoku: ھەقسىز توردىكى سۇدوكۇ، ئېلان يوق، تىزىملىتىش يوق",
@@ -4183,7 +6183,47 @@
       "androidSource": "Android مەنبە كودى",
       "updated": "يېڭىلاندى",
       "languagesLabel": "تىللار",
-      "ogAlt": "Bare Sudoku تۇغى ۋە ھەقسىز توردىكى سۇدوكۇ، ئېلان يوق دېگەن سۆزلەر"
+      "ogAlt": "Bare Sudoku تۇغى ۋە ھەقسىز توردىكى سۇدوكۇ، ئېلان يوق دېگەن سۆزلەر",
+      "dailyTitle": "كۈندىلىك سۇدوكۇ: ھەردىم يېڭى تېپىشماق، ھەقسىز ۋە ئېلانسىز",
+      "dailyDescription": "ھەردىم بەش دەرىجىدە يېڭى سۇدوكۇ، ھەمىسىگە بىردەك تېپىشماق. بۈگۈنۈڭ تېپىشماقىنى ئاسان'دىن ئۇستا'غىچە يېشىڭ، ۋاقىتىڭىزنى ئورتاقلىشىڭ. ئېلان يوق، تىزىملىتىش يوق.",
+      "dailyH1": "كۈندىلىك سۇدوكۇ",
+      "dailyIntro": "ھەردىم ھەربىر دەرىجىگە يېڭى تېپىشماق بار، پوتىنتا ھەر كىشىگە بىردەك. يېشىڭ، سونى بىلەن ۋاقىتىڭىزنى دوستلىرىڭىز بىلەن ئورتاقلىشىڭ. كۈندىلىك تېپىشماق سىزنىڭ ئۈسكۈنىڭىزدە چېسىسىدىن ياسالىدۇ؛ شۇڭا تورسىز ھەمدە ئىشلەيدۇ، ۋە تۈنى ئۆتۈپ كېتكەن تېپىشماق يوقايدۇ.",
+      "solver": {
+        "title": "سۇدوكۇ يېشىۋەر: ئۇسۇللار بىلەن قادام-قادام يېشىش",
+        "description": "يىڭدى سۇدوكۇنى چاپلاشتۇرۇڭ ياكى يېزىڭ، يېشىمنى قادام-قادام ئالىڭ. ھەربىر ھەرىكەت ئۆز ئۇسۇلىنى كۆرسىتىدۇ، يالغۇزلاردىن X-Wing ۋە زەنجىرغىچە.",
+        "h1": "سۇدوكۇ يېشىۋەر، قادام-قادام",
+        "intro": "بېرىلگەن رەقەملەرنى كاتەگ'غا يېزىڭ ياكى 81 ھەرپنى چاپلاشتۇرۇڭ (رەقەملەر؛ بوش ياشېلا ئۈچۈن 0 ياكى نۇقتا). كېيىنكى قادام بىر ۋاقىتتا بىر ھەرىكەتنى ئۇنىڭ كۆتۈرۈشتۈكى ئۇسۇل بىلەن كۆرسىتىدۇ؛ يېشىش ھەربىر قادامنى تىزىملىگە ئېلىدۇ ۋە تېپىشماقنىڭ دەرىجىسى ۋە باھالىنىشى بىلەن ئاخىرلاشىدۇ. يېشىۋەر سىزنىڭ توركۆرگۈڭىزدە ئىشلەيدۇ، ھېچنېمە يۈكلەنمىدى، ئويۇننىڭ يىپ ئۇچلىرى بىلەن بىردەك لوگىكانى ئىشلىتىدۇ، شۇڭا ھەربىر قادام چىقىرىش، ھەرگىز پەرەز ئەمەس.",
+        "link": "سۇدوكۇ يېشىۋەر",
+        "paste": "تېپىشماقنى چاپلاشتۇرۇڭ: 81 رەقەم، بوش ياشېلا ئۈچۈن 0 ياكى .",
+        "next": "كېيىنكى قادام",
+        "solve": "يېشىش",
+        "clear": "ئۆچۈرۈش",
+        "example": "مىسال",
+        "edit": "تەھرىر",
+        "noSolution": "بۇ تېپىشماقنىڭ يېشىمى يوق. بېرىلگەن رەقەملەرنى تەكشۈرۈڭ.",
+        "manySolutions": "بۇ تېپىشماقنىڭ بىر نەچچە يېشىمى بار. بېرىلگەن رەقەملەرنى قوشۇڭ.",
+        "tooFew": "ئەڭ كەمىدە 17 بېرىلگەن رەقەم كىرگۈزۈڭ.",
+        "stuck": "يېشىۋەردە كېيىنكى قادام ئۈچۈن ئۇسۇل يوق.",
+        "done": "يېشىلدى",
+        "placed": "{d} رەقەمنى {cell} ياشېلىسىغا قويۇڭ",
+        "removed": "{d} رەقەمنى {cells} ياشېلىسىدىن چىقىرىڭ",
+        "rating": "باھا {r}",
+        "steps": "{n} قادام",
+        "faq": [
+          [
+            "يېشىۋەر قايسى ئۇسۇللارنى ئىشلىتىدۇ؟",
+            "ئويۇننىڭ يىپ ئۇچلىرى بىلەن بىردەك ئۇسۇللارنى، بىردەك تەرتىپتە سىنىڭ كۆرۈڭ: يالغۇزلار، قۇلۇپلانغان نامزاتلار، جۈپ ۋە ئۈچلۈكلەر، بالىقلار، قانات، تېك بولۇش نەقشلىرى، زەنجير، دېمەك بولار قۇلۇپلانغان تۆپلىملىرى ۋە مەجبۇرى تور. ھەربىر قادام لوگىكا چىقىرىشى، ھەرگىز پەرەز ئەمەس، ۋە ئەڭ قىيىن قادام باھالىنىشنى بېلگىلەيدۇ."
+          ],
+          [
+            "ھەربىر سۇدوكۇدا ئىشلەيدۇ؟",
+            "دەل بىر يېشىمى بولغان ھەر تېپىشماق ئۈچۈن. يېشىمى يوق يا بىر نەچچە يېشىمى بولغان تېپىشماقلار يېشىلدى دەپ بىلدۈرۈلمەي، بەلكى خەۋەردار قىلىنىدۇ، تېپىشماقتا ئەڭ كەمىدە 17 بېرىلگەن رەقەم بولىشى كېرەك."
+          ],
+          [
+            "مېنىڭ تېپىشماقىم يۈكلەنەمدۇ؟",
+            "يوق. يېشىۋەر پېتىن سىزنىڭ توركۆرگۈڭىزدە ئىشلەيدۇ، تورسىز ھەمدە. تېپىشماقنى ئۇنىڭ 81 رەقەمىنى ئادرېسغا ?p= دەپ قوشۇپ ئورتاقلىشىۋېلىشىڭىز مۇمكۈن."
+          ]
+        ]
+      }
     },
     "kaa": {
       "title": "Bare Sudoku: biypul onlayn sudoku, reklamasız, dizimnen ótpesten",
@@ -4256,7 +6296,47 @@
       "androidSource": "Android baslanǵısh kodı",
       "updated": "Jańalandı",
       "languagesLabel": "Tiller",
-      "ogAlt": "Bare Sudoku logotipi hám Biypul onlayn sudoku, reklamasız degen sózler"
+      "ogAlt": "Bare Sudoku logotipi hám Biypul onlayn sudoku, reklamasız degen sózler",
+      "dailyTitle": "Künlük Sudoku: Her Künde Jańa Jumbaġa, Tipleme Uqlansız",
+      "dailyDescription": "Her künde bes darajada jańa sudoku, barǵamıñ shinday jumbaġası. Búgin' jumbaġasın Ańsat'tan Usta'ğa shekem, waqitniń payla. Reklama joq, dizimige joq.",
+      "dailyH1": "Künlük Sudoku",
+      "dailyIntro": "Her künde darajamañ kóri-kóri jańa jumbaġa, butın dünya oyunshılarının shinday jumbaġası. Sheshiw, soñ waqitniń dostlarıñmen oruslaw. Künlük jumbaġa seniñ shemdegi künnen jaratılıp, oñtayday oflayn islede, kesheki jumbaġa túnorten ketip ketedi.",
+      "solver": {
+        "title": "Sudoku Shesheş: Tehnikalarmen Qadam Qadam Sheshiw",
+        "description": "Sudokuny yaz ya'qında qamay, sheshiwni qadam-qadam biliw. Har jureñ tehnikasın aytsa: yahshi namzettan X-Wing'ge, qıynlyq deresimen.",
+        "h1": "Sudoku shesheş, qadam qadam",
+        "intro": "Berilgen sanlarny izğara yaz ya'qında 81 belgini qamay (sanlar; boş hücre ushın 0 ya'qında nukta). Keyinshi adym bir jureñdi tehnikası buleh körset; Sheshiw barlıq adymdarny jynaq körsetp, jumbaġanyñ darajası hem deresini aytsa. Sheshesh sizin brauzeríñde islede, eç ner juklemese, oyunnyñ keńesliri buleh shinday mántika isleted, har bir adym çıqaríw, asla tabıñ emes.",
+        "link": "Sudoku shesheş",
+        "paste": "Jumbaġa qamay: 81 san, boş hücre ushın 0 ya'qında .",
+        "next": "Keyinshi adym",
+        "solve": "Sheshiw",
+        "clear": "Óshiriw",
+        "example": "Misali",
+        "edit": "Óz'lertiw",
+        "noSolution": "Bul jumbaġanyñ sheshimi joq. Berilgen sanlarny tekserilep kóriw.",
+        "manySolutions": "Bul jumbaġanyñ birladen kóp sheshimi bar. Berilgen san qoshıw.",
+        "tooFew": "Enmese 17 berilgen san girip kóriw.",
+        "stuck": "Sheshesh keyinshi adym ushın tehnikası joq.",
+        "done": "Sheshildi",
+        "placed": "{cell} hücrese {d} yaz",
+        "removed": "{cells} hücrelerden {d} óshiriw",
+        "rating": "dereje {r}",
+        "steps": "{n} adym",
+        "faq": [
+          [
+            "Sheshesh qandaý tehnikalarny isleted?",
+            "Oyunnyñ keńesleri buleh shinday tehnikalarny, shinday retke: yahshi namzetler, bektilgen namzetler, jup hem úshlik, balıqlar, qanatlar, teklik órülümleri, zinjirler, jaqın-jaqın bektilgen kümeler hem córleme aǵalary. Har bir adym mántiki çıqaríw, asla tabıñ emes; eng qıyn adym deresini belgiled."
+          ],
+          [
+            "Her sudokudy sheshed?",
+            "Tam bir sheshimi bar jumbaġada. Sheshimi bolmagan ya'qında birladen kóp sheshimi bar jumbaġalar sheshelip bilmey bildirilep ketedi; jumbaġa 17-den az bolmagan berilgen san talapta."
+          ],
+          [
+            "Meniñ jumbaġa bir yerge juklenep?",
+            "Joq. Sheshesh butında sizin brauzeríñde islede, oflayn da. Jumbaġany addresske ?p= buleh 81 san qoshıp oruslaw."
+          ]
+        ]
+      }
     },
     "crh": {
       "title": "Bare Sudoku: bedava onlayn sudoku, reklamsız, qayd olmadan",
@@ -4329,7 +6409,47 @@
       "androidSource": "Android menba kodu",
       "updated": "Yañılandı",
       "languagesLabel": "Tiller",
-      "ogAlt": "Bare Sudoku logotipi ve Bedava onlayn sudoku, reklamsız sözleri"
+      "ogAlt": "Bare Sudoku logotipi ve Bedava onlayn sudoku, reklamsız sözleri",
+      "dailyTitle": "Günlük Sudoku: Kün Saçında Bilmece, Bedava ve Reklamsız",
+      "dailyDescription": "Kün saçında beş seviyede yañı sudoku, herkese aynı bilmece. Bugünün bilmecesini Qolay'dan Usta'ğa çöz, vaqıtını paylaş. Reklam yoq, hesap yoq.",
+      "dailyH1": "Günlük Sudoku",
+      "dailyIntro": "Kün saçında seviye başına yañı bilmece, bütün dünyada oyunçılar ushın aynı. Çöz, soñ vaqıtını dostlarıñ buleh paylaş. Günlük bilmece cihazda tarixten yaradılır; oñtayday oflayn çalışır, kesheki bilmece gece yarısında ketedi.",
+      "solver": {
+        "title": "Sudoku Çözücü: Usullernen Adım Adım Çözim",
+        "description": "İstediñiz sudokuny yazıñız ya'qında qopya etiñiz, çözimni adım adım aliñız. Her hareke usulün söyleyer: tek adaydan X-Wing'e, zorluq derecesiyle.",
+        "h1": "Sudoku çözücü, adım adım",
+        "intro": "Berilen raqamları ızgaraya yazıñız ya'qında 81 belgini qopya etiñiz (raqamlar; boş hücre ushın 0 ya'qında nuqta). Sonraki adım harekelerini usulü buleh birer-birer kösterir; Çöz, bütün adımları jynaq kösterir, bilmecenıñ seviyesi hem derecesini aytır. Çözücü brauzerde çalışır, hiç bir şey yüklemese, oyunun yardımları buleh aynı mantık isleted, her adım çıqarım, asla tahmin değildir.",
+        "link": "Sudoku çözücü",
+        "paste": "Bilmece qopya etiñiz: 81 raqam, boş hücre ushın 0 ya'qında .",
+        "next": "Sonraki adym",
+        "solve": "Çöz",
+        "clear": "Sil",
+        "example": "Misal",
+        "edit": "Düzenle",
+        "noSolution": "Bu bilmecenıñ çözimi yoq. Berilen raqamları kontrol etiñiz.",
+        "manySolutions": "Bu bilmecenıñ birladen kóp çözimi bar. Berilen raqam qoşıñız.",
+        "tooFew": "Enmese 17 berilen raqam giriniñiz.",
+        "stuck": "Çözücünüñ sonraki adym ushın usulü yoq.",
+        "done": "Çezildi",
+        "placed": "{cell} hücresine {d} yazıñız",
+        "removed": "{cells} hücrelerden {d} siliñiz",
+        "rating": "derece {r}",
+        "steps": "{n} adym",
+        "faq": [
+          [
+            "Çözücü qandaý usullerni isleted?",
+            "Oyunun yardımları buleh aynı usullerni, aynı sırada: tek adaylar, kilitli adaylar, çift hem üçlük, balıqlar, qanatlar, teklik öritmeleri, zinjirler, neredeyse kilitli kümeler hem córleme ağları. Her adym mantıqi çıqarım, asla tahmin değildir; en zor adym derecesini belgiler."
+          ],
+          [
+            "Her sudokuyu çözer mi?",
+            "Tam bir çözimi olan her bilmecede. Çözimi olmayan ya'qında birladen kóp çözimi olan bilmeceler çezilmey bildirilir; bilmecede enmese 17 berilen raqam talep edilir."
+          ],
+          [
+            "Bilmecelerim bir yere yüklenedi mi?",
+            "Hayır. Çözücü tamamen brauzerde çalışır, oflayn da. Bilmeceni addrese ?p= buleh 81 raqamını qoşup paylaşa bilersiz."
+          ]
+        ]
+      }
     },
     "sah": {
       "title": "Bare Sudoku: босхо онлайн судоку, реклама суох, регистрация суох",
@@ -4402,7 +6522,47 @@
       "androidSource": "Android төрүт кода",
       "updated": "Саҥардылынна",
       "languagesLabel": "Тыллар",
-      "ogAlt": "Bare Sudoku логотиба уонна Босхо онлайн судоку, реклама суох диэн тыллар"
+      "ogAlt": "Bare Sudoku логотиба уонна Босхо онлайн судоку, реклама суох диэн тыллар",
+      "dailyTitle": "Кун Судоку: Кун Саһыннан Саҥа Таабыр, Босхо уонна Реклама суох",
+      "dailyDescription": "Кун саһыннан биис таһымга саҥа судоку, барыта охотун ааҕар таабыр. Бүгүн таабырын Чэпчэки булан Мастар хоорун чечип, уырдыманы бөлүс. Реклама суох, каата суох.",
+      "dailyH1": "Кун Судоку",
+      "dailyIntro": "Кун саһыннан таһым сиэннэ саҥа таабыр, бүтүн дүнэгэй охотун ааҕар таабыр. Чечип, аттан уырдыманы достарыҥ булан бөлүс. Кун таабыр сибэккигин күнүнэ булан санна ыйталлыбыт; оннуо оффлайн ылбыт, кэтэ таабыр түнүнүн төрүгэйе киирер.",
+      "solver": {
+        "title": "Судоку Чэпсиһэ: Ньыманы Буолан Адым Адым Чечиһиэ",
+        "description": "Суоҕа биирдии судокуну биэргирбит, чечиһиитин адым адым ала. Хас хайдах ньыманы ааттар: биир кандидаттан X-Wing диэри, уустуу даңаһынан.",
+        "h1": "Судоку чэпсиһэ, адым адым",
+        "intro": "Берилен ыйтыктыры сирэйигэ биэргирбит эбэтэр сакаммар, 81 белэ сакал (ыйтыктар; буос салалаах сула 0 эбэтэр чэмпчэк). Кэлэр адым балык ньыманы буолан үлэлэйэ сургур; Чэпсинээ хас балык адымы муҥҳур, таабырыҥ таһымын уонна даңаһын сказур. Чэпсиһэ браузер булан үлэлэр, эмбэ нерэ ылбаппыт, оонньуу сүбэлэрибит булан аҕа логика үлэлер, хас балык адым биһэдэйинэр, аһилаах та абааһы суох.",
+        "link": "Судоку чэпсиһэ",
+        "paste": "Таабыры сакал: 81 ыйтыкта, буос салалаах сула 0 эбэтэр .",
+        "next": "Кэлэр адым",
+        "solve": "Чэпсинээ",
+        "clear": "Сот",
+        "example": "Миэбэлэ",
+        "edit": "Түҥнөөнүмэ",
+        "noSolution": "Бу таабырыҥ чечиһи суох. Берилен ыйтыктарны сахалаабын.",
+        "manySolutions": "Бу таабырыҥ элбэхтик чечиһи бар. Берилен ыйтыкта оҕо биэргирбит.",
+        "tooFew": "Эһэ 17 берилен ыйтыкта биэргиниэх.",
+        "stuck": "Чэпсиһэ кэлэр адымнаҕа ньыма суох.",
+        "done": "Чечилди",
+        "placed": "{cell} сулаҕа {d} биэргирбит",
+        "removed": "{cells} сулалартан {d} сот",
+        "rating": "даңа {r}",
+        "steps": "{n} адым",
+        "faq": [
+          [
+            "Чэпсиһэ қайа ньыманы үлэлэр?",
+            "Оонньуу сүбэлэрибитэ буолан аҕа ньыманы, аҕа арайынан: биир кандидаттар, дьэпкэтикэн кандидаттар, паара уонна үс, балыграй, паранньар, оҕо салыстыы арсинар, зинджирлэр, солуттан дьэпкэтикэн күмүллэр уонна көстэххэ ааҕылар. Хас балык адым логикаан чэпсинээринэр, аһилаах та абааһы суох; эң уустук адым даңаны сугуу."
+          ],
+          [
+            "Бүтүн судокуну чечэр дьиэ?",
+            "Толо бир чечиһи бар таабырыҥ. Чечиһи суох эбэтэр эхэ чечиһи бар таабырнар чечилмэй биһилэр; таабырга эһэ 17 берилен ыйтыкта таланыыр."
+          ],
+          [
+            "Таабырым бирэ миэстэ ылбатыргамайаҕа дьиэ?",
+            "Суох. Чэпсиһэ толо браузер булан үлэлэр, оффлайн та. Таабырын адреһэ ?p= булан 81 ыйтыкта оҕо биэргирип бөлүс."
+          ]
+        ]
+      }
     },
     "kum": {
       "title": "Bare Sudoku: гьакъсыз онлайн судоку, рекламасыз, регистрациясыз",
@@ -4475,7 +6635,47 @@
       "androidSource": "Android башлангъыч коду",
       "updated": "Янгыртылды",
       "languagesLabel": "Тиллер",
-      "ogAlt": "Bare Sudoku логотиби ва Гьакъсыз онлайн судоку, рекламасыз деген сёзлер"
+      "ogAlt": "Bare Sudoku логотиби ва Гьакъсыз онлайн судоку, рекламасыз деген сёзлер",
+      "dailyTitle": "Кюнлюк Судоку: Кюн Сайында Янгы Табышма, Акъсыз Ве Рекламасыз",
+      "dailyDescription": "Кюн сайында беш даражада янгы судоку, барыси учун бир табышма. Бюгюнкю табышманы Енгилден Мастерге чечип, вакъытыны олашмакъ. Реклама йокъ, эсеп йокъ.",
+      "dailyH1": "Кюнлюк Судоку",
+      "dailyIntro": "Кюн сайында даража башына янгы табышма, дюнйанынъ барыса учун бир табышма. Чечип, соньа вакъытыны достларыныз булан олашмакъ. Кюнлюк табышма сизин джихазда датадан аланалып; оны оффлайн ишлей, кечеки табышма туннун ярысында кетип кетер.",
+      "solver": {
+        "title": "Судоку Чечювджи: Техникаларнен Адым Адым Чечиў",
+        "description": "Исценсе судокуну йаз яхъшы беслеп, чечиўни адым адым ала. Харь юрюш техникасын айт: бир кандидаттан X-Wing'е, зиялылыкъ даражасы булан.",
+        "h1": "Судоку чечювджи, адым адым",
+        "intro": "Берилген санларны торагъа йазын яхъшы 81 символ беслеп (санлар; бош хюджре учун 0 яхъшы чекит). Кейинги адым бир юрюшню техникасы булан айт; Чечип, барысын адымларны жынакъла, табышманынъ даражасы ве даражасын айт. Чечювджи браузерде ишлей, эчен-сечен нерсе беслеме, оюннун насигьатлары булан бир мантыкъ ишлед, харь адым чыкъарым, асла тахьмин емес.",
+        "link": "Судоку чечювджи",
+        "paste": "Табышма беслеп: 81 сан, бош хюджре учун 0 яхъшы .",
+        "next": "Кейинги адым",
+        "solve": "Чечип",
+        "clear": "Оьчюр",
+        "example": "Мисал",
+        "edit": "Оьзлерт",
+        "noSolution": "Бу табышманынъ чечиви йокъ. Берилген санларны контроль ет.",
+        "manySolutions": "Бу табышманынъ биртеден кьоп чечиви бар. Берилген сан къошъ.",
+        "tooFew": "Энмесе 17 берилген сан гир.",
+        "stuck": "Чечювджинин кейинги адым учун техникасы йокъ.",
+        "done": "Чечилди",
+        "placed": "{cell} хюджреге {d} йаз",
+        "removed": "{cells} хюджрелерден {d} оьчюр",
+        "rating": "даража {r}",
+        "steps": "{n} адым",
+        "faq": [
+          [
+            "Чечювджи какъа техникаларны ишлед?",
+            "Оюннун насигьатлары булан бир техникаларны, бир сыра булан: бир кандидаттар, бегитилген кандидаттар, экилер ве юьчлер, балыклар, канаттар, бирлик шеклери, зинджирлер, якъын джанлы кюмелер ве джобырла агълары. Харь адым мантыкъый чыкъарым, асла тахьмин емес; энг къыйын адым даражасын белгилер."
+          ],
+          [
+            "Харь судокуну чечер ми?",
+            "Дакъыкъ бир чечиви olan харь табышмада. Чечиви йокъ яхъшы биртеден кьоп чечиви olan табышмалар чечилмей билдирилер; табышма энмесе 17 берилген сан талап ет."
+          ],
+          [
+            "Мениь табышмам бирер йерге беслене ми?",
+            "Йокъ. Чечювджи дакъыкъ браузерде ишлей, оффлайн да. Табышманы адресге ?p= булан 81 санны къошып олашмакъ."
+          ]
+        ]
+      }
     },
     "azb": {
       "title": "Bare Sudoku: پولسوز اونلاین سودوکو، رکلامسیز، قئیدیاتسیز",
@@ -4548,7 +6748,47 @@
       "androidSource": "آندروید قایناق کودو",
       "updated": "یئنیلندی",
       "languagesLabel": "دیللر",
-      "ogAlt": "Bare Sudoku لوقوسو و پولسوز اونلاین سودوکو، رکلامسیز سؤزلری"
+      "ogAlt": "Bare Sudoku لوقوسو و پولسوز اونلاین سودوکو، رکلامسیز سؤزلری",
+      "dailyTitle": "گونلوک سودوکو: هر رؤز یئنی بولماجا، پولسوز و رکلاماسیز",
+      "dailyDescription": "هر رؤز بش سویّهده یئنی سودوکو، همی اوچون اینه بولماجا. بو گون بولماجاسینی آسان'دان اوستا'یا حل ات، واختینی پایلاش. رکلام یوخ، قئیدیات یوخ.",
+      "dailyH1": "گونلوک سودوکو",
+      "dailyIntro": "هر رؤز هر سویّه اوچون یئنی بولماجا، دونیاداکی هر اویونچو اوچون اینه. حل ات، سونرا واختینی دؤستلرینله پایلاش. گونلوک بولماجا جیهازدا تاریخین اساسینده یاراتیلیر؛ بونا گؤره آفلاین ده ایشلیر و دونن بولماجاسی شاب یاریسینده یوخ اولور.",
+      "solver": {
+        "title": "سودوکو حل کنندهٔ: تکنیک‌هایی با راه‌حل‌های گام‌به‌گام",
+        "description": "هر سودوکویی بچسبانید و یا بنویسید، راه‌حل را گام‌به‌گام بگیرید. هر حرکت تکنیک‌اش را نشان می‌دهد، از تک‌ها تا X-Wing و زنجیر.",
+        "h1": "سودوکو حل کنندهٔ، گام‌به‌گام",
+        "intro": "اعداد داده‌شده را در شبکه وارد کنید یا 81 کاراکتر را بچسبانید (ارقام؛ 0 یا نقطه برای سلول‌های خالی). مرحلهٔ بعدی یک حرکت را در یک بار با تکنیک پشت آن نشان می‌دهد؛ حل هر مرحله را فهرست می‌کند و با سطح و امتیاز پازل پایان می‌یابد. حل‌کننده در مرورگر شما اجرا می‌شود، هیچ چیز آپلود نمی‌شود، و از همان منطق راهنمایی‌های بازی استفاده می‌کند، بنابراین هر مرحله یک قیاس است، هرگز حدس نیست.",
+        "link": "سودوکو حل کنندهٔ",
+        "paste": "بولماجا بچسبانید: 81 رقم، 0 یا . برای سلول‌های خالی",
+        "next": "مرحلهٔ بعدی",
+        "solve": "حل کنید",
+        "clear": "پاک کنید",
+        "example": "نمونه",
+        "edit": "ویرایش",
+        "noSolution": "این بولماجا راه‌حل ندارد. اعداد داده‌شده را بررسی کنید.",
+        "manySolutions": "این بولماجا بیش از یک راه‌حل دارد. اعداد داده‌شده اضافه کنید.",
+        "tooFew": "حداقل 17 عدد داده‌شده وارد کنید.",
+        "stuck": "حل‌کنندهٔ برای مرحلهٔ بعدی تکنیکی ندارد.",
+        "done": "حل شد",
+        "placed": "{d} را در {cell} قرار دهید",
+        "removed": "{d} را از {cells} حذف کنید",
+        "rating": "امتیاز {r}",
+        "steps": "{n} مرحله",
+        "faq": [
+          [
+            "حل‌کنندهٔ از کدام تکنیک‌ها استفاده می‌کند؟",
+            "همان‌هایی که راهنمایی‌های بازی استفاده می‌کنند، به همان ترتیب امتحان می‌شوند: تک‌ها، کاندیدای قفل‌شده، جفت و سه‌تایی، ماهی، بال، الگوهای منحصربه‌فرد، زنجیر، مجموعه‌های تقریباً قفل‌شده و شبکه‌های اجباری. هر مرحله یک استنتاج منطقی است، هرگز حدس نیست، و سخت‌ترین مرحله امتیاز را تعیین می‌کند."
+          ],
+          [
+            "برای هر سودوکو کار می‌کند؟",
+            "برای هر پازلی با دقیقاً یک راه‌حل. پازل‌هایی بدون راه‌حل یا با چندین راه‌حل به جای حل به جای آن گزارش می‌شوند، و یک پازل به حداقل 17 عدد داده‌شده نیاز دارد."
+          ],
+          [
+            "پازل من آپلود می‌شود؟",
+            "خیر. حل‌کنندهٔ کاملاً در مرورگر شما کار می‌کند، همچنین آفلاین. می‌توانید یک پازل را با اضافه کردن 81 رقم آن به آدرس به‌عنوان ?p= اشتراک کنید."
+          ]
+        ]
+      }
     },
     "et": {
       "title": "Bare Sudoku: tasuta sudoku veebis, reklaamita, registreerimata",
@@ -4621,7 +6861,47 @@
       "androidSource": "Androidi lähtekood",
       "updated": "Uuendatud",
       "languagesLabel": "Keeled",
-      "ogAlt": "Bare Sudoku logo sõnadega Tasuta sudoku veebis, reklaamita"
+      "ogAlt": "Bare Sudoku logo sõnadega Tasuta sudoku veebis, reklaamita",
+      "dailyTitle": "Päevane Sudoku: Uus Pusle Tasuta, Ilma Reklaamideta",
+      "dailyDescription": "Uus sudoku iga päev viiel tasemel, sama kõigile. Lahenda täna pusle Kergest Meistri tasemeni ja jaga aeg. Ilma reklaamideta, ilma registreerimiseta.",
+      "dailyH1": "Päevane Sudoku",
+      "dailyIntro": "Iga päev ilmub uus pusle tasemele, sama kõigile mängijatele maailmas. Lahenda see, siis jaga aeg sõpradega. Päevaseid puslet genereeritakse su seadmes kuupäeva järgi; seega toimib ka ilma internetita, ja eile pusle kaob keskööl.",
+      "solver": {
+        "title": "Sudoku lahendaja: Samm-Sammu Lahendus Tehnikaga",
+        "description": "Kleebi või sisesta mis tahes sudoku ja saa lahendus samm-sammu. Iga käik nimetab oma tehnika, singliest X-Wing-i ja ahelateni, raskusastmega.",
+        "h1": "Sudoku lahendaja, samm sammu kaupa",
+        "intro": "Sisesta antud numbrid ruudustikku või kleebi 81 märki (numbrid; 0 või punkt tühjale lahtele). Järgmine samm näitab ühte käiku korraga tehnikaga selle taga; Lahenda loetleb kõik sammud ja lõpeb pusle tasemega ja hinnetega. Lahendaja töötab su brauseris, midagi ei laadita üles ja see kasutab sama loogikat kui mängu vihjeid, nii et iga samm on deduktsoon, mitte arvamine.",
+        "link": "Sudoku lahendaja",
+        "paste": "Kleebi pusle: 81 numbrit, 0 või . tühjale lahtele",
+        "next": "Järgmine samm",
+        "solve": "Lahenda",
+        "clear": "Puhasta",
+        "example": "Näide",
+        "edit": "Muuda",
+        "noSolution": "Sellel puslel pole lahendust. Kontrolli antud numbreid.",
+        "manySolutions": "Sellel puslel on rohkem kui üks lahendus. Lisage antud numbrid.",
+        "tooFew": "Sisesta vähemalt 17 antud numbrit.",
+        "stuck": "Lahendajal pole järgmise sammu jaoks tehnikat.",
+        "done": "Lahendatud",
+        "placed": "Sisesta {d} sisse {cell}",
+        "removed": "Eemalda {d} sealt {cells}",
+        "rating": "hinne {r}",
+        "steps": "{n} sammu",
+        "faq": [
+          [
+            "Milliseid tehnikaid lahendaja kasutab?",
+            "Samu, mida mängu vihjed, samas järjekorras: singlid, lukustatud kandidaadid, paarid ja kolmikud, kalad, tiivad, kordumatuse mustrid, ahelad, peaaegu lukustatud komplektid ja sundnõudmised. Iga samm on loogiline järeldus, mitte arvamine, ja raskeim samm määrab hinnet."
+          ],
+          [
+            "Kas see töötab kõigi sudokutega?",
+            "Kõigiga puslega, millel on täpselt üks lahendus. Pusleid ilma lahenduseta või mitme lahendusega tähendatakse lahendamise asemel ja puslel peab olema vähemalt 17 antud numbrit."
+          ],
+          [
+            "Kas minu puslet üles laetakse?",
+            "Ei. Lahendaja töötab täielikult su brauseris, ka ilma internetita. Saad puslet jagada, lisades 81 numbrit aadressile kui ?p=."
+          ]
+        ]
+      }
     },
     "qxq": {
       "title": "Bare Sudoku: پولسوز آنلاین سودوکو، تبلیغسیز، قیدسیز",
@@ -4694,7 +6974,47 @@
       "androidSource": "Android قایناق کودو",
       "updated": "یئنیلنیب",
       "languagesLabel": "دیللر",
-      "ogAlt": "Bare Sudoku لوگوسو و پولسوز آنلاین سودوکو، تبلیغسیز سؤزلری"
+      "ogAlt": "Bare Sudoku لوگوسو و پولسوز آنلاین سودوکو، تبلیغسیز سؤزلری",
+      "dailyTitle": "روزانه سودوکو: هر روز یک معما نو، رایگان و بدون تبلیغ",
+      "dailyDescription": "هر روز بسه حسب معما جدید، برای تمام یکی معما. امروز را از آسان تا بزرگ حل کنید و وقتتان را بیرلیشدیرید. تبلیغ ندارد، ثبت نام ندارد.",
+      "dailyH1": "روزانه سودوکو",
+      "dailyIntro": "هر روز برای درجه یکی معما نو، برای تمام بازی کنندگان دنیا یکی. حل کنید، سپس وقتتان را با دوستان بیرلیشدیرید. معما روزانه روی دستگاه شما از تاریخ ساخته شده است؛ بنابراین بدون اینترنت هم کار میکند و معمای دیروز در نیمه شب رفت.",
+      "solver": {
+        "title": "حل کننده سودوکو: راه حل قدم به قدم با تکنیک‌ها",
+        "description": "هر سودوکویی را بچسبانید یا تایپ کنید، راه حل را قدم به قدم بگیرید. هر حرکت تکنیک خود را می گوید: از نامزد تنها تا X-Wing و زنجیر، با درجه سختی.",
+        "h1": "حل کننده سودوکو، قدم به قدم",
+        "intro": "اعداد داده شده را در شبکه تایپ کنید یا 81 کاراکتر بچسبانید (اعداد؛ برای سلول خالی 0 یا نقطه). مرحله بعد حرکت ها را یکی یکی با تکنیک پشت آن نشان می دهد؛ حل تمام مراحل را فهرست می کند و سطح و رتبه معما را می دهد. حل کننده در مرورگر کار می کند، چیزی آپلود نمی شود؛ از همان منطق اشاره های بازی استفاده می کند، بنابراین هر مرحله یک استنتاج است، هیچ گاه حدس نیست.",
+        "link": "حل کننده سودوکو",
+        "paste": "معما بچسبانید: 81 رقم، برای خالی 0 یا .",
+        "next": "مرحله بعد",
+        "solve": "حل",
+        "clear": "پاک",
+        "example": "نمونه",
+        "edit": "ویرایش",
+        "noSolution": "این معما راه حل ندارد. اعداد داده شده را بررسی کنید.",
+        "manySolutions": "این معما بیش از یک راه حل دارد. عدد داده شده بیفزایید.",
+        "tooFew": "حداقل 17 عدد داده شده وارد کنید.",
+        "stuck": "حل کننده برای مرحله بعد تکنیکی ندارد.",
+        "done": "حل شد",
+        "placed": "عدد {d} را در {cell} بگذارید",
+        "removed": "نامزد {d} را از این سلول های حذف کنید: {cells}",
+        "rating": "درجه {r}",
+        "steps": "{n} مراحل",
+        "faq": [
+          [
+            "حل کننده از چه تکنیک هایی استفاده می کند؟",
+            "همانهایی که اشاره های بازی از آنها استفاده می کنند، به همان ترتیب: نامزدهای تنها، نامزدهای قفل شده، جفت ها و سه تایی ها، ماهی، بال ها، الگوهای منحصر به فرد، زنجیرها، مجموعه های تقریباً قفل شده و شبکه های اجباری. هر مرحله یک استنتاج منطقی است، هیچ گاه حدس نیست؛ سخت ترین مرحله درجه را تعیین می کند."
+          ],
+          [
+            "برای هر سودوکو کار می کند؟",
+            "برای هر معمایی با دقیقاً یک راه حل. معماهایی بدون راه حل یا با چندین راه حل به جای حل شدن گزارش می شوند؛ معما نیاز به حداقل 17 عدد داده شده دارد."
+          ],
+          [
+            "معمای من آپلود می شود؟",
+            "خیر. حل کننده کاملاً در مرورگر شما کار می کند، بدون اینترنت نیز. شما می توانید معما را با اضافه کردن 81 رقم آن به آدرس به عنوان ?p= بیرلیشدیرید."
+          ]
+        ]
+      }
     }
   }
 }
