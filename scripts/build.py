@@ -209,6 +209,32 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
     return out
 
 
+DYNAMIC_REDIRECTS = 100
+
+
+def removed_languages():
+    path = os.path.join(ROOT, "i18n", "removed.json")
+    if not os.path.exists(path):
+        return {"codes": [], "paths": []}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def redirects_file(removed):
+    lines = ["/security.txt /.well-known/security.txt 301"]
+    for k, code in enumerate(removed["codes"]):
+        base = i18n.path(code)
+        lines.append("%s / 301" % base.rstrip("/"))
+        if k < DYNAMIC_REDIRECTS:
+            lines.append("%s* /:splat 301" % base)
+            continue
+        lines.append("%s / 301" % base)
+        lines.append("%sprivacy/ /privacy/ 301" % base)
+        for rel in removed["paths"]:
+            lines.append("%s%s /%s 301" % (base, rel, rel))
+    return "\n".join(lines) + "\n"
+
+
 def headers_file(sitemaps):
     lines = [
         "/*",
@@ -430,7 +456,7 @@ def main():
     icons.write(dist)
     sitemaps = sitemap_files(languages, guides, lastmod, guide_dates)
     write(dist, "_headers", headers_file([name for name in sitemaps if name != "sitemap.xml"]))
-    write(dist, "_redirects", "/security.txt /.well-known/security.txt 301\n")
+    write(dist, "_redirects", redirects_file(removed_languages()))
     write(dist, "robots.txt", robots_file())
     for name, text in sitemaps.items():
         write(dist, name, text)
