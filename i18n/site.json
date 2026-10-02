@@ -14,7 +14,7 @@
         "Row, column, box and same-digit highlights, mistake marking you can turn off",
         "Automatic save, dark mode, keyboard support and landscape layout",
         "Works offline after the first visit, no app store needed",
-        "60 languages, each on its own page"
+        "223 languages, each on its own page"
       ],
       "androidHeading": "Android app",
       "android": "Bare Sudoku is also a native Android app: version {version}, about {size} KB, no permissions, no internet access, plain Java with zero libraries. It is not on Google Play; download the signed APK from GitHub Releases and install it on Android 8 or newer.",
@@ -61,7 +61,7 @@
         ],
         [
           "Which languages does Bare Sudoku support?",
-          "60 languages, each on its own page: English, Türkçe, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी and more. The game follows the page language and remembers your choice."
+          "223 languages, each on its own page: English, Türkçe, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी and more. The game follows the page language and remembers your choice."
         ],
         [
           "Can I play with the keyboard?",
@@ -142,7 +142,7 @@
         "Satır, sütun, kutu ve aynı rakam vurgusu; kapatılabilir hata işareti",
         "Otomatik kayıt, koyu tema, klavye desteği ve yatay düzen",
         "İlk ziyaretten sonra internetsiz çalışır, mağaza gerekmez",
-        "Her biri kendi sayfasında 60 dil"
+        "Her biri kendi sayfasında 223 dil"
       ],
       "androidHeading": "Android uygulaması",
       "android": "Bare Sudoku'nun yerel bir Android uygulaması da var: sürüm {version}, yaklaşık {size} KB, izin yok, internet erişimi yok, sıfır kütüphaneyle düz Java. Google Play'de değil; imzalı APK'yı GitHub Releases'ten indirip Android 8 ve üstüne kurabilirsin.",
@@ -189,7 +189,7 @@
         ],
         [
           "Bare Sudoku hangi dilleri destekler?",
-          "Her biri kendi sayfasında 60 dil: Türkçe, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ve daha fazlası. Oyun sayfanın dilini izler ve seçimini hatırlar."
+          "Her biri kendi sayfasında 223 dil: Türkçe, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ve daha fazlası. Oyun sayfanın dilini izler ve seçimini hatırlar."
         ],
         [
           "Klavyeyle oynayabilir miyim?",
@@ -266,11 +266,11 @@
         "Dörd səviyyə: asan, orta, çətin və ekspert",
         "Hər tapmacanın bir həlli var, təxmin etmək lazım deyil",
         "Qeydlər, geri al, sil və bir toxunuşla bütün qeydləri doldur",
-        "Texnikanı izah edən ipucları: tək namizəd, kilidli namizədlər, cütlər və üçlüklər, X-Wing, Y-Wing, Swordfish və XYZ-Wing",
+        "Texnikanı izah edən ipucları: tək namizəd və cütlərdən tutmuş X-Wing, Y-Wing, Skyscraper və Unique Rectangle fiqurlarına qədər",
         "Sətir, sütun, blok və eyni rəqəm vurğusu; söndürülə bilən səhv işarəsi",
         "Avtomatik yadda saxlama, qaranlıq rejim, klaviatura və üfüqi düzülüş",
         "İlk ziyarətdən sonra oflayn işləyir, tətbiq mağazası lazım deyil",
-        "60 dil, hər biri öz səhifəsində"
+        "223 dil, hər biri öz səhifəsində"
       ],
       "androidHeading": "Android tətbiqi",
       "android": "Bare Sudoku həm də yerli Android tətbiqidir: versiya {version}, təxminən {size} KB, icazə yox, internet girişi yox, kitabxanasız təmiz Java. Google Play-də deyil; imzalanmış APK-nı GitHub Releases-dən yüklə və Android 8 və ya daha yenisinə quraşdır.",
@@ -309,7 +309,7 @@
         ],
         [
           "Nə vaxtsa təxmin etmək lazım gəlirmi?",
-          "Xeyr. Hər tapmacanın düz bir həlli var və yalnız məntiqlə həll olunur. İlişsəniz, ipucu növbəti xananı göstərir və texnikanın adını deyir: single, kilidli namizədlər, cüt və ya üçlük, X-Wing, Y-Wing, Swordfish və ya XYZ-Wing. Rəqəmi yerləşdirmək üçün ipucuna yenidən toxunun."
+          "Xeyr. Hər tapmacanın düz bir həlli var və yalnız məntiqlə həll olunur. İlişsəniz, ipucu növbəti xananı göstərir və lazım olan texnikanın adını deyir, məsələn, tək namizəd, kilidli namizədlər, cüt və ya üçlük, X-Wing, Y-Wing, Skyscraper və ya Unique Rectangle. Rəqəmi yerləşdirmək üçün ipucuna yenidən toxunun."
         ],
         [
           "Kompüterdə klaviatura ilə oynaya bilərəmmi?",
@@ -321,7 +321,7 @@
         ],
         [
           "Bare Sudoku neçə dildədir?",
-          "60 dildə, hər biri öz səhifəsində. Oyundakı dil menyusu səhifəni dəyişir, oyunun altındakı siyahı isə hər dilə keçid verir. Oyun seçiminizi yadda saxlayır."
+          "223 dildə, hər biri öz səhifəsində. Oyundakı dil menyusu səhifəni dəyişir, oyunun altındakı siyahı isə hər dilə keçid verir. Oyun seçiminizi yadda saxlayır."
         ]
       ],
       "madeBy": "Müəllif: Alparslan Selçuk Develioğlu",
@@ -341,11 +341,11 @@
         "Vier Stufen: Leicht, Mittel, Schwer und Experte",
         "Jedes Rätsel hat eine Lösung und erfordert nie Raten",
         "Notizen, Rückgängig, Löschen und alle Notizen mit einem Tipp füllen",
-        "Tipps, die die Technik erklären: Singles, Locked Candidates, Paare und Tripel, X-Wing, Y-Wing, Swordfish und XYZ-Wing",
+        "Tipps, die die Technik erklären, von Singles und Paaren bis zu X-Wing, Y-Wing, Skyscraper und Unique Rectangle",
         "Hervorhebung von Zeile, Spalte, Block und gleicher Ziffer; abschaltbare Fehlermarkierung",
         "Automatisches Speichern, Dunkelmodus, Tastatursteuerung und Querformat",
         "Funktioniert nach dem ersten Besuch offline, kein App-Store nötig",
-        "60 Sprachen, jede auf eigener Seite"
+        "223 Sprachen, jede auf eigener Seite"
       ],
       "androidHeading": "Android-App",
       "android": "Bare Sudoku gibt es auch als native Android-App: Version {version}, etwa {size} KB, keine Berechtigungen, kein Internetzugriff, reines Java ohne Bibliotheken. Sie ist nicht bei Google Play; lade die signierte APK von GitHub Releases und installiere sie auf Android 8 oder neuer.",
@@ -384,7 +384,7 @@
         ],
         [
           "Muss ich jemals raten?",
-          "Nein. Jedes Rätsel hat genau eine Lösung und lässt sich allein durch Logik lösen. Wenn du feststeckst, zeigt ein Hinweis das nächste Feld und nennt die Technik: Single, Locked Candidates, Paar oder Tripel, X-Wing, Y-Wing, Swordfish oder XYZ-Wing. Tippe erneut auf den Hinweis, um die Ziffer zu setzen."
+          "Nein. Jedes Rätsel hat genau eine Lösung und lässt sich allein durch Logik lösen. Wenn du feststeckst, zeigt ein Hinweis das nächste Feld und nennt die Technik, die er gebraucht hat, zum Beispiel ein Single, Locked Candidates, ein Paar oder Tripel, X-Wing, Y-Wing, Skyscraper oder Unique Rectangle. Tippe erneut auf den Hinweis, um die Ziffer zu setzen."
         ],
         [
           "Kann ich am Computer mit der Tastatur spielen?",
@@ -396,7 +396,7 @@
         ],
         [
           "In wie vielen Sprachen gibt es Bare Sudoku?",
-          "60 Sprachen, jede auf ihrer eigenen Seite. Das Sprachmenü im Spiel wechselt die Seite, und die Liste unter dem Spiel verlinkt jede Sprache. Das Spiel merkt sich deine Wahl."
+          "223 Sprachen, jede auf ihrer eigenen Seite. Das Sprachmenü im Spiel wechselt die Seite, und die Liste unter dem Spiel verlinkt jede Sprache. Das Spiel merkt sich deine Wahl."
         ]
       ],
       "madeBy": "Gemacht von Alparslan Selçuk Develioğlu",
@@ -416,11 +416,11 @@
         "Quatre niveaux : Facile, Moyen, Difficile et Expert",
         "Chaque grille a une seule solution et ne demande jamais de deviner",
         "Notes, annulation, effacement et remplissage de toutes les notes en un geste",
-        "Des indices qui expliquent la technique : singletons, candidats verrouillés, paires et triplets, X-Wing, Y-Wing, Swordfish et XYZ-Wing",
+        "Des indices qui expliquent la technique, des singletons et des paires jusqu'aux X-Wing, Y-Wing, Skyscraper et Unique Rectangle",
         "Mise en évidence de la ligne, de la colonne, du bloc et du même chiffre ; marquage des erreurs désactivable",
         "Sauvegarde automatique, mode sombre, clavier et affichage paysage",
         "Fonctionne hors ligne après la première visite, sans boutique d'applis",
-        "60 langues, chacune sur sa propre page"
+        "223 langues, chacune sur sa propre page"
       ],
       "androidHeading": "Application Android",
       "android": "Bare Sudoku existe aussi en application Android native : version {version}, environ {size} Ko, aucune permission, aucun accès Internet, du Java pur sans bibliothèque. Elle n'est pas sur Google Play : téléchargez l'APK signé depuis GitHub Releases et installez-le sur Android 8 ou plus récent.",
@@ -459,7 +459,7 @@
         ],
         [
           "Faut-il parfois deviner ?",
-          "Non. Chaque grille a exactement une solution et se résout par la seule logique. Si vous bloquez, un indice montre la prochaine case et nomme la technique : single, candidats verrouillés, paire ou triplet, X-Wing, Y-Wing, Swordfish ou XYZ-Wing. Touchez l'indice à nouveau pour placer le chiffre."
+          "Non. Chaque grille a exactement une solution et se résout par la seule logique. Si vous bloquez, un indice montre la prochaine case et nomme la technique nécessaire, par exemple un singleton, des candidats verrouillés, une paire ou un triplet, X-Wing, Y-Wing, Skyscraper ou Unique Rectangle. Touchez l'indice à nouveau pour placer le chiffre."
         ],
         [
           "Peut-on jouer sur ordinateur avec le clavier ?",
@@ -471,7 +471,7 @@
         ],
         [
           "En combien de langues Bare Sudoku existe-t-il ?",
-          "60 langues, chacune sur sa propre page. Le menu des langues dans le jeu change de page, et la liste sous le jeu relie chaque langue. Le jeu se souvient de votre choix."
+          "223 langues, chacune sur sa propre page. Le menu des langues dans le jeu change de page, et la liste sous le jeu relie chaque langue. Le jeu se souvient de votre choix."
         ]
       ],
       "madeBy": "Créé par Alparslan Selçuk Develioğlu",
@@ -491,11 +491,11 @@
         "Cuatro niveles: Fácil, Medio, Difícil y Experto",
         "Cada puzle tiene una sola solución y nunca exige adivinar",
         "Notas, deshacer, borrar y rellenar todas las notas con un toque",
-        "Pistas que explican la técnica: singles, candidatos bloqueados, pares y tríos, X-Wing, Y-Wing, Swordfish y XYZ-Wing",
+        "Pistas que explican la técnica, desde singles y pares hasta X-Wing, Y-Wing, Skyscraper y Unique Rectangle",
         "Resaltado de fila, columna, caja y mismo dígito; marcado de errores desactivable",
         "Guardado automático, modo oscuro, teclado y diseño horizontal",
         "Funciona sin conexión tras la primera visita, sin tienda de apps",
-        "60 idiomas, cada uno en su propia página"
+        "223 idiomas, cada uno en su propia página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku también es una app Android nativa: versión {version}, unos {size} KB, sin permisos, sin acceso a Internet, Java puro sin bibliotecas. No está en Google Play; descarga el APK firmado desde GitHub Releases e instálalo en Android 8 o superior.",
@@ -534,7 +534,7 @@
         ],
         [
           "¿Alguna vez hay que adivinar?",
-          "No. Cada sudoku tiene exactamente una solución y se resuelve solo con lógica. Si te atascas, una pista muestra la siguiente casilla y nombra la técnica: single, candidatos bloqueados, par o trío, X-Wing, Y-Wing, Swordfish o XYZ-Wing. Toca la pista otra vez para colocar el dígito."
+          "No. Cada sudoku tiene exactamente una solución y se resuelve solo con lógica. Si te atascas, una pista muestra la siguiente casilla y nombra la técnica que necesitó, por ejemplo un single, candidatos bloqueados, un par o trío, X-Wing, Y-Wing, Skyscraper o Unique Rectangle. Toca la pista otra vez para colocar el dígito."
         ],
         [
           "¿Puedo jugar en el ordenador con el teclado?",
@@ -546,7 +546,7 @@
         ],
         [
           "¿En cuántos idiomas está Bare Sudoku?",
-          "60 idiomas, cada uno en su propia página. El menú de idioma del juego cambia de página y la lista bajo el juego enlaza a todos los idiomas. El juego recuerda tu elección."
+          "223 idiomas, cada uno en su propia página. El menú de idioma del juego cambia de página y la lista bajo el juego enlaza a todos los idiomas. El juego recuerda tu elección."
         ]
       ],
       "madeBy": "Hecho por Alparslan Selçuk Develioğlu",
@@ -566,11 +566,11 @@
         "Quatro níveis: Fácil, Médio, Difícil e Especialista",
         "Cada puzzle tem uma única solução e nunca exige chute",
         "Anotações, desfazer, apagar e preencher todas as anotações com um toque",
-        "Dicas que explicam a técnica: singles, candidatos travados, pares e trios, X-Wing, Y-Wing, Swordfish e XYZ-Wing",
+        "Dicas que explicam a técnica, dos singles e pares ao X-Wing, Y-Wing, Skyscraper e Unique Rectangle",
         "Destaque de linha, coluna, bloco e mesmo dígito; marcação de erros que pode ser desligada",
         "Salvamento automático, modo escuro, teclado e layout horizontal",
         "Funciona offline após a primeira visita, sem loja de apps",
-        "60 idiomas, cada um na sua própria página"
+        "223 idiomas, cada um na sua própria página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku também é um app Android nativo: versão {version}, cerca de {size} KB, sem permissões, sem acesso à internet, Java puro sem bibliotecas. Não está no Google Play; baixe o APK assinado no GitHub Releases e instale no Android 8 ou mais novo.",
@@ -609,7 +609,7 @@
         ],
         [
           "Alguma vez é preciso adivinhar?",
-          "Não. Cada puzzle tem exatamente uma solução e resolve-se só com lógica. Se ficar preso, uma dica mostra a próxima célula e nomeia a técnica: single, candidatos bloqueados, par ou trio, X-Wing, Y-Wing, Swordfish ou XYZ-Wing. Toque na dica outra vez para colocar o algarismo."
+          "Não. Cada puzzle tem exatamente uma solução e resolve-se só com lógica. Se ficar preso, uma dica mostra a próxima célula e nomeia a técnica de que precisou, por exemplo um single, candidatos bloqueados, um par ou trio, X-Wing, Y-Wing, Skyscraper ou Unique Rectangle. Toque na dica outra vez para colocar o algarismo."
         ],
         [
           "Posso jogar no computador com o teclado?",
@@ -621,7 +621,7 @@
         ],
         [
           "Em quantas línguas existe o Bare Sudoku?",
-          "60 línguas, cada uma na sua própria página. O menu de idioma no jogo muda de página e a lista por baixo do jogo liga a todas as línguas. O jogo lembra-se da sua escolha."
+          "223 línguas, cada uma na sua própria página. O menu de idioma no jogo muda de página e a lista por baixo do jogo liga a todas as línguas. O jogo lembra-se da sua escolha."
         ]
       ],
       "madeBy": "Feito por Alparslan Selçuk Develioğlu",
@@ -641,11 +641,11 @@
         "Quattro livelli: Facile, Medio, Difficile ed Esperto",
         "Ogni schema ha una sola soluzione e non richiede mai di tirare a indovinare",
         "Note, annulla, cancella e riempi tutte le note con un tocco",
-        "Suggerimenti che spiegano la tecnica: singoli, candidati bloccati, coppie e terzine, X-Wing, Y-Wing, Swordfish e XYZ-Wing",
+        "Suggerimenti che spiegano la tecnica, dai singoli e dalle coppie fino a X-Wing, Y-Wing, Skyscraper e Unique Rectangle",
         "Evidenziazione di riga, colonna, riquadro e stessa cifra; segnalazione errori disattivabile",
         "Salvataggio automatico, tema scuro, tastiera e layout orizzontale",
         "Funziona offline dopo la prima visita, senza store",
-        "60 lingue, ognuna con la propria pagina"
+        "223 lingue, ognuna con la propria pagina"
       ],
       "androidHeading": "App Android",
       "android": "Bare Sudoku è anche un'app Android nativa: versione {version}, circa {size} KB, nessun permesso, nessun accesso a Internet, Java puro senza librerie. Non è su Google Play: scarica l'APK firmato da GitHub Releases e installalo su Android 8 o successivo.",
@@ -684,7 +684,7 @@
         ],
         [
           "Devo mai tirare a indovinare?",
-          "No. Ogni schema ha esattamente una soluzione e si risolve con la sola logica. Se ti blocchi, un suggerimento mostra la prossima casella e indica la tecnica: single, candidati bloccati, coppia o terzina, X-Wing, Y-Wing, Swordfish o XYZ-Wing. Tocca di nuovo il suggerimento per inserire la cifra."
+          "No. Ogni schema ha esattamente una soluzione e si risolve con la sola logica. Se ti blocchi, un suggerimento mostra la prossima casella e indica la tecnica che è servita, per esempio un single, candidati bloccati, una coppia o terzina, X-Wing, Y-Wing, Skyscraper o Unique Rectangle. Tocca di nuovo il suggerimento per inserire la cifra."
         ],
         [
           "Posso giocare al computer con la tastiera?",
@@ -696,7 +696,7 @@
         ],
         [
           "In quante lingue è disponibile Bare Sudoku?",
-          "60 lingue, ognuna sulla propria pagina. Il menu della lingua nel gioco cambia pagina e l'elenco sotto il gioco collega ogni lingua. Il gioco ricorda la tua scelta."
+          "223 lingue, ognuna sulla propria pagina. Il menu della lingua nel gioco cambia pagina e l'elenco sotto il gioco collega ogni lingua. Il gioco ricorda la tua scelta."
         ]
       ],
       "madeBy": "Creato da Alparslan Selçuk Develioğlu",
@@ -716,11 +716,11 @@
         "Vier niveaus: Makkelijk, Gemiddeld, Moeilijk en Expert",
         "Elke puzzel heeft één oplossing en vraagt nooit om gokken",
         "Notities, ongedaan maken, wissen en alle notities met één tik invullen",
-        "Hints die de techniek uitleggen: singles, locked candidates, paren en drietallen, X-Wing, Y-Wing, Swordfish en XYZ-Wing",
+        "Hints die de techniek uitleggen, van singles en paren tot X-Wing, Y-Wing, Skyscraper en Unique Rectangle",
         "Markering van rij, kolom, blok en hetzelfde cijfer; foutmarkering die je kunt uitzetten",
         "Automatisch opslaan, donkere modus, toetsenbord en liggende weergave",
         "Werkt offline na het eerste bezoek, geen app store nodig",
-        "60 talen, elk op een eigen pagina"
+        "223 talen, elk op een eigen pagina"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku is er ook als native Android-app: versie {version}, ongeveer {size} KB, geen machtigingen, geen internettoegang, pure Java zonder bibliotheken. Niet in Google Play; download de ondertekende APK van GitHub Releases en installeer hem op Android 8 of nieuwer.",
@@ -759,7 +759,7 @@
         ],
         [
           "Moet ik ooit gokken?",
-          "Nee. Elke puzzel heeft precies één oplossing en is met logica alleen op te lossen. Zit je vast, dan toont een hint het volgende vakje en noemt de techniek: single, locked candidates, paar of tripel, X-Wing, Y-Wing, Swordfish of XYZ-Wing. Tik nogmaals op de hint om het cijfer te plaatsen."
+          "Nee. Elke puzzel heeft precies één oplossing en is met logica alleen op te lossen. Zit je vast, dan toont een hint het volgende vakje en noemt de techniek die nodig was, bijvoorbeeld een single, locked candidates, een paar of tripel, X-Wing, Y-Wing, Skyscraper of Unique Rectangle. Tik nogmaals op de hint om het cijfer te plaatsen."
         ],
         [
           "Kan ik op de computer met het toetsenbord spelen?",
@@ -771,7 +771,7 @@
         ],
         [
           "In hoeveel talen is Bare Sudoku beschikbaar?",
-          "60 talen, elk op een eigen pagina. Het taalmenu in het spel wisselt van pagina en de lijst onder het spel linkt naar elke taal. Het spel onthoudt je keuze."
+          "223 talen, elk op een eigen pagina. Het taalmenu in het spel wisselt van pagina en de lijst onder het spel linkt naar elke taal. Het spel onthoudt je keuze."
         ]
       ],
       "madeBy": "Gemaakt door Alparslan Selçuk Develioğlu",
@@ -791,11 +791,11 @@
         "Cztery poziomy: łatwy, średni, trudny i ekspert",
         "Każda plansza ma jedno rozwiązanie i nigdy nie wymaga zgadywania",
         "Notatki, cofanie, wymazywanie i wypełnianie wszystkich notatek jednym dotknięciem",
-        "Podpowiedzi tłumaczące technikę: single, zablokowani kandydaci, pary i trójki, X-Wing, Y-Wing, Swordfish i XYZ-Wing",
+        "Podpowiedzi tłumaczące technikę, od singli i par po X-Wing, Y-Wing, Skyscraper i Unique Rectangle",
         "Podświetlanie wiersza, kolumny, bloku i tej samej cyfry; zaznaczanie błędów, które można wyłączyć",
         "Automatyczny zapis, tryb ciemny, klawiatura i układ poziomy",
         "Działa offline po pierwszej wizycie, bez sklepu z aplikacjami",
-        "60 języki, każdy na własnej stronie"
+        "223 języki, każdy na własnej stronie"
       ],
       "androidHeading": "Aplikacja na Androida",
       "android": "Bare Sudoku to także natywna aplikacja na Androida: wersja {version}, około {size} KB, bez uprawnień, bez dostępu do internetu, czysta Java bez bibliotek. Nie ma jej w Google Play; pobierz podpisany plik APK z GitHub Releases i zainstaluj na Androidzie 8 lub nowszym.",
@@ -834,7 +834,7 @@
         ],
         [
           "Czy trzeba czasem zgadywać?",
-          "Nie. Każda łamigłówka ma dokładnie jedno rozwiązanie i da się ją rozwiązać samą logiką. Gdy utkniesz, podpowiedź pokazuje następne pole i nazywa technikę: singiel, zablokowani kandydaci, para lub trójka, X-Wing, Y-Wing, Swordfish lub XYZ-Wing. Dotknij podpowiedzi ponownie, aby wpisać cyfrę."
+          "Nie. Każda łamigłówka ma dokładnie jedno rozwiązanie i da się ją rozwiązać samą logiką. Gdy utkniesz, podpowiedź pokazuje następne pole i nazywa technikę, której potrzebowała, na przykład singiel, zablokowani kandydaci, para lub trójka, X-Wing, Y-Wing, Skyscraper lub Unique Rectangle. Dotknij podpowiedzi ponownie, aby wpisać cyfrę."
         ],
         [
           "Czy mogę grać na komputerze klawiaturą?",
@@ -846,7 +846,7 @@
         ],
         [
           "W ilu językach jest Bare Sudoku?",
-          "60 języków, każdy na własnej stronie. Menu języka w grze zmienia stronę, a lista pod grą prowadzi do każdego języka. Gra zapamiętuje twój wybór."
+          "223 języków, każdy na własnej stronie. Menu języka w grze zmienia stronę, a lista pod grą prowadzi do każdego języka. Gra zapamiętuje twój wybór."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -866,11 +866,11 @@
         "Čtyři úrovně: lehká, střední, těžká a expert",
         "Každé zadání má jedno řešení a nikdy nevyžaduje hádání",
         "Poznámky, zpět, mazání a vyplnění všech poznámek jedním klepnutím",
-        "Nápovědy vysvětlující techniku: singly, uzamčení kandidáti, dvojice a trojice, X-Wing, Y-Wing, Swordfish a XYZ-Wing",
+        "Nápovědy vysvětlující techniku, od singlů a dvojic po X-Wing, Y-Wing, Skyscraper a Unique Rectangle",
         "Zvýraznění řádku, sloupce, bloku a stejné číslice; označování chyb lze vypnout",
         "Automatické ukládání, tmavý režim, klávesnice a rozložení na šířku",
         "Po první návštěvě funguje offline, bez obchodu s aplikacemi",
-        "60 jazyků, každý na vlastní stránce"
+        "223 jazyků, každý na vlastní stránce"
       ],
       "androidHeading": "Aplikace pro Android",
       "android": "Bare Sudoku existuje i jako nativní aplikace pro Android: verze {version}, asi {size} KB, žádná oprávnění, žádný přístup k internetu, čistá Java bez knihoven. Není na Google Play; stáhněte podepsané APK z GitHub Releases a nainstalujte je na Android 8 nebo novější.",
@@ -909,7 +909,7 @@
         ],
         [
           "Musím někdy hádat?",
-          "Ne. Každé sudoku má právě jedno řešení a dá se vyřešit čistě logicky. Když se zaseknete, nápověda ukáže další políčko a pojmenuje techniku: single, uzamčení kandidáti, dvojice nebo trojice, X-Wing, Y-Wing, Swordfish nebo XYZ-Wing. Klepněte na nápovědu znovu a číslice se doplní."
+          "Ne. Každé sudoku má právě jedno řešení a dá se vyřešit čistě logicky. Když se zaseknete, nápověda ukáže další políčko a pojmenuje techniku, kterou potřebovala, například single, uzamčené kandidáty, dvojici nebo trojici, X-Wing, Y-Wing, Skyscraper nebo Unique Rectangle. Klepněte na nápovědu znovu a číslice se doplní."
         ],
         [
           "Můžu hrát na počítači klávesnicí?",
@@ -921,7 +921,7 @@
         ],
         [
           "V kolika jazycích je Bare Sudoku?",
-          "Ve 60 jazycích, každý na vlastní stránce. Nabídka jazyka ve hře přepne stránku a seznam pod hrou odkazuje na každý jazyk. Hra si vaši volbu pamatuje."
+          "Ve 223 jazycích, každý na vlastní stránce. Nabídka jazyka ve hře přepne stránku a seznam pod hrou odkazuje na každý jazyk. Hra si vaši volbu pamatuje."
         ]
       ],
       "madeBy": "Vytvořil Alparslan Selçuk Develioğlu",
@@ -941,11 +941,11 @@
         "Štyri úrovne: ľahká, stredná, ťažká a expert",
         "Každé zadanie má jedno riešenie a nikdy nevyžaduje hádanie",
         "Poznámky, späť, mazanie a vyplnenie všetkých poznámok jedným ťuknutím",
-        "Nápovedy vysvetľujúce techniku: singly, uzamknutí kandidáti, dvojice a trojice, X-Wing, Y-Wing, Swordfish a XYZ-Wing",
+        "Nápovedy vysvetľujúce techniku, od singlov a dvojíc po X-Wing, Y-Wing, Skyscraper a Unique Rectangle",
         "Zvýraznenie riadka, stĺpca, bloku a rovnakej číslice; označovanie chýb sa dá vypnúť",
         "Automatické ukladanie, tmavý režim, klávesnica a rozloženie na šírku",
         "Po prvej návšteve funguje offline, bez obchodu s aplikáciami",
-        "60 jazykov, každý na vlastnej stránke"
+        "223 jazykov, každý na vlastnej stránke"
       ],
       "androidHeading": "Aplikácia pre Android",
       "android": "Bare Sudoku existuje aj ako natívna aplikácia pre Android: verzia {version}, približne {size} KB, žiadne povolenia, žiadny prístup na internet, čistá Java bez knižníc. Nie je v Google Play; stiahnite podpísané APK z GitHub Releases a nainštalujte ho na Android 8 alebo novší.",
@@ -984,7 +984,7 @@
         ],
         [
           "Musím niekedy hádať?",
-          "Nie. Každé sudoku má práve jedno riešenie a dá sa vyriešiť čisto logicky. Keď sa zaseknete, nápoveda ukáže ďalšie políčko a pomenuje techniku: single, uzamknutí kandidáti, dvojica alebo trojica, X-Wing, Y-Wing, Swordfish alebo XYZ-Wing. Ťuknite na nápovedu znova a číslica sa doplní."
+          "Nie. Každé sudoku má práve jedno riešenie a dá sa vyriešiť čisto logicky. Keď sa zaseknete, nápoveda ukáže ďalšie políčko a pomenuje techniku, ktorú potrebovala, napríklad single, uzamknutých kandidátov, dvojicu alebo trojicu, X-Wing, Y-Wing, Skyscraper alebo Unique Rectangle. Ťuknite na nápovedu znova a číslica sa doplní."
         ],
         [
           "Môžem hrať na počítači klávesnicou?",
@@ -996,7 +996,7 @@
         ],
         [
           "V koľkých jazykoch je Bare Sudoku?",
-          "V 60 jazykoch, každý na vlastnej stránke. Ponuka jazyka v hre prepne stránku a zoznam pod hrou odkazuje na každý jazyk. Hra si vašu voľbu pamätá."
+          "V 223 jazykoch, každý na vlastnej stránke. Ponuka jazyka v hre prepne stránku a zoznam pod hrou odkazuje na každý jazyk. Hra si vašu voľbu pamätá."
         ]
       ],
       "madeBy": "Vytvoril Alparslan Selçuk Develioğlu",
@@ -1016,11 +1016,11 @@
         "Négy szint: könnyű, közepes, nehéz és szakértő",
         "Minden feladványnak egy megoldása van, és sosem kell találgatni",
         "Jegyzetek, visszavonás, törlés és az összes jegyzet kitöltése egy érintéssel",
-        "A technikát elmagyarázó tippek: single-ök, zárolt jelöltek, párok és hármasok, X-Wing, Y-Wing, Swordfish és XYZ-Wing",
+        "A technikát elmagyarázó tippek, a single-öktől és pároktól az X-Wingig, az Y-Wingig, a Skyscraperig és a Unique Rectangle-ig",
         "Sor, oszlop, blokk és azonos számjegy kiemelése; kikapcsolható hibajelölés",
         "Automatikus mentés, sötét mód, billentyűzet és fekvő elrendezés",
         "Az első látogatás után offline is működik, nem kell alkalmazásbolt",
-        "60 nyelv, mindegyik saját oldalon"
+        "223 nyelv, mindegyik saját oldalon"
       ],
       "androidHeading": "Android-alkalmazás",
       "android": "A Bare Sudoku natív Android-alkalmazásként is létezik: {version} verzió, körülbelül {size} KB, engedélyek nélkül, internet-hozzáférés nélkül, tiszta Java, könyvtárak nélkül. Nincs a Google Playen; töltsd le az aláírt APK-t a GitHub Releases oldalról, és telepítsd Android 8 vagy újabb rendszerre.",
@@ -1059,7 +1059,7 @@
         ],
         [
           "Kell valaha találgatni?",
-          "Nem. Minden feladványnak pontosan egy megoldása van, és tisztán logikával megoldható. Ha elakadsz, a tipp megmutatja a következő cellát és megnevezi a technikát: single, zárt jelöltek, pár vagy hármas, X-Wing, Y-Wing, Swordfish vagy XYZ-Wing. Koppints újra a tippre, és a számjegy bekerül."
+          "Nem. Minden feladványnak pontosan egy megoldása van, és tisztán logikával megoldható. Ha elakadsz, a tipp megmutatja a következő cellát, és megnevezi a technikát, amelyre szüksége volt, például single, zárt jelöltek, pár vagy hármas, X-Wing, Y-Wing, Skyscraper vagy Unique Rectangle. Koppints újra a tippre, és a számjegy bekerül."
         ],
         [
           "Játszhatok számítógépen billentyűzettel?",
@@ -1071,7 +1071,7 @@
         ],
         [
           "Hány nyelven érhető el a Bare Sudoku?",
-          "60 nyelven, mindegyik saját oldalon. A játékbeli nyelvmenü oldalt vált, a játék alatti lista pedig minden nyelvre hivatkozik. A játék megjegyzi a választásodat."
+          "223 nyelven, mindegyik saját oldalon. A játékbeli nyelvmenü oldalt vált, a játék alatti lista pedig minden nyelvre hivatkozik. A játék megjegyzi a választásodat."
         ]
       ],
       "madeBy": "Készítette: Alparslan Selçuk Develioğlu",
@@ -1091,11 +1091,11 @@
         "Patru niveluri: ușor, mediu, greu și expert",
         "Fiecare grilă are o singură soluție și nu cere niciodată ghicit",
         "Notițe, anulare, ștergere și completarea tuturor notițelor cu o atingere",
-        "Indicii care explică tehnica: single-uri, candidați blocați, perechi și triplete, X-Wing, Y-Wing, Swordfish și XYZ-Wing",
+        "Indicii care explică tehnica, de la single-uri și perechi la X-Wing, Y-Wing, Skyscraper și Unique Rectangle",
         "Evidențierea rândului, coloanei, blocului și a aceleiași cifre; marcarea greșelilor se poate opri",
         "Salvare automată, mod întunecat, tastatură și așezare pe orizontală",
         "Funcționează offline după prima vizită, fără magazin de aplicații",
-        "60 de limbi, fiecare pe pagina ei"
+        "223 de limbi, fiecare pe pagina ei"
       ],
       "androidHeading": "Aplicație Android",
       "android": "Bare Sudoku există și ca aplicație Android nativă: versiunea {version}, aproximativ {size} KB, fără permisiuni, fără acces la internet, Java pur fără biblioteci. Nu este pe Google Play; descarcă APK-ul semnat de pe GitHub Releases și instalează-l pe Android 8 sau mai nou.",
@@ -1134,7 +1134,7 @@
         ],
         [
           "Trebuie să ghicesc vreodată?",
-          "Nu. Fiecare puzzle are exact o soluție și se rezolvă doar prin logică. Dacă te blochezi, un indiciu arată următoarea celulă și numește tehnica: single, candidați blocați, pereche sau triplet, X-Wing, Y-Wing, Swordfish sau XYZ-Wing. Atinge indiciul din nou pentru a plasa cifra."
+          "Nu. Fiecare puzzle are exact o soluție și se rezolvă doar prin logică. Dacă te blochezi, un indiciu arată următoarea celulă și numește tehnica de care a avut nevoie, de exemplu un single, candidați blocați, o pereche sau un triplet, X-Wing, Y-Wing, Skyscraper sau Unique Rectangle. Atinge indiciul din nou pentru a plasa cifra."
         ],
         [
           "Pot juca pe calculator cu tastatura?",
@@ -1146,7 +1146,7 @@
         ],
         [
           "În câte limbi este Bare Sudoku?",
-          "60 de limbi, fiecare pe propria pagină. Meniul de limbă din joc schimbă pagina, iar lista de sub joc trimite la fiecare limbă. Jocul îți reține alegerea."
+          "223 de limbi, fiecare pe propria pagină. Meniul de limbă din joc schimbă pagina, iar lista de sub joc trimite la fiecare limbă. Jocul îți reține alegerea."
         ]
       ],
       "madeBy": "Creat de Alparslan Selçuk Develioğlu",
@@ -1166,11 +1166,11 @@
         "Τέσσερα επίπεδα: εύκολο, μεσαίο, δύσκολο και expert",
         "Κάθε γρίφος έχει μία λύση και δεν χρειάζεται ποτέ μάντεμα",
         "Σημειώσεις, αναίρεση, σβήσιμο και συμπλήρωση όλων των σημειώσεων με ένα άγγιγμα",
-        "Βοήθειες που εξηγούν την τεχνική: singles, κλειδωμένοι υποψήφιοι, ζεύγη και τριάδες, X-Wing, Y-Wing, Swordfish και XYZ-Wing",
+        "Βοήθειες που εξηγούν την τεχνική, από singles και ζεύγη ως X-Wing, Y-Wing, Skyscraper και Unique Rectangle",
         "Επισήμανση γραμμής, στήλης, μπλοκ και ίδιου ψηφίου· σήμανση λαθών που απενεργοποιείται",
         "Αυτόματη αποθήκευση, σκούρο θέμα, πληκτρολόγιο και οριζόντια διάταξη",
         "Λειτουργεί offline μετά την πρώτη επίσκεψη, χωρίς app store",
-        "60 γλώσσες, καθεμία στη δική της σελίδα"
+        "223 γλώσσες, καθεμία στη δική της σελίδα"
       ],
       "androidHeading": "Εφαρμογή Android",
       "android": "Το Bare Sudoku υπάρχει και ως εγγενής εφαρμογή Android: έκδοση {version}, περίπου {size} KB, χωρίς άδειες, χωρίς πρόσβαση στο internet, καθαρή Java χωρίς βιβλιοθήκες. Δεν είναι στο Google Play· κατέβασε το υπογεγραμμένο APK από το GitHub Releases και εγκατάστησέ το σε Android 8 ή νεότερο.",
@@ -1209,7 +1209,7 @@
         ],
         [
           "Χρειάζεται ποτέ να μαντέψω;",
-          "Όχι. Κάθε γρίφος έχει ακριβώς μία λύση και λύνεται μόνο με λογική. Αν κολλήσετε, η υπόδειξη δείχνει το επόμενο κελί και ονομάζει την τεχνική: single, κλειδωμένοι υποψήφιοι, ζεύγος ή τριάδα, X-Wing, Y-Wing, Swordfish ή XYZ-Wing. Πατήστε ξανά την υπόδειξη για να τοποθετηθεί το ψηφίο."
+          "Όχι. Κάθε γρίφος έχει ακριβώς μία λύση και λύνεται μόνο με λογική. Αν κολλήσετε, η υπόδειξη δείχνει το επόμενο κελί και ονομάζει την τεχνική που χρειάστηκε, για παράδειγμα single, κλειδωμένοι υποψήφιοι, ζεύγος ή τριάδα, X-Wing, Y-Wing, Skyscraper ή Unique Rectangle. Πατήστε ξανά την υπόδειξη για να τοποθετηθεί το ψηφίο."
         ],
         [
           "Μπορώ να παίξω στον υπολογιστή με το πληκτρολόγιο;",
@@ -1221,7 +1221,7 @@
         ],
         [
           "Σε πόσες γλώσσες υπάρχει το Bare Sudoku;",
-          "Σε 60 γλώσσες, καθεμία στη δική της σελίδα. Το μενού γλώσσας στο παιχνίδι αλλάζει σελίδα και η λίστα κάτω από το παιχνίδι συνδέει κάθε γλώσσα. Το παιχνίδι θυμάται την επιλογή σας."
+          "Σε 223 γλώσσες, καθεμία στη δική της σελίδα. Το μενού γλώσσας στο παιχνίδι αλλάζει σελίδα και η λίστα κάτω από το παιχνίδι συνδέει κάθε γλώσσα. Το παιχνίδι θυμάται την επιλογή σας."
         ]
       ],
       "madeBy": "Δημιουργός: Alparslan Selçuk Develioğlu",
@@ -1241,11 +1241,11 @@
         "Fyra nivåer: lätt, medel, svår och expert",
         "Varje pussel har en lösning och kräver aldrig gissning",
         "Anteckningar, ångra, radera och fyll i alla anteckningar med ett tryck",
-        "Ledtrådar som förklarar tekniken: singlar, låsta kandidater, par och tripplar, X-Wing, Y-Wing, Swordfish och XYZ-Wing",
+        "Ledtrådar som förklarar tekniken, från singlar och par till X-Wing, Y-Wing, Skyscraper och Unique Rectangle",
         "Markering av rad, kolumn, ruta och samma siffra; felmarkering som kan stängas av",
         "Automatisk sparning, mörkt läge, tangentbord och liggande läge",
         "Fungerar offline efter första besöket, ingen appbutik behövs",
-        "60 språk, vart och ett på sin egen sida"
+        "223 språk, vart och ett på sin egen sida"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finns också som inbyggd Android-app: version {version}, cirka {size} KB, inga behörigheter, ingen internetåtkomst, ren Java utan bibliotek. Den finns inte på Google Play; ladda ner den signerade APK-filen från GitHub Releases och installera den på Android 8 eller senare.",
@@ -1284,7 +1284,7 @@
         ],
         [
           "Måste jag någonsin gissa?",
-          "Nej. Varje pussel har exakt en lösning och kan lösas med enbart logik. Om du fastnar visar en ledtråd nästa ruta och namnger tekniken: single, låsta kandidater, par eller trippel, X-Wing, Y-Wing, Swordfish eller XYZ-Wing. Tryck på ledtråden igen för att placera siffran."
+          "Nej. Varje pussel har exakt en lösning och kan lösas med enbart logik. Om du fastnar visar en ledtråd nästa ruta och namnger tekniken som behövdes, till exempel en single, låsta kandidater, ett par eller en trippel, X-Wing, Y-Wing, Skyscraper eller Unique Rectangle. Tryck på ledtråden igen för att placera siffran."
         ],
         [
           "Kan jag spela på datorn med tangentbordet?",
@@ -1296,7 +1296,7 @@
         ],
         [
           "På hur många språk finns Bare Sudoku?",
-          "60 språk, vart och ett på sin egen sida. Språkmenyn i spelet byter sida, och listan under spelet länkar till varje språk. Spelet kommer ihåg ditt val."
+          "223 språk, vart och ett på sin egen sida. Språkmenyn i spelet byter sida, och listan under spelet länkar till varje språk. Spelet kommer ihåg ditt val."
         ]
       ],
       "madeBy": "Skapad av Alparslan Selçuk Develioğlu",
@@ -1316,11 +1316,11 @@
         "Fire niveauer: let, mellem, svær og ekspert",
         "Hver opgave har én løsning og kræver aldrig gætteri",
         "Noter, fortryd, slet og udfyld alle noter med ét tryk",
-        "Hints, der forklarer teknikken: singles, låste kandidater, par og tripler, X-Wing, Y-Wing, Swordfish og XYZ-Wing",
+        "Hints, der forklarer teknikken, fra singles og par til X-Wing, Y-Wing, Skyscraper og Unique Rectangle",
         "Fremhævning af række, kolonne, boks og samme ciffer; fejlmarkering, der kan slås fra",
         "Automatisk gem, mørk tilstand, tastatur og liggende layout",
         "Virker offline efter første besøg, ingen app store nødvendig",
-        "60 sprog, hvert på sin egen side"
+        "223 sprog, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku findes også som native Android-app: version {version}, cirka {size} KB, ingen tilladelser, ingen internetadgang, ren Java uden biblioteker. Den er ikke på Google Play; hent den signerede APK fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -1359,7 +1359,7 @@
         ],
         [
           "Skal jeg nogensinde gætte?",
-          "Nej. Hver opgave har præcis én løsning og kan løses med logik alene. Hvis du sidder fast, viser et hint det næste felt og nævner teknikken: single, låste kandidater, par eller tripel, X-Wing, Y-Wing, Swordfish eller XYZ-Wing. Tryk på hintet igen for at placere tallet."
+          "Nej. Hver opgave har præcis én løsning og kan løses med logik alene. Hvis du sidder fast, viser et hint det næste felt og nævner den teknik, der skulle til, for eksempel en single, låste kandidater, et par eller en tripel, X-Wing, Y-Wing, Skyscraper eller Unique Rectangle. Tryk på hintet igen for at placere tallet."
         ],
         [
           "Kan jeg spille på computeren med tastaturet?",
@@ -1371,7 +1371,7 @@
         ],
         [
           "Hvor mange sprog findes Bare Sudoku på?",
-          "60 sprog, hvert på sin egen side. Sprogmenuen i spillet skifter side, og listen under spillet linker til hvert sprog. Spillet husker dit valg."
+          "223 sprog, hvert på sin egen side. Sprogmenuen i spillet skifter side, og listen under spillet linker til hvert sprog. Spillet husker dit valg."
         ]
       ],
       "madeBy": "Lavet af Alparslan Selçuk Develioğlu",
@@ -1391,11 +1391,11 @@
         "Fire nivåer: lett, middels, vanskelig og ekspert",
         "Hvert brett har én løsning og krever aldri gjetting",
         "Notater, angre, slett og fyll inn alle notater med ett trykk",
-        "Hint som forklarer teknikken: singler, låste kandidater, par og tripler, X-Wing, Y-Wing, Swordfish og XYZ-Wing",
+        "Hint som forklarer teknikken, fra singler og par til X-Wing, Y-Wing, Skyscraper og Unique Rectangle",
         "Utheving av rad, kolonne, boks og samme siffer; feilmarkering som kan slås av",
         "Automatisk lagring, mørk modus, tastatur og liggende visning",
         "Fungerer frakoblet etter første besøk, ingen appbutikk nødvendig",
-        "60 språk, hvert på sin egen side"
+        "223 språk, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finnes også som egen Android-app: versjon {version}, omtrent {size} KB, ingen tillatelser, ingen internettilgang, ren Java uten biblioteker. Den er ikke på Google Play; last ned den signerte APK-filen fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -1434,7 +1434,7 @@
         ],
         [
           "Må jeg noen gang gjette?",
-          "Nei. Hvert puslespill har nøyaktig én løsning og kan løses med logikk alene. Står du fast, viser et hint neste rute og navngir teknikken: single, låste kandidater, par eller trippel, X-Wing, Y-Wing, Swordfish eller XYZ-Wing. Trykk på hintet igjen for å plassere sifferet."
+          "Nei. Hvert puslespill har nøyaktig én løsning og kan løses med logikk alene. Står du fast, viser et hint neste rute og navngir teknikken som trengtes, for eksempel en single, låste kandidater, et par eller en trippel, X-Wing, Y-Wing, Skyscraper eller Unique Rectangle. Trykk på hintet igjen for å plassere sifferet."
         ],
         [
           "Kan jeg spille på datamaskinen med tastaturet?",
@@ -1446,7 +1446,7 @@
         ],
         [
           "Hvor mange språk finnes Bare Sudoku på?",
-          "60 språk, hvert på sin egen side. Språkmenyen i spillet bytter side, og listen under spillet lenker til hvert språk. Spillet husker valget ditt."
+          "223 språk, hvert på sin egen side. Språkmenyen i spillet bytter side, og listen under spillet lenker til hvert språk. Spillet husker valget ditt."
         ]
       ],
       "madeBy": "Laget av Alparslan Selçuk Develioğlu",
@@ -1466,11 +1466,11 @@
         "Neljä tasoa: helppo, keskitaso, vaikea ja ekspertti",
         "Jokaisella ruudukolla on yksi ratkaisu eikä arvaamista tarvita koskaan",
         "Muistiinpanot, kumoa, pyyhi ja täytä kaikki muistiinpanot yhdellä napautuksella",
-        "Vihjeet, jotka selittävät tekniikan: singlet, lukitut ehdokkaat, parit ja kolmikot, X-Wing, Y-Wing, Swordfish ja XYZ-Wing",
+        "Vihjeet, jotka selittävät tekniikan, singleistä ja pareista X-Wingiin, Y-Wingiin, Skyscraperiin ja Unique Rectangleen",
         "Rivin, sarakkeen, ruudun ja saman numeron korostus; virhemerkintä, jonka voi kytkeä pois",
         "Automaattinen tallennus, tumma tila, näppäimistö ja vaaka-asettelu",
         "Toimii offline ensimmäisen käynnin jälkeen, ei sovelluskauppaa",
-        "60 kieltä, jokainen omalla sivullaan"
+        "223 kieltä, jokainen omalla sivullaan"
       ],
       "androidHeading": "Android-sovellus",
       "android": "Bare Sudoku on myös natiivi Android-sovellus: versio {version}, noin {size} KB, ei käyttöoikeuksia, ei internetyhteyttä, puhdasta Javaa ilman kirjastoja. Se ei ole Google Playssa; lataa allekirjoitettu APK GitHub Releases -sivulta ja asenna se Android 8:aan tai uudempaan.",
@@ -1509,7 +1509,7 @@
         ],
         [
           "Pitääkö koskaan arvata?",
-          "Ei. Jokaisella tehtävällä on täsmälleen yksi ratkaisu, ja se ratkeaa pelkällä logiikalla. Jos jäät jumiin, vihje näyttää seuraavan ruudun ja nimeää tekniikan: single, lukitut ehdokkaat, pari tai kolmikko, X-Wing, Y-Wing, Swordfish tai XYZ-Wing. Napauta vihjettä uudelleen, niin numero asetetaan."
+          "Ei. Jokaisella tehtävällä on täsmälleen yksi ratkaisu, ja se ratkeaa pelkällä logiikalla. Jos jäät jumiin, vihje näyttää seuraavan ruudun ja nimeää tekniikan, jota se tarvitsi, esimerkiksi singlen, lukitut ehdokkaat, parin tai kolmikon, X-Wingin, Y-Wingin, Skyscraperin tai Unique Rectanglen. Napauta vihjettä uudelleen, niin numero asetetaan."
         ],
         [
           "Voinko pelata tietokoneella näppäimistöllä?",
@@ -1521,7 +1521,7 @@
         ],
         [
           "Kuinka monella kielellä Bare Sudoku on?",
-          "60 kielellä, jokainen omalla sivullaan. Pelin kielivalikko vaihtaa sivua, ja pelin alla oleva luettelo linkittää jokaiseen kieleen. Peli muistaa valintasi."
+          "223 kielellä, jokainen omalla sivullaan. Pelin kielivalikko vaihtaa sivua, ja pelin alla oleva luettelo linkittää jokaiseen kieleen. Peli muistaa valintasi."
         ]
       ],
       "madeBy": "Tekijä: Alparslan Selçuk Develioğlu",
@@ -1541,11 +1541,11 @@
         "Четыре уровня: лёгкий, средний, сложный и эксперт",
         "У каждой головоломки одно решение, угадывать не нужно никогда",
         "Заметки, отмена, стирание и заполнение всех заметок одним касанием",
-        "Подсказки объясняют технику: одиночки, запертые кандидаты, пары и тройки, X-Wing, Y-Wing, Swordfish и XYZ-Wing",
+        "Подсказки объясняют технику, от одиночек и пар до X-Wing, Y-Wing, Skyscraper и Unique Rectangle",
         "Подсветка строки, столбца, блока и одинаковых цифр; отключаемая отметка ошибок",
         "Автосохранение, тёмная тема, клавиатура и горизонтальная раскладка",
         "После первого визита работает офлайн, магазин приложений не нужен",
-        "60 языка, у каждого своя страница"
+        "223 языка, у каждого своя страница"
       ],
       "androidHeading": "Приложение для Android",
       "android": "Bare Sudoku есть и как нативное приложение для Android: версия {version}, около {size} КБ, без разрешений, без доступа в интернет, чистая Java без библиотек. Его нет в Google Play; скачай подписанный APK со страницы GitHub Releases и установи на Android 8 или новее.",
@@ -1584,7 +1584,7 @@
         ],
         [
           "Приходится ли угадывать?",
-          "Нет. У каждой головоломки ровно одно решение, и она решается только логикой. Если вы застряли, подсказка покажет следующую клетку и назовёт приём: одиночка, запертые кандидаты, пара или тройка, X-Wing, Y-Wing, Swordfish или XYZ-Wing. Нажмите подсказку ещё раз, чтобы поставить цифру."
+          "Нет. У каждой головоломки ровно одно решение, и она решается только логикой. Если вы застряли, подсказка покажет следующую клетку и назовёт приём, который понадобился, например одиночку, запертых кандидатов, пару или тройку, X-Wing, Y-Wing, Skyscraper или Unique Rectangle. Нажмите подсказку ещё раз, чтобы поставить цифру."
         ],
         [
           "Можно ли играть на компьютере с клавиатуры?",
@@ -1596,7 +1596,7 @@
         ],
         [
           "На скольких языках есть Bare Sudoku?",
-          "60 языков, каждый на своей странице. Меню языка в игре переключает страницу, а список под игрой ведёт на каждый язык. Игра запоминает ваш выбор."
+          "223 языков, каждый на своей странице. Меню языка в игре переключает страницу, а список под игрой ведёт на каждый язык. Игра запоминает ваш выбор."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -1616,11 +1616,11 @@
         "Чотири рівні: легкий, середній, складний і експерт",
         "Кожна головоломка має один розв'язок, вгадувати не потрібно ніколи",
         "Нотатки, скасування, стирання та заповнення всіх нотаток одним дотиком",
-        "Підказки пояснюють техніку: одинаки, замкнені кандидати, пари й трійки, X-Wing, Y-Wing, Swordfish і XYZ-Wing",
+        "Підказки пояснюють техніку, від одинаків і пар до X-Wing, Y-Wing, Skyscraper і Unique Rectangle",
         "Підсвічування рядка, стовпця, блоку та однакових цифр; позначення помилок можна вимкнути",
         "Автозбереження, темна тема, клавіатура та горизонтальна розкладка",
         "Після першого візиту працює офлайн, магазин застосунків не потрібен",
-        "60 мови, кожна на своїй сторінці"
+        "223 мови, кожна на своїй сторінці"
       ],
       "androidHeading": "Застосунок для Android",
       "android": "Bare Sudoku є і як нативний застосунок для Android: версія {version}, близько {size} КБ, без дозволів, без доступу до інтернету, чиста Java без бібліотек. Його немає в Google Play; завантаж підписаний APK зі сторінки GitHub Releases і встанови на Android 8 або новішу.",
@@ -1659,7 +1659,7 @@
         ],
         [
           "Чи доводиться вгадувати?",
-          "Ні. Кожна головоломка має рівно один розв'язок і розв'язується лише логікою. Якщо ви застрягли, підказка покаже наступну клітинку й назве прийом: одинак, замкнені кандидати, пара чи трійка, X-Wing, Y-Wing, Swordfish або XYZ-Wing. Торкніться підказки ще раз, щоб поставити цифру."
+          "Ні. Кожна головоломка має рівно один розв'язок і розв'язується лише логікою. Якщо ви застрягли, підказка покаже наступну клітинку й назве прийом, який знадобився, наприклад одинака, замкнених кандидатів, пару чи трійку, X-Wing, Y-Wing, Skyscraper або Unique Rectangle. Торкніться підказки ще раз, щоб поставити цифру."
         ],
         [
           "Чи можна грати на комп'ютері з клавіатури?",
@@ -1671,7 +1671,7 @@
         ],
         [
           "Скількома мовами доступний Bare Sudoku?",
-          "60 мов, кожна на своїй сторінці. Меню мови в грі перемикає сторінку, а список під грою веде до кожної мови. Гра запам'ятовує ваш вибір."
+          "223 мов, кожна на своїй сторінці. Меню мови в грі перемикає сторінку, а список під грою веде до кожної мови. Гра запам'ятовує ваш вибір."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -1691,11 +1691,11 @@
         "Четири нива: лесно, средно, трудно и експерт",
         "Всяка задача има едно решение и никога не изисква гадаене",
         "Бележки, отмяна, изтриване и попълване на всички бележки с едно докосване",
-        "Подсказки, които обясняват техниката: единични, заключени кандидати, двойки и тройки, X-Wing, Y-Wing, Swordfish и XYZ-Wing",
+        "Подсказки, които обясняват техниката, от единични кандидати и двойки до X-Wing, Y-Wing, Skyscraper и Unique Rectangle",
         "Открояване на ред, колона, блок и еднаква цифра; отбелязване на грешки, което може да се изключи",
         "Автоматично запазване, тъмен режим, клавиатура и хоризонтално оформление",
         "Работи офлайн след първото посещение, без магазин за приложения",
-        "60 езика, всеки на своя страница"
+        "223 езика, всеки на своя страница"
       ],
       "androidHeading": "Приложение за Android",
       "android": "Bare Sudoku съществува и като нативно приложение за Android: версия {version}, около {size} КБ, без разрешения, без достъп до интернет, чиста Java без библиотеки. Няма го в Google Play; изтегли подписания APK от GitHub Releases и го инсталирай на Android 8 или по-нов.",
@@ -1734,7 +1734,7 @@
         ],
         [
           "Трябва ли някога да гадая?",
-          "Не. Всяка задача има точно едно решение и се решава само с логика. Ако закъсате, подсказката показва следващата клетка и назовава техниката: single, заключени кандидати, двойка или тройка, X-Wing, Y-Wing, Swordfish или XYZ-Wing. Докоснете подсказката отново, за да поставите цифрата."
+          "Не. Всяка задача има точно едно решение и се решава само с логика. Ако закъсате, подсказката показва следващата клетка и назовава техниката, която е била нужна, например единичен кандидат, заключени кандидати, двойка или тройка, X-Wing, Y-Wing, Skyscraper или Unique Rectangle. Докоснете подсказката отново, за да поставите цифрата."
         ],
         [
           "Мога ли да играя на компютър с клавиатурата?",
@@ -1746,7 +1746,7 @@
         ],
         [
           "На колко езика е Bare Sudoku?",
-          "На 60 езика, всеки на своя страница. Менюто за език в играта сменя страницата, а списъкът под играта води към всеки език. Играта помни избора ви."
+          "На 223 езика, всеки на своя страница. Менюто за език в играта сменя страницата, а списъкът под играта води към всеки език. Играта помни избора ви."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -1766,11 +1766,11 @@
         "Četiri nivoa: lako, srednje, teško i ekspert",
         "Svaka zagonetka ima jedno rešenje i nikada ne traži pogađanje",
         "Beleške, opozivanje, brisanje i popunjavanje svih beleški jednim dodirom",
-        "Nagoveštaji koji objašnjavaju tehniku: singlovi, zaključani kandidati, parovi i trojke, X-Wing, Y-Wing, Swordfish i XYZ-Wing",
+        "Nagoveštaji koji objašnjavaju tehniku, od singlova i parova do tehnika X-Wing, Y-Wing, Skyscraper i Unique Rectangle",
         "Isticanje reda, kolone, bloka i iste cifre; označavanje grešaka koje se može isključiti",
         "Automatsko čuvanje, tamni režim, tastatura i horizontalni raspored",
         "Radi oflajn posle prve posete, bez prodavnice aplikacija",
-        "60 jezika, svaki na svojoj stranici"
+        "223 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Play-u; preuzmi potpisani APK sa GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -1809,7 +1809,7 @@
         ],
         [
           "Da li ikada moram da pogađam?",
-          "Ne. Svaka zagonetka ima tačno jedno rešenje i rešava se samo logikom. Ako zapneš, savet pokazuje sledeće polje i imenuje tehniku: single, zaključani kandidati, par ili trojka, X-Wing, Y-Wing, Swordfish ili XYZ-Wing. Dodirni savet ponovo da upišeš cifru."
+          "Ne. Svaka zagonetka ima tačno jedno rešenje i rešava se samo logikom. Ako zapneš, savet pokazuje sledeće polje i imenuje tehniku koja mu je bila potrebna, na primer singl, zaključane kandidate, par ili trojku, X-Wing, Y-Wing, Skyscraper ili Unique Rectangle. Dodirni savet ponovo da upišeš cifru."
         ],
         [
           "Da li mogu da igram na računaru tastaturom?",
@@ -1821,7 +1821,7 @@
         ],
         [
           "Na koliko jezika postoji Bare Sudoku?",
-          "Na 60 jezika, svaki na svojoj stranici. Meni jezika u igri menja stranicu, a spisak ispod igre vodi na svaki jezik. Igra pamti tvoj izbor."
+          "Na 223 jezika, svaki na svojoj stranici. Meni jezika u igri menja stranicu, a spisak ispod igre vodi na svaki jezik. Igra pamti tvoj izbor."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -1841,11 +1841,11 @@
         "Četiri razine: lako, srednje, teško i ekspert",
         "Svaka zagonetka ima jedno rješenje i nikada ne traži pogađanje",
         "Bilješke, poništavanje, brisanje i popunjavanje svih bilješki jednim dodirom",
-        "Savjeti koji objašnjavaju tehniku: singlovi, zaključani kandidati, parovi i trojke, X-Wing, Y-Wing, Swordfish i XYZ-Wing",
+        "Savjeti koji objašnjavaju tehniku, od singlova i parova do tehnika X-Wing, Y-Wing, Skyscraper i Unique Rectangle",
         "Isticanje retka, stupca, bloka i iste znamenke; označavanje pogrešaka koje se može isključiti",
         "Automatsko spremanje, tamni način, tipkovnica i vodoravni raspored",
         "Radi offline nakon prvog posjeta, bez trgovine aplikacija",
-        "60 jezika, svaki na svojoj stranici"
+        "223 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Playu; preuzmi potpisani APK s GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -1884,7 +1884,7 @@
         ],
         [
           "Moram li ikada pogađati?",
-          "Ne. Svaka zagonetka ima točno jedno rješenje i rješava se samo logikom. Ako zapneš, savjet pokazuje sljedeće polje i imenuje tehniku: single, zaključani kandidati, par ili trojka, X-Wing, Y-Wing, Swordfish ili XYZ-Wing. Dodirni savjet ponovno da upišeš znamenku."
+          "Ne. Svaka zagonetka ima točno jedno rješenje i rješava se samo logikom. Ako zapneš, savjet pokazuje sljedeće polje i imenuje tehniku koja mu je bila potrebna, primjerice singl, zaključane kandidate, par ili trojku, X-Wing, Y-Wing, Skyscraper ili Unique Rectangle. Dodirni savjet ponovno da upišeš znamenku."
         ],
         [
           "Mogu li igrati na računalu tipkovnicom?",
@@ -1896,7 +1896,7 @@
         ],
         [
           "Na koliko je jezika Bare Sudoku?",
-          "Na 60 jezika, svaki na vlastitoj stranici. Izbornik jezika u igri mijenja stranicu, a popis ispod igre vodi na svaki jezik. Igra pamti tvoj izbor."
+          "Na 223 jezika, svaki na vlastitoj stranici. Izbornik jezika u igri mijenja stranicu, a popis ispod igre vodi na svaki jezik. Igra pamti tvoj izbor."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -1916,11 +1916,11 @@
         "أربعة مستويات: سهل ومتوسط وصعب وخبير",
         "لكل لغز حل واحد ولا يحتاج إلى التخمين أبدًا",
         "ملاحظات وتراجع ومسح وتعبئة كل الملاحظات بلمسة واحدة",
-        "تلميحات تشرح التقنية: المرشح الوحيد، المرشحون المحصورون، الأزواج والثلاثيات، X-Wing وY-Wing وSwordfish وXYZ-Wing",
+        "تلميحات تشرح التقنية، من المرشح الوحيد والأزواج إلى X-Wing وY-Wing وSkyscraper وUnique Rectangle",
         "إبراز الصف والعمود والمربع والرقم نفسه؛ تعليم الأخطاء قابل للإيقاف",
         "حفظ تلقائي ووضع داكن ودعم لوحة المفاتيح وتخطيط أفقي",
         "يعمل دون اتصال بعد الزيارة الأولى، دون متجر تطبيقات",
-        "60 لغة، لكل منها صفحتها الخاصة"
+        "223 لغة، لكل منها صفحتها الخاصة"
       ],
       "androidHeading": "تطبيق أندرويد",
       "android": "Bare Sudoku متوفر أيضًا كتطبيق أندرويد أصلي: الإصدار {version}، نحو {size} كيلوبايت، بلا أذونات، بلا وصول إلى الإنترنت، جافا خالصة بلا مكتبات. ليس على Google Play؛ نزّل ملف APK الموقّع من GitHub Releases وثبّته على أندرويد 8 أو أحدث.",
@@ -1959,7 +1959,7 @@
         ],
         [
           "هل أحتاج إلى التخمين أحيانًا؟",
-          "لا. لكل لغز حل واحد بالضبط ويمكن حله بالمنطق وحده. إذا توقفت، يُظهر التلميح الخلية التالية ويسمّي التقنية: مفرد، مرشحون محبوسون، زوج أو ثلاثي، X-Wing، Y-Wing، Swordfish أو XYZ-Wing. المس التلميح مرة أخرى لوضع الرقم."
+          "لا. لكل لغز حل واحد بالضبط ويمكن حله بالمنطق وحده. إذا توقفت، يُظهر التلميح الخلية التالية ويسمّي التقنية التي احتاج إليها، مثل مفرد، أو مرشحين محصورين، أو زوج أو ثلاثي، أو X-Wing أو Y-Wing أو Skyscraper أو Unique Rectangle. المس التلميح مرة أخرى لوضع الرقم."
         ],
         [
           "هل يمكنني اللعب على الحاسوب بلوحة المفاتيح؟",
@@ -1971,7 +1971,7 @@
         ],
         [
           "كم لغة يدعم Bare Sudoku؟",
-          "60 لغة، لكل منها صفحتها الخاصة. قائمة اللغة داخل اللعبة تبدّل الصفحة، والقائمة أسفل اللعبة تصل إلى كل لغة. تتذكر اللعبة اختيارك."
+          "223 لغة، لكل منها صفحتها الخاصة. قائمة اللغة داخل اللعبة تبدّل الصفحة، والقائمة أسفل اللعبة تصل إلى كل لغة. تتذكر اللعبة اختيارك."
         ]
       ],
       "madeBy": "من صنع Alparslan Selçuk Develioğlu",
@@ -1991,11 +1991,11 @@
         "چهار سطح: آسان، متوسط، سخت و حرفه‌ای",
         "هر جدول یک جواب دارد و هرگز به حدس نیاز نیست",
         "یادداشت، بازگشت، پاک کردن و پر کردن همهٔ یادداشت‌ها با یک لمس",
-        "راهنمایی‌هایی که تکنیک را توضیح می‌دهند: تک‌گزینه، نامزدهای قفل‌شده، جفت و سه‌تایی، X-Wing، Y-Wing، Swordfish و XYZ-Wing",
+        "راهنمایی‌هایی که تکنیک را توضیح می‌دهند، از تک‌گزینه و جفت تا X-Wing، Y-Wing، Skyscraper و Unique Rectangle",
         "برجسته‌سازی سطر، ستون، جعبه و رقم یکسان؛ علامت‌گذاری خطا که می‌توان خاموشش کرد",
         "ذخیرهٔ خودکار، حالت تاریک، صفحه‌کلید و چیدمان افقی",
         "پس از اولین بازدید آفلاین کار می‌کند، بدون نیاز به فروشگاه برنامه",
-        "۶۰ زبان، هر کدام در صفحهٔ خودش"
+        "۳۷ زبان، هر کدام در صفحهٔ خودش"
       ],
       "androidHeading": "برنامهٔ اندروید",
       "android": "Bare Sudoku به‌صورت برنامهٔ بومی اندروید هم موجود است: نسخهٔ {version}، حدود {size} کیلوبایت، بدون مجوز، بدون دسترسی به اینترنت، جاوای خالص بدون کتابخانه. در Google Play نیست؛ فایل APK امضاشده را از GitHub Releases دانلود کن و روی اندروید ۸ یا جدیدتر نصب کن.",
@@ -2034,7 +2034,7 @@
         ],
         [
           "آیا گاهی باید حدس زد؟",
-          "نه. هر جدول دقیقاً یک جواب دارد و فقط با منطق حل می‌شود. اگر گیر کردید، راهنما خانهٔ بعدی را نشان می‌دهد و نام تکنیک را می‌گوید: تک‌گزینه، نامزدهای قفل‌شده، جفت یا سه‌تایی، X-Wing، Y-Wing، Swordfish یا XYZ-Wing. برای گذاشتن رقم، دوباره راهنما را لمس کنید."
+          "نه. هر جدول دقیقاً یک جواب دارد و فقط با منطق حل می‌شود. اگر گیر کردید، راهنما خانهٔ بعدی را نشان می‌دهد و نام تکنیکی را که لازم داشت می‌گوید، مثلاً تک‌گزینه، نامزدهای قفل‌شده، جفت یا سه‌تایی، X-Wing، Y-Wing، Skyscraper یا Unique Rectangle. برای گذاشتن رقم، دوباره راهنما را لمس کنید."
         ],
         [
           "می‌توانم روی رایانه با صفحه‌کلید بازی کنم؟",
@@ -2046,7 +2046,7 @@
         ],
         [
           "Bare Sudoku به چند زبان است؟",
-          "۶۰ زبان، هر کدام در صفحهٔ خودش. منوی زبان در بازی صفحه را عوض می‌کند و فهرست زیر بازی به همهٔ زبان‌ها پیوند دارد. بازی انتخاب شما را به خاطر می‌سپارد."
+          "۲۲۳ زبان، هر کدام در صفحهٔ خودش. منوی زبان در بازی صفحه را عوض می‌کند و فهرست زیر بازی به همهٔ زبان‌ها پیوند دارد. بازی انتخاب شما را به خاطر می‌سپارد."
         ]
       ],
       "madeBy": "ساختهٔ Alparslan Selçuk Develioğlu",
@@ -2066,11 +2066,11 @@
         "ארבע רמות: קל, בינוני, קשה ומומחה",
         "לכל חידה פתרון אחד ואף פעם לא צריך לנחש",
         "הערות, ביטול, מחיקה ומילוי כל ההערות בנגיעה אחת",
-        "רמזים שמסבירים את הטכניקה: מועמד יחיד, מועמדים נעולים, זוגות ושלשות, X-Wing, Y-Wing, Swordfish ו-XYZ-Wing",
+        "רמזים שמסבירים את הטכניקה, מיחידים וזוגות ועד X-Wing, Y-Wing, Skyscraper ו-Unique Rectangle",
         "הדגשת שורה, עמודה, תיבה ואותה ספרה; סימון טעויות שאפשר לכבות",
         "שמירה אוטומטית, מצב כהה, תמיכה במקלדת ופריסה לרוחב",
         "עובד בלי אינטרנט אחרי הביקור הראשון, בלי חנות אפליקציות",
-        "60 שפות, לכל אחת דף משלה"
+        "223 שפות, לכל אחת דף משלה"
       ],
       "androidHeading": "אפליקציית אנדרואיד",
       "android": "Bare Sudoku קיים גם כאפליקציית אנדרואיד מקורית: גרסה {version}, כ-{size} KB, בלי הרשאות, בלי גישה לאינטרנט, Java טהורה בלי ספריות. היא לא ב-Google Play; הורידו את קובץ ה-APK החתום מ-GitHub Releases והתקינו על אנדרואיד 8 ומעלה.",
@@ -2109,7 +2109,7 @@
         ],
         [
           "האם צריך לנחש לפעמים?",
-          "לא. לכל חידה יש פתרון אחד בדיוק, והיא נפתרת בהיגיון בלבד. אם נתקעתם, רמז מציג את התא הבא ומציין את הטכניקה: יחיד, מועמדים נעולים, זוג או שלשה, X-Wing, Y-Wing, Swordfish או XYZ-Wing. הקישו שוב על הרמז כדי להציב את הספרה."
+          "לא. לכל חידה יש פתרון אחד בדיוק, והיא נפתרת בהיגיון בלבד. אם נתקעתם, רמז מציג את התא הבא ומציין את הטכניקה שהייתה נחוצה, למשל יחיד, מועמדים נעולים, זוג או שלשה, X-Wing, Y-Wing, Skyscraper או Unique Rectangle. הקישו שוב על הרמז כדי להציב את הספרה."
         ],
         [
           "אפשר לשחק במחשב עם המקלדת?",
@@ -2121,7 +2121,7 @@
         ],
         [
           "בכמה שפות Bare Sudoku זמין?",
-          "60 שפות, לכל אחת עמוד משלה. תפריט השפה במשחק מחליף עמוד, והרשימה מתחת למשחק מקשרת לכל שפה. המשחק זוכר את הבחירה שלכם."
+          "223 שפות, לכל אחת עמוד משלה. תפריט השפה במשחק מחליף עמוד, והרשימה מתחת למשחק מקשרת לכל שפה. המשחק זוכר את הבחירה שלכם."
         ]
       ],
       "madeBy": "נוצר על ידי Alparslan Selçuk Develioğlu",
@@ -2141,11 +2141,11 @@
         "चार स्तर: आसान, मध्यम, कठिन और विशेषज्ञ",
         "हर पहेली का एक ही हल है और कभी अनुमान की ज़रूरत नहीं",
         "नोट्स, अनडू, मिटाना और एक टैप में सभी नोट्स भरना",
-        "तकनीक समझाने वाले संकेत: सिंगल, लॉक्ड कैंडिडेट, जोड़े और तिकड़ी, X-Wing, Y-Wing, Swordfish और XYZ-Wing",
+        "तकनीक समझाने वाले संकेत, सिंगल और जोड़ों से लेकर X-Wing, Y-Wing, Skyscraper और Unique Rectangle तक",
         "पंक्ति, स्तंभ, बॉक्स और समान अंक की हाइलाइट; गलती का निशान जिसे बंद किया जा सकता है",
         "स्वतः सेव, डार्क मोड, कीबोर्ड समर्थन और लैंडस्केप लेआउट",
         "पहली बार खोलने के बाद ऑफ़लाइन चलता है, किसी ऐप स्टोर की ज़रूरत नहीं",
-        "60 भाषाएँ, हर एक का अपना पेज"
+        "223 भाषाएँ, हर एक का अपना पेज"
       ],
       "androidHeading": "Android ऐप",
       "android": "Bare Sudoku एक नेटिव Android ऐप के रूप में भी है: संस्करण {version}, लगभग {size} KB, कोई अनुमति नहीं, इंटरनेट की ज़रूरत नहीं, बिना किसी लाइब्रेरी की शुद्ध Java। यह Google Play पर नहीं है; GitHub Releases से हस्ताक्षरित APK डाउनलोड करें और Android 8 या नए पर इंस्टॉल करें।",
@@ -2184,7 +2184,7 @@
         ],
         [
           "क्या कभी अनुमान लगाना पड़ता है?",
-          "नहीं। हर पहेली का ठीक एक हल है और वह सिर्फ़ तर्क से हल होती है। अटक जाएँ तो इशारा अगला सेल दिखाता है और तकनीक का नाम बताता है: सिंगल, लॉक्ड कैंडिडेट्स, जोड़ा या तिकड़ी, X-Wing, Y-Wing, Swordfish या XYZ-Wing। अंक रखने के लिए इशारे को फिर छुएँ।"
+          "नहीं। हर पहेली का ठीक एक हल है और वह सिर्फ़ तर्क से हल होती है। अटक जाएँ तो इशारा अगला सेल दिखाता है और बताता है कि किस तकनीक की ज़रूरत पड़ी, जैसे सिंगल, लॉक्ड कैंडिडेट्स, जोड़ा या तिकड़ी, X-Wing, Y-Wing, Skyscraper या Unique Rectangle। अंक रखने के लिए इशारे को फिर छुएँ।"
         ],
         [
           "क्या कंप्यूटर पर कीबोर्ड से खेल सकते हैं?",
@@ -2196,7 +2196,7 @@
         ],
         [
           "Bare Sudoku कितनी भाषाओं में है?",
-          "60 भाषाएँ, हर एक अपने पेज पर। गेम का भाषा मेनू पेज बदलता है और गेम के नीचे की सूची हर भाषा से जोड़ती है। गेम आपकी पसंद याद रखता है।"
+          "223 भाषाएँ, हर एक अपने पेज पर। गेम का भाषा मेनू पेज बदलता है और गेम के नीचे की सूची हर भाषा से जोड़ती है। गेम आपकी पसंद याद रखता है।"
         ]
       ],
       "madeBy": "निर्माता: Alparslan Selçuk Develioğlu",
@@ -2216,11 +2216,11 @@
         "চারটি স্তর: সহজ, মাঝারি, কঠিন ও বিশেষজ্ঞ",
         "প্রতিটি ধাঁধার একটিই সমাধান, অনুমানের দরকার হয় না কখনও",
         "নোট, আনডু, মোছা এবং এক ট্যাপে সব নোট পূরণ",
-        "কৌশল ব্যাখ্যা করা ইঙ্গিত: সিঙ্গেল, লকড ক্যান্ডিডেট, জোড়া ও ত্রয়ী, X-Wing, Y-Wing, Swordfish ও XYZ-Wing",
+        "কৌশল ব্যাখ্যা করা ইঙ্গিত, সিঙ্গেল আর জোড়া থেকে X-Wing, Y-Wing, Skyscraper ও Unique Rectangle পর্যন্ত",
         "সারি, কলাম, বাক্স ও একই সংখ্যার হাইলাইট; ভুলের চিহ্ন বন্ধ করা যায়",
         "স্বয়ংক্রিয় সেভ, ডার্ক মোড, কীবোর্ড সমর্থন ও ল্যান্ডস্কেপ লেআউট",
         "প্রথমবার খোলার পর অফলাইনে চলে, অ্যাপ স্টোর লাগে না",
-        "৬০টি ভাষা, প্রতিটির নিজস্ব পেজ"
+        "৩৭টি ভাষা, প্রতিটির নিজস্ব পেজ"
       ],
       "androidHeading": "Android অ্যাপ",
       "android": "Bare Sudoku একটি নেটিভ Android অ্যাপ হিসেবেও আছে: সংস্করণ {version}, প্রায় {size} KB, কোনো অনুমতি নেই, ইন্টারনেট লাগে না, কোনো লাইব্রেরি ছাড়া বিশুদ্ধ Java। এটি Google Play-তে নেই; GitHub Releases থেকে স্বাক্ষরিত APK ডাউনলোড করে Android 8 বা নতুনে ইনস্টল করুন।",
@@ -2259,7 +2259,7 @@
         ],
         [
           "কখনো কি অনুমান করতে হয়?",
-          "না। প্রতিটি ধাঁধার ঠিক একটি সমাধান আছে এবং শুধু যুক্তিতেই মেলে। আটকে গেলে ইঙ্গিত পরের ঘর দেখায় ও কৌশলের নাম বলে: সিঙ্গল, লকড ক্যান্ডিডেট, জোড়া বা ত্রয়ী, X-Wing, Y-Wing, Swordfish বা XYZ-Wing। অঙ্ক বসাতে ইঙ্গিতে আবার ছুঁন।"
+          "না। প্রতিটি ধাঁধার ঠিক একটি সমাধান আছে এবং শুধু যুক্তিতেই মেলে। আটকে গেলে ইঙ্গিত পরের ঘর দেখায় ও যে কৌশল লেগেছে তার নাম বলে, যেমন সিঙ্গল, লকড ক্যান্ডিডেট, জোড়া বা ত্রয়ী, X-Wing, Y-Wing, Skyscraper বা Unique Rectangle। অঙ্ক বসাতে ইঙ্গিতে আবার ছুঁন।"
         ],
         [
           "কম্পিউটারে কিবোর্ড দিয়ে খেলা যায়?",
@@ -2271,7 +2271,7 @@
         ],
         [
           "Bare Sudoku কতগুলো ভাষায় আছে?",
-          "৬০টি ভাষা, প্রতিটির নিজস্ব পাতা। গেমের ভাষা মেনু পাতা বদলায়, আর গেমের নিচের তালিকা প্রতিটি ভাষায় নিয়ে যায়। গেম আপনার পছন্দ মনে রাখে।"
+          "২২৩টি ভাষা, প্রতিটির নিজস্ব পাতা। গেমের ভাষা মেনু পাতা বদলায়, আর গেমের নিচের তালিকা প্রতিটি ভাষায় নিয়ে যায়। গেম আপনার পছন্দ মনে রাখে।"
         ]
       ],
       "madeBy": "নির্মাতা: Alparslan Selçuk Develioğlu",
@@ -2291,11 +2291,11 @@
         "Empat level: Mudah, Sedang, Sulit, dan Ahli",
         "Setiap teka-teki punya satu solusi dan tak pernah perlu menebak",
         "Catatan, urungkan, hapus, dan isi semua catatan dengan sekali ketuk",
-        "Petunjuk yang menjelaskan tekniknya: single, kandidat terkunci, pasangan dan tripel, X-Wing, Y-Wing, Swordfish, dan XYZ-Wing",
+        "Petunjuk yang menjelaskan tekniknya, dari single dan pasangan hingga X-Wing, Y-Wing, Skyscraper, dan Unique Rectangle",
         "Sorotan baris, kolom, kotak, dan angka yang sama; penanda kesalahan bisa dimatikan",
         "Simpan otomatis, mode gelap, dukungan keyboard, dan tata letak lanskap",
         "Bisa offline setelah kunjungan pertama, tanpa toko aplikasi",
-        "60 bahasa, masing-masing di halamannya sendiri"
+        "223 bahasa, masing-masing di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga tersedia sebagai aplikasi Android native: versi {version}, sekitar {size} KB, tanpa izin, tanpa akses internet, Java murni tanpa pustaka. Tidak ada di Google Play; unduh APK bertanda tangan dari GitHub Releases dan pasang di Android 8 atau lebih baru.",
@@ -2334,7 +2334,7 @@
         ],
         [
           "Apakah pernah harus menebak?",
-          "Tidak. Setiap teka-teki punya tepat satu solusi dan bisa dipecahkan dengan logika saja. Jika buntu, petunjuk menunjukkan sel berikutnya dan menyebutkan tekniknya: single, kandidat terkunci, pasangan atau triple, X-Wing, Y-Wing, Swordfish, atau XYZ-Wing. Ketuk petunjuk lagi untuk menempatkan angka."
+          "Tidak. Setiap teka-teki punya tepat satu solusi dan bisa dipecahkan dengan logika saja. Jika buntu, petunjuk menunjukkan sel berikutnya dan menyebutkan teknik yang dibutuhkan, misalnya single, kandidat terkunci, pasangan atau triple, X-Wing, Y-Wing, Skyscraper, atau Unique Rectangle. Ketuk petunjuk lagi untuk menempatkan angka."
         ],
         [
           "Bisakah bermain di komputer dengan keyboard?",
@@ -2346,7 +2346,7 @@
         ],
         [
           "Berapa banyak bahasa yang didukung Bare Sudoku?",
-          "60 bahasa, masing-masing di halamannya sendiri. Menu bahasa di dalam gim mengganti halaman, dan daftar di bawah gim menautkan ke setiap bahasa. Gim mengingat pilihan Anda."
+          "223 bahasa, masing-masing di halamannya sendiri. Menu bahasa di dalam gim mengganti halaman, dan daftar di bawah gim menautkan ke setiap bahasa. Gim mengingat pilihan Anda."
         ]
       ],
       "madeBy": "Dibuat oleh Alparslan Selçuk Develioğlu",
@@ -2366,11 +2366,11 @@
         "Empat tahap: Mudah, Sederhana, Sukar dan Pakar",
         "Setiap teka-teki ada satu penyelesaian dan tidak pernah perlu meneka",
         "Nota, buat asal, padam dan isi semua nota dengan satu ketikan",
-        "Petunjuk yang menerangkan teknik: single, calon terkunci, pasangan dan tiga serangkai, X-Wing, Y-Wing, Swordfish dan XYZ-Wing",
+        "Petunjuk yang menerangkan teknik, daripada single dan pasangan hingga X-Wing, Y-Wing, Skyscraper dan Unique Rectangle",
         "Sorotan baris, lajur, kotak dan digit yang sama; penanda kesilapan boleh dimatikan",
         "Simpan automatik, mod gelap, sokongan papan kekunci dan susun atur landskap",
         "Berfungsi luar talian selepas lawatan pertama, tanpa gedung aplikasi",
-        "60 bahasa, setiap satu di halamannya sendiri"
+        "223 bahasa, setiap satu di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga ada sebagai aplikasi Android asli: versi {version}, kira-kira {size} KB, tiada kebenaran, tiada akses internet, Java tulen tanpa pustaka. Tiada di Google Play; muat turun APK bertandatangan dari GitHub Releases dan pasang pada Android 8 atau lebih baharu.",
@@ -2409,7 +2409,7 @@
         ],
         [
           "Adakah saya perlu meneka?",
-          "Tidak. Setiap teka-teki mempunyai tepat satu penyelesaian dan boleh diselesaikan dengan logik sahaja. Jika buntu, petunjuk menunjukkan sel seterusnya dan menamakan tekniknya: single, calon terkunci, pasangan atau tiga, X-Wing, Y-Wing, Swordfish atau XYZ-Wing. Ketik petunjuk sekali lagi untuk meletakkan digit."
+          "Tidak. Setiap teka-teki mempunyai tepat satu penyelesaian dan boleh diselesaikan dengan logik sahaja. Jika buntu, petunjuk menunjukkan sel seterusnya dan menamakan teknik yang diperlukannya, contohnya single, calon terkunci, pasangan atau tiga, X-Wing, Y-Wing, Skyscraper atau Unique Rectangle. Ketik petunjuk sekali lagi untuk meletakkan digit."
         ],
         [
           "Bolehkah bermain di komputer dengan papan kekunci?",
@@ -2421,7 +2421,7 @@
         ],
         [
           "Berapa banyak bahasa yang ada dalam Bare Sudoku?",
-          "60 bahasa, setiap satu di halamannya sendiri. Menu bahasa dalam permainan menukar halaman, dan senarai di bawah permainan memaut ke setiap bahasa. Permainan mengingati pilihan anda."
+          "223 bahasa, setiap satu di halamannya sendiri. Menu bahasa dalam permainan menukar halaman, dan senarai di bawah permainan memaut ke setiap bahasa. Permainan mengingati pilihan anda."
         ]
       ],
       "madeBy": "Dibuat oleh Alparslan Selçuk Develioğlu",
@@ -2441,11 +2441,11 @@
         "Bốn cấp độ: Dễ, Vừa, Khó và Chuyên gia",
         "Mỗi câu đố có một lời giải duy nhất và không bao giờ cần đoán",
         "Ghi chú, hoàn tác, xóa và điền tất cả ghi chú chỉ bằng một chạm",
-        "Gợi ý giải thích kỹ thuật: single, ứng viên bị khóa, cặp và bộ ba, X-Wing, Y-Wing, Swordfish và XYZ-Wing",
+        "Gợi ý giải thích kỹ thuật, từ single và cặp đến X-Wing, Y-Wing, Skyscraper và Unique Rectangle",
         "Tô sáng hàng, cột, ô vuông và cùng chữ số; đánh dấu lỗi có thể tắt",
         "Tự động lưu, chế độ tối, hỗ trợ bàn phím và bố cục ngang",
         "Hoạt động offline sau lần truy cập đầu tiên, không cần cửa hàng ứng dụng",
-        "60 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
+        "223 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
       ],
       "androidHeading": "Ứng dụng Android",
       "android": "Bare Sudoku cũng có ứng dụng Android gốc: phiên bản {version}, khoảng {size} KB, không quyền truy cập, không kết nối internet, Java thuần không thư viện. Không có trên Google Play; tải APK đã ký từ GitHub Releases và cài trên Android 8 trở lên.",
@@ -2484,7 +2484,7 @@
         ],
         [
           "Có bao giờ phải đoán không?",
-          "Không. Mỗi câu đố có đúng một lời giải và có thể giải chỉ bằng logic. Nếu bí, gợi ý sẽ chỉ ô tiếp theo và nêu tên kỹ thuật: single, ứng viên bị khóa, cặp hoặc bộ ba, X-Wing, Y-Wing, Swordfish hoặc XYZ-Wing. Chạm gợi ý lần nữa để đặt chữ số."
+          "Không. Mỗi câu đố có đúng một lời giải và có thể giải chỉ bằng logic. Nếu bí, gợi ý sẽ chỉ ô tiếp theo và nêu tên kỹ thuật cần dùng, ví dụ single, ứng viên bị khóa, cặp hoặc bộ ba, X-Wing, Y-Wing, Skyscraper hoặc Unique Rectangle. Chạm gợi ý lần nữa để đặt chữ số."
         ],
         [
           "Có thể chơi trên máy tính bằng bàn phím không?",
@@ -2496,7 +2496,7 @@
         ],
         [
           "Bare Sudoku có bao nhiêu ngôn ngữ?",
-          "60 ngôn ngữ, mỗi ngôn ngữ có trang riêng. Menu ngôn ngữ trong trò chơi chuyển trang, và danh sách dưới trò chơi liên kết tới mọi ngôn ngữ. Trò chơi ghi nhớ lựa chọn của bạn."
+          "223 ngôn ngữ, mỗi ngôn ngữ có trang riêng. Menu ngôn ngữ trong trò chơi chuyển trang, và danh sách dưới trò chơi liên kết tới mọi ngôn ngữ. Trò chơi ghi nhớ lựa chọn của bạn."
         ]
       ],
       "madeBy": "Tạo bởi Alparslan Selçuk Develioğlu",
@@ -2516,11 +2516,11 @@
         "สี่ระดับ: ง่าย ปานกลาง ยาก และผู้เชี่ยวชาญ",
         "ทุกโจทย์มีคำตอบเดียวและไม่ต้องเดาเลย",
         "โน้ต เลิกทำ ลบ และเติมโน้ตทั้งหมดด้วยการแตะครั้งเดียว",
-        "คำใบ้ที่อธิบายเทคนิค: ซิงเกิล ตัวเลือกที่ถูกล็อก คู่และสามตัว X-Wing, Y-Wing, Swordfish และ XYZ-Wing",
+        "คำใบ้ที่อธิบายเทคนิค ตั้งแต่ซิงเกิลและคู่ไปจนถึง X-Wing, Y-Wing, Skyscraper และ Unique Rectangle",
         "ไฮไลต์แถว คอลัมน์ กล่อง และตัวเลขเดียวกัน; เครื่องหมายผิดพลาดปิดได้",
         "บันทึกอัตโนมัติ โหมดมืด รองรับคีย์บอร์ด และเลย์เอาต์แนวนอน",
         "เล่นออฟไลน์ได้หลังเปิดครั้งแรก ไม่ต้องใช้แอปสโตร์",
-        "60 ภาษา แต่ละภาษามีหน้าของตัวเอง"
+        "223 ภาษา แต่ละภาษามีหน้าของตัวเอง"
       ],
       "androidHeading": "แอป Android",
       "android": "Bare Sudoku ยังมีเป็นแอป Android แบบเนทีฟ: เวอร์ชัน {version} ขนาดประมาณ {size} KB ไม่ขอสิทธิ์ใด ๆ ไม่ใช้อินเทอร์เน็ต เขียนด้วย Java ล้วนไม่มีไลบรารี ไม่มีใน Google Play; ดาวน์โหลด APK ที่ลงลายเซ็นแล้วจาก GitHub Releases และติดตั้งบน Android 8 ขึ้นไป",
@@ -2559,7 +2559,7 @@
         ],
         [
           "ต้องเดาบ้างไหม?",
-          "ไม่ต้อง ทุกปริศนามีคำตอบเดียวและแก้ได้ด้วยตรรกะล้วน ๆ ถ้าติด คำใบ้จะชี้ช่องถัดไปและบอกชื่อเทคนิค: single, locked candidates, คู่หรือสาม, X-Wing, Y-Wing, Swordfish หรือ XYZ-Wing แตะคำใบ้อีกครั้งเพื่อใส่ตัวเลข"
+          "ไม่ต้อง ทุกปริศนามีคำตอบเดียวและแก้ได้ด้วยตรรกะล้วน ๆ ถ้าติด คำใบ้จะชี้ช่องถัดไปและบอกชื่อเทคนิคที่ต้องใช้ เช่น ซิงเกิล ตัวเลือกที่ถูกล็อก คู่หรือสาม X-Wing, Y-Wing, Skyscraper หรือ Unique Rectangle แตะคำใบ้อีกครั้งเพื่อใส่ตัวเลข"
         ],
         [
           "เล่นบนคอมพิวเตอร์ด้วยคีย์บอร์ดได้ไหม?",
@@ -2571,7 +2571,7 @@
         ],
         [
           "Bare Sudoku มีกี่ภาษา?",
-          "60 ภาษา แต่ละภาษามีหน้าของตัวเอง เมนูภาษาในเกมใช้สลับหน้า และรายการใต้เกมลิงก์ไปทุกภาษา เกมจะจำภาษาที่คุณเลือก"
+          "223 ภาษา แต่ละภาษามีหน้าของตัวเอง เมนูภาษาในเกมใช้สลับหน้า และรายการใต้เกมลิงก์ไปทุกภาษา เกมจะจำภาษาที่คุณเลือก"
         ]
       ],
       "madeBy": "สร้างโดย Alparslan Selçuk Develioğlu",
@@ -2591,11 +2591,11 @@
         "4段階の難易度: かんたん、ふつう、むずかしい、エキスパート",
         "すべての問題は解が一つだけで、当て推量は不要",
         "メモ、元に戻す、消す、全メモを一度に入力",
-        "テクニックを説明するヒント: シングル、ロックされた候補、ペアとトリプル、X-Wing、Y-Wing、Swordfish、XYZ-Wing",
+        "テクニックを説明するヒント: シングルやペアからX-Wing、Y-Wing、Skyscraper、Unique Rectangleまで",
         "行・列・ブロック・同じ数字のハイライト、オフにできる誤りの表示",
         "自動保存、ダークモード、キーボード操作、横向きレイアウト",
         "初回アクセス後はオフラインでも動作、アプリストア不要",
-        "60言語、それぞれ専用ページ"
+        "223言語、それぞれ専用ページ"
       ],
       "androidHeading": "Androidアプリ",
       "android": "Bare SudokuにはネイティブのAndroidアプリもあります。バージョン{version}、約{size} KB、権限なし、インターネット接続なし、ライブラリを使わない純粋なJava製。Google Playにはありません。GitHub Releasesから署名済みAPKをダウンロードし、Android 8以降にインストールしてください。",
@@ -2634,7 +2634,7 @@
         ],
         [
           "当てずっぽうが必要になることはありますか？",
-          "ありません。どの問題も解はただ一つで、論理だけで解けます。行き詰まったらヒントが次のマスを示し、手法の名前を教えます。シングル、ロックされた候補、ペアやトリプル、X-Wing、Y-Wing、Swordfish、XYZ-Wingです。もう一度ヒントをタップすると数字が入ります。"
+          "ありません。どの問題も解はただ一つで、論理だけで解けます。行き詰まったらヒントが次のマスを示し、必要だった手法の名前を教えます。たとえばシングル、ロックされた候補、ペアやトリプル、X-Wing、Y-Wing、Skyscraper、Unique Rectangleなどです。もう一度ヒントをタップすると数字が入ります。"
         ],
         [
           "パソコンでキーボード操作はできますか？",
@@ -2646,7 +2646,7 @@
         ],
         [
           "Bare Sudokuは何か国語に対応していますか？",
-          "60言語で、それぞれ専用のページがあります。ゲーム内の言語メニューでページが切り替わり、ゲームの下の一覧から各言語へ移動できます。選んだ言語は記憶されます。"
+          "223言語で、それぞれ専用のページがあります。ゲーム内の言語メニューでページが切り替わり、ゲームの下の一覧から各言語へ移動できます。選んだ言語は記憶されます。"
         ]
       ],
       "madeBy": "制作: Alparslan Selçuk Develioğlu",
@@ -2666,11 +2666,11 @@
         "네 가지 난이도: 쉬움, 보통, 어려움, 전문가",
         "모든 퍼즐은 정답이 하나뿐이며 추측이 필요 없음",
         "메모, 실행 취소, 지우기, 한 번의 탭으로 모든 메모 채우기",
-        "기법을 설명하는 힌트: 싱글, 잠긴 후보, 페어와 트리플, X-Wing, Y-Wing, Swordfish, XYZ-Wing",
+        "기법을 설명하는 힌트: 싱글과 페어부터 X-Wing, Y-Wing, Skyscraper, Unique Rectangle까지",
         "행, 열, 박스, 같은 숫자 강조; 끌 수 있는 오류 표시",
         "자동 저장, 다크 모드, 키보드 지원, 가로 레이아웃",
         "첫 방문 후 오프라인 작동, 앱 스토어 불필요",
-        "60개 언어, 언어마다 전용 페이지"
+        "223개 언어, 언어마다 전용 페이지"
       ],
       "androidHeading": "Android 앱",
       "android": "Bare Sudoku는 네이티브 Android 앱으로도 제공됩니다. 버전 {version}, 약 {size} KB, 권한 없음, 인터넷 접근 없음, 라이브러리 없는 순수 Java. Google Play에는 없습니다. GitHub Releases에서 서명된 APK를 내려받아 Android 8 이상에 설치하세요.",
@@ -2709,7 +2709,7 @@
         ],
         [
           "찍어야 할 때가 있나요?",
-          "없습니다. 모든 퍼즐은 정답이 하나뿐이며 논리만으로 풀 수 있습니다. 막히면 힌트가 다음 칸을 보여 주고 기법 이름을 알려 줍니다: 싱글, 잠긴 후보, 페어나 트리플, X-Wing, Y-Wing, Swordfish, XYZ-Wing. 힌트를 한 번 더 누르면 숫자가 입력됩니다."
+          "없습니다. 모든 퍼즐은 정답이 하나뿐이며 논리만으로 풀 수 있습니다. 막히면 힌트가 다음 칸을 보여 주고 필요했던 기법의 이름을 알려 줍니다. 예를 들면 싱글, 잠긴 후보, 페어나 트리플, X-Wing, Y-Wing, Skyscraper, Unique Rectangle 등입니다. 힌트를 한 번 더 누르면 숫자가 입력됩니다."
         ],
         [
           "컴퓨터에서 키보드로 할 수 있나요?",
@@ -2721,7 +2721,7 @@
         ],
         [
           "Bare Sudoku는 몇 개 언어를 지원하나요?",
-          "60개 언어이며 언어마다 자체 페이지가 있습니다. 게임 안의 언어 메뉴로 페이지를 바꾸고, 게임 아래 목록에서 모든 언어로 갈 수 있습니다. 선택한 언어는 기억됩니다."
+          "223개 언어이며 언어마다 자체 페이지가 있습니다. 게임 안의 언어 메뉴로 페이지를 바꾸고, 게임 아래 목록에서 모든 언어로 갈 수 있습니다. 선택한 언어는 기억됩니다."
         ]
       ],
       "madeBy": "제작: Alparslan Selçuk Develioğlu",
@@ -2741,11 +2741,11 @@
         "四个难度：简单、中等、困难、专家",
         "每道题只有一个解，永远不需要猜",
         "笔记、撤销、擦除，一键填入全部笔记",
-        "解释技巧的提示：唯一候选数、区块摒除、数对与三链数、X-Wing、Y-Wing、Swordfish、XYZ-Wing",
+        "解释技巧的提示：从唯一候选数和数对到 X-Wing、Y-Wing、Skyscraper 和 Unique Rectangle",
         "行、列、宫及相同数字高亮；可关闭的错误标记",
         "自动保存、深色模式、键盘操作、横屏布局",
         "首次访问后可离线使用，无需应用商店",
-        "60 种语言，每种语言都有独立页面"
+        "223 种语言，每种语言都有独立页面"
       ],
       "androidHeading": "Android 应用",
       "android": "Bare Sudoku 也有原生 Android 应用：版本 {version}，约 {size} KB，不需要任何权限，不联网，纯 Java 编写，不依赖任何库。它不在 Google Play 上架；请从 GitHub Releases 下载已签名的 APK，安装到 Android 8 或更高版本。",
@@ -2784,7 +2784,7 @@
         ],
         [
           "需要猜吗？",
-          "不需要。每道题都只有一个解，仅靠逻辑就能解出。卡住时，提示会指出下一个格子并说明技巧：唯一数、区块摒除、数对或三链数、X-Wing、Y-Wing、Swordfish 或 XYZ-Wing。再点一次提示即可填入数字。"
+          "不需要。每道题都只有一个解，仅靠逻辑就能解出。卡住时，提示会指出下一个格子并说明所需的技巧，例如唯一数、区块摒除、数对或三链数、X-Wing、Y-Wing、Skyscraper 或 Unique Rectangle。再点一次提示即可填入数字。"
         ],
         [
           "能在电脑上用键盘玩吗？",
@@ -2796,7 +2796,7 @@
         ],
         [
           "Bare Sudoku 支持多少种语言？",
-          "60 种语言，每种都有自己的页面。游戏里的语言菜单可切换页面，游戏下方的列表链接到每种语言。游戏会记住你的选择。"
+          "223 种语言，每种都有自己的页面。游戏里的语言菜单可切换页面，游戏下方的列表链接到每种语言。游戏会记住你的选择。"
         ]
       ],
       "madeBy": "作者：Alparslan Selçuk Develioğlu",
@@ -2816,11 +2816,11 @@
         "四種難度：簡單、中等、困難、專家",
         "每道題只有一個解，永遠不需要猜",
         "筆記、復原、清除，一鍵填入全部筆記",
-        "解釋技巧的提示：唯一候選數、區塊摒除、數對與三鏈數、X-Wing、Y-Wing、Swordfish、XYZ-Wing",
+        "解釋技巧的提示：從唯一候選數和數對到 X-Wing、Y-Wing、Skyscraper 和 Unique Rectangle",
         "列、欄、宮及相同數字醒目提示；可關閉的錯誤標記",
         "自動儲存、深色模式、鍵盤操作、橫向版面",
         "首次造訪後可離線使用，不需要應用程式商店",
-        "60 種語言，每種語言都有獨立頁面"
+        "223 種語言，每種語言都有獨立頁面"
       ],
       "androidHeading": "Android 應用程式",
       "android": "Bare Sudoku 也有原生 Android 應用程式：版本 {version}，約 {size} KB，不需要任何權限，不連網，純 Java 撰寫，不依賴任何函式庫。它不在 Google Play 上架；請從 GitHub Releases 下載已簽署的 APK，安裝到 Android 8 或更新版本。",
@@ -2859,7 +2859,7 @@
         ],
         [
           "需要用猜的嗎？",
-          "不需要。每道題都只有一個解，只靠邏輯就能解出。卡住時，提示會指出下一個格子並說明技巧：唯一數、區塊摒除、數對或三鏈數、X-Wing、Y-Wing、Swordfish 或 XYZ-Wing。再點一次提示即可填入數字。"
+          "不需要。每道題都只有一個解，只靠邏輯就能解出。卡住時，提示會指出下一個格子並說明所需的技巧，例如唯一數、區塊摒除、數對或三鏈數、X-Wing、Y-Wing、Skyscraper 或 Unique Rectangle。再點一次提示即可填入數字。"
         ],
         [
           "能在電腦上用鍵盤玩嗎？",
@@ -2871,7 +2871,7 @@
         ],
         [
           "Bare Sudoku 支援多少種語言？",
-          "60 種語言，每種都有自己的頁面。遊戲裡的語言選單可切換頁面，遊戲下方的清單連結到每種語言。遊戲會記住你的選擇。"
+          "223 種語言，每種都有自己的頁面。遊戲裡的語言選單可切換頁面，遊戲下方的清單連結到每種語言。遊戲會記住你的選擇。"
         ]
       ],
       "madeBy": "作者：Alparslan Selçuk Develioğlu",
@@ -2891,7 +2891,7 @@
         "چار درجے: آسان، درمیانہ، مشکل اور ماہر",
         "ہر پہیلی کا ایک ہی حل ہے اور کبھی اندازہ نہیں لگانا پڑتا",
         "نوٹس، واپس، مٹانا اور ایک ٹچ میں سارے نوٹس بھرنا",
-        "تکنیک سمجھانے والے اشارے: سنگل، مقفل امیدوار، جوڑے اور تین، X-Wing، Y-Wing، Swordfish اور XYZ-Wing",
+        "تکنیک سمجھانے والے اشارے، سنگل اور جوڑوں سے لے کر X-Wing، Y-Wing، Skyscraper اور Unique Rectangle تک",
         "خودکار محفوظ، ڈارک موڈ، کی بورڈ اور افقی ترتیب",
         "پہلی بار کھولنے کے بعد آف لائن چلتا ہے، ایپ اسٹور کی ضرورت نہیں"
       ],
@@ -2932,7 +2932,7 @@
         ],
         [
           "کیا کبھی اندازہ لگانا پڑتا ہے؟",
-          "نہیں۔ ہر پزل کا بالکل ایک حل ہے اور وہ صرف منطق سے حل ہوتا ہے۔ اگر پھنس جائیں تو اشارہ اگلا خانہ دکھاتا ہے اور تکنیک کا نام بتاتا ہے: سنگل، مقفل امیدوار، جوڑا یا تین، X-Wing، Y-Wing، Swordfish یا XYZ-Wing۔ ہندسہ رکھنے کے لیے اشارہ دوبارہ چھوئیں۔"
+          "نہیں۔ ہر پزل کا بالکل ایک حل ہے اور وہ صرف منطق سے حل ہوتا ہے۔ اگر پھنس جائیں تو اشارہ اگلا خانہ دکھاتا ہے اور اس تکنیک کا نام بتاتا ہے جو درکار تھی، مثلاً سنگل، مقفل امیدوار، جوڑا یا تین، X-Wing، Y-Wing، Skyscraper یا Unique Rectangle۔ ہندسہ رکھنے کے لیے اشارہ دوبارہ چھوئیں۔"
         ],
         [
           "کیا کمپیوٹر پر کی بورڈ سے کھیل سکتے ہیں؟",
@@ -2944,7 +2944,7 @@
         ],
         [
           "Bare Sudoku کتنی زبانوں میں ہے؟",
-          "60 زبانیں، ہر ایک اپنے صفحے پر۔ گیم کا زبان مینو صفحہ بدلتا ہے اور گیم کے نیچے کی فہرست ہر زبان تک لے جاتی ہے۔ گیم آپ کا انتخاب یاد رکھتا ہے۔"
+          "223 زبانیں، ہر ایک اپنے صفحے پر۔ گیم کا زبان مینو صفحہ بدلتا ہے اور گیم کے نیچے کی فہرست ہر زبان تک لے جاتی ہے۔ گیم آپ کا انتخاب یاد رکھتا ہے۔"
         ]
       ],
       "madeBy": "بنانے والا: Alparslan Selçuk Develioğlu",
@@ -2964,7 +2964,7 @@
         "நான்கு நிலைகள்: எளிது, நடுத்தரம், கடினம், நிபுணர்",
         "ஒவ்வொரு புதிருக்கும் ஒரே தீர்வு, யூகிக்கத் தேவையில்லை",
         "குறிப்புகள், செயல்தவிர், அழித்தல், ஒரே தட்டலில் எல்லாக் குறிப்புகளையும் நிரப்புதல்",
-        "நுட்பத்தை விளக்கும் துப்புகள்: சிங்கிள், பூட்டிய வேட்பாளர்கள், ஜோடி மற்றும் மூன்று, X-Wing, Y-Wing, Swordfish, XYZ-Wing",
+        "நுட்பத்தை விளக்கும் துப்புகள், சிங்கிள், ஜோடிகள் முதல் X-Wing, Y-Wing, Skyscraper, Unique Rectangle வரை",
         "தானியங்கி சேமிப்பு, இருண்ட பயன்முறை, விசைப்பலகை, கிடைமட்ட அமைப்பு",
         "முதல் வருகைக்குப் பிறகு ஆஃப்லைனில் இயங்கும், ஆப் ஸ்டோர் தேவையில்லை"
       ],
@@ -3005,7 +3005,7 @@
         ],
         [
           "எப்போதாவது யூகிக்க வேண்டுமா?",
-          "இல்லை. ஒவ்வொரு புதிருக்கும் சரியாக ஒரே ஒரு தீர்வு உண்டு, தர்க்கத்தால் மட்டுமே தீர்க்கலாம். சிக்கினால் குறிப்பு அடுத்த கட்டத்தைக் காட்டி நுட்பத்தின் பெயரைச் சொல்லும்: single, பூட்டப்பட்ட வேட்பாளர்கள், இணை அல்லது மும்மை, X-Wing, Y-Wing, Swordfish அல்லது XYZ-Wing. இலக்கத்தை வைக்க குறிப்பை மீண்டும் தொடுங்கள்."
+          "இல்லை. ஒவ்வொரு புதிருக்கும் சரியாக ஒரே ஒரு தீர்வு உண்டு, தர்க்கத்தால் மட்டுமே தீர்க்கலாம். சிக்கினால் குறிப்பு அடுத்த கட்டத்தைக் காட்டி, தேவைப்பட்ட நுட்பத்தின் பெயரைச் சொல்லும், உதாரணமாக single, பூட்டப்பட்ட வேட்பாளர்கள், இணை அல்லது மும்மை, X-Wing, Y-Wing, Skyscraper அல்லது Unique Rectangle. இலக்கத்தை வைக்க குறிப்பை மீண்டும் தொடுங்கள்."
         ],
         [
           "கணினியில் விசைப்பலகையால் விளையாடலாமா?",
@@ -3017,7 +3017,7 @@
         ],
         [
           "Bare Sudoku எத்தனை மொழிகளில் உள்ளது?",
-          "60 மொழிகளில், ஒவ்வொன்றுக்கும் தனிப் பக்கம். விளையாட்டில் உள்ள மொழி மெனு பக்கத்தை மாற்றும், விளையாட்டின் கீழ் உள்ள பட்டியல் ஒவ்வொரு மொழிக்கும் இணைக்கும். விளையாட்டு உங்கள் தேர்வை நினைவில் வைக்கும்."
+          "223 மொழிகளில், ஒவ்வொன்றுக்கும் தனிப் பக்கம். விளையாட்டில் உள்ள மொழி மெனு பக்கத்தை மாற்றும், விளையாட்டின் கீழ் உள்ள பட்டியல் ஒவ்வொரு மொழிக்கும் இணைக்கும். விளையாட்டு உங்கள் தேர்வை நினைவில் வைக்கும்."
         ]
       ],
       "madeBy": "உருவாக்கியவர்: Alparslan Selçuk Develioğlu",
@@ -3037,7 +3037,7 @@
         "నాలుగు స్థాయిలు: సులభం, మధ్యస్థం, కఠినం, నిపుణుడు",
         "ప్రతి పజిల్‌కు ఒకే పరిష్కారం, ఊహించాల్సిన అవసరం లేదు",
         "నోట్స్, వెనక్కి, చెరిపివేత, ఒక్క ట్యాప్‌తో అన్ని నోట్స్ నింపడం",
-        "పద్ధతిని వివరించే సూచనలు: సింగిల్, లాక్ చేసిన అభ్యర్థులు, జంటలు మరియు త్రయాలు, X-Wing, Y-Wing, Swordfish, XYZ-Wing",
+        "పద్ధతిని వివరించే సూచనలు, సింగిల్, జంటల నుండి X-Wing, Y-Wing, Skyscraper, Unique Rectangle వరకు",
         "ఆటో సేవ్, డార్క్ మోడ్, కీబోర్డ్, ల్యాండ్‌స్కేప్ లేఅవుట్",
         "మొదటి సందర్శన తర్వాత ఆఫ్‌లైన్‌లో పనిచేస్తుంది, యాప్ స్టోర్ అవసరం లేదు"
       ],
@@ -3078,7 +3078,7 @@
         ],
         [
           "ఎప్పుడైనా ఊహించాల్సి వస్తుందా?",
-          "లేదు. ప్రతి పజిల్‌కు సరిగ్గా ఒకే పరిష్కారం ఉంటుంది, తర్కంతోనే పరిష్కరించవచ్చు. ఇరుక్కుపోతే సూచన తదుపరి గడిని చూపి పద్ధతి పేరు చెబుతుంది: single, లాక్ చేసిన అభ్యర్థులు, జంట లేదా త్రయం, X-Wing, Y-Wing, Swordfish లేదా XYZ-Wing. అంకెను ఉంచడానికి సూచనను మళ్లీ తాకండి."
+          "లేదు. ప్రతి పజిల్‌కు సరిగ్గా ఒకే పరిష్కారం ఉంటుంది, తర్కంతోనే పరిష్కరించవచ్చు. ఇరుక్కుపోతే సూచన తదుపరి గడిని చూపి, అవసరమైన పద్ధతి పేరు చెబుతుంది, ఉదాహరణకు single, లాక్ చేసిన అభ్యర్థులు, జంట లేదా త్రయం, X-Wing, Y-Wing, Skyscraper లేదా Unique Rectangle. అంకెను ఉంచడానికి సూచనను మళ్లీ తాకండి."
         ],
         [
           "కంప్యూటర్‌లో కీబోర్డ్‌తో ఆడవచ్చా?",
@@ -3090,7 +3090,7 @@
         ],
         [
           "Bare Sudoku ఎన్ని భాషల్లో ఉంది?",
-          "60 భాషల్లో, ఒక్కొక్క దానికి సొంత పేజీ. గేమ్‌లోని భాషా మెనూ పేజీని మారుస్తుంది, గేమ్ కింది జాబితా ప్రతి భాషకు లింక్ చేస్తుంది. గేమ్ మీ ఎంపికను గుర్తుంచుకుంటుంది."
+          "223 భాషల్లో, ఒక్కొక్క దానికి సొంత పేజీ. గేమ్‌లోని భాషా మెనూ పేజీని మారుస్తుంది, గేమ్ కింది జాబితా ప్రతి భాషకు లింక్ చేస్తుంది. గేమ్ మీ ఎంపికను గుర్తుంచుకుంటుంది."
         ]
       ],
       "madeBy": "రూపకర్త: Alparslan Selçuk Develioğlu",
@@ -3110,7 +3110,7 @@
         "Apat na antas: Madali, Katamtaman, Mahirap, at Eksperto",
         "Bawat puzzle ay may isang solusyon at hindi kailanman nangangailangan ng hula",
         "Mga tala, ibalik, burahin, at punan ang lahat ng tala sa isang tap",
-        "Mga pahiwatig na nagpapaliwanag ng teknik: singles, naka-lock na kandidato, pares at tatlo, X-Wing, Y-Wing, Swordfish, at XYZ-Wing",
+        "Mga pahiwatig na nagpapaliwanag ng teknik, mula singles at pares hanggang X-Wing, Y-Wing, Skyscraper at Unique Rectangle",
         "Awtomatikong save, dark mode, keyboard, at landscape layout",
         "Gumagana offline pagkatapos ng unang pagbisita, walang app store na kailangan"
       ],
@@ -3151,7 +3151,7 @@
         ],
         [
           "Kailangan bang manghula minsan?",
-          "Hindi. Bawat puzzle ay may eksaktong isang sagot at nalulutas sa lohika lang. Kapag natigil ka, ipinapakita ng hint ang susunod na selda at pinapangalanan ang teknik: single, locked candidates, pares o tatluhan, X-Wing, Y-Wing, Swordfish o XYZ-Wing. Pindutin muli ang hint para ilagay ang bilang."
+          "Hindi. Bawat puzzle ay may eksaktong isang sagot at nalulutas sa lohika lang. Kapag natigil ka, ipinapakita ng pahiwatig ang susunod na selda at pinapangalanan ang teknik na kinailangan nito, halimbawa single, naka-lock na kandidato, pares o tatluhan, X-Wing, Y-Wing, Skyscraper o Unique Rectangle. Pindutin muli ang pahiwatig para ilagay ang bilang."
         ],
         [
           "Puwede bang maglaro sa computer gamit ang keyboard?",
@@ -3163,7 +3163,7 @@
         ],
         [
           "Ilang wika ang mayroon ang Bare Sudoku?",
-          "60 wika, bawat isa sa sariling pahina. Ang menu ng wika sa laro ang nagpapalit ng pahina, at ang listahan sa ilalim ng laro ay nagli-link sa bawat wika. Naaalala ng laro ang pinili mo."
+          "223 wika, bawat isa sa sariling pahina. Ang menu ng wika sa laro ang nagpapalit ng pahina, at ang listahan sa ilalim ng laro ay nagli-link sa bawat wika. Naaalala ng laro ang pinili mo."
         ]
       ],
       "madeBy": "Gawa ni Alparslan Selçuk Develioğlu",
@@ -3183,7 +3183,7 @@
         "Quatre nivells: Fàcil, Mitjà, Difícil i Expert",
         "Cada trencaclosques té una sola solució i mai cal endevinar",
         "Notes, desfer, esborrar i omplir totes les notes amb un toc",
-        "Pistes que expliquen la tècnica: singles, candidats bloquejats, parelles i trios, X-Wing, Y-Wing, Swordfish i XYZ-Wing",
+        "Pistes que expliquen la tècnica, dels singles i les parelles a l'X-Wing, l'Y-Wing, el Skyscraper i l'Unique Rectangle",
         "Desament automàtic, mode fosc, teclat i disposició horitzontal",
         "Funciona sense connexió després de la primera visita, sense botiga d'apps"
       ],
@@ -3224,7 +3224,7 @@
         ],
         [
           "Cal endevinar alguna vegada?",
-          "No. Cada trencaclosques té exactament una solució i es resol només amb lògica. Si t'encalles, una pista mostra la casella següent i anomena la tècnica: single, candidats bloquejats, parella o trio, X-Wing, Y-Wing, Swordfish o XYZ-Wing. Toca la pista una altra vegada per col·locar el dígit."
+          "No. Cada trencaclosques té exactament una solució i es resol només amb lògica. Si t'encalles, una pista mostra la casella següent i anomena la tècnica que ha calgut, per exemple un single, candidats bloquejats, una parella o un trio, X-Wing, Y-Wing, Skyscraper o Unique Rectangle. Toca la pista una altra vegada per col·locar el dígit."
         ],
         [
           "Puc jugar a l'ordinador amb el teclat?",
@@ -3236,7 +3236,7 @@
         ],
         [
           "En quants idiomes hi ha Bare Sudoku?",
-          "En 60 idiomes, cadascun a la seva pàgina. El menú d'idioma del joc canvia de pàgina i la llista sota el joc enllaça a tots els idiomes. El joc recorda la teva tria."
+          "En 223 idiomes, cadascun a la seva pàgina. El menú d'idioma del joc canvia de pàgina i la llista sota el joc enllaça a tots els idiomes. El joc recorda la teva tria."
         ]
       ],
       "madeBy": "Fet per Alparslan Selçuk Develioğlu",
@@ -3256,7 +3256,7 @@
         "Štiri težavnosti: lahko, srednje, težko in strokovnjak",
         "Vsaka uganka ima eno rešitev in nikoli ne zahteva ugibanja",
         "Zapiski, razveljavi, izbriši in izpolni vse zapiske z enim dotikom",
-        "Namigi, ki razložijo tehniko: singli, zaklenjeni kandidati, pari in trojice, X-Wing, Y-Wing, Swordfish in XYZ-Wing",
+        "Namigi, ki razložijo tehniko, od singlov in parov do X-Wing, Y-Wing, Skyscraper in Unique Rectangle",
         "Samodejno shranjevanje, temni način, tipkovnica in ležeča postavitev",
         "Po prvem obisku deluje brez povezave, trgovina z aplikacijami ni potrebna"
       ],
@@ -3297,7 +3297,7 @@
         ],
         [
           "Ali moram kdaj ugibati?",
-          "Ne. Vsaka uganka ima natanko eno rešitev in jo je mogoče rešiti zgolj z logiko. Če obtičiš, namig pokaže naslednje polje in poimenuje tehniko: single, zaklenjeni kandidati, par ali trojka, X-Wing, Y-Wing, Swordfish ali XYZ-Wing. Znova se dotakni namiga, da vpišeš števko."
+          "Ne. Vsaka uganka ima natanko eno rešitev in jo je mogoče rešiti zgolj z logiko. Če obtičiš, namig pokaže naslednje polje in poimenuje tehniko, ki jo je potreboval, na primer single, zaklenjene kandidate, par ali trojko, X-Wing, Y-Wing, Skyscraper ali Unique Rectangle. Znova se dotakni namiga, da vpišeš števko."
         ],
         [
           "Ali lahko igram na računalniku s tipkovnico?",
@@ -3309,7 +3309,7 @@
         ],
         [
           "V koliko jezikih je Bare Sudoku?",
-          "V 60 jezikih, vsak na svoji strani. Meni jezika v igri zamenja stran, seznam pod igro pa vodi do vsakega jezika. Igra si zapomni tvojo izbiro."
+          "V 223 jezikih, vsak na svoji strani. Meni jezika v igri zamenja stran, seznam pod igro pa vodi do vsakega jezika. Igra si zapomni tvojo izbiro."
         ]
       ],
       "madeBy": "Ustvaril Alparslan Selçuk Develioğlu",
@@ -3329,7 +3329,7 @@
         "Keturi lygiai: lengvas, vidutinis, sunkus ir ekspertas",
         "Kiekvienas galvosūkis turi vieną sprendimą ir niekada nereikia spėlioti",
         "Užrašai, atšaukimas, trynimas ir visų užrašų užpildymas vienu palietimu",
-        "Techniką paaiškinančios užuominos: vieniši kandidatai, užrakinti kandidatai, poros ir trejetai, X-Wing, Y-Wing, Swordfish ir XYZ-Wing",
+        "Techniką paaiškinančios užuominos, nuo vienišų kandidatų ir porų iki X-Wing, Y-Wing, Skyscraper ir Unique Rectangle",
         "Automatinis išsaugojimas, tamsus režimas, klaviatūra ir gulsčias išdėstymas",
         "Po pirmo apsilankymo veikia neprisijungus, programėlių parduotuvės nereikia"
       ],
@@ -3370,7 +3370,7 @@
         ],
         [
           "Ar kada nors reikia spėlioti?",
-          "Ne. Kiekvienas galvosūkis turi lygiai vieną sprendimą ir išsprendžiamas vien logika. Jei įstrigote, užuomina parodo kitą langelį ir įvardija techniką: single, užrakinti kandidatai, pora ar trejetas, X-Wing, Y-Wing, Swordfish arba XYZ-Wing. Palieskite užuominą dar kartą, kad skaitmuo būtų įrašytas."
+          "Ne. Kiekvienas galvosūkis turi lygiai vieną sprendimą ir išsprendžiamas vien logika. Jei įstrigote, užuomina parodo kitą langelį ir įvardija techniką, kurios prireikė, pavyzdžiui, vienišą kandidatą, užrakintus kandidatus, porą ar trejetą, X-Wing, Y-Wing, Skyscraper arba Unique Rectangle. Palieskite užuominą dar kartą, kad skaitmuo būtų įrašytas."
         ],
         [
           "Ar galiu žaisti kompiuteriu klaviatūra?",
@@ -3382,7 +3382,7 @@
         ],
         [
           "Kiek kalbų turi Bare Sudoku?",
-          "60 kalbų, kiekviena savo puslapyje. Kalbos meniu žaidime perjungia puslapį, o sąrašas po žaidimu nuveda į kiekvieną kalbą. Žaidimas prisimena jūsų pasirinkimą."
+          "223 kalbų, kiekviena savo puslapyje. Kalbos meniu žaidime perjungia puslapį, o sąrašas po žaidimu nuveda į kiekvieną kalbą. Žaidimas prisimena jūsų pasirinkimą."
         ]
       ],
       "madeBy": "Sukūrė Alparslan Selçuk Develioğlu",
@@ -3402,7 +3402,7 @@
         "Četri līmeņi: viegli, vidēji, grūti un eksperts",
         "Katrai mīklai ir viens atrisinājums, un nekad nav jāmin",
         "Piezīmes, atsaukšana, dzēšana un visu piezīmju aizpildīšana ar vienu pieskārienu",
-        "Mājieni, kas skaidro tehniku: vientuļie kandidāti, bloķētie kandidāti, pāri un trijnieki, X-Wing, Y-Wing, Swordfish un XYZ-Wing",
+        "Mājieni, kas skaidro tehniku, no vientuļajiem kandidātiem un pāriem līdz X-Wing, Y-Wing, Skyscraper un Unique Rectangle",
         "Automātiska saglabāšana, tumšais režīms, tastatūra un ainavas izkārtojums",
         "Pēc pirmā apmeklējuma darbojas bezsaistē, lietotņu veikals nav vajadzīgs"
       ],
@@ -3443,7 +3443,7 @@
         ],
         [
           "Vai kādreiz jāmin?",
-          "Nē. Katrai mīklai ir tieši viens atrisinājums, un to var atrisināt tikai ar loģiku. Ja iestrēgsti, padoms parāda nākamo rūtiņu un nosauc paņēmienu: single, bloķētie kandidāti, pāris vai trijnieks, X-Wing, Y-Wing, Swordfish vai XYZ-Wing. Pieskaries padomam vēlreiz, lai ievietotu ciparu."
+          "Nē. Katrai mīklai ir tieši viens atrisinājums, un to var atrisināt tikai ar loģiku. Ja iestrēgsti, padoms parāda nākamo rūtiņu un nosauc paņēmienu, kas bija vajadzīgs, piemēram, vientuļo kandidātu, bloķētos kandidātus, pāri vai trijnieku, X-Wing, Y-Wing, Skyscraper vai Unique Rectangle. Pieskaries padomam vēlreiz, lai ievietotu ciparu."
         ],
         [
           "Vai varu spēlēt datorā ar tastatūru?",
@@ -3455,7 +3455,7 @@
         ],
         [
           "Cik valodās ir Bare Sudoku?",
-          "60 valodās, katra savā lapā. Valodas izvēlne spēlē pārslēdz lapu, un saraksts zem spēles ved uz katru valodu. Spēle atceras tavu izvēli."
+          "223 valodās, katra savā lapā. Valodas izvēlne spēlē pārslēdz lapu, un saraksts zem spēles ved uz katru valodu. Spēle atceras tavu izvēli."
         ]
       ],
       "madeBy": "Izveidoja Alparslan Selçuk Develioğlu",
@@ -3475,7 +3475,7 @@
         "Төрт деңгээл: жеңил, орточо, кыйын жана эксперт",
         "Ар бир табышмактын бир чечими бар, эч качан божомолдоонун кереги жок",
         "Белгилер, артка кайтаруу, өчүрүү жана бир басуу менен бардык белгилерди толтуруу",
-        "Ыкманы түшүндүргөн кеңештер: жалгыз талапкер, бекитилген талапкерлер, жуптар жана үчтүктөр, X-Wing, Y-Wing, Swordfish жана XYZ-Wing",
+        "Ыкманы түшүндүргөн кеңештер, жалгыз талапкерден жана жуптардан X-Wing, Y-Wing, Skyscraper жана Unique Rectangle ыкмаларына чейин",
         "Автоматтык сактоо, караңгы режим, клавиатура жана туурасынан жайгашуу",
         "Биринчи кирүүдөн кийин оффлайн иштейт, колдонмо дүкөнү керек эмес"
       ],
@@ -3516,7 +3516,7 @@
         ],
         [
           "Болжолдоо керекпи?",
-          "Жок. Ар бир табышмактын так бир чечими бар жана логика менен гана чечилет. Тыгылып калсаңыз, кеңеш кийинки уячаны көрсөтүп, ыкманын атын айтат: single, кулпуланган талапкерлер, жуп же үчтүк, X-Wing, Y-Wing, Swordfish же XYZ-Wing. Цифраны коюу үчүн кеңешти кайра басыңыз."
+          "Жок. Ар бир табышмактын так бир чечими бар жана логика менен гана чечилет. Тыгылып калсаңыз, кеңеш кийинки уячаны көрсөтүп, ага керек болгон ыкманын атын айтат, мисалы, жалгыз талапкер, бекитилген талапкерлер, жуп же үчтүк, X-Wing, Y-Wing, Skyscraper же Unique Rectangle. Цифраны коюу үчүн кеңешти кайра басыңыз."
         ],
         [
           "Компьютерде клавиатура менен ойносо болобу?",
@@ -3528,7 +3528,7 @@
         ],
         [
           "Bare Sudoku канча тилде бар?",
-          "60 тилде, ар бири өз барагында. Оюндагы тил менюсу барагын алмаштырат, ал эми оюндун астындагы тизме ар бир тилге шилтеме берет. Оюн тандооңузду эстеп калат."
+          "223 тилде, ар бири өз барагында. Оюндагы тил менюсу барагын алмаштырат, ал эми оюндун астындагы тизме ар бир тилге шилтеме берет. Оюн тандооңузду эстеп калат."
         ]
       ],
       "madeBy": "Жасаган: Alparslan Selçuk Develioğlu",
@@ -3548,7 +3548,7 @@
         "Төрт деңгей: оңай, орташа, қиын және сарапшы",
         "Әр жұмбақтың бір шешімі бар, ешқашан болжаудың қажеті жоқ",
         "Белгілер, артқа қайтару, өшіру және бір басумен барлық белгілерді толтыру",
-        "Тәсілді түсіндіретін кеңестер: жалғыз үміткер, бекітілген үміткерлер, жұптар мен үштіктер, X-Wing, Y-Wing, Swordfish және XYZ-Wing",
+        "Тәсілді түсіндіретін кеңестер: жалғыздар мен жұптардан X-Wing, Y-Wing, Skyscraper және Unique Rectangle тәсілдеріне дейін",
         "Автоматты сақтау, қараңғы режим, пернетақта және көлденең орналасу",
         "Бірінші кіруден кейін офлайн жұмыс істейді, қолданба дүкені қажет емес"
       ],
@@ -3589,7 +3589,7 @@
         ],
         [
           "Болжау керек пе?",
-          "Жоқ. Әр жұмбақтың дәл бір шешімі бар және тек логикамен шешіледі. Тығырыққа тірелсеңіз, кеңес келесі ұяшықты көрсетіп, тәсілдің атын айтады: single, құлыпталған кандидаттар, жұп немесе үштік, X-Wing, Y-Wing, Swordfish немесе XYZ-Wing. Цифрды қою үшін кеңесті қайта түртіңіз."
+          "Жоқ. Әр жұмбақтың дәл бір шешімі бар және тек логикамен шешіледі. Тығырыққа тірелсеңіз, кеңес келесі ұяшықты көрсетіп, қажет болған тәсілдің атын айтады, мысалы жалғыз үміткер, бекітілген үміткерлер, жұп немесе үштік, X-Wing, Y-Wing, Skyscraper немесе Unique Rectangle. Цифрды қою үшін кеңесті қайта түртіңіз."
         ],
         [
           "Компьютерде пернетақтамен ойнауға бола ма?",
@@ -3601,7 +3601,7 @@
         ],
         [
           "Bare Sudoku қанша тілде бар?",
-          "60 тілде, әрқайсысы өз бетінде. Ойындағы тіл мәзірі бетті ауыстырады, ал ойын астындағы тізім әр тілге сілтейді. Ойын таңдауыңызды есте сақтайды."
+          "223 тілде, әрқайсысы өз бетінде. Ойындағы тіл мәзірі бетті ауыстырады, ал ойын астындағы тізім әр тілге сілтейді. Ойын таңдауыңызды есте сақтайды."
         ]
       ],
       "madeBy": "Жасаған: Alparslan Selçuk Develioğlu",
@@ -3621,7 +3621,7 @@
         "Toʻrt daraja: oson, oʻrtacha, qiyin va ekspert",
         "Har bir boshqotirmaning bitta yechimi bor, hech qachon taxmin qilish shart emas",
         "Belgilar, orqaga qaytarish, oʻchirish va bir bosishda barcha belgilarni toʻldirish",
-        "Usulni tushuntiruvchi maslahatlar: yagona nomzod, qulflangan nomzodlar, juftliklar va uchliklar, X-Wing, Y-Wing, Swordfish va XYZ-Wing",
+        "Usulni tushuntiruvchi maslahatlar: yagonalar va juftliklardan X-Wing, Y-Wing, Skyscraper va Unique Rectangle'gacha",
         "Avtomatik saqlash, qorongʻu rejim, klaviatura va yotiq joylashuv",
         "Birinchi tashrifdan keyin oflayn ishlaydi, ilova doʻkoni kerak emas"
       ],
@@ -3662,7 +3662,7 @@
         ],
         [
           "Taxmin qilish kerak bo'ladimi?",
-          "Yo'q. Har bir boshqotirmaning aynan bitta yechimi bor va u faqat mantiq bilan yechiladi. Qotib qolsangiz, maslahat keyingi katakni ko'rsatadi va usulning nomini aytadi: single, qulflangan nomzodlar, juft yoki uchlik, X-Wing, Y-Wing, Swordfish yoki XYZ-Wing. Raqamni qo'yish uchun maslahatga yana teging."
+          "Yo'q. Har bir boshqotirmaning aynan bitta yechimi bor va u faqat mantiq bilan yechiladi. Qotib qolsangiz, maslahat keyingi katakni ko'rsatadi va kerak bo'lgan usulning nomini aytadi, masalan yagona nomzod, qulflangan nomzodlar, juftlik yoki uchlik, X-Wing, Y-Wing, Skyscraper yoki Unique Rectangle. Raqamni qo'yish uchun maslahatga yana teging."
         ],
         [
           "Kompyuterda klaviatura bilan o'ynasa bo'ladimi?",
@@ -3674,7 +3674,7 @@
         ],
         [
           "Bare Sudoku nechta tilda bor?",
-          "60 tilda, har biri o'z sahifasida. O'yindagi til menyusi sahifani almashtiradi, o'yin ostidagi ro'yxat esa har bir tilga havola beradi. O'yin tanlovingizni eslab qoladi."
+          "223 tilda, har biri o'z sahifasida. O'yindagi til menyusi sahifani almashtiradi, o'yin ostidagi ro'yxat esa har bir tilga havola beradi. O'yin tanlovingizni eslab qoladi."
         ]
       ],
       "madeBy": "Yaratuvchi: Alparslan Selçuk Develioğlu",
@@ -3694,7 +3694,7 @@
         "Dört dereje: aňsat, orta, kyn we ekspert",
         "Her tapmaçanyň bir çözgüdi bar, hiç haçan çaklamak gerek däl",
         "Bellikler, yza gaýtarmak, pozmak we bir basyşda ähli bellikleri doldurmak",
-        "Usuly düşündirýän maslahatlar: ýeke dalaşgär, gulplanan dalaşgärler, jübütler we üçlükler, X-Wing, Y-Wing, Swordfish we XYZ-Wing",
+        "Usuly düşündirýän maslahatlar: ýekelerden we jübütlerden X-Wing, Y-Wing, Skyscraper we Unique Rectangle usullaryna çenli",
         "Awtomatik ýatda saklamak, garaňky režim, klawiatura we keseligine ýerleşiş",
         "Ilkinji girişden soň oflaýn işleýär, programma dükany gerek däl"
       ],
@@ -3735,7 +3735,7 @@
         ],
         [
           "Çaklamak gerek bolýarmy?",
-          "Ýok. Her tapmaçanyň diňe bir çözgüdi bar we diňe logika bilen çözülýär. Päsgel bolsaňyz, maslahat indiki öýjügi görkezýär we usulyň adyny aýdýar: single, gulplanan dalaşgärler, jübüt ýa-da üçlük, X-Wing, Y-Wing, Swordfish ýa-da XYZ-Wing. Sany goýmak üçin maslahata ýene degiň."
+          "Ýok. Her tapmaçanyň diňe bir çözgüdi bar we diňe logika bilen çözülýär. Päsgel bolsaňyz, maslahat indiki öýjügi görkezýär we gerek bolan usulyň adyny aýdýar, meselem, ýeke dalaşgär, gulplanan dalaşgärler, jübüt ýa-da üçlük, X-Wing, Y-Wing, Skyscraper ýa-da Unique Rectangle. Sany goýmak üçin maslahata ýene degiň."
         ],
         [
           "Kompýuterde klawiatura bilen oýnap bolýarmy?",
@@ -3747,7 +3747,7 @@
         ],
         [
           "Bare Sudoku näçe dilde bar?",
-          "60 dilde, her biri öz sahypasynda. Oýundaky dil menýusy sahypany çalyşýar, oýnuň aşagyndaky sanaw bolsa her dile salgy berýär. Oýun saýlawyňyzy ýatda saklaýar."
+          "223 dilde, her biri öz sahypasynda. Oýundaky dil menýusy sahypany çalyşýar, oýnuň aşagyndaky sanaw bolsa her dile salgy berýär. Oýun saýlawyňyzy ýatda saklaýar."
         ]
       ],
       "madeBy": "Ýasan: Alparslan Selçuk Develioğlu",
@@ -3767,7 +3767,7 @@
         "Дүрт дәрәҗә: җиңел, уртача, авыр һәм эксперт",
         "Һәр табышмакның бер чишелеше бар, беркайчан да фаразларга кирәкми",
         "Билгеләр, кире кайтару, бетерү һәм бер басу белән барлык билгеләрне тутыру",
-        "Ысулны аңлаткан киңәшләр: бердәнбер кандидат, бикләнгән кандидатлар, парлар һәм өчлекләр, X-Wing, Y-Wing, Swordfish һәм XYZ-Wing",
+        "Ысулны аңлаткан киңәшләр: бердәнберләр һәм парлардан X-Wing, Y-Wing, Skyscraper һәм Unique Rectangle ысулларына кадәр",
         "Автоматик саклау, караңгы режим, клавиатура һәм аркылы урнашу",
         "Беренче керүдән соң офлайн эшли, кушымта кибете кирәкми"
       ],
@@ -3808,7 +3808,7 @@
         ],
         [
           "Фаразларга кирәкме?",
-          "Юк. Һәр табышмакның нәкъ бер чишелеше бар һәм ул логика белән генә чишелә. Тукталып калсагыз, киңәш киләсе күзәнәкне күрсәтә һәм алымның исемен әйтә: single, бикләнгән кандидатлар, пар яки өчлек, X-Wing, Y-Wing, Swordfish яки XYZ-Wing. Санны кую өчен киңәшкә кабат басыгыз."
+          "Юк. Һәр табышмакның нәкъ бер чишелеше бар һәм ул логика белән генә чишелә. Тукталып калсагыз, киңәш киләсе күзәнәкне күрсәтә һәм кирәк булган алымның исемен әйтә, мәсәлән, бердәнбер кандидат, бикләнгән кандидатлар, пар яки өчлек, X-Wing, Y-Wing, Skyscraper яки Unique Rectangle. Санны кую өчен киңәшкә кабат басыгыз."
         ],
         [
           "Компьютерда клавиатура белән уйнап буламы?",
@@ -3820,7 +3820,7 @@
         ],
         [
           "Bare Sudoku ничә телдә бар?",
-          "60 телдә, һәрберсе үз битендә. Уендагы тел менюсы битне алыштыра, ә уен астындагы исемлек һәр телгә сылтама бирә. Уен сайлавыгызны истә тота."
+          "223 телдә, һәрберсе үз битендә. Уендагы тел менюсы битне алыштыра, ә уен астындагы исемлек һәр телгә сылтама бирә. Уен сайлавыгызны истә тота."
         ]
       ],
       "madeBy": "Ясаучы: Alparslan Selçuk Develioğlu",
@@ -3840,7 +3840,7 @@
         "Дүрт кимәл: еңел, уртаса, ауыр һәм эксперт",
         "Һәр йомаҡтың бер сиселеше бар, бер ҡасан да фараз итергә кәрәкмәй",
         "Билдәләр, кире ҡайтарыу, юйыу һәм бер баҫыу менән бөтә билдәләрҙе тултырыу",
-        "Ысулды аңлатҡан кәңәштәр: берҙән-бер кандидат, бикләнгән кандидаттар, парҙар һәм өслөктәр, X-Wing, Y-Wing, Swordfish һәм XYZ-Wing",
+        "Ысулды аңлатҡан кәңәштәр: яңғыҙҙар һәм парҙарҙан алып X-Wing, Y-Wing, Skyscraper һәм Unique Rectangle ысулдарына тиклем",
         "Автоматик һаҡлау, ҡараңғы режим, клавиатура һәм арҡыры урынлашыу",
         "Беренсе инеүҙән һуң офлайн эшләй, ҡушымта магазины кәрәкмәй"
       ],
@@ -3881,7 +3881,7 @@
         ],
         [
           "Фаразларға кәрәкме?",
-          "Юҡ. Һәр йомаҡтың теүәл бер сиселеше бар һәм ул логика менән генә сиселә. Туҡталып ҡалһағыҙ, кәңәш киләһе күҙәнәкте күрһәтә һәм алымдың исемен әйтә: single, бикләнгән кандидаттар, пар йәки өслөк, X-Wing, Y-Wing, Swordfish йәки XYZ-Wing. Һанды ҡуйыу өсөн кәңәшкә ҡабат баҫығыҙ."
+          "Юҡ. Һәр йомаҡтың теүәл бер сиселеше бар һәм ул логика менән генә сиселә. Туҡталып ҡалһағыҙ, кәңәш киләһе күҙәнәкте күрһәтә һәм уға кәрәк булған алымдың исемен әйтә, мәҫәлән, яңғыҙ, бикләнгән кандидаттар, пар йәки өслөк, X-Wing, Y-Wing, Skyscraper йәки Unique Rectangle. Һанды ҡуйыу өсөн кәңәшкә ҡабат баҫығыҙ."
         ],
         [
           "Компьютерҙа клавиатура менән уйнап буламы?",
@@ -3893,7 +3893,7 @@
         ],
         [
           "Bare Sudoku нисә телдә бар?",
-          "60 телдә, һәр береһе үҙ битендә. Уйындағы тел менюһы битте алмаштыра, ә уйын аҫтындағы исемлек һәр телгә һылтанма бирә. Уйын һайлауығыҙҙы иҫтә тота."
+          "223 телдә, һәр береһе үҙ битендә. Уйындағы тел менюһы битте алмаштыра, ә уйын аҫтындағы исемлек һәр телгә һылтанма бирә. Уйын һайлауығыҙҙы иҫтә тота."
         ]
       ],
       "madeBy": "Яһаусы: Alparslan Selçuk Develioğlu",
@@ -3913,7 +3913,7 @@
         "Тӑватӑ шай: ҫӑмӑл, вӑтам, йывӑр тата эксперт",
         "Кашни тупсӑмӑн пӗр хурав, нихҫан та тӗшмӗртмелле мар",
         "Паллӑсем, каялла тавӑрни, хуратни тата пӗрре пусса пур паллӑсене тултарни",
-        "Мелне ӑнлантаракан сӗнӳсем: пӗртен-пӗр кандидат, питӗрнӗ кандидатсем, мӑшӑрсем тата виҫҫӗшсем, X-Wing, Y-Wing, Swordfish тата XYZ-Wing",
+        "Мелне ӑнлантаракан сӗнӳсем: пӗчченсемпе мӑшӑрсенчен пуҫласа X-Wing, Y-Wing, Skyscraper тата Unique Rectangle таран",
         "Хӑй тӗллӗн упрани, тӗттӗм режим, клавиатура тата урлӑ вырнаҫни",
         "Пӗрремӗш кӗнӗ хыҫҫӑн офлайн ӗҫлет, приложени лавкки кирлӗ мар"
       ],
@@ -3954,7 +3954,7 @@
         ],
         [
           "Тӗшмӗртме кирлӗ-и?",
-          "Ҫук. Кашни ребусӑн шӑпах пӗр ответ пур, ӑна логикӑпа ҫеҫ шутлаҫҫӗ. Чарӑнса ларсан, сӗнӳ тепӗр клеткӑна кӑтартать те мелӗн ятне калать: single, питӗрнӗ кандидатсем, мӑшӑр е виҫҫӗ, X-Wing, Y-Wing, Swordfish е XYZ-Wing. Цифрӑна лартма сӗнӗве тепӗр хут тӗртӗр."
+          "Ҫук. Кашни ребусӑн шӑпах пӗр ответ пур, ӑна логикӑпа ҫеҫ шутлаҫҫӗ. Чарӑнса ларсан, сӗнӳ тепӗр клеткӑна кӑтартать те ун валли кирлӗ пулнӑ мелӗн ятне калать, сӑмахран, пӗччен, питӗрнӗ кандидатсем, мӑшӑр е виҫҫӗ, X-Wing, Y-Wing, Skyscraper е Unique Rectangle. Цифрӑна лартма сӗнӗве тепӗр хут тӗртӗр."
         ],
         [
           "Компьютерта клавиатурӑпа выляма пулать-и?",
@@ -3966,7 +3966,7 @@
         ],
         [
           "Bare Sudoku миҫе чӗлхепе пур?",
-          "60 чӗлхепе, кашни хӑйӗн страницинче. Вӑйӑри чӗлхе менювӗ страницӑна улӑштарать, вӑйӑ айӗнчи список кашни чӗлхе патне ярать. Вӑйӑ суйлавӑра астуса юлать."
+          "223 чӗлхепе, кашни хӑйӗн страницинче. Вӑйӑри чӗлхе менювӗ страницӑна улӑштарать, вӑйӑ айӗнчи список кашни чӗлхе патне ярать. Вӑйӑ суйлавӑра астуса юлать."
         ]
       ],
       "madeBy": "Тӑваканӗ: Alparslan Selçuk Develioğlu",
@@ -3986,7 +3986,7 @@
         "تۆت دەرىجە: ئاسان، ئوتتۇرا، قىيىن ۋە مۇتەخەسسىس",
         "ھەربىر تېپىشماقنىڭ بىرلا يېشىمى بار، ھەرگىز پەرەز قىلىش ھاجەتسىز",
         "بەلگىلەر، قايتۇرۇش، ئۆچۈرۈش ۋە بىر بېسىشتا بارلىق بەلگىلەرنى تولدۇرۇش",
-        "ئۇسۇلنى چۈشەندۈرىدىغان يىپ ئۇچلىرى: يالغۇز نامزات، قۇلۇپلانغان نامزاتلار، جۈپ ۋە ئۈچلۈكلەر، X-Wing، Y-Wing، Swordfish ۋە XYZ-Wing",
+        "ئۇسۇلنى چۈشەندۈرىدىغان يىپ ئۇچلىرى: يالغۇزلار ۋە جۈپلەردىن تارتىپ X-Wing، Y-Wing، Skyscraper ۋە Unique Rectangle غىچە",
         "ئاپتوماتىك ساقلاش، قاراڭغۇ ھالەت، كۇنۇپكا تاختىسى ۋە توغرىسىغا ئورۇنلاشتۇرۇش",
         "تۇنجى زىيارەتتىن كېيىن تورسىز ئىشلەيدۇ، ئەپ دۇكىنى كېرەك ئەمەس"
       ],
@@ -4027,7 +4027,7 @@
         ],
         [
           "پەرەز قىلىشقا توغرا كېلەمدۇ؟",
-          "ياق. ھەر بىر تېپىشماقنىڭ دەل بىر يېشىمى بار ۋە پەقەت لوگىكا بىلەنلا يېشىلىدۇ. توختاپ قالسىڭىز، يىپ ئۇچى كېيىنكى كاتەكچىنى كۆرسىتىدۇ ۋە ئۇسۇلنىڭ نامىنى ئېيتىدۇ: single، قۇلۇپلانغان نامزاتلار، جۈپ ياكى ئۈچلۈك، X-Wing، Y-Wing، Swordfish ياكى XYZ-Wing. ساننى قويۇش ئۈچۈن يىپ ئۇچىنى قايتا بېسىڭ."
+          "ياق. ھەر بىر تېپىشماقنىڭ دەل بىر يېشىمى بار ۋە پەقەت لوگىكا بىلەنلا يېشىلىدۇ. توختاپ قالسىڭىز، يىپ ئۇچى كېيىنكى خانىنى كۆرسىتىدۇ ۋە ئۇنىڭغا لازىم بولغان ئۇسۇلنىڭ نامىنى ئېيتىدۇ، مەسىلەن يالغۇز نامزات، قۇلۇپلانغان نامزاتلار، جۈپ ياكى ئۈچلۈك، X-Wing، Y-Wing، Skyscraper ياكى Unique Rectangle. ساننى قويۇش ئۈچۈن يىپ ئۇچىنى قايتا بېسىڭ."
         ],
         [
           "كومپيۇتېردا كۇنۇپكا تاختىسى بىلەن ئوينىغىلى بولامدۇ؟",
@@ -4039,7 +4039,7 @@
         ],
         [
           "Bare Sudoku قانچە تىلدا بار؟",
-          "60 تىلدا، ھەر بىرى ئۆز بېتىدە. ئويۇندىكى تىل تىزىملىكى بەتنى ئالماشتۇرىدۇ، ئويۇن ئاستىدىكى تىزىملىك ھەر بىر تىلغا ئۇلىنىدۇ. ئويۇن تاللىشىڭىزنى ئەستە تۇتىدۇ."
+          "223 تىلدا، ھەر بىرى ئۆز بېتىدە. ئويۇندىكى تىل تىزىملىكى بەتنى ئالماشتۇرىدۇ، ئويۇن ئاستىدىكى تىزىملىك ھەر بىر تىلغا ئۇلىنىدۇ. ئويۇن تاللىشىڭىزنى ئەستە تۇتىدۇ."
         ]
       ],
       "madeBy": "ياسىغۇچى: Alparslan Selçuk Develioğlu",
@@ -4059,7 +4059,7 @@
         "Tórt dáreje: ańsat, ortasha, qıyın hám ekspert",
         "Hár bir jumbaqtıń bir sheshimi bar, hesh qashan boljawdıń keregi joq",
         "Belgiler, artqa qaytarıw, óshiriw hám bir basıw menen barlıq belgilerdi toltırıw",
-        "Usıldı túsindiretuǵın keńesler: jalǵız talapker, qulıplanǵan talapkerler, juplar hám úshlikler, X-Wing, Y-Wing, Swordfish hám XYZ-Wing",
+        "Usıldı túsindiretuǵın keńesler: jalǵızlar hám juplardan baslap X-Wing, Y-Wing, Skyscraper hám Unique Rectangle usıllarına shekem",
         "Avtomatik saqlaw, qarańǵı rejim, klaviatura hám kóldeneń jaylasıw",
         "Birinshi kiriwden keyin oflayn isleydi, qosımsha dúkanı kerek emes"
       ],
@@ -4100,7 +4100,7 @@
         ],
         [
           "Shamalaw kerek pe?",
-          "Yaq. Hár bir jumbaqtıń dál bir sheshimi bar hám tek logika menen sheshiledi. Tıǵılıp qalsańız, keńes keyingi katekti kórsetip, usıldıń atın aytadı: single, qulıplanǵan kandidatlar, jup yamasa úshlik, X-Wing, Y-Wing, Swordfish yamasa XYZ-Wing. Sandı qoyıw ushın keńesti qayta basıń."
+          "Yaq. Hár bir jumbaqtıń dál bir sheshimi bar hám tek logika menen sheshiledi. Tıǵılıp qalsańız, keńes keyingi katekti kórsetip, oǵan kerek bolǵan usıldıń atın aytadı, máselen, jalǵız talapker, qulıplanǵan talapkerler, jup yamasa úshlik, X-Wing, Y-Wing, Skyscraper yamasa Unique Rectangle. Sandı qoyıw ushın keńesti qayta basıń."
         ],
         [
           "Kompyuterde klaviatura menen oynawǵa bola ma?",
@@ -4112,7 +4112,7 @@
         ],
         [
           "Bare Sudoku neshe tilde bar?",
-          "60 tilde, hár biri óz betinde. Oyındaǵı til menyui betti awıstıradı, al oyın astındaǵı dizim hár bir tilge silteme beredi. Oyın tańlawıńızdı este saqlaydı."
+          "223 tilde, hár biri óz betinde. Oyındaǵı til menyui betti awıstıradı, al oyın astındaǵı dizim hár bir tilge silteme beredi. Oyın tańlawıńızdı este saqlaydı."
         ]
       ],
       "madeBy": "Jasaǵan: Alparslan Selçuk Develioğlu",
@@ -4132,7 +4132,7 @@
         "Dört seviye: qolay, orta, qıyın ve ekspert",
         "Er bir bilmecenıñ bir çezimi bar, iç bir vaqıt tahmin etmek kerekmey",
         "Notlar, keri alma, silme ve bir basuvnen bütün notlarnı toldurma",
-        "Usulnı añlatqan yardımlar: tek namzet, kilitli namzetler, çiftler ve üçlükler, X-Wing, Y-Wing, Swordfish ve XYZ-Wing",
+        "Usulnı añlatqan yardımlar, tek namzet ve çiftlerden X-Wing, Y-Wing, Skyscraper ve Unique Rectangle'ge qadar",
         "Avtomatik saqlav, qaranlıq rejim, klaviatura ve yatıq yerleşim",
         "Birinci ziyarettten soñ oflayn çalışa, uyğulama tükânı kerekmey"
       ],
@@ -4173,7 +4173,7 @@
         ],
         [
           "Tahmin etmek kerek olamı?",
-          "Yoq. Er tapmacanıñ tam bir çezimi bar ve tek mantıq ile çezile. Tıqılıp qalsañız, ipucu kelecek hüceyreni köstere ve tekniknıñ adını ayta: single, kilitli namzetler, çift ya da üçlük, X-Wing, Y-Wing, Swordfish ya da XYZ-Wing. Raqamnı qoymaq içün ipucuna yañıdan toqunıñız."
+          "Yoq. Er bilmeceniñ tam bir çezimi bar ve tek mantıq ile çezile. Tıqılıp qalsañız, yardım kelecek hüceyreni köstere ve kerek olğan usulnıñ adını ayta, meselâ tek namzet, kilitli namzetler, çift yaki üçlük, X-Wing, Y-Wing, Skyscraper yaki Unique Rectangle. Raqamnı qoymaq içün yardımğa yañıdan toqunıñız."
         ],
         [
           "Kompyuterde klaviatura ile oynap olamı?",
@@ -4185,7 +4185,7 @@
         ],
         [
           "Bare Sudoku qaç tilde bar?",
-          "60 tilde, er biri öz saifesinde. Oyundaki til menüsi saifeni deñiştire, oyunnıñ astındaki cedvel ise er tilge bağlana. Oyun saylavıñıznı aqılda tuta."
+          "223 tilde, er biri öz saifesinde. Oyundaki til menüsi saifeni deñiştire, oyunnıñ astındaki cedvel ise er tilge bağlana. Oyun saylavıñıznı aqılda tuta."
         ]
       ],
       "madeBy": "Yapqan: Alparslan Selçuk Develioğlu",
@@ -4205,7 +4205,7 @@
         "Түөрт таһым: чэпчэки, орто, уустук уонна эксперт",
         "Хас биирдии таабырын биир быһаарыылаах, хаһан да таайар наадата суох",
         "Бэлиэлэр, төттөрү төннөрүү, сотуу уонна биир баттааһынынан бары бэлиэлэри толоруу",
-        "Ньыманы быһаарар сүбэлэр: биир кандидат, хатанан кандидаттар, паралар уонна үстэр, X-Wing, Y-Wing, Swordfish уонна XYZ-Wing",
+        "Ньыманы быһаарар сүбэлэр, соҕотохтортон уонна паралартан X-Wing, Y-Wing, Skyscraper уонна Unique Rectangle диэри",
         "Аптамаатынан хараллыы, хараҥа режим, клавиатура уонна туора туруу",
         "Бастакы киириэ кэннэ оффлайн үлэлиир, сыһыарыы маҕаһыына наадата суох"
       ],
@@ -4246,7 +4246,7 @@
         ],
         [
           "Таайарга наада дуо?",
-          "Суох. Хас биирдии таабырын чопчу биир быһаарыылаах уонна логика эрэ көмөтүнэн быһаарыллар. Тохтоотоххуна, сүбэ кэлэр клетканы көрдөрөр уонна ньыма аатын этэр: single, хатаммыт кандидаттар, пара эбэтэр үс, X-Wing, Y-Wing, Swordfish эбэтэр XYZ-Wing. Сыыппараны туруорарга сүбэни хаттаан баттаа."
+          "Суох. Хас биирдии таабырын чопчу биир быһаарыылаах уонна логика эрэ көмөтүнэн быһаарыллар. Тохтоотоххуна, сүбэ кэлэр клетканы көрдөрөр уонна наада буолбут ньыма аатын этэр, холобур, биир кандидат, хатанан кандидаттар, паара эбэтэр үс, X-Wing, Y-Wing, Skyscraper эбэтэр Unique Rectangle. Сыыппараны туруорарга сүбэни хаттаан баттаа."
         ],
         [
           "Компьютерга клавиатуранан оонньуохха сөп дуо?",
@@ -4258,7 +4258,7 @@
         ],
         [
           "Bare Sudoku хас тылынан баарый?",
-          "60 тылынан, хас биирдиилэрэ бэйэтин сирэйигэр. Оонньуу иһинээҕи тыл менютэ сирэйи уларытар, оонньуу анныгар баар испииһэк хас биирдии тылга сигэр. Оонньуу эн талыыгын өйдүүр."
+          "223 тылынан, хас биирдиилэрэ бэйэтин сирэйигэр. Оонньуу иһинээҕи тыл менютэ сирэйи уларытар, оонньуу анныгар баар испииһэк хас биирдии тылга сигэр. Оонньуу эн талыыгын өйдүүр."
         ]
       ],
       "madeBy": "Оҥордо: Alparslan Selçuk Develioğlu",
@@ -4278,7 +4278,7 @@
         "Дёрт даража: енгил, орта, къыйын ва эксперт",
         "Гьар бир табышманы бир чечими бар, бир заманда да чама этмеге тарыкъ тюгюл",
         "Белгилер, артгъа къайтарыв, оьчюрюв ва бир басыв булан бары да белгилени толтурув",
-        "Усулну англатагъан насигьатлар: ялгъыз кандидат, бегитилген кандидатлар, экилер ва уьчлер, X-Wing, Y-Wing, Swordfish ва XYZ-Wing",
+        "Усулну англатагъан насигьатлар: ялгъыз кандидат ва экилерден башлап X-Wing, Y-Wing, Skyscraper ва Unique Rectangle усуллагъа ерли",
         "Автомат сакълав, къарангы режим, клавиатура ва туура ерлешив",
         "Биринчи гиривден сонг оффлайн ишлей, программа тюкен тарыкъ тюгюл"
       ],
@@ -4319,7 +4319,7 @@
         ],
         [
           "Ойлашып тапмагъа тарыкъмы?",
-          "Ёкъ. Гьар тапмача тюз бир чечиви бар ва янгыз логика булан чечиле. Токътап къалсагъыз, насигьат гелеген клетканы гёрсете ва усулну атын айта: single, бегитилген кандидатлар, эки яда уьч, X-Wing, Y-Wing, Swordfish яда XYZ-Wing. Санны салмакъ учун насигьатгъа дагъы да басыгъыз."
+          "Ёкъ. Гьар тапмачаны тюз бир чечиви бар ва янгыз логика булан чечиле. Токътап къалсагъыз, насигьат гелеген клетканы гёрсете ва огъар тарыкъ болгъан усулну атын айта, мисал учун: ялгъыз кандидат, бегитилген кандидатлар, эки яда уьч, X-Wing, Y-Wing, Skyscraper яда Unique Rectangle. Санны салмакъ учун насигьатгъа дагъы да басыгъыз."
         ],
         [
           "Компьютерде клавиатура булан ойнама боламы?",
@@ -4331,7 +4331,7 @@
         ],
         [
           "Bare Sudoku нече тилде бар?",
-          "60 тилде, гьар бири оьзюню бетинде. Оюндагъы тил меню бетни алышдыра, оюнну тюбюндеги тизим буса гьар тилге элте. Оюн сайлавугъузну эсде сакълай."
+          "223 тилде, гьар бири оьзюню бетинде. Оюндагъы тил меню бетни алышдыра, оюнну тюбюндеги тизим буса гьар тилге элте. Оюн сайлавугъузну эсде сакълай."
         ]
       ],
       "madeBy": "Этген: Alparslan Selçuk Develioğlu",
@@ -4351,7 +4351,7 @@
         "دؤرد سویّه: آسان، اورتا، چتین و اوزمان",
         "هر بولماجانین بیر حلّی وار، هئچ واخت تخمین لازیم دئییل",
         "قئیدلر، گئری آلما، سیلمه و بیر توخونوشلا بوتون قئیدلری دولدورما",
-        "اوصولو آچیقلایان ایپوجولار: تک نامیزد، کیلیدلی نامیزدلر، جوتلر و اوچلوکلر، X-Wing، Y-Wing، Swordfish و XYZ-Wing",
+        "اوصولو آچیقلایان ایپوجولار، تک نامیزد و جوتلردن X-Wing، Y-Wing، Skyscraper و Unique Rectangle-ه قدر",
         "اوتوماتیک ساخلاما، قارانلیق رژیم، کلاویاتورا و یاتای دوزولوش",
         "ایلک زیارتدن سونرا آفلاین ایشلیر، تطبیق ماغازاسی لازیم دئییل"
       ],
@@ -4392,7 +4392,7 @@
         ],
         [
           "هئچ واخت تخمین ائتمک لازیم گلیرمی؟",
-          "یوخ. هر تاپماجانین دوز بیر حلی وار و یالنیز منطیقله حل اولونور. ایلیشسه‌نیز، ایپوجو نؤوبتی خانانی گؤستریر و تکنیکین آدینی دئییر: single، کیلیدلی نامیزدلر، جوت و یا اوچلوک، X-Wing، Y-Wing، Swordfish و یا XYZ-Wing. رقمی یئرلشدیرمک اوچون ایپوجونا یئنیدن توخونون."
+          "یوخ. هر بولماجانین دوز بیر حلّی وار و یالنیز منطیقله حل اولونور. ایلیشسه‌نیز، ایپوجو نؤوبتی خانانی گؤستریر و لازیم اولان اوصولون آدینی چکیر، مثلاً تک نامیزد، کیلیدلی نامیزدلر، جوت یا اوچلوک، X-Wing، Y-Wing، Skyscraper یا Unique Rectangle. رقمی یئرلشدیرمک اوچون ایپوجونا یئنیدن توخونون."
         ],
         [
           "کامپیوتئرده کلاویاتورا ایله اوینایا بیله‌رم‌می؟",
@@ -4404,7 +4404,7 @@
         ],
         [
           "Bare Sudoku نئچه دیلده‌دیر؟",
-          "60 دیلده، هر بیری اؤز صحیفه‌سینده. اویونداکی دیل منوسو صحیفه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله کئچید وئریر. اویون سئچیمینیزی یاددا ساخلاییر."
+          "223 دیلده، هر بیری اؤز صحیفه‌سینده. اویونداکی دیل منوسو صحیفه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله کئچید وئریر. اویون سئچیمینیزی یاددا ساخلاییر."
         ]
       ],
       "madeBy": "یارادان: Alparslan Selçuk Develioğlu",
@@ -4424,7 +4424,7 @@
         "Neli taset: lihtne, keskmine, raske ja ekspert",
         "Igal mõistatusel on üks lahendus ja arvamist pole kunagi vaja",
         "Märkmed, tagasivõtmine, kustutamine ja kõigi märkmete täitmine ühe puudutusega",
-        "Vihjed, mis selgitavad tehnikat: üksikud, lukustatud kandidaadid, paarid ja kolmikud, X-Wing, Y-Wing, Swordfish ja XYZ-Wing",
+        "Vihjed, mis selgitavad tehnikat, üksikutest ja paaridest kuni X-Wingi, Y-Wingi, Skyscraperi ja Unique Rectangle'ini",
         "Automaatne salvestus, tume režiim, klaviatuur ja rõhtpaigutus",
         "Töötab pärast esimest külastust võrguühenduseta, rakendustepoodi pole vaja"
       ],
@@ -4465,7 +4465,7 @@
         ],
         [
           "Kas pean kunagi arvama?",
-          "Ei. Igal mõistatusel on täpselt üks lahendus ja see on lahendatav ainult loogikaga. Kui jääd toppama, näitab vihje järgmist ruutu ja nimetab tehnika: single, lukustatud kandidaadid, paar või kolmik, X-Wing, Y-Wing, Swordfish või XYZ-Wing. Puuduta vihjet uuesti, et number paigutada."
+          "Ei. Igal mõistatusel on täpselt üks lahendus ja see on lahendatav ainult loogikaga. Kui jääd toppama, näitab vihje järgmist lahtrit ja nimetab tehnika, mida oli vaja, näiteks üksik kandidaat, lukustatud kandidaadid, paar või kolmik, X-Wing, Y-Wing, Skyscraper või Unique Rectangle. Puuduta vihjet uuesti, et number paigutada."
         ],
         [
           "Kas saan arvutis klaviatuuriga mängida?",
@@ -4477,7 +4477,7 @@
         ],
         [
           "Mitmes keeles Bare Sudoku on?",
-          "60 keeles, igaüks oma lehel. Mängu keelemenüü vahetab lehte ja mängu all olev loend viib iga keeleni. Mäng jätab su valiku meelde."
+          "223 keeles, igaüks oma lehel. Mängu keelemenüü vahetab lehte ja mängu all olev loend viib iga keeleni. Mäng jätab su valiku meelde."
         ]
       ],
       "madeBy": "Tegija: Alparslan Selçuk Develioğlu",
@@ -4497,7 +4497,7 @@
         "دؤرد درجه: آسان، اورتا، چتین و اوستا",
         "هر بولماجانین بیرجه حلی وار، تخمین ائتمک هئچ واخت لازیم دئییل",
         "قیدلر، گئری آلما، سیلمه و بیر توخونوشلا بوتون قیدلری دولدورما",
-        "تکنیکی آچیقلایان ایشاره‌لر: تک نامزد، قیفیللی نامزدلر، جوت و اوچلوکلر، X-Wing، Y-Wing، Swordfish و XYZ-Wing",
+        "تکنیکی آچیقلیان ایشاره‌لار: تک نامزد و جؤتلردن X-Wing، Y-Wing، Skyscraper و Unique Rectangle ا",
         "اؤزو ساخلاما، قارانلیق حالت، کلاویه و یاتیق دوزن",
         "بیرینجی گیریشدن سونرا اینترنتسیز ایشله‌یر، اویغولاما دوکانی لازیم دئییل"
       ],
@@ -4538,7 +4538,7 @@
         ],
         [
           "تخمین ائتمک لازیم اولور؟",
-          "یوخ. هر بولماجانین دوز بیر حلی وار و یالنیز منطق ایله حل اولور. ایلیشسن، ایشاره سونراکی خانانی گؤستریر و تکنیکین آدینی دئییر: single، قیفیللی نامزدلر، جوت یا اوچلوک، X-Wing، Y-Wing، Swordfish یا XYZ-Wing. رقمی قویماق اوچون ایشاره‌یه گینه باس."
+          "یوخ. هر بولماجانین دوز بیر حلی وار و یالنیز منطق ایله حل آلور. ایلیشسن، ایشاره سونراکی خانانی گؤستریر و تکنیکین آدینی دئییر؛ مثلاً تک نامزد، رقمین ستیر، ستون یا قوتودا یالنیز یئری، بستیل نامزدلار، جؤت یا اوچلو، X-Wing، Y-Wing، Skyscraper یا Unique Rectangle. رقمی قویماق اوچون ایشاره‌یه گینه باس."
         ],
         [
           "کامپیوترده کلاویه ایله اوینایا بیلرم؟",
