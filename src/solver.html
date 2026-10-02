@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{DIR}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Alparslan Selçuk Develioğlu">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="{{URL}}">
+{{ALTERNATES}}
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/icon-192.png">
+<link rel="author" href="https://devdiscipline.com/about">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bare Sudoku">
+<meta property="og:locale" content="{{OG_LOCALE}}">
+<meta property="og:url" content="{{URL}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESCRIPTION}}">
+<meta property="og:image" content="https://baresudoku.com/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{OG_ALT}}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESCRIPTION}}">
+<meta name="twitter:image" content="https://baresudoku.com/og.png">
+<meta name="twitter:image:alt" content="{{OG_ALT}}">
+<script type="application/ld+json">{{JSONLD}}</script>
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<main id="about" class="guide solver">
+<nav class="crumbs" aria-label="{{CRUMBS_LABEL}}">{{CRUMBS}}</nav>
+<article>
+<h1>{{H1}}</h1>
+<p>{{INTRO}}</p>
+<div id="entry">
+<div id="grid" class="sgrid" role="grid" aria-label="Sudoku"></div>
+<input id="paste" type="text" placeholder="{{PASTE}}" autocomplete="off" spellcheck="false" aria-label="{{PASTE}}">
+</div>
+<div id="result" hidden>
+<figure id="figure"></figure>
+<p id="summary"></p>
+</div>
+<p class="actions"><button type="button" id="next">{{NEXT}}</button><button type="button" id="solve">{{SOLVE}}</button><button type="button" id="example">{{EXAMPLE}}</button><button type="button" id="clear">{{CLEAR}}</button><button type="button" id="edit" hidden>{{EDIT}}</button></p>
+<p id="msg" aria-live="polite"></p>
+<ol id="steps"></ol>
+{{FAQ}}
+<p class="pager"><a href="{{PLAY_PATH}}">{{PLAY}}</a><a href="{{TECH_PATH}}">{{TECHNIQUES}}</a></p>
+</article>
+<nav aria-label="{{LANGUAGES_LABEL}}">{{LANGUAGE_LINKS}}</nav>
+</main>
+<script type="application/json" id="i18n">{{L}}</script>
+<script src="/solver.js"></script>
+</body>
+</html>

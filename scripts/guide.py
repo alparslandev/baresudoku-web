@@ -438,8 +438,11 @@ def write_all(write, dist, template, css, guide, site, tables, examples, names):
     return count, dates
 
 
-def learn_block(code, entry):
-    return "<h2>%s</h2>\n<p>%s <a href=\"%s\">%s</a> · <a href=\"%s\">%s</a></p>" % (esc(entry["learnHeading"]), esc(entry["learnText"]), howto_path(code), esc(entry["howToLink"]), index_path(code), esc(entry["techniquesLink"]))
+def learn_block(code, entry, extra=None):
+    links = [(howto_path(code), entry["howToLink"]), (index_path(code), entry["techniquesLink"])]
+    if extra:
+        links.append(extra)
+    return "<h2>%s</h2>\n<p>%s %s</p>" % (esc(entry["learnHeading"]), esc(entry["learnText"]), " · ".join('<a href="%s">%s</a>' % (href, esc(label)) for href, label in links))
 
 
 def sitemap_groups(guide):
@@ -450,7 +453,7 @@ def sitemap_groups(guide):
 
 
 def header_paths():
-    paths = ["/" + HOWTO + "/", "/:lang/" + HOWTO + "/", "/" + TECH + "/", "/:lang/" + TECH + "/"]
+    paths = ["/" + HOWTO + "/", "/:lang/" + HOWTO + "/", "/" + TECH + "/", "/:lang/" + TECH + "/", "/solver/", "/:lang/solver/"]
     for slug in i18n.TECHNIQUES:
         paths += ["/" + TECH + "/" + slug + "/", "/:lang/" + TECH + "/" + slug + "/"]
     return paths
