@@ -19,6 +19,7 @@ S_NAKED, S_BOX, S_LOCKED, S_SUBSET, S_FIXED, S_TECH_EXTRA = 17, 20, 22, 23, 24, 
 HINT_INDEX = {
     "naked-single": S_NAKED, "hidden-single": S_BOX, "locked-candidates": S_LOCKED, "naked-pairs": S_SUBSET, "hidden-pairs": S_SUBSET, "x-wing": S_FIXED, "y-wing": S_FIXED + 1, "swordfish": S_FIXED + 2, "xyz-wing": S_FIXED + 3,
     "skyscraper": S_TECH_EXTRA, "two-string-kite": S_TECH_EXTRA + 1, "w-wing": S_TECH_EXTRA + 2, "unique-rectangle": S_TECH_EXTRA + 3,
+    "finned-x-wing": S_TECH_EXTRA + 7, "finned-swordfish": S_TECH_EXTRA + 8, "empty-rectangle": S_TECH_EXTRA + 10, "wxyz-wing": S_TECH_EXTRA + 12, "unique-rectangle-type-4": S_TECH_EXTRA + 15, "hidden-rectangle": S_TECH_EXTRA + 18,
 }
 UNITS = []
 for u in range(9):
@@ -145,6 +146,21 @@ def params(ex, labels):
         return {"x": ex["x"], "z": ex["z"], "wingA": ref(ex["wings"][0]), "wingB": ref(ex["wings"][1]), "unit": unit_label(labels, ex["unit"]), "linkA": ref(ex["links"][0]), "linkB": ref(ex["links"][1]), "elim": elim_cells}
     if tech == "unique-rectangle":
         return {"a": digits[0], "b": digits[1], "corners": joined(ref(c) for c in sorted(ex["corners"])), "boxA": ex["boxes"][0] + 1, "boxB": ex["boxes"][1] + 1, "pairCells": joined(ref(c) for c in sorted(ex["floor"])), "target": ref(ex["target"]), "extra": joined(ex["extra"])}
+    if tech in ("finned-x-wing", "finned-swordfish"):
+        p = {"d": digits[0], "fin": ref(ex["fins"][0]), "finBox": ex["finBox"] + 1, "elim": elim_cells}
+        if tech == "finned-x-wing":
+            p.update({"r1": ex["base"][0] + 1, "r2": ex["base"][1] + 1, "c1": ex["cover"][0] + 1, "c2": ex["cover"][1] + 1})
+        else:
+            p.update({"rows": joined(r + 1 for r in ex["base"]), "cols": joined(c + 1 for c in ex["cover"])})
+        return p
+    if tech == "empty-rectangle":
+        return {"d": digits[0], "box": ex["box"] + 1, "row": ex["row"] + 1, "col": ex["col"] + 1, "erA": unit_label(labels, ex["erA"]), "erB": unit_label(labels, ex["erB"]), "linkUnit": unit_label(labels, ex["linkUnit"]), "linkA": ref(ex["linkA"]), "linkB": ref(ex["linkB"]), "elim": elim_cells}
+    if tech == "wxyz-wing":
+        return {"cells": joined("%s (%s)" % (ref(c), " ".join(str(d) for d in digits_of(cands[c]))) for c in cells), "digits": joined(digits), "z": ex["z"], "others": joined(ex["others"]), "zCells": joined(ref(c) for c in ex["zCells"]), "elim": elim_cells}
+    if tech == "unique-rectangle-type-4":
+        return {"corners": joined(ref(c) for c in sorted(ex["corners"])), "boxA": sorted(ex["boxes"])[0] + 1, "boxB": sorted(ex["boxes"])[1] + 1, "floor": joined(ref(c) for c in sorted(ex["floor"])), "roof": joined(ref(c) for c in sorted(ex["roof"])), "a": ex["a"], "b": ex["b"], "unit": unit_label(labels, ex["unit"]), "elim": elim_cells}
+    if tech == "hidden-rectangle":
+        return {"corners": joined(ref(c) for c in sorted(ex["corners"])), "boxA": sorted(ex["boxes"])[0] + 1, "boxB": sorted(ex["boxes"])[1] + 1, "a": ex["a"], "b": ex["b"], "pivot": ref(ex["pivot"]), "target": ref(ex["target"]), "sideA": ref(ex["sideA"]), "sideB": ref(ex["sideB"]), "rowT": row(ex["target"]) + 1, "colT": col(ex["target"]) + 1, "extra": joined(ex["extra"])}
     raise SystemExit("bilinmeyen teknik ornegi: %s" % tech)
 
 
@@ -243,7 +259,7 @@ def index_body(code, entry, site_entry, strings, modified):
     parts += ["<p>%s</p>" % rich(p, code) for p in index["intro"]]
     parts.append("<p>%s</p>" % esc(labels["notation"]))
     items = []
-    for slug in i18n.TECHNIQUES:
+    for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
         items.append('<li><a href="%s">%s</a><small>%s</small><br>%s</li>' % (tech_path(code, slug), esc(t["name"]), esc(strings[i18n.TECH_LEVEL[slug]]), esc(t["description"])))
     parts.append('<ol class="techs">%s</ol>' % "".join(items))
@@ -276,7 +292,7 @@ def tech_body(code, entry, site_entry, strings, slug, examples, modified):
     parts.append('<p class="facts">%s<br>%s</p>' % (fill(labels["level"], {"level": strings[i18n.TECH_LEVEL[slug]]}), fill(labels["hint"], {"text": hint_text(slug, strings, shown[0])})))
     parts.append('<p><a href="%s">%s</a></p>' % (i18n.path(code), esc(labels["play"])))
     parts += faq_html(site_entry["faqHeading"], t["faq"])
-    order = i18n.TECHNIQUES
+    order = i18n.techniques_of(entry)
     k = order.index(slug)
     pager = []
     if k > 0:
@@ -390,17 +406,21 @@ def render(template, css, code, url, path, title, description, entry, site_entry
     return out
 
 
-def pages(code, entry, site_entry, strings, examples, dates):
+def languages_with(guide, slug):
+    return [code for code in guide if slug in guide[code]["tech"]]
+
+
+def pages(code, entry, site_entry, strings, examples, dates, guide):
     labels = entry["labels"]
     how = entry["howTo"]
     modified = dates[1]
-    yield howto_path(code), how, howto_body(code, entry, site_entry, examples, modified), [(labels["howTo"], howto_path(code))], howto_path, how["faq"]
+    yield howto_path(code), how, howto_body(code, entry, site_entry, examples, modified), [(labels["howTo"], howto_path(code))], howto_path, how["faq"], list(guide)
     index = entry["index"]
-    yield index_path(code), index, index_body(code, entry, site_entry, strings, modified), [(labels["techniques"], index_path(code))], index_path, index["faq"]
-    for slug in i18n.TECHNIQUES:
+    yield index_path(code), index, index_body(code, entry, site_entry, strings, modified), [(labels["techniques"], index_path(code))], index_path, index["faq"], list(guide)
+    for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
         trail = [(labels["techniques"], index_path(code)), (t["name"], tech_path(code, slug))]
-        yield tech_path(code, slug), t, tech_body(code, entry, site_entry, strings, slug, examples, modified), trail, (lambda c, s=slug: tech_path(c, s)), t["faq"]
+        yield tech_path(code, slug), t, tech_body(code, entry, site_entry, strings, slug, examples, modified), trail, (lambda c, s=slug: tech_path(c, s)), t["faq"], languages_with(guide, slug)
 
 
 def write_all(write, dist, template, css, guide, site, tables, examples, names):
@@ -409,10 +429,10 @@ def write_all(write, dist, template, css, guide, site, tables, examples, names):
     count = 0
     for code, entry in guide.items():
         site_entry = site[code]
-        for path, page, body, trail, resolve, faq in pages(code, entry, site_entry, tables[code], examples, dates[code]):
+        for path, page, body, trail, resolve, faq, codes in pages(code, entry, site_entry, tables[code], examples, dates[code], guide):
             url = SITE + path
             ld = jsonld(code, url, page["title"], page["description"], page["h1"], faq, trail, dates[code][0], dates[code][1], body)
-            out = render(template, css, code, url, path, page["title"], page["description"], entry, site_entry, languages, body, ld, trail, dates[code], resolve)
+            out = render(template, css, code, url, path, page["title"], page["description"], entry, site_entry, {c: languages[c] for c in codes}, body, ld, trail, dates[code], resolve)
             write(dist, os.path.join(path.strip("/"), "index.html"), out)
             count += 1
     return count, dates
@@ -423,9 +443,9 @@ def learn_block(code, entry):
 
 
 def sitemap_groups(guide):
-    groups = [(HOWTO, howto_path), (TECH, index_path)]
+    groups = [(HOWTO, howto_path, list(guide)), (TECH, index_path, list(guide))]
     for slug in i18n.TECHNIQUES:
-        groups.append((slug, lambda c, s=slug: tech_path(c, s)))
+        groups.append((slug, lambda c, s=slug: tech_path(c, s), languages_with(guide, slug)))
     return groups
 
 
@@ -444,10 +464,10 @@ def llms_lines(entry):
     lines = ["", "## Guides"]
     lines.append("- [%s](%s): %s" % (entry["howTo"]["h1"], SITE + howto_path("en"), plain(entry["howTo"]["description"])))
     lines.append("- [%s](%s): %s" % (entry["index"]["h1"], SITE + index_path("en"), plain(entry["index"]["description"])))
-    for slug in i18n.TECHNIQUES:
+    for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
         lines.append("- [%s](%s): %s" % (t["name"], SITE + tech_path("en", slug), plain(t["description"])))
-    lines.append("- Every guide page exists in every language of the game, under the same path as the game page for that language")
+    lines.append("- Guide pages live under the same path as the game page of each language; a page appears in a language once it is translated, and English and Turkish always have every page")
     return lines
 
 
@@ -463,13 +483,13 @@ def full_text_lines(entry, site_entry, strings, examples):
     for q, a in how["faq"]:
         lines += ["", "### " + q, a]
     lines += ["", "---", "", "# " + entry["index"]["h1"], ""] + [plain(p) for p in entry["index"]["intro"]] + [labels["notation"], ""]
-    for slug in i18n.TECHNIQUES:
+    for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
         lines.append("- %s (%s): %s" % (t["name"], strings[i18n.TECH_LEVEL[slug]], t["description"]))
     lines += ["", "## " + site_entry["faqHeading"]]
     for q, a in entry["index"]["faq"]:
         lines += ["", "### " + q, a]
-    for slug in i18n.TECHNIQUES:
+    for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
         lines += ["", "---", "", "# " + t["h1"], "", plain(t["summary"]), "", "## " + labels["when"]] + [plain(p) for p in t["when"]]
         lines += ["", "## " + labels["spot"]] + [plain(p) for p in t["spot"]]

@@ -291,8 +291,8 @@ def urlset(codes, resolve, lastmod_of):
 
 def sitemap_files(languages, guide_languages, lastmod, guide_dates):
     files = {"sitemap-play.xml": urlset(languages, i18n.path, lambda c: lastmod), "sitemap-privacy.xml": urlset(languages, privacy_path, lambda c: lastmod)}
-    for name, resolve in guide.sitemap_groups(guide_languages):
-        files["sitemap-%s.xml" % name] = urlset(list(guide_languages), resolve, lambda c: guide_dates[c][1])
+    for name, resolve, codes in guide.sitemap_groups(guide_languages):
+        files["sitemap-%s.xml" % name] = urlset(codes, resolve, lambda c: guide_dates[c][1])
     newest = max([lastmod] + [d[1] for d in guide_dates.values()])
     entries = "".join("<sitemap><loc>%s/%s</loc><lastmod>%s</lastmod></sitemap>\n" % (SITE, name, newest) for name in files)
     files["sitemap.xml"] = '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s</sitemapindex>\n' % entries
