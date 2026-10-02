@@ -14,6 +14,8 @@ const L = JSON.parse($('i18n').textContent);
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 let meta = { t: 0, d: false };
+const IDLE_MS = 60000;
+let lastActivity = Date.now(), idle = false;
 const ratingFormat = numberFormat(document.documentElement.lang);
 
 function numberFormat(lang) {
@@ -188,6 +190,28 @@ function hintMessage() {
 
 function renderTime() {
   $('time').textContent = game.active && !generating ? clock(game.time(now())) : '';
+  $('time').classList.toggle('paused', idle);
+}
+
+function tick() {
+  if (game.running && now() - lastActivity >= IDLE_MS) {
+    idle = true;
+    game.pause(now());
+    stopTimer();
+    save();
+  }
+  renderTime();
+}
+
+function activity() {
+  lastActivity = now();
+  if (!idle) return;
+  idle = false;
+  if (game.active && !game.solved && !menuOpen && !generating && !document.hidden) {
+    game.resume(now());
+    startTimer();
+  }
+  renderTime();
 }
 
 function render() {
@@ -271,7 +295,7 @@ function save() {
 
 function startTimer() {
   stopTimer();
-  if (game.running) timer = setInterval(renderTime, 1000);
+  if (game.running) timer = setInterval(tick, 1000);
 }
 
 function stopTimer() {
@@ -464,12 +488,13 @@ function bind() {
       game.pause(now());
       stopTimer();
       save();
-    } else if (!menuOpen && !generating) {
+    } else if (!menuOpen && !generating && !idle) {
       game.resume(now());
       startTimer();
       renderTime();
     }
   });
+  for (const type of ['pointerdown', 'pointermove', 'keydown', 'wheel']) document.addEventListener(type, activity, { passive: true });
   window.addEventListener('pagehide', save);
 }
 
