@@ -30,6 +30,7 @@ button:disabled{color:var(--muted);cursor:default}
 #msg{min-height:2.7em;text-align:center;color:var(--accent);font-size:.95rem;display:flex;flex-direction:column;justify-content:center}
 #msg.bad{color:var(--wrong)}
 #msg small{color:var(--muted)}
+#msg a{color:inherit;text-decoration:underline;margin-inline-start:8px}
 #tools{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
 #tools button{height:64px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-size:.72rem;padding:0 4px;overflow:hidden}
 #tools svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}

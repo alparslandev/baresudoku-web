@@ -295,7 +295,7 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
     alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, resolve(c)) for c in codes]
     alternates.append('<link rel="alternate" hreflang="x-default" href="%s">' % resolve("en"))
     options = "".join('<option value="%s">%s</option>' % (c, esc(languages[c][0])) for c in languages)
-    local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code], "mode": mode, "daily": daily_path(code) if code in daily_codes else ""}
+    local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code], "mode": mode, "daily": daily_path(code) if code in daily_codes else "", "solver": solver_path(code) if code in solver_codes else ""}
     values = {
         "{{LANG}}": code,
         "{{DIR}}": "rtl" if code in i18n.RTL else "ltr",

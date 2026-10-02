@@ -6,6 +6,7 @@ const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31, S_RESTART = 32, S_TECH_EXT
 const S_MASTER = S_TECH_EXTRA + TECH_COUNT - 7;
 const S_DAILY = S_MASTER + 1, S_SHARE = S_MASTER + 2, S_COPIED = S_MASTER + 3, S_PLAY = S_MASTER + 4;
 const S_STATS = S_MASTER + 5, S_PLAYED = S_MASTER + 6, S_BEST = S_MASTER + 7, S_AVERAGE = S_MASTER + 8, S_STREAK = S_MASTER + 9;
+const S_EXPLAIN = S_MASTER + 10, S_SHARE_PUZZLE = S_MASTER + 11;
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
 const now = () => Date.now();
@@ -15,6 +16,7 @@ const cells = [], noteSpans = [], keyButtons = [], toolButtons = [];
 const L = JSON.parse($('i18n').textContent);
 const DAILY = L.mode === 'daily';
 const DAILY_PATH = L.daily || '';
+const SOLVER_PATH = L.solver || '';
 const STATE_KEY = DAILY ? KEY + '.daily' : KEY;
 const LOG_KEY = KEY + '.dailyLog';
 const STATS_KEY = KEY + '.stats';
@@ -148,6 +150,7 @@ function renderLabels() {
   play.href = pathOf($('lang').value);
   play.hidden = !DAILY;
   $('share-btn').textContent = strings[S_SHARE];
+  $('share-puzzle-btn').textContent = strings[S_SHARE_PUZZLE];
   $('stats-btn').textContent = strings[S_STATS];
 }
 
@@ -295,7 +298,16 @@ function render() {
       msg.textContent = hintMessage();
     } else {
       msg.textContent = '';
-      msg.append(hintMessage(), document.createElement('br'));
+      msg.append(hintMessage());
+      if (SOLVER_PATH) {
+        const a = document.createElement('a');
+        a.href = SOLVER_PATH + '?p=' + game.value.join('');
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = strings[S_EXPLAIN];
+        msg.appendChild(a);
+      }
+      msg.appendChild(document.createElement('br'));
       const small = document.createElement('small');
       small.textContent = strings[S_AGAIN];
       msg.appendChild(small);
@@ -328,6 +340,7 @@ function render() {
     $('errors-btn').textContent = strings[S_ERRORS] + ': ' + strings[game.showErrors ? S_ON : S_OFF];
     $('cancel-btn').hidden = !cancellable();
     $('restart-btn').hidden = !game.active;
+    $('share-puzzle-btn').hidden = !game.active || DAILY;
   }
 }
 
@@ -429,22 +442,64 @@ function logDaily() {
   store(LOG_KEY, JSON.stringify(log));
 }
 
+function puzzleLink() {
+  return location.origin + pathOf($('lang').value) + '?p=' + game.given.join('');
+}
+
+function copyOrShare(text, btn) {
+  if (navigator.share) {
+    navigator.share({ text }).catch(() => {});
+    return;
+  }
+  const label = btn.textContent;
+  const done = () => {
+    btn.textContent = strings[S_COPIED];
+    setTimeout(() => { btn.textContent = label; }, 2000);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, () => {});
+}
+
+function sharePuzzle() {
+  if (!game.active) return;
+  copyOrShare(puzzleLink(), $('share-puzzle-btn'));
+}
+
+function levelOf(values) {
+  const clues = values.filter(v => v).length;
+  const r = engine.rate(values);
+  if (r < 0) return -1;
+  const order = engine.rateOrder;
+  return r >= MASTER_RATING ? 4 : order >= 3 ? 3 : order >= 1 ? 2 : clues >= 38 ? 0 : 1;
+}
+
+function sharedPuzzle() {
+  const param = new URLSearchParams(location.search).get('p');
+  if (!param) return null;
+  const chars = param.replace(/[^0-9.]/g, '');
+  if (chars.length !== 81) return null;
+  const values = Array.from(chars, ch => ch === '.' ? 0 : +ch);
+  for (let c = 0; c < 81; c++) if (values[c]) for (const p of PEERS[c]) if (values[p] === values[c]) return null;
+  if (engine.countSolutions(values, 2) !== 1) return null;
+  const level = levelOf(values);
+  if (level < 0) return null;
+  return { values, solution: Array.from(engine.found), level, rating: engine.rate(values) };
+}
+
+function startShared(shared) {
+  game.start(shared.values, shared.solution, shared.level);
+  game.rating = shared.rating;
+  meta = { t: now(), d: false };
+  beacon({ e: 'start', k: shared.level });
+  recordStart(shared.level);
+  save();
+}
+
 function shareText() {
   return strings[S_DAILY] + ' ' + dateText() + ' · ' + levelText() + ' · ' + clock(game.time(now())) + '\n' + location.origin + DAILY_PATH;
 }
 
 function share() {
-  const text = shareText();
-  if (navigator.share) {
-    navigator.share({ text }).catch(() => {});
-    return;
-  }
-  const btn = $('share-btn');
-  const done = () => {
-    btn.textContent = strings[S_COPIED];
-    setTimeout(() => { btn.textContent = strings[S_SHARE]; }, 2000);
-  };
-  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, () => {});
+  copyOrShare(shareText(), $('share-btn'));
 }
 
 function startTimer() {
@@ -620,6 +675,7 @@ function bind() {
   $('cancel-btn').addEventListener('click', closeMenu);
   $('restart-btn').addEventListener('click', restartGame);
   $('share-btn').addEventListener('click', share);
+  $('share-puzzle-btn').addEventListener('click', sharePuzzle);
   $('stats-btn').addEventListener('click', openStats);
   $('stats-back').addEventListener('click', closeStats);
   $('lang').addEventListener('change', e => switchLang(e.target.value));
@@ -674,7 +730,7 @@ function init() {
     const target = pickLang();
     if (target !== 'en' && LANGS.includes(target)) {
       try { if (document.referrer) sessionStorage.setItem(KEY + '.ref', document.referrer); } catch (e) {}
-      location.replace(pathOf(target));
+      location.replace(pathOf(target) + location.search);
       return;
     }
   }
@@ -689,6 +745,11 @@ function init() {
     if (saved && saved.d !== dailyDate) saved = null;
   }
   game.load(saved);
+  const shared = DAILY ? null : sharedPuzzle();
+  if (shared) {
+    startShared(shared);
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  }
   if (game.active) game.rating = engine.rate(game.given);
   meta = saved && saved.a ? { t: +saved.a.t || now(), d: !!saved.a.d } : { t: now(), d: game.solved };
   menuOpen = !game.active;
