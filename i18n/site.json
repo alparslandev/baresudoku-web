@@ -406,7 +406,7 @@
         "Sətir, sütun, blok və eyni rəqəm vurğusu; söndürülə bilən səhv işarəsi",
         "Avtomatik yadda saxlama, qaranlıq rejim, klaviatura və üfüqi düzülüş",
         "İlk ziyarətdən sonra oflayn işləyir, tətbiq mağazası lazım deyil",
-        "223 dil, hər biri öz səhifəsində"
+        "60 dil, hər biri öz səhifəsində"
       ],
       "androidHeading": "Android tətbiqi",
       "android": "Bare Sudoku həm də yerli Android tətbiqidir: versiya {version}, təxminən {size} KB, icazə yox, internet girişi yox, kitabxanasız təmiz Java. Google Play-də deyil; imzalanmış APK-nı GitHub Releases-dən yüklə və Android 8 və ya daha yenisinə quraşdır.",
@@ -457,7 +457,7 @@
         ],
         [
           "Bare Sudoku neçə dildədir?",
-          "223 dildə, hər biri öz səhifəsində. Oyundakı dil menyusu səhifəni dəyişir, oyunun altındakı siyahı isə hər dilə keçid verir. Oyun seçiminizi yadda saxlayır."
+          "60 dildə, hər biri öz səhifəsində. Oyundakı dil menyusu səhifəni dəyişir, oyunun altındakı siyahı isə hər dilə keçid verir. Oyun seçiminizi yadda saxlayır."
         ]
       ],
       "madeBy": "Müəllif: Alparslan Selçuk Develioğlu",
@@ -505,6 +505,34 @@
             "Yox. Həlledicι tamamilə brauzerinizda işləyir, oflayn da. Tapmacayı onun 81 rəqəmini ünvana ?p= sifətində əlavə edərək paylaşa bilərsiniz."
           ]
         ]
+      },
+      "print": {
+        "title": "Çapı Sudoku: Hər Səviyyədə Pulsuz Tapmacalar",
+        "description": "Pulsuz sudoku tapmacaları çapin: Asan-Usta səviyyəsini seçin, 1-6 tapmaca hər səhifədə. Həllər ayrı səhifədə. Reklam yox, qeydiyyat yox.",
+        "h1": "Çapı sudoku tapmacaları",
+        "intro": "Səviyyə seçin və neçə tapmaca istədiğinizi seçin, sonra çapin. Tapmacalar oyunla eyni generatordan gəlir, buna görə hər birinin tam bir həlli var, təxmin etməyə ehtiyac yoxdur və səviyyəsini və reytingini göstərir. Həllər ayrı səhifədə çapılır, buna görə onları buraxa bilərsiniz, səhifənin aşağısındakı keçid eynilər tapmacaları həlləri ilə geri qaytarır.",
+        "link": "Sudoku çap et",
+        "level": "Səviyyə",
+        "count": "Səhifə başına",
+        "solutions": "Həlləri əlavə et",
+        "print": "Çap et",
+        "refresh": "Yeni tapmacalar",
+        "solutionsHeading": "Həllər",
+        "sheet": "Eynilər tapmacalar həlləri ilə: {url}",
+        "faq": [
+          [
+            "Bir səhifəyə neçə tapmaca sığır?",
+            "Bir, iki, dörd və ya altı. Biri-biri ilə şəbəkə böyük, altı ilə kiçik ama doldurmaq hələ də asandır. Həllər ayrı səhifədə çapılır, üçü bir sırada."
+          ],
+          [
+            "Oynadığım tapmacayı çapa bilərəmmi?",
+            "Bəli. Oyun menyusunda Tapmacay paylaş ?p= ilə bitən və tapmacaçın 81 rəqəmini ehtiva edən keçidi kopyalayır. Bu səhifəni eyni ?p= hissəsi ilə açın, səhifə yalnız o tapmacaçı, istəsəniz həlli ilə göstərir."
+          ],
+          [
+            "Həlləri sonra ala bilərəmmi?",
+            "Bəli. Səhifənin aşağısında çapılmış keçid eynilər tapmacaları həlləri ilə açır. Hər hərəkətin arxasındakı texnika ilə addım-addım həll üçün verilən rəqəmləri həllediciyə daxil edin."
+          ]
+        ]
       }
     },
     "de": {
@@ -521,7 +549,7 @@
         "Hervorhebung von Zeile, Spalte, Block und gleicher Ziffer; abschaltbare Fehlermarkierung",
         "Automatisches Speichern, Dunkelmodus, Tastatursteuerung und Querformat",
         "Funktioniert nach dem ersten Besuch offline, kein App-Store nötig",
-        "223 Sprachen, jede auf eigener Seite"
+        "60 Sprachen, jede auf eigener Seite"
       ],
       "androidHeading": "Android-App",
       "android": "Bare Sudoku gibt es auch als native Android-App: Version {version}, etwa {size} KB, keine Berechtigungen, kein Internetzugriff, reines Java ohne Bibliotheken. Sie ist nicht bei Google Play; lade die signierte APK von GitHub Releases und installiere sie auf Android 8 oder neuer.",
@@ -572,7 +600,7 @@
         ],
         [
           "In wie vielen Sprachen gibt es Bare Sudoku?",
-          "223 Sprachen, jede auf ihrer eigenen Seite. Das Sprachmenü im Spiel wechselt die Seite, und die Liste unter dem Spiel verlinkt jede Sprache. Das Spiel merkt sich deine Wahl."
+          "60 Sprachen, jede auf ihrer eigenen Seite. Das Sprachmenü im Spiel wechselt die Seite, und die Liste unter dem Spiel verlinkt jede Sprache. Das Spiel merkt sich deine Wahl."
         ]
       ],
       "madeBy": "Gemacht von Alparslan Selçuk Develioğlu",
@@ -620,6 +648,34 @@
             "Nein. Der Löser läuft komplett in deinem Browser, auch offline. Du kannst ein Rätsel teilen, indem du seine 81 Ziffern als ?p= in die Adresszeile einfügst."
           ]
         ]
+      },
+      "print": {
+        "title": "Druckbare Sudoku: Kostenlose Rätsel auf allen Stufen",
+        "description": "Sudoku zum Ausdrucken: Wähle eine Stufe von Leicht bis Meister und ein bis sechs Rätsel pro Seite; Lösungen separat. Kostenlos, ohne Anmeldung.",
+        "h1": "Druckbare Sudoku-Rätsel",
+        "intro": "Wähle eine Stufe und wie viele Rätsel du auf der Seite haben möchtest, dann drucke. Die Rätsel stammen aus dem gleichen Generator wie das Spiel; jedes hat exakt eine Lösung, erfordert kein Raten und zeigt seine Stufe und Bewertung. Die Lösungen werden auf einer separaten Seite gedruckt, du kannst sie also weglassen, und der Link am unteren Ende der Seite bringt die gleichen Rätsel mit ihren Lösungen zurück.",
+        "link": "Sudoku drucken",
+        "level": "Stufe",
+        "count": "Rätsel pro Seite",
+        "solutions": "Lösungen hinzufügen",
+        "print": "Drucken",
+        "refresh": "Neue Rätsel",
+        "solutionsHeading": "Lösungen",
+        "sheet": "Die gleichen Rätsel mit Lösungen: {url}",
+        "faq": [
+          [
+            "Wie viele Rätsel passen auf eine Seite?",
+            "Ein, zwei, vier oder sechs. Bei ein oder zwei sind die Gitter groß, bei sechs sind sie kleiner, aber immer noch leicht auszufüllen. Die Lösungen werden auf einer separaten Seite gedruckt, drei pro Zeile."
+          ],
+          [
+            "Kann ich das Rätsel, das ich gerade spiele, drucken?",
+            "Ja. Rätsel teilen im Spielmenü kopiert einen Link, der mit ?p= und den 81 Ziffern des Rätsels endet. Öffne diese Seite mit dem gleichen ?p=-Teil, und die Seite zeigt nur dieses Rätsel, mit Lösung wenn du möchtest."
+          ],
+          [
+            "Kann ich die Lösungen später abrufen?",
+            "Ja. Der Link am unteren Ende der Seite öffnet die gleichen Rätsel mit ihren Lösungen. Für eine Schritt-für-Schritt-Lösung mit der Technik hinter jedem Zug gib die gegebenen Ziffern in den Solver ein."
+          ]
+        ]
       }
     },
     "fr": {
@@ -636,7 +692,7 @@
         "Mise en évidence de la ligne, de la colonne, du bloc et du même chiffre ; marquage des erreurs désactivable",
         "Sauvegarde automatique, mode sombre, clavier et affichage paysage",
         "Fonctionne hors ligne après la première visite, sans boutique d'applis",
-        "223 langues, chacune sur sa propre page"
+        "60 langues, chacune sur sa propre page"
       ],
       "androidHeading": "Application Android",
       "android": "Bare Sudoku existe aussi en application Android native : version {version}, environ {size} Ko, aucune permission, aucun accès Internet, du Java pur sans bibliothèque. Elle n'est pas sur Google Play : téléchargez l'APK signé depuis GitHub Releases et installez-le sur Android 8 ou plus récent.",
@@ -687,7 +743,7 @@
         ],
         [
           "En combien de langues Bare Sudoku existe-t-il ?",
-          "223 langues, chacune sur sa propre page. Le menu des langues dans le jeu change de page, et la liste sous le jeu relie chaque langue. Le jeu se souvient de votre choix."
+          "60 langues, chacune sur sa propre page. Le menu des langues dans le jeu change de page, et la liste sous le jeu relie chaque langue. Le jeu se souvient de votre choix."
         ]
       ],
       "madeBy": "Créé par Alparslan Selçuk Develioğlu",
@@ -735,6 +791,34 @@
             "Non. Le solveur tourne entièrement dans votre navigateur, hors ligne aussi. Vous pouvez partager une grille en ajoutant ses 81 chiffres à l'adresse comme ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku à imprimer : Grilles gratuites à tous les niveaux",
+        "description": "Sudoku à imprimer gratuitement : choisissez un niveau de Facile à Maître et une à six grilles par page, solutions séparées. Sans publicité, sans inscription.",
+        "h1": "Grilles de Sudoku à imprimer",
+        "intro": "Choisissez un niveau et le nombre de grilles que vous voulez sur la page, puis imprimez. Les grilles proviennent du même générateur que le jeu, chacune a exactement une solution, ne demande pas de deviner et affiche son niveau et sa note. Les solutions s'impriment sur une page séparée, vous pouvez donc les laisser de côté, et le lien en bas de la page ramène les mêmes grilles avec leurs solutions.",
+        "link": "Imprimer le Sudoku",
+        "level": "Niveau",
+        "count": "Grilles par page",
+        "solutions": "Inclure les solutions",
+        "print": "Imprimer",
+        "refresh": "Nouvelles grilles",
+        "solutionsHeading": "Solutions",
+        "sheet": "Les mêmes grilles avec solutions : {url}",
+        "faq": [
+          [
+            "Combien de grilles tiennent sur une page ?",
+            "Une, deux, quatre ou six. Avec une ou deux, les grilles sont grandes, avec six elles sont plus petites mais toujours faciles à remplir. Les solutions s'impriment sur une page séparée, trois par ligne."
+          ],
+          [
+            "Puis-je imprimer la grille que je suis en train de jouer ?",
+            "Oui. Partager la grille dans le menu du jeu copie un lien qui finit par ?p= et les 81 chiffres de la grille. Ouvrez cette page avec la même partie ?p=, et la page affiche cette grille seule, avec sa solution si vous la voulez."
+          ],
+          [
+            "Puis-je obtenir les solutions plus tard ?",
+            "Oui. Le lien imprimé en bas de la page ouvre les mêmes grilles avec leurs solutions. Pour une solution étape par étape avec la technique derrière chaque coup, tapez les chiffres donnés dans le solveur."
+          ]
+        ]
       }
     },
     "es": {
@@ -751,7 +835,7 @@
         "Resaltado de fila, columna, caja y mismo dígito; marcado de errores desactivable",
         "Guardado automático, modo oscuro, teclado y diseño horizontal",
         "Funciona sin conexión tras la primera visita, sin tienda de apps",
-        "223 idiomas, cada uno en su propia página"
+        "60 idiomas, cada uno en su propia página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku también es una app Android nativa: versión {version}, unos {size} KB, sin permisos, sin acceso a Internet, Java puro sin bibliotecas. No está en Google Play; descarga el APK firmado desde GitHub Releases e instálalo en Android 8 o superior.",
@@ -802,7 +886,7 @@
         ],
         [
           "¿En cuántos idiomas está Bare Sudoku?",
-          "223 idiomas, cada uno en su propia página. El menú de idioma del juego cambia de página y la lista bajo el juego enlaza a todos los idiomas. El juego recuerda tu elección."
+          "60 idiomas, cada uno en su propia página. El menú de idioma del juego cambia de página y la lista bajo el juego enlaza a todos los idiomas. El juego recuerda tu elección."
         ]
       ],
       "madeBy": "Hecho por Alparslan Selçuk Develioğlu",
@@ -850,6 +934,34 @@
             "No. El resolvedor funciona completamente en tu navegador, incluso sin conexión. Puedes compartir un puzle añadiendo sus 81 dígitos a la dirección como ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudokus imprimibles: Puzles gratuitos en todos los niveles",
+        "description": "Imprime puzles de Sudoku gratis: elige un nivel de Fácil a Maestro y uno a seis puzles por página, soluciones aparte. Gratis, sin registro.",
+        "h1": "Puzles de Sudoku imprimibles",
+        "intro": "Elige un nivel y cuántos puzles quieres en la página, luego imprime. Los puzles provienen del mismo generador que el juego, así que cada uno tiene exactamente una solución, no requiere adivinanzas y muestra su nivel y puntuación. Las soluciones se imprimen en una página aparte, así que puedes dejarlas fuera, y el enlace en la parte inferior de la página trae los mismos puzles con sus soluciones.",
+        "link": "Imprimir Sudoku",
+        "level": "Nivel",
+        "count": "Puzles por página",
+        "solutions": "Incluir soluciones",
+        "print": "Imprimir",
+        "refresh": "Nuevos puzles",
+        "solutionsHeading": "Soluciones",
+        "sheet": "Los mismos puzles con soluciones: {url}",
+        "faq": [
+          [
+            "¿Cuántos puzles caben en una página?",
+            "Uno, dos, cuatro o seis. Con uno o dos las cuadrículas son grandes, con seis son más pequeñas pero igual de fáciles de rellenar. Las soluciones se imprimen en una página aparte, tres por fila."
+          ],
+          [
+            "¿Puedo imprimir el puzle que estoy jugando?",
+            "Sí. Compartir puzle en el menú del juego copia un enlace que termina con ?p= y los 81 dígitos del puzle. Abre esta página con la misma parte ?p=, y la página muestra solo ese puzle, con su solución si la quieres."
+          ],
+          [
+            "¿Puedo obtener las soluciones después?",
+            "Sí. El enlace impreso en la parte inferior de la página abre los mismos puzles con sus soluciones. Para una solución paso a paso con la técnica detrás de cada movimiento, escribe los números dados en el resolvedor."
+          ]
+        ]
       }
     },
     "pt": {
@@ -866,7 +978,7 @@
         "Destaque de linha, coluna, bloco e mesmo dígito; marcação de erros que pode ser desligada",
         "Salvamento automático, modo escuro, teclado e layout horizontal",
         "Funciona offline após a primeira visita, sem loja de apps",
-        "223 idiomas, cada um na sua própria página"
+        "60 idiomas, cada um na sua própria página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku também é um app Android nativo: versão {version}, cerca de {size} KB, sem permissões, sem acesso à internet, Java puro sem bibliotecas. Não está no Google Play; baixe o APK assinado no GitHub Releases e instale no Android 8 ou mais novo.",
@@ -917,7 +1029,7 @@
         ],
         [
           "Em quantas línguas existe o Bare Sudoku?",
-          "223 línguas, cada uma na sua própria página. O menu de idioma no jogo muda de página e a lista por baixo do jogo liga a todas as línguas. O jogo lembra-se da sua escolha."
+          "60 línguas, cada uma na sua própria página. O menu de idioma no jogo muda de página e a lista por baixo do jogo liga a todas as línguas. O jogo lembra-se da sua escolha."
         ]
       ],
       "madeBy": "Feito por Alparslan Selçuk Develioğlu",
@@ -965,6 +1077,34 @@
             "Não. O resolvedor funciona completamente no seu navegador, offline também. Você pode compartilhar um puzzle adicionando seus 81 dígitos ao endereço como ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku imprimível: Puzzles gratuitos em todos os níveis",
+        "description": "Imprima puzzles de Sudoku gratuitos: escolha um nível de Fácil a Mestre e um a seis por página, soluções separadas. Sem anúncios, sem cadastro.",
+        "h1": "Puzzles de Sudoku imprimíveis",
+        "intro": "Escolha um nível e quantos puzzles você quer na página, depois imprima. Os puzzles vêm do mesmo gerador que o jogo, então cada um tem exatamente uma solução, não exige suposições e mostra seu nível e classificação. As soluções são impressas em uma página separada, então você pode deixá-las de fora, e o link na parte inferior da página traz de volta os mesmos puzzles com suas soluções.",
+        "link": "Imprimir Sudoku",
+        "level": "Nível",
+        "count": "Puzzles por página",
+        "solutions": "Incluir soluções",
+        "print": "Imprimir",
+        "refresh": "Novos puzzles",
+        "solutionsHeading": "Soluções",
+        "sheet": "Os mesmos puzzles com soluções: {url}",
+        "faq": [
+          [
+            "Quantos puzzles cabem em uma página?",
+            "Um, dois, quatro ou seis. Com um ou dois os grades são grandes, com seis são menores mas ainda fáceis de preencher. As soluções são impressas em uma página separada, três por linha."
+          ],
+          [
+            "Posso imprimir o puzzle que estou jogando?",
+            "Sim. Compartilhar puzzle no menu do jogo copia um link que termina com ?p= e os 81 dígitos do puzzle. Abra esta página com a mesma parte ?p=, e a página mostra apenas esse puzzle, com sua solução se quiser."
+          ],
+          [
+            "Posso obter as soluções depois?",
+            "Sim. O link impresso na parte inferior da página abre os mesmos puzzles com suas soluções. Para uma solução passo a passo com a técnica por trás de cada movimento, digite os números dados no resolvedor."
+          ]
+        ]
       }
     },
     "it": {
@@ -981,7 +1121,7 @@
         "Evidenziazione di riga, colonna, riquadro e stessa cifra; segnalazione errori disattivabile",
         "Salvataggio automatico, tema scuro, tastiera e layout orizzontale",
         "Funziona offline dopo la prima visita, senza store",
-        "223 lingue, ognuna con la propria pagina"
+        "60 lingue, ognuna con la propria pagina"
       ],
       "androidHeading": "App Android",
       "android": "Bare Sudoku è anche un'app Android nativa: versione {version}, circa {size} KB, nessun permesso, nessun accesso a Internet, Java puro senza librerie. Non è su Google Play: scarica l'APK firmato da GitHub Releases e installalo su Android 8 o successivo.",
@@ -1032,7 +1172,7 @@
         ],
         [
           "In quante lingue è disponibile Bare Sudoku?",
-          "223 lingue, ognuna sulla propria pagina. Il menu della lingua nel gioco cambia pagina e l'elenco sotto il gioco collega ogni lingua. Il gioco ricorda la tua scelta."
+          "60 lingue, ognuna sulla propria pagina. Il menu della lingua nel gioco cambia pagina e l'elenco sotto il gioco collega ogni lingua. Il gioco ricorda la tua scelta."
         ]
       ],
       "madeBy": "Creato da Alparslan Selçuk Develioğlu",
@@ -1080,6 +1220,34 @@
             "No. Il risolutore funziona completamente nel tuo browser, anche offline. Puoi condividere uno schema aggiungendo le sue 81 cifre all'indirizzo come ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku stampabili: Schemi gratuiti a ogni livello",
+        "description": "Stampa schemi di Sudoku gratuiti: scegli un livello da Facile a Maestro e uno a sei schemi per pagina, soluzioni separate. Senza annunci, senza registrazione.",
+        "h1": "Schemi di Sudoku stampabili",
+        "intro": "Scegli un livello e quanti schemi vuoi nella pagina, poi stampa. Gli schemi provengono dallo stesso generatore del gioco, quindi ognuno ha esattamente una soluzione, non richiede indovinelli e mostra il suo livello e la sua valutazione. Le soluzioni vengono stampate su una pagina separata, quindi puoi lasciarle fuori, e il link in fondo alla pagina riporta gli stessi schemi con le loro soluzioni.",
+        "link": "Stampa Sudoku",
+        "level": "Livello",
+        "count": "Schemi per pagina",
+        "solutions": "Includi soluzioni",
+        "print": "Stampa",
+        "refresh": "Nuovi schemi",
+        "solutionsHeading": "Soluzioni",
+        "sheet": "Gli stessi schemi con soluzioni: {url}",
+        "faq": [
+          [
+            "Quanti schemi stanno in una pagina?",
+            "Uno, due, quattro o sei. Con uno o due le griglie sono grandi, con sei sono più piccole ma comunque facili da compilare. Le soluzioni vengono stampate su una pagina separata, tre per riga."
+          ],
+          [
+            "Posso stampare lo schema che sto giocando?",
+            "Sì. Condividi schema nel menu del gioco copia un link che termina con ?p= e gli 81 numeri dello schema. Apri questa pagina con la stessa parte ?p=, e la pagina mostra solo quello schema, con la soluzione se la vuoi."
+          ],
+          [
+            "Posso ottenere le soluzioni dopo?",
+            "Sì. Il link stampato in fondo alla pagina apre gli stessi schemi con le loro soluzioni. Per una soluzione passo dopo passo con la tecnica dietro ogni mossa, digita i numeri dati nel risolutore."
+          ]
+        ]
       }
     },
     "nl": {
@@ -1096,7 +1264,7 @@
         "Markering van rij, kolom, blok en hetzelfde cijfer; foutmarkering die je kunt uitzetten",
         "Automatisch opslaan, donkere modus, toetsenbord en liggende weergave",
         "Werkt offline na het eerste bezoek, geen app store nodig",
-        "223 talen, elk op een eigen pagina"
+        "60 talen, elk op een eigen pagina"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku is er ook als native Android-app: versie {version}, ongeveer {size} KB, geen machtigingen, geen internettoegang, pure Java zonder bibliotheken. Niet in Google Play; download de ondertekende APK van GitHub Releases en installeer hem op Android 8 of nieuwer.",
@@ -1147,7 +1315,7 @@
         ],
         [
           "In hoeveel talen is Bare Sudoku beschikbaar?",
-          "223 talen, elk op een eigen pagina. Het taalmenu in het spel wisselt van pagina en de lijst onder het spel linkt naar elke taal. Het spel onthoudt je keuze."
+          "60 talen, elk op een eigen pagina. Het taalmenu in het spel wisselt van pagina en de lijst onder het spel linkt naar elke taal. Het spel onthoudt je keuze."
         ]
       ],
       "madeBy": "Gemaakt door Alparslan Selçuk Develioğlu",
@@ -1195,6 +1363,34 @@
             "Nee. De oplosser draait volledig in je browser, ook offline. Je kunt een puzzel delen door zijn 81 cijfers als ?p= aan het adres toe te voegen."
           ]
         ]
+      },
+      "print": {
+        "title": "Afdrukbare Sudoku: Gratis puzzels op alle niveaus",
+        "description": "Druk gratis Sudoku-puzzels af: kies een niveau van Makkelijk tot Meester en een tot zes per pagina, oplossingen apart. Geen reclame, geen registratie.",
+        "h1": "Afdrukbare Sudoku-puzzels",
+        "intro": "Kies een niveau en hoeveel puzzels je op de pagina wilt hebben, en druk af. De puzzels komen van dezelfde generator als het spel, dus elk heeft precies één oplossing, vereist geen gokken en toont zijn niveau en beoordeling. De oplossingen worden op een aparte pagina afgedrukt, dus je kunt ze weglaten, en de link aan de onderkant van de pagina brengt dezelfde puzzels met hun oplossingen terug.",
+        "link": "Sudoku afdrukken",
+        "level": "Niveau",
+        "count": "Puzzels per pagina",
+        "solutions": "Oplossingen toevoegen",
+        "print": "Afdrukken",
+        "refresh": "Nieuwe puzzels",
+        "solutionsHeading": "Oplossingen",
+        "sheet": "Dezelfde puzzels met oplossingen: {url}",
+        "faq": [
+          [
+            "Hoeveel puzzels passen op één pagina?",
+            "Een, twee, vier of zes. Met één of twee zijn de rasters groot, met zes zijn ze kleiner maar nog steeds gemakkelijk in te vullen. De oplossingen worden op een aparte pagina afgedrukt, drie per rij."
+          ],
+          [
+            "Kan ik de puzzel die ik speel afdrukken?",
+            "Ja. Puzzel delen in het spelmenu kopieert een link die eindigt met ?p= en de 81 cijfers van de puzzel. Open deze pagina met hetzelfde ?p=-gedeelte, en de pagina toont alleen die puzzel, met zijn oplossing als je die wilt."
+          ],
+          [
+            "Kan ik de oplossingen later krijgen?",
+            "Ja. De link die aan de onderkant van de pagina is afgedrukt, opent dezelfde puzzels met hun oplossingen. Voor een stap-voor-stap-oplossing met de techniek achter elke zet typ je de gegeven cijfers in de oplosser."
+          ]
+        ]
       }
     },
     "pl": {
@@ -1211,7 +1407,7 @@
         "Podświetlanie wiersza, kolumny, bloku i tej samej cyfry; zaznaczanie błędów, które można wyłączyć",
         "Automatyczny zapis, tryb ciemny, klawiatura i układ poziomy",
         "Działa offline po pierwszej wizycie, bez sklepu z aplikacjami",
-        "223 języki, każdy na własnej stronie"
+        "60 języków, każdy na własnej stronie"
       ],
       "androidHeading": "Aplikacja na Androida",
       "android": "Bare Sudoku to także natywna aplikacja na Androida: wersja {version}, około {size} KB, bez uprawnień, bez dostępu do internetu, czysta Java bez bibliotek. Nie ma jej w Google Play; pobierz podpisany plik APK z GitHub Releases i zainstaluj na Androidzie 8 lub nowszym.",
@@ -1262,7 +1458,7 @@
         ],
         [
           "W ilu językach jest Bare Sudoku?",
-          "223 języków, każdy na własnej stronie. Menu języka w grze zmienia stronę, a lista pod grą prowadzi do każdego języka. Gra zapamiętuje twój wybór."
+          "60 języków, każdy na własnej stronie. Menu języka w grze zmienia stronę, a lista pod grą prowadzi do każdego języka. Gra zapamiętuje twój wybór."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -1310,6 +1506,34 @@
             "Nie. Solwer działa całkowicie w przeglądarce, również offline. Możesz udostępnić zagadkę, dodając jej 81 cyfr do adresu jako ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku do wydrukowania: Darmowe bulmaki na każdy poziom",
+        "description": "Drukuj darmowe sudoku: wybierz poziom od Łatwy do Mistrz i jeden do sześciu bulmak na stronę, z rozwiązaniami na osobnej stronie. Bez reklam, bez rejestracji.",
+        "h1": "Sudoku do wydrukowania",
+        "intro": "Wybierz poziom i ile bulmak chcesz na stronie, potem drukuj. Bulmaki pochodzą z tego samego generatora co gra, więc każdy ma dokładnie jedno rozwiązanie, nie wymaga zgadywania i pokazuje swój poziom i stopień trudności. Rozwiązania drukują się na osobnej stronie, możesz je pominąć, a link na dole strony przypomina te same bulmaki z ich rozwiązaniami.",
+        "link": "Drukuj sudoku",
+        "level": "Poziom",
+        "count": "Bulmaki na stronę",
+        "solutions": "Dodaj rozwiązania",
+        "print": "Drukuj",
+        "refresh": "Nowe bulmaki",
+        "solutionsHeading": "Rozwiązania",
+        "sheet": "Te same bulmaki z rozwiązaniami: {url}",
+        "faq": [
+          [
+            "Ile bulmak mieści się na jednej stronie?",
+            "Jeden, dwa, cztery lub sześć. Z jednym lub dwoma siatki są duże, z sześcioma są mniejsze, ale nadal łatwe do wypełnienia. Rozwiązania drukują się na osobnej stronie, po trzy w rzędzie."
+          ],
+          [
+            "Mogę wydrukować bulmaka, w który gram?",
+            "Tak. Udostępnij bulmaka w menu gry kopiuje link kończący się na ?p= i 81 cyframi bulmaka. Otwórz tę stronę z tą samą częścią ?p=, a strona pokazuje tylko ten bulmaka, z jego rozwiązaniem, jeśli chcesz."
+          ],
+          [
+            "Czy mogę mieć rozwiązania później?",
+            "Tak. Link drukowany na dole strony otwiera te same bulmaki z ich rozwiązaniami. Aby uzyskać rozwiązanie krok po kroku z techniką za każdym ruchem, wpisz dane do solwera."
+          ]
+        ]
       }
     },
     "cs": {
@@ -1326,7 +1550,7 @@
         "Zvýraznění řádku, sloupce, bloku a stejné číslice; označování chyb lze vypnout",
         "Automatické ukládání, tmavý režim, klávesnice a rozložení na šířku",
         "Po první návštěvě funguje offline, bez obchodu s aplikacemi",
-        "223 jazyků, každý na vlastní stránce"
+        "60 jazyků, každý na vlastní stránce"
       ],
       "androidHeading": "Aplikace pro Android",
       "android": "Bare Sudoku existuje i jako nativní aplikace pro Android: verze {version}, asi {size} KB, žádná oprávnění, žádný přístup k internetu, čistá Java bez knihoven. Není na Google Play; stáhněte podepsané APK z GitHub Releases a nainstalujte je na Android 8 nebo novější.",
@@ -1377,7 +1601,7 @@
         ],
         [
           "V kolika jazycích je Bare Sudoku?",
-          "Ve 223 jazycích, každý na vlastní stránce. Nabídka jazyka ve hře přepne stránku a seznam pod hrou odkazuje na každý jazyk. Hra si vaši volbu pamatuje."
+          "60 jazyků, každý na vlastní stránce: Čeština, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी a další. Hra následuje jazyk stránky a pamatuje si vaši volbu."
         ]
       ],
       "madeBy": "Vytvořil Alparslan Selçuk Develioğlu",
@@ -1425,6 +1649,34 @@
             "Ne. Řešitel běží zcela ve vašem prohlížeči, offline také. Hádanku si můžete sdílet přidáním jejích 81 číslic do adresy jako ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku k tisku: Bezplatné hádanky v každé obtížnosti",
+        "description": "Tiskněte bezplatné sudoku: zvolte úroveň od Lehké po Mistr a jednu až šest hádanek na list, řešení na samostatné stránce. Bez reklam, bez registrace.",
+        "h1": "Sudoku k tisku",
+        "intro": "Zvolte úroveň a počet hádanek na list, pak tiskněte. Hádanky pocházejí ze stejného generátoru jako hra, takže každá má přesně jedno řešení, nevyžaduje hádání a ukazuje svou obtížnost a hodnocení. Řešení se tisknou na samostatné stránce, můžete je vynechat; odkaz na spodu listu vrátí stejné hádanky s jejich řešeními.",
+        "link": "Tisknout Sudoku",
+        "level": "Obtížnost",
+        "count": "Hádanek na list",
+        "solutions": "Zahrnout řešení",
+        "print": "Tisk",
+        "refresh": "Nové hádanky",
+        "solutionsHeading": "Řešení",
+        "sheet": "Stejné hádanky s řešením: {url}",
+        "faq": [
+          [
+            "Kolik hádanek se vejde na jeden list?",
+            "Jedna, dvě, čtyři nebo šest. U jedné a dvou jsou mřížky velké, u šesti menší, ale stále se snadno vyplňují. Řešení se tisknou na samostatné stránce, tři v řadě."
+          ],
+          [
+            "Mohu vytisknout hádanku, kterou právě hraji?",
+            "Ano. Sdílet hádanku v nabídce hry zkopíruje odkaz končící na ?p= a 81 číslic hádanky. Otevřete tuto stránku se stejnou částí ?p= a list ukazuje jen tu hádanku, s řešením, pokud si to přejete."
+          ],
+          [
+            "Mohu řešení dostat později?",
+            "Ano. Odkaz tištěný na spodu listu otevře stejné hádanky s jejich řešeními. Chcete-li řešení krok za krokem s technikou za každým tahem, vepište zadaná čísla do řešitele."
+          ]
+        ]
       }
     },
     "sk": {
@@ -1441,7 +1693,7 @@
         "Zvýraznenie riadka, stĺpca, bloku a rovnakej číslice; označovanie chýb sa dá vypnúť",
         "Automatické ukladanie, tmavý režim, klávesnica a rozloženie na šírku",
         "Po prvej návšteve funguje offline, bez obchodu s aplikáciami",
-        "223 jazykov, každý na vlastnej stránke"
+        "60 jazykov, každý na vlastnej stránke"
       ],
       "androidHeading": "Aplikácia pre Android",
       "android": "Bare Sudoku existuje aj ako natívna aplikácia pre Android: verzia {version}, približne {size} KB, žiadne povolenia, žiadny prístup na internet, čistá Java bez knižníc. Nie je v Google Play; stiahnite podpísané APK z GitHub Releases a nainštalujte ho na Android 8 alebo novší.",
@@ -1492,7 +1744,7 @@
         ],
         [
           "V koľkých jazykoch je Bare Sudoku?",
-          "V 223 jazykoch, každý na vlastnej stránke. Ponuka jazyka v hre prepne stránku a zoznam pod hrou odkazuje na každý jazyk. Hra si vašu voľbu pamätá."
+          "60 jazykov, každý na vlastnej stránke: Slovenčina, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी a ďalšie. Hra sleduje jazyk stránky a pamätá si vašu voľbu."
         ]
       ],
       "madeBy": "Vytvoril Alparslan Selçuk Develioğlu",
@@ -1540,6 +1792,34 @@
             "Nie. Riešiteľ beží úplne vo vašom prehliadači, offline tiež. Hlavolam si môžete zdieľať pridaním jeho 81 číslic do adresy ako ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku na tlač: Bezplatné hlavolamy v každej obtížnosti",
+        "description": "Tlačte bezplatné sudoku: vyberte úroveň od Ľahkej po Majstra a jeden až šesť hlavolamov na list, riešenia na osobitnej stránke. Bez reklám, bez registrácie.",
+        "h1": "Sudoku na tlač",
+        "intro": "Vyberte si úroveň a počet hlavolamov na liste, potom tlačte. Hlavolamy pochádzajú z rovnakého generátora ako hra, takže každý má presne jedno riešenie, nevyžaduje uhádnutie a ukazuje svoju obtížnosť a hodnotenie. Riešenia sa tlačia na samostatnej stránke, môžete ich vynechať; odkaz na konci listu vráti rovnaké hlavolamy s ich riešeniami.",
+        "link": "Tlač Sudoku",
+        "level": "Obtížnosť",
+        "count": "Hlavolamov na list",
+        "solutions": "Zahrnúť riešenia",
+        "print": "Tlač",
+        "refresh": "Nové hlavolamy",
+        "solutionsHeading": "Riešenia",
+        "sheet": "Rovnaké hlavolamy s riešeniami: {url}",
+        "faq": [
+          [
+            "Koľko hlavolamov sa zmestí na jeden list?",
+            "Jeden, dva, štyri alebo šesť. S jedným a dvoma sú mriežky veľké, so šiestimi menšie, ale stále sa ľahko vypĺňajú. Riešenia sa tlačia na samostatnej stránke, tri v rade."
+          ],
+          [
+            "Mohu tlačiť hlavolam, ktorý hrám?",
+            "Áno. Zdieľať hlavolam v menu hry skopíruje odkaz končiaci sa na ?p= a 81 číslic hlavolamu. Otvorte túto stránku s rovnakou časťou ?p= a list zobrazí len ten hlavolam, s riešením, ak chcete."
+          ],
+          [
+            "Mohu získať riešenia neskôr?",
+            "Áno. Odkaz tlačený na konci listu otvorí rovnaké hlavolamy s ich riešeniami. Pre riešenie krok za krokom s technikou za každým ťahom zadajte dané čísla do riešiteľa."
+          ]
+        ]
       }
     },
     "hu": {
@@ -1556,7 +1836,7 @@
         "Sor, oszlop, blokk és azonos számjegy kiemelése; kikapcsolható hibajelölés",
         "Automatikus mentés, sötét mód, billentyűzet és fekvő elrendezés",
         "Az első látogatás után offline is működik, nem kell alkalmazásbolt",
-        "223 nyelv, mindegyik saját oldalon"
+        "60 nyelv, mindegyik saját oldalon"
       ],
       "androidHeading": "Android-alkalmazás",
       "android": "A Bare Sudoku natív Android-alkalmazásként is létezik: {version} verzió, körülbelül {size} KB, engedélyek nélkül, internet-hozzáférés nélkül, tiszta Java, könyvtárak nélkül. Nincs a Google Playen; töltsd le az aláírt APK-t a GitHub Releases oldalról, és telepítsd Android 8 vagy újabb rendszerre.",
@@ -1607,7 +1887,7 @@
         ],
         [
           "Hány nyelven érhető el a Bare Sudoku?",
-          "223 nyelven, mindegyik saját oldalon. A játékbeli nyelvmenü oldalt vált, a játék alatti lista pedig minden nyelvre hivatkozik. A játék megjegyzi a választásodat."
+          "60 nyelven, mindegyik saját oldalon: Magyar, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी és még több. A játék követi az oldal nyelvét és megjegyzi a választásodat."
         ]
       ],
       "madeBy": "Készítette: Alparslan Selçuk Develioğlu",
@@ -1655,6 +1935,34 @@
             "Nem. A megoldó teljes egészében a böngészőjében fut, offline is. Egy feladatot megoszthat úgy, hogy a 81 számjegyét az URL-hez adja ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Nyomtatható Sudoku: Ingyenes feladványok minden szinten",
+        "description": "Nyomtatható sudoku-feladványokat: válassz szintet a Könnyűtől a Mesterig, egy hat feladványt lapra, a megoldások külön lapon. Reklám és regisztráció nélkül.",
+        "h1": "Nyomtatható sudoku",
+        "intro": "Válassz szintet és hány feladványt szeretnél lapra, majd nyomtass. A feladványok ugyanabból a generátorból jönnek, mint a játék, így mindegyiknek pontosan egy megoldása van, nem igényel találgatást, és megjeleníti szintjét és értékelését. A megoldások külön lapra nyomtatódnak, így elhagyhatod őket; a lap alján lévő link ugyanazokat a feladványokat adja vissza a megoldásaikkal.",
+        "link": "Sudoku nyomtatása",
+        "level": "Szint",
+        "count": "Feladványok lapra",
+        "solutions": "Megoldások beírása",
+        "print": "Nyomtatás",
+        "refresh": "Új feladványok",
+        "solutionsHeading": "Megoldások",
+        "sheet": "Ugyanezek a feladványok megoldásokkal: {url}",
+        "faq": [
+          [
+            "Hány feladat fér egy lapra?",
+            "Egy, két, négy vagy hat. Egy vagy két feladat esetén a rácsok nagyok, hat feladat esetén kisebbek, de még mindig könnyű kitölteni őket. A megoldások külön lapra nyomtatódnak, soronként három."
+          ],
+          [
+            "Ki tudom-e nyomtatni az éppen játszott feladványt?",
+            "Igen. A játékmenü Feladat megosztása elemét választva a ?p= végű és a feladat 81 számjegyét tartalmazó hivatkozás lemásolódik. Nyisd meg ezt az oldalt ugyanazzal a ?p= résszel, és a lap csak azt a feladványt mutatja meg, a megoldásával, ha azt szeretnéd."
+          ],
+          [
+            "Később meg tudom-e szerzni a megoldásokat?",
+            "Igen. A lap alján nyomtatott link ugyanazokat a feladványokat nyitja meg a megoldásaikkal. A lépésről lépésre történő megoldásért az eljárást magyarázó tippek mellett írd be az adott számokat a megoldóba."
+          ]
+        ]
       }
     },
     "ro": {
@@ -1671,7 +1979,7 @@
         "Evidențierea rândului, coloanei, blocului și a aceleiași cifre; marcarea greșelilor se poate opri",
         "Salvare automată, mod întunecat, tastatură și așezare pe orizontală",
         "Funcționează offline după prima vizită, fără magazin de aplicații",
-        "223 de limbi, fiecare pe pagina ei"
+        "60 de limbi, fiecare pe pagina ei"
       ],
       "androidHeading": "Aplicație Android",
       "android": "Bare Sudoku există și ca aplicație Android nativă: versiunea {version}, aproximativ {size} KB, fără permisiuni, fără acces la internet, Java pur fără biblioteci. Nu este pe Google Play; descarcă APK-ul semnat de pe GitHub Releases și instalează-l pe Android 8 sau mai nou.",
@@ -1722,7 +2030,7 @@
         ],
         [
           "În câte limbi este Bare Sudoku?",
-          "223 de limbi, fiecare pe propria pagină. Meniul de limbă din joc schimbă pagina, iar lista de sub joc trimite la fiecare limbă. Jocul îți reține alegerea."
+          "60 de limbi, fiecare pe propria pagină: Română, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी și altele. Jocul urmărește limba paginii și îți reține alegerea."
         ]
       ],
       "madeBy": "Creat de Alparslan Selçuk Develioğlu",
@@ -1770,6 +2078,34 @@
             "Nu. Rezolvitorul rulează în întregime în browser-ul tău, offline de asemenea. Puteți partaja un puzzle adăugând 81 de cifre la adresă ca ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku pentru tipărit: Puzzle-uri gratuite la fiecare nivel",
+        "description": "Tipărește Sudoku gratuit: alege nivel de la Ușor la Maestru, una până la șase puzzle-uri pe foaie, soluțiile pe pagina separată. Fără reclame, fără cont.",
+        "h1": "Puzzle-uri Sudoku",
+        "intro": "Alege un nivel și câte puzzle-uri dorești pe foaie, apoi tipărește. Puzzle-urile vin din același generator ca jocul, deci fiecare are exact o soluție, nu necesită ghicit și arată nivelul și evaluarea sa. Soluțiile se tipăresc pe pagina separată, deci le poți omite; linkul din josul foii aduce înapoi aceleași puzzle-uri cu soluțiile lor.",
+        "link": "Tipărire Sudoku",
+        "level": "Nivel",
+        "count": "Puzzle-uri pe foaie",
+        "solutions": "Includ soluțiile",
+        "print": "Tipărire",
+        "refresh": "Puzzle-uri noi",
+        "solutionsHeading": "Soluțiile",
+        "sheet": "Aceleași puzzle-uri cu soluțiile: {url}",
+        "faq": [
+          [
+            "Câte puzzle-uri încap pe o foaie?",
+            "Unu, doi, patru sau șase. Cu unu sau doi, grilele sunt mari, cu șase sunt mai mici, dar încă ușor de umplut. Soluțiile se tipăresc pe pagina separată, trei pe rând."
+          ],
+          [
+            "Pot tipări puzzle-ul pe care joc?",
+            "Da. Distribuie puzzle din meniul jocului copiază un link care se termină cu ?p= și cele 81 de cifre ale puzzle-ului. Deschide această pagină cu aceeași parte ?p=, și foaia arată doar acel puzzle, cu soluția dacă o vrei."
+          ],
+          [
+            "Pot obține soluțiile mai târziu?",
+            "Da. Linkul tipărit la josul foii deschide aceleași puzzle-uri cu soluțiile lor. Pentru o soluție pas cu pas cu tehnica din spatele fiecărei mutări, introdu cifrele date în rezolvitor."
+          ]
+        ]
       }
     },
     "el": {
@@ -1786,7 +2122,7 @@
         "Επισήμανση γραμμής, στήλης, μπλοκ και ίδιου ψηφίου· σήμανση λαθών που απενεργοποιείται",
         "Αυτόματη αποθήκευση, σκούρο θέμα, πληκτρολόγιο και οριζόντια διάταξη",
         "Λειτουργεί offline μετά την πρώτη επίσκεψη, χωρίς app store",
-        "223 γλώσσες, καθεμία στη δική της σελίδα"
+        "60 γλώσσες, καθεμία στη δική της σελίδα"
       ],
       "androidHeading": "Εφαρμογή Android",
       "android": "Το Bare Sudoku υπάρχει και ως εγγενής εφαρμογή Android: έκδοση {version}, περίπου {size} KB, χωρίς άδειες, χωρίς πρόσβαση στο internet, καθαρή Java χωρίς βιβλιοθήκες. Δεν είναι στο Google Play· κατέβασε το υπογεγραμμένο APK από το GitHub Releases και εγκατάστησέ το σε Android 8 ή νεότερο.",
@@ -1837,7 +2173,7 @@
         ],
         [
           "Σε πόσες γλώσσες υπάρχει το Bare Sudoku;",
-          "Σε 223 γλώσσες, καθεμία στη δική της σελίδα. Το μενού γλώσσας στο παιχνίδι αλλάζει σελίδα και η λίστα κάτω από το παιχνίδι συνδέει κάθε γλώσσα. Το παιχνίδι θυμάται την επιλογή σας."
+          "60 γλώσσες, καθεμία στη δική της σελίδα: Ελληνικά, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी και άλλα. Το παιχνίδι ακολουθεί τη γλώσσα της σελίδας και θυμάται την επιλογή σας."
         ]
       ],
       "madeBy": "Δημιουργός: Alparslan Selçuk Develioğlu",
@@ -1885,6 +2221,34 @@
             "Όχι. Ο επίλυσης τρέχει εντελώς στον browser σας, offline επίσης. Μπορείτε να μοιραστείτε ένα γρίφο προσθέτοντας τα 81 ψηφία του στη διεύθυνση ως ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Εκτυπώσιμο Sudoku: Δωρεάν Γρίφοι Σε Κάθε Επίπεδο",
+        "description": "Εκτυπώστε δωρεάν Sudoku: επιλέξτε επίπεδο από Εύκολο έως Μάστερ, έναν έως έξι γρίφους ανά σελίδα, λύσεις σε ξεχωριστή σελίδα. Χωρίς διαφημίσεις, χωρίς εγγραφή.",
+        "h1": "Εκτυπώσιμοι Γρίφοι Sudoku",
+        "intro": "Επιλέξτε επίπεδο και πόσους γρίφους θέλετε στη σελίδα, μετά εκτυπώστε. Οι γρίφοι προέρχονται από την ίδια γεννήτρια με το παιχνίδι, επομένως κάθε ένας έχει ακριβώς μία λύση, δεν χρειάζεται μάντεμα και δείχνει το επίπεδό του και την αξιολόγησή του. Οι λύσεις εκτυπώνονται σε ξεχωριστή σελίδα, ώστε να μπορείτε να τις παραλείψετε, και ο σύνδεσμος στο κάτω μέρος της σελίδας επιστρέφει τους ίδιους γρίφους με τις λύσεις τους.",
+        "link": "Εκτύπωση Sudoku",
+        "level": "Επίπεδο",
+        "count": "Γρίφοι ανά σελίδα",
+        "solutions": "Συμπερίληψη λύσεων",
+        "print": "Εκτύπωση",
+        "refresh": "Νέοι γρίφοι",
+        "solutionsHeading": "Λύσεις",
+        "sheet": "Οι ίδιοι γρίφοι με τις λύσεις: {url}",
+        "faq": [
+          [
+            "Πόσοι γρίφοι χωρούν σε μία σελίδα;",
+            "Ένας, δύο, τέσσερις ή έξι. Με ένα ή δύο, τα πλέγματα είναι μεγάλα, με έξι είναι μικρότερα αλλά εξακολουθούν να είναι εύκολα στη συμπλήρωση. Οι λύσεις εκτυπώνονται σε ξεχωριστή σελίδα, τρεις σε κάθε γραμμή."
+          ],
+          [
+            "Μπορώ να εκτυπώσω το γρίφο που παίζω;",
+            "Ναι. Κοινή χρήση γρίφου στο μενού παιχνιδιού αντιγράφει ένα σύνδεσμο που τελειώνει με ?p= και τα 81 ψηφία του γρίφου. Ανοίξτε αυτή τη σελίδα με το ίδιο ?p= μέρος, και η σελίδα δείχνει μόνο εκείνο το γρίφο, με τη λύση του αν το επιθυμείτε."
+          ],
+          [
+            "Μπορώ να πάρω τις λύσεις αργότερα;",
+            "Ναι. Ο σύνδεσμος που εκτυπώνεται στο κάτω μέρος της σελίδας ανοίγει τους ίδιους γρίφους με τις λύσεις τους. Για μία λύση βήμα προς βήμα με την τεχνική κάθε κίνησης, πληκτρολογήστε τους δεδομένους αριθμούς στο πρόγραμμα επίλυσης."
+          ]
+        ]
       }
     },
     "sv": {
@@ -1901,7 +2265,7 @@
         "Markering av rad, kolumn, ruta och samma siffra; felmarkering som kan stängas av",
         "Automatisk sparning, mörkt läge, tangentbord och liggande läge",
         "Fungerar offline efter första besöket, ingen appbutik behövs",
-        "223 språk, vart och ett på sin egen sida"
+        "60 språk, vart och ett på sin egen sida"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finns också som inbyggd Android-app: version {version}, cirka {size} KB, inga behörigheter, ingen internetåtkomst, ren Java utan bibliotek. Den finns inte på Google Play; ladda ner den signerade APK-filen från GitHub Releases och installera den på Android 8 eller senare.",
@@ -1952,7 +2316,7 @@
         ],
         [
           "På hur många språk finns Bare Sudoku?",
-          "223 språk, vart och ett på sin egen sida. Språkmenyn i spelet byter sida, och listan under spelet länkar till varje språk. Spelet kommer ihåg ditt val."
+          "60 språk, vart och ett på sin egen sida. Språkmenyn i spelet byter sida, och listan under spelet länkar till varje språk. Spelet kommer ihåg ditt val."
         ]
       ],
       "madeBy": "Skapad av Alparslan Selçuk Develioğlu",
@@ -2000,6 +2364,34 @@
             "Nej. Lösaren körs helt i din webbläsare, offline också. Du kan dela ett pussel genom att lägga till dess 81 siffror på adressen som ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku att skriva ut: Gratis pussel på alla nivåer",
+        "description": "Skriv ut gratis sudoku: välj nivå från Lätt till Mästare och 1-6 pussel per sida, med lösningar på separat sida. Ingen reklam, ingen registrering.",
+        "h1": "Sudoku att skriva ut",
+        "intro": "Välj en nivå och hur många pussel du vill ha på sidan, sedan skriv ut. Pusslena kommer från samma generator som spelet, så varje pussel har exakt en lösning, kräver ingen gissning och visar sin nivå och betyg. Lösningarna skrivs ut på en separat sida, så du kan lämna dem ute, och länken längst ned på sidan hämtar tillbaka samma pussel med sina lösningar.",
+        "link": "Skriv ut Sudoku",
+        "level": "Nivå",
+        "count": "Pussel per sida",
+        "solutions": "Inkludera lösningar",
+        "print": "Skriv ut",
+        "refresh": "Nya pussel",
+        "solutionsHeading": "Lösningar",
+        "sheet": "Samma pussel med lösningar: {url}",
+        "faq": [
+          [
+            "Hur många pussel får plats på en sida?",
+            "Ett, två, fyra eller sex. Med ett eller två är rutnäten stora, med sex är de mindre men fortfarande lätta att fylla i. Lösningarna skrivs ut på en separat sida, tre i rad."
+          ],
+          [
+            "Kan jag skriva ut det pussel jag spelar?",
+            "Ja. Dela pussel i spelmenyn kopierar en länk som slutar med ?p= och pusslets 81 siffror. Öppna denna sida med samma ?p=-del, och sidan visar bara det pusslet, med sin lösning om du vill."
+          ],
+          [
+            "Kan jag få lösningarna senare?",
+            "Ja. Länken som skrivs ut längst ned på sidan öppnar samma pussel med sina lösningar. För en steg-för-steg-lösning med tekniken bakom varje drag, skriv in giverna i lösaren."
+          ]
+        ]
       }
     },
     "da": {
@@ -2016,7 +2408,7 @@
         "Fremhævning af række, kolonne, boks og samme ciffer; fejlmarkering, der kan slås fra",
         "Automatisk gem, mørk tilstand, tastatur og liggende layout",
         "Virker offline efter første besøg, ingen app store nødvendig",
-        "223 sprog, hvert på sin egen side"
+        "60 sprog, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku findes også som native Android-app: version {version}, cirka {size} KB, ingen tilladelser, ingen internetadgang, ren Java uden biblioteker. Den er ikke på Google Play; hent den signerede APK fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -2067,7 +2459,7 @@
         ],
         [
           "Hvor mange sprog findes Bare Sudoku på?",
-          "223 sprog, hvert på sin egen side. Sprogmenuen i spillet skifter side, og listen under spillet linker til hvert sprog. Spillet husker dit valg."
+          "60 sprog, hvert på sin egen side. Sprogmenuen i spillet skifter side, og listen under spillet linker til hvert sprog. Spillet husker dit valg."
         ]
       ],
       "madeBy": "Lavet af Alparslan Selçuk Develioğlu",
@@ -2115,6 +2507,34 @@
             "Nej. Løseren kører helt i din browser, også offline. Du kan dele en opgave ved at tilføje dens 81 tal til adressen som ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Udskrivelig Sudoku: Gratis opgaver på alle niveauer",
+        "description": "Udskriv gratis sudoku: vælg niveau fra Let til Mester og 1-6 opgaver pr. side, med løsninger på separat side. Ingen reklamer, ingen tilmelding.",
+        "h1": "Udskrivelige sudoku-opgaver",
+        "intro": "Vælg et niveau og hvor mange opgaver du ønsker på siden, derefter udskrev. Opgaverne kommer fra den samme generator som spillet, så hver har præcis en løsning, kræver ingen gætteri og viser sit niveau og rating. Løsningerne udskrives på en separat side, så du kan lade dem være, og linket nederst på siden bringer de samme opgaver tilbage med deres løsninger.",
+        "link": "Udskriv Sudoku",
+        "level": "Niveau",
+        "count": "Opgaver pr. side",
+        "solutions": "Inkluder løsninger",
+        "print": "Udskriv",
+        "refresh": "Nye opgaver",
+        "solutionsHeading": "Løsninger",
+        "sheet": "De samme opgaver med løsninger: {url}",
+        "faq": [
+          [
+            "Hvor mange opgaver passer på en side?",
+            "En, to, fire eller seks. Med en eller to er rutenetene store, med seks er de mindre men stadig nemme at udfylde. Løsningerne udskrives på en separat side, tre på rækken."
+          ],
+          [
+            "Kan jeg udskrive den opgave, jeg spiller?",
+            "Ja. Del opgave i spillemenuen kopierer et link, der slutter med ?p= og opgavens 81 cifre. Åbn denne side med den samme ?p=-del, og siden viser kun den opgave, med sin løsning hvis du ønsker det."
+          ],
+          [
+            "Kan jeg få løsningerne senere?",
+            "Ja. Linket udskrevet nederst på siden åbner de samme opgaver med deres løsninger. For en trin-for-trin-løsning med teknikken bag hvert træk skal du skrive de givne tal ind i løseren."
+          ]
+        ]
       }
     },
     "nb": {
@@ -2131,7 +2551,7 @@
         "Utheving av rad, kolonne, boks og samme siffer; feilmarkering som kan slås av",
         "Automatisk lagring, mørk modus, tastatur og liggende visning",
         "Fungerer frakoblet etter første besøk, ingen appbutikk nødvendig",
-        "223 språk, hvert på sin egen side"
+        "60 språk, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finnes også som egen Android-app: versjon {version}, omtrent {size} KB, ingen tillatelser, ingen internettilgang, ren Java uten biblioteker. Den er ikke på Google Play; last ned den signerte APK-filen fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -2182,7 +2602,7 @@
         ],
         [
           "Hvor mange språk finnes Bare Sudoku på?",
-          "223 språk, hvert på sin egen side. Språkmenyen i spillet bytter side, og listen under spillet lenker til hvert språk. Spillet husker valget ditt."
+          "60 språk, hvert på sin egen side. Språkmenyen i spillet bytter side, og listen under spillet lenker til hvert språk. Spillet husker valget ditt."
         ]
       ],
       "madeBy": "Laget av Alparslan Selçuk Develioğlu",
@@ -2230,6 +2650,34 @@
             "Nei. Løseren kjører helt i nettleseren din, frakoblet også. Du kan dele ett brett ved å legge til dets 81 tall på adressen som ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku som kan skrives ut: Gratis oppgaver på alle nivåer",
+        "description": "Skriv ut gratis sudoku: velg nivå fra Lett til Mester og 1-6 oppgaver per side, med løsninger på egen side. Ingen annonser, ingen påmelding.",
+        "h1": "Sudoku som kan skrives ut",
+        "intro": "Velg et nivå og hvor mange oppgaver du vil ha på siden, deretter skriv ut. Oppgavene kommer fra samme generator som spillet, så hver oppgave har nøyaktig én løsning, krever ingen gjetting og viser sitt nivå og vanskelighetsgrad. Løsningene skrives ut på en egen side, så du kan utelate dem, og lenken nederst på siden bringer tilbake samme oppgaver med deres løsninger.",
+        "link": "Skriv ut Sudoku",
+        "level": "Nivå",
+        "count": "Oppgaver per side",
+        "solutions": "Inkluder løsninger",
+        "print": "Skriv ut",
+        "refresh": "Nye oppgaver",
+        "solutionsHeading": "Løsninger",
+        "sheet": "Samme oppgaver med løsninger: {url}",
+        "faq": [
+          [
+            "Hvor mange oppgaver passer på en side?",
+            "En, to, fire eller seks. Med en eller to er rutenetene store, med seks er de mindre men fortsatt lette å fylle ut. Løsningene skrives ut på en egen side, tre per rad."
+          ],
+          [
+            "Kan jeg skrive ut oppgaven jeg spiller?",
+            "Ja. Del oppgave i spillemenyen kopierer en lenke som slutter med ?p= og oppgavens 81 sifre. Åpne denne siden med samme ?p=-del, og siden viser bare den oppgaven, med løsningen hvis du ønsker det."
+          ],
+          [
+            "Kan jeg få løsningene senere?",
+            "Ja. Lenken som skrives ut nederst på siden åpner samme oppgaver med deres løsninger. For en trinn-for-trinn-løsning med teknikken bak hvert trekk, skriv inn de gitte tallene i løseren."
+          ]
+        ]
       }
     },
     "fi": {
@@ -2246,7 +2694,7 @@
         "Rivin, sarakkeen, ruudun ja saman numeron korostus; virhemerkintä, jonka voi kytkeä pois",
         "Automaattinen tallennus, tumma tila, näppäimistö ja vaaka-asettelu",
         "Toimii offline ensimmäisen käynnin jälkeen, ei sovelluskauppaa",
-        "223 kieltä, jokainen omalla sivullaan"
+        "60 kieltä, jokainen omalla sivullaan"
       ],
       "androidHeading": "Android-sovellus",
       "android": "Bare Sudoku on myös natiivi Android-sovellus: versio {version}, noin {size} KB, ei käyttöoikeuksia, ei internetyhteyttä, puhdasta Javaa ilman kirjastoja. Se ei ole Google Playssa; lataa allekirjoitettu APK GitHub Releases -sivulta ja asenna se Android 8:aan tai uudempaan.",
@@ -2297,7 +2745,7 @@
         ],
         [
           "Kuinka monella kielellä Bare Sudoku on?",
-          "223 kielellä, jokainen omalla sivullaan. Pelin kielivalikko vaihtaa sivua, ja pelin alla oleva luettelo linkittää jokaiseen kieleen. Peli muistaa valintasi."
+          "60 kielellä, jokainen omalla sivullaan. Pelin kielivalikko vaihtaa sivua, ja pelin alla oleva luettelo linkittää jokaiseen kieleen. Peli muistaa valintasi."
         ]
       ],
       "madeBy": "Tekijä: Alparslan Selçuk Develioğlu",
@@ -2345,6 +2793,34 @@
             "Ei. Ratkaisija toimii kokonaan selaimessasi, myos offline-tilassa. Voit jaa palapelin lisäämällä sen 81 numeroa osoitteeseen muodossa ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Tulostettava Sudoku: Ilmaisia pulmia joka tasolla",
+        "description": "Tulosta ilmaisia sudokutehtäviä: valitse taso Helposta Mestariin ja 1-6 tehtävää sivua kohti, ratkaisut erillisellä sivulla. Ei mainoksia, ei rekisteröintiä.",
+        "h1": "Tulostettavat sudokutehtävät",
+        "intro": "Valitse taso ja kuinka monta tehtävää haluat sivulle, sitten tulosta. Tehtävät tulevat saman generaattorin kautta kuin peli, joten jokainen tehtävä on tasan yksi ratkaisu, ei arvaamista ja näyttää sen tason sekä vaikeustason. Ratkaisut tulostetaan erilliselle sivulle, joten voit jättää ne pois, ja sivun alalaidassa oleva linkki palauttaa samat tehtävät niiden ratkaisuineen.",
+        "link": "Tulosta Sudoku",
+        "level": "Taso",
+        "count": "Tehtäviä sivua kohti",
+        "solutions": "Sisällytä ratkaisut",
+        "print": "Tulosta",
+        "refresh": "Uusia tehtäviä",
+        "solutionsHeading": "Ratkaisut",
+        "sheet": "Samat tehtävät ratkaisuineen: {url}",
+        "faq": [
+          [
+            "Kuinka monta tehtävää mahtuu yhdelle sivulle?",
+            "Yksi, kaksi, neljä tai kuusi. Yhdessä tai kahdessa ruudukot ovat isot, kuudessa pienemmät mutta silti helppo täyttää. Ratkaisut tulostetaan erilliselle sivulle, kolme per rivi."
+          ],
+          [
+            "Voinko tulostaa tehtävän, jota olen pelaamassa?",
+            "Kyllä. Jaa palapeli -peli-valikossa kopioi linkin, joka päättyy ?p=:hen ja tehtävän 81 numeroon. Avaa tämä sivu samalla ?p=-osalla, ja sivulla näkyy vain kyseinen tehtävä, ratkaisuineen jos haluat."
+          ],
+          [
+            "Voinko saada ratkaisut myöhemmin?",
+            "Kyllä. Sivun alalaidassa tulostettu linkki avaa samat tehtävät niiden ratkaisuineen. Vaihe vaiheelta -ratkaisun saamiseksi jokaisen siirron tekniikalla kirjoita annetut luvut ratkaisijaan."
+          ]
+        ]
       }
     },
     "ru": {
@@ -2361,7 +2837,7 @@
         "Подсветка строки, столбца, блока и одинаковых цифр; отключаемая отметка ошибок",
         "Автосохранение, тёмная тема, клавиатура и горизонтальная раскладка",
         "После первого визита работает офлайн, магазин приложений не нужен",
-        "223 языка, у каждого своя страница"
+        "60 языков, каждый на своей странице"
       ],
       "androidHeading": "Приложение для Android",
       "android": "Bare Sudoku есть и как нативное приложение для Android: версия {version}, около {size} КБ, без разрешений, без доступа в интернет, чистая Java без библиотек. Его нет в Google Play; скачай подписанный APK со страницы GitHub Releases и установи на Android 8 или новее.",
@@ -2412,7 +2888,7 @@
         ],
         [
           "На скольких языках есть Bare Sudoku?",
-          "223 языков, каждый на своей странице. Меню языка в игре переключает страницу, а список под игрой ведёт на каждый язык. Игра запоминает ваш выбор."
+          "60 языков, каждый на своей странице. Выбор языка в игре меняет страницу, а список под игрой приводит к каждому языку. Игра запомнит ваш выбор."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -2460,6 +2936,34 @@
             "Нет. Решатель работает полностью в браузере, также оффлайн. Вы можете поделиться пазлом, добавив его 81 цифру в адрес как ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Печатное судоку: бесплатные головоломки всех уровней",
+        "description": "Печатайте бесплатное судоку: выберите уровень от лёгкого до мастера и одну-шесть головоломок на страницу с решениями отдельно. Без рекламы и регистрации.",
+        "h1": "Печатное судоку",
+        "intro": "Выберите уровень и количество головоломок на странице, затем печатайте. Головоломки создаются тем же генератором, что и в игре, поэтому у каждой ровно одно решение, она не требует угадывания и показывает свой уровень и сложность. Решения печатаются на отдельной странице, вы можете их исключить, а ссылка внизу страницы воспроизводит те же головоломки с их решениями.",
+        "link": "Печать судоку",
+        "level": "Уровень",
+        "count": "Головоломок на странице",
+        "solutions": "Добавить решения",
+        "print": "Печать",
+        "refresh": "Новые головоломки",
+        "solutionsHeading": "Решения",
+        "sheet": "Те же головоломки с решениями: {url}",
+        "faq": [
+          [
+            "Сколько головоломок помещается на одной странице?",
+            "Одна, две, четыре или шесть. При одной или двух сетки большие, при шести они меньше, но всё равно удобно заполняются. Решения печатаются на отдельной странице, по три в ряд."
+          ],
+          [
+            "Могу ли я напечатать головоломку, в которую играю?",
+            "Да. Функция «Поделиться головоломкой» в меню игры копирует ссылку, которая заканчивается на ?p= и 81 цифрой головоломки. Откройте эту страницу с тем же параметром ?p=, и страница покажет только эту головоломку с её решением, если вы хотите."
+          ],
+          [
+            "Могу ли я получить решения позже?",
+            "Да. Ссылка, напечатанная внизу страницы, открывает те же головоломки с их решениями. Для пошагового решения с объяснением техники для каждого шага введите исходные цифры в решатель."
+          ]
+        ]
       }
     },
     "uk": {
@@ -2476,7 +2980,7 @@
         "Підсвічування рядка, стовпця, блоку та однакових цифр; позначення помилок можна вимкнути",
         "Автозбереження, темна тема, клавіатура та горизонтальна розкладка",
         "Після першого візиту працює офлайн, магазин застосунків не потрібен",
-        "223 мови, кожна на своїй сторінці"
+        "60 мов, кожна на своїй сторінці"
       ],
       "androidHeading": "Застосунок для Android",
       "android": "Bare Sudoku є і як нативний застосунок для Android: версія {version}, близько {size} КБ, без дозволів, без доступу до інтернету, чиста Java без бібліотек. Його немає в Google Play; завантаж підписаний APK зі сторінки GitHub Releases і встанови на Android 8 або новішу.",
@@ -2527,7 +3031,7 @@
         ],
         [
           "Скількома мовами доступний Bare Sudoku?",
-          "223 мов, кожна на своїй сторінці. Меню мови в грі перемикає сторінку, а список під грою веде до кожної мови. Гра запам'ятовує ваш вибір."
+          "60 мов, кожна на своїй сторінці. Вибір мови в грі змінює сторінку, а список під грою веде до кожної мови. Гра запам'ятає ваш вибір."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -2575,6 +3079,34 @@
             "Ні. Розв'язувач працює повністю в браузері, також офлайн. Ви можете поділитися головоломкою, додавши її 81 цифру в адресу як ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Друковане судоку: безплатні головоломки всіх рівнів",
+        "description": "Друкуйте безплатне судоку: обирайте рівень від легкого до майстра та одну-шість головоломок на сторінку з розв'язками окремо. Без реклами й реєстрації.",
+        "h1": "Друковане судоку",
+        "intro": "Оберіть рівень і кількість головоломок на сторінці, потім друкуйте. Головоломки генеруються тим самим генератором, що й у грі, тому кожна має рівно один розв'язок, не потребує угадування й показує свій рівень і складність. Розв'язки друкуються на окремій сторінці, їх можна пропустити, а посилання внизу сторінки відкриває ті самі головоломки з їхніми розв'язками.",
+        "link": "Друкувати судоку",
+        "level": "Рівень",
+        "count": "Головоломок на сторінці",
+        "solutions": "Додати розв'язки",
+        "print": "Друкувати",
+        "refresh": "Нові головоломки",
+        "solutionsHeading": "Розв'язки",
+        "sheet": "Ті самі головоломки з розв'язками: {url}",
+        "faq": [
+          [
+            "Скільки головоломок міститься на одній сторінці?",
+            "Одна, дві, чотири або шість. При одній чи двох сітки великі, при шести вони менші, але все ще зручні для заповнення. Розв'язки друкуються на окремій сторінці, по три в рядку."
+          ],
+          [
+            "Чи можу я надрукувати головоломку, у яку граю?",
+            "Так. Функція «Поділитися головоломкою» в меню гри копіює посилання, яке закінчується на ?p= та 81 цифрою головоломки. Відкрийте цю сторінку з тим самим параметром ?p=, і сторінка покаже лише цю головоломку з її розв'язком, якщо хочете."
+          ],
+          [
+            "Чи можу я отримати розв'язки пізніше?",
+            "Так. Посилання, надруковане внизу сторінки, відкриває ті самі головоломки з їхніми розв'язками. Для покрокового розв'язання з поясненням прийому на кожному кроку введіть дані цифри в розв'язувач."
+          ]
+        ]
       }
     },
     "bg": {
@@ -2591,7 +3123,7 @@
         "Открояване на ред, колона, блок и еднаква цифра; отбелязване на грешки, което може да се изключи",
         "Автоматично запазване, тъмен режим, клавиатура и хоризонтално оформление",
         "Работи офлайн след първото посещение, без магазин за приложения",
-        "223 езика, всеки на своя страница"
+        "60 езика, всеки на своя страница"
       ],
       "androidHeading": "Приложение за Android",
       "android": "Bare Sudoku съществува и като нативно приложение за Android: версия {version}, около {size} КБ, без разрешения, без достъп до интернет, чиста Java без библиотеки. Няма го в Google Play; изтегли подписания APK от GitHub Releases и го инсталирай на Android 8 или по-нов.",
@@ -2642,7 +3174,7 @@
         ],
         [
           "На колко езика е Bare Sudoku?",
-          "На 223 езика, всеки на своя страница. Менюто за език в играта сменя страницата, а списъкът под играта води към всеки език. Играта помни избора ви."
+          "60 езика, всеки на своя страница: Български, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी и други. Играта следва езика на страницата и помни избора ви."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -2690,6 +3222,34 @@
             "Не. Решавачът работи напълно в браузъра ти, офлайн също. Можеш да сподели задача, добавяйки нейните 81 цифри към адреса като ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Судоку за печат: Безплатни задачи на всяко ниво",
+        "description": "Печатайте безплатни судоку: изберете ниво от Лесно до Майстор и един до шест пъзела на лист, решенията на отделна страница. Без реклами, без регистрация.",
+        "h1": "Судоку задачи за печат",
+        "intro": "Изберете ниво и колко задачи искате на листа, след това печатайте. Задачите идват от един и същи генератор като играта, затова всяка има точно едно решение, не изисква гадаене и показва нивото си и оценката си. Решенията се печатат на отделна страница, така че можете да ги пропуснете, а връзката в дъното на листа връща същите задачи с техните решения.",
+        "link": "Печатай Судоку",
+        "level": "Ниво",
+        "count": "Задачи на лист",
+        "solutions": "Включи решения",
+        "print": "Печатай",
+        "refresh": "Нови задачи",
+        "solutionsHeading": "Решения",
+        "sheet": "Същите задачи с решения: {url}",
+        "faq": [
+          [
+            "Колко задачи влизат на един лист?",
+            "Една, две, четири или шест. При една или две сеткат са големи, при шест са по-малки, но все още лесни за попълване. Решенията се печатат на отделна страница, по три на ред."
+          ],
+          [
+            "Мога ли да печатам задачата, която играя?",
+            "Да. Споделяне на задача в меню на играта копира връзка, която се завършва с ?p= и 81 цифрите на задачата. Отворете тази страница със същото ?p= част, и листът показва само тази задача, с решението й, ако искате."
+          ],
+          [
+            "Мога ли да получа решенията по-късно?",
+            "Да. Връзката, отпечатана в дъното на листа, отваря същите задачи с техните решения. За решение стъпка по стъпка с техниката за всеки ход, въведете дадените числа в решавача."
+          ]
+        ]
       }
     },
     "sr": {
@@ -2706,7 +3266,7 @@
         "Isticanje reda, kolone, bloka i iste cifre; označavanje grešaka koje se može isključiti",
         "Automatsko čuvanje, tamni režim, tastatura i horizontalni raspored",
         "Radi oflajn posle prve posete, bez prodavnice aplikacija",
-        "223 jezika, svaki na svojoj stranici"
+        "60 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Play-u; preuzmi potpisani APK sa GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -2757,7 +3317,7 @@
         ],
         [
           "Na koliko jezika postoji Bare Sudoku?",
-          "Na 223 jezika, svaki na svojoj stranici. Meni jezika u igri menja stranicu, a spisak ispod igre vodi na svaki jezik. Igra pamti tvoj izbor."
+          "60 jezika, svaki na svojoj stranici: Srpski, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी i još. Igra prati jeziku stranice i pamti tvoj izbor."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -2805,6 +3365,34 @@
             "Ne. Rešavač se pokreće potpuno u tvom pregledniku, i bez interneta. Zagonetku možeš podeliti dodavanjem 81 cifre adresi kao ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Štampljiva Sudoku: Besplatne zagonetke na svakom nivou",
+        "description": "Štampaj besplatne sudoku zagonetke na nivou od Lakog do Glavnog, 1-6 po stranici, sa rešenjima na zasebnoj stranici. Bez reklama, bez registracije.",
+        "h1": "Štampljive sudoku zagonetke",
+        "intro": "Odaberi nivo i koliko zagonetki želiš na stranici, pa štampaj. Zagonetke dolaze iz istog generatora kao igra, tako da svaka ima tačno jedno rešenje, ne traži pogađanje i prikazuje svoj nivo i ocenu. Rešenja se štampaju na zasebnoj stranici, pa ih možeš izostaviti, a veza na dnu stranice vraća iste zagonetke sa njihovim rešenjima.",
+        "link": "Štampaj Sudoku",
+        "level": "Nivo",
+        "count": "Zagonetki po stranici",
+        "solutions": "Uključi rešenja",
+        "print": "Štampaj",
+        "refresh": "Nove zagonetke",
+        "solutionsHeading": "Rešenja",
+        "sheet": "Iste zagonetke sa rešenjima: {url}",
+        "faq": [
+          [
+            "Koliko zagonetki stane na jednu stranicu?",
+            "Jedna, dve, četiri ili šest. Sa jednom ili dve mreže su velike, sa šest su manje ali i dalje lako se popunjavaju. Rešenja se štampaju na zasebnoj stranici, tri po redu."
+          ],
+          [
+            "Mogu li štampati zagonetku koju igram?",
+            "Da. Podeli zagonetku u meniju igre kopira vezu koja se završava sa ?p= i 81 cifrom zagonetke. Otvori ovu stranicu sa istim ?p= delom, a stranica prikazuje samo tu zagonetku, sa njeним rešenjem ako to želiš."
+          ],
+          [
+            "Mogu li kasnije dobiti rešenja?",
+            "Da. Veza štampana na dnu stranice otvara iste zagonetke sa njihovim rešenjima. Za korak-po-korak rešenje sa tehnikom iza svakog poteza, upiši date brojeve u rešavač."
+          ]
+        ]
       }
     },
     "hr": {
@@ -2821,7 +3409,7 @@
         "Isticanje retka, stupca, bloka i iste znamenke; označavanje pogrešaka koje se može isključiti",
         "Automatsko spremanje, tamni način, tipkovnica i vodoravni raspored",
         "Radi offline nakon prvog posjeta, bez trgovine aplikacija",
-        "223 jezika, svaki na svojoj stranici"
+        "60 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Playu; preuzmi potpisani APK s GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -2872,7 +3460,7 @@
         ],
         [
           "Na koliko je jezika Bare Sudoku?",
-          "Na 223 jezika, svaki na vlastitoj stranici. Izbornik jezika u igri mijenja stranicu, a popis ispod igre vodi na svaki jezik. Igra pamti tvoj izbor."
+          "60 jezika, svaki na svojoj stranici: Hrvatski, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी i više. Igra prati jeziku stranice i pamti tvoj izbor."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -2920,6 +3508,34 @@
             "Ne. Rješavač se pokreće potpuno u tvom pregledniku, i bez interneta. Zagonetku možeš podijeliti dodavanjem 81 znamenke adresi kao ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Isprintaj Sudoku: Besplatne zagonetke na svakoj razini",
+        "description": "Isprintaj besplatne sudoku zagonetke na razini od Lakog do Majstora, 1-6 po stranici, sa rješenjima na zasebnoj stranici. Bez reklama, bez registracije.",
+        "h1": "Isprintljive sudoku zagonetke",
+        "intro": "Odaberi razinu i koliko zagonetki želiš na stranici, pa isprintaj. Zagonetke dolaze iz istog otioca kao igra, tako da svaka ima točno jedno rješenje, ne traži pogađanje i prikazuje svoju razinu i ocjenu. Rješenja se ispisuju na zasebnoj stranici, pa ih možeš izostaviti, a poveznica na dnu stranice vraća iste zagonetke sa njihovim rješenjima.",
+        "link": "Isprintaj Sudoku",
+        "level": "Razina",
+        "count": "Zagonetki po stranici",
+        "solutions": "Uključi rješenja",
+        "print": "Isprintaj",
+        "refresh": "Nove zagonetke",
+        "solutionsHeading": "Rješenja",
+        "sheet": "Iste zagonetke sa rješenjima: {url}",
+        "faq": [
+          [
+            "Koliko zagonetki stane na jednu stranicu?",
+            "Jedna, dvije, četiri ili šest. Sa jednom ili dvije mreže su velike, sa šest su manje ali i dalje lako se popunjavaju. Rješenja se ispisuju na zasebnoj stranici, tri po redu."
+          ],
+          [
+            "Mogu li isprintati zagonetku koju igram?",
+            "Da. Dijeli zagonetku u izborniku igre kopira poveznicu koja se završava sa ?p= i 81 znamenkom zagonetke. Otvori ovu stranicu sa istim dijelom ?p=, a stranica prikazuje samo tu zagonetku, sa njezinim rješenjem ako to želiš."
+          ],
+          [
+            "Mogu li kasnije dobiti rješenja?",
+            "Da. Poveznica ispisana na dnu stranice otvara iste zagonetke sa njihovim rješenjima. Za korak-po-korak rješenje s tehnikom iza svakog poteza, upišite dane brojeve u rješavač."
+          ]
+        ]
       }
     },
     "ar": {
@@ -2936,7 +3552,7 @@
         "إبراز الصف والعمود والمربع والرقم نفسه؛ تعليم الأخطاء قابل للإيقاف",
         "حفظ تلقائي ووضع داكن ودعم لوحة المفاتيح وتخطيط أفقي",
         "يعمل دون اتصال بعد الزيارة الأولى، دون متجر تطبيقات",
-        "223 لغة، لكل منها صفحتها الخاصة"
+        "60 لغة، لكل منها صفحتها الخاصة"
       ],
       "androidHeading": "تطبيق أندرويد",
       "android": "Bare Sudoku متوفر أيضًا كتطبيق أندرويد أصلي: الإصدار {version}، نحو {size} كيلوبايت، بلا أذونات، بلا وصول إلى الإنترنت، جافا خالصة بلا مكتبات. ليس على Google Play؛ نزّل ملف APK الموقّع من GitHub Releases وثبّته على أندرويد 8 أو أحدث.",
@@ -2987,7 +3603,7 @@
         ],
         [
           "كم لغة يدعم Bare Sudoku؟",
-          "223 لغة، لكل منها صفحتها الخاصة. قائمة اللغة داخل اللعبة تبدّل الصفحة، والقائمة أسفل اللعبة تصل إلى كل لغة. تتذكر اللعبة اختيارك."
+          "60 لغة، لكل منها صفحتها الخاصة. قائمة اللغة داخل اللعبة تبدّل الصفحة، والقائمة أسفل اللعبة تصل إلى كل لغة. تتذكر اللعبة اختيارك."
         ]
       ],
       "madeBy": "من صنع Alparslan Selçuk Develioğlu",
@@ -3035,6 +3651,34 @@
             "لا. يعمل الحل بالكامل في المتصفح، وبدون اتصال أيضًا. يمكنك مشاركة لغز بإضافة 81 رقمًا إلى العنوان بصيغة ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "سودوكو قابل للطباعة: ألغاز مجانية للطباعة في كل مستوى",
+        "description": "اطبع ألغاز سودوكو مجانية: اختر مستوى من السهل إلى الخبير وواحد إلى ستة ألغاز في الصفحة، مع الحلول على صفحة منفصلة. بلا إعلانات، بلا تسجيل.",
+        "h1": "ألغاز سودوكو قابلة للطباعة",
+        "intro": "اختر مستوى وعدد الألغاز التي تريدها على الصفحة، ثم اطبع. تأتي الألغاز من نفس مولد اللعبة، لذا لكل منها حل واحد بالضبط، ولا تحتاج إلى التخمين وتعرض مستواك والتقييم. تطبع الحلول على صفحة منفصلة، لذا يمكنك تركها، والرابط أسفل الورقة يعيد نفس الألغاز مع حلولها.",
+        "link": "اطبع سودوكو",
+        "level": "المستوى",
+        "count": "الألغاز في الصفحة",
+        "solutions": "أدرج الحلول",
+        "print": "اطبع",
+        "refresh": "ألغاز جديدة",
+        "solutionsHeading": "الحلول",
+        "sheet": "نفس الألغاز مع الحلول: {url}",
+        "faq": [
+          [
+            "كم عدد الألغاز التي تناسب على صفحة واحدة؟",
+            "واحد أو اثنان أو أربعة أو ستة. مع واحد أو اثنين تكون الشبكات كبيرة، مع ستة تكون أصغر لكن لا تزال سهلة الملء. تطبع الحلول على صفحة منفصلة، ثلاثة في صف."
+          ],
+          [
+            "هل يمكنني طباعة اللغز الذي أشغله؟",
+            "نعم. مشاركة اللغز في قائمة اللعبة تنسخ رابطًا ينتهي بـ ?p= وأرقام اللغز الـ 81. افتح هذه الصفحة بنفس جزء ?p=، والورقة تعرض ذلك اللغز وحده، مع الحل إذا كنت تريده."
+          ],
+          [
+            "هل يمكنني الحصول على الحلول لاحقًا؟",
+            "نعم. الرابط المطبوع أسفل الورقة يفتح نفس الألغاز مع حلولها. لحل خطوة بخطوة مع التقنية خلف كل حركة، اكتب المعطيات في الحل."
+          ]
+        ]
       }
     },
     "fa": {
@@ -3051,7 +3695,7 @@
         "برجسته‌سازی سطر، ستون، جعبه و رقم یکسان؛ علامت‌گذاری خطا که می‌توان خاموشش کرد",
         "ذخیرهٔ خودکار، حالت تاریک، صفحه‌کلید و چیدمان افقی",
         "پس از اولین بازدید آفلاین کار می‌کند، بدون نیاز به فروشگاه برنامه",
-        "۳۷ زبان، هر کدام در صفحهٔ خودش"
+        "۶۰ زبان، هر کدام در صفحهٔ خودش"
       ],
       "androidHeading": "برنامهٔ اندروید",
       "android": "Bare Sudoku به‌صورت برنامهٔ بومی اندروید هم موجود است: نسخهٔ {version}، حدود {size} کیلوبایت، بدون مجوز، بدون دسترسی به اینترنت، جاوای خالص بدون کتابخانه. در Google Play نیست؛ فایل APK امضاشده را از GitHub Releases دانلود کن و روی اندروید ۸ یا جدیدتر نصب کن.",
@@ -3102,7 +3746,7 @@
         ],
         [
           "Bare Sudoku به چند زبان است؟",
-          "۲۲۳ زبان، هر کدام در صفحهٔ خودش. منوی زبان در بازی صفحه را عوض می‌کند و فهرست زیر بازی به همهٔ زبان‌ها پیوند دارد. بازی انتخاب شما را به خاطر می‌سپارد."
+          "۶۰ زبان، هر کدام در صفحهٔ خودش. منوی زبان در بازی صفحه را عوض می‌کند و فهرست زیر بازی به همهٔ زبان‌ها پیوند دارد. بازی انتخاب شما را به خاطر می‌سپارد."
         ]
       ],
       "madeBy": "ساختهٔ Alparslan Selçuk Develioğlu",
@@ -3150,6 +3794,34 @@
             "نه. حل‌کننده کاملاً در مرورگر اجرا می‌شود، آفلاین هم. می‌توانی جدول را با افزودن 81 رقمش به نشانی با ?p= اشتراک کنی."
           ]
         ]
+      },
+      "print": {
+        "title": "جدول سودوکو قابل‌چاپ: جداول رایگان برای چاپ در هر سطح",
+        "description": "جداول سودوکوی رایگان برای چاپ: سطحی از آسان تا استاد را انتخاب کنید و یک تا شش جدول در صفحه، با جواب‌ها در صفحهٔ جداگانه. بدون تبلیغ، بدون ثبت‌نام.",
+        "h1": "جداول سودوکو قابل‌چاپ",
+        "intro": "سطحی انتخاب کنید و تعداد جدول‌هایی که می‌خواهید در صفحه تعیین کنید، سپس چاپ کنید. جداول از همان تولیدکننده بازی می‌آیند، بنابراین هر کدام دقیقاً یک جواب دارند، به حدس نیاز ندارند و سطح و رتبه‌بندی خود را نمایش می‌دهند. جواب‌ها در صفحهٔ جداگانه چاپ می‌شوند، بنابراین می‌توانید آن‌ها را حذف کنید و پیوند در پایین کاغذ جداول یکسان را با جواب‌های آن‌ها برمی‌گرداند.",
+        "link": "سودوکو چاپ کنید",
+        "level": "سطح",
+        "count": "جدول در صفحه",
+        "solutions": "شامل جواب‌ها",
+        "print": "چاپ",
+        "refresh": "جداول جدید",
+        "solutionsHeading": "جواب‌ها",
+        "sheet": "جداول یکسان با جواب‌ها: {url}",
+        "faq": [
+          [
+            "چند جدول در یک صفحه جا می‌شوند؟",
+            "یک، دو، چهار یا شش. با یک یا دو، شبکه‌ها بزرگ‌اند، با شش کوچک‌تر‌اند ولی پر کردن آن‌ها آسان است. جواب‌ها در صفحهٔ جداگانه چاپ می‌شوند، سه در یک ردیف."
+          ],
+          [
+            "می‌توانم جدول فعلی خود را چاپ کنم؟",
+            "بله. اشتراک جدول در منوی بازی پیوندی کپی می‌کند که با ?p= و ۸۱ رقم جدول پایان می‌یابد. این صفحه را با همان قسمت ?p= باز کنید، و کاغذ آن جدول را تنها نشان می‌دهد، با جواب اگر بخواهید."
+          ],
+          [
+            "می‌توانم جواب‌ها را بعداً بگیرم؟",
+            "بله. پیوند چاپ‌شده در پایین کاغذ جداول یکسان را با جواب‌های آن‌ها باز می‌کند. برای حل گام‌به‌گام با تکنیک پشت هر حرکت، متن‌های داده‌شده را به حل‌کننده وارد کنید."
+          ]
+        ]
       }
     },
     "he": {
@@ -3166,7 +3838,7 @@
         "הדגשת שורה, עמודה, תיבה ואותה ספרה; סימון טעויות שאפשר לכבות",
         "שמירה אוטומטית, מצב כהה, תמיכה במקלדת ופריסה לרוחב",
         "עובד בלי אינטרנט אחרי הביקור הראשון, בלי חנות אפליקציות",
-        "223 שפות, לכל אחת דף משלה"
+        "60 שפות, לכל אחת דף משלה"
       ],
       "androidHeading": "אפליקציית אנדרואיד",
       "android": "Bare Sudoku קיים גם כאפליקציית אנדרואיד מקורית: גרסה {version}, כ-{size} KB, בלי הרשאות, בלי גישה לאינטרנט, Java טהורה בלי ספריות. היא לא ב-Google Play; הורידו את קובץ ה-APK החתום מ-GitHub Releases והתקינו על אנדרואיד 8 ומעלה.",
@@ -3217,7 +3889,7 @@
         ],
         [
           "בכמה שפות Bare Sudoku זמין?",
-          "223 שפות, לכל אחת עמוד משלה. תפריט השפה במשחק מחליף עמוד, והרשימה מתחת למשחק מקשרת לכל שפה. המשחק זוכר את הבחירה שלכם."
+          "60 שפות, לכל אחת עמוד משלה. תפריט השפה במשחק מחליף עמוד, והרשימה מתחת למשחק מקשרת לכל שפה. המשחק זוכר את הבחירה שלכם."
         ]
       ],
       "madeBy": "נוצר על ידי Alparslan Selçuk Develioğlu",
@@ -3265,6 +3937,34 @@
             "לא. הפותר עובד לחלוטין בדפדפן שלך, גם בלי אינטרנט. אתה יכול לשתף חידה על ידי הוספת 81 הספרות שלה לכתובת כ-?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "סודוקו שניתן להדפסה: חידות חינם להדפסה בכל רמה",
+        "description": "הדפסת חידות סודוקו חינם: בחרו רמה מקל למורה וחידה אחת עד שש בעמוד, עם הפתרונות בעמוד נפרד. בלי פרסומות, בלי הרשמה.",
+        "h1": "חידות סודוקו שניתנות להדפסה",
+        "intro": "בחרו רמה וכמה חידות אתם רוצים בעמוד, ואז הדפיסו. החידות באות מאותו מחולל כמו המשחק, אז לכל אחת יש פתרון אחד בדיוק, לא צריך ניחוש ומראים את הרמה והדירוג. הפתרונות מודפסים בעמוד נפרד, אז אתם יכולים להשאיר אותם בחוץ, והקישור בתחתית הדף מחזיר את אותן החידות עם הפתרונות שלהן.",
+        "link": "הדפס סודוקו",
+        "level": "רמה",
+        "count": "חידות בעמוד",
+        "solutions": "כלול פתרונות",
+        "print": "הדפס",
+        "refresh": "חידות חדשות",
+        "solutionsHeading": "פתרונות",
+        "sheet": "אותן החידות עם הפתרונות: {url}",
+        "faq": [
+          [
+            "כמה חידות נכנסות לעמוד אחד?",
+            "אחת, שתיים, ארבע או שש. עם אחת או שתיים הרשתות גדולות, עם שש הן קטנות יותר אבל עדיין קל למלא. הפתרונות מודפסים בעמוד נפרד, שלוש בשורה."
+          ],
+          [
+            "אני יכול להדפיס את החידה שאני משחק?",
+            "כן. שתף חידה בתפריט המשחק מעתיק קישור שמסתיים ב-?p= ו-81 הספרות של החידה. פתחו את העמוד הזה עם אותו חלק ?p=, והעמוד מראה רק את החידה הזו, עם הפתרון אם אתם רוצים."
+          ],
+          [
+            "אני יכול לקבל את הפתרונות אחר כך?",
+            "כן. הקישור המודפס בתחתית העמוד פותח את אותן החידות עם הפתרונות שלהן. לפתרון שלב אחר שלב עם הטכניקה מאחורי כל צעד, הקלידו את הנתונים לפותר."
+          ]
+        ]
       }
     },
     "hi": {
@@ -3281,7 +3981,7 @@
         "पंक्ति, स्तंभ, बॉक्स और समान अंक की हाइलाइट; गलती का निशान जिसे बंद किया जा सकता है",
         "स्वतः सेव, डार्क मोड, कीबोर्ड समर्थन और लैंडस्केप लेआउट",
         "पहली बार खोलने के बाद ऑफ़लाइन चलता है, किसी ऐप स्टोर की ज़रूरत नहीं",
-        "223 भाषाएँ, हर एक का अपना पेज"
+        "60 भाषाएँ, हर एक का अपना पेज"
       ],
       "androidHeading": "Android ऐप",
       "android": "Bare Sudoku एक नेटिव Android ऐप के रूप में भी है: संस्करण {version}, लगभग {size} KB, कोई अनुमति नहीं, इंटरनेट की ज़रूरत नहीं, बिना किसी लाइब्रेरी की शुद्ध Java। यह Google Play पर नहीं है; GitHub Releases से हस्ताक्षरित APK डाउनलोड करें और Android 8 या नए पर इंस्टॉल करें।",
@@ -3332,7 +4032,7 @@
         ],
         [
           "Bare Sudoku कितनी भाषाओं में है?",
-          "223 भाषाएँ, हर एक अपने पेज पर। गेम का भाषा मेनू पेज बदलता है और गेम के नीचे की सूची हर भाषा से जोड़ती है। गेम आपकी पसंद याद रखता है।"
+          "60 भाषाएँ, हर एक अपने पेज पर। गेम का भाषा मेनू पेज बदलता है और गेम के नीचे की सूची हर भाषा से जोड़ती है। गेम आपकी पसंद याद रखता है।"
         ]
       ],
       "madeBy": "निर्माता: Alparslan Selçuk Develioğlu",
@@ -3380,6 +4080,34 @@
             "नहीं। समाधानकर्ता पूरी तरह आपके ब्राउज़र में चलता है, ऑफ़लाइन भी। आप पहेली को उसके 81 अंक को पता में ?p= के रूप में जोड़कर शेयर कर सकते हैं।"
           ]
         ]
+      },
+      "print": {
+        "title": "प्रिंट करने योग्य सुडोकू: हर स्तर पर मुफ़्त पहेलियाँ",
+        "description": "मुफ़्त सुडोकू पहेलियाँ प्रिंट करें: आसान से महारत तक स्तर चुनें और एक शीट पर एक से छह पहेलियाँ, समाधान अलग पेज पर। कोई विज्ञापन नहीं, कोई साइन-अप नहीं।",
+        "h1": "प्रिंट करने योग्य सुडोकू पहेलियाँ",
+        "intro": "स्तर चुनें और शीट पर कितनी पहेलियाँ चाहती हैं, फिर प्रिंट करें। पहेलियाँ गेम के समान जनरेटर से आती हैं, इसलिए हर एक का बिल्कुल एक हल है, अनुमान की ज़रूरत नहीं है और अपना स्तर व रेटिंग दिखाता है। समाधान अलग पेज पर प्रिंट होते हैं, इसलिए आप उन्हें छोड़ सकते हैं, और शीट के नीचे की कड़ी समान पहेलियों को उनके समाधान के साथ वापस लाती है।",
+        "link": "सुडोकू प्रिंट करें",
+        "level": "स्तर",
+        "count": "शीट में पहेलियाँ",
+        "solutions": "समाधान शामिल करें",
+        "print": "प्रिंट करें",
+        "refresh": "नई पहेलियाँ",
+        "solutionsHeading": "समाधान",
+        "sheet": "समान पहेलियाँ समाधान के साथ: {url}",
+        "faq": [
+          [
+            "एक शीट पर कितनी पहेलियाँ आती हैं?",
+            "एक, दो, चार या छह। एक या दो के साथ ग्रिड बड़े होते हैं, छह के साथ छोटे होते हैं लेकिन भरना अभी भी आसान है। समाधान अलग पेज पर प्रिंट होते हैं, एक पंक्ति में तीन।"
+          ],
+          [
+            "क्या मैं जो पहेली खेल रहा हूँ उसे प्रिंट कर सकता हूँ?",
+            "हाँ। गेम मेनू में पहेली शेयर करें से एक कड़ी कॉपी होती है जो ?p= और पहेली के 81 अंकों पर समाप्त होती है। इस पेज को समान ?p= भाग के साथ खोलें, और शीट केवल वह पहेली दिखाता है, समाधान के साथ यदि चाहते हैं।"
+          ],
+          [
+            "क्या मैं बाद में समाधान पा सकता हूँ?",
+            "हाँ। शीट के नीचे प्रिंट की गई कड़ी समान पहेलियों को उनके समाधान के साथ खोलती है। हर चाल के पीछे तकनीक के साथ चरण-दर-चरण समाधान के लिए, दिए गए अंकों को समाधानकर्ता में दर्ज करें।"
+          ]
+        ]
       }
     },
     "bn": {
@@ -3396,7 +4124,7 @@
         "সারি, কলাম, বাক্স ও একই সংখ্যার হাইলাইট; ভুলের চিহ্ন বন্ধ করা যায়",
         "স্বয়ংক্রিয় সেভ, ডার্ক মোড, কীবোর্ড সমর্থন ও ল্যান্ডস্কেপ লেআউট",
         "প্রথমবার খোলার পর অফলাইনে চলে, অ্যাপ স্টোর লাগে না",
-        "৩৭টি ভাষা, প্রতিটির নিজস্ব পেজ"
+        "৬০টি ভাষা, প্রতিটির নিজস্ব পেজ"
       ],
       "androidHeading": "Android অ্যাপ",
       "android": "Bare Sudoku একটি নেটিভ Android অ্যাপ হিসেবেও আছে: সংস্করণ {version}, প্রায় {size} KB, কোনো অনুমতি নেই, ইন্টারনেট লাগে না, কোনো লাইব্রেরি ছাড়া বিশুদ্ধ Java। এটি Google Play-তে নেই; GitHub Releases থেকে স্বাক্ষরিত APK ডাউনলোড করে Android 8 বা নতুনে ইনস্টল করুন।",
@@ -3447,7 +4175,7 @@
         ],
         [
           "Bare Sudoku কতগুলো ভাষায় আছে?",
-          "২২৩টি ভাষা, প্রতিটির নিজস্ব পাতা। গেমের ভাষা মেনু পাতা বদলায়, আর গেমের নিচের তালিকা প্রতিটি ভাষায় নিয়ে যায়। গেম আপনার পছন্দ মনে রাখে।"
+          "৬০টি ভাষা, প্রতিটির নিজস্ব পাতা। গেমের ভাষা মেনু পাতা বদলায়, আর গেমের নিচের তালিকা প্রতিটি ভাষায় নিয়ে যায়। গেম আপনার পছন্দ মনে রাখে।"
         ]
       ],
       "madeBy": "নির্মাতা: Alparslan Selçuk Develioğlu",
@@ -3495,6 +4223,34 @@
             "না। সমাধানকারী সম্পূর্ণরূপে আপনার ব্রাউজারে চলে, অফলাইনেও। আপনি ধাঁধার 81 টি অঙ্ক ঠিকানায় ?p= হিসাবে যোগ করে একটি ধাঁধা শেয়ার করতে পারেন।"
           ]
         ]
+      },
+      "print": {
+        "title": "মুদ্রণযোগ্য সুডোকু: প্রতিটি স্তরে বিনামূল্যের ধাঁধা",
+        "description": "বিনামূল্যের সুডোকু ধাঁধা মুদ্রিত করুন: সহজ থেকে দক্ষ স্তর বেছে নিন, একটি শীটে এক থেকে ছয়টি ধাঁধা, সমাধান আলাদা পেজে। বিজ্ঞাপন ও সাইন-আপ নেই।",
+        "h1": "মুদ্রণযোগ্য সুডোকু ধাঁধা",
+        "intro": "একটি স্তর বেছে নিন এবং শীটে কতটি ধাঁধা চান তা নির্ধারণ করুন, তারপর মুদ্রণ করুন। ধাঁধাগুলি গেমের মতো একই জেনারেটর থেকে আসে, তাই প্রতিটির ঠিক একটি সমাধান আছে, অনুমানের দরকার নেই এবং এর স্তর ও রেটিং দেখায়। সমাধানগুলি একটি আলাদা পেজে মুদ্রিত হয়, তাই আপনি সেগুলি বাদ দিতে পারেন, এবং শীটের নীচের লিঙ্ক একই ধাঁধাগুলি তাদের সমাধানের সাথে ফিরিয়ে আনে।",
+        "link": "সুডোকু মুদ্রণ করুন",
+        "level": "স্তর",
+        "count": "শীটে ধাঁধা",
+        "solutions": "সমাধান অন্তর্ভুক্ত করুন",
+        "print": "মুদ্রণ করুন",
+        "refresh": "নতুন ধাঁধা",
+        "solutionsHeading": "সমাধান",
+        "sheet": "একই ধাঁধা সমাধান সহ: {url}",
+        "faq": [
+          [
+            "একটি শীটে কত ধাঁধা ফিট হয়?",
+            "এক, দুই, চার বা ছয়। এক বা দুইটিতে গ্রিডগুলি বড়, ছয়টিতে ছোট কিন্তু এখনও পূরণ করা সহজ। সমাধানগুলি একটি আলাদা পেজে মুদ্রিত হয়, একটি সারিতে তিনটি।"
+          ],
+          [
+            "আমি যে ধাঁধা খেলছি তা মুদ্রণ করতে পারি?",
+            "হ্যাঁ। গেম মেনুতে ধাঁধা শেয়ার করুন একটি লিঙ্ক কপি করে যা ?p= এবং ধাঁধার ৮১ সংখ্যা দিয়ে শেষ হয়। এই পেজটি একই ?p= অংশ দিয়ে খুলুন, এবং শীটটি শুধুমাত্র সেই ধাঁধা দেখায়, সমাধান সহ যদি চান।"
+          ],
+          [
+            "আমি পরে সমাধান পেতে পারি?",
+            "হ্যাঁ। শীটের নীচে মুদ্রিত লিঙ্ক একই ধাঁধাগুলি তাদের সমাধানের সাথে খোলে। প্রতিটি পদক্ষেপের পিছনে প্রযুক্তি সহ ধাপে ধাপে সমাধানের জন্য, প্রদত্ত সংখ্যাগুলি সমাধানকারীতে টাইপ করুন।"
+          ]
+        ]
       }
     },
     "id": {
@@ -3511,7 +4267,7 @@
         "Sorotan baris, kolom, kotak, dan angka yang sama; penanda kesalahan bisa dimatikan",
         "Simpan otomatis, mode gelap, dukungan keyboard, dan tata letak lanskap",
         "Bisa offline setelah kunjungan pertama, tanpa toko aplikasi",
-        "223 bahasa, masing-masing di halamannya sendiri"
+        "60 bahasa, masing-masing di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga tersedia sebagai aplikasi Android native: versi {version}, sekitar {size} KB, tanpa izin, tanpa akses internet, Java murni tanpa pustaka. Tidak ada di Google Play; unduh APK bertanda tangan dari GitHub Releases dan pasang di Android 8 atau lebih baru.",
@@ -3562,7 +4318,7 @@
         ],
         [
           "Berapa banyak bahasa yang didukung Bare Sudoku?",
-          "223 bahasa, masing-masing di halamannya sendiri. Menu bahasa di dalam gim mengganti halaman, dan daftar di bawah gim menautkan ke setiap bahasa. Gim mengingat pilihan Anda."
+          "60 bahasa, masing-masing di halamannya sendiri. Menu bahasa di dalam gim mengganti halaman, dan daftar di bawah gim menautkan ke setiap bahasa. Gim mengingat pilihan Anda."
         ]
       ],
       "madeBy": "Dibuat oleh Alparslan Selçuk Develioğlu",
@@ -3610,6 +4366,34 @@
             "Tidak. Pemecah berjalan sepenuhnya di browser Anda, offline juga. Anda dapat membagikan teka-teki dengan menambahkan 81 angkanya ke alamat sebagai ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku yang Dapat Dicetak: Teka-Teki Gratis",
+        "description": "Cetak teka-teki sudoku gratis: pilih tingkat Mudah hingga Ahli, satu hingga enam per halaman, solusi di halaman terpisah. Tanpa iklan, tanpa daftar.",
+        "h1": "Teka-teki sudoku yang dapat dicetak",
+        "intro": "Pilih tingkat dan berapa banyak teka-teki yang ingin Anda cetak, lalu cetak. Teka-teki berasal dari pembuat yang sama dengan permainan, jadi masing-masing memiliki tepat satu solusi, tidak perlu menebak, dan menunjukkan tingkat dan nilainya. Solusi dicetak di halaman terpisah, sehingga Anda dapat menghilangkannya, dan tautan di bagian bawah halaman membawa kembali teka-teki yang sama dengan solusinya.",
+        "link": "Cetak Sudoku",
+        "level": "Tingkat",
+        "count": "Teka-teki per halaman",
+        "solutions": "Sertakan solusi",
+        "print": "Cetak",
+        "refresh": "Teka-teki baru",
+        "solutionsHeading": "Solusi",
+        "sheet": "Teka-teki yang sama dengan solusi: {url}",
+        "faq": [
+          [
+            "Berapa banyak teka-teki yang cocok di satu halaman?",
+            "Satu, dua, empat atau enam. Dengan satu atau dua, kotak besar, dengan enam lebih kecil tetapi masih mudah diisi. Solusi dicetak di halaman terpisah, tiga per baris."
+          ],
+          [
+            "Bisakah saya mencetak teka-teki yang sedang saya mainkan?",
+            "Ya. Bagikan teka-teki di menu permainan menyalin tautan yang diakhiri dengan ?p= dan 81 digit teka-teki. Buka halaman ini dengan bagian ?p= yang sama, dan halaman menampilkan teka-teki itu saja, dengan solusinya jika Anda menginginkannya."
+          ],
+          [
+            "Bisakah saya mendapatkan solusi nanti?",
+            "Ya. Tautan yang dicetak di bagian bawah halaman membuka teka-teki yang sama dengan solusinya. Untuk solusi langkah demi langkah dengan teknik di balik setiap gerakan, ketikkan angka yang diberikan ke pemecah."
+          ]
+        ]
       }
     },
     "ms": {
@@ -3626,7 +4410,7 @@
         "Sorotan baris, lajur, kotak dan digit yang sama; penanda kesilapan boleh dimatikan",
         "Simpan automatik, mod gelap, sokongan papan kekunci dan susun atur landskap",
         "Berfungsi luar talian selepas lawatan pertama, tanpa gedung aplikasi",
-        "223 bahasa, setiap satu di halamannya sendiri"
+        "60 bahasa, setiap satu di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga ada sebagai aplikasi Android asli: versi {version}, kira-kira {size} KB, tiada kebenaran, tiada akses internet, Java tulen tanpa pustaka. Tiada di Google Play; muat turun APK bertandatangan dari GitHub Releases dan pasang pada Android 8 atau lebih baharu.",
@@ -3677,7 +4461,7 @@
         ],
         [
           "Berapa banyak bahasa yang ada dalam Bare Sudoku?",
-          "223 bahasa, setiap satu di halamannya sendiri. Menu bahasa dalam permainan menukar halaman, dan senarai di bawah permainan memaut ke setiap bahasa. Permainan mengingati pilihan anda."
+          "60 bahasa, setiap satu di halamannya sendiri. Menu bahasa dalam permainan menukar halaman, dan senarai di bawah permainan memaut ke setiap bahasa. Permainan mengingati pilihan anda."
         ]
       ],
       "madeBy": "Dibuat oleh Alparslan Selçuk Develioğlu",
@@ -3725,6 +4509,34 @@
             "Tidak. Penyelesai berjalan sepenuhnya dalam pelayar Anda, luar talian juga. Anda boleh berkongsi teka-teki dengan menambah 81 digitnya ke alamat sebagai ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku Boleh Cetak: Teka-Teki Percuma",
+        "description": "Cetak teka-teki sudoku percuma: pilih tahap Mudah hingga Guru, satu hingga enam setiap halaman, penyelesaian di halaman berasingan. Tiada iklan, tiada daftar.",
+        "h1": "Teka-teki sudoku boleh cetak",
+        "intro": "Pilih tahap dan berapa banyak teka-teki yang anda mahukan, kemudian cetak. Teka-teki datang daripada penjana yang sama seperti permainan, jadi setiap satu mempunyai betul-betul satu penyelesaian, tidak perlu meneka, dan menunjukkan tahapnya dan penilai. Penyelesaian dicetak di halaman berasingan, jadi anda boleh tinggalkan, dan pautan di bawah halaman membawa balik teka-teki yang sama dengan penyelesaiannya.",
+        "link": "Cetak Sudoku",
+        "level": "Tahap",
+        "count": "Teka-teki setiap halaman",
+        "solutions": "Sertakan penyelesaian",
+        "print": "Cetak",
+        "refresh": "Teka-teki baharu",
+        "solutionsHeading": "Penyelesaian",
+        "sheet": "Teka-teki yang sama dengan penyelesaian: {url}",
+        "faq": [
+          [
+            "Berapa banyak teka-teki yang muat di satu halaman?",
+            "Satu, dua, empat atau enam. Dengan satu atau dua kotak adalah besar, dengan enam lebih kecil tetapi masih mudah diisi. Penyelesaian dicetak di halaman berasingan, tiga setiap baris."
+          ],
+          [
+            "Boleh saya cetak teka-teki yang saya sedang mainkan?",
+            "Ya. Kongsi teka-teki dalam menu permainan menyalin pautan yang berakhir dengan ?p= dan 81 digit teka-teki. Buka halaman ini dengan bahagian ?p= yang sama, dan halaman menunjukkan teka-teki itu sahaja, dengan penyelesaiannya jika anda mahukan."
+          ],
+          [
+            "Boleh saya dapat penyelesaian kemudian?",
+            "Ya. Pautan yang dicetak di bawah halaman membuka teka-teki yang sama dengan penyelesaiannya. Untuk penyelesaian langkah demi langkah dengan teknik di belakang setiap gerakan, taipkan digit yang diberikan ke pemecah."
+          ]
+        ]
       }
     },
     "vi": {
@@ -3741,7 +4553,7 @@
         "Tô sáng hàng, cột, ô vuông và cùng chữ số; đánh dấu lỗi có thể tắt",
         "Tự động lưu, chế độ tối, hỗ trợ bàn phím và bố cục ngang",
         "Hoạt động offline sau lần truy cập đầu tiên, không cần cửa hàng ứng dụng",
-        "223 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
+        "60 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
       ],
       "androidHeading": "Ứng dụng Android",
       "android": "Bare Sudoku cũng có ứng dụng Android gốc: phiên bản {version}, khoảng {size} KB, không quyền truy cập, không kết nối internet, Java thuần không thư viện. Không có trên Google Play; tải APK đã ký từ GitHub Releases và cài trên Android 8 trở lên.",
@@ -3792,7 +4604,7 @@
         ],
         [
           "Bare Sudoku có bao nhiêu ngôn ngữ?",
-          "223 ngôn ngữ, mỗi ngôn ngữ có trang riêng. Menu ngôn ngữ trong trò chơi chuyển trang, và danh sách dưới trò chơi liên kết tới mọi ngôn ngữ. Trò chơi ghi nhớ lựa chọn của bạn."
+          "60 ngôn ngữ, mỗi ngôn ngữ có trang riêng. Menu ngôn ngữ trong trò chơi chuyển trang, và danh sách dưới trò chơi liên kết tới mọi ngôn ngữ. Trò chơi ghi nhớ lựa chọn của bạn."
         ]
       ],
       "madeBy": "Tạo bởi Alparslan Selçuk Develioğlu",
@@ -3840,6 +4652,34 @@
             "Không. Trình giải chạy hoàn toàn trong trình duyệt của bạn, ngoại tuyến. Bạn có thể chia sẻ câu đố bằng cách thêm 81 chữ số của nó vào địa chỉ dưới dạng ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Sudoku In Được: Câu Đố Miễn Phí ở Mọi Cấp Độ",
+        "description": "In câu đố sudoku miễn phí: chọn cấp độ từ Dễ đến Đại sư, một đến sáu câu đố mỗi trang, lời giải trên trang riêng. Không quảng cáo, không đăng ký.",
+        "h1": "Câu đố sudoku in được",
+        "intro": "Chọn cấp độ và bao nhiêu câu đố bạn muốn in, sau đó in. Các câu đố đến từ trình tạo giống như trong trò chơi, vì vậy mỗi câu đó có đúng một lời giải, không cần đoán và hiển thị cấp độ cũng như xếp hạng. Lời giải được in trên trang riêng, bạn có thể bỏ qua, và liên kết ở cuối trang mang lại các câu đố tương tự cùng với lời giải.",
+        "link": "In Sudoku",
+        "level": "Cấp độ",
+        "count": "Câu đố mỗi trang",
+        "solutions": "Bao gồm lời giải",
+        "print": "In",
+        "refresh": "Câu đố mới",
+        "solutionsHeading": "Lời giải",
+        "sheet": "Các câu đố tương tự cùng với lời giải: {url}",
+        "faq": [
+          [
+            "Bao nhiêu câu đố vừa trên một trang?",
+            "Một, hai, bốn hoặc sáu. Với một hoặc hai lưới lớn, với sáu nhỏ hơn nhưng vẫn dễ điền. Lời giải được in trên trang riêng, ba mỗi hàng."
+          ],
+          [
+            "Tôi có thể in câu đố mà tôi đang chơi không?",
+            "Có. Chia sẻ câu đố trong menu trò chơi sao chép một liên kết kết thúc bằng ?p= và 81 chữ số câu đố. Mở trang này với cùng phần ?p=, trang hiển thị chỉ câu đó, cùng với lời giải nếu bạn muốn."
+          ],
+          [
+            "Tôi có thể lấy lời giải sau không?",
+            "Có. Liên kết được in ở cuối trang mở các câu đố tương tự cùng với lời giải. Để giải pháp từng bước với kỹ thuật đằng sau mỗi nước đi, gõ các chữ số đã cho vào trình giải."
+          ]
+        ]
       }
     },
     "th": {
@@ -3856,7 +4696,7 @@
         "ไฮไลต์แถว คอลัมน์ กล่อง และตัวเลขเดียวกัน; เครื่องหมายผิดพลาดปิดได้",
         "บันทึกอัตโนมัติ โหมดมืด รองรับคีย์บอร์ด และเลย์เอาต์แนวนอน",
         "เล่นออฟไลน์ได้หลังเปิดครั้งแรก ไม่ต้องใช้แอปสโตร์",
-        "223 ภาษา แต่ละภาษามีหน้าของตัวเอง"
+        "60 ภาษา แต่ละภาษามีหน้าของตัวเอง"
       ],
       "androidHeading": "แอป Android",
       "android": "Bare Sudoku ยังมีเป็นแอป Android แบบเนทีฟ: เวอร์ชัน {version} ขนาดประมาณ {size} KB ไม่ขอสิทธิ์ใด ๆ ไม่ใช้อินเทอร์เน็ต เขียนด้วย Java ล้วนไม่มีไลบรารี ไม่มีใน Google Play; ดาวน์โหลด APK ที่ลงลายเซ็นแล้วจาก GitHub Releases และติดตั้งบน Android 8 ขึ้นไป",
@@ -3907,7 +4747,7 @@
         ],
         [
           "Bare Sudoku มีกี่ภาษา?",
-          "223 ภาษา แต่ละภาษามีหน้าของตัวเอง เมนูภาษาในเกมใช้สลับหน้า และรายการใต้เกมลิงก์ไปทุกภาษา เกมจะจำภาษาที่คุณเลือก"
+          "60 ภาษา แต่ละภาษามีหน้าของตัวเอง เมนูภาษาในเกมใช้สลับหน้า และรายการใต้เกมลิงก์ไปทุกภาษา เกมจะจำภาษาที่คุณเลือก"
         ]
       ],
       "madeBy": "สร้างโดย Alparslan Selçuk Develioğlu",
@@ -3955,6 +4795,34 @@
             "ไม่ ตัวแก้ทำงานอย่างสมบูรณ์ในเบราว์เซอร์ของคุณ ออฟไลน์ด้วย คุณสามารถแชร์บุคคลโดยเพิ่มตัวเลข 81 ตัวของมันลงในที่อยู่เป็น ?p="
           ]
         ]
+      },
+      "print": {
+        "title": "ซูโดกุพิมพ์ได้: บุคคลฟรีทุกระดับ",
+        "description": "พิมพ์บุคคลซูโดกุฟรี: เลือกระดับจากง่ายถึงอาจารย์ และ 1 ถึง 6 บุคคลต่อหน้า พร้อมวิธีแก้บนหน้าแยก ไม่มีโฆษณา ไม่ต้องสมัคร",
+        "h1": "บุคคลซูโดกุพิมพ์ได้",
+        "intro": "เลือกระดับและจำนวนบุคคลที่คุณต้องการบนหน้า แล้วพิมพ์ บุคคลมาจากเครื่องกำเนิดเดียวกับเกม ดังนั้นแต่ละบุคคลจึงมีวิธีแก้เพียงวิธีเดียว ไม่ต้องการการเดา และแสดงระดับและความยาก วิธีแก้พิมพ์บนหน้าแยก คุณอาจปล่อยให้ออก และลิงก์ที่ด้านล่างของหน้าจะนำบุคคลเดียวกันกลับมาพร้อมกับวิธีแก้",
+        "link": "พิมพ์ซูโดกุ",
+        "level": "ระดับ",
+        "count": "บุคคลต่อหน้า",
+        "solutions": "เพิ่มวิธีแก้",
+        "print": "พิมพ์",
+        "refresh": "บุคคลใหม่",
+        "solutionsHeading": "วิธีแก้",
+        "sheet": "บุคคลเดียวกัน ที่มีวิธีแก้: {url}",
+        "faq": [
+          [
+            "บุคคลกี่อันพอดีบนหน้าเดียว?",
+            "หนึ่ง สอง สี่ หรือหก ด้วยหนึ่งหรือสอง ตารางจะใหญ่ขึ้น โดยหกตารางจะเล็กลง แต่ยังคงเติมได้ง่าย วิธีแก้พิมพ์บนหน้าแยก สามหน้าต่อแถว"
+          ],
+          [
+            "ฉันสามารถพิมพ์บุคคลที่ฉันกำลังเล่นได้หรือไม่?",
+            "ใช่ แชร์บุคคลในเมนูเกมคัดลอกลิงก์ที่ลงท้ายด้วย ?p= และตัวเลข 81 ของบุคคล เปิดหน้านี้ด้วยส่วน ?p= เดียวกัน และหน้าจะแสดงบุคคลนั้นเพียงอย่างเดียว พร้อมกับวิธีแก้ถ้าคุณต้องการ"
+          ],
+          [
+            "ฉันสามารถรับวิธีแก้ในภายหลังได้หรือไม่?",
+            "ใช่ ลิงก์ที่พิมพ์ที่ด้านล่างของหน้าจะเปิดบุคคลเดียวกัน ด้วยวิธีแก้ สำหรับวิธีแก้ทีละขั้นตอน พร้อมเทคนิคในการย้ายทุกครั้ง พิมพ์ตัวเลขที่กำหนดลงในตัวแก้"
+          ]
+        ]
       }
     },
     "ja": {
@@ -3971,7 +4839,7 @@
         "行・列・ブロック・同じ数字のハイライト、オフにできる誤りの表示",
         "自動保存、ダークモード、キーボード操作、横向きレイアウト",
         "初回アクセス後はオフラインでも動作、アプリストア不要",
-        "223言語、それぞれ専用ページ"
+        "60の言語、それぞれのページ"
       ],
       "androidHeading": "Androidアプリ",
       "android": "Bare SudokuにはネイティブのAndroidアプリもあります。バージョン{version}、約{size} KB、権限なし、インターネット接続なし、ライブラリを使わない純粋なJava製。Google Playにはありません。GitHub Releasesから署名済みAPKをダウンロードし、Android 8以降にインストールしてください。",
@@ -4022,7 +4890,7 @@
         ],
         [
           "Bare Sudokuは何か国語に対応していますか？",
-          "223言語で、それぞれ専用のページがあります。ゲーム内の言語メニューでページが切り替わり、ゲームの下の一覧から各言語へ移動できます。選んだ言語は記憶されます。"
+          "60の言語、それぞれのページ。ゲームの言語選択でページが切り替わり、ゲーム下部のリストで各言語にアクセスできます。ゲームはご選択を記憶します。"
         ]
       ],
       "madeBy": "制作: Alparslan Selçuk Develioğlu",
@@ -4070,6 +4938,34 @@
             "いいえ。ソルバーはブラウザで完全に動作し、オフラインでも。問題をアドレスに81の数字を?p=として追加してシェアできます。"
           ]
         ]
+      },
+      "print": {
+        "title": "印刷できるナンプレ：すべてのレベルで無料の問題",
+        "description": "無料のナンプレを印刷：簡単から達人まで難易度を選び、1枚～6枚を1ページに印刷できます。解答は別ページ。広告なし、登録不要。",
+        "h1": "印刷できるナンプレ",
+        "intro": "難易度を選び、1ページに何枚の問題を入れるかを選んでから印刷します。問題はゲームと同じジェネレーターで生成されるため、それぞれが正確に1つの解を持ち、推測の必要がなく、難易度と評価を表示します。解答は別ページに印刷されるため、省略することもでき、ページの下部のリンクで同じ問題とその解答を呼び出すことができます。",
+        "link": "ナンプレを印刷",
+        "level": "難易度",
+        "count": "1ページの問題数",
+        "solutions": "解答を含める",
+        "print": "印刷",
+        "refresh": "新しい問題",
+        "solutionsHeading": "解答",
+        "sheet": "同じ問題と解答：{url}",
+        "faq": [
+          [
+            "1ページに何問の問題が入りますか？",
+            "1問、2問、4問または6問です。1問か2問の場合、格子は大きくなります。6問の場合は小さくなりますが、埋めやすいままです。解答は別ページに印刷され、1行に3問ずつ表示されます。"
+          ],
+          [
+            "今やっている問題を印刷できますか？",
+            "はい。ゲームメニューの「問題をシェア」をタップすると、?p= で始まり問題の81個の数字が続くリンクがコピーされます。このページをその同じ ?p= 部分で開くと、シートはその問題だけを表示し、必要に応じて解答も表示します。"
+          ],
+          [
+            "後で解答を入手できますか？",
+            "はい。ページ下部に印刷されているリンクをクリックすると、同じ問題と解答が表示されます。各ステップの手法を含む段階的な解答については、与えられた数字をソルバーに入力してください。"
+          ]
+        ]
       }
     },
     "ko": {
@@ -4086,7 +4982,7 @@
         "행, 열, 박스, 같은 숫자 강조; 끌 수 있는 오류 표시",
         "자동 저장, 다크 모드, 키보드 지원, 가로 레이아웃",
         "첫 방문 후 오프라인 작동, 앱 스토어 불필요",
-        "223개 언어, 언어마다 전용 페이지"
+        "60개 언어, 언어마다 전용 페이지"
       ],
       "androidHeading": "Android 앱",
       "android": "Bare Sudoku는 네이티브 Android 앱으로도 제공됩니다. 버전 {version}, 약 {size} KB, 권한 없음, 인터넷 접근 없음, 라이브러리 없는 순수 Java. Google Play에는 없습니다. GitHub Releases에서 서명된 APK를 내려받아 Android 8 이상에 설치하세요.",
@@ -4137,7 +5033,7 @@
         ],
         [
           "Bare Sudoku는 몇 개 언어를 지원하나요?",
-          "223개 언어이며 언어마다 자체 페이지가 있습니다. 게임 안의 언어 메뉴로 페이지를 바꾸고, 게임 아래 목록에서 모든 언어로 갈 수 있습니다. 선택한 언어는 기억됩니다."
+          "60개 언어이며 언어마다 자체 페이지가 있습니다. 게임 안의 언어 메뉴로 페이지를 바꾸고, 게임 아래 목록에서 모든 언어로 갈 수 있습니다. 선택한 언어는 기억됩니다."
         ]
       ],
       "madeBy": "제작: Alparslan Selçuk Develioğlu",
@@ -4185,6 +5081,34 @@
             "아니요. 풀이기는 브라우저에서 완전히 작동하고, 오프라인에서도 가능합니다. 문제의 81개 숫자를 주소에 ?p=로 추가하여 공유할 수 있습니다."
           ]
         ]
+      },
+      "print": {
+        "title": "인쇄할 수 있는 스도쿠: 모든 난이도의 무료 문제",
+        "description": "무료 스도쿠 문제를 프린트하세요. 쉬움부터 달인까지 난이도를 선택하고, 한 장에 1개에서 6개 문제를 프린트하며, 정답은 별도 페이지에 프린트됩니다. 광고 없음, 가입 필요 없음.",
+        "h1": "인쇄할 수 있는 스도쿠 문제",
+        "intro": "난이도를 선택하고 한 장에 몇 개 문제를 원하는지 정한 후 프린트하세요. 문제들은 게임과 같은 생성기에서 나오므로 각각 정확히 하나의 정답을 가지며, 추측이 필요 없고, 난이도와 난이도 평점을 보여줍니다. 정답은 별도 페이지에 프린트되므로 필요 없으면 건너뛸 수 있고, 종이 아래의 링크는 같은 문제들을 정답과 함께 다시 엽니다.",
+        "link": "스도쿠 프린트",
+        "level": "난이도",
+        "count": "한 장의 문제 수",
+        "solutions": "정답 포함",
+        "print": "프린트",
+        "refresh": "새 문제",
+        "solutionsHeading": "정답",
+        "sheet": "같은 문제들의 정답: {url}",
+        "faq": [
+          [
+            "한 장에 몇 개 문제가 들어가나요?",
+            "1개, 2개, 4개, 또는 6개입니다. 1개 또는 2개일 때는 칸이 크고, 6개일 때는 작지만 여전히 쉽게 풀 수 있습니다. 정답은 별도 페이지에 한 줄에 3개씩 프린트됩니다."
+          ],
+          [
+            "지금 풀고 있는 문제를 프린트할 수 있나요?",
+            "네. 게임 메뉴의 문제 공유를 누르면 끝에 ?p=와 문제의 81개 숫자가 있는 링크를 복사합니다. 이 페이지를 같은 ?p= 부분으로 열면, 그 문제만 표시되고 정답도 보고 싶으면 볼 수 있습니다."
+          ],
+          [
+            "나중에 정답을 받을 수 있나요?",
+            "네. 한 장의 아래에 프린트된 링크는 같은 문제들을 정답과 함께 엽니다. 모든 움직임 뒤의 기법을 포함한 단계별 풀이를 원하면, 주어진 숫자들을 풀이기에 입력하세요."
+          ]
+        ]
       }
     },
     "zh-Hans": {
@@ -4201,7 +5125,7 @@
         "行、列、宫及相同数字高亮；可关闭的错误标记",
         "自动保存、深色模式、键盘操作、横屏布局",
         "首次访问后可离线使用，无需应用商店",
-        "223 种语言，每种语言都有独立页面"
+        "60种语言，各自独立的页面"
       ],
       "androidHeading": "Android 应用",
       "android": "Bare Sudoku 也有原生 Android 应用：版本 {version}，约 {size} KB，不需要任何权限，不联网，纯 Java 编写，不依赖任何库。它不在 Google Play 上架；请从 GitHub Releases 下载已签名的 APK，安装到 Android 8 或更高版本。",
@@ -4252,7 +5176,7 @@
         ],
         [
           "Bare Sudoku 支持多少种语言？",
-          "223 种语言，每种都有自己的页面。游戏里的语言菜单可切换页面，游戏下方的列表链接到每种语言。游戏会记住你的选择。"
+          "60种语言，各自独立的页面。游戏中的语言选择会改变页面，游戏下方的列表指向各种语言。游戏会记住您的选择。"
         ]
       ],
       "madeBy": "作者：Alparslan Selçuk Develioğlu",
@@ -4300,6 +5224,34 @@
             "不会。求解器完全在浏览器中运行，离线也可以。你可以通过在地址栏加?p=和81个数字来分享题目。"
           ]
         ]
+      },
+      "print": {
+        "title": "可打印的数独：每个难度等级的免费谜题",
+        "description": "打印免费数独谜题：选择一个难度从简单到大师，每页印刷一到六道题，解答在单独页。完全无广告，无账户需求。",
+        "h1": "可打印的数独谜题",
+        "intro": "选择难度等级和每页要打印的谜题数量，然后打印。这些谜题由与游戏相同的生成器生成，因此每个谜题只有一个解，无需猜测，并显示其难度等级和评分。解答在单独的页面上打印，您可以选择省略，页面底部的链接可以恢复相同的谜题及其解答。",
+        "link": "打印数独",
+        "level": "难度等级",
+        "count": "每页的题数",
+        "solutions": "包含解答",
+        "print": "打印",
+        "refresh": "新谜题",
+        "solutionsHeading": "解答",
+        "sheet": "相同的谜题及解答：{url}",
+        "faq": [
+          [
+            "一页能容纳多少个谜题？",
+            "1个、2个、4个或6个。1个或2个时网格较大，6个时较小但仍易于填写。解答在单独页面打印，每行3个。"
+          ],
+          [
+            "我能打印正在玩的谜题吗？",
+            "可以。游戏菜单中的\"分享题目\"会复制一个以?p=开头后跟谜题81个数字的链接。用相同的?p=部分打开此页面，页面将仅显示该谜题，如需要还有其解答。"
+          ],
+          [
+            "我可以稍后获取解答吗？",
+            "可以。页面底部打印的链接会打开相同的谜题及其解答。要获得每一步骤及其背后技巧的详细解答，请将已知数字输入求解器。"
+          ]
+        ]
       }
     },
     "zh-Hant": {
@@ -4316,7 +5268,7 @@
         "列、欄、宮及相同數字醒目提示；可關閉的錯誤標記",
         "自動儲存、深色模式、鍵盤操作、橫向版面",
         "首次造訪後可離線使用，不需要應用程式商店",
-        "223 種語言，每種語言都有獨立頁面"
+        "60種語言，各自獨立的頁面"
       ],
       "androidHeading": "Android 應用程式",
       "android": "Bare Sudoku 也有原生 Android 應用程式：版本 {version}，約 {size} KB，不需要任何權限，不連網，純 Java 撰寫，不依賴任何函式庫。它不在 Google Play 上架；請從 GitHub Releases 下載已簽署的 APK，安裝到 Android 8 或更新版本。",
@@ -4367,7 +5319,7 @@
         ],
         [
           "Bare Sudoku 支援多少種語言？",
-          "223 種語言，每種都有自己的頁面。遊戲裡的語言選單可切換頁面，遊戲下方的清單連結到每種語言。遊戲會記住你的選擇。"
+          "60種語言，各自獨立的頁面。遊戲中的語言選擇會改變頁面，遊戲下方的列表指向各種語言。遊戲會記住您的選擇。"
         ]
       ],
       "madeBy": "作者：Alparslan Selçuk Develioğlu",
@@ -4413,6 +5365,34 @@
           [
             "我的題目會被上傳嗎？",
             "不會。求解器完全在瀏覽器中運行，離線也可以。你可以通過在地址欄加?p=和81個數字來分享題目。"
+          ]
+        ]
+      },
+      "print": {
+        "title": "可列印的數獨：每個難度級別的免費謎題",
+        "description": "列印免費數獨謎題：從簡單到大師選擇難度，每頁列印1至6道題，解答在單獨頁面。完全無廣告，無帳戶需求。",
+        "h1": "可列印的數獨謎題",
+        "intro": "選擇難度級別和每頁要列印的謎題數量，然後列印。這些謎題由與遊戲相同的生成器生成，因此每個謎題只有一個解，無需猜測，並顯示其難度級別和評分。解答在單獨的頁面上列印，您可以選擇省略，頁面底部的連結可以恢復相同的謎題及其解答。",
+        "link": "列印數獨",
+        "level": "難度級別",
+        "count": "每頁的題數",
+        "solutions": "包含解答",
+        "print": "列印",
+        "refresh": "新謎題",
+        "solutionsHeading": "解答",
+        "sheet": "相同的謎題及解答：{url}",
+        "faq": [
+          [
+            "一頁能容納多少個謎題？",
+            "1個、2個、4個或6個。1個或2個時網格較大，6個時較小但仍易於填寫。解答在單獨頁面列印，每行3個。"
+          ],
+          [
+            "我能列印正在玩的謎題嗎？",
+            "可以。遊戲菜單中的\"分享題目\"會複製一個以?p=開頭後跟謎題81個數字的連結。用相同的?p=部分打開此頁面，頁面將僅顯示該謎題，如需要還有其解答。"
+          ],
+          [
+            "我可以稍後獲取解答嗎？",
+            "可以。頁面底部列印的連結會打開相同的謎題及其解答。要獲得每一步驟及其背後技巧的詳細解答，請將已知數字輸入求解器。"
           ]
         ]
       }
@@ -4480,7 +5460,7 @@
         ],
         [
           "Bare Sudoku کتنی زبانوں میں ہے؟",
-          "223 زبانیں، ہر ایک اپنے صفحے پر۔ گیم کا زبان مینو صفحہ بدلتا ہے اور گیم کے نیچے کی فہرست ہر زبان تک لے جاتی ہے۔ گیم آپ کا انتخاب یاد رکھتا ہے۔"
+          "ہر ایک اپنے صفحے پر 60 زبانیں۔ کھیل صفحے کی زبان کی پیروی کرتا ہے اور اپنی پسند یاد رکھتا ہے۔"
         ]
       ],
       "madeBy": "بنانے والا: Alparslan Selçuk Develioğlu",
@@ -4526,6 +5506,34 @@
           [
             "کیا میرا بلما اپ لوڈ ہو رہا ہے؟",
             "نہیں۔ حل کار مکمل طور پر آپ کے براؤزر میں چلتا ہے، آف لائن بھی۔ آپ کسی بلما کو اس کے 81 ہندسوں کو پتے میں ?p= کے طور پر شامل کر کے شیئر کر سکتے ہیں۔"
+          ]
+        ]
+      },
+      "print": {
+        "title": "پرنٹ کے قابل سوڈوکو: ہر درجے میں مفت بلما",
+        "description": "مفت سوڈوکو بلما پرنٹ کریں: آسان سے استاد تک ایک درجہ اور صفحے میں ایک سے چھ بلما منتخب کریں، حل الگ صفحے پر۔ کوئی اشتہار نہیں، کوئی رجسٹریشن نہیں۔",
+        "h1": "پرنٹ کے قابل سوڈوکو بلما",
+        "intro": "ایک درجہ اور صفحے پر کتنے بلما چاہتے ہو وہ منتخب کرو، پھر پرنٹ کرو۔ بلما وہی ماخذ سے آتے ہیں جو کھیل میں، تو ہر ایک کا بالکل ایک حل ہے، کوئی اندازہ نہیں چاہیے، اپنا درجہ اور درجہ بندی بتاتا ہے۔ حل الگ صفحے پر بھرتے ہیں، چاہو تو نہ رکھو؛ صفحے کے نیچے کا ربط وہی بلما ان کے حل کے ساتھ واپس لاتا ہے۔",
+        "link": "سوڈوکو پرنٹ کریں",
+        "level": "درجہ",
+        "count": "صفحے میں بلما",
+        "solutions": "حل شامل کریں",
+        "print": "پرنٹ کریں",
+        "refresh": "نئے بلما",
+        "solutionsHeading": "حل",
+        "sheet": "وہی بلما ان کے حل کے ساتھ: {url}",
+        "faq": [
+          [
+            "ایک صفحے میں کتنے بلما سماتے ہیں؟",
+            "ایک، دو، چار یا چھ۔ ایک اور دو میں جالیاں بڑی ہوتی ہیں، چھ میں چھوٹی لیکن پھر بھی آسانی سے بھرتے ہیں۔ حل الگ صفحے پر، صف میں تین ہوتے ہیں۔"
+          ],
+          [
+            "جو بلما کھیل رہا ہوں اسے پرنٹ کر سکتا ہوں؟",
+            "جی۔ کھیل کے مینو میں بلما شیئر کریں وہ ایک ربط نقل کرتے ہیں جو ?p= اور بلما کے 81 ہندسے پر ختم ہوتا ہے۔ اسی ?p= کے ساتھ یہ صفحہ کھولو؛ صفحہ صرف وہ بلما دکھاتا ہے، چاہو تو اس کے حل کے ساتھ۔"
+          ],
+          [
+            "حل بعد میں لے سکتا ہوں؟",
+            "جی۔ صفحے کے نیچے کا پرنٹ شدہ ربط وہی بلما ان کے حل کے ساتھ کھولتا ہے۔ ہر حرکت کے پیچھے کی تکنیک کے ساتھ قدم قدم حل کے لیے دیے گئے ہندسے حل کار میں داخل کرو۔"
           ]
         ]
       }
@@ -4593,7 +5601,7 @@
         ],
         [
           "Bare Sudoku எத்தனை மொழிகளில் உள்ளது?",
-          "223 மொழிகளில், ஒவ்வொன்றுக்கும் தனிப் பக்கம். விளையாட்டில் உள்ள மொழி மெனு பக்கத்தை மாற்றும், விளையாட்டின் கீழ் உள்ள பட்டியல் ஒவ்வொரு மொழிக்கும் இணைக்கும். விளையாட்டு உங்கள் தேர்வை நினைவில் வைக்கும்."
+          "ஒவ்வொன்றுக்கும் தனிப் பக்கம் 60 மொழிகளில். விளையாட்டு பக்கத்தின் மொழியை பின்பற்றும், உங்கள் தேர்வை நினைவில் வைக்கும்."
         ]
       ],
       "madeBy": "உருவாக்கியவர்: Alparslan Selçuk Develioğlu",
@@ -4639,6 +5647,34 @@
           [
             "என் புதிர் பதிவேற்றப்பட்டுள்ளதா?",
             "இல்லை. தீர்ப்பாளர் முழுமையாக உங்கள் உலாவியில் இயங்குகிறது, ஆஃப்லைனும் கூட. அதன் 81 எண்களை முகவரியில் ?p= ஆக சேர்ப்பதன் மூலம் ஒரு புதிரை நீங்கள் பகிரலாம்."
+          ]
+        ]
+      },
+      "print": {
+        "title": "அச்சிடக்கூடிய சுடோகு: ஒவ்வொரு நிலையிலும் இலவச புதிர்கள்",
+        "description": "இலவச சுடோகு பதிப்புகளை அச்சிடுக: எளிது முதல் வல்லுனர் வரை நிலை மற்றும் பக்கப் பக்கத்தில் ஒன்று முதல் ஆறு. விளம்பரம் இல்லை, பதிவு தேவையில்லை.",
+        "h1": "அச்சிடக்கூடிய சுடோகு புதிர்கள்",
+        "intro": "ஒரு நிலை மற்றும் நீங்கள் விரும்பும் புதிர்களின் எண்ணிக்கையைத் தேர்ந்தெடுத்து, பின்னர் அச்சிடுங்கள். புதிர்கள் விளையாட்டிலிருந்து வரும் பொதுவான ஜெனரேட்டரிலிருந்து வருகின்றன, எனவே ஒவ்வொன்றுக்கும் சரியாக ஒரு தீர்வு உள்ளது, யூகிக்க வேண்டியதில்லை, அதன் நிலை மற்றும் மதிப்பீட்டைக் காட்டுகிறது. தீர்வுகள் தனி பக்கத்தில் அச்சிடப்படும், விரும்பினால் விட்டுவிடலாம்; பக்கத்தின் கீழிலுள்ள இணைப்பு அதே புதிர்களை தீர்வுகளுடன் மீண்டும் கொண்டு வருகிறது.",
+        "link": "சுடோகு அச்சிடு",
+        "level": "நிலை",
+        "count": "பக்கத்தில் புதிர்கள்",
+        "solutions": "தீர்வுகளை சேர்க்கவும்",
+        "print": "அச்சிடு",
+        "refresh": "புதிய புதிர்கள்",
+        "solutionsHeading": "தீர்வுகள்",
+        "sheet": "அதே புதிர்கள் தீர்வுகளுடன்: {url}",
+        "faq": [
+          [
+            "ஒரு பக்கத்தில் எத்தனை புதிர்கள் பொருந்தும்?",
+            "ஒன்று, இரண்டு, நான்கு அல்லது ஆறு. ஒன்று அல்லது இரண்டில் கட்டங்கள் பெரியவை, ஆறில் சிறியவை ஆனால் இன்னும் எளிதாக நிரப்பபடும். தீர்வுகள் தனி பக்கத்தில் அச்சிடப்படும், ஒரு வரிசையில் மூன்று."
+          ],
+          [
+            "நான் விளையாடும் புதிரை அச்சிடலாம்?",
+            "ஆம். விளையாட்டு மெனுவில் புதிரைப் பகிர்க ஒரு இணைப்பை நகல் செய்யும் இது ?p= இல் முடிந்து புதிரின் 81 இலக்கங்களும் உள்ளது. இதே ?p= உடன் இந்தப் பக்கத்தைத் திறந்து; பக்கம் அந்த புதிரை மட்டும் காட்டுகிறது, விரும்பினால் அதன் தீர்வுடன்."
+          ],
+          [
+            "தீர்வுகளை பின்னர் பெறலாம்?",
+            "ஆம். பக்கத்தின் கீழில் அச்சிடப்பட்ட இணைப்பு அதே புதிர்களை தீர்வுகளுடன் திறக்கிறது. ஒவ்வொரு நகர்வின் பின்னணியிலுள்ள நுட்பத்துடன் படிப்படியாக தீர்வுக்கு கொடுக்கப்பட்ட எண்களை தீர்ப்பாளர்க்கு உள்ளிடுக."
           ]
         ]
       }
@@ -4706,7 +5742,7 @@
         ],
         [
           "Bare Sudoku ఎన్ని భాషల్లో ఉంది?",
-          "223 భాషల్లో, ఒక్కొక్క దానికి సొంత పేజీ. గేమ్‌లోని భాషా మెనూ పేజీని మారుస్తుంది, గేమ్ కింది జాబితా ప్రతి భాషకు లింక్ చేస్తుంది. గేమ్ మీ ఎంపికను గుర్తుంచుకుంటుంది."
+          "ఒక్కొక్కదానికి సొంత పేజీ 60 భాషల్లో. గేమ్ పేజీ భాషను అనుసరిస్తుంది, మీ ఎంపికను గుర్తుంచుకుంటుంది."
         ]
       ],
       "madeBy": "రూపకర్త: Alparslan Selçuk Develioğlu",
@@ -4752,6 +5788,34 @@
           [
             "నా పజిల్ అపలోడ్ చేయబడుతుందా?",
             "లేదు. సమాధానకారి పూర్తిగా మీ బ్రౌజర్‌లో నడిస్తుంది, ఆఫ్‌లైన్‌లో కూడా. దాని 81 అంకెలను చిరునామాకు ?p= గా జోడించడం ద్వారా మీరు పజిల్‌ని భాగస్వామ్యం చేయవచ్చు."
+          ]
+        ]
+      },
+      "print": {
+        "title": "ముద్రించదగిన సుడోకు: ప్రతి స్థాయిలో ఉచిత పజిల్‌లు",
+        "description": "ఉచిత సుడోకు పజిల్‌లను ముద్రించండి: సులభం నుండి ఆచార్య వరకు స్థాయి, ఒక నుండి ఆరు పజిల్‌లు. ప్రకటనలు లేవు, నమోదు లేదు.",
+        "h1": "ముద్రించదగిన సుడోకు పజిల్‌లు",
+        "intro": "స్థాయి మరియు మీరు కోరుకున్న పజిల్‌ల సంఖ్యను ఎంచుకుని, ఆపై ముద్రించండి. పజిల్‌లు ఆట నుండి ఉన్న జనరేటర్ నుండి వస్తాయి, కాబట్టి ప్రతిదానికి సరిగ్గా ఒక పరిష్కారం ఉంది, ఊహించవలసిన అవసరం లేదు, దాని స్థాయి మరియు రేటింగ్ చూపుతుంది. పరిష్కారాలు ప్రత్యేక పేజీలో ముద్రిస్తారు, కూడా విస్మరించవచ్చు; పేజీ ఆధారంలో లింక్ అదే పజిల్‌లను వాటి పరిష్కారాలతో తిరిగి తీసుకువస్తుంది.",
+        "link": "సుడోకు ముద్రించండి",
+        "level": "స్థాయి",
+        "count": "పేజీకి పజిల్‌లు",
+        "solutions": "పరిష్కారాలను చేర్చండి",
+        "print": "ముద్రించండి",
+        "refresh": "కొత్త పజిల్‌లు",
+        "solutionsHeading": "పరిష్కారాలు",
+        "sheet": "అదే పజిల్‌లు వాటి పరిష్కారాలతో: {url}",
+        "faq": [
+          [
+            "ఒక పేజీలో ఎన్ని పజిల్‌లు సరిపోతాయి?",
+            "ఒకటి, రెండు, నాలుగు లేదా ఆరు. ఒకటి లేదా రెండులో గ్రిడ్‌లు పెద్దవి, ఆరులో చిన్నవి కానీ ఇప్పటికీ సులభంగా నిండుతాయి. పరిష్కారాలు ప్రత్యేక పేజీలో, ఒక వరుసలో మూడు."
+          ],
+          [
+            "నేను ఆడుకుంటున్న పజిల్‌ను ముద్రించవచ్చా?",
+            "అవును. ఆట మెనూలో పజిల్‌ను భాగస్వామ్యం చేయండి ఒక లింక్‌ను కాపీ చేస్తుంది ఇది ?p= లో ముగిసి పజిల్ 81 అంకెలు. ఈ ?p= ఉన్న ఈ పేజీను తెరిచి; పేజీ ఆ పజిల్‌ను మాత్రమే చూపుతుంది, విరిచిపెట్టినట్లు దాని పరిష్కారం కూడా."
+          ],
+          [
+            "నేను తరువాత పరిష్కారాలను పొందవచ్చా?",
+            "అవును. పేజీ ఆధారంలో ముద్రిత లింక్ అదే పజిల్‌లను వాటి పరిష్కారాలతో తెరుస్తుంది. ప్రతి కదలిక వెనుక సాంకేతికతతో దశ-దశ పరిష్కారం కోసం ఇచ్చిన సంఖ్యలను పరిష్కారకంలో టైప్ చేయండి."
           ]
         ]
       }
@@ -4819,7 +5883,7 @@
         ],
         [
           "Ilang wika ang mayroon ang Bare Sudoku?",
-          "223 wika, bawat isa sa sariling pahina. Ang menu ng wika sa laro ang nagpapalit ng pahina, at ang listahan sa ilalim ng laro ay nagli-link sa bawat wika. Naaalala ng laro ang pinili mo."
+          "60 wika, bawat isa sa sariling pahina. Ang menu ng wika sa laro ang nagpapalit ng pahina, at ang listahan sa ilalim ng laro ay nagli-link sa bawat wika. Naaalala ng laro ang pinili mo."
         ]
       ],
       "madeBy": "Gawa ni Alparslan Selçuk Develioğlu",
@@ -4865,6 +5929,34 @@
           [
             "Naka-upload ba ang aking puzzle?",
             "Hindi. Ang solver ay tumatakbo nang lubusan sa iyong browser, offline din. Maaari kang magbahagi ng puzzle sa pamamagitan ng pagdaragdag ng 81 digit nito sa address bilang ?p=."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Printable Sudoku: Libreng Puzzle Magagamit sa Lahat ng Antas",
+        "description": "I-print ang libreng Sudoku: pumili ng antas mula Madali hanggang Dalubhasa at 1-6 puzzles bawat sheet, may solusyon. Walang ads, walang sign-up.",
+        "h1": "Printable Sudoku puzzles",
+        "intro": "Pumili ng antas at kung gaano karaming puzzles ang gusto mo sa sheet, pagkatapos ay i-print. Ang mga puzzle ay mula sa parehong generator ng laro, kaya bawat isa ay may eksaktong isang solusyon, hindi na kailangang mag-guess at ipinapakita ang antas at rating nito. Ang mga solusyon ay nai-print sa ibang pahina, kaya maaari mong iwanan ang mga ito, at ang link sa ibaba ng sheet ay nagdadala ng parehong puzzles kasama ang kanilang mga solusyon.",
+        "link": "I-print ang Sudoku",
+        "level": "Antas",
+        "count": "Puzzles bawat sheet",
+        "solutions": "Kasama ang mga solusyon",
+        "print": "I-print",
+        "refresh": "Bagong puzzles",
+        "solutionsHeading": "Mga solusyon",
+        "sheet": "Parehong puzzles na may solusyon: {url}",
+        "faq": [
+          [
+            "Gaano karaming puzzle ang umaangkop sa isang sheet?",
+            "Isa, dalawa, apat o anim. Sa isa o dalawa ang grids ay malaki, sa anim ay mas maliit ngunit madaling punan pa rin. Ang mga solusyon ay nai-print sa ibang pahina, tatlo sa isang hilera."
+          ],
+          [
+            "Maaari bang i-print ang puzzle na ginagawa ko?",
+            "Oo. Ang ibahagi ang puzzle sa menu ng laro ay nagsasalin ng link na nagtatapos sa ?p= at ang 81 digit ng puzzle. Buksan ang pahinang ito na may parehong ?p= bahagi, at ang sheet ay nagpapakita lamang ng puzzle na iyon, kasama ang solusyon kung gusto mo."
+          ],
+          [
+            "Maaari akong makakuha ng mga solusyon mamaya?",
+            "Oo. Ang link na naiprintahan sa ibaba ng sheet ay nagbubukas ng parehong puzzles kasama ang kanilang mga solusyon. Para sa step-by-step na solusyon kasama ang teknik sa likod ng bawat galaw, i-type ang mga binigay sa solver."
           ]
         ]
       }
@@ -4932,7 +6024,7 @@
         ],
         [
           "En quants idiomes hi ha Bare Sudoku?",
-          "En 223 idiomes, cadascun a la seva pàgina. El menú d'idioma del joc canvia de pàgina i la llista sota el joc enllaça a tots els idiomes. El joc recorda la teva tria."
+          "En 60 idiomes, cadascun a la seva pàgina. El menú d'idioma del joc canvia de pàgina i la llista sota el joc enllaça a tots els idiomes. El joc recorda la teva tria."
         ]
       ],
       "madeBy": "Fet per Alparslan Selçuk Develioğlu",
@@ -4978,6 +6070,34 @@
           [
             "El meu trencaclosques s'envia?",
             "No. El solver s'executa completament al teu navegador, sense connexió també. Pots compartir un trencaclosques afegint els seus 81 dígits a l'adreça com ?p=."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Sudoku imprimibles: Puzles gratuïts per imprimir",
+        "description": "Imprimeix sudokus gratuïts: tria nivell Fàcil a Mestre i 1-6 puzles per pàgina. Solucions en pàgina apart. Sense anuncis ni registre.",
+        "h1": "Puzles de sudoku imprimibles",
+        "intro": "Tria un nivell i quants puzles vols a la pàgina, després imprimeix. Els puzles provenen del mateix generador que el joc, així que cadascun té exactament una solució, no necessita suposicions i mostra el seu nivell i puntuació. Les solucions s'imprimeixen a una pàgina apart, així que pots ometre-les, i l'enllaç al peu de la pàgina torna els mateixos puzles amb les seves solucions.",
+        "link": "Imprimeix Sudoku",
+        "level": "Nivell",
+        "count": "Puzles per pàgina",
+        "solutions": "Inclou solucions",
+        "print": "Imprimeix",
+        "refresh": "Puzles nous",
+        "solutionsHeading": "Solucions",
+        "sheet": "Els mateixos puzles amb solucions: {url}",
+        "faq": [
+          [
+            "Quants puzles caben en una pàgina?",
+            "Un, dos, quatre o sis. Amb un o dos les graelles són grans, amb sis són més petites però es completen fàcilment. Les solucions s'imprimeixen a una pàgina apart, tres per fila."
+          ],
+          [
+            "Puc imprimir el puzle que estic jugant?",
+            "Sí. Comparteix el puzle al menú del joc copia un enllaç que acaba amb ?p= i els 81 dígits del puzle. Obri aquesta pàgina amb la mateixa part ?p= i la pàgina mostra només aquell puzle, amb la seva solució si la vols."
+          ],
+          [
+            "Puc obtenir les solucions més tard?",
+            "Sí. L'enllaç imprès al peu de la pàgina obri els mateixos puzles amb les seves solucions. Per a una solució pas a pas amb la tècnica de cada moviment, escriu els números donats al solver."
           ]
         ]
       }
@@ -5045,7 +6165,7 @@
         ],
         [
           "V koliko jezikih je Bare Sudoku?",
-          "V 223 jezikih, vsak na svoji strani. Meni jezika v igri zamenja stran, seznam pod igro pa vodi do vsakega jezika. Igra si zapomni tvojo izbiro."
+          "V 60 jezikih, vsak na svoji strani: Slovenščina, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी in še. Igra sledi jeziku strani in si zapomni tvojo izbiro."
         ]
       ],
       "madeBy": "Ustvaril Alparslan Selçuk Develioğlu",
@@ -5091,6 +6211,34 @@
           [
             "Se moja uganka naloži nekam?",
             "Ne. Reševalnik teče v celoti v tveм brskalniku, tudi brez interneta. Uganko lahko deliš z dodajanjem 81 števk naslovni vrstici kot ?p=."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Sudoku za tisk: Brezplačne uganke na vsakem nivoju",
+        "description": "Izpiši brezplačne uganke sudoku na nivoju od Lahko do Mojster, 1-6 na strani, s spletom na ločeni strani. Brez oglasov, brez registracije.",
+        "h1": "Sudoku uganke za tisk",
+        "intro": "Izberi raven in koliko ugank želiš na strani, nato izpiši. Uganke prihajajo iz istega generatorja kot igra, zato ima vsaka natanko eno rešitev, ne zahteva ugibanja in prikazuje svojo raven in oceno. Rešitve se tiskajo na ločeni strani, zato jih lahko izpustiš, povezava pa na dnu strani vrne enake uganke s svojimi rešitvami.",
+        "link": "Izpiši Sudoku",
+        "level": "Raven",
+        "count": "Ugank na strani",
+        "solutions": "Vključi rešitve",
+        "print": "Izpiši",
+        "refresh": "Nove uganke",
+        "solutionsHeading": "Rešitve",
+        "sheet": "Iste uganke z rešitvami: {url}",
+        "faq": [
+          [
+            "Koliko ugank se prilega na eno stran?",
+            "Ena, dve, štiri ali šest. Z eno ali dvema so mreže velike, s šestimi so manjše, vendar jih je še vedno enostavno izpolniti. Rešitve se tiskajo na ločeni strani, tri v vrsto."
+          ],
+          [
+            "Ali lahko izpiš uganko, ki jo igram?",
+            "Da. Deli uganko v meniu igre kopira povezavo, ki se konča z ?p= in 81 številkami uganke. Odpri to stran z enakim ?p= delom, stran pa prikaže samo to uganko, z njeno rešitvijo, če jo želiš."
+          ],
+          [
+            "Ali lahko pozneje dobi rešitve?",
+            "Da. Povezava natisnjena na dnu strani odpre iste uganke s svojimi rešitvami. Za rešitev po korakih s tehniko za vsak potez vpiši dane številke v reševalnik."
           ]
         ]
       }
@@ -5158,7 +6306,7 @@
         ],
         [
           "Kiek kalbų turi Bare Sudoku?",
-          "223 kalbų, kiekviena savo puslapyje. Kalbos meniu žaidime perjungia puslapį, o sąrašas po žaidimu nuveda į kiekvieną kalbą. Žaidimas prisimena jūsų pasirinkimą."
+          "60 kalbų, kiekviena savo puslapyje: Lietuvių, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ir daugiau. Žaidimas seka puslapio kalbą ir prisimena jūsų pasirinkimą."
         ]
       ],
       "madeBy": "Sukūrė Alparslan Selçuk Develioğlu",
@@ -5204,6 +6352,34 @@
           [
             "Ar mano galvosūkis yra į diegtas?",
             "Ne. Sprendėjas veikia visiškai tavo naršyklėje, taip pat neprisijungus. Galvosūkį gali dalintis pridėdamas 81 skaitmenį į adresą kaip ?p=."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Spausdinamas Sudoku: nemokama galvosūkiai kiekvienam lygiui",
+        "description": "Spausdink nemokamai sudoku: pasirink lygį nuo Lengva iki Meistras ir 1-6 galvosūkius per lapą, sprendimus atskirame puslapyje. Be reklamų, be registracijos.",
+        "h1": "Spausdinami sudoku galvosūkiai",
+        "intro": "Pasirink lygį ir kiek galvosūkių nori puslapyje, tada spausdink. Galvosūkiai iš to paties generatoriaus kaip žaidimas, todėl kiekvienas turi tiksliai vieną sprendimą, nereikia atspėti ir rodo savo lygį bei įvertinimą. Sprendimai spausdinami atskirame puslapyje, todėl juos gali praleisti, o nuoroda puslapio apačioje grąžina tuos pačius galvosūkius su sprendimais.",
+        "link": "Spausdink Sudoku",
+        "level": "Lygis",
+        "count": "Galvosūkiai per lapą",
+        "solutions": "Įtraukti sprendimus",
+        "print": "Spausdinti",
+        "refresh": "Nauji galvosūkiai",
+        "solutionsHeading": "Sprendimai",
+        "sheet": "Tie patys galvosūkiai su sprendimais: {url}",
+        "faq": [
+          [
+            "Kiek galvosūkių tilps viename lape?",
+            "Vienas, du, keturi ar šeši. Su vienu ar dviem tinkleliai dideli, su šešiais - mažesni, bet vis tiek lengvi įpildyti. Sprendimai spausdinami atskirame puslapyje, trys eilutėje."
+          ],
+          [
+            "Ar galiu spausdinti žaidžiamą galvosūkį?",
+            "Taip. Bendrinti galvosūkį žaidimo meniu kopijuoja nuorodą, baigiantis ?p= ir 81 galvosūkio skaitmeniu. Atidaryk šį puslapį tuo pačiu ?p= dalimi, ir puslapis rodo tik tą galvosūkį, su sprendimu, jei to nori."
+          ],
+          [
+            "Ar vėliau galiu gauti sprendimus?",
+            "Taip. Nuoroda, atsispausdinta puslapio apačioje, atidaro tuos pačius galvosūkius su sprendimais. Kad gautum žingsnis po žingsnio sprendimą su kiekvieno žingsnio technika, įvesk duotus skaitmenis į sprendėją."
           ]
         ]
       }
@@ -5271,7 +6447,7 @@
         ],
         [
           "Cik valodās ir Bare Sudoku?",
-          "223 valodās, katra savā lapā. Valodas izvēlne spēlē pārslēdz lapu, un saraksts zem spēles ved uz katru valodu. Spēle atceras tavu izvēli."
+          "60 valodās, katra savā lapā: Latviešu, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी un vairāk. Spēle seko lapas valodai un atceras tavu izvēli."
         ]
       ],
       "madeBy": "Izveidoja Alparslan Selçuk Develioğlu",
@@ -5317,6 +6493,34 @@
           [
             "Vai mana mīkla tiek augšupielādēta?",
             "Nē. Risinātājs darbojas pilnībā tavā pārlūkā, arī bezsaistē. Mīklu vari koplietot, pievienojot 81 ciparu adresei kā ?p=."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Drukājams Sudoku: Bezmaksas mīklas drukāšanai visos līmeņos",
+        "description": "Drukā bezmaksas sudoku: izvēlies līmeni no Vienkārša līdz Meistars un 1-6 mīklas uz lapas, ar risinājumiem atsevišķā lapā. Bez reklāmām, bez reģistrācijas.",
+        "h1": "Drukājamas sudoku mīklas",
+        "intro": "Izvēlies līmeni un cik mīklu vēlies uz lapas, pēc tam drukā. Mīklas nāk no tā paša ģeneratora kā spēle, tāpēc katrai ir tieši viens risinājums, nav jāmin un tā rāda savu līmeni un novērtējumu. Risinājumi tiek drukāti atsevišķā lapā, tāpēc tos vari izlaist, un saite lapas apakšā atgriež tās pašas mīklas ar to risinājumiem.",
+        "link": "Drukā Sudoku",
+        "level": "Līmenis",
+        "count": "Mīklas uz lapas",
+        "solutions": "Ietvert risinājumus",
+        "print": "Drukāt",
+        "refresh": "Jaunas mīklas",
+        "solutionsHeading": "Risinājumi",
+        "sheet": "Tās pašas mīklas ar risinājumiem: {url}",
+        "faq": [
+          [
+            "Cik mīklu ietilps vienā lapā?",
+            "Viena, divas, četras vai sešas. Ar vienu vai divām režģi ir lieli, ar sešām ir mazāki, bet joprojām viegli aizpildāmi. Risinājumi tiek drukāti atsevišķā lapā, trīs rindā."
+          ],
+          [
+            "Vai varu drukāt mīklu, kuru spēlēju?",
+            "Jā. Mīklas koplietošana spēles izvēlnē kopē saiti, kas beidzas ar ?p= un mīklas 81 ciparem. Atver šo lapu ar tādu pašu ?p= daļu, un lapa parāda tikai šo mīklu ar tās risinājumu, ja to vēlies."
+          ],
+          [
+            "Vai vēlāk varu iegūt risinājumus?",
+            "Jā. Saite, kas drukāta lapas apakšā, atver tās pašas mīklas ar to risinājumiem. Soli pa solim risinājumam ar katra soļa paņēmienu, ievadi dotos ciparus risinātājā."
           ]
         ]
       }
@@ -5384,7 +6588,7 @@
         ],
         [
           "Bare Sudoku канча тилде бар?",
-          "223 тилде, ар бири өз барагында. Оюндагы тил менюсу барагын алмаштырат, ал эми оюндун астындагы тизме ар бир тилге шилтеме берет. Оюн тандооңузду эстеп калат."
+          "60 тилде, ар бири өз барагында. Оюндагы тил менюсу барагын алмаштырат, ал эми оюндун астындагы тизме ар бир тилге шилтеме берет. Оюн тандооңузду эстеп калат."
         ]
       ],
       "madeBy": "Жасаган: Alparslan Selçuk Develioğlu",
@@ -5430,6 +6634,34 @@
           [
             "Табышмагым кайсы жакка жүктөлүүдө?",
             "Жок. Чешүүчү толугу менен браузерде иштейт, интернетсиз да. Табышмакты дарегине ?p= менен 81 цифрасын кошуу менен бөлүшө аласыз."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Басууга боло турган Судоку: Ар бир деңгээлде акысыз табышмактар",
+        "description": "Акысыз судоку табышмактарын басыңыз: деңгээлди тандап, барагында 1-6 табышмак; чечимдер өзөө барагында. Жарнама жок, катталуу жок.",
+        "h1": "Басууга боло турган судоку табышмактары",
+        "intro": "Деңгээлди жана барагында канча табышмак каалап жатканыңызды тандап, андан кийин басыңыз. Табышмактар оюн сыяктуу эле генератордон келет; ар бирине так бир чечим бар, божомолдоо керек эмес жана деңгээлин менен рейтингин көрсөтөт. Чечимдер өзөө барагында басылат, каалап жатканыңызда аларды калтырасыз; барактын астындагы шилтеме ошол табышмактарды чечимдери менен кайра алып келет.",
+        "link": "Судоку басуу",
+        "level": "Деңгээл",
+        "count": "Барагында табышмактар",
+        "solutions": "Чечимдерди кошуу",
+        "print": "Басуу",
+        "refresh": "Жаңы табышмактар",
+        "solutionsHeading": "Чечимдер",
+        "sheet": "Ошол табышмактар чечимдери менен: {url}",
+        "faq": [
+          [
+            "Бир барагына канча табышмак сыйына?",
+            "Бир, эки, төрт же алты. Бир же экида торчулар чоң болот, алтыда кичи болот бирок толтуруу дагы эле жеңил. Чечимдер өзөө барагында, бири-бирине үч басылат."
+          ],
+          [
+            "Ойноп жаткан табышмакты басуу аласызбы?",
+            "Ооба. Оюн менюсундагы Табышмакты бөлүшүү ?p= менен аяккалап жана табышмактын 81 цифрасы болгон шилтемени көчүрөт. Бул баракты ошол эле ?p= менен ачыңыз; барак башка эч нерсе көрсөтпөстөн ошол табышмакты, каалап жатканыңызда анын чечимин көрсөтөт."
+          ],
+          [
+            "Чечимдерди кийинчерээк ала аласызбы?",
+            "Ооба. Барактын астына басылган шилтеме ошол табышмактарды чечимдери менен ачат. Ар бир жүрүштүн артында ыкма менен этап-этап чечим үчүн берилген сандарды чешүүчүгө жазыңыз."
           ]
         ]
       }
@@ -5497,7 +6729,7 @@
         ],
         [
           "Bare Sudoku қанша тілде бар?",
-          "223 тілде, әрқайсысы өз бетінде. Ойындағы тіл мәзірі бетті ауыстырады, ал ойын астындағы тізім әр тілге сілтейді. Ойын таңдауыңызды есте сақтайды."
+          "60 тілде, әрқайсысы өз бетінде. Ойындағы тіл мәзірі бетті ауыстырады, ал ойын астындағы тізім әр тілге сілтейді. Ойын таңдауыңызды есте сақтайды."
         ]
       ],
       "madeBy": "Жасаған: Alparslan Selçuk Develioğlu",
@@ -5543,6 +6775,34 @@
           [
             "Менің жұмбақым жүктелсін бе?",
             "Жоқ. Шешушісі толығымен сіздің браузеріңізде жұмыс істейді, офлайнда да. Жұмбақты оның 81 цифрын мекенжайына ?p= ретінде қосу арқылы бөлісе аласыз."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Басылмалы судоку: әр деңгейде тегін жұмбақтар",
+        "description": "Тегін судоку жұмбақтарын басыңыз: Оңай-Ұста деңгейін таңдаңыз, әрбір беттік 1-6 жұмбақ. Шешімдер өзге беттік. Жарнама жоқ, тіркелу жоқ.",
+        "h1": "Басылмалы судоку жұмбақтары",
+        "intro": "Деңгейді таңдап, беттіге қанша жұмбақ қажет екенін білдіріңіз, содан кейін басыңыз. Жұмбақтар ойынмен бір генератордан келеді, сондықтан әрқайсысының дәл бір шешімі бар, болжаудың қажеті жоқ және оның деңгейін және рейтингін көрсетеді. Шешімдер өзге беттіге басылады, сондықтан оларды қалдырып кете аласыз, ал беттіктің төменгі сілтемесі осындай жұмбақтарды олардың шешімдерімен қайта келтіреді.",
+        "link": "Судоку басыңыз",
+        "level": "Деңгей",
+        "count": "Беттіге",
+        "solutions": "Шешімдерін қосу",
+        "print": "Басыңыз",
+        "refresh": "Жаңа жұмбақтар",
+        "solutionsHeading": "Шешімдер",
+        "sheet": "Бір өзге жұмбақтар шешімдерімен: {url}",
+        "faq": [
+          [
+            "Бір беттіге қанша жұмбақ сығады?",
+            "Бір, екі, төрт немесе алты. Бір-екісінде торлар үлкен, алтысында кішірек бірақ толтыру өте де қуанышты. Шешімдер өзге беттіге басылады, қатарына үш."
+          ],
+          [
+            "Ойнап жатқан жұмбақымды басыға аламын ба?",
+            "Иә. Ойындағы мәзірдік жұмбақты бөліс ?p= арқылы аяқталатын және жұмбақтың 81 сандарын құрайтын сілтемені көшіреді. Бұл беттіді бір өзге ?p= бөлігімен ашыңыз, беттік тек сол жұмбақты, istense оның шешімімен көрсетеді."
+          ],
+          [
+            "Шешімдерді кейін ала аламын ба?",
+            "Иә. Беттіктің төменгі хәрі басылмалы сілтеме осындай жұмбақтарды олардың шешімдерімен ашады. Әр қадамдың ард ырасындағы тәсілі бар сатылай-сатылай шешім үшін берілген сандарды шешушіге енгізіңіз."
           ]
         ]
       }
@@ -5610,7 +6870,7 @@
         ],
         [
           "Bare Sudoku nechta tilda bor?",
-          "223 tilda, har biri o'z sahifasida. O'yindagi til menyusi sahifani almashtiradi, o'yin ostidagi ro'yxat esa har bir tilga havola beradi. O'yin tanlovingizni eslab qoladi."
+          "60 tilda, har biri o'z sahifasida. O'yindagi til menyusi sahifani almashtiradi, o'yin ostidagi ro'yxat esa har bir tilga havola beradi. O'yin tanlovingizni eslab qoladi."
         ]
       ],
       "madeBy": "Yaratuvchi: Alparslan Selçuk Develioğlu",
@@ -5656,6 +6916,34 @@
           [
             "Mening boshqotirmam yuqlodiladimi?",
             "Yo'q. Yechuvchi to'liq sizning brauzeringizda ishlaydi, oflayn ham. Boshqotirmani uning 81 ta raqamini manzilga ?p= sifatida qo'shish orqali ulashishingiz mumkin."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Bosilgan Sudoku: Har bir darajadagi bepul boshqotirmalar",
+        "description": "Bepul sudoku bosing: Oson-Usta darajani tanlang, 1-6 ta boshqotirma varaqda. Yechimlar alohida varaqda. Reklama yoʻq, roʻyxat yoʻq.",
+        "h1": "Bosilgan sudoku boshqotirmalari",
+        "intro": "Darajani tanlang va varaqqada nechi ta boshqotirma istaysiz, keyin bosing. Boshqotirmalar oʻyn bilan bir xil generator dan keladi, shuning uchun har biri aynan bitta yechimga ega, taxmin qilish shart emas va uning darajasi va reyting ini koʻrsatadi. Yechimlar alohida varaqqada bosil adi, shuning uchun ularni oʻtkazib yuborishingiz mumkin, varaqqaning pastidagi havola bir xil boshqotirmalarni ularning yechimlari bilan qaytaradi.",
+        "link": "Sudoku bosing",
+        "level": "Daraja",
+        "count": "Varaq boshiga",
+        "solutions": "Yechimlarni qoʻshish",
+        "print": "Bosing",
+        "refresh": "Yangi boshqotirmalar",
+        "solutionsHeading": "Yechimlar",
+        "sheet": "Bir xil boshqotirmalar ularning yechimlari bilan: {url}",
+        "faq": [
+          [
+            "Bir varaqqaga nechi ta boshqotirma sigʻadi?",
+            "Bitta, ikkita, toʻrtta yoki oltita. Bitta va ikkitada toʻrlar katta, oltitada kichikroq lekin toʻldirish oson. Yechimlar alohida varaqqada, qatorida uchtadan bosil adi."
+          ],
+          [
+            "O'ynaydigan boshqotirmani bosishim mumkinmi?",
+            "Ha. O'yindagi menyuda Boshqotirmani ulashish ?p= bilan tugʻaydigan va boshqotirmaning 81 raqami bo'lgan havolani nusxa oladi. Bu sahifani bir xil ?p= qismi bilan oching va varaq faqat shu boshqotirmani, istasangiz uning yechimi bilan koʻrsatadi."
+          ],
+          [
+            "Yechimlarni keyin olishim mumkinmi?",
+            "Ha. Varaqqaning pastiga bosilgan havola bir xil boshqotirmalarni ularning yechimlari bilan ochadi. Har bir xabar tushundadigan ushbu usuli bilan qadam-qadam yechim uchun berilgan raqamlarni yechuvchiga kiriting."
           ]
         ]
       }
@@ -5723,7 +7011,7 @@
         ],
         [
           "Bare Sudoku näçe dilde bar?",
-          "223 dilde, her biri öz sahypasynda. Oýundaky dil menýusy sahypany çalyşýar, oýnuň aşagyndaky sanaw bolsa her dile salgy berýär. Oýun saýlawyňyzy ýatda saklaýar."
+          "60 dilde, her biri öz sahypasynda. Oýundaky dil menýusy sahypany çalyşýar, oýnuň aşagyndaky sanaw bolsa her dile salgy berýär. Oýun saýlawyňyzy ýatda saklaýar."
         ]
       ],
       "madeBy": "Ýasan: Alparslan Selçuk Develioğlu",
@@ -5769,6 +7057,34 @@
           [
             "Tapmaçam bir ýere ýükleniyor mi?",
             "Ýok. Çözüji doly brauzerde işleýär, internet ýok-da hem. Tapmaçany adresiň ?p= bilen 81 sanynyň ýa-da golemiş yapyşdyryp payla alyşsañ bolar."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Çap edilýän Sudoku: Her Derejede Mugt Tapmaçalar",
+        "description": "Mugt sudoku tapmaçalaryny çap et: Aňsat'dan Usta'çä derejesini saýla, sayfada bir bilen alty tapmaça; çözgütler ayrça sayfada basylýar. Mahabatsyz, hasapsyz.",
+        "h1": "Çap edilýän sudoku tapmaçalary",
+        "intro": "Bir dereje we sahyfada näçe tapmaça isleýändigiňi saýla, soňra çap et. Tapmaçalar oýun bilen birmeňzeş tuzuwçydan gelýär; her biri takyk bir çözgüde owaş, tahmin gerek däl, derejesi we derejesini görkez. Çözgütler ayrça sayfaya çap edilýär, isleseň daşarda galdyryryş; sayfanyň aşagyndaky baglanyşyk şol tapmaçalary çözgütleri bilen geri getirýär.",
+        "link": "Sudoku çap et",
+        "level": "Dereje",
+        "count": "Sayfada tapmaçalar",
+        "solutions": "Çözgütleri goş",
+        "print": "Çap et",
+        "refresh": "Täze tapmaçalar",
+        "solutionsHeading": "Çözgütler",
+        "sheet": "Şol tapmaçalar çözgütleri bilen: {url}",
+        "faq": [
+          [
+            "Bir sayfaya näçe tapmaça sığar?",
+            "Bir, iki, dört ýa-da alty. Bir bilen ikide setka uly bolup, altýda kiçi bolýar ama gowy doldurylyp bilinýär. Çözgütler ayrça sayfaya, gapyk ýa-da çokda üçer çap edilýär."
+          ],
+          [
+            "Oýnaýan tapmaçamy çap edip bilerinmi?",
+            "Hawa. Oýun menýusynda Tapmaçany payla soňunda ?p= we bulmaçanyň 81 sanyny göçürýär. Bu sayfany şol ?p= bilen açyp; sayfa diňe şol tapmaçany görkez, isleseň çözgüdi bilen."
+          ],
+          [
+            "Çözgütleri soňra alip bilerinmi?",
+            "Hawa. Sayfanyň aşagyna çap edilen baglanyşyk şol tapmaçalary çözgütleri bilen açýar. Her hereketlygynyň arkasyndaky tehnikalar bilen ädim ädim çözgüt üçin berilýän sanlary çözüjeye ýaz."
           ]
         ]
       }
@@ -5836,7 +7152,7 @@
         ],
         [
           "Bare Sudoku ничә телдә бар?",
-          "223 телдә, һәрберсе үз битендә. Уендагы тел менюсы битне алыштыра, ә уен астындагы исемлек һәр телгә сылтама бирә. Уен сайлавыгызны истә тота."
+          "60 телдә, һәрберсе үз битендә. Уендагы тел менюсы битне алыштыра, ә уен астындагы исемлек һәр телгә сылтама бирә. Уен сайлавыгызны истә тота."
         ]
       ],
       "madeBy": "Ясаучы: Alparslan Selçuk Develioğlu",
@@ -5882,6 +7198,34 @@
           [
             "Табышмакым бир ераһа йөкләнә ми?",
             "Юк. Чишүче тулысынча браузерда эшли, интернет булмаса да. Табышмакны адреска ?p= белән 81 сан өсте ясап уртаташа аласыз."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Печатка ярамлы Судоку: Һәр дәрәҗәдә бушлай табышмаклар",
+        "description": "Бушлай судоку табышмаклары печатка: Җиңелдән Мастар дәрәҗәсен сайлагыз, битгә бер белән ачты табышмак; чишелешләр башка битне басыла. Реклама юк, теркәлүсез.",
+        "h1": "Печатка ярамлы судоку табышмаклары",
+        "intro": "Дәрәҗә һәм битгә нинди табышмак истәсәгез сайлагыз, аннары печатка. Табышмаклар уен белән бер генератордан килә; һәрберсенең нәкъ бер чишелеше бар, фараз кирәкми, дәрәҗә һәм рейтингын күрсәтә. Чишелешләр башка битне басыла, теләгез ахырдан калдыра аласыз; биттың аштыннан сылтама шул табышмаклары чишелешләре белән кайтара.",
+        "link": "Судоку печатка",
+        "level": "Дәрәҗә",
+        "count": "Битгә табышмаклар",
+        "solutions": "Чишелешләрне кушыгыз",
+        "print": "Печатка",
+        "refresh": "Яңа табышмаклар",
+        "solutionsHeading": "Чишелешләр",
+        "sheet": "Шул табышмаклар чишелешләре белән: {url}",
+        "faq": [
+          [
+            "Бер битгә нинди табышмак сыйына?",
+            "Бер, ике, дүрт яке ачты. Бер һәм икегә тор зур булып, ачтыда кечке булса да җиңелнәр. Чишелешләр башка битне, яңын үзләнүче өчәр басыла."
+          ],
+          [
+            "Уйнаган табышмакны печатка ала аламмы?",
+            "Әйе. Уен менюсындагы Табышмакны уртаташу акырында ?p= һәм табышмакның 81 ысулын копия итә. Бу битне шул ?p= белән ачыгыз; бит төнь ул табышмакны күрсәтә, теләгез чишелеше белән."
+          ],
+          [
+            "Чишелешләрне соңрадан ала аламмы?",
+            "Әйе. Биттың астына басылган сылтама шул табышмаклары чишелешләре белән ачыла. Һәр хәрәкәттең артында ысул белән адым-адым чишелеш өчен бирелгән сандарны чишүчегә языгыз."
           ]
         ]
       }
@@ -5949,7 +7293,7 @@
         ],
         [
           "Bare Sudoku нисә телдә бар?",
-          "223 телдә, һәр береһе үҙ битендә. Уйындағы тел менюһы битте алмаштыра, ә уйын аҫтындағы исемлек һәр телгә һылтанма бирә. Уйын һайлауығыҙҙы иҫтә тота."
+          "60 телдә, һәр береһе үҙ битендә. Уйындағы тел менюһы битте алмаштыра, ә уйын аҫтындағы исемлек һәр телгә һылтанма бирә. Уйын һайлауығыҙҙы иҫтә тота."
         ]
       ],
       "madeBy": "Яһаусы: Alparslan Selçuk Develioğlu",
@@ -5995,6 +7339,34 @@
           [
             "йомаҡым бер ераһа юҡләнә ми?",
             "Юҡ. Сисеүсе тулысынса браузерҙа эшләй, интернет булмаһа да. йомаҡны адреска ?p= менән 81 цифраһын өсте яһап уртаташа аласыҙ."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Баҫып ҡуй һәләмлек Судоку: Һәр кимәлдә бушлай йомаҡтар",
+        "description": "Бушлай судоку йомаҡтарын баҫығыҙ: еңелҙән мастарға кимәлде һайлап, бер йәки алты йомаҡ; сиселеүләр башҡа битте баҫыла. Реклама юҡ, теркәлеү юҡ.",
+        "h1": "Баҫып ҡуй һәләмлек судоку йомаҡтары",
+        "intro": "Кимәлде һәм битҡа ҡанша йомаҡ теләгәнеңҙе һайлап, һуң баҫығыҙ. Йомаҡтар уйын менән шул уҡ генератордан килә; һәр береһенең теүәл бер сиселеше бар, фараз кәрәкмәй, кимәлен һәм реңгегеҙҙе күрһәтә. Сиселеүләр башҡа битте баҫыла, теләгән ураҫта ҡалдыра алаһығыҙ; биттың аҫтындағы һылтанма шул йомаҡтарҙы сиселеүләре менән ҡайта алып килә.",
+        "link": "Судоку баҫ",
+        "level": "Кимәл",
+        "count": "Биттә йомаҡтар",
+        "solutions": "Сиселеүләрҙе қуш",
+        "print": "Баҫ",
+        "refresh": "Яңы йомаҡтар",
+        "solutionsHeading": "Сиселеүләр",
+        "sheet": "Шул йомаҡтар сиселеүләре менән: {url}",
+        "faq": [
+          [
+            "Бер биткә ҡанша йомаҡ сыйына?",
+            "Бер, ике, дүрт йәки алты. Бер һәм икегә торсы зур, алтыға киҫе, ләкин ҙа тултырыу еңел. Сиселеүләр башҡа биткә, үҙ-үҙгә өс баҫыла."
+          ],
+          [
+            "Уйнап яткан йомаҡты баҫа аламмы?",
+            "Әйе. Уйын меню һәм йомаҡты уртаташ сонғы һүҙе ?p= һәм йомаҡтың 81 һан булғандағы һылтанма һөйләнә. Был битте шул ?p= менән асығыҙ; бит тамамы шул йомаҡты күрһәтә, теләгән ҡеҙен сиселеше менән."
+          ],
+          [
+            "Сиселеүләрҙе һуңра ала аламмы?",
+            "Әйе. Биттың аҫтына баҫылған һылтанма шул йомаҡтарҙы сиселеүләре менән асата. Һәр хәрәкәттең артында ысул менән аҙым-аҙым сиселеү өсөн берелгән һандарҙы сисеүсегә яҙығыҙ."
           ]
         ]
       }
@@ -6062,7 +7434,7 @@
         ],
         [
           "Bare Sudoku миҫе чӗлхепе пур?",
-          "223 чӗлхепе, кашни хӑйӗн страницинче. Вӑйӑри чӗлхе менювӗ страницӑна улӑштарать, вӑйӑ айӗнчи список кашни чӗлхе патне ярать. Вӑйӑ суйлавӑра астуса юлать."
+          "60 чӗлхепе, кашни хӑйӗн страницинче. Вӑйӑри чӗлхе менювӗ страницӑна улӑштарать, вӑйӑ айӗнчи список кашни чӗлхе патне ярать. Вӑйӑ суйлавӑра астуса юлать."
         ]
       ],
       "madeBy": "Тӑваканӗ: Alparslan Selçuk Develioğlu",
@@ -6108,6 +7480,34 @@
           [
             "Манӑ тупсӑм йӳклет ми?",
             "Ҫук. Тупӑр пӗлтерӗш браузерта ӗҫлет та офлайн та. Тупсӑме адресӑпа ?p= килӗш 81 цифра пайлап пуштарса та пайла вӑйӑҫ та кунет."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Пуҫлама хӑтӗлӗ Судоку: Кашни Шайра Тӳлевсӗр Тупсӑсем",
+        "description": "Тӳлевсӗр судоку тупсӑсене пуҫла: ҫӑмӑлтан мастерем шайне суйла, листке пӗр вӑл алтӑ тупсӑ; хуравсем паян листра пуҫлатат. Реклама йук, регистрация йук.",
+        "h1": "Пуҫлама хӑтӗлӗ судоку тупсӑсем",
+        "intro": "Шайне та листка нумайсем суйла, танахалан пуҫла. Тупсӑсем вӑйӑпа пӗр генератортан килет; кашне шӑпах пӗр хурав пур, тӗшмӗртма мар та шайне та пӗҫ турӑ пӑрахӑҫ хырӑ. Хуравсем паян листра пуҫлатат, килӗ ӑрӑмпа умса хӑвӑртса та пулать; листтин алӑ ярӑ ҫулӗ ҫул туп тупсӑсемне хуравсем менен суттете.",
+        "link": "Судоку пуҫла",
+        "level": "Шай",
+        "count": "Листра тупсӑ",
+        "solutions": "Хуравсене лӑртма",
+        "print": "Пуҫла",
+        "refresh": "Ҫӗнӗ тупсӑсем",
+        "solutionsHeading": "Хуравсем",
+        "sheet": "Ҫул туп ку тупсӑсем хуравсем менен: {url}",
+        "faq": [
+          [
+            "Пӗр листра нумай тупсӑ яшана?",
+            "Пӗр, икӗ, тӑватӑ е алтӑ. Пӗрте икӗте таван кӑтӑл сӑнӑ, алтӑта кӑвӑл, анчах та пуҫма еңел. Хуравсем паян листра, виҫҫӗнче пӗртен-пӗр пуҫлатат."
+          ],
+          [
+            "Вӑйӑ выляйӑнхи тупсӑме пуҫла аша пулӑр?",
+            "Тесен. Вӑйӑ меню тупсӑме пайла сонӑ юллине яҫӑ ?p= та тупсӑ 81 цифра. Ку страницӑ ҫул юллине уҫӑр; страница пӗрпе те ҫук ҫул ку тупсӑне хуҫӑ, килӗ хуравӑ менен."
+          ],
+          [
+            "Хуравсене каялла та ила аша пулӑр?",
+            "Тесен. Листтин алӑ яҫӑ ҫулӗ ҫул туп тупсӑсемне хуравсем менен уҫа. Кашни тепӗр хӑй мелне ӑнлатӑ сӗнӳ менен тепре-тепре туп пӗѐ валли кӑҫӑ цифр тупӑр менеле яҫӑр."
           ]
         ]
       }
@@ -6175,7 +7575,7 @@
         ],
         [
           "Bare Sudoku قانچە تىلدا بار؟",
-          "223 تىلدا، ھەر بىرى ئۆز بېتىدە. ئويۇندىكى تىل تىزىملىكى بەتنى ئالماشتۇرىدۇ، ئويۇن ئاستىدىكى تىزىملىك ھەر بىر تىلغا ئۇلىنىدۇ. ئويۇن تاللىشىڭىزنى ئەستە تۇتىدۇ."
+          "60 تىلدا، ھەر بىرى ئۆز بېتىدە. ئويۇندىكى تىل تىزىملىكى بەتنى ئالماشتۇرىدۇ، ئويۇن ئاستىدىكى تىزىملىك ھەر بىر تىلغا ئۇلىنىدۇ. ئويۇن تاللىشىڭىزنى ئەستە تۇتىدۇ."
         ]
       ],
       "madeBy": "ياسىغۇچى: Alparslan Selçuk Develioğlu",
@@ -6221,6 +7621,34 @@
           [
             "مېنىڭ تېپىشماقىم يۈكلەنەمدۇ؟",
             "يوق. يېشىۋەر پېتىن سىزنىڭ توركۆرگۈڭىزدە ئىشلەيدۇ، تورسىز ھەمدە. تېپىشماقنى ئۇنىڭ 81 رەقەمىنى ئادرېسغا ?p= دەپ قوشۇپ ئورتاقلىشىۋېلىشىڭىز مۇمكۈن."
+          ]
+        ]
+      },
+      "print": {
+        "title": "بېسىلىدىغان سۇدوكۇ: ھەربىر دەرىجىدە ھەقسىز تېپىشماقلار",
+        "description": "ھەقسىز سۇدوكۇ تېپىشماقلارنى بېسىڭ: ئاسان-ئۇستا دەرىجىسىنى تاللاڭ، ھەر بەتتە 1-6 تېپىشماق. يېشىملىرى باشقا بەتتە. ئېلان يوق، تىزىملىتىش يوق.",
+        "h1": "بېسىلىدىغان سۇدوكۇ تېپىشماقلىرى",
+        "intro": "دەرىجىنى تاللاپ، بەتتە نېچە تېپىشماق خالىسى بولسىڭىز بىلدۈرۈڭ، ئاندىن بېسىڭ. تېپىشماقلار ئويۇن بىلەن بىردەي جەنېراتوردىن كېلىدۇ، شۇڭا ھەر بىرىنىڭ دەل بىرلا يېشىمى بار، پەرەز قىلىشنىڭ ھاجىتى يوق ۋە ئۇنىڭ دەرىجىسى ۋە باھاسىنى كۆرسىتىدۇ. يېشىملىرى باشقا بەتتە بېسىلىدۇ، شۇڭا سىز ئۇنى قويۇپ كېتسىڭىز بولىدۇ، ۋە بەتتىڭ ئاستىدىكى ئۇلىنىش شۇ تېپىشماقلارنى ئۇلارنىڭ يېشىملىرى بىلەن قايتا كەلتۈرىدۇ.",
+        "link": "سۇدوكۇ بېسىڭ",
+        "level": "دەرىجە",
+        "count": "بەتتە",
+        "solutions": "يېشىملىرى قوشۇڭ",
+        "print": "بېسىڭ",
+        "refresh": "يېڭى تېپىشماقلار",
+        "solutionsHeading": "يېشىملىرى",
+        "sheet": "شۇ تېپىشماقلار يېشىملىرى ئىلا: {url}",
+        "faq": [
+          [
+            "بىر بەتتە نېچە تېپىشماق سىغىدۇ؟",
+            "بىر، ئىككى، تۆرت ياكى ئالتە. بىر-ئىككىدە تورلار چوڭ، ئالتىدا كىچىك بىلەن بىلەن توپلاش ئاسان. يېشىملىرى باشقا بەتتە بېسىلىدۇ، قۇردا ئۈچ."
+          ],
+          [
+            "ئوينىۋاتقان تېپىشماقىمنى بېسە ئالامدۇ؟",
+            "ھې. ئويۇن تىزىملىكىدە تېپىشماقنى ئورتاقلىشىش ?p= بىلەن ئاخىرلاشقان ۋە تېپىشماقنىڭ 81 رەقەمىنى ئوز ئىچىگە ئالغان ئۇلىنىش كۆچۈرىدۇ. بۇ بەتنى شۇ ?p= بۆلىكى بىلەن ئېچىڭ، بەت شۇ تېپىشماقنىلا، خوھلىسانغاندا ئۇنىڭ يېشىمى بىلەن كۆرسىتىدۇ."
+          ],
+          [
+            "يېشىملىرىنى كېيىن ئالۇ ئالامدۇ؟",
+            "ھې. بەتتىڭ ئاستىدا بېسىلغان ئۇلىنىش شۇ تېپىشماقلارنى ئۇلارنىڭ يېشىملىرى بىلەن ئېچىدۇ. ھەر قىدىمنىڭ ئارقىسىدىكى ئۇسۇل بىلەن قادام-قادام يېشىش ئۈچۈن بېرىلگەن رەقەملەرنى يېشىۋەرگە كىرگۈزۈڭ."
           ]
         ]
       }
@@ -6288,7 +7716,7 @@
         ],
         [
           "Bare Sudoku neshe tilde bar?",
-          "223 tilde, hár biri óz betinde. Oyındaǵı til menyui betti awıstıradı, al oyın astındaǵı dizim hár bir tilge silteme beredi. Oyın tańlawıńızdı este saqlaydı."
+          "60 dilde, hár biri óz betinde."
         ]
       ],
       "madeBy": "Jasaǵan: Alparslan Selçuk Develioğlu",
@@ -6334,6 +7762,34 @@
           [
             "Meniñ jumbaġa bir yerge juklenep?",
             "Joq. Sheshesh butında sizin brauzeríñde islede, oflayn da. Jumbaġany addresske ?p= buleh 81 san qoshıp oruslaw."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Chapa etiletuǵın Sudoku: Hár bir dáreje ushın biypul jumbaġalar",
+        "description": "Sudoku jumbaġalarını chapa etiń: Ańsatdan Ustảǵa dáreje; sayfaya bir-altı jumbaq qoiń, cheshimler ayrım sayfada. Reklama joq, dizimnen ótiw kerek emes.",
+        "h1": "Chapa etiletuǵın sudoku jumbaġalar",
+        "intro": "Dáreje tańlań, sayfaya neşe jumbaq istegeniñiz aytıń, sonra chapa etiń. Jumbaġalar oyındaǵı janaǵy kórsetkeş borlıklas soňǵı, shunıń ushın hár birenin tam bir sheshimi bar, boljaw kerek emes hám dárejesi men derecesi kórsetiledi. Cheshimler ayrım sayfada basıladi, istesañiz olardan bas táwtáń bolasız, sayfanıń astındaǵı silteme shu jumbaġalardy sheshimleriyle qaytaradi.",
+        "link": "Sudoku chapa etiń",
+        "level": "Dáreje",
+        "count": "Sayfaya jumbaq sayı",
+        "solutions": "Cheshimni qoiń",
+        "print": "Chapa etiń",
+        "refresh": "Jańa jumbaġalar",
+        "solutionsHeading": "Cheshimler",
+        "sheet": "Shu jumbaġalar cheshimleriyle: {url}",
+        "faq": [
+          [
+            "Bir sayfaya neşe jumbaq sığadi?",
+            "Bir, ikki, tórt ya da alty. Bir men ikkide şetkallar ulken boladi, altyda kíshi lekin yene ham oson toltırıladi. Cheshimler ayrım sayfada basıladi, üsh den bir jerde."
+          ],
+          [
+            "Óz jumbaqımni chapa eta olaman ba?",
+            "Ay, bole. Oyın menyusinde Jumbaġany oruslaw saýladı, soňuńda ?p= men jumbaġanıń 81 raqami bar silteme kóshiradi. Bu betti shu ?p= qısımı menen ashıń, saýfa tek shu jumbaġany kórsetedi, istesañiz cheshimiyle."
+          ],
+          [
+            "Cheshimlerni keyin ala olaman ba?",
+            "Ay, bole. Sayfanıń astında basılǵan silteme shu jumbaġalardy cheshimleriyle ashadi. Her jaldı arkasındaǵı usuli menen addım addım cheshim ushın berilgen raqamlardy shesheşke yazıń."
           ]
         ]
       }
@@ -6401,7 +7857,7 @@
         ],
         [
           "Bare Sudoku qaç tilde bar?",
-          "223 tilde, er biri öz saifesinde. Oyundaki til menüsi saifeni deñiştire, oyunnıñ astındaki cedvel ise er tilge bağlana. Oyun saylavıñıznı aqılda tuta."
+          "60 tilde, er biri öz saifesinde."
         ]
       ],
       "madeBy": "Yapqan: Alparslan Selçuk Develioğlu",
@@ -6447,6 +7903,34 @@
           [
             "Bilmecelerim bir yere yüklenedi mi?",
             "Hayır. Çözücü tamamen brauzerde çalışır, oflayn da. Bilmeceni addrese ?p= buleh 81 raqamını qoşup paylaşa bilersiz."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Yazdırıladı Bilegüçü Sudoku: Hár bir Seviyede Bedava Bilmeceler",
+        "description": "Bedava sudoku bilmecelerini yazdır: Qolaydan Usta'ya seviye sayla, sayfaya bir-altı bilmece koy, çezimler ayrı sayfada basılır. Reklam yoq, hesap yoq.",
+        "h1": "Yazdırıladı Bilegüçü Sudoku Bilmeceler",
+        "intro": "Seviye sayla, sayfaya neşe bilmece isterseñ, sonra yazdır. Bilmeceler oyundaki üreticiden gelir; her birenin tam bir çezimi bar, tahmin kerek emes, seviyesini ve derecesini korseter. Çezimler ayrı sayfada basılır, istersen olardan bas çıqarırsıñ; sayfanıñ astındaki bağlantı shu bilmecelerdi çezimlerile qaytarır.",
+        "link": "Sudoku yazdır",
+        "level": "Seviye",
+        "count": "Sayfaya bilmece",
+        "solutions": "Çezimler qoyulsuñ",
+        "print": "Yazdır",
+        "refresh": "Yañı bilmeceler",
+        "solutionsHeading": "Çezimler",
+        "sheet": "Shu bilmeceler çezimlerile: {url}",
+        "faq": [
+          [
+            "Bir sayfaya neşe bilmece sığır?",
+            "Bir, iki, dört yaki altı. Bir ve ikide şetkallar büyükdir, altıda kiçikdir ama kolay doldurılır. Çezimler ayrı sayfada basılır, üç yan yana."
+          ],
+          [
+            "Oynadığım bilmeceni yazdırabilir miyim?",
+            "Evet. Oyun menyusunda Bilmeceni paylaş saýladı, soñuda ?p= ve bilmecenin 81 raqamı olan bağlantı qopya ete. Bu saifeni shu ?p= qısmı bilan aç; sayfa yalnız shu bilmeceni korsete, isterseñ çezimile."
+          ],
+          [
+            "Çezimlerdi keyin ala bilir miyim?",
+            "Evet. Sayfanıñ astında basılğan bağlantı shu bilmecelerdi çezimlerile aça. Her hamlenin arkasındaki usulnen addım addım çezim üçün verilgen raqamlarny çözücüne yaz."
           ]
         ]
       }
@@ -6514,7 +7998,7 @@
         ],
         [
           "Bare Sudoku хас тылынан баарый?",
-          "223 тылынан, хас биирдиилэрэ бэйэтин сирэйигэр. Оонньуу иһинээҕи тыл менютэ сирэйи уларытар, оонньуу анныгар баар испииһэк хас биирдии тылга сигэр. Оонньуу эн талыыгын өйдүүр."
+          "60 тылынан, хас биирдиилэрэ бэйэтин сирэйигэр."
         ]
       ],
       "madeBy": "Оҥордо: Alparslan Selçuk Develioğlu",
@@ -6560,6 +8044,34 @@
           [
             "Таабырым бирэ миэстэ ылбатыргамайаҕа дьиэ?",
             "Суох. Чэпсиһэ толо браузер булан үлэлэр, оффлайн та. Таабырын адреһэ ?p= булан 81 ыйтыкта оҕо биэргирип бөлүс."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Сигирэргэ Судоку: Сырдыма Оонньуулар Хас Таһыма",
+        "description": "Босхо судоку оонньууларын сигир: Чэпчэкитэн Мастаргар таһым тал, бир-алта оонньуу сирэйэ, быһаарыылаалар аса. Реклама суох, регистрация суох.",
+        "h1": "Сигирэргэ Судоку оонньуулар",
+        "intro": "Таһым тал, сирэйэ миэстэлээхтээх оонньуу һаҥата, сонуоҕу сигир. Оонньуулар оонньуудаҕы генератор биһэ эҥэ, сыһыа биирэ эрэ быһаарыылаах, таайар наадата суох ба таһымын уонна деңээлин эрэ кӧрдөр. Быһаарыылаалар аса сирэйэ сигирилэр, истебил ынна ситэрээш, сирэйинин анныгар сигирэмэ сыһыа оонньууны быһаарыылаалар биһиһэ ылбаһыа.",
+        "link": "Судоку сигир",
+        "level": "Таһым",
+        "count": "Сирэйэ оонньуу",
+        "solutions": "Быһаарыылаалары ел",
+        "print": "Сигир",
+        "refresh": "Саҥа оонньуулар",
+        "solutionsHeading": "Быһаарыылаалар",
+        "sheet": "Сыһыа оонньуулар быһаарыылаалар биһиһэ: {url}",
+        "faq": [
+          [
+            "Бир сирэйэ миэстэлээхтээх оонньуу сыһыа?",
+            "Биир, икки, төрт эбэтэр алта. Биир уонна иккиттэн шетка улахан, алтатан кыра ылмалта оҥоруу оҥо буолар. Быһаарыылаалар аса сирэйэ сигирилэр, үс сирээстэ."
+          ],
+          [
+            "Оонньуугун оонньуогун сигирэ турарбын боллор?",
+            "Ээ. Оонньуудаҕы меню биһиһэ Оонньуу бөлүс сонуорунну сигэрир, сонуоҕу ?p= уонна оонньуунун 81 сыыппара сигирэме сигэрэ. Маннаӊ сирэйини сыһыа ?p= бөлүһүгүнээн ас; сирэй сакха сыһыа оонньуу кӧрдөр, истебил быһаарыылаалар биһиһэ."
+          ],
+          [
+            "Быһаарыылаалары кэннэ ала алан ебик?",
+            "Ээ. Сирэйинин анныгар сигирэмэ сигирэме сыһыа оонньууны быһаарыылаалар биһиһэ ас. Хас хальдыынан арра хандыы аҕалаҳа биирдэ-биирдэ быһаарыы өйүүрүнэ бэйээ сыыппара туһуоруога бар."
           ]
         ]
       }
@@ -6627,7 +8139,7 @@
         ],
         [
           "Bare Sudoku нече тилде бар?",
-          "223 тилде, гьар бири оьзюню бетинде. Оюндагъы тил меню бетни алышдыра, оюнну тюбюндеги тизим буса гьар тилге элте. Оюн сайлавугъузну эсде сакълай."
+          "60 тилде, гьар бири оьзюню бетинде."
         ]
       ],
       "madeBy": "Этген: Alparslan Selçuk Develioğlu",
@@ -6673,6 +8185,34 @@
           [
             "Мениь табышмам бирер йерге беслене ми?",
             "Йокъ. Чечювджи дакъыкъ браузерде ишлей, оффлайн да. Табышманы адресге ?p= булан 81 санны къошып олашмакъ."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Басмага Судоку: Гьар Даражада Гьакъсыз Табышмалар",
+        "description": "Гьакъсыз судоку табышмаларын бас: Енгилдан Мастергъа даража сайла, басмаға бир-алты табышма кой, чечимлер аса басмага. Реклама ёкъ, регистрация ёкъ.",
+        "h1": "Басмага Судоку табышмалар",
+        "intro": "Даража сайла, басмаға неле табышма истегениңи аит, сонра бас. Табышмалар оюндаӓи генератордан келир; гьар биренин бир чечими бар, чама этмеге тарыкъ тюгюл, даражасы ва дереджеси кёрсетилир. Чечимлер аса басмага басылыр, истесеңиз ондан кочун болусуз; басманын астындаги ишаре бир шу табышмаларны чечимлериле кайта апарыр.",
+        "link": "Судокуну бас",
+        "level": "Даража",
+        "count": "Басмаға табышма",
+        "solutions": "Чечимлери салмакъ",
+        "print": "Бас",
+        "refresh": "Янгы табышмалар",
+        "solutionsHeading": "Чечимлер",
+        "sheet": "Бир шу табышмалар чечимлериле: {url}",
+        "faq": [
+          [
+            "Бир басмаға неле табышма сыдырыр?",
+            "Бир, эки, дёрт яда алты. Бир ва экиде торгъу улкюн болыр, алтыда кичи ама йена коъай толтурыла. Чечимлер аса басмага басылыр, үч бир йолда."
+          ],
+          [
+            "Оюнуьм табышманы басма аларын бола?",
+            "Я, бола. Оюн меню булан Табышманы олашмакъ саелди, сонунда ?p= ва табышманын 81 рагъамы болгъан ишаре вургълады. Бу сахифаны бир шу ?p= кисмы булан ач; сахифа йалгъыз бир шу табышманы кёрсетир, истесеңиз чечимиле."
+          ],
+          [
+            "Чечимлерни кейин ала бола?",
+            "Я, бола. Басманын астындаги басыллыкъ ишаре бир шу табышмаларны чечимлериле ачыр. Гьар ишнин артындаги усулу булан адым адым чечим учун верилген рагъамларны чечювджюге язын."
           ]
         ]
       }
@@ -6740,7 +8280,7 @@
         ],
         [
           "Bare Sudoku نئچه دیلده‌دیر؟",
-          "223 دیلده، هر بیری اؤز صحیفه‌سینده. اویونداکی دیل منوسو صحیفه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله کئچید وئریر. اویون سئچیمینیزی یاددا ساخلاییر."
+          "60 دیلده، هر بیری اؤز صحیفه‌سینده. اویونداکی دیل منوسو صحیفه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله کئچید وئریر. اویون سئچیمینیزی یاددا ساخلاییر."
         ]
       ],
       "madeBy": "یارادان: Alparslan Selçuk Develioğlu",
@@ -6786,6 +8326,34 @@
           [
             "پازل من آپلود می‌شود؟",
             "خیر. حل‌کنندهٔ کاملاً در مرورگر شما کار می‌کند، همچنین آفلاین. می‌توانید یک پازل را با اضافه کردن 81 رقم آن به آدرس به‌عنوان ?p= اشتراک کنید."
+          ]
+        ]
+      },
+      "print": {
+        "title": "چاپی سودوکو: هر سویّه‌ده پولسوز بولماجالار",
+        "description": "پولسوز سودوکو بولماجالارینی چاپ کنید: آسان-اوستا سویّه‌نی سئچین، هر صحیفه‌ده 1-6 بولماجا. حل آفتاب صحیفه‌ده. رکلام یوخ، قئیدیات یوخ.",
+        "h1": "چاپی سودوکو بولماجالاری",
+        "intro": "بیر سویّه سئچین و صحیفه‌ده نه قدر بولماجا ایستیدیتینیزی بیلدیرین، سونرا چاپ کنید. بولماجالار اویونال آیئن یتاخت‌دان آلینیر، اونوْن اوچون هر بولماجانین دقیق بیر حلّی وار، تخمین لازیم دئییل و اؤز سویّه‌سینی و درجه‌سینی گؤستریر. حل آفتاب صحیفه‌ده چاپ اولونور، اونو بوراخیب جئتسئنیز، صحیفه‌نین آلتینداکی باغلانتی آیئن بولماجالارینی حل‌لری ایله گئری آلیر.",
+        "link": "سودوکو چاپ کنید",
+        "level": "سویّه",
+        "count": "صحیفه‌ده",
+        "solutions": "حل آفتاب",
+        "print": "چاپ کنید",
+        "refresh": "یئنی بولماجالار",
+        "solutionsHeading": "حل‌لر",
+        "sheet": "آیئن بولماجالار حل‌لری ایله: {url}",
+        "faq": [
+          [
+            "بیر صحیفه‌ده نه قدر بولماجا سیغار؟",
+            "بیری، ایکی، دؤرد یا آلتی. بیری‌ایکیده شبکه‌لر بؤیوک‌دور، آلتیدا کیچیک ام آلتی یئنه راحات دولدورولور. حل‌لر آفتاب صحیفه‌ده چاپ اولونور، سیرادا اوچ."
+          ],
+          [
+            "اویناد‌یغیم بولماجایی چاپ آلا بیلیرممی؟",
+            "بلی. اویون منوسوندا بولماجایی پایلاش ?p= ایله بیتین و بولماجانین 81 رقمینی اؤز‌وندن احتوا ادن بیر لینکی کوپیالایر. بو صحیفه‌نی آیئن ?p= قسمی ایله آچین، صحیفه تکجه او بولماجایی، ایستسئنیز حل‌ی ایله گؤستریر."
+          ],
+          [
+            "حل‌لری سونرا آلا بیلیرممی؟",
+            "بلی. صحیفه‌نین آلتینا چاپ شودو لینک آیئن بولماجالارینی حل‌لری ایله آچار. هر حرکتین آرخاسیندا بیلیندن قدم‌قدم حل اوچون ورولمو رقملری حل کننده‌ده یازین."
           ]
         ]
       }
@@ -6853,7 +8421,7 @@
         ],
         [
           "Mitmes keeles Bare Sudoku on?",
-          "223 keeles, igaüks oma lehel. Mängu keelemenüü vahetab lehte ja mängu all olev loend viib iga keeleni. Mäng jätab su valiku meelde."
+          "60 keeles, igaüks oma lehel: Eesti, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ja veel. Mäng järgib lehe keelt ja jätab su valiku meelde."
         ]
       ],
       "madeBy": "Tegija: Alparslan Selçuk Develioğlu",
@@ -6899,6 +8467,34 @@
           [
             "Kas minu puslet üles laetakse?",
             "Ei. Lahendaja töötab täielikult su brauseris, ka ilma internetita. Saad puslet jagada, lisades 81 numbrit aadressile kui ?p=."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Prinditav Sudoku: tasuta mõistatused igal tasemel",
+        "description": "Prindi tasuta sudokumõistatusi - vali tase Lihtsest kuni Meistri ja 1-6 mõistatust lehele, lahendused eraldi lehel. Ilma reklaami, ilma registreerimiseta.",
+        "h1": "Prinditavad sudokumõistatused",
+        "intro": "Vali tase ja kui palju mõistatusi soovid lehele, seejärel prindi. Mõistatused pärinevad samast generaatorist kui mäng, seega igal on täpselt üks lahendus, arvamist pole vaja ja see näitab oma taset ja hinnangut. Lahendused prinditakse eraldi lehele, nii et võid need välja jätta, ja lehe all olev link toob samad mõistatused nende lahendusega tagasi.",
+        "link": "Prindi Sudoku",
+        "level": "Tase",
+        "count": "Mõistatused lehel",
+        "solutions": "Kaasa lahendused",
+        "print": "Prindi",
+        "refresh": "Uued mõistatused",
+        "solutionsHeading": "Lahendused",
+        "sheet": "Samad mõistatused lahendusega: {url}",
+        "faq": [
+          [
+            "Kui palju mõistatusi mahub ühele lehele?",
+            "Üks, kaks, neli või kuus. Ühe või kahe korral on ruudukod suured, kuue korral väiksemad, kuid siiski hõlpsasti täidavad. Lahendused prinditakse eraldi lehele, kolm reas."
+          ],
+          [
+            "Kas saan mängitavat mõistatust printida?",
+            "Jah. Mängu menüüs mõistatuse jagamine kopeerib lingi, mis lõpeb ?p= ja mõistatuse 81 numbriga. Ava see leht sama ?p= osaga ja leht näitab ainult seda mõistatust, selle lahendusega, kui soovid."
+          ],
+          [
+            "Kas saan hiljem lahendused?",
+            "Jah. Lehe all trükitud link avab samad mõistatused nende lahendusega. Samm-sammult lahenduse jaoks iga sammu tehnikaga sisesta antud numbrid lahendajasse."
           ]
         ]
       }
@@ -7012,6 +8608,34 @@
           [
             "معمای من آپلود می شود؟",
             "خیر. حل کننده کاملاً در مرورگر شما کار می کند، بدون اینترنت نیز. شما می توانید معما را با اضافه کردن 81 رقم آن به آدرس به عنوان ?p= بیرلیشدیرید."
+          ]
+        ]
+      },
+      "print": {
+        "title": "چاپدار سودوکو: هر درجه‌ای بولماجان پولسوز",
+        "description": "سودوکو بولماجان‌لاری چاپ اتمه: درجه انتخاب کنید و هر شئت‌ده یک تا شش بولماجان؛ حل‌لر جداگانه شئت‌ده چاپ میشود. تبلیغ یوخ، قیدسیز.",
+        "h1": "چاپدار سودوکو بولماجان‌لاری",
+        "intro": "درجه و شئت‌ده چند بولماجان می‌خواهید انتخاب کنید، سپس چاپ کنید. بولماجان‌ها اویون‌داکی همان تولیدجی‌دن گله‌یر؛ هر کدام دقیق یک حل دارد، حدس زدن لزوم نیست و درجه و درجه‌بندی‌سی نشان میدهد. حل‌لر جداگانه شئت‌ده چاپ میشود، می‌توانید کناری گذاشتن‌لر؛ شئت‌تین پایین‌داکی لینک همان بولماجان‌لاری حل‌‌لری‌یله برکردی میاره.",
+        "link": "سودوکو چاپ کنید",
+        "level": "درجه",
+        "count": "شئت‌ده بولماجان",
+        "solutions": "حل‌لری افزایش دهید",
+        "print": "چاپ کنید",
+        "refresh": "تزه بولماجان‌لار",
+        "solutionsHeading": "حل‌لر",
+        "sheet": "همان بولماجان‌ها حل‌لری‌یله: {url}",
+        "faq": [
+          [
+            "یک شئت‌ده چند بولماجان سیغار؟",
+            "بیر، ایکی، دؤرد یا شش. بیر و ایکی‌ده تورسو بوزوق، شش‌دا کوچوک، لکین پرکردن‌ه آسان. حل‌لر جداگانه شئت‌ده، سه تا سیر چاپ میشود."
+          ],
+          [
+            "اویون‌داکی بولماجان‌ی چاپ ادا میتونم؟",
+            "بله. اویون منویسوندا بولماجان‌ی شریک شود بر لینک کپی میکنه که ?p= بر‌ای شود و بولماجان‌تین 81 رقم. بو شئفه‌نی همان ?p= برای باز کنید؛ شئفه تنها آن بولماجان‌ی نشان میدهد، می‌خواهید حل‌ی‌یله."
+          ],
+          [
+            "حل‌لری بعدتر ادا میتونم؟",
+            "بله. شئت‌تین پایین‌داکی چاپ شده لینک همان بولماجان‌لاری حل‌‌لری‌یله باز میکنه. هر حرکت‌تین پشت‌ه تکنیک‌یله مرحله‌به‌مرحله حل برای ورو‌نده شده رقم‌لاری حل‌کننده‌یه یازیں."
           ]
         ]
       }
