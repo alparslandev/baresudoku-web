@@ -75,6 +75,7 @@ class Sudoku {
     this.positions = new Uint16Array(10);
     this.lineMasks = new Uint16Array(9);
     this.corners = new Uint8Array(4);
+    this.rng = (Math.random() * 4294967296) >>> 0;
     this.count = 0;
     this.limit = 0;
     this.found = null;
@@ -212,9 +213,25 @@ class Sudoku {
     return false;
   }
 
+  seed(s) {
+    this.rng = s | 0;
+  }
+
+  random() {
+    this.rng = (this.rng + 0x6D2B79F5) | 0;
+    let t = this.rng;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return (t ^ (t >>> 14)) >>> 0;
+  }
+
+  nextInt(bound) {
+    return this.random() % bound;
+  }
+
   shuffle(a) {
     for (let k = a.length - 1; k > 0; k--) {
-      const j = (Math.random() * (k + 1)) | 0;
+      const j = this.nextInt(k + 1);
       const t = a[k];
       a[k] = a[j];
       a[j] = t;
