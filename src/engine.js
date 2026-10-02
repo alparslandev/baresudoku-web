@@ -34,7 +34,7 @@ const digit = m => 32 - Math.clz32(m & -m);
 const low = m => 31 - Math.clz32(m & -m);
 const SEE = new Uint8Array(6561);
 for (let i = 0; i < 81; i++) for (let j = 0; j < 81; j++) SEE[i * 81 + j] = sees(i, j) ? 1 : 0;
-const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56, 65, 66, 68, 70, 73, 70, 75, 78, 80, 82, 86, 84, 85, 90, 95];
+const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56, 65, 66, 68, 70, 73, 70, 75, 78, 80, 82, 84, 85, 86, 90, 95];
 const TECH_COUNT = TECH_BASE.length;
 const MASTER_RATING = 65;
 const LEVELS = 5;

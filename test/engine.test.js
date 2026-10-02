@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-const { Sudoku, Game, candidates, bit, PEERS, HINT_WRONG, HINT_PLACE, NONE, TECH_BASE, TECH_COUNT, TECH_ORDER, MASTER_RATING, EXPERT_LIMIT, LEVELS } = require("../src/engine.js");
+const { Sudoku, Game, candidates, bit, PEERS, ROW, COL, BOX, HINT_WRONG, HINT_PLACE, NONE, TECH_BASE, TECH_COUNT, TECH_ORDER, MASTER_RATING, EXPERT_LIMIT, LEVELS } = require("../src/engine.js");
 
 const LEVEL_NAMES = ["Kolay", "Orta", "Zor", "Uzman", "Usta"];
 const count = values => values.filter(v => v !== 0).length;
@@ -83,6 +83,25 @@ for (let level = 0; level < LEVELS; level++) {
     console.log(`${LEVEL_NAMES[level]}: ${n} bulmaca, ort ipucu ${(clues.reduce((a, b) => a + b, 0) / n).toFixed(1)}, ${ms.toFixed(1)} ms/bulmaca`);
   });
 }
+
+test("zorlama sirasi: Nishio once denenir, Cell ve Unit Forcing varsayilan sirada tetiklenmez", () => {
+  expect(TECH_BASE[37] < TECH_BASE[38] && TECH_BASE[38] < TECH_BASE[39]).toBe(true);
+  const e = new Sudoku();
+  const puzzle = "030040008000000600000009170000190800026000790004027000019200000005000000600050030".split("").map(Number);
+  e.load(puzzle);
+  const used = new Set();
+  let r1c4Lost5By = -1;
+  while (!e.complete()) {
+    expect(e.stuck()).toBe(false);
+    const had = e.lc[3] & bit(5);
+    const t = e.step();
+    expect(t).toBeGreaterThanOrEqual(0);
+    used.add(t);
+    if (had && !e.lv[3] && !(e.lc[3] & bit(5))) r1c4Lost5By = t;
+  }
+  expect(r1c4Lost5By).toBe(37);
+  expect(used.has(38) || used.has(39)).toBe(false);
+});
 
 test("oyun durumu: hamle, not, geri al, not doldurma, ipucu, sure, kayit", () => {
   const e = new Sudoku();
