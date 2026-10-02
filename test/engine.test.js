@@ -103,6 +103,30 @@ test("zorlama sirasi: Nishio once denenir, Cell ve Unit Forcing varsayilan sirad
   expect(used.has(38) || used.has(39)).toBe(false);
 });
 
+test("WXYZ-Wing: dortlu kesisen iki birime sigar", () => {
+  const inUnit = (c, u) => u < 9 ? ROW[c] === u : u < 18 ? COL[c] === u - 9 : BOX[c] === u - 18;
+  const crossing = (u, v) => u < 9 ? (v < 18 ? v >= 9 : Math.floor(u / 3) === Math.floor((v - 18) / 3)) : u < 18 && v >= 18 && Math.floor((u - 9) / 3) === (v - 18) % 3;
+  const bent = quad => {
+    for (let u = 0; u < 27; u++) for (let v = u + 1; v < 27; v++) if (crossing(u, v) && quad.every(c => inUnit(c, u) || inUnit(c, v))) return true;
+    return false;
+  };
+  const e = new Sudoku();
+  let wings = 0;
+  for (let level = 3; level < LEVELS; level++) {
+    for (let i = 0; i < 20; i++) {
+      e.load(e.generate(level));
+      while (!e.complete() && !e.stuck()) {
+        const t = e.step();
+        if (t < 0) break;
+        if (t !== 19) continue;
+        wings++;
+        expect(bent(Array.from(e.quad))).toBe(true);
+      }
+    }
+  }
+  expect(wings).toBeGreaterThan(0);
+});
+
 test("oyun durumu: hamle, not, geri al, not doldurma, ipucu, sure, kayit", () => {
   const e = new Sudoku();
   const puzzle = e.generate(1);

@@ -54,6 +54,7 @@ const MAX_ALS_LINKS = 131072;
 const PEER_SET = new Int32Array(243);
 for (let c = 0; c < 81; c++) for (const p of PEERS[c]) PEER_SET[c * 3 + ((p / 27) | 0)] |= 1 << (p % 27);
 const positionIn = (c, u) => u < 9 ? COL[c] : u < 18 ? ROW[c] : (ROW[c] % 3) * 3 + COL[c] % 3;
+const inUnit = (c, u) => u < 9 ? ROW[c] === u : u < 18 ? COL[c] === u - 9 : BOX[c] === u - 18;
 const chainBonus = links => links > 4 ? Math.min(10, (links - 4) >> 1) : 0;
 const MAX_NEST = 8;
 function candidates(values, cell) {
@@ -882,6 +883,25 @@ class Sudoku {
     return false;
   }
 
+  inTwo(u, v) {
+    const quad = this.quad;
+    for (let k = 0; k < 4; k++) if (!inUnit(quad[k], u) && !inUnit(quad[k], v)) return false;
+    return true;
+  }
+
+  bentQuad() {
+    const quad = this.quad;
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 4; j++) {
+        const a = quad[i], b = quad[j];
+        if (this.inTwo(ROW[a], 9 + COL[b])) return true;
+        if (((ROW[a] / 3) | 0) === ((BOX[b] / 3) | 0) && this.inTwo(ROW[a], 18 + BOX[b])) return true;
+        if (((COL[a] / 3) | 0) === BOX[b] % 3 && this.inTwo(9 + COL[a], 18 + BOX[b])) return true;
+      }
+    }
+    return false;
+  }
+
   wingDrop(union) {
     const lc = this.lc, quad = this.quad;
     let z = 0;
@@ -896,7 +916,7 @@ class Sudoku {
       if (z) return false;
       z = x;
     }
-    if (!z) return false;
+    if (!z || !this.bentQuad()) return false;
     let changed = false;
     for (let t = 0; t < 81; t++) {
       if (!(lc[t] & z) || t === quad[0] || t === quad[1] || t === quad[2] || t === quad[3]) continue;
