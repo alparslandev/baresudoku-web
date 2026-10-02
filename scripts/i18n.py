@@ -66,6 +66,23 @@ SITE_KEYS = ["title", "description", "h1", "intro", "featuresHeading", "features
 DAILY_KEYS = ["dailyTitle", "dailyDescription", "dailyH1", "dailyIntro"]
 
 
+SOLVER_KEYS = ["title", "description", "h1", "intro", "link", "paste", "next", "solve", "clear", "example", "edit", "noSolution", "manySolutions", "tooFew", "stuck", "done", "placed", "removed", "rating", "steps", "faq"]
+
+
+def has_solver(entry):
+    solver = entry.get("solver")
+    if not solver:
+        return False
+    missing = [k for k in SOLVER_KEYS if not solver.get(k)]
+    if missing:
+        raise SystemExit("site.json: solver metinleri eksik: %s" % ", ".join(missing))
+    for key, needed in (("placed", {"d", "cell"}), ("removed", {"d", "cells"}), ("rating", {"r"}), ("steps", {"n"})):
+        if placeholders(solver[key]) != needed:
+            raise SystemExit("site.json: solver.%s yer tutuculari %s olmali" % (key, sorted(needed)))
+    check_faq("site", "solver", solver["faq"], 2, 6)
+    return True
+
+
 def has_daily(entry):
     present = [k for k in DAILY_KEYS if entry.get(k)]
     if present and len(present) != len(DAILY_KEYS):

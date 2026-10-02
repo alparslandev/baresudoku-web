@@ -130,7 +130,43 @@
       "dailyTitle": "Daily Sudoku: A New Puzzle Every Day, Free and Ad-Free",
       "dailyDescription": "A new Sudoku every day at five levels, the same puzzle for everyone. Solve today's puzzle, from Easy to Master, and share your time. No ads, no sign-up.",
       "dailyH1": "Daily Sudoku",
-      "dailyIntro": "Every day brings one new puzzle per level, the same for every player in the world. Solve it, then share your time with friends. The daily puzzle is generated on your device from the date, so it works offline too, and yesterday's puzzle is gone at midnight."
+      "dailyIntro": "Every day brings one new puzzle per level, the same for every player in the world. Solve it, then share your time with friends. The daily puzzle is generated on your device from the date, so it works offline too, and yesterday's puzzle is gone at midnight.",
+      "solver": {
+        "title": "Sudoku Solver: Step-by-Step Solution with Techniques",
+        "description": "Paste or type any Sudoku and get the solution step by step. Each move names its technique, from singles to X-Wing and chains, with the difficulty rating.",
+        "h1": "Sudoku solver, step by step",
+        "intro": "Type the givens into the grid or paste 81 characters (digits, with 0 or a dot for empty cells). Next step shows one move at a time with the technique behind it; Solve lists every step and ends with the puzzle's level and rating. The solver runs in your browser, nothing is uploaded, and it uses the same logic as the game's hints, so every step is a deduction, never a guess.",
+        "link": "Sudoku solver",
+        "paste": "Paste a puzzle: 81 digits, 0 or . for empty cells",
+        "next": "Next step",
+        "solve": "Solve",
+        "clear": "Clear",
+        "example": "Example",
+        "edit": "Edit",
+        "noSolution": "This puzzle has no solution. Check the givens.",
+        "manySolutions": "This puzzle has more than one solution. Add givens.",
+        "tooFew": "Enter at least 17 givens.",
+        "stuck": "The solver has no technique for the next step.",
+        "done": "Solved",
+        "placed": "Place {d} in {cell}",
+        "removed": "Remove {d} from {cells}",
+        "rating": "rating {r}",
+        "steps": "{n} steps",
+        "faq": [
+          [
+            "Which techniques does the solver use?",
+            "The same ones as the game's hints, tried in the same order: singles, locked candidates, pairs and triples, fish, wings, uniqueness patterns, chains, almost locked sets and forcing nets. Every step is a logical deduction, never a guess, and the hardest step sets the rating."
+          ],
+          [
+            "Does it work for any Sudoku?",
+            "For any puzzle with exactly one solution. Puzzles with no solution or with several are reported instead of solved, and a puzzle needs at least 17 givens."
+          ],
+          [
+            "Is my puzzle uploaded?",
+            "No. The solver runs entirely in your browser, offline as well. You can share a puzzle by adding its 81 digits to the address as ?p=."
+          ]
+        ]
+      }
     },
     "tr": {
       "title": "Bare Sudoku: Ücretsiz Online Sudoku, Reklamsız, Üyeliksiz",
@@ -262,7 +298,43 @@
       "dailyTitle": "Günlük Sudoku: Her Gün Yeni Bulmaca, Ücretsiz ve Reklamsız",
       "dailyDescription": "Her gün beş seviyede yeni bir sudoku, herkes için aynı bulmaca. Bugünün bulmacasını Kolay'dan Usta'ya çöz ve süreni paylaş. Reklam yok, kayıt yok.",
       "dailyH1": "Günlük Sudoku",
-      "dailyIntro": "Her gün seviye başına bir yeni bulmaca gelir, dünyadaki her oyuncu için aynısı. Çöz, sonra süreni arkadaşlarınla paylaş. Günlük bulmaca cihazında tarihten üretilir; bu yüzden internetsiz de çalışır ve dünün bulmacası gece yarısı gider."
+      "dailyIntro": "Her gün seviye başına bir yeni bulmaca gelir, dünyadaki her oyuncu için aynısı. Çöz, sonra süreni arkadaşlarınla paylaş. Günlük bulmaca cihazında tarihten üretilir; bu yüzden internetsiz de çalışır ve dünün bulmacası gece yarısı gider.",
+      "solver": {
+        "title": "Sudoku Çözücü: Tekniklerle Adım Adım Çözüm",
+        "description": "Herhangi bir sudokuyu yapıştır ya da yaz, çözümünü adım adım al. Her hamle kullandığı tekniği söyler: tek adaydan X-Wing'e ve zincirlere, zorluk derecesiyle.",
+        "h1": "Sudoku çözücü, adım adım",
+        "intro": "Verili rakamları ızgaraya yaz ya da 81 karakter yapıştır (rakamlar; boş hücre için 0 ya da nokta). Sonraki adım, hamleleri arkasındaki teknikle birer birer gösterir; Çöz, bütün adımları listeler ve bulmacanın seviyesi ile derecesini verir. Çözücü tarayıcında çalışır, hiçbir şey yüklenmez; oyunun ipuçlarıyla aynı mantığı kullanır, yani her adım bir çıkarımdır, asla tahmin değildir.",
+        "link": "Sudoku çözücü",
+        "paste": "Bulmaca yapıştır: 81 rakam, boş hücre için 0 ya da .",
+        "next": "Sonraki adım",
+        "solve": "Çöz",
+        "clear": "Temizle",
+        "example": "Örnek",
+        "edit": "Düzenle",
+        "noSolution": "Bu bulmacanın çözümü yok. Verili rakamları kontrol et.",
+        "manySolutions": "Bu bulmacanın birden fazla çözümü var. Verili rakam ekle.",
+        "tooFew": "En az 17 verili rakam gir.",
+        "stuck": "Çözücünün sonraki adım için tekniği yok.",
+        "done": "Çözüldü",
+        "placed": "{cell} hücresine {d} yaz",
+        "removed": "Şu hücrelerden {d} adayını sil: {cells}",
+        "rating": "derece {r}",
+        "steps": "{n} adım",
+        "faq": [
+          [
+            "Çözücü hangi teknikleri kullanır?",
+            "Oyunun ipuçlarıyla aynılarını, aynı sırada: tekler, kilitli adaylar, çift ve üçlüler, balıklar, kanatlar, teklik örüntüleri, zincirler, neredeyse kilitli kümeler ve zorlama ağları. Her adım mantıksal bir çıkarımdır, asla tahmin değildir; en zor adım dereceyi belirler."
+          ],
+          [
+            "Her sudokuda çalışır mı?",
+            "Tam olarak tek çözümü olan her bulmacada. Çözümü olmayan ya da birden fazla çözümü olan bulmacalar çözülmek yerine bildirilir; bir bulmacada en az 17 verili rakam olmalıdır."
+          ],
+          [
+            "Bulmacam bir yere yükleniyor mu?",
+            "Hayır. Çözücü tamamen tarayıcında çalışır, internetsiz de. Bir bulmacayı adrese ?p= ile 81 rakamını ekleyerek paylaşabilirsin."
+          ]
+        ]
+      }
     },
     "az": {
       "title": "Bare Sudoku: pulsuz onlayn sudoku, reklamsız, qeydiyyatsız",
