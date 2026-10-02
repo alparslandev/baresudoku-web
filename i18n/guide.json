@@ -28,7 +28,8 @@
         "elimItem": "{d} from {cell}",
         "regions": "Row 5, column 5 and box 5 at the start of a puzzle",
         "firstMove": "A naked single: {cell} can only be {d}",
-        "breadcrumb": "Breadcrumb"
+        "breadcrumb": "Breadcrumb",
+        "playExample": "Play this puzzle"
       },
       "howTo": {
         "title": "How to Play Sudoku: Rules, Board and First Moves",
@@ -1082,7 +1083,8 @@
         "elimItem": "{cell} hücresinden {d}",
         "regions": "Bulmacanın başında 5. satır, 5. sütun ve 5. kutu",
         "firstMove": "Bir tek aday: {cell} yalnızca {d} olabilir",
-        "breadcrumb": "Sayfa yolu"
+        "breadcrumb": "Sayfa yolu",
+        "playExample": "Bu bulmacayı oyna"
       },
       "howTo": {
         "title": "Sudoku Nasıl Oynanır: Kurallar, Tahta ve İlk Hamleler",
