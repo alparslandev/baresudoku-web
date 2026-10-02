@@ -21,7 +21,15 @@ def url_list(languages, guide_languages):
         pages.append(base + i18n.path(code) + "how-to-play/")
         pages.append(base + i18n.path(code) + "techniques/")
         pages += [base + i18n.path(code) + "techniques/" + slug + "/" for slug in i18n.TECHNIQUES]
-    return pages + [base + "/sitemap.xml", base + "/llms.txt", base + "/llms-full.txt"]
+    return pages + [base + "/sitemap.xml", base + "/llms.txt", base + "/llms-full.txt"] + removed_pages(base)
+
+
+def removed_pages(base):
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "i18n", "removed.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as f:
+        return [base + i18n.path(code) for code in json.load(f)["codes"]]
 
 
 def ping(languages, guide_languages):
