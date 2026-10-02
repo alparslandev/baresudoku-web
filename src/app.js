@@ -230,9 +230,13 @@ function hintMessage() {
   return s;
 }
 
+function pausedGame() {
+  return game.active && !game.solved && !game.running;
+}
+
 function renderTime() {
   $('time').textContent = game.active && !generating ? clock(game.time(now())) : '';
-  $('time').classList.toggle('paused', idle);
+  $('time').classList.toggle('paused', pausedGame() && !menuOpen && !generating);
 }
 
 function tick() {
@@ -247,9 +251,13 @@ function tick() {
 
 function activity() {
   lastActivity = now();
-  if (!idle) return;
+  if (!idle && (!pausedGame() || menuOpen || generating)) return;
   idle = false;
-  if (game.active && !game.solved && !menuOpen && !generating && !document.hidden) {
+  resumeIfAllowed();
+}
+
+function resumeIfAllowed() {
+  if (pausedGame() && !menuOpen && !generating && !idle && !document.hidden && document.hasFocus()) {
     game.resume(now());
     startTimer();
   }
@@ -716,12 +724,15 @@ function bind() {
       game.pause(now());
       stopTimer();
       save();
-    } else if (!menuOpen && !generating && !idle) {
-      game.resume(now());
-      startTimer();
-      renderTime();
-    }
+    } else resumeIfAllowed();
   });
+  window.addEventListener('blur', () => {
+    game.pause(now());
+    stopTimer();
+    save();
+    renderTime();
+  });
+  window.addEventListener('focus', resumeIfAllowed);
   for (const type of ['pointerdown', 'pointermove', 'keydown', 'wheel']) document.addEventListener(type, activity, { passive: true });
   window.addEventListener('pagehide', save);
 }
@@ -755,7 +766,7 @@ function init() {
   if (game.active) game.rating = engine.rate(game.given);
   meta = saved && saved.a ? { t: +saved.a.t || now(), d: !!saved.a.d } : { t: now(), d: game.solved };
   menuOpen = !game.active;
-  if (game.active && !game.solved) game.resume(now());
+  if (game.active && !game.solved && !document.hidden && document.hasFocus()) game.resume(now());
   render();
   startTimer();
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js');
