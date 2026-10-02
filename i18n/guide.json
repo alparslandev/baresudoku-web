@@ -104,8 +104,8 @@
             "No. That is the whole rule: each of the nine rows, nine columns and nine boxes contains every digit from 1 to 9 exactly once. If two identical digits share a unit, at least one of them is wrong."
           ],
           [
-            "What is the difference between Easy, Medium, Hard and Expert?",
-            "The level is set by the techniques the puzzle needs. Easy and Medium are solved with singles only, and Easy starts with at least 38 given digits. Hard needs locked candidates or pairs and triples. Expert needs at least one advanced pattern, such as an X-Wing, a Y-Wing, a Skyscraper or a Unique Rectangle."
+            "What is the difference between Easy, Medium, Hard, Expert and Master?",
+            "The level is set by the techniques the puzzle needs. Easy and Medium are solved with singles only, and Easy starts with at least 38 given digits. Hard needs locked candidates or pairs and triples. Expert needs at least one advanced pattern, such as an X-Wing, a Y-Wing, a Skyscraper or a Unique Rectangle. Master needs chains, almost locked sets or forcing nets. The number next to the level name is the puzzle's difficulty rating, set by the hardest step it needs."
           ],
           [
             "Is it better to fill notes for every cell or only for some?",
@@ -127,7 +127,7 @@
         "h1": "Sudoku solving techniques",
         "intro": [
           "Every Sudoku can be solved with a small set of logical techniques. This index lists the techniques that the Bare Sudoku solver and its hints use, in the order the solver tries them: singles first, then eliminations within one unit, then patterns that span several rows, columns and boxes, including patterns that rely on the puzzle having exactly one solution. Each technique has its own page with a definition, how to spot it, a real example from a generated puzzle and the common mistakes.",
-          "The level of a puzzle is decided by the hardest technique it needs. Easy and Medium puzzles need only singles, Hard puzzles need locked candidates or pairs and triples, and Expert puzzles need at least one advanced pattern, such as a fish, a wing, a Skyscraper or a Unique Rectangle. Whatever the level, singles do most of the work; the advanced technique removes a candidate or two and singles carry on from there."
+          "The level of a puzzle is decided by the hardest technique it needs. Easy and Medium puzzles need only singles, Hard puzzles need locked candidates or pairs and triples, Expert puzzles need at least one advanced pattern, such as a fish, a wing, a Skyscraper or a Unique Rectangle, and Master puzzles need chains or other techniques beyond this guide. Whatever the level, singles do most of the work; the advanced technique removes a candidate or two and singles carry on from there."
         ],
         "faq": [
           [
@@ -136,11 +136,11 @@
           ],
           [
             "Do I need all these techniques to solve Sudoku?",
-            "For Easy and Medium puzzles, singles are enough. Hard puzzles add locked candidates and subsets. Expert puzzles need at least one advanced pattern, such as a fish, a wing, a Skyscraper or a Unique Rectangle, but usually only once or twice per puzzle."
+            "For Easy and Medium puzzles, singles are enough. Hard puzzles add locked candidates and subsets. Expert puzzles need at least one advanced pattern, such as a fish, a wing, a Skyscraper or a Unique Rectangle, but usually only once or twice per puzzle. Master puzzles go further and need chains or other techniques that this guide does not cover."
           ],
           [
             "Are there harder techniques than the ones in this guide?",
-            "Yes. Players have described many more techniques for the hardest puzzles, and new ones keep appearing. Bare Sudoku generates only puzzles that the techniques in this guide can finish, so every puzzle in the game can be solved with what is described here."
+            "Yes. Players have described many more techniques for the hardest puzzles, and new ones keep appearing. Bare Sudoku uses several of them beyond the pages here: more fish, wings and rectangle patterns at Expert level, and chains, almost locked sets and forcing nets at Master level. The hint always names the technique it used, so you can look it up even when this guide has no page for it yet."
           ],
           [
             "What is a candidate?",
@@ -438,7 +438,7 @@
             ],
             [
               "Which level has X-Wings?",
-              "Expert. Bare Sudoku rates a puzzle as Expert when it needs an X-Wing; other advanced patterns, such as the Y-Wing and the Skyscraper, are rated Expert as well."
+              "Expert or Master. Bare Sudoku rates a puzzle as Expert when it needs an X-Wing or another advanced pattern, such as the Y-Wing or the Skyscraper, and as Master when it also needs chains or other techniques beyond this guide."
             ]
           ]
         },
@@ -495,7 +495,7 @@
           "h1": "Swordfish",
           "summary": "A Swordfish is an X-Wing with three rows and three columns. If a digit has at most three candidate cells in each of three rows, and all of those cells fall in the same three columns, then the three rows use up the digit in those columns, and the digit can be removed from every other cell of the three columns. Rows and columns can be swapped. Bare Sudoku checks for Swordfish after Y-Wing, in Expert puzzles.",
           "when": [
-            "When X-Wing and Y-Wing find nothing. Swordfish are less common than X-Wings and need a digit whose candidates are spread thinly over three lines. They need complete and accurate notes for that digit."
+            "When an X-Wing finds nothing. Swordfish are less common than X-Wings and need a digit whose candidates are spread thinly over three lines. They need complete and accurate notes for that digit."
           ],
           "spot": [
             "Pick a digit and look for rows with two or three candidate cells for it. If three such rows cover only three columns in total, check those columns for further candidates of the digit. Not every row needs a candidate in every column: a Swordfish can have six, seven, eight or nine cells. In the game, highlight the digit with its key and look for three rows whose candidates line up in three columns."
@@ -576,7 +576,7 @@
             ],
             [
               "Is there a WXYZ-Wing?",
-              "Yes, with a four-candidate pivot. Every puzzle in Bare Sudoku can be finished with the techniques described in this guide."
+              "Yes: four cells with four candidates in two crossing units, where one digit is free to sit in more than one of them. Bare Sudoku finds it too and rates it Expert, like the other wings."
             ]
           ]
         },
@@ -587,7 +587,7 @@
           "h1": "Skyscraper",
           "summary": "A Skyscraper is a single-digit pattern built on two rows in which a digit has exactly two candidate cells. One cell of each row lies in the same column; these two cells are the base, and they cannot both hold the digit. The other two cells, the tops, lie in different columns. Because at least one base cell is not the digit, at least one top must be, so the digit can be removed from every cell that sees both tops. The same works with columns instead of rows. The Skyscraper is a form of Turbot Fish, like the [2-String Kite](two-string-kite), and it is an Expert technique in Bare Sudoku.",
           "when": [
-            "When X-Wing, Y-Wing, Swordfish and XYZ-Wing find nothing. The Skyscraper is one of the most common Expert patterns in Bare Sudoku, and it often appears where an [X-Wing](x-wing) almost works: two rows with two candidates each for a digit, sharing only one column instead of two. It needs complete notes for the digit you examine."
+            "When X-Wing and Swordfish find nothing. The Skyscraper is one of the most common Expert patterns in Bare Sudoku, and it often appears where an [X-Wing](x-wing) almost works: two rows with two candidates each for a digit, sharing only one column instead of two. It needs complete notes for the digit you examine."
           ],
           "spot": [
             "Pick a digit and list the rows in which it has exactly two candidate cells. Compare those rows in pairs: if exactly one candidate cell of each row sits in the same column, those two cells are the base and the other two are the tops. Then look for cells that see both tops and still contain the digit; usually they sit in the box of one top and the column of the other. Repeat with columns instead of rows. In the game, tap the digit key to highlight its candidates and look for two rows that show exactly two each."
@@ -760,7 +760,7 @@
             ],
             [
               "Which type of Unique Rectangle does Bare Sudoku use?",
-              "Type 1: three corners with exactly the same two candidates and a fourth corner with those two plus others. Other types, usually numbered 2 to 6, use extra candidates in two or more corners or strong links between them; this page covers Type 1."
+              "Type 1, described on this page: three corners with exactly the same two candidates and a fourth corner with those two plus others. Bare Sudoku also finds the other types, usually numbered 2 to 6, which use extra candidates in two or more corners or strong links between them, and the Hidden Rectangle."
             ],
             [
               "What is a deadly pattern?",
@@ -874,8 +874,8 @@
             "Hayır. Kuralın tamamı budur: dokuz satırın, dokuz sütunun ve dokuz kutunun her biri 1'den 9'a her rakamı tam bir kez içerir. Aynı iki rakam bir birimi paylaşıyorsa en az biri yanlıştır."
           ],
           [
-            "Kolay, Orta, Zor ve Uzman arasındaki fark nedir?",
-            "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca teklerle çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar ya da çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü gerektirir."
+            "Kolay, Orta, Zor, Uzman ve Usta arasındaki fark nedir?",
+            "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca teklerle çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar ya da çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü gerektirir. Usta, zincirler, neredeyse kilitli kümeler ya da zorlama ağları gerektirir. Seviye adının yanındaki sayı bulmacanın zorluk derecesidir; onu gerektirdiği en zor adım belirler."
           ],
           [
             "Notları her hücreye mi yoksa yalnızca bazılarına mı yazmak daha iyi?",
@@ -897,7 +897,7 @@
         "h1": "Sudoku çözüm teknikleri",
         "intro": [
           "Her sudoku küçük bir mantıksal teknik kümesiyle çözülebilir. Bu dizin Bare Sudoku çözücüsünün ve ipuçlarının kullandığı teknikleri çözücünün deneme sırasıyla listeler: önce tekler, sonra tek birim içindeki elemeler, sonra birden çok satıra, sütuna ve kutuya yayılan örüntüler; bunların arasında bulmacanın tam olarak tek çözümü olmasına dayanan örüntüler de vardır. Her tekniğin tanım, nasıl fark edileceği, üretilmiş bir bulmacadan gerçek bir örnek ve yaygın hatalar içeren kendi sayfası vardır.",
-          "Bulmacanın seviyesini gerektirdiği en zor teknik belirler. Kolay ve Orta bulmacalar yalnızca tek ister, Zor bulmacalar kilitli adaylar ya da çift ve üçlü ister, Uzman bulmacalar ise balık, kanat, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü ister. Seviye ne olursa olsun işin çoğunu tekler yapar; ileri teknik bir iki aday siler ve tekler oradan devam eder."
+          "Bulmacanın seviyesini gerektirdiği en zor teknik belirler. Kolay ve Orta bulmacalar yalnızca tek ister, Zor bulmacalar kilitli adaylar ya da çift ve üçlü ister, Uzman bulmacalar balık, kanat, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü ister, Usta bulmacalar ise zincirler ya da bu rehberin ötesindeki başka teknikler ister. Seviye ne olursa olsun işin çoğunu tekler yapar; ileri teknik bir iki aday siler ve tekler oradan devam eder."
         ],
         "faq": [
           [
@@ -906,11 +906,11 @@
           ],
           [
             "Sudoku çözmek için bu tekniklerin hepsi gerekli mi?",
-            "Kolay ve Orta bulmacalar için tekler yeter. Zor bulmacalar kilitli adaylar ve alt kümeleri ekler. Uzman bulmacalar balık, kanat, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü ister, ama genellikle bulmaca başına yalnızca bir iki kez."
+            "Kolay ve Orta bulmacalar için tekler yeter. Zor bulmacalar kilitli adaylar ve alt kümeleri ekler. Uzman bulmacalar balık, kanat, Skyscraper ya da Unique Rectangle gibi en az bir ileri örüntü ister, ama genellikle bulmaca başına yalnızca bir iki kez. Usta bulmacalar daha ileri gider ve zincirler ya da bu rehberin anlatmadığı başka teknikler ister."
           ],
           [
             "Bu rehberdekilerden daha zor teknikler var mı?",
-            "Evet. Oyuncular en zor bulmacalar için çok daha fazla teknik tanımlamıştır ve yenileri çıkmaya devam ediyor. Bare Sudoku yalnızca bu rehberdeki tekniklerin bitirebildiği bulmacalar üretir; yani oyundaki her bulmaca burada anlatılanlarla çözülebilir."
+            "Evet. Oyuncular en zor bulmacalar için çok daha fazla teknik tanımlamıştır ve yenileri çıkmaya devam ediyor. Bare Sudoku bunların birkaçını buradaki sayfaların ötesinde kullanır: Uzman seviyesinde başka balıklar, kanatlar ve dikdörtgen örüntüleri, Usta seviyesinde zincirler, neredeyse kilitli kümeler ve zorlama ağları. İpucu kullandığı tekniği her zaman söyler; böylece bu rehberde henüz sayfası olmasa bile onu araştırabilirsin."
           ],
           [
             "Aday nedir?",
@@ -1208,7 +1208,7 @@
             ],
             [
               "Hangi seviyede X-Wing var?",
-              "Uzman. Bare Sudoku X-Wing gerektiren bulmacayı Uzman diye derecelendirir; Y-Wing ve Skyscraper gibi diğer ileri örüntüler de Uzman sayılır."
+              "Uzman ya da Usta. Bare Sudoku X-Wing ya da Y-Wing ve Skyscraper gibi başka bir ileri örüntü gerektiren bulmacayı Uzman, ayrıca zincirler ya da bu rehberin ötesindeki başka teknikler gerektiren bulmacayı Usta diye derecelendirir."
             ]
           ]
         },
@@ -1265,7 +1265,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish, üç satır ve üç sütunlu bir X-Wing'dir. Bir rakamın üç satırın her birinde en çok üç aday hücresi varsa ve bu hücrelerin hepsi aynı üç sütuna düşüyorsa üç satır rakamı o sütunlarda tüketir ve rakam üç sütunun diğer her hücresinden silinebilir. Satır ve sütun yer değiştirebilir. Bare Sudoku, Uzman bulmacalarda Swordfish'i Y-Wing'den sonra denetler.",
           "when": [
-            "X-Wing ve Y-Wing hiçbir şey bulamadığında. Swordfish X-Wing'den daha az yaygındır ve adayları üç çizgiye seyrek yayılmış bir rakam ister. O rakam için eksiksiz ve doğru not gerektirir."
+            "X-Wing hiçbir şey bulamadığında. Swordfish X-Wing'den daha az yaygındır ve adayları üç çizgiye seyrek yayılmış bir rakam ister. O rakam için eksiksiz ve doğru not gerektirir."
           ],
           "spot": [
             "Bir rakam seç ve o rakam için iki ya da üç aday hücresi olan satırları ara. Böyle üç satır toplamda yalnızca üç sütunu kapsıyorsa o sütunlarda rakamın başka adaylarını kontrol et. Her satırın her sütunda adayı olması gerekmez: bir Swordfish altı, yedi, sekiz ya da dokuz hücreli olabilir. Oyunda rakamı tuşuyla vurgula ve adayları üç sütunda hizalanan üç satır ara."
@@ -1346,7 +1346,7 @@
             ],
             [
               "WXYZ-Wing var mı?",
-              "Evet, dört adaylı eksenle. Bare Sudoku'daki her bulmaca bu rehberde anlatılan tekniklerle bitirilebilir."
+              "Evet: kesişen iki birimde dört adaylı dört hücre; rakamlardan biri birden fazla hücreye serbestçe gidebilir. Bare Sudoku onu da bulur ve diğer kanatlar gibi Uzman diye derecelendirir."
             ]
           ]
         },
@@ -1357,7 +1357,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (gökdelen), bir rakamın tam olarak iki aday hücresi olduğu iki satır üzerine kurulan tek rakamlı bir örüntüdür. Her satırın bir hücresi aynı sütunda durur; bu iki hücre tabandır ve ikisi birden rakamı alamaz. Diğer iki hücre, yani tepeler, farklı sütunlardadır. Taban hücrelerinden en az biri rakam olmadığına göre tepelerden en az biri rakam olmak zorundadır; bu yüzden rakam iki tepeyi de gören her hücreden silinebilir. Satırlar yerine sütunlarla da aynı şey işler. Skyscraper, [2-String Kite](two-string-kite) gibi bir Turbot Fish biçimidir ve Bare Sudoku'da bir Uzman tekniğidir.",
           "when": [
-            "X-Wing, Y-Wing, Swordfish ve XYZ-Wing hiçbir şey bulamadığında. Skyscraper, Bare Sudoku'daki en yaygın Uzman örüntülerinden biridir ve çoğu zaman bir [X-Wing](x-wing) örüntüsünün neredeyse tuttuğu yerde görünür: bir rakam için ikişer adaylı iki satır, iki sütun yerine yalnızca birini paylaşır. İncelediğin rakam için eksiksiz not gerektirir."
+            "X-Wing ve Swordfish hiçbir şey bulamadığında. Skyscraper, Bare Sudoku'daki en yaygın Uzman örüntülerinden biridir ve çoğu zaman bir [X-Wing](x-wing) örüntüsünün neredeyse tuttuğu yerde görünür: bir rakam için ikişer adaylı iki satır, iki sütun yerine yalnızca birini paylaşır. İncelediğin rakam için eksiksiz not gerektirir."
           ],
           "spot": [
             "Bir rakam seç ve o rakamın tam olarak iki aday hücresi olduğu satırları listele. Bu satırları ikişer ikişer karşılaştır: her satırın tam olarak bir aday hücresi aynı sütunda duruyorsa bu iki hücre taban, diğer ikisi tepedir. Sonra iki tepeyi de gören ve hâlâ rakamı içeren hücrelere bak; bunlar genellikle bir tepenin kutusunda ve diğerinin sütunundadır. Aynısını satırlar yerine sütunlarla yinele. Oyunda rakam tuşuna dokunarak adaylarını vurgula ve tam olarak ikişer aday gösteren iki satır ara."
@@ -1530,7 +1530,7 @@
             ],
             [
               "Bare Sudoku hangi Unique Rectangle tipini kullanır?",
-              "Tip 1: tam olarak aynı iki adayı taşıyan üç köşe ve bu ikisinin yanında başka adayları da olan bir dördüncü köşe. Genellikle 2'den 6'ya numaralanan diğer tipler iki ya da daha fazla köşedeki fazladan adayları ya da köşeler arasındaki güçlü bağları kullanır; bu sayfa Tip 1'i anlatır."
+              "Bu sayfada anlatılan Tip 1: tam olarak aynı iki adayı taşıyan üç köşe ve bu ikisinin yanında başka adayları da olan bir dördüncü köşe. Bare Sudoku genellikle 2'den 6'ya numaralanan diğer tipleri de bulur; bunlar iki ya da daha fazla köşedeki fazladan adayları ya da köşeler arasındaki güçlü bağları kullanır. Hidden Rectangle'ı da bulur."
             ],
             [
               "Ölümcül örüntü (deadly pattern) nedir?",

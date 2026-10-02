@@ -2,15 +2,15 @@
   "languages": {
     "en": {
       "title": "Bare Sudoku: Free Sudoku Online, No Ads, No Sign-Up",
-      "description": "Free Sudoku in your browser: no ads, no account, no tracking. Four levels, notes, undo and hints that explain the logic. Works offline. Also a {size} KB Android app.",
+      "description": "Free Sudoku in your browser: no ads, no account, no tracking. Five levels, notes, undo and hints that explain the logic. Works offline. Also a {size} KB Android app.",
       "h1": "Bare Sudoku: free Sudoku online, no ads, no sign-up",
       "intro": "Bare Sudoku is a free Sudoku game that runs in your browser. There are no ads, no account, no tracking and nothing to install: open the page, pick a level and play. Every puzzle has exactly one solution and can be solved by logic alone, and every hint explains the reasoning. The game works offline and is open source under the MIT license.",
       "featuresHeading": "What you get",
       "features": [
-        "Four levels: Easy, Medium, Hard and Expert",
+        "Five levels: Easy, Medium, Hard, Expert and Master",
         "Every puzzle has one solution and never needs guessing",
         "Notes, undo, erase and fill all notes with one tap",
-        "Hints that explain the technique, from singles and pairs to X-Wing, Y-Wing, Skyscraper and Unique Rectangle",
+        "Hints that explain the technique, from singles and pairs to X-Wing, Skyscraper and Unique Rectangle, and at Master level chains and forcing nets",
         "Row, column, box and same-digit highlights, mistake marking you can turn off",
         "Automatic save, dark mode, keyboard support and landscape layout",
         "Works offline after the first visit, no app store needed",
@@ -45,7 +45,7 @@
         ],
         [
           "What do the hints explain?",
-          "A hint points to the next cell you can fill and names the technique it needed, for example a single candidate, the only place for a digit in a row, column or box, locked candidates, a pair or triple, X-Wing, Y-Wing, Skyscraper or Unique Rectangle. Tap the hint again to place the digit."
+          "A hint points to the next cell you can fill and names the technique it needed, for example a single candidate, the only place for a digit in a row, column or box, locked candidates, a pair or triple, X-Wing, Y-Wing, Skyscraper or Unique Rectangle, and at Master level chains, almost locked sets or forcing nets. Tap the hint again to place the digit."
         ],
         [
           "Does Bare Sudoku collect any data?",
@@ -76,8 +76,8 @@
           "Fill the 9×9 grid so that every row, every column and every 3×3 box contains the digits 1 to 9 exactly once. Some digits are given at the start; you deduce the rest. In Bare Sudoku, tap a cell and then a digit, or tap a digit first and then every cell where it belongs."
         ],
         [
-          "What is the difference between the Easy, Medium, Hard and Expert levels?",
-          "The level is set by the techniques the puzzle needs. Easy and Medium are solved with singles only, and Easy starts with at least 38 given digits. Hard needs locked candidates or pairs and triples. Expert needs at least one advanced pattern, such as X-Wing, Y-Wing, Skyscraper or Unique Rectangle. Every level has exactly one solution."
+          "What is the difference between the Easy, Medium, Hard, Expert and Master levels?",
+          "The level is set by the techniques the puzzle needs. Easy and Medium are solved with singles only, and Easy starts with at least 38 given digits. Hard needs locked candidates or pairs and triples. Expert needs at least one advanced pattern, such as X-Wing, Y-Wing, Skyscraper or Unique Rectangle. Master needs chains, almost locked sets or forcing nets. The number next to the level name is the puzzle's difficulty rating: the hardest step it needs, on a scale where singles are 1.0 and the hardest forcing nets are above 9. Every level has exactly one solution."
         ],
         [
           "Can I restart the same puzzle from scratch?",
@@ -130,15 +130,15 @@
     },
     "tr": {
       "title": "Bare Sudoku: Ücretsiz Online Sudoku, Reklamsız, Üyeliksiz",
-      "description": "Tarayıcıda ücretsiz sudoku: reklam yok, hesap yok, takip yok. Dört seviye, not, geri al ve mantığı açıklayan ipucu. İnternetsiz çalışır. {size} KB Android uygulaması da var.",
+      "description": "Tarayıcıda ücretsiz sudoku: reklam yok, hesap yok, takip yok. Beş seviye, not, geri al ve mantığı açıklayan ipucu. İnternetsiz çalışır. {size} KB Android uygulaması da var.",
       "h1": "Bare Sudoku: ücretsiz online sudoku, reklamsız, üyeliksiz",
       "intro": "Bare Sudoku tarayıcıda çalışan ücretsiz bir sudoku oyunudur. Reklam yok, hesap yok, takip yok, kurulum yok: sayfayı aç, seviye seç, oyna. Her bulmacanın tek çözümü vardır ve yalnızca mantıkla çözülür; her ipucu gerekçesini açıklar. Oyun internetsiz çalışır ve MIT lisansıyla açık kaynaktır.",
       "featuresHeading": "Neler var",
       "features": [
-        "Dört seviye: Kolay, Orta, Zor ve Uzman",
+        "Beş seviye: Kolay, Orta, Zor, Uzman ve Usta",
         "Her bulmacanın tek çözümü var, tahmin gerekmez",
         "Not, geri al, sil ve tek dokunuşla tüm notları doldur",
-        "Tekniği açıklayan ipucu: tek aday ve çiftlerden X-Wing, Y-Wing, Skyscraper ve Unique Rectangle'a kadar",
+        "Tekniği açıklayan ipucu: tek aday ve çiftlerden X-Wing, Skyscraper ve Unique Rectangle'a, Usta seviyesinde zincirlere ve zorlama ağlarına kadar",
         "Satır, sütun, kutu ve aynı rakam vurgusu; kapatılabilir hata işareti",
         "Otomatik kayıt, koyu tema, klavye desteği ve yatay düzen",
         "İlk ziyaretten sonra internetsiz çalışır, mağaza gerekmez",
@@ -173,7 +173,7 @@
         ],
         [
           "İpucu ne açıklar?",
-          "İpucu doldurabileceğin sonraki hücreyi gösterir ve gereken tekniği söyler; örneğin tek aday, bir rakam için satır, sütun veya kutudaki tek yer, kilitli adaylar, çift veya üçlü, X-Wing, Y-Wing, Skyscraper veya Unique Rectangle. Rakamı yerleştirmek için ipucuna tekrar bas."
+          "İpucu doldurabileceğin sonraki hücreyi gösterir ve gereken tekniği söyler; örneğin tek aday, bir rakam için satır, sütun veya kutudaki tek yer, kilitli adaylar, çift veya üçlü, X-Wing, Y-Wing, Skyscraper veya Unique Rectangle, Usta seviyesinde zincirler, neredeyse kilitli kümeler veya zorlama ağları. Rakamı yerleştirmek için ipucuna tekrar bas."
         ],
         [
           "Bare Sudoku veri topluyor mu?",
@@ -204,8 +204,8 @@
           "9×9 ızgarayı her satır, her sütun ve her 3×3 kutuda 1'den 9'a kadar her rakam tam bir kez olacak şekilde doldur. Bazı rakamlar başta verilir; kalanını mantıkla bulursun. Bare Sudoku'da önce hücreye sonra rakama dokun, ya da önce rakama sonra o rakamın gittiği hücrelere dokun."
         ],
         [
-          "Kolay, Orta, Zor ve Uzman seviyeleri arasındaki fark ne?",
-          "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca tek adaylarla çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar veya çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Skyscraper veya Unique Rectangle gibi en az bir ileri örüntü gerektirir. Her seviyede tam olarak tek çözüm vardır."
+          "Kolay, Orta, Zor, Uzman ve Usta seviyeleri arasındaki fark ne?",
+          "Seviyeyi bulmacanın gerektirdiği teknikler belirler. Kolay ve Orta yalnızca tek adaylarla çözülür; Kolay en az 38 verili rakamla başlar. Zor, kilitli adaylar veya çift ve üçlü gerektirir. Uzman, X-Wing, Y-Wing, Skyscraper veya Unique Rectangle gibi en az bir ileri örüntü gerektirir. Usta, zincirler, neredeyse kilitli kümeler veya zorlama ağları gerektirir. Seviye adının yanındaki sayı bulmacanın zorluk derecesidir: gerektirdiği en zor adım; teklerin 1,0 olduğu, en zor zorlama ağlarının 9'u geçtiği bir ölçekte. Her seviyede tam olarak tek çözüm vardır."
         ],
         [
           "Aynı bulmacaya baştan başlayabilir miyim?",
