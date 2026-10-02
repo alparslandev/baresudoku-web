@@ -140,7 +140,7 @@
           ],
           [
             "Are there harder techniques than the ones in this guide?",
-            "Yes. Players have described many more techniques for the hardest puzzles, and new ones keep appearing. Bare Sudoku uses several of them at Master level: chains, almost locked sets and forcing nets, and the hint names the one it used. The pages here cover everything up to Expert, so every puzzle up to that level can be solved with what is described here."
+            "Yes. Players have described many more techniques for the hardest puzzles, and new ones keep appearing. Bare Sudoku uses several of them beyond the pages here: more fish, wings and rectangle patterns at Expert level, and chains, almost locked sets and forcing nets at Master level. The hint always names the technique it used, so you can look it up even when this guide has no page for it yet."
           ],
           [
             "What is a candidate?",
@@ -442,60 +442,14 @@
             ]
           ]
         },
-        "y-wing": {
-          "name": "Y-Wing",
-          "title": "Y-Wing in Sudoku: How the Technique Works",
-          "description": "Y-Wing (XY-Wing): a pivot with two candidates and two wings that each share one of them force a digit out of every cell that sees both wings. Example.",
-          "h1": "Y-Wing",
-          "summary": "A Y-Wing, also called XY-Wing, uses three cells with two candidates each. The pivot has candidates X and Y. One wing sees the pivot and has X and Z; the other wing sees the pivot and has Y and Z. Whatever the pivot is, one of the wings must be Z, so Z can be removed from every cell that sees both wings. It is an Expert technique in Bare Sudoku.",
-          "when": [
-            "When a puzzle has several cells with exactly two candidates and no fish is available. Y-Wings are common in Expert puzzles and are found by following the two-candidate cells: each is a potential pivot or wing."
-          ],
-          "spot": [
-            "List the cells with exactly two candidates. For each one, treat it as the pivot with candidates X and Y, and look among its peers for a cell with X and another digit Z, and a cell with Y and the same Z. Those two are the wings. Then find cells that see both wings and contain Z. Note that the wings do not need to see each other."
-          ],
-          "examples": [
-            {
-              "h": "Example",
-              "steps": [
-                "The pivot {pivot} has candidates {x} and {y}. It sees {wingA}, which has {x} and {z}, and {wingB}, which has {y} and {z}.",
-                "If {pivot} is {x}, then {wingA} loses {x} and becomes {z}. If {pivot} is {y}, then {wingB} becomes {z}. One of the two wings is {z} in every case.",
-                "A cell that sees both wings can never be {z}. Remove {z} from {elim}."
-              ]
-            }
-          ],
-          "mistakes": [
-            "Choosing wings that do not both see the pivot. Each wing must share a row, column or box with the pivot.",
-            "Removing Z from cells that see only one wing. The eliminated cell must see both wings.",
-            "Removing Z from the pivot. The pivot does not contain Z in a Y-Wing; if it does, the pattern is an XYZ-Wing with different rules."
-          ],
-          "faq": [
-            [
-              "What is a Y-Wing in Sudoku?",
-              "Three two-candidate cells: a pivot with X and Y, a wing with X and Z that sees the pivot, and a wing with Y and Z that sees the pivot. One wing is always Z, so Z is removed from cells that see both wings."
-            ],
-            [
-              "Is Y-Wing the same as XY-Wing?",
-              "Yes. The two names describe the same pattern. Bare Sudoku calls it Y-Wing."
-            ],
-            [
-              "Why must one wing be Z?",
-              "If the pivot is X, the first wing loses X and becomes Z. If the pivot is Y, the second wing becomes Z. The pivot is one of the two, so one wing is Z."
-            ],
-            [
-              "How many cells does a Y-Wing eliminate?",
-              "Usually one or two: only the cells that see both wings and still contain Z. That is enough to create a single."
-            ]
-          ]
-        },
         "swordfish": {
           "name": "Swordfish",
           "title": "Swordfish in Sudoku: How the Technique Works",
           "description": "Swordfish: a digit confined to three columns across three rows is removed from the rest of those columns. The size-three fish, explained with a real example.",
           "h1": "Swordfish",
-          "summary": "A Swordfish is an X-Wing with three rows and three columns. If a digit has at most three candidate cells in each of three rows, and all of those cells fall in the same three columns, then the three rows use up the digit in those columns, and the digit can be removed from every other cell of the three columns. Rows and columns can be swapped. Bare Sudoku checks for Swordfish after Y-Wing, in Expert puzzles.",
+          "summary": "A Swordfish is an X-Wing with three rows and three columns. If a digit has at most three candidate cells in each of three rows, and all of those cells fall in the same three columns, then the three rows use up the digit in those columns, and the digit can be removed from every other cell of the three columns. Rows and columns can be swapped. Bare Sudoku checks for Swordfish right after X-Wing, in Expert puzzles.",
           "when": [
-            "When X-Wing finds nothing. Swordfish are less common than X-Wings and need a digit whose candidates are spread thinly over three lines. They need complete and accurate notes for that digit."
+            "When an X-Wing finds nothing. Swordfish are less common than X-Wings and need a digit whose candidates are spread thinly over three lines. They need complete and accurate notes for that digit."
           ],
           "spot": [
             "Pick a digit and look for rows with two or three candidate cells for it. If three such rows cover only three columns in total, check those columns for further candidates of the digit. Not every row needs a candidate in every column: a Swordfish can have six, seven, eight or nine cells. In the game, highlight the digit with its key and look for three rows whose candidates line up in three columns."
@@ -531,52 +485,6 @@
             [
               "Is there a fish of size four?",
               "Yes, the Jellyfish, with four rows and four columns. The reasoning is the same as for the X-Wing and the Swordfish, only with more lines."
-            ]
-          ]
-        },
-        "xyz-wing": {
-          "name": "XYZ-Wing",
-          "title": "XYZ-Wing in Sudoku: How the Technique Works",
-          "description": "XYZ-Wing: a pivot with three candidates and two wings that share one of them force that digit out of every cell seeing all three. Real example, step by step.",
-          "h1": "XYZ-Wing",
-          "summary": "An XYZ-Wing is a Y-Wing whose pivot has three candidates. The pivot has X, Y and Z; one wing sees the pivot and has X and Z, the other sees the pivot and has Y and Z. One of the three cells must be Z, so Z can be removed from every cell that sees all three. Because the pivot itself may be Z, the eliminated cell must see the pivot as well as both wings, which limits it to the box or line the cells share. It is an Expert technique in Bare Sudoku.",
-          "when": [
-            "When X-Wing, Y-Wing and Swordfish find nothing. XYZ-Wings are less common than Y-Wings. Look for them when a three-candidate cell sits in a box with a two-candidate cell that shares two of its digits."
-          ],
-          "spot": [
-            "Start from cells with exactly three candidates; each is a possible pivot. Among its peers, look for two cells with two candidates each, both taken from the pivot's three, sharing exactly one digit Z. Then look for cells that see the pivot and both wings and contain Z. In practice one wing is in the pivot's box and the other in its row or column, and the eliminated cells are the remaining cells of that box in that row or column."
-          ],
-          "examples": [
-            {
-              "h": "Example",
-              "steps": [
-                "The pivot {pivot} has three candidates: {x}, {y} and {z}. It sees {wingA} with {x} and {z}, and {wingB} with {y} and {z}.",
-                "If {pivot} is {z}, done. If it is {x}, {wingA} must be {z}. If it is {y}, {wingB} must be {z}. In every case one of the three cells is {z}.",
-                "A cell that sees all three cannot be {z}. Remove {z} from {elim}."
-              ]
-            }
-          ],
-          "mistakes": [
-            "Eliminating from cells that see only the two wings. Unlike a Y-Wing, the pivot can be Z, so the cell must see the pivot too.",
-            "Using wings whose candidates are not both contained in the pivot's three candidates.",
-            "Confusing it with a Y-Wing: the difference is the third candidate in the pivot, and it changes which cells can be cleared."
-          ],
-          "faq": [
-            [
-              "What is an XYZ-Wing in Sudoku?",
-              "A pivot with candidates X, Y and Z and two wings, one with X and Z and one with Y and Z, both seeing the pivot. One of the three cells is Z, so Z is removed from cells that see all three."
-            ],
-            [
-              "How is an XYZ-Wing different from a Y-Wing?",
-              "The pivot has three candidates instead of two, including Z. That makes the pivot a possible home for Z, so only cells that see the pivot and both wings can lose Z."
-            ],
-            [
-              "How often does an XYZ-Wing appear?",
-              "Less often than a Y-Wing: most Expert puzzles in Bare Sudoku are solved without one. The solver looks for it after X-Wing, Y-Wing and Swordfish."
-            ],
-            [
-              "Is there a WXYZ-Wing?",
-              "Yes: four cells with four candidates in two crossing units, where one digit is free to sit in more than one of them. Bare Sudoku finds it too and rates it Expert, like the other wings."
             ]
           ]
         },
@@ -674,6 +582,98 @@
             ]
           ]
         },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Y-Wing in Sudoku: How the Technique Works",
+          "description": "Y-Wing (XY-Wing): a pivot with two candidates and two wings that each share one of them force a digit out of every cell that sees both wings. Example.",
+          "h1": "Y-Wing",
+          "summary": "A Y-Wing, also called XY-Wing, uses three cells with two candidates each. The pivot has candidates X and Y. One wing sees the pivot and has X and Z; the other wing sees the pivot and has Y and Z. Whatever the pivot is, one of the wings must be Z, so Z can be removed from every cell that sees both wings. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When a puzzle has several cells with exactly two candidates and no fish is available. Y-Wings are common in Expert puzzles and are found by following the two-candidate cells: each is a potential pivot or wing."
+          ],
+          "spot": [
+            "List the cells with exactly two candidates. For each one, treat it as the pivot with candidates X and Y, and look among its peers for a cell with X and another digit Z, and a cell with Y and the same Z. Those two are the wings. Then find cells that see both wings and contain Z. Note that the wings do not need to see each other."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "The pivot {pivot} has candidates {x} and {y}. It sees {wingA}, which has {x} and {z}, and {wingB}, which has {y} and {z}.",
+                "If {pivot} is {x}, then {wingA} loses {x} and becomes {z}. If {pivot} is {y}, then {wingB} becomes {z}. One of the two wings is {z} in every case.",
+                "A cell that sees both wings can never be {z}. Remove {z} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Choosing wings that do not both see the pivot. Each wing must share a row, column or box with the pivot.",
+            "Removing Z from cells that see only one wing. The eliminated cell must see both wings.",
+            "Removing Z from the pivot. The pivot does not contain Z in a Y-Wing; if it does, the pattern is an XYZ-Wing with different rules."
+          ],
+          "faq": [
+            [
+              "What is a Y-Wing in Sudoku?",
+              "Three two-candidate cells: a pivot with X and Y, a wing with X and Z that sees the pivot, and a wing with Y and Z that sees the pivot. One wing is always Z, so Z is removed from cells that see both wings."
+            ],
+            [
+              "Is Y-Wing the same as XY-Wing?",
+              "Yes. The two names describe the same pattern. Bare Sudoku calls it Y-Wing."
+            ],
+            [
+              "Why must one wing be Z?",
+              "If the pivot is X, the first wing loses X and becomes Z. If the pivot is Y, the second wing becomes Z. The pivot is one of the two, so one wing is Z."
+            ],
+            [
+              "How many cells does a Y-Wing eliminate?",
+              "Usually one or two: only the cells that see both wings and still contain Z. That is enough to create a single."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "XYZ-Wing in Sudoku: How the Technique Works",
+          "description": "XYZ-Wing: a pivot with three candidates and two wings that share one of them force that digit out of every cell seeing all three. Real example, step by step.",
+          "h1": "XYZ-Wing",
+          "summary": "An XYZ-Wing is a Y-Wing whose pivot has three candidates. The pivot has X, Y and Z; one wing sees the pivot and has X and Z, the other sees the pivot and has Y and Z. One of the three cells must be Z, so Z can be removed from every cell that sees all three. Because the pivot itself may be Z, the eliminated cell must see the pivot as well as both wings, which limits it to the box or line the cells share. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When X-Wing, Y-Wing and Swordfish find nothing. XYZ-Wings are less common than Y-Wings. Look for them when a three-candidate cell sits in a box with a two-candidate cell that shares two of its digits."
+          ],
+          "spot": [
+            "Start from cells with exactly three candidates; each is a possible pivot. Among its peers, look for two cells with two candidates each, both taken from the pivot's three, sharing exactly one digit Z. Then look for cells that see the pivot and both wings and contain Z. In practice one wing is in the pivot's box and the other in its row or column, and the eliminated cells are the remaining cells of that box in that row or column."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "The pivot {pivot} has three candidates: {x}, {y} and {z}. It sees {wingA} with {x} and {z}, and {wingB} with {y} and {z}.",
+                "If {pivot} is {z}, done. If it is {x}, {wingA} must be {z}. If it is {y}, {wingB} must be {z}. In every case one of the three cells is {z}.",
+                "A cell that sees all three cannot be {z}. Remove {z} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminating from cells that see only the two wings. Unlike a Y-Wing, the pivot can be Z, so the cell must see the pivot too.",
+            "Using wings whose candidates are not both contained in the pivot's three candidates.",
+            "Confusing it with a Y-Wing: the difference is the third candidate in the pivot, and it changes which cells can be cleared."
+          ],
+          "faq": [
+            [
+              "What is an XYZ-Wing in Sudoku?",
+              "A pivot with candidates X, Y and Z and two wings, one with X and Z and one with Y and Z, both seeing the pivot. One of the three cells is Z, so Z is removed from cells that see all three."
+            ],
+            [
+              "How is an XYZ-Wing different from a Y-Wing?",
+              "The pivot has three candidates instead of two, including Z. That makes the pivot a possible home for Z, so only cells that see the pivot and both wings can lose Z."
+            ],
+            [
+              "How often does an XYZ-Wing appear?",
+              "Less often than a Y-Wing: most Expert puzzles in Bare Sudoku are solved without one. The solver looks for it after X-Wing, Y-Wing and Swordfish."
+            ],
+            [
+              "Is there a WXYZ-Wing?",
+              "Yes: four cells with four candidates in two crossing units, where one digit is free to sit in more than one of them. Bare Sudoku finds it too and rates it Expert, like the other wings."
+            ]
+          ]
+        },
         "w-wing": {
           "name": "W-Wing",
           "title": "W-Wing in Sudoku: How the Technique Works",
@@ -765,6 +765,290 @@
             [
               "What is a deadly pattern?",
               "Four corners of a rectangle in two rows, two columns and two boxes that hold the same two digits crosswise. The digits could be swapped without breaking any rule, so a puzzle with one solution never ends up with one. Unique Rectangles remove the candidates that would create it."
+            ]
+          ]
+        },
+        "finned-x-wing": {
+          "name": "Finned X-Wing",
+          "title": "Finned X-Wing in Sudoku: How the Technique Works",
+          "description": "Finned X-Wing: an X-Wing with an extra candidate, the fin, in a base row. The digit is removed from the cover cells that lie in the fin's box. Real example.",
+          "h1": "Finned X-Wing",
+          "summary": "A Finned X-Wing is an [X-Wing](x-wing) that almost works: a digit has candidates in two rows that line up in two columns, except for one or more extra cells, the fins, in one of the two rows. All fins must lie in the same box. Either a fin holds the digit, or no fin does and the plain X-Wing applies; in both cases the digit cannot sit in the cells of the two cover columns that lie in the fin's box, outside the base rows, so it is removed from them. Rows and columns can be swapped. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When an X-Wing almost appears: two rows with the digit lined up in two columns plus a stray candidate or two in a single box. Finned X-Wings are among the most common Expert patterns in Bare Sudoku, and they need complete notes for the digit you examine."
+          ],
+          "spot": [
+            "Pick a digit and look for rows in which it has two or three candidate cells. Take two such rows and find two columns that cover all of their candidates except one or two cells; those cells are the fins, and they must sit in one box. Then look at the cells of the two columns inside the fin's box, outside the two rows: any that contain the digit lose it. Repeat with columns as the base. In the game, tap the digit key: a near rectangle of highlighted notes with an extra note beside it is the sign."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Digit {d} has candidates in rows {r1} and {r2} only in columns {c1} and {c2}, apart from one extra cell, {fin}, in box {finBox}. Without {fin} the pattern would be an X-Wing.",
+                "If {fin} is not {d}, the X-Wing holds: rows {r1} and {r2} place their {d} in columns {c1} and {c2}, and no other cell of those columns can be {d}.",
+                "If {fin} is {d}, no other cell of box {finBox} can be {d}.",
+                "A cell of column {c1} or {c2} that lies in box {finBox}, outside rows {r1} and {r2}, is ruled out either way. Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Removing the digit from the whole of the two columns, as in a plain X-Wing. With a fin, only the cover cells inside the fin's box can be cleared.",
+            "Using fins in two different boxes. The eliminated cells must see every fin, and cells in one box cannot see fins in two.",
+            "Taking a candidate outside the base rows for a fin. Fins lie in the base rows; an extra candidate in a cover column outside them is a cell the X-Wing would eliminate."
+          ],
+          "faq": [
+            [
+              "What is a Finned X-Wing in Sudoku?",
+              "An X-Wing with extra candidates, called fins, in one of its two base rows, all inside one box. Either a fin is the digit, or the X-Wing is valid; both cases rule out the digit in the cells of the cover columns that lie in the fin's box, so it is removed from them."
+            ],
+            [
+              "What is a fin?",
+              "A candidate cell in a base row of a fish that lies outside the cover columns. A fish with fins eliminates only in cells that see every fin, which is why all fins of a Finned X-Wing must lie in one box."
+            ],
+            [
+              "What is a Sashimi X-Wing?",
+              "A Finned X-Wing in which a base row keeps only one candidate in the cover columns once the fins are set aside. The reasoning is the same: either a fin holds the digit, or the rows force it into the cover columns. Bare Sudoku reports both as a Finned X-Wing."
+            ],
+            [
+              "How is a Finned X-Wing different from a Skyscraper?",
+              "Both use a digit in two rows. A Skyscraper needs exactly two candidates per row, aligned in one column, and eliminates in the cells that see both free ends. A Finned X-Wing needs the candidates aligned in two columns with the extra cells confined to one box, and eliminates only inside that box. Every Skyscraper can also be read as a fish with a fin; Bare Sudoku tries the Skyscraper first because it is easier to see."
+            ]
+          ]
+        },
+        "empty-rectangle": {
+          "name": "Empty Rectangle",
+          "title": "Empty Rectangle in Sudoku: How the Technique Works",
+          "description": "Empty Rectangle: a box where a digit's candidates lie in one row and one column, joined to a strong link, rules the digit out of one cell at the far end.",
+          "h1": "Empty Rectangle",
+          "summary": "An Empty Rectangle is a single-digit pattern. In one box, every candidate for a digit lies in a single row or a single column of that box; the four cells outside those two lines hold no candidate, which gives the pattern its name. The box is joined to a strong link: a row or column outside the box's band or stack in which the digit has exactly two candidate cells, one of them in the box's row or column. Then the cell that sees the other end of that link and lies on the box's other line can never be the digit, and it is removed from that cell. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When a digit's candidates in a box form an L or a T along one row and one column, and the digit also has a row or column with exactly two candidates nearby. Empty Rectangles are common in Expert puzzles, about as common as Finned X-Wings. They need complete notes for the digit."
+          ],
+          "spot": [
+            "Pick a digit and look at each box where it has at least two candidate cells. If all of them fit in one row plus one column of the box, you have an empty rectangle for that digit. Now find a column outside the box's stack where the digit has exactly two candidate cells, one of them in the box's row; the other end of that column is the far cell. The cell in the far cell's row and the box's column loses the digit. Try the same with a row outside the box's band and the box's column. In the game, tap the digit key and look for a box whose highlighted notes form an L or a T."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "In box {box}, every candidate for {d} lies in row {row} or column {col}. The other four cells of the box hold no {d}: they form the empty rectangle.",
+                "In {linkUnit}, {d} has exactly two candidate cells, {linkA} and {linkB}, and {linkA} lies in {erA}. One of the two must be {d}.",
+                "If {linkB} is {d}, then {elim} is not {d}, because it sees {linkB}.",
+                "If {linkA} is {d}, then {erA} has its {d} outside box {box}, so the box must place {d} in {erB}. {elim} lies in {erB} too, outside the box, so it is not {d} either.",
+                "Both cases rule out the same cell. Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Using a box where the digit has a candidate outside the chosen row and column. Every candidate in the box must lie on one of the two lines.",
+            "Taking a link row or column with three candidate cells for the digit, or one that runs through the box's own band or stack. The link must be a strong link outside the box's band or stack, with one end in line with the box.",
+            "Removing the digit from the wrong end. The eliminated cell lies on the box's other line, in line with the far end of the link, not next to the box."
+          ],
+          "faq": [
+            [
+              "What is an Empty Rectangle in Sudoku?",
+              "A box in which all candidates for a digit lie in one row and one column, joined to a row or column elsewhere where the digit has exactly two candidate cells, one of them in line with the box. The cell that lies on the box's other line and sees the far end of the pair cannot be the digit."
+            ],
+            [
+              "Why is it called an Empty Rectangle?",
+              "Because the four cells of the box that lie outside the chosen row and column contain no candidate for the digit; they form a rectangle that is empty of it."
+            ],
+            [
+              "Why does an Empty Rectangle work?",
+              "The two-candidate line forces the digit into one of its two cells. If it is the far cell, the eliminated cell sees it. If it is the near cell, the box must put the digit on its other line, and the eliminated cell lies on that line too. Both cases rule out the same cell."
+            ],
+            [
+              "Is an Empty Rectangle a kind of fish?",
+              "It is a close relative: an Empty Rectangle is a grouped Turbot Fish, in which one strong link runs through the box's row and column instead of two single cells. The Skyscraper and the 2-String Kite are its single-cell cousins."
+            ]
+          ]
+        },
+        "unique-rectangle-type-4": {
+          "name": "Unique Rectangle Type 4",
+          "title": "Unique Rectangle Type 4 in Sudoku: How It Works",
+          "description": "Unique Rectangle Type 4: two corners hold only the pair A and B, and A is confined to the other two corners in a shared unit, so B leaves both of them.",
+          "h1": "Unique Rectangle Type 4",
+          "summary": "A Unique Rectangle Type 4 is a uniqueness technique, like the [Unique Rectangle](unique-rectangle) of Type 1. Four cells at the corners of a rectangle in two rows, two columns and two boxes all hold the candidates A and B; two neighbouring corners, the floor, hold nothing else, and the two opposite them, the roof, hold more. If A has no other candidate cell in a row, column or box that the two roof corners share, one of them must be A. The other cannot then be B, or all four corners would hold only A and B, a deadly pattern with two solutions. So B is removed from both roof corners. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When two neighbouring corners of a rectangle are down to the same pair and the opposite two corners still hold more candidates, so that Type 1 does not apply. Type 4 is the most common of the further Unique Rectangle types in Bare Sudoku puzzles. It needs complete notes for the four corners and for one digit of the pair in the roof's unit."
+          ],
+          "spot": [
+            "Find two cells in the same row or column with exactly the same two candidates, A and B, and complete the rectangle with two cells that also hold A and B, in exactly two boxes in total. If the two roof cells still have other candidates, look at the row, column or box they share: if A has no candidate there outside the two roof cells, remove B from both. Then try the same with B as the confined digit, which would remove A."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "{corners} are the corners of a rectangle in two rows, two columns and two boxes, {boxA} and {boxB}. All four hold the candidates {a} and {b}.",
+                "{floor} hold nothing but {a} and {b}. The other two corners, {roof}, hold {a} and {b} together with other candidates.",
+                "In {unit}, {a} has no candidate cell other than {roof}. So one of these two corners must be {a}.",
+                "If the other one were {b}, the four corners would hold only {a} and {b}, and swapping the two digits would give a second solution. Every Bare Sudoku puzzle has exactly one solution, so neither corner can be {b}.",
+                "Remove {b} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Removing A instead of B. The digit that is confined to the two roof cells stays; the other digit of the pair is removed from them.",
+            "Using a rectangle whose corners lie in four boxes, or a unit where A has a third candidate cell. Without the two-box shape there is no deadly pattern, and without the strong link on A one roof corner could still be B.",
+            "Applying it to a puzzle that may have more than one solution. Every Bare Sudoku puzzle is checked for exactly one solution, so the argument holds in the game."
+          ],
+          "faq": [
+            [
+              "What is a Unique Rectangle Type 4?",
+              "A rectangle of four cells in two rows, two columns and two boxes that all hold the candidates A and B. Two neighbouring corners hold only A and B; the other two hold more, and in a unit they share, A is confined to those two corners. Then B is removed from both of them."
+            ],
+            [
+              "Why does Type 4 work?",
+              "One of the two roof corners must be A, because A has nowhere else to go in their shared unit. If the other roof corner were B, all four corners would hold only A and B, and the two digits could be swapped for a second solution. A proper Sudoku has one solution, so B is impossible in both roof corners."
+            ],
+            [
+              "How is Type 4 different from Type 1?",
+              "Type 1 has three corners with only the pair and removes both digits from the fourth. Type 4 has two corners with only the pair and uses a strong link on one digit between the other two corners; it removes the other digit from those two."
+            ],
+            [
+              "Which Unique Rectangle types does Bare Sudoku find?",
+              "Types 1 to 6 and the Hidden Rectangle. Type 1 and Type 4 are the most common in its puzzles; the hint names the type it used."
+            ]
+          ]
+        },
+        "hidden-rectangle": {
+          "name": "Hidden Rectangle",
+          "title": "Hidden Rectangle in Sudoku: How the Technique Works",
+          "description": "Hidden Rectangle: four corners hold the pair A and B, one of them nothing else, and A is confined to the rectangle in two lines, so the far corner loses B.",
+          "h1": "Hidden Rectangle",
+          "summary": "A Hidden Rectangle is a uniqueness technique in which the deadly pattern is hidden among other candidates. Four cells at the corners of a rectangle in two rows, two columns and two boxes all hold the candidates A and B, and one corner holds nothing else. In the row and in the column of the opposite corner, A has no candidate cell beyond the corners of the rectangle. If that opposite corner were B, both corners next to it would have to be A, and the first corner would have to be B: the four corners would hold only A and B, a deadly pattern with two solutions. So B is removed from the opposite corner. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When a rectangle's corners all hold the same two candidates, one of them holds nothing else, and the other three still have extra candidates, so that Type 1 and Type 4 do not apply. Hidden Rectangles are about as common as Type 4 in Bare Sudoku puzzles. They need complete notes for one digit of the pair in two lines."
+          ],
+          "spot": [
+            "Start from a cell with exactly two candidates, A and B. Look for a rectangle through it, in exactly two boxes, whose other three corners also hold A and B. Take the corner opposite your starting cell and check its row and its column: if A has no candidate there outside the rectangle, that corner loses B. Then try the same with the roles of A and B swapped."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "{corners} are the corners of a rectangle in two rows, two columns and two boxes, {boxA} and {boxB}. All four hold {a} and {b}. {pivot} holds nothing else; the opposite corner, {target}, also holds {extra}.",
+                "In row {rowT}, the only candidate cells for {a} are {target} and {sideA}. In column {colT}, they are {target} and {sideB}.",
+                "Suppose {target} were {b}. Then {sideA} and {sideB} would both have to be {a}, and {pivot}, which sees both of them, would have to be {b}. The four corners would hold only {a} and {b}, and swapping them would give a second solution.",
+                "Every Bare Sudoku puzzle has exactly one solution, so {target} is not {b}. Remove {b} from {target}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Checking the strong links in the wrong cells. The two links on A run through the corner opposite the two-candidate cell, along its row and its column.",
+            "Removing A instead of B. The digit with the strong links stays possible; the other digit of the pair is removed from the opposite corner.",
+            "Using a rectangle spread over four boxes. Without the two-box shape, swapping the digits would break the boxes and there is no deadly pattern to avoid."
+          ],
+          "faq": [
+            [
+              "What is a Hidden Rectangle in Sudoku?",
+              "A rectangle in two rows, two columns and two boxes whose four corners all hold the candidates A and B, one of them nothing else. If A is confined to the rectangle in both the row and the column of the opposite corner, that corner cannot be B, because the four corners would otherwise hold only A and B and the puzzle would have two solutions."
+            ],
+            [
+              "Why is it called hidden?",
+              "Because the deadly pattern is covered by extra candidates in three of the corners. In the plain Unique Rectangle you see three corners with just the pair; here you must look at where the digit A can go in two lines to uncover the pattern."
+            ],
+            [
+              "How is a Hidden Rectangle different from Type 4?",
+              "Type 4 needs two neighbouring corners with only the pair and one strong link in the unit of the other two. A Hidden Rectangle needs just one corner with only the pair and two strong links, in the row and the column of the opposite corner."
+            ],
+            [
+              "Can the two-candidate corner be the one that loses B?",
+              "No. The strong links run through the row and the column of the corner with extra candidates, and that corner is where B is removed. The corner with only the pair is the one that would be forced to B in the deadly pattern."
+            ]
+          ]
+        },
+        "finned-swordfish": {
+          "name": "Finned Swordfish",
+          "title": "Finned Swordfish in Sudoku: How the Technique Works",
+          "description": "Finned Swordfish: a Swordfish with an extra candidate, the fin, in a base row. The digit is removed from cover cells that lie in the fin's box. Real example.",
+          "h1": "Finned Swordfish",
+          "summary": "A Finned Swordfish is a [Swordfish](swordfish) with extra candidates: a digit has candidates in three rows that fall into three columns, except for one or more cells, the fins, which lie together in one box. Either a fin holds the digit, or no fin does and the plain Swordfish applies. In both cases the digit cannot sit in the cells of the three cover columns that lie in the fin's box, outside the base rows, so it is removed from them. Rows and columns can be swapped. It is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When a Swordfish almost appears: three rows whose candidates for a digit fall into three columns apart from a cell or two in one box. Finned Swordfish are less common than Finned X-Wings; look for them when a digit is spread thinly over several rows. They need complete and accurate notes for that digit."
+          ],
+          "spot": [
+            "Pick a digit and list the rows with two to four candidate cells for it. Look for three rows and three columns that cover all of their candidates but one or two; the leftover cells are the fins, and they must lie in one box. Then check the cells of the three columns inside the fin's box, outside the three rows: any that hold the digit lose it. Repeat with columns as the base."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "Digit {d} has candidates in rows {rows} only in columns {cols}, apart from one extra cell, {fin}, in box {finBox}. Without {fin} the pattern would be a Swordfish.",
+                "If {fin} is not {d}, the Swordfish holds: the three rows place their {d} in the three columns, one each, and no other cell of those columns can be {d}.",
+                "If {fin} is {d}, no other cell of box {finBox} can be {d}.",
+                "A cell of columns {cols} that lies in box {finBox}, outside rows {rows}, is ruled out either way. Remove {d} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Eliminating in the whole of the three columns. With fins, only the cover cells inside the fin's box can be cleared.",
+            "Using fins spread over two boxes. All fins must see the eliminated cells, so they must share one box.",
+            "Counting a cell outside the base rows as a fin. Fins lie in the base rows; extra candidates elsewhere in the cover columns are cells to eliminate, not fins."
+          ],
+          "faq": [
+            [
+              "What is a Finned Swordfish in Sudoku?",
+              "A Swordfish whose base rows hold extra candidates, the fins, all inside one box. Either a fin is the digit, or the Swordfish is valid; both cases rule out the digit in the cells of the cover columns that lie in the fin's box, so it is removed from them."
+            ],
+            [
+              "How many fins can a Finned Swordfish have?",
+              "Bare Sudoku accepts any number, provided they all lie in one box; one or two fins are the norm. Fins in different boxes would leave no cell that sees them all."
+            ],
+            [
+              "Is there a Finned Jellyfish?",
+              "Yes: the same idea with four rows and four columns. Bare Sudoku finds Finned Jellyfish as well, but they are rare, because a digit seldom spreads over four rows without a smaller pattern appearing first."
+            ],
+            [
+              "How is a Finned Swordfish different from a Finned X-Wing?",
+              "Only in size: a Finned X-Wing uses two rows and two columns, a Finned Swordfish three of each. The fin rule and the eliminations work the same way, inside the fin's box."
+            ]
+          ]
+        },
+        "wxyz-wing": {
+          "name": "WXYZ-Wing",
+          "title": "WXYZ-Wing in Sudoku: How the Technique Works",
+          "description": "WXYZ-Wing: four cells with exactly four candidates between them, bent across two units. The one digit not confined to cells that see each other is removed.",
+          "h1": "WXYZ-Wing",
+          "summary": "A WXYZ-Wing is a wing of four cells that together hold exactly four candidates, W, X, Y and Z, laid out across two crossing units: a row or column and a box, or a row and a column. Three of the digits are confined: each appears only in cells that all see each other, so each can be placed in at most one of the four cells. The fourth digit, Z, appears in cells that do not all see each other. Four cells need four different digits, and the confined digits fill at most three of them, so at least one cell holding Z is Z. Z can therefore be removed from every cell that sees all the cells holding Z. The WXYZ-Wing extends the [XYZ-Wing](xyz-wing) by one cell and one digit, and it is an Expert technique in Bare Sudoku.",
+          "when": [
+            "When the [XYZ-Wing](xyz-wing) and the simpler wings find nothing and the puzzle has a cluster of cells with two to four candidates in one box and the row or column through it. WXYZ-Wings are less common than XYZ-Wings. They need complete notes in the cells involved."
+          ],
+          "spot": [
+            "Start from a cell with three or four candidates and collect cells in its box, row or column whose candidates are all among its own, until you have four cells with exactly four candidates between them, lying in two crossing units. For each digit, check whether all the cells holding it see each other. If exactly one digit fails that test, it is Z: every cell outside the four that sees all the cells holding Z loses Z. In the classic form one cell, the pivot, holds all four digits and the other three hold two each, but the pivot may hold fewer, and a wing may hold three."
+          ],
+          "examples": [
+            {
+              "h": "Example",
+              "steps": [
+                "The four cells {cells} hold exactly four candidates between them: {digits}.",
+                "Digits {others} are each confined to cells that see each other, so each of them can occupy at most one of the four cells. Digit {z} is held by {zCells}, which do not all see each other.",
+                "The four cells need four different digits. The three confined digits fill at most three cells, so at least one cell is {z}, and it is one of {zCells}.",
+                "A cell that sees all of {zCells} can never be {z}. Remove {z} from {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Using four cells with five candidates between them. The count must be exactly four, or the cells could be filled without Z.",
+            "Treating a digit as Z when its cells all see each other. Such a digit is confined and can occupy only one cell; Z is the one digit whose cells do not all see each other.",
+            "Removing Z from cells that see only some of the cells holding Z. The eliminated cell must see every cell that holds Z, including the pivot if it has Z."
+          ],
+          "faq": [
+            [
+              "What is a WXYZ-Wing in Sudoku?",
+              "Four cells with exactly four candidates between them, bent across two crossing units, in which three digits are each confined to cells that see each other and the fourth, Z, is not. At least one of the cells holding Z is Z, so Z is removed from every cell that sees all of them."
+            ],
+            [
+              "How is a WXYZ-Wing different from an XYZ-Wing?",
+              "It has one more cell and one more digit. An XYZ-Wing has a three-candidate pivot and two wings; a WXYZ-Wing usually has a four-candidate pivot and three wings, but it also covers shapes where the digits are shared differently, as long as four cells hold exactly four candidates and only one digit is unconfined."
+            ],
+            [
+              "Does the pivot have to hold all four candidates?",
+              "No. Bare Sudoku accepts any four cells with four candidates in two crossing units where exactly one digit is unconfined. The classic pivot with all four digits is simply the most common form."
+            ],
+            [
+              "Is a WXYZ-Wing the same as a bent naked quad?",
+              "Yes. A bent naked subset is a naked subset whose cells lie in two crossing units instead of one. When exactly one digit is not confined to cells that see each other, that digit can be removed from cells that see all of its holders. The WXYZ-Wing is the four-cell case; the Y-Wing and the XYZ-Wing are three-cell cases."
             ]
           ]
         }
@@ -910,7 +1194,7 @@
           ],
           [
             "Bu rehberdekilerden daha zor teknikler var mı?",
-            "Evet. Oyuncular en zor bulmacalar için çok daha fazla teknik tanımlamıştır ve yenileri çıkmaya devam ediyor. Bare Sudoku bunların birkaçını Usta seviyesinde kullanır: zincirler, neredeyse kilitli kümeler ve zorlama ağları; ipucu hangisini kullandığını söyler. Buradaki sayfalar Uzman'a kadar her şeyi anlatır; yani o seviyeye kadar her bulmaca burada anlatılanlarla çözülebilir."
+            "Evet. Oyuncular en zor bulmacalar için çok daha fazla teknik tanımlamıştır ve yenileri çıkmaya devam ediyor. Bare Sudoku bunların birkaçını buradaki sayfaların ötesinde kullanır: Uzman seviyesinde başka balıklar, kanatlar ve dikdörtgen örüntüleri, Usta seviyesinde zincirler, neredeyse kilitli kümeler ve zorlama ağları. İpucu kullandığı tekniği her zaman söyler; böylece bu rehberde henüz sayfası olmasa bile onu araştırabilirsin."
           ],
           [
             "Aday nedir?",
@@ -1212,58 +1496,12 @@
             ]
           ]
         },
-        "y-wing": {
-          "name": "Y-Wing",
-          "title": "Sudokuda Y-Wing: Teknik Nasıl Çalışır",
-          "description": "Y-Wing (XY-Wing): iki adaylı bir eksen ve onlardan birini paylaşan iki kanat, iki kanadı da gören her hücreden bir rakamı çıkarır. Gerçek örnek, adım adım.",
-          "h1": "Y-Wing",
-          "summary": "Y-Wing, XY-Wing de denir, her biri iki adaylı üç hücre kullanır. Eksen hücresinin adayları X ve Y'dir. Bir kanat ekseni görür ve X ile Z taşır; diğer kanat ekseni görür ve Y ile Z taşır. Eksen ne olursa olsun kanatlardan biri Z olmak zorundadır; bu yüzden Z, iki kanadı da gören her hücreden silinebilir. Bare Sudoku'da bir Uzman tekniğidir.",
-          "when": [
-            "Bulmacada tam olarak iki adaylı birkaç hücre varken ve hiçbir balık yokken. Y-Wing Uzman bulmacalarda yaygındır ve iki adaylı hücreleri izleyerek bulunur: her biri olası bir eksen ya da kanattır."
-          ],
-          "spot": [
-            "Tam olarak iki adayı olan hücreleri listele. Her birini X ve Y adaylı eksen kabul et ve komşuları arasında X ile başka bir Z rakamı taşıyan bir hücre ve Y ile aynı Z'yi taşıyan bir hücre ara. Bu ikisi kanatlardır. Sonra iki kanadı da gören ve Z içeren hücreleri bul. Kanatların birbirini görmesi gerekmez."
-          ],
-          "examples": [
-            {
-              "h": "Örnek",
-              "steps": [
-                "Eksen {pivot} hücresinin adayları {x} ve {y}. {x} ile {z} taşıyan {wingA} hücresini ve {y} ile {z} taşıyan {wingB} hücresini görüyor.",
-                "{pivot} {x} ise {wingA} {x} adayını kaybeder ve {z} olur. {pivot} {y} ise {wingB} {z} olur. Her durumda iki kanattan biri {z}.",
-                "İki kanadı da gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
-              ]
-            }
-          ],
-          "mistakes": [
-            "İkisi de ekseni görmeyen kanatlar seçmek. Her kanat eksenle bir satır, sütun ya da kutu paylaşmalıdır.",
-            "Z'yi yalnızca bir kanadı gören hücrelerden silmek. Elenen hücre iki kanadı da görmelidir.",
-            "Z'yi eksenden silmek. Y-Wing'de eksen Z içermez; içeriyorsa örüntü farklı kuralları olan bir XYZ-Wing'dir."
-          ],
-          "faq": [
-            [
-              "Sudokuda Y-Wing nedir?",
-              "İki adaylı üç hücre: X ve Y taşıyan bir eksen, ekseni gören X ve Z taşıyan bir kanat, ekseni gören Y ve Z taşıyan bir kanat. Bir kanat her zaman Z'dir; bu yüzden Z iki kanadı da gören hücrelerden silinir."
-            ],
-            [
-              "Y-Wing ile XY-Wing aynı şey mi?",
-              "Evet. İki ad da aynı örüntüyü anlatır. Bare Sudoku ona Y-Wing der."
-            ],
-            [
-              "Neden bir kanat Z olmak zorunda?",
-              "Eksen X ise ilk kanat X'i kaybeder ve Z olur. Eksen Y ise ikinci kanat Z olur. Eksen ikisinden biridir; dolayısıyla bir kanat Z'dir."
-            ],
-            [
-              "Y-Wing kaç hücreden eler?",
-              "Genellikle bir ya da iki: yalnızca iki kanadı da gören ve hâlâ Z içeren hücreler. Bir tek yaratmaya bu yeter."
-            ]
-          ]
-        },
         "swordfish": {
           "name": "Swordfish",
           "title": "Sudokuda Swordfish: Teknik Nasıl Çalışır",
           "description": "Swordfish: üç satır boyunca üç sütuna sıkışmış bir rakam o sütunların geri kalanından silinebilir. Üç boyutlu balık, gerçek bir örnekle adım adım anlatılıyor.",
           "h1": "Swordfish",
-          "summary": "Swordfish, üç satır ve üç sütunlu bir X-Wing'dir. Bir rakamın üç satırın her birinde en çok üç aday hücresi varsa ve bu hücrelerin hepsi aynı üç sütuna düşüyorsa üç satır rakamı o sütunlarda tüketir ve rakam üç sütunun diğer her hücresinden silinebilir. Satır ve sütun yer değiştirebilir. Bare Sudoku, Uzman bulmacalarda Swordfish'i Y-Wing'den sonra denetler.",
+          "summary": "Swordfish, üç satır ve üç sütunlu bir X-Wing'dir. Bir rakamın üç satırın her birinde en çok üç aday hücresi varsa ve bu hücrelerin hepsi aynı üç sütuna düşüyorsa üç satır rakamı o sütunlarda tüketir ve rakam üç sütunun diğer her hücresinden silinebilir. Satır ve sütun yer değiştirebilir. Bare Sudoku, Uzman bulmacalarda Swordfish'i X-Wing'den hemen sonra denetler.",
           "when": [
             "X-Wing hiçbir şey bulamadığında. Swordfish X-Wing'den daha az yaygındır ve adayları üç çizgiye seyrek yayılmış bir rakam ister. O rakam için eksiksiz ve doğru not gerektirir."
           ],
@@ -1301,52 +1539,6 @@
             [
               "Dört boyutlu balık var mı?",
               "Evet, dört satır ve dört sütunlu Jellyfish. Akıl yürütme X-Wing ve Swordfish ile aynıdır, yalnızca daha çok çizgi vardır."
-            ]
-          ]
-        },
-        "xyz-wing": {
-          "name": "XYZ-Wing",
-          "title": "Sudokuda XYZ-Wing: Teknik Nasıl Çalışır",
-          "description": "XYZ-Wing: üç adaylı bir eksen ve onlardan birini paylaşan iki kanat, o rakamı üçünü de gören her hücreden çıkarır. Gerçek bir örnekle, adım adım anlatılıyor.",
-          "h1": "XYZ-Wing",
-          "summary": "XYZ-Wing, ekseni üç adaylı bir Y-Wing'dir. Eksen X, Y ve Z taşır; bir kanat ekseni görür ve X ile Z taşır, diğeri ekseni görür ve Y ile Z taşır. Üç hücreden biri Z olmak zorundadır; bu yüzden Z üçünü de gören her hücreden silinebilir. Eksenin kendisi Z olabileceğinden elenen hücre iki kanadın yanı sıra ekseni de görmelidir; bu da onu hücrelerin paylaştığı kutu ya da çizgiyle sınırlar. Bare Sudoku'da bir Uzman tekniğidir.",
-          "when": [
-            "X-Wing, Y-Wing ve Swordfish hiçbir şey bulamadığında. XYZ-Wing, Y-Wing'den daha az görülür. Üç adaylı bir hücre, rakamlarından ikisini paylaşan iki adaylı bir hücreyle aynı kutuda duruyorsa ara."
-          ],
-          "spot": [
-            "Tam olarak üç adayı olan hücrelerden başla; her biri olası bir eksendir. Komşuları arasında ikişer adaylı, ikisi de eksenin üç adayından alınmış ve tam olarak bir Z rakamını paylaşan iki hücre ara. Sonra ekseni ve iki kanadı gören ve Z içeren hücreleri bul. Uygulamada kanatlardan biri eksenin kutusunda, diğeri satırında ya da sütunundadır ve elenen hücreler o kutunun o satır ya da sütundaki kalan hücreleridir."
-          ],
-          "examples": [
-            {
-              "h": "Örnek",
-              "steps": [
-                "Eksen {pivot} hücresinin üç adayı var: {x}, {y} ve {z}. {x} ile {z} taşıyan {wingA} hücresini ve {y} ile {z} taşıyan {wingB} hücresini görüyor.",
-                "{pivot} {z} ise iş bitti. {x} ise {wingA} {z} olmalı. {y} ise {wingB} {z} olmalı. Her durumda üç hücreden biri {z}.",
-                "Üçünü de gören bir hücre {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
-              ]
-            }
-          ],
-          "mistakes": [
-            "Yalnızca iki kanadı gören hücrelerden eleme yapmak. Y-Wing'den farklı olarak eksen Z olabilir; bu yüzden hücre ekseni de görmelidir.",
-            "Adayları eksenin üç adayının içinde olmayan kanatlar kullanmak.",
-            "Y-Wing ile karıştırmak: fark eksendeki üçüncü adaydır ve bu, hangi hücrelerin temizlenebileceğini değiştirir."
-          ],
-          "faq": [
-            [
-              "Sudokuda XYZ-Wing nedir?",
-              "X, Y ve Z adaylı bir eksen ile biri X ve Z, diğeri Y ve Z taşıyan, ikisi de ekseni gören iki kanat. Üç hücreden biri Z'dir; bu yüzden Z üçünü de gören hücrelerden silinir."
-            ],
-            [
-              "XYZ-Wing Y-Wing'den nasıl farklıdır?",
-              "Eksenin iki değil, Z dahil üç adayı vardır. Bu, ekseni Z için olası bir yer yapar; dolayısıyla yalnızca ekseni ve iki kanadı gören hücreler Z kaybedebilir."
-            ],
-            [
-              "XYZ-Wing ne sıklıkla görülür?",
-              "Y-Wing'den daha seyrek: Bare Sudoku'daki Uzman bulmacaların çoğu onsuz çözülür. Çözücü onu X-Wing, Y-Wing ve Swordfish'ten sonra arar."
-            ],
-            [
-              "WXYZ-Wing var mı?",
-              "Evet: kesişen iki birimde dört adaylı dört hücre; rakamlardan biri birden fazla hücreye serbestçe gidebilir. Bare Sudoku onu da bulur ve diğer kanatlar gibi Uzman diye derecelendirir."
             ]
           ]
         },
@@ -1444,6 +1636,98 @@
             ]
           ]
         },
+        "y-wing": {
+          "name": "Y-Wing",
+          "title": "Sudokuda Y-Wing: Teknik Nasıl Çalışır",
+          "description": "Y-Wing (XY-Wing): iki adaylı bir eksen ve onlardan birini paylaşan iki kanat, iki kanadı da gören her hücreden bir rakamı çıkarır. Gerçek örnek, adım adım.",
+          "h1": "Y-Wing",
+          "summary": "Y-Wing, XY-Wing de denir, her biri iki adaylı üç hücre kullanır. Eksen hücresinin adayları X ve Y'dir. Bir kanat ekseni görür ve X ile Z taşır; diğer kanat ekseni görür ve Y ile Z taşır. Eksen ne olursa olsun kanatlardan biri Z olmak zorundadır; bu yüzden Z, iki kanadı da gören her hücreden silinebilir. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "Bulmacada tam olarak iki adaylı birkaç hücre varken ve hiçbir balık yokken. Y-Wing Uzman bulmacalarda yaygındır ve iki adaylı hücreleri izleyerek bulunur: her biri olası bir eksen ya da kanattır."
+          ],
+          "spot": [
+            "Tam olarak iki adayı olan hücreleri listele. Her birini X ve Y adaylı eksen kabul et ve komşuları arasında X ile başka bir Z rakamı taşıyan bir hücre ve Y ile aynı Z'yi taşıyan bir hücre ara. Bu ikisi kanatlardır. Sonra iki kanadı da gören ve Z içeren hücreleri bul. Kanatların birbirini görmesi gerekmez."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "Eksen {pivot} hücresinin adayları {x} ve {y}. {x} ile {z} taşıyan {wingA} hücresini ve {y} ile {z} taşıyan {wingB} hücresini görüyor.",
+                "{pivot} {x} ise {wingA} {x} adayını kaybeder ve {z} olur. {pivot} {y} ise {wingB} {z} olur. Her durumda iki kanattan biri {z}.",
+                "İki kanadı da gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "İkisi de ekseni görmeyen kanatlar seçmek. Her kanat eksenle bir satır, sütun ya da kutu paylaşmalıdır.",
+            "Z'yi yalnızca bir kanadı gören hücrelerden silmek. Elenen hücre iki kanadı da görmelidir.",
+            "Z'yi eksenden silmek. Y-Wing'de eksen Z içermez; içeriyorsa örüntü farklı kuralları olan bir XYZ-Wing'dir."
+          ],
+          "faq": [
+            [
+              "Sudokuda Y-Wing nedir?",
+              "İki adaylı üç hücre: X ve Y taşıyan bir eksen, ekseni gören X ve Z taşıyan bir kanat, ekseni gören Y ve Z taşıyan bir kanat. Bir kanat her zaman Z'dir; bu yüzden Z iki kanadı da gören hücrelerden silinir."
+            ],
+            [
+              "Y-Wing ile XY-Wing aynı şey mi?",
+              "Evet. İki ad da aynı örüntüyü anlatır. Bare Sudoku ona Y-Wing der."
+            ],
+            [
+              "Neden bir kanat Z olmak zorunda?",
+              "Eksen X ise ilk kanat X'i kaybeder ve Z olur. Eksen Y ise ikinci kanat Z olur. Eksen ikisinden biridir; dolayısıyla bir kanat Z'dir."
+            ],
+            [
+              "Y-Wing kaç hücreden eler?",
+              "Genellikle bir ya da iki: yalnızca iki kanadı da gören ve hâlâ Z içeren hücreler. Bir tek yaratmaya bu yeter."
+            ]
+          ]
+        },
+        "xyz-wing": {
+          "name": "XYZ-Wing",
+          "title": "Sudokuda XYZ-Wing: Teknik Nasıl Çalışır",
+          "description": "XYZ-Wing: üç adaylı bir eksen ve onlardan birini paylaşan iki kanat, o rakamı üçünü de gören her hücreden çıkarır. Gerçek bir örnekle, adım adım anlatılıyor.",
+          "h1": "XYZ-Wing",
+          "summary": "XYZ-Wing, ekseni üç adaylı bir Y-Wing'dir. Eksen X, Y ve Z taşır; bir kanat ekseni görür ve X ile Z taşır, diğeri ekseni görür ve Y ile Z taşır. Üç hücreden biri Z olmak zorundadır; bu yüzden Z üçünü de gören her hücreden silinebilir. Eksenin kendisi Z olabileceğinden elenen hücre iki kanadın yanı sıra ekseni de görmelidir; bu da onu hücrelerin paylaştığı kutu ya da çizgiyle sınırlar. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "X-Wing, Y-Wing ve Swordfish hiçbir şey bulamadığında. XYZ-Wing, Y-Wing'den daha az görülür. Üç adaylı bir hücre, rakamlarından ikisini paylaşan iki adaylı bir hücreyle aynı kutuda duruyorsa ara."
+          ],
+          "spot": [
+            "Tam olarak üç adayı olan hücrelerden başla; her biri olası bir eksendir. Komşuları arasında ikişer adaylı, ikisi de eksenin üç adayından alınmış ve tam olarak bir Z rakamını paylaşan iki hücre ara. Sonra ekseni ve iki kanadı gören ve Z içeren hücreleri bul. Uygulamada kanatlardan biri eksenin kutusunda, diğeri satırında ya da sütunundadır ve elenen hücreler o kutunun o satır ya da sütundaki kalan hücreleridir."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "Eksen {pivot} hücresinin üç adayı var: {x}, {y} ve {z}. {x} ile {z} taşıyan {wingA} hücresini ve {y} ile {z} taşıyan {wingB} hücresini görüyor.",
+                "{pivot} {z} ise iş bitti. {x} ise {wingA} {z} olmalı. {y} ise {wingB} {z} olmalı. Her durumda üç hücreden biri {z}.",
+                "Üçünü de gören bir hücre {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Yalnızca iki kanadı gören hücrelerden eleme yapmak. Y-Wing'den farklı olarak eksen Z olabilir; bu yüzden hücre ekseni de görmelidir.",
+            "Adayları eksenin üç adayının içinde olmayan kanatlar kullanmak.",
+            "Y-Wing ile karıştırmak: fark eksendeki üçüncü adaydır ve bu, hangi hücrelerin temizlenebileceğini değiştirir."
+          ],
+          "faq": [
+            [
+              "Sudokuda XYZ-Wing nedir?",
+              "X, Y ve Z adaylı bir eksen ile biri X ve Z, diğeri Y ve Z taşıyan, ikisi de ekseni gören iki kanat. Üç hücreden biri Z'dir; bu yüzden Z üçünü de gören hücrelerden silinir."
+            ],
+            [
+              "XYZ-Wing Y-Wing'den nasıl farklıdır?",
+              "Eksenin iki değil, Z dahil üç adayı vardır. Bu, ekseni Z için olası bir yer yapar; dolayısıyla yalnızca ekseni ve iki kanadı gören hücreler Z kaybedebilir."
+            ],
+            [
+              "XYZ-Wing ne sıklıkla görülür?",
+              "Y-Wing'den daha seyrek: Bare Sudoku'daki Uzman bulmacaların çoğu onsuz çözülür. Çözücü onu X-Wing, Y-Wing ve Swordfish'ten sonra arar."
+            ],
+            [
+              "WXYZ-Wing var mı?",
+              "Evet: kesişen iki birimde dört adaylı dört hücre; rakamlardan biri birden fazla hücreye serbestçe gidebilir. Bare Sudoku onu da bulur ve diğer kanatlar gibi Uzman diye derecelendirir."
+            ]
+          ]
+        },
         "w-wing": {
           "name": "W-Wing",
           "title": "Sudokuda W-Wing: Teknik Nasıl Çalışır",
@@ -1535,6 +1819,290 @@
             [
               "Ölümcül örüntü (deadly pattern) nedir?",
               "İki satır, iki sütun ve iki kutudaki bir dikdörtgenin köşelerinde aynı iki rakamın çapraz biçimde yer alması. Bu rakamlar hiçbir kuralı bozmadan yer değiştirebilirdi; bu yüzden tek çözümlü bir bulmaca hiçbir zaman böyle bitmez. Unique Rectangle, bu örüntüyü yaratacak adayları siler."
+            ]
+          ]
+        },
+        "finned-x-wing": {
+          "name": "Finned X-Wing",
+          "title": "Sudokuda Finned X-Wing: Teknik Nasıl Çalışır",
+          "description": "Finned X-Wing: taban satırında fazladan bir adayı, yüzgeci, olan X-Wing. Rakam, yüzgecin kutusundaki örtü hücrelerinden silinir. Gerçek örnek, adım adım.",
+          "h1": "Finned X-Wing",
+          "summary": "Finned X-Wing (yüzgeçli X-Wing), neredeyse tutan bir [X-Wing](x-wing)'dir: bir rakamın iki satırdaki adayları iki sütunda hizalanır, yalnız bu satırlardan birinde bir ya da birkaç fazladan hücre, yani yüzgeçler, vardır. Yüzgeçlerin hepsi aynı kutuda olmalıdır. Ya yüzgeçlerden biri rakamdır ya da hiçbiri değildir ve düz X-Wing geçerlidir; iki durumda da rakam, iki örtü sütununun yüzgeç kutusundaki ve taban satırlarının dışındaki hücrelerinde olamaz, bu yüzden oralardan silinir. Satır ve sütun yer değiştirebilir. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "Bir X-Wing neredeyse ortaya çıktığında: rakamı iki sütunda hizalanmış iki satır ve tek bir kutuda bir iki başıboş aday. Finned X-Wing, Bare Sudoku'daki en yaygın Uzman örüntülerindendir ve incelediğin rakam için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Bir rakam seç ve o rakamın iki ya da üç aday hücresi olduğu satırları ara. Böyle iki satır al ve adaylarının bir ikisi dışında hepsini kapsayan iki sütun bul; dışarıda kalan hücreler yüzgeçlerdir ve tek bir kutuda durmalıdır. Sonra iki sütunun yüzgeç kutusundaki, iki satırın dışındaki hücrelerine bak: rakamı içerenler onu kaybeder. Aynısını sütunları taban alarak yinele. Oyunda rakam tuşuna dokun: yanında fazladan bir not bulunan, dikdörtgene yakın bir vurgulu not kümesi işarettir."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{d} rakamının {r1}. ve {r2}. satırlardaki adayları yalnızca {c1}. ve {c2}. sütunlarda, bir tek {finBox}. kutudaki fazladan {fin} hücresi dışında. {fin} olmasa örüntü bir X-Wing olurdu.",
+                "{fin} {d} değilse X-Wing tutar: {r1}. ve {r2}. satırlar {d} rakamlarını {c1}. ve {c2}. sütunlara koyar ve o sütunların başka hiçbir hücresi {d} olamaz.",
+                "{fin} {d} ise {finBox}. kutunun başka hiçbir hücresi {d} olamaz.",
+                "{c1}. ya da {c2}. sütunun {finBox}. kutudaki, {r1}. ve {r2}. satırların dışındaki bir hücresi iki durumda da elenir. Şu hücrelerden {d} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Rakamı düz X-Wing'deki gibi iki sütunun tamamından silmek. Yüzgeç varken yalnızca yüzgeç kutusundaki örtü hücreleri temizlenebilir.",
+            "İki farklı kutuda yüzgeç kullanmak. Elenen hücreler her yüzgeci görmelidir; bir kutudaki hücreler iki kutudaki yüzgeçleri göremez.",
+            "Taban satırlarının dışındaki bir adayı yüzgeç saymak. Yüzgeçler taban satırlarındadır; örtü sütununda onların dışındaki fazladan bir aday, X-Wing'in eleyeceği bir hücredir."
+          ],
+          "faq": [
+            [
+              "Sudokuda Finned X-Wing nedir?",
+              "İki taban satırından birinde fazladan adayları, yani yüzgeçleri, olan ve yüzgeçlerin hepsi tek kutuda bulunan bir X-Wing. Ya yüzgeçlerden biri rakamdır ya da X-Wing geçerlidir; iki durum da rakamı örtü sütunlarının yüzgeç kutusundaki hücrelerinde dışlar, bu yüzden oralardan silinir."
+            ],
+            [
+              "Yüzgeç nedir?",
+              "Bir balığın taban satırında, örtü sütunlarının dışında kalan bir aday hücresi. Yüzgeçli bir balık yalnızca her yüzgeci gören hücrelerde eleme yapar; Finned X-Wing'in bütün yüzgeçlerinin tek kutuda olması bu yüzdendir."
+            ],
+            [
+              "Sashimi X-Wing nedir?",
+              "Yüzgeçler bir yana bırakılınca bir taban satırında örtü sütunlarında yalnızca tek aday kalan bir Finned X-Wing. Akıl yürütme aynıdır: ya yüzgeçlerden biri rakamı taşır ya da satırlar rakamı örtü sütunlarına zorlar. Bare Sudoku ikisini de Finned X-Wing diye bildirir."
+            ],
+            [
+              "Finned X-Wing Skyscraper'dan nasıl farklıdır?",
+              "İkisi de bir rakamı iki satırda kullanır. Skyscraper her satırda tam olarak iki aday ister, bunlar bir sütunda hizalanır ve iki serbest ucu da gören hücrelerde eleme yapar. Finned X-Wing adayların iki sütunda hizalanmasını ve fazladan hücrelerin tek kutuda kalmasını ister, yalnızca o kutuda eleme yapar. Her Skyscraper yüzgeçli bir balık olarak da okunabilir; Bare Sudoku daha kolay görüldüğü için önce Skyscraper'ı dener."
+            ]
+          ]
+        },
+        "empty-rectangle": {
+          "name": "Empty Rectangle",
+          "title": "Sudokuda Empty Rectangle: Teknik Nasıl Çalışır",
+          "description": "Empty Rectangle: bir rakamın adaylarının bir satır ve bir sütunda toplandığı kutu, güçlü bir bağla birleşince rakamı uzak uçtaki tek hücreden dışlar.",
+          "h1": "Empty Rectangle",
+          "summary": "Empty Rectangle (boş dikdörtgen) tek rakamlı bir örüntüdür. Bir kutuda bir rakamın her adayı kutunun tek bir satırında ya da tek bir sütunundadır; bu iki çizginin dışındaki dört hücrede aday yoktur, örüntünün adı da buradan gelir. Kutu güçlü bir bağa bağlanır: kutunun bandının ya da sütun şeridinin dışında, rakamın tam olarak iki aday hücresi olan ve bu hücrelerden biri kutunun satırında ya da sütununda duran bir satır ya da sütun. O zaman bağın diğer ucunu gören ve kutunun öbür çizgisinde duran hücre asla rakam olamaz ve rakam o hücreden silinir. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "Bir kutuda bir rakamın adayları bir satır ve bir sütun boyunca L ya da T biçimi oluşturduğunda ve rakamın yakınlarda tam olarak iki adaylı bir satırı ya da sütunu da varsa. Empty Rectangle, Uzman bulmacalarda yaygındır, aşağı yukarı Finned X-Wing kadar. Rakam için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Bir rakam seç ve en az iki aday hücresi olduğu her kutuya bak. Hepsi kutunun bir satırı ile bir sütununa sığıyorsa o rakam için bir boş dikdörtgenin var. Şimdi kutunun sütun şeridinin dışında, rakamın tam olarak iki aday hücresi olan ve biri kutunun satırında duran bir sütun bul; o sütunun diğer ucu uzak hücredir. Uzak hücrenin satırı ile kutunun sütununun kesiştiği hücre rakamı kaybeder. Aynısını kutunun bandının dışındaki bir satır ve kutunun sütunuyla dene. Oyunda rakam tuşuna dokun ve vurgulu notları L ya da T oluşturan bir kutu ara."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{box}. kutuda {d} rakamının her adayı {row}. satırda ya da {col}. sütunda. Kutunun diğer dört hücresinde {d} yok: bunlar boş dikdörtgeni oluşturur.",
+                "{linkUnit}da {d} rakamının tam olarak iki aday hücresi var, {linkA} ve {linkB}; {linkA} {erA}da duruyor. İkisinden biri {d} olmak zorunda.",
+                "{linkB} {d} ise {elim} {d} olamaz, çünkü {linkB} hücresini görüyor.",
+                "{linkA} {d} ise {erA} {d} rakamını {box}. kutunun dışında almış olur; o zaman kutunun {d} rakamı {erB}da olmak zorundadır. {elim} de {erB}da, kutunun dışında; yani o da {d} olamaz.",
+                "İki durum da aynı hücreyi dışlıyor. {elim} hücresinden {d} rakamını sil."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Rakamın seçilen satır ve sütunun dışında adayı olan bir kutu kullanmak. Kutudaki her aday iki çizgiden birinde durmalıdır.",
+            "Rakam için üç aday hücresi olan ya da kutunun kendi bandından ya da sütun şeridinden geçen bir bağ satırı ya da sütunu almak. Bağ, kutunun bandının ve sütun şeridinin dışında, bir ucu kutuyla hizalı güçlü bir bağ olmalıdır.",
+            "Rakamı yanlış uçtan silmek. Elenen hücre kutunun öbür çizgisinde, bağın uzak ucuyla hizalıdır; kutunun hemen yanında değildir."
+          ],
+          "faq": [
+            [
+              "Sudokuda Empty Rectangle nedir?",
+              "Bir rakamın bütün adaylarının bir satır ve bir sütunda toplandığı bir kutunun, rakamın tam olarak iki aday hücresi olan ve biri kutuyla hizalı başka bir satır ya da sütunla birleşmesi. Kutunun öbür çizgisinde duran ve çiftin uzak ucunu gören hücre rakam olamaz."
+            ],
+            [
+              "Neden Empty Rectangle (boş dikdörtgen) denir?",
+              "Çünkü kutunun seçilen satır ve sütunun dışında kalan dört hücresinde rakam için aday yoktur; bu dört hücre rakamdan boş bir dikdörtgen oluşturur."
+            ],
+            [
+              "Empty Rectangle neden işler?",
+              "İki adaylı çizgi rakamı iki hücresinden birine zorlar. Uzak hücreyse elenen hücre onu görür. Yakın hücreyse kutu rakamı öbür çizgisine koymak zorundadır ve elenen hücre de o çizgidedir. İki durum da aynı hücreyi dışlar."
+            ],
+            [
+              "Empty Rectangle bir balık türü mü?",
+              "Yakın akrabası: Empty Rectangle, güçlü bağlardan birinin iki tek hücre yerine kutunun satırı ve sütunundan geçtiği gruplu bir Turbot Fish'tir. Skyscraper ve 2-String Kite onun tek hücreli kuzenleridir."
+            ]
+          ]
+        },
+        "unique-rectangle-type-4": {
+          "name": "Unique Rectangle Type 4",
+          "title": "Sudokuda Unique Rectangle Type 4: Nasıl Çalışır",
+          "description": "Unique Rectangle Type 4: iki köşe yalnızca A ve B çiftini taşır, A ortak birimde diğer iki köşeyle sınırlıdır; bu yüzden B ikisinden de silinir. Gerçek örnek.",
+          "h1": "Unique Rectangle Type 4",
+          "summary": "Unique Rectangle Type 4 (Tip 4), Tip 1 [Unique Rectangle](unique-rectangle) gibi bir teklik tekniğidir. İki satır, iki sütun ve iki kutudaki bir dikdörtgenin köşelerindeki dört hücrenin hepsi A ve B adaylarını taşır; komşu iki köşe, yani taban, başka bir şey taşımaz, karşılarındaki iki köşe, yani çatı, daha fazlasını taşır. İki çatı köşesinin paylaştığı bir satır, sütun ya da kutuda A'nın başka aday hücresi yoksa ikisinden biri A olmak zorundadır. Diğeri o zaman B olamaz; yoksa dört köşe yalnızca A ve B taşırdı, bu da iki çözümlü bir ölümcül örüntüdür. Bu yüzden B iki çatı köşesinden de silinir. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "Bir dikdörtgenin komşu iki köşesinde aynı çift kaldığında ve karşıdaki iki köşe hâlâ daha fazla aday taşıdığında, yani Tip 1 uygulanamadığında. Tip 4, Bare Sudoku bulmacalarında diğer Unique Rectangle tiplerinin en yaygınıdır. Dört köşe ve çatının birimindeki çiftin bir rakamı için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Aynı satır ya da sütunda tam olarak aynı iki adayı, A ve B'yi, taşıyan iki hücre bul ve dikdörtgeni yine A ve B taşıyan iki hücreyle, toplam tam olarak iki kutuda, tamamla. İki çatı hücresinin hâlâ başka adayları varsa paylaştıkları satır, sütun ya da kutuya bak: A'nın orada iki çatı hücresi dışında adayı yoksa B'yi ikisinden de sil. Sonra aynısını sınırlı rakam olarak B ile dene; bu da A'yı siler."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{corners} hücreleri iki satır, iki sütun ve iki kutudaki, {boxA}. ve {boxB}. kutulardaki, bir dikdörtgenin köşeleri. Dördü de {a} ve {b} adaylarını taşıyor.",
+                "{floor} yalnızca {a} ve {b} taşıyor. Diğer iki köşe, {roof}, {a} ve {b} ile birlikte başka adaylar da taşıyor.",
+                "{unit}da {a} rakamının {roof} dışında aday hücresi yok. Yani bu iki köşeden biri {a} olmak zorunda.",
+                "Diğeri {b} olsaydı dört köşe yalnızca {a} ve {b} taşırdı ve bu iki rakamın yerini değiştirmek ikinci bir çözüm verirdi. Her Bare Sudoku bulmacasının tam olarak tek çözümü vardır; bu yüzden iki köşe de {b} olamaz.",
+                "Şu hücrelerden {b} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "B yerine A'yı silmek. İki çatı hücresiyle sınırlı olan rakam kalır; çiftin diğer rakamı onlardan silinir.",
+            "Köşeleri dört kutuya yayılan bir dikdörtgen ya da A'nın üçüncü bir aday hücresi olduğu bir birim kullanmak. İki kutulu biçim olmadan ölümcül örüntü yoktur; A üzerindeki güçlü bağ olmadan çatı köşelerinden biri hâlâ B olabilir.",
+            "Birden fazla çözümü olabilecek bir bulmacada uygulamak. Her Bare Sudoku bulmacasının tek çözümü olduğu denetlenir; bu yüzden akıl yürütme oyunda geçerlidir."
+          ],
+          "faq": [
+            [
+              "Unique Rectangle Tip 4 nedir?",
+              "İki satır, iki sütun ve iki kutudaki, dört hücresi de A ve B adaylarını taşıyan bir dikdörtgen. Komşu iki köşe yalnızca A ve B taşır; diğer ikisi daha fazlasını taşır ve paylaştıkları bir birimde A bu iki köşeyle sınırlıdır. O zaman B ikisinden de silinir."
+            ],
+            [
+              "Tip 4 neden işler?",
+              "İki çatı köşesinden biri A olmak zorundadır, çünkü A'nın paylaştıkları birimde gidecek başka yeri yoktur. Diğer çatı köşesi B olsaydı dört köşe yalnızca A ve B taşırdı ve iki rakamın yeri değiştirilerek ikinci bir çözüm bulunurdu. Düzgün bir sudokunun tek çözümü vardır; bu yüzden B iki çatı köşesinde de imkânsızdır."
+            ],
+            [
+              "Tip 4 Tip 1'den nasıl farklıdır?",
+              "Tip 1'de yalnızca çifti taşıyan üç köşe vardır ve iki rakam da dördüncü köşeden silinir. Tip 4'te yalnızca çifti taşıyan iki köşe vardır ve diğer iki köşe arasında bir rakam üzerinde güçlü bir bağ kullanılır; diğer rakam o iki köşeden silinir."
+            ],
+            [
+              "Bare Sudoku hangi Unique Rectangle tiplerini bulur?",
+              "Tip 1'den 6'ya kadar hepsini ve Hidden Rectangle'ı. Bulmacalarında en yaygın olanlar Tip 1 ve Tip 4'tür; ipucu kullandığı tipi söyler."
+            ]
+          ]
+        },
+        "hidden-rectangle": {
+          "name": "Hidden Rectangle",
+          "title": "Sudokuda Hidden Rectangle: Teknik Nasıl Çalışır",
+          "description": "Hidden Rectangle: dört köşe A ve B çiftini taşır, biri başka bir şey taşımaz; A karşı köşenin satır ve sütununda dikdörtgenle sınırlıysa o köşe B'yi kaybeder.",
+          "h1": "Hidden Rectangle",
+          "summary": "Hidden Rectangle (gizli dikdörtgen), ölümcül örüntünün başka adayların arasına gizlendiği bir teklik tekniğidir. İki satır, iki sütun ve iki kutudaki bir dikdörtgenin köşelerindeki dört hücrenin hepsi A ve B adaylarını taşır ve bir köşe başka bir şey taşımaz. Karşı köşenin satırında ve sütununda A'nın dikdörtgenin köşeleri dışında aday hücresi yoktur. O karşı köşe B olsaydı yanındaki iki köşe A olmak zorunda kalırdı ve ilk köşe B olmak zorunda kalırdı: dört köşe yalnızca A ve B taşırdı, bu da iki çözümlü bir ölümcül örüntüdür. Bu yüzden B karşı köşeden silinir. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "Bir dikdörtgenin köşelerinin hepsi aynı iki adayı taşıdığında, biri başka bir şey taşımadığında ve diğer üçünün hâlâ fazladan adayları olduğunda, yani Tip 1 ve Tip 4 uygulanamadığında. Hidden Rectangle, Bare Sudoku bulmacalarında aşağı yukarı Tip 4 kadar yaygındır. İki çizgide çiftin bir rakamı için eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Tam olarak iki adayı, A ve B, olan bir hücreden başla. Ondan geçen, tam olarak iki kutuda duran ve diğer üç köşesi de A ve B taşıyan bir dikdörtgen ara. Başladığın hücrenin karşısındaki köşeyi al ve satırına ve sütununa bak: A'nın orada dikdörtgenin dışında adayı yoksa o köşe B'yi kaybeder. Sonra aynısını A ve B'nin rollerini değiştirerek dene."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{corners} hücreleri iki satır, iki sütun ve iki kutudaki, {boxA}. ve {boxB}. kutulardaki, bir dikdörtgenin köşeleri. Dördü de {a} ve {b} taşıyor. {pivot} başka bir şey taşımıyor; karşı köşe {target} ise fazladan {extra} taşıyor.",
+                "{rowT}. satırda {a} rakamının aday hücreleri yalnızca {target} ve {sideA}. {colT}. sütunda ise yalnızca {target} ve {sideB}.",
+                "{target} {b} olsaydı {sideA} ve {sideB} ikisi de {a} olmak zorunda kalırdı ve ikisini de gören {pivot} {b} olmak zorunda kalırdı. Dört köşe yalnızca {a} ve {b} taşırdı ve bunların yerini değiştirmek ikinci bir çözüm verirdi.",
+                "Her Bare Sudoku bulmacasının tam olarak tek çözümü vardır; bu yüzden {target} {b} değildir. {target} hücresinden {b} rakamını sil."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Güçlü bağları yanlış hücrelerde aramak. A üzerindeki iki bağ, iki adaylı hücrenin karşısındaki köşeden, onun satırı ve sütunu boyunca geçer.",
+            "B yerine A'yı silmek. Güçlü bağları olan rakam mümkün kalır; çiftin diğer rakamı karşı köşeden silinir.",
+            "Dört kutuya yayılmış bir dikdörtgen kullanmak. İki kutulu biçim olmadan rakamların yerini değiştirmek kutuları bozar ve kaçınılacak bir ölümcül örüntü yoktur."
+          ],
+          "faq": [
+            [
+              "Sudokuda Hidden Rectangle nedir?",
+              "İki satır, iki sütun ve iki kutudaki, dört köşesi de A ve B adaylarını taşıyan ve köşelerinden biri başka bir şey taşımayan bir dikdörtgen. A, karşı köşenin hem satırında hem sütununda dikdörtgenle sınırlıysa o köşe B olamaz; çünkü yoksa dört köşe yalnızca A ve B taşırdı ve bulmacanın iki çözümü olurdu."
+            ],
+            [
+              "Neden gizli (hidden) denir?",
+              "Çünkü ölümcül örüntü üç köşedeki fazladan adayların altında kalır. Düz Unique Rectangle'da yalnızca çifti taşıyan üç köşeyi görürsün; burada örüntüyü ortaya çıkarmak için A rakamının iki çizgide nereye gidebileceğine bakmak gerekir."
+            ],
+            [
+              "Hidden Rectangle Tip 4'ten nasıl farklıdır?",
+              "Tip 4, yalnızca çifti taşıyan komşu iki köşe ve diğer ikisinin birimindeki bir güçlü bağ ister. Hidden Rectangle, yalnızca çifti taşıyan tek bir köşe ve karşı köşenin satırında ve sütununda iki güçlü bağ ister."
+            ],
+            [
+              "B'yi kaybeden köşe iki adaylı köşe olabilir mi?",
+              "Hayır. Güçlü bağlar fazladan adayları olan köşenin satırından ve sütunundan geçer ve B o köşeden silinir. Yalnızca çifti taşıyan köşe, ölümcül örüntüde B olmaya zorlanacak olan köşedir."
+            ]
+          ]
+        },
+        "finned-swordfish": {
+          "name": "Finned Swordfish",
+          "title": "Sudokuda Finned Swordfish: Teknik Nasıl Çalışır",
+          "description": "Finned Swordfish: taban satırında fazladan bir adayı, yüzgeci, olan Swordfish. Rakam, yüzgecin kutusundaki örtü hücrelerinden silinir. Gerçek örnek, adım adım.",
+          "h1": "Finned Swordfish",
+          "summary": "Finned Swordfish (yüzgeçli Swordfish), fazladan adayları olan bir [Swordfish](swordfish)'tir: bir rakamın üç satırdaki adayları üç sütuna düşer, yalnız bir ya da birkaç hücre, yani yüzgeçler, bunun dışında kalır ve hepsi tek bir kutudadır. Ya yüzgeçlerden biri rakamdır ya da hiçbiri değildir ve düz Swordfish geçerlidir. İki durumda da rakam, üç örtü sütununun yüzgeç kutusundaki ve taban satırlarının dışındaki hücrelerinde olamaz, bu yüzden oralardan silinir. Satır ve sütun yer değiştirebilir. Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "Bir Swordfish neredeyse ortaya çıktığında: bir rakam için adayları tek kutudaki bir iki hücre dışında üç sütuna düşen üç satır. Finned Swordfish, Finned X-Wing'den daha az yaygındır; bir rakam birkaç satıra seyrek yayıldığında ara. O rakam için eksiksiz ve doğru not gerektirir."
+          ],
+          "spot": [
+            "Bir rakam seç ve o rakam için iki ile dört arası aday hücresi olan satırları listele. Adaylarının bir ikisi dışında hepsini kapsayan üç satır ve üç sütun ara; dışarıda kalan hücreler yüzgeçlerdir ve tek kutuda durmalıdır. Sonra üç sütunun yüzgeç kutusundaki, üç satırın dışındaki hücrelerini kontrol et: rakamı taşıyanlar onu kaybeder. Aynısını sütunları taban alarak yinele."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "{d} rakamının {rows}. satırlardaki adayları yalnızca {cols}. sütunlarda, bir tek {finBox}. kutudaki fazladan {fin} hücresi dışında. {fin} olmasa örüntü bir Swordfish olurdu.",
+                "{fin} {d} değilse Swordfish tutar: üç satır {d} rakamlarını üç sütuna birer birer koyar ve o sütunların başka hiçbir hücresi {d} olamaz.",
+                "{fin} {d} ise {finBox}. kutunun başka hiçbir hücresi {d} olamaz.",
+                "{cols}. sütunların {finBox}. kutudaki, {rows}. satırların dışındaki bir hücresi iki durumda da elenir. Şu hücrelerden {d} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Üç sütunun tamamında eleme yapmak. Yüzgeç varken yalnızca yüzgeç kutusundaki örtü hücreleri temizlenebilir.",
+            "İki kutuya yayılmış yüzgeçler kullanmak. Bütün yüzgeçler elenen hücreleri görmelidir; bu yüzden tek kutuyu paylaşmalıdır.",
+            "Taban satırlarının dışındaki bir hücreyi yüzgeç saymak. Yüzgeçler taban satırlarındadır; örtü sütunlarının başka yerlerindeki fazladan adaylar yüzgeç değil, elenecek hücrelerdir."
+          ],
+          "faq": [
+            [
+              "Sudokuda Finned Swordfish nedir?",
+              "Taban satırlarında fazladan adaylar, yani yüzgeçler, bulunan ve yüzgeçlerin hepsi tek kutuda olan bir Swordfish. Ya yüzgeçlerden biri rakamdır ya da Swordfish geçerlidir; iki durum da rakamı örtü sütunlarının yüzgeç kutusundaki hücrelerinde dışlar, bu yüzden oralardan silinir."
+            ],
+            [
+              "Bir Finned Swordfish'in kaç yüzgeci olabilir?",
+              "Bare Sudoku hepsi tek kutuda olmak şartıyla istediği kadar kabul eder; olağan olan bir ya da iki yüzgeçtir. Farklı kutulardaki yüzgeçlerin hepsini birden gören hiçbir hücre kalmazdı."
+            ],
+            [
+              "Finned Jellyfish var mı?",
+              "Evet: aynı fikrin dört satır ve dört sütunlu hali. Bare Sudoku Finned Jellyfish'i de bulur ama nadirdir, çünkü bir rakam daha küçük bir örüntü ortaya çıkmadan dört satıra pek yayılmaz."
+            ],
+            [
+              "Finned Swordfish Finned X-Wing'den nasıl farklıdır?",
+              "Yalnızca boyutta: Finned X-Wing iki satır ve iki sütun, Finned Swordfish üçer tane kullanır. Yüzgeç kuralı ve elemeler aynı biçimde, yüzgeç kutusunun içinde işler."
+            ]
+          ]
+        },
+        "wxyz-wing": {
+          "name": "WXYZ-Wing",
+          "title": "Sudokuda WXYZ-Wing: Teknik Nasıl Çalışır",
+          "description": "WXYZ-Wing: aralarında tam olarak dört aday taşıyan, iki birime bükülmüş dört hücre. Birbirini gören hücrelerle sınırlı olmayan tek rakam çevrelerinden silinir.",
+          "h1": "WXYZ-Wing",
+          "summary": "WXYZ-Wing, birlikte tam olarak dört aday, W, X, Y ve Z, taşıyan ve kesişen iki birime, bir satır ya da sütun ile bir kutuya ya da bir satır ile bir sütuna, yayılmış dört hücrelik bir kanattır. Rakamlardan üçü sınırlıdır: her biri yalnızca birbirini gören hücrelerde bulunur, bu yüzden dört hücreden en çok birine konabilir. Dördüncü rakam Z ise hepsi birbirini görmeyen hücrelerde bulunur. Dört hücre dört farklı rakam ister ve sınırlı rakamlar en çok üçünü doldurur; demek ki Z taşıyan hücrelerden en az biri Z'dir. Bu yüzden Z, Z taşıyan hücrelerin hepsini gören her hücreden silinebilir. WXYZ-Wing, [XYZ-Wing](xyz-wing)'i bir hücre ve bir rakamla genişletir ve Bare Sudoku'da bir Uzman tekniğidir.",
+          "when": [
+            "[XYZ-Wing](xyz-wing) ve daha basit kanatlar hiçbir şey bulamadığında ve bulmacada bir kutu ile ondan geçen satır ya da sütunda iki ile dört arası adaylı bir hücre kümesi varsa. WXYZ-Wing, XYZ-Wing'den daha az yaygındır. İlgili hücrelerde eksiksiz not gerektirir."
+          ],
+          "spot": [
+            "Üç ya da dört adaylı bir hücreden başla ve kutusunda, satırında ya da sütununda adayları tamamen onunkilerin içinde kalan hücreleri topla; kesişen iki birimde duran, aralarında tam olarak dört aday taşıyan dört hücre bulana kadar. Her rakam için onu taşıyan hücrelerin hepsinin birbirini görüp görmediğine bak. Bu sınavdan tam olarak bir rakam kalıyorsa o Z'dir: dördün dışında, Z taşıyan hücrelerin hepsini gören her hücre Z'yi kaybeder. Klasik biçimde bir hücre, eksen, dört rakamı da taşır ve diğer üçü ikişer taşır; ama eksen daha az taşıyabilir ve bir kanat üç taşıyabilir."
+          ],
+          "examples": [
+            {
+              "h": "Örnek",
+              "steps": [
+                "Dört hücre {cells} aralarında tam olarak dört aday taşıyor: {digits}.",
+                "{others} rakamlarının her biri birbirini gören hücrelerle sınırlı; bu yüzden her biri dört hücreden en çok birini alabilir. {z} rakamını {zCells} taşıyor ve bunların hepsi birbirini görmüyor.",
+                "Dört hücre dört farklı rakam ister. Sınırlı üç rakam en çok üç hücre doldurur; demek ki en az bir hücre {z} ve bu hücre {zCells} arasında.",
+                "{zCells} hücrelerinin hepsini gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
+              ]
+            }
+          ],
+          "mistakes": [
+            "Aralarında beş aday taşıyan dört hücre kullanmak. Sayı tam olarak dört olmalı; yoksa hücreler Z olmadan doldurulabilir.",
+            "Hücrelerinin hepsi birbirini gören bir rakamı Z saymak. Böyle bir rakam sınırlıdır ve yalnızca bir hücre alabilir; Z, hücrelerinin hepsi birbirini görmeyen tek rakamdır.",
+            "Z'yi, Z taşıyan hücrelerin yalnızca bazılarını gören hücrelerden silmek. Elenen hücre, Z taşıyan her hücreyi, Z taşıyorsa ekseni de, görmelidir."
+          ],
+          "faq": [
+            [
+              "Sudokuda WXYZ-Wing nedir?",
+              "Aralarında tam olarak dört aday taşıyan, kesişen iki birime bükülmüş dört hücre; üç rakamın her biri birbirini gören hücrelerle sınırlıdır, dördüncüsü Z değildir. Z taşıyan hücrelerden en az biri Z'dir; bu yüzden Z, hepsini gören her hücreden silinir."
+            ],
+            [
+              "WXYZ-Wing XYZ-Wing'den nasıl farklıdır?",
+              "Bir hücresi ve bir rakamı fazladır. XYZ-Wing'de üç adaylı bir eksen ve iki kanat vardır; WXYZ-Wing'de genellikle dört adaylı bir eksen ve üç kanat vardır, ama dört hücre tam olarak dört aday taşıdığı ve yalnızca bir rakam sınırsız olduğu sürece rakamların farklı paylaşıldığı biçimleri de kapsar."
+            ],
+            [
+              "Eksen dört adayı da taşımak zorunda mı?",
+              "Hayır. Bare Sudoku, kesişen iki birimde dört aday taşıyan ve tam olarak bir rakamı sınırsız olan her dört hücreyi kabul eder. Dört rakamı da taşıyan klasik eksen yalnızca en yaygın biçimdir."
+            ],
+            [
+              "WXYZ-Wing bükük bir açık dörtlü mü?",
+              "Evet. Bükük açık alt küme, hücreleri tek birim yerine kesişen iki birimde duran bir açık alt kümedir. Tam olarak bir rakam birbirini gören hücrelerle sınırlı değilse o rakam, onu taşıyan hücrelerin hepsini gören hücrelerden silinebilir. WXYZ-Wing dört hücreli durumdur; Y-Wing ve XYZ-Wing üç hücreli durumlardır."
             ]
           ]
         }

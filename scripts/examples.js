@@ -4,7 +4,7 @@ const path = require('path');
 const { Sudoku, candidates, bit, PEERS, ROW, COL, BOX } = require('../src/engine.js');
 
 const OUT = path.join(__dirname, '..', 'src', 'examples.json');
-const BUDGET_MS = 90000;
+const BUDGET_MS = Number(process.env.EXAMPLES_BUDGET_MS) || 90000;
 const UNITS = [];
 for (let u = 0; u < 9; u++) {
   const r = [], c = [], b = [];
@@ -22,6 +22,7 @@ const low = m => 31 - Math.clz32(m & -m);
 const digitsOf = m => { const a = []; for (let d = 1; d <= 9; d++) if (m & bit(d)) a.push(d); return a; };
 const bitsOf = m => { const a = []; for (let k = 0; k < 9; k++) if (m & (1 << k)) a.push(k); return a; };
 const unitIndex = cells => UNITS.findIndex(u => u.every((c, k) => c === cells[k]));
+const sees = (a, b) => PEERS[a].includes(b);
 
 let rec = null;
 let running = null;
@@ -148,6 +149,100 @@ hook('uniqueRectangle', (args, before, engine) => {
   return { tech: 'unique-rectangle', kind: 'type1', corners, target, floor, boxes, extra: digitsOf(engine.lc[target]), cells: corners, unit: -1, digits: digitsOf(pair) };
 });
 
+function finnedPattern([b, t, baseMask, coverMask], before) {
+  const d = digitsOf(b)[0];
+  const base = bitsOf(baseMask), cover = bitsOf(coverMask);
+  const lineOf = c => t === 0 ? ROW[c] : COL[c];
+  const acrossOf = c => t === 0 ? COL[c] : ROW[c];
+  const cells = [], fins = [];
+  for (let c = 0; c < 81; c++) {
+    if (!(before[c] & b) || !base.includes(lineOf(c))) continue;
+    cells.push(c);
+    if (!cover.includes(acrossOf(c))) fins.push(c);
+  }
+  const finBox = BOX[fins[0]];
+  const proper = base.every(l => cells.filter(c => lineOf(c) === l && !fins.includes(c)).length >= 2);
+  const tech = base.length === 2 ? 'finned-x-wing' : base.length === 3 ? 'finned-swordfish' : 'finned-jellyfish';
+  return { tech, kind: t === 0 ? 'rows' : 'cols', t, base, cover, fins, finBox, proper, cells, unit: 18 + finBox, digits: [d] };
+}
+
+function emptyRectanglePattern(args, before, engine) {
+  const [[cell, d]] = diff(before, engine.lc);
+  const b = bit(d);
+  const holders = cells => cells.filter(c => before[c] & b);
+  for (let box = 0; box < 9; box++) {
+    const held = holders(UNITS[18 + box]);
+    if (held.length < 2) continue;
+    const band = (box / 3) | 0, stack = box % 3;
+    for (let i = 0; i < 3; i++) {
+      const row = band * 3 + i;
+      for (let j = 0; j < 3; j++) {
+        const col = stack * 3 + j;
+        if (!held.every(c => ROW[c] === row || COL[c] === col)) continue;
+        const shape = (linkA, linkB, erA, erB, linkUnit) => ({ tech: 'empty-rectangle', kind: 'er', box, row, col, linkUnit, linkA, linkB, erA, erB, cells: held.concat([linkA, linkB]), unit: 18 + box, digits: [d] });
+        for (let line = 0; line < 9; line++) {
+          if (((line / 3) | 0) === stack) continue;
+          const pair = holders(UNITS[9 + line]);
+          if (pair.length !== 2 || !pair.some(c => ROW[c] === row)) continue;
+          const far = pair.find(c => ROW[c] !== row);
+          if (((ROW[far] / 3) | 0) !== band && ROW[far] * 9 + col === cell) return shape(row * 9 + line, far, row, 9 + col, 9 + line);
+        }
+        for (let line = 0; line < 9; line++) {
+          if (((line / 3) | 0) === band) continue;
+          const pair = holders(UNITS[line]);
+          if (pair.length !== 2 || !pair.some(c => COL[c] === col)) continue;
+          const far = pair.find(c => COL[c] !== col);
+          if (((COL[far] / 3) | 0) !== stack && row * 9 + COL[far] === cell) return shape(line * 9 + col, far, 9 + col, row, line);
+        }
+      }
+    }
+  }
+  throw new Error('Empty Rectangle deseni bulunamadi');
+}
+
+function wxyzPattern([union], before, engine) {
+  const quad = Array.from(engine.quad);
+  const digits = digitsOf(union);
+  const confined = d => {
+    const held = quad.filter(c => before[c] & bit(d));
+    return held.every(c => held.every(o => o === c || sees(c, o)));
+  };
+  const z = digits.find(d => !confined(d));
+  return { tech: 'wxyz-wing', kind: 'wxyz', z, others: digits.filter(d => d !== z), zCells: quad.filter(c => before[c] & bit(z)), cells: quad, unit: -1, digits };
+}
+
+function boxesOf(corners) {
+  return [...new Set(corners.map(c => BOX[c]))];
+}
+
+function urType4Pattern(args, before, engine) {
+  const corners = Array.from(engine.corners);
+  const elim = diff(before, engine.lc);
+  const b = elim[0][1];
+  const roof = corners.filter(c => elim.some(([e]) => e === c));
+  const floor = corners.filter(c => !roof.includes(c));
+  const a = digitsOf(before[floor[0]] & ~bit(b))[0];
+  const line = ROW[roof[0]] === ROW[roof[1]] ? ROW[roof[0]] : 9 + COL[roof[0]];
+  const confined = u => UNITS[u].every(c => roof.includes(c) || !(before[c] & bit(a)));
+  const unit = confined(line) ? line : 18 + BOX[roof[0]];
+  return { tech: 'unique-rectangle-type-4', kind: 'type4', corners, floor, roof, a, b, unit, boxes: boxesOf(corners), cells: corners, digits: [a, b] };
+}
+
+function hiddenRectanglePattern(args, before, engine) {
+  const corners = Array.from(engine.corners);
+  const [[target, b]] = diff(before, engine.lc);
+  const pivot = corners[(corners.indexOf(target) + 2) & 3];
+  const pair = before[pivot];
+  const a = digitsOf(pair & ~bit(b))[0];
+  return { tech: 'hidden-rectangle', kind: 'hidden', corners, pivot, target, sideA: ROW[target] * 9 + COL[pivot], sideB: ROW[pivot] * 9 + COL[target], a, b, extra: digitsOf(before[target] & ~pair), boxes: boxesOf(corners), cells: corners, unit: -1, digits: [a, b] };
+}
+
+hook('finnedDrop', finnedPattern);
+hook('emptyRectangle', emptyRectanglePattern);
+hook('wingDrop', wxyzPattern);
+hook('urType4', urType4Pattern);
+hook('hiddenRectangle', hiddenRectanglePattern);
+
 function firstLocked(lc) {
   for (let d = 1; d <= 9; d++) {
     const b = bit(d);
@@ -202,7 +297,13 @@ const WANT = {
   'skyscraper': { level: 3, slots: ['rows'] },
   'two-string-kite': { level: 3, slots: ['kite'] },
   'w-wing': { level: 3, slots: ['w'] },
-  'unique-rectangle': { level: 3, slots: ['type1'] }
+  'unique-rectangle': { level: 3, slots: ['type1'] },
+  'finned-x-wing': { level: 3, slots: ['rows'] },
+  'empty-rectangle': { level: 3, slots: ['er'] },
+  'unique-rectangle-type-4': { level: 3, slots: ['type4'] },
+  'hidden-rectangle': { level: 3, slots: ['hidden'] },
+  'finned-swordfish': { level: 3, slots: ['rows'] },
+  'wxyz-wing': { level: 3, slots: ['wxyz'] }
 };
 
 function keptExamples() {
@@ -224,7 +325,7 @@ const found = {};
 for (const tech of SEARCH) found[tech] = {};
 
 function offer(tech, kind, example) {
-  if (KEPT[tech]) return;
+  if (!WANT[tech] || KEPT[tech]) return;
   const slots = WANT[tech].slots;
   if (!slots.includes(kind)) return;
   const filled = example.values.split('').filter(ch => ch !== '0').length;
@@ -267,6 +368,12 @@ function walk(e, puzzle, solution) {
         if (rec.t === 0) offer(rec.tech, rec.kind, Object.assign(rec, { unit: -1, place: null }, base));
       } else if (rec.tech === 'y-wing' || rec.tech === 'xyz-wing') {
         if (rec.pivot >= 0) offer(rec.tech, rec.kind, Object.assign(rec, { unit: -1, place: null }, base));
+      } else if (rec.tech === 'finned-x-wing' || rec.tech === 'finned-swordfish') {
+        if (rec.t === 0 && rec.fins.length === 1 && rec.proper) offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
+      } else if (rec.tech === 'unique-rectangle-type-4') {
+        if (rec.roof.every(c => pop(cands[c]) > 2)) offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
+      } else if (rec.tech === 'hidden-rectangle') {
+        if (rec.extra.length) offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
       } else offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
     }
   }

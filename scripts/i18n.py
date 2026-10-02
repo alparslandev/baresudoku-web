@@ -72,8 +72,10 @@ def load_site(languages):
 GUIDE_KEYS = ["learnHeading", "learnText", "howToLink", "techniquesLink", "labels", "howTo", "index", "tech"]
 GUIDE_LABELS = ["howTo", "techniques", "play", "prev", "next", "all", "example", "steps", "when", "spot", "mistakes", "inGame", "level", "hint", "legend", "notation", "row", "column", "box", "elimItem", "regions", "firstMove", "breadcrumb"]
 LABEL_PLACEHOLDERS = {"level": {"level"}, "hint": {"text"}, "row": {"n"}, "column": {"n"}, "box": {"n"}, "elimItem": {"d", "cell"}, "firstMove": {"cell", "d"}}
-TECHNIQUES = ["naked-single", "hidden-single", "locked-candidates", "naked-pairs", "hidden-pairs", "x-wing", "swordfish", "skyscraper", "two-string-kite", "y-wing", "xyz-wing", "w-wing", "unique-rectangle"]
-TECH_LEVEL = {"naked-single": 0, "hidden-single": 0, "locked-candidates": 2, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 3, "swordfish": 3, "xyz-wing": 3, "skyscraper": 3, "two-string-kite": 3, "w-wing": 3, "unique-rectangle": 3}
+TECHNIQUES = ["naked-single", "hidden-single", "locked-candidates", "naked-pairs", "hidden-pairs", "x-wing", "swordfish", "skyscraper", "two-string-kite", "y-wing", "xyz-wing", "w-wing", "unique-rectangle", "finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "wxyz-wing"]
+TECH_LEVEL = {"naked-single": 0, "hidden-single": 0, "locked-candidates": 2, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 3, "swordfish": 3, "xyz-wing": 3, "skyscraper": 3, "two-string-kite": 3, "w-wing": 3, "unique-rectangle": 3, "finned-x-wing": 3, "empty-rectangle": 3, "unique-rectangle-type-4": 3, "hidden-rectangle": 3, "finned-swordfish": 3, "wxyz-wing": 3}
+OPTIONAL_TECHNIQUES = {"finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "wxyz-wing"}
+COMPLETE_LANGUAGES = ("en", "tr")
 HOWTO_KEYS = ["title", "description", "h1", "summary", "sections", "faq"]
 INDEX_KEYS = ["title", "description", "h1", "intro", "faq"]
 TECH_KEYS = ["name", "title", "description", "h1", "summary", "when", "spot", "examples", "mistakes", "faq"]
@@ -174,6 +176,8 @@ def check_guide_entry(code, entry, reference):
     tech = entry["tech"]
     for slug in TECHNIQUES:
         if slug not in tech:
+            if slug in OPTIONAL_TECHNIQUES and code not in COMPLETE_LANGUAGES:
+                continue
             fail(code, "tech.%s eksik" % slug)
         t = tech[slug]
         r = reference["tech"][slug]
@@ -204,6 +208,10 @@ def check_guide_entry(code, entry, reference):
     for k in tech:
         if k not in TECHNIQUES:
             fail(code, "tech.%s bilinmiyor" % k)
+
+
+def techniques_of(entry):
+    return [slug for slug in TECHNIQUES if slug in entry["tech"]]
 
 
 def guide_file():
