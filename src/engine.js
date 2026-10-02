@@ -42,8 +42,8 @@ const TECH_ORDER = new Uint8Array(TECH_COUNT);
 let EXPERT_LIMIT = 0;
 {
   let n = 0;
-  for (let id = 0; id < 11; id++) TECH_ORDER[n++] = id;
-  for (let r = 0; r < 128; r++) for (let id = 11; id < TECH_COUNT; id++) if (TECH_BASE[id] === r) TECH_ORDER[n++] = id;
+  for (let id = 0; id < 3; id++) TECH_ORDER[n++] = id;
+  for (let r = 0; r < 128; r++) for (let id = 3; id < TECH_COUNT; id++) if (TECH_BASE[id] === r) TECH_ORDER[n++] = id;
   for (let id = 0; id < TECH_COUNT; id++) if (TECH_BASE[id] < MASTER_RATING) EXPERT_LIMIT++;
 }
 const NODES = 1215;
