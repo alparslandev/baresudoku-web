@@ -72,10 +72,17 @@
 <button type="button" data-level="4"></button>
 <button type="button" id="errors-btn"></button>
 <button type="button" id="restart-btn"></button>
+<button type="button" id="stats-btn"></button>
 <a id="daily-btn" class="btn" hidden></a>
 <a id="play-btn" class="btn" hidden></a>
 <label><span id="lang-label"></span><select id="lang">{{OPTIONS}}</select></label>
 <button type="button" id="cancel-btn"></button>
+</div>
+<div id="stats" role="dialog" aria-modal="true" aria-labelledby="stats-title" hidden>
+<h2 id="stats-title"></h2>
+<table id="stats-table"><thead><tr><th></th><th id="stats-solved"></th><th id="stats-best"></th><th id="stats-average"></th></tr></thead><tbody></tbody></table>
+<p id="streak"></p>
+<button type="button" id="stats-back"></button>
 </div>
 </div>
 <noscript><p style="text-align:center;padding:24px">Bare Sudoku needs JavaScript to run.</p></noscript>

@@ -5,6 +5,7 @@ const S_WRONG = 16, S_NAKED = 17, S_ROW = 18, S_COL = 19, S_BOX = 20, S_AGAIN = 
 const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31, S_RESTART = 32, S_TECH_EXTRA = 33;
 const S_MASTER = S_TECH_EXTRA + TECH_COUNT - 7;
 const S_DAILY = S_MASTER + 1, S_SHARE = S_MASTER + 2, S_COPIED = S_MASTER + 3, S_PLAY = S_MASTER + 4;
+const S_STATS = S_MASTER + 5, S_PLAYED = S_MASTER + 6, S_BEST = S_MASTER + 7, S_AVERAGE = S_MASTER + 8, S_STREAK = S_MASTER + 9;
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
 const now = () => Date.now();
@@ -16,7 +17,9 @@ const DAILY = L.mode === 'daily';
 const DAILY_PATH = L.daily || '';
 const STATE_KEY = DAILY ? KEY + '.daily' : KEY;
 const LOG_KEY = KEY + '.dailyLog';
+const STATS_KEY = KEY + '.stats';
 let dailyDate = '';
+let statsOpen = false;
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 let meta = { t: 0, d: false };
@@ -145,6 +148,7 @@ function renderLabels() {
   play.href = pathOf($('lang').value);
   play.hidden = !DAILY;
   $('share-btn').textContent = strings[S_SHARE];
+  $('stats-btn').textContent = strings[S_STATS];
 }
 
 function buildBoard() {
@@ -312,6 +316,8 @@ function render() {
   });
   const overlay = menuOpen || (game.active && game.solved);
   $('overlay').hidden = !overlay;
+  $('panel').hidden = statsOpen;
+  $('stats').hidden = !statsOpen;
   if (overlay) {
     const solved = game.active && game.solved;
     $('panel-title').textContent = solved ? strings[S_SOLVED] : DAILY ? strings[S_DAILY] : strings[S_TITLE];
@@ -329,6 +335,87 @@ let pendingLevel = 0;
 
 function save() {
   store(STATE_KEY, JSON.stringify(Object.assign(game.save(now()), { a: meta, d: dailyDate })));
+}
+
+function readJson(key) {
+  try { return JSON.parse(fetchStored(key)); } catch (e) { return null; }
+}
+
+function loadStats() {
+  const stats = readJson(STATS_KEY);
+  const levels = stats && Array.isArray(stats.levels) ? stats.levels : [];
+  while (levels.length < LEVELS) levels.push({ p: 0, s: 0, t: 0, b: 0 });
+  return { levels: levels.map(l => ({ p: l.p | 0, s: l.s | 0, t: l.t | 0, b: l.b | 0 })) };
+}
+
+function recordStart(level) {
+  const stats = loadStats();
+  stats.levels[level].p++;
+  store(STATS_KEY, JSON.stringify(stats));
+}
+
+function recordSolved(level, seconds) {
+  const stats = loadStats();
+  const l = stats.levels[level];
+  l.s++;
+  l.t += seconds;
+  if (!l.b || seconds < l.b) l.b = seconds;
+  store(STATS_KEY, JSON.stringify(stats));
+}
+
+function dayShift(date, days) {
+  const d = new Date(+date.slice(0, 4), +date.slice(5, 7) - 1, +date.slice(8, 10) + days);
+  const pad = n => (n < 10 ? '0' : '') + n;
+  return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+}
+
+function dailyStreak() {
+  const log = readJson(LOG_KEY) || {};
+  let day = localDate();
+  if (!log[day]) day = dayShift(day, -1);
+  let n = 0;
+  while (log[day]) {
+    n++;
+    day = dayShift(day, -1);
+  }
+  return n;
+}
+
+function renderStats() {
+  $('stats-title').textContent = strings[S_STATS];
+  $('stats-solved').textContent = strings[S_PLAYED];
+  $('stats-best').textContent = strings[S_BEST];
+  $('stats-average').textContent = strings[S_AVERAGE];
+  $('stats-back').textContent = strings[S_CANCEL];
+  const body = $('stats-table').querySelector('tbody');
+  body.textContent = '';
+  const stats = loadStats();
+  for (let level = 0; level < LEVELS; level++) {
+    const l = stats.levels[level];
+    const name = levelName(level);
+    if (name === undefined || (!l.p && !l.s)) continue;
+    const tr = document.createElement('tr');
+    for (const text of [name, l.s + ' / ' + l.p, l.b ? clock(l.b * 1000) : '-', l.s ? clock(Math.round(l.t / l.s) * 1000) : '-']) {
+      const td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+    }
+    body.appendChild(tr);
+  }
+  $('streak').textContent = strings[S_STREAK] + ': ' + dailyStreak();
+}
+
+function openStats() {
+  statsOpen = true;
+  renderStats();
+  render();
+  $('stats-back').focus();
+}
+
+function closeStats() {
+  statsOpen = false;
+  render();
+  focusPanel();
 }
 
 function logDaily() {
@@ -384,6 +471,10 @@ function openMenu() {
 }
 
 function closeMenu() {
+  if (statsOpen) {
+    closeStats();
+    return;
+  }
   if (!cancellable()) return;
   menuOpen = false;
   game.resume(now());
@@ -410,6 +501,7 @@ function startGame(level) {
     game.rating = engine.rating;
     meta = { t: now(), d: false };
     beacon({ e: 'start', k: level });
+    recordStart(level);
     generating = false;
     game.resume(now());
     save();
@@ -425,6 +517,7 @@ function restartGame() {
   if (game.solved) {
     meta = { t: now(), d: false };
     beacon({ e: 'start', k: game.level });
+    recordStart(game.level);
   }
   game.restart();
   game.resume(now());
@@ -452,7 +545,9 @@ function finish(changed) {
     stopTimer();
     if (!meta.d) {
       meta.d = true;
-      beacon({ e: 'done', k: game.level, t: meta.t, s: Math.round(game.time(now()) / 1000) });
+      const seconds = Math.round(game.time(now()) / 1000);
+      beacon({ e: 'done', k: game.level, t: meta.t, s: seconds });
+      recordSolved(game.level, seconds);
       if (DAILY) logDaily();
       changed = true;
     }
@@ -525,6 +620,8 @@ function bind() {
   $('cancel-btn').addEventListener('click', closeMenu);
   $('restart-btn').addEventListener('click', restartGame);
   $('share-btn').addEventListener('click', share);
+  $('stats-btn').addEventListener('click', openStats);
+  $('stats-back').addEventListener('click', closeStats);
   $('lang').addEventListener('change', e => switchLang(e.target.value));
   document.addEventListener('keydown', e => {
     if (e.target && e.target.tagName === 'SELECT') return;

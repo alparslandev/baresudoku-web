@@ -13,9 +13,10 @@ HOST = "baresudoku.com"
 ENDPOINT = "https://api.indexnow.org/indexnow"
 
 
-def url_list(languages, guide_languages):
+def url_list(languages, guide_languages, daily_languages=()):
     base = "https://" + HOST
     pages = [base + i18n.path(code) for code in languages]
+    pages += [base + i18n.path(code) + "daily/" for code in daily_languages]
     pages += [base + i18n.path(code) + "privacy/" for code in languages]
     for code in guide_languages:
         pages.append(base + i18n.path(code) + "how-to-play/")
@@ -32,8 +33,8 @@ def removed_pages(base):
         return [base + i18n.path(code) for code in json.load(f)["codes"]]
 
 
-def ping(languages, guide_languages):
-    body = json.dumps({"host": HOST, "key": KEY, "keyLocation": "https://%s/%s.txt" % (HOST, KEY), "urlList": url_list(languages, guide_languages)}).encode("utf-8")
+def ping(languages, guide_languages, daily_languages=()):
+    body = json.dumps({"host": HOST, "key": KEY, "keyLocation": "https://%s/%s.txt" % (HOST, KEY), "urlList": url_list(languages, guide_languages, daily_languages)}).encode("utf-8")
     request = urllib.request.Request(ENDPOINT, data=body, headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=20) as response:
@@ -47,4 +48,6 @@ def ping(languages, guide_languages):
 if __name__ == "__main__":
     keys, languages = i18n.load()
     guide_languages = list(i18n.load_guide(languages))
-    print("IndexNow: %s (%d URL)" % (ping(languages, guide_languages), len(url_list(languages, guide_languages))))
+    site = i18n.load_site(languages)
+    daily_languages = [code for code in languages if i18n.has_daily(site[code])]
+    print("IndexNow: %s (%d URL)" % (ping(languages, guide_languages, daily_languages), len(url_list(languages, guide_languages, daily_languages))))
