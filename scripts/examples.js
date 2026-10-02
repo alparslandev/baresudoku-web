@@ -24,6 +24,8 @@ const bitsOf = m => { const a = []; for (let k = 0; k < 9; k++) if (m & (1 << k)
 const unitIndex = cells => UNITS.findIndex(u => u.every((c, k) => c === cells[k]));
 
 let rec = null;
+let running = null;
+let lineType = -1;
 
 function diff(before, after) {
   const elim = [];
@@ -39,8 +41,28 @@ function hook(name, describe) {
   Sudoku.prototype[name] = function (...args) {
     const before = rec === null ? this.lc.slice() : null;
     const changed = orig.apply(this, args);
-    if (changed && rec === null) rec = Object.assign({ elim: diff(before, this.lc) }, describe(args, before));
+    if (changed && rec === null) rec = Object.assign({ elim: diff(before, this.lc) }, describe(args, before, this));
     return changed;
+  };
+}
+
+function track(name) {
+  const orig = Sudoku.prototype[name];
+  Sudoku.prototype[name] = function (...args) {
+    running = name;
+    try {
+      return orig.apply(this, args);
+    } finally {
+      running = null;
+    }
+  };
+}
+
+function recordLineType() {
+  const orig = Sudoku.prototype.fillLineMasks;
+  Sudoku.prototype.fillLineMasks = function (b, t) {
+    lineType = t;
+    return orig.call(this, b, t);
   };
 }
 
@@ -60,19 +82,70 @@ hook('fishClear', ([b, t, coverMask, baseMask], before) => {
   }
   return { tech: base.length === 2 ? 'x-wing' : 'swordfish', kind: t === 0 ? 'rows' : 'cols', t, base, cover, cells, digits: [d] };
 });
-hook('clearSeeing', ([z, c1, c2, c3], before) => {
+function yWingPattern([z, c1, c2], before) {
   const zd = digitsOf(z)[0];
   const am = before[c1], bm = before[c2];
-  if (c3 >= 0) {
-    const pm = before[c3];
-    const x = digitsOf(am & ~z)[0], y = digitsOf(bm & ~z)[0];
-    return { tech: 'xyz-wing', kind: 'xyz', pivot: c3, wings: [c1, c2], x, y, z: zd, cells: [c3, c1, c2], digits: digitsOf(pm) };
-  }
   const pm = (am | bm) & ~z;
   let pivot = -1;
   for (let p = 0; p < 81 && pivot < 0; p++) if (before[p] === pm && PEERS[p].includes(c1) && PEERS[p].includes(c2)) pivot = p;
   const x = digitsOf(am & pm)[0], y = digitsOf(bm & pm)[0];
   return { tech: 'y-wing', kind: 'y', pivot, wings: [c1, c2], x, y, z: zd, cells: [pivot, c1, c2], digits: digitsOf(pm) };
+}
+
+function xyzWingPattern([z, c1, c2, c3], before) {
+  const zd = digitsOf(z)[0];
+  const x = digitsOf(before[c1] & ~z)[0], y = digitsOf(before[c2] & ~z)[0];
+  return { tech: 'xyz-wing', kind: 'xyz', pivot: c3, wings: [c1, c2], x, y, z: zd, cells: [c3, c1, c2], digits: digitsOf(before[c3]) };
+}
+
+function otherCandidate(unit, cell, b, before) {
+  return UNITS[unit].find(c => c !== cell && (before[c] & b));
+}
+
+function skyscraperPattern([b, top1, top2], before) {
+  const t = lineType;
+  const lines = t === 0 ? [ROW[top1], ROW[top2]] : [COL[top1], COL[top2]];
+  const bases = [otherCandidate(t * 9 + lines[0], top1, b, before), otherCandidate(t * 9 + lines[1], top2, b, before)];
+  const baseLine = t === 0 ? COL[bases[0]] : ROW[bases[0]];
+  return { tech: 'skyscraper', kind: t === 0 ? 'rows' : 'cols', t, lines, baseLine, bases, tops: [top1, top2], cells: [bases[0], top1, bases[1], top2], unit: -1, digits: digitsOf(b) };
+}
+
+function kitePattern([b, rowEnd, colEnd], before) {
+  const row = ROW[rowEnd], col = COL[colEnd];
+  const rowInBox = otherCandidate(row, rowEnd, b, before);
+  const colInBox = otherCandidate(9 + col, colEnd, b, before);
+  const box = BOX[rowInBox];
+  return { tech: 'two-string-kite', kind: 'kite', row, col, box, rowEnd, rowInBox, colInBox, colEnd, cells: [rowEnd, rowInBox, colInBox, colEnd], unit: 18 + box, digits: digitsOf(b) };
+}
+
+function wWingPattern([z, p, q], before) {
+  const xb = before[p] & ~z;
+  const x = digitsOf(xb)[0], zd = digitsOf(z)[0];
+  for (let u = 0; u < 27; u++) {
+    const ends = UNITS[u].filter(c => before[c] & xb);
+    if (ends.length !== 2) continue;
+    const [e1, e2] = ends;
+    const links = PEERS[e1].includes(p) && PEERS[e2].includes(q) ? [e1, e2] : PEERS[e1].includes(q) && PEERS[e2].includes(p) ? [e2, e1] : null;
+    if (links) return { tech: 'w-wing', kind: 'w', x, z: zd, wings: [p, q], links, cells: [p, links[0], links[1], q], unit: u, digits: [x, zd] };
+  }
+  throw new Error('W-Wing baglantisi bulunamadi');
+}
+
+const SEEING = { yWing: yWingPattern, xyzWing: xyzWingPattern, skyscraper: skyscraperPattern, twoStringKite: kitePattern, wWing: wWingPattern };
+for (const name of Object.keys(SEEING)) track(name);
+recordLineType();
+hook('clearSeeing', (args, before) => {
+  const describe = SEEING[running];
+  if (!describe) throw new Error('clearSeeing beklenmeyen yerden cagrildi: ' + running);
+  return describe(args, before);
+});
+hook('uniqueRectangle', (args, before, engine) => {
+  const corners = Array.from(engine.corners);
+  const target = corners.find(c => before[c] !== engine.lc[c]);
+  const pair = before[target] & ~engine.lc[target];
+  const floor = corners.filter(c => c !== target);
+  const boxes = [...new Set(corners.map(c => BOX[c]))];
+  return { tech: 'unique-rectangle', kind: 'type1', corners, target, floor, boxes, extra: digitsOf(engine.lc[target]), cells: corners, unit: -1, digits: digitsOf(pair) };
 });
 
 function firstLocked(lc) {
@@ -125,13 +198,33 @@ const WANT = {
   'x-wing': { level: 3, slots: ['rows'] },
   'y-wing': { level: 3, slots: ['y'] },
   'swordfish': { level: 3, slots: ['rows'] },
-  'xyz-wing': { level: 3, slots: ['xyz'] }
+  'xyz-wing': { level: 3, slots: ['xyz'] },
+  'skyscraper': { level: 3, slots: ['rows'] },
+  'two-string-kite': { level: 3, slots: ['kite'] },
+  'w-wing': { level: 3, slots: ['w'] },
+  'unique-rectangle': { level: 3, slots: ['type1'] }
 };
 
+function keptExamples() {
+  if (process.argv.includes('--all') || !fs.existsSync(OUT)) return {};
+  const old = JSON.parse(fs.readFileSync(OUT, 'utf8'));
+  const kept = {};
+  for (const tech of Object.keys(WANT)) {
+    const list = old[tech];
+    if (Array.isArray(list) && list.map(ex => ex.kind).join() === WANT[tech].slots.join()) kept[tech] = list;
+  }
+  return kept;
+}
+
+const KEPT = keptExamples();
+const SEARCH = Object.keys(WANT).filter(tech => !KEPT[tech]);
+const LEVELS = [...new Set(SEARCH.map(tech => WANT[tech].level))];
+
 const found = {};
-for (const tech of Object.keys(WANT)) found[tech] = {};
+for (const tech of SEARCH) found[tech] = {};
 
 function offer(tech, kind, example) {
+  if (KEPT[tech]) return;
   const slots = WANT[tech].slots;
   if (!slots.includes(kind)) return;
   const filled = example.values.split('').filter(ch => ch !== '0').length;
@@ -170,7 +263,7 @@ function walk(e, puzzle, solution) {
         if (lineIsRow) offer(r.tech, r.kind, Object.assign(r, { place: null }, base));
       }
     } else if (rec) {
-      if (rec.tech === 'x-wing' || rec.tech === 'swordfish') {
+      if (rec.tech === 'x-wing' || rec.tech === 'swordfish' || rec.tech === 'skyscraper') {
         if (rec.t === 0) offer(rec.tech, rec.kind, Object.assign(rec, { unit: -1, place: null }, base));
       } else if (rec.tech === 'y-wing' || rec.tech === 'xyz-wing') {
         if (rec.pivot >= 0) offer(rec.tech, rec.kind, Object.assign(rec, { unit: -1, place: null }, base));
@@ -185,21 +278,25 @@ function ideal(tech, ex) {
 }
 
 function done() {
-  return Object.keys(WANT).every(tech => WANT[tech].slots.every(kind => ideal(tech, found[tech][kind])));
+  return SEARCH.every(tech => WANT[tech].slots.every(kind => ideal(tech, found[tech][kind])));
 }
 
 const e = new Sudoku();
 const start = Date.now();
 let n = 0;
 while (Date.now() - start < BUDGET_MS && !done()) {
-  const level = n % 4 === 0 ? 0 : n % 4 === 1 ? 1 : n % 4 === 2 ? 2 : 3;
-  const puzzle = e.generate(level);
+  const puzzle = e.generate(LEVELS[n % LEVELS.length]);
   walk(e, puzzle, e.solution);
   n++;
 }
 
 const out = {};
 for (const tech of Object.keys(WANT)) {
+  if (KEPT[tech]) {
+    out[tech] = KEPT[tech];
+    console.log(tech, 'korundu');
+    continue;
+  }
   out[tech] = [];
   for (const kind of WANT[tech].slots) {
     const ex = found[tech][kind];
