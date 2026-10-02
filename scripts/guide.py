@@ -290,7 +290,7 @@ def tech_body(code, entry, site_entry, strings, slug, examples, modified):
     parts.append("<h2>%s</h2><ul>%s</ul>" % (esc(labels["mistakes"]), "".join("<li>%s</li>" % esc(m) for m in t["mistakes"])))
     parts.append("<h2>%s</h2>" % esc(labels["inGame"]))
     parts.append('<p class="facts">%s<br>%s</p>' % (fill(labels["level"], {"level": strings[i18n.TECH_LEVEL[slug]]}), fill(labels["hint"], {"text": hint_text(slug, strings, shown[0])})))
-    parts.append('<p><a href="%s">%s</a></p>' % (i18n.path(code), esc(labels["play"])))
+    parts.append('<p class="try">%s</p>' % " · ".join(try_links(code, labels, site_entry, shown[0]["given"])))
     parts += faq_html(site_entry["faqHeading"], t["faq"])
     order = i18n.techniques_of(entry)
     k = order.index(slug)
@@ -303,6 +303,15 @@ def tech_body(code, entry, site_entry, strings, slug, examples, modified):
     parts.append('<p class="pager">%s</p>' % "".join(pager))
     parts.append(meta_html(site_entry, modified))
     return "\n".join(parts)
+
+
+def try_links(code, labels, site_entry, given):
+    links = [(i18n.path(code) + "?p=" + given, labels.get("playExample") or labels["play"])]
+    if labels.get("playExample"):
+        links.append((i18n.path(code), labels["play"]))
+    if site_entry.get("solver"):
+        links.append((i18n.path(code) + "solver/?p=" + given, site_entry["solver"]["link"]))
+    return ['<a href="%s">%s</a>' % (href, esc(label)) for href, label in links]
 
 
 def crumbs_html(code, entry, trail):
