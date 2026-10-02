@@ -14,7 +14,7 @@
         "Row, column, box and same-digit highlights, mistake marking you can turn off",
         "Automatic save, dark mode, keyboard support and landscape layout",
         "Works offline after the first visit, no app store needed",
-        "223 languages, each on its own page"
+        "60 languages, each on its own page"
       ],
       "androidHeading": "Android app",
       "android": "Bare Sudoku is also a native Android app: version {version}, about {size} KB, no permissions, no internet access, plain Java with zero libraries. It is not on Google Play; download the signed APK from GitHub Releases and install it on Android 8 or newer.",
@@ -61,7 +61,7 @@
         ],
         [
           "Which languages does Bare Sudoku support?",
-          "223 languages, each on its own page: English, Türkçe, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी and more. The game follows the page language and remembers your choice."
+          "60 languages, each on its own page: English, Türkçe, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी and more. The game follows the page language and remembers your choice."
         ],
         [
           "Can I play with the keyboard?",
@@ -210,7 +210,7 @@
         "Satır, sütun, kutu ve aynı rakam vurgusu; kapatılabilir hata işareti",
         "Otomatik kayıt, koyu tema, klavye desteği ve yatay düzen",
         "İlk ziyaretten sonra internetsiz çalışır, mağaza gerekmez",
-        "Her biri kendi sayfasında 223 dil"
+        "Her biri kendi sayfasında 60 dil"
       ],
       "androidHeading": "Android uygulaması",
       "android": "Bare Sudoku'nun yerel bir Android uygulaması da var: sürüm {version}, yaklaşık {size} KB, izin yok, internet erişimi yok, sıfır kütüphaneyle düz Java. Google Play'de değil; imzalı APK'yı GitHub Releases'ten indirip Android 8 ve üstüne kurabilirsin.",
@@ -257,7 +257,7 @@
         ],
         [
           "Bare Sudoku hangi dilleri destekler?",
-          "Her biri kendi sayfasında 223 dil: Türkçe, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ve daha fazlası. Oyun sayfanın dilini izler ve seçimini hatırlar."
+          "Her biri kendi sayfasında 60 dil: Türkçe, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ve daha fazlası. Oyun sayfanın dilini izler ve seçimini hatırlar."
         ],
         [
           "Klavyeyle oynayabilir miyim?",
