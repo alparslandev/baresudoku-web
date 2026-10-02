@@ -24,8 +24,8 @@ function verifiedRate(e, puzzle, solution) {
 test("teknik kaydi: kimlik sirasi, derece sirasi, uzman siniri", () => {
   expect(TECH_ORDER.length).toBe(TECH_COUNT);
   expect(new Set(TECH_ORDER).size).toBe(TECH_COUNT);
-  for (let k = 0; k < 11; k++) expect(TECH_ORDER[k]).toBe(k);
-  for (let k = 12; k < TECH_COUNT; k++) {
+  for (let k = 0; k < 3; k++) expect(TECH_ORDER[k]).toBe(k);
+  for (let k = 4; k < TECH_COUNT; k++) {
     const a = TECH_ORDER[k - 1], b = TECH_ORDER[k];
     expect(TECH_BASE[a] < TECH_BASE[b] || (TECH_BASE[a] === TECH_BASE[b] && a < b)).toBe(true);
   }
