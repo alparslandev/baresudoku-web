@@ -336,11 +336,11 @@ function render() {
     const result = levelText() + '  ' + clock(game.time(now()));
     if (DAILY) $('panel-sub').textContent = solved ? result + '\n' + dateText() : dateText() + '\n' + strings[S_NEW];
     else $('panel-sub').textContent = solved ? result + '\n' + strings[S_NEW] : strings[S_NEW];
-    $('share-btn').hidden = !(DAILY && solved);
+    $('share-btn').hidden = !solved;
     $('errors-btn').textContent = strings[S_ERRORS] + ': ' + strings[game.showErrors ? S_ON : S_OFF];
     $('cancel-btn').hidden = !cancellable();
     $('restart-btn').hidden = !game.active;
-    $('share-puzzle-btn').hidden = !game.active || DAILY;
+    $('share-puzzle-btn').hidden = !game.active || DAILY || solved;
   }
 }
 
@@ -495,7 +495,9 @@ function startShared(shared) {
 }
 
 function shareText() {
-  return strings[S_DAILY] + ' ' + dateText() + ' · ' + levelText() + ' · ' + clock(game.time(now())) + '\n' + location.origin + DAILY_PATH;
+  const result = levelText() + ' · ' + clock(game.time(now()));
+  if (DAILY) return strings[S_DAILY] + ' ' + dateText() + ' · ' + result + '\n' + location.origin + DAILY_PATH;
+  return strings[S_TITLE] + ' · ' + result + '\n' + puzzleLink();
 }
 
 function share() {
