@@ -83,6 +83,22 @@ def has_solver(entry):
     return True
 
 
+PRINT_KEYS = ["title", "description", "h1", "intro", "link", "level", "count", "solutions", "print", "refresh", "solutionsHeading", "sheet", "faq"]
+
+
+def has_print(entry):
+    texts = entry.get("print")
+    if not texts:
+        return False
+    missing = [k for k in PRINT_KEYS if not texts.get(k)]
+    if missing:
+        raise SystemExit("site.json: print metinleri eksik: %s" % ", ".join(missing))
+    if placeholders(texts["sheet"]) != {"url"}:
+        raise SystemExit("site.json: print.sheet yer tutucusu {url} olmali")
+    check_faq("site", "print", texts["faq"], 2, 6)
+    return True
+
+
 def has_daily(entry):
     present = [k for k in DAILY_KEYS if entry.get(k)]
     if present and len(present) != len(DAILY_KEYS):

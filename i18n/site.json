@@ -166,6 +166,34 @@
             "No. The solver runs entirely in your browser, offline as well. You can share a puzzle by adding its 81 digits to the address as ?p=."
           ]
         ]
+      },
+      "print": {
+        "title": "Printable Sudoku: Free Puzzles to Print at Every Level",
+        "description": "Print free Sudoku puzzles: pick a level from Easy to Master and one to six puzzles per sheet, with the solutions on a separate page. No ads, no sign-up.",
+        "h1": "Printable Sudoku puzzles",
+        "intro": "Pick a level and how many puzzles you want on the sheet, then print. The puzzles come from the same generator as the game, so each one has exactly one solution, needs no guessing and shows its level and rating. The solutions print on a separate page, so you can leave them out, and the link at the bottom of the sheet brings back the same puzzles with their solutions.",
+        "link": "Print Sudoku",
+        "level": "Level",
+        "count": "Puzzles per sheet",
+        "solutions": "Include solutions",
+        "print": "Print",
+        "refresh": "New puzzles",
+        "solutionsHeading": "Solutions",
+        "sheet": "The same puzzles with solutions: {url}",
+        "faq": [
+          [
+            "How many puzzles fit on one sheet?",
+            "One, two, four or six. With one or two the grids are large, with six they are smaller but still easy to fill in. The solutions print on a separate page, three to a row."
+          ],
+          [
+            "Can I print the puzzle I am playing?",
+            "Yes. Share puzzle in the game menu copies a link that ends with ?p= and the puzzle's 81 digits. Open this page with the same ?p= part, and the sheet shows that puzzle alone, with its solution if you want it."
+          ],
+          [
+            "Can I get the solutions later?",
+            "Yes. The link printed at the bottom of the sheet opens the same puzzles with their solutions. For a step-by-step solution with the technique behind every move, type the givens into the solver."
+          ]
+        ]
       }
     },
     "tr": {
@@ -332,6 +360,34 @@
           [
             "Bulmacam bir yere yükleniyor mu?",
             "Hayır. Çözücü tamamen tarayıcında çalışır, internetsiz de. Bir bulmacayı adrese ?p= ile 81 rakamını ekleyerek paylaşabilirsin."
+          ]
+        ]
+      },
+      "print": {
+        "title": "Yazdırılabilir Sudoku: Her Seviyede Ücretsiz Bulmaca",
+        "description": "Ücretsiz sudoku bulmacaları yazdır: Kolay'dan Usta'ya bir seviye ve sayfa başına bir ile altı bulmaca seç; çözümler ayrı sayfada basılır. Reklamsız, üyeliksiz.",
+        "h1": "Yazdırılabilir sudoku bulmacaları",
+        "intro": "Bir seviye ve sayfaya kaç bulmaca istediğini seç, sonra yazdır. Bulmacalar oyunla aynı üreteçten gelir; her birinin tam olarak tek çözümü vardır, tahmin gerektirmez, seviyesini ve derecesini gösterir. Çözümler ayrı sayfaya basılır, istersen dışarıda bırakırsın; sayfanın altındaki bağlantı aynı bulmacaları çözümleriyle geri getirir.",
+        "link": "Sudoku yazdır",
+        "level": "Seviye",
+        "count": "Sayfa başına bulmaca",
+        "solutions": "Çözümleri ekle",
+        "print": "Yazdır",
+        "refresh": "Yeni bulmacalar",
+        "solutionsHeading": "Çözümler",
+        "sheet": "Aynı bulmacalar çözümleriyle: {url}",
+        "faq": [
+          [
+            "Bir sayfaya kaç bulmaca sığar?",
+            "Bir, iki, dört ya da altı. Bir ve ikide ızgaralar büyük olur, altıda küçülür ama yine rahat doldurulur. Çözümler ayrı sayfaya, yan yana üçer basılır."
+          ],
+          [
+            "Oynadığım bulmacayı yazdırabilir miyim?",
+            "Evet. Oyun menüsündeki Bulmacayı paylaş, sonunda ?p= ve bulmacanın 81 rakamı olan bir bağlantı kopyalar. Bu sayfayı aynı ?p= kısmıyla aç; sayfa yalnız o bulmacayı gösterir, istersen çözümüyle."
+          ],
+          [
+            "Çözümleri sonradan alabilir miyim?",
+            "Evet. Sayfanın altına basılan bağlantı aynı bulmacaları çözümleriyle açar. Her hamlenin arkasındaki teknikle adım adım çözüm için verili rakamları çözücüye yaz."
           ]
         ]
       }
