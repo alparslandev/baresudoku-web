@@ -221,18 +221,19 @@ def removed_languages():
 
 
 def redirects_file(removed):
-    lines = ["/security.txt /.well-known/security.txt 301"]
+    static = ["/security.txt /.well-known/security.txt 301"]
+    dynamic = []
     for k, code in enumerate(removed["codes"]):
         base = i18n.path(code)
-        lines.append("%s / 301" % base.rstrip("/"))
+        static.append("%s / 301" % base.rstrip("/"))
         if k < DYNAMIC_REDIRECTS:
-            lines.append("%s* /:splat 301" % base)
+            dynamic.append("%s* /:splat 301" % base)
             continue
-        lines.append("%s / 301" % base)
-        lines.append("%sprivacy/ /privacy/ 301" % base)
+        static.append("%s / 301" % base)
+        static.append("%sprivacy/ /privacy/ 301" % base)
         for rel in removed["paths"]:
-            lines.append("%s%s /%s 301" % (base, rel, rel))
-    return "\n".join(lines) + "\n"
+            static.append("%s%s /%s 301" % (base, rel, rel))
+    return "\n".join(static + dynamic) + "\n"
 
 
 def headers_file(sitemaps):
