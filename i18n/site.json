@@ -258,15 +258,15 @@
     },
     "az": {
       "title": "Bare Sudoku: pulsuz onlayn sudoku, reklamsız, qeydiyyatsız",
-      "description": "Brauzerdə pulsuz sudoku: reklam yox, hesab yox, izləmə yox. Dörd səviyyə, qeydlər, geri al və məntiqi izah edən ipucları. Oflayn işləyir. {size} KB Android tətbiqi də var.",
+      "description": "Brauzerinizde pulsuz Sudoku: reklam yoxdur, hesab yoxdur, izləmə yoxdur. Beş səviyyə, qeydlər, geri qaytarma və məntiqi izah edən ipuçları. Oflayn işləyir. Həmçinin {size} KB Android tətbiqi.",
       "h1": "Bare Sudoku: pulsuz onlayn sudoku, reklamsız, qeydiyyatsız",
       "intro": "Bare Sudoku brauzerdə işləyən pulsuz sudoku oyunudur. Reklam yox, hesab yox, izləmə yox, quraşdırma yox: səhifəni aç, səviyyə seç, oyna. Hər tapmacanın tam bir həlli var və yalnız məntiqlə həll olunur; hər ipucu səbəbini izah edir. Oyun oflayn işləyir və MIT lisenziyası ilə açıq mənbəlidir.",
       "featuresHeading": "Nə var",
       "features": [
-        "Dörd səviyyə: asan, orta, çətin və ekspert",
+        "Beş səviyyə: asan, orta, çətin, ekspert və sərdar",
         "Hər tapmacanın bir həlli var, təxmin etmək lazım deyil",
         "Qeydlər, geri al, sil və bir toxunuşla bütün qeydləri doldur",
-        "Texnikanı izah edən ipucları: tək namizəd və cütlərdən tutmuş X-Wing, Y-Wing, Skyscraper və Unique Rectangle fiqurlarına qədər",
+        "Texnikasını izah edən ipuçları, tuntiklər və cütlükdən X-Wing, Skyscraper və Unique Rectangle-ə və Sərdar səviyyəsində zəncir və məcburi şəbəkələr",
         "Sətir, sütun, blok və eyni rəqəm vurğusu; söndürülə bilən səhv işarəsi",
         "Avtomatik yadda saxlama, qaranlıq rejim, klaviatura və üfüqi düzülüş",
         "İlk ziyarətdən sonra oflayn işləyir, tətbiq mağazası lazım deyil",
@@ -309,7 +309,7 @@
         ],
         [
           "Nə vaxtsa təxmin etmək lazım gəlirmi?",
-          "Xeyr. Hər tapmacanın düz bir həlli var və yalnız məntiqlə həll olunur. İlişsəniz, ipucu növbəti xananı göstərir və lazım olan texnikanın adını deyir, məsələn, tək namizəd, kilidli namizədlər, cüt və ya üçlük, X-Wing, Y-Wing, Skyscraper və ya Unique Rectangle. Rəqəmi yerləşdirmək üçün ipucuna yenidən toxunun."
+          "Yox. Hər bir tapmacasının dəqiq bir həlli var və yalnız məntiqlə həll edilə bilər. Əgər siz sıxışıbsa, ipucu sonrakı xananı göstərir və lazım olan texnikasını adlandırır, məsələn bir tuntik, qilitli namizədlər, cütlük və ya üçlük, X-Wing, Y-Wing, Skyscraper və ya Unique Rectangle, Sərdar səviyyəsində zəncir, demək olar qilitli dəst və ya məcburi şəbəkə. Rəqəmi yerləşdirmək üçün ipucuna yenidən toxunun."
         ],
         [
           "Kompüterdə klaviatura ilə oynaya bilərəmmi?",
@@ -333,15 +333,15 @@
     },
     "de": {
       "title": "Bare Sudoku: Kostenloses Sudoku online, ohne Werbung, ohne Anmeldung",
-      "description": "Kostenloses Sudoku im Browser: keine Werbung, kein Konto, kein Tracking. Vier Stufen, Notizen, Rückgängig und Tipps, die die Logik erklären. Funktioniert offline. Auch als {size} KB Android-App.",
+      "description": "Kostenloses Sudoku im Browser: keine Werbung, kein Konto, kein Tracking. Fünf Stufen, Notizen, Rückgängig und Tipps, die die Logik erklären. Funktioniert offline. Auch als {size} KB Android-App.",
       "h1": "Bare Sudoku: kostenloses Sudoku online, ohne Werbung, ohne Anmeldung",
       "intro": "Bare Sudoku ist ein kostenloses Sudoku-Spiel für den Browser. Keine Werbung, kein Konto, kein Tracking, keine Installation: Seite öffnen, Stufe wählen, spielen. Jedes Rätsel hat genau eine Lösung und lässt sich allein durch Logik lösen; jeder Tipp erklärt seine Begründung. Das Spiel funktioniert offline und ist Open Source unter der MIT-Lizenz.",
       "featuresHeading": "Was du bekommst",
       "features": [
-        "Vier Stufen: Leicht, Mittel, Schwer und Experte",
+        "Fünf Stufen: Leicht, Mittel, Schwer, Experte und Meister",
         "Jedes Rätsel hat eine Lösung und erfordert nie Raten",
         "Notizen, Rückgängig, Löschen und alle Notizen mit einem Tipp füllen",
-        "Tipps, die die Technik erklären, von Singles und Paaren bis zu X-Wing, Y-Wing, Skyscraper und Unique Rectangle",
+        "Tipps, die die Technik erklären, von Singles und Paaren bis zu X-Wing, Skyscraper und Unique Rectangle, und auf Meister-Stufe Ketten und Erzwingungsnetze",
         "Hervorhebung von Zeile, Spalte, Block und gleicher Ziffer; abschaltbare Fehlermarkierung",
         "Automatisches Speichern, Dunkelmodus, Tastatursteuerung und Querformat",
         "Funktioniert nach dem ersten Besuch offline, kein App-Store nötig",
@@ -384,7 +384,7 @@
         ],
         [
           "Muss ich jemals raten?",
-          "Nein. Jedes Rätsel hat genau eine Lösung und lässt sich allein durch Logik lösen. Wenn du feststeckst, zeigt ein Hinweis das nächste Feld und nennt die Technik, die er gebraucht hat, zum Beispiel ein Single, Locked Candidates, ein Paar oder Tripel, X-Wing, Y-Wing, Skyscraper oder Unique Rectangle. Tippe erneut auf den Hinweis, um die Ziffer zu setzen."
+          "Nein. Jedes Rätsel hat genau eine Lösung und lässt sich allein durch Logik lösen. Wenn du feststeckst, zeigt ein Hinweis das nächste Feld und nennt die Technik, die er gebraucht hat, zum Beispiel ein Single, blockierte Kandidaten, ein Paar oder Tripel, X-Wing, Y-Wing, Skyscraper oder Unique Rectangle, und auf Meister-Stufe eine Kette, ein fast gesperrtes Set oder ein Erzwingungsnetz. Tippe erneut auf den Hinweis, um die Ziffer zu setzen."
         ],
         [
           "Kann ich am Computer mit der Tastatur spielen?",
@@ -783,15 +783,15 @@
     },
     "pl": {
       "title": "Bare Sudoku: darmowe sudoku online, bez reklam, bez rejestracji",
-      "description": "Darmowe sudoku w przeglądarce: bez reklam, bez konta, bez śledzenia. Cztery poziomy, notatki, cofanie i podpowiedzi, które tłumaczą logikę. Działa offline. Także jako aplikacja Android o rozmiarze {size} KB.",
+      "description": "Darmowe sudoku w przeglądarce: bez reklam, bez konta, bez śledzenia. Pięć poziomów, notatki, cofanie i podpowiedzi, które tłumaczą logikę. Działa offline. Także jako aplikacja Android o rozmiarze {size} KB.",
       "h1": "Bare Sudoku: darmowe sudoku online, bez reklam, bez rejestracji",
       "intro": "Bare Sudoku to darmowa gra sudoku działająca w przeglądarce. Bez reklam, bez konta, bez śledzenia i bez instalacji: otwórz stronę, wybierz poziom i graj. Każda plansza ma dokładnie jedno rozwiązanie i daje się rozwiązać samą logiką, a każda podpowiedź wyjaśnia swoje uzasadnienie. Gra działa offline i jest otwartym oprogramowaniem na licencji MIT.",
       "featuresHeading": "Co dostajesz",
       "features": [
-        "Cztery poziomy: łatwy, średni, trudny i ekspert",
+        "Pięć poziomów: łatwy, średni, trudny, ekspert i mistrz",
         "Każda plansza ma jedno rozwiązanie i nigdy nie wymaga zgadywania",
         "Notatki, cofanie, wymazywanie i wypełnianie wszystkich notatek jednym dotknięciem",
-        "Podpowiedzi tłumaczące technikę, od singli i par po X-Wing, Y-Wing, Skyscraper i Unique Rectangle",
+        "Podpowiedzi tłumaczące technikę, od singli i par po X-Wing, Skyscraper i Unique Rectangle, a na poziomie Mistrz łańcuchy i sieci wymuszające",
         "Podświetlanie wiersza, kolumny, bloku i tej samej cyfry; zaznaczanie błędów, które można wyłączyć",
         "Automatyczny zapis, tryb ciemny, klawiatura i układ poziomy",
         "Działa offline po pierwszej wizycie, bez sklepu z aplikacjami",
@@ -834,7 +834,7 @@
         ],
         [
           "Czy trzeba czasem zgadywać?",
-          "Nie. Każda łamigłówka ma dokładnie jedno rozwiązanie i da się ją rozwiązać samą logiką. Gdy utkniesz, podpowiedź pokazuje następne pole i nazywa technikę, której potrzebowała, na przykład singiel, zablokowani kandydaci, para lub trójka, X-Wing, Y-Wing, Skyscraper lub Unique Rectangle. Dotknij podpowiedzi ponownie, aby wpisać cyfrę."
+          "Nie. Każda łamigłówka ma dokładnie jedno rozwiązanie i da się ją rozwiązać samą logiką. Gdy utkniesz, podpowiedź pokazuje następne pole i nazywa technikę, której potrzebowała, na przykład singiel, zablokowani kandydaci, para lub trójka, X-Wing, Y-Wing, Skyscraper lub Unique Rectangle, a na poziomie Mistrz łańcuch, prawie zablokowany zestaw lub sieć wymuszającą. Dotknij podpowiedzi ponownie, aby wpisać cyfrę."
         ],
         [
           "Czy mogę grać na komputerze klawiaturą?",
@@ -1158,15 +1158,15 @@
     },
     "el": {
       "title": "Bare Sudoku: δωρεάν sudoku online, χωρίς διαφημίσεις, χωρίς εγγραφή",
-      "description": "Δωρεάν sudoku στον browser: χωρίς διαφημίσεις, χωρίς λογαριασμό, χωρίς παρακολούθηση. Τέσσερα επίπεδα, σημειώσεις, αναίρεση και βοήθειες που εξηγούν τη λογική. Λειτουργεί offline. Και ως εφαρμογή Android {size} KB.",
+      "description": "Δωρεάν sudoku στον browser: χωρίς διαφημίσεις, χωρίς λογαριασμό, χωρίς παρακολούθηση. Πέντε επίπεδα, σημειώσεις, αναίρεση και βοήθειες που εξηγούν τη λογική. Λειτουργεί offline. Και ως εφαρμογή Android {size} KB.",
       "h1": "Bare Sudoku: δωρεάν sudoku online, χωρίς διαφημίσεις, χωρίς εγγραφή",
       "intro": "Το Bare Sudoku είναι ένα δωρεάν παιχνίδι sudoku που τρέχει στον browser. Χωρίς διαφημίσεις, χωρίς λογαριασμό, χωρίς παρακολούθηση και χωρίς εγκατάσταση: ανοίγεις τη σελίδα, διαλέγεις επίπεδο και παίζεις. Κάθε γρίφος έχει ακριβώς μία λύση και λύνεται μόνο με λογική, και κάθε βοήθεια εξηγεί το σκεπτικό της. Το παιχνίδι λειτουργεί offline και είναι ανοιχτού κώδικα με άδεια MIT.",
       "featuresHeading": "Τι περιλαμβάνει",
       "features": [
-        "Τέσσερα επίπεδα: εύκολο, μεσαίο, δύσκολο και expert",
+        "Πέντε επίπεδα: εύκολο, μεσαίο, δύσκολο, expert και master",
         "Κάθε γρίφος έχει μία λύση και δεν χρειάζεται ποτέ μάντεμα",
         "Σημειώσεις, αναίρεση, σβήσιμο και συμπλήρωση όλων των σημειώσεων με ένα άγγιγμα",
-        "Βοήθειες που εξηγούν την τεχνική, από singles και ζεύγη ως X-Wing, Y-Wing, Skyscraper και Unique Rectangle",
+        "Βοήθειες που εξηγούν την τεχνική, από singles και ζεύγη ως X-Wing, Skyscraper και Unique Rectangle, και στο επίπεδο Master ζυγούς και δίκτυα αναγκασμού",
         "Επισήμανση γραμμής, στήλης, μπλοκ και ίδιου ψηφίου· σήμανση λαθών που απενεργοποιείται",
         "Αυτόματη αποθήκευση, σκούρο θέμα, πληκτρολόγιο και οριζόντια διάταξη",
         "Λειτουργεί offline μετά την πρώτη επίσκεψη, χωρίς app store",
@@ -1209,7 +1209,7 @@
         ],
         [
           "Χρειάζεται ποτέ να μαντέψω;",
-          "Όχι. Κάθε γρίφος έχει ακριβώς μία λύση και λύνεται μόνο με λογική. Αν κολλήσετε, η υπόδειξη δείχνει το επόμενο κελί και ονομάζει την τεχνική που χρειάστηκε, για παράδειγμα single, κλειδωμένοι υποψήφιοι, ζεύγος ή τριάδα, X-Wing, Y-Wing, Skyscraper ή Unique Rectangle. Πατήστε ξανά την υπόδειξη για να τοποθετηθεί το ψηφίο."
+          "Όχι. Κάθε γρίφος έχει ακριβώς μία λύση και λύνεται μόνο με λογική. Αν κολλήσετε, η υπόδειξη δείχνει το επόμενο κελί και ονομάζει την τεχνική που χρειάστηκε, για παράδειγμα single, κλειδωμένοι υποψήφιοι, ζεύγος ή τριάδα, X-Wing, Y-Wing, Skyscraper ή Unique Rectangle, και στο επίπεδο Master ένας ζυγός, ένα σχεδόν κλειδωμένο σύνολο ή ένα δίκτυο αναγκασμού. Πατήστε ξανά την υπόδειξη για να τοποθετηθεί το ψηφίο."
         ],
         [
           "Μπορώ να παίξω στον υπολογιστή με το πληκτρολόγιο;",
@@ -1683,15 +1683,15 @@
     },
     "bg": {
       "title": "Bare Sudoku: безплатно судоку онлайн, без реклами, без регистрация",
-      "description": "Безплатно судоку в браузъра: без реклами, без акаунт, без проследяване. Четири нива, бележки, отмяна и подсказки, които обясняват логиката. Работи офлайн. Има и Android приложение от {size} КБ.",
+      "description": "Безплатно судоку в браузъра: без реклами, без акаунт, без проследяване. Пет нива, бележки, отмяна и подсказки, които обясняват логиката. Работи офлайн. Също приложение за Android {size} KB.",
       "h1": "Bare Sudoku: безплатно судоку онлайн, без реклами, без регистрация",
       "intro": "Bare Sudoku е безплатна игра судоку, която работи в браузъра. Без реклами, без акаунт, без проследяване и без инсталиране: отвори страницата, избери ниво и играй. Всяка задача има точно едно решение и се решава само с логика, а всяка подсказка обяснява разсъждението си. Играта работи офлайн и е с отворен код под лиценз MIT.",
       "featuresHeading": "Какво получаваш",
       "features": [
-        "Четири нива: лесно, средно, трудно и експерт",
+        "Пет нива: лесно, средно, трудно, експерт и майстор",
         "Всяка задача има едно решение и никога не изисква гадаене",
         "Бележки, отмяна, изтриване и попълване на всички бележки с едно докосване",
-        "Подсказки, които обясняват техниката, от единични кандидати и двойки до X-Wing, Y-Wing, Skyscraper и Unique Rectangle",
+        "Подсказки, които обясняват техниката, от единични кандидати и двойки до X-Wing, Skyscraper и Unique Rectangle, и на ниво Майстор вериги и принудни мрежи",
         "Открояване на ред, колона, блок и еднаква цифра; отбелязване на грешки, което може да се изключи",
         "Автоматично запазване, тъмен режим, клавиатура и хоризонтално оформление",
         "Работи офлайн след първото посещение, без магазин за приложения",
@@ -1734,7 +1734,7 @@
         ],
         [
           "Трябва ли някога да гадая?",
-          "Не. Всяка задача има точно едно решение и се решава само с логика. Ако закъсате, подсказката показва следващата клетка и назовава техниката, която е била нужна, например единичен кандидат, заключени кандидати, двойка или тройка, X-Wing, Y-Wing, Skyscraper или Unique Rectangle. Докоснете подсказката отново, за да поставите цифрата."
+          "Не. Всяка задача има точно едно решение и може да бъде решена само чрез логика. Ако сте заседнали, подсказка показва следващата клетка и назовава техниката, която нуждае, например един кандидат, заключени кандидати, двойка или тройка, X-Wing, Y-Wing, Skyscraper или Unique Rectangle, и на ниво Майстор верига, почти заключен набор или принудна мрежа. Докоснете подсказката отново, за да поставите цифрата."
         ],
         [
           "Мога ли да играя на компютър с клавиатурата?",
@@ -1758,15 +1758,15 @@
     },
     "sr": {
       "title": "Bare Sudoku: besplatan sudoku onlajn, bez reklama, bez registracije",
-      "description": "Besplatan sudoku u pregledaču: bez reklama, bez naloga, bez praćenja. Četiri nivoa, beleške, opozivanje i nagoveštaji koji objašnjavaju logiku. Radi oflajn. I kao Android aplikacija od {size} KB.",
+      "description": "Besplatni Sudoku u vašem pregledniku: bez oglasa, bez nalogа, bez praćenja. Pet nivoa, beleške, nazad i saveti koji objašnjavaju logiku. Radi offline. Takođe Android aplikacija {size} KB.",
       "h1": "Bare Sudoku: besplatan sudoku onlajn, bez reklama, bez registracije",
       "intro": "Bare Sudoku je besplatna sudoku igra koja radi u pregledaču. Bez reklama, bez naloga, bez praćenja i bez instalacije: otvori stranicu, izaberi nivo i igraj. Svaka zagonetka ima tačno jedno rešenje i rešava se samo logikom, a svaki nagoveštaj objašnjava svoje obrazloženje. Igra radi oflajn i otvorenog je koda pod MIT licencom.",
       "featuresHeading": "Šta dobijaš",
       "features": [
-        "Četiri nivoa: lako, srednje, teško i ekspert",
+        "Pet nivoa: jednostavna, srednja, teška, stručnjak i glavan",
         "Svaka zagonetka ima jedno rešenje i nikada ne traži pogađanje",
         "Beleške, opozivanje, brisanje i popunjavanje svih beleški jednim dodirom",
-        "Nagoveštaji koji objašnjavaju tehniku, od singlova i parova do tehnika X-Wing, Y-Wing, Skyscraper i Unique Rectangle",
+        "Saveti koji objašnjavaju tehniku, od pojedinaca i parova do X-Wing, Skyscraper i Unique Rectangle, i na Glavnom nivou lance i prisilne mreže",
         "Isticanje reda, kolone, bloka i iste cifre; označavanje grešaka koje se može isključiti",
         "Automatsko čuvanje, tamni režim, tastatura i horizontalni raspored",
         "Radi oflajn posle prve posete, bez prodavnice aplikacija",
@@ -1809,7 +1809,7 @@
         ],
         [
           "Da li ikada moram da pogađam?",
-          "Ne. Svaka zagonetka ima tačno jedno rešenje i rešava se samo logikom. Ako zapneš, savet pokazuje sledeće polje i imenuje tehniku koja mu je bila potrebna, na primer singl, zaključane kandidate, par ili trojku, X-Wing, Y-Wing, Skyscraper ili Unique Rectangle. Dodirni savet ponovo da upišeš cifru."
+          "Ne. Svaka zagonetka ima tačno jedno rešenje i može se rešiti samo logikom. Ako ste zapeli, savet pokazuje sledeću ćeliju i naziva tehniku koja je trebala, na primer jedan kandidat, zakljucani kandidati, par ili trojka, X-Wing, Y-Wing, Skyscraper ili Unique Rectangle, i na Glavnom nivou lanac, skoro zakljucan skup ili prisilna mreža. Ponovo dodirnite savet da postavite cifru."
         ],
         [
           "Da li mogu da igram na računaru tastaturom?",
@@ -1833,15 +1833,15 @@
     },
     "hr": {
       "title": "Bare Sudoku: besplatan sudoku online, bez reklama, bez registracije",
-      "description": "Besplatan sudoku u pregledniku: bez reklama, bez računa, bez praćenja. Četiri razine, bilješke, poništavanje i savjeti koji objašnjavaju logiku. Radi offline. I kao Android aplikacija od {size} KB.",
+      "description": "Besplatni Sudoku u vašem pregledniku: bez oglasa, bez računa, bez praćenja. Pet razina, bilješke, poništavanje i savjeti koji objašnjavaju logiku. Radi offline. Također Android aplikacija {size} KB.",
       "h1": "Bare Sudoku: besplatan sudoku online, bez reklama, bez registracije",
       "intro": "Bare Sudoku je besplatna sudoku igra koja radi u pregledniku. Bez reklama, bez računa, bez praćenja i bez instalacije: otvori stranicu, odaberi razinu i igraj. Svaka zagonetka ima točno jedno rješenje i rješava se samo logikom, a svaki savjet objašnjava svoje obrazloženje. Igra radi offline i otvorenog je koda pod MIT licencom.",
       "featuresHeading": "Što dobivaš",
       "features": [
-        "Četiri razine: lako, srednje, teško i ekspert",
+        "Pet razina: lagana, srednja, teška, stručnjak i glavan",
         "Svaka zagonetka ima jedno rješenje i nikada ne traži pogađanje",
         "Bilješke, poništavanje, brisanje i popunjavanje svih bilješki jednim dodirom",
-        "Savjeti koji objašnjavaju tehniku, od singlova i parova do tehnika X-Wing, Y-Wing, Skyscraper i Unique Rectangle",
+        "Savjeti koji objašnjavaju tehniku, od pojedinaca i parova do X-Wing, Skyscraper i Unique Rectangle, i na Glavnoj razini lance i prisilne mreže",
         "Isticanje retka, stupca, bloka i iste znamenke; označavanje pogrešaka koje se može isključiti",
         "Automatsko spremanje, tamni način, tipkovnica i vodoravni raspored",
         "Radi offline nakon prvog posjeta, bez trgovine aplikacija",
@@ -1884,7 +1884,7 @@
         ],
         [
           "Moram li ikada pogađati?",
-          "Ne. Svaka zagonetka ima točno jedno rješenje i rješava se samo logikom. Ako zapneš, savjet pokazuje sljedeće polje i imenuje tehniku koja mu je bila potrebna, primjerice singl, zaključane kandidate, par ili trojku, X-Wing, Y-Wing, Skyscraper ili Unique Rectangle. Dodirni savjet ponovno da upišeš znamenku."
+          "Ne. Svaka zagonetka ima točno jedno rješenje i može se riješiti samo logikom. Ako ste zapeli, savjet pokazuje sljeću ćeliju i naziva tehniku koja je trebala, na primjer jedan kandidat, zaključalni kandidati, par ili trojka, X-Wing, Y-Wing, Skyscraper ili Unique Rectangle, i na Glavnoj razini lanac, gotovo zaključan skup ili prisilna mreža. Ponovno dodirnite savjet da postavite znamenku."
         ],
         [
           "Mogu li igrati na računalu tipkovnicom?",
@@ -3175,15 +3175,15 @@
     },
     "ca": {
       "title": "Bare Sudoku: Sudoku gratuït en línia, sense anuncis, sense registre",
-      "description": "Sudoku gratuït al navegador: sense anuncis, sense compte, sense seguiment. Quatre nivells, notes, desfer i pistes que expliquen la lògica. Funciona sense connexió. També com a app per a Android de {size} KB.",
+      "description": "Sudoku gratuït al vostre navegador: sense anuncis, sense compte, sense seguiment. Cinc nivells, notes, desfer i pistes que expliquen la lògica. Funciona sense connexió. També una aplicació Android de {size} KB.",
       "h1": "Bare Sudoku: sudoku gratuït en línia, sense anuncis, sense registre",
       "intro": "Bare Sudoku és un joc de sudoku gratuït que funciona al teu navegador. Sense anuncis, sense compte, sense seguiment i sense instal·lar res: obre la pàgina, tria un nivell i juga. Cada trencaclosques té exactament una solució i es resol només amb lògica, i cada pista explica el seu raonament. El joc funciona sense connexió i és de codi obert amb llicència MIT.",
       "featuresHeading": "Què inclou",
       "features": [
-        "Quatre nivells: Fàcil, Mitjà, Difícil i Expert",
+        "Cinc nivells: fàcil, mitjà, difícil, expert i màster",
         "Cada trencaclosques té una sola solució i mai cal endevinar",
         "Notes, desfer, esborrar i omplir totes les notes amb un toc",
-        "Pistes que expliquen la tècnica, dels singles i les parelles a l'X-Wing, l'Y-Wing, el Skyscraper i l'Unique Rectangle",
+        "Pistes que expliquen la tècnica, de individuals i parells a X-Wing, Skyscraper i Unique Rectangle, i al nivell Màster cadenes i xarxes forçades",
         "Desament automàtic, mode fosc, teclat i disposició horitzontal",
         "Funciona sense connexió després de la primera visita, sense botiga d'apps"
       ],
@@ -3224,7 +3224,7 @@
         ],
         [
           "Cal endevinar alguna vegada?",
-          "No. Cada trencaclosques té exactament una solució i es resol només amb lògica. Si t'encalles, una pista mostra la casella següent i anomena la tècnica que ha calgut, per exemple un single, candidats bloquejats, una parella o un trio, X-Wing, Y-Wing, Skyscraper o Unique Rectangle. Toca la pista una altra vegada per col·locar el dígit."
+          "No. Cada trencaclosques té exactament una solució i es pot resoldre només amb lògica. Si vostè esta atrapada, la pista mostra la següent cel·la i anomena la tècnica que va necessitar, per exemple un individual, candidats bloquejats, un parell o un trio, X-Wing, Y-Wing, Skyscraper o Unique Rectangle, i al nivell Màster una cadena, un conjunt gairebé bloquejat o una xarxa forçada. Toqui la pista de nou per col·locar el dígit."
         ],
         [
           "Puc jugar a l'ordinador amb el teclat?",
@@ -3248,15 +3248,15 @@
     },
     "sl": {
       "title": "Bare Sudoku: brezplačen sudoku na spletu, brez oglasov, brez registracije",
-      "description": "Brezplačen sudoku v brskalniku: brez oglasov, brez računa, brez sledenja. Štiri težavnosti, zapiski, razveljavi in namigi, ki razložijo logiko. Deluje brez povezave. Tudi kot aplikacija za Android z {size} KB.",
+      "description": "Brezplačen Sudoku v svojem brskalniku: brez oglasov, brez računa, brez sledenja. Pet ravni, opombe, razveljavljanje in nasveti, ki pojasnjujejo logiko. Deluje brez interneta. Tudi Android aplikacija {size} KB.",
       "h1": "Bare Sudoku: brezplačen sudoku na spletu, brez oglasov, brez registracije",
       "intro": "Bare Sudoku je brezplačna igra sudoku, ki teče v brskalniku. Brez oglasov, brez računa, brez sledenja in brez namestitve: odpri stran, izberi težavnost in igraj. Vsaka uganka ima natanko eno rešitev in jo je mogoče rešiti zgolj z logiko, vsak namig pa razloži svojo utemeljitev. Igra deluje brez povezave in je odprtokodna pod licenco MIT.",
       "featuresHeading": "Kaj dobiš",
       "features": [
-        "Štiri težavnosti: lahko, srednje, težko in strokovnjak",
+        "Pet ravni: lahka, srednja, težka, strokovnjak in glavna",
         "Vsaka uganka ima eno rešitev in nikoli ne zahteva ugibanja",
         "Zapiski, razveljavi, izbriši in izpolni vse zapiske z enim dotikom",
-        "Namigi, ki razložijo tehniko, od singlov in parov do X-Wing, Y-Wing, Skyscraper in Unique Rectangle",
+        "Nasveti, ki pojasnjujejo tehniko, od enojcev in parov do X-Wing, Skyscraper in Unique Rectangle, ter na Glavni ravni verige in prisiljene mreže",
         "Samodejno shranjevanje, temni način, tipkovnica in ležeča postavitev",
         "Po prvem obisku deluje brez povezave, trgovina z aplikacijami ni potrebna"
       ],
@@ -3297,7 +3297,7 @@
         ],
         [
           "Ali moram kdaj ugibati?",
-          "Ne. Vsaka uganka ima natanko eno rešitev in jo je mogoče rešiti zgolj z logiko. Če obtičiš, namig pokaže naslednje polje in poimenuje tehniko, ki jo je potreboval, na primer single, zaklenjene kandidate, par ali trojko, X-Wing, Y-Wing, Skyscraper ali Unique Rectangle. Znova se dotakni namiga, da vpišeš števko."
+          "Ne. Vsaka uganka ima natanko eno rešitev in jo je mogoče rešiti samo z logiko. Če si zaglavljen, namig pokaže naslednjo celico in poimenuje tehniko, ki je bila potrebna, na primer enojec, zaklenjeni kandidati, par ali trojka, X-Wing, Y-Wing, Skyscraper ali Unique Rectangle, in na Glavni ravni verigo, skoraj zaklenjeno množico ali prisiljeno mrežo. Ponovno dotakni namig, da postaviš številko."
         ],
         [
           "Ali lahko igram na računalniku s tipkovnico?",
@@ -3321,15 +3321,15 @@
     },
     "lt": {
       "title": "Bare Sudoku: nemokamas sudoku internete, be reklamų, be registracijos",
-      "description": "Nemokamas sudoku naršyklėje: jokių reklamų, paskyros ar sekimo. Keturi lygiai, užrašai, atšaukimas ir logiką paaiškinančios užuominos. Veikia neprisijungus. Taip pat {size} KB Android programėlė.",
+      "description": "Nemokamas Sudoku jūsų naršyklėje: jokių reklamos, jokio paskyros, jokio stebėjimo. Penki lygiai, pastabos, atšaukimas ir patarimai, kurie paaiškina logiką. Veikia neprisijungus. Taip pat Android programa {size} KB.",
       "h1": "Bare Sudoku: nemokamas sudoku internete, be reklamų, be registracijos",
       "intro": "Bare Sudoku yra nemokamas sudoku žaidimas, veikiantis naršyklėje. Jokių reklamų, paskyros, sekimo ir nieko nereikia diegti: atidaryk puslapį, pasirink lygį ir žaisk. Kiekvienas galvosūkis turi lygiai vieną sprendimą ir išsprendžiamas vien logika, o kiekviena užuomina paaiškina savo pagrindimą. Žaidimas veikia neprisijungus ir yra atviro kodo pagal MIT licenciją.",
       "featuresHeading": "Ką gauni",
       "features": [
-        "Keturi lygiai: lengvas, vidutinis, sunkus ir ekspertas",
+        "Penki lygiai: lengva, vidutina, sunki, ekspertinė ir pagrindinė",
         "Kiekvienas galvosūkis turi vieną sprendimą ir niekada nereikia spėlioti",
         "Užrašai, atšaukimas, trynimas ir visų užrašų užpildymas vienu palietimu",
-        "Techniką paaiškinančios užuominos, nuo vienišų kandidatų ir porų iki X-Wing, Y-Wing, Skyscraper ir Unique Rectangle",
+        "Patarimai, kurie paaiškina techniką, nuo vienetų ir porų iki X-Wing, Skyscraper ir Unique Rectangle, o pagrindiniam lygiui - grandinės ir priverstiniai tinklai",
         "Automatinis išsaugojimas, tamsus režimas, klaviatūra ir gulsčias išdėstymas",
         "Po pirmo apsilankymo veikia neprisijungus, programėlių parduotuvės nereikia"
       ],
@@ -3370,7 +3370,7 @@
         ],
         [
           "Ar kada nors reikia spėlioti?",
-          "Ne. Kiekvienas galvosūkis turi lygiai vieną sprendimą ir išsprendžiamas vien logika. Jei įstrigote, užuomina parodo kitą langelį ir įvardija techniką, kurios prireikė, pavyzdžiui, vienišą kandidatą, užrakintus kandidatus, porą ar trejetą, X-Wing, Y-Wing, Skyscraper arba Unique Rectangle. Palieskite užuominą dar kartą, kad skaitmuo būtų įrašytas."
+          "Ne. Kiekvienas galvosūkis turi tiksliai vieną sprendimą ir gali būti išspręstas tik logika. Jei užstrigos, patarimas rodo kitą ląstelę ir pavadina techniką, kuri buvo reikalinga, pavyzdžiui vienetas, užrakinti kandidatai, pora ar triada, X-Wing, Y-Wing, Skyscraper ar Unique Rectangle, o pagrindiniam lygiui - grandinė, beveik užrakinti rinkinys ar priverstiniu tinklas. Dar kartą palieskite patarimą, kad padėtumėte skaitmenį."
         ],
         [
           "Ar galiu žaisti kompiuteriu klaviatūra?",
@@ -3394,15 +3394,15 @@
     },
     "lv": {
       "title": "Bare Sudoku: bezmaksas sudoku tiešsaistē, bez reklāmām, bez reģistrācijas",
-      "description": "Bezmaksas sudoku pārlūkā: bez reklāmām, bez konta, bez izsekošanas. Četri līmeņi, piezīmes, atsaukšana un mājieni, kas skaidro loģiku. Darbojas bezsaistē. Arī {size} KB Android lietotne.",
+      "description": "Bezmaksas Sudoku jūsu pārlūkprogrammā: bez reklāmām, bez konta, bez izsekošanas. Pieci līmeņi, piezīmes, atsaukšana un padomu, kas izskaidro loģiku. Darbojas bezsaistē. Arī Android programma {size} KB.",
       "h1": "Bare Sudoku: bezmaksas sudoku tiešsaistē, bez reklāmām, bez reģistrācijas",
       "intro": "Bare Sudoku ir bezmaksas sudoku spēle, kas darbojas pārlūkā. Bez reklāmām, bez konta, bez izsekošanas un bez instalēšanas: atver lapu, izvēlies līmeni un spēlē. Katrai mīklai ir tieši viens atrisinājums, un to var atrisināt tikai ar loģiku, un katrs mājiens paskaidro savu pamatojumu. Spēle darbojas bezsaistē un ir atvērtā pirmkoda ar MIT licenci.",
       "featuresHeading": "Ko tu iegūsti",
       "features": [
-        "Četri līmeņi: viegli, vidēji, grūti un eksperts",
+        "Pieci līmeņi: vienkāršs, vidējs, grūts, eksperts un galvenais",
         "Katrai mīklai ir viens atrisinājums, un nekad nav jāmin",
         "Piezīmes, atsaukšana, dzēšana un visu piezīmju aizpildīšana ar vienu pieskārienu",
-        "Mājieni, kas skaidro tehniku, no vientuļajiem kandidātiem un pāriem līdz X-Wing, Y-Wing, Skyscraper un Unique Rectangle",
+        "Padomu, kas izskaidro paņēmienu, no atsevišķiem un pāriem līdz X-Wing, Skyscraper un Unique Rectangle, un galvenajā līmenī ķēdes un piespiedu tīkli",
         "Automātiska saglabāšana, tumšais režīms, tastatūra un ainavas izkārtojums",
         "Pēc pirmā apmeklējuma darbojas bezsaistē, lietotņu veikals nav vajadzīgs"
       ],
@@ -3443,7 +3443,7 @@
         ],
         [
           "Vai kādreiz jāmin?",
-          "Nē. Katrai mīklai ir tieši viens atrisinājums, un to var atrisināt tikai ar loģiku. Ja iestrēgsti, padoms parāda nākamo rūtiņu un nosauc paņēmienu, kas bija vajadzīgs, piemēram, vientuļo kandidātu, bloķētos kandidātus, pāri vai trijnieku, X-Wing, Y-Wing, Skyscraper vai Unique Rectangle. Pieskaries padomam vēlreiz, lai ievietotu ciparu."
+          "Nē. Katra mīkla ir tieši viens risinājums un to var atrisināt tikai ar loģiku. Ja esat iesprūduši, padoms parāda nākamo šūnu un nosauc nepieciešamo paņēmienu, piemēram vienu, bloķētus kandidātus, pāri vai trīskāršu, X-Wing, Y-Wing, Skyscraper vai Unique Rectangle, un galvenajā līmenī ķēdi, gandrīz bloķētu kopu vai piespiedu tīklu. Vēlreiz pieskarieties padomam, lai ievietotu ciparu."
         ],
         [
           "Vai varu spēlēt datorā ar tastatūru?",
@@ -3613,15 +3613,15 @@
     },
     "uz": {
       "title": "Bare Sudoku: bepul onlayn sudoku, reklamasiz, roʻyxatdan oʻtmasdan",
-      "description": "Brauzerda bepul sudoku: reklama yoʻq, hisob yoʻq, kuzatuv yoʻq. Toʻrt daraja, belgilar, orqaga qaytarish va mantiqni tushuntiruvchi maslahatlar. Oflayn ishlaydi. {size} KB Android ilovasi ham bor.",
+      "description": "Brauzeringizda bepul Sudoku: reklamalar yo'q, hisob yo'q, kuzatish yo'q. Besh daraja, qaydlar, bekor va mantiqni tushuntiradigan maslahatlar. Oflayn ishlaydi. Shuningdek {size} KB Android ilovasi.",
       "h1": "Bare Sudoku: bepul onlayn sudoku, reklamasiz, roʻyxatdan oʻtmasdan",
       "intro": "Bare Sudoku: brauzerda ishlaydigan bepul sudoku oʻyini. Reklama yoʻq, hisob yoʻq, kuzatuv yoʻq va hech narsa oʻrnatish shart emas: sahifani oching, darajani tanlang va oʻynang. Har bir boshqotirmaning aynan bitta yechimi bor va u faqat mantiq bilan yechiladi, har bir maslahat oʻz sababini tushuntiradi. Oʻyin oflayn ishlaydi va MIT litsenziyasi ostida ochiq manbali.",
       "featuresHeading": "Nima olasiz",
       "features": [
-        "Toʻrt daraja: oson, oʻrtacha, qiyin va ekspert",
+        "Besh daraja: oson, o'rta, qiyin, mutaxassis va asosiy",
         "Har bir boshqotirmaning bitta yechimi bor, hech qachon taxmin qilish shart emas",
         "Belgilar, orqaga qaytarish, oʻchirish va bir bosishda barcha belgilarni toʻldirish",
-        "Usulni tushuntiruvchi maslahatlar: yagonalar va juftliklardan X-Wing, Y-Wing, Skyscraper va Unique Rectangle'gacha",
+        "Usulni tushuntiradigan maslahatlar, individual va juftlikdan X-Wing, Skyscraper va Unique Rectangle gacha va Asosiy darajada zanjirlar va majburiy tarmoqlar",
         "Avtomatik saqlash, qorongʻu rejim, klaviatura va yotiq joylashuv",
         "Birinchi tashrifdan keyin oflayn ishlaydi, ilova doʻkoni kerak emas"
       ],
@@ -3662,7 +3662,7 @@
         ],
         [
           "Taxmin qilish kerak bo'ladimi?",
-          "Yo'q. Har bir boshqotirmaning aynan bitta yechimi bor va u faqat mantiq bilan yechiladi. Qotib qolsangiz, maslahat keyingi katakni ko'rsatadi va kerak bo'lgan usulning nomini aytadi, masalan yagona nomzod, qulflangan nomzodlar, juftlik yoki uchlik, X-Wing, Y-Wing, Skyscraper yoki Unique Rectangle. Raqamni qo'yish uchun maslahatga yana teging."
+          "Yo'q. Har bir jumboqning aynan bitta yechimi bor va faqat mantiq yordamida hal qilinishi mumkin. Agar siz qolimsiz, maslahat keyingi katakni ko'rsatadi va kerak bo'lgan usulni nomini beradi, masalan bitta, qulflangan nomzodlar, juftlik yoki uchlika, X-Wing, Y-Wing, Skyscraper yoki Unique Rectangle, Asosiy darajada zanjir, deyarli qulflangan to'plam yoki majburiy tarmoq. Raqamni o'rniga qo'yish uchun maslahatga yana bir marta teging."
         ],
         [
           "Kompyuterda klaviatura bilan o'ynasa bo'ladimi?",
@@ -4416,15 +4416,15 @@
     },
     "et": {
       "title": "Bare Sudoku: tasuta sudoku veebis, reklaamita, registreerimata",
-      "description": "Tasuta sudoku brauseris: ei reklaame, ei kontot, ei jälgimist. Neli taset, märkmed, tagasivõtmine ja vihjed, mis selgitavad loogikat. Töötab võrguühenduseta. Ka {size} KB Androidi rakendus.",
+      "description": "Tasuta Sudoku oma brauseris: ilma reklaamideta, ilma kontota, ilma jälgimiseta. Viis taset, märkused, võta tagasi ja vihjed, mis seletavad loogika. Töötab ühenduseta. Ka Androidi rakendus {size} KB.",
       "h1": "Bare Sudoku: tasuta sudoku veebis, reklaamita, registreerimata",
       "intro": "Bare Sudoku on tasuta sudokumäng, mis töötab brauseris. Ei reklaame, ei kontot, ei jälgimist ega midagi paigaldada: ava leht, vali tase ja mängi. Igal mõistatusel on täpselt üks lahendus ja selle saab lahendada ainult loogikaga, iga vihje selgitab oma põhjendust. Mäng töötab võrguühenduseta ja on avatud lähtekoodiga MIT-litsentsi all.",
       "featuresHeading": "Mida saad",
       "features": [
-        "Neli taset: lihtne, keskmine, raske ja ekspert",
+        "Viis taset: lihtne, keskmine, raske, eksperttasemel ja peatasandil",
         "Igal mõistatusel on üks lahendus ja arvamist pole kunagi vaja",
         "Märkmed, tagasivõtmine, kustutamine ja kõigi märkmete täitmine ühe puudutusega",
-        "Vihjed, mis selgitavad tehnikat, üksikutest ja paaridest kuni X-Wingi, Y-Wingi, Skyscraperi ja Unique Rectangle'ini",
+        "Vihjed, mis selgitavad tehnikat, üksikutest ja paaridest kuni X-Wing, Skyscraper ja Unique Rectangle ning peatasandil ahelad ja sundtakistuse võrgud",
         "Automaatne salvestus, tume režiim, klaviatuur ja rõhtpaigutus",
         "Töötab pärast esimest külastust võrguühenduseta, rakendustepoodi pole vaja"
       ],
@@ -4465,7 +4465,7 @@
         ],
         [
           "Kas pean kunagi arvama?",
-          "Ei. Igal mõistatusel on täpselt üks lahendus ja see on lahendatav ainult loogikaga. Kui jääd toppama, näitab vihje järgmist lahtrit ja nimetab tehnika, mida oli vaja, näiteks üksik kandidaat, lukustatud kandidaadid, paar või kolmik, X-Wing, Y-Wing, Skyscraper või Unique Rectangle. Puuduta vihjet uuesti, et number paigutada."
+          "Ei. Igal mõistusel on täpselt üks lahendus ja seda saab lahendada ainult loogiliselt. Kui olete ummikus, näitab vihje järgmist lahtrit ja nimetab vajalikku tehnikat, näiteks üksik, lukustatud kandidaadid, paar või kolmik, X-Wing, Y-Wing, Skyscraper või Unique Rectangle ning peatasandil ahel, peaaegu lukustatud komplekt või sundtakistuse võrk. Jälgige vihjet uuesti, et number paigaldada."
         ],
         [
           "Kas saan arvutis klaviatuuriga mängida?",

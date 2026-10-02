@@ -140,7 +140,7 @@
           ],
           [
             "Are there harder techniques than the ones in this guide?",
-            "Yes. Players have described many more techniques for the hardest puzzles, and new ones keep appearing. Bare Sudoku uses several of them beyond the pages here: more fish, wings and rectangle patterns at Expert level, and chains, almost locked sets and forcing nets at Master level. The hint always names the technique it used, so you can look it up even when this guide has no page for it yet."
+            "Yes. Players have described many more techniques for the hardest puzzles, and new ones keep appearing. Bare Sudoku uses several of them at Master level: chains, almost locked sets and forcing nets, and the hint names the one it used. The pages here cover everything up to Expert, so every puzzle up to that level can be solved with what is described here."
           ],
           [
             "What is a candidate?",
@@ -495,7 +495,7 @@
           "h1": "Swordfish",
           "summary": "A Swordfish is an X-Wing with three rows and three columns. If a digit has at most three candidate cells in each of three rows, and all of those cells fall in the same three columns, then the three rows use up the digit in those columns, and the digit can be removed from every other cell of the three columns. Rows and columns can be swapped. Bare Sudoku checks for Swordfish after Y-Wing, in Expert puzzles.",
           "when": [
-            "When an X-Wing finds nothing. Swordfish are less common than X-Wings and need a digit whose candidates are spread thinly over three lines. They need complete and accurate notes for that digit."
+            "When X-Wing finds nothing. Swordfish are less common than X-Wings and need a digit whose candidates are spread thinly over three lines. They need complete and accurate notes for that digit."
           ],
           "spot": [
             "Pick a digit and look for rows with two or three candidate cells for it. If three such rows cover only three columns in total, check those columns for further candidates of the digit. Not every row needs a candidate in every column: a Swordfish can have six, seven, eight or nine cells. In the game, highlight the digit with its key and look for three rows whose candidates line up in three columns."
@@ -910,7 +910,7 @@
           ],
           [
             "Bu rehberdekilerden daha zor teknikler var mı?",
-            "Evet. Oyuncular en zor bulmacalar için çok daha fazla teknik tanımlamıştır ve yenileri çıkmaya devam ediyor. Bare Sudoku bunların birkaçını buradaki sayfaların ötesinde kullanır: Uzman seviyesinde başka balıklar, kanatlar ve dikdörtgen örüntüleri, Usta seviyesinde zincirler, neredeyse kilitli kümeler ve zorlama ağları. İpucu kullandığı tekniği her zaman söyler; böylece bu rehberde henüz sayfası olmasa bile onu araştırabilirsin."
+            "Evet. Oyuncular en zor bulmacalar için çok daha fazla teknik tanımlamıştır ve yenileri çıkmaya devam ediyor. Bare Sudoku bunların birkaçını Usta seviyesinde kullanır: zincirler, neredeyse kilitli kümeler ve zorlama ağları; ipucu hangisini kullandığını söyler. Buradaki sayfalar Uzman'a kadar her şeyi anlatır; yani o seviyeye kadar her bulmaca burada anlatılanlarla çözülebilir."
           ],
           [
             "Aday nedir?",
@@ -1644,8 +1644,8 @@
             "Xeyr. Bütün qayda elə budur: doqquz sətrin, doqquz sütunun və doqquz blokun hər biri 1-dən 9-a qədər hər rəqəmi düz bir dəfə ehtiva edir. Eyni vahiddə iki eyni rəqəm varsa, onlardan ən azı biri səhvdir."
           ],
           [
-            "Asan, Orta, Çətin və Ekspert arasında fərq nədir?",
-            "Səviyyəni tapmacanın tələb etdiyi texnikalar müəyyən edir. Asan və Orta yalnız təklərlə həll olunur, Asan isə ən azı 38 verilmiş rəqəmlə başlayır. Çətin kilidlənmiş namizədlər və ya cütlər və üçlüklər tələb edir. Ekspert ən azı bir qabaqcıl fiqur, məsələn, X-Wing, Y-Wing, Skyscraper və ya Unique Rectangle tələb edir."
+            "Asan, Orta, Çətin, Ekspert və Sərdar arasında fərq nədir?",
+            "Səviyyə tapmacasının tələb etdiyi texnikalar ilə müəyyən edilir. Asan və Orta yalnız tuntiklər ilə həll olunur, Asan ən azı 38 verilmiş rəqəmlə başlanır. Çətin qilitli namizədlər və ya cütlüklər və üçlüklər tələb edir. Ekspert X-Wing, Y-Wing, Skyscraper və ya Unique Rectangle kimi ən azı bir qabaqcıl nümunə tələb edir. Sərdar zəncir, demək olar qilitli dəstlər və ya məcburi şəbəkələr tələb edir. Səviyyə adının yanındakı rəqəm tapmacasının çətinlik reytingidir, onun tələb etdiyi ən çətin addım ilə təyin edilir."
           ],
           [
             "Qeydləri bütün xanalar üçün doldurmaq yaxşıdır, yoxsa yalnız bəziləri üçün?",
@@ -1667,7 +1667,7 @@
         "h1": "Sudoku həll texnikaları",
         "intro": [
           "Hər Sudoku kiçik bir məntiqi texnikalar dəsti ilə həll oluna bilər. Bu siyahı Bare Sudoku həlledicisinin və ipuclarının istifadə etdiyi texnikaları həlledicinin onları sınadığı sıra ilə göstərir: əvvəlcə təklər, sonra bir vahid daxilində silmələr, sonra bir neçə sətir, sütun və bloka yayılan fiqurlar, o cümlədən tapmacanın düz bir həlli olmasına əsaslanan fiqurlar. Hər texnikanın tərifi, necə tapılması, yaradılmış tapmacadan real nümunə və tez-tez edilən səhvlərlə öz səhifəsi var.",
-          "Tapmacanın səviyyəsini onun tələb etdiyi ən çətin texnika müəyyən edir. Asan və Orta tapmacalar yalnız təklər, Çətin tapmacalar kilidlənmiş namizədlər və ya cütlər və üçlüklər, Ekspert tapmacalar isə ən azı bir qabaqcıl fiqur, məsələn, balıq, qanad, Skyscraper və ya Unique Rectangle tələb edir. Səviyyədən asılı olmayaraq işin çoxunu təklər görür; qabaqcıl texnika bir-iki namizədi silir, sonra təklər işi davam etdirir."
+          "Tapmacının səviyyəsi onun tələb etdiyi ən çətin texnika ilə müəyyən edilir. Asan və Orta tapmacalar yalnız tuntikləri tələb edir, Çətin tapmacalar qilitli namizədlər və ya cütlüklər və üçlüklər tələb edir, Ekspert tapmacalar balıqlar, qanadlar, Skyscraper və ya Unique Rectangle kimi ən azı bir qabaqcıl nümunə tələb edir, Sərdar tapmacaları isə zəncir və ya bu bələdçinin tərəfindən başqa texnikalar tələb edir. Səviyyə nə olursa olsun, tuntiklər işin əksəriyyətini görürlər; qabaqcıl texnika bir və ya iki namizədi çıxarır və tuntiklər oradan davam edir."
         ],
         "faq": [
           [
@@ -1676,11 +1676,11 @@
           ],
           [
             "Sudoku həll etmək üçün bütün bu texnikalar lazımdırmı?",
-            "Asan və Orta tapmacalar üçün təklər kifayətdir. Çətin tapmacalara kilidlənmiş namizədlər və alt çoxluqlar əlavə olunur. Ekspert tapmacalar ən azı bir qabaqcıl fiqur, məsələn, balıq, qanad, Skyscraper və ya Unique Rectangle tələb edir, amma adətən bir tapmacada cəmi bir-iki dəfə."
+            "Asan və Orta tapmacalar üçün tuntiklər kifayətdir. Çətin tapmacalar qilitli namizədlər və alt fəsilləri əlavə edir. Ekspert tapmacalar balıqlar, qanadlar, Skyscraper və ya Unique Rectangle kimi ən azı bir qabaqcıl nümunə tələb edir, lakin adətən tapmaca üzrə bir və ya iki dəfə. Sərdar tapmacaları daha irəli getir və bu bələdçinin əhatə etmədiyi zəncir və ya başqa texnikalar tələb edir."
           ],
           [
             "Bu bələdçidəkilərdən daha çətin texnikalar varmı?",
-            "Bəli. Oyunçular ən çətin tapmacalar üçün daha çox texnika təsvir ediblər və yeniləri meydana çıxmaqda davam edir. Bare Sudoku yalnız bu bələdçidəki texnikaların başa çatdıra bildiyi tapmacalar yaradır, buna görə oyundakı hər tapmaca burada təsvir olunanlarla həll oluna bilər."
+            "Bəli. Oyunçular ən çətin tapmacalar üçün daha çox texnika təsvir etmiş və yenilər davamlı olaraq ortaya çıxır. Bare Sudoku Sərdar səviyyəsində onlardan bir neçəsini istifadə edir: zəncir, demək olar qilitli dəstlər və məcburi şəbəkələr; hint istifadə olunanı adlandırır. Buradakı səhifələr Ekspertə qədər hər şeyi əhatə edir, buna görə də həmin səviyyəyə qədər hər bir tapmaca burada təsvir olunanlarla həll edilə bilər."
           ],
           [
             "Namizəd nədir?",
@@ -1978,7 +1978,7 @@
             ],
             [
               "Hansı səviyyədə X-Wing var?",
-              "Ekspert. Bare Sudoku X-Wing tələb edən tapmacanı Ekspert sayır; Y-Wing və Skyscraper kimi digər qabaqcıl fiqurlar da Ekspert səviyyəsinə aiddir."
+              "Ekspert və ya Sərdar. Bare Sudoku X-Wing və ya Y-Wing və ya Skyscraper kimi başqa qabaqcıl nümunə tələb etdikdə tapmacasını Ekspert olaraq qiymətləndirir və zəncir və ya bu bələdçinin başqa texnikaları tələb etdikdə Sərdar olaraq qiymətləndirir."
             ]
           ]
         },
@@ -2035,7 +2035,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish üç sətir və üç sütunlu X-Wing-dir. Rəqəmin üç sətrin hər birində ən çox üç namizəd xanası varsa və bu xanaların hamısı eyni üç sütuna düşürsə, üç sətir həmin sütunlarda rəqəmi tükədir və rəqəm üç sütunun bütün digər xanalarından silinə bilər. Sətir və sütunların yeri dəyişdirilə bilər. Bare Sudoku Ekspert tapmacalarda Swordfish-i Y-Wing-dən sonra yoxlayır.",
           "when": [
-            "X-Wing və Y-Wing heç nə tapmayanda. Swordfish X-Wing-dən az rast gəlinir və namizədləri üç xətt üzrə seyrək paylanmış rəqəm tələb edir. Bunun üçün həmin rəqəm üzrə tam və dəqiq qeydlər lazımdır."
+            "X-Wing heç nə tapmadığında. Balıqlar X-Wingdən daha az yayğındır və namizədləri üç xətə incə yayılmış rəqəm tələb edir. Bu rəqəm üçün tam və dəqiq qeydlər tələb olunur."
           ],
           "spot": [
             "Bir rəqəm seçin və onun iki və ya üç namizəd xanası olan sətirləri axtarın. Belə üç sətir cəmi üç sütunu əhatə edirsə, həmin sütunlarda rəqəmin əlavə namizədlərini yoxlayın. Hər sətrin hər sütunda namizədi olması vacib deyil: Swordfish altı, yeddi, səkkiz və ya doqquz xanadan ibarət ola bilər. Oyunda rəqəmi öz düyməsi ilə vurğulayın və namizədləri üç sütun üzrə düzülən üç sətir axtarın."
@@ -2116,7 +2116,7 @@
             ],
             [
               "WXYZ-Wing varmı?",
-              "Bəli, dörd namizədli mərkəzlə. Bare Sudoku-dakı hər tapmaca bu bələdçidə təsvir olunan texnikalarla başa çatdırıla bilər."
+              "Bəli: iki kəsişən vahiddə dörd namizədli dörd xana, rəqəm onlardan birdən çoxunda free oturması mumkün. Bare Sudoku onu tapır və başqa qanadlar kimi Ekspert olaraq qiymətləndirir."
             ]
           ]
         },
@@ -2127,7 +2127,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (göydələn) bir rəqəmin düz iki namizəd xanası olduğu iki sətir üzərində qurulan tək rəqəmli fiqurdur. Hər sətrin bir xanası eyni sütunda yerləşir; bu iki xana bazadır və hər ikisi birdən həmin rəqəm ola bilməz. Digər iki xana, yəni zirvələr, fərqli sütunlardadır. Baza xanalarından ən azı biri həmin rəqəm olmadığı üçün zirvələrdən ən azı biri o rəqəm olmalıdır, ona görə də rəqəm hər iki zirvəni görən bütün xanalardan silinə bilər. Sətirlər əvəzinə sütunlarla da eynilə işləyir. Skyscraper, [2-String Kite](two-string-kite) kimi, Turbot Fish formasıdır və Bare Sudoku-da Ekspert texnikasıdır.",
           "when": [
-            "X-Wing, Y-Wing, Swordfish və XYZ-Wing heç nə tapmayanda. Skyscraper Bare Sudoku-da ən çox rast gəlinən Ekspert fiqurlarından biridir və çox vaxt [X-Wing](x-wing) fiqurunun az qala alındığı yerdə görünür: rəqəm üçün hər birində iki namizəd olan iki sətir iki deyil, yalnız bir sütunu paylaşır. Bunun üçün yoxladığınız rəqəm üzrə tam qeydlər lazımdır."
+            "X-Wing və Balıq heç nə tapdığında. Göy qırağı Bare Sudokuda ən çox rast gələn Ekspert nümunələrindən biridir və çox vaxt [X-Wing](x-wing) demək olar işləyən yerdə görünür: rəqəm üçün iki sıra iki namizəddə, iki sütun əvəzinə yalnız birini paylaşır. Sizin yoxladığınız rəqəm üçün tam qeydlər tələb olunur."
           ],
           "spot": [
             "Bir rəqəm seçin və onun düz iki namizəd xanası olan sətirləri sadalayın. Bu sətirləri cüt-cüt müqayisə edin: hər sətrin düz bir namizəd xanası eyni sütundadırsa, bu iki xana baza, digər ikisi isə zirvələrdir. Sonra hər iki zirvəni görən və hələ də həmin rəqəmi ehtiva edən xanaları axtarın; adətən onlar bir zirvənin blokunda və digərinin sütununda olur. Sonra sətirlər əvəzinə sütunlarla təkrarlayın. Oyunda rəqəm düyməsinə toxunaraq onun namizədlərini vurğulayın və hər birində düz iki namizəd görünən iki sətir axtarın."
@@ -2300,7 +2300,7 @@
             ],
             [
               "Bare Sudoku hansı Unique Rectangle tipindən istifadə edir?",
-              "Tip 1: tam eyni iki namizədi olan üç künc və həmin ikisindən əlavə başqa namizədləri də olan dördüncü künc. Adətən 2-dən 6-ya qədər nömrələnən digər tiplər iki və ya daha çox küncdəki əlavə namizədlərdən və ya künclər arasındakı güclü əlaqələrdən istifadə edir; bu səhifə Tip 1-i izah edir."
+              "Tipi 1, bu səhifədə təsvir edilmişdir: dəqiq eyni iki namizədli üç künc və bu iki plus digərlərində dördüncü künc. Bare Sudoku həm də digər tiplərini tapır, adətən 2-dən 6-ya qədər rəqəmlənir, həmçinin Gizli Düzbucaqlı; bu tiplər iki və ya daha çox küncdə əlavə namizədlərdən və ya onların arasında güclü bağlantılardan istifadə edir."
             ],
             [
               "Ölümcül fiqur (deadly pattern) nədir?",
@@ -2414,8 +2414,8 @@
             "Nein. Das ist die ganze Regel: Jede der neun Zeilen, neun Spalten und neun Blöcke enthält jede Ziffer von 1 bis 9 genau einmal. Wenn zwei gleiche Ziffern in einer Einheit stehen, ist mindestens eine davon falsch."
           ],
           [
-            "Was ist der Unterschied zwischen Leicht, Mittel, Schwer und Experte?",
-            "Die Stufe hängt von den Techniken ab, die das Rätsel braucht. Leicht und Mittel werden nur mit Einern gelöst, und Leicht beginnt mit mindestens 38 vorgegebenen Ziffern. Schwer braucht blockierte Kandidaten oder Paare und Tripel. Experte braucht mindestens ein fortgeschrittenes Muster, etwa einen X-Wing, einen Y-Wing, einen Skyscraper oder ein Unique Rectangle."
+            "Was ist der Unterschied zwischen Leicht, Mittel, Schwer, Experte und Meister?",
+            "Die Stufe hängt von den Techniken ab, die das Rätsel braucht. Leicht und Mittel werden nur mit Einern gelöst, und Leicht beginnt mit mindestens 38 vorgegebenen Ziffern. Schwer braucht blockierte Kandidaten oder Paare und Tripel. Experte braucht mindestens ein fortgeschrittenes Muster, etwa einen X-Wing, einen Y-Wing, einen Skyscraper oder ein Unique Rectangle. Meister braucht Ketten, fast gesperrte Sets oder Erzwingungsnetze. Die Zahl neben dem Stufennamen ist die Schwierigkeitsbewertung des Rätsels, bestimmt durch den schwierigsten Schritt, den es braucht."
           ],
           [
             "Solltest du Notizen für alle Felder schreiben oder nur für einige?",
@@ -2437,7 +2437,7 @@
         "h1": "Sudoku-Lösungstechniken",
         "intro": [
           "Jedes Sudoku lässt sich mit einer kleinen Zahl logischer Techniken lösen. Diese Übersicht zeigt die Techniken, die der Löser von Bare Sudoku und seine Tipps verwenden, in der Reihenfolge, in der der Löser sie probiert: zuerst Einer, dann Streichungen innerhalb einer Einheit, dann Muster über mehrere Zeilen, Spalten und Blöcke, darunter Muster, die darauf beruhen, dass das Rätsel genau eine Lösung hat. Jede Technik hat eine eigene Seite mit Definition, Hinweisen zum Erkennen, einem echten Beispiel aus einem erzeugten Rätsel und den häufigen Fehlern.",
-          "Die Stufe eines Rätsels richtet sich nach der schwierigsten Technik, die es braucht. Leichte und mittlere Rätsel brauchen nur Einer, schwere Rätsel blockierte Kandidaten oder Paare und Tripel, und Rätsel der Stufe Experte mindestens ein fortgeschrittenes Muster, etwa einen Fisch, ein Wing-Muster, einen Skyscraper oder ein Unique Rectangle. Auf jeder Stufe erledigen die Einer den größten Teil der Arbeit; die fortgeschrittene Technik entfernt einen oder zwei Kandidaten, und die Einer machen von dort aus weiter."
+          "Die Stufe eines Rätsels richtet sich nach der schwierigsten Technik, die es braucht. Leichte und mittlere Rätsel brauchen nur Einer, schwere Rätsel blockierte Kandidaten oder Paare und Tripel, Rätsel der Stufe Experte mindestens ein fortgeschrittenes Muster, etwa einen Fisch, ein Wing-Muster, einen Skyscraper oder ein Unique Rectangle, und Rätsel der Stufe Meister brauchen Ketten oder andere Techniken jenseits dieser Anleitung. Auf jeder Stufe erledigen die Einer den größten Teil der Arbeit; die fortgeschrittene Technik entfernt einen oder zwei Kandidaten, und die Einer machen von dort aus weiter."
         ],
         "faq": [
           [
@@ -2446,11 +2446,11 @@
           ],
           [
             "Brauche ich alle diese Techniken, um Sudoku zu lösen?",
-            "Für leichte und mittlere Rätsel reichen Einer. Bei schweren Rätseln kommen blockierte Kandidaten und Teilmengen hinzu. Rätsel der Stufe Experte brauchen mindestens ein fortgeschrittenes Muster, etwa einen Fisch, ein Wing-Muster, einen Skyscraper oder ein Unique Rectangle, meist aber nur ein- oder zweimal pro Rätsel."
+            "Für leichte und mittlere Rätsel reichen Einer. Bei schweren Rätseln kommen blockierte Kandidaten und Teilmengen hinzu. Rätsel der Stufe Experte brauchen mindestens ein fortgeschrittenes Muster, etwa einen Fisch, ein Wing-Muster, einen Skyscraper oder ein Unique Rectangle, meist aber nur ein- oder zweimal pro Rätsel. Rätsel der Stufe Meister gehen weiter und brauchen Ketten oder andere Techniken, die diese Anleitung nicht abdeckt."
           ],
           [
             "Gibt es schwierigere Techniken als die in dieser Anleitung?",
-            "Ja. Spieler haben für die schwierigsten Rätsel viele weitere Techniken beschrieben, und es kommen immer neue hinzu. Bare Sudoku erzeugt nur Rätsel, die sich mit den Techniken dieser Anleitung lösen lassen, also ist jedes Rätsel im Spiel mit dem lösbar, was hier beschrieben ist."
+            "Ja. Spieler haben für die schwierigsten Rätsel viele weitere Techniken beschrieben, und es kommen immer neue hinzu. Bare Sudoku nutzt mehrere davon auf der Meister-Stufe: Ketten, fast gesperrte Sets und Erzwingungsnetze; der Hinweis nennt die verwendete. Die Seiten hier decken alles bis Experte ab, also kann jedes Rätsel bis zu dieser Stufe mit dem gelöst werden, was hier beschrieben ist."
           ],
           [
             "Was ist ein Kandidat?",
@@ -2748,7 +2748,7 @@
             ],
             [
               "Auf welcher Stufe gibt es X-Wings?",
-              "Experte. Bare Sudoku stuft ein Rätsel als Experte ein, wenn es einen X-Wing braucht; andere fortgeschrittene Muster wie der Y-Wing und der Skyscraper gehören ebenfalls zur Stufe Experte."
+              "Experte oder Meister. Bare Sudoku stuft ein Rätsel als Experte ein, wenn es einen X-Wing oder ein anderes fortgeschrittenes Muster wie den Y-Wing oder den Skyscraper braucht, und als Meister, wenn es auch Ketten oder andere Techniken jenseits dieser Anleitung braucht."
             ]
           ]
         },
@@ -2805,7 +2805,7 @@
           "h1": "Swordfish",
           "summary": "Ein Swordfish ist ein X-Wing mit drei Zeilen und drei Spalten. Hat eine Ziffer in jeder von drei Zeilen höchstens drei Kandidatenfelder und liegen alle diese Felder in denselben drei Spalten, dann verbrauchen die drei Zeilen die Ziffer in diesen Spalten, und die Ziffer kann aus jedem anderen Feld der drei Spalten entfernt werden. Zeilen und Spalten lassen sich vertauschen. Bare Sudoku sucht in Rätseln der Stufe Experte nach dem Y-Wing nach einem Swordfish.",
           "when": [
-            "Wenn X-Wing und Y-Wing nichts finden. Swordfish sind seltener als X-Wings und brauchen eine Ziffer, deren Kandidaten dünn über drei Linien verteilt sind. Du brauchst vollständige und genaue Notizen für diese Ziffer."
+            "Wenn ein X-Wing nichts findet. Swordfish sind seltener als X-Wings und brauchen eine Ziffer, deren Kandidaten dünn über drei Linien verteilt sind. Sie brauchen vollständige und genaue Notizen für diese Ziffer."
           ],
           "spot": [
             "Wähle eine Ziffer und suche Zeilen mit zwei oder drei Kandidatenfeldern dafür. Decken drei solche Zeilen insgesamt nur drei Spalten ab, prüfe diese Spalten auf weitere Kandidaten der Ziffer. Nicht jede Zeile braucht in jeder Spalte einen Kandidaten: Ein Swordfish kann sechs, sieben, acht oder neun Felder haben. Im Spiel hebst du die Ziffer mit ihrer Taste hervor und suchst drei Zeilen, deren Kandidaten sich in drei Spalten aufreihen."
@@ -2886,7 +2886,7 @@
             ],
             [
               "Gibt es einen WXYZ-Wing?",
-              "Ja, mit einem Angelpunkt mit vier Kandidaten. Jedes Rätsel in Bare Sudoku lässt sich mit den Techniken lösen, die in dieser Anleitung beschrieben sind."
+              "Ja: vier Zellen mit vier Kandidaten in zwei sich kreuzenden Einheiten, wobei eine Ziffer frei in mehr als einer von ihnen sitzen kann. Bare Sudoku findet es auch und stuft es wie die anderen Flügel als Experte ein."
             ]
           ]
         },
@@ -2897,7 +2897,7 @@
           "h1": "Skyscraper",
           "summary": "Ein Skyscraper (Wolkenkratzer) ist ein Muster aus einer einzigen Ziffer, gebaut auf zwei Zeilen, in denen die Ziffer genau zwei Kandidatenfelder hat. Je ein Feld jeder Zeile liegt in derselben Spalte; diese beiden Felder bilden die Basis, und sie können nicht beide die Ziffer enthalten. Die anderen zwei Felder, die Spitzen, liegen in verschiedenen Spalten. Weil mindestens ein Basisfeld die Ziffer nicht enthält, muss mindestens eine Spitze sie enthalten, also kann die Ziffer aus jedem Feld entfernt werden, das beide Spitzen sieht. Dasselbe funktioniert mit Spalten statt Zeilen. Der Skyscraper ist wie der [2-String Kite](two-string-kite) eine Form des Turbot Fish und in Bare Sudoku eine Technik der Stufe Experte.",
           "when": [
-            "Wenn X-Wing, Y-Wing, Swordfish und XYZ-Wing nichts finden. Der Skyscraper ist eines der häufigsten Muster der Stufe Experte in Bare Sudoku und taucht oft dort auf, wo ein [X-Wing](x-wing) fast passt: zwei Zeilen mit je zwei Kandidaten für eine Ziffer, die statt zwei Spalten nur eine gemeinsam haben. Du brauchst vollständige Notizen für die untersuchte Ziffer."
+            "Wenn X-Wing und Swordfish nichts finden. Der Skyscraper ist eines der häufigsten Experten-Muster in Bare Sudoku und taucht oft dort auf, wo ein [X-Wing](x-wing) fast passt: zwei Zeilen mit je zwei Kandidaten für eine Ziffer, die statt zwei Spalten nur eine gemeinsam haben. Du brauchst vollständige Notizen für die untersuchte Ziffer."
           ],
           "spot": [
             "Wähle eine Ziffer und notiere die Zeilen, in denen sie genau zwei Kandidatenfelder hat. Vergleiche diese Zeilen paarweise: Liegt genau ein Kandidatenfeld jeder Zeile in derselben Spalte, sind diese zwei Felder die Basis und die anderen zwei die Spitzen. Suche dann Felder, die beide Spitzen sehen und die Ziffer noch enthalten; meist liegen sie im Block der einen Spitze und in der Spalte der anderen. Wiederhole das mit Spalten statt Zeilen. Im Spiel tippst du auf die Zifferntaste, um ihre Kandidaten hervorzuheben, und suchst zwei Zeilen, die jeweils genau zwei zeigen."
@@ -3070,7 +3070,7 @@
             ],
             [
               "Welchen Typ des Unique Rectangle verwendet Bare Sudoku?",
-              "Typ 1: drei Ecken mit genau denselben zwei Kandidaten und eine vierte Ecke mit diesen beiden und weiteren. Andere Typen, meist von 2 bis 6 nummeriert, nutzen zusätzliche Kandidaten in zwei oder mehr Ecken oder starke Verbindungen zwischen ihnen; diese Seite behandelt Typ 1."
+              "Typ 1, beschrieben auf dieser Seite: drei Ecken mit exakt denselben zwei Kandidaten und eine vierte Ecke mit diesen zwei plus anderen. Bare Sudoku findet auch die anderen Typen, normalerweise mit den Nummern 2 bis 6, die zusätzliche Kandidaten in zwei oder mehr Ecken oder starke Verbindungen zwischen ihnen verwenden, und das Hidden Rectangle."
             ],
             [
               "Was ist ein tödliches Muster (Deadly Pattern)?",
@@ -3840,7 +3840,7 @@
             ],
             [
               "Quel type d'Unique Rectangle utilise Bare Sudoku ?",
-              "Le Type 1 : trois coins avec exactement les deux mêmes candidats et un quatrième coin avec ces deux-là plus d'autres. Les autres types, généralement numérotés de 2 à 6, utilisent des candidats en plus dans deux coins ou plus, ou des liens forts entre eux ; cette page traite du Type 1."
+              "Non. Chaque grille a exactement une solution et se résout par la seule logique. Si vous bloquez, un indice montre la prochaine case et nomme la technique nécessaire, par exemple un singleton, des candidats verrouillés, une paire ou un triplet, X-Wing, Y-Wing, Skyscraper ou Unique Rectangle. Touchez l'indice à nouveau pour placer le chiffre."
             ],
             [
               "Qu'est-ce qu'un motif mortel (deadly pattern) ?",
@@ -4610,7 +4610,7 @@
             ],
             [
               "¿Qué tipo de Unique Rectangle usa Bare Sudoku?",
-              "El Tipo 1: tres esquinas con exactamente los mismos dos candidatos y una cuarta esquina con esos dos y otros más. Los demás tipos, numerados normalmente del 2 al 6, usan candidatos extra en dos o más esquinas o enlaces fuertes entre ellas; esta página trata el Tipo 1."
+              "No. Cada sudoku tiene exactamente una solución y se resuelve solo con lógica. Si te atascas, una pista muestra la siguiente casilla y nombra la técnica que necesitó, por ejemplo un single, candidatos bloqueados, un par o trío, X-Wing, Y-Wing, Skyscraper o Unique Rectangle. Toca la pista otra vez para colocar el dígito."
             ],
             [
               "¿Qué es un patrón mortal (deadly pattern)?",
@@ -5380,7 +5380,7 @@
             ],
             [
               "Que tipo de Unique Rectangle usa o Bare Sudoku?",
-              "O Tipo 1: três cantos com exatamente os mesmos dois candidatos e um quarto canto com esses dois e mais outros. Os outros tipos, normalmente numerados de 2 a 6, usam candidatos extra em dois ou mais cantos, ou ligações fortes entre eles; esta página trata do Tipo 1."
+              "Não. Cada puzzle tem exatamente uma solução e resolve-se só com lógica. Se ficar preso, uma dica mostra a próxima célula e nomeia a técnica de que precisou, por exemplo um single, candidatos bloqueados, um par ou trio, X-Wing, Y-Wing, Skyscraper ou Unique Rectangle. Toque na dica outra vez para colocar o algarismo."
             ],
             [
               "O que é um padrão mortal (deadly pattern)?",
@@ -6150,7 +6150,7 @@
             ],
             [
               "Quale tipo di Unique Rectangle usa Bare Sudoku?",
-              "Il Tipo 1: tre angoli con esattamente gli stessi due candidati e un quarto angolo con quei due più altri. Gli altri tipi, di solito numerati da 2 a 6, usano candidati in più in due o più angoli oppure legami forti tra di essi; questa pagina tratta il Tipo 1."
+              "No. Ogni schema ha esattamente una soluzione e si risolve con la sola logica. Se ti blocchi, un suggerimento mostra la prossima casella e indica la tecnica che è servita, per esempio un single, candidati bloccati, una coppia o terzina, X-Wing, Y-Wing, Skyscraper o Unique Rectangle. Tocca di nuovo il suggerimento per inserire la cifra."
             ],
             [
               "Che cos'è una configurazione mortale (deadly pattern)?",
@@ -6920,7 +6920,7 @@
             ],
             [
               "Welk type Unique Rectangle gebruikt Bare Sudoku?",
-              "Type 1: drie hoeken met precies dezelfde twee kandidaten en een vierde hoek met die twee plus andere. Andere types, meestal genummerd van 2 tot 6, gebruiken extra kandidaten in twee of meer hoeken of sterke links ertussen; deze pagina behandelt Type 1."
+              "Nee. Elke puzzel heeft precies één oplossing en is met logica alleen op te lossen. Zit je vast, dan toont een hint het volgende vakje en noemt de techniek die nodig was, bijvoorbeeld een single, locked candidates, een paar of tripel, X-Wing, Y-Wing, Skyscraper of Unique Rectangle. Tik nogmaals op de hint om het cijfer te plaatsen."
             ],
             [
               "Wat is een dodelijk patroon (deadly pattern)?",
@@ -7034,8 +7034,8 @@
             "Nie. Na tym polega cała zasada: każdy z dziewięciu wierszy, dziewięciu kolumn i dziewięciu bloków zawiera każdą cyfrę od 1 do 9 dokładnie raz. Jeśli dwie takie same cyfry są w jednej jednostce, co najmniej jedna z nich jest błędna."
           ],
           [
-            "Czym różnią się poziomy Łatwy, Średni, Trudny i Ekspert?",
-            "Poziom wyznaczają techniki, których wymaga łamigłówka. Łatwy i Średni rozwiązuje się samymi singlami, a Łatwy zaczyna się od co najmniej 38 podanych cyfr. Trudny wymaga zablokowanych kandydatów albo par i trójek. Ekspert wymaga co najmniej jednego zaawansowanego układu, takiego jak X-Wing, Y-Wing, Skyscraper czy Unique Rectangle."
+            "Jaka jest różnica między Łatwe, Średnie, Trudne, Eksperckie i Mistrzowskie?",
+            "Poziom jest ustalany przez techniki, które puzzle potrzebuje. Łatwe i Średnie rozwiązywane są tylko pojedynczymi, a Łatwe zaczyna się co najmniej 38 danymi cyframi. Trudne wymaga zablokowanych kandydatów lub par i trojek. Eksperckie wymaga co najmniej jednego zaawansowanego wzoru, takiego jak X-Wing, Y-Wing, Skyscraper lub Unikalny Prostokąt. Mistrzowskie wymaga łańcuchów, prawie zablokowanych zestawów lub sieci wymuszających. Liczba obok nazwy poziomu to ocena trudności puzzli, określona przez najtrudniejszy krok, którego potrzebuje."
           ],
           [
             "Lepiej wpisywać notatki we wszystkie pola czy tylko w niektóre?",
@@ -7057,7 +7057,7 @@
         "h1": "Techniki rozwiązywania sudoku",
         "intro": [
           "Każde sudoku da się rozwiązać niewielkim zestawem technik logicznych. Ten spis zawiera techniki, których używają solver Bare Sudoku i jego podpowiedzi, w kolejności, w jakiej solver je próbuje: najpierw single, potem eliminacje w obrębie jednej jednostki, a na końcu układy obejmujące kilka wierszy, kolumn i bloków, w tym układy opierające się na tym, że łamigłówka ma dokładnie jedno rozwiązanie. Każda technika ma własną stronę z definicją, opisem, jak ją rozpoznać, prawdziwym przykładem z wygenerowanej łamigłówki i częstymi błędami.",
-          "Poziom łamigłówki wyznacza najtrudniejsza technika, jakiej wymaga. Łamigłówki Łatwy i Średni wymagają tylko singli, Trudny wymaga zablokowanych kandydatów albo par i trójek, a Ekspert co najmniej jednego zaawansowanego układu, takiego jak ryba, skrzydło, Skyscraper czy Unique Rectangle. Niezależnie od poziomu większość pracy wykonują single; zaawansowana technika usuwa jednego lub dwóch kandydatów, a dalej znów prowadzą single."
+          "Poziom puzzli jest określony najtrudniejszą techniką, którą potrzebuje. Puzzle Łatwe i Średnie wymagają tylko pojedynczych, Trudne wymagają zablokowanych kandydatów lub par i trojek, Eksperckie wymagają co najmniej jednego zaawansowanego wzoru, takiego jak ryba, skrzydło, Skyscraper lub Unikalny Prostokąt, a Mistrzowskie wymagają łańcuchów lub innych technik poza tym przewodnikiem. Niezależnie od poziomu pojedyncze robią większość pracy; zaawansowana technika eliminuje jednego lub dwóch kandydatów i pojedyncze kontynuują stąd."
         ],
         "faq": [
           [
@@ -7066,11 +7066,11 @@
           ],
           [
             "Czy do rozwiązania sudoku potrzebne są wszystkie te techniki?",
-            "W łamigłówkach Łatwy i Średni wystarczą single. Łamigłówki Trudny dodają zablokowanych kandydatów i podzbiory. Łamigłówki Ekspert wymagają co najmniej jednego zaawansowanego układu, takiego jak ryba, skrzydło, Skyscraper czy Unique Rectangle, ale zwykle tylko raz lub dwa razy na łamigłówkę."
+            "W przypadku puzzli Łatwe i Średnie pojedyncze wystarczają. Puzzli Trudne dodają zablokowanych kandydatów i podzbiory. Puzzli Eksperckie wymagają co najmniej jednego zaawansowanego wzoru, takiego jak ryba, skrzydło, Skyscraper lub Unikalny Prostokąt, ale zwykle tylko jeden lub dwa razy na puzzle. Puzzli Mistrzowskie idą dalej i wymagają łańcuchów lub innych technik, których ten przewodnik nie obejmuje."
           ],
           [
             "Czy są techniki trudniejsze niż te z tego poradnika?",
-            "Tak. Gracze opisali o wiele więcej technik dla najtrudniejszych łamigłówek, a wciąż pojawiają się nowe. Bare Sudoku generuje tylko łamigłówki, które da się dokończyć technikami z tego poradnika, więc każdą łamigłówkę w grze można rozwiązać tym, co tu opisano."
+            "Tak. Gracze opisali znacznie więcej technik dla najtrudniejszych puzzli, a nowe wciąż się pojawiają. Bare Sudoku używa kilku z nich na poziomie Mistrzowskim: łańcuchy, prawie zablokowane zestawy i sieci wymuszające; wskazówka podaje użytą. Strony tutaj obejmują wszystko do poziomu Eksperckie, więc każdą puzzlę do tego poziomu można rozwiązać tym, co jest tutaj opisane."
           ],
           [
             "Co to jest kandydat?",
@@ -7368,7 +7368,7 @@
             ],
             [
               "Na którym poziomie pojawia się X-Wing?",
-              "Ekspert. Bare Sudoku daje łamigłówce poziom Ekspert, gdy wymaga ona techniki X-Wing; inne zaawansowane układy, takie jak Y-Wing i Skyscraper, też dostają poziom Ekspert."
+              "Eksperckie lub Mistrzowskie. Bare Sudoku ocenia puzzle jako Eksperckie, gdy potrzebuje X-Wing lub innego zaawansowanego wzoru, takiego jak Y-Wing lub Skyscraper, i jako Mistrzowskie, gdy potrzebuje również łańcuchów lub innych technik poza tym przewodnikiem."
             ]
           ]
         },
@@ -7425,7 +7425,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish to X-Wing z trzema wierszami i trzema kolumnami. Jeśli cyfra ma co najwyżej trzy pola kandydujące w każdym z trzech wierszy, a wszystkie te pola wypadają w tych samych trzech kolumnach, to trzy wiersze wyczerpują tę cyfrę w tych kolumnach i można ją usunąć ze wszystkich pozostałych pól trzech kolumn. Wiersze i kolumny można zamienić. Bare Sudoku szuka układu Swordfish po Y-Wing, w łamigłówkach Ekspert.",
           "when": [
-            "Gdy X-Wing i Y-Wing nic nie znajdują. Swordfish jest rzadszy niż X-Wing i wymaga cyfry, której kandydaci są rzadko rozsiani po trzech liniach. Wymaga kompletnych i poprawnych notatek dla tej cyfry."
+            "Kiedy X-Wing nic nie znajdzie. Miecze są mniej powszechne niż X-Wings i potrzebują cyfry, której kandydaci są rozpowszechniani na trzech liniach. Wymagają pełnych i dokładnych notatek dla tej cyfry."
           ],
           "spot": [
             "Wybierz cyfrę i szukaj wierszy z dwoma lub trzema polami kandydującymi dla niej. Jeśli trzy takie wiersze razem obejmują tylko trzy kolumny, sprawdź w tych kolumnach dalszych kandydatów tej cyfry. Nie każdy wiersz musi mieć kandydata w każdej kolumnie: Swordfish może mieć sześć, siedem, osiem lub dziewięć pól. W grze podświetl cyfrę jej klawiszem i szukaj trzech wierszy, których kandydaci układają się w trzech kolumnach."
@@ -7506,7 +7506,7 @@
             ],
             [
               "Czy istnieje WXYZ-Wing?",
-              "Tak, z osią o czterech kandydatach. Każdą łamigłówkę w Bare Sudoku da się dokończyć technikami opisanymi w tym poradniku."
+              "Tak: cztery komórki z czterema kandydatami w dwóch przecinających się jednostkach, gdzie jedna cyfra może swobodnie siedzieć w więcej niż jednej z nich. Bare Sudoku je również znajduje i ocenia jako Eksperckie, jak pozostałe skrzydła."
             ]
           ]
         },
@@ -7517,7 +7517,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (drapacz chmur) to układ jednej cyfry zbudowany na dwóch wierszach, w których ta cyfra ma dokładnie dwa pola kandydujące. Po jednym polu z każdego wiersza leży w tej samej kolumnie; te dwa pola tworzą podstawę i nie mogą oba zawierać tej cyfry. Dwa pozostałe pola, szczyty, leżą w różnych kolumnach. Ponieważ co najmniej jedno pole podstawy nie jest tą cyfrą, co najmniej jeden szczyt musi nią być, więc cyfrę można usunąć z każdego pola, które widzi oba szczyty. To samo działa z kolumnami zamiast wierszy. Skyscraper jest odmianą Turbot Fish, podobnie jak [2-String Kite](two-string-kite), a w Bare Sudoku to technika poziomu Ekspert.",
           "when": [
-            "Gdy X-Wing, Y-Wing, Swordfish i XYZ-Wing nic nie znajdują. Skyscraper to jeden z najczęstszych układów poziomu Ekspert w Bare Sudoku i często pojawia się tam, gdzie [X-Wing](x-wing) prawie działa: dwa wiersze z dwoma kandydatami danej cyfry każdy, które dzielą tylko jedną kolumnę zamiast dwóch. Wymaga kompletnych notatek dla badanej cyfry."
+            "Kiedy X-Wing i Swordfish nic nie znajdą. Skyscraper jest jednym z najczęstszych wzorów Eksperckich w Bare Sudoku i często pojawia się tam, gdzie [X-Wing](x-wing) prawie działa: dwa wiersze z dwoma kandydatami każdy dla cyfry, dzieląc tylko jedną kolumnę zamiast dwóch. Wymaga pełnych notatek dla cyfry, którą badasz."
           ],
           "spot": [
             "Wybierz cyfrę i wypisz wiersze, w których ma dokładnie dwa pola kandydujące. Porównuj te wiersze parami: jeśli dokładnie jedno pole kandydujące z każdego wiersza leży w tej samej kolumnie, te dwa pola są podstawą, a dwa pozostałe to szczyty. Potem szukaj pól, które widzą oba szczyty i wciąż zawierają tę cyfrę; zwykle leżą w bloku jednego szczytu i w kolumnie drugiego. Powtórz z kolumnami zamiast wierszy. W grze dotknij klawisza cyfry, aby podświetlić jej kandydatów, i szukaj dwóch wierszy, w których widać dokładnie po dwóch."
@@ -7690,7 +7690,7 @@
             ],
             [
               "Którego typu Unique Rectangle używa Bare Sudoku?",
-              "Typu 1: trzy rogi z dokładnie tymi samymi dwoma kandydatami i czwarty róg z tymi dwoma oraz innymi. Pozostałe typy, zwykle numerowane od 2 do 6, wykorzystują dodatkowych kandydatów w dwóch lub więcej rogach albo silne połączenia między nimi; ta strona opisuje Typ 1."
+              "Typ 1, opisany na tej stronie: trzy narożniki z dokładnie tymi samymi dwoma kandydatami i czwarty narożnik z tymi dwoma plus innymi. Bare Sudoku znajduje również pozostałe typy, zwykle ponumerowane od 2 do 6, które używają dodatkowych kandydatów w dwóch lub więcej narożnikach lub silnych więzi między nimi, oraz Ukryty Prostokąt."
             ],
             [
               "Co to jest zabójczy układ (deadly pattern)?",
@@ -10884,8 +10884,8 @@
             "Όχι. Αυτός είναι όλος ο κανόνας: καθεμία από τις εννέα γραμμές, τις εννέα στήλες και τα εννέα κουτιά περιέχει κάθε ψηφίο από το 1 έως το 9 ακριβώς μία φορά. Αν δύο ίδια ψηφία μοιράζονται μια μονάδα, τουλάχιστον το ένα είναι λάθος."
           ],
           [
-            "Ποια η διαφορά ανάμεσα σε Εύκολο, Μέτριο, Δύσκολο και Ειδικός;",
-            "Το επίπεδο καθορίζεται από τις τεχνικές που χρειάζεται ο γρίφος. Το Εύκολο και το Μέτριο λύνονται μόνο με μονά, και το Εύκολο ξεκινά με τουλάχιστον 38 δοσμένα ψηφία. Το Δύσκολο χρειάζεται κλειδωμένους υποψηφίους ή ζεύγη και τριάδες. Το Ειδικός χρειάζεται τουλάχιστον ένα προχωρημένο μοτίβο, όπως ένα X-Wing, ένα Y-Wing, ένα Skyscraper ή ένα Unique Rectangle."
+            "Ποια η διαφορά ανάμεσα σε Εύκολο, Μέτριο, Δύσκολο, Ειδικός και Μάστερ;",
+            "Το επίπεδο καθορίζεται από τις τεχνικές που χρειάζεται ο γρίφος. Το Εύκολο και το Μέτριο λύνονται μόνο με μονά, και το Εύκολο ξεκινά με τουλάχιστον 38 δοσμένα ψηφία. Το Δύσκολο χρειάζεται κλειδωμένους υποψηφίους ή ζεύγη και τριάδες. Το Ειδικός χρειάζεται τουλάχιστον ένα προχωρημένο μοτίβο, όπως ένα X-Wing, ένα Y-Wing, ένα Skyscraper ή ένα Unique Rectangle. Το Μάστερ χρειάζεται ζυγούς, σχεδόν κλειδωμένα σύνολα ή δίκτυα αναγκασμού. Ο αριθμός δίπλα στο όνομα του επιπέδου είναι η βαθμολογία δυσκολίας του γρίφου, η οποία καθορίζεται από το πιο δύσκολο βήμα που χρειάζεται."
           ],
           [
             "Είναι καλύτερο να γράφετε σημειώσεις σε κάθε κελί ή μόνο σε μερικά;",
@@ -10907,7 +10907,7 @@
         "h1": "Τεχνικές επίλυσης Sudoku",
         "intro": [
           "Κάθε Sudoku λύνεται με ένα μικρό σύνολο λογικών τεχνικών. Αυτός ο κατάλογος παρουσιάζει τις τεχνικές που χρησιμοποιούν ο επιλυτής του Bare Sudoku και οι βοήθειές του, με τη σειρά που τις δοκιμάζει ο επιλυτής: πρώτα τα μονά, μετά οι απαλοιφές μέσα σε μία μονάδα και τέλος τα μοτίβα που απλώνονται σε πολλές γραμμές, στήλες και κουτιά, ανάμεσά τους και μοτίβα που βασίζονται στο ότι ο γρίφος έχει ακριβώς μία λύση. Κάθε τεχνική έχει τη δική της σελίδα με ορισμό, τρόπο εντοπισμού, πραγματικό παράδειγμα από έναν παραγόμενο γρίφο και τα συνηθισμένα λάθη.",
-          "Το επίπεδο ενός γρίφου καθορίζεται από την πιο δύσκολη τεχνική που χρειάζεται. Οι γρίφοι Εύκολο και Μέτριο χρειάζονται μόνο μονά, οι Δύσκολοι χρειάζονται κλειδωμένους υποψηφίους ή ζεύγη και τριάδες, και οι γρίφοι Ειδικός χρειάζονται τουλάχιστον ένα προχωρημένο μοτίβο, όπως ένα fish, ένα wing, ένα Skyscraper ή ένα Unique Rectangle. Όποιο κι αν είναι το επίπεδο, τα μονά κάνουν το μεγαλύτερο μέρος της δουλειάς· η προχωρημένη τεχνική αφαιρεί έναν ή δύο υποψηφίους και τα μονά συνεχίζουν από εκεί."
+          "Το επίπεδο ενός γρίφου καθορίζεται από την πιο δύσκολη τεχνική που χρειάζεται. Οι γρίφοι Εύκολο και Μέτριο χρειάζονται μόνο μονά, οι Δύσκολοι χρειάζονται κλειδωμένους υποψηφίους ή ζεύγη και τριάδες, οι γρίφοι Ειδικός χρειάζονται τουλάχιστον ένα προχωρημένο μοτίβο, όπως ένα fish, ένα wing, ένα Skyscraper ή ένα Unique Rectangle, και οι γρίφοι Μάστερ χρειάζονται ζυγούς ή άλλες τεχνικές πέρα από αυτόν τον οδηγό. Όποιο κι αν είναι το επίπεδο, τα μονά κάνουν το μεγαλύτερο μέρος της δουλειάς· η προχωρημένη τεχνική αφαιρεί έναν ή δύο υποψηφίους και τα μονά συνεχίζουν από εκεί."
         ],
         "faq": [
           [
@@ -10916,11 +10916,11 @@
           ],
           [
             "Χρειάζομαι όλες αυτές τις τεχνικές για να λύσω Sudoku;",
-            "Για γρίφους Εύκολο και Μέτριο αρκούν τα μονά. Οι Δύσκολοι γρίφοι προσθέτουν κλειδωμένους υποψηφίους και υποσύνολα. Οι γρίφοι Ειδικός χρειάζονται τουλάχιστον ένα προχωρημένο μοτίβο, όπως ένα fish, ένα wing, ένα Skyscraper ή ένα Unique Rectangle, αλλά συνήθως μόνο μία ή δύο φορές ανά γρίφο."
+            "Για γρίφους Εύκολο και Μέτριο αρκούν τα μονά. Οι Δύσκολοι γρίφοι προσθέτουν κλειδωμένους υποψηφίους και υποσύνολα. Οι γρίφοι Ειδικός χρειάζονται τουλάχιστον ένα προχωρημένο μοτίβο, όπως ένα fish, ένα wing, ένα Skyscraper ή ένα Unique Rectangle, αλλά συνήθως μόνο μία ή δύο φορές ανά γρίφο. Οι γρίφοι Μάστερ πάνε παραπέρα και χρειάζονται ζυγούς ή άλλες τεχνικές που δεν καλύπτει αυτός ο οδηγός."
           ],
           [
             "Υπάρχουν τεχνικές πιο δύσκολες από αυτές του οδηγού;",
-            "Ναι. Οι παίκτες έχουν περιγράψει πολλές ακόμη τεχνικές για τους πιο δύσκολους γρίφους, και νέες εμφανίζονται συνεχώς. Το Bare Sudoku δημιουργεί μόνο γρίφους που ολοκληρώνονται με τις τεχνικές αυτού του οδηγού, οπότε κάθε γρίφος του παιχνιδιού λύνεται με όσα περιγράφονται εδώ."
+            "Ναι. Οι παίκτες έχουν περιγράψει πολλές ακόμη τεχνικές για τους πιο δύσκολους γρίφους, και νέες εμφανίζονται συνεχώς. Το Bare Sudoku χρησιμοποιεί αρκετές από αυτές στο επίπεδο Μάστερ: ζυγούς, σχεδόν κλειδωμένα σύνολα και δίκτυα αναγκασμού· η βοήθεια ονομάζει ποια χρησιμοποίησε. Οι σελίδες εδώ καλύπτουν όλα όσα χρειάζονται έως τον Ειδικό, οπότε κάθε γρίφος μέχρι εκείνο το επίπεδο λύνεται με όσα περιγράφονται εδώ."
           ],
           [
             "Τι είναι ο υποψήφιος;",
@@ -11218,7 +11218,7 @@
             ],
             [
               "Σε ποιο επίπεδο υπάρχουν X-Wing;",
-              "Στο Ειδικός. Το Bare Sudoku βαθμολογεί έναν γρίφο ως Ειδικός όταν χρειάζεται X-Wing· άλλα προχωρημένα μοτίβα, όπως το Y-Wing και το Skyscraper, βαθμολογούνται επίσης ως Ειδικός."
+              "Ειδικός ή Μάστερ. Το Bare Sudoku βαθμολογεί έναν γρίφο ως Ειδικός όταν χρειάζεται ένα X-Wing ή άλλο προχωρημένο μοτίβο, όπως το Y-Wing ή το Skyscraper, και ως Μάστερ όταν χρειάζεται επίσης ζυγούς ή άλλες τεχνικές πέρα από αυτόν τον οδηγό."
             ]
           ]
         },
@@ -11275,7 +11275,7 @@
           "h1": "Swordfish",
           "summary": "Το Swordfish είναι ένα X-Wing με τρεις γραμμές και τρεις στήλες. Αν ένα ψηφίο έχει το πολύ τρία υποψήφια κελιά σε καθεμία από τρεις γραμμές, και όλα αυτά τα κελιά πέφτουν στις ίδιες τρεις στήλες, τότε οι τρεις γραμμές εξαντλούν το ψηφίο σε αυτές τις στήλες, και το ψηφίο μπορεί να αφαιρεθεί από κάθε άλλο κελί των τριών στηλών. Οι γραμμές και οι στήλες μπορούν να αντιστραφούν. Το Bare Sudoku ελέγχει για Swordfish μετά το Y-Wing, στους γρίφους Ειδικός.",
           "when": [
-            "Όταν το X-Wing και το Y-Wing δεν βρίσκουν τίποτα. Τα Swordfish είναι λιγότερο συχνά από τα X-Wing και χρειάζονται ένα ψηφίο με υποψηφίους αραιά απλωμένους σε τρεις γραμμές ή στήλες. Χρειάζονται πλήρεις και ακριβείς σημειώσεις για αυτό το ψηφίο."
+            "Όταν το X-Wing δεν βρίσκει τίποτα. Τα Swordfish είναι λιγότερο συχνά από τα X-Wing και χρειάζονται ένα ψηφίο με υποψηφίους αραιά απλωμένους σε τρεις γραμμές ή στήλες. Χρειάζονται πλήρεις και ακριβείς σημειώσεις για αυτό το ψηφίο."
           ],
           "spot": [
             "Διαλέξτε ένα ψηφίο και ψάξτε γραμμές με δύο ή τρία υποψήφια κελιά γι' αυτό. Αν τρεις τέτοιες γραμμές καλύπτουν συνολικά μόνο τρεις στήλες, ελέγξτε αυτές τις στήλες για άλλους υποψηφίους του ψηφίου. Δεν χρειάζεται κάθε γραμμή να έχει υποψήφιο σε κάθε στήλη: ένα Swordfish μπορεί να έχει έξι, επτά, οκτώ ή εννέα κελιά. Στο παιχνίδι, επισημάνετε το ψηφίο με το πλήκτρο του και ψάξτε τρεις γραμμές των οποίων οι υποψήφιοι ευθυγραμμίζονται σε τρεις στήλες."
@@ -11356,7 +11356,7 @@
             ],
             [
               "Υπάρχει WXYZ-Wing;",
-              "Ναι, με άξονα τεσσάρων υποψηφίων. Κάθε γρίφος του Bare Sudoku ολοκληρώνεται με τις τεχνικές που περιγράφονται σε αυτόν τον οδηγό."
+              "Ναι: τέσσερα κελιά με τέσσερις υποψηφίους σε δύο διασταυρούμενες μονάδες, όπου ένα ψηφίο είναι ελεύθερο να βρεθεί σε περισσότερα από ένα από αυτά. Το Bare Sudoku το βρίσκει και το βαθμολογεί Ειδικός, όπως τα άλλα wings."
             ]
           ]
         },
@@ -11367,7 +11367,7 @@
           "h1": "Skyscraper",
           "summary": "Το Skyscraper (ουρανοξύστης) είναι ένα μοτίβο με ένα μόνο ψηφίο, χτισμένο σε δύο γραμμές όπου το ψηφίο έχει ακριβώς δύο υποψήφια κελιά. Ένα κελί από κάθε γραμμή βρίσκεται στην ίδια στήλη· αυτά τα δύο κελιά είναι η βάση, και δεν μπορούν να πάρουν και τα δύο το ψηφίο. Τα άλλα δύο κελιά, οι κορυφές, βρίσκονται σε διαφορετικές στήλες. Αφού τουλάχιστον ένα κελί της βάσης δεν είναι το ψηφίο, τουλάχιστον μία κορυφή πρέπει να είναι, οπότε το ψηφίο μπορεί να αφαιρεθεί από κάθε κελί που βλέπει και τις δύο κορυφές. Το ίδιο ισχύει με στήλες αντί για γραμμές. Το Skyscraper είναι μορφή του Turbot Fish, όπως και το [2-String Kite](two-string-kite), και είναι τεχνική του επιπέδου Ειδικός στο Bare Sudoku.",
           "when": [
-            "Όταν το X-Wing, το Y-Wing, το Swordfish και το XYZ-Wing δεν βρίσκουν τίποτα. Το Skyscraper είναι από τα πιο συχνά μοτίβα του επιπέδου Ειδικός στο Bare Sudoku και εμφανίζεται συχνά εκεί όπου ένα [X-Wing](x-wing) σχεδόν ταιριάζει: δύο γραμμές με δύο υποψηφίους η καθεμία για ένα ψηφίο, που μοιράζονται μόνο μία στήλη αντί για δύο. Χρειάζεται πλήρεις σημειώσεις για το ψηφίο που εξετάζετε."
+            "Όταν το X-Wing και το Swordfish δεν βρίσκουν τίποτα. Το Skyscraper είναι από τα πιο συχνά μοτίβα του επιπέδου Ειδικός στο Bare Sudoku και εμφανίζεται συχνά εκεί όπου ένα [X-Wing](x-wing) σχεδόν ταιριάζει: δύο γραμμές με δύο υποψηφίους η καθεμία για ένα ψηφίο, που μοιράζονται μόνο μία στήλη αντί για δύο. Χρειάζεται πλήρεις σημειώσεις για το ψηφίο που εξετάζετε."
           ],
           "spot": [
             "Διαλέξτε ένα ψηφίο και καταγράψτε τις γραμμές όπου έχει ακριβώς δύο υποψήφια κελιά. Συγκρίνετε αυτές τις γραμμές ανά δύο: αν ακριβώς ένα υποψήφιο κελί από κάθε γραμμή βρίσκεται στην ίδια στήλη, αυτά τα δύο κελιά είναι η βάση και τα άλλα δύο οι κορυφές. Μετά ψάξτε κελιά που βλέπουν και τις δύο κορυφές και περιέχουν ακόμη το ψηφίο· συνήθως βρίσκονται στο κουτί της μίας κορυφής και στη στήλη της άλλης. Επαναλάβετε με στήλες αντί για γραμμές. Στο παιχνίδι, πατήστε το πλήκτρο του ψηφίου για να επισημανθούν οι υποψήφιοί του και ψάξτε δύο γραμμές που δείχνουν ακριβώς δύο η καθεμία."
@@ -11540,7 +11540,7 @@
             ],
             [
               "Ποιον τύπο Unique Rectangle χρησιμοποιεί το Bare Sudoku;",
-              "Τον Τύπο 1: τρεις γωνίες με ακριβώς τους ίδιους δύο υποψηφίους και μια τέταρτη γωνία με αυτούς τους δύο και άλλους. Οι άλλοι τύποι, που συνήθως αριθμούνται από 2 έως 6, χρησιμοποιούν επιπλέον υποψηφίους σε δύο ή περισσότερες γωνίες ή ισχυρές συνδέσεις ανάμεσά τους· αυτή η σελίδα καλύπτει τον Τύπο 1."
+              "Ο Τύπος 1, που περιγράφεται σε αυτή τη σελίδα: τρεις γωνίες με ακριβώς τους ίδιους δύο υποψηφίους και μια τέταρτη γωνία με αυτούς τους δύο και άλλους. Το Bare Sudoku βρίσκει και τους άλλους τύπους, που συνήθως αριθμούνται από 2 έως 6, όπως και το Hidden Rectangle· οι τύποι αυτοί χρησιμοποιούν επιπλέον υποψηφίους σε δύο ή περισσότερες γωνίες ή ισχυρές συνδέσεις ανάμεσά τους."
             ],
             [
               "Τι είναι το θανάσιμο μοτίβο (deadly pattern);",
@@ -15390,7 +15390,7 @@
             ],
             [
               "Какой тип Unique Rectangle использует Bare Sudoku?",
-              "Тип 1: три угла ровно с одними и теми же двумя кандидатами и четвёртый угол с этими двумя и другими. Остальные типы, обычно с номерами от 2 до 6, используют лишние кандидаты в двух или более углах или сильные связи между ними; эта страница посвящена типу 1."
+              "Нет. У каждой головоломки ровно одно решение, и она решается только логикой. Если вы застряли, подсказка покажет следующую клетку и назовёт приём, который понадобился, например одиночку, запертых кандидатов, пару или тройку, X-Wing, Y-Wing, Skyscraper или Unique Rectangle. Нажмите подсказку ещё раз, чтобы поставить цифру."
             ],
             [
               "Что такое смертельная фигура (deadly pattern)?",
@@ -16160,7 +16160,7 @@
             ],
             [
               "Який тип Unique Rectangle використовує Bare Sudoku?",
-              "Тип 1: три кути з рівно тими самими двома кандидатами і четвертий кут із цими двома та іншими. Інші типи, зазвичай з номерами від 2 до 6, використовують зайвих кандидатів у двох або більше кутах чи сильні зв'язки між ними; ця сторінка присвячена типу 1."
+              "Ні. Кожна головоломка має рівно один розв'язок і розв'язується лише логікою. Якщо ви застрягли, підказка покаже наступну клітинку й назве прийом, який знадобився, наприклад одинака, замкнених кандидатів, пару чи трійку, X-Wing, Y-Wing, Skyscraper або Unique Rectangle. Торкніться підказки ще раз, щоб поставити цифру."
             ],
             [
               "Що таке смертельна фігура (deadly pattern)?",
@@ -16274,8 +16274,8 @@
             "Не. Това е цялото правило: всеки от деветте реда, деветте колони и деветте карета съдържа всяка цифра от 1 до 9 точно веднъж. Ако две еднакви цифри са в една група, поне едната от тях е грешна."
           ],
           [
-            "Каква е разликата между Лесно, Средно, Трудно и Експерт?",
-            "Нивото се определя от техниките, които задачата изисква. Лесно и Средно се решават само с единаци, а Лесно започва с поне 38 дадени цифри. Трудно изисква заключени кандидати или двойки и тройки. Експерт изисква поне една напреднала фигура, например X-Wing, Y-Wing, Skyscraper или Unique Rectangle."
+            "Каква е разликата между Лесно, Средно, Трудно, Експерт и Майстор?",
+            "Нивото се определя от техниките, които задачата нуждае. Лесно и Средно се решават само с единаци, и Лесно започва с поне 38 дадени цифри. Трудно нуждае заключени кандидати или двойки и тройки. Експерт нуждае поне една напреднала фигура, например X-Wing, Y-Wing, Skyscraper или Unique Rectangle. Майстор нуждае вериги, почти заключени набори или принудни мрежи. Числото до името на нивото е рейтинг на сложност на задачата, определен от най-трудната стъпка, която нуждае."
           ],
           [
             "По-добре ли е да попълвате бележки във всяка клетка или само в някои?",
@@ -16297,7 +16297,7 @@
         "h1": "Техники за решаване на судоку",
         "intro": [
           "Всяко судоку може да се реши с малък набор логически техники. Този списък съдържа техниките, които използват решателят на Bare Sudoku и неговите подсказки, в реда, в който решателят ги опитва: първо единаците, после изключванията в рамките на една група, после фигурите, които обхващат няколко реда, колони и карета, включително фигури, които разчитат на това, че задачата има точно едно решение. Всяка техника има своя страница с определение, как да я забележите, реален пример от генерирана задача и честите грешки.",
-          "Нивото на задачата се определя от най-трудната техника, която тя изисква. Задачите на ниво Лесно и Средно изискват само единаци, на ниво Трудно изискват заключени кандидати или двойки и тройки, а на ниво Експерт поне една напреднала фигура, например риба, крило, Skyscraper или Unique Rectangle. Каквото и да е нивото, единаците вършат повечето работа; напредналата техника премахва един или два кандидата и единаците продължават оттам."
+          "Нивото на задачата се определя от най-трудната техника, която тя изисква. Задачите на ниво Лесно и Средно изискват само единаци, на ниво Трудно изискват заключени кандидати или двойки и тройки, на ниво Експерт поне една напреднала фигура, например риба, крило, Skyscraper или Unique Rectangle, а на ниво Майстор вериги или други техники отвъд този водач. Каквото и да е нивото, единаците вършат повечето работа; напредналата техника премахва един или два кандидата и единаците продължават оттам."
         ],
         "faq": [
           [
@@ -16306,11 +16306,11 @@
           ],
           [
             "Нужни ли са всички тези техники, за да се решава судоку?",
-            "За задачи на ниво Лесно и Средно единаците стигат. На ниво Трудно се добавят заключени кандидати и подмножества. На ниво Експерт е нужна поне една напреднала фигура, например риба, крило, Skyscraper или Unique Rectangle, но обикновено само веднъж или два пъти на задача."
+            "За задачи на ниво Лесно и Средно единаците стигат. На ниво Трудно се добавят заключени кандидати и подмножества. На ниво Експерт е нужна поне една напреднала фигура, например риба, крило, Skyscraper или Unique Rectangle, но обикновено само веднъж или два пъти на задача. На ниво Майстор е нужна още по-сложна техника - вериги или други, които този водач не покрива."
           ],
           [
             "Има ли по-трудни техники от тези в това ръководство?",
-            "Да. Играчите са описали още много техники за най-трудните задачи и продължават да се появяват нови. Bare Sudoku създава само задачи, които техниките от това ръководство могат да довършат, така че всяка задача в играта може да се реши с описаното тук."
+            "Да. Играчите описаха много повече техники за най-трудните задачи, и постоянно се появяват нови. Bare Sudoku използва няколко от тях на ниво Майстор: вериги, почти заключени набори и принудни мрежи; подсказката показва коя използва. Страниците тук покриват всичко до Експерт, така че всяка задача до това ниво може да бъде решена с описаното тук."
           ],
           [
             "Какво е кандидат?",
@@ -16608,7 +16608,7 @@
             ],
             [
               "На кое ниво има X-Wing?",
-              "Експерт. Bare Sudoku дава на задачата ниво Експерт, когато тя изисква X-Wing; другите напреднали фигури, например Y-Wing и Skyscraper, също са от ниво Експерт."
+              "Експерт или Майстор. Bare Sudoku оценява задача като Експерт, когато нуждае X-Wing или друга напреднала фигура, например Y-Wing или Skyscraper, и като Майстор, когато също нуждае вериги или други техники отвъд този водач."
             ]
           ]
         },
@@ -16665,7 +16665,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish е X-Wing с три реда и три колони. Ако цифрата има най-много три клетки кандидати във всеки от три реда и всички тези клетки попадат в едни и същи три колони, трите реда изчерпват цифрата в тези колони и тя може да се премахне от всяка друга клетка на трите колони. Редовете и колоните могат да се разменят. Bare Sudoku търси Swordfish след Y-Wing, в задачите на ниво Експерт.",
           "when": [
-            "Когато X-Wing и Y-Wing не намират нищо. Swordfish е по-рядък от X-Wing и изисква цифра, чиито кандидати са пръснати нарядко по три линии. Нужни са пълни и точни бележки за тази цифра."
+            "Когато X-Wing не намери нищо. Swordfish са по-редки от X-Wings и нуждаят цифра, чиито кандидати са разпръснати тънко над три линии. Нуждаят пълни и точни бележки за тази цифра."
           ],
           "spot": [
             "Изберете цифра и търсете редове с две или три клетки кандидати за нея. Ако три такива реда заедно обхващат само три колони, проверете тези колони за още кандидати на цифрата. Не е нужно всеки ред да има кандидат във всяка колона: Swordfish може да има шест, седем, осем или девет клетки. В играта оцветете цифрата с нейния клавиш и търсете три реда, чиито кандидати се подреждат в три колони."
@@ -16746,7 +16746,7 @@
             ],
             [
               "Има ли WXYZ-Wing?",
-              "Да, с опорна клетка с четири кандидата. Всяка задача в Bare Sudoku може да се реши с техниките, описани в това ръководство."
+              "Да: четири клетки с четири кандидата в два пресичащи се блока, където цифра е свободна да стои в повече от един от тях. Bare Sudoku го намира и оценява като Експерт, както другите крила."
             ]
           ]
         },
@@ -16757,7 +16757,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (небостъргач) е фигура от една цифра, изградена върху два реда, в които цифрата има точно две клетки кандидати. По една клетка от всеки ред е в една и съща колона; тези две клетки са основата и не могат и двете да съдържат цифрата. Другите две клетки, върховете, са в различни колони. Тъй като поне едната клетка от основата не получава цифрата, поне единият връх трябва да я получи, така че цифрата може да се премахне от всяка клетка, която вижда и двата върха. Същото важи с колони вместо редове. Skyscraper, както и [2-String Kite](two-string-kite), е разновидност на Turbot Fish и в Bare Sudoku е техника от ниво Експерт.",
           "when": [
-            "Когато X-Wing, Y-Wing, Swordfish и XYZ-Wing не намират нищо. Skyscraper е една от най-честите фигури на ниво Експерт в Bare Sudoku и често се появява там, където [X-Wing](x-wing) почти се получава: два реда с по два кандидата за цифрата, които споделят само една колона вместо две. Нужни са пълни бележки за цифрата, която изследвате."
+            "Когато X-Wing и Swordfish не намерат нищо. Skyscraper е една от най-честите напреднали фигури на ниво Експерт в Bare Sudoku и често се появява където [X-Wing](x-wing) почти работи: два реда с два кандидата на цифра, споделящи само един стълб вместо два. Нуждае пълни бележки за цифрата, която разглеждате."
           ],
           "spot": [
             "Изберете цифра и изброете редовете, в които тя има точно две клетки кандидати. Сравнявайте тези редове по двойки: ако точно по една клетка кандидат от всеки ред е в една и съща колона, тези две клетки са основата, а другите две са върховете. После търсете клетки, които виждат и двата върха и още съдържат цифрата; обикновено те са в карето на единия връх и в колоната на другия. Повторете същото с колони вместо редове. В играта докоснете клавиша на цифрата, за да оцветите кандидатите ѝ, и търсете два реда, които показват точно по два."
@@ -16930,7 +16930,7 @@
             ],
             [
               "Кой тип Unique Rectangle използва Bare Sudoku?",
-              "Тип 1: три ъгъла с точно едни и същи два кандидата и четвърти ъгъл с тези два и още други. Другите типове, обикновено номерирани от 2 до 6, използват допълнителни кандидати в два или повече ъгъла или силни връзки между тях; тази страница разглежда тип 1."
+              "Тип 1, описан на тази страница: три ъгъла с точно същите два кандидата и четвърти ъгъл с тези два плюс други. Bare Sudoku също намира другите типове, обикновено номерирани от 2 до 6, както и Скритият правоъгълник; тези типове използват допълнителни кандидати в два или повече ъгъла или силни връзки между тях."
             ],
             [
               "Какво е смъртоносна фигура (deadly pattern)?",
@@ -17044,8 +17044,8 @@
             "Ne. To je celo pravilo: svaki od devet redova, devet kolona i devet blokova sadrži svaku cifru od 1 do 9 tačno jednom. Ako dve iste cifre dele jedinicu, bar jedna od njih je pogrešna."
           ],
           [
-            "Koja je razlika između nivoa Lako, Srednje, Teško i Ekspert?",
-            "Nivo određuju tehnike koje zagonetka zahteva. Lako i Srednje se rešavaju samo singlovima, a Lako počinje sa najmanje 38 zadatih cifara. Teško zahteva zaključane kandidate ili parove i trojke. Ekspert zahteva bar jedan napredni obrazac, kao što su X-Wing, Y-Wing, Skyscraper ili Unique Rectangle."
+            "Koja je razlika između Jednostavne, Srednje, Teške, Stručnjaka i Glavne?",
+            "Nivo određuju tehnike koje zagonetka zahteva. Jednostavne i srednje se rešavaju samo s pojedinima, a Jednostavne počinju s najmanje 38 datih cifara. Teške trebaju zakljucane kandidate ili parove i trojke. Stručnjačke trebaju barem jedan napredni obrazac, kao što su X-Wing, Y-Wing, Skyscraper ili Unique Rectangle. Glavne trebaju lance, skoro zakljucane skupove ili prisilne mreže. Broj pored imena nivoa je ocena težine zagonetke, određena najtežim korakom koji zahteva."
           ],
           [
             "Da li je bolje popuniti beleške za svako polje ili samo za neka?",
@@ -17067,7 +17067,7 @@
         "h1": "Tehnike rešavanja sudokua",
         "intro": [
           "Svaki sudoku se može rešiti malim skupom logičkih tehnika. Ovaj pregled navodi tehnike koje koriste rešavač Bare Sudokua i njegovi saveti, redom kojim ih rešavač isprobava: prvo singlovi, zatim uklanjanja unutar jedne jedinice, pa obrasci koji se protežu kroz više redova, kolona i blokova, uključujući obrasce koji se oslanjaju na to da zagonetka ima tačno jedno rešenje. Svaka tehnika ima svoju stranicu sa definicijom, uputstvom kako da je prepoznaš, pravim primerom iz generisane zagonetke i čestim greškama.",
-          "Nivo zagonetke određuje najteža tehnika koju ona zahteva. Zagonetkama nivoa Lako i Srednje dovoljni su singlovi, zagonetke nivoa Teško zahtevaju zaključane kandidate ili parove i trojke, a zagonetke nivoa Ekspert bar jedan napredni obrazac, kao što su riba, krilo, Skyscraper ili Unique Rectangle. Bez obzira na nivo, singlovi obavljaju najveći deo posla; napredna tehnika ukloni kandidata ili dva, a singlovi nastavljaju odatle."
+          "Nivo zagonetke određuje se najtežom tehnikom koju zahteva. Jednostavne i srednje zagonetke trebaju samo pojedine, teške zagonetke trebaju zakljucane kandidate ili parove i trojke, stručnjačke zagonetke trebaju barem jedan napredni obrazac, kao što su ribe, krila, Skyscraper ili Unique Rectangle, a glavne zagonetke trebaju lance ili druge tehnike izvan ovog vodiča. Bez obzira na nivo, pojedini obave većinu posla; napredna tehnika uklanja jednog ili dva kandidata i pojedini nastavljaju odatle."
         ],
         "faq": [
           [
@@ -17076,11 +17076,11 @@
           ],
           [
             "Da li su mi potrebne sve ove tehnike da rešim sudoku?",
-            "Za zagonetke nivoa Lako i Srednje dovoljni su singlovi. Zagonetke nivoa Teško dodaju zaključane kandidate i podskupove. Zagonetke nivoa Ekspert zahtevaju bar jedan napredni obrazac, kao što su riba, krilo, Skyscraper ili Unique Rectangle, ali obično samo jednom ili dvaput po zagonetki."
+            "Za jednostavne i srednje zagonetke dovoljni su pojedini. Teške zagonetke dodaju zakljucane kandidate i podskupove. Stručnjačke zagonetke trebaju barem jedan napredni obrazac, kao što su ribe, krila, Skyscraper ili Unique Rectangle, ali obično samo jednom ili dva puta po zagonetki. Glavne zagonetke idu dalje i trebaju lance ili druge tehnike koje ovaj vodič ne pokriva."
           ],
           [
             "Postoje li teže tehnike od onih u ovom vodiču?",
-            "Da. Igrači su opisali još mnogo tehnika za najteže zagonetke, a nove se i dalje pojavljuju. Bare Sudoku pravi samo zagonetke koje tehnike iz ovog vodiča mogu da završe, pa se svaka zagonetka u igri može rešiti onim što je ovde opisano."
+            "Da. Igrači su opisali mnogo više tehnika za najtže zagonetke, a nove se pojavljuju neprekidno. Bare Sudoku koristi nekoliko od njih na Glavnom nivou: lance, skoro zakljucane skupove i prisilne mreže; savet pokazuje koju je koristio. Stranice ovde pokrivaju sve do Stručnjaka, tako da se svaka zagonetka do tog nivoa može rešiti s onim što je opisano ovde."
           ],
           [
             "Šta je kandidat?",
@@ -17378,7 +17378,7 @@
             ],
             [
               "Na kom nivou se javlja X-Wing?",
-              "Ekspert. Bare Sudoku ocenjuje zagonetku kao Ekspert kada joj je potreban X-Wing; i drugi napredni obrasci, kao što su Y-Wing i Skyscraper, ocenjuju se kao Ekspert."
+              "Stručnjak ili Glavan. Bare Sudoku rangira zagonetku kao Stručnjaka kada treba X-Wing ili drugi napredni obrazac, kao što su Y-Wing ili Skyscraper, i kao Glavnu kada treba i lance ili druge tehnike izvan ovog vodiča."
             ]
           ]
         },
@@ -17435,7 +17435,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish je X-Wing sa tri reda i tri kolone. Ako cifra ima najviše tri polja-kandidata u svakom od tri reda, i sva ta polja padaju u iste tri kolone, tri reda troše tu cifru u tim kolonama, pa se cifra može ukloniti iz svakog drugog polja te tri kolone. Redovi i kolone mogu da zamene uloge. Bare Sudoku traži Swordfish posle Y-Winga, u zagonetkama nivoa Ekspert.",
           "when": [
-            "Kada X-Wing i Y-Wing ne nađu ništa. Swordfish je ređi od X-Winga i zahteva cifru čiji su kandidati retko raspoređeni po tri linije. Potrebne su potpune i tačne beleške za tu cifru."
+            "Kada X-Wing ništa ne pronađe. Ribice su rjeđe od X-Wingsa i trebaju cifru čiji kandidati su retko razpršeni preko tri linije. Trebaju potpune i tačne beleške za tu cifru."
           ],
           "spot": [
             "Izaberi cifru i traži redove sa dva ili tri polja-kandidata za nju. Ako tri takva reda ukupno pokrivaju samo tri kolone, proveri te kolone ima li u njima drugih kandidata te cifre. Ne mora svaki red da ima kandidata u svakoj koloni: Swordfish može da ima šest, sedam, osam ili devet polja. U igri istakni cifru njenim tasterom i traži tri reda čiji se kandidati poklapaju u tri kolone."
@@ -17516,7 +17516,7 @@
             ],
             [
               "Postoji li WXYZ-Wing?",
-              "Da, sa stožerom od četiri kandidata. Svaka zagonetka u Bare Sudokuu može se završiti tehnikama opisanim u ovom vodiču."
+              "Da: četiri ćelije s četiri kandidata u dva sekaća bloka, gde je cifra slobodna stajati u više od jednog od njih. Bare Sudoku ga pronalazi i rangira kao Stručnjaka, kao i druga krila."
             ]
           ]
         },
@@ -17527,7 +17527,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (oblakoder) je obrazac jedne cifre zasnovan na dva reda u kojima cifra ima tačno dva polja-kandidata. Po jedno polje iz svakog reda leži u istoj koloni; ta dva polja čine osnovu i ne mogu oba da sadrže cifru. Druga dva polja, vrhovi, leže u različitim kolonama. Pošto bar jedno polje osnove nije ta cifra, bar jedan vrh mora biti ona, pa se cifra može ukloniti iz svakog polja koje vidi oba vrha. Isto funkcioniše i sa kolonama umesto redova. Skyscraper je oblik Turbot Fisha, kao i [2-String Kite](two-string-kite), i to je tehnika nivoa Ekspert u Bare Sudokuu.",
           "when": [
-            "Kada X-Wing, Y-Wing, Swordfish i XYZ-Wing ne nađu ništa. Skyscraper je jedan od najčešćih obrazaca nivoa Ekspert u Bare Sudokuu i često se javlja tamo gde [X-Wing](x-wing) skoro uspeva: dva reda sa po dva kandidata za cifru dele samo jednu kolonu umesto dve. Potrebne su potpune beleške za cifru koju ispituješ."
+            "Kada X-Wing i Ribica ništa ne pronađu. Neboder je jedan od najčešćih naprednih obrazaca Stručnjaka u Bare Sudokuu i često se pojavljuje gde [X-Wing](x-wing) gotovo funkcioniše: dva reda s dva kandidata za cifru, dele samo jednu kolonu umesto dva. Trebaju potpune beleške za cifru koju razmatrate."
           ],
           "spot": [
             "Izaberi cifru i napravi spisak redova u kojima ona ima tačno dva polja-kandidata. Uporedi te redove dva po dva: ako tačno po jedno polje-kandidat iz svakog reda stoji u istoj koloni, ta dva polja su osnova, a druga dva su vrhovi. Zatim traži polja koja vide oba vrha i još sadrže cifru; obično su u bloku jednog vrha i koloni drugog. Ponovi isto sa kolonama umesto redova. U igri dodirni taster cifre da istakneš njene kandidate i traži dva reda u kojima su istaknuta tačno po dva."
@@ -17700,7 +17700,7 @@
             ],
             [
               "Koji tip obrasca Unique Rectangle koristi Bare Sudoku?",
-              "Tip 1: tri ugla sa tačno ista dva kandidata i četvrti ugao sa ta dva i još nekim. Ostali tipovi, obično numerisani od 2 do 6, koriste dodatne kandidate u dva ili više uglova ili jake veze među njima; ova stranica obrađuje Tip 1."
+              "Tip 1, opisan na ovoj stranici: tri uglа s tačno istih dva kandidata i četvrti ugao s ta dva plus drugima. Bare Sudoku takođe pronalazi druge tipove, obično numerisane od 2 do 6, kao i Skriveni pravougaonik; ti tipovi koriste dodatne kandidate u dva ili više uglova ili jaka veza između njih."
             ],
             [
               "Šta je smrtonosni obrazac (deadly pattern)?",
@@ -17814,8 +17814,8 @@
             "Ne. To je cijelo pravilo: svaki od devet redaka, devet stupaca i devet blokova sadrži svaku znamenku od 1 do 9 točno jednom. Ako dvije iste znamenke dijele jedinicu, barem je jedna od njih pogrešna."
           ],
           [
-            "Koja je razlika između razina Lako, Srednje, Teško i Ekspert?",
-            "Razinu određuju tehnike koje zagonetka zahtijeva. Lako i Srednje rješavaju se samo singlovima, a Lako počinje s najmanje 38 zadanih znamenaka. Teško zahtijeva zaključane kandidate ili parove i trojke. Ekspert zahtijeva barem jedan napredni uzorak, kao što su X-Wing, Y-Wing, Skyscraper ili Unique Rectangle."
+            "Koja je razlika između Lagane, Srednje, Teške, Stručnjaka i Glavne?",
+            "Razinu određuju tehnike koje zagonetka zahtijeva. Lagane i srednje se rješavaju samo s pojedinima, a Lagane počinju s najmanje 38 danih znamenki. Teške trebaju zaključane kandidate ili parove i trojke. Stručnjačke trebaju barem jedan napredni uzorak, kao što su X-Wing, Y-Wing, Skyscraper ili Unique Rectangle. Glavne trebaju lance, gotovo zaključane skupove ili prisilne mreže. Broj pored imena razine je ocjena težine zagonetke, određena najtežim korakom koji zahtijeva."
           ],
           [
             "Je li bolje popuniti bilješke za svako polje ili samo za neka?",
@@ -17837,7 +17837,7 @@
         "h1": "Tehnike rješavanja sudokua",
         "intro": [
           "Svaki se sudoku može riješiti malim skupom logičkih tehnika. Ovaj pregled navodi tehnike koje koriste rješavač Bare Sudokua i njegovi savjeti, redom kojim ih rješavač isprobava: najprije singlovi, zatim uklanjanja unutar jedne jedinice, pa uzorci koji se protežu kroz više redaka, stupaca i blokova, uključujući uzorke koji se oslanjaju na to da zagonetka ima točno jedno rješenje. Svaka tehnika ima svoju stranicu s definicijom, uputom kako je prepoznati, stvarnim primjerom iz generirane zagonetke i čestim pogreškama.",
-          "Razinu zagonetke određuje najteža tehnika koju ona zahtijeva. Zagonetkama razine Lako i Srednje dovoljni su singlovi, zagonetke razine Teško zahtijevaju zaključane kandidate ili parove i trojke, a zagonetke razine Ekspert barem jedan napredni uzorak, kao što su riba, krilo, Skyscraper ili Unique Rectangle. Bez obzira na razinu, singlovi obavljaju najveći dio posla; napredna tehnika ukloni kandidata ili dva, a singlovi nastavljaju odatle."
+          "Razina zagonetke određuje se najtežom tehnikom koju zahtijeva. Lagane i srednje zagonetke trebaju samo pojedine, teške zagonetke trebaju zaključane kandidate ili parove i trojke, stručnjačke zagonetke trebaju barem jedan napredni uzorak, kao što su ribe, krila, Skyscraper ili Unique Rectangle, a glavne zagonetke trebaju lance ili druge tehnike izvan ovog vodiča. Bez obzira na razinu, pojedini obave većinu posla; napredna tehnika uklanja jednoga ili dvojica kandidata i pojedini nastavljaju odatle."
         ],
         "faq": [
           [
@@ -17846,11 +17846,11 @@
           ],
           [
             "Trebam li sve ove tehnike da riješim sudoku?",
-            "Za zagonetke razine Lako i Srednje dovoljni su singlovi. Zagonetke razine Teško dodaju zaključane kandidate i podskupove. Zagonetke razine Ekspert zahtijevaju barem jedan napredni uzorak, kao što su riba, krilo, Skyscraper ili Unique Rectangle, ali obično samo jednom ili dvaput po zagonetki."
+            "Za lagane i srednje zagonetke dovoljni su pojedini. Teške zagonetke dodaju zaključane kandidate i podskupove. Stručnjačke zagonetke trebaju barem jedan napredni uzorak, kao što su ribe, krila, Skyscraper ili Unique Rectangle, ali obično samo jednom ili dvaput po zagonetki. Glavne zagonetke idu dalje i trebaju lance ili druge tehnike koje ovaj vodič ne pokriva."
           ],
           [
             "Postoje li teže tehnike od onih u ovom vodiču?",
-            "Da. Igrači su opisali još mnogo tehnika za najteže zagonetke, a nove se i dalje pojavljuju. Bare Sudoku stvara samo zagonetke koje tehnike iz ovog vodiča mogu završiti, pa se svaka zagonetka u igri može riješiti onim što je ovdje opisano."
+            "Da. Igrači su opisali mnogo više tehnika za najtže zagonetke, a nove se pojavljuju neprekidno. Bare Sudoku koristi nekoliko od njih na Glavnoj razini: lance, gotovo zaključane skupove i prisilne mreže; savet pokazuje koju je koristio. Stranice ovdje pokrivaju sve do Stručnjaka, tako da se svaka zagonetka do te razine može riješiti s onim što je opisano ovdje."
           ],
           [
             "Što je kandidat?",
@@ -18148,7 +18148,7 @@
             ],
             [
               "Na kojoj se razini javlja X-Wing?",
-              "Ekspert. Bare Sudoku ocjenjuje zagonetku kao Ekspert kada joj je potreban X-Wing; i drugi napredni uzorci, kao što su Y-Wing i Skyscraper, ocjenjuju se kao Ekspert."
+              "Stručnjak ili Glavan. Bare Sudoku rangira zagonetku kao Stručnjaka kada trebaj X-Wing ili drugi napredni uzorak, kao što su Y-Wing ili Skyscraper, i kao Glavnu kada trebaj i lance ili druge tehnike izvan ovog vodiča."
             ]
           ]
         },
@@ -18205,7 +18205,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish je X-Wing s tri retka i tri stupca. Ako znamenka ima najviše tri polja-kandidata u svakom od tri retka, i sva ta polja padaju u ista tri stupca, tri retka troše tu znamenku u tim stupcima, pa se znamenka može ukloniti iz svakog drugog polja ta tri stupca. Retci i stupci mogu zamijeniti uloge. Bare Sudoku traži Swordfish nakon Y-Winga, u zagonetkama razine Ekspert.",
           "when": [
-            "Kada X-Wing i Y-Wing ne nađu ništa. Swordfish je rjeđi od X-Winga i zahtijeva znamenku čiji su kandidati rijetko raspoređeni po tri linije. Potrebne su potpune i točne bilješke za tu znamenku."
+            "Kada X-Wing ništa ne naiđe. Ribice su rjeđe od X-Wingsa i trebaju znamenku čiji kandidati su rijetko razpršeni preko tri linije. Trebaju potpune i točne bilješke za tu znamenku."
           ],
           "spot": [
             "Odaberi znamenku i traži retke s dva ili tri polja-kandidata za nju. Ako tri takva retka ukupno pokrivaju samo tri stupca, provjeri ima li u tim stupcima drugih kandidata te znamenke. Ne mora svaki redak imati kandidata u svakom stupcu: Swordfish može imati šest, sedam, osam ili devet polja. U igri istakni znamenku njezinom tipkom i traži tri retka čiji se kandidati poklapaju u tri stupca."
@@ -18286,7 +18286,7 @@
             ],
             [
               "Postoji li WXYZ-Wing?",
-              "Da, sa stožerom od četiri kandidata. Svaka zagonetka u Bare Sudokuu može se završiti tehnikama opisanima u ovom vodiču."
+              "Da: četiri ćelije s četiri kandidata u dva presijecajuća bloka, gdje je znamenka slobodna stajati u više od jednog od njih. Bare Sudoku ga pronalazi i rangira kao Stručnjaka, kao i druga krila."
             ]
           ]
         },
@@ -18297,7 +18297,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (neboder) je uzorak jedne znamenke zasnovan na dva retka u kojima znamenka ima točno dva polja-kandidata. Po jedno polje iz svakog retka leži u istom stupcu; ta dva polja čine osnovu i ne mogu oba sadržavati znamenku. Druga dva polja, vrhovi, leže u različitim stupcima. Budući da barem jedno polje osnove nije ta znamenka, barem jedan vrh mora biti ona, pa se znamenka može ukloniti iz svakog polja koje vidi oba vrha. Isto funkcionira i sa stupcima umjesto redaka. Skyscraper je oblik Turbot Fisha, kao i [2-String Kite](two-string-kite), i to je tehnika razine Ekspert u Bare Sudokuu.",
           "when": [
-            "Kada X-Wing, Y-Wing, Swordfish i XYZ-Wing ne pronađu ništa. Skyscraper je jedan od najčešćih uzoraka razine Ekspert u Bare Sudokuu i često se javlja ondje gdje [X-Wing](x-wing) gotovo uspijeva: dva retka s po dva kandidata za znamenku dijele samo jedan stupac umjesto dva. Potrebne su potpune bilješke za znamenku koju ispituješ."
+            "Kada X-Wing i Ribica ništa ne naiđu. Neboder je jedan od najčešćih naprednih uzoraka Stručnjaka u Bare Sudokuu i često se pojavljuje gdje [X-Wing](x-wing) gotovo funkcionira: dva reda s dva kandidata za znamenku, dijeleći samo jedan stupac umjesto dva. Trebaju potpune bilješke za znamenku koju razmatrate."
           ],
           "spot": [
             "Odaberi znamenku i napravi popis redaka u kojima ona ima točno dva polja-kandidata. Usporedi te retke dva po dva: ako točno po jedno polje-kandidat iz svakog retka stoji u istom stupcu, ta dva polja su osnova, a druga dva su vrhovi. Zatim traži polja koja vide oba vrha i još sadrže znamenku; obično su u bloku jednog vrha i stupcu drugog. Ponovi isto sa stupcima umjesto redaka. U igri dodirni tipku znamenke da istakneš njezine kandidate i traži dva retka u kojima su istaknuta točno po dva."
@@ -18470,7 +18470,7 @@
             ],
             [
               "Koji tip uzorka Unique Rectangle koristi Bare Sudoku?",
-              "Tip 1: tri kuta s točno ista dva kandidata i četvrti kut s ta dva i još nekim. Ostali tipovi, obično numerirani od 2 do 6, koriste dodatne kandidate u dva ili više kutova ili jake veze među njima; ova stranica obrađuje Tip 1."
+              "Tip 1, opisan na ovoj stranici: tri kuta s točno istih dva kandidata i četvrti kut s ta dva plus drugima. Bare Sudoku također pronalazi druge tipove, obično numerirane od 2 do 6, kao i Skriveni pravokutnik; ti tipovi koriste dodatne kandidate u dva ili više kutova ili jaka veza između njih."
             ],
             [
               "Što je smrtonosni uzorak (deadly pattern)?",
@@ -19240,7 +19240,7 @@
             ],
             [
               "أي نوع من Unique Rectangle يستخدمه Bare Sudoku؟",
-              "النوع 1: ثلاث زوايا لها المرشحان نفسهما بالضبط، وزاوية رابعة لها هذان المرشحان وغيرهما. أما الأنواع الأخرى، المرقمة عادة من 2 إلى 6، فتستخدم مرشحين إضافيين في زاويتين أو أكثر أو روابط قوية بينها، وهذه الصفحة تتناول النوع 1."
+              "لا. لكل لغز حل واحد بالضبط ويمكن حله بالمنطق وحده. إذا توقفت، يُظهر التلميح الخلية التالية ويسمّي التقنية التي احتاج إليها، مثل مفرد، أو مرشحين محصورين، أو زوج أو ثلاثي، أو X-Wing أو Y-Wing أو Skyscraper أو Unique Rectangle. المس التلميح مرة أخرى لوضع الرقم."
             ],
             [
               "ما النمط المميت (deadly pattern)؟",
@@ -26170,7 +26170,7 @@
             ],
             [
               "Bare SudokuはどのタイプのUnique Rectangleを使う？",
-              "タイプ1です。3つの隅がまったく同じ2つの候補を持ち、4つ目の隅がその2つに加えてほかの候補を持つ形です。ほかのタイプはふつう2から6の番号で呼ばれ、2つ以上の隅にある余分な候補や、隅どうしの強リンクを使います。このページではタイプ1を扱います。"
+              "ありません。どの問題も解はただ一つで、論理だけで解けます。行き詰まったらヒントが次のマスを示し、必要だった手法の名前を教えます。たとえばシングル、ロックされた候補、ペアやトリプル、X-Wing、Y-Wing、Skyscraper、Unique Rectangleなどです。もう一度ヒントをタップすると数字が入ります。"
             ],
             [
               "デッドリーパターンとは？",
@@ -26940,7 +26940,7 @@
             ],
             [
               "Bare Sudoku는 어떤 유형의 Unique Rectangle을 쓰나요?",
-              "유형 1입니다. 후보가 정확히 같은 두 숫자인 세 꼭짓점과, 그 두 숫자에 다른 후보까지 가진 네 번째 꼭짓점으로 이루어집니다. 보통 2에서 6까지 번호가 붙는 다른 유형은 두 개 이상의 꼭짓점에 있는 추가 후보나 꼭짓점 사이의 강한 링크를 이용합니다. 이 페이지는 유형 1을 다룹니다."
+              "없습니다. 모든 퍼즐은 정답이 하나뿐이며 논리만으로 풀 수 있습니다. 막히면 힌트가 다음 칸을 보여 주고 필요했던 기법의 이름을 알려 줍니다. 예를 들면 싱글, 잠긴 후보, 페어나 트리플, X-Wing, Y-Wing, Skyscraper, Unique Rectangle 등입니다. 힌트를 한 번 더 누르면 숫자가 입력됩니다."
             ],
             [
               "치명적 패턴(deadly pattern)이란 무엇인가요?",
@@ -27710,7 +27710,7 @@
             ],
             [
               "Bare Sudoku 使用哪种类型的 Unique Rectangle？",
-              "类型 1：三个角恰好拥有相同的两个候选数，第四个角除了这两个数还有其他候选数。其他类型通常编号为 2 到 6，利用两个或更多角上的额外候选数，或者角与角之间的强链；本页讲解类型 1。"
+              "不需要。每道题都只有一个解，仅靠逻辑就能解出。卡住时，提示会指出下一个格子并说明所需的技巧，例如唯一数、区块摒除、数对或三链数、X-Wing、Y-Wing、Skyscraper 或 Unique Rectangle。再点一次提示即可填入数字。"
             ],
             [
               "什么是致命结构（deadly pattern）？",
@@ -28480,7 +28480,7 @@
             ],
             [
               "Bare Sudoku 使用哪種類型的 Unique Rectangle？",
-              "類型 1：三個角恰好擁有相同的兩個候選數，第四個角除了這兩個數還有其他候選數。其他類型通常編號為 2 到 6，利用兩個或更多角上的額外候選數，或者角與角之間的強鏈；本頁講解類型 1。"
+              "不需要。每道題都只有一個解，只靠邏輯就能解出。卡住時，提示會指出下一個格子並說明所需的技巧，例如唯一數、區塊摒除、數對或三鏈數、X-Wing、Y-Wing、Skyscraper 或 Unique Rectangle。再點一次提示即可填入數字。"
             ],
             [
               "什麼是致命結構（deadly pattern）？",
@@ -31674,8 +31674,8 @@
             "No. Aquesta és tota la regla: cadascuna de les nou files, nou columnes i nou caixes conté cada dígit de l'1 al 9 exactament un cop. Si dos dígits iguals comparteixen una unitat, com a mínim un és incorrecte."
           ],
           [
-            "Quina diferència hi ha entre Fàcil, Mitjà, Difícil i Expert?",
-            "El nivell el determinen les tècniques que necessita el trencaclosques. Fàcil i Mitjà es resolen només amb singles, i Fàcil comença amb almenys 38 dígits donats. Difícil necessita candidats bloquejats o parelles i trios. Expert necessita com a mínim un patró avançat, com ara un X-Wing, un Y-Wing, un Skyscraper o un Unique Rectangle."
+            "Quina és la diferència entre Fàcil, Mitjà, Difícil, Expert i Màster?",
+            "El nivell es determina per les tècniques que necessita el trencaclosques. El Fàcil i el Mitjà es resolen només amb individuals, i el Fàcil comença amb almenys 38 dígits donats. El Difícil necessita candidats bloquejats o parells i trios. L'Expert necessita almenys un patró avançat, com X-Wing, Y-Wing, Skyscraper o Unique Rectangle. El Màster necessita cadenes, conjunts gairebé bloquejats o xarxes forçades. El número al costat del nom del nivell és la qualificació de dificultat del trencaclosques, determinada per la passa més difícil que necessita."
           ],
           [
             "És millor omplir les notes de totes les caselles o només d'algunes?",
@@ -31697,7 +31697,7 @@
         "h1": "Tècniques per resoldre sudokus",
         "intro": [
           "Qualsevol sudoku es pot resoldre amb un petit conjunt de tècniques lògiques. Aquest índex recull les tècniques que fan servir el resolutor de Bare Sudoku i les seves pistes, en l'ordre en què el resolutor les prova: primer els singles, després les eliminacions dins d'una unitat i després els patrons que abasten diverses files, columnes i caixes, inclosos patrons que es basen en el fet que el trencaclosques té exactament una solució. Cada tècnica té la seva pàgina amb una definició, com detectar-la, un exemple real d'un trencaclosques generat i els errors habituals.",
-          "El nivell d'un trencaclosques el decideix la tècnica més difícil que necessita. Els trencaclosques Fàcil i Mitjà només necessiten singles, els Difícil necessiten candidats bloquejats o parelles i trios, i els Expert necessiten com a mínim un patró avançat, com ara un peix, una ala, un Skyscraper o un Unique Rectangle. Sigui quin sigui el nivell, els singles fan la major part de la feina; la tècnica avançada elimina un o dos candidats i els singles continuen a partir d'aquí."
+          "El nivell d'un trencaclosques es determinat per la tècnica més difícil que requereix. Els trencaclosques Fàcils i Mitjans només necessiten individuals, els Difícils necessiten candidats bloquejats o parells i trios, els trencaclosques Experts necessiten almenys un patró avançat, com peixos, alesons, Skyscraper o Unique Rectangle, i els trencaclosques Màster necessiten cadenes o altres tècniques més allà d'aquesta guia. Independentment del nivell, els individuals fan la major part del treball; la tècnica avançada elimina un o dos candidats i els individuals continuen des d'allà."
         ],
         "faq": [
           [
@@ -31706,11 +31706,11 @@
           ],
           [
             "Necessito totes aquestes tècniques per resoldre sudokus?",
-            "Per als trencaclosques Fàcil i Mitjà, n'hi ha prou amb els singles. Els Difícil hi afegeixen els candidats bloquejats i les parelles i trios. Els Expert necessiten com a mínim un patró avançat, com ara un peix, una ala, un Skyscraper o un Unique Rectangle, però normalment només una o dues vegades per trencaclosques."
+            "Per als trencaclosques Fàcils i Mitjans n'hi ha prou amb els individuals. Els trencaclosques Difícils afegeixen candidats bloquejats i subconjunts. Els trencaclosques Experts necessiten almenys un patró avançat, com peixos, alesons, Skyscraper o Unique Rectangle, però normalment només una o dues vegades per trencaclosques. Els trencaclosques Màster van més lluny i necessiten cadenes o altres tècniques que aquesta guia no cobreix."
           ],
           [
             "Hi ha tècniques més difícils que les d'aquesta guia?",
-            "Sí. Els jugadors n'han descrit moltes més per als trencaclosques més difícils, i en continuen apareixent de noves. Bare Sudoku només genera trencaclosques que les tècniques d'aquesta guia poden acabar, així que tots els trencaclosques del joc es poden resoldre amb el que es descriu aquí."
+            "Sí. Els jugadors han descrit moltes més tècniques pels trencaclosques més difícils, i noves segueixen apareixent. Bare Sudoku utilitza diversos d'ells al nivell Màster: cadenes, conjunts gairebé bloquejats i xarxes forçades; la pista anomena quin va utilitzar. Les pàgines aquí cobreixen tot fins a Expert, així que cada trencaclosques fins a aquest nivell es pot resoldre amb el que es descriu aquí."
           ],
           [
             "Què és un candidat?",
@@ -32008,7 +32008,7 @@
             ],
             [
               "A quin nivell hi ha X-Wing?",
-              "Expert. Bare Sudoku classifica un trencaclosques com a Expert quan necessita un X-Wing; altres patrons avançats, com l'Y-Wing i el Skyscraper, també es classifiquen com a Expert."
+              "Expert o Màster. Bare Sudoku qualifica un trencaclosques com Expert quan necessita un X-Wing o un altre patró avançat, com Y-Wing o Skyscraper, i com Màster quan també necessita cadenes o altres tècniques més allà d'aquesta guia."
             ]
           ]
         },
@@ -32065,7 +32065,7 @@
           "h1": "Swordfish",
           "summary": "Un Swordfish és un X-Wing amb tres files i tres columnes. Si un dígit té com a màxim tres caselles candidates a cadascuna de tres files, i totes aquestes caselles cauen a les mateixes tres columnes, les tres files esgoten el dígit en aquestes columnes, i el dígit es pot eliminar de totes les altres caselles de les tres columnes. Files i columnes es poden intercanviar. Bare Sudoku busca Swordfish després de l'Y-Wing, en els trencaclosques Expert.",
           "when": [
-            "Quan l'X-Wing i l'Y-Wing no troben res. Els Swordfish són menys habituals que els X-Wing i necessiten un dígit amb els candidats escampats per tres línies. Necessiten notes completes i exactes d'aquest dígit."
+            "Quan X-Wing no trobi res. Els peixos són menys comuns que els X-Wings i necessiten un dígit els candidats del qual es distribueixen finament a tres línies. Necessiten notes completes i precises per a aquest dígit."
           ],
           "spot": [
             "Tria un dígit i busca files amb dues o tres caselles candidates per a ell. Si tres d'aquestes files només cobreixen tres columnes en total, busca en aquestes columnes més candidats del dígit. No cal que cada fila tingui un candidat a cada columna: un Swordfish pot tenir sis, set, vuit o nou caselles. Al joc, ressalta el dígit amb la seva tecla i busca tres files amb els candidats alineats en tres columnes."
@@ -32146,7 +32146,7 @@
             ],
             [
               "Existeix un WXYZ-Wing?",
-              "Sí, amb un pivot de quatre candidats. Tots els trencaclosques de Bare Sudoku es poden acabar amb les tècniques descrites en aquesta guia."
+              "Sí: quatre cel·les amb quatre candidats en dos blocs creuats, on un dígit és lliure de seure en més d'un d'ells. Bare Sudoku ho trova i ho qualifica com Expert, com les altres alesons."
             ]
           ]
         },
@@ -32157,7 +32157,7 @@
           "h1": "Skyscraper",
           "summary": "Un Skyscraper (gratacels) és un patró d'un sol dígit construït sobre dues files en què el dígit té exactament dues caselles candidates. Una casella de cada fila és a la mateixa columna; aquestes dues caselles són la base i no poden contenir totes dues el dígit. Les altres dues caselles, els cims, són en columnes diferents. Com que almenys una casella de la base no és el dígit, almenys un cim ho ha de ser, així que el dígit es pot eliminar de totes les caselles que veuen els dos cims. El mateix funciona amb columnes en lloc de files. El Skyscraper és una forma de Turbot Fish, com el [2-String Kite](two-string-kite), i és una tècnica Expert a Bare Sudoku.",
           "when": [
-            "Quan l'X-Wing, l'Y-Wing, el Swordfish i l'XYZ-Wing no troben res. El Skyscraper és un dels patrons Expert més habituals a Bare Sudoku i sovint apareix on un [X-Wing](x-wing) gairebé funciona: dues files amb dos candidats cadascuna per a un dígit que comparteixen només una columna en lloc de dues. Necessita les notes completes del dígit que examines."
+            "Quan X-Wing i els peixos no trobin res. El gratacel és un dels patrons Expert més comuns a Bare Sudoku i sovint apareix on un [X-Wing](x-wing) gairebé funciona: dos files amb dos candidats cadascuna per a un dígit, compartint només una columna en comptes de dues. Necessita notes completes per al dígit que examineu."
           ],
           "spot": [
             "Tria un dígit i fes la llista de les files on té exactament dues caselles candidates. Compara aquestes files de dues en dues: si exactament una casella candidata de cada fila és a la mateixa columna, aquestes dues caselles són la base i les altres dues són els cims. Després busca caselles que vegin els dos cims i que encara continguin el dígit; normalment són a la caixa d'un cim i a la columna de l'altre. Repeteix-ho amb columnes en lloc de files. Al joc, toca la tecla del dígit per ressaltar-ne els candidats i busca dues files que en mostrin exactament dos cadascuna."
@@ -32330,7 +32330,7 @@
             ],
             [
               "Quin tipus d'Unique Rectangle fa servir Bare Sudoku?",
-              "El Tipus 1: tres vèrtexs amb exactament els mateixos dos candidats i un quart vèrtex amb aquests dos i algun més. Els altres tipus, normalment numerats del 2 al 6, fan servir candidats addicionals en dos o més vèrtexs o enllaços forts entre ells; aquesta pàgina tracta el Tipus 1."
+              "Tipus 1, descrit en aquesta pàgina: tres cantonades amb exactament els mateixos dos candidats i una quarta cantonada amb aquests dos més altres. Bare Sudoku també troba els altres tipus, normalment numerats del 2 al 6, així com el Rectangle Ocult; aquests tipus utilitzen candidats addicionals en dues o més cantonades o vincles forts entre ells."
             ],
             [
               "Què és un patró mortal (deadly pattern)?",
@@ -32444,8 +32444,8 @@
             "Ne. To je celotno pravilo: vsaka od devetih vrstic, devetih stolpcev in devetih kvadratov vsebuje vsako števko od 1 do 9 natanko enkrat. Če si dve enaki števki delita enoto, je vsaj ena od njiju napačna."
           ],
           [
-            "Kakšna je razlika med težavnostmi Lahko, Srednje, Težko in Strokovnjak?",
-            "Težavnost določajo tehnike, ki jih uganka potrebuje. Lahko in Srednje se rešita samo s singli, Lahko pa se začne z vsaj 38 podanimi števkami. Težko zahteva zaklenjene kandidate ali pare in trojice. Strokovnjak zahteva vsaj en napreden vzorec, na primer X-Wing, Y-Wing, Skyscraper ali Unique Rectangle."
+            "Kaj je razlika med Lahko, Srednjo, Težko, Strokovnjak in Glavno?",
+            "Raven je določena s tehnikami, ki jih uganke potrebuje. Lahka in srednja se rešita samo z enojci, lahka pa se začne z najmanj 38 danimi števkami. Težka potrebuje zaklenjene kandidate ali pare in trojke. Strokovnja potrebuje vsaj en napredni vzorec, kot so X-Wing, Y-Wing, Skyscraper ali Unique Rectangle. Glavna potrebuje verige, skoraj zaklenjene množice ali prisiljene mreže. Število poleg imena ravni je ocena težavnosti uganke, ki jo določa najtežji korak, ki ga potrebuje."
           ],
           [
             "Je bolje izpolniti zapiske za vsa polja ali le za nekatera?",
@@ -32467,7 +32467,7 @@
         "h1": "Tehnike reševanja sudokuja",
         "intro": [
           "Vsak sudoku je mogoče rešiti z majhnim naborom logičnih tehnik. To kazalo navaja tehnike, ki jih uporabljata reševalec Bare Sudokuja in njegovi namigi, v vrstnem redu, v katerem jih reševalec preizkuša: najprej singli, nato izločanja znotraj ene enote, nato vzorci, ki se raztezajo čez več vrstic, stolpcev in kvadratov, med njimi tudi vzorci, ki se opirajo na to, da ima uganka natanko eno rešitev. Vsaka tehnika ima svojo stran z definicijo, navodili, kako jo opaziti, resničnim primerom iz ustvarjene uganke in pogostimi napakami.",
-          "Težavnost uganke določa najtežja tehnika, ki jo potrebuje. Uganke Lahko in Srednje potrebujejo le single, uganke Težko zaklenjene kandidate ali pare in trojice, uganke Strokovnjak pa vsaj en napreden vzorec, na primer ribo, krilo, Skyscraper ali Unique Rectangle. Ne glede na težavnost večino dela opravijo singli; napredna tehnika odstrani kandidata ali dva, singli pa nadaljujejo od tam."
+          "Raven uganke je določena s težko tehniko, ki jo potrebuje. Lahke in srednje uganke potrebujejo le enojce, težke uganke potrebujejo zaklenjene kandidate ali pare in trojke, strokovne uganke potrebujejo vsaj en napredni vzorec, kot so ribe, krila, Skyscraper ali Unique Rectangle, glavne uganke pa potrebujejo verige ali druge tehnike zunaj tega vodiča. Ne glede na raven, enojci opravijo večino dela; napredna tehnika odstrani enega ali dva kandidata in enojci se nadaljevajo od tam."
         ],
         "faq": [
           [
@@ -32476,11 +32476,11 @@
           ],
           [
             "Ali za reševanje sudokuja potrebujem vse te tehnike?",
-            "Za uganke Lahko in Srednje zadostujejo singli. Uganke Težko dodajo zaklenjene kandidate in podmnožice. Uganke Strokovnjak potrebujejo vsaj en napreden vzorec, na primer ribo, krilo, Skyscraper ali Unique Rectangle, a običajno le enkrat ali dvakrat na uganko."
+            "Za lahke in srednje uganke zadostajo enojci. Težke uganke dodajo zaklenjene kandidate in podmnožice. Strokovne uganke potrebujejo vsaj en napredni vzorec, kot so ribe, krila, Skyscraper ali Unique Rectangle, vendar običajno samo enkrat ali dvakrat na uganko. Glavne uganke gredo naprej in potrebujejo verige ali druge tehnike, ki jih ta vodnik ne pokriva."
           ],
           [
             "Ali obstajajo težje tehnike od tistih v tem vodniku?",
-            "Da. Igralci so za najtežje uganke opisali še veliko več tehnik in nove se še kar pojavljajo. Bare Sudoku ustvarja le uganke, ki jih tehnike iz tega vodnika lahko dokončajo, zato je vsako uganko v igri mogoče rešiti s tem, kar je opisano tukaj."
+            "Da. Igralci so opisali še številne tehnike za najtežje uganke, nove pa se pojavljajo neprestano. Bare Sudoku jih na Glavni ravni uporablja nekaj: verige, skoraj zaklenjene množice in prisiljene mreže; namig poimenova, katero je uporabil. Strani tukaj pokrivajo vse do Strokovnjaka, tako da je vsako uganko do te ravni mogoče rešiti s tem, kar je opisano tukaj."
           ],
           [
             "Kaj je kandidat?",
@@ -32778,7 +32778,7 @@
             ],
             [
               "Na kateri težavnosti se pojavi X-Wing?",
-              "Strokovnjak. Bare Sudoku uganko, ki potrebuje X-Wing, oceni kot Strokovnjak; tudi drugi napredni vzorci, na primer Y-Wing in Skyscraper, so ocenjeni kot Strokovnjak."
+              "Strokovnjak ali Glavni. Bare Sudoku oceni uganko kot strokovnjaka, kadar potrebuje X-Wing ali drug napredni vzorec, kot sta Y-Wing ali Skyscraper, in kot glavno, kadar potrebuje tudi verige ali druge tehnike zunaj tega vodiča."
             ]
           ]
         },
@@ -32835,7 +32835,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish je X-Wing s tremi vrsticami in tremi stolpci. Če ima števka v vsaki od treh vrstic največ tri kandidatna polja in vsa ta polja ležijo v istih treh stolpcih, tri vrstice porabijo števko v teh stolpcih in števko lahko odstraniš iz vseh drugih polj treh stolpcev. Vrstice in stolpce lahko zamenjaš. Bare Sudoku Swordfish išče po Y-Wingu, v ugankah Strokovnjak.",
           "when": [
-            "Ko X-Wing in Y-Wing ne najdeta ničesar. Swordfish je redkejši od X-Winga in potrebuje števko, katere kandidati so redko razporejeni po treh linijah. Potrebuje popolne in točne zapiske za to števko."
+            "Kadar X-Wing ne najde ničesar. Ribice so redkejše od X-Wingsa in potrebujejo številko, katere kandidati so thinly razpršeni čez tri črte. Potrebujejo polne in natančne opombe za to številko."
           ],
           "spot": [
             "Izberi števko in poišči vrstice z dvema ali tremi kandidatnimi polji zanjo. Če tri take vrstice skupaj pokrivajo le tri stolpce, v teh stolpcih preveri nadaljnje kandidate števke. Ni nujno, da ima vsaka vrstica kandidata v vsakem stolpcu: Swordfish ima lahko šest, sedem, osem ali devet polj. V igri označi števko z njeno tipko in poišči tri vrstice, katerih kandidati se poravnajo v treh stolpcih."
@@ -32916,7 +32916,7 @@
             ],
             [
               "Ali obstaja WXYZ-Wing?",
-              "Da, s stožerjem s štirimi kandidati. Vsako uganko v Bare Sudokuju je mogoče dokončati s tehnikami, opisanimi v tem vodniku."
+              "Da: štiri celice s štirimi kandidati v dveh sekajočih se enotah, kjer je številka svobodna, da stoji v več kot eni od njih. Bare Sudoku jo najde in jo oceni kot strokovnjak, kot tudi druga krila."
             ]
           ]
         },
@@ -32927,7 +32927,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (nebotičnik) je vzorec ene števke, zgrajen na dveh vrsticah, v katerih ima števka natanko dve kandidatni polji. Po eno polje iz vsake vrstice leži v istem stolpcu; ti dve polji sta podnožje in števka ne more biti v obeh. Drugi dve polji, vrhova, ležita v različnih stolpcih. Ker vsaj eno polje podnožja ni ta števka, mora biti vsaj eden od vrhov, zato lahko števko odstraniš iz vseh polj, ki vidijo oba vrhova. Enako deluje s stolpci namesto vrstic. Skyscraper je oblika vzorca Turbot Fish, tako kot [2-String Kite](two-string-kite), in v Bare Sudokuju je to tehnika težavnosti Strokovnjak.",
           "when": [
-            "Ko X-Wing, Y-Wing, Swordfish in XYZ-Wing ne najdejo ničesar. Skyscraper je eden najpogostejših vzorcev težavnosti Strokovnjak v Bare Sudokuju in se pogosto pojavi tam, kjer [X-Wing](x-wing) skoraj deluje: dve vrstici s po dvema kandidatoma za števko si delita le en stolpec namesto dveh. Potrebuje popolne zapiske za števko, ki jo preučuješ."
+            "Kadar X-Wing in Ribica ne najdeta ničesar. Nebotičnik je eden od najpogostejših naprednih vzorcev strokovnjakov v Bare Sudokuu in se pogosto pojavi tam, kjer [X-Wing](x-wing) skoraj deluje: dve vrsti z dvema kandidatoma za številko, ki delita le en stolpec namesto dveh. Potrebuje polne opombe za številko, ki jo pregleduješ."
           ],
           "spot": [
             "Izberi števko in naštej vrstice, v katerih ima natanko dve kandidatni polji. Te vrstice primerjaj po dve in dve: če natanko eno kandidatno polje iz vsake vrstice leži v istem stolpcu, sta ti dve polji podnožje, drugi dve pa vrhova. Nato poišči polja, ki vidijo oba vrhova in še vsebujejo števko; navadno ležijo v kvadratu enega vrha in v stolpcu drugega. Ponovi s stolpci namesto vrstic. V igri tapni tipko števke, da označiš njene kandidate, in poišči dve vrstici, ki kažeta natanko po dva."
@@ -33100,7 +33100,7 @@
             ],
             [
               "Kateri tip Unique Rectangle uporablja Bare Sudoku?",
-              "Tip 1: tri oglišča z natanko istima dvema kandidatoma in četrto oglišče s tema dvema in še drugimi. Drugi tipi, običajno oštevilčeni od 2 do 6, uporabljajo dodatne kandidate v dveh ali več ogliščih ali močne povezave med njimi; ta stran obravnava Tip 1."
+              "Tip 1, opisan na tej strani: tri vogali z natančno istima dvema kandidatoma in četrti vogal s tema dvema plus drugimi. Bare Sudoku prav tako najde druge vrste, običajno oštevilčene od 2 do 6, kot tudi Skrito Pravokotnik; te vrste uporabljajo dodatne kandidate v dveh ali več vogalih ali moči vezi med njimi."
             ],
             [
               "Kaj je smrtonosni vzorec (deadly pattern)?",
@@ -33214,8 +33214,8 @@
             "Ne. Tai ir yra visa taisyklė: kiekvienoje iš devynių eilučių, devynių stulpelių ir devynių kvadratų kiekvienas skaitmuo nuo 1 iki 9 yra lygiai vieną kartą. Jei du vienodi skaitmenys yra toje pačioje srityje, bent vienas jų neteisingas."
           ],
           [
-            "Kuo skiriasi lygiai „Lengva“, „Vidutinė“, „Sunku“ ir „Ekspertas“?",
-            "Lygį lemia technikos, kurių reikia galvosūkiui. „Lengva“ ir „Vidutinė“ išsprendžiami vien vienišais kandidatais, o „Lengva“ prasideda bent su 38 duotais skaitmenimis. „Sunku“ lygiui reikia užrakintų kandidatų arba porų ir trejetų. „Ekspertas“ lygiui reikia bent vieno pažangaus rašto, pavyzdžiui, X-Wing, Y-Wing, Skyscraper ar Unique Rectangle."
+            "Kuo skiriasi Lengva, Vidutina, Sunki, Ekspertinė ir Pagrindinė?",
+            "Lygis nustatomas pagal technikus, kurių reikia galvosūkiui. Lengva ir vidutina sprendžiama tik vienetais, lengva prasideda nuo mažiausiai 38 duotų skaitmenų. Sunki reikalinga užrakinti kandidatus arba poras ir triadas. Ekspertinė reikalinga bent vieną pažangią schemą, pavyzdžiui X-Wing, Y-Wing, Skyscraper ar Unique Rectangle. Pagrindinė reikalinga grandinės, beveik užrakinti rinkinius arba priverstinius tinklus. Skaičius šalia lygio pavadinimo yra galvosūkio sunkumų vertinimas, nustatytas pagal sunkiausią žingsnį, kurio reikia."
           ],
           [
             "Ar geriau užpildyti užrašus visiems langeliams, ar tik kai kuriems?",
@@ -33237,7 +33237,7 @@
         "h1": "Sudoku sprendimo technikos",
         "intro": [
           "Kiekvieną sudoku galima išspręsti nedideliu loginių technikų rinkiniu. Šiame sąraše pateiktos technikos, kurias naudoja Bare Sudoku sprendiklis ir jo užuominos, ta tvarka, kuria sprendiklis jas bando: pirmiausia vieniši kandidatai, tada pašalinimai vienoje srityje, tada raštai, apimantys kelias eilutes, stulpelius ir kvadratus, tarp jų ir raštai, kurie remiasi tuo, kad galvosūkis turi lygiai vieną sprendimą. Kiekviena technika turi savo puslapį su apibrėžimu, patarimais, kaip ją pastebėti, tikru pavyzdžiu iš sugeneruoto galvosūkio ir dažnomis klaidomis.",
-          "Galvosūkio lygį lemia sunkiausia technika, kurios jam reikia. „Lengva“ ir „Vidutinė“ galvosūkiams užtenka vienišų kandidatų, „Sunku“ galvosūkiams reikia užrakintų kandidatų arba porų ir trejetų, o „Ekspertas“ galvosūkiams reikia bent vieno pažangaus rašto, pavyzdžiui, žuvies, sparno, Skyscraper ar Unique Rectangle. Kad ir koks lygis, didžiąją darbo dalį atlieka vieniši kandidatai; pažangi technika pašalina vieną ar du kandidatus, o toliau vėl dirba vieniši kandidatai."
+          "Galvosūkio lygis nustatomas pagal sunkiausią techniką, kurios jam reikia. Lengvus ir vidutinius galvosūkius sprendžiant pakanka vienetų, sunkius reikalinga užrakinti kandidatus arba poras ir triadas, ekspertines reikalinga bent vieną pažangią schemą, pavyzdžiui žuvies, sparnus, Skyscraper ar Unique Rectangle, o pagrindines reikalinga grandinės ar kitos technikos, kurios šiame vadove nėra. Nepaisant lygio, vienetai atlieka didžiausią dalį darbo; pažangi technika pašalina vieną ar du kandidatus, o vienetai tęsiasi iš čia."
         ],
         "faq": [
           [
@@ -33246,11 +33246,11 @@
           ],
           [
             "Ar sudoku spręsti reikia visų šių technikų?",
-            "„Lengva“ ir „Vidutinė“ galvosūkiams užtenka vienišų kandidatų. „Sunku“ galvosūkiai prideda užrakintus kandidatus ir poaibius. „Ekspertas“ galvosūkiams reikia bent vieno pažangaus rašto, pavyzdžiui, žuvies, sparno, Skyscraper ar Unique Rectangle, bet dažniausiai tik kartą ar du per galvosūkį."
+            "Lengviems ir vidutiniams galvosūkiams pakanka vienetų. Sunkius papildo užrakinti kandidatai ir poaibiai. Ekspertiniams reikalinga bent viena pažangi schema, pavyzdžiui žuvys, sparnai, Skyscraper ar Unique Rectangle, bet paprastai tik vieną ar du kartus per galvosūkį. Pagrindiniai eina toliau ir reikalinga grandinės ar kitos technikos, kurias šis vadovas neaprašo."
           ],
           [
             "Ar yra sunkesnių technikų nei šiame vadove?",
-            "Taip. Žaidėjai yra aprašę dar daug technikų sunkiausiems galvosūkiams, ir vis atsiranda naujų. Bare Sudoku kuria tik tokius galvosūkius, kuriuos galima užbaigti šio vadovo technikomis, todėl kiekvieną žaidimo galvosūkį galima išspręsti tuo, kas čia aprašyta."
+            "Taip. Žaidėjai aprašė daug daugiau technikos sunkiausiais galvosūkiams, o naujos nuolat atsiranda. Bare Sudoku pagrindiniam lygiui naudoja kelis: grandinės, beveik užrakinti rinkiniai ir priverstinio tinklo; patarimas pavadina, kurią naudojo. Šios puslapiai apima viską iki Eksperto, todėl kiekvienas galvosūkis iki to lygio gali būti išspręstas tuo, kas čia aprašyta."
           ],
           [
             "Kas yra kandidatas?",
@@ -33548,7 +33548,7 @@
             ],
             [
               "Kuriame lygyje pasitaiko X-Wing?",
-              "„Ekspertas“. Bare Sudoku galvosūkį vertina kaip „Ekspertas“, kai jam reikia X-Wing; kiti pažangūs raštai, pavyzdžiui, Y-Wing ir Skyscraper, taip pat vertinami kaip „Ekspertas“."
+              "Ekspertinė arba pagrindinė. Bare Sudoku vertina galvosūkį kaip ekspertinį, kai reikalinga X-Wing arba kita pažangi schema, pvz. Y-Wing ar Skyscraper, ir kaip pagrindinį, kai taip pat reikalinga grandinės ar kitos technikos, kurios šis vadovas neaprašo."
             ]
           ]
         },
@@ -33605,7 +33605,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish yra X-Wing su trimis eilutėmis ir trimis stulpeliais. Jei skaitmuo kiekvienoje iš trijų eilučių turi ne daugiau kaip tris kandidatų langelius ir visi tie langeliai yra tuose pačiuose trijuose stulpeliuose, trys eilutės sunaudoja skaitmenį tuose stulpeliuose, ir skaitmenį galima pašalinti iš visų kitų trijų stulpelių langelių. Eilutes ir stulpelius galima sukeisti. Bare Sudoku Swordfish tikrina po Y-Wing, „Ekspertas“ galvosūkiuose.",
           "when": [
-            "Kai X-Wing ir Y-Wing nieko neranda. Swordfish retesnis už X-Wing ir reikalauja skaitmens, kurio kandidatai negausiai išsibarstę trijose linijose. Reikia pilnų ir tikslių užrašų tam skaitmeniui."
+            "Kai X-Wing nieko nerado. Žuvys retesnės nei X-Wings ir reikalinga skaitmuo, kurio kandidatai retai išdėstyti per tris linijas. Reikalingos pilnos ir tikslios pastabos dėl to skaitmens."
           ],
           "spot": [
             "Pasirinkite skaitmenį ir ieškokite eilučių, kuriose jis turi du ar tris kandidatų langelius. Jei trys tokios eilutės kartu apima tik tris stulpelius, patikrinkite, ar tuose stulpeliuose yra daugiau to skaitmens kandidatų. Nebūtina, kad kiekviena eilutė turėtų kandidatą kiekviename stulpelyje: Swordfish gali turėti šešis, septynis, aštuonis ar devynis langelius. Žaidime paryškinkite skaitmenį jo klavišu ir ieškokite trijų eilučių, kurių kandidatai išsirikiuoja trijuose stulpeliuose."
@@ -33686,7 +33686,7 @@
             ],
             [
               "Ar yra WXYZ-Wing?",
-              "Taip, su keturių kandidatų ašimi. Kiekvieną Bare Sudoku galvosūkį galima užbaigti šiame vadove aprašytomis technikomis."
+              "Taip: keturios ląstelės su keturiais kandidatais dviejose susikertančiose vienetose, kur skaitmuo gali laisvai stovėti daugiau nei viename iš jų. Bare Sudoku jį randa ir vertina kaip ekspertą, kaip ir kiti sparnai."
             ]
           ]
         },
@@ -33697,7 +33697,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (dangoraižis) yra vieno skaitmens raštas, sudarytas iš dviejų eilučių, kuriose skaitmuo turi lygiai du kandidatų langelius. Vienas kiekvienos eilutės langelis yra tame pačiame stulpelyje; šie du langeliai yra pagrindas, ir skaitmuo negali būti abiejuose. Kiti du langeliai, viršūnės, yra skirtinguose stulpeliuose. Kadangi bent vienas pagrindo langelis nėra tas skaitmuo, bent viena viršūnė juo turi būti, todėl skaitmenį galima pašalinti iš kiekvieno langelio, kuris mato abi viršūnes. Tas pats veikia su stulpeliais vietoj eilučių. Skyscraper yra Turbot Fish atmaina, kaip ir [2-String Kite](two-string-kite), o Bare Sudoku tai „Ekspertas“ lygio technika.",
           "when": [
-            "Kai X-Wing, Y-Wing, Swordfish ir XYZ-Wing nieko neranda. Skyscraper yra vienas dažniausių „Ekspertas“ lygio raštų Bare Sudoku ir dažnai pasirodo ten, kur [X-Wing](x-wing) beveik veikia: dvi eilutės, kuriose skaitmuo turi po du kandidatus, dalijasi tik vienu stulpeliu, o ne dviem. Reikia pilnų užrašų nagrinėjamam skaitmeniui."
+            "Kai X-Wing ir žuvys nieko nerado. Dangus yra vienas iš labiausiai paplitusių ekspertinių schemų Bare Sudoku ir dažnai pasirodo ten, kur [X-Wing](x-wing) beveik veikia: dvi eilutės su dviem kandidatais skaitmeniui, dalijimosi tik viena stulpeliu, o ne dviem. Reikalingos pilnos pastabos dėl jūsų nagrinėto skaitmens."
           ],
           "spot": [
             "Pasirinkite skaitmenį ir surašykite eilutes, kuriose jis turi lygiai du kandidatų langelius. Palyginkite tas eilutes poromis: jei lygiai vienas kiekvienos eilutės kandidatų langelis yra tame pačiame stulpelyje, šie du langeliai yra pagrindas, o kiti du yra viršūnės. Tada ieškokite langelių, kurie mato abi viršūnes ir dar turi tą skaitmenį; paprastai jie yra vienos viršūnės kvadrate ir kitos viršūnės stulpelyje. Pakartokite su stulpeliais vietoj eilučių. Žaidime palieskite skaitmens klavišą, kad paryškintumėte jo kandidatus, ir ieškokite dviejų eilučių, kuriose rodoma lygiai po du."
@@ -33870,7 +33870,7 @@
             ],
             [
               "Kurį Unique Rectangle tipą naudoja Bare Sudoku?",
-              "1 tipą: trys kampai su lygiai tais pačiais dviem kandidatais ir ketvirtasis kampas su tais dviem ir kitais. Kiti tipai, paprastai numeruojami nuo 2 iki 6, naudoja papildomus kandidatus dviejuose ar daugiau kampų arba stiprias jungtis tarp jų; šiame puslapyje aptariamas 1 tipas."
+              "Tipas 1, aprašytas šiame puslapyje: trys kampai su lygiai tais pačiais dviem kandidatais ir ketvirtasis kampas su tais dviem ir dar kitais. Bare Sudoku taip pat randa kitus tipus, paprastai numeruojamus nuo 2 iki 6, taip pat Slaptą stačiakampį; šie tipai naudoja papildomus kandidatus dviejose ar daugiau kampų arba stiprias nuorodas tarp jų."
             ],
             [
               "Kas yra mirtinas raštas (deadly pattern)?",
@@ -33984,8 +33984,8 @@
             "Nē. Tas arī ir viss noteikums: katrā no deviņām rindām, deviņām kolonnām un deviņiem kvadrātiem katrs cipars no 1 līdz 9 ir tieši vienu reizi. Ja vienā vienībā ir divi vienādi cipari, vismaz viens no tiem ir nepareizs."
           ],
           [
-            "Kāda ir atšķirība starp līmeņiem „Viegli”, „Vidēji”, „Grūti” un „Eksperts”?",
-            "Līmeni nosaka tehnikas, kas mīklai vajadzīgas. „Viegli” un „Vidēji” atrisina tikai ar vientuļajiem kandidātiem, turklāt „Viegli” sākas ar vismaz 38 dotiem cipariem. Līmenim „Grūti” vajag bloķētos kandidātus vai pārus un trijniekus. Līmenim „Eksperts” vajag vismaz vienu sarežģītu figūru, piemēram, X-Wing, Y-Wing, Skyscraper vai Unique Rectangle."
+            "Kāda ir atšķirība starp Vienkāršu, Vidēju, Grūtu, Eksperta un Galveno?",
+            "Līmeni nosaka paņēmieni, kādi mīklai nepieciešami. Vienkāršu un vidēju atrisina tikai ar vienu, un vienkāršu sāk ar vismaz 38 dotiem cipāriem. Grūtus nepieciešami bloķēti kandidāti vai pāri un trīskāršas. Eksperta nepieciešams vismaz viens progresīvs modelis, piemēram X-Wing, Y-Wing, Skyscraper vai Unique Rectangle. Galvenais nepieciešams ķēdes, gandrīz bloķētas kopas vai piespiedu tīkli. Numurs pie līmeņa nosaukuma ir mīklas grūtuma vērtējums, ko nosaka grūtākais solis, kāds nepieciešams."
           ],
           [
             "Vai labāk aizpildīt piezīmes visām rūtiņām vai tikai dažām?",
@@ -34007,7 +34007,7 @@
         "h1": "Sudoku risināšanas tehnikas",
         "intro": [
           "Katru sudoku var atrisināt ar nelielu loģisko tehniku kopu. Šajā sarakstā ir tehnikas, ko izmanto Bare Sudoku risinātājs un tā mājieni, tādā secībā, kādā risinātājs tās mēģina: vispirms vientuļie kandidāti, tad izslēgšana vienas vienības ietvaros, tad figūras, kas aptver vairākas rindas, kolonnas un kvadrātus, tostarp figūras, kas balstās uz to, ka mīklai ir tieši viens atrisinājums. Katrai tehnikai ir sava lapa ar definīciju, padomiem, kā to pamanīt, īstu piemēru no ģenerētas mīklas un biežākajām kļūdām.",
-          "Mīklas līmeni nosaka grūtākā tehnika, kas tai vajadzīga. Līmeņa „Viegli” un „Vidēji” mīklām pietiek ar vientuļajiem kandidātiem, līmeņa „Grūti” mīklām vajag bloķētos kandidātus vai pārus un trijniekus, bet līmeņa „Eksperts” mīklām vajag vismaz vienu sarežģītu figūru, piemēram, zivi, spārnu, Skyscraper vai Unique Rectangle. Lai kāds būtu līmenis, lielāko darbu padara vientuļie kandidāti; sarežģītā tehnika noņem vienu vai divus kandidātus, un tālāk turpina vientuļie kandidāti."
+          "Mīklas līmeni nosaka grūtākais paņēmiens, kāds tai nepieciešams. Vienkāršus un vidēji grūtus mīklus var atrisināt tikai ar vienu, grūtus mīklus nepieciešami bloķēti kandidāti vai pāri un trīskāršas, eksperta mīklas nepieciešams vismaz viens progresīvs modelis, piemēram zivis, spārni, Skyscraper vai Unique Rectangle, bet galvenie mīkli nepieciešams ķēdes vai citi paņēmieni ārpus šī vadoša. Neatkarīgi no līmeņa, singles veic lielāko daļu darba; progresīvs paņēmiens noņem vienu vai divus kandidātus un singles turpina no turienes."
         ],
         "faq": [
           [
@@ -34016,11 +34016,11 @@
           ],
           [
             "Vai sudoku risināšanai vajag visas šīs tehnikas?",
-            "Līmeņa „Viegli” un „Vidēji” mīklām pietiek ar vientuļajiem kandidātiem. Līmeņa „Grūti” mīklām nāk klāt bloķētie kandidāti un apakškopas. Līmeņa „Eksperts” mīklām vajag vismaz vienu sarežģītu figūru, piemēram, zivi, spārnu, Skyscraper vai Unique Rectangle, bet parasti tikai vienu vai divas reizes mīklā."
+            "Vienkāršiem un vidēji grūtiem mīkliem pietiek vienu. Grūtos mīklus pievieno bloķētiem kandidātiem un apakškopas. Eksperta mīklas nepieciešams vismaz viens progresīvs modelis, piemēram zivis, spārni, Skyscraper vai Unique Rectangle, bet parasti tikai vienu vai divas reizes uz mīklu. Galvenie mīkli iet tālāk un nepieciešams ķēdes vai citus paņēmienus, ko šis vadonis nepārklāj."
           ],
           [
             "Vai ir grūtākas tehnikas par šajā ceļvedī aprakstītajām?",
-            "Jā. Spēlētāji ir aprakstījuši vēl daudz tehniku visgrūtākajām mīklām, un joprojām rodas jaunas. Bare Sudoku veido tikai mīklas, ko var pabeigt ar šī ceļveža tehnikām, tāpēc katru spēles mīklu var atrisināt ar to, kas šeit aprakstīts."
+            "Jā. Spēlētāji ir aprakstījuši daudz vairāk paņēmienu grūtākajiem mīklam, un jaunas nepārtraukti parādās. Bare Sudoku izmanto vairākus no tiem galvenajā līmenī: ķēdes, gandrīz bloķētas kopas un piespiedu tīkli; padoms nosauc, kādu tas izmantoja. Lapas šeit sedz visu līdz Ekspertam, tāpēc katru mīklu līdz tam līmenim var atrisināt ar to, kas šeit aprakstīts."
           ],
           [
             "Kas ir kandidāts?",
@@ -34318,7 +34318,7 @@
             ],
             [
               "Kurā līmenī sastopams X-Wing?",
-              "„Eksperts”. Bare Sudoku mīklu vērtē kā „Eksperts”, ja tai vajag X-Wing; arī citas sarežģītas figūras, piemēram, Y-Wing un Skyscraper, vērtē kā „Eksperts”."
+              "Eksperta vai galvenais. Bare Sudoku novērtē mīklu kā eksperta, kad nepieciešams X-Wing vai cits progresīvs modelis, piemēram Y-Wing vai Skyscraper, un kā galveno, kad nepieciešamas arī ķēdes vai citi paņēmieni ārpus šī vadoņa."
             ]
           ]
         },
@@ -34375,7 +34375,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish ir X-Wing ar trim rindām un trim kolonnām. Ja ciparam katrā no trim rindām ir ne vairāk kā trīs kandidātu rūtiņas un visas šīs rūtiņas ir tajās pašās trīs kolonnās, trīs rindas izlieto ciparu šajās kolonnās, un ciparu var dzēst no visām pārējām trīs kolonnu rūtiņām. Rindas un kolonnas var samainīt. Bare Sudoku Swordfish pārbauda pēc Y-Wing, līmeņa „Eksperts” mīklās.",
           "when": [
-            "Kad X-Wing un Y-Wing neko neatrod. Swordfish ir retāks par X-Wing, un tam vajag ciparu, kura kandidāti ir plāni izkaisīti pa trim līnijām. Vajag pilnas un precīzas piezīmes šim ciparam."
+            "Kad X-Wing neatrod neko. Zivis ir retāk nekā X-Wings un nepieciešams cipars, kura kandidāti ir reti izklāti pāri trim līnijām. Nepieciešami pilni un precīzi piezīmes par šo ciparu."
           ],
           "spot": [
             "Izvēlies ciparu un meklē rindas ar divām vai trim tā kandidātu rūtiņām. Ja trīs šādas rindas kopā aptver tikai trīs kolonnas, pārbaudi šajās kolonnās citus šī cipara kandidātus. Nav nepieciešams, lai katrā rindā būtu kandidāts katrā kolonnā: Swordfish var būt sešas, septiņas, astoņas vai deviņas rūtiņas. Spēlē izcel ciparu ar tā taustiņu un meklē trīs rindas, kuru kandidāti sakārtojas trīs kolonnās."
@@ -34456,7 +34456,7 @@
             ],
             [
               "Vai ir WXYZ-Wing?",
-              "Jā, ar četru kandidātu asi. Katru Bare Sudoku mīklu var pabeigt ar šajā ceļvedī aprakstītajām tehnikām."
+              "Jā: četras šūnas ar četriem kandidātiem divos krustojošos blokos, kur cipars ir brīvs stāvēt vairāk nekā vienā no tiem. Bare Sudoku to atrod un novērtē kā eksperta, tāpat kā citi spārni."
             ]
           ]
         },
@@ -34467,7 +34467,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (debesskrāpis) ir viena cipara figūra, kas balstās uz divām rindām, kurās ciparam ir tieši divas kandidātu rūtiņas. Viena katras rindas rūtiņa atrodas vienā un tajā pašā kolonnā; šīs divas rūtiņas ir pamats, un cipars nevar būt abās. Pārējās divas rūtiņas, virsotnes, atrodas dažādās kolonnās. Tā kā vismaz viena pamata rūtiņa nav šis cipars, vismaz vienai virsotnei jābūt šim ciparam, tāpēc ciparu var dzēst no katras rūtiņas, kas redz abas virsotnes. Tas pats darbojas ar kolonnām rindu vietā. Skyscraper ir Turbot Fish paveids, tāpat kā [2-String Kite](two-string-kite), un Bare Sudoku tā ir līmeņa „Eksperts” tehnika.",
           "when": [
-            "Kad X-Wing, Y-Wing, Swordfish un XYZ-Wing neko neatrod. Skyscraper ir viena no biežākajām līmeņa „Eksperts” figūrām Bare Sudoku, un tā bieži parādās tur, kur [X-Wing](x-wing) gandrīz darbojas: divām rindām, kurās ciparam ir pa diviem kandidātiem, ir kopīga tikai viena kolonna, nevis divas. Vajag pilnas piezīmes pētāmajam ciparam."
+            "Kad X-Wing un Zivis neatrod neko. Debesskrāpis ir viens no visbiežāk sastopamajiem eksperta modeļiem Bare Sudoku un bieži parādās tur, kur [X-Wing](x-wing) gandrīz darbojas: divas rindas ar diviem kandidātiem ciparam, dalot tikai vienu kolonnu, nevis divus. Nepieciešami pilni piezīmes ciparam, ko jūs pārbaudāt."
           ],
           "spot": [
             "Izvēlies ciparu un uzskaiti rindas, kurās tam ir tieši divas kandidātu rūtiņas. Salīdzini šīs rindas pa pāriem: ja tieši viena katras rindas kandidātu rūtiņa atrodas vienā un tajā pašā kolonnā, šīs divas rūtiņas ir pamats, bet pārējās divas ir virsotnes. Tad meklē rūtiņas, kas redz abas virsotnes un joprojām satur ciparu; parasti tās atrodas vienas virsotnes kvadrātā un otras virsotnes kolonnā. Atkārto ar kolonnām rindu vietā. Spēlē pieskaries cipara taustiņam, lai izceltu tā kandidātus, un meklē divas rindas, kurās redzami tieši divi katrā."
@@ -34640,7 +34640,7 @@
             ],
             [
               "Kuru Unique Rectangle tipu izmanto Bare Sudoku?",
-              "1. tipu: trīs stūri ar tieši vieniem un tiem pašiem diviem kandidātiem un ceturtais stūris ar šiem diviem un vēl citiem. Citi tipi, parasti numurēti no 2 līdz 6, izmanto papildu kandidātus divos vai vairāk stūros vai stipras saites starp tiem; šajā lapā aplūkots 1. tips."
+              "Tips 1, aprakstīts šajā lapā: trīs stūri ar tieši tiem pašiem diviem kandidātiem un ceturtais stūris ar šiem diviem plus cits. Bare Sudoku arī atrod citus tipus, parasti numurētus no 2 līdz 6, kā arī Slēpto Taisnstūri; šie tipi izmanto papildu kandidātus divos vai vairākos stūros vai spēcīgas saites starp tiem."
             ],
             [
               "Kas ir nāvējošā figūra (deadly pattern)?",
@@ -36294,8 +36294,8 @@
             "Yoʻq. Butun qoida shu: toʻqqizta qator, toʻqqizta ustun va toʻqqizta kvadratning har birida 1 dan 9 gacha har bir raqam aynan bir marta boʻladi. Agar ikkita bir xil raqam bitta birlikda turgan boʻlsa, ulardan kamida bittasi notoʻgʻri."
           ],
           [
-            "Oson, Oʻrtacha, Qiyin va Ekspert oʻrtasida qanday farq bor?",
-            "Darajani boshqotirma talab qiladigan usullar belgilaydi. Oson va Oʻrtacha faqat yagonalar bilan yechiladi, Oson esa kamida 38 ta berilgan raqam bilan boshlanadi. Qiyin uchun qulflangan nomzodlar yoki juftliklar va uchliklar kerak. Ekspert uchun kamida bitta murakkab naqsh kerak, masalan X-Wing, Y-Wing, Skyscraper yoki Unique Rectangle."
+            "Oson, O'rta, Qiyin, Mutaxassis va Asosiy o'rtasidagi farq nima?",
+            "Darajani jumboq talab qilayotgan usullar belgilaydi. Oson va o'rta faqat birlar bilan hal qilinadi, va Oson kamida 38 berilgan raqam bilan boshlanadi. Qiyin qulflangan nomzodlar yoki juftliklar va uchlikalrini talab qiladi. Mutaxassis kamida X-Wing, Y-Wing, Skyscraper yoki Unique Rectangle kabi avvalgi naqshni talab qiladi. Asosiy zanjirlar, deyarli qulflangan to'plamlar yoki majburiy tarmoqlarni talab qiladi. Darajaning nomi yonidagi raqam jumboqning qiyinchilik reytingi bo'lib, unga kerak bo'lgan eng qiyin qadam bilan belgilanadi."
           ],
           [
             "Belgilarni barcha kataklarga yozgan maʼqulmi yoki faqat baʼzilariga?",
@@ -36317,7 +36317,7 @@
         "h1": "Sudoku yechish usullari",
         "intro": [
           "Har qanday sudokuni kichik mantiqiy usullar toʻplami bilan yechish mumkin. Bu roʻyxatda Bare Sudoku yechuvchisi va uning maslahatlari foydalanadigan usullar yechuvchi ularni sinab koʻradigan tartibda keltirilgan: avval yagonalar, soʻng bitta birlik ichidagi olib tashlashlar, keyin bir nechta qator, ustun va kvadratni qamrab oladigan naqshlar, jumladan boshqotirmaning aynan bitta yechimi borligiga tayanadigan naqshlar. Har bir usulning taʼrifi, uni qanday topish, yaratilgan boshqotirmadan olingan haqiqiy misoli va koʻp uchraydigan xatolari bor alohida sahifasi mavjud.",
-          "Boshqotirmaning darajasini u talab qiladigan eng qiyin usul belgilaydi. Oson va Oʻrtacha boshqotirmalarga faqat yagonalar kerak, Qiyin boshqotirmalarga qulflangan nomzodlar yoki juftliklar va uchliklar kerak, Ekspert boshqotirmalariga esa kamida bitta murakkab naqsh kerak, masalan baliq, qanot, Skyscraper yoki Unique Rectangle. Daraja qanday boʻlmasin, ishning katta qismini yagonalar bajaradi; murakkab usul bir-ikkita nomzodni olib tashlaydi, keyin yana yagonalar davom ettiradi."
+          "Jumboqning darajasi unga kerak bo'lgan eng qiyin usul orqali belgilanadi. Oson va o'rta jumboqlar faqat birlarni talab qiladi, qiyin jumboqlar qulflangan nomzodlar yoki juftliklar va uchlikalrini talab qiladi, mutaxassis jumboqlar baliq, qanot, Skyscraper yoki Unique Rectangle kabi avvalgi naqshning hech bo'lmaganda birini talab qiladi, asosiy jumboqlar esa zanjirlar yoki ushbu qo'llanmadan tashqari boshqa usullarni talab qiladi. Darajasi qanday bo'lishdan qat'i nazar, birlar asosiy ishni bajaradi; avalligi usul bir yoki ikkita nomzodni olib tashlaydi va birlar u yerdan davom etadi."
         ],
         "faq": [
           [
@@ -36326,11 +36326,11 @@
           ],
           [
             "Sudokuni yechish uchun bu usullarning hammasi kerakmi?",
-            "Oson va Oʻrtacha boshqotirmalar uchun yagonalar yetarli. Qiyin boshqotirmalarga qulflangan nomzodlar hamda juftliklar va uchliklar qoʻshiladi. Ekspert boshqotirmalariga kamida bitta murakkab naqsh kerak, masalan baliq, qanot, Skyscraper yoki Unique Rectangle, lekin odatda bitta boshqotirmada bir-ikki marta xolos."
+            "Oson va o'rta jumboqlar uchun birlar etarli. Qiyin jumboqlar qulflangan nomzodlar va kichik to'plamlarni qo'shadi. Mutaxassis jumboqlar baliq, qanot, Skyscraper yoki Unique Rectangle kabi avvalgi naqshning hech bo'lmaganda birini talab qiladi, lekin odatda jumboq uchun faqat bir yoki ikkita marta. Asosiy jumboqlar yangada boradi va ushbu qo'llanma qoplagan zanjirlar yoki boshqa usullarni talab qiladi."
           ],
           [
             "Bu qoʻllanmadagilardan ham qiyinroq usullar bormi?",
-            "Ha. Oʻyinchilar eng qiyin boshqotirmalar uchun yana koʻplab usullarni tasvirlagan va yangilari paydo boʻlishda davom etmoqda. Bare Sudoku faqat shu qoʻllanmadagi usullar bilan oxiriga yetkazish mumkin boʻlgan boshqotirmalarni yaratadi, shuning uchun oʻyindagi har bir boshqotirmani bu yerda tasvirlangan usullar bilan yechish mumkin."
+            "Ha. O'yinchilar eng qiyin jumboqlar uchun ko'proq usullar tasvirlab berishlari va yangilari doimiy ravishda paydo bo'lmoqda. Bare Sudoku Asosiy darajada ularning bir nechtasini ishlatadi: zanjirlar, deyarli qulflangan to'plamlar va majburiy tarmoqlar; maslahat qaysi biri ishlatilganini nomini beradi. Bu yerda sahifalar Mutaxassisga qadar hamma narsani qoplaydi, shuning uchun shu darajagacha har bir jumboq shu yerda tavsiflangan narsalar bilan hal qilinishi mumkin."
           ],
           [
             "Nomzod nima?",
@@ -36628,7 +36628,7 @@
             ],
             [
               "Qaysi darajada X-Wing uchraydi?",
-              "Ekspert. Bare Sudoku X-Wing talab qiladigan boshqotirmani Ekspert deb baholaydi; Y-Wing va Skyscraper kabi boshqa murakkab naqshlar ham Ekspert deb baholanadi."
+              "Mutaxassis yoki Asosiy. Bare Sudoku X-Wing yoki Y-Wing yoki Skyscraper kabi boshqa avvalgi naqshni talab qilganda jumboqni Mutaxassis sifatida baholaygani, va zanjirlar yoki ushbu qo'llanmadan boshqa usullarni ham talab qilganda Asosiy sifatida baholaygani."
             ]
           ]
         },
@@ -36685,7 +36685,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish bu uchta qator va uchta ustundan iborat X-Wing. Agar raqamning uchta qatorning har birida koʻpi bilan uchta nomzod katagi boʻlsa va bu kataklarning hammasi bir xil uchta ustunga tushsa, uchta qator oʻsha ustunlardagi raqamni toʻliq band qiladi va raqamni uchta ustunning boshqa barcha kataklaridan olib tashlash mumkin. Qator va ustunlar oʻrnini almashtirish mumkin. Bare Sudoku Ekspert boshqotirmalarida Swordfish'ni Y-Wing'dan keyin tekshiradi.",
           "when": [
-            "X-Wing va Y-Wing hech narsa topmaganda. Swordfish X-Wing'ga qaraganda kamroq uchraydi va nomzodlari uchta chiziqqa siyrak taqsimlangan raqamni talab qiladi. Buning uchun oʻsha raqam boʻyicha toʻliq va aniq belgilar kerak."
+            "X-Wing hech narsa topganida. Baliqlar X-Wingsdan kamroq ko'p va uch chiziq bo'ylab kamlab tarqalgan nomzodlari bo'lgan raqamni talab qiladi. Shu raqam uchun to'liq va to'g'ri qaydlar talab qilinadi."
           ],
           "spot": [
             "Raqamni tanlang va unda shu raqam uchun ikki yoki uchta nomzod katagi bor qatorlarni qidiring. Agar shunday uchta qator jami faqat uchta ustunni qamrab olsa, oʻsha ustunlarda raqamning boshqa nomzodlarini tekshiring. Har bir qatorda har bir ustunda nomzod boʻlishi shart emas: Swordfish olti, yetti, sakkiz yoki toʻqqizta katakdan iborat boʻlishi mumkin. Oʻyinda raqamni oʻz tugmasi bilan ajratib koʻrsating va nomzodlari uchta ustunda tekislangan uchta qatorni qidiring."
@@ -36766,7 +36766,7 @@
             ],
             [
               "WXYZ-Wing bormi?",
-              "Ha, tayanchida toʻrtta nomzod boʻladi. Bare Sudoku'dagi har bir boshqotirmani shu qoʻllanmada tasvirlangan usullar bilan oxiriga yetkazish mumkin."
+              "Ha: ikkita kesishuvchi blokda to'rt nomzodli to'rt hujayra, bu yerda raqam ularning boshqalarida erkin turishishi mumkin. Bare Sudoku uni topadi va boshqa qanatlarga kabi Mutaxassis sifatida baholaygani."
             ]
           ]
         },
@@ -36777,7 +36777,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (osmonoʻpar bino) raqamning aynan ikkita nomzod katagi bor ikki qatorga qurilgan bir raqamli naqsh. Har bir qatorning bitta katagi bir xil ustunda yotadi; bu ikki katak asos boʻlib, ikkalasi birdaniga oʻsha raqam boʻla olmaydi. Qolgan ikki katak, yaʼni tepalar, turli ustunlarda yotadi. Asos kataklaridan kamida bittasi oʻsha raqam boʻlmagani uchun tepalardan kamida bittasi oʻsha raqam boʻlishi shart, shuning uchun raqamni ikkala tepani koʻradigan har bir katakdan olib tashlash mumkin. Qatorlar oʻrniga ustunlar olinganda ham xuddi shunday ishlaydi. Skyscraper, [2-String Kite](two-string-kite) kabi, Turbot Fish naqshining bir koʻrinishi boʻlib, Bare Sudoku'da Ekspert usuli hisoblanadi.",
           "when": [
-            "X-Wing, Y-Wing, Swordfish va XYZ-Wing hech narsa topmaganda. Skyscraper Bare Sudoku'dagi eng koʻp uchraydigan Ekspert naqshlaridan biri va koʻpincha [X-Wing](x-wing) deyarli hosil boʻladigan joyda paydo boʻladi: raqam uchun har birida ikkitadan nomzod bor ikki qatorning ikkita emas, faqat bitta ustuni umumiy boʻladi. Koʻrib chiqilayotgan raqam uchun toʻliq belgilar kerak."
+            "X-Wing va Baliqlar hech narsa topganida. Osmonkasri Bare Sudokuning eng ko'p uchraydigan Mutaxassis naqshlaridan biri va ko'pincha [X-Wing](x-wing) deyarli ishlayotgan joyda paydo bo'ladi: har bir raqam uchun ikkita nomzodli ikkita satr, ikki ustun o'rniga faqat birini bo'lishadi. Siz tekshirayotgan raqam uchun to'liq qaydlar talab qilinadi."
           ],
           "spot": [
             "Raqamni tanlang va unda aynan ikkita nomzod katagi bor qatorlarni roʻyxatga oling. Bu qatorlarni juft-juft solishtiring: har bir qatorning aynan bitta nomzod katagi bir xil ustunda tursa, bu ikki katak asos, qolgan ikkitasi esa tepalar. Soʻng ikkala tepani koʻradigan va hali oʻsha raqam bor kataklarni qidiring; odatda ular bir tepaning kvadratida va ikkinchisining ustunida joylashadi. Xuddi shuni qatorlar oʻrniga ustunlar bilan takrorlang. Oʻyinda raqam tugmasiga teging: uning nomzodlari ajratib koʻrsatiladi, shunda har birida aynan ikkitadan nomzod koʻrinadigan ikki qatorni qidiring."
@@ -36950,7 +36950,7 @@
             ],
             [
               "Bare Sudoku Unique Rectangle'ning qaysi turidan foydalanadi?",
-              "1-tur: aynan bir xil ikki nomzodli uch burchak va shu ikkisidan tashqari boshqa nomzodlari ham bor toʻrtinchi burchak. Odatda 2 dan 6 gacha raqamlanadigan boshqa turlar ikki yoki undan koʻp burchakdagi qoʻshimcha nomzodlardan yoki burchaklar orasidagi kuchli bogʻlanishlardan foydalanadi; bu sahifa 1-turni koʻrib chiqadi."
+              "Tipi 1, shu sahifada tavsiflangan: aynan shunday ikkita nomzodli uchta burun va shu ikkita ortiqcha bilan to'rtinchi burun. Bare Sudoku shuningdek boshqalarni topadi, odatda 2 dan 6 gacha raqamlangan, shuningdek Yashirin To'rtburchak; bu turlar ikkita yoki ko'proq burchakda qo'shimcha nomzodlardan yoki ular o'rtasida kuchli bog'lanishlardan foydalanadi."
             ],
             [
               "Halokatli naqsh (deadly pattern) nima?",
@@ -44764,8 +44764,8 @@
             "Ei. See ongi kogu reegel: igas üheksast reast, üheksast veerust ja üheksast ruudust on iga number 1 kuni 9 täpselt üks kord. Kui kaks ühesugust numbrit on samas üksuses, on vähemalt üks neist vale."
           ],
           [
-            "Mis vahe on tasemetel Lihtne, Keskmine, Raske ja Ekspert?",
-            "Taseme määravad tehnikad, mida mõistatus vajab. Lihtne ja Keskmine lahenduvad ainult üksikutega ning Lihtne algab vähemalt 38 antud numbriga. Raske vajab lukustatud kandidaate või paare ja kolmikuid. Ekspert vajab vähemalt üht keerulisemat mustrit, näiteks X-Wingi, Y-Wingi, Skyscraperit või Unique Rectangle'it."
+            "Mis vahe on lihtsal, keskmisel, raskel, eksperttasemel ja peatasandil?",
+            "Taseme määrab mõistatusele vajalik tehnika. Lihtsat ja keskmist lahendatakse vaid üksikutega ning lihtne algab vähemalt 38 antud numbriga. Rasket on vaja lukustatud kandidaate või paare ja kolmikuid. Eksperttaseme jaoks on vaja vähemalt ühte arenenud mustrit, nagu X-Wing, Y-Wing, Skyscraper või Unique Rectangle. Peataseme jaoks on vaja ahelaid, peaaegu lukustatud komplekte või sundtakistuse võrke. Taseme nime kõrval olev number on mõistatuse raskusastme hinnang, mille määrab raskeim samm, mida on vaja."
           ],
           [
             "Kas märkmed on parem täita kõigis lahtrites või ainult mõnes?",
@@ -44787,7 +44787,7 @@
         "h1": "Sudoku lahendamise tehnikad",
         "intro": [
           "Iga sudoku on lahendatav väikese hulga loogiliste tehnikatega. See ülevaade loetleb tehnikad, mida kasutavad Bare Sudoku lahendaja ja selle vihjed, selles järjekorras, milles lahendaja neid proovib: kõigepealt üksikud, siis välistused ühe üksuse sees, siis mustrid, mis ulatuvad üle mitme rea, veeru ja ruudu, sealhulgas mustrid, mis tuginevad sellele, et mõistatusel on täpselt üks lahendus. Igal tehnikal on oma leht, kus on määratlus, äratundmise juhised, päris näide genereeritud mõistatusest ja levinud vead.",
-          "Mõistatuse taseme määrab kõige raskem tehnika, mida see vajab. Lihtsad ja Keskmised mõistatused vajavad ainult üksikuid, Rasked mõistatused vajavad lukustatud kandidaate või paare ja kolmikuid ning Ekspert-mõistatused vähemalt üht keerulisemat mustrit, näiteks kala, tiiba, Skyscraperit või Unique Rectangle'it. Olenemata tasemest teevad suurema osa tööst ära üksikud; keerulisem tehnika eemaldab kandidaadi või kaks ja sealt jätkavad jälle üksikud."
+          "Mõistatuse taseme määrab kõige keerulisem tehnika, mida see nõuab. Lihtsat ja keskmist mõistatust lahendatakse vaid üksikutega, rasket mõistatust on vaja lukustatud kandidaate või paare ja kolmikuid, eksperttaseme mõistatust on vaja vähemalt ühte arenenud mustrit, nagu kalad, tiivad, Skyscraper või Unique Rectangle, ja peatasemel on vaja ahelaid või muid meetodeid selle juhendi väliselt. Olenemata tasemest, üksikud teevad enamuse tööst; arenenud tehnika eemaldab ühe või kaks kandidaati ja üksikud jätkavad sealt."
         ],
         "faq": [
           [
@@ -44796,11 +44796,11 @@
           ],
           [
             "Kas sudoku lahendamiseks on kõiki neid tehnikaid vaja?",
-            "Lihtsate ja Keskmiste mõistatuste jaoks piisab üksikutest. Rasked mõistatused lisavad lukustatud kandidaadid ja alamhulgad. Ekspert-mõistatused vajavad vähemalt üht keerulisemat mustrit, näiteks kala, tiiba, Skyscraperit või Unique Rectangle'it, kuid tavaliselt ainult üks või kaks korda mõistatuse kohta."
+            "Lihtsat ja keskmist mõistatust piisab üksikute järgi. Rasket mõistatust lisavad lukustatud kandidaadid ja alamhulgad. Eksperttaseme mõistatust on vaja vähemalt ühte arenenud mustrit, nagu kalad, tiivad, Skyscraper või Unique Rectangle, kuid tavaliselt vaid korra või kaks korda mõistatuse kohta. Peatasemeline mõistatus läheb edasi ja nõuab ahelaid või muid tehnikaid, mida see juhend ei hõlma."
           ],
           [
             "Kas on olemas raskemaid tehnikaid kui selles juhendis?",
-            "Jah. Mängijad on kõige raskemate mõistatuste jaoks kirjeldanud palju rohkem tehnikaid ja uusi tuleb aina juurde. Bare Sudoku loob ainult mõistatusi, mida selle juhendi tehnikad suudavad lõpetada, seega saab iga mängu mõistatuse lahendada siin kirjeldatuga."
+            "Jah. Mängijad on kirjeldanud palju rohkem tehnikaid kõige raskematele mõistatusjadele ja uued tekivad pidevalt. Bare Sudoku kasutab mitmeid neist peatasandil: ahelaid, peaaegu lukustatud komplekte ja sundtakistuse võrke; vihje nimetab selle, mida ta kasutas. Lehed siin katavad kõike Eksperdini, nii et kõiki mõistatusi selle tasemeni saab lahendada siin kirjeldatuga."
           ],
           [
             "Mis on kandidaat?",
@@ -45098,7 +45098,7 @@
             ],
             [
               "Millisel tasemel X-Wingid esinevad?",
-              "Ekspert. Bare Sudoku hindab mõistatuse Ekspert-tasemeks, kui see vajab X-Wingi; ka teised keerulisemad mustrid, näiteks Y-Wing ja Skyscraper, saavad hinnangu Ekspert."
+              "Eksperttasemel või peatasandil. Bare Sudoku hindab mõistatust eksperdina, kui vajatakse X-Wing või muu arenenud mustrit, nagu Y-Wing või Skyscraper, ja peatasandina, kui vajatakse ka ahelaid või muid tehnikaid selle juhendi väliselt."
             ]
           ]
         },
@@ -45155,7 +45155,7 @@
           "h1": "Swordfish",
           "summary": "Swordfish on X-Wing kolme rea ja kolme veeruga. Kui numbril on kõigis kolmes reas kõige rohkem kolm kandidaatlahtrit ja kõik need lahtrid jäävad samadesse kolme veergu, kasutavad need kolm rida numbri neis veergudes ära ning numbri saab eemaldada kolme veeru kõigist teistest lahtritest. Ridu ja veerge võib vahetada. Bare Sudoku otsib Swordfishi Ekspert-mõistatustes pärast Y-Wingi.",
           "when": [
-            "Kui X-Wing ja Y-Wing ei leia midagi. Swordfishid on harvemad kui X-Wingid ja vajavad numbrit, mille kandidaadid on kolme rea peale hõredalt jaotunud. Need nõuavad selle numbri jaoks täielikke ja täpseid märkmeid."
+            "Kui X-Wing midagi ei leia. Kalad on haruldasemad kui X-Wings ja nõuavad numbrit, mille kandidaadid on kolme joone ulatuses hajali. Selle numbri jaoks on vaja täielikku ja täpset märkust."
           ],
           "spot": [
             "Vali number ja otsi ridu, kus sellel on kaks või kolm kandidaatlahtrit. Kui kolm sellist rida katavad kokku ainult kolm veergu, kontrolli neis veergudes numbri teisi kandidaate. Igal real ei pea igas veerus kandidaati olema: Swordfishis võib olla kuus, seitse, kaheksa või üheksa lahtrit. Mängus tõsta number selle klahviga esile ja otsi kolme rida, mille kandidaadid asetuvad kolme veergu."
@@ -45236,7 +45236,7 @@
             ],
             [
               "Kas on olemas WXYZ-Wing?",
-              "Jah, nelja kandidaadiga teljega. Iga Bare Sudoku mõistatuse saab lõpetada selles juhendis kirjeldatud tehnikatega."
+              "Jah: neli lahtrit nelja kandidaadiga kahes ristuvat ühiku, kus number on vaba asuda rohkem kui ühes neist. Bare Sudoku leiab selle ja hindab seda ekspertidena, nagu ka teised tiivad."
             ]
           ]
         },
@@ -45247,7 +45247,7 @@
           "h1": "Skyscraper",
           "summary": "Skyscraper (pilvelõhkuja) on ühe numbri muster, mis põhineb kahel real, kus numbril on täpselt kaks kandidaatlahtrit. Kummagi rea üks lahter asub samas veerus; need kaks lahtrit on alus ja mõlemad ei saa korraga numbrit sisaldada. Ülejäänud kaks lahtrit, tipud, asuvad eri veergudes. Kuna vähemalt üks aluse lahter ei ole see number, peab vähemalt üks tipp seda olema, seega saab numbri eemaldada igast lahtrist, mis näeb mõlemat tippu. Sama toimib ka ridade asemel veergudega. Skyscraper on nagu [2-String Kite](two-string-kite) üks Turbot Fishi vorme ja Bare Sudokus on see Ekspert-taseme tehnika.",
           "when": [
-            "Kui X-Wing, Y-Wing, Swordfish ja XYZ-Wing ei leia midagi. Skyscraper on Bare Sudoku üks levinumaid Ekspert-mustreid ja ilmub sageli seal, kus [X-Wing](x-wing) peaaegu toimib: kahel real, kus numbril on kummaski kaks kandidaati, on ühine ainult üks veerg kahe asemel. See nõuab uuritava numbri jaoks täielikke märkmeid."
+            "Kui X-Wing ja kalad midagi ei leia. Pilvelõhkuja on üks levinumatest eksperttaseme mustrites Bare Sudokus ja ilmneb sageli, kus [X-Wing](x-wing) peaaegu toimib: kaks rida kahe kandidaadiga numbri jaoks, jagades ainult ühe veergu kahe asemel. Vajalik täielik märkus numbri kohta, mida te uurite."
           ],
           "spot": [
             "Vali number ja pane kirja read, kus sellel on täpselt kaks kandidaatlahtrit. Võrdle neid ridu paarikaupa: kui kummagi rea täpselt üks kandidaatlahter asub samas veerus, on need kaks lahtrit alus ja ülejäänud kaks tipud. Seejärel otsi lahtreid, mis näevad mõlemat tippu ja sisaldavad veel seda numbrit; tavaliselt asuvad need ühe tipu ruudus ja teise tipu veerus. Korda sama ridade asemel veergudega. Mängus puuduta numbriklahvi, et selle kandidaadid esile tõsta, ja otsi kahte rida, kus kummaski on näha täpselt kaks."
@@ -45420,7 +45420,7 @@
             ],
             [
               "Millist Unique Rectangle'i tüüpi Bare Sudoku kasutab?",
-              "Tüüpi 1: kolm nurka täpselt samade kahe kandidaadiga ja neljas nurk, millel on need kaks ning lisaks teisi. Teised tüübid, tavaliselt nummerdatud 2 kuni 6, kasutavad lisakandidaate kahes või enamas nurgas või tugevaid seoseid nurkade vahel; see leht käsitleb tüüpi 1."
+              "Tüüp 1, kirjeldatud sellel leheküljel: kolm nurka täpselt sama kahe kandidaadiga ja neljas nurk nende kahe ja muudega. Bare Sudoku leiab ka muud tüübid, tavaliselt nummerdatud 2-6, samuti peidetud ristkülikud; need tüübid kasutavad täiendavaid kandidaate kahes või rohkem nurgas või tugevaid ühendusi nende vahel."
             ],
             [
               "Mis on surmav muster (deadly pattern)?",
