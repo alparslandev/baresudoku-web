@@ -34,7 +34,7 @@ const digit = m => 32 - Math.clz32(m & -m);
 const low = m => 31 - Math.clz32(m & -m);
 const SEE = new Uint8Array(6561);
 for (let i = 0; i < 81; i++) for (let j = 0; j < 81; j++) SEE[i * 81 + j] = sees(i, j) ? 1 : 0;
-const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56, 65, 66, 68, 70, 73, 70, 75, 78, 80, 82, 84, 85, 86, 90, 95];
+const TECH_BASE = [10, 26, 30, 32, 42, 38, 44, 40, 41, 44, 45, 50, 54, 52, 46, 50, 56, 46, 47, 55, 46, 48, 47, 47, 48, 48, 56, 65, 66, 68, 70, 73, 70, 75, 78, 80, 82, 84, 85, 86, 90, 95, 48, 53, 58];
 const TECH_COUNT = TECH_BASE.length;
 const MASTER_RATING = 65;
 const LEVELS = 5;
@@ -362,11 +362,11 @@ class Sudoku {
           const mb = lc[cells[b]];
           if (!mb || POP[mb] > 3) continue;
           const m2 = ma | mb;
-          if (POP[m2] === 2) changed = this.clearOthers(cells, m2, (1 << a) | (1 << b)) || changed;
+          if (POP[m2] === 2) changed = this.dropOutside(cells, m2, (1 << a) | (1 << b)) || changed;
           else if (POP[m2] === 3) {
             for (let c = b + 1; c < 9; c++) {
               const mc = lc[cells[c]];
-              if (mc && (mc | m2) === m2 && this.clearOthers(cells, m2, (1 << a) | (1 << b) | (1 << c))) changed = this.rated(36);
+              if (mc && (mc | m2) === m2 && this.dropOutside(cells, m2, (1 << a) | (1 << b) | (1 << c))) changed = this.rated(36);
             }
           }
         }
@@ -385,11 +385,11 @@ class Sudoku {
           if (!p2 || POP[p2] > 3) continue;
           const u2 = p1 | p2;
           if (POP[u2] === 2) {
-            if (this.keepOnly(cells, u2, bit(d1) | bit(d2))) changed = this.rated(34);
+            if (this.keepInside(cells, u2, bit(d1) | bit(d2))) changed = this.rated(34);
           } else if (POP[u2] === 3) {
             for (let d3 = d2 + 1; d3 <= 9; d3++) {
               const p3 = positions[d3];
-              if (p3 && (p3 | u2) === u2 && this.keepOnly(cells, u2, bit(d1) | bit(d2) | bit(d3))) changed = this.rated(40);
+              if (p3 && (p3 | u2) === u2 && this.keepInside(cells, u2, bit(d1) | bit(d2) | bit(d3))) changed = this.rated(40);
             }
           }
         }
@@ -398,27 +398,7 @@ class Sudoku {
     return changed;
   }
 
-  clearOthers(cells, digits, members) {
-    let changed = false;
-    for (let k = 0; k < 9; k++) {
-      if (!(members & (1 << k)) && (this.lc[cells[k]] & digits)) {
-        this.lc[cells[k]] &= ~digits;
-        changed = true;
-      }
-    }
-    return changed;
-  }
 
-  keepOnly(cells, members, digits) {
-    let changed = false;
-    for (let k = 0; k < 9; k++) {
-      if ((members & (1 << k)) && (this.lc[cells[k]] & ~digits & ALL)) {
-        this.lc[cells[k]] &= digits;
-        changed = true;
-      }
-    }
-    return changed;
-  }
 
   unitMask(cells, b) {
     let m = 0;
@@ -445,13 +425,13 @@ class Sudoku {
             if (!m2 || POP[m2] > size) continue;
             const u2 = m1 | m2;
             if (size === 2) {
-              if (POP[u2] === 2) changed = this.fishClear(b, t, u2, (1 << l1) | (1 << l2)) || changed;
+              if (POP[u2] === 2) changed = this.fishDrop(b, t, u2, (1 << l1) | (1 << l2)) || changed;
             } else if (POP[u2] <= 3) {
               for (let l3 = l2 + 1; l3 < 9; l3++) {
                 const m3 = masks[l3];
                 if (!m3 || POP[m3] > 3) continue;
                 const u3 = u2 | m3;
-                if (POP[u3] === 3) changed = this.fishClear(b, t, u3, (1 << l1) | (1 << l2) | (1 << l3)) || changed;
+                if (POP[u3] === 3) changed = this.fishDrop(b, t, u3, (1 << l1) | (1 << l2) | (1 << l3)) || changed;
               }
             }
           }
@@ -461,18 +441,6 @@ class Sudoku {
     return changed;
   }
 
-  fishClear(b, t, coverMask, baseMask) {
-    let changed = false;
-    for (let c = 0; c < 81; c++) {
-      const base = t === 0 ? ROW[c] : COL[c];
-      const cover = t === 0 ? COL[c] : ROW[c];
-      if ((coverMask & (1 << cover)) && !(baseMask & (1 << base)) && (this.lc[c] & b)) {
-        this.lc[c] &= ~b;
-        changed = true;
-      }
-    }
-    return changed;
-  }
 
   yWing() {
     const lc = this.lc;
@@ -599,28 +567,18 @@ class Sudoku {
   }
 
   uniqueRectangle() {
+    return this.rectangles(1);
+  }
+
+  urType1() {
     const lc = this.lc, corners = this.corners;
-    for (let r1 = 0; r1 < 9; r1++) {
-      for (let r2 = r1 + 1; r2 < 9; r2++) {
-        const sameBand = ((r1 / 3) | 0) === ((r2 / 3) | 0);
-        for (let c1 = 0; c1 < 9; c1++) {
-          for (let c2 = c1 + 1; c2 < 9; c2++) {
-            if (sameBand === (((c1 / 3) | 0) === ((c2 / 3) | 0))) continue;
-            corners[0] = r1 * 9 + c1;
-            corners[1] = r1 * 9 + c2;
-            corners[2] = r2 * 9 + c2;
-            corners[3] = r2 * 9 + c1;
-            for (let k = 0; k < 4; k++) {
-              const target = corners[k];
-              const m = lc[corners[(k + 1) & 3]];
-              if (POP[m] !== 2 || lc[corners[(k + 2) & 3]] !== m || lc[corners[(k + 3) & 3]] !== m) continue;
-              if ((lc[target] & m) !== m || lc[target] === m) continue;
-              lc[target] &= ~m;
-              return true;
-            }
-          }
-        }
-      }
+    for (let k = 0; k < 4; k++) {
+      const target = corners[k];
+      const m = lc[corners[(k + 1) & 3]];
+      if (POP[m] !== 2 || lc[corners[(k + 2) & 3]] !== m || lc[corners[(k + 3) & 3]] !== m) continue;
+      if ((lc[target] & m) !== m || lc[target] === m) continue;
+      lc[target] &= ~m;
+      return true;
     }
     return false;
   }
@@ -734,7 +692,7 @@ class Sudoku {
     return false;
   }
 
-  finnedFish(n) {
+  finnedFish(n, sashimi) {
     for (let d = 1; d <= 9; d++) {
       const b = bit(d);
       for (let t = 0; t < 2; t++) {
@@ -750,7 +708,7 @@ class Sudoku {
             const inside = all & block;
             for (let sub = inside; ; sub = (sub - 1) & inside) {
               const cover = outside | sub;
-              if (POP[cover] === n && this.finnedDrop(b, t, base, cover)) return true;
+              if (POP[cover] === n && this.finnedDrop(b, t, base, cover, sashimi)) return true;
               if (!sub) break;
             }
           }
@@ -760,18 +718,19 @@ class Sudoku {
     return false;
   }
 
-  finnedDrop(b, t, base, cover) {
+  finnedDrop(b, t, base, cover, sashimi) {
     const masks = this.lineMasks;
-    let finBox = -1;
+    let finBox = -1, degenerate = false;
     for (let l = 0; l < 9; l++) {
       if (!(base & (1 << l))) continue;
+      if (POP[masks[l] & cover] < 2) degenerate = true;
       const fins = masks[l] & ~cover;
       if (!fins) continue;
       const box = BOX[UNITS[t * 9 + l][low(fins)]];
       if (finBox >= 0 && box !== finBox) return false;
       finBox = box;
     }
-    if (finBox < 0) return false;
+    if (finBox < 0 || degenerate !== sashimi) return false;
     let changed = false;
     for (let k = 0; k < 9; k++) {
       if (!(cover & (1 << k))) continue;
@@ -949,6 +908,7 @@ class Sudoku {
 
   rectangle(kind) {
     switch (kind) {
+      case 1: return this.urType1();
       case 2: return this.urExtra(false);
       case 3: return this.urType3();
       case 4: return this.urType4();
@@ -1577,7 +1537,7 @@ class Sudoku {
         for (let q = p + 1; q < start[c + 1]; q++) {
           const b = to[q];
           const common = this.alsDigits[a] & this.alsDigits[b];
-          if (!common || this.alsOverlap(a, b)) continue;
+          if (!common) continue;
           for (let xs = mask[p]; xs; xs &= xs - 1) {
             const x = xs & -xs;
             for (let ys = mask[q] & ~x; ys; ys &= ys - 1) {
@@ -2001,9 +1961,9 @@ class Sudoku {
       case 11: return this.nakedQuad();
       case 12: return this.hiddenQuad();
       case 13: return this.jellyfish();
-      case 14: return this.finnedFish(2);
-      case 15: return this.finnedFish(3);
-      case 16: return this.finnedFish(4);
+      case 14: return this.finnedFish(2, false);
+      case 15: return this.finnedFish(3, false);
+      case 16: return this.finnedFish(4, false);
       case 17: return this.emptyRectangle();
       case 18: return this.remotePair();
       case 19: return this.wxyzWing();
@@ -2029,6 +1989,9 @@ class Sudoku {
       case 39: return this.unitForcing();
       case 40: return this.dynamicNet();
       case 41: return this.nestedNet();
+      case 42: return this.finnedFish(2, true);
+      case 43: return this.finnedFish(3, true);
+      case 44: return this.finnedFish(4, true);
     }
     return false;
   }

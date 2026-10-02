@@ -5,7 +5,8 @@ const NAMES = ['Single', 'Locked Candidates', 'Pair/Triple', 'X-Wing', 'Y-Wing',
   'Naked Quad', 'Hidden Quad', 'Jellyfish', 'Finned X-Wing', 'Finned Swordfish', 'Finned Jellyfish', 'Empty Rectangle', 'Remote Pair', 'WXYZ-Wing',
   'Unique Rectangle Type 2', 'Unique Rectangle Type 3', 'Unique Rectangle Type 4', 'Unique Rectangle Type 5', 'Unique Rectangle Type 6', 'Hidden Rectangle', 'BUG+1',
   'X-Chain', 'XY-Chain', 'Continuous Nice Loop', 'AIC', 'Grouped AIC', 'Sue de Coq', 'ALS-XZ', 'ALS-XY-Wing', 'Death Blossom', 'ALS Chain',
-  'Nishio Forcing Chain', 'Cell Forcing Chain', 'Unit Forcing Chain', 'Dynamic Forcing Net', 'Nested Forcing Net'];
+  'Nishio Forcing Chain', 'Cell Forcing Chain', 'Unit Forcing Chain', 'Dynamic Forcing Net', 'Nested Forcing Net',
+  'Sashimi X-Wing', 'Sashimi Swordfish', 'Sashimi Jellyfish'];
 const LEVEL_NAMES = ['Easy', 'Medium', 'Hard', 'Expert', 'Master'];
 const FORCING_RATING = 84;
 

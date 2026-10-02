@@ -67,13 +67,14 @@ function recordLineType() {
   };
 }
 
-hook('clearOthers', ([cells, digits, members]) => ({
-  tech: 'naked-pairs', kind: pop(digits) === 2 ? 'pair' : 'triple', unit: unitIndex(cells), cells: bitsOf(members).map(k => cells[k]), digits: digitsOf(digits)
+const subsetKind = digits => pop(digits) === 2 ? 'pair' : pop(digits) === 3 ? 'triple' : 'quad';
+hook('dropOutside', ([cells, digits, members]) => ({
+  tech: 'naked-pairs', kind: subsetKind(digits), unit: unitIndex(cells), cells: bitsOf(members).map(k => cells[k]), digits: digitsOf(digits)
 }));
-hook('keepOnly', ([cells, members, digits]) => ({
-  tech: 'hidden-pairs', kind: pop(digits) === 2 ? 'pair' : 'triple', unit: unitIndex(cells), cells: bitsOf(members).map(k => cells[k]), digits: digitsOf(digits)
+hook('keepInside', ([cells, members, digits]) => ({
+  tech: 'hidden-pairs', kind: subsetKind(digits), unit: unitIndex(cells), cells: bitsOf(members).map(k => cells[k]), digits: digitsOf(digits)
 }));
-hook('fishClear', ([b, t, coverMask, baseMask], before) => {
+hook('fishDrop', ([b, t, coverMask, baseMask], before) => {
   const d = digitsOf(b)[0];
   const base = bitsOf(baseMask), cover = bitsOf(coverMask);
   const cells = [];
@@ -81,7 +82,7 @@ hook('fishClear', ([b, t, coverMask, baseMask], before) => {
     const line = t === 0 ? ROW[c] : COL[c];
     if (base.includes(line) && (before[c] & b)) cells.push(c);
   }
-  return { tech: base.length === 2 ? 'x-wing' : 'swordfish', kind: t === 0 ? 'rows' : 'cols', t, base, cover, cells, digits: [d] };
+  return { tech: base.length === 2 ? 'x-wing' : base.length === 3 ? 'swordfish' : 'jellyfish', kind: t === 0 ? 'rows' : 'cols', t, base, cover, cells, digits: [d] };
 });
 function yWingPattern([z, c1, c2], before) {
   const zd = digitsOf(z)[0];
