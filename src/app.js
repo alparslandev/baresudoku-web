@@ -737,6 +737,16 @@ function bind() {
   window.addEventListener('pagehide', save);
 }
 
+function registerWorker() {
+  if (!('serviceWorker' in navigator) || location.protocol !== 'https:') return;
+  let controlled = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (controlled) location.reload();
+    controlled = true;
+  });
+  navigator.serviceWorker.register('/sw.js');
+}
+
 function init() {
   const pageLang = document.documentElement.lang;
   if (location.pathname === '/') {
@@ -769,7 +779,7 @@ function init() {
   if (game.active && !game.solved && !document.hidden && document.hasFocus()) game.resume(now());
   render();
   startTimer();
-  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('/sw.js');
+  registerWorker();
   openEvent(lang);
 }
 
