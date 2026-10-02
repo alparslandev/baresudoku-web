@@ -126,7 +126,11 @@
       "updated": "Updated",
       "languagesLabel": "Languages",
       "ogAlt": "Bare Sudoku logo with the words Free Sudoku online, no ads",
-      "privacyExtra": "This policy covers the web game at baresudoku.com, the Android app and the iOS app. None of them shows ads or asks for personal data. The web game sends only the anonymous counters described above, to baresudoku.com itself; the apps do not connect to the internet at all. Questions: open an issue on GitHub."
+      "privacyExtra": "This policy covers the web game at baresudoku.com, the Android app and the iOS app. None of them shows ads or asks for personal data. The web game sends only the anonymous counters described above, to baresudoku.com itself; the apps do not connect to the internet at all. Questions: open an issue on GitHub.",
+      "dailyTitle": "Daily Sudoku: A New Puzzle Every Day, Free and Ad-Free",
+      "dailyDescription": "A new Sudoku every day at five levels, the same puzzle for everyone. Solve today's puzzle, from Easy to Master, and share your time. No ads, no sign-up.",
+      "dailyH1": "Daily Sudoku",
+      "dailyIntro": "Every day brings one new puzzle per level, the same for every player in the world. Solve it, then share your time with friends. The daily puzzle is generated on your device from the date, so it works offline too, and yesterday's puzzle is gone at midnight."
     },
     "tr": {
       "title": "Bare Sudoku: Ücretsiz Online Sudoku, Reklamsız, Üyeliksiz",
@@ -254,7 +258,11 @@
       "updated": "Güncelleme",
       "languagesLabel": "Diller",
       "ogAlt": "Bare Sudoku logosu ve Ücretsiz online sudoku, reklamsız yazısı",
-      "privacyExtra": "Bu politika baresudoku.com'daki web oyununu, Android uygulamasını ve iOS uygulamasını kapsar. Hiçbiri reklam göstermez ve kişisel veri istemez. Web oyunu yalnızca yukarıda anlatılan anonim sayaçları, yalnızca baresudoku.com'a gönderir; uygulamalar internete hiç bağlanmaz. Sorular için GitHub'da bir konu açabilirsin."
+      "privacyExtra": "Bu politika baresudoku.com'daki web oyununu, Android uygulamasını ve iOS uygulamasını kapsar. Hiçbiri reklam göstermez ve kişisel veri istemez. Web oyunu yalnızca yukarıda anlatılan anonim sayaçları, yalnızca baresudoku.com'a gönderir; uygulamalar internete hiç bağlanmaz. Sorular için GitHub'da bir konu açabilirsin.",
+      "dailyTitle": "Günlük Sudoku: Her Gün Yeni Bulmaca, Ücretsiz ve Reklamsız",
+      "dailyDescription": "Her gün beş seviyede yeni bir sudoku, herkes için aynı bulmaca. Bugünün bulmacasını Kolay'dan Usta'ya çöz ve süreni paylaş. Reklam yok, kayıt yok.",
+      "dailyH1": "Günlük Sudoku",
+      "dailyIntro": "Her gün seviye başına bir yeni bulmaca gelir, dünyadaki her oyuncu için aynısı. Çöz, sonra süreni arkadaşlarınla paylaş. Günlük bulmaca cihazında tarihten üretilir; bu yüzden internetsiz de çalışır ve dünün bulmacası gece yarısı gider."
     },
     "az": {
       "title": "Bare Sudoku: pulsuz onlayn sudoku, reklamsız, qeydiyyatsız",

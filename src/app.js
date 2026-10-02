@@ -4,6 +4,7 @@ const S_UNDO = 4, S_NEW = 9, S_ERRORS = 10, S_ON = 11, S_OFF = 12, S_CANCEL = 13
 const S_WRONG = 16, S_NAKED = 17, S_ROW = 18, S_COL = 19, S_BOX = 20, S_AGAIN = 21, S_TECH = 22, S_TITLE = 28;
 const S_LANGUAGE = 29, S_ANDROID = 30, S_SOURCE = 31, S_RESTART = 32, S_TECH_EXTRA = 33;
 const S_MASTER = S_TECH_EXTRA + TECH_COUNT - 7;
+const S_DAILY = S_MASTER + 1, S_SHARE = S_MASTER + 2, S_COPIED = S_MASTER + 3, S_PLAY = S_MASTER + 4;
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
 const now = () => Date.now();
@@ -11,12 +12,37 @@ const engine = new Sudoku();
 const game = new Game();
 const cells = [], noteSpans = [], keyButtons = [], toolButtons = [];
 const L = JSON.parse($('i18n').textContent);
+const DAILY = L.mode === 'daily';
+const DAILY_PATH = L.daily || '';
+const STATE_KEY = DAILY ? KEY + '.daily' : KEY;
+const LOG_KEY = KEY + '.dailyLog';
+let dailyDate = '';
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 let meta = { t: 0, d: false };
 const IDLE_MS = 60000;
 let lastActivity = Date.now(), idle = false;
 const ratingFormat = numberFormat(document.documentElement.lang);
+const dateFormat = dateFormatter(document.documentElement.lang);
+
+function dateFormatter(lang) {
+  const options = { dateStyle: 'long' };
+  try { return new Intl.DateTimeFormat(lang, options); } catch (e) { return new Intl.DateTimeFormat('en', options); }
+}
+
+function localDate() {
+  const d = new Date();
+  const pad = n => (n < 10 ? '0' : '') + n;
+  return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+}
+
+function dailySeed(date, level) {
+  return ((+date.slice(0, 4) * 10000 + +date.slice(5, 7) * 100 + +date.slice(8, 10)) * 8 + level + 1) | 0;
+}
+
+function dateText() {
+  return dateFormat.format(new Date(+dailyDate.slice(0, 4), +dailyDate.slice(5, 7) - 1, +dailyDate.slice(8, 10)));
+}
 
 function numberFormat(lang) {
   const options = { minimumFractionDigits: 1, maximumFractionDigits: 1 };
@@ -110,6 +136,15 @@ function renderLabels() {
   $('android').textContent = strings[S_ANDROID];
   $('source').textContent = strings[S_SOURCE];
   $('menu-btn').setAttribute('aria-label', strings[S_NEW]);
+  const daily = $('daily-btn');
+  daily.textContent = strings[S_DAILY];
+  daily.href = DAILY_PATH;
+  daily.hidden = DAILY || !DAILY_PATH;
+  const play = $('play-btn');
+  play.textContent = strings[S_PLAY];
+  play.href = pathOf($('lang').value);
+  play.hidden = !DAILY;
+  $('share-btn').textContent = strings[S_SHARE];
 }
 
 function buildBoard() {
@@ -279,8 +314,11 @@ function render() {
   $('overlay').hidden = !overlay;
   if (overlay) {
     const solved = game.active && game.solved;
-    $('panel-title').textContent = solved ? strings[S_SOLVED] : strings[S_TITLE];
-    $('panel-sub').textContent = solved ? levelText() + '  ' + clock(game.time(now())) + '\n' + strings[S_NEW] : strings[S_NEW];
+    $('panel-title').textContent = solved ? strings[S_SOLVED] : DAILY ? strings[S_DAILY] : strings[S_TITLE];
+    const result = levelText() + '  ' + clock(game.time(now()));
+    if (DAILY) $('panel-sub').textContent = solved ? result + '\n' + dateText() : dateText() + '\n' + strings[S_NEW];
+    else $('panel-sub').textContent = solved ? result + '\n' + strings[S_NEW] : strings[S_NEW];
+    $('share-btn').hidden = !(DAILY && solved);
     $('errors-btn').textContent = strings[S_ERRORS] + ': ' + strings[game.showErrors ? S_ON : S_OFF];
     $('cancel-btn').hidden = !cancellable();
     $('restart-btn').hidden = !game.active;
@@ -290,7 +328,36 @@ function render() {
 let pendingLevel = 0;
 
 function save() {
-  store(KEY, JSON.stringify(Object.assign(game.save(now()), { a: meta })));
+  store(STATE_KEY, JSON.stringify(Object.assign(game.save(now()), { a: meta, d: dailyDate })));
+}
+
+function logDaily() {
+  let log = null;
+  try { log = JSON.parse(fetchStored(LOG_KEY)); } catch (e) {}
+  if (!log || typeof log !== 'object') log = {};
+  const day = log[dailyDate] || (log[dailyDate] = {});
+  if (!(game.level in day)) day[game.level] = Math.round(game.time(now()) / 1000);
+  const days = Object.keys(log).sort();
+  while (days.length > 400) delete log[days.shift()];
+  store(LOG_KEY, JSON.stringify(log));
+}
+
+function shareText() {
+  return strings[S_DAILY] + ' ' + dateText() + ' · ' + levelText() + ' · ' + clock(game.time(now())) + '\n' + location.origin + DAILY_PATH;
+}
+
+function share() {
+  const text = shareText();
+  if (navigator.share) {
+    navigator.share({ text }).catch(() => {});
+    return;
+  }
+  const btn = $('share-btn');
+  const done = () => {
+    btn.textContent = strings[S_COPIED];
+    setTimeout(() => { btn.textContent = strings[S_SHARE]; }, 2000);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, () => {});
 }
 
 function startTimer() {
@@ -334,6 +401,10 @@ function startGame(level) {
   stopTimer();
   render();
   setTimeout(() => {
+    if (DAILY) {
+      dailyDate = localDate();
+      engine.seed(dailySeed(dailyDate, level));
+    }
     const puzzle = engine.generate(level);
     game.start(puzzle, engine.solution, level);
     game.rating = engine.rating;
@@ -382,6 +453,7 @@ function finish(changed) {
     if (!meta.d) {
       meta.d = true;
       beacon({ e: 'done', k: game.level, t: meta.t, s: Math.round(game.time(now()) / 1000) });
+      if (DAILY) logDaily();
       changed = true;
     }
   }
@@ -452,6 +524,7 @@ function bind() {
   $('errors-btn').addEventListener('click', () => { game.showErrors = !game.showErrors; save(); render(); });
   $('cancel-btn').addEventListener('click', closeMenu);
   $('restart-btn').addEventListener('click', restartGame);
+  $('share-btn').addEventListener('click', share);
   $('lang').addEventListener('change', e => switchLang(e.target.value));
   document.addEventListener('keydown', e => {
     if (e.target && e.target.tagName === 'SELECT') return;
@@ -513,7 +586,11 @@ function init() {
   const lang = LANGS.includes(pageLang) ? pageLang : 'en';
   applyLang(lang);
   let saved = null;
-  try { saved = JSON.parse(fetchStored(KEY)); } catch (e) {}
+  try { saved = JSON.parse(fetchStored(STATE_KEY)); } catch (e) {}
+  if (DAILY) {
+    dailyDate = localDate();
+    if (saved && saved.d !== dailyDate) saved = null;
+  }
   game.load(saved);
   if (game.active) game.rating = engine.rate(game.given);
   meta = saved && saved.a ? { t: +saved.a.t || now(), d: !!saved.a.d } : { t: now(), d: game.solved };

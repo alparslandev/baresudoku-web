@@ -46,7 +46,9 @@ test("teknik kaydi: kimlik sirasi, derece sirasi, uzman siniri", () => {
   expect(table[constant("S_RESTART")]).toBe("Restart");
   expect(table.slice(constant("S_TECH_EXTRA"), constant("S_TECH_EXTRA") + extra.length)).toEqual(extra);
   const master = constant("S_TECH_EXTRA") + TECH_COUNT - 7;
-  expect(table.length === master || (table.length === master + 1 && table[master] === "Master")).toBe(true);
+  expect(table[master]).toBe("Master");
+  expect(app).toContain("S_DAILY = S_MASTER + 1, S_SHARE = S_MASTER + 2, S_COPIED = S_MASTER + 3, S_PLAY = S_MASTER + 4");
+  expect(table.slice(master + 1, master + 5)).toEqual(["Daily Sudoku", "Share", "Copied!", "Play Sudoku"]);
 });
 
 for (let level = 0; level < LEVELS; level++) {
@@ -83,6 +85,23 @@ for (let level = 0; level < LEVELS; level++) {
     console.log(`${LEVEL_NAMES[level]}: ${n} bulmaca, ort ipucu ${(clues.reduce((a, b) => a + b, 0) / n).toFixed(1)}, ${ms.toFixed(1)} ms/bulmaca`);
   });
 }
+
+test("tohumlu uretim: ayni tohum ayni bulmaca, uc motorda ayni sabit", () => {
+  const a = new Sudoku(), b = new Sudoku();
+  a.seed(162088025);
+  b.seed(162088025);
+  const p = a.generate(1).join("");
+  expect(p).toBe("000020006000004700680100009004070068003000900250040100300002087007400000100030000");
+  expect(a.rating).toBe(10);
+  expect(b.generate(1).join("")).toBe(p);
+  const c = new Sudoku();
+  c.seed(162088027);
+  expect(c.generate(3).join("")).toBe("300600480000320600091000002000060007009705800500040000900000310003096000018004006");
+  expect(c.rating).toBe(40);
+  const d = new Sudoku();
+  d.seed(1);
+  expect(d.generate(1).join("")).not.toBe(p);
+});
 
 test("zorlama sirasi: Nishio once denenir, Cell ve Unit Forcing varsayilan sirada tetiklenmez", () => {
   expect(TECH_BASE[37] < TECH_BASE[38] && TECH_BASE[38] < TECH_BASE[39]).toBe(true);

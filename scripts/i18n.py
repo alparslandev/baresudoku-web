@@ -14,20 +14,40 @@ def path(code):
     return "/" if code == "en" else "/" + code.lower() + "/"
 
 
+PADDED = {}
+
+
 def load():
     with open(os.path.join(ROOT, "i18n", "strings.json"), encoding="utf-8") as f:
         data = json.load(f)
     keys = data["keys"]
     languages = data["languages"]
+    english = languages["en"]
+    if len(english) != len(keys) + 1:
+        raise SystemExit("en: %d deger bekleniyor, %d var" % (len(keys) + 1, len(english)))
     for code, values in languages.items():
-        if len(values) != len(keys) + 1:
+        if len(values) > len(keys) + 1:
             raise SystemExit("%s: %d deger bekleniyor, %d var" % (code, len(keys) + 1, len(values)))
+        if len(values) < len(keys) + 1:
+            PADDED[code] = keys[len(values) - 1:]
+            values.extend(english[len(values):])
         for k, v in zip(keys, values[1:]):
             if not v:
                 raise SystemExit("%s: %s bos" % (code, k))
             if k in ("naked", "row", "col", "box") and "#" not in v:
                 raise SystemExit("%s: %s icinde # yok" % (code, k))
     return keys, languages
+
+
+def index_of(keys, key):
+    split = keys.index("language")
+    fixed_end = keys.index("restart") + 1
+    k = keys.index(key)
+    if k < split:
+        return k
+    if k < fixed_end:
+        return k + len(FIXED) + 1
+    return k + len(FIXED) + 1 + len(FIXED_EXTRA)
 
 
 def table(keys, values):
@@ -43,6 +63,14 @@ def web(keys, languages):
 
 
 SITE_KEYS = ["title", "description", "h1", "intro", "featuresHeading", "features", "androidHeading", "android", "androidLink", "privacyHeading", "privacy", "faqHeading", "faq", "madeBy", "source", "androidSource", "updated", "languagesLabel", "ogAlt"]
+DAILY_KEYS = ["dailyTitle", "dailyDescription", "dailyH1", "dailyIntro"]
+
+
+def has_daily(entry):
+    present = [k for k in DAILY_KEYS if entry.get(k)]
+    if present and len(present) != len(DAILY_KEYS):
+        raise SystemExit("site.json: gunluk sayfa metinleri eksik: %s" % ", ".join(k for k in DAILY_KEYS if k not in present))
+    return len(present) == len(DAILY_KEYS)
 MIN_FEATURES = 6
 MIN_FAQ = 11
 
