@@ -29,7 +29,9 @@
         "regions": "Row 5, column 5 and box 5 at the start of a puzzle",
         "firstMove": "A naked single: {cell} can only be {d}",
         "breadcrumb": "Breadcrumb",
-        "playExample": "Play this puzzle"
+        "playExample": "Play this puzzle",
+        "practice": "Practice puzzles",
+        "practiceIntro": "In these puzzles, {technique} is the hardest technique you need. Each link opens the puzzle in the game; the solver link shows every step."
       },
       "howTo": {
         "title": "How to Play Sudoku: Rules, Board and First Moves",
@@ -1084,7 +1086,9 @@
         "regions": "Bulmacanın başında 5. satır, 5. sütun ve 5. kutu",
         "firstMove": "Bir tek aday: {cell} yalnızca {d} olabilir",
         "breadcrumb": "Sayfa yolu",
-        "playExample": "Bu bulmacayı oyna"
+        "playExample": "Bu bulmacayı oyna",
+        "practice": "Alıştırma bulmacaları",
+        "practiceIntro": "Bu bulmacalarda {technique}, ihtiyaç duyduğunuz en zor tekniktir. Her bağlantı bulmacayı oyunda açar; çözücü bağlantısı her adımı gösterir."
       },
       "howTo": {
         "title": "Sudoku Nasıl Oynanır: Kurallar, Tahta ve İlk Hamleler",
@@ -2138,7 +2142,9 @@
         "elimItem": "{cell} xanasından {d}",
         "regions": "Tapmacanın əvvəlində 5-ci sətir, 5-ci sütun və 5-ci blok",
         "firstMove": "Tək namizəd: {cell} xanası yalnız {d} ola bilər",
-        "breadcrumb": "Naviqasiya yolu"
+        "breadcrumb": "Naviqasiya yolu",
+        "practice": "Məşq tapmaçaları",
+        "practiceIntro": "{technique} bu tapmaçalarda sizin lazım olan ən çətin texnikadır. Hər bağlantı tapmaçanı oyunda açar; həlli bağlantısı hər addımı göstərir."
       },
       "howTo": {
         "title": "Sudoku necə oynanılır: qaydalar, lövhə və ilk gedişlər",
@@ -3192,7 +3198,9 @@
         "elimItem": "{d} aus {cell}",
         "regions": "Zeile 5, Spalte 5 und Block 5 zu Beginn eines Rätsels",
         "firstMove": "Ein nackter Einer: In {cell} kann nur {d} stehen",
-        "breadcrumb": "Navigationspfad"
+        "breadcrumb": "Navigationspfad",
+        "practice": "Übungspuzzles",
+        "practiceIntro": "In diesen Puzzles ist {technique} die schwierigste Technik, die du brauchst. Jeder Link öffnet das Puzzle im Spiel; der Lösungs-Link zeigt jeden Schritt."
       },
       "howTo": {
         "title": "Sudoku spielen: Regeln, Spielfeld und erste Züge",
@@ -4246,7 +4254,9 @@
         "elimItem": "{d} de {cell}",
         "regions": "Ligne 5, colonne 5 et bloc 5 au début d'une grille",
         "firstMove": "Un singleton nu : {cell} ne peut être que {d}",
-        "breadcrumb": "Fil d'Ariane"
+        "breadcrumb": "Fil d'Ariane",
+        "practice": "Puzzles d'exercice",
+        "practiceIntro": "Dans ces puzzles, {technique} est la technique la plus difficile dont vous avez besoin. Chaque lien ouvre le puzzle dans le jeu; le lien du solveur affiche chaque étape."
       },
       "howTo": {
         "title": "Comment jouer au sudoku : règles, grille et premiers coups",
@@ -5300,7 +5310,9 @@
         "elimItem": "{d} de {cell}",
         "regions": "Fila 5, columna 5 y bloque 5 al inicio de un puzle",
         "firstMove": "Un solitario desnudo: {cell} solo puede ser {d}",
-        "breadcrumb": "Ruta de navegación"
+        "breadcrumb": "Ruta de navegación",
+        "practice": "Puzzles de práctica",
+        "practiceIntro": "En estos puzzles, {technique} es la técnica más difícil que necesitas. Cada enlace abre el puzzle en el juego; el enlace del solucionador muestra cada paso."
       },
       "howTo": {
         "title": "Cómo jugar al sudoku: reglas, tablero y primeros pasos",
@@ -6354,7 +6366,9 @@
         "elimItem": "{d} de {cell}",
         "regions": "Linha 5, coluna 5 e bloco 5 no início de um puzzle",
         "firstMove": "Candidato único: {cell} só pode ser {d}",
-        "breadcrumb": "Caminho de navegação"
+        "breadcrumb": "Caminho de navegação",
+        "practice": "Quebra-cabeças de prática",
+        "practiceIntro": "Nestes quebra-cabeças, {technique} é a técnica mais difícil que você precisa. Cada link abre o quebra-cabeça no jogo; o link do solucionador mostra cada passo."
       },
       "howTo": {
         "title": "Como jogar Sudoku: regras, tabuleiro e primeiras jogadas",
@@ -7408,7 +7422,9 @@
         "elimItem": "{d} da {cell}",
         "regions": "Riga 5, colonna 5 e blocco 5 all'inizio di uno schema",
         "firstMove": "Singolo nudo: {cell} può essere solo {d}",
-        "breadcrumb": "Percorso di navigazione"
+        "breadcrumb": "Percorso di navigazione",
+        "practice": "Puzzle di pratica",
+        "practiceIntro": "In questi puzzle, {technique} è la tecnica più difficile di cui hai bisogno. Ogni collegamento apre il puzzle nel gioco; il collegamento del risolutore mostra ogni passaggio."
       },
       "howTo": {
         "title": "Come si gioca a Sudoku: regole, griglia e prime mosse",
@@ -8462,7 +8478,9 @@
         "elimItem": "{d} uit {cell}",
         "regions": "Rij 5, kolom 5 en blok 5 aan het begin van een puzzel",
         "firstMove": "Een naakte single: {cell} kan alleen {d} zijn",
-        "breadcrumb": "Kruimelpad"
+        "breadcrumb": "Kruimelpad",
+        "practice": "Oefenpuzzels",
+        "practiceIntro": "In deze puzzels is {technique} de moeilijkste techniek die je nodig hebt. Elke link opent de puzzel in het spel; de oplossinglink toont elke stap."
       },
       "howTo": {
         "title": "Hoe speel je Sudoku: regels, speelveld en eerste zetten",
@@ -9516,7 +9534,9 @@
         "elimItem": "{d} z {cell}",
         "regions": "Wiersz 5, kolumna 5 i blok 5 na początku łamigłówki",
         "firstMove": "Nagi singiel: w {cell} pasuje tylko {d}",
-        "breadcrumb": "Ścieżka nawigacji"
+        "breadcrumb": "Ścieżka nawigacji",
+        "practice": "Puzzle do ćwiczenia",
+        "practiceIntro": "{technique} jest najtrudniejszą techniką, którą potrzebujesz w tych puzzlach. Każdy link otwiera puzzle w grze; link solvera pokazuje każdy krok."
       },
       "howTo": {
         "title": "Jak grać w sudoku: zasady, plansza i pierwsze ruchy",
@@ -10570,7 +10590,9 @@
         "elimItem": "{d} z {cell}",
         "regions": "Řádek 5, sloupec 5 a blok 5 na začátku zadání",
         "firstMove": "Nahý singl: v {cell} může být jen {d}",
-        "breadcrumb": "Drobečková navigace"
+        "breadcrumb": "Drobečková navigace",
+        "practice": "Cvičné puzzle",
+        "practiceIntro": "V těchto puzzle je {technique} nejtěžší technikou, kterou potřebuješ. Každý odkaz otevře puzzle ve hře; odkaz na řešitele ukazuje každý krok."
       },
       "howTo": {
         "title": "Jak hrát sudoku: pravidla, hrací plocha a první tahy",
@@ -11624,7 +11646,9 @@
         "elimItem": "{d} z {cell}",
         "regions": "Riadok 5, stĺpec 5 a blok 5 na začiatku zadania",
         "firstMove": "Nahý singel: v {cell} môže byť len {d}",
-        "breadcrumb": "Navigačná cesta"
+        "breadcrumb": "Navigačná cesta",
+        "practice": "Cvičné puzzle",
+        "practiceIntro": "V týchto puzzle je {technique} najtažšou technikou, ktorú potrebuješ. Každý odkaz otvorí puzzle v hre; odkaz na riešiteľa zobrazuje každý krok."
       },
       "howTo": {
         "title": "Ako hrať sudoku: pravidlá, hracia plocha a prvé ťahy",
@@ -12678,7 +12702,9 @@
         "elimItem": "{d} az {cell} cellából",
         "regions": "Az 5. sor, az 5. oszlop és az 5. blokk a feladvány elején",
         "firstMove": "Csupasz single: az {cell} cellába csak {d} kerülhet",
-        "breadcrumb": "Navigációs útvonal"
+        "breadcrumb": "Navigációs útvonal",
+        "practice": "Gyakorló rejtvények",
+        "practiceIntro": "Ezekben a rejtvényekben {technique} a szükséges legnehezebb technika. Minden hivatkozás megnyitja a rejtvényt a játékban; a megoldó hivatkozás minden lépést mutat."
       },
       "howTo": {
         "title": "Hogyan kell sudokut játszani: szabályok, tábla, első lépések",
@@ -13732,7 +13758,9 @@
         "elimItem": "{d} din {cell}",
         "regions": "Rândul 5, coloana 5 și blocul 5 la începutul grilei",
         "firstMove": "Single evident: în {cell} poate fi doar {d}",
-        "breadcrumb": "Cale de navigare"
+        "breadcrumb": "Cale de navigare",
+        "practice": "Puzzle de practică",
+        "practiceIntro": "În aceste puzzle, {technique} este cea mai dificilă tehnică de care ai nevoie. Fiecare link deschide puzzle în joc; linkul rezolvitorului arată fiecare pas."
       },
       "howTo": {
         "title": "Cum se joacă Sudoku: reguli, tabla de joc și primele mutări",
@@ -14786,7 +14814,9 @@
         "elimItem": "{d} από το {cell}",
         "regions": "Γραμμή 5, στήλη 5 και κουτί 5 στην αρχή ενός γρίφου",
         "firstMove": "Φανερό μονό: το {cell} μπορεί να είναι μόνο {d}",
-        "breadcrumb": "Διαδρομή πλοήγησης"
+        "breadcrumb": "Διαδρομή πλοήγησης",
+        "practice": "Ασκήσεις Sudoku",
+        "practiceIntro": "Σε αυτά τα puzzle, {technique} είναι η πιο δύσκολη τεχνική που χρειάζεσαι. Κάθε σύνδεσμος ανοίγει το puzzle στο παιχνίδι· ο σύνδεσμος εργαλείου επίλυσης δείχνει κάθε βήμα."
       },
       "howTo": {
         "title": "Πώς παίζεται το Sudoku: κανόνες, πλέγμα, πρώτες κινήσεις",
@@ -15840,7 +15870,9 @@
         "elimItem": "{d} från {cell}",
         "regions": "Rad 5, kolumn 5 och ruta 5 i början av ett pussel",
         "firstMove": "En naken singel: {cell} kan bara vara {d}",
-        "breadcrumb": "Brödsmulor"
+        "breadcrumb": "Brödsmulor",
+        "practice": "Övningspussel",
+        "practiceIntro": "I dessa pussel är {technique} den svåraste tekniken du behöver. Varje länk öppnar pusslet i spelet; lösarlänken visar varje steg."
       },
       "howTo": {
         "title": "Så spelar du sudoku: regler, spelplan och första drag",
@@ -16894,7 +16926,9 @@
         "elimItem": "{d} fra {cell}",
         "regions": "Række 5, kolonne 5 og boks 5 i starten af en opgave",
         "firstMove": "En nøgen single: {cell} kan kun være {d}",
-        "breadcrumb": "Brødkrummesti"
+        "breadcrumb": "Brødkrummesti",
+        "practice": "Øvelsespuslespil",
+        "practiceIntro": "I disse puslespil er {technique} den sværeste teknik, du har brug for. Hvert link åbner puslespillet i spillet; løserlinket viser hvert trin."
       },
       "howTo": {
         "title": "Sådan spiller du sudoku: regler, gitter og første træk",
@@ -17948,7 +17982,9 @@
         "elimItem": "{d} fra {cell}",
         "regions": "Rad 5, kolonne 5 og boks 5 i starten av et brett",
         "firstMove": "En naken singel: {cell} kan bare være {d}",
-        "breadcrumb": "Brødsmulesti"
+        "breadcrumb": "Brødsmulesti",
+        "practice": "Øvelsespuslespill",
+        "practiceIntro": "I disse puslespillene er {technique} den vanskeligste teknikken du trenger. Hver lenke åpner puslespillet i spillet; løserlenken viser hvert trinn."
       },
       "howTo": {
         "title": "Slik spiller du sudoku: regler, rutenett og første trekk",
@@ -19002,7 +19038,9 @@
         "elimItem": "{d} ruudusta {cell}",
         "regions": "Rivi 5, sarake 5 ja laatikko 5 pelin alussa",
         "firstMove": "Ainoa ehdokas: ruutuun {cell} käy vain {d}",
-        "breadcrumb": "Murupolku"
+        "breadcrumb": "Murupolku",
+        "practice": "Harjoituspuzzlet",
+        "practiceIntro": "Näissä peleissä {technique} on vaikeain tekniikka, jota tarvitset. Jokainen linkki avaa pelin; ratkaisijan linkki näyttää jokaisen vaiheen."
       },
       "howTo": {
         "title": "Miten sudokua pelataan: säännöt, ruudukko ja ensisiirrot",
@@ -20056,7 +20094,9 @@
         "elimItem": "{d} из {cell}",
         "regions": "Строка 5, столбец 5 и блок 5 в начале головоломки",
         "firstMove": "Открытая одиночка: в {cell} может стоять только {d}",
-        "breadcrumb": "Навигационная цепочка"
+        "breadcrumb": "Навигационная цепочка",
+        "practice": "Практические пазлы",
+        "practiceIntro": "В этих пазлах {technique} является самой сложной техникой, которая вам нужна. Каждая ссылка открывает пазл в игре; ссылка решателя показывает каждый шаг."
       },
       "howTo": {
         "title": "Как играть в судоку: правила, поле и первые ходы",
@@ -21110,7 +21150,9 @@
         "elimItem": "{d} з {cell}",
         "regions": "Рядок 5, стовпець 5 і блок 5 на початку головоломки",
         "firstMove": "Відкритий одинак: у {cell} може стояти лише {d}",
-        "breadcrumb": "Навігаційний ланцюжок"
+        "breadcrumb": "Навігаційний ланцюжок",
+        "practice": "Практичні головоломки",
+        "practiceIntro": "У цих головоломках {technique} є найскладнішою технікою, яка вам потрібна. Кожне посилання відкриває головоломку в грі; посилання розв'язувача показує кожен крок."
       },
       "howTo": {
         "title": "Як грати в судоку: правила, поле та перші ходи",
@@ -22164,7 +22206,9 @@
         "elimItem": "{d} от {cell}",
         "regions": "Ред 5, колона 5 и каре 5 в началото на задачата",
         "firstMove": "Открит единак: в {cell} може да стои само {d}",
-        "breadcrumb": "Навигационна пътека"
+        "breadcrumb": "Навигационна пътека",
+        "practice": "Практически пъзели",
+        "practiceIntro": "В тези пъзели {technique} е най-трудната техника, която ти е необходима. Всяка връзка отваря пъзела в играта; връзката на решавача показва всяка стъпка."
       },
       "howTo": {
         "title": "Как се играе судоку: правила, поле и първи ходове",
@@ -23218,7 +23262,9 @@
         "elimItem": "{d} iz {cell}",
         "regions": "Red 5, kolona 5 i blok 5 na početku zagonetke",
         "firstMove": "Goli singl: {cell} može biti samo {d}",
-        "breadcrumb": "Putanja stranice"
+        "breadcrumb": "Putanja stranice",
+        "practice": "Vežbanje zagonetki",
+        "practiceIntro": "U ovim zagonetkama, {technique} je najtežja teknika koja vam je potrebna. Svaki link otvara zagonetku u igri; link rešavača pokazuje svaki korak."
       },
       "howTo": {
         "title": "Kako se igra sudoku: pravila, tabla i prvi potezi",
@@ -24272,7 +24318,9 @@
         "elimItem": "{d} iz {cell}",
         "regions": "Redak 5, stupac 5 i blok 5 na početku zagonetke",
         "firstMove": "Goli singl: {cell} može biti samo {d}",
-        "breadcrumb": "Putanja stranice"
+        "breadcrumb": "Putanja stranice",
+        "practice": "Vježbanje zagnetki",
+        "practiceIntro": "U ovim zagonetkama, {technique} je najtežja tehnika koja vam je potrebna. Svaki link otvara zagonetku u igri; link rješavača pokazuje svaki korak."
       },
       "howTo": {
         "title": "Kako se igra sudoku: pravila, ploča i prvi potezi",
@@ -25326,7 +25374,9 @@
         "elimItem": "{d} من {cell}",
         "regions": "الصف 5 والعمود 5 والمربع 5 في بداية اللغز",
         "firstMove": "مفرد مكشوف: الخلية {cell} لا تقبل إلا {d}",
-        "breadcrumb": "مسار التنقل"
+        "breadcrumb": "مسار التنقل",
+        "practice": "ألغاز الممارسة",
+        "practiceIntro": "في هذه الألغاز، {technique} هي أصعب تقنية تحتاجها. كل رابط يفتح اللغز في اللعبة؛ رابط الحل يعرض كل خطوة."
       },
       "howTo": {
         "title": "كيف تلعب السودوكو: القواعد واللوحة والنقلات الأولى",
@@ -26380,7 +26430,9 @@
         "elimItem": "{d} از {cell}",
         "regions": "سطر 5، ستون 5 و جعبهٔ 5 در آغاز جدول",
         "firstMove": "تک‌گزینهٔ آشکار: {cell} فقط می‌تواند {d} باشد",
-        "breadcrumb": "مسیر صفحه"
+        "breadcrumb": "مسیر صفحه",
+        "practice": "پازل های تمرین",
+        "practiceIntro": "در این پازل‌ها، {technique} سخت‌ترین تکنیکی است که نیاز دارید. هر پیوند پازل را در بازی باز می‌کند؛ پیوند حل‌کننده هر مرحله را نشان می‌دهد."
       },
       "howTo": {
         "title": "سودوکو چطور بازی می‌شود: قوانین، صفحه و حرکت‌های اول",
@@ -27434,7 +27486,9 @@
         "elimItem": "{d} מ-{cell}",
         "regions": "שורה 5, עמודה 5 וריבוע 5 בתחילת החידה",
         "firstMove": "יחיד גלוי: {cell} יכול להיות רק {d}",
-        "breadcrumb": "נתיב ניווט"
+        "breadcrumb": "נתיב ניווט",
+        "practice": "חידות תרגול",
+        "practiceIntro": "בתוך החידות הללו, {technique} היא הטכניקה הקשה ביותר שאתה צריך. כל קישור פותח את החידה במשחק; קישור הפותר מציג כל שלב."
       },
       "howTo": {
         "title": "איך משחקים סודוקו: חוקים, לוח ומהלכים ראשונים",
@@ -28488,7 +28542,9 @@
         "elimItem": "{cell} से {d}",
         "regions": "पहेली की शुरुआत में पंक्ति 5, स्तंभ 5 और बॉक्स 5",
         "firstMove": "खुला एकल: {cell} केवल {d} हो सकता है",
-        "breadcrumb": "नेविगेशन पथ"
+        "breadcrumb": "नेविगेशन पथ",
+        "practice": "अभ्यास पहेलियाँ",
+        "practiceIntro": "इन पहेलियों में, {technique} सबसे कठिन तकनीक है जिसकी आपको आवश्यकता है। प्रत्येक लिंक खेल में पहेली खोलता है; सॉल्वर लिंक प्रत्येक चरण दिखाता है।"
       },
       "howTo": {
         "title": "सुडोकू कैसे खेलें: नियम, बोर्ड और पहली चालें",
@@ -29542,7 +29598,9 @@
         "elimItem": "{cell} থেকে {d}",
         "regions": "ধাঁধার শুরুতে সারি 5, কলাম 5 ও বক্স 5",
         "firstMove": "খোলা একক: {cell} শুধু {d} হতে পারে",
-        "breadcrumb": "নেভিগেশন পথ"
+        "breadcrumb": "নেভিগেশন পথ",
+        "practice": "অনুশীলন ধাঁধা",
+        "practiceIntro": "এই ধাঁধাগুলিতে, {technique} হল সবচেয়ে কঠিন কৌশল যা আপনার প্রয়োজন। প্রতিটি লিংক খেলায় ধাঁধাটি খোলে; সমাধানকারী লিংক প্রতিটি পদক্ষেপ দেখায়।"
       },
       "howTo": {
         "title": "সুডোকু কীভাবে খেলবেন: নিয়ম, বোর্ড ও প্রথম চাল",
@@ -30596,7 +30654,9 @@
         "elimItem": "{d} dari {cell}",
         "regions": "Baris 5, kolom 5, dan kotak 5 di awal teka-teki",
         "firstMove": "Single terbuka: {cell} hanya bisa {d}",
-        "breadcrumb": "Jejak navigasi"
+        "breadcrumb": "Jejak navigasi",
+        "practice": "Teka-teki latihan",
+        "practiceIntro": "Dalam teka-teki ini, {technique} adalah teknik paling sulit yang Anda butuhkan. Setiap tautan membuka teka-teki dalam permainan; tautan pemecah menampilkan setiap langkah."
       },
       "howTo": {
         "title": "Cara Bermain Sudoku: Aturan, Papan, dan Langkah Pertama",
@@ -31650,7 +31710,9 @@
         "elimItem": "{d} daripada {cell}",
         "regions": "Baris 5, lajur 5 dan kotak 5 pada permulaan teka-teki",
         "firstMove": "Tunggal terdedah: {cell} hanya boleh jadi {d}",
-        "breadcrumb": "Jejak navigasi"
+        "breadcrumb": "Jejak navigasi",
+        "practice": "Teka-teki latihan",
+        "practiceIntro": "Dalam teka-teki ini, {technique} adalah teknik paling sulit yang Anda perlukan. Setiap pautan membuka teka-teki dalam permainan; pautan pemecah menunjukkan setiap langkah."
       },
       "howTo": {
         "title": "Cara Bermain Sudoku: Peraturan, Papan dan Langkah Pertama",
@@ -32704,7 +32766,9 @@
         "elimItem": "{d} khỏi {cell}",
         "regions": "Hàng 5, cột 5 và ô vuông 5 khi bắt đầu câu đố",
         "firstMove": "Ứng viên duy nhất: {cell} chỉ có thể là {d}",
-        "breadcrumb": "Đường dẫn"
+        "breadcrumb": "Đường dẫn",
+        "practice": "Câu đố thực hành",
+        "practiceIntro": "Trong những câu đố này, {technique} là kỹ thuật khó nhất mà bạn cần. Mỗi liên kết mở câu đố trong trò chơi; liên kết trình giải hiển thị từng bước."
       },
       "howTo": {
         "title": "Cách chơi Sudoku: luật chơi, bảng và những nước đi đầu tiên",
@@ -33758,7 +33822,9 @@
         "elimItem": "{d} ออกจาก {cell}",
         "regions": "แถว 5 คอลัมน์ 5 และกล่อง 5 ตอนเริ่มโจทย์",
         "firstMove": "ตัวเลือกเดียว: {cell} เป็นได้แค่ {d}",
-        "breadcrumb": "เส้นทางนำทาง"
+        "breadcrumb": "เส้นทางนำทาง",
+        "practice": "ปริศนาฝึกหัด",
+        "practiceIntro": "ในปริศนาเหล่านี้ {technique} เป็นเทคนิคที่ยากที่สุดที่คุณต้องการ ลิงก์แต่ละลิงก์เปิดปริศนาในเกม ลิงก์โปรแกรมแก้ไขแสดงแต่ละขั้นตอน"
       },
       "howTo": {
         "title": "วิธีเล่นซูโดกุ: กติกา กระดาน และการเดินตาแรก",
@@ -34812,7 +34878,9 @@
         "elimItem": "{cell}の{d}",
         "regions": "問題開始時の5行目、5列目、ブロック5",
         "firstMove": "ネイキッドシングル: {cell}には{d}しか入らない",
-        "breadcrumb": "パンくずリスト"
+        "breadcrumb": "パンくずリスト",
+        "practice": "練習パズル",
+        "practiceIntro": "これらのパズルでは、{technique}があなたが必要とする最も難しいテクニックです。各リンクはゲーム内でパズルを開きます。ソルバーリンクは各ステップを表示します。"
       },
       "howTo": {
         "title": "ナンプレの遊び方: ルール、盤面、最初の一手",
@@ -35866,7 +35934,9 @@
         "elimItem": "{cell}의 {d}",
         "regions": "퍼즐을 시작할 때의 5행, 5열, 5번 박스",
         "firstMove": "네이키드 싱글: {cell} 칸에는 {d}만 들어갈 수 있습니다",
-        "breadcrumb": "현재 위치"
+        "breadcrumb": "현재 위치",
+        "practice": "연습 퍼즐",
+        "practiceIntro": "이 퍼즐들에서 {technique}는 당신이 필요한 가장 어려운 기법입니다. 각 링크는 게임에서 퍼즐을 엽니다. 풀이 링크는 각 단계를 보여줍니다."
       },
       "howTo": {
         "title": "스도쿠 하는 법: 규칙, 판 구조, 첫 수",
@@ -36920,7 +36990,9 @@
         "elimItem": "{cell} 的 {d}",
         "regions": "开局时的第 5 行、第 5 列和第 5 宫",
         "firstMove": "显性唯一数：{cell} 只能是 {d}",
-        "breadcrumb": "面包屑导航"
+        "breadcrumb": "面包屑导航",
+        "practice": "练习题",
+        "practiceIntro": "在这些题目中，{technique}是您需要的最难的技巧。每个链接都在游戏中打开题目；求解器链接显示每一步。"
       },
       "howTo": {
         "title": "数独怎么玩：规则、盘面与第一步",
@@ -37974,7 +38046,9 @@
         "elimItem": "{cell} 的 {d}",
         "regions": "開局時的第 5 列、第 5 欄和第 5 宮",
         "firstMove": "顯性唯一數：{cell} 只能是 {d}",
-        "breadcrumb": "麵包屑導覽"
+        "breadcrumb": "麵包屑導覽",
+        "practice": "練習題",
+        "practiceIntro": "在這些題目中，{technique}是您需要的最難的技巧。每個鏈接都在遊戲中打開題目；求解器鏈接顯示每一步。"
       },
       "howTo": {
         "title": "數獨怎麼玩：規則、盤面與第一步",
@@ -39028,7 +39102,9 @@
         "elimItem": "{cell} سے {d}",
         "regions": "پہیلی کے آغاز میں قطار 5، کالم 5 اور خانہ 5",
         "firstMove": "ظاہر سنگل: {cell} میں صرف {d} آ سکتا ہے",
-        "breadcrumb": "صفحے کا راستہ"
+        "breadcrumb": "صفحے کا راستہ",
+        "practice": "مشق کے پہیلیاں",
+        "practiceIntro": "ان پہیلیوں میں، {technique} سب سے مشکل تکنیک ہے جس کی آپ کو ضرورت ہے۔ ہر لنک گیم میں پہیلی کو کھولتا ہے؛ حل کار لنک ہر قدم دکھاتا ہے۔"
       },
       "howTo": {
         "title": "سوڈوکو کیسے کھیلیں: قواعد، بورڈ اور پہلی چالیں",
@@ -40082,7 +40158,9 @@
         "elimItem": "{cell}-இலிருந்து {d}",
         "regions": "புதிரின் தொடக்கத்தில் 5-வது வரிசை, 5-வது நெடுவரிசை, 5-வது பெட்டி",
         "firstMove": "ஒரு வெளிப்படையான சிங்கிள்: {cell} கட்டம் {d} மட்டுமே ஆக முடியும்",
-        "breadcrumb": "பக்க வழி"
+        "breadcrumb": "பக்க வழி",
+        "practice": "பயிற்சி புதிர்கள்",
+        "practiceIntro": "இந்த புதிர்களில், {technique} என்பது உங்களுக்குத் தேவையான கடினமான நுட்பமாகும். ஒவ்வொரு இணைப்பும் விளையாட்டில் புதிரைத் திறக்கிறது; தீர்வு இணைப்பு ஒவ்வொரு படியையும் காட்டுகிறது।"
       },
       "howTo": {
         "title": "சுடோகு விளையாடுவது எப்படி: விதிகள், பலகை, முதல் நகர்வுகள்",
@@ -41136,7 +41214,9 @@
         "elimItem": "{cell} నుండి {d}",
         "regions": "పజిల్ ప్రారంభంలో 5వ వరుస, 5వ నిలువు వరుస, 5వ పెట్టె",
         "firstMove": "ఒక బహిర్గత సింగిల్: {cell} గడి {d} మాత్రమే కాగలదు",
-        "breadcrumb": "పేజీ మార్గం"
+        "breadcrumb": "పేజీ మార్గం",
+        "practice": "ప్రాక్టీస్ పజిల్‌లు",
+        "practiceIntro": "ఈ పజిల్‌లలో, {technique} మీకు అవసరమైన కష్టతమ పద్ధతి. ప్రతిটి లింక్ గేమ్‌లో పజిల్‌ను తెరుస్తుంది; సమాధానదాత లింక్ ప్రతిটి దశను చూపుతుంది."
       },
       "howTo": {
         "title": "సుడోకు ఎలా ఆడాలి: నియమాలు, గ్రిడ్, మొదటి ఎత్తులు",
@@ -42190,7 +42270,9 @@
         "elimItem": "{d} mula sa {cell}",
         "regions": "Hilera 5, hanay 5 at kahon 5 sa simula ng puzzle",
         "firstMove": "Lantad na single: {d} lang ang puwede sa {cell}",
-        "breadcrumb": "Landas ng pahina"
+        "breadcrumb": "Landas ng pahina",
+        "practice": "Mga puhunang pangpraktis",
+        "practiceIntro": "Sa mga puhunang ito, ang {technique} ay ang pinakamahirap na teknik na kailangan mo. Ang bawat link ay nagbubukas ng buhunan sa laro; ang link ng solver ay nagpapakita ng bawat hakbang."
       },
       "howTo": {
         "title": "Paano Laruin ang Sudoku: Patakaran, Board at Unang Galaw",
@@ -43244,7 +43326,9 @@
         "elimItem": "{d} de {cell}",
         "regions": "La fila 5, la columna 5 i la caixa 5 a l'inici d'un trencaclosques",
         "firstMove": "Un candidat únic: {cell} només pot ser {d}",
-        "breadcrumb": "Ruta de navegació"
+        "breadcrumb": "Ruta de navegació",
+        "practice": "Trencaclosques pràctiques",
+        "practiceIntro": "En aquests trencaclosques, {technique} és la tècnica més difícil que necessites. Cada enllaç obri el trencaclosques al joc; l'enllaç del solucionador mostra cada pas."
       },
       "howTo": {
         "title": "Com es juga al sudoku: regles, quadrícula i primers passos",
@@ -44298,7 +44382,9 @@
         "elimItem": "{d} iz {cell}",
         "regions": "Vrstica 5, stolpec 5 in kvadrat 5 na začetku uganke",
         "firstMove": "Edini kandidat: {cell} je lahko le {d}",
-        "breadcrumb": "Drobtinice"
+        "breadcrumb": "Drobtinice",
+        "practice": "Vaje sestavljanke",
+        "practiceIntro": "V teh sestavljankah je {technique} najtežja tehnika, ki jo potrebuješ. Vsaka povezava odpre sestavljanko v igri; povezava reševalnika prikazuje vsak korak."
       },
       "howTo": {
         "title": "Kako igrati sudoku: pravila, mreža in prve poteze",
@@ -45352,7 +45438,9 @@
         "elimItem": "{d} iš {cell}",
         "regions": "5 eilutė, 5 stulpelis ir 5 kvadratas galvosūkio pradžioje",
         "firstMove": "Vienintelis kandidatas: {cell} gali būti tik {d}",
-        "breadcrumb": "Naršymo kelias"
+        "breadcrumb": "Naršymo kelias",
+        "practice": "Pratybų galvosūkiai",
+        "practiceIntro": "Šiuose galvosūkiuose {technique} yra sunkiausia technika, kurios tau reikia. Kiekvienas nuoroda atidaro galvosūkį žaidime; sprendiklio nuoroda rodo kiekvieną žingsnį."
       },
       "howTo": {
         "title": "Kaip žaisti sudoku: taisyklės, tinklelis ir pirmi ėjimai",
@@ -46406,7 +46494,9 @@
         "elimItem": "{d} no {cell}",
         "regions": "5. rinda, 5. kolonna un 5. kvadrāts mīklas sākumā",
         "firstMove": "Vienīgais kandidāts: {cell} var būt tikai {d}",
-        "breadcrumb": "Navigācijas ceļš"
+        "breadcrumb": "Navigācijas ceļš",
+        "practice": "Prakses mīklas",
+        "practiceIntro": "Šajos mīklajos {technique} ir grūtākā paņēmiens, kas tev nepieciešams. Katra saite atver mīklu spēlē; atrisinātāja saite rāda katru soli."
       },
       "howTo": {
         "title": "Kā spēlēt sudoku: noteikumi, režģis un pirmie gājieni",
@@ -47460,7 +47550,9 @@
         "elimItem": "{cell} уячасынан {d}",
         "regions": "Табышмактын башында 5-сап, 5-мамыча жана 5-куту",
         "firstMove": "Жалгыз талапкер: {cell} уячасы {d} гана боло алат",
-        "breadcrumb": "Навигация жолу"
+        "breadcrumb": "Навигация жолу",
+        "practice": "Жээдик чечемелер",
+        "practiceIntro": "Бул чечемелерде {technique} сизге керек болгон эң кыйын техника. Ар бир шилтеме оюндагы чечемени ачат; чечүүчү шилтемеси ар бир кадамды көрсөтөт."
       },
       "howTo": {
         "title": "Судоку кантип ойнолот: эрежелер, торчо жана алгачкы жүрүштөр",
@@ -48514,7 +48606,9 @@
         "elimItem": "{cell} ұяшығынан {d}",
         "regions": "Жұмбақ басындағы 5-жол, 5-баған және 5-қорап",
         "firstMove": "Жалғыз үміткер: {cell} ұяшығы тек {d} бола алады",
-        "breadcrumb": "Бет жолы"
+        "breadcrumb": "Бет жолы",
+        "practice": "Жаттығу басқыштары",
+        "practiceIntro": "{technique} осы басқыштарда сізге қажет болатын ең қиын техника болып табылады. Әр сілтеме ойындағы басқышты ашады; шешуші сілтемесі әр қадамды көрсетеді."
       },
       "howTo": {
         "title": "Судоку қалай ойналады: ережелер, тақта, алғашқы жүрістер",
@@ -49568,7 +49662,9 @@
         "elimItem": "{cell} katagidan {d}",
         "regions": "Boshqotirma boshidagi 5-qator, 5-ustun va 5-kvadrat",
         "firstMove": "Yagona nomzod: {cell} katagi faqat {d} boʻlishi mumkin",
-        "breadcrumb": "Sahifa yoʻli"
+        "breadcrumb": "Sahifa yoʻli",
+        "practice": "Mashq muammolari",
+        "practiceIntro": "Bu muammolarda {technique} sizga kerak bo'lgan eng qiyin usul hisoblanadi. Har bir havola o'yinda muammoni ochadi; yechuvchi havolasi har bir qadamni ko'rsatadi."
       },
       "howTo": {
         "title": "Sudoku qanday oʻynaladi: qoidalar, maydon va ilk yurishlar",
@@ -50622,7 +50718,9 @@
         "elimItem": "{cell} öýjüginden {d}",
         "regions": "Tapmaçanyň başynda 5-nji setir, 5-nji sütün we 5-nji guty",
         "firstMove": "Ýeke dalaşgär: {cell} öýjügi diňe {d} bolup biler",
-        "breadcrumb": "Sahypa ýoly"
+        "breadcrumb": "Sahypa ýoly",
+        "practice": "Maşk aňlatmalary",
+        "practiceIntro": "{technique} bu aňlatmalarda size zerur bolan iň kyn usuldyr. Her bir baglaňa oýunda aňlatmany açýar; çyşyrylan baglaňasy her bir ädimi görkezýär."
       },
       "howTo": {
         "title": "Sudoku nähili oýnalýar: düzgünler, meýdan, ilkinji ýörişler",
@@ -51676,7 +51774,9 @@
         "elimItem": "{cell} күзәнәгеннән {d}",
         "regions": "Табышмак башында 5 нче юл, 5 нче багана һәм 5 нче тартма",
         "firstMove": "Бердәнбер кандидат: {cell} күзәнәге бары тик {d} була ала",
-        "breadcrumb": "Бит юлы"
+        "breadcrumb": "Бит юлы",
+        "practice": "Тәҗрибәлекне мисалнар",
+        "practiceIntro": "{technique} бу мисалнарда сезгә кирәк булган иң авыр техникадыр. Хәр бер сылтама уендагы мисалны асыйцы; чишүче сылтамасы хәр бер адымны күрсәтә."
       },
       "howTo": {
         "title": "Судоку ничек уйнала: кагыйдәләр, мәйдан, беренче йөрешләр",
@@ -52730,7 +52830,9 @@
         "elimItem": "{cell} күҙәнәгенән {d}",
         "regions": "Йомаҡ башында 5-се юл, 5-се бағана һәм 5-се тартма",
         "firstMove": "Берҙән-бер кандидат: {cell} күҙәнәге тик {d} була ала",
-        "breadcrumb": "Бит юлы"
+        "breadcrumb": "Бит юлы",
+        "practice": "Өндәштерелгән есеп",
+        "practiceIntro": "{technique} бындай есептәрҙә сеңә кәрәк булған иң ауыр техника. Һәр бер силтәмә уында есепне асыйласы; чишүче силтәмәсе һәр адымын күрсәтә."
       },
       "howTo": {
         "title": "Судокуны нисек уйнарға: ҡағиҙәләр, таҡта һәм тәүге йөрөштәр",
@@ -53784,7 +53886,9 @@
         "elimItem": "{cell} клеткӑран {d}",
         "regions": "Тупсӑм пуҫламӑшӗнче 5-мӗш йӗрке, 5-мӗш юпа тата 5-мӗш тӑваткал",
         "firstMove": "Пӗртен-пӗр кандидат: {cell} клеткӑра {d} ҫеҫ пулма пултарать",
-        "breadcrumb": "Навигаци"
+        "breadcrumb": "Навигаци",
+        "practice": "Вӑл пӑтӑмлисем",
+        "practiceIntro": "Ку пӑтӑмлисенче {technique} тӑвассӑр ҫухатӗ лаканхи техника. Пӗр-пӗр каяс вулаҫе уенче пӑтӑмле асайлатса; вулатхи каяс пӗр-пӗр етме асайлатса."
       },
       "howTo": {
         "title": "Судокӑлла мӗнле выляс: правилӑсем, хӑма, малтанхи утӑмсем",
@@ -54838,7 +54942,9 @@
         "elimItem": "{cell} خانىسىدىن {d}",
         "regions": "تېپىشماق بېشىدىكى 5-قۇر، 5-ئىستون ۋە 5-كاتەكچە",
         "firstMove": "يالغۇز نامزات: {cell} خانىسى پەقەت {d} بولالايدۇ",
-        "breadcrumb": "بەت يولى"
+        "breadcrumb": "بەت يولى",
+        "practice": "مەشق مەسىلىلەري",
+        "practiceIntro": "بۇ مەسىلىلەردە {technique} سىزگە كېرەك بولغان ئىڭ قىين تېخنىكا. ھەربىر ئۇلانما ئويۇندا مەسىلە ئاچسا؛ ھەل قىلغۇچى ئۇلانمىسى ھەربىر قەدەمنى كۆرسىتىدۇ."
       },
       "howTo": {
         "title": "سۇدوكۇ قانداق ئوينىلىدۇ: قائىدىلەر، تاختا ۋە تۇنجى قەدەملەر",
@@ -55892,7 +55998,9 @@
         "elimItem": "{cell} kateginen {d}",
         "regions": "Jumbaq basındaǵı 5-qatar, 5-baǵana hám 5-qutı",
         "firstMove": "Jalǵız talapker: {cell} kategi tek {d} bola aladı",
-        "breadcrumb": "Bet jolı"
+        "breadcrumb": "Bet jolı",
+        "practice": "Maşk maseleleri",
+        "practiceIntro": "{technique} bu maselelerde siziń kerek bolatyn eng qiyn usul. Her bir bağlama oyında masele açady; şeshiwshi bağlamasy har bir qadam körsetedi."
       },
       "howTo": {
         "title": "Sudoku qalay oynaladı: qaǵıydalar, taqta, dáslepki júrisler",
@@ -56946,7 +57054,9 @@
         "elimItem": "{cell} hüceyresinden {d}",
         "regions": "Bilmeceniñ başında 5. satır, 5. sütün ve 5. qutu",
         "firstMove": "Tek namzet: {cell} hüceyresi yalıñız {d} ola bile",
-        "breadcrumb": "Saife yolu"
+        "breadcrumb": "Saife yolu",
+        "practice": "Maşq meseleleri",
+        "practiceIntro": "{technique} bu meselelerde siz üçün kerektü en qıyın usuldır. Her bir bağlantı oyunda mesele açar; çözvüçü bağlantısı her bir adımı körseder."
       },
       "howTo": {
         "title": "Sudoku Nasıl Oynala: Qaideler, Taqta ve İlk Adımlar",
@@ -58000,7 +58110,9 @@
         "elimItem": "{cell} клеткаттан {d}",
         "regions": "Таабырын саҕаланыытыгар 5-с строка, 5-с колонка уонна 5-с дьааһык",
         "firstMove": "Биир кандидат: {cell} клетка {d} эрэ буолуон сөп",
-        "breadcrumb": "Сирэй суола"
+        "breadcrumb": "Сирэй суола",
+        "practice": "Үндүрүү толкуйдара",
+        "practiceIntro": "Биһи толкуйдарыга {technique} киһи кэрэтэ, иҥэ аһын ыйынньаҕа. Хоһоон сүрэҕэ холкота толкуйну асыйыа; сыһыптыырчы сүрэҕэ хоһоон адымын сэрэ сүнэрэ."
       },
       "howTo": {
         "title": "Судоку оонньуута: быраабылалар, дуоска, бастакы хардыылар",
@@ -59054,7 +59166,9 @@
         "elimItem": "{cell} клеткадан {d}",
         "regions": "Табышманы башында 5-нчи сатыр, 5-нчи багъана ва 5-нчи къуту",
         "firstMove": "Ялгъыз кандидат: {cell} клетка тек {d} болуп бола",
-        "breadcrumb": "Бетни ёлу"
+        "breadcrumb": "Бетни ёлу",
+        "practice": "Машт мягънялар",
+        "practiceIntro": "{technique} бу мягънялында сизге кяряк болан иң авур техника. Хаьр бир линк уйында мягъня ачар; чешкичи линки хаьр бир адымы кёрстетер."
       },
       "howTo": {
         "title": "Судокуну нечик ойнайлар: къайдалар, майдан, юрюшлер",
@@ -60108,7 +60222,9 @@
         "elimItem": "{cell} خاناسیندان {d}",
         "regions": "بولماجانین باشیندا 5 نؤمره‌لی سطر، سوتون و قوتو",
         "firstMove": "تک نامیزد: {cell} یالنیز {d} اولا بیلر",
-        "breadcrumb": "صحیفه یولو"
+        "breadcrumb": "صحیفه یولو",
+        "practice": "تمرین معماها",
+        "practiceIntro": "{technique} این معماها میں سب سے مشکل تکنیک است که شما نیاز دارید. هر پیوند معما را در بازی باز میکند؛ پیوند حل کننده هر مرحله را نشان میدهد."
       },
       "howTo": {
         "title": "سودوکو نئجه اوینانیر: قایدالار، جدول و ایلک گدیشلر",
@@ -61162,7 +61278,9 @@
         "elimItem": "{d} lahtrist {cell}",
         "regions": "5. rida, 5. veerg ja 5. ruut mõistatuse alguses",
         "firstMove": "Üksik kandidaat: {cell} saab olla ainult {d}",
-        "breadcrumb": "Navigeerimisrada"
+        "breadcrumb": "Navigeerimisrada",
+        "practice": "Harjutuspuzzled",
+        "practiceIntro": "Nendes puzzletes on {technique} kõige keerulisem tehnika, mida sa vajad. Iga link avab mängu puzle; lahendaja link näitab iga sammu."
       },
       "howTo": {
         "title": "Kuidas sudokut mängida: reeglid, ruudustik, esimesed käigud",
@@ -62216,7 +62334,9 @@
         "elimItem": "{cell} خاناسیندان {d}",
         "regions": "بولماجانین باشیندا 5 نومره‌لی سیرا، سوتون و قوتو",
         "firstMove": "تک نامزد: {cell} یالنیز {d} اولا بیلر",
-        "breadcrumb": "صفحه یولو"
+        "breadcrumb": "صفحه یولو",
+        "practice": "سوال پرتی ها",
+        "practiceIntro": "در این سوال پرتی ها، {technique} سخت ترین تکنیک است که شما نیاز دارید. هر پیوند معما را در بازی باز میکند؛ پیوند حل کننده هر مرحله را نشان میدهد."
       },
       "howTo": {
         "title": "سودوکو نئجه اوینانیر: قایدالار، جدول و ایلک حرکتلر",
