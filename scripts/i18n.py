@@ -132,7 +132,9 @@ def load_site(languages):
 
 GUIDE_KEYS = ["learnHeading", "learnText", "howToLink", "techniquesLink", "labels", "howTo", "index", "tech"]
 GUIDE_LABELS = ["howTo", "techniques", "play", "prev", "next", "all", "example", "steps", "when", "spot", "mistakes", "inGame", "level", "hint", "legend", "notation", "row", "column", "box", "elimItem", "regions", "firstMove", "breadcrumb"]
-LABEL_PLACEHOLDERS = {"level": {"level"}, "hint": {"text"}, "row": {"n"}, "column": {"n"}, "box": {"n"}, "elimItem": {"d", "cell"}, "firstMove": {"cell", "d"}}
+LABEL_PLACEHOLDERS = {"level": {"level"}, "hint": {"text"}, "row": {"n"}, "column": {"n"}, "box": {"n"}, "elimItem": {"d", "cell"}, "firstMove": {"cell", "d"}, "practiceIntro": {"technique"}}
+OPTIONAL_LABELS = ["playExample", "practice", "practiceIntro"]
+DECIMAL_COMMA = {"tr", "az", "de", "fr", "es", "pt", "it", "nl", "pl", "cs", "sk", "hu", "ro", "el", "sv", "da", "nb", "fi", "ru", "uk", "bg", "sr", "hr", "id", "vi", "ca", "sl", "lt", "lv", "ky", "kk", "uz", "tk", "tt", "cv", "sah", "et"}
 TECHNIQUES = ["naked-single", "hidden-single", "locked-candidates", "naked-pairs", "hidden-pairs", "x-wing", "swordfish", "skyscraper", "two-string-kite", "y-wing", "xyz-wing", "w-wing", "unique-rectangle", "finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "wxyz-wing"]
 TECH_LEVEL = {"naked-single": 0, "hidden-single": 0, "locked-candidates": 2, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 3, "swordfish": 3, "xyz-wing": 3, "skyscraper": 3, "two-string-kite": 3, "w-wing": 3, "unique-rectangle": 3, "finned-x-wing": 3, "empty-rectangle": 3, "unique-rectangle-type-4": 3, "hidden-rectangle": 3, "finned-swordfish": 3, "wxyz-wing": 3}
 OPTIONAL_TECHNIQUES = {"finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "wxyz-wing"}
@@ -213,6 +215,7 @@ def check_guide_entry(code, entry, reference):
     for k in GUIDE_LABELS:
         if not labels.get(k):
             fail(code, "labels.%s eksik" % k)
+    for k in GUIDE_LABELS + [k for k in OPTIONAL_LABELS if labels.get(k)]:
         if placeholders(labels[k]) != LABEL_PLACEHOLDERS.get(k, set()):
             fail(code, "labels.%s yer tutuculari %s olmali" % (k, sorted(LABEL_PLACEHOLDERS.get(k, set()))))
     dense = code in DENSE

@@ -11,7 +11,7 @@ from consts import SITE, NAME, AUTHOR, AUTHOR_URL, PERSON_ID, WEBSITE_ID, GAME_I
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HOWTO = "how-to-play"
 TECH = "techniques"
-GUIDE_SOURCES = ["i18n/guide.json", "src/guide.html", "src/examples.json"]
+GUIDE_SOURCES = ["i18n/guide.json", "src/guide.html", "src/examples.json", "src/practice.json"]
 LINK = re.compile(r"\[([^\]]+)\]\(([a-z0-9-]+)\)")
 PLACEHOLDER = re.compile(r"\{([A-Za-z0-9]+)\}")
 TAG = re.compile(r"<[^>]+>")
@@ -100,6 +100,32 @@ def fill(text, values):
 def load_examples():
     with open(os.path.join(ROOT, "src", "examples.json"), encoding="utf-8") as f:
         return json.load(f)
+
+
+def load_practice():
+    with open(os.path.join(ROOT, "src", "practice.json"), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def rating_text(code, rating):
+    text = "%d.%d" % (rating // 10, rating % 10)
+    return text.replace(".", ",") if code in i18n.DECIMAL_COMMA else text
+
+
+def practice_html(code, entry, site_entry, strings, slug, practice, fallback):
+    items = practice.get(slug) or []
+    if not items:
+        return ""
+    labels = entry["labels"]
+    heading = labels.get("practice") or fallback["practice"]
+    intro = labels.get("practiceIntro") or fallback["practiceIntro"]
+    rows = []
+    for item in items:
+        links = ['<a href="%s?p=%s">%s %s</a>' % (i18n.path(code), item["p"], esc(strings[item["l"]]), rating_text(code, item["r"]))]
+        if site_entry.get("solver"):
+            links.append('<a href="%ssolver/?p=%s">%s</a>' % (i18n.path(code), item["p"], esc(site_entry["solver"]["link"])))
+        rows.append("<li>%s</li>" % " · ".join(links))
+    return '<h2>%s</h2><p>%s</p><ol class="practice">%s</ol>' % (esc(heading), fill(intro, {"technique": entry["tech"][slug]["name"]}), "".join(rows))
 
 
 def unit_label(labels, u):
@@ -269,7 +295,7 @@ def index_body(code, entry, site_entry, strings, modified):
     return "\n".join(parts)
 
 
-def tech_body(code, entry, site_entry, strings, slug, examples, modified):
+def tech_body(code, entry, site_entry, strings, slug, examples, modified, practice, fallback):
     labels = entry["labels"]
     t = entry["tech"][slug]
     shown = examples[slug]
@@ -291,6 +317,7 @@ def tech_body(code, entry, site_entry, strings, slug, examples, modified):
     parts.append("<h2>%s</h2>" % esc(labels["inGame"]))
     parts.append('<p class="facts">%s<br>%s</p>' % (fill(labels["level"], {"level": strings[i18n.TECH_LEVEL[slug]]}), fill(labels["hint"], {"text": hint_text(slug, strings, shown[0])})))
     parts.append('<p class="try">%s</p>' % " · ".join(try_links(code, labels, site_entry, shown[0]["given"])))
+    parts.append(practice_html(code, entry, site_entry, strings, slug, practice, fallback))
     parts += faq_html(site_entry["faqHeading"], t["faq"])
     order = i18n.techniques_of(entry)
     k = order.index(slug)
@@ -379,8 +406,8 @@ def guide_dates(guide):
         if previous.get(code) != entry:
             last[code] = today
     try:
-        template_date = run(["git", "log", "-1", "--format=%cs", "--", "src/guide.html", "src/examples.json"], 30) or today
-        if run(["git", "status", "--porcelain", "--", "src/guide.html", "src/examples.json"], 30):
+        template_date = run(["git", "log", "-1", "--format=%cs", "--", "src/guide.html", "src/examples.json", "src/practice.json"], 30) or today
+        if run(["git", "status", "--porcelain", "--", "src/guide.html", "src/examples.json", "src/practice.json"], 30):
             template_date = today
     except Exception:
         template_date = today
@@ -419,7 +446,7 @@ def languages_with(guide, slug):
     return [code for code in guide if slug in guide[code]["tech"]]
 
 
-def pages(code, entry, site_entry, strings, examples, dates, guide):
+def pages(code, entry, site_entry, strings, examples, dates, guide, practice, fallback):
     labels = entry["labels"]
     how = entry["howTo"]
     modified = dates[1]
@@ -429,16 +456,18 @@ def pages(code, entry, site_entry, strings, examples, dates, guide):
     for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
         trail = [(labels["techniques"], index_path(code)), (t["name"], tech_path(code, slug))]
-        yield tech_path(code, slug), t, tech_body(code, entry, site_entry, strings, slug, examples, modified), trail, (lambda c, s=slug: tech_path(c, s)), t["faq"], languages_with(guide, slug)
+        yield tech_path(code, slug), t, tech_body(code, entry, site_entry, strings, slug, examples, modified, practice, fallback), trail, (lambda c, s=slug: tech_path(c, s)), t["faq"], languages_with(guide, slug)
 
 
 def write_all(write, dist, template, css, guide, site, tables, examples, names):
     dates = guide_dates(guide)
     languages = {code: {"name": names[code]} for code in guide}
+    practice = load_practice()
+    fallback = guide["en"]["labels"]
     count = 0
     for code, entry in guide.items():
         site_entry = site[code]
-        for path, page, body, trail, resolve, faq, codes in pages(code, entry, site_entry, tables[code], examples, dates[code], guide):
+        for path, page, body, trail, resolve, faq, codes in pages(code, entry, site_entry, tables[code], examples, dates[code], guide, practice, fallback):
             url = SITE + path
             ld = jsonld(code, url, page["title"], page["description"], page["h1"], faq, trail, dates[code][0], dates[code][1], body)
             out = render(template, css, code, url, path, page["title"], page["description"], entry, site_entry, {c: languages[c] for c in codes}, body, ld, trail, dates[code], resolve)
