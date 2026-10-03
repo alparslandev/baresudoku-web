@@ -23,6 +23,8 @@ Game strings for all languages are in `i18n/strings.json`; page texts (title, de
 
 ## Solver
 
+The daily page also has an archive (`/daily/?d=2026-09-15` plays any past day from 2025 on, with a calendar of what you solved) and a puzzle of the week (`/daily/?w=2026-W41`, a hard Master puzzle taken from `src/weekly.json`, which `bun scripts/weekly.js` generates with a fixed seed). After a daily or weekly puzzle the game shows how many players solved it, their average time and the share of them you beat; the Worker keeps only anonymous counters per puzzle (count, total time and a coarse time histogram) and serves them at `/api/p`. The menu can hide the timer, and on desktop it lists the keyboard shortcuts (`?` opens the list).
+
 `/solver/` (and `/tr/solver/`, for languages with solver texts in `site.json`) is a step-by-step solver built on the same engine: type or paste a puzzle, then step through it or solve it at once. Every step names the technique with its rating and links to its guide page where one exists, the board shows the placement or the eliminated candidates, and the summary gives the level and rating. It runs in the browser only; `?p=` with 81 digits prefills the grid. The script is `dist/solver.js` (engine plus `src/solver.js`).
 
 `/print/` (and `/tr/print/`, for languages with print texts in `site.json`) prints puzzles: pick a level and one, two, four or six puzzles per sheet; the solutions go on a separate page and can be left out. The puzzles come from the same generator, seeded from the `s` parameter, so the link printed at the bottom of the sheet (`?l=3&n=4&s=123456&k=1`) brings back the same puzzles with their solutions, and `?p=` with 81 digits prints that one puzzle. The script is `dist/print.js` (engine plus `src/print.js`).
