@@ -374,7 +374,7 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
     return out
 
 
-DYNAMIC_REDIRECTS = 40
+DYNAMIC_REDIRECTS = 41
 
 
 def removed_languages():
