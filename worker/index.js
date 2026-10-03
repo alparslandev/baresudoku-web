@@ -11,6 +11,12 @@ const UPSERT = 'INSERT INTO counts (day, dim, name, n) VALUES (?1, ?2, ?3, ?4) O
 const RANGES = { 7: 7, 30: 30, 90: 90, all: 0 };
 const RANGE_LABELS = { 7: '7 days', 30: '30 days', 90: '90 days', all: 'All time' };
 const LEVELS = ['Easy', 'Medium', 'Hard', 'Expert', 'Master'];
+const PUZZLE_DIMS = new Set(['pn', 'ps', 'pt']);
+const FIRST_PUZZLE_DAY = '2025-01-01';
+const DAILY_ID = /^d(\d{4})-(\d{2})-(\d{2})$/;
+const WEEK_ID = /^w(\d{4})-W(\d{2})$/;
+const PUZZLE_SQL = "SELECT dim, name, n FROM counts WHERE day = ?1 AND dim IN ('pn', 'ps', 'pt')";
+const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'public, max-age=15', 'X-Robots-Tag': 'noindex', 'X-Content-Type-Options': 'nosniff' };
 const STATS_HEADERS = {
   'Content-Type': 'text/html; charset=utf-8',
   'Cache-Control': 'public, max-age=60',
@@ -32,6 +38,52 @@ function row(day, dim, name, n) {
   return { day, dim, name, n };
 }
 
+export function timeBucket(s) {
+  return s < 600 ? s - s % 15 : s < 3600 ? s - s % 60 : s - s % 300;
+}
+
+function utcDay(ms) {
+  return new Date(ms).toISOString().slice(0, 10);
+}
+
+export function weekMonday(year, week) {
+  const jan4 = Date.UTC(year, 0, 4);
+  const offset = (new Date(jan4).getUTCDay() + 6) % 7;
+  return utcDay(jan4 + ((week - 1) * 7 - offset) * DAY);
+}
+
+export function puzzleKey(id, nowMs) {
+  if (typeof id !== 'string') return null;
+  let day, kind;
+  const d = DAILY_ID.exec(id);
+  if (d) {
+    day = d[1] + '-' + d[2] + '-' + d[3];
+    if (utcDay(Date.UTC(+d[1], +d[2] - 1, +d[3])) !== day) return null;
+    kind = 'd';
+  } else {
+    const w = WEEK_ID.exec(id);
+    if (!w || +w[2] < 1 || +w[2] > 53) return null;
+    day = weekMonday(+w[1], +w[2]);
+    kind = 'w';
+  }
+  if (day < FIRST_PUZZLE_DAY || day > dayOf(nowMs + DAY)) return null;
+  return { day, kind };
+}
+
+export function puzzleSummary(rows, kind) {
+  const levels = {};
+  for (const r of rows) {
+    if (!PUZZLE_DIMS.has(r.dim) || typeof r.name !== 'string' || r.name[0] !== kind) continue;
+    const [name, bucket] = r.name.split(':');
+    const l = levels[name] || (levels[name] = { n: 0, s: 0, h: {} });
+    const n = +r.n || 0;
+    if (r.dim === 'pn') l.n += n;
+    else if (r.dim === 'ps') l.s += n;
+    else if (bucket !== undefined) l.h[bucket] = (l.h[bucket] || 0) + n;
+  }
+  return { levels };
+}
+
 export function parseEvent(raw, nowMs) {
   let ev;
   try { ev = JSON.parse(raw); } catch (e) { return null; }
@@ -51,7 +103,14 @@ export function parseEvent(raw, nowMs) {
   const t = +ev.t;
   const day = t >= nowMs - 60 * DAY && t <= nowMs + 300e3 ? dayOf(t) : today;
   const rows = [row(day, 'done', level, 1)];
-  if (Number.isInteger(ev.s) && ev.s >= 1 && ev.s <= 10800) rows.push(row(day, 'time', level, ev.s), row(day, 'timed', level, 1));
+  if (Number.isInteger(ev.s) && ev.s >= 1 && ev.s <= 10800) {
+    rows.push(row(day, 'time', level, ev.s), row(day, 'timed', level, 1));
+    const key = puzzleKey(ev.p, nowMs);
+    if (key && (key.kind === 'd' || level === '4')) {
+      const name = key.kind + level;
+      rows.push(row(key.day, 'pn', name, 1), row(key.day, 'ps', name, ev.s), row(key.day, 'pt', name + ':' + timeBucket(ev.s), 1));
+    }
+  }
   return rows;
 }
 
@@ -89,6 +148,7 @@ export function summarize(rows) {
   const byDay = new Map();
   const langs = new Map(), refs = new Map(), devs = new Map();
   for (const r of rows) {
+    if (PUZZLE_DIMS.has(r.dim)) continue;
     const n = +r.n || 0;
     let day = byDay.get(r.day);
     if (!day) byDay.set(r.day, day = { visit: 0, open: 0, start: 0, done: 0 });
@@ -143,6 +203,13 @@ export function renderStats(s, days, today) {
     '<p class="foot">Anonymous counters only: no cookies, no IP addresses, no identifiers. Days follow Europe/Istanbul; today is ' + esc(today) + '. <a href="/">Play</a> · <a href="https://github.com/alparslandev/baresudoku-web">Source</a></p></body></html>';
 }
 
+async function puzzleStats(env, id) {
+  const key = puzzleKey(id, Date.now());
+  if (!key) return new Response('{}', { status: 400, headers: JSON_HEADERS });
+  const { results } = await env.DB.prepare(PUZZLE_SQL).bind(key.day).all();
+  return new Response(JSON.stringify(puzzleSummary(results, key.kind)), { headers: JSON_HEADERS });
+}
+
 async function stats(env, param) {
   const days = Object.hasOwn(RANGES, param) ? RANGES[param] : 30;
   const now = Date.now();
@@ -158,6 +225,13 @@ export default {
     if (url.pathname === '/api/e') {
       if (request.method === 'POST') await collect(request, env, ctx).catch(() => {});
       return new Response(null, { status: 204 });
+    }
+    if (url.pathname === '/api/p' && (request.method === 'GET' || request.method === 'HEAD')) {
+      try {
+        return await puzzleStats(env, url.searchParams.get('id'));
+      } catch (e) {
+        return new Response('{}', { status: 503, headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' } });
+      }
     }
     if ((url.pathname === '/stats' || url.pathname === '/stats/') && (request.method === 'GET' || request.method === 'HEAD')) {
       try {

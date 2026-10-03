@@ -1,5 +1,5 @@
 import { test, expect } from "bun:test";
-import worker, { dayOf, parseEvent, summarize, renderStats, automated } from "../worker/index.js";
+import worker, { dayOf, parseEvent, summarize, renderStats, automated, timeBucket, weekMonday, puzzleKey, puzzleSummary } from "../worker/index.js";
 
 const NOW = Date.UTC(2026, 8, 29, 12, 0, 0);
 const DAY = 86400e3;
@@ -124,4 +124,61 @@ test("routing", async () => {
   expect(await stats.text()).toContain("No data yet");
   expect((await get("/stats?days=constructor")).status).toBe(200);
   expect((await get("/stats/?days=all")).status).toBe(200);
+});
+
+test("puzzle ids, weeks and time buckets", () => {
+  expect(timeBucket(1)).toBe(0);
+  expect(timeBucket(599)).toBe(585);
+  expect(timeBucket(600)).toBe(600);
+  expect(timeBucket(3599)).toBe(3540);
+  expect(timeBucket(3600)).toBe(3600);
+  expect(timeBucket(10799)).toBe(10500);
+  expect(weekMonday(2026, 40)).toBe("2026-09-28");
+  expect(weekMonday(2026, 1)).toBe("2025-12-29");
+  expect(weekMonday(2027, 1)).toBe("2027-01-04");
+  expect(puzzleKey("d2026-09-29", NOW)).toEqual({ day: "2026-09-29", kind: "d" });
+  expect(puzzleKey("d2026-09-30", NOW)).toEqual({ day: "2026-09-30", kind: "d" });
+  expect(puzzleKey("d2026-10-01", NOW)).toBeNull();
+  expect(puzzleKey("d2026-02-31", NOW)).toBeNull();
+  expect(puzzleKey("d2024-12-31", NOW)).toBeNull();
+  expect(puzzleKey("w2026-W40", NOW)).toEqual({ day: "2026-09-28", kind: "w" });
+  expect(puzzleKey("w2026-W41", NOW)).toBeNull();
+  expect(puzzleKey("w2026-W00", NOW)).toBeNull();
+  expect(puzzleKey("x2026-09-29", NOW)).toBeNull();
+  expect(puzzleKey(5, NOW)).toBeNull();
+});
+
+test("daily and weekly solves feed the comparison counters", () => {
+  const daily = parseEvent(JSON.stringify({ e: "done", k: 3, t: NOW - 3600e3, s: 754, p: "d2026-09-27" }), NOW);
+  expect(daily.slice(3)).toEqual([
+    { day: "2026-09-27", dim: "pn", name: "d3", n: 1 },
+    { day: "2026-09-27", dim: "ps", name: "d3", n: 754 },
+    { day: "2026-09-27", dim: "pt", name: "d3:720", n: 1 },
+  ]);
+  const weekly = parseEvent(JSON.stringify({ e: "done", k: 4, t: NOW, s: 3700, p: "w2026-W40" }), NOW);
+  expect(weekly.slice(3).map(r => r.day + " " + r.dim + " " + r.name + " " + r.n)).toEqual(["2026-09-28 pn w4 1", "2026-09-28 ps w4 3700", "2026-09-28 pt w4:3600 1"]);
+  expect(parseEvent(JSON.stringify({ e: "done", k: 2, t: NOW, s: 300, p: "w2026-W40" }), NOW).length).toBe(3);
+  expect(parseEvent(JSON.stringify({ e: "done", k: 2, t: NOW, s: 300, p: "d2026-12-01" }), NOW).length).toBe(3);
+  expect(parseEvent(JSON.stringify({ e: "done", k: 2, t: NOW, p: "d2026-09-29" }), NOW).length).toBe(1);
+  const rows = [
+    { day: "2026-09-28", dim: "pn", name: "d3", n: 4 }, { day: "2026-09-28", dim: "ps", name: "d3", n: 2000 },
+    { day: "2026-09-28", dim: "pt", name: "d3:450", n: 3 }, { day: "2026-09-28", dim: "pt", name: "d3:600", n: 1 },
+    { day: "2026-09-28", dim: "pn", name: "w4", n: 1 }, { day: "2026-09-28", dim: "ps", name: "w4", n: 4000 }, { day: "2026-09-28", dim: "pt", name: "w4:3900", n: 1 },
+  ];
+  expect(puzzleSummary(rows, "d")).toEqual({ levels: { d3: { n: 4, s: 2000, h: { 450: 3, 600: 1 } } } });
+  expect(puzzleSummary(rows, "w")).toEqual({ levels: { w4: { n: 1, s: 4000, h: { 3900: 1 } } } });
+  const s = summarize(rows.concat([{ day: "2026-09-29", dim: "open", name: "en", n: 2 }]));
+  expect(s.days.map(d => d.day)).toEqual(["2026-09-29"]);
+  expect(s.total.open).toBe(2);
+});
+
+test("puzzle comparison endpoint", async () => {
+  const { env, ctx } = fakeEnv();
+  const get = path => worker.fetch(new Request("https://baresudoku.com" + path), env, ctx);
+  const ok = await get("/api/p?id=d2026-09-29");
+  expect(ok.status).toBe(200);
+  expect(ok.headers.get("Content-Type")).toBe("application/json; charset=utf-8");
+  expect(await ok.json()).toEqual({ levels: {} });
+  expect((await get("/api/p?id=nope")).status).toBe(400);
+  expect((await get("/api/p")).status).toBe(400);
 });
