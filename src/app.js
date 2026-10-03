@@ -7,6 +7,9 @@ const S_MASTER = S_TECH_EXTRA + TECH_COUNT - 7;
 const S_DAILY = S_MASTER + 1, S_SHARE = S_MASTER + 2, S_COPIED = S_MASTER + 3, S_PLAY = S_MASTER + 4;
 const S_STATS = S_MASTER + 5, S_PLAYED = S_MASTER + 6, S_BEST = S_MASTER + 7, S_AVERAGE = S_MASTER + 8, S_STREAK = S_MASTER + 9;
 const S_EXPLAIN = S_MASTER + 10, S_SHARE_PUZZLE = S_MASTER + 11;
+const S_TIMER = S_MASTER + 12, S_SHORTCUTS = S_MASTER + 13, S_ENTER = S_MASTER + 14, S_MOVE = S_MASTER + 15, S_MENU = S_MASTER + 16;
+const S_ARCHIVE = S_MASTER + 17, S_SOLVERS = S_MASTER + 18, S_FASTER = S_MASTER + 19, S_WEEKLY = S_MASTER + 20;
+const SHORTCUTS = [['1-9', S_ENTER], ['\u2190 \u2191 \u2192 \u2193', S_MOVE], ['Backspace, 0', S_UNDO + 1], ['N', S_UNDO + 2], ['F', S_UNDO + 3], ['U, Ctrl+Z', S_UNDO], ['H', S_UNDO + 4], ['Esc', S_MENU], ['?', S_SHORTCUTS]];
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
 const now = () => Date.now();
@@ -17,28 +20,90 @@ const L = JSON.parse($('i18n').textContent);
 const DAILY = L.mode === 'daily';
 const DAILY_PATH = L.daily || '';
 const SOLVER_PATH = L.solver || '';
-const STATE_KEY = DAILY ? KEY + '.daily' : KEY;
+const WEEKS = L.weekly || null;
+const ARCHIVE_FIRST = '2025-01-01';
+const QUERY = new URLSearchParams(location.search);
+const WEEK = DAILY ? weekParam(QUERY.get('w')) : '';
+const ARCHIVE_DATE = DAILY && !WEEK ? archiveParam(QUERY.get('d')) : '';
+const STATE_KEY = WEEK ? KEY + '.weekly' : ARCHIVE_DATE ? KEY + '.archive' : DAILY ? KEY + '.daily' : KEY;
 const LOG_KEY = KEY + '.dailyLog';
+const ARCHIVE_LOG_KEY = KEY + '.archiveLog';
+const WEEKLY_LOG_KEY = KEY + '.weeklyLog';
 const STATS_KEY = KEY + '.stats';
+const TIMER_KEY = KEY + '.timer';
 let dailyDate = '';
-let statsOpen = false;
+let dialog = '';
+let archiveMonth = '';
+let weeklyPuzzle = null;
+let compare = null;
+let showTimer = fetchStored(TIMER_KEY) !== '0';
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 let meta = { t: 0, d: false };
 const IDLE_MS = 60000;
 let lastActivity = Date.now(), idle = false;
 const ratingFormat = numberFormat(document.documentElement.lang);
+const countFormat = formatter(Intl.NumberFormat, document.documentElement.lang, {});
 const dateFormat = dateFormatter(document.documentElement.lang);
+const monthFormat = formatter(Intl.DateTimeFormat, document.documentElement.lang, { month: 'long', year: 'numeric' });
+const weekdayFormat = formatter(Intl.DateTimeFormat, document.documentElement.lang, { weekday: 'short' });
+
+function formatter(Kind, lang, options) {
+  try { return new Kind(lang, options); } catch (e) { return new Kind('en', options); }
+}
 
 function dateFormatter(lang) {
-  const options = { dateStyle: 'long' };
-  try { return new Intl.DateTimeFormat(lang, options); } catch (e) { return new Intl.DateTimeFormat('en', options); }
+  return formatter(Intl.DateTimeFormat, lang, { dateStyle: 'long' });
+}
+
+function dateKey(d) {
+  const pad = n => (n < 10 ? '0' : '') + n;
+  return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+}
+
+function parseDate(text) {
+  return new Date(+text.slice(0, 4), +text.slice(5, 7) - 1, +text.slice(8, 10));
 }
 
 function localDate() {
-  const d = new Date();
-  const pad = n => (n < 10 ? '0' : '') + n;
-  return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  return dateKey(new Date());
+}
+
+function isoWeek(date) {
+  const thursday = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate() + 3 - (date.getDay() + 6) % 7));
+  const week = Math.floor((thursday - Date.UTC(thursday.getUTCFullYear(), 0, 1)) / 864e5 / 7) + 1;
+  return thursday.getUTCFullYear() + '-W' + (week < 10 ? '0' : '') + week;
+}
+
+function weekStart(id) {
+  const year = +id.slice(0, 4);
+  const jan4 = new Date(year, 0, 4);
+  return new Date(year, 0, 4 - (jan4.getDay() + 6) % 7 + (+id.slice(6) - 1) * 7);
+}
+
+function weeklyAvailable() {
+  const week = isoWeek(new Date());
+  return !!WEEKS && week >= WEEKS.first && week <= WEEKS.last;
+}
+
+function weekParam(raw) {
+  if (!raw || !/^\d{4}-W\d{2}$/.test(raw) || !WEEKS) return '';
+  return raw >= WEEKS.first && raw <= WEEKS.last && raw <= isoWeek(new Date()) ? raw : '';
+}
+
+function archiveParam(raw) {
+  if (!raw || !/^\d{4}-\d{2}-\d{2}$/.test(raw) || dateKey(parseDate(raw)) !== raw) return '';
+  return raw >= ARCHIVE_FIRST && raw < localDate() ? raw : '';
+}
+
+function weekText() {
+  const monday = weekStart(WEEK);
+  const sunday = new Date(monday.getFullYear(), monday.getMonth(), monday.getDate() + 6);
+  return dateFormat.format(monday) + ' - ' + dateFormat.format(sunday);
+}
+
+function fill(text, values) {
+  return String(text).replace(/\{([a-z]+)\}/g, (m, key) => (key in values ? String(values[key]) : m));
 }
 
 function dailySeed(date, level) {
@@ -46,7 +111,7 @@ function dailySeed(date, level) {
 }
 
 function dateText() {
-  return dateFormat.format(new Date(+dailyDate.slice(0, 4), +dailyDate.slice(5, 7) - 1, +dailyDate.slice(8, 10)));
+  return dateFormat.format(parseDate(dailyDate));
 }
 
 function numberFormat(lang) {
@@ -132,7 +197,7 @@ function renderLabels() {
   toolButtons.forEach((b, i) => { b.querySelector('span').textContent = strings[S_UNDO + i]; });
   document.querySelectorAll('#panel [data-level]').forEach(b => {
     const name = levelName(+b.dataset.level);
-    b.hidden = name === undefined;
+    b.hidden = name === undefined || (!!WEEK && +b.dataset.level !== 4);
     b.textContent = name || '';
   });
   $('cancel-btn').textContent = strings[S_CANCEL];
@@ -144,7 +209,7 @@ function renderLabels() {
   const daily = $('daily-btn');
   daily.textContent = strings[S_DAILY];
   daily.href = DAILY_PATH;
-  daily.hidden = DAILY || !DAILY_PATH;
+  daily.hidden = !DAILY_PATH || (DAILY && !ARCHIVE_DATE && !WEEK);
   const play = $('play-btn');
   play.textContent = strings[S_PLAY];
   play.href = pathOf($('lang').value);
@@ -152,6 +217,14 @@ function renderLabels() {
   $('share-btn').textContent = strings[S_SHARE];
   $('share-puzzle-btn').textContent = strings[S_SHARE_PUZZLE];
   $('stats-btn').textContent = strings[S_STATS];
+  $('archive-btn').textContent = strings[S_ARCHIVE];
+  $('archive-btn').hidden = !DAILY;
+  const weekly = $('weekly-btn');
+  weekly.textContent = strings[S_WEEKLY];
+  weekly.href = DAILY_PATH + '?w=' + isoWeek(new Date());
+  weekly.hidden = !DAILY || !!WEEK || !weeklyAvailable();
+  $('keys-btn').textContent = strings[S_SHORTCUTS];
+  $('keys-btn').hidden = matchMedia('(pointer: coarse)').matches;
 }
 
 function buildBoard() {
@@ -235,7 +308,7 @@ function pausedGame() {
 }
 
 function renderTime() {
-  $('time').textContent = game.active && !generating ? clock(game.time(now())) : '';
+  $('time').textContent = game.active && !generating && showTimer ? clock(game.time(now())) : '';
   $('time').classList.toggle('paused', pausedGame() && !menuOpen && !generating);
 }
 
@@ -336,16 +409,24 @@ function render() {
   });
   const overlay = menuOpen || (game.active && game.solved);
   $('overlay').hidden = !overlay;
-  $('panel').hidden = statsOpen;
-  $('stats').hidden = !statsOpen;
+  $('panel').hidden = !!dialog;
+  $('stats').hidden = dialog !== 'stats';
+  $('keys-help').hidden = dialog !== 'keys';
+  $('archive').hidden = dialog !== 'archive';
   if (overlay) {
     const solved = game.active && game.solved;
-    $('panel-title').textContent = solved ? strings[S_SOLVED] : DAILY ? strings[S_DAILY] : strings[S_TITLE];
-    const result = levelText() + '  ' + clock(game.time(now()));
-    if (DAILY) $('panel-sub').textContent = solved ? result + '\n' + dateText() : dateText() + '\n' + strings[S_NEW];
-    else $('panel-sub').textContent = solved ? result + '\n' + strings[S_NEW] : strings[S_NEW];
+    $('panel-title').textContent = solved ? strings[S_SOLVED] : WEEK ? strings[S_WEEKLY] : DAILY ? strings[S_DAILY] : strings[S_TITLE];
+    const lines = [];
+    if (solved) lines.push(levelText() + '  ' + clock(game.time(now())));
+    if (WEEK) lines.push(weekText());
+    else if (DAILY) lines.push(dateText());
+    if (solved) lines.push(...compareLines());
+    if (!solved || !DAILY) lines.push(strings[S_NEW]);
+    $('panel-sub').textContent = lines.join('\n');
     $('share-btn').hidden = !solved;
     $('errors-btn').textContent = strings[S_ERRORS] + ': ' + strings[game.showErrors ? S_ON : S_OFF];
+    $('timer-btn').textContent = strings[S_TIMER] + ': ' + strings[showTimer ? S_ON : S_OFF];
+    if (WEEK) $('panel').querySelector('[data-level="4"]').disabled = !weeklyPuzzle;
     $('cancel-btn').hidden = !cancellable();
     $('restart-btn').hidden = !game.active;
     $('share-puzzle-btn').hidden = !game.active || DAILY || solved;
@@ -355,7 +436,7 @@ function render() {
 let pendingLevel = 0;
 
 function save() {
-  store(STATE_KEY, JSON.stringify(Object.assign(game.save(now()), { a: meta, d: dailyDate })));
+  store(STATE_KEY, JSON.stringify(Object.assign(game.save(now()), { a: meta, d: dailyDate, w: WEEK })));
 }
 
 function readJson(key) {
@@ -385,13 +466,17 @@ function recordSolved(level, seconds) {
 }
 
 function dayShift(date, days) {
-  const d = new Date(+date.slice(0, 4), +date.slice(5, 7) - 1, +date.slice(8, 10) + days);
-  const pad = n => (n < 10 ? '0' : '') + n;
-  return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  const d = parseDate(date);
+  return dateKey(new Date(d.getFullYear(), d.getMonth(), d.getDate() + days));
+}
+
+function readLog(key) {
+  const log = readJson(key);
+  return log && typeof log === 'object' && !Array.isArray(log) ? log : {};
 }
 
 function dailyStreak() {
-  const log = readJson(LOG_KEY) || {};
+  const log = readLog(LOG_KEY);
   let day = localDate();
   if (!log[day]) day = dayShift(day, -1);
   let n = 0;
@@ -426,28 +511,177 @@ function renderStats() {
   $('streak').textContent = strings[S_STREAK] + ': ' + dailyStreak();
 }
 
-function openStats() {
-  statsOpen = true;
-  renderStats();
-  render();
-  $('stats-back').focus();
+function renderKeys() {
+  $('keys-title').textContent = strings[S_SHORTCUTS];
+  $('keys-back').textContent = strings[S_CANCEL];
+  const body = $('keys-table').querySelector('tbody');
+  body.textContent = '';
+  for (const [keys, label] of SHORTCUTS) {
+    const tr = document.createElement('tr');
+    const th = document.createElement('th');
+    th.scope = 'row';
+    keys.split(', ').forEach((part, k) => {
+      if (k) th.append(' ');
+      const kbd = document.createElement('kbd');
+      kbd.textContent = part;
+      th.appendChild(kbd);
+    });
+    const td = document.createElement('td');
+    td.textContent = strings[label];
+    tr.append(th, td);
+    body.appendChild(tr);
+  }
 }
 
-function closeStats() {
-  statsOpen = false;
+function firstWeekday() {
+  try {
+    const locale = new Intl.Locale(document.documentElement.lang);
+    const info = locale.getWeekInfo ? locale.getWeekInfo() : locale.weekInfo;
+    if (info && info.firstDay) return info.firstDay % 7;
+  } catch (e) {}
+  return 1;
+}
+
+function solvedLevels(date, daily, later) {
+  const levels = [];
+  const onDay = daily[date] || {}, afterwards = later[date] || {};
+  for (let level = 0; level < LEVELS; level++) {
+    const seconds = level in onDay ? onDay[level] : afterwards[level];
+    if (Number.isFinite(seconds) && levelName(level) !== undefined) levels.push(levelName(level) + ' ' + clock(seconds * 1000));
+  }
+  return levels;
+}
+
+function renderArchive() {
+  $('archive-title').textContent = strings[S_ARCHIVE];
+  $('archive-back').textContent = strings[S_CANCEL];
+  const year = +archiveMonth.slice(0, 4), month = +archiveMonth.slice(5, 7) - 1;
+  const first = new Date(year, month, 1);
+  const today = localDate();
+  $('month-name').textContent = monthFormat.format(first);
+  const prev = $('month-prev'), next = $('month-next');
+  prev.disabled = archiveMonth <= ARCHIVE_FIRST.slice(0, 7);
+  next.disabled = archiveMonth >= today.slice(0, 7);
+  prev.setAttribute('aria-label', monthFormat.format(new Date(year, month - 1, 1)));
+  next.setAttribute('aria-label', monthFormat.format(new Date(year, month + 1, 1)));
+  const grid = $('calendar');
+  grid.textContent = '';
+  const start = firstWeekday();
+  for (let k = 0; k < 7; k++) {
+    const head = document.createElement('span');
+    head.className = 'wd';
+    head.textContent = weekdayFormat.format(new Date(2024, 0, 7 + (start + k) % 7));
+    grid.appendChild(head);
+  }
+  for (let k = (first.getDay() - start + 7) % 7; k > 0; k--) grid.appendChild(document.createElement('span'));
+  const daily = readLog(LOG_KEY), later = readLog(ARCHIVE_LOG_KEY);
+  const current = WEEK ? '' : dailyDate;
+  const days = new Date(year, month + 1, 0).getDate();
+  for (let day = 1; day <= days; day++) {
+    const date = dateKey(new Date(year, month, day));
+    const open = date >= ARCHIVE_FIRST && date <= today;
+    const solved = solvedLevels(date, daily, later);
+    const el = document.createElement(open ? 'a' : 'span');
+    el.className = 'day' + (solved.length ? ' done' : '') + (date === today ? ' today' : '') + (date === current ? ' cur' : '') + (open ? '' : ' off');
+    el.textContent = day;
+    if (open) {
+      el.href = DAILY_PATH + (date === today ? '' : '?d=' + date);
+      el.setAttribute('aria-label', dateFormat.format(parseDate(date)) + (solved.length ? ': ' + solved.join(', ') : ''));
+      if (solved.length) el.title = solved.join(', ');
+      if (date === current) el.setAttribute('aria-current', 'date');
+    }
+    if (solved.length) {
+      const dots = document.createElement('small');
+      dots.textContent = '\u2022'.repeat(solved.length);
+      el.appendChild(dots);
+    }
+    grid.appendChild(el);
+  }
+}
+
+function shiftMonth(delta) {
+  const d = new Date(+archiveMonth.slice(0, 4), +archiveMonth.slice(5, 7) - 1 + delta, 1);
+  archiveMonth = dateKey(d).slice(0, 7);
+  renderArchive();
+}
+
+function openDialog(name) {
+  dialog = name;
+  if (name === 'stats') renderStats();
+  else if (name === 'keys') renderKeys();
+  else {
+    archiveMonth = (dailyDate || localDate()).slice(0, 7);
+    renderArchive();
+  }
+  render();
+  $(name === 'stats' ? 'stats-back' : name === 'keys' ? 'keys-back' : 'archive-back').focus();
+}
+
+function closeDialog() {
+  dialog = '';
   render();
   focusPanel();
 }
 
-function logDaily() {
-  let log = null;
-  try { log = JSON.parse(fetchStored(LOG_KEY)); } catch (e) {}
-  if (!log || typeof log !== 'object') log = {};
-  const day = log[dailyDate] || (log[dailyDate] = {});
-  if (!(game.level in day)) day[game.level] = Math.round(game.time(now()) / 1000);
-  const days = Object.keys(log).sort();
-  while (days.length > 400) delete log[days.shift()];
-  store(LOG_KEY, JSON.stringify(log));
+function logResult(seconds) {
+  const key = WEEK ? WEEKLY_LOG_KEY : ARCHIVE_DATE ? ARCHIVE_LOG_KEY : LOG_KEY;
+  const log = readLog(key);
+  if (WEEK) {
+    if (!(WEEK in log)) log[WEEK] = seconds;
+  } else {
+    const day = log[dailyDate] || (log[dailyDate] = {});
+    if (!(game.level in day)) day[game.level] = seconds;
+  }
+  const keys = Object.keys(log).sort();
+  while (keys.length > 800) delete log[keys.shift()];
+  store(key, JSON.stringify(log));
+}
+
+function puzzleId() {
+  return WEEK ? 'w' + WEEK : DAILY ? 'd' + dailyDate : '';
+}
+
+function timeBucket(s) {
+  return s < 600 ? s - s % 15 : s < 3600 ? s - s % 60 : s - s % 300;
+}
+
+function compareLines() {
+  if (!compare || compare.id !== puzzleId() || compare.level !== game.level) return [];
+  const lines = [fill(strings[S_SOLVERS], { n: countFormat.format(compare.n) }), strings[S_AVERAGE] + ': ' + clock(compare.avg * 1000)];
+  if (compare.p >= 0) lines.push(fill(strings[S_FASTER], { p: countFormat.format(compare.p) }));
+  return lines;
+}
+
+function fetchCompare(delay) {
+  const id = puzzleId();
+  if (!id || !game.active || !game.solved || typeof fetch !== 'function') return;
+  const level = game.level;
+  const mine = Math.round(game.time(now()) / 1000);
+  setTimeout(() => {
+    fetch('/api/p?id=' + id).then(r => (r.ok ? r.json() : null)).then(data => {
+      const l = data && data.levels && data.levels[(WEEK ? 'w' : 'd') + level];
+      if (!l || !(l.n > 0)) return;
+      const bucket = timeBucket(mine);
+      let slower = 0, same = 0;
+      for (const [b, n] of Object.entries(l.h || {})) {
+        if (+b > bucket) slower += n;
+        else if (+b === bucket) same += n;
+      }
+      const others = l.n - 1;
+      const p = others > 0 ? Math.min(100, Math.round(100 * (slower + Math.max(0, same - 1) / 2) / others)) : -1;
+      compare = { id, level, n: l.n, avg: Math.round(l.s / l.n), p };
+      render();
+    }).catch(() => {});
+  }, delay);
+}
+
+function loadWeekly() {
+  return fetch('/weekly.json').then(r => (r.ok ? r.json() : null)).then(data => {
+    const text = data && data[WEEK];
+    if (typeof text !== 'string' || !/^[0-9]{81}$/.test(text)) return null;
+    weeklyPuzzle = Array.from(text, Number);
+    return weeklyPuzzle;
+  }).catch(() => null);
 }
 
 function puzzleLink() {
@@ -504,7 +738,8 @@ function startShared(shared) {
 
 function shareText() {
   const result = levelText() + ' · ' + clock(game.time(now()));
-  if (DAILY) return strings[S_DAILY] + ' ' + dateText() + ' · ' + result + '\n' + location.origin + DAILY_PATH;
+  if (WEEK) return strings[S_WEEKLY] + ' ' + weekText() + ' · ' + result + '\n' + location.origin + DAILY_PATH + '?w=' + WEEK;
+  if (DAILY) return strings[S_DAILY] + ' ' + dateText() + ' · ' + result + '\n' + location.origin + DAILY_PATH + (ARCHIVE_DATE ? '?d=' + dailyDate : '');
   return strings[S_TITLE] + ' · ' + result + '\n' + puzzleLink();
 }
 
@@ -536,8 +771,8 @@ function openMenu() {
 }
 
 function closeMenu() {
-  if (statsOpen) {
-    closeStats();
+  if (dialog) {
+    closeDialog();
     return;
   }
   if (!cancellable()) return;
@@ -549,7 +784,7 @@ function closeMenu() {
 }
 
 function startGame(level) {
-  if (generating) return;
+  if (generating || (WEEK && !weeklyPuzzle)) return;
   menuOpen = false;
   generating = true;
   pendingLevel = level;
@@ -557,13 +792,20 @@ function startGame(level) {
   stopTimer();
   render();
   setTimeout(() => {
-    if (DAILY) {
-      dailyDate = localDate();
-      engine.seed(dailySeed(dailyDate, level));
+    if (WEEK) {
+      const puzzle = weeklyPuzzle.slice();
+      engine.countSolutions(puzzle, 2);
+      game.start(puzzle, Array.from(engine.found), 4);
+      game.rating = engine.rate(puzzle);
+    } else {
+      if (DAILY) {
+        if (!ARCHIVE_DATE) dailyDate = localDate();
+        engine.seed(dailySeed(dailyDate, level));
+      }
+      const puzzle = engine.generate(level);
+      game.start(puzzle, engine.solution, level);
+      game.rating = engine.rating;
     }
-    const puzzle = engine.generate(level);
-    game.start(puzzle, engine.solution, level);
-    game.rating = engine.rating;
     meta = { t: now(), d: false };
     beacon({ e: 'start', k: level });
     recordStart(level);
@@ -611,9 +853,14 @@ function finish(changed) {
     if (!meta.d) {
       meta.d = true;
       const seconds = Math.round(game.time(now()) / 1000);
-      beacon({ e: 'done', k: game.level, t: meta.t, s: seconds });
+      const ev = { e: 'done', k: game.level, t: meta.t, s: seconds };
+      if (DAILY) ev.p = puzzleId();
+      beacon(ev);
       recordSolved(game.level, seconds);
-      if (DAILY) logDaily();
+      if (DAILY) {
+        logResult(seconds);
+        fetchCompare(1500);
+      }
       changed = true;
     }
   }
@@ -682,12 +929,23 @@ function bind() {
   $('overlay').addEventListener('click', e => { if (e.target === $('overlay')) closeMenu(); });
   document.querySelectorAll('#panel [data-level]').forEach(b => b.addEventListener('click', () => startGame(+b.dataset.level)));
   $('errors-btn').addEventListener('click', () => { game.showErrors = !game.showErrors; save(); render(); });
+  $('timer-btn').addEventListener('click', () => {
+    showTimer = !showTimer;
+    store(TIMER_KEY, showTimer ? '1' : '0');
+    render();
+  });
+  $('archive-btn').addEventListener('click', () => openDialog('archive'));
+  $('keys-btn').addEventListener('click', () => openDialog('keys'));
+  $('keys-back').addEventListener('click', closeDialog);
+  $('archive-back').addEventListener('click', closeDialog);
+  $('month-prev').addEventListener('click', () => shiftMonth(-1));
+  $('month-next').addEventListener('click', () => shiftMonth(1));
   $('cancel-btn').addEventListener('click', closeMenu);
   $('restart-btn').addEventListener('click', restartGame);
   $('share-btn').addEventListener('click', share);
   $('share-puzzle-btn').addEventListener('click', sharePuzzle);
-  $('stats-btn').addEventListener('click', openStats);
-  $('stats-back').addEventListener('click', closeStats);
+  $('stats-btn').addEventListener('click', () => openDialog('stats'));
+  $('stats-back').addEventListener('click', closeDialog);
   $('lang').addEventListener('change', e => switchLang(e.target.value));
   document.addEventListener('keydown', e => {
     if (e.target && e.target.tagName === 'SELECT') return;
@@ -698,6 +956,7 @@ function bind() {
     }
     if (menuOpen || (game.active && game.solved) || generating) {
       if (k === 'Escape') closeMenu();
+      else if (k === '?' && !dialog && !generating) openDialog('keys');
       return;
     }
     if (k >= '1' && k <= '9') act('digit', +k);
@@ -710,6 +969,10 @@ function bind() {
     else if (k === 'Escape') {
       if (game.sticky) act('digit', game.sticky);
       else openMenu();
+    }
+    else if (k === '?') {
+      openMenu();
+      openDialog('keys');
     }
     else if (k === 'Enter' || k === ' ') {
       const cell = document.activeElement && document.activeElement.closest('[data-i]');
@@ -763,8 +1026,10 @@ function init() {
   applyLang(lang);
   let saved = null;
   try { saved = JSON.parse(fetchStored(STATE_KEY)); } catch (e) {}
-  if (DAILY) {
-    dailyDate = localDate();
+  if (WEEK) {
+    if (saved && saved.w !== WEEK) saved = null;
+  } else if (DAILY) {
+    dailyDate = ARCHIVE_DATE || localDate();
     if (saved && saved.d !== dailyDate) saved = null;
   }
   game.load(saved);
@@ -779,6 +1044,11 @@ function init() {
   if (game.active && !game.solved && !document.hidden && document.hasFocus()) game.resume(now());
   render();
   startTimer();
+  if (DAILY && game.active && game.solved) fetchCompare(0);
+  if (WEEK) loadWeekly().then(puzzle => {
+    if (!puzzle) location.replace(DAILY_PATH);
+    else render();
+  });
   registerWorker();
   openEvent(lang);
 }
