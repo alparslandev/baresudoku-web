@@ -21,7 +21,7 @@ APK_URL = ANDROID_REPO + "/releases/latest/download/baresudoku.apk"
 SCREENSHOT = "https://raw.githubusercontent.com/alparslandev/baresudoku/main/screenshot.png"
 LICENSE_URL = WEB_REPO + "/blob/main/LICENSE"
 ANDROID_LICENSE_URL = ANDROID_REPO + "/blob/main/LICENSE"
-APK_FALLBACK = ("1.2", 24972)
+APK_FALLBACK = ("1.6", 45452)
 APP_STORE_URL = ""
 BOTS = [
     "Googlebot", "Bingbot", "Applebot", "DuckDuckBot", "YandexBot", "Google-Extended", "GoogleOther", "GPTBot", "OAI-SearchBot",
