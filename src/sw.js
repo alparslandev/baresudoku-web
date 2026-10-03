@@ -1,5 +1,5 @@
 const CACHE = 'bs-{{HASH}}';
-const FILES = ['/', '/app.js', '/manifest.webmanifest', '/icon.svg', '/icon-192.png', '/icon-512.png'];
+const FILES = ['/', '/app.js', '/weekly.json', '/manifest.webmanifest', '/icon.svg', '/icon-192.png', '/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });

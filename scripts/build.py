@@ -197,7 +197,7 @@ def solver_page(template, css, table, code, entry, guide_entry, languages, solve
     alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, solver_url(c)) for c in solver_codes]
     alternates.append('<link rel="alternate" hreflang="x-default" href="%s">' % solver_url("en"))
     guide_links = {slug: guide.tech_path(code, slug) for slug in guide_entry["tech"]}
-    local = {"name": languages[code][0], "s": table[code], "solver": {k: v for k, v in solver.items() if k != "faq"}, "guide": guide_links}
+    local = {"name": languages[code][0], "s": table[code], "solver": {k: v for k, v in solver.items() if k != "faq"}, "guide": guide_links, "play": i18n.path(code)}
     faq = "".join("<details><summary>%s</summary><p>%s</p></details>" % (esc(q), esc(a)) for q, a in solver["faq"])
     crumbs = '<a href="%s">%s</a><span>›</span><span aria-current="page">%s</span>' % (i18n.path(code), NAME, esc(solver["h1"]))
     values = {
@@ -218,6 +218,7 @@ def solver_page(template, css, table, code, entry, guide_entry, languages, solve
         "{{PASTE}}": esc(solver["paste"]),
         "{{NEXT}}": esc(solver["next"]),
         "{{SOLVE}}": esc(solver["solve"]),
+        "{{PLAY_PUZZLE}}": esc(labels.get("playExample") or labels["play"]),
         "{{EXAMPLE}}": esc(solver["example"]),
         "{{CLEAR}}": esc(solver["clear"]),
         "{{EDIT}}": esc(solver["edit"]),
@@ -342,6 +343,16 @@ def jsonld(code, entry, languages, version, size, lastmod, web):
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
 
 
+def weekly_puzzles():
+    with open(os.path.join(ROOT, "src", "weekly.json"), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def weekly_range():
+    weeks = sorted(weekly_puzzles())
+    return {"first": weeks[0], "last": weeks[-1]}
+
+
 def page(template, css, table, code, entry, languages, version, size, lastmod, web, learn, daily_codes, solver_codes, print_codes, mode="play", play_label=""):
     def f(text):
         return esc(fill(text, version, size))
@@ -352,6 +363,8 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
     alternates.append('<link rel="alternate" hreflang="x-default" href="%s">' % resolve("en"))
     options = "".join('<option value="%s">%s</option>' % (c, esc(languages[c][0])) for c in languages)
     local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code], "mode": mode, "daily": daily_path(code) if code in daily_codes else "", "solver": solver_path(code) if code in solver_codes else ""}
+    if daily:
+        local["weekly"] = weekly_range()
     values = {
         "{{LANG}}": code,
         "{{DIR}}": "rtl" if code in i18n.RTL else "ltr",
@@ -613,6 +626,9 @@ def main():
     os.makedirs(dist)
     digest = hashlib.sha1(script.encode("utf-8"))
     write(dist, "app.js", script)
+    weekly = json.dumps(weekly_puzzles(), separators=(",", ":"))
+    digest.update(weekly.encode("utf-8"))
+    write(dist, "weekly.json", weekly + "\n")
     total = 0
     for code in languages:
         out = page(template, css, table, code, site[code], languages, version, size, lastmod, web, guides.get(code), daily_codes, solver_codes, print_codes)

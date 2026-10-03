@@ -293,6 +293,9 @@ function bind() {
   $('paste').addEventListener('input', e => { if (parsePuzzle(e.target.value)) focusInput(0); });
   $('next').addEventListener('click', nextStep);
   $('solve').addEventListener('click', solveAll);
+  $('play').addEventListener('click', () => {
+    if (start()) location.href = L.play + '?p=' + givens.join('');
+  });
   $('clear').addEventListener('click', clearGrid);
   $('example').addEventListener('click', () => { leaveResult(); parsePuzzle(EXAMPLE); message(''); });
   $('edit').addEventListener('click', () => { leaveResult(); message(''); focusInput(0); });

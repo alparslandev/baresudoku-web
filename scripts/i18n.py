@@ -15,6 +15,7 @@ def path(code):
 
 
 PADDED = {}
+STRING_PLACEHOLDERS = {"solvers": "n", "faster": "p"}
 
 
 def load():
@@ -36,6 +37,8 @@ def load():
                 raise SystemExit("%s: %s bos" % (code, k))
             if k in ("naked", "row", "col", "box") and "#" not in v:
                 raise SystemExit("%s: %s icinde # yok" % (code, k))
+            if k in STRING_PLACEHOLDERS and re.findall(r"\{([a-z]+)\}", v) != [STRING_PLACEHOLDERS[k]]:
+                raise SystemExit("%s: %s icinde {%s} tam bir kez olmali" % (code, k, STRING_PLACEHOLDERS[k]))
     return keys, languages
 
 
