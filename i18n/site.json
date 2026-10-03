@@ -14,7 +14,7 @@
         "Row, column, box and same-digit highlights, mistake marking you can turn off",
         "Automatic save, dark mode, keyboard support and landscape layout",
         "Works offline after the first visit, no app store needed",
-        "60 languages, each on its own page"
+        "59 languages, each on its own page"
       ],
       "androidHeading": "Android app",
       "android": "Bare Sudoku is also a native Android app: version {version}, about {size} KB, no permissions, no internet access, plain Java with zero libraries. It is not on Google Play; download the signed APK from GitHub Releases and install it on Android 8 or newer.",
@@ -61,7 +61,7 @@
         ],
         [
           "Which languages does Bare Sudoku support?",
-          "60 languages, each on its own page: English, Türkçe, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी and more. The game follows the page language and remembers your choice."
+          "59 languages, each on its own page: English, Türkçe, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी and more. The game follows the page language and remembers your choice."
         ],
         [
           "Can I play with the keyboard?",
@@ -210,7 +210,7 @@
         "Satır, sütun, kutu ve aynı rakam vurgusu; kapatılabilir hata işareti",
         "Otomatik kayıt, koyu tema, klavye desteği ve yatay düzen",
         "İlk ziyaretten sonra internetsiz çalışır, mağaza gerekmez",
-        "Her biri kendi sayfasında 60 dil"
+        "Her biri kendi sayfasında 59 dil"
       ],
       "androidHeading": "Android uygulaması",
       "android": "Bare Sudoku'nun yerel bir Android uygulaması da var: sürüm {version}, yaklaşık {size} KB, izin yok, internet erişimi yok, sıfır kütüphaneyle düz Java. Google Play'de değil; imzalı APK'yı GitHub Releases'ten indirip Android 8 ve üstüne kurabilirsin.",
@@ -257,7 +257,7 @@
         ],
         [
           "Bare Sudoku hangi dilleri destekler?",
-          "Her biri kendi sayfasında 60 dil: Türkçe, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ve daha fazlası. Oyun sayfanın dilini izler ve seçimini hatırlar."
+          "Her biri kendi sayfasında 59 dil: Türkçe, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ve daha fazlası. Oyun sayfanın dilini izler ve seçimini hatırlar."
         ],
         [
           "Klavyeyle oynayabilir miyim?",
@@ -406,7 +406,7 @@
         "Sətir, sütun, blok və eyni rəqəm vurğusu; söndürülə bilən səhv işarəsi",
         "Avtomatik yadda saxlama, qaranlıq rejim, klaviatura və üfüqi düzülüş",
         "İlk ziyarətdən sonra oflayn işləyir, tətbiq mağazası lazım deyil",
-        "60 dil, hər biri öz səhifəsində"
+        "59 dil, hər biri öz səhifəsində"
       ],
       "androidHeading": "Android tətbiqi",
       "android": "Bare Sudoku həm də yerli Android tətbiqidir: versiya {version}, təxminən {size} KB, icazə yox, internet girişi yox, kitabxanasız təmiz Java. Google Play-də deyil; imzalanmış APK-nı GitHub Releases-dən yüklə və Android 8 və ya daha yenisinə quraşdır.",
@@ -457,7 +457,7 @@
         ],
         [
           "Bare Sudoku neçə dildədir?",
-          "60 dildə, hər biri öz səhifəsində. Oyundakı dil menyusu səhifəni dəyişir, oyunun altındakı siyahı isə hər dilə keçid verir. Oyun seçiminizi yadda saxlayır."
+          "59 dildə, hər biri öz səhifəsində. Oyundakı dil menyusu səhifəni dəyişir, oyunun altındakı siyahı isə hər dilə keçid verir. Oyun seçiminizi yadda saxlayır."
         ]
       ],
       "madeBy": "Müəllif: Alparslan Selçuk Develioğlu",
@@ -549,7 +549,7 @@
         "Hervorhebung von Zeile, Spalte, Block und gleicher Ziffer; abschaltbare Fehlermarkierung",
         "Automatisches Speichern, Dunkelmodus, Tastatursteuerung und Querformat",
         "Funktioniert nach dem ersten Besuch offline, kein App-Store nötig",
-        "60 Sprachen, jede auf eigener Seite"
+        "59 Sprachen, jede auf eigener Seite"
       ],
       "androidHeading": "Android-App",
       "android": "Bare Sudoku gibt es auch als native Android-App: Version {version}, etwa {size} KB, keine Berechtigungen, kein Internetzugriff, reines Java ohne Bibliotheken. Sie ist nicht bei Google Play; lade die signierte APK von GitHub Releases und installiere sie auf Android 8 oder neuer.",
@@ -600,7 +600,7 @@
         ],
         [
           "In wie vielen Sprachen gibt es Bare Sudoku?",
-          "60 Sprachen, jede auf ihrer eigenen Seite. Das Sprachmenü im Spiel wechselt die Seite, und die Liste unter dem Spiel verlinkt jede Sprache. Das Spiel merkt sich deine Wahl."
+          "59 Sprachen, jede auf ihrer eigenen Seite. Das Sprachmenü im Spiel wechselt die Seite, und die Liste unter dem Spiel verlinkt jede Sprache. Das Spiel merkt sich deine Wahl."
         ]
       ],
       "madeBy": "Gemacht von Alparslan Selçuk Develioğlu",
@@ -692,7 +692,7 @@
         "Mise en évidence de la ligne, de la colonne, du bloc et du même chiffre ; marquage des erreurs désactivable",
         "Sauvegarde automatique, mode sombre, clavier et affichage paysage",
         "Fonctionne hors ligne après la première visite, sans boutique d'applis",
-        "60 langues, chacune sur sa propre page"
+        "59 langues, chacune sur sa propre page"
       ],
       "androidHeading": "Application Android",
       "android": "Bare Sudoku existe aussi en application Android native : version {version}, environ {size} Ko, aucune permission, aucun accès Internet, du Java pur sans bibliothèque. Elle n'est pas sur Google Play : téléchargez l'APK signé depuis GitHub Releases et installez-le sur Android 8 ou plus récent.",
@@ -743,7 +743,7 @@
         ],
         [
           "En combien de langues Bare Sudoku existe-t-il ?",
-          "60 langues, chacune sur sa propre page. Le menu des langues dans le jeu change de page, et la liste sous le jeu relie chaque langue. Le jeu se souvient de votre choix."
+          "59 langues, chacune sur sa propre page. Le menu des langues dans le jeu change de page, et la liste sous le jeu relie chaque langue. Le jeu se souvient de votre choix."
         ]
       ],
       "madeBy": "Créé par Alparslan Selçuk Develioğlu",
@@ -835,7 +835,7 @@
         "Resaltado de fila, columna, caja y mismo dígito; marcado de errores desactivable",
         "Guardado automático, modo oscuro, teclado y diseño horizontal",
         "Funciona sin conexión tras la primera visita, sin tienda de apps",
-        "60 idiomas, cada uno en su propia página"
+        "59 idiomas, cada uno en su propia página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku también es una app Android nativa: versión {version}, unos {size} KB, sin permisos, sin acceso a Internet, Java puro sin bibliotecas. No está en Google Play; descarga el APK firmado desde GitHub Releases e instálalo en Android 8 o superior.",
@@ -886,7 +886,7 @@
         ],
         [
           "¿En cuántos idiomas está Bare Sudoku?",
-          "60 idiomas, cada uno en su propia página. El menú de idioma del juego cambia de página y la lista bajo el juego enlaza a todos los idiomas. El juego recuerda tu elección."
+          "59 idiomas, cada uno en su propia página. El menú de idioma del juego cambia de página y la lista bajo el juego enlaza a todos los idiomas. El juego recuerda tu elección."
         ]
       ],
       "madeBy": "Hecho por Alparslan Selçuk Develioğlu",
@@ -978,7 +978,7 @@
         "Destaque de linha, coluna, bloco e mesmo dígito; marcação de erros que pode ser desligada",
         "Salvamento automático, modo escuro, teclado e layout horizontal",
         "Funciona offline após a primeira visita, sem loja de apps",
-        "60 idiomas, cada um na sua própria página"
+        "59 idiomas, cada um na sua própria página"
       ],
       "androidHeading": "App para Android",
       "android": "Bare Sudoku também é um app Android nativo: versão {version}, cerca de {size} KB, sem permissões, sem acesso à internet, Java puro sem bibliotecas. Não está no Google Play; baixe o APK assinado no GitHub Releases e instale no Android 8 ou mais novo.",
@@ -1029,7 +1029,7 @@
         ],
         [
           "Em quantas línguas existe o Bare Sudoku?",
-          "60 línguas, cada uma na sua própria página. O menu de idioma no jogo muda de página e a lista por baixo do jogo liga a todas as línguas. O jogo lembra-se da sua escolha."
+          "59 línguas, cada uma na sua própria página. O menu de idioma no jogo muda de página e a lista por baixo do jogo liga a todas as línguas. O jogo lembra-se da sua escolha."
         ]
       ],
       "madeBy": "Feito por Alparslan Selçuk Develioğlu",
@@ -1121,7 +1121,7 @@
         "Evidenziazione di riga, colonna, riquadro e stessa cifra; segnalazione errori disattivabile",
         "Salvataggio automatico, tema scuro, tastiera e layout orizzontale",
         "Funziona offline dopo la prima visita, senza store",
-        "60 lingue, ognuna con la propria pagina"
+        "59 lingue, ognuna con la propria pagina"
       ],
       "androidHeading": "App Android",
       "android": "Bare Sudoku è anche un'app Android nativa: versione {version}, circa {size} KB, nessun permesso, nessun accesso a Internet, Java puro senza librerie. Non è su Google Play: scarica l'APK firmato da GitHub Releases e installalo su Android 8 o successivo.",
@@ -1172,7 +1172,7 @@
         ],
         [
           "In quante lingue è disponibile Bare Sudoku?",
-          "60 lingue, ognuna sulla propria pagina. Il menu della lingua nel gioco cambia pagina e l'elenco sotto il gioco collega ogni lingua. Il gioco ricorda la tua scelta."
+          "59 lingue, ognuna sulla propria pagina. Il menu della lingua nel gioco cambia pagina e l'elenco sotto il gioco collega ogni lingua. Il gioco ricorda la tua scelta."
         ]
       ],
       "madeBy": "Creato da Alparslan Selçuk Develioğlu",
@@ -1264,7 +1264,7 @@
         "Markering van rij, kolom, blok en hetzelfde cijfer; foutmarkering die je kunt uitzetten",
         "Automatisch opslaan, donkere modus, toetsenbord en liggende weergave",
         "Werkt offline na het eerste bezoek, geen app store nodig",
-        "60 talen, elk op een eigen pagina"
+        "59 talen, elk op een eigen pagina"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku is er ook als native Android-app: versie {version}, ongeveer {size} KB, geen machtigingen, geen internettoegang, pure Java zonder bibliotheken. Niet in Google Play; download de ondertekende APK van GitHub Releases en installeer hem op Android 8 of nieuwer.",
@@ -1315,7 +1315,7 @@
         ],
         [
           "In hoeveel talen is Bare Sudoku beschikbaar?",
-          "60 talen, elk op een eigen pagina. Het taalmenu in het spel wisselt van pagina en de lijst onder het spel linkt naar elke taal. Het spel onthoudt je keuze."
+          "59 talen, elk op een eigen pagina. Het taalmenu in het spel wisselt van pagina en de lijst onder het spel linkt naar elke taal. Het spel onthoudt je keuze."
         ]
       ],
       "madeBy": "Gemaakt door Alparslan Selçuk Develioğlu",
@@ -1407,7 +1407,7 @@
         "Podświetlanie wiersza, kolumny, bloku i tej samej cyfry; zaznaczanie błędów, które można wyłączyć",
         "Automatyczny zapis, tryb ciemny, klawiatura i układ poziomy",
         "Działa offline po pierwszej wizycie, bez sklepu z aplikacjami",
-        "60 języków, każdy na własnej stronie"
+        "59 języków, każdy na własnej stronie"
       ],
       "androidHeading": "Aplikacja na Androida",
       "android": "Bare Sudoku to także natywna aplikacja na Androida: wersja {version}, około {size} KB, bez uprawnień, bez dostępu do internetu, czysta Java bez bibliotek. Nie ma jej w Google Play; pobierz podpisany plik APK z GitHub Releases i zainstaluj na Androidzie 8 lub nowszym.",
@@ -1458,7 +1458,7 @@
         ],
         [
           "W ilu językach jest Bare Sudoku?",
-          "60 języków, każdy na własnej stronie. Menu języka w grze zmienia stronę, a lista pod grą prowadzi do każdego języka. Gra zapamiętuje twój wybór."
+          "59 języków, każdy na własnej stronie. Menu języka w grze zmienia stronę, a lista pod grą prowadzi do każdego języka. Gra zapamiętuje twój wybór."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -1550,7 +1550,7 @@
         "Zvýraznění řádku, sloupce, bloku a stejné číslice; označování chyb lze vypnout",
         "Automatické ukládání, tmavý režim, klávesnice a rozložení na šířku",
         "Po první návštěvě funguje offline, bez obchodu s aplikacemi",
-        "60 jazyků, každý na vlastní stránce"
+        "59 jazyků, každý na vlastní stránce"
       ],
       "androidHeading": "Aplikace pro Android",
       "android": "Bare Sudoku existuje i jako nativní aplikace pro Android: verze {version}, asi {size} KB, žádná oprávnění, žádný přístup k internetu, čistá Java bez knihoven. Není na Google Play; stáhněte podepsané APK z GitHub Releases a nainstalujte je na Android 8 nebo novější.",
@@ -1601,7 +1601,7 @@
         ],
         [
           "V kolika jazycích je Bare Sudoku?",
-          "60 jazyků, každý na vlastní stránce: Čeština, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी a další. Hra následuje jazyk stránky a pamatuje si vaši volbu."
+          "59 jazyků, každý na vlastní stránce: Čeština, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी a další. Hra následuje jazyk stránky a pamatuje si vaši volbu."
         ]
       ],
       "madeBy": "Vytvořil Alparslan Selçuk Develioğlu",
@@ -1693,7 +1693,7 @@
         "Zvýraznenie riadka, stĺpca, bloku a rovnakej číslice; označovanie chýb sa dá vypnúť",
         "Automatické ukladanie, tmavý režim, klávesnica a rozloženie na šírku",
         "Po prvej návšteve funguje offline, bez obchodu s aplikáciami",
-        "60 jazykov, každý na vlastnej stránke"
+        "59 jazykov, každý na vlastnej stránke"
       ],
       "androidHeading": "Aplikácia pre Android",
       "android": "Bare Sudoku existuje aj ako natívna aplikácia pre Android: verzia {version}, približne {size} KB, žiadne povolenia, žiadny prístup na internet, čistá Java bez knižníc. Nie je v Google Play; stiahnite podpísané APK z GitHub Releases a nainštalujte ho na Android 8 alebo novší.",
@@ -1744,7 +1744,7 @@
         ],
         [
           "V koľkých jazykoch je Bare Sudoku?",
-          "60 jazykov, každý na vlastnej stránke: Slovenčina, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी a ďalšie. Hra sleduje jazyk stránky a pamätá si vašu voľbu."
+          "59 jazykov, každý na vlastnej stránke: Slovenčina, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी a ďalšie. Hra sleduje jazyk stránky a pamätá si vašu voľbu."
         ]
       ],
       "madeBy": "Vytvoril Alparslan Selçuk Develioğlu",
@@ -1836,7 +1836,7 @@
         "Sor, oszlop, blokk és azonos számjegy kiemelése; kikapcsolható hibajelölés",
         "Automatikus mentés, sötét mód, billentyűzet és fekvő elrendezés",
         "Az első látogatás után offline is működik, nem kell alkalmazásbolt",
-        "60 nyelv, mindegyik saját oldalon"
+        "59 nyelv, mindegyik saját oldalon"
       ],
       "androidHeading": "Android-alkalmazás",
       "android": "A Bare Sudoku natív Android-alkalmazásként is létezik: {version} verzió, körülbelül {size} KB, engedélyek nélkül, internet-hozzáférés nélkül, tiszta Java, könyvtárak nélkül. Nincs a Google Playen; töltsd le az aláírt APK-t a GitHub Releases oldalról, és telepítsd Android 8 vagy újabb rendszerre.",
@@ -1887,7 +1887,7 @@
         ],
         [
           "Hány nyelven érhető el a Bare Sudoku?",
-          "60 nyelven, mindegyik saját oldalon: Magyar, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी és még több. A játék követi az oldal nyelvét és megjegyzi a választásodat."
+          "59 nyelven, mindegyik saját oldalon: Magyar, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी és még több. A játék követi az oldal nyelvét és megjegyzi a választásodat."
         ]
       ],
       "madeBy": "Készítette: Alparslan Selçuk Develioğlu",
@@ -1979,7 +1979,7 @@
         "Evidențierea rândului, coloanei, blocului și a aceleiași cifre; marcarea greșelilor se poate opri",
         "Salvare automată, mod întunecat, tastatură și așezare pe orizontală",
         "Funcționează offline după prima vizită, fără magazin de aplicații",
-        "60 de limbi, fiecare pe pagina ei"
+        "59 de limbi, fiecare pe pagina ei"
       ],
       "androidHeading": "Aplicație Android",
       "android": "Bare Sudoku există și ca aplicație Android nativă: versiunea {version}, aproximativ {size} KB, fără permisiuni, fără acces la internet, Java pur fără biblioteci. Nu este pe Google Play; descarcă APK-ul semnat de pe GitHub Releases și instalează-l pe Android 8 sau mai nou.",
@@ -2030,7 +2030,7 @@
         ],
         [
           "În câte limbi este Bare Sudoku?",
-          "60 de limbi, fiecare pe propria pagină: Română, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी și altele. Jocul urmărește limba paginii și îți reține alegerea."
+          "59 de limbi, fiecare pe propria pagină: Română, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी și altele. Jocul urmărește limba paginii și îți reține alegerea."
         ]
       ],
       "madeBy": "Creat de Alparslan Selçuk Develioğlu",
@@ -2122,7 +2122,7 @@
         "Επισήμανση γραμμής, στήλης, μπλοκ και ίδιου ψηφίου· σήμανση λαθών που απενεργοποιείται",
         "Αυτόματη αποθήκευση, σκούρο θέμα, πληκτρολόγιο και οριζόντια διάταξη",
         "Λειτουργεί offline μετά την πρώτη επίσκεψη, χωρίς app store",
-        "60 γλώσσες, καθεμία στη δική της σελίδα"
+        "59 γλώσσες, καθεμία στη δική της σελίδα"
       ],
       "androidHeading": "Εφαρμογή Android",
       "android": "Το Bare Sudoku υπάρχει και ως εγγενής εφαρμογή Android: έκδοση {version}, περίπου {size} KB, χωρίς άδειες, χωρίς πρόσβαση στο internet, καθαρή Java χωρίς βιβλιοθήκες. Δεν είναι στο Google Play· κατέβασε το υπογεγραμμένο APK από το GitHub Releases και εγκατάστησέ το σε Android 8 ή νεότερο.",
@@ -2173,7 +2173,7 @@
         ],
         [
           "Σε πόσες γλώσσες υπάρχει το Bare Sudoku;",
-          "60 γλώσσες, καθεμία στη δική της σελίδα: Ελληνικά, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी και άλλα. Το παιχνίδι ακολουθεί τη γλώσσα της σελίδας και θυμάται την επιλογή σας."
+          "59 γλώσσες, καθεμία στη δική της σελίδα: Ελληνικά, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी και άλλα. Το παιχνίδι ακολουθεί τη γλώσσα της σελίδας και θυμάται την επιλογή σας."
         ]
       ],
       "madeBy": "Δημιουργός: Alparslan Selçuk Develioğlu",
@@ -2265,7 +2265,7 @@
         "Markering av rad, kolumn, ruta och samma siffra; felmarkering som kan stängas av",
         "Automatisk sparning, mörkt läge, tangentbord och liggande läge",
         "Fungerar offline efter första besöket, ingen appbutik behövs",
-        "60 språk, vart och ett på sin egen sida"
+        "59 språk, vart och ett på sin egen sida"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finns också som inbyggd Android-app: version {version}, cirka {size} KB, inga behörigheter, ingen internetåtkomst, ren Java utan bibliotek. Den finns inte på Google Play; ladda ner den signerade APK-filen från GitHub Releases och installera den på Android 8 eller senare.",
@@ -2316,7 +2316,7 @@
         ],
         [
           "På hur många språk finns Bare Sudoku?",
-          "60 språk, vart och ett på sin egen sida. Språkmenyn i spelet byter sida, och listan under spelet länkar till varje språk. Spelet kommer ihåg ditt val."
+          "59 språk, vart och ett på sin egen sida. Språkmenyn i spelet byter sida, och listan under spelet länkar till varje språk. Spelet kommer ihåg ditt val."
         ]
       ],
       "madeBy": "Skapad av Alparslan Selçuk Develioğlu",
@@ -2408,7 +2408,7 @@
         "Fremhævning af række, kolonne, boks og samme ciffer; fejlmarkering, der kan slås fra",
         "Automatisk gem, mørk tilstand, tastatur og liggende layout",
         "Virker offline efter første besøg, ingen app store nødvendig",
-        "60 sprog, hvert på sin egen side"
+        "59 sprog, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku findes også som native Android-app: version {version}, cirka {size} KB, ingen tilladelser, ingen internetadgang, ren Java uden biblioteker. Den er ikke på Google Play; hent den signerede APK fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -2459,7 +2459,7 @@
         ],
         [
           "Hvor mange sprog findes Bare Sudoku på?",
-          "60 sprog, hvert på sin egen side. Sprogmenuen i spillet skifter side, og listen under spillet linker til hvert sprog. Spillet husker dit valg."
+          "59 sprog, hvert på sin egen side. Sprogmenuen i spillet skifter side, og listen under spillet linker til hvert sprog. Spillet husker dit valg."
         ]
       ],
       "madeBy": "Lavet af Alparslan Selçuk Develioğlu",
@@ -2551,7 +2551,7 @@
         "Utheving av rad, kolonne, boks og samme siffer; feilmarkering som kan slås av",
         "Automatisk lagring, mørk modus, tastatur og liggende visning",
         "Fungerer frakoblet etter første besøk, ingen appbutikk nødvendig",
-        "60 språk, hvert på sin egen side"
+        "59 språk, hvert på sin egen side"
       ],
       "androidHeading": "Android-app",
       "android": "Bare Sudoku finnes også som egen Android-app: versjon {version}, omtrent {size} KB, ingen tillatelser, ingen internettilgang, ren Java uten biblioteker. Den er ikke på Google Play; last ned den signerte APK-filen fra GitHub Releases og installer den på Android 8 eller nyere.",
@@ -2602,7 +2602,7 @@
         ],
         [
           "Hvor mange språk finnes Bare Sudoku på?",
-          "60 språk, hvert på sin egen side. Språkmenyen i spillet bytter side, og listen under spillet lenker til hvert språk. Spillet husker valget ditt."
+          "59 språk, hvert på sin egen side. Språkmenyen i spillet bytter side, og listen under spillet lenker til hvert språk. Spillet husker valget ditt."
         ]
       ],
       "madeBy": "Laget av Alparslan Selçuk Develioğlu",
@@ -2694,7 +2694,7 @@
         "Rivin, sarakkeen, ruudun ja saman numeron korostus; virhemerkintä, jonka voi kytkeä pois",
         "Automaattinen tallennus, tumma tila, näppäimistö ja vaaka-asettelu",
         "Toimii offline ensimmäisen käynnin jälkeen, ei sovelluskauppaa",
-        "60 kieltä, jokainen omalla sivullaan"
+        "59 kieltä, jokainen omalla sivullaan"
       ],
       "androidHeading": "Android-sovellus",
       "android": "Bare Sudoku on myös natiivi Android-sovellus: versio {version}, noin {size} KB, ei käyttöoikeuksia, ei internetyhteyttä, puhdasta Javaa ilman kirjastoja. Se ei ole Google Playssa; lataa allekirjoitettu APK GitHub Releases -sivulta ja asenna se Android 8:aan tai uudempaan.",
@@ -2745,7 +2745,7 @@
         ],
         [
           "Kuinka monella kielellä Bare Sudoku on?",
-          "60 kielellä, jokainen omalla sivullaan. Pelin kielivalikko vaihtaa sivua, ja pelin alla oleva luettelo linkittää jokaiseen kieleen. Peli muistaa valintasi."
+          "59 kielellä, jokainen omalla sivullaan. Pelin kielivalikko vaihtaa sivua, ja pelin alla oleva luettelo linkittää jokaiseen kieleen. Peli muistaa valintasi."
         ]
       ],
       "madeBy": "Tekijä: Alparslan Selçuk Develioğlu",
@@ -2837,7 +2837,7 @@
         "Подсветка строки, столбца, блока и одинаковых цифр; отключаемая отметка ошибок",
         "Автосохранение, тёмная тема, клавиатура и горизонтальная раскладка",
         "После первого визита работает офлайн, магазин приложений не нужен",
-        "60 языков, каждый на своей странице"
+        "59 языков, каждый на своей странице"
       ],
       "androidHeading": "Приложение для Android",
       "android": "Bare Sudoku есть и как нативное приложение для Android: версия {version}, около {size} КБ, без разрешений, без доступа в интернет, чистая Java без библиотек. Его нет в Google Play; скачай подписанный APK со страницы GitHub Releases и установи на Android 8 или новее.",
@@ -2888,7 +2888,7 @@
         ],
         [
           "На скольких языках есть Bare Sudoku?",
-          "60 языков, каждый на своей странице. Выбор языка в игре меняет страницу, а список под игрой приводит к каждому языку. Игра запомнит ваш выбор."
+          "59 языков, каждый на своей странице. Выбор языка в игре меняет страницу, а список под игрой приводит к каждому языку. Игра запомнит ваш выбор."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -2980,7 +2980,7 @@
         "Підсвічування рядка, стовпця, блоку та однакових цифр; позначення помилок можна вимкнути",
         "Автозбереження, темна тема, клавіатура та горизонтальна розкладка",
         "Після першого візиту працює офлайн, магазин застосунків не потрібен",
-        "60 мов, кожна на своїй сторінці"
+        "59 мов, кожна на своїй сторінці"
       ],
       "androidHeading": "Застосунок для Android",
       "android": "Bare Sudoku є і як нативний застосунок для Android: версія {version}, близько {size} КБ, без дозволів, без доступу до інтернету, чиста Java без бібліотек. Його немає в Google Play; завантаж підписаний APK зі сторінки GitHub Releases і встанови на Android 8 або новішу.",
@@ -3031,7 +3031,7 @@
         ],
         [
           "Скількома мовами доступний Bare Sudoku?",
-          "60 мов, кожна на своїй сторінці. Вибір мови в грі змінює сторінку, а список під грою веде до кожної мови. Гра запам'ятає ваш вибір."
+          "59 мов, кожна на своїй сторінці. Вибір мови в грі змінює сторінку, а список під грою веде до кожної мови. Гра запам'ятає ваш вибір."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -3123,7 +3123,7 @@
         "Открояване на ред, колона, блок и еднаква цифра; отбелязване на грешки, което може да се изключи",
         "Автоматично запазване, тъмен режим, клавиатура и хоризонтално оформление",
         "Работи офлайн след първото посещение, без магазин за приложения",
-        "60 езика, всеки на своя страница"
+        "59 езика, всеки на своя страница"
       ],
       "androidHeading": "Приложение за Android",
       "android": "Bare Sudoku съществува и като нативно приложение за Android: версия {version}, около {size} КБ, без разрешения, без достъп до интернет, чиста Java без библиотеки. Няма го в Google Play; изтегли подписания APK от GitHub Releases и го инсталирай на Android 8 или по-нов.",
@@ -3174,7 +3174,7 @@
         ],
         [
           "На колко езика е Bare Sudoku?",
-          "60 езика, всеки на своя страница: Български, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी и други. Играта следва езика на страницата и помни избора ви."
+          "59 езика, всеки на своя страница: Български, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी и други. Играта следва езика на страницата и помни избора ви."
         ]
       ],
       "madeBy": "Автор: Alparslan Selçuk Develioğlu",
@@ -3266,7 +3266,7 @@
         "Isticanje reda, kolone, bloka i iste cifre; označavanje grešaka koje se može isključiti",
         "Automatsko čuvanje, tamni režim, tastatura i horizontalni raspored",
         "Radi oflajn posle prve posete, bez prodavnice aplikacija",
-        "60 jezika, svaki na svojoj stranici"
+        "59 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Play-u; preuzmi potpisani APK sa GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -3317,7 +3317,7 @@
         ],
         [
           "Na koliko jezika postoji Bare Sudoku?",
-          "60 jezika, svaki na svojoj stranici: Srpski, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी i još. Igra prati jeziku stranice i pamti tvoj izbor."
+          "59 jezika, svaki na svojoj stranici: Srpski, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी i još. Igra prati jeziku stranice i pamti tvoj izbor."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -3409,7 +3409,7 @@
         "Isticanje retka, stupca, bloka i iste znamenke; označavanje pogrešaka koje se može isključiti",
         "Automatsko spremanje, tamni način, tipkovnica i vodoravni raspored",
         "Radi offline nakon prvog posjeta, bez trgovine aplikacija",
-        "60 jezika, svaki na svojoj stranici"
+        "59 jezika, svaki na svojoj stranici"
       ],
       "androidHeading": "Android aplikacija",
       "android": "Bare Sudoku postoji i kao nativna Android aplikacija: verzija {version}, oko {size} KB, bez dozvola, bez pristupa internetu, čista Java bez biblioteka. Nije na Google Playu; preuzmi potpisani APK s GitHub Releases i instaliraj ga na Android 8 ili noviji.",
@@ -3460,7 +3460,7 @@
         ],
         [
           "Na koliko je jezika Bare Sudoku?",
-          "60 jezika, svaki na svojoj stranici: Hrvatski, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी i više. Igra prati jeziku stranice i pamti tvoj izbor."
+          "59 jezika, svaki na svojoj stranici: Hrvatski, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी i više. Igra prati jeziku stranice i pamti tvoj izbor."
         ]
       ],
       "madeBy": "Autor: Alparslan Selçuk Develioğlu",
@@ -3552,7 +3552,7 @@
         "إبراز الصف والعمود والمربع والرقم نفسه؛ تعليم الأخطاء قابل للإيقاف",
         "حفظ تلقائي ووضع داكن ودعم لوحة المفاتيح وتخطيط أفقي",
         "يعمل دون اتصال بعد الزيارة الأولى، دون متجر تطبيقات",
-        "60 لغة، لكل منها صفحتها الخاصة"
+        "59 لغة، لكل منها صفحتها الخاصة"
       ],
       "androidHeading": "تطبيق أندرويد",
       "android": "Bare Sudoku متوفر أيضًا كتطبيق أندرويد أصلي: الإصدار {version}، نحو {size} كيلوبايت، بلا أذونات، بلا وصول إلى الإنترنت، جافا خالصة بلا مكتبات. ليس على Google Play؛ نزّل ملف APK الموقّع من GitHub Releases وثبّته على أندرويد 8 أو أحدث.",
@@ -3603,7 +3603,7 @@
         ],
         [
           "كم لغة يدعم Bare Sudoku؟",
-          "60 لغة، لكل منها صفحتها الخاصة. قائمة اللغة داخل اللعبة تبدّل الصفحة، والقائمة أسفل اللعبة تصل إلى كل لغة. تتذكر اللعبة اختيارك."
+          "59 لغة، لكل منها صفحتها الخاصة. قائمة اللغة داخل اللعبة تبدّل الصفحة، والقائمة أسفل اللعبة تصل إلى كل لغة. تتذكر اللعبة اختيارك."
         ]
       ],
       "madeBy": "من صنع Alparslan Selçuk Develioğlu",
@@ -3695,7 +3695,7 @@
         "برجسته‌سازی سطر، ستون، جعبه و رقم یکسان؛ علامت‌گذاری خطا که می‌توان خاموشش کرد",
         "ذخیرهٔ خودکار، حالت تاریک، صفحه‌کلید و چیدمان افقی",
         "پس از اولین بازدید آفلاین کار می‌کند، بدون نیاز به فروشگاه برنامه",
-        "۶۰ زبان، هر کدام در صفحهٔ خودش"
+        "۵۹ زبان، هر کدام در صفحهٔ خودش"
       ],
       "androidHeading": "برنامهٔ اندروید",
       "android": "Bare Sudoku به‌صورت برنامهٔ بومی اندروید هم موجود است: نسخهٔ {version}، حدود {size} کیلوبایت، بدون مجوز، بدون دسترسی به اینترنت، جاوای خالص بدون کتابخانه. در Google Play نیست؛ فایل APK امضاشده را از GitHub Releases دانلود کن و روی اندروید ۸ یا جدیدتر نصب کن.",
@@ -3746,7 +3746,7 @@
         ],
         [
           "Bare Sudoku به چند زبان است؟",
-          "۶۰ زبان، هر کدام در صفحهٔ خودش. منوی زبان در بازی صفحه را عوض می‌کند و فهرست زیر بازی به همهٔ زبان‌ها پیوند دارد. بازی انتخاب شما را به خاطر می‌سپارد."
+          "۵۹ زبان، هر کدام در صفحهٔ خودش. منوی زبان در بازی صفحه را عوض می‌کند و فهرست زیر بازی به همهٔ زبان‌ها پیوند دارد. بازی انتخاب شما را به خاطر می‌سپارد."
         ]
       ],
       "madeBy": "ساختهٔ Alparslan Selçuk Develioğlu",
@@ -3838,7 +3838,7 @@
         "הדגשת שורה, עמודה, תיבה ואותה ספרה; סימון טעויות שאפשר לכבות",
         "שמירה אוטומטית, מצב כהה, תמיכה במקלדת ופריסה לרוחב",
         "עובד בלי אינטרנט אחרי הביקור הראשון, בלי חנות אפליקציות",
-        "60 שפות, לכל אחת דף משלה"
+        "59 שפות, לכל אחת דף משלה"
       ],
       "androidHeading": "אפליקציית אנדרואיד",
       "android": "Bare Sudoku קיים גם כאפליקציית אנדרואיד מקורית: גרסה {version}, כ-{size} KB, בלי הרשאות, בלי גישה לאינטרנט, Java טהורה בלי ספריות. היא לא ב-Google Play; הורידו את קובץ ה-APK החתום מ-GitHub Releases והתקינו על אנדרואיד 8 ומעלה.",
@@ -3889,7 +3889,7 @@
         ],
         [
           "בכמה שפות Bare Sudoku זמין?",
-          "60 שפות, לכל אחת עמוד משלה. תפריט השפה במשחק מחליף עמוד, והרשימה מתחת למשחק מקשרת לכל שפה. המשחק זוכר את הבחירה שלכם."
+          "59 שפות, לכל אחת עמוד משלה. תפריט השפה במשחק מחליף עמוד, והרשימה מתחת למשחק מקשרת לכל שפה. המשחק זוכר את הבחירה שלכם."
         ]
       ],
       "madeBy": "נוצר על ידי Alparslan Selçuk Develioğlu",
@@ -3981,7 +3981,7 @@
         "पंक्ति, स्तंभ, बॉक्स और समान अंक की हाइलाइट; गलती का निशान जिसे बंद किया जा सकता है",
         "स्वतः सेव, डार्क मोड, कीबोर्ड समर्थन और लैंडस्केप लेआउट",
         "पहली बार खोलने के बाद ऑफ़लाइन चलता है, किसी ऐप स्टोर की ज़रूरत नहीं",
-        "60 भाषाएँ, हर एक का अपना पेज"
+        "59 भाषाएँ, हर एक का अपना पेज"
       ],
       "androidHeading": "Android ऐप",
       "android": "Bare Sudoku एक नेटिव Android ऐप के रूप में भी है: संस्करण {version}, लगभग {size} KB, कोई अनुमति नहीं, इंटरनेट की ज़रूरत नहीं, बिना किसी लाइब्रेरी की शुद्ध Java। यह Google Play पर नहीं है; GitHub Releases से हस्ताक्षरित APK डाउनलोड करें और Android 8 या नए पर इंस्टॉल करें।",
@@ -4032,7 +4032,7 @@
         ],
         [
           "Bare Sudoku कितनी भाषाओं में है?",
-          "60 भाषाएँ, हर एक अपने पेज पर। गेम का भाषा मेनू पेज बदलता है और गेम के नीचे की सूची हर भाषा से जोड़ती है। गेम आपकी पसंद याद रखता है।"
+          "59 भाषाएँ, हर एक अपने पेज पर। गेम का भाषा मेनू पेज बदलता है और गेम के नीचे की सूची हर भाषा से जोड़ती है। गेम आपकी पसंद याद रखता है।"
         ]
       ],
       "madeBy": "निर्माता: Alparslan Selçuk Develioğlu",
@@ -4124,7 +4124,7 @@
         "সারি, কলাম, বাক্স ও একই সংখ্যার হাইলাইট; ভুলের চিহ্ন বন্ধ করা যায়",
         "স্বয়ংক্রিয় সেভ, ডার্ক মোড, কীবোর্ড সমর্থন ও ল্যান্ডস্কেপ লেআউট",
         "প্রথমবার খোলার পর অফলাইনে চলে, অ্যাপ স্টোর লাগে না",
-        "৬০টি ভাষা, প্রতিটির নিজস্ব পেজ"
+        "৫৯টি ভাষা, প্রতিটির নিজস্ব পেজ"
       ],
       "androidHeading": "Android অ্যাপ",
       "android": "Bare Sudoku একটি নেটিভ Android অ্যাপ হিসেবেও আছে: সংস্করণ {version}, প্রায় {size} KB, কোনো অনুমতি নেই, ইন্টারনেট লাগে না, কোনো লাইব্রেরি ছাড়া বিশুদ্ধ Java। এটি Google Play-তে নেই; GitHub Releases থেকে স্বাক্ষরিত APK ডাউনলোড করে Android 8 বা নতুনে ইনস্টল করুন।",
@@ -4175,7 +4175,7 @@
         ],
         [
           "Bare Sudoku কতগুলো ভাষায় আছে?",
-          "৬০টি ভাষা, প্রতিটির নিজস্ব পাতা। গেমের ভাষা মেনু পাতা বদলায়, আর গেমের নিচের তালিকা প্রতিটি ভাষায় নিয়ে যায়। গেম আপনার পছন্দ মনে রাখে।"
+          "৫৯টি ভাষা, প্রতিটির নিজস্ব পাতা। গেমের ভাষা মেনু পাতা বদলায়, আর গেমের নিচের তালিকা প্রতিটি ভাষায় নিয়ে যায়। গেম আপনার পছন্দ মনে রাখে।"
         ]
       ],
       "madeBy": "নির্মাতা: Alparslan Selçuk Develioğlu",
@@ -4267,7 +4267,7 @@
         "Sorotan baris, kolom, kotak, dan angka yang sama; penanda kesalahan bisa dimatikan",
         "Simpan otomatis, mode gelap, dukungan keyboard, dan tata letak lanskap",
         "Bisa offline setelah kunjungan pertama, tanpa toko aplikasi",
-        "60 bahasa, masing-masing di halamannya sendiri"
+        "59 bahasa, masing-masing di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga tersedia sebagai aplikasi Android native: versi {version}, sekitar {size} KB, tanpa izin, tanpa akses internet, Java murni tanpa pustaka. Tidak ada di Google Play; unduh APK bertanda tangan dari GitHub Releases dan pasang di Android 8 atau lebih baru.",
@@ -4318,7 +4318,7 @@
         ],
         [
           "Berapa banyak bahasa yang didukung Bare Sudoku?",
-          "60 bahasa, masing-masing di halamannya sendiri. Menu bahasa di dalam gim mengganti halaman, dan daftar di bawah gim menautkan ke setiap bahasa. Gim mengingat pilihan Anda."
+          "59 bahasa, masing-masing di halamannya sendiri. Menu bahasa di dalam gim mengganti halaman, dan daftar di bawah gim menautkan ke setiap bahasa. Gim mengingat pilihan Anda."
         ]
       ],
       "madeBy": "Dibuat oleh Alparslan Selçuk Develioğlu",
@@ -4410,7 +4410,7 @@
         "Sorotan baris, lajur, kotak dan digit yang sama; penanda kesilapan boleh dimatikan",
         "Simpan automatik, mod gelap, sokongan papan kekunci dan susun atur landskap",
         "Berfungsi luar talian selepas lawatan pertama, tanpa gedung aplikasi",
-        "60 bahasa, setiap satu di halamannya sendiri"
+        "59 bahasa, setiap satu di halamannya sendiri"
       ],
       "androidHeading": "Aplikasi Android",
       "android": "Bare Sudoku juga ada sebagai aplikasi Android asli: versi {version}, kira-kira {size} KB, tiada kebenaran, tiada akses internet, Java tulen tanpa pustaka. Tiada di Google Play; muat turun APK bertandatangan dari GitHub Releases dan pasang pada Android 8 atau lebih baharu.",
@@ -4461,7 +4461,7 @@
         ],
         [
           "Berapa banyak bahasa yang ada dalam Bare Sudoku?",
-          "60 bahasa, setiap satu di halamannya sendiri. Menu bahasa dalam permainan menukar halaman, dan senarai di bawah permainan memaut ke setiap bahasa. Permainan mengingati pilihan anda."
+          "59 bahasa, setiap satu di halamannya sendiri. Menu bahasa dalam permainan menukar halaman, dan senarai di bawah permainan memaut ke setiap bahasa. Permainan mengingati pilihan anda."
         ]
       ],
       "madeBy": "Dibuat oleh Alparslan Selçuk Develioğlu",
@@ -4553,7 +4553,7 @@
         "Tô sáng hàng, cột, ô vuông và cùng chữ số; đánh dấu lỗi có thể tắt",
         "Tự động lưu, chế độ tối, hỗ trợ bàn phím và bố cục ngang",
         "Hoạt động offline sau lần truy cập đầu tiên, không cần cửa hàng ứng dụng",
-        "60 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
+        "59 ngôn ngữ, mỗi ngôn ngữ có trang riêng"
       ],
       "androidHeading": "Ứng dụng Android",
       "android": "Bare Sudoku cũng có ứng dụng Android gốc: phiên bản {version}, khoảng {size} KB, không quyền truy cập, không kết nối internet, Java thuần không thư viện. Không có trên Google Play; tải APK đã ký từ GitHub Releases và cài trên Android 8 trở lên.",
@@ -4604,7 +4604,7 @@
         ],
         [
           "Bare Sudoku có bao nhiêu ngôn ngữ?",
-          "60 ngôn ngữ, mỗi ngôn ngữ có trang riêng. Menu ngôn ngữ trong trò chơi chuyển trang, và danh sách dưới trò chơi liên kết tới mọi ngôn ngữ. Trò chơi ghi nhớ lựa chọn của bạn."
+          "59 ngôn ngữ, mỗi ngôn ngữ có trang riêng. Menu ngôn ngữ trong trò chơi chuyển trang, và danh sách dưới trò chơi liên kết tới mọi ngôn ngữ. Trò chơi ghi nhớ lựa chọn của bạn."
         ]
       ],
       "madeBy": "Tạo bởi Alparslan Selçuk Develioğlu",
@@ -4696,7 +4696,7 @@
         "ไฮไลต์แถว คอลัมน์ กล่อง และตัวเลขเดียวกัน; เครื่องหมายผิดพลาดปิดได้",
         "บันทึกอัตโนมัติ โหมดมืด รองรับคีย์บอร์ด และเลย์เอาต์แนวนอน",
         "เล่นออฟไลน์ได้หลังเปิดครั้งแรก ไม่ต้องใช้แอปสโตร์",
-        "60 ภาษา แต่ละภาษามีหน้าของตัวเอง"
+        "59 ภาษา แต่ละภาษามีหน้าของตัวเอง"
       ],
       "androidHeading": "แอป Android",
       "android": "Bare Sudoku ยังมีเป็นแอป Android แบบเนทีฟ: เวอร์ชัน {version} ขนาดประมาณ {size} KB ไม่ขอสิทธิ์ใด ๆ ไม่ใช้อินเทอร์เน็ต เขียนด้วย Java ล้วนไม่มีไลบรารี ไม่มีใน Google Play; ดาวน์โหลด APK ที่ลงลายเซ็นแล้วจาก GitHub Releases และติดตั้งบน Android 8 ขึ้นไป",
@@ -4747,7 +4747,7 @@
         ],
         [
           "Bare Sudoku มีกี่ภาษา?",
-          "60 ภาษา แต่ละภาษามีหน้าของตัวเอง เมนูภาษาในเกมใช้สลับหน้า และรายการใต้เกมลิงก์ไปทุกภาษา เกมจะจำภาษาที่คุณเลือก"
+          "59 ภาษา แต่ละภาษามีหน้าของตัวเอง เมนูภาษาในเกมใช้สลับหน้า และรายการใต้เกมลิงก์ไปทุกภาษา เกมจะจำภาษาที่คุณเลือก"
         ]
       ],
       "madeBy": "สร้างโดย Alparslan Selçuk Develioğlu",
@@ -4839,7 +4839,7 @@
         "行・列・ブロック・同じ数字のハイライト、オフにできる誤りの表示",
         "自動保存、ダークモード、キーボード操作、横向きレイアウト",
         "初回アクセス後はオフラインでも動作、アプリストア不要",
-        "60の言語、それぞれのページ"
+        "59の言語、それぞれのページ"
       ],
       "androidHeading": "Androidアプリ",
       "android": "Bare SudokuにはネイティブのAndroidアプリもあります。バージョン{version}、約{size} KB、権限なし、インターネット接続なし、ライブラリを使わない純粋なJava製。Google Playにはありません。GitHub Releasesから署名済みAPKをダウンロードし、Android 8以降にインストールしてください。",
@@ -4890,7 +4890,7 @@
         ],
         [
           "Bare Sudokuは何か国語に対応していますか？",
-          "60の言語、それぞれのページ。ゲームの言語選択でページが切り替わり、ゲーム下部のリストで各言語にアクセスできます。ゲームはご選択を記憶します。"
+          "59の言語、それぞれのページ。ゲームの言語選択でページが切り替わり、ゲーム下部のリストで各言語にアクセスできます。ゲームはご選択を記憶します。"
         ]
       ],
       "madeBy": "制作: Alparslan Selçuk Develioğlu",
@@ -4982,7 +4982,7 @@
         "행, 열, 박스, 같은 숫자 강조; 끌 수 있는 오류 표시",
         "자동 저장, 다크 모드, 키보드 지원, 가로 레이아웃",
         "첫 방문 후 오프라인 작동, 앱 스토어 불필요",
-        "60개 언어, 언어마다 전용 페이지"
+        "59개 언어, 언어마다 전용 페이지"
       ],
       "androidHeading": "Android 앱",
       "android": "Bare Sudoku는 네이티브 Android 앱으로도 제공됩니다. 버전 {version}, 약 {size} KB, 권한 없음, 인터넷 접근 없음, 라이브러리 없는 순수 Java. Google Play에는 없습니다. GitHub Releases에서 서명된 APK를 내려받아 Android 8 이상에 설치하세요.",
@@ -5033,7 +5033,7 @@
         ],
         [
           "Bare Sudoku는 몇 개 언어를 지원하나요?",
-          "60개 언어이며 언어마다 자체 페이지가 있습니다. 게임 안의 언어 메뉴로 페이지를 바꾸고, 게임 아래 목록에서 모든 언어로 갈 수 있습니다. 선택한 언어는 기억됩니다."
+          "59개 언어이며 언어마다 자체 페이지가 있습니다. 게임 안의 언어 메뉴로 페이지를 바꾸고, 게임 아래 목록에서 모든 언어로 갈 수 있습니다. 선택한 언어는 기억됩니다."
         ]
       ],
       "madeBy": "제작: Alparslan Selçuk Develioğlu",
@@ -5125,7 +5125,7 @@
         "行、列、宫及相同数字高亮；可关闭的错误标记",
         "自动保存、深色模式、键盘操作、横屏布局",
         "首次访问后可离线使用，无需应用商店",
-        "60种语言，各自独立的页面"
+        "59种语言，各自独立的页面"
       ],
       "androidHeading": "Android 应用",
       "android": "Bare Sudoku 也有原生 Android 应用：版本 {version}，约 {size} KB，不需要任何权限，不联网，纯 Java 编写，不依赖任何库。它不在 Google Play 上架；请从 GitHub Releases 下载已签名的 APK，安装到 Android 8 或更高版本。",
@@ -5176,7 +5176,7 @@
         ],
         [
           "Bare Sudoku 支持多少种语言？",
-          "60种语言，各自独立的页面。游戏中的语言选择会改变页面，游戏下方的列表指向各种语言。游戏会记住您的选择。"
+          "59种语言，各自独立的页面。游戏中的语言选择会改变页面，游戏下方的列表指向各种语言。游戏会记住您的选择。"
         ]
       ],
       "madeBy": "作者：Alparslan Selçuk Develioğlu",
@@ -5268,7 +5268,7 @@
         "列、欄、宮及相同數字醒目提示；可關閉的錯誤標記",
         "自動儲存、深色模式、鍵盤操作、橫向版面",
         "首次造訪後可離線使用，不需要應用程式商店",
-        "60種語言，各自獨立的頁面"
+        "59種語言，各自獨立的頁面"
       ],
       "androidHeading": "Android 應用程式",
       "android": "Bare Sudoku 也有原生 Android 應用程式：版本 {version}，約 {size} KB，不需要任何權限，不連網，純 Java 撰寫，不依賴任何函式庫。它不在 Google Play 上架；請從 GitHub Releases 下載已簽署的 APK，安裝到 Android 8 或更新版本。",
@@ -5319,7 +5319,7 @@
         ],
         [
           "Bare Sudoku 支援多少種語言？",
-          "60種語言，各自獨立的頁面。遊戲中的語言選擇會改變頁面，遊戲下方的列表指向各種語言。遊戲會記住您的選擇。"
+          "59種語言，各自獨立的頁面。遊戲中的語言選擇會改變頁面，遊戲下方的列表指向各種語言。遊戲會記住您的選擇。"
         ]
       ],
       "madeBy": "作者：Alparslan Selçuk Develioğlu",
@@ -5460,7 +5460,7 @@
         ],
         [
           "Bare Sudoku کتنی زبانوں میں ہے؟",
-          "ہر ایک اپنے صفحے پر 60 زبانیں۔ کھیل صفحے کی زبان کی پیروی کرتا ہے اور اپنی پسند یاد رکھتا ہے۔"
+          "ہر ایک اپنے صفحے پر 59 زبانیں۔ کھیل صفحے کی زبان کی پیروی کرتا ہے اور اپنی پسند یاد رکھتا ہے۔"
         ]
       ],
       "madeBy": "بنانے والا: Alparslan Selçuk Develioğlu",
@@ -5601,7 +5601,7 @@
         ],
         [
           "Bare Sudoku எத்தனை மொழிகளில் உள்ளது?",
-          "ஒவ்வொன்றுக்கும் தனிப் பக்கம் 60 மொழிகளில். விளையாட்டு பக்கத்தின் மொழியை பின்பற்றும், உங்கள் தேர்வை நினைவில் வைக்கும்."
+          "ஒவ்வொன்றுக்கும் தனிப் பக்கம் 59 மொழிகளில். விளையாட்டு பக்கத்தின் மொழியை பின்பற்றும், உங்கள் தேர்வை நினைவில் வைக்கும்."
         ]
       ],
       "madeBy": "உருவாக்கியவர்: Alparslan Selçuk Develioğlu",
@@ -5742,7 +5742,7 @@
         ],
         [
           "Bare Sudoku ఎన్ని భాషల్లో ఉంది?",
-          "ఒక్కొక్కదానికి సొంత పేజీ 60 భాషల్లో. గేమ్ పేజీ భాషను అనుసరిస్తుంది, మీ ఎంపికను గుర్తుంచుకుంటుంది."
+          "ఒక్కొక్కదానికి సొంత పేజీ 59 భాషల్లో. గేమ్ పేజీ భాషను అనుసరిస్తుంది, మీ ఎంపికను గుర్తుంచుకుంటుంది."
         ]
       ],
       "madeBy": "రూపకర్త: Alparslan Selçuk Develioğlu",
@@ -5883,7 +5883,7 @@
         ],
         [
           "Ilang wika ang mayroon ang Bare Sudoku?",
-          "60 wika, bawat isa sa sariling pahina. Ang menu ng wika sa laro ang nagpapalit ng pahina, at ang listahan sa ilalim ng laro ay nagli-link sa bawat wika. Naaalala ng laro ang pinili mo."
+          "59 wika, bawat isa sa sariling pahina. Ang menu ng wika sa laro ang nagpapalit ng pahina, at ang listahan sa ilalim ng laro ay nagli-link sa bawat wika. Naaalala ng laro ang pinili mo."
         ]
       ],
       "madeBy": "Gawa ni Alparslan Selçuk Develioğlu",
@@ -6024,7 +6024,7 @@
         ],
         [
           "En quants idiomes hi ha Bare Sudoku?",
-          "En 60 idiomes, cadascun a la seva pàgina. El menú d'idioma del joc canvia de pàgina i la llista sota el joc enllaça a tots els idiomes. El joc recorda la teva tria."
+          "En 59 idiomes, cadascun a la seva pàgina. El menú d'idioma del joc canvia de pàgina i la llista sota el joc enllaça a tots els idiomes. El joc recorda la teva tria."
         ]
       ],
       "madeBy": "Fet per Alparslan Selçuk Develioğlu",
@@ -6165,7 +6165,7 @@
         ],
         [
           "V koliko jezikih je Bare Sudoku?",
-          "V 60 jezikih, vsak na svoji strani: Slovenščina, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी in še. Igra sledi jeziku strani in si zapomni tvojo izbiro."
+          "V 59 jezikih, vsak na svoji strani: Slovenščina, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी in še. Igra sledi jeziku strani in si zapomni tvojo izbiro."
         ]
       ],
       "madeBy": "Ustvaril Alparslan Selçuk Develioğlu",
@@ -6306,7 +6306,7 @@
         ],
         [
           "Kiek kalbų turi Bare Sudoku?",
-          "60 kalbų, kiekviena savo puslapyje: Lietuvių, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ir daugiau. Žaidimas seka puslapio kalbą ir prisimena jūsų pasirinkimą."
+          "59 kalbų, kiekviena savo puslapyje: Lietuvių, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ir daugiau. Žaidimas seka puslapio kalbą ir prisimena jūsų pasirinkimą."
         ]
       ],
       "madeBy": "Sukūrė Alparslan Selçuk Develioğlu",
@@ -6447,7 +6447,7 @@
         ],
         [
           "Cik valodās ir Bare Sudoku?",
-          "60 valodās, katra savā lapā: Latviešu, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी un vairāk. Spēle seko lapas valodai un atceras tavu izvēli."
+          "59 valodās, katra savā lapā: Latviešu, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी un vairāk. Spēle seko lapas valodai un atceras tavu izvēli."
         ]
       ],
       "madeBy": "Izveidoja Alparslan Selçuk Develioğlu",
@@ -6588,7 +6588,7 @@
         ],
         [
           "Bare Sudoku канча тилде бар?",
-          "60 тилде, ар бири өз барагында. Оюндагы тил менюсу барагын алмаштырат, ал эми оюндун астындагы тизме ар бир тилге шилтеме берет. Оюн тандооңузду эстеп калат."
+          "59 тилде, ар бири өз барагында. Оюндагы тил менюсу барагын алмаштырат, ал эми оюндун астындагы тизме ар бир тилге шилтеме берет. Оюн тандооңузду эстеп калат."
         ]
       ],
       "madeBy": "Жасаган: Alparslan Selçuk Develioğlu",
@@ -6729,7 +6729,7 @@
         ],
         [
           "Bare Sudoku қанша тілде бар?",
-          "60 тілде, әрқайсысы өз бетінде. Ойындағы тіл мәзірі бетті ауыстырады, ал ойын астындағы тізім әр тілге сілтейді. Ойын таңдауыңызды есте сақтайды."
+          "59 тілде, әрқайсысы өз бетінде. Ойындағы тіл мәзірі бетті ауыстырады, ал ойын астындағы тізім әр тілге сілтейді. Ойын таңдауыңызды есте сақтайды."
         ]
       ],
       "madeBy": "Жасаған: Alparslan Selçuk Develioğlu",
@@ -6870,7 +6870,7 @@
         ],
         [
           "Bare Sudoku nechta tilda bor?",
-          "60 tilda, har biri o'z sahifasida. O'yindagi til menyusi sahifani almashtiradi, o'yin ostidagi ro'yxat esa har bir tilga havola beradi. O'yin tanlovingizni eslab qoladi."
+          "59 tilda, har biri o'z sahifasida. O'yindagi til menyusi sahifani almashtiradi, o'yin ostidagi ro'yxat esa har bir tilga havola beradi. O'yin tanlovingizni eslab qoladi."
         ]
       ],
       "madeBy": "Yaratuvchi: Alparslan Selçuk Develioğlu",
@@ -7011,7 +7011,7 @@
         ],
         [
           "Bare Sudoku näçe dilde bar?",
-          "60 dilde, her biri öz sahypasynda. Oýundaky dil menýusy sahypany çalyşýar, oýnuň aşagyndaky sanaw bolsa her dile salgy berýär. Oýun saýlawyňyzy ýatda saklaýar."
+          "59 dilde, her biri öz sahypasynda. Oýundaky dil menýusy sahypany çalyşýar, oýnuň aşagyndaky sanaw bolsa her dile salgy berýär. Oýun saýlawyňyzy ýatda saklaýar."
         ]
       ],
       "madeBy": "Ýasan: Alparslan Selçuk Develioğlu",
@@ -7152,7 +7152,7 @@
         ],
         [
           "Bare Sudoku ничә телдә бар?",
-          "60 телдә, һәрберсе үз битендә. Уендагы тел менюсы битне алыштыра, ә уен астындагы исемлек һәр телгә сылтама бирә. Уен сайлавыгызны истә тота."
+          "59 телдә, һәрберсе үз битендә. Уендагы тел менюсы битне алыштыра, ә уен астындагы исемлек һәр телгә сылтама бирә. Уен сайлавыгызны истә тота."
         ]
       ],
       "madeBy": "Ясаучы: Alparslan Selçuk Develioğlu",
@@ -7293,7 +7293,7 @@
         ],
         [
           "Bare Sudoku нисә телдә бар?",
-          "60 телдә, һәр береһе үҙ битендә. Уйындағы тел менюһы битте алмаштыра, ә уйын аҫтындағы исемлек һәр телгә һылтанма бирә. Уйын һайлауығыҙҙы иҫтә тота."
+          "59 телдә, һәр береһе үҙ битендә. Уйындағы тел менюһы битте алмаштыра, ә уйын аҫтындағы исемлек һәр телгә һылтанма бирә. Уйын һайлауығыҙҙы иҫтә тота."
         ]
       ],
       "madeBy": "Яһаусы: Alparslan Selçuk Develioğlu",
@@ -7371,147 +7371,6 @@
         ]
       }
     },
-    "cv": {
-      "title": "Bare Sudoku: тӳлевсӗр онлайн судоку, рекламасӑр, регистрацисӗр",
-      "description": "Браузерта тӳлевсӗр судоку: реклама ҫук, аккаунт ҫук, сӑнаса тӑни ҫук. Тӑватӑ шай, паллӑсем, каялла тавӑрни тата логикӑна ӑнлантаракан сӗнӳсем. Офлайн ӗҫлет. {size} KB Android приложенийӗ те пур.",
-      "h1": "Bare Sudoku: тӳлевсӗр онлайн судоку, рекламасӑр, регистрацисӗр",
-      "intro": "Bare Sudoku: браузерта ӗҫлекен тӳлевсӗр судоку вӑййи. Реклама ҫук, аккаунт ҫук, сӑнаса тӑни ҫук, нимӗн те лартмалла мар: страницӑна уҫӑр, шайне суйлӑр та выляйӑр. Кашни тупсӑмӑн шӑпах пӗр татӑклӑ хурав пур, ӑна логикӑпа ҫеҫ тупма пулать, кашни сӗнӳ хӑйӗн сӑлтавне ӑнлантарать. Вӑйӑ офлайн ӗҫлет, MIT лицензипе уҫӑ кодлӑ.",
-      "featuresHeading": "Мӗн илетӗр",
-      "features": [
-        "Тӑватӑ шай: ҫӑмӑл, вӑтам, йывӑр тата эксперт",
-        "Кашни тупсӑмӑн пӗр хурав, нихҫан та тӗшмӗртмелле мар",
-        "Паллӑсем, каялла тавӑрни, хуратни тата пӗрре пусса пур паллӑсене тултарни",
-        "Мелне ӑнлантаракан сӗнӳсем: пӗчченсемпе мӑшӑрсенчен пуҫласа X-Wing, Y-Wing, Skyscraper тата Unique Rectangle таран",
-        "Хӑй тӗллӗн упрани, тӗттӗм режим, клавиатура тата урлӑ вырнаҫни",
-        "Пӗрремӗш кӗнӗ хыҫҫӑн офлайн ӗҫлет, приложени лавкки кирлӗ мар"
-      ],
-      "androidHeading": "Android приложенийӗ",
-      "android": "Bare Sudoku Android приложенийӗ пек те пур: верси {version}, {size} KB яхӑн, ирӗксем ҫук, интернета кӗни ҫук, библиотекӑсӑр таса Java. Вӑл Google Play-ра ҫук; GitHub Releases-ран алӑ пуснӑ APK-на тиесе илӗр те Android 8 е ҫӗнӗреххи ҫине лартӑр.",
-      "androidLink": "APK тиесе илмелле",
-      "privacyHeading": "Вӑрттӑнлӑх",
-      "privacy": "Bare Sudoku персональнӑй даннӑйсене упрамасть: аккаунт, cookie тата IP адрес ҫук. Хальхи вӑйӑ сирӗн браузерта ҫеҫ упранать. Сайт анонимлӑ шутлавҫӑсем тытса пырать (страницӑна уҫни, пуҫланӑ тата вӗҫленӗ вӑйӑсем, шай, чӗлхе, хатӗр тӗсӗ тата хӑш сайтран килни); пӗтӗмӗшле хисепсем baresudoku.com/stats/ адресра пуриншӗн те уҫӑ. Android приложенийӗн интернет ирӗкӗ те ҫук.",
-      "faqHeading": "Час-часах паракан ыйтусем",
-      "faq": [
-        [
-          "Bare Sudoku тӳлевсӗр-и?",
-          "Ҫапла. Bare Sudoku браузерта та, Android ҫинче те пӗтӗмпех тӳлевсӗр. Реклама, приложени ӑшӗнчи туянусем тата премиум верси ҫук."
-        ],
-        [
-          "Bare Sudoku-ра реклама пур-и?",
-          "Ҫук. Веб вӑйӑ та, Android приложенийӗ те реклама кӑтартмасть, сӑнавҫӑсем е виҫҫӗмӗш енӗн скрипчӗсем ҫук."
-        ],
-        [
-          "Выляма аккаунт кирлӗ-и?",
-          "Ҫук. baresudoku.com-а уҫӑр та выляйӑр. Вӑйӑ браузерта хӑй тӗллӗн упранать; вкладкӑна хупӑр та каярах малалла тӑсӑр."
-        ],
-        [
-          "Bare Sudoku офлайн ӗҫлет-и?",
-          "Ҫапла. Пӗрремӗш кӗнӗ хыҫҫӑн браузер страницӑна упрать те ҫыхӑнусӑр уҫать. Android приложенийӗ интернетпа нихҫан та усӑ курмасть."
-        ],
-        [
-          "Bare Sudoku даннӑйсем пуҫтарать-и?",
-          "Bare Sudoku анонимлӑ шутлавҫӑсем ҫеҫ тытса пырать: страницӑна миҫе хут уҫни тата миҫе вӑйӑ пуҫланса вӗҫленни; шайпа, чӗлхепе, хатӗр тӗсӗпе тата хӑш сайтран килнипе. IP адрес, cookie тата аккаунт ҫук; пӗтӗмӗшле хисепсем baresudoku.com/stats/ адресра пуриншӗн те уҫӑ. Упранӑ вӑйӑ сирӗн браузерӑн вырӑнти управӑшӗнче ҫеҫ тӑрать."
-        ],
-        [
-          "Android приложенийӗ пур-и?",
-          "Ҫапла. Android валли Bare Sudoku: Android 8 тата ҫӗнӗреххи валли {size} KB APK, ирӗксӗр тата интернетсӑр. GitHub Releases-ран тиесе илӗр."
-        ],
-        [
-          "Судокӑлла мӗнле вылямалла?",
-          "9×9 сеткӑна кашни йӗркере, кашни юпара тата кашни 3×3 тӑваткалта 1-рен 9 таран цифрӑсем шӑпах пӗрер хут пулмалла тултарӑр. Хӑш-пӗр цифрӑсене малтанах панӑ; ыттисене логикӑпа тупатӑр. Bare Sudoku-ра малтан клеткӑна, унтан цифрӑна тӗртӗр, е малтан цифрӑна, унтан вӑл кӗрекен кашни клеткӑна."
-        ],
-        [
-          "Тӗшмӗртме кирлӗ-и?",
-          "Ҫук. Кашни ребусӑн шӑпах пӗр ответ пур, ӑна логикӑпа ҫеҫ шутлаҫҫӗ. Чарӑнса ларсан, сӗнӳ тепӗр клеткӑна кӑтартать те ун валли кирлӗ пулнӑ мелӗн ятне калать, сӑмахран, пӗччен, питӗрнӗ кандидатсем, мӑшӑр е виҫҫӗ, X-Wing, Y-Wing, Skyscraper е Unique Rectangle. Цифрӑна лартма сӗнӗве тепӗр хут тӗртӗр."
-        ],
-        [
-          "Компьютерта клавиатурӑпа выляма пулать-и?",
-          "Пулать. Ухӑ йӗппи клавишисем суйлава куҫараҫҫӗ, 1-рен 9 таран цифра кӗртеҫҫӗ, Backspace хуратать, N паллӑсене улӑштарать, U каялла тавӑрать, H сӗнӳ парать, F паллӑсене тултарать, Escape менюна уҫать. Вырнаҫу телефонпа, планшетпа тата компьютерпа килӗшсе тӑрать."
-        ],
-        [
-          "Bare Sudoku уҫӑ кодлӑ-и?",
-          "Ҫапла. Веб вӑйӑ тата Android приложенийӗ GitHub-ра MIT лицензипе уҫӑ кодлӑ: alparslandev/baresudoku-web тата alparslandev/baresudoku. Кода вулама е приложенине хӑвӑр пухма пултаратӑр."
-        ],
-        [
-          "Bare Sudoku миҫе чӗлхепе пур?",
-          "60 чӗлхепе, кашни хӑйӗн страницинче. Вӑйӑри чӗлхе менювӗ страницӑна улӑштарать, вӑйӑ айӗнчи список кашни чӗлхе патне ярать. Вӑйӑ суйлавӑра астуса юлать."
-        ]
-      ],
-      "madeBy": "Тӑваканӗ: Alparslan Selçuk Develioğlu",
-      "source": "Ҫӑл код",
-      "androidSource": "Android ҫӑл кочӗ",
-      "updated": "Ҫӗнетнӗ",
-      "languagesLabel": "Чӗлхесем",
-      "ogAlt": "Bare Sudoku логотипӗ тата Тӳлевсӗр онлайн судоку, рекламасӑр сӑмахсем",
-      "dailyTitle": "Кун судоку: Кун-кун Ҫӗнӗ тупсӑм, Тӳлевсӗр ӑнтав рекламасӑр",
-      "dailyDescription": "Кун-кун пӗш шайта ҫӗнӗ судоку, пургӑ валли пӗртӗшне тупсӑм. Паян тупсӑме Ҫӑмӑлтан Мастера ӑнлат та вӑхӑтне пайла. Реклама ҫук, регистрация ҫук.",
-      "dailyH1": "Кун судоку",
-      "dailyIntro": "Кун-кун шай сӑвӑнта пӗр ҫӗнӗ тупсӑм пулать, тӗл пуҫаршӑвӗнче кашни ойнакӗр валли пӗртӗшне. Тупӑр, теҫҫӗ вӑхӑтне достӑм-йӗрӱ менле пайла. Кун тупсӑме сӑлнӑм истелӗпе рулӑ; шапах офлайн ӗҫле та хакі пулать, пӗн-пӗнни тупсӑме вӑл пӱлӗ пӱл-ҫӗргӗ кӗтеллет.",
-      "solver": {
-        "title": "Судоку тупӑр: Велӑ-велӑ хурав техникӑпа",
-        "description": "Судокуне парнӑ вӑй йӑ теп, хуравне велӑ-велӑ пол. Кашни ҫанлӑк техниканы сӑлтавет: пӗчченсемпе X-Wing та чынжыр ҫьам, йывӑрлӑҫӑ марал менле.",
-        "h1": "Судоку тупӑр, велӑ-велӑ",
-        "intro": "Парнӑ цифра кадре теп йӑ 81 та пайлӑн парнӑ (цифра; сулӑ вырӑн валли 0 йӑ 0-та). Тепери велӑ ҫанлӑ кӑвӑмне техника менле парнӑ; Тупӑр кашни велӑ санлӑ та тупсӑмри марал та санӑ парать. Тупӑр браузерта ӗҫлет, нимӗ йӳклет мар та вӑйӑн сӗнӳпе охшаш логика ҫуклемен уҫӑ таса суслет та шӑпах велӑ манлӑ парма, тӗшмӗк мар.",
-        "link": "Судоку тупӑр",
-        "paste": "Тупсӑме парнӑ: 81 цифра, сулӑ валли 0 йӑ .",
-        "next": "Тепери велӑ",
-        "solve": "Тупӑр",
-        "clear": "Ҫута",
-        "example": "Образец",
-        "edit": "Рӗндмелле",
-        "noSolution": "Ку тупсӑмӑн хурав ҫук. Парнӑ цифра ювӑр.",
-        "manySolutions": "Ку тупсӑмӑн пӗртен вӗҫ хурав пур. Парнӑ цифра кӑвӑр.",
-        "tooFew": "Кӑшкӑрас 17 парнӑ цифра кирле.",
-        "stuck": "Тупӑр пелӗн велӑ валли техника ҫук.",
-        "done": "Тупӑнчӗ",
-        "placed": "{cell} вырӑнта {d} парнӑ",
-        "removed": "Ку вырӑнсенчен {d} кандидат шухӑш: {cells}",
-        "rating": "марал {r}",
-        "steps": "{n} велӑ",
-        "faq": [
-          [
-            "Тупӑр ҫӑват техника уҫӑта?",
-            "Вӑйӑ сӗнӳпе охшаш техникӑсем, шул реттесене: пӗчченсем, килӗшӗнӗ кандидатсем, мӑшӑр та виҫҫӗ, балыҫ, канатсем, ешне чаршӑ, чынжырсем, сӗҫҫе килӗшӗнӗ юплӑш та мӑ паннӑ юҫӑ. Кашни велӑ логикӑ вӗҫ та мар, нихҫан та тӗшмӗк мар та иҫе йывӑр велӑ маралӑ булать."
-          ],
-          [
-            "Кашни судокута пулать ми?",
-            "Шӑпах пӗр хуравлӑ тупсӑмта. Хурав ҫук йӑ пӗртен вӗҫ хурав булан тупсӑм тупӑнвӑр менле танӑ парать та кашни тупсӑмта кӑшкӑрас 17 парнӑ булла кирле."
-          ],
-          [
-            "Манӑ тупсӑм йӳклет ми?",
-            "Ҫук. Тупӑр пӗлтерӗш браузерта ӗҫлет та офлайн та. Тупсӑме адресӑпа ?p= килӗш 81 цифра пайлап пуштарса та пайла вӑйӑҫ та кунет."
-          ]
-        ]
-      },
-      "print": {
-        "title": "Пуҫлама хӑтӗлӗ Судоку: Кашни Шайра Тӳлевсӗр Тупсӑсем",
-        "description": "Тӳлевсӗр судоку тупсӑсене пуҫла: ҫӑмӑлтан мастерем шайне суйла, листке пӗр вӑл алтӑ тупсӑ; хуравсем паян листра пуҫлатат. Реклама йук, регистрация йук.",
-        "h1": "Пуҫлама хӑтӗлӗ судоку тупсӑсем",
-        "intro": "Шайне та листка нумайсем суйла, танахалан пуҫла. Тупсӑсем вӑйӑпа пӗр генератортан килет; кашне шӑпах пӗр хурав пур, тӗшмӗртма мар та шайне та пӗҫ турӑ пӑрахӑҫ хырӑ. Хуравсем паян листра пуҫлатат, килӗ ӑрӑмпа умса хӑвӑртса та пулать; листтин алӑ ярӑ ҫулӗ ҫул туп тупсӑсемне хуравсем менен суттете.",
-        "link": "Судоку пуҫла",
-        "level": "Шай",
-        "count": "Листра тупсӑ",
-        "solutions": "Хуравсене лӑртма",
-        "print": "Пуҫла",
-        "refresh": "Ҫӗнӗ тупсӑсем",
-        "solutionsHeading": "Хуравсем",
-        "sheet": "Ҫул туп ку тупсӑсем хуравсем менен: {url}",
-        "faq": [
-          [
-            "Пӗр листра нумай тупсӑ яшана?",
-            "Пӗр, икӗ, тӑватӑ е алтӑ. Пӗрте икӗте таван кӑтӑл сӑнӑ, алтӑта кӑвӑл, анчах та пуҫма еңел. Хуравсем паян листра, виҫҫӗнче пӗртен-пӗр пуҫлатат."
-          ],
-          [
-            "Вӑйӑ выляйӑнхи тупсӑме пуҫла аша пулӑр?",
-            "Тесен. Вӑйӑ меню тупсӑме пайла сонӑ юллине яҫӑ ?p= та тупсӑ 81 цифра. Ку страницӑ ҫул юллине уҫӑр; страница пӗрпе те ҫук ҫул ку тупсӑне хуҫӑ, килӗ хуравӑ менен."
-          ],
-          [
-            "Хуравсене каялла та ила аша пулӑр?",
-            "Тесен. Листтин алӑ яҫӑ ҫулӗ ҫул туп тупсӑсемне хуравсем менен уҫа. Кашни тепӗр хӑй мелне ӑнлатӑ сӗнӳ менен тепре-тепре туп пӗѐ валли кӑҫӑ цифр тупӑр менеле яҫӑр."
-          ]
-        ]
-      }
-    },
     "ug": {
       "title": "Bare Sudoku: ھەقسىز توردىكى سۇدوكۇ، ئېلان يوق، تىزىملىتىش يوق",
       "description": "توركۆرگۈدە ھەقسىز سۇدوكۇ: ئېلان يوق، ھېسابات يوق، ئىزلاش يوق. تۆت دەرىجە، بەلگىلەر، قايتۇرۇش ۋە لوگىكىنى چۈشەندۈرىدىغان يىپ ئۇچلىرى. تورسىز ئىشلەيدۇ. {size} KB Android ئەپىمۇ بار.",
@@ -7575,7 +7434,7 @@
         ],
         [
           "Bare Sudoku قانچە تىلدا بار؟",
-          "60 تىلدا، ھەر بىرى ئۆز بېتىدە. ئويۇندىكى تىل تىزىملىكى بەتنى ئالماشتۇرىدۇ، ئويۇن ئاستىدىكى تىزىملىك ھەر بىر تىلغا ئۇلىنىدۇ. ئويۇن تاللىشىڭىزنى ئەستە تۇتىدۇ."
+          "59 تىلدا، ھەر بىرى ئۆز بېتىدە. ئويۇندىكى تىل تىزىملىكى بەتنى ئالماشتۇرىدۇ، ئويۇن ئاستىدىكى تىزىملىك ھەر بىر تىلغا ئۇلىنىدۇ. ئويۇن تاللىشىڭىزنى ئەستە تۇتىدۇ."
         ]
       ],
       "madeBy": "ياسىغۇچى: Alparslan Selçuk Develioğlu",
@@ -7716,7 +7575,7 @@
         ],
         [
           "Bare Sudoku neshe tilde bar?",
-          "60 dilde, hár biri óz betinde."
+          "59 dilde, hár biri óz betinde."
         ]
       ],
       "madeBy": "Jasaǵan: Alparslan Selçuk Develioğlu",
@@ -7857,7 +7716,7 @@
         ],
         [
           "Bare Sudoku qaç tilde bar?",
-          "60 tilde, er biri öz saifesinde."
+          "59 tilde, er biri öz saifesinde."
         ]
       ],
       "madeBy": "Yapqan: Alparslan Selçuk Develioğlu",
@@ -7998,7 +7857,7 @@
         ],
         [
           "Bare Sudoku хас тылынан баарый?",
-          "60 тылынан, хас биирдиилэрэ бэйэтин сирэйигэр."
+          "59 тылынан, хас биирдиилэрэ бэйэтин сирэйигэр."
         ]
       ],
       "madeBy": "Оҥордо: Alparslan Selçuk Develioğlu",
@@ -8139,7 +7998,7 @@
         ],
         [
           "Bare Sudoku нече тилде бар?",
-          "60 тилде, гьар бири оьзюню бетинде."
+          "59 тилде, гьар бири оьзюню бетинде."
         ]
       ],
       "madeBy": "Этген: Alparslan Selçuk Develioğlu",
@@ -8280,7 +8139,7 @@
         ],
         [
           "Bare Sudoku نئچه دیلده‌دیر؟",
-          "60 دیلده، هر بیری اؤز صحیفه‌سینده. اویونداکی دیل منوسو صحیفه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله کئچید وئریر. اویون سئچیمینیزی یاددا ساخلاییر."
+          "59 دیلده، هر بیری اؤز صحیفه‌سینده. اویونداکی دیل منوسو صحیفه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله کئچید وئریر. اویون سئچیمینیزی یاددا ساخلاییر."
         ]
       ],
       "madeBy": "یارادان: Alparslan Selçuk Develioğlu",
@@ -8421,7 +8280,7 @@
         ],
         [
           "Mitmes keeles Bare Sudoku on?",
-          "60 keeles, igaüks oma lehel: Eesti, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ja veel. Mäng järgib lehe keelt ja jätab su valiku meelde."
+          "59 keeles, igaüks oma lehel: Eesti, English, Deutsch, Français, Español, 日本語, 한국어, 中文, العربية, हिन्दी ja veel. Mäng järgib lehe keelt ja jätab su valiku meelde."
         ]
       ],
       "madeBy": "Tegija: Alparslan Selçuk Develioğlu",
@@ -8562,7 +8421,7 @@
         ],
         [
           "Bare Sudoku نئچه دیلده‌دیر؟",
-          "60 دیلده، هر بیری اؤز صفحه‌سینده. اویونداکی دیل منوسو صفحه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله باغلانیر. اویون سئچیمینی یاددا ساخلاییر."
+          "59 دیلده، هر بیری اؤز صفحه‌سینده. اویونداکی دیل منوسو صفحه‌نی دییشیر، اویونون آلتینداکی سیاهی ایسه هر دیله باغلانیر. اویون سئچیمینی یاددا ساخلاییر."
         ]
       ],
       "madeBy": "یازان: Alparslan Selçuk Develioğlu",
