@@ -656,7 +656,7 @@ function fetchCompare(delay) {
   const id = puzzleId();
   if (!id || !game.active || !game.solved || typeof fetch !== 'function') return;
   const level = game.level;
-  const mine = Math.round(game.time(now()) / 1000);
+  const mine = Math.floor(game.time(now()) / 1000);
   setTimeout(() => {
     fetch('/api/p?id=' + id).then(r => (r.ok ? r.json() : null)).then(data => {
       const l = data && data.levels && data.levels[(WEEK ? 'w' : 'd') + level];
@@ -852,7 +852,7 @@ function finish(changed) {
     stopTimer();
     if (!meta.d) {
       meta.d = true;
-      const seconds = Math.round(game.time(now()) / 1000);
+      const seconds = Math.floor(game.time(now()) / 1000);
       const ev = { e: 'done', k: game.level, t: meta.t, s: seconds };
       if (DAILY) ev.p = puzzleId();
       beacon(ev);
