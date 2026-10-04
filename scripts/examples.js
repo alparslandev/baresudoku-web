@@ -238,7 +238,93 @@ function hiddenRectanglePattern(args, before, engine) {
   return { tech: 'hidden-rectangle', kind: 'hidden', corners, pivot, target, sideA: ROW[target] * 9 + COL[pivot], sideB: ROW[pivot] * 9 + COL[target], a, b, extra: digitsOf(before[target] & ~pair), boxes: boxesOf(corners), cells: corners, unit: -1, digits: [a, b] };
 }
 
+function bugPattern(args, before, engine) {
+  const [[tri]] = diff(before, engine.lc);
+  const d = digitsOf(engine.lc[tri])[0];
+  return { tech: 'bug-plus-1', kind: 'bug', cell: tri, d, others: digitsOf(before[tri] & ~bit(d)), cells: [tri], unit: -1, digits: [d] };
+}
+
+function chainSearch(engine, s, limit) {
+  const start = engine.linkStart, to = engine.linkTo;
+  const parent = new Map([[s * 2, -1]]);
+  const depth = new Map([[s * 2, 0]]);
+  const queue = [s * 2];
+  for (let head = 0; head < queue.length; head++) {
+    const st = queue[head];
+    const d = depth.get(st) + 1;
+    if (d >= limit) break;
+    for (let k = start[st]; k < start[st + 1]; k++) {
+      const ch = to[k];
+      if (parent.has(ch)) continue;
+      parent.set(ch, st);
+      depth.set(ch, d);
+      queue.push(ch);
+      if (!(ch & 1)) continue;
+      if (engine.targets(s, ch >> 1, false) && engine.targets(s, ch >> 1, true)) {
+        const path = [];
+        for (let x = ch; x !== -1; x = parent.get(x)) path.unshift(x);
+        return { depth: d, path };
+      }
+    }
+  }
+  return null;
+}
+
+const CHAIN_TECH = { 27: 'x-chain', 28: 'xy-chain', 30: 'aic' };
+
+function chainPattern([id], before, engine) {
+  const tech = CHAIN_TECH[id];
+  if (!tech) return { tech: 'other-chain', kind: 'none' };
+  const after = engine.lc.slice();
+  engine.lc.set(before);
+  let best = 0x7fffffff, path = null;
+  try {
+    for (let s = 0; s < 729 + engine.groupCount; s++) {
+      if (engine.linkStart[s * 2] === engine.linkStart[s * 2 + 1]) continue;
+      const found = chainSearch(engine, s, best);
+      if (found) {
+        best = found.depth;
+        path = found.path;
+      }
+    }
+  } finally {
+    engine.lc.set(after);
+  }
+  if (!path) throw new Error('zincir yolu bulunamadi: ' + id);
+  const nodes = path.map(st => [((st >> 1) / 9) | 0, (st >> 1) % 9 + 1, st & 1]);
+  const cells = [];
+  for (const [c] of nodes) if (!cells.includes(c)) cells.push(c);
+  const digits = [...new Set(nodes.map(n => n[1]))].sort((a, b) => a - b);
+  return { tech, kind: 'chain', nodes, cells, digits, unit: -1, start: nodes[0].slice(0, 2), end: nodes[nodes.length - 1].slice(0, 2) };
+}
+
+let alsArgs = null;
+const plainDropSeen = Sudoku.prototype.dropSeen;
+Sudoku.prototype.dropSeen = function (i, j, d) {
+  const changed = plainDropSeen.call(this, i, j, d);
+  if (changed && running === 'alsXz' && alsArgs === null) alsArgs = [i, j, d];
+  return changed;
+};
+
+function alsCellsOf(engine, i) {
+  const cells = [];
+  for (let c = 0; c < 81; c++) if (engine.alsHas(i, c)) cells.push(c);
+  return cells;
+}
+
+function alsXzPattern(args, before, engine) {
+  const [i, j, d] = alsArgs;
+  if (i === j) return { tech: 'als-xz', kind: 'double' };
+  const alsA = alsCellsOf(engine, i), alsB = alsCellsOf(engine, j);
+  const x = digitsOf(engine.restrictedCommon(i, j));
+  return { tech: 'als-xz', kind: x.length === 1 ? 'single' : 'double', alsA, alsB, digitsA: digitsOf(engine.alsDigits[i]), digitsB: digitsOf(engine.alsDigits[j]), x: x[0], z: d + 1, cells: alsA.concat(alsB), unit: -1, digits: [x[0], d + 1] };
+}
+
+track('alsXz');
 hook('finnedDrop', finnedPattern);
+hook('bugPlusOne', bugPattern);
+hook('chains', chainPattern);
+hook('alsXz', alsXzPattern);
 hook('emptyRectangle', emptyRectanglePattern);
 hook('wingDrop', wxyzPattern);
 hook('urType4', urType4Pattern);
@@ -304,7 +390,13 @@ const WANT = {
   'unique-rectangle-type-4': { level: 3, slots: ['type4'] },
   'hidden-rectangle': { level: 3, slots: ['hidden'] },
   'finned-swordfish': { level: 3, slots: ['rows'] },
-  'wxyz-wing': { level: 3, slots: ['wxyz'] }
+  'wxyz-wing': { level: 3, slots: ['wxyz'] },
+  'jellyfish': { level: 3, slots: ['rows'] },
+  'bug-plus-1': { level: 3, slots: ['bug'] },
+  'x-chain': { level: 4, slots: ['chain'] },
+  'xy-chain': { level: 4, slots: ['chain'] },
+  'aic': { level: 4, slots: ['chain'] },
+  'als-xz': { level: 4, slots: ['single'] }
 };
 
 function keptExamples() {
@@ -330,7 +422,11 @@ function offer(tech, kind, example) {
   const slots = WANT[tech].slots;
   if (!slots.includes(kind)) return;
   const filled = example.values.split('').filter(ch => ch !== '0').length;
-  const score = (example.fresh ? 100 : 0) + (example.values === example.given ? 100 : 0) + 30 - Math.abs(filled - 45) - 3 * Math.max(0, example.elim.length - 4);
+  const size = example.nodes ? 4 * example.nodes.length : example.alsA ? 6 * (example.alsA.length + example.alsB.length) : 0;
+  const values = Array.from(example.values, Number);
+  let prior = 0;
+  for (let c = 0; c < 81; c++) if (!values[c]) prior += pop(candidates(values, c) & ~example.cands[c]);
+  const score = (example.fresh ? 100 : 0) + (example.values === example.given ? 100 : 0) + 30 - Math.abs(filled - 45) - 3 * Math.max(0, example.elim.length - 4) - size - 3 * prior;
   const current = found[tech][kind];
   if (!current || score > current.score) found[tech][kind] = Object.assign({ score }, example);
 }
@@ -344,6 +440,7 @@ function walk(e, puzzle, solution) {
     const cands = Array.from(e.lc);
     const fresh = freshState(e);
     rec = null;
+    alsArgs = null;
     const t = e.step();
     if (t < 0) return;
     const base = { given, values: values.join(''), solution: solution.join(''), cands, fresh };
@@ -365,7 +462,7 @@ function walk(e, puzzle, solution) {
         if (lineIsRow) offer(r.tech, r.kind, Object.assign(r, { place: null }, base));
       }
     } else if (rec) {
-      if (rec.tech === 'x-wing' || rec.tech === 'swordfish' || rec.tech === 'skyscraper') {
+      if (rec.tech === 'x-wing' || rec.tech === 'swordfish' || rec.tech === 'jellyfish' || rec.tech === 'skyscraper') {
         if (rec.t === 0) offer(rec.tech, rec.kind, Object.assign(rec, { unit: -1, place: null }, base));
       } else if (rec.tech === 'y-wing' || rec.tech === 'xyz-wing') {
         if (rec.pivot >= 0) offer(rec.tech, rec.kind, Object.assign(rec, { unit: -1, place: null }, base));
@@ -375,6 +472,11 @@ function walk(e, puzzle, solution) {
         if (rec.roof.every(c => pop(cands[c]) > 2)) offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
       } else if (rec.tech === 'hidden-rectangle') {
         if (rec.extra.length) offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
+      } else if (rec.tech === 'x-chain' || rec.tech === 'xy-chain' || rec.tech === 'aic') {
+        const sameDigitEnds = rec.start[1] === rec.end[1] && rec.start[0] !== rec.end[0];
+        if (rec.nodes.length <= 10 && sameDigitEnds) offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
+      } else if (rec.tech === 'als-xz') {
+        if (rec.kind === 'single' && rec.elim.every(([, d]) => d === rec.z) && rec.alsA.length + rec.alsB.length <= 6) offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
       } else offer(rec.tech, rec.kind, Object.assign(rec, { place: null }, base));
     }
   }
@@ -396,6 +498,7 @@ while (Date.now() - start < BUDGET_MS && !done()) {
   const puzzle = e.generate(LEVELS[n % LEVELS.length]);
   walk(e, puzzle, e.solution);
   n++;
+  if (n % 2000 === 0) console.log(n, Math.round((Date.now() - start) / 1000) + ' s', SEARCH.map(tech => tech + ':' + WANT[tech].slots.map(kind => found[tech][kind] ? (ideal(tech, found[tech][kind]) ? 'ok' : 'x') : '-').join('')).join(' '));
 }
 
 const out = {};

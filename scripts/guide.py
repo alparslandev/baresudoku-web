@@ -20,7 +20,13 @@ HINT_INDEX = {
     "naked-single": S_NAKED, "hidden-single": S_BOX, "locked-candidates": S_LOCKED, "naked-pairs": S_SUBSET, "hidden-pairs": S_SUBSET, "x-wing": S_FIXED, "y-wing": S_FIXED + 1, "swordfish": S_FIXED + 2, "xyz-wing": S_FIXED + 3,
     "skyscraper": S_TECH_EXTRA, "two-string-kite": S_TECH_EXTRA + 1, "w-wing": S_TECH_EXTRA + 2, "unique-rectangle": S_TECH_EXTRA + 3,
     "finned-x-wing": S_TECH_EXTRA + 7, "finned-swordfish": S_TECH_EXTRA + 8, "empty-rectangle": S_TECH_EXTRA + 10, "wxyz-wing": S_TECH_EXTRA + 12, "unique-rectangle-type-4": S_TECH_EXTRA + 15, "hidden-rectangle": S_TECH_EXTRA + 18,
+    "jellyfish": S_TECH_EXTRA + 6, "bug-plus-1": S_TECH_EXTRA + 19, "x-chain": S_TECH_EXTRA + 20, "xy-chain": S_TECH_EXTRA + 21, "aic": S_TECH_EXTRA + 23, "als-xz": S_TECH_EXTRA + 26,
 }
+S_MASTER = S_TECH_EXTRA + len(i18n.FIXED_EXTRA)
+
+
+def level_name(strings, level):
+    return strings[level] if level < 4 else strings[S_MASTER]
 UNITS = []
 for u in range(9):
     UNITS.append([u * 9 + k for k in range(9)])
@@ -121,7 +127,7 @@ def practice_html(code, entry, site_entry, strings, slug, practice, fallback):
     intro = labels.get("practiceIntro") or fallback["practiceIntro"]
     rows = []
     for item in items:
-        links = ['<a href="%s?p=%s">%s %s</a>' % (i18n.path(code), item["p"], esc(strings[item["l"]]), rating_text(code, item["r"]))]
+        links = ['<a href="%s?p=%s">%s %s</a>' % (i18n.path(code), item["p"], esc(level_name(strings, item["l"])), rating_text(code, item["r"]))]
         if site_entry.get("solver"):
             links.append('<a href="%ssolver/?p=%s">%s</a>' % (i18n.path(code), item["p"], esc(site_entry["solver"]["link"])))
         rows.append("<li>%s</li>" % " · ".join(links))
@@ -160,8 +166,23 @@ def params(ex, labels):
         return {"unit": unit_label(labels, ex["unit"]), "d1": digits[0], "d2": digits[1], "cells": joined(ref(c) for c in cells), "elim": elim_items}
     if tech == "x-wing":
         return {"d": digits[0], "r1": ex["base"][0] + 1, "r2": ex["base"][1] + 1, "c1": ex["cover"][0] + 1, "c2": ex["cover"][1] + 1, "cells": joined(ref(c) for c in cells), "elim": elim_cells}
-    if tech == "swordfish":
+    if tech in ("swordfish", "jellyfish"):
         return {"d": digits[0], "rows": joined(r + 1 for r in ex["base"]), "cols": joined(c + 1 for c in ex["cover"]), "cells": joined(ref(c) for c in cells), "elim": elim_cells}
+    if tech == "bug-plus-1":
+        c = ex["cell"]
+        return {"cell": ref(c), "cands": joined(digits_of(cands[c])), "row": row(c) + 1, "col": col(c) + 1, "box": box(c) + 1, "d": ex["d"], "others": joined(ex["others"])}
+    if tech in ("x-chain", "xy-chain", "aic"):
+        nodes = ex["nodes"]
+        z = nodes[0][1]
+        if tech == "x-chain":
+            return {"d": z, "chain": chain_text(nodes, False), "start": ref(nodes[0][0]), "end": ref(nodes[-1][0]), "elim": elim_cells}
+        if tech == "xy-chain":
+            return {"z": z, "chain": chain_text(nodes, True), "start": ref(nodes[0][0]), "end": ref(nodes[-1][0]), "elim": elim_cells}
+        return {"z": z, "chain": chain_text(nodes, True), "start": node_text(nodes[0]), "end": node_text(nodes[-1]), "elim": elim_cells}
+    if tech == "als-xz":
+        def described(group):
+            return joined("%s (%s)" % (ref(c), " ".join(str(d) for d in digits_of(cands[c]))) for c in group)
+        return {"alsA": described(ex["alsA"]), "digitsA": joined(ex["digitsA"]), "alsB": described(ex["alsB"]), "digitsB": joined(ex["digitsB"]), "x": ex["x"], "z": ex["z"], "elim": elim_cells}
     if tech in ("y-wing", "xyz-wing"):
         return {"pivot": ref(ex["pivot"]), "x": ex["x"], "y": ex["y"], "z": ex["z"], "wingA": ref(ex["wings"][0]), "wingB": ref(ex["wings"][1]), "elim": elim_cells}
     if tech == "skyscraper":
@@ -188,6 +209,23 @@ def params(ex, labels):
     if tech == "hidden-rectangle":
         return {"corners": joined(ref(c) for c in sorted(ex["corners"])), "boxA": sorted(ex["boxes"])[0] + 1, "boxB": sorted(ex["boxes"])[1] + 1, "a": ex["a"], "b": ex["b"], "pivot": ref(ex["pivot"]), "target": ref(ex["target"]), "sideA": ref(ex["sideA"]), "sideB": ref(ex["sideB"]), "rowT": row(ex["target"]) + 1, "colT": col(ex["target"]) + 1, "extra": joined(ex["extra"])}
     raise SystemExit("bilinmeyen teknik ornegi: %s" % tech)
+
+
+def node_text(node):
+    return "%s (%d)" % (ref(node[0]), node[1])
+
+
+def chain_text(nodes, with_digits):
+    out = ""
+    for k, node in enumerate(nodes):
+        if k:
+            link = " = " if not nodes[k - 1][2] and node[2] else " - "
+            if with_digits and node[0] == nodes[k - 1][0]:
+                out = out[:-1] + link.strip() + "%d)" % node[1]
+                continue
+            out += link
+        out += "%s (%d)" % (ref(node[0]), node[1]) if with_digits else ref(node[0])
+    return out
 
 
 def board_html(ex, caption, mode):
@@ -287,7 +325,7 @@ def index_body(code, entry, site_entry, strings, modified):
     items = []
     for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
-        items.append('<li><a href="%s">%s</a><small>%s</small><br>%s</li>' % (tech_path(code, slug), esc(t["name"]), esc(strings[i18n.TECH_LEVEL[slug]]), esc(t["description"])))
+        items.append('<li><a href="%s">%s</a><small>%s</small><br>%s</li>' % (tech_path(code, slug), esc(t["name"]), esc(level_name(strings, i18n.TECH_LEVEL[slug])), esc(t["description"])))
     parts.append('<ol class="techs">%s</ol>' % "".join(items))
     parts += faq_html(site_entry["faqHeading"], index["faq"])
     parts.append('<p class="pager"><a href="%s">%s</a><a href="%s">%s</a></p>' % (howto_path(code), esc(labels["howTo"]), i18n.path(code), esc(labels["play"])))
@@ -315,7 +353,7 @@ def tech_body(code, entry, site_entry, strings, slug, examples, modified, practi
         parts.append('<ol class="steps" aria-label="%s">%s</ol>' % (esc(labels["steps"]), "".join("<li>%s</li>" % fill(step, p) for step in text["steps"])))
     parts.append("<h2>%s</h2><ul>%s</ul>" % (esc(labels["mistakes"]), "".join("<li>%s</li>" % esc(m) for m in t["mistakes"])))
     parts.append("<h2>%s</h2>" % esc(labels["inGame"]))
-    parts.append('<p class="facts">%s<br>%s</p>' % (fill(labels["level"], {"level": strings[i18n.TECH_LEVEL[slug]]}), fill(labels["hint"], {"text": hint_text(slug, strings, shown[0])})))
+    parts.append('<p class="facts">%s<br>%s</p>' % (fill(labels["level"], {"level": level_name(strings, i18n.TECH_LEVEL[slug])}), fill(labels["hint"], {"text": hint_text(slug, strings, shown[0])})))
     parts.append('<p class="try">%s</p>' % " · ".join(try_links(code, labels, site_entry, shown[0]["given"])))
     parts.append(practice_html(code, entry, site_entry, strings, slug, practice, fallback))
     parts += faq_html(site_entry["faqHeading"], t["faq"])
@@ -524,7 +562,7 @@ def full_text_lines(entry, site_entry, strings, examples):
     lines += ["", "---", "", "# " + entry["index"]["h1"], ""] + [plain(p) for p in entry["index"]["intro"]] + [labels["notation"], ""]
     for slug in i18n.techniques_of(entry):
         t = entry["tech"][slug]
-        lines.append("- %s (%s): %s" % (t["name"], strings[i18n.TECH_LEVEL[slug]], t["description"]))
+        lines.append("- %s (%s): %s" % (t["name"], level_name(strings, i18n.TECH_LEVEL[slug]), t["description"]))
     lines += ["", "## " + site_entry["faqHeading"]]
     for q, a in entry["index"]["faq"]:
         lines += ["", "### " + q, a]
@@ -537,7 +575,7 @@ def full_text_lines(entry, site_entry, strings, examples):
             lines += ["", "## %s: %s" % (labels["example"], text["h"]), "Board (0 = empty): " + ex["values"]]
             lines += ["%d. %s" % (k + 1, html.unescape(fill(step, p))) for k, step in enumerate(text["steps"])]
         lines += ["", "## " + labels["mistakes"]] + ["- " + m for m in t["mistakes"]]
-        lines += ["", labels["level"].replace("{level}", strings[i18n.TECH_LEVEL[slug]]), labels["hint"].replace("{text}", hint_text(slug, strings, examples[slug][0]))]
+        lines += ["", labels["level"].replace("{level}", level_name(strings, i18n.TECH_LEVEL[slug])), labels["hint"].replace("{text}", hint_text(slug, strings, examples[slug][0]))]
         lines += ["", "## " + site_entry["faqHeading"]]
         for q, a in t["faq"]:
             lines += ["", "### " + q, a]

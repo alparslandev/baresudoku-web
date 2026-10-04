@@ -7,15 +7,17 @@ const OUT = path.join(__dirname, '..', 'src', 'practice.json');
 const SEED = 20261004;
 const PER_POOL = 10;
 const WANT = 24;
-const CAPS = [600, 600, 6000, 40000];
+const CAPS = [600, 600, 6000, 60000, 30000];
 const EASY_CLUES = 38;
 const NAKED_PAIR = TECH_BASE[2], HIDDEN_PAIR = 34, NAKED_TRIPLE = 36, HIDDEN_TRIPLE = 40;
-const BY_TECH = { 'locked-candidates': 1, 'x-wing': 3, 'swordfish': 5, 'skyscraper': 7, 'two-string-kite': 8, 'y-wing': 4, 'xyz-wing': 6, 'w-wing': 9, 'unique-rectangle': 10, 'finned-x-wing': 14, 'empty-rectangle': 17, 'unique-rectangle-type-4': 22, 'hidden-rectangle': 25, 'finned-swordfish': 15, 'wxyz-wing': 19 };
+const BY_TECH = { 'locked-candidates': 1, 'x-wing': 3, 'swordfish': 5, 'skyscraper': 7, 'two-string-kite': 8, 'y-wing': 4, 'xyz-wing': 6, 'w-wing': 9, 'unique-rectangle': 10, 'finned-x-wing': 14, 'empty-rectangle': 17, 'unique-rectangle-type-4': 22, 'hidden-rectangle': 25, 'finned-swordfish': 15, 'jellyfish': 13, 'wxyz-wing': 19, 'bug-plus-1': 26, 'x-chain': 27, 'xy-chain': 28, 'aic': 30, 'als-xz': 33 };
+const MASTER_POOL = ['x-chain', 'xy-chain', 'aic', 'als-xz'];
 const LEVEL_POOLS = [
   ['naked-single'],
   ['hidden-single'],
   ['locked-candidates', 'naked-pairs', 'hidden-pairs'],
-  Object.keys(BY_TECH).filter(slug => slug !== 'locked-candidates'),
+  Object.keys(BY_TECH).filter(slug => slug !== 'locked-candidates' && !MASTER_POOL.includes(slug)),
+  MASTER_POOL,
 ];
 const SLUGS = LEVEL_POOLS.flat();
 

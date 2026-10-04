@@ -2,7 +2,8 @@ import { test, expect } from "bun:test";
 const { Sudoku, candidates, bit, PEERS, ROW, COL, BOX } = require("../src/engine.js");
 const examples = require("../src/examples.json");
 
-const CODES = { "naked-single": 0, "hidden-single": 0, "locked-candidates": 1, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 4, "swordfish": 5, "xyz-wing": 6, "skyscraper": 7, "two-string-kite": 8, "w-wing": 9, "unique-rectangle": 10, "finned-x-wing": 14, "finned-swordfish": 15, "empty-rectangle": 17, "wxyz-wing": 19, "unique-rectangle-type-4": 22, "hidden-rectangle": 25 };
+const CODES = { "naked-single": 0, "hidden-single": 0, "locked-candidates": 1, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 4, "swordfish": 5, "xyz-wing": 6, "skyscraper": 7, "two-string-kite": 8, "w-wing": 9, "unique-rectangle": 10, "finned-x-wing": 14, "finned-swordfish": 15, "empty-rectangle": 17, "wxyz-wing": 19, "unique-rectangle-type-4": 22, "hidden-rectangle": 25, "jellyfish": 13, "bug-plus-1": 26, "x-chain": 27, "xy-chain": 28, "aic": 30, "als-xz": 33 };
+const REDUCED = new Set(["jellyfish", "als-xz"]);
 const digits = s => Array.from(s, ch => ch.charCodeAt(0) - 48);
 const sees = (a, b) => PEERS[a].includes(b);
 const holding = (ex, d, cells) => cells.filter(c => ex.cands[c] & bit(d)).sort((a, b) => a - b);
@@ -80,6 +81,45 @@ const PATTERNS = {
     expect(sorted(ex.elim.map(([c]) => c))).toEqual(sorted(ex.roof));
     for (const [, e] of ex.elim) expect(e).toBe(ex.b);
   },
+  "jellyfish": ex => {
+    const d = ex.digits[0];
+    expect([ex.base.length, ex.cover.length]).toEqual([4, 4]);
+    for (const r of ex.base) for (const c of holding(ex, d, rowCells(r))) expect(ex.cover).toContain(COL[c]);
+    expect(sorted(ex.cells)).toEqual(sorted(ex.base.flatMap(r => holding(ex, d, rowCells(r)))));
+    for (const [c, e] of ex.elim) expect([e, ex.cover.includes(COL[c]), ex.base.includes(ROW[c])]).toEqual([d, true, false]);
+  },
+  "bug-plus-1": ex => {
+    const values = digits(ex.values);
+    for (let c = 0; c < 81; c++) if (!values[c]) expect(digitsOf(ex.cands[c]).length).toBe(c === ex.cell ? 3 : 2);
+    expect(digitsOf(ex.cands[ex.cell])).toEqual(sorted([ex.d, ...ex.others]));
+    expect(sorted(ex.elim.map(([, e]) => e))).toEqual(sorted(ex.others));
+    for (const [c] of ex.elim) expect(c).toBe(ex.cell);
+  },
+  "x-chain": ex => {
+    chain(ex);
+    expect(new Set(ex.nodes.map(n => n[1])).size).toBe(1);
+  },
+  "xy-chain": ex => {
+    chain(ex);
+    ex.nodes.forEach((n, k) => { if (k) expect(n[0] === ex.nodes[k - 1][0]).toBe(k % 2 === 1); });
+  },
+  "aic": ex => chain(ex),
+  "als-xz": ex => {
+    const set = (cells, held) => {
+      expect(UNITS.some(u => cells.every(c => u.includes(c)))).toBe(true);
+      const union = cells.reduce((m, c) => m | ex.cands[c], 0);
+      expect(digitsOf(union)).toEqual(held);
+      expect(held.length).toBe(cells.length + 1);
+    };
+    set(ex.alsA, ex.digitsA);
+    set(ex.alsB, ex.digitsB);
+    expect(ex.alsA.some(c => ex.alsB.includes(c))).toBe(false);
+    const holders = (cells, d) => cells.filter(c => ex.cands[c] & bit(d));
+    expect([ex.digitsA.includes(ex.x), ex.digitsB.includes(ex.x), ex.digitsA.includes(ex.z), ex.digitsB.includes(ex.z)]).toEqual([true, true, true, true]);
+    for (const a of holders(ex.alsA, ex.x)) for (const b of holders(ex.alsB, ex.x)) expect(sees(a, b)).toBe(true);
+    const zCells = holders(ex.alsA, ex.z).concat(holders(ex.alsB, ex.z));
+    for (const [c, e] of ex.elim) expect([e, zCells.every(z => sees(c, z)), ex.cells.includes(c)]).toEqual([ex.z, true, false]);
+  },
   "hidden-rectangle": ex => {
     rectangle(ex);
     const pair = bit(ex.a) | bit(ex.b);
@@ -94,6 +134,27 @@ const PATTERNS = {
   }
 };
 const digitsOf = m => { const a = []; for (let d = 1; d <= 9; d++) if (m & bit(d)) a.push(d); return a; };
+const UNITS = Array.from({ length: 27 }, (_, u) => unitCells(u));
+function strongLink(ex, a, b) {
+  if (a[0] === b[0]) return a[1] !== b[1] && ex.cands[a[0]] === (bit(a[1]) | bit(b[1]));
+  return a[1] === b[1] && UNITS.some(u => u.includes(a[0]) && u.includes(b[0]) && holding(ex, a[1], u).length === 2);
+}
+function weakLink(a, b) {
+  return a[0] === b[0] ? a[1] !== b[1] : a[1] === b[1] && sees(a[0], b[0]);
+}
+function chain(ex) {
+  const nodes = ex.nodes;
+  expect(nodes.length).toBeGreaterThanOrEqual(4);
+  nodes.forEach((n, k) => {
+    expect(n[2]).toBe(k % 2);
+    expect(ex.cands[n[0]] & bit(n[1])).not.toBe(0);
+    if (k) expect(k % 2 ? strongLink(ex, nodes[k - 1], n) : weakLink(nodes[k - 1], n)).toBe(true);
+  });
+  const first = nodes[0], last = nodes[nodes.length - 1];
+  expect(first[1]).toBe(last[1]);
+  expect(first[0]).not.toBe(last[0]);
+  for (const [c, e] of ex.elim) expect([e, sees(c, first[0]), sees(c, last[0])]).toEqual([first[1], true, true]);
+}
 function rectangle(ex) {
   expect(new Set(ex.corners.map(c => ROW[c])).size).toBe(2);
   expect(new Set(ex.corners.map(c => COL[c])).size).toBe(2);
@@ -131,7 +192,8 @@ for (const tech of Object.keys(CODES)) {
         if (values[c]) expect(values[c]).toBe(solution[c]);
         else {
           expect(ex.cands[c] & bit(solution[c])).not.toBe(0);
-          expect(ex.cands[c]).toBe(candidates(values, c));
+          if (REDUCED.has(tech)) expect(ex.cands[c] & ~candidates(values, c)).toBe(0);
+          else expect(ex.cands[c]).toBe(candidates(values, c));
         }
       }
       e.lv.set(values);
