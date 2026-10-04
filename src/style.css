@@ -26,6 +26,7 @@ button:disabled{color:var(--muted);cursor:default}
 .c .sum{position:absolute;top:2px;left:3px;font-size:calc(var(--cell)*.2);font-weight:700;line-height:1;color:var(--fg);background:var(--bg);padding:0 1px;z-index:1;pointer-events:none}
 .c .sum:empty{display:none}
 #board.mini .n{grid-template-rows:repeat(2,1fr)}
+#board.killer .n{inset:27% 10% 8%;font-size:calc(var(--cell)*.2);line-height:1;grid-template-rows:repeat(3,minmax(0,1fr))}
 .c.unit{background:var(--unit)}.c.same{background:var(--same)}
 .c.k1{background:var(--k1)}.c.k2{background:var(--k2)}.c.k3{background:var(--k3)}.c.k4{background:var(--k4)}.c.k5{background:var(--k5)}.c.k6{background:var(--k6)}
 .c.sel{background:var(--sel)}

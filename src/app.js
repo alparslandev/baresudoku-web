@@ -278,6 +278,7 @@ function buildBoard() {
   board.style.setProperty('--n', N);
   $('keys').style.setProperty('--n', N);
   if (N !== 9) board.classList.add('mini');
+  if (VARIANT === 'killer') board.classList.add('killer');
   let row = null;
   for (let i = 0; i < SIZE; i++) {
     if (i % N === 0) {
