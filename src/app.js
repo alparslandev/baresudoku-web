@@ -262,10 +262,7 @@ function geometryClass(i) {
 }
 
 function cageHead(i) {
-  if (VARIANT !== 'killer' || SHAPE.cageOf[i] < 0) return false;
-  const k = SHAPE.cageOf[i];
-  for (let j = 0; j < i; j++) if (SHAPE.cageOf[j] === k) return false;
-  return true;
+  return VARIANT === 'killer' && SHAPE.cageHead(i);
 }
 
 function paintCages() {

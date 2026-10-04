@@ -1,7 +1,7 @@
 const KIND_DIAGONAL = 0, KIND_KILLER = 1, KIND_MINI = 2;
 const VARIANT_LEVELS = 3;
 const UNIT_ROW = 0, UNIT_COL = 1, UNIT_BOX = 2, UNIT_NAKED = 3, UNIT_DIAGONAL = 4, UNIT_REVEAL = 5;
-const MAX_CELLS = 81, MAX_UNITS = 29, MAX_CAGES = 81;
+const MAX_CELLS = 81, MAX_UNITS = 29, MAX_CAGES = 81, MAX_PEERS = 32, COMBO_SLOTS = 16, NODE_LIMIT = 400000;
 
 class Shape {
   constructor(kind) {
@@ -20,32 +20,41 @@ class Shape {
     this.cageSum = new Int32Array(MAX_CAGES);
     this.cageCells = new Int32Array(MAX_CAGES * 9);
     this.peerCount = new Int32Array(MAX_CELLS);
-    this.peerCells = new Int32Array(MAX_CELLS * 32);
+    this.peerCells = new Int32Array(MAX_CELLS * MAX_PEERS);
     const n = this.n;
-    for (let r = 0; r < n; r++) this.addUnit(UNIT_ROW, k => r * n + k);
-    for (let c = 0; c < n; c++) this.addUnit(UNIT_COL, k => k * n + c);
+    for (let r = 0; r < n; r++) {
+      const u = this.addUnit(UNIT_ROW);
+      for (let k = 0; k < n; k++) this.unitCells[u * 9 + k] = r * n + k;
+    }
+    for (let c = 0; c < n; c++) {
+      const u = this.addUnit(UNIT_COL);
+      for (let k = 0; k < n; k++) this.unitCells[u * 9 + k] = k * n + c;
+    }
     const across = n / this.boxW;
     for (let b = 0; b < n; b++) {
       const top = ((b / across) | 0) * this.boxH, left = (b % across) * this.boxW;
-      this.addUnit(UNIT_BOX, k => (top + ((k / this.boxW) | 0)) * n + left + (k % this.boxW));
+      const u = this.addUnit(UNIT_BOX);
+      for (let k = 0; k < n; k++) this.unitCells[u * 9 + k] = (top + ((k / this.boxW) | 0)) * n + left + (k % this.boxW);
     }
     if (kind === KIND_DIAGONAL) {
-      this.addUnit(UNIT_DIAGONAL, k => k * n + k);
-      this.addUnit(UNIT_DIAGONAL, k => k * n + n - 1 - k);
+      const down = this.addUnit(UNIT_DIAGONAL);
+      for (let k = 0; k < n; k++) this.unitCells[down * 9 + k] = k * n + k;
+      const up = this.addUnit(UNIT_DIAGONAL);
+      for (let k = 0; k < n; k++) this.unitCells[up * 9 + k] = k * n + n - 1 - k;
     }
     this.buildPeers();
   }
 
-  addUnit(type, cellAt) {
+  addUnit(type) {
     const u = this.unitCount++;
     this.unitType[u] = type;
-    for (let k = 0; k < this.n; k++) this.unitCells[u * 9 + k] = cellAt(k);
+    return u;
   }
 
-  setCages(cells, sums) {
+  setCages(cells, sums, count) {
     this.cageOf.fill(-1);
     this.cageCount = 0;
-    for (let k = 0; k < sums.length; k++) {
+    for (let k = 0; k < count; k++) {
       this.cageSize[k] = 0;
       this.cageSum[k] = sums[k];
     }
@@ -75,7 +84,7 @@ class Shape {
   buildPeers() {
     for (let a = 0; a < this.size; a++) {
       let m = 0;
-      for (let b = 0; b < this.size; b++) if (b !== a && this.sharesGroup(a, b)) this.peerCells[a * 32 + m++] = b;
+      for (let b = 0; b < this.size; b++) if (b !== a && this.sharesGroup(a, b)) this.peerCells[a * MAX_PEERS + m++] = b;
       this.peerCount[a] = m;
     }
   }
@@ -83,10 +92,15 @@ class Shape {
   seen(values, cell) {
     let used = 0;
     for (let k = 0; k < this.peerCount[cell]; k++) {
-      const v = values[this.peerCells[cell * 32 + k]];
+      const v = values[this.peerCells[cell * MAX_PEERS + k]];
       if (v) used |= 1 << (v - 1);
     }
     return this.all & ~used;
+  }
+
+  cageHead(cell) {
+    const k = this.cageOf[cell];
+    return k >= 0 && this.cageCells[k * 9] === cell;
   }
 }
 
@@ -98,21 +112,36 @@ class Variant {
     this.found = new Int32Array(MAX_CELLS);
     this.other = new Int32Array(MAX_CELLS);
     this.solution = new Int32Array(MAX_CELLS);
+    this.full = new Int32Array(MAX_CELLS);
+    this.puzzle = new Int32Array(MAX_CELLS);
+    this.order = new Int32Array(MAX_CELLS);
+    this.cages = new Int32Array(MAX_CELLS);
+    this.sums = new Int32Array(MAX_CAGES);
+    this.members = new Int32Array(4);
+    this.keyGivens = new Int32Array(MAX_CELLS);
+    this.keyCages = new Int32Array(MAX_CELLS);
+    this.keySums = new Int32Array(MAX_CAGES);
+    this.keyCount = 0;
+    this.keyValid = false;
     this.count = 0;
     this.limit = 0;
     this.nodes = 0;
-    this.solvedKey = '';
     this.stepCell = -1;
     this.stepDigit = 0;
     this.stepUnit = 0;
     this.hintTech = 0;
-    this.combos = new Int32Array(10 * 46 * 128);
+    this.combos = new Int32Array(10 * 46 * COMBO_SLOTS);
     this.comboCount = new Int32Array(10 * 46);
     for (let m = 1; m < 512; m++) {
       let size = 0, sum = 0;
-      for (let d = 1; d <= 9; d++) if (m & (1 << (d - 1))) { size++; sum += d; }
+      for (let d = 1; d <= 9; d++) {
+        if (m & (1 << (d - 1))) {
+          size++;
+          sum += d;
+        }
+      }
       const at = size * 46 + sum;
-      this.combos[at * 128 + this.comboCount[at]++] = m;
+      this.combos[at * COMBO_SLOTS + this.comboCount[at]++] = m;
     }
   }
 
@@ -157,7 +186,7 @@ class Variant {
     const at = left * 46 + rest;
     let mask = 0;
     for (let i = 0; i < this.comboCount[at]; i++) {
-      const m = this.combos[at * 128 + i];
+      const m = this.combos[at * COMBO_SLOTS + i];
       if ((m & used) === 0 && (m & ~s.all) === 0) mask |= m;
     }
     return mask;
@@ -190,7 +219,7 @@ class Variant {
       this.count++;
       return;
     }
-    for (let d = 1; d <= s.n && this.count < this.limit && this.nodes < 400000; d++) {
+    for (let d = 1; d <= s.n && this.count < this.limit && this.nodes < NODE_LIMIT; d++) {
       if (!(bestMask & (1 << (d - 1)))) continue;
       values[best] = d;
       this.search();
@@ -200,15 +229,13 @@ class Variant {
 
   countSolutions(puzzle, limit) {
     const s = this.shape;
-    for (let c = 0; c < s.size; c++) {
-      this.values[c] = puzzle[c];
-      if (puzzle[c] && !(this.candidatesWithout(c) & (1 << (puzzle[c] - 1)))) return 0;
-    }
+    for (let c = 0; c < s.size; c++) this.values[c] = puzzle[c];
+    for (let c = 0; c < s.size; c++) if (puzzle[c] && !(this.candidatesWithout(c) & (1 << (puzzle[c] - 1)))) return 0;
     this.count = 0;
     this.limit = limit;
     this.nodes = 0;
     this.search();
-    return this.nodes >= 400000 ? limit : this.count;
+    return this.nodes >= NODE_LIMIT ? limit : this.count;
   }
 
   candidatesWithout(cell) {
@@ -223,7 +250,8 @@ class Variant {
     const s = this.shape, values = this.values;
     if (cell === s.size) return true;
     const m = s.seen(values, cell);
-    const order = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const order = new Int32Array(9);
+    for (let i = 0; i < 9; i++) order[i] = i + 1;
     this.shuffle(order, s.n);
     for (let i = 0; i < s.n; i++) {
       const d = order[i];
@@ -237,45 +265,49 @@ class Variant {
 
   fullGrid() {
     const s = this.shape;
-    for (let c = 0; c < s.size; c++) this.values[c] = 0;
-    s.setCages(new Int32Array(s.size).fill(-1), []);
+    for (let c = 0; c < s.size; c++) {
+      this.values[c] = 0;
+      this.cages[c] = -1;
+    }
+    s.setCages(this.cages, this.sums, 0);
     this.fill(0);
-    return Array.from(this.values.subarray(0, s.size));
+    for (let c = 0; c < s.size; c++) this.full[c] = this.values[c];
   }
 
-  makeCages(full) {
-    const s = this.shape, n = s.n;
-    const cageOf = new Int32Array(s.size).fill(-1);
-    const sums = [];
-    const order = [];
-    for (let c = 0; c < s.size; c++) order.push(c);
+  makeCages() {
+    const s = this.shape, n = s.n, full = this.full, cageOf = this.cages, order = this.order, members = this.members;
+    for (let c = 0; c < s.size; c++) {
+      cageOf[c] = -1;
+      order[c] = c;
+    }
     this.shuffle(order, s.size);
-    const near = [-1, 1, -n, n];
+    let count = 0;
     for (let i = 0; i < s.size; i++) {
       const start = order[i];
       if (cageOf[start] >= 0) continue;
-      const k = sums.length;
+      const k = count++;
       const want = 2 + this.nextInt(3);
-      const members = [start];
+      let size = 1;
+      members[0] = start;
       let used = 1 << (full[start] - 1);
       cageOf[start] = k;
-      for (let grow = 0; grow < 12 && members.length < want; grow++) {
-        const from = members[this.nextInt(members.length)];
-        const dir = near[this.nextInt(4)];
+      for (let grow = 0; grow < 12 && size < want; grow++) {
+        const from = members[this.nextInt(size)];
+        const way = this.nextInt(4);
+        const dir = way === 0 ? -1 : way === 1 ? 1 : way === 2 ? -n : n;
         const to = from + dir;
         if (to < 0 || to >= s.size) continue;
         if ((dir === -1 || dir === 1) && ((to / n) | 0) !== ((from / n) | 0)) continue;
         if (cageOf[to] >= 0 || (used & (1 << (full[to] - 1)))) continue;
         cageOf[to] = k;
         used |= 1 << (full[to] - 1);
-        members.push(to);
+        members[size++] = to;
       }
       let sum = 0;
-      for (const c of members) sum += full[c];
-      sums.push(sum);
+      for (let m = 0; m < size; m++) sum += full[members[m]];
+      this.sums[k] = sum;
     }
-    s.setCages(cageOf, sums);
-    return { cageOf, sums };
+    s.setCages(cageOf, this.sums, count);
   }
 
   singlesSolve(puzzle) {
@@ -315,11 +347,12 @@ class Variant {
     }
   }
 
-  dig(full, level) {
-    const s = this.shape;
-    const puzzle = full.slice();
-    const order = [];
-    for (let c = 0; c < s.size; c++) order.push(c);
+  dig(level) {
+    const s = this.shape, puzzle = this.puzzle, order = this.order;
+    for (let c = 0; c < s.size; c++) {
+      puzzle[c] = this.full[c];
+      order[c] = c;
+    }
     this.shuffle(order, s.size);
     const keep = level === 0 ? (s.n === 9 ? 36 : 18) : 0;
     let clues = s.size;
@@ -330,66 +363,72 @@ class Variant {
       if (ok) clues--;
       else puzzle[c] = v;
     }
-    return puzzle;
   }
 
-  killerGivens(full, level) {
-    const s = this.shape;
-    const puzzle = new Array(s.size).fill(0);
+  killerGivens(level) {
+    const s = this.shape, puzzle = this.puzzle, order = this.order, full = this.full;
+    for (let c = 0; c < s.size; c++) puzzle[c] = 0;
     for (let guard = 0; guard < s.size; guard++) {
       const n = this.countSolutions(puzzle, 2);
       if (n === 1) break;
       let differ = -1;
-      if (n === 2 && this.nodes < 400000) for (let c = 0; c < s.size && differ < 0; c++) if (!puzzle[c] && this.found[c] !== this.other[c]) differ = c;
+      if (n === 2 && this.nodes < NODE_LIMIT) for (let c = 0; c < s.size && differ < 0; c++) if (!puzzle[c] && this.found[c] !== this.other[c]) differ = c;
       for (let c = 0; c < s.size && differ < 0; c++) if (!puzzle[c]) differ = c;
       puzzle[differ] = full[differ];
     }
     const extra = level === 0 ? 24 : level === 1 ? 10 : 0;
-    const order = [];
-    for (let c = 0; c < s.size; c++) order.push(c);
+    for (let c = 0; c < s.size; c++) order[c] = c;
     this.shuffle(order, s.size);
     for (let i = 0, added = 0; i < s.size && added < extra; i++) {
       if (puzzle[order[i]]) continue;
       puzzle[order[i]] = full[order[i]];
       added++;
     }
-    return puzzle;
   }
 
   generate(level) {
     const s = this.shape;
     for (;;) {
-      const full = this.fullGrid();
-      let puzzle;
+      this.fullGrid();
       if (s.kind === KIND_KILLER) {
-        this.makeCages(full);
-        puzzle = this.killerGivens(full, level);
+        this.makeCages();
+        this.killerGivens(level);
       } else {
-        puzzle = this.dig(full, level);
-        if (level === 2 && this.singlesSolve(puzzle)) continue;
+        this.dig(level);
+        if (level === 2 && this.singlesSolve(this.puzzle)) continue;
       }
-      if (this.countSolutions(puzzle, 2) !== 1) continue;
-      for (let c = 0; c < s.size; c++) this.solution[c] = full[c];
-      this.solvedKey = this.puzzleKey(puzzle);
-      return puzzle;
+      if (this.countSolutions(this.puzzle, 2) !== 1) continue;
+      for (let c = 0; c < s.size; c++) this.solution[c] = this.full[c];
+      this.rememberKey(this.puzzle);
+      return Array.from(this.puzzle.subarray(0, s.size));
     }
   }
 
-  puzzleKey(givens) {
+  rememberKey(givens) {
     const s = this.shape;
-    let key = '';
-    for (let c = 0; c < s.size; c++) key += givens[c] + ',' + s.cageOf[c] + ',';
-    for (let k = 0; k < s.cageCount; k++) key += s.cageSum[k] + ',';
-    return key;
+    for (let c = 0; c < s.size; c++) {
+      this.keyGivens[c] = givens[c];
+      this.keyCages[c] = s.cageOf[c];
+    }
+    for (let k = 0; k < s.cageCount; k++) this.keySums[k] = s.cageSum[k];
+    this.keyCount = s.cageCount;
+    this.keyValid = true;
+  }
+
+  sameKey(givens) {
+    const s = this.shape;
+    if (!this.keyValid || this.keyCount !== s.cageCount) return false;
+    for (let c = 0; c < s.size; c++) if (this.keyGivens[c] !== givens[c] || this.keyCages[c] !== s.cageOf[c]) return false;
+    for (let k = 0; k < s.cageCount; k++) if (this.keySums[k] !== s.cageSum[k]) return false;
+    return true;
   }
 
   hint(values, givens) {
     const s = this.shape;
-    const key = this.puzzleKey(givens);
-    if (key !== this.solvedKey) {
+    if (!this.sameKey(givens)) {
       if (this.countSolutions(givens, 2) !== 1) return false;
       for (let c = 0; c < s.size; c++) this.solution[c] = this.found[c];
-      this.solvedKey = key;
+      this.rememberKey(givens);
     }
     for (let c = 0; c < s.size; c++) {
       if (values[c]) continue;
@@ -443,4 +482,4 @@ class Variant {
   }
 }
 
-if (typeof module !== 'undefined') module.exports = { Shape, Variant, KIND_DIAGONAL, KIND_KILLER, KIND_MINI, VARIANT_LEVELS, UNIT_ROW, UNIT_COL, UNIT_BOX, UNIT_NAKED, UNIT_DIAGONAL, UNIT_REVEAL };
+if (typeof module !== 'undefined') module.exports = { Shape, Variant, KIND_DIAGONAL, KIND_KILLER, KIND_MINI, VARIANT_LEVELS, UNIT_ROW, UNIT_COL, UNIT_BOX, UNIT_NAKED, UNIT_DIAGONAL, UNIT_REVEAL, MAX_PEERS };
