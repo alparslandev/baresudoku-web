@@ -455,6 +455,9 @@ def redirects_file(removed):
     return "\n".join(static + dynamic) + "\n"
 
 
+HEADER_RULES = 100
+
+
 def headers_file(sitemaps):
     lines = [
         "/*",
@@ -484,6 +487,9 @@ def headers_file(sitemaps):
     lines += ["/manifest.webmanifest", "  Content-Type: application/manifest+json; charset=utf-8", "  Cache-Control: public, max-age=86400"]
     for path in ("/icon.svg", "/favicon.ico", "/icon-192.png", "/icon-512.png", "/icon-maskable-512.png", "/og.png"):
         lines += [path, "  Cache-Control: public, max-age=2592000"]
+    rules = sum(1 for line in lines if line.startswith("/"))
+    if rules > HEADER_RULES:
+        raise SystemExit("_headers: %d kural, Cloudflare siniri %d" % (rules, HEADER_RULES))
     return "\n".join(lines) + "\n"
 
 
