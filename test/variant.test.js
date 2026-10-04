@@ -95,3 +95,9 @@ test("varyant ipucu: tekli bulunmazsa hucre acilir, kosegen birimi ayri adla don
   }
   expect(units.has(UNIT_REVEAL) || units.has(UNIT_DIAGONAL)).toBe(true);
 });
+
+test("varyant tohumu: tohum verilmezse her yeni varyant farkli bulmaca uretir", () => {
+  const first = new Variant(KIND_MINI).generate(1);
+  const second = new Variant(KIND_MINI).generate(1);
+  expect(first).not.toEqual(second);
+});
