@@ -2097,10 +2097,6 @@ const COLORS = 6;
 
 class Game {
   constructor() {
-    this.size = 81;
-    this.n = 9;
-    this.all = ALL;
-    this.peers = PEERS;
     this.given = new Array(81).fill(0);
     this.solution = new Array(81).fill(0);
     this.value = new Array(81).fill(0);
@@ -2129,25 +2125,8 @@ class Game {
     this.hintMoves = 0;
   }
 
-  setShape(shape) {
-    this.size = shape ? shape.size : 81;
-    this.n = shape ? shape.n : 9;
-    this.all = shape ? shape.all : ALL;
-    this.peers = PEERS;
-    if (!shape) return;
-    this.peers = [];
-    for (let c = 0; c < shape.size; c++) this.peers.push(Array.from(shape.peerCells.subarray(c * 32, c * 32 + shape.peerCount[c])));
-  }
-
-  candidatesOf(cell) {
-    let used = 0;
-    const peers = this.peers[cell];
-    for (let k = 0; k < peers.length; k++) if (this.value[peers[k]]) used |= bit(this.value[peers[k]]);
-    return this.all & ~used;
-  }
-
   start(puzzle, full, level) {
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < 81; i++) {
       this.given[i] = puzzle[i];
       this.solution[i] = full[i];
     }
@@ -2160,7 +2139,7 @@ class Game {
   restart() {
     if (!this.active) return false;
     for (let i = 0; i < 81; i++) {
-      this.value[i] = i < this.size ? this.given[i] : 0;
+      this.value[i] = this.given[i];
       this.notes[i] = 0;
       this.corner[i] = 0;
       this.color[i] = 0;
@@ -2205,7 +2184,7 @@ class Game {
     this.notes[c] = 0;
     this.corner[c] = 0;
     const b = bit(d);
-    for (const p of this.peers[c]) {
+    for (const p of PEERS[c]) {
       if ((this.notes[p] | this.corner[p]) & b) {
         this.touch(p);
         this.notes[p] &= ~b;
@@ -2275,7 +2254,7 @@ class Game {
   }
 
   checkSolved() {
-    for (let i = 0; i < this.size; i++) if (this.value[i] !== this.solution[i]) return;
+    for (let i = 0; i < 81; i++) if (this.value[i] !== this.solution[i]) return;
     this.solved = true;
     this.selected = NONE;
   }
@@ -2283,7 +2262,7 @@ class Game {
   conflict(cell) {
     const v = this.value[cell];
     if (!v) return false;
-    for (const p of this.peers[cell]) if (this.value[p] === v) return true;
+    for (const p of PEERS[cell]) if (this.value[p] === v) return true;
     return false;
   }
 
@@ -2292,8 +2271,8 @@ class Game {
   }
 
   remaining(d) {
-    let n = this.n;
-    for (let i = 0; i < this.size; i++) if (this.value[i] === d) n--;
+    let n = 9;
+    for (const v of this.value) if (v === d) n--;
     return n;
   }
 
@@ -2329,16 +2308,16 @@ class Game {
 
   fillNotes() {
     if (!this.active || this.solved) return false;
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < 81; i++) {
       if (this.value[i]) continue;
-      const m = this.candidatesOf(i);
+      const m = candidates(this.value, i);
       if (this.notes[i] !== m) {
         this.touch(i);
         this.notes[i] = m;
       }
     }
     if (this.record.length) return this.commit();
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < 81; i++) {
       if (this.notes[i]) {
         this.touch(i);
         this.notes[i] = 0;
@@ -2361,7 +2340,7 @@ class Game {
       return this.enter(this.hintDigit);
     }
     this.hintKind = HINT_NONE;
-    for (let i = 0; i < this.size; i++) {
+    for (let i = 0; i < 81; i++) {
       if (!this.given[i] && this.value[i] && this.value[i] !== this.solution[i]) {
         this.hintKind = HINT_WRONG;
         this.hintCell = i;
@@ -2392,12 +2371,12 @@ class Game {
       cornerMode: this.cornerMode,
       selected: this.selected,
       elapsed: this.time(now),
-      given: this.given.slice(0, this.size).join(''),
-      solution: this.solution.slice(0, this.size).join(''),
-      value: this.value.slice(0, this.size).join(''),
-      notes: this.notes.slice(0, this.size),
-      corner: this.corner.slice(0, this.size),
-      color: this.color.slice(0, this.size),
+      given: this.given.join(''),
+      solution: this.solution.join(''),
+      value: this.value.join(''),
+      notes: this.notes,
+      corner: this.corner,
+      color: this.color,
       history: this.history
     };
   }
@@ -2408,9 +2387,8 @@ class Game {
       if (!s || (s.v !== 1 && s.v !== 2)) return false;
       this.showErrors = !!s.showErrors;
       if (!s.active) return true;
-      const size = this.size;
       const digits = str => {
-        if (typeof str !== 'string' || str.length !== size) throw new Error('bad');
+        if (typeof str !== 'string' || str.length !== 81) throw new Error('bad');
         return Array.from(str, ch => {
           const v = ch.charCodeAt(0) - 48;
           if (v < 0 || v > 9) throw new Error('bad');
@@ -2418,21 +2396,20 @@ class Game {
         });
       };
       const given = digits(s.given), solution = digits(s.solution), value = digits(s.value);
-      if (!Array.isArray(s.notes) || s.notes.length !== size || !Array.isArray(s.history)) return false;
-      const layer = list => s.v === 1 ? new Array(size).fill(0) : Array.isArray(list) && list.length === size ? list : null;
+      if (!Array.isArray(s.notes) || s.notes.length !== 81 || !Array.isArray(s.history)) return false;
+      const layer = list => s.v === 1 ? new Array(81).fill(0) : Array.isArray(list) && list.length === 81 ? list : null;
       const corner = layer(s.corner), color = layer(s.color);
       const width = s.v === 1 ? 3 : 4;
       if (!corner || !color) return false;
       const level = s.level | 0, selected = s.selected | 0, elapsed = +s.elapsed;
       if (level < 0 || level >= LEVELS || selected < NONE || selected > 80 || !(elapsed >= 0)) return false;
       for (const r of s.history) if (!Array.isArray(r) || r.length % width !== 0) return false;
-      const pad = list => list.concat(new Array(81 - size).fill(0));
-      this.given = pad(given);
-      this.solution = pad(solution);
-      this.value = pad(value);
-      this.notes = pad(s.notes.map(n => (n | 0) & this.all));
-      this.corner = pad(corner.map(n => (n | 0) & this.all));
-      this.color = pad(color.map(k => Math.max(0, Math.min(COLORS, k | 0))));
+      this.given = given;
+      this.solution = solution;
+      this.value = value;
+      this.notes = s.notes.map(n => (n | 0) & ALL);
+      this.corner = corner.map(n => (n | 0) & ALL);
+      this.color = color.map(k => Math.max(0, Math.min(COLORS, k | 0)));
       this.history = s.history.map(r => {
         const out = [];
         for (let i = 0; i < r.length; i += width) out.push(r[i] | 0, r[i + 1] | 0, r[i + 2] | 0, width === 4 ? r[i + 3] | 0 : 0);

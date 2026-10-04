@@ -182,14 +182,3 @@ test("puzzle comparison endpoint", async () => {
   expect((await get("/api/p?id=nope")).status).toBe(400);
   expect((await get("/api/p")).status).toBe(400);
 });
-
-test("variant games count separately and show in their own table", () => {
-  expect(parseEvent(JSON.stringify({ e: "start", k: 2, v: "killer" }), NOW)).toEqual([{ day: "2026-09-29", dim: "vstart", name: "killer2", n: 1 }]);
-  expect(parseEvent(JSON.stringify({ e: "done", k: 0, v: "mini", t: NOW, s: 90 }), NOW)).toEqual([{ day: "2026-09-29", dim: "vdone", name: "mini0", n: 1 }]);
-  expect(parseEvent(JSON.stringify({ e: "start", k: 3, v: "killer" }), NOW)).toBeNull();
-  expect(parseEvent(JSON.stringify({ e: "start", k: 1, v: "samurai" }), NOW)).toBeNull();
-  const s = summarize([{ day: "2026-09-29", dim: "vstart", name: "killer2", n: 4 }, { day: "2026-09-29", dim: "vdone", name: "killer2", n: 3 }, { day: "2026-09-29", dim: "open", name: "en", n: 1 }]);
-  expect(s.variants).toEqual([["killer2", { start: 4, done: 3 }]]);
-  expect(s.total.start).toBe(0);
-  expect(renderStats(s, 30, "2026-09-29")).toContain("killer Hard");
-});

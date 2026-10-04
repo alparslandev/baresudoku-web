@@ -10,7 +10,6 @@ const S_EXPLAIN = S_MASTER + 10, S_SHARE_PUZZLE = S_MASTER + 11;
 const S_TIMER = S_MASTER + 12, S_SHORTCUTS = S_MASTER + 13, S_ENTER = S_MASTER + 14, S_MOVE = S_MASTER + 15, S_MENU = S_MASTER + 16;
 const S_ARCHIVE = S_MASTER + 17, S_SOLVERS = S_MASTER + 18, S_FASTER = S_MASTER + 19, S_WEEKLY = S_MASTER + 20;
 const S_COLOR = S_MASTER + 21, S_CORNER = S_MASTER + 22;
-const S_VARIANTS = S_MASTER + 23, S_DIAG = S_MASTER + 24, S_REVEAL = S_MASTER + 25, S_CAGE = S_MASTER + 26;
 const SHORTCUTS = [['1-9', S_ENTER], ['\u2190 \u2191 \u2192 \u2193', S_MOVE], ['Backspace, 0', S_UNDO + 1], ['N', S_UNDO + 2], ['F', S_UNDO + 3], ['U, Ctrl+Z', S_UNDO], ['H', S_UNDO + 4], ['C', S_COLOR], ['Esc', S_MENU], ['?', S_SHORTCUTS]];
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
@@ -20,13 +19,6 @@ const game = new Game();
 const cells = [], noteSpans = [], keyButtons = [], toolButtons = [];
 const L = JSON.parse($('i18n').textContent);
 const DAILY = L.mode === 'daily';
-const VARIANT_KINDS = { killer: KIND_KILLER, diagonal: KIND_DIAGONAL, mini: KIND_MINI };
-const VARIANT = Object.prototype.hasOwnProperty.call(VARIANT_KINDS, L.mode) ? L.mode : '';
-const variant = VARIANT ? new Variant(VARIANT_KINDS[VARIANT]) : null;
-const SHAPE = variant ? variant.shape : null;
-const SIZE = SHAPE ? SHAPE.size : 81, N = SHAPE ? SHAPE.n : 9;
-const VARIANTS = L.variants || null;
-const baseClass = [];
 const DAILY_PATH = L.daily || '';
 const SOLVER_PATH = L.solver || '';
 const WEEKS = L.weekly || null;
@@ -34,7 +26,7 @@ const ARCHIVE_FIRST = '2025-01-01';
 const QUERY = new URLSearchParams(location.search);
 const WEEK = DAILY ? weekParam(QUERY.get('w')) : '';
 const ARCHIVE_DATE = DAILY && !WEEK ? archiveParam(QUERY.get('d')) : '';
-const STATE_KEY = VARIANT ? KEY + '.' + VARIANT : WEEK ? KEY + '.weekly' : ARCHIVE_DATE ? KEY + '.archive' : DAILY ? KEY + '.daily' : KEY;
+const STATE_KEY = WEEK ? KEY + '.weekly' : ARCHIVE_DATE ? KEY + '.archive' : DAILY ? KEY + '.daily' : KEY;
 const LOG_KEY = KEY + '.dailyLog';
 const ARCHIVE_LOG_KEY = KEY + '.archiveLog';
 const WEEKLY_LOG_KEY = KEY + '.weeklyLog';
@@ -206,9 +198,8 @@ function switchLang(code) {
 function renderLabels() {
   toolButtons.forEach((b, i) => { b.querySelector('span').textContent = strings[i < 5 ? S_UNDO + i : S_COLOR]; });
   document.querySelectorAll('#panel [data-level]').forEach(b => {
-    const level = +b.dataset.level;
-    const name = levelName(level);
-    b.hidden = name === undefined || (!!WEEK && level !== 4) || (!!VARIANT && level >= VARIANT_LEVELS);
+    const name = levelName(+b.dataset.level);
+    b.hidden = name === undefined || (!!WEEK && +b.dataset.level !== 4);
     b.textContent = name || '';
   });
   $('cancel-btn').textContent = strings[S_CANCEL];
@@ -220,11 +211,11 @@ function renderLabels() {
   const daily = $('daily-btn');
   daily.textContent = strings[S_DAILY];
   daily.href = DAILY_PATH;
-  daily.hidden = !DAILY_PATH || !!VARIANT || (DAILY && !ARCHIVE_DATE && !WEEK);
+  daily.hidden = !DAILY_PATH || (DAILY && !ARCHIVE_DATE && !WEEK);
   const play = $('play-btn');
   play.textContent = strings[S_PLAY];
   play.href = pathOf($('lang').value);
-  play.hidden = !DAILY && !VARIANT;
+  play.hidden = !DAILY;
   $('share-btn').textContent = strings[S_SHARE];
   $('share-puzzle-btn').textContent = strings[S_SHARE_PUZZLE];
   $('stats-btn').textContent = strings[S_STATS];
@@ -236,52 +227,13 @@ function renderLabels() {
   weekly.hidden = !DAILY || !!WEEK || !weeklyAvailable();
   $('keys-btn').textContent = strings[S_SHORTCUTS];
   $('keys-btn').hidden = matchMedia('(pointer: coarse)').matches;
-  $('stats-btn').hidden = !!VARIANT;
-  const variantsBtn = $('variants-btn');
-  variantsBtn.textContent = strings[S_VARIANTS];
-  variantsBtn.hidden = !VARIANTS;
-}
-
-function geometryClass(i) {
-  const r = (i / N) | 0, c = i % N;
-  const boxH = SHAPE ? SHAPE.boxH : 3, boxW = SHAPE ? SHAPE.boxW : 3;
-  let cls = 'c';
-  if (c === N - 1) cls += ' er';
-  else if ((c + 1) % boxW === 0) cls += ' br';
-  if (r === N - 1) cls += ' eb';
-  else if ((r + 1) % boxH === 0) cls += ' bb';
-  if (VARIANT === 'diagonal' && (r === c || r + c === N - 1)) cls += ' dg';
-  if (VARIANT === 'killer' && SHAPE.cageOf[i] >= 0) {
-    const k = SHAPE.cageOf[i];
-    if (r === 0 || SHAPE.cageOf[i - N] !== k) cls += ' kt';
-    if (r === N - 1 || SHAPE.cageOf[i + N] !== k) cls += ' kb';
-    if (c === 0 || SHAPE.cageOf[i - 1] !== k) cls += ' kl';
-    if (c === N - 1 || SHAPE.cageOf[i + 1] !== k) cls += ' kr';
-  }
-  return cls;
-}
-
-function cageHead(i) {
-  return VARIANT === 'killer' && SHAPE.cageHead(i);
-}
-
-function paintCages() {
-  for (let i = 0; i < SIZE; i++) {
-    baseClass[i] = geometryClass(i);
-    const sum = cells[i].querySelector('.sum');
-    if (sum) sum.textContent = cageHead(i) ? SHAPE.cageSum[SHAPE.cageOf[i]] : '';
-  }
 }
 
 function buildBoard() {
   const board = $('board');
-  board.style.setProperty('--n', N);
-  $('keys').style.setProperty('--n', N);
-  if (N !== 9) board.classList.add('mini');
-  if (VARIANT === 'killer') board.classList.add('killer');
   let row = null;
-  for (let i = 0; i < SIZE; i++) {
-    if (i % N === 0) {
+  for (let i = 0; i < 81; i++) {
+    if (i % 9 === 0) {
       row = document.createElement('div');
       row.className = 'row';
       row.setAttribute('role', 'row');
@@ -296,25 +248,18 @@ function buildBoard() {
     const n = document.createElement('div');
     n.className = 'n';
     const spans = [];
-    for (let d = 1; d <= N; d++) {
+    for (let d = 1; d <= 9; d++) {
       const s = document.createElement('span');
       n.appendChild(s);
       spans.push(s);
     }
     cell.append(v, n);
-    if (VARIANT === 'killer') {
-      const cage = document.createElement('i');
-      cage.className = 'cg';
-      const sum = document.createElement('b');
-      sum.className = 'sum';
-      cell.append(cage, sum);
-    }
     row.appendChild(cell);
     cells.push(cell);
     noteSpans.push(spans);
   }
   const keys = $('keys');
-  for (let d = 1; d <= N; d++) {
+  for (let d = 1; d <= 9; d++) {
     const b = document.createElement('button');
     b.type = 'button';
     b.dataset.digit = d;
@@ -324,7 +269,6 @@ function buildBoard() {
     keyButtons.push(b);
   }
   document.querySelectorAll('#tools button').forEach(b => toolButtons.push(b));
-  paintCages();
 }
 
 function clock(ms) {
@@ -350,12 +294,11 @@ function cellLabel(i, v, notes, corner, wrong) {
     if (corner) parts.push(strings[S_CORNER] + ' ' + noteList(corner));
   }
   if (game.color[i]) parts.push(strings[S_COLOR] + ' ' + game.color[i]);
-  if (cageHead(i)) parts.push(strings[S_CAGE].replace('#', SHAPE.cageSum[SHAPE.cageOf[i]]));
   return parts.filter(p => p).join(', ');
 }
 
 function focusCell() {
-  const i = game.selected >= 0 ? game.selected : SIZE >> 1;
+  const i = game.selected >= 0 ? game.selected : 40;
   cells[i].focus({ preventScroll: true });
 }
 
@@ -367,7 +310,7 @@ function focusPanel() {
 function hintMessage() {
   if (game.hintKind === HINT_WRONG) return strings[S_WRONG];
   const u = game.hintUnit;
-  let s = strings[u === 0 ? S_ROW : u === 1 ? S_COL : u === 2 ? S_BOX : u === 4 ? S_DIAG : u === 5 ? S_REVEAL : S_NAKED].replace('#', game.hintDigit);
+  let s = strings[u === 0 ? S_ROW : u === 1 ? S_COL : u === 2 ? S_BOX : S_NAKED].replace('#', game.hintDigit);
   const t = game.hintTech;
   if (t > 0) s += ' (' + strings[t < 7 ? S_TECH + t - 1 : S_TECH_EXTRA + t - 7] + ')';
   return s;
@@ -414,30 +357,29 @@ function render() {
   const selValue = (sel >= 0 && game.active ? game.value[sel] : 0) || game.sticky;
   const selBit = selValue ? bit(selValue) : 0;
   const hintOn = game.active && game.hintActive();
-  const selPeers = sel >= 0 && game.active ? new Set(game.peers[sel]) : null;
-  for (let i = 0; i < SIZE; i++) {
+  for (let i = 0; i < 81; i++) {
     const cell = cells[i];
     const v = game.active && !generating ? game.value[i] : 0;
     const notes = game.active && !generating ? game.notes[i] : 0;
     const corner = game.active && !generating ? game.corner[i] : 0;
-    let cls = baseClass[i];
+    let cls = 'c c' + COL[i] + ' r' + ROW[i];
     if (game.active && !generating) {
       if (i === sel) cls += ' sel';
       else if (selValue && (v === selValue || (!v && ((notes | corner) & selBit)))) cls += ' same';
-      else if (selPeers && selPeers.has(i)) cls += ' unit';
+      else if (sel >= 0 && (ROW[i] === ROW[sel] || COL[i] === COL[sel] || BOX[i] === BOX[sel])) cls += ' unit';
       if (game.color[i]) cls += ' k' + game.color[i];
       if (game.given[i]) cls += ' given';
       if (v && (game.conflict(i) || game.wrong(i))) cls += ' wrong';
     }
     cell.className = cls;
     cell.setAttribute('aria-selected', i === sel ? 'true' : 'false');
-    cell.tabIndex = i === (sel >= 0 ? sel : SIZE >> 1) ? 0 : -1;
+    cell.tabIndex = i === (sel >= 0 ? sel : 40) ? 0 : -1;
     const label = game.active && !generating ? cellLabel(i, v, notes, corner, cls.includes(' wrong')) : '';
     if (label) cell.setAttribute('aria-label', (v ? v + ', ' : '') + label);
     else cell.removeAttribute('aria-label');
     cell.firstChild.textContent = v ? v : '';
     const spans = noteSpans[i];
-    for (let d = 1; d <= N; d++) {
+    for (let d = 1; d <= 9; d++) {
       const b = bit(d);
       const on = !v && ((notes | corner) & b);
       spans[d - 1].textContent = on ? d : '';
@@ -454,7 +396,7 @@ function render() {
     } else {
       msg.textContent = '';
       msg.append(hintMessage());
-      if (SOLVER_PATH && !VARIANT) {
+      if (SOLVER_PATH) {
         const a = document.createElement('a');
         a.href = SOLVER_PATH + '?p=' + game.value.join('');
         a.target = '_blank';
@@ -496,11 +438,10 @@ function render() {
   $('panel').hidden = !!dialog;
   $('stats').hidden = dialog !== 'stats';
   $('keys-help').hidden = dialog !== 'keys';
-  $('variants').hidden = dialog !== 'variants';
   $('archive').hidden = dialog !== 'archive';
   if (overlay) {
     const solved = game.active && game.solved;
-    $('panel-title').textContent = solved ? strings[S_SOLVED] : VARIANT ? VARIANTS[VARIANT].name : WEEK ? strings[S_WEEKLY] : DAILY ? strings[S_DAILY] : strings[S_TITLE];
+    $('panel-title').textContent = solved ? strings[S_SOLVED] : WEEK ? strings[S_WEEKLY] : DAILY ? strings[S_DAILY] : strings[S_TITLE];
     const lines = [];
     if (solved) lines.push(levelText() + '  ' + clock(game.time(now())));
     if (WEEK) lines.push(weekText());
@@ -514,19 +455,14 @@ function render() {
     if (WEEK) $('panel').querySelector('[data-level="4"]').disabled = !weeklyPuzzle;
     $('cancel-btn').hidden = !cancellable();
     $('restart-btn').hidden = !game.active;
-    $('share-puzzle-btn').hidden = !game.active || DAILY || !!VARIANT || solved;
+    $('share-puzzle-btn').hidden = !game.active || DAILY || solved;
   }
 }
 
 let pendingLevel = 0;
 
 function save() {
-  const state = Object.assign(game.save(now()), { a: meta, d: dailyDate, w: WEEK });
-  if (VARIANT === 'killer') {
-    state.cg = Array.from(SHAPE.cageOf.subarray(0, SIZE));
-    state.cs = Array.from(SHAPE.cageSum.subarray(0, SHAPE.cageCount));
-  }
-  store(STATE_KEY, JSON.stringify(state));
+  store(STATE_KEY, JSON.stringify(Object.assign(game.save(now()), { a: meta, d: dailyDate, w: WEEK })));
 }
 
 function readJson(key) {
@@ -541,14 +477,12 @@ function loadStats() {
 }
 
 function recordStart(level) {
-  if (VARIANT) return;
   const stats = loadStats();
   stats.levels[level].p++;
   store(STATS_KEY, JSON.stringify(stats));
 }
 
 function recordSolved(level, seconds) {
-  if (VARIANT) return;
   const stats = loadStats();
   const l = stats.levels[level];
   l.s++;
@@ -622,22 +556,6 @@ function renderKeys() {
     td.textContent = strings[label];
     tr.append(th, td);
     body.appendChild(tr);
-  }
-}
-
-function renderVariants() {
-  $('variants-title').textContent = strings[S_VARIANTS];
-  $('variants-back').textContent = strings[S_CANCEL];
-  const list = $('variants-list');
-  list.textContent = '';
-  for (const key of ['killer', 'diagonal', 'mini']) {
-    if (!VARIANTS || !VARIANTS[key]) continue;
-    const a = document.createElement('a');
-    a.className = 'btn';
-    a.href = VARIANTS[key].path;
-    a.textContent = VARIANTS[key].name;
-    if (key === VARIANT) a.setAttribute('aria-current', 'page');
-    list.appendChild(a);
   }
 }
 
@@ -717,13 +635,12 @@ function openDialog(name) {
   dialog = name;
   if (name === 'stats') renderStats();
   else if (name === 'keys') renderKeys();
-  else if (name === 'variants') renderVariants();
   else {
     archiveMonth = (dailyDate || localDate()).slice(0, 7);
     renderArchive();
   }
   render();
-  $(name === 'stats' ? 'stats-back' : name === 'keys' ? 'keys-back' : name === 'variants' ? 'variants-back' : 'archive-back').focus();
+  $(name === 'stats' ? 'stats-back' : name === 'keys' ? 'keys-back' : 'archive-back').focus();
 }
 
 function closeDialog() {
@@ -847,7 +764,6 @@ function startShared(shared) {
 
 function shareText() {
   const result = levelText() + ' · ' + clock(game.time(now()));
-  if (VARIANT) return VARIANTS[VARIANT].name + ' · ' + result + '\n' + location.origin + VARIANTS[VARIANT].path;
   if (WEEK) return strings[S_WEEKLY] + ' ' + weekText() + ' · ' + result + '\n' + location.origin + DAILY_PATH + '?w=' + WEEK;
   if (DAILY) return strings[S_DAILY] + ' ' + dateText() + ' · ' + result + '\n' + location.origin + DAILY_PATH + (ARCHIVE_DATE ? '?d=' + dailyDate : '');
   return strings[S_TITLE] + ' · ' + result + '\n' + puzzleLink();
@@ -902,13 +818,7 @@ function startGame(level) {
   stopTimer();
   render();
   setTimeout(() => {
-    if (VARIANT) {
-      const puzzle = variant.generate(level);
-      game.setShape(SHAPE);
-      game.start(puzzle, Array.from(variant.solution.subarray(0, SIZE)), level);
-      game.rating = 0;
-      paintCages();
-    } else if (WEEK) {
+    if (WEEK) {
       const puzzle = weeklyPuzzle.slice();
       engine.countSolutions(puzzle, 2);
       game.start(puzzle, Array.from(engine.found), 4);
@@ -923,7 +833,7 @@ function startGame(level) {
       game.rating = engine.rating;
     }
     meta = { t: now(), d: false };
-    beacon(VARIANT ? { e: 'start', k: level, v: VARIANT } : { e: 'start', k: level });
+    beacon({ e: 'start', k: level });
     recordStart(level);
     generating = false;
     game.resume(now());
@@ -939,7 +849,7 @@ function restartGame() {
   menuOpen = false;
   if (game.solved) {
     meta = { t: now(), d: false };
-    beacon(VARIANT ? { e: 'start', k: game.level, v: VARIANT } : { e: 'start', k: game.level });
+    beacon({ e: 'start', k: game.level });
     recordStart(game.level);
   }
   game.restart();
@@ -953,7 +863,6 @@ function restartGame() {
 function act(kind, d) {
   if (!game.active || generating || menuOpen) return;
   let changed = false;
-  if (kind === 'digit' && d > N) return;
   if (kind === 'digit' && colorMode) changed = d <= 7 && game.paint(d <= 6 ? d : 0);
   else if (kind === 'digit') changed = game.key(d);
   else if (kind === 'undo') changed = game.undo();
@@ -965,7 +874,7 @@ function act(kind, d) {
     changed = true;
   }
   else if (kind === 'fill') changed = game.fillNotes();
-  else if (kind === 'hint') changed = game.hint(variant || engine);
+  else if (kind === 'hint') changed = game.hint(engine);
   finish(changed);
 }
 
@@ -978,7 +887,6 @@ function finish(changed) {
       const seconds = Math.floor(game.time(now()) / 1000);
       const ev = { e: 'done', k: game.level, t: meta.t, s: seconds };
       if (DAILY) ev.p = puzzleId();
-      if (VARIANT) ev.v = VARIANT;
       beacon(ev);
       recordSolved(game.level, seconds);
       if (DAILY) {
@@ -1012,11 +920,10 @@ function cellAt(e) {
 
 function move(key) {
   let i = game.selected < 0 ? 0 : game.selected;
-  const r = (i / N) | 0, c = i % N;
-  if (key === 'ArrowLeft') i = r * N + (c + N - 1) % N;
-  else if (key === 'ArrowRight') i = r * N + (c + 1) % N;
-  else if (key === 'ArrowUp') i = ((r + N - 1) % N) * N + c;
-  else i = ((r + 1) % N) * N + c;
+  if (key === 'ArrowLeft') i = ROW[i] * 9 + (COL[i] + 8) % 9;
+  else if (key === 'ArrowRight') i = ROW[i] * 9 + (COL[i] + 1) % 9;
+  else if (key === 'ArrowUp') i = ((ROW[i] + 8) % 9) * 9 + COL[i];
+  else i = ((ROW[i] + 1) % 9) * 9 + COL[i];
   selectCell(i);
   focusCell();
 }
@@ -1060,8 +967,6 @@ function bind() {
     render();
   });
   $('archive-btn').addEventListener('click', () => openDialog('archive'));
-  $('variants-btn').addEventListener('click', () => openDialog('variants'));
-  $('variants-back').addEventListener('click', closeDialog);
   $('keys-btn').addEventListener('click', () => openDialog('keys'));
   $('keys-back').addEventListener('click', closeDialog);
   $('archive-back').addEventListener('click', closeDialog);
@@ -1161,19 +1066,13 @@ function init() {
     dailyDate = ARCHIVE_DATE || localDate();
     if (saved && saved.d !== dailyDate) saved = null;
   }
-  if (VARIANT) {
-    if (VARIANT === 'killer' && saved && Array.isArray(saved.cg) && saved.cg.length === SIZE && Array.isArray(saved.cs)) SHAPE.setCages(saved.cg.map(k => k | 0), saved.cs.map(k => k | 0));
-    else if (VARIANT === 'killer') saved = null;
-    game.setShape(SHAPE);
-    paintCages();
-  }
   game.load(saved);
-  const shared = DAILY || VARIANT ? null : sharedPuzzle();
+  const shared = DAILY ? null : sharedPuzzle();
   if (shared) {
     startShared(shared);
     try { history.replaceState(null, '', location.pathname); } catch (e) {}
   }
-  if (game.active && !VARIANT) game.rating = engine.rate(game.given);
+  if (game.active) game.rating = engine.rate(game.given);
   meta = saved && saved.a ? { t: +saved.a.t || now(), d: !!saved.a.d } : { t: now(), d: game.solved };
   menuOpen = !game.active;
   if (game.active && !game.solved && !document.hidden && document.hasFocus()) game.resume(now());

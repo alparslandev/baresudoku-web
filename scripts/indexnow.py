@@ -13,14 +13,13 @@ HOST = "baresudoku.com"
 ENDPOINT = "https://api.indexnow.org/indexnow"
 
 
-def url_list(languages, guide_languages, daily_languages=(), solver_languages=(), print_languages=(), variant_languages=()):
+def url_list(languages, guide_languages, daily_languages=(), solver_languages=(), print_languages=()):
     base = "https://" + HOST
     pages = [base + i18n.path(code) for code in languages]
     pages += [base + i18n.path(code) + "daily/" for code in daily_languages]
     pages += [base + i18n.path(code) + "solver/" for code in solver_languages]
     pages += [base + i18n.path(code) + "print/" for code in print_languages]
     pages += [base + i18n.path(code) + "privacy/" for code in languages]
-    pages += [base + i18n.path(code) + variant + "/" for code in variant_languages for variant in i18n.VARIANTS]
     for code in guide_languages:
         pages.append(base + i18n.path(code) + "how-to-play/")
         pages.append(base + i18n.path(code) + "techniques/")
@@ -37,8 +36,8 @@ def removed_pages(base):
         return [base + i18n.path(code) for code in json.load(f)["codes"]]
 
 
-def ping(languages, guide_languages, daily_languages=(), solver_languages=(), print_languages=(), variant_languages=()):
-    body = json.dumps({"host": HOST, "key": KEY, "keyLocation": "https://%s/%s.txt" % (HOST, KEY), "urlList": url_list(languages, guide_languages, daily_languages, solver_languages, print_languages, variant_languages)}).encode("utf-8")
+def ping(languages, guide_languages, daily_languages=(), solver_languages=(), print_languages=()):
+    body = json.dumps({"host": HOST, "key": KEY, "keyLocation": "https://%s/%s.txt" % (HOST, KEY), "urlList": url_list(languages, guide_languages, daily_languages, solver_languages, print_languages)}).encode("utf-8")
     request = urllib.request.Request(ENDPOINT, data=body, headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=20) as response:
@@ -56,5 +55,4 @@ if __name__ == "__main__":
     daily_languages = [code for code in languages if i18n.has_daily(site[code])]
     solver_languages = [code for code in languages if i18n.has_solver(site[code])]
     print_languages = [code for code in languages if i18n.has_print(site[code])]
-    variant_languages = [code for code in languages if i18n.has_variants(site[code])]
-    print("IndexNow: %s (%d URL)" % (ping(languages, guide_languages, daily_languages, solver_languages, print_languages, variant_languages), len(url_list(languages, guide_languages, daily_languages, solver_languages, print_languages, variant_languages))))
+    print("IndexNow: %s (%d URL)" % (ping(languages, guide_languages, daily_languages, solver_languages, print_languages), len(url_list(languages, guide_languages, daily_languages, solver_languages, print_languages))))

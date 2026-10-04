@@ -69,14 +69,6 @@ def daily_url(code):
     return SITE + daily_path(code)
 
 
-def variant_path(code, variant):
-    return i18n.path(code) + variant + "/"
-
-
-def variant_url(code, variant):
-    return SITE + variant_path(code, variant)
-
-
 def solver_path(code):
     return i18n.path(code) + "solver/"
 
@@ -175,36 +167,6 @@ def daily_content(code, entry, daily_codes, play_label):
     parts.append('<nav aria-label="%s">%s</nav>' % (esc(entry["languagesLabel"]), "".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (daily_path(c), c, c, esc(daily_codes[c])) for c in daily_codes)))
     parts.append("</section>")
     return "\n".join(parts)
-
-
-def variant_content(code, entry, variant, variant_codes, play_label):
-    page = entry["variants"][variant]
-    parts = ['<section id="about">', "<h1>%s</h1>" % esc(page["h1"]), "<p>%s</p>" % esc(page["intro"])]
-    parts.append("<ol>%s</ol>" % "".join("<li>%s</li>" % esc(rule) for rule in page["rules"]))
-    parts.append('<h2>%s</h2>' % esc(entry["faqHeading"]))
-    for question, answer in page["faq"]:
-        parts.append("<details><summary>%s</summary><p>%s</p></details>" % (esc(question), esc(answer)))
-    others = " · ".join('<a href="%s">%s</a>' % (variant_path(code, v), esc(entry["variants"][v]["name"])) for v in i18n.VARIANTS if v != variant)
-    parts.append('<p><a href="%s">%s</a> · %s</p>' % (i18n.path(code), esc(play_label), others))
-    parts.append('<nav aria-label="%s">%s</nav>' % (esc(entry["languagesLabel"]), "".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (variant_path(c, variant), c, c, esc(variant_codes[c])) for c in variant_codes)))
-    parts.append("</section>")
-    return "\n".join(parts)
-
-
-def variant_jsonld(code, entry, variant, lastmod):
-    page = entry["variants"][variant]
-    faq = [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in page["faq"]]
-    graph = [
-        {"@type": "WebSite", "@id": WEBSITE_ID, "url": SITE + "/", "name": NAME, "publisher": {"@id": PERSON_ID}},
-        {"@type": "Person", "@id": PERSON_ID, "name": AUTHOR, "alternateName": "alparslandev", "url": AUTHOR_URL, "sameAs": SAME_AS},
-        {
-            "@type": "WebPage", "@id": variant_url(code, variant) + "#webpage", "url": variant_url(code, variant), "name": page["title"], "description": page["description"],
-            "inLanguage": code, "dateModified": lastmod, "isPartOf": {"@id": WEBSITE_ID}, "about": {"@id": GAME_ID},
-            "primaryImageOfPage": {"@type": "ImageObject", "contentUrl": OG_IMAGE, "width": 1200, "height": 630},
-        },
-        {"@type": "FAQPage", "@id": variant_url(code, variant) + "#faq", "mainEntity": faq, "inLanguage": code},
-    ]
-    return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
 
 
 def tool_jsonld(code, url, tool, lastmod):
@@ -391,32 +353,29 @@ def weekly_range():
     return {"first": weeks[0], "last": weeks[-1]}
 
 
-def page(template, css, table, code, entry, languages, version, size, lastmod, web, learn, daily_codes, solver_codes, print_codes, variant_codes, mode="play", play_label=""):
+def page(template, css, table, code, entry, languages, version, size, lastmod, web, learn, daily_codes, solver_codes, print_codes, mode="play", play_label=""):
     def f(text):
         return esc(fill(text, version, size))
     daily = mode == "daily"
-    variant = mode in i18n.VARIANTS
-    codes = list(variant_codes) if variant else daily_codes if daily else languages
-    resolve = (lambda c: variant_url(c, mode)) if variant else daily_url if daily else url_of
+    codes = daily_codes if daily else languages
+    resolve = daily_url if daily else url_of
     alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, resolve(c)) for c in codes]
     alternates.append('<link rel="alternate" hreflang="x-default" href="%s">' % resolve("en"))
     options = "".join('<option value="%s">%s</option>' % (c, esc(languages[c][0])) for c in languages)
     local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code], "mode": mode, "daily": daily_path(code) if code in daily_codes else "", "solver": solver_path(code) if code in solver_codes else ""}
     if daily:
         local["weekly"] = weekly_range()
-    if code in variant_codes:
-        local["variants"] = {v: {"path": variant_path(code, v), "name": entry["variants"][v]["name"]} for v in i18n.VARIANTS}
     values = {
         "{{LANG}}": code,
         "{{DIR}}": "rtl" if code in i18n.RTL else "ltr",
-        "{{TITLE}}": f(entry["variants"][mode]["title"] if variant else entry["dailyTitle"] if daily else entry["title"]),
-        "{{DESCRIPTION}}": f(entry["variants"][mode]["description"] if variant else entry["dailyDescription"] if daily else entry["description"]),
+        "{{TITLE}}": f(entry["dailyTitle"] if daily else entry["title"]),
+        "{{DESCRIPTION}}": f(entry["dailyDescription"] if daily else entry["description"]),
         "{{URL}}": resolve(code),
         "{{ALTERNATES}}": "\n".join(alternates),
         "{{OG_LOCALE}}": og_locale(code),
         "{{OG_ALT}}": f(entry["ogAlt"]),
-        "{{JSONLD}}": variant_jsonld(code, entry, mode, lastmod) if variant else daily_jsonld(code, entry, lastmod) if daily else jsonld(code, entry, languages, version, size, lastmod, web),
-        "{{CONTENT}}": variant_content(code, entry, mode, variant_codes, play_label) if variant else daily_content(code, entry, daily_codes, play_label) if daily else content(code, entry, languages, version, size, lastmod, web, learn, solver_codes, print_codes),
+        "{{JSONLD}}": daily_jsonld(code, entry, lastmod) if daily else jsonld(code, entry, languages, version, size, lastmod, web),
+        "{{CONTENT}}": daily_content(code, entry, daily_codes, play_label) if daily else content(code, entry, languages, version, size, lastmod, web, learn, solver_codes, print_codes),
         "{{WEB_VERSION}}": web,
         "{{CSS}}": css,
         "{{OPTIONS}}": options,
@@ -429,6 +388,7 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
 
 
 DYNAMIC_REDIRECTS = 41
+RETIRED_PAGES = ["killer", "diagonal", "mini"]
 
 
 def removed_languages():
@@ -440,7 +400,7 @@ def removed_languages():
 
 
 def redirects_file(removed):
-    static = ["/security.txt /.well-known/security.txt 301"]
+    static = ["/security.txt /.well-known/security.txt 301"] + ["/%s/ / 301" % page for page in RETIRED_PAGES]
     dynamic = []
     for k, code in enumerate(removed["codes"]):
         base = i18n.path(code)
@@ -452,6 +412,7 @@ def redirects_file(removed):
         static.append("%sprivacy/ /privacy/ 301" % base)
         for rel in removed["paths"]:
             static.append("%s%s /%s 301" % (base, rel, rel))
+    dynamic += ["/:lang/%s/ /:lang/ 301" % page for page in RETIRED_PAGES]
     return "\n".join(static + dynamic) + "\n"
 
 
@@ -514,10 +475,8 @@ def urlset(codes, resolve, lastmod_of):
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n%s</urlset>\n' % "".join(urls)
 
 
-def sitemap_files(languages, guide_languages, lastmod, guide_dates, daily_codes, solver_codes, print_codes, variant_codes):
+def sitemap_files(languages, guide_languages, lastmod, guide_dates, daily_codes, solver_codes, print_codes):
     files = {"sitemap-play.xml": urlset(languages, i18n.path, lambda c: lastmod), "sitemap-daily.xml": urlset(list(daily_codes), daily_path, lambda c: lastmod), "sitemap-solver.xml": urlset(solver_codes, solver_path, lambda c: lastmod), "sitemap-print.xml": urlset(print_codes, print_path, lambda c: lastmod), "sitemap-privacy.xml": urlset(languages, privacy_path, lambda c: lastmod)}
-    for v in i18n.VARIANTS:
-        files["sitemap-%s.xml" % v] = urlset(list(variant_codes), lambda c, v=v: variant_path(c, v), lambda c: lastmod)
     for name, resolve, codes in guide.sitemap_groups(guide_languages):
         files["sitemap-%s.xml" % name] = urlset(codes, resolve, lambda c: guide_dates[c][1])
     newest = max([lastmod] + [d[1] for d in guide_dates.values()])
@@ -583,7 +542,6 @@ def llms_file(site, languages, version, size, lastmod, web, guide_en):
         "- [Daily Sudoku](%s): %s" % (daily_url("en"), en["dailyDescription"]),
         "- [Sudoku solver](%s): %s" % (solver_url("en"), en["solver"]["description"]),
         "- [Printable puzzles](%s): %s" % (print_url("en"), en["print"]["description"]),
-    ] + ["- [%s](%s): %s" % (en["variants"][v]["name"], variant_url("en", v), en["variants"][v]["description"]) for v in i18n.VARIANTS] + [
         "",
         "## Optional",
         "- [Full text](%s/llms-full.txt): the complete page text in English and Turkish, the guides in English, plus a one-line summary in every language" % SITE,
@@ -665,11 +623,10 @@ def main():
     web = web_version()
     table = {code: i18n.table(keys, languages[code]) for code in languages}
     daily_codes = {code: languages[code][0] for code in languages if i18n.has_daily(site[code])}
-    variant_codes = {code: languages[code][0] for code in languages if i18n.has_variants(site[code])}
     solver_codes = [code for code in languages if i18n.has_solver(site[code]) and code in guides]
     print_codes = [code for code in languages if i18n.has_print(site[code]) and code in guides]
     play_index = i18n.index_of(keys, "play")
-    script = "%s\n%s\n%s\n" % (read("src", "engine.js").strip(), read("src", "variant.js").strip(), read("src", "app.js").strip())
+    script = "%s\n%s\n" % (read("src", "engine.js").strip(), read("src", "app.js").strip())
     css = read("src", "style.css").strip()
     template = read("src", "index.html")
     dist = os.path.join(ROOT, "dist")
@@ -682,15 +639,12 @@ def main():
     write(dist, "weekly.json", weekly + "\n")
     total = 0
     for code in languages:
-        out = page(template, css, table, code, site[code], languages, version, size, lastmod, web, guides.get(code), daily_codes, solver_codes, print_codes, variant_codes)
+        out = page(template, css, table, code, site[code], languages, version, size, lastmod, web, guides.get(code), daily_codes, solver_codes, print_codes)
         digest.update(out.encode("utf-8"))
         total += len(out.encode("utf-8"))
         write(dist, os.path.join(i18n.path(code).strip("/"), "index.html"), out)
     for code in daily_codes:
-        write(dist, os.path.join(daily_path(code).strip("/"), "index.html"), page(template, css, table, code, site[code], languages, version, size, lastmod, web, None, daily_codes, solver_codes, print_codes, variant_codes, "daily", table[code][play_index]))
-    for code in variant_codes:
-        for v in i18n.VARIANTS:
-            write(dist, os.path.join(variant_path(code, v).strip("/"), "index.html"), page(template, css, table, code, site[code], languages, version, size, lastmod, web, None, daily_codes, solver_codes, print_codes, variant_codes, v, table[code][play_index]))
+        write(dist, os.path.join(daily_path(code).strip("/"), "index.html"), page(template, css, table, code, site[code], languages, version, size, lastmod, web, None, daily_codes, solver_codes, print_codes, "daily", table[code][play_index]))
     solver_template = read("src", "solver.html")
     for code in solver_codes:
         write(dist, os.path.join(solver_path(code).strip("/"), "index.html"), solver_page(solver_template, css, table, code, site[code], guides[code], languages, solver_codes, lastmod, table[code][play_index]))
@@ -709,7 +663,7 @@ def main():
     write(dist, "sw.js", read("src", "sw.js").replace("{{HASH}}", digest.hexdigest()[:10]))
     shutil.copytree(os.path.join(ROOT, "static"), dist, dirs_exist_ok=True)
     icons.write(dist)
-    sitemaps = sitemap_files(languages, guides, lastmod, guide_dates, daily_codes, solver_codes, print_codes, variant_codes)
+    sitemaps = sitemap_files(languages, guides, lastmod, guide_dates, daily_codes, solver_codes, print_codes)
     write(dist, "_headers", headers_file([name for name in sitemaps if name != "sitemap.xml"]))
     write(dist, "_redirects", redirects_file(removed_languages()))
     write(dist, "robots.txt", robots_file())
