@@ -93,7 +93,7 @@ class Shape {
 class Variant {
   constructor(kind) {
     this.shape = new Shape(kind);
-    this.state = 1;
+    this.state = (Math.random() * 4294967296) | 0;
     this.values = new Int32Array(MAX_CELLS);
     this.found = new Int32Array(MAX_CELLS);
     this.other = new Int32Array(MAX_CELLS);
