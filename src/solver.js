@@ -7,7 +7,7 @@ const L = JSON.parse($('i18n').textContent);
 const strings = L.s, T = L.solver, GUIDE = L.guide;
 const LANG = document.documentElement.lang;
 const EXAMPLE = '000074900800001320000002060000030076460000032170020000050700000016800005009250000';
-const SLUGS = { 1: 'locked-candidates', 2: 'naked-pairs', 3: 'x-wing', 4: 'y-wing', 5: 'swordfish', 6: 'xyz-wing', 7: 'skyscraper', 8: 'two-string-kite', 9: 'w-wing', 10: 'unique-rectangle', 14: 'finned-x-wing', 15: 'finned-swordfish', 17: 'empty-rectangle', 19: 'wxyz-wing', 22: 'unique-rectangle-type-4', 25: 'hidden-rectangle' };
+const SLUGS = { 1: 'locked-candidates', 2: 'naked-pairs', 3: 'x-wing', 4: 'y-wing', 5: 'swordfish', 6: 'xyz-wing', 7: 'skyscraper', 8: 'two-string-kite', 9: 'w-wing', 10: 'unique-rectangle', 13: 'jellyfish', 14: 'finned-x-wing', 15: 'finned-swordfish', 17: 'empty-rectangle', 19: 'wxyz-wing', 22: 'unique-rectangle-type-4', 25: 'hidden-rectangle', 26: 'bug-plus-1', 27: 'x-chain', 28: 'xy-chain', 30: 'aic', 33: 'als-xz' };
 const MAX_STEPS = 400;
 const engine = new Sudoku();
 const inputs = [];
