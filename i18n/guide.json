@@ -2349,48 +2349,48 @@
         },
         "jellyfish": {
           "name": "Jellyfish",
-          "title": "Sudokuda Jellyfish: Dört Satırlı Balık Tekniği",
-          "description": "Jellyfish: bir rakamın dört satırda aynı dört sütunla ya da dört sütunda aynı dört satırla sınırlı. Rakam bu satırların ve sütunların diğer hücrelerden silinir.",
+          "title": "Sudokuda Jellyfish: Dörtlü Balık Nasıl Çalışır",
+          "description": "Jellyfish: bir rakam, dört satırda aynı dört sütuna ya da dört sütunda aynı dört satıra sıkışır. Rakam o sütunların veya satırların geri kalanından silinir.",
           "h1": "Jellyfish",
-          "summary": "Jellyfish, [X-Wing](x-wing) ve [Swordfish](swordfish) ile başlayan balık ailesinin dört satırlı üyesidir. Bir rakam seç ve dört satırda bu rakamın yalnızca aynı dört sütunda gidebileceği satırları bul; her satır bunlardan ikisini, üçünü veya dördünü kullanabilir. Dört satırın her biri rakamın bir kopyasına ihtiyaç duyar ve bu kopyalar yalnızca dört sütunda oturur, her sütuna bir tane. Bu yüzden dört sütun kopyasını bu satırlardan alır ve rakam dört sütunun diğer her hücresinden silinebilir. Aynı şey satır ve sütun yer değiştirilerek de işler. Jellyfish, Bare Sudoku'da bir Uzman tekniğidir.",
+          "summary": "Jellyfish, [X-Wing](x-wing) ve [Swordfish](swordfish) ile başlayan balık ailesinin dört satırlı (ya da dört sütunlu) üyesidir. Bir rakam ve dört satır seçin; bu satırların hepsinde rakam yalnızca aynı dört sütuna gidebiliyor olsun. Her satır bu sütunlardan ikisini, üçünü ya da dördünü kullanabilir. Dört satırın her biri rakamı bir kez koymak zorundadır; yani toplam dört rakam gerekir ve bunlar yalnızca o dört sütunda, her sütunda bir tane olmak üzere bulunabilir. Böylece dört sütun rakamlarını bu satırlardan alır ve rakam, dört sütunun diğer her hücresinden silinebilir. Satırlarla sütunlar yer değiştirdiğinde de aynısı geçerlidir. Jellyfish, Bare Sudoku'da bir Uzman tekniğidir.",
           "when": [
-            "X-Wing ve Swordfish bir rakam için hiçbir şey bulamadığında, rakam hâlâ tahtada geniş yayılmış birçok adayı var. Jellyfish nadirdir, çünkü daha küçük balıklar, çiftler ve diğer örüntüler rakamı genellikle daha önce çözer, ama zor bulmacalarda ortaya çıkarlar. Tam bir not seti gereklidir."
+            "X-Wing ve Swordfish, hâlâ ızgaraya yayılmış çok sayıda adayı olan bir rakam için bir şey bulamadığında. Jellyfish seyrek görülür, çünkü rakamı genellikle daha küçük balıklar, çiftler ve başka örüntüler önce çözer; yine de zor bulmacalarda ortaya çıkar. Notların eksiksiz olması gerekir."
           ],
           "spot": [
-            "Bir rakam seç ve her satır için hangi sütunlara gidebileceğini listele. Listeleri birlikte yalnızca dört sütun kullanan dört satırı bul; bir satır bunlardan ikisini, üçünü veya dördünü kullanabilir, ama hiçbiri dört dışında bir sütun kullanmazsa. Rakamın dört satır dışındaki bu sütunlardaki her adayını sil. Sütunları satırlara karşı aynı şekilde kontrol et."
+            "Bir rakam seçin ve her satır için rakamın hâlâ gidebileceği sütunları listeleyin. Listeleri birlikte yalnızca dört sütun kullanan dört satır arayın; bir satır bu sütunlardan ikisini, üçünü ya da dördünü kullanabilir ama hiçbiri bu dördün dışındaki bir sütunu kullanamaz. O zaman rakamın bu sütunlardaki, dört satırın dışında kalan her adayı silinebilir. Aynı denetimi satırlarla sütunları yer değiştirerek de yapın."
           ],
           "examples": [
             {
               "h": "Örnek",
               "steps": [
-                "Satırlar {rows}: rakam {d} yalnızca sütunlar {cols} içinde gidebilir. Bu satırlardaki adaylar {cells}.",
-                "Dört satırın her biri bir {d} rakamına ihtiyaç duyar ve o rakam dört sütundan birinde olmalıdır. Dört satır, dört sütun: rakamı {d} dört sütunda tam olarak birer hücrede oturur.",
-                "Bu yüzden sütunlar {cols} her biri rakam {d}'yi satırlar {rows} arasından alır.",
-                "Diğer hiçbir hücre rakamı {d} olamaz. Rakamı {d}'yi hücreler {elim}'den sil."
+                "{d} rakamı {rows}. satırlarda yalnızca {cols}. sütunlara gidebilir; buradaki adayları: {cells}.",
+                "Dört satırın her biri {d} rakamını koymak zorundadır ve bu rakam dört sütundan birine düşer. Dört satır, dört sütun: bu satırlardaki {d} rakamları dört sütunun her birinde tam olarak bir hücreye oturur.",
+                "Yani {cols}. sütunların her biri {d} rakamını {rows}. satırlardan birinden alır.",
+                "Bu sütunlardaki başka hiçbir hücre {d} olamaz. Şu hücrelerden {d} rakamını sil: {elim}."
               ]
             }
           ],
           "mistakes": [
-            "Adayları beş sütuna yayılan dört satırı seçmek. Rakamın her adayı aynı dört sütunda bulunmalıdır.",
-            "Rakamı dört satırdan kendisinden silmek. Silme işlemleri dört sütunda, dört satırın dışında yapılır.",
-            "Daha küçük bir balığı kaçırmak. Satırlardan ikisi veya üçü zaten bir X-Wing ya da Swordfish oluşturuyorsa, onu önce kullanın: kontrol etmesi daha basittir."
+            "Adayları beş sütuna yayılan dört satır seçmek. Rakamın dört satırdaki her adayı aynı dört sütunda olmalıdır.",
+            "Rakamı dört satırın kendisinden silmek. Elemeler dört sütundadır ve dört satırın dışında kalan hücrelerde yapılır.",
+            "Daha küçük bir balığı gözden kaçırmak. Satırlardan ikisi ya da üçü zaten bir X-Wing veya Swordfish oluşturuyorsa önce onu kullanın: denetlemesi daha kolaydır."
           ],
           "faq": [
             [
               "Sudokuda Jellyfish nedir?",
-              "Boyutu dört olan balık örüntüsü: bir rakam dört satırda aynı dört sütunla ya da dört sütunda aynı dört satırla sınırlıdır. Rakam o sütunların veya satırların diğer hücrelerinden silinir."
+              "Boyutu dört olan bir balık örüntüsü: bir rakam, dört satırda aynı dört sütuna ya da dört sütunda aynı dört satıra sıkışmıştır. Rakam, o sütunların ya da satırların geri kalanından silinir."
             ],
             [
               "Jellyfish, X-Wing ve Swordfish ile nasıl ilişkilidir?",
-              "Üçü de aynı fikri farklı sayıda satırla kullanır: [X-Wing](x-wing) için iki, [Swordfish](swordfish) için üç, Jellyfish için dört. Daha büyük balıklar mümkün ama her biri diğer yöndeki daha küçük bir balık eşliğinde gelir, bu yüzden dört satır aramaya değer en büyük boyuttur."
+              "Üçü de aynı fikri farklı sayıda satır ya da sütunla uygular: [X-Wing](x-wing) için iki, [Swordfish](swordfish) için üç, Jellyfish için dört. Daha büyük balıklar da mümkündür, ama her biri diğer yönde daha küçük bir balıkla birlikte gelir; bu yüzden aramaya değer en büyük boyut dört satır ya da sütundur."
             ],
             [
-              "Her satırın dört sütunun hepsinde rakamı bulunması gerekir mi?",
-              "Hayır. Her satır rakamı sütunlardan ikisinde, üçünde veya dördünde tutabilir, dört dışında tutmadığı sürece."
+              "Rakam her satırda dört sütunun hepsinde olmak zorunda mı?",
+              "Hayır. Hiçbir satırda rakam bu sütunların dışında olmadığı sürece, her satır rakamı sütunlardan ikisinde, üçünde ya da dördünde taşıyabilir."
             ],
             [
-              "Jellyfish yaygın mıdır?",
-              "Hayır. Bir tane kullana bilecek çoğu bulmaca daha küçük balık veya diğer örüntü tarafından çözülür. İpucu bir Jellyfish'i adlandırırsa bulmaca genellikle zor bir Uzman seviyesi bulmacadır."
+              "Jellyfish sık görülür mü?",
+              "Hayır. Jellyfish kullanılabilecek bulmacaların çoğu, önce daha küçük balıklarla ya da başka örüntülerle çözülür. İpucu bir Jellyfish'ten söz ediyorsa bulmaca genellikle zor bir Uzman bulmacasıdır."
             ]
           ]
         },
@@ -2443,236 +2443,236 @@
         },
         "bug-plus-1": {
           "name": "BUG+1",
-          "title": "Sudokuda BUG+1: Bivalue Universal Grave Kuralı",
-          "description": "BUG+1: çözülmemiş hücrelerin biri hariç hepsi iki adaya sahip, o hücre üç adaya sahip. Bulmaca bir çözüme sahip olduğundan, o hücre üç kez görülen rakamı alır.",
-          "h1": "BUG+1 (Bivalue Universal Grave)",
-          "summary": "BUG, Bivalue Universal Grave anlamına gelir: çözülmemiş her hücrenin tam olarak iki adayı olduğu ve her adayın o hücreyi gören satır, sütun ve kutuda tam olarak iki kere göründüğü bir pozisyon. Böyle bir pozisyon hiçbir zaman tam olarak bir çözüme sahip değildir, bu yüzden doğru bir bulmaca buna asla ulaşmaz. BUG+1'de tahta bu çukurun bir adayı uzağında: çözülmemiş her hücre iki adaya sahip ama bir hücre üç adaya sahiptir ve bu üç rakamdan biri o hücrenin satırında, sütununda ve kutusunda üç kere görünür. Bu rakam tahtayı çukurdan uzak tutan rakamdır, bu yüzden üç adayı olan hücre o rakam olmalıdır. [Unique Rectangle](unique-rectangle) gibi, BUG+1 bulmacanın bir çözüme sahip olması bilgisine dayanır. Bare Sudoku'da bir Uzman tekniğidir.",
+          "title": "Sudokuda BUG+1: İki Adaylı Evrensel Mezar Kuralı",
+          "description": "BUG+1: çözülmemiş her hücrenin iki adayı vardır, yalnızca birinin üçü. Bulmacanın tek çözümü olduğundan o hücre, üç kez görünen rakamı alır.",
+          "h1": "BUG+1 (iki adaylı evrensel mezar)",
+          "summary": "BUG, Bivalue Universal Grave, yani iki adaylı evrensel mezarın kısaltmasıdır. Bu, çözülmemiş her hücrenin tam olarak iki adayı olduğu ve her adayın girebileceği her satırda, sütunda ve kutuda tam olarak iki kez göründüğü bir durumdur. Böyle bir durumun hiçbir zaman tam olarak tek çözümü olmaz; bu yüzden düzgün bir bulmaca bu duruma asla ulaşmaz. BUG+1'de ızgara bu mezardan bir aday uzaktır: çözülmemiş her hücrenin iki adayı vardır, yalnızca bir hücrenin üç adayı vardır ve bu üç rakamdan biri, o hücrenin satırında, sütununda ve kutusunda üç kez görünür. Izgarayı mezardan uzak tutan rakam odur; bu yüzden üç adaylı hücre o rakam olmak zorundadır. [Unique Rectangle](unique-rectangle) gibi BUG+1 de bulmacanın tek çözümü olmasına dayanır. Bare Sudoku'da bir Uzman tekniğidir.",
           "when": [
-            "Bulmacanın sonlarında, neredeyse her boş hücre iki adaya indirgenmişken ve olağan teknikler durmuşken. Tam olarak bir hücre üç adaya sahip ve diğerlerinin hepsi iki adayı varsa, zincir denemeden önce BUG+1'i sına."
+            "Bulmacanın sonlarına doğru, neredeyse her boş hücre iki adaya indiğinde ve olağan teknikler tıkandığında. Tam olarak bir hücrenin üç, diğerlerinin iki adayı varsa zincirlere geçmeden önce BUG+1'e bakın."
           ],
           "spot": [
-            "Adayları say: çözülmemiş her hücrenin iki tane olması gerekir, ama bir hücrenin üçü var. O hücrenin satırında, sütununda ve kutusunda her üç rakamın kaç kere göründüğünü say. İkisi bunlardan her birinde tam olarak iki kere görünür; üçüncüsü üç kere görünür. Bu üçüncü rakam hücrenin cevabıdır. Eğer ikiden fazla hücre üç adayı varsa ya da bir hücrede dördü varsa, basit BUG+1 uygulanmaz."
+            "Adayları sayın: çözülmemiş her hücrenin iki adayı olmalı, yalnızca bir hücrenin üç adayı olmalı. O hücrenin satırında, sütununda ve kutusunda üç rakamın her birinin kaç kez göründüğünü sayın. İkisi bu birimlerin her birinde tam olarak iki kez görünür; üçüncüsü üç kez görünür. Bu üçüncü rakam hücrenin cevabıdır. Birden fazla hücrenin üç adayı varsa ya da bir hücrenin dört adayı varsa basit BUG+1 uygulanmaz."
           ],
           "examples": [
             {
               "h": "Örnek",
               "steps": [
-                "Çözülmemiş her hücrenin tam olarak iki adayı var, ama hücre {cell}'nin üçü var: {cands}.",
-                "Satır {row}, sütun {col} ve kutu {box}'ta rakam {d} aday olarak üç kere görünür. Diğer her aday yalnızca iki kere görünür girebileceği her yerde.",
-                "Hücre {cell} rakam {d} değilse, her hücre gibi iki adayı olurdu ve tahta Bivalue Universal Grave olurdu, bu hiçbir zaman tam olarak bir çözüme sahip değildir. Bulmacanın bir çözümü var, bu yüzden bu olamaz.",
-                "Öyleyse hücre {cell} rakam {d}. Rakamlar {others}'ı oradan sil ve hücre çözülür."
+                "Çözülmemiş her hücrenin tam olarak iki adayı var, yalnızca {cell} hücresinin üç adayı var: {cands}.",
+                "{row}. satırda, {col}. sütunda ve {box}. kutuda {d} rakamı üç kez aday olarak görünüyor. Diğer her aday, girebildiği her birimde tam olarak iki kez görünüyor.",
+                "{cell} hücresi {d} olmasaydı, diğer hücreler gibi iki adayı kalırdı ve ızgara, hiçbir zaman tam olarak tek çözümü olmayan bir iki adaylı evrensel mezar olurdu. Bulmacanın tek çözümü var, yani bu olamaz.",
+                "Yani {cell} hücresi {d} olmak zorundadır. Bu hücreden {others} rakamlarını sil; hücre çözülmüş olur."
               ]
             }
           ],
           "mistakes": [
-            "İki hücrenin üç adayı olduğunda ya da bir hücrenin dördü olduğunda uygulamak. BUG+1 tam olarak tahtanın tamamında bir ekstra adaya ihtiyaç duyar.",
-            "Üç rakamdan yanlış olanını seçmek. Cevap hücrenin satırında, sütununda ve kutusunda üç kere görünen rakamdır.",
-            "Birden fazla çözüme sahip olabilecek bir bulmaca üzerinde kullanmak. Her teklik tekniği gibi, BUG+1 yalnızca bulmaca tam olarak bir çözüme sahip olduğunda çalışır ve her Bare Sudoku bulmacası bunu yapar."
+            "İki hücrenin üç adayı varken ya da bir hücrenin dört adayı varken uygulamak. BUG+1, tüm ızgarada tam olarak bir fazladan aday ister.",
+            "Üç rakamdan yanlışını seçmek. Cevap, hücrenin satırında, sütununda ve kutusunda üç kez görünen rakamdır.",
+            "Birden fazla çözümü olabilecek bir bulmacada kullanmak. Her teklik tekniği gibi BUG+1 de yalnızca bulmacanın tam olarak tek çözümü olduğunda işler; her Bare Sudoku bulmacasının tek çözümü vardır."
           ],
           "faq": [
             [
-              "Sudokuda BUG+1 ne anlama geliyor?",
-              "BUG, Bivalue Universal Grave'nin kısaltmasıdır: her boş hücrenin iki adayı olduğu ve her adayın her birimde iki kere göründüğü bir pozisyon. Böyle bir pozisyon tam olarak bir çözüme sahip olamaz. BUG+1 bu pozisyon artı bir ekstra adaydır ve ekstra aday doğru olmalıdır."
+              "Sudokuda BUG+1 ne demek?",
+              "BUG, iki adaylı evrensel mezar (Bivalue Universal Grave) adının kısaltmasıdır: her boş hücrenin iki adayı olduğu ve her adayın her birimde iki kez göründüğü bir durum. Böyle bir durumun tam olarak tek çözümü olamaz. BUG+1, bu durumun bir fazladan adayla hâlidir ve fazladan aday doğru olmak zorundadır."
             ],
             [
-              "Bivalue Universal Grave neden bir çözüme sahip olamaz?",
-              "Her çözülmemiş hücrenin iki adayı olduğunda ve her aday her birimde iki kere göründüğünde, pozisyonun ya çözümü olmadığı ya da en az iki tane olduğu gösterilebilir, hiçbir zaman tam olarak bir tane değil."
+              "İki adaylı evrensel mezarın neden tek çözümü olamaz?",
+              "Çözülmemiş her hücrenin iki adayı varsa ve her aday her birimde iki kez görünüyorsa, durumun ya hiç çözümü olmadığı ya da en az iki çözümü olduğu, hiçbir zaman tam olarak tek çözümü olmadığı gösterilebilir."
             ],
             [
-              "BUG+1 tahmin mi?",
-              "Hayır. Bulmacanın tam olarak bir çözüme sahip olması gerçeğini kullanan mantıksal bir adımdır. Bare Sudoku yalnızca böyle bulmaçalar üretir."
+              "BUG+1 bir tahmin midir?",
+              "Hayır. Bir fazladan bilgiyi kullanan mantıksal bir adımdır: bulmacanın tam olarak tek çözümü vardır. Bare Sudoku yalnızca böyle bulmacalar üretir."
             ],
             [
               "İki hücrenin üç adayı varsa ne olur?",
-              "O zaman basit BUG+1 uygulanmaz ve zincir gibi diğer teknikler gereklidir."
+              "O zaman basit BUG+1 uygulanmaz; zincirler gibi başka teknikler gerekir."
             ]
           ]
         },
         "x-chain": {
           "name": "X-Chain",
-          "title": "Sudokuda X-Chain: Tek Rakamlı Zincirler",
-          "description": "X-Chain: bir rakamı güçlü ve zayıf bağlantılar aracılığıyla izleyin. Zincirin bir ucu rakamı tutmalı, bu yüzden her iki ucu da gören hücreler bunu kaybeder.",
+          "title": "Sudokuda X-Chain: Tek Rakamlı Zincirler Nasıl Çalışır",
+          "description": "X-Chain: tek bir rakamı güçlü ve zayıf bağlar boyunca izler. Zincirin bir ucu rakamı taşımak zorundadır; bu yüzden iki ucu da gören hücreler rakamı kaybeder.",
           "h1": "X-Chain",
-          "summary": "Bir X-Chain tek bir rakamı izler ve adaylarını iki tür bağlantı ile birleştirir. Güçlü bağlantı bir satır, sütun veya kutuda o rakamın yalnızca iki yerini birleştirir: biri rakam değilse diğeri o rakamı almalıdır. Zayıf bağlantı, birbirini gören aynı rakamın iki adayını birleştirir: biri rakamsa diğeri değildir. Bir X-Chain iki tür bağlantıyı değiştirir ve güçlü bağlantı ile başlayıp güçlü bağlantı ile biter. Rakam nasıl yerleştirilse, iki uçtan biri onu tutmalıdır. Her iki ucu da gören her hücre rakamı kaybedebilir. [Skyscraper](skyscraper) ve [2-String Kite](two-string-kite) üç bağlantılı en kısa X-Chain'lerdir. X-Chain, Bare Sudoku'da bir Usta tekniğidir.",
+          "summary": "X-Chain, tek bir rakamı ızgara boyunca izler ve adaylarını iki tür bağla birleştirir. Güçlü bağ, rakamın bir satırda, sütunda ya da kutuda gidebileceği yalnızca iki yeri birleştirir: biri rakam değilse diğeri rakamdır. Zayıf bağ, rakamın birbirini gören iki adayını birleştirir: biri rakamsa diğeri rakam değildir. X-Chain bu iki türü dönüşümlü kullanır ve güçlü bağla başlayıp güçlü bağla biter; böylece rakam nasıl yerleşirse yerleşsin uçlarından biri onu taşır. İki ucu da gören her hücre rakamı kaybedebilir. [Skyscraper](skyscraper) ve [2-String Kite](two-string-kite), üç bağlı en kısa X-Chain'lerdir. X-Chain, Bare Sudoku'da bir Usta tekniğidir.",
           "when": [
-            "Skyscraper, 2-String Kite ve Empty Rectangle gibi tek rakamlı örüntüler hiçbir şey bulmadığında, ama bazı rakamlar birçok satırda, sütunda veya kutuda yalnızca iki yerde girebiliyorsa. Bu çiftler zincirin inşa edildiği güçlü bağlantılardır."
+            "Skyscraper, 2-String Kite ve Empty Rectangle gibi tek rakamlı örüntüler bir şey bulamadığında, ama bir rakamın yalnızca iki yere gidebildiği çok sayıda satır, sütun ya da kutu olduğunda. Bu çiftler, zincirlerin kurulduğu güçlü bağlardır."
           ],
           "spot": [
-            "Bir rakam seç ve tam olarak iki adayı olan her birimi işaretle; bunlar güçlü bağlantılardır. Bir adaydan başla, eşine güçlü bağlantı al, sonra o rakamın gördüğü herhangi bir adayına zayıf bağlantı al, sonra yeniden güçlü bağlantı al ve böyle devam et. Her seferinde güçlü bağlantı bitirdiğinde, başlangıç hücresi ve mevcut hücreyi gören hücrelere bak: biri rakamı tutarsa bu silinebilir. Kısa zincirler kontrol etmesi daha kolaydır ve Bare Sudoku her zaman en kısa olanı arar."
+            "Bir rakam seçin ve rakamın tam olarak iki adayı olduğu her birimi işaretleyin; bunlar güçlü bağlardır. Bir adaydan başlayın, güçlü bağla öbür ucuna geçin, oradan zayıf bağla o hücrenin gördüğü herhangi bir rakam adayına, sonra yine güçlü bağla ilerleyin ve böyle sürdürün. Bir güçlü bağı her bitirişinizde, hem başlangıç hücresini hem de o anki hücreyi gören hücrelere bakın: içlerinden biri rakamı taşıyorsa rakam oradan silinebilir. Kısa zincirleri denetlemek daha kolaydır ve Bare Sudoku her zaman en kısa olanı arar."
           ],
           "examples": [
             {
               "h": "Örnek",
               "steps": [
-                "Rakam {d}'yi zincir {chain} boyunca izle. Her = güçlü bağlantı: iki hücre bir satır, sütun veya kutuda rakam {d}'nin tek yeridir. Her - zayıf bağlantı: iki hücre birbirini görür.",
-                "Hücre {start} rakam {d} değil varsay. İlk güçlü bağlantı sonraki hücreyi {d} yapar, ondan sonra zayıf bağlantı o sonraki hücreden {d} eler ve böyle devam eder, son hücre {end} {d} olana kadar.",
-                "Öyleyse rakam {d} hücre {start}'da ya da hücre {end}'de.",
-                "Hem hücre {start} hem hücre {end}'yi gören bir hücre {d} olamaz. {d} rakamını hücreler {elim}'den sil."
+                "{d} rakamı için zincir şöyle: {chain}. Her = işareti bir güçlü bağdır: iki hücre, bir satırda, sütunda ya da kutuda {d} rakamının gidebileceği yalnızca iki yerdir. Her - işareti bir zayıf bağdır: iki hücre birbirini görür.",
+                "Diyelim ki {start} hücresi {d} değil. O zaman ilk güçlü bağ sıradaki hücreyi {d} yapar, ardından gelen zayıf bağ sonraki hücreden {d} rakamını eler ve böyle sürerek son hücre {end}, {d} olur.",
+                "Yani {d} rakamı ya {start} hücresindedir ya da {end} hücresindedir; ikisinde birden de olabilir.",
+                "Hem {start} hem {end} hücresini gören bir hücre asla {d} olamaz. Şu hücrelerden {d} rakamını sil: {elim}."
               ]
             }
           ],
           "mistakes": [
-            "İki hücreyi güçlü bağlantı saymak, oysa birimde rakamın üçüncü bir yeri var. Güçlü bağlantı iki hücrenin satırda, sütunda veya kutuda rakamın tek yerleri olmasını gerektirir.",
-            "Zinciri zayıf bağlantıda bitirmek. Her iki uç da güçlü bağlantı aracılığıyla ulaşılmalı, yoksa bir ucun rakamı tutması çıkarsanması yapılamaz.",
-            "Zincirin sadece bir ucunu gören bir hücreden rakamı silmek. Silinen hücre her iki ucu da görmelidir."
+            "Rakamın o birimde üçüncü bir yeri varken iki hücreyi güçlü bağ saymak. Güçlü bağ için iki hücrenin, o satırda, sütunda ya da kutuda rakamın gidebileceği tek yerler olması gerekir.",
+            "Zinciri zayıf bağla bitirmek. İki uca da güçlü bağlarla varılmalıdır; yoksa uçlardan birinin rakamı taşıdığı sonucu çıkmaz.",
+            "Rakamı zincirin yalnızca bir ucunu gören bir hücreden silmek. Rakamın silineceği hücre iki ucu da görmelidir."
           ],
           "faq": [
             [
               "Sudokuda X-Chain nedir?",
-              "Güçlü ve zayıf bağlantıları değiştiren ve güçlü bağlantı ile başlayıp güçlü bağlantı ile biten bir rakamın aday zinciri. İki uçtan biri rakamı tutmalı, bu yüzden her iki ucu da gören hücreler bunu tutamaz."
+              "Güçlü ve zayıf bağları dönüşümlü kullanan, güçlü bağla başlayıp güçlü bağla biten, tek bir rakamın aday zinciri. İki uçtan biri rakamı taşımak zorundadır; bu yüzden iki ucu da gören hücreler taşıyamaz."
             ],
             [
-              "Güçlü bağlantı ile zayıf bağlantı arasında fark nedir?",
-              "Güçlü bağlantı iki adaydan en az birinin doğru olduğunu söyler: bunlar bir birimde o rakamın yalnızca iki yeridir. Zayıf bağlantı ikisinden en çok birinin doğru olduğunu söyler: birbirini gören hücrelerde aynı rakam ya da aynı hücrede iki rakam. Bir birim içindeki güçlü bağlantı zayıf bağlantı olarak da çalışır, ama tersi değildir."
+              "Güçlü bağ ile zayıf bağ arasındaki fark nedir?",
+              "Güçlü bağ, iki adaydan en az birinin doğru olduğunu söyler: bunlar rakamın bir birimde gidebileceği yalnızca iki yerdir. Zayıf bağ, en çok birinin doğru olduğunu söyler: bunlar birbirini gören hücrelerdeki aynı rakamdır. Bir birimdeki güçlü bağ zayıf bağ olarak da işler, ama tersi geçerli değildir."
             ],
             [
               "X-Chain, Skyscraper ve 2-String Kite ile nasıl ilişkilidir?",
-              "Her ikisi de üç bağlantılı X-Chain'lerdir: iki güçlü bağlantı bir zayıf bağlantı tarafından birleştirilir. [Skyscraper](skyscraper) bunları ortak bir satır veya sütun aracılığıyla birleştirir, [2-String Kite](two-string-kite) bir kutu aracılığıyla. Daha uzun X-Chain'ler aynı mantığı daha fazla bağlantı üzerinde izler."
+              "İkisi de üç bağlı birer X-Chain'dir: bir zayıf bağla birleşen iki güçlü bağ. [Skyscraper](skyscraper) ikisini ortak bir satır ya da sütun üzerinden, [2-String Kite](two-string-kite) bir kutu üzerinden birleştirir. Daha uzun X-Chain'ler aynı mantığı daha çok bağ üzerinden izler."
             ],
             [
               "Bir X-Chain ne kadar uzun olabilir?",
-              "Sabit bir sınır yoktur, ama her bağlantı kontrol edilmelidir. Bare Sudoku bir şeyi kaldıran en kısa zinciri arar ve daha uzun zincirler bir bulmacanın derecesini yükseltir."
+              "Sabit bir sınır yoktur, ama her bağ denetlenmelidir. Bare Sudoku bir şey eleyen en kısa zinciri arar ve daha uzun zincirler bulmacanın derecesini yükseltir."
             ]
           ]
         },
         "xy-chain": {
           "name": "XY-Chain",
-          "title": "Sudokuda XY-Chain: İki Adaylı Hücreler Zinciri",
-          "description": "XY-Chain: iki adaylı hücreler yolu, paylaşılan rakamlarla bağlı. Her iki uç aynı rakamı tutabilir, bu yüzden her iki ucu da gören hücreler onu kaybeder.",
+          "title": "Sudokuda XY-Chain: İki Adaylı Hücre Zincirleri",
+          "description": "XY-Chain: iki adaylı hücrelerden oluşan, ortak rakamlarla bağlanan bir yol. İki uç aynı Z rakamını taşıyabilir; iki ucu da gören hücreler Z'yi kaybeder.",
           "h1": "XY-Chain",
-          "summary": "Bir XY-Chain tam olarak iki adayı olan hücreler yoludur. Komşu hücreler birbirini görür ve rakam paylaşır: bir hücrenin ikinci rakamı sonraki hücrenin ilk rakamıdır. İlk hücre ilk rakamı değilse ikincisi olmalı; sonra sonraki hücre o rakamı alamaz ve kendi öteki rakamı olmalı, ve böyle sona kadar. İlk hücrenin ilk rakamı ve son hücrenin son rakamı aynı rakam Z olduğunda, iki uç hücreden biri her zaman Z'dir ve her iki ucu da gören her hücre Z'yi kaybedebilir. [Y-Wing](y-wing) üç hücreli en kısa XY-Chain. XY-Chain, Bare Sudoku'da bir Usta tekniğidir.",
+          "summary": "XY-Chain, her biri tam olarak iki adaylı hücrelerden oluşan bir yoldur. Zincirde ardışık hücreler birbirini görür ve bir rakamı paylaşır: bir hücrenin ikinci rakamı, sonrakinin ilk rakamıdır. İlk hücre kendi ilk rakamı değilse ikincisi olmak zorundadır; o zaman sonraki hücre bu rakam olamaz, kendi diğer rakamı olmak zorundadır ve zincir böyle sona kadar sürer. İlk hücrenin ilk rakamı ile son hücrenin son rakamı aynı Z rakamıysa iki uç hücreden biri her zaman Z'dir ve iki ucu da gören her hücre Z'yi kaybedebilir. [Y-Wing](y-wing), üç hücreli en kısa XY-Chain'dir. XY-Chain, Bare Sudoku'da bir Usta tekniğidir.",
           "when": [
-            "Tahta tam olarak iki adayı olan birçok hücreye sahip olduğunda ve kanatlar hiçbir şey bulmazsa. XY-Chain'ler yalnızca bu iki adaylı hücreleri kullanır, bu yüzden uçları bir rakamı paylaşan bir yol bulduğunda izlemesi kolaydır."
+            "Izgarada tam olarak iki adaylı çok sayıda hücre olduğunda ve kanat teknikleri bir şey bulamadığında. XY-Chain yalnızca bu iki adaylı hücreleri kullanır; iki ucu aynı rakamı paylaşan bir yol fark ettiğinizde izlemesi kolaydır."
           ],
           "spot": [
-            "İki adaylı bir hücre seç ve rakamlarından birini Z olarak seç. Diğer rakamına git, sonra o rakamı gören ve bir tane ötekisi olan bir hücreye git ve o öteki rakamla devam et. Her bulunduğun hücrenin kalan rakamı Z olduğunda, bir zinciriniz vardır: ilk ve son hücreyi gören ve Z'yi tutan hücreleri ara."
+            "İki adaylı bir hücre ve rakamlarından birini Z olarak seçin. Hücrenin öbür rakamına geçin, sonra onu gören ve bu rakamı bir başkasıyla birlikte taşıyan bir hücreye gidin, o başka rakamla sürdürün. Geriye kalan rakamı Z olan bir hücreye vardığınızda bir zincir bulmuşsunuz demektir: ilk ve son hücreyi birlikte gören ve Z taşıyan hücreleri arayın."
           ],
           "examples": [
             {
               "h": "Örnek",
               "steps": [
-                "Zincirin her hücresi {chain} tam olarak iki adaya sahiptir. Bir hücre içinde = rakamlarını birleştirir: biri yanlışsa diğeri doğrudur. Hücreler arasında - birbirini gören hücrelerde aynı rakamı birleştirir: en çok biri doğrudur.",
-                "Hücre {start} rakam {z} değil varsay. Sonra öteki rakamını tutması gerekir, bu yüzden sonraki hücre o rakamı tutamaz ve kendi öteki rakamı olmalı, ve zincir boyunca, son hücre {end} rakam {z} olana kadar.",
-                "Öyleyse rakam {z} hücre {start}'da ya da hücre {end}'de.",
-                "Hem hücre {start} hem hücre {end}'yi gören bir hücre {z} olamaz. {z} rakamını hücreler {elim}'den sil."
+                "{chain} zincirindeki her hücrenin tam olarak iki adayı var. Bir hücrenin içinde = işareti iki rakamı birleştirir: biri yanlışsa diğeri doğrudur. Hücreler arasında - işareti, birbirini gören iki hücredeki aynı rakamı birleştirir: en çok biri doğrudur.",
+                "Diyelim ki {start} hücresi {z} değil. O zaman o hücre kendi diğer rakamını taşır; bu yüzden sonraki hücre o rakamı taşıyamaz ve kendi diğer rakamı olmak zorundadır. Zincir boyunca böyle sürer ve son hücre {end}, {z} olur.",
+                "Yani {z} rakamı ya {start} hücresindedir ya da {end} hücresindedir.",
+                "Hem {start} hem {end} hücresini gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
               ]
             }
           ],
           "mistakes": [
-            "Üç adayı olan bir hücre kullanmak. Bir XY-Chain'in her hücresi tam olarak iki adayı olmalı, yoksa bir rakamdan ötekine adım atlamak başarısız olur.",
-            "Rakam paylaşan ama birbirini görmeyen hücreleri bağlamak. Ardışık hücrelerin aynı satırda, sütunda veya kutuda olması gerekir.",
-            "Sadece bir ucu gören bir hücreden Z'yi silmek. Silinen hücre zincirin ilk ve son hücresini de görmelidir."
+            "Üç adaylı bir hücre kullanmak. Bir XY-Chain'in her hücresinin tam olarak iki adayı olmalıdır; yoksa bir rakamdan ötekine geçiş çöker.",
+            "Bir rakamı paylaşan ama birbirini görmeyen hücreleri bağlamak. Ardışık hücreler aynı satırda, sütunda ya da kutuda olmalıdır.",
+            "Z rakamını yalnızca bir ucu gören bir hücreden silmek. Z rakamının silineceği hücre zincirin hem ilk hem son hücresini görmelidir."
           ],
           "faq": [
             [
               "Sudokuda XY-Chain nedir?",
-              "Her hücre tam olarak iki adaya sahip olan iki adaylı hücreler zinciri ve her hücre sonrakini görür ve bir rakamı paylaşır. Her iki uç aynı rakamı Z olabildiğinde, biri Z'dir, bu yüzden her iki ucu da gören hücreler Z'yi kaybeder."
+              "Her hücrenin sonrakini gördüğü ve onunla bir rakamı paylaştığı, iki adaylı hücrelerden oluşan bir zincir. İki uç aynı Z rakamı olabiliyorsa biri Z'dir; bu yüzden iki ucu da gören hücreler Z'yi kaybeder."
             ],
             [
               "XY-Chain, Y-Wing ile nasıl ilişkilidir?",
-              "Bir [Y-Wing](y-wing) üç hücreli bir XY-Chain'dir: pivot ve iki kanat. Daha uzun XY-Chain'ler aynı mantığı daha fazla hücre üzerinde izler."
+              "[Y-Wing](y-wing) üç hücreli bir XY-Chain'dir: eksen ve iki kanat. Daha uzun XY-Chain'ler aynı mantığı daha çok hücre üzerinden uygular."
             ],
             [
               "Bir XY-Chain'in iki ucu birbirini görebilir mi?",
-              "Evet. Sonra Z her iki ucu da gören hücrelerden silinir, her zamanki gibi. Zincir bir döngüde kapandığında, daha fazlası silinebilir; Bare Sudoku döngüleri ayrı bir teknik olarak ele alır."
+              "Evet. O zaman Z, her zamanki gibi iki ucu da gören hücrelerden silinir. Zincir kapanıp bir döngü olduğunda daha da fazlası silinebilir; Bare Sudoku döngüleri ayrı bir teknik olarak ele alır."
             ],
             [
-              "XY-Chain yalnızca iki rakam kullanır mı?",
-              "Hayır. Her hücrenin iki rakamı var, ama rakamlar hücreden hücreye değişebilir, her bağlantı bir rakam paylaştığı sürece."
+              "XY-Chain yalnızca iki rakam mı kullanır?",
+              "Hayır. Her hücrenin iki rakamı vardır, ama her bağ bir rakamı paylaştığı sürece rakamlar hücreden hücreye değişebilir."
             ]
           ]
         },
         "aic": {
           "name": "AIC",
           "title": "Sudokuda AIC: Dönüşümlü Çıkarım Zincirleri",
-          "description": "AIC: güçlü ve zayıf bağlantılarla bağlanan adaylar. Bir uç doğru, bu yüzden her iki ucu da gören hücreler o rakamı kaybeder.",
+          "description": "Dönüşümlü Çıkarım Zinciri: rakamlar ve hücreler arasında güçlü ve zayıf bağlarla birleşen adaylar. Bir uç doğrudur; iki ucu da gören hücreler rakamı kaybeder.",
           "h1": "Dönüşümlü Çıkarım Zinciri (AIC)",
-          "summary": "Dönüşümlü Çıkarım Zinciri veya AIC, Sudoku'daki zincirlerin genel biçimidir. Öğeleri adaylardır: bir hücrede bir rakam. Iki tür bağlantı tarafından birleştirilir. Güçlü bağlantı iki adaydan en az birinin doğru olduğunu anlamına gelir: bunlar bir birimde o rakamın yalnızca iki yeridir ya da bir hücrenin yalnızca iki adayıdır. Zayıf bağlantı ikisinden en çok birinin doğru olduğunu anlamına gelir: birbirini gören hücrelerde aynı rakam ya da aynı hücrede iki rakam. Bir AIC güçlü ve zayıf bağlantıları değiştirir ve güçlü bağlantı ile başlayıp güçlü bağlantı ile biter, bu yüzden en az bir uç adayı doğrudur. Her iki uç aynı rakam olduğunda, her iki ucu da gören her hücre o rakamı kaybeder. [X-Chain](x-chain) yalnızca bir rakam kullanır ve [XY-Chain](xy-chain) yalnızca iki adaylı hücreler; bir AIC her ikisini de karıştırabilir. Bare Sudoku'da bir Usta tekniğidir.",
+          "summary": "Dönüşümlü Çıkarım Zinciri, kısaca AIC (Alternating Inference Chain), Sudokudaki zincirlerin genel biçimidir. Öğeleri, her biri bir hücredeki bir rakam olan adaylardır ve iki tür bağla birleştirilir. Güçlü bağ, iki adaydan en az birinin doğru olduğu anlamına gelir: bunlar rakamın bir birimde gidebileceği yalnızca iki yerdir ya da bir hücrenin yalnızca iki adayıdır. Zayıf bağ, en çok birinin doğru olduğu anlamına gelir: birbirini gören hücrelerdeki aynı rakam ya da aynı hücredeki iki rakam. AIC güçlü ve zayıf bağları dönüşümlü kullanır ve güçlü bağla başlayıp güçlü bağla biter; bu yüzden iki uç adayından en az biri doğrudur. İki uç aynı rakamsa iki ucu da gören her hücre o rakamı kaybeder. [X-Chain](x-chain) yalnızca tek bir rakamı, [XY-Chain](xy-chain) yalnızca iki adaylı hücreleri kullanır; AIC ikisini karıştırabilir. Bare Sudoku'da bir Usta tekniğidir.",
           "when": [
-            "Tek rakamlı zincirler ve iki adaylı hücreler zincirleri hiçbir şey bulmazsa. Karışık zincirler daha ileri ulaşır, çünkü bir hücre içinde rakam değiştirebilir ya da bir rakam boyunca hücreler arasında hareket edebilir, ama izlemesi daha zordur. Bare Sudoku onları daha basit zincirlerden sonra deneyelim."
+            "Tek rakamlı zincirler ve iki adaylı hücre zincirleri bir şey bulamadığında. Karışık zincirler daha ileri gider, çünkü bir hücrenin içinde rakam değiştirebilir ya da tek bir rakam boyunca hücreler arasında ilerleyebilir; ama izlemesi de daha zordur. Bare Sudoku bunları daha basit zincirlerden sonra dener."
           ],
           "spot": [
-            "Her adayı bir hücre ve rakam olarak yaz, örneğin r1c2 (5). Bir adaydan güçlü bağlantıyla başla, sonra zayıf bağlantı, sonra güçlü bağlantı ve böyle devam et, her adımda doğru türün herhangi bir bağlantısını seç: bir birim içinde bir rakam boyunca ya da iki adaylı hücrenin iki rakamı arasında. Her seferinde güçlü bağlantı bitirdiğinde, iki ucu karşılaştır. Aynı rakamsa, her iki ucu da gören hücreler onu kaybeder; aynı hücrenin iki rakamıysa, o hücrenin diğer her adayı gidebilir."
+            "Her adayı bir hücre ve bir rakam olarak yazın, örneğin r1c2 (5). Bir adaydan güçlü bağla başlayın, sonra zayıf bağ, sonra yine güçlü bağ alın ve böyle sürdürün; her adımda uygun türden herhangi bir bağı seçebilirsiniz: bir birim içinde tek bir rakam boyunca ya da iki adaylı bir hücrenin iki rakamı arasında. Bir güçlü bağla her bitirişinizde iki ucu karşılaştırın. Aynı rakamsa iki ucu da gören hücreler onu kaybeder; aynı hücrenin iki rakamıysa o hücrenin diğer tüm adayları silinebilir."
           ],
           "examples": [
             {
               "h": "Örnek",
               "steps": [
-                "Zincir {chain}'i oku. Her öğe bir hücrede bir rakamı gösterir. = güçlü bağlantı: iki öğeden en az biri doğru. - zayıf bağlantı: en çok biri doğru.",
-                "Aday {start} yanlış varsay. Ondan sonra güçlü bağlantı sonraki öğeyi doğru yapar, ondan sonra zayıf bağlantı sonraki öğeyi yanlış yapar, ve böyle devam eder, {end} doğru olana kadar.",
-                "Öyleyse aday {start} ya da aday {end}'den en az biri doğru. Her ikisi de rakam {z}.",
-                "Her iki uç hücreyi gören bir hücre {z} olamaz. {z} rakamını hücreler {elim}'den sil."
+                "Zincir şöyle: {chain}. Her öğe bir hücredeki bir rakamdır. = işareti güçlü bağdır: iki öğeden en az biri doğrudur. - işareti zayıf bağdır: en çok biri doğrudur.",
+                "Diyelim ki {start} adayı yanlış. Ondan sonraki güçlü bağ sıradaki öğeyi doğru yapar, onun ardındaki zayıf bağ sonraki öğeyi yanlış yapar ve böyle sürerek {end} adayı doğru olur.",
+                "Yani {start} ve {end} adaylarından en az biri doğrudur. İkisi de {z} rakamıdır.",
+                "İki uç hücresini de gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
               ]
             }
           ],
           "mistakes": [
-            "Birimde rakamın üçüncü bir yeri varken ya da hücrede üçüncü aday varken bağlantı güçlü saymak. Güçlü bağlantı tam olarak iki imkânı gerektirir.",
-            "Bağlantıları değiştirilmediğinde zincirden sonuç çıkarmak. Zincir güçlü ve zayıf bağlantıları değiştirir ve güçlü bağlantı ile başlayıp biter.",
-            "Sadece bir ucu gören adayı silmek. Silinen aday her iki ucu da çatışmalı olmalı."
+            "Birimde rakam için üçüncü bir yer varken ya da hücrenin üçüncü bir adayı varken bağa güçlü demek. Güçlü bağ tam olarak iki olasılık ister.",
+            "Bağları dönüşümlü olmayan bir zincirden sonuç çıkarmak. Zincir güçlü ve zayıf bağları dönüşümlü kullanmalı, güçlü bağla başlayıp güçlü bağla bitmelidir.",
+            "Yalnızca bir ucu gören bir adayı silmek. Silinen aday iki uçla da çelişmelidir."
           ],
           "faq": [
             [
               "Sudokuda AIC nedir?",
-              "Değişen Çıkarım Zinciri: adaylar alternatif güçlü ve zayıf bağlantı tarafından birleştirilir, güçlü bağlantı ile başlayıp biter. En az bir uç doğru, bu yüzden her iki ucu çatışan her şey silinebilir."
+              "Dönüşümlü Çıkarım Zinciri: güçlü ve zayıf bağlarla dönüşümlü birleştirilen, güçlü bağla başlayıp biten adaylar. Uçlardan en az biri doğrudur; bu yüzden iki uçla da çelişen her aday silinebilir."
             ],
             [
-              "AIC ile X-Chain arasında fark nedir?",
-              "Bir [X-Chain](x-chain) yalnızca bir rakamı kullanır. Bir AIC iki adaylı hücre içinde rakam değiştirebilir, bu yüzden tek rakamlı zincirin bağlanamadığı tahtanın parçalarını bağlayabilir."
+              "AIC ile X-Chain arasındaki fark nedir?",
+              "[X-Chain](x-chain) yalnızca tek bir rakam kullanır. AIC, iki adaylı bir hücrenin içinde rakam değiştirebilir; bu yüzden tek rakamlı bir zincirin bağlayamadığı ızgara bölgelerini bağlayabilir."
             ],
             [
-              "XY-Chain bir AIC mi?",
-              "Evet. Bir [XY-Chain](xy-chain), güçlü bağlantıları iki adaylı hücre içinde olan ve zayıf bağlantıları aynı rakamı birleştiren bir AIC'dir. X-Chain diğer özel durumdur."
+              "XY-Chain bir AIC midir?",
+              "Evet. [XY-Chain](xy-chain), güçlü bağlarının hepsi iki adaylı hücrelerin içinde olan ve zayıf bağlarının hepsi aynı rakamı birleştiren bir AIC'dir. X-Chain diğer özel durumdur."
             ],
             [
-              "Güçlü bağlantı neden zayıf bağlantı olarak hizmet edebilir?",
-              "Zayıf bağlantı yalnızca iki adaydan en çok birinin doğru olmasını gerektirir. Bir birimde rakamın yalnızca iki yeri olan iki aday da birbirini görür ve bir hücrenin iki adayı da doğru olamaz, bu yüzden en çok biri de doğru."
+              "Güçlü bağ neden zayıf bağ olarak da işe yarar?",
+              "Zayıf bağ için iki adaydan en çok birinin doğru olması yeter. Bir rakamın bir birimdeki tek iki yeri olan iki aday birbirini de görür ve bir hücrenin iki adayı birlikte doğru olamaz; bu yüzden bunlarda da en çok biri doğrudur."
             ]
           ]
         },
         "als-xz": {
           "name": "ALS-XZ",
-          "title": "Sudokuda ALS-XZ: Neredeyse Kilitli Kümeler",
-          "description": "ALS-XZ: iki neredeyse kilitli küme X'i paylaşır, biri kilitlenir. Z bir kümeye girmek zorunda, onu gören hücrelerden silinir.",
+          "title": "Sudokuda ALS-XZ: Neredeyse Kilitli Kümeler Nasıl Çalışır",
+          "description": "ALS-XZ: iki neredeyse kilitli küme sınırlı X rakamını paylaşır, biri kilitlenir. Z rakamı kümelerden birindedir; tüm Z adaylarını gören hücrelerden silinir.",
           "h1": "ALS-XZ (Neredeyse Kilitli Kümeler)",
-          "summary": "Neredeyse kilitli küme veya ALS, bir satır, sütun veya kutuda N hücre olan ve aralarında N + 1 aday tutan bir gruptur. İki adaylı tek bir hücre en küçük ALS'dir. Rakamlarından biri alınırsa, küme kilitlenir: hücreleri tam olarak kalan rakamlar tarafından doldurulur. ALS-XZ iki böyle kümeyi kullanır, A ve B. Sınırlı rakam X her iki seti paylaşır: A'nın her X, B'nin her X'ini görür, bu yüzden X en çok bir sette bulunabilir. X olmayan set kilitlenir. İki set başka rakamı Z de paylaşırsa, o rakam A'da ya da B'de bitmek zorundadır, bu yüzden her iki setin de Z adaylarının hepsini gören her hücre Z'yi kaybedebilir. Bir [Y-Wing](y-wing) bu fikrin en küçük durumudur. ALS-XZ, Bare Sudoku'da bir Usta tekniğidir.",
+          "summary": "Neredeyse kilitli küme (almost locked set, ALS), bir satırda, sütunda ya da kutuda bulunan ve aralarında N + 1 aday taşıyan N hücrelik bir gruptur. İki adaylı tek bir hücre en küçük ALS'dir. Rakamlarından biri alınırsa küme kilitlenir: hücreleri tam olarak kalan rakamlarla dolar. ALS-XZ, sınırlı bir X rakamını paylaşan A ve B adlı iki böyle küme kullanır: A kümesinin her X adayı, B kümesinin her X adayını görür; bu yüzden X en çok kümelerden birinde olabilir. X'i içermeyen küme o zaman kilitlidir. İki küme başka bir Z rakamını da paylaşıyorsa bu rakam A'da ya da B'de bulunmak zorundadır; bu yüzden iki kümenin tüm Z adaylarını gören her hücre Z'yi kaybedebilir. [Y-Wing](y-wing), bu fikrin en küçük örneğidir. ALS-XZ, Bare Sudoku'da bir Usta tekniğidir.",
           "when": [
-            "Zor bulmacalarda geç, tahta iki veya üç adayı olan birçok hücreye sahip olduğunda ve zincirler hiçbir şey bulmazsa. ALS teknikleri tek adaylar yerine hücre gruplarına bak, bu yüzden tek hücreler zincirinin kaçırdığı silmeleri bul."
+            "Zor bulmacaların geç aşamalarında, ızgarada iki ya da üç adaylı çok sayıda hücre olduğunda ve zincirler bir şey bulamadığında. ALS teknikleri tek tek adaylar yerine hücre gruplarına bakar; bu yüzden tek hücrelerden kurulan zincirlerin kaçırdığı elemeleri bulur."
           ],
           "spot": [
-            "Küçükleri önce ara: iki adaylı hücre, bir birimde üç aday arasında iki hücre ya da dört aday arasında üç hücre. Bir hücre paylaşmayan iki set al. Her iki setin tuttuğu rakam X'i bul ve birinin her X'inin ötekinin her X'ini gördüğünü kontrol et. Sonra her iki setin de tuttuğu başka rakam Z al ve Z'yi her iki setin de Z adaylarının hepsini gören hücrelerden sil."
+            "Önce küçük gruplara bakın: iki adaylı bir hücre, aralarında üç aday bulunan aynı birimdeki iki hücre ya da aralarında dört aday bulunan üç hücre. Hücre paylaşmayan böyle iki küme alın. İkisinin de taşıdığı bir X rakamı bulun ve birindeki her X adayının ötekindeki her X adayını gördüğünü denetleyin. Sonra iki kümenin de taşıdığı başka bir Z rakamı seçin ve Z rakamını, iki kümedeki her Z adayını gören hücrelerden silin."
           ],
           "examples": [
             {
               "h": "Örnek",
               "steps": [
-                "Set A {alsA}: bu hücreler birlikte rakamlar {digitsA}'yı tutarlar, hücre sayısından bir rakam fazla, bu yüzden A neredeyse kilitli set. Set B {alsB}, rakamlar {digitsB}'yi tutar.",
-                "Her iki set rakamı {x}'i tutarlar ve A'daki her {x}, B'deki her {x}'i görür, bu yüzden en çok setlerden biri rakamı {x} tutabilir.",
-                "Rakamı {x} tutmayan set kilitlenir: hücreleri tam olarak öteki rakamlarını alırlar ve rakamı {z} bunlardan biri. Öyleyse rakamı {z} A'da ya da B'de biter.",
-                "Her iki setin de rakamı {z}'nin adaylarının hepsini gören bir hücre {z} olamaz. Rakamı {z}'yi hücreler {elim}'den sil."
+                "A kümesi: {alsA}. Bu hücreler birlikte {digitsA} rakamlarını taşır; hücre sayısından bir rakam fazla, yani A neredeyse kilitli bir kümedir. B kümesi: {alsB}; rakamları: {digitsB}.",
+                "İki küme de {x} rakamını taşır ve A kümesinin her {x} adayı B kümesinin her {x} adayını görür; bu yüzden kümelerden en çok biri {x} rakamını içerebilir.",
+                "{x} rakamını almayan küme kilitlenir: hücreleri tam olarak kendi diğer rakamlarını alır ve bunlardan biri {z} rakamıdır. Yani {z} rakamı A kümesinde ya da B kümesinde yer alır.",
+                "İki kümenin her {z} adayını gören bir hücre asla {z} olamaz. Şu hücrelerden {z} rakamını sil: {elim}."
               ]
             }
           ],
           "mistakes": [
-            "Sınırlı olmayan rakam X kullanmak. Eğer A'daki bir X, B'deki bir X'i görmezse, her iki set de X'i tutabilir ve hiçbir şey çıkarsanması yapılamaz.",
-            "İki setin bir hücre paylaşmasına izin vermek. A ve B çakışmamış olmalı.",
-            "Sadece Z adaylarından bazılarını gören bir hücreden Z'yi silmek. Hücre A'daki her Z'yi ve B'deki her Z'yi görmelidir."
+            "Sınırlı olmayan bir X rakamı kullanmak. A kümesindeki bir X, B kümesindeki bir X'i görmüyorsa iki küme de X'i taşıyabilir ve hiçbir sonuç çıkmaz.",
+            "İki kümenin bir hücreyi paylaşmasına izin vermek. A ile B çakışmamalıdır.",
+            "Z adaylarının yalnızca bir kısmını gören bir hücreden Z rakamını silmek. Hücre A kümesindeki her Z adayını ve B kümesindeki her Z adayını görmelidir."
           ],
           "faq": [
             [
               "Neredeyse kilitli küme nedir?",
-              "Bir satır, sütun veya kutuda N hücre aralarında N + 1 aday tutan grup. Bu rakamlardan herhangi birini almak kümeyi kilitler, bu yüzden hücreleri tam olarak kalan rakamlar tarafından doldurulur."
+              "Bir satırda, sütunda ya da kutuda, aralarında N + 1 aday bulunan N hücrelik bir grup. Bu rakamlardan herhangi biri alınırsa küme kilitlenir; yani hücreleri tam olarak kalan rakamlarla dolar."
             ],
             [
-              "ALS-XZ'de X ve Z ne anlamına gelir?",
-              "X sınırlı ortak rakamdır: her iki küme de onu tutarlar, ama en çok birinde olabilir. Z silinen rakamdır: her iki kümeyi de tutarlar ve ikisinden birinde bitmek zorundadır."
+              "ALS-XZ'de X ve Z neyi ifade eder?",
+              "X sınırlı ortak rakamdır: iki küme de onu taşır ama en çok birinde olabilir. Z silinen rakamdır: iki kümede de vardır ve kümelerden birinde yer almak zorundadır."
             ],
             [
-              "Y-Wing bir ALS-XZ mi?",
-              "Evet. Bir [Y-Wing](y-wing), kümeleri pivot ve bir kanat ile öteki kanat kendi başına olan bir ALS-XZ'dir. ALS-XZ aynı fikri hücre gruplarına izler."
+              "Y-Wing bir ALS-XZ midir?",
+              "Evet. [Y-Wing](y-wing), kümeleri eksen ile bir kanat ve tek başına öteki kanat olan bir ALS-XZ'dir. ALS-XZ aynı fikri daha büyük hücre gruplarına uygular."
             ],
             [
               "İki küme iki sınırlı rakamı paylaşırsa ne olur?",
-              "Sonra her iki küme de aynı anda kilitlenir ve daha fazlası silinebilir: iki rakamdan her biri her iki kümedeki aday hepsini gören hücreler silinir ve her kümenin diğer rakamı o küme içinde adaylarının hepsini gören hücrelerden silinir. Buna çiftli bağlantılı ALS-XZ denir."
+              "O zaman iki küme birden kilitlenir ve daha fazlası silinebilir: iki rakamın her biri, iki kümedeki tüm adaylarını gören hücrelerden silinir ve her kümenin diğer her rakamı, o rakamın küme içindeki tüm adaylarını gören hücrelerden silinir. Buna çift bağlı ALS-XZ denir."
             ]
           ]
         }
