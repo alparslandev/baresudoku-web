@@ -1,8 +1,8 @@
 # Bare Sudoku Web
 
-The browser version of [Bare Sudoku](https://baresudoku.com): ad-free Sudoku with five levels (Easy to Master, with the puzzle's difficulty rating next to the level name), notes and corner notes, cell colors, undo, hints that explain the logic, digit-first entry (tap a digit, then the cells), every language on its own page, a daily puzzle (`/daily/`, the same puzzle for everyone, generated on the device from the date, with a shareable result), local statistics per level with a daily streak, a clock that pauses after a minute without input, dark mode, keyboard support and offline play. One HTML file, no libraries, no tracking.
+The browser version of [Bare Sudoku](https://baresudoku.com): ad-free Sudoku in 59 languages with five levels (Easy to Master, with the puzzle's difficulty rating next to the level name), notes and corner notes, cell colors, undo, hints that explain the logic, digit-first entry (tap a digit, then the cells), every language on its own page, a daily puzzle (`/daily/`, the same puzzle for everyone, generated on the device from the date, with a shareable result), local statistics per level with a daily streak, a clock that pauses after a minute without input, dark mode, keyboard support and offline play, plus a step-by-step solver, printable puzzles and a guide to 25 solving techniques with practice puzzles. The game is one HTML file per language, with no libraries, no cookies and no account.
 
-The Android app lives in [alparslandev/baresudoku](https://github.com/alparslandev/baresudoku).
+The apps for Android, iPhone, iPad, Mac, Apple TV and Apple Vision Pro live in [alparslandev/baresudoku](https://github.com/alparslandev/baresudoku). Bare Sudoku is also listed on [AlternativeTo](https://alternativeto.net/software/bare-sudoku/).
 
 ## Develop
 
