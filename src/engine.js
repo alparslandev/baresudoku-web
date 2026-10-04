@@ -2093,18 +2093,26 @@ class Sudoku {
 
 const NONE = -1;
 const HINT_NONE = 0, HINT_WRONG = 1, HINT_PLACE = 2;
+const COLORS = 6;
 
 class Game {
   constructor() {
+    this.size = 81;
+    this.n = 9;
+    this.all = ALL;
+    this.peers = PEERS;
     this.given = new Array(81).fill(0);
     this.solution = new Array(81).fill(0);
     this.value = new Array(81).fill(0);
     this.notes = new Array(81).fill(0);
+    this.corner = new Array(81).fill(0);
+    this.color = new Array(81).fill(0);
     this.history = [];
     this.record = [];
     this.active = false;
     this.solved = false;
     this.noteMode = false;
+    this.cornerMode = false;
     this.showErrors = true;
     this.level = 0;
     this.rating = 0;
@@ -2121,8 +2129,25 @@ class Game {
     this.hintMoves = 0;
   }
 
+  setShape(shape) {
+    this.size = shape ? shape.size : 81;
+    this.n = shape ? shape.n : 9;
+    this.all = shape ? shape.all : ALL;
+    this.peers = PEERS;
+    if (!shape) return;
+    this.peers = [];
+    for (let c = 0; c < shape.size; c++) this.peers.push(Array.from(shape.peerCells.subarray(c * 32, c * 32 + shape.peerCount[c])));
+  }
+
+  candidatesOf(cell) {
+    let used = 0;
+    const peers = this.peers[cell];
+    for (let k = 0; k < peers.length; k++) if (this.value[peers[k]]) used |= bit(this.value[peers[k]]);
+    return this.all & ~used;
+  }
+
   start(puzzle, full, level) {
-    for (let i = 0; i < 81; i++) {
+    for (let i = 0; i < this.size; i++) {
       this.given[i] = puzzle[i];
       this.solution[i] = full[i];
     }
@@ -2135,13 +2160,16 @@ class Game {
   restart() {
     if (!this.active) return false;
     for (let i = 0; i < 81; i++) {
-      this.value[i] = this.given[i];
+      this.value[i] = i < this.size ? this.given[i] : 0;
       this.notes[i] = 0;
+      this.corner[i] = 0;
+      this.color[i] = 0;
     }
     this.history = [];
     this.record = [];
     this.solved = false;
     this.noteMode = false;
+    this.cornerMode = false;
     this.selected = NONE;
     this.sticky = 0;
     this.elapsed = 0;
@@ -2164,7 +2192,8 @@ class Game {
     if (this.noteMode) {
       if (this.value[c]) return false;
       this.touch(c);
-      this.notes[c] ^= bit(d);
+      if (this.cornerMode) this.corner[c] ^= bit(d);
+      else this.notes[c] ^= bit(d);
       return this.commit();
     }
     this.touch(c);
@@ -2174,11 +2203,13 @@ class Game {
     }
     this.value[c] = d;
     this.notes[c] = 0;
+    this.corner[c] = 0;
     const b = bit(d);
-    for (const p of PEERS[c]) {
-      if (this.notes[p] & b) {
+    for (const p of this.peers[c]) {
+      if ((this.notes[p] | this.corner[p]) & b) {
         this.touch(p);
         this.notes[p] &= ~b;
+        this.corner[p] &= ~b;
       }
     }
     this.commit();
@@ -2207,16 +2238,33 @@ class Game {
   }
 
   erase() {
-    if (!this.canEdit() || (!this.value[this.selected] && !this.notes[this.selected])) return false;
+    if (!this.canEdit() || (!this.value[this.selected] && !this.notes[this.selected] && !this.corner[this.selected])) return false;
     this.touch(this.selected);
     this.value[this.selected] = 0;
     this.notes[this.selected] = 0;
+    this.corner[this.selected] = 0;
     return this.commit();
   }
 
+  cycleNotes() {
+    if (!this.noteMode) this.noteMode = true;
+    else if (!this.cornerMode) this.cornerMode = true;
+    else {
+      this.noteMode = false;
+      this.cornerMode = false;
+    }
+  }
+
+  paint(k) {
+    if (!this.active || this.solved || this.selected < 0) return false;
+    const c = this.selected;
+    this.color[c] = this.color[c] === k ? 0 : k;
+    return true;
+  }
+
   touch(cell) {
-    for (let i = 0; i < this.record.length; i += 3) if (this.record[i] === cell) return;
-    this.record.push(cell, this.value[cell], this.notes[cell]);
+    for (let i = 0; i < this.record.length; i += 4) if (this.record[i] === cell) return;
+    this.record.push(cell, this.value[cell], this.notes[cell], this.corner[cell]);
   }
 
   commit() {
@@ -2227,7 +2275,7 @@ class Game {
   }
 
   checkSolved() {
-    for (let i = 0; i < 81; i++) if (this.value[i] !== this.solution[i]) return;
+    for (let i = 0; i < this.size; i++) if (this.value[i] !== this.solution[i]) return;
     this.solved = true;
     this.selected = NONE;
   }
@@ -2235,7 +2283,7 @@ class Game {
   conflict(cell) {
     const v = this.value[cell];
     if (!v) return false;
-    for (const p of PEERS[cell]) if (this.value[p] === v) return true;
+    for (const p of this.peers[cell]) if (this.value[p] === v) return true;
     return false;
   }
 
@@ -2244,8 +2292,8 @@ class Game {
   }
 
   remaining(d) {
-    let n = 9;
-    for (const v of this.value) if (v === d) n--;
+    let n = this.n;
+    for (let i = 0; i < this.size; i++) if (this.value[i] === d) n--;
     return n;
   }
 
@@ -2270,9 +2318,10 @@ class Game {
   undo() {
     if (!this.active || this.solved || !this.history.length) return false;
     const r = this.history.pop();
-    for (let i = 0; i < r.length; i += 3) {
+    for (let i = 0; i < r.length; i += 4) {
       this.value[r[i]] = r[i + 1];
       this.notes[r[i]] = r[i + 2];
+      this.corner[r[i]] = r[i + 3];
     }
     if (!this.sticky) this.selected = r[0];
     return true;
@@ -2280,16 +2329,16 @@ class Game {
 
   fillNotes() {
     if (!this.active || this.solved) return false;
-    for (let i = 0; i < 81; i++) {
+    for (let i = 0; i < this.size; i++) {
       if (this.value[i]) continue;
-      const m = candidates(this.value, i);
+      const m = this.candidatesOf(i);
       if (this.notes[i] !== m) {
         this.touch(i);
         this.notes[i] = m;
       }
     }
     if (this.record.length) return this.commit();
-    for (let i = 0; i < 81; i++) {
+    for (let i = 0; i < this.size; i++) {
       if (this.notes[i]) {
         this.touch(i);
         this.notes[i] = 0;
@@ -2307,11 +2356,12 @@ class Game {
     this.sticky = 0;
     if (this.hintActive() && this.hintKind === HINT_PLACE && !this.value[this.hintCell]) {
       this.noteMode = false;
+      this.cornerMode = false;
       this.hintKind = HINT_NONE;
       return this.enter(this.hintDigit);
     }
     this.hintKind = HINT_NONE;
-    for (let i = 0; i < 81; i++) {
+    for (let i = 0; i < this.size; i++) {
       if (!this.given[i] && this.value[i] && this.value[i] !== this.solution[i]) {
         this.hintKind = HINT_WRONG;
         this.hintCell = i;
@@ -2333,18 +2383,21 @@ class Game {
 
   save(now) {
     return {
-      v: 1,
+      v: 2,
       active: this.active,
       level: this.level,
       solved: this.solved,
       showErrors: this.showErrors,
       noteMode: this.noteMode,
+      cornerMode: this.cornerMode,
       selected: this.selected,
       elapsed: this.time(now),
-      given: this.given.join(''),
-      solution: this.solution.join(''),
-      value: this.value.join(''),
-      notes: this.notes,
+      given: this.given.slice(0, this.size).join(''),
+      solution: this.solution.slice(0, this.size).join(''),
+      value: this.value.slice(0, this.size).join(''),
+      notes: this.notes.slice(0, this.size),
+      corner: this.corner.slice(0, this.size),
+      color: this.color.slice(0, this.size),
       history: this.history
     };
   }
@@ -2352,11 +2405,12 @@ class Game {
   load(s) {
     this.active = false;
     try {
-      if (!s || s.v !== 1) return false;
+      if (!s || (s.v !== 1 && s.v !== 2)) return false;
       this.showErrors = !!s.showErrors;
       if (!s.active) return true;
+      const size = this.size;
       const digits = str => {
-        if (typeof str !== 'string' || str.length !== 81) throw new Error('bad');
+        if (typeof str !== 'string' || str.length !== size) throw new Error('bad');
         return Array.from(str, ch => {
           const v = ch.charCodeAt(0) - 48;
           if (v < 0 || v > 9) throw new Error('bad');
@@ -2364,20 +2418,32 @@ class Game {
         });
       };
       const given = digits(s.given), solution = digits(s.solution), value = digits(s.value);
-      if (!Array.isArray(s.notes) || s.notes.length !== 81 || !Array.isArray(s.history)) return false;
+      if (!Array.isArray(s.notes) || s.notes.length !== size || !Array.isArray(s.history)) return false;
+      const layer = list => s.v === 1 ? new Array(size).fill(0) : Array.isArray(list) && list.length === size ? list : null;
+      const corner = layer(s.corner), color = layer(s.color);
+      const width = s.v === 1 ? 3 : 4;
+      if (!corner || !color) return false;
       const level = s.level | 0, selected = s.selected | 0, elapsed = +s.elapsed;
       if (level < 0 || level >= LEVELS || selected < NONE || selected > 80 || !(elapsed >= 0)) return false;
-      for (const r of s.history) if (!Array.isArray(r) || r.length % 3 !== 0) return false;
-      this.given = given;
-      this.solution = solution;
-      this.value = value;
-      this.notes = s.notes.map(n => (n | 0) & ALL);
-      this.history = s.history.map(r => r.map(x => x | 0));
+      for (const r of s.history) if (!Array.isArray(r) || r.length % width !== 0) return false;
+      const pad = list => list.concat(new Array(81 - size).fill(0));
+      this.given = pad(given);
+      this.solution = pad(solution);
+      this.value = pad(value);
+      this.notes = pad(s.notes.map(n => (n | 0) & this.all));
+      this.corner = pad(corner.map(n => (n | 0) & this.all));
+      this.color = pad(color.map(k => Math.max(0, Math.min(COLORS, k | 0))));
+      this.history = s.history.map(r => {
+        const out = [];
+        for (let i = 0; i < r.length; i += width) out.push(r[i] | 0, r[i + 1] | 0, r[i + 2] | 0, width === 4 ? r[i + 3] | 0 : 0);
+        return out;
+      });
       this.record = [];
       this.level = level;
       this.rating = 0;
       this.solved = !!s.solved;
       this.noteMode = !!s.noteMode;
+      this.cornerMode = this.noteMode && !!s.cornerMode;
       this.selected = selected;
       this.elapsed = elapsed;
       this.running = false;
@@ -2391,4 +2457,4 @@ class Game {
   }
 }
 
-if (typeof module !== 'undefined') module.exports = { Sudoku, Game, candidates, bit, PEERS, ROW, COL, BOX, HINT_WRONG, HINT_PLACE, NONE, TECH_BASE, TECH_COUNT, TECH_ORDER, MASTER_RATING, EXPERT_LIMIT, LEVELS };
+if (typeof module !== 'undefined') module.exports = { Sudoku, Game, candidates, bit, PEERS, ROW, COL, BOX, HINT_WRONG, HINT_PLACE, NONE, TECH_BASE, TECH_COUNT, TECH_ORDER, MASTER_RATING, EXPERT_LIMIT, LEVELS, COLORS };

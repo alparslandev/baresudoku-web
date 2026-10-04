@@ -35,7 +35,7 @@ def load():
         for k, v in zip(keys, values[1:]):
             if not v:
                 raise SystemExit("%s: %s bos" % (code, k))
-            if k in ("naked", "row", "col", "box") and "#" not in v:
+            if k in ("naked", "row", "col", "box", "diag", "reveal", "cage") and "#" not in v:
                 raise SystemExit("%s: %s icinde # yok" % (code, k))
             if k in STRING_PLACEHOLDERS and re.findall(r"\{([a-z]+)\}", v) != [STRING_PLACEHOLDERS[k]]:
                 raise SystemExit("%s: %s icinde {%s} tam bir kez olmali" % (code, k, STRING_PLACEHOLDERS[k]))
@@ -102,6 +102,30 @@ def has_print(entry):
     return True
 
 
+VARIANTS = ["killer", "diagonal", "mini"]
+VARIANT_KEYS = ["name", "title", "description", "h1", "intro", "rules", "faq"]
+
+
+def has_variants(entry):
+    variants = entry.get("variants")
+    if not variants:
+        return False
+    for v in VARIANTS:
+        page = variants.get(v)
+        if not isinstance(page, dict) or any(not page.get(k) for k in VARIANT_KEYS):
+            raise SystemExit("site.json: %s varyant metinleri eksik" % v)
+        if len(page["title"]) > 65:
+            raise SystemExit("site.json: %s baslik 65 karakteri asiyor" % v)
+        if not isinstance(page["rules"], list) or len(page["rules"]) != 3:
+            raise SystemExit("site.json: %s kurallar 3 madde olmali" % v)
+        if not isinstance(page["faq"], list) or len(page["faq"]) != 3 or any(len(pair) != 2 for pair in page["faq"]):
+            raise SystemExit("site.json: %s SSS 3 soru olmali" % v)
+        for text in [page["name"], page["title"], page["description"], page["h1"], page["intro"]] + page["rules"] + [t for pair in page["faq"] for t in pair]:
+            if any(ch in text for ch in DASHES) or "{" in text:
+                raise SystemExit("site.json: %s metninde uzun cizgi ya da suslu parantez" % v)
+    return True
+
+
 def has_daily(entry):
     present = [k for k in DAILY_KEYS if entry.get(k)]
     if present and len(present) != len(DAILY_KEYS):
@@ -138,9 +162,9 @@ GUIDE_LABELS = ["howTo", "techniques", "play", "prev", "next", "all", "example",
 LABEL_PLACEHOLDERS = {"level": {"level"}, "hint": {"text"}, "row": {"n"}, "column": {"n"}, "box": {"n"}, "elimItem": {"d", "cell"}, "firstMove": {"cell", "d"}, "practiceIntro": {"technique"}}
 OPTIONAL_LABELS = ["playExample", "practice", "practiceIntro"]
 DECIMAL_COMMA = {"tr", "az", "de", "fr", "es", "pt", "it", "nl", "pl", "cs", "sk", "hu", "ro", "el", "sv", "da", "nb", "fi", "ru", "uk", "bg", "sr", "hr", "id", "vi", "ca", "sl", "lt", "lv", "ky", "kk", "uz", "tk", "tt", "sah", "et"}
-TECHNIQUES = ["naked-single", "hidden-single", "locked-candidates", "naked-pairs", "hidden-pairs", "x-wing", "swordfish", "skyscraper", "two-string-kite", "y-wing", "xyz-wing", "w-wing", "unique-rectangle", "finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "wxyz-wing"]
-TECH_LEVEL = {"naked-single": 0, "hidden-single": 0, "locked-candidates": 2, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 3, "swordfish": 3, "xyz-wing": 3, "skyscraper": 3, "two-string-kite": 3, "w-wing": 3, "unique-rectangle": 3, "finned-x-wing": 3, "empty-rectangle": 3, "unique-rectangle-type-4": 3, "hidden-rectangle": 3, "finned-swordfish": 3, "wxyz-wing": 3}
-OPTIONAL_TECHNIQUES = {"finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "wxyz-wing"}
+TECHNIQUES = ["naked-single", "hidden-single", "locked-candidates", "naked-pairs", "hidden-pairs", "x-wing", "swordfish", "skyscraper", "two-string-kite", "y-wing", "xyz-wing", "w-wing", "unique-rectangle", "finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "jellyfish", "wxyz-wing", "bug-plus-1", "x-chain", "xy-chain", "aic", "als-xz"]
+TECH_LEVEL = {"naked-single": 0, "hidden-single": 0, "locked-candidates": 2, "naked-pairs": 2, "hidden-pairs": 2, "x-wing": 3, "y-wing": 3, "swordfish": 3, "xyz-wing": 3, "skyscraper": 3, "two-string-kite": 3, "w-wing": 3, "unique-rectangle": 3, "finned-x-wing": 3, "empty-rectangle": 3, "unique-rectangle-type-4": 3, "hidden-rectangle": 3, "finned-swordfish": 3, "wxyz-wing": 3, "jellyfish": 3, "bug-plus-1": 3, "x-chain": 4, "xy-chain": 4, "aic": 4, "als-xz": 4}
+OPTIONAL_TECHNIQUES = {"finned-x-wing", "empty-rectangle", "unique-rectangle-type-4", "hidden-rectangle", "finned-swordfish", "wxyz-wing", "jellyfish", "bug-plus-1", "x-chain", "xy-chain", "aic", "als-xz"}
 COMPLETE_LANGUAGES = ("en", "tr")
 HOWTO_KEYS = ["title", "description", "h1", "summary", "sections", "faq"]
 INDEX_KEYS = ["title", "description", "h1", "intro", "faq"]

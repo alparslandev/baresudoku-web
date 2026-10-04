@@ -12,6 +12,8 @@ const RANGES = { 7: 7, 30: 30, 90: 90, all: 0 };
 const RANGE_LABELS = { 7: '7 days', 30: '30 days', 90: '90 days', all: 'All time' };
 const LEVELS = ['Easy', 'Medium', 'Hard', 'Expert', 'Master'];
 const PUZZLE_DIMS = new Set(['pn', 'ps', 'pt']);
+const VARIANT_NAMES = ['killer', 'diagonal', 'mini'];
+const VARIANT_DIMS = new Set(['vstart', 'vdone']);
 const FIRST_PUZZLE_DAY = '2025-01-01';
 const DAILY_ID = /^d(\d{4})-(\d{2})-(\d{2})$/;
 const WEEK_ID = /^w(\d{4})-W(\d{2})$/;
@@ -98,6 +100,10 @@ export function parseEvent(raw, nowMs) {
   }
   if (ev.e !== 'start' && ev.e !== 'done') return null;
   if (!Number.isInteger(ev.k) || ev.k < 0 || ev.k >= LEVELS.length) return null;
+  if (ev.v !== undefined) {
+    if (!VARIANT_NAMES.includes(ev.v) || ev.k > 2) return null;
+    return [row(today, ev.e === 'start' ? 'vstart' : 'vdone', ev.v + ev.k, 1)];
+  }
   const level = String(ev.k);
   if (ev.e === 'start') return [row(today, 'start', level, 1)];
   const t = +ev.t;
@@ -147,8 +153,15 @@ export function summarize(rows) {
   const levels = LEVELS.map(() => ({ start: 0, done: 0, time: 0, timed: 0 }));
   const byDay = new Map();
   const langs = new Map(), refs = new Map(), devs = new Map();
+  const variants = new Map();
   for (const r of rows) {
     if (PUZZLE_DIMS.has(r.dim)) continue;
+    if (VARIANT_DIMS.has(r.dim)) {
+      const v = variants.get(r.name) || { start: 0, done: 0 };
+      v[r.dim === 'vstart' ? 'start' : 'done'] += +r.n || 0;
+      variants.set(r.name, v);
+      continue;
+    }
     const n = +r.n || 0;
     let day = byDay.get(r.day);
     if (!day) byDay.set(r.day, day = { visit: 0, open: 0, start: 0, done: 0 });
@@ -167,7 +180,8 @@ export function summarize(rows) {
     }
   }
   const days = [...byDay.entries()].sort((a, b) => (a[0] < b[0] ? 1 : -1)).map(([day, d]) => ({ day, ...d }));
-  return { total, levels, days, langs: top(langs, 10), refs: top(refs, 10), devs: [devs.get('m') || 0, devs.get('d') || 0] };
+  const variantRows = [...variants.entries()].sort((a, b) => (a[0] < b[0] ? -1 : 1));
+  return { total, levels, days, langs: top(langs, 10), refs: top(refs, 10), devs: [devs.get('m') || 0, devs.get('d') || 0], variants: variantRows };
 }
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -193,13 +207,14 @@ export function renderStats(s, days, today) {
     .map(([k, v]) => '<div><b>' + esc(v) + '</b>' + k + '</div>').join('');
   const levels = table(['Level', 'Started', 'Completed', 'Completion', 'Avg time'], s.levels.map((l, i) => [LEVELS[i], num(l.start), num(l.done), pct(l.done, l.start), l.timed ? clock(l.time / l.timed) : '-']));
   const daily = table(['Day', 'Visitors', 'Opens', 'Started', 'Completed'], s.days.slice(0, 90).map(d => [d.day, num(d.visit), num(d.open), num(d.start), num(d.done)]));
+  const variants = table(['Variant', 'Started', 'Completed', 'Completion'], (s.variants || []).map(([k, v]) => [k.slice(0, -1) + ' ' + LEVELS[+k.slice(-1)], num(v.start), num(v.done), pct(v.done, v.start)]));
   const langs = table(['Language', 'Opens', 'Share'], s.langs.map(([k, v]) => [k, num(v), pct(v, t.open)]));
   const refs = table(['Referring site', 'Opens'], s.refs.map(([k, v]) => [k, num(v)]));
   const devTotal = s.devs[0] + s.devs[1];
   const devs = table(['Device', 'Opens', 'Share'], [['Touch screen', num(s.devs[0]), pct(s.devs[0], devTotal)], ['Mouse or trackpad', num(s.devs[1]), pct(s.devs[1], devTotal)]]);
   return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Bare Sudoku stats</title><style>' + CSS + '</style></head><body>' +
     '<h1>Bare Sudoku stats</h1><p>' + nav + '</p><div class="big">' + cards + '</div>' +
-    '<h2>Levels</h2>' + levels + '<h2>Days</h2>' + daily + '<h2>Languages</h2>' + langs + '<h2>Referring sites</h2>' + refs + '<h2>Devices</h2>' + devs +
+    '<h2>Levels</h2>' + levels + '<h2>Variants</h2>' + variants + '<h2>Days</h2>' + daily + '<h2>Languages</h2>' + langs + '<h2>Referring sites</h2>' + refs + '<h2>Devices</h2>' + devs +
     '<p class="foot">Anonymous counters only: no cookies, no IP addresses, no identifiers. Days follow Europe/Istanbul; today is ' + esc(today) + '. <a href="/">Play</a> · <a href="https://github.com/alparslandev/baresudoku-web">Source</a></p></body></html>';
 }
 
