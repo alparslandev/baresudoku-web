@@ -13,6 +13,7 @@ WEBSITE_ID = SITE + "/#website"
 GAME_ID = SITE + "/#game"
 WEB_REPO = "https://github.com/alparslandev/baresudoku-web"
 ANDROID_REPO = "https://github.com/alparslandev/baresudoku"
+ALTERNATIVETO = "https://alternativeto.net/software/bare-sudoku/"
 OG_IMAGE = SITE + "/og.png"
 SAME_AS = ["https://github.com/alparslandev"] + [url for _, url in AUTHOR_LINKS] + ["https://www.youtube.com/@alparslandev"]
 OG_LOCALES = {

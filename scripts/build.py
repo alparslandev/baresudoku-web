@@ -13,7 +13,7 @@ import i18n
 import icons
 import indexnow
 import guide
-from consts import SITE, NAME, AUTHOR, AUTHOR_URL, AUTHOR_LINKS, PERSON_ID, WEBSITE_ID, GAME_ID, WEB_REPO, ANDROID_REPO, OG_IMAGE, SAME_AS, og_locale
+from consts import SITE, NAME, AUTHOR, AUTHOR_URL, AUTHOR_LINKS, PERSON_ID, WEBSITE_ID, GAME_ID, WEB_REPO, ANDROID_REPO, ALTERNATIVETO, OG_IMAGE, SAME_AS, og_locale
 
 TRACKED_LINKS = {"https://yarisradari.com": "https://yarisradari.com/?utm_source=baresudoku"}
 ANDROID_ID = SITE + "/#android"
@@ -313,7 +313,7 @@ def jsonld(code, entry, languages, version, size, lastmod, web):
             "numberOfPlayers": {"@type": "QuantitativeValue", "value": 1}, "operatingSystem": "Any", "browserRequirements": "Requires JavaScript",
             "isAccessibleForFree": True, "isFamilyFriendly": True, "offers": offer(), "inLanguage": codes, "softwareVersion": web,
             "featureList": [f(item) for item in entry["features"]], "image": OG_IMAGE, "dateModified": lastmod, "license": LICENSE_URL,
-            "sameAs": WEB_REPO, "author": {"@id": PERSON_ID}, "publisher": {"@id": PERSON_ID},
+            "sameAs": [WEB_REPO, ALTERNATIVETO], "author": {"@id": PERSON_ID}, "publisher": {"@id": PERSON_ID},
         },
         {
             "@type": "MobileApplication", "@id": ANDROID_ID, "name": NAME + " for Android", "description": f(entry["android"]), "url": ANDROID_REPO,
