@@ -527,10 +527,7 @@ def sitemap_groups(guide):
 
 
 def header_paths():
-    paths = ["/" + HOWTO + "/", "/:lang/" + HOWTO + "/", "/" + TECH + "/", "/:lang/" + TECH + "/", "/solver/", "/:lang/solver/", "/print/", "/:lang/print/"]
-    for slug in i18n.TECHNIQUES:
-        paths += ["/" + TECH + "/" + slug + "/", "/:lang/" + TECH + "/" + slug + "/"]
-    return paths
+    return ["/" + HOWTO + "/", "/:lang/" + HOWTO + "/", "/" + TECH + "/*", "/:lang/" + TECH + "/*", "/solver/", "/:lang/solver/", "/print/", "/:lang/print/"]
 
 
 def plain(text):
