@@ -501,18 +501,18 @@
         "diagonal": {
           "name": "Diagonal Sudoku",
           "title": "Diagonal Sudoku (Sudoku X): Ücretsiz Online Bulmacalar",
-          "description": "Diagonal Sudoku'yu, ayrıca Sudoku X olarak bilinir, ücretsiz oynayın: her iki ana köşegenlde de 1'den 9'a yer almalıdır. Üç seviye, not, ipucu ve reklam yok.",
+          "description": "Diagonal Sudoku'yu, ayrıca Sudoku X olarak bilinir, ücretsiz oynayın: her iki ana köşegende 1'den 9'a yer almalıdır. Üç seviye, not, ipucu ve reklam yok.",
           "h1": "Diagonal Sudoku (Sudoku X)",
-          "intro": "Diagonal Sudoku, ayrıca Sudoku X olarak bilinir, klasik oyuna bir kural daha ekler: ızgaranın iki ana köşegenlinde işaretlenen ve her biri 1'den 9'a kadar rakamları birer birer tutmalıdır. Ek kural bir rakam yerleştirmek için daha fazla yol sağladığı için, bulmacalar daha az açılmış rakamla başlayabilir.",
+          "intro": "Diagonal Sudoku, ayrıca Sudoku X olarak bilinir, klasik oyuna bir kural daha ekler: ızgaranın iki ana köşegeninde işaretlenen ve her biri 1'den 9'a kadar rakamları birer birer tutmalıdır. Ek kural bir rakam yerleştirmek için daha fazla yol sağladığı için, bulmacalar daha az açılmış rakamla başlayabilir.",
           "rules": [
             "Her satır, sütun ve 3×3 kutuda 1'den 9'a kadar rakamlar birer birer yer almalıdır.",
-            "İşaretlenen iki köşegenlde de 1'den 9'a kadar rakamlar birer birer yer almalıdır.",
-            "Köşegenlde bulunan bir hücre normalden daha fazla hücreyi görür, bu nedenle bir rakamın tek yerini ararken köşegenini kontrol edin."
+            "İşaretlenen iki köşegende 1'den 9'a kadar rakamlar birer birer yer almalıdır.",
+            "Köşegende bulunan bir hücre normalden daha fazla hücreyi görür, bu nedenle bir rakamın tek yerini ararken köşegenini kontrol edin."
           ],
           "faq": [
             [
               "Sudoku X nedir?",
-              "Sudoku X, Diagonal Sudoku'nun başka bir adıdır. Izgaranın iki köşegenlinde bir X oluştururlar ve her biri bir satır gibi 1'den 9'a kadar tutmalıdır."
+              "Sudoku X, Diagonal Sudoku'nun başka bir adıdır. Izgaranın iki köşegeninde bir X oluştururlar ve her biri bir satır gibi 1'den 9'a kadar tutmalıdır."
             ],
             [
               "Diagonal Sudoku klasik Sudoku'dan daha zor mu?",
