@@ -194,6 +194,86 @@
             "Yes. The link printed at the bottom of the sheet opens the same puzzles with their solutions. For a step-by-step solution with the technique behind every move, type the givens into the solver."
           ]
         ]
+      },
+      "variants": {
+        "killer": {
+          "name": "Killer Sudoku",
+          "title": "Killer Sudoku: Free Online Puzzles With Cages and Sums",
+          "description": "Play Killer Sudoku free online: dashed cages with sums replace most givens. Three levels, notes, colors and hints, with no ads and no sign-up.",
+          "h1": "Killer Sudoku",
+          "intro": "In Killer Sudoku the grid starts almost empty. Dashed cages group cells, and the small number in the corner of each cage is the sum of its digits. Digits never repeat inside a cage, and every row, column and box still holds 1 to 9 once.",
+          "rules": [
+            "Fill every row, every column and every 3×3 box with the digits 1 to 9, each exactly once.",
+            "The digits in a dashed cage add up to the number in its corner, and no digit repeats inside a cage.",
+            "Start with the cages that allow only one combination: a two-cell cage of 3 holds 1 and 2, a two-cell cage of 17 holds 8 and 9."
+          ],
+          "faq": [
+            [
+              "How is Killer Sudoku different from classic Sudoku?",
+              "The usual rules still apply, but most givens are replaced by cages. Each cage shows the sum of its digits, and a digit cannot appear twice in the same cage."
+            ],
+            [
+              "Does Killer Sudoku have givens?",
+              "Hard puzzles start with no givens or only a few. Easy and Medium puzzles add some given digits so the first steps are quicker."
+            ],
+            [
+              "Does every Killer Sudoku have one solution?",
+              "Yes. Every puzzle here is checked to have exactly one solution, so it can always be solved by logic."
+            ]
+          ]
+        },
+        "diagonal": {
+          "name": "Diagonal Sudoku",
+          "title": "Diagonal Sudoku (Sudoku X): Free Online Puzzles",
+          "description": "Play Diagonal Sudoku, also called Sudoku X, free online: both main diagonals must also hold 1 to 9. Three levels, notes, hints and no ads.",
+          "h1": "Diagonal Sudoku (Sudoku X)",
+          "intro": "Diagonal Sudoku, also called Sudoku X, adds one rule to the classic game: the two main diagonals, marked in the grid, must each hold the digits 1 to 9 once. The extra rule gives more ways to place a digit, so puzzles can start with fewer givens.",
+          "rules": [
+            "Fill every row, every column and every 3×3 box with the digits 1 to 9, each exactly once.",
+            "Each of the two marked diagonals must also hold the digits 1 to 9, each exactly once.",
+            "A cell on a diagonal sees more cells than usual, so check its diagonal when you look for the only place of a digit."
+          ],
+          "faq": [
+            [
+              "What is Sudoku X?",
+              "Sudoku X is another name for Diagonal Sudoku. The two diagonals of the grid form an X, and each must hold 1 to 9 like a row."
+            ],
+            [
+              "Is Diagonal Sudoku harder than classic Sudoku?",
+              "Not always. The diagonals add constraints, which also add ways to find digits. Puzzles here come in three levels."
+            ],
+            [
+              "Does the hint know the diagonal rule?",
+              "Yes. The hint looks for single candidates and only places in rows, columns, boxes and diagonals, and it names the diagonal when that is where the digit fits."
+            ]
+          ]
+        },
+        "mini": {
+          "name": "Mini Sudoku 6×6",
+          "title": "Mini Sudoku 6×6: Free Online Puzzles for Beginners",
+          "description": "Play Mini Sudoku 6×6 free online: a smaller grid with the digits 1 to 6, ideal for beginners and children. Three levels, hints and no ads.",
+          "h1": "Mini Sudoku 6×6",
+          "intro": "Mini Sudoku uses a 6×6 grid with six boxes of two rows and three columns. Each row, column and box holds the digits 1 to 6 once. It is a quick game and a gentle way to learn the logic of Sudoku.",
+          "rules": [
+            "Fill every row and every column with the digits 1 to 6, each exactly once.",
+            "Each box of two rows and three columns also holds the digits 1 to 6 once.",
+            "Look for the cell where only one digit fits, or the only place for a digit in a row, column or box."
+          ],
+          "faq": [
+            [
+              "Who is Mini Sudoku for?",
+              "It is a good start for beginners and children, and a short break for anyone. The rules are the same as classic Sudoku on a smaller grid."
+            ],
+            [
+              "How long does a Mini Sudoku take?",
+              "Most puzzles take a few minutes. The Hard level leaves more cells empty and needs a little more thought."
+            ],
+            [
+              "Can I use notes and hints?",
+              "Yes. Notes, hints, colors and undo work the same way as in classic Sudoku."
+            ]
+          ]
+        }
       }
     },
     "tr": {
