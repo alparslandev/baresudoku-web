@@ -111,6 +111,19 @@ MIN_FEATURES = 6
 MIN_FAQ = 11
 
 
+ANDROID_TEST_KEYS = ["text", "join", "install", "close"]
+
+
+def android_test(entry):
+    texts = entry.get("androidTest")
+    if not texts:
+        return None
+    missing = [k for k in ANDROID_TEST_KEYS if not texts.get(k)]
+    if missing:
+        raise SystemExit("site.json: androidTest metinleri eksik: %s" % ", ".join(missing))
+    return texts
+
+
 def load_site(languages):
     with open(os.path.join(ROOT, "i18n", "site.json"), encoding="utf-8") as f:
         site = json.load(f)["languages"]

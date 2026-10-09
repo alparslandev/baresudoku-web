@@ -1044,6 +1044,34 @@ function registerWorker() {
   navigator.serviceWorker.register('/sw.js');
 }
 
+function betaLink(href, label) {
+  const a = document.createElement('a');
+  a.href = href;
+  a.target = '_blank';
+  a.rel = 'noopener';
+  a.textContent = label;
+  return a;
+}
+
+function showBeta() {
+  const b = L.beta;
+  if (!b || !/Android/i.test(navigator.userAgent) || fetchStored(KEY + '.beta')) return;
+  const box = document.createElement('div');
+  box.id = 'beta';
+  const text = document.createElement('p');
+  text.textContent = b.text;
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.textContent = '×';
+  close.setAttribute('aria-label', b.close);
+  close.addEventListener('click', () => {
+    store(KEY + '.beta', '1');
+    box.remove();
+  });
+  box.append(text, close, betaLink(b.group, b.join), betaLink(b.optin, b.install));
+  $('app').prepend(box);
+}
+
 function init() {
   const pageLang = document.documentElement.lang;
   if (location.pathname === '/') {
@@ -1058,6 +1086,7 @@ function init() {
   bind();
   const lang = LANGS.includes(pageLang) ? pageLang : 'en';
   applyLang(lang);
+  showBeta();
   let saved = null;
   try { saved = JSON.parse(fetchStored(STATE_KEY)); } catch (e) {}
   if (WEEK) {

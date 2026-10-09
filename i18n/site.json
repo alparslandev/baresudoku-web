@@ -194,6 +194,12 @@
             "Yes. The link printed at the bottom of the sheet opens the same puzzles with their solutions. For a step-by-step solution with the technique behind every move, type the givens into the solver."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Help test the Android app on Google Play: join the test group with your Google account, then install it.",
+        "join": "1. Join the group",
+        "install": "2. Install from Play",
+        "close": "Close"
       }
     },
     "tr": {
@@ -390,6 +396,12 @@
             "Evet. Sayfanın altına basılan bağlantı aynı bulmacaları çözümleriyle açar. Her hamlenin arkasındaki teknikle adım adım çözüm için verili rakamları çözücüye yaz."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android uygulamasını Google Play'de test etmeye yardım et: Google hesabınla test grubuna katıl, sonra indir.",
+        "join": "1. Gruba katıl",
+        "install": "2. Play'den indir",
+        "close": "Kapat"
       }
     },
     "az": {

@@ -46,6 +46,10 @@ button:disabled{color:var(--muted);cursor:default}
 #keys button.swatch{color:var(--fg);box-shadow:inset 0 0 0 1px var(--line)}
 #keys button.k1{background:var(--k1)}#keys button.k2{background:var(--k2)}#keys button.k3{background:var(--k3)}#keys button.k4{background:var(--k4)}#keys button.k5{background:var(--k5)}#keys button.k6{background:var(--k6)}
 #keys button.on small{color:inherit}
+#beta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;background:var(--card);font-size:.85rem;line-height:1.35}
+#beta p{flex:1 1 calc(100% - 44px);margin:0}
+#beta button{width:36px;height:36px;border:0;background:none;color:var(--muted);font-size:1.4rem;cursor:pointer}
+#beta a{flex:1;text-align:center;padding:9px 10px;border-radius:10px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600}
 #foot{margin-top:auto;padding-top:8px;text-align:center;color:var(--muted);font-size:.8rem}
 #foot a{color:var(--muted)}
 #overlay{position:fixed;inset:0;background:var(--dim);display:flex;align-items:center;justify-content:center;padding:16px;z-index:9}
@@ -193,4 +197,5 @@ body{background:#fff;color:#000}
 #msg{min-height:2.2em;font-size:.9rem}
 #tools button{height:56px}
 #foot{margin-top:0;padding-top:4px}
+#beta{display:none}
 }

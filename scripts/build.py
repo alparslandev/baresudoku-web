@@ -13,7 +13,7 @@ import i18n
 import icons
 import indexnow
 import guide
-from consts import SITE, NAME, AUTHOR, AUTHOR_URL, AUTHOR_LINKS, PERSON_ID, WEBSITE_ID, GAME_ID, WEB_REPO, ANDROID_REPO, ALTERNATIVETO, OG_IMAGE, SAME_AS, og_locale
+from consts import SITE, NAME, AUTHOR, AUTHOR_URL, AUTHOR_LINKS, PERSON_ID, WEBSITE_ID, GAME_ID, WEB_REPO, ANDROID_REPO, ALTERNATIVETO, TEST_GROUP, TEST_OPTIN, OG_IMAGE, SAME_AS, og_locale
 
 TRACKED_LINKS = {"https://yarisradari.com": "https://yarisradari.com/?utm_source=baresudoku"}
 ANDROID_ID = SITE + "/#android"
@@ -365,6 +365,9 @@ def page(template, css, table, code, entry, languages, version, size, lastmod, w
     local = {"name": languages[code][0], "rtl": code in i18n.RTL, "s": table[code], "mode": mode, "daily": daily_path(code) if code in daily_codes else "", "solver": solver_path(code) if code in solver_codes else ""}
     if daily:
         local["weekly"] = weekly_range()
+    beta = i18n.android_test(entry)
+    if beta and TEST_GROUP:
+        local["beta"] = dict(beta, group=TEST_GROUP, optin=TEST_OPTIN)
     values = {
         "{{LANG}}": code,
         "{{DIR}}": "rtl" if code in i18n.RTL else "ltr",
