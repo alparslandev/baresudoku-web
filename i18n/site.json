@@ -545,6 +545,12 @@
             "Bəli. Səhifənin aşağısında çapılmış keçid eynilər tapmacaları həlləri ilə açır. Hər hərəkətin arxasındakı texnika ilə addım-addım həll üçün verilən rəqəmləri həllediciyə daxil edin."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android tətbiqini Google Play-də sınamağa kömək et: Google hesabınla test qrupuna qoşul, sonra quraşdır.",
+        "join": "1. Qrupa qoşul",
+        "install": "2. Play-dən quraşdır",
+        "close": "Bağla"
       }
     },
     "de": {
@@ -688,6 +694,12 @@
             "Ja. Der Link am unteren Ende der Seite öffnet die gleichen Rätsel mit ihren Lösungen. Für eine Schritt-für-Schritt-Lösung mit der Technik hinter jedem Zug gib die gegebenen Ziffern in den Solver ein."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Hilf beim Testen der Android-App bei Google Play: Tritt der Testgruppe mit deinem Google-Konto bei und installiere sie dann.",
+        "join": "1. Gruppe beitreten",
+        "install": "2. Bei Play installieren",
+        "close": "Schließen"
       }
     },
     "fr": {
@@ -831,6 +843,12 @@
             "Oui. Le lien imprimé en bas de la page ouvre les mêmes grilles avec leurs solutions. Pour une solution étape par étape avec la technique derrière chaque coup, tapez les chiffres donnés dans le solveur."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Aide à tester l'application Android sur Google Play : rejoins le groupe de test avec ton compte Google, puis installe-la.",
+        "join": "1. Rejoindre le groupe",
+        "install": "2. Installer depuis Play",
+        "close": "Fermer"
       }
     },
     "es": {
@@ -974,6 +992,12 @@
             "Sí. El enlace impreso en la parte inferior de la página abre los mismos puzles con sus soluciones. Para una solución paso a paso con la técnica detrás de cada movimiento, escribe los números dados en el resolvedor."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Ayuda a probar la app de Android en Google Play: únete al grupo de pruebas con tu cuenta de Google y luego instálala.",
+        "join": "1. Únete al grupo",
+        "install": "2. Instalar desde Play",
+        "close": "Cerrar"
       }
     },
     "pt": {
@@ -1117,6 +1141,12 @@
             "Sim. O link impresso na parte inferior da página abre os mesmos puzzles com suas soluções. Para uma solução passo a passo com a técnica por trás de cada movimento, digite os números dados no resolvedor."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Ajuda a testar a app Android na Google Play: entra no grupo de testes com a tua conta Google e depois instala-a.",
+        "join": "1. Entrar no grupo",
+        "install": "2. Instalar pela Play",
+        "close": "Fechar"
       }
     },
     "it": {
@@ -1260,6 +1290,12 @@
             "Sì. Il link stampato in fondo alla pagina apre gli stessi schemi con le loro soluzioni. Per una soluzione passo dopo passo con la tecnica dietro ogni mossa, digita i numeri dati nel risolutore."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Aiuta a testare l'app Android su Google Play: unisciti al gruppo di test con il tuo account Google, poi installala.",
+        "join": "1. Unisciti al gruppo",
+        "install": "2. Installa da Play",
+        "close": "Chiudi"
       }
     },
     "nl": {
@@ -1403,6 +1439,12 @@
             "Ja. De link die aan de onderkant van de pagina is afgedrukt, opent dezelfde puzzels met hun oplossingen. Voor een stap-voor-stap-oplossing met de techniek achter elke zet typ je de gegeven cijfers in de oplosser."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Help mee de Android-app op Google Play te testen: word lid van de testgroep met je Google-account en installeer daarna de app.",
+        "join": "1. Word lid van de groep",
+        "install": "2. Installeer via Play",
+        "close": "Sluiten"
       }
     },
     "pl": {
@@ -1546,6 +1588,12 @@
             "Tak. Link drukowany na dole strony otwiera te same bulmaki z ich rozwiązaniami. Aby uzyskać rozwiązanie krok po kroku z techniką za każdym ruchem, wpisz dane do solwera."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Pomóż przetestować aplikację na Androida w Google Play: dołącz do grupy testerów swoim kontem Google, a potem ją zainstaluj.",
+        "join": "1. Dołącz do grupy",
+        "install": "2. Zainstaluj z Play",
+        "close": "Zamknij"
       }
     },
     "cs": {
@@ -1689,6 +1737,12 @@
             "Ano. Odkaz tištěný na spodu listu otevře stejné hádanky s jejich řešeními. Chcete-li řešení krok za krokem s technikou za každým tahem, vepište zadaná čísla do řešitele."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Pomozte otestovat aplikaci pro Android na Google Play: připojte se k testovací skupině svým účtem Google a pak ji nainstalujte.",
+        "join": "1. Připojit se ke skupině",
+        "install": "2. Nainstalovat z Play",
+        "close": "Zavřít"
       }
     },
     "sk": {
@@ -1832,6 +1886,12 @@
             "Áno. Odkaz tlačený na konci listu otvorí rovnaké hlavolamy s ich riešeniami. Pre riešenie krok za krokom s technikou za každým ťahom zadajte dané čísla do riešiteľa."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Pomôžte otestovať aplikáciu pre Android na Google Play: pridajte sa do testovacej skupiny svojím účtom Google a potom ju nainštalujte.",
+        "join": "1. Pridať sa do skupiny",
+        "install": "2. Nainštalovať z Play",
+        "close": "Zavrieť"
       }
     },
     "hu": {
@@ -1975,6 +2035,12 @@
             "Igen. A lap alján nyomtatott link ugyanazokat a feladványokat nyitja meg a megoldásaikkal. A lépésről lépésre történő megoldásért az eljárást magyarázó tippek mellett írd be az adott számokat a megoldóba."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Segíts tesztelni az Android-alkalmazást a Google Play-en: csatlakozz a tesztcsoporthoz a Google-fiókoddal, majd telepítsd.",
+        "join": "1. Csatlakozz a csoporthoz",
+        "install": "2. Telepítés a Play-ről",
+        "close": "Bezárás"
       }
     },
     "ro": {
@@ -2118,6 +2184,12 @@
             "Da. Linkul tipărit la josul foii deschide aceleași puzzle-uri cu soluțiile lor. Pentru o soluție pas cu pas cu tehnica din spatele fiecărei mutări, introdu cifrele date în rezolvitor."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Ajută-ne să testăm aplicația Android de pe Google Play: alătură-te grupului de testare cu contul tău Google, apoi instalează-o.",
+        "join": "1. Alătură-te grupului",
+        "install": "2. Instalează din Play",
+        "close": "Închide"
       }
     },
     "el": {
@@ -2261,6 +2333,12 @@
             "Ναι. Ο σύνδεσμος που εκτυπώνεται στο κάτω μέρος της σελίδας ανοίγει τους ίδιους γρίφους με τις λύσεις τους. Για μία λύση βήμα προς βήμα με την τεχνική κάθε κίνησης, πληκτρολογήστε τους δεδομένους αριθμούς στο πρόγραμμα επίλυσης."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Βοήθησε να δοκιμάσουμε την εφαρμογή Android στο Google Play: μπες στην ομάδα δοκιμών με τον λογαριασμό σου Google και μετά εγκατάστησέ την.",
+        "join": "1. Μπες στην ομάδα",
+        "install": "2. Εγκατάσταση από το Play",
+        "close": "Κλείσιμο"
       }
     },
     "sv": {
@@ -2404,6 +2482,12 @@
             "Ja. Länken som skrivs ut längst ned på sidan öppnar samma pussel med sina lösningar. För en steg-för-steg-lösning med tekniken bakom varje drag, skriv in giverna i lösaren."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Hjälp till att testa Android-appen på Google Play: gå med i testgruppen med ditt Google-konto och installera sedan appen.",
+        "join": "1. Gå med i gruppen",
+        "install": "2. Installera från Play",
+        "close": "Stäng"
       }
     },
     "da": {
@@ -2547,6 +2631,12 @@
             "Ja. Linket udskrevet nederst på siden åbner de samme opgaver med deres løsninger. For en trin-for-trin-løsning med teknikken bag hvert træk skal du skrive de givne tal ind i løseren."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Hjælp med at teste Android-appen på Google Play: tilmeld dig testgruppen med din Google-konto, og installer appen bagefter.",
+        "join": "1. Tilmeld dig gruppen",
+        "install": "2. Installer fra Play",
+        "close": "Luk"
       }
     },
     "nb": {
@@ -2690,6 +2780,12 @@
             "Ja. Lenken som skrives ut nederst på siden åpner samme oppgaver med deres løsninger. For en trinn-for-trinn-løsning med teknikken bak hvert trekk, skriv inn de gitte tallene i løseren."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Hjelp til med å teste Android-appen på Google Play: bli med i testgruppen med Google-kontoen din, og installer appen etterpå.",
+        "join": "1. Bli med i gruppen",
+        "install": "2. Installer fra Play",
+        "close": "Lukk"
       }
     },
     "fi": {
@@ -2833,6 +2929,12 @@
             "Kyllä. Sivun alalaidassa tulostettu linkki avaa samat tehtävät niiden ratkaisuineen. Vaihe vaiheelta -ratkaisun saamiseksi jokaisen siirron tekniikalla kirjoita annetut luvut ratkaisijaan."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Auta testaamaan Android-sovellusta Google Playssa: liity testiryhmään Google-tililläsi ja asenna sitten sovellus.",
+        "join": "1. Liity ryhmään",
+        "install": "2. Asenna Playstä",
+        "close": "Sulje"
       }
     },
     "ru": {
@@ -2976,6 +3078,12 @@
             "Да. Ссылка, напечатанная внизу страницы, открывает те же головоломки с их решениями. Для пошагового решения с объяснением техники для каждого шага введите исходные цифры в решатель."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Помогите протестировать приложение для Android в Google Play: вступите в тестовую группу под своим аккаунтом Google, а затем установите приложение.",
+        "join": "1. Вступить в группу",
+        "install": "2. Установить из Play",
+        "close": "Закрыть"
       }
     },
     "uk": {
@@ -3119,6 +3227,12 @@
             "Так. Посилання, надруковане внизу сторінки, відкриває ті самі головоломки з їхніми розв'язками. Для покрокового розв'язання з поясненням прийому на кожному кроку введіть дані цифри в розв'язувач."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Допоможіть протестувати застосунок для Android у Google Play: приєднайтеся до тестової групи зі своїм обліковим записом Google, а потім встановіть його.",
+        "join": "1. Приєднатися до групи",
+        "install": "2. Встановити з Play",
+        "close": "Закрити"
       }
     },
     "bg": {
@@ -3262,6 +3376,12 @@
             "Да. Връзката, отпечатана в дъното на листа, отваря същите задачи с техните решения. За решение стъпка по стъпка с техниката за всеки ход, въведете дадените числа в решавача."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Помогнете за тестването на Android приложението в Google Play: присъединете се към тестовата група с вашия Google акаунт, след това го инсталирайте.",
+        "join": "1. Присъедини се към групата",
+        "install": "2. Инсталирай от Play",
+        "close": "Затвори"
       }
     },
     "sr": {
@@ -3405,6 +3525,12 @@
             "Da. Veza štampana na dnu stranice otvara iste zagonetke sa njihovim rešenjima. Za korak-po-korak rešenje sa tehnikom iza svakog poteza, upiši date brojeve u rešavač."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Pomozite testiranje Android aplikacije na Google Play-u: pridružite se test grupi svojim Google nalogom, pa je instalirajte.",
+        "join": "1. Pridruži se grupi",
+        "install": "2. Instaliraj sa Play-a",
+        "close": "Zatvori"
       }
     },
     "hr": {
@@ -3548,6 +3674,12 @@
             "Da. Poveznica ispisana na dnu stranice otvara iste zagonetke sa njihovim rješenjima. Za korak-po-korak rješenje s tehnikom iza svakog poteza, upišite dane brojeve u rješavač."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Pomozite testirati Android aplikaciju na Google Playu: pridružite se testnoj grupi svojim Google računom, zatim je instalirajte.",
+        "join": "1. Pridruži se grupi",
+        "install": "2. Instaliraj s Playa",
+        "close": "Zatvori"
       }
     },
     "ar": {
@@ -3691,6 +3823,12 @@
             "نعم. الرابط المطبوع أسفل الورقة يفتح نفس الألغاز مع حلولها. لحل خطوة بخطوة مع التقنية خلف كل حركة، اكتب المعطيات في الحل."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "ساعد في اختبار تطبيق Android على Google Play: انضم إلى مجموعة الاختبار بحساب Google الخاص بك، ثم ثبّت التطبيق.",
+        "join": "1. انضم إلى المجموعة",
+        "install": "2. ثبّت من Play",
+        "close": "إغلاق"
       }
     },
     "fa": {
@@ -3834,6 +3972,12 @@
             "بله. پیوند چاپ‌شده در پایین کاغذ جداول یکسان را با جواب‌های آن‌ها باز می‌کند. برای حل گام‌به‌گام با تکنیک پشت هر حرکت، متن‌های داده‌شده را به حل‌کننده وارد کنید."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "به آزمایش اپلیکیشن اندروید در Google Play کمک کنید: با حساب گوگل خود به گروه آزمایش بپیوندید، سپس آن را نصب کنید.",
+        "join": "1. به گروه بپیوندید",
+        "install": "2. نصب از Play",
+        "close": "بستن"
       }
     },
     "he": {
@@ -3977,6 +4121,12 @@
             "כן. הקישור המודפס בתחתית העמוד פותח את אותן החידות עם הפתרונות שלהן. לפתרון שלב אחר שלב עם הטכניקה מאחורי כל צעד, הקלידו את הנתונים לפותר."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "עזרו לנו לבדוק את אפליקציית Android ב-Google Play: הצטרפו לקבוצת הבדיקה עם חשבון Google שלכם, ואז התקינו אותה.",
+        "join": "1. הצטרפו לקבוצה",
+        "install": "2. התקינו מ-Play",
+        "close": "סגירה"
       }
     },
     "hi": {
@@ -4120,6 +4270,12 @@
             "हाँ। शीट के नीचे प्रिंट की गई कड़ी समान पहेलियों को उनके समाधान के साथ खोलती है। हर चाल के पीछे तकनीक के साथ चरण-दर-चरण समाधान के लिए, दिए गए अंकों को समाधानकर्ता में दर्ज करें।"
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android ऐप को Google Play पर टेस्ट करने में मदद करें: अपने Google खाते से टेस्ट ग्रुप जॉइन करें, फिर इसे इंस्टॉल करें।",
+        "join": "1. ग्रुप जॉइन करें",
+        "install": "2. Play से इंस्टॉल करें",
+        "close": "बंद करें"
       }
     },
     "bn": {
@@ -4263,6 +4419,12 @@
             "হ্যাঁ। শীটের নীচে মুদ্রিত লিঙ্ক একই ধাঁধাগুলি তাদের সমাধানের সাথে খোলে। প্রতিটি পদক্ষেপের পিছনে প্রযুক্তি সহ ধাপে ধাপে সমাধানের জন্য, প্রদত্ত সংখ্যাগুলি সমাধানকারীতে টাইপ করুন।"
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play-তে Android অ্যাপ পরীক্ষা করতে সাহায্য করুন: আপনার Google অ্যাকাউন্ট দিয়ে টেস্ট গ্রুপে যোগ দিন, তারপর ইনস্টল করুন।",
+        "join": "1. গ্রুপে যোগ দিন",
+        "install": "2. Play থেকে ইনস্টল করুন",
+        "close": "বন্ধ করুন"
       }
     },
     "id": {
@@ -4406,6 +4568,12 @@
             "Ya. Tautan yang dicetak di bagian bawah halaman membuka teka-teki yang sama dengan solusinya. Untuk solusi langkah demi langkah dengan teknik di balik setiap gerakan, ketikkan angka yang diberikan ke pemecah."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Bantu uji aplikasi Android di Google Play: gabung grup uji dengan akun Google Anda, lalu instal aplikasinya.",
+        "join": "1. Gabung grup",
+        "install": "2. Instal dari Play",
+        "close": "Tutup"
       }
     },
     "ms": {
@@ -4549,6 +4717,12 @@
             "Ya. Pautan yang dicetak di bawah halaman membuka teka-teki yang sama dengan penyelesaiannya. Untuk penyelesaian langkah demi langkah dengan teknik di belakang setiap gerakan, taipkan digit yang diberikan ke pemecah."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Bantu uji aplikasi Android di Google Play: sertai kumpulan ujian dengan akaun Google anda, kemudian pasang aplikasinya.",
+        "join": "1. Sertai kumpulan",
+        "install": "2. Pasang dari Play",
+        "close": "Tutup"
       }
     },
     "vi": {
@@ -4692,6 +4866,12 @@
             "Có. Liên kết được in ở cuối trang mở các câu đố tương tự cùng với lời giải. Để giải pháp từng bước với kỹ thuật đằng sau mỗi nước đi, gõ các chữ số đã cho vào trình giải."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Giúp kiểm thử ứng dụng Android trên Google Play: tham gia nhóm thử nghiệm bằng tài khoản Google của bạn, rồi cài đặt ứng dụng.",
+        "join": "1. Tham gia nhóm",
+        "install": "2. Cài từ Play",
+        "close": "Đóng"
       }
     },
     "th": {
@@ -4835,6 +5015,12 @@
             "ใช่ ลิงก์ที่พิมพ์ที่ด้านล่างของหน้าจะเปิดบุคคลเดียวกัน ด้วยวิธีแก้ สำหรับวิธีแก้ทีละขั้นตอน พร้อมเทคนิคในการย้ายทุกครั้ง พิมพ์ตัวเลขที่กำหนดลงในตัวแก้"
           ]
         ]
+      },
+      "androidTest": {
+        "text": "ช่วยทดสอบแอป Android บน Google Play: เข้าร่วมกลุ่มทดสอบด้วยบัญชี Google ของคุณ แล้วติดตั้งแอป",
+        "join": "1. เข้าร่วมกลุ่ม",
+        "install": "2. ติดตั้งจาก Play",
+        "close": "ปิด"
       }
     },
     "ja": {
@@ -4978,6 +5164,12 @@
             "はい。ページ下部に印刷されているリンクをクリックすると、同じ問題と解答が表示されます。各ステップの手法を含む段階的な解答については、与えられた数字をソルバーに入力してください。"
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play で Android アプリのテストにご協力ください。Google アカウントでテストグループに参加してから、インストールしてください。",
+        "join": "1. グループに参加",
+        "install": "2. Play からインストール",
+        "close": "閉じる"
       }
     },
     "ko": {
@@ -5121,6 +5313,12 @@
             "네. 한 장의 아래에 프린트된 링크는 같은 문제들을 정답과 함께 엽니다. 모든 움직임 뒤의 기법을 포함한 단계별 풀이를 원하면, 주어진 숫자들을 풀이기에 입력하세요."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play에서 Android 앱 테스트를 도와주세요. Google 계정으로 테스트 그룹에 가입한 뒤 설치해 주세요.",
+        "join": "1. 그룹 가입",
+        "install": "2. Play에서 설치",
+        "close": "닫기"
       }
     },
     "zh-Hans": {
@@ -5264,6 +5462,12 @@
             "可以。页面底部打印的链接会打开相同的谜题及其解答。要获得每一步骤及其背后技巧的详细解答，请将已知数字输入求解器。"
           ]
         ]
+      },
+      "androidTest": {
+        "text": "帮忙在 Google Play 上测试 Android 应用：用你的 Google 账号加入测试群组，然后安装。",
+        "join": "1. 加入群组",
+        "install": "2. 从 Play 安装",
+        "close": "关闭"
       }
     },
     "zh-Hant": {
@@ -5407,6 +5611,12 @@
             "可以。頁面底部列印的連結會打開相同的謎題及其解答。要獲得每一步驟及其背後技巧的詳細解答，請將已知數字輸入求解器。"
           ]
         ]
+      },
+      "androidTest": {
+        "text": "幫忙在 Google Play 上測試 Android 應用程式：用你的 Google 帳號加入測試群組，然後安裝。",
+        "join": "1. 加入群組",
+        "install": "2. 從 Play 安裝",
+        "close": "關閉"
       }
     },
     "ur": {
@@ -5548,6 +5758,12 @@
             "جی۔ صفحے کے نیچے کا پرنٹ شدہ ربط وہی بلما ان کے حل کے ساتھ کھولتا ہے۔ ہر حرکت کے پیچھے کی تکنیک کے ساتھ قدم قدم حل کے لیے دیے گئے ہندسے حل کار میں داخل کرو۔"
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play پر Android ایپ کی جانچ میں مدد کریں: اپنے Google اکاؤنٹ سے ٹیسٹ گروپ میں شامل ہوں، پھر اسے انسٹال کریں۔",
+        "join": "1. گروپ میں شامل ہوں",
+        "install": "2. Play سے انسٹال کریں",
+        "close": "بند کریں"
       }
     },
     "ta": {
@@ -5689,6 +5905,12 @@
             "ஆம். பக்கத்தின் கீழில் அச்சிடப்பட்ட இணைப்பு அதே புதிர்களை தீர்வுகளுடன் திறக்கிறது. ஒவ்வொரு நகர்வின் பின்னணியிலுள்ள நுட்பத்துடன் படிப்படியாக தீர்வுக்கு கொடுக்கப்பட்ட எண்களை தீர்ப்பாளர்க்கு உள்ளிடுக."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play-இல் Android செயலியைச் சோதிக்க உதவுங்கள்: உங்கள் Google கணக்கில் சோதனைக் குழுவில் சேருங்கள், பிறகு நிறுவுங்கள்.",
+        "join": "1. குழுவில் சேரவும்",
+        "install": "2. Play-இலிருந்து நிறுவவும்",
+        "close": "மூடு"
       }
     },
     "te": {
@@ -5830,6 +6052,12 @@
             "అవును. పేజీ ఆధారంలో ముద్రిత లింక్ అదే పజిల్‌లను వాటి పరిష్కారాలతో తెరుస్తుంది. ప్రతి కదలిక వెనుక సాంకేతికతతో దశ-దశ పరిష్కారం కోసం ఇచ్చిన సంఖ్యలను పరిష్కారకంలో టైప్ చేయండి."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play లో Android యాప్‌ను పరీక్షించడంలో సహాయం చేయండి: మీ Google ఖాతాతో పరీక్ష గ్రూపులో చేరి, తర్వాత ఇన్‌స్టాల్ చేయండి.",
+        "join": "1. గ్రూపులో చేరండి",
+        "install": "2. Play నుండి ఇన్‌స్టాల్ చేయండి",
+        "close": "మూసివేయి"
       }
     },
     "tl": {
@@ -5971,6 +6199,12 @@
             "Oo. Ang link na naiprintahan sa ibaba ng sheet ay nagbubukas ng parehong puzzles kasama ang kanilang mga solusyon. Para sa step-by-step na solusyon kasama ang teknik sa likod ng bawat galaw, i-type ang mga binigay sa solver."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Tulungan mong subukan ang Android app sa Google Play: sumali sa test group gamit ang Google account mo, saka i-install ito.",
+        "join": "1. Sumali sa grupo",
+        "install": "2. I-install mula sa Play",
+        "close": "Isara"
       }
     },
     "ca": {
@@ -6112,6 +6346,12 @@
             "Sí. L'enllaç imprès al peu de la pàgina obri els mateixos puzles amb les seves solucions. Per a una solució pas a pas amb la tècnica de cada moviment, escriu els números donats al solver."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Ajuda a provar l'app d'Android a Google Play: uneix-te al grup de proves amb el teu compte de Google i després instal·la-la.",
+        "join": "1. Uneix-te al grup",
+        "install": "2. Instal·la-la des de Play",
+        "close": "Tanca"
       }
     },
     "sl": {
@@ -6253,6 +6493,12 @@
             "Da. Povezava natisnjena na dnu strani odpre iste uganke s svojimi rešitvami. Za rešitev po korakih s tehniko za vsak potez vpiši dane številke v reševalnik."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Pomagaj preizkusiti Android aplikacijo na Googlu Play: pridruži se preizkusni skupini s svojim Google računom in jo nato namesti.",
+        "join": "1. Pridruži se skupini",
+        "install": "2. Namesti iz Playa",
+        "close": "Zapri"
       }
     },
     "lt": {
@@ -6394,6 +6640,12 @@
             "Taip. Nuoroda, atsispausdinta puslapio apačioje, atidaro tuos pačius galvosūkius su sprendimais. Kad gautum žingsnis po žingsnio sprendimą su kiekvieno žingsnio technika, įvesk duotus skaitmenis į sprendėją."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Padėk išbandyti Android programėlę Google Play: prisijunk prie testuotojų grupės su savo Google paskyra, tada ją įdiek.",
+        "join": "1. Prisijunk prie grupės",
+        "install": "2. Įdiek iš Play",
+        "close": "Uždaryti"
       }
     },
     "lv": {
@@ -6535,6 +6787,12 @@
             "Jā. Saite, kas drukāta lapas apakšā, atver tās pašas mīklas ar to risinājumiem. Soli pa solim risinājumam ar katra soļa paņēmienu, ievadi dotos ciparus risinātājā."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Palīdzi testēt Android lietotni Google Play: pievienojies testa grupai ar savu Google kontu un pēc tam instalē to.",
+        "join": "1. Pievienoties grupai",
+        "install": "2. Instalēt no Play",
+        "close": "Aizvērt"
       }
     },
     "ky": {
@@ -6676,6 +6934,12 @@
             "Ооба. Барактын астына басылган шилтеме ошол табышмактарды чечимдери менен ачат. Ар бир жүрүштүн артында ыкма менен этап-этап чечим үчүн берилген сандарды чешүүчүгө жазыңыз."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android колдонмосун Google Play'де тестилөөгө жардам бер: Google аккаунтуң менен тест тобуна кошул, андан кийин орнот.",
+        "join": "1. Топко кошулуу",
+        "install": "2. Play'ден орнотуу",
+        "close": "Жабуу"
       }
     },
     "kk": {
@@ -6817,6 +7081,12 @@
             "Иә. Беттіктің төменгі хәрі басылмалы сілтеме осындай жұмбақтарды олардың шешімдерімен ашады. Әр қадамдың ард ырасындағы тәсілі бар сатылай-сатылай шешім үшін берілген сандарды шешушіге енгізіңіз."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android қолданбасын Google Play-де тестілеуге көмектесіңіз: Google аккаунтыңызбен тест тобына қосылып, содан кейін орнатыңыз.",
+        "join": "1. Топқа қосылу",
+        "install": "2. Play-ден орнату",
+        "close": "Жабу"
       }
     },
     "uz": {
@@ -6958,6 +7228,12 @@
             "Ha. Varaqqaning pastiga bosilgan havola bir xil boshqotirmalarni ularning yechimlari bilan ochadi. Har bir xabar tushundadigan ushbu usuli bilan qadam-qadam yechim uchun berilgan raqamlarni yechuvchiga kiriting."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android ilovasini Google Play’da sinashga yordam bering: Google hisobingiz bilan test guruhiga qoʻshiling, soʻng uni oʻrnating.",
+        "join": "1. Guruhga qoʻshilish",
+        "install": "2. Play’dan oʻrnatish",
+        "close": "Yopish"
       }
     },
     "tk": {
@@ -7099,6 +7375,12 @@
             "Hawa. Sayfanyň aşagyna çap edilen baglanyşyk şol tapmaçalary çözgütleri bilen açýar. Her hereketlygynyň arkasyndaky tehnikalar bilen ädim ädim çözgüt üçin berilýän sanlary çözüjeye ýaz."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android programmasyny Google Play-de synamaga kömek ediň: Google hasabyňyz bilen synag toparyna goşulyň, soňra guruň.",
+        "join": "1. Topara goşulmak",
+        "install": "2. Play-den gurmak",
+        "close": "Ýapmak"
       }
     },
     "tt": {
@@ -7240,6 +7522,12 @@
             "Әйе. Биттың астына басылган сылтама шул табышмаклары чишелешләре белән ачыла. Һәр хәрәкәттең артында ысул белән адым-адым чишелеш өчен бирелгән сандарны чишүчегә языгыз."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Android кушымтасын Google Play'да тестлауга булыгыз: Google акказаң белән тест төркеменә кушылыгыз, аннан соң урнаштырыгыз.",
+        "join": "1. Төркемгә кушылу",
+        "install": "2. Play'дан урнаштыру",
+        "close": "Ябу"
       }
     },
     "ba": {
@@ -7381,6 +7669,12 @@
             "Әйе. Биттың аҫтына баҫылған һылтанма шул йомаҡтарҙы сиселеүләре менән асата. Һәр хәрәкәттең артында ысул менән аҙым-аҙым сиселеү өсөн берелгән һандарҙы сисеүсегә яҙығыҙ."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play-ҙа Android ҡушымтаһын һынарға ярҙам итегеҙ: Google иҫәбегеҙ менән һынау төркөмөнә ҡушылығыҙ, һуңынан уны индерегеҙ.",
+        "join": "1. Төркөмгә ҡушылырға",
+        "install": "2. Play-ҙан индерергә",
+        "close": "Ябырға"
       }
     },
     "ug": {
@@ -7522,6 +7816,12 @@
             "ھې. بەتتىڭ ئاستىدا بېسىلغان ئۇلىنىش شۇ تېپىشماقلارنى ئۇلارنىڭ يېشىملىرى بىلەن ئېچىدۇ. ھەر قىدىمنىڭ ئارقىسىدىكى ئۇسۇل بىلەن قادام-قادام يېشىش ئۈچۈن بېرىلگەن رەقەملەرنى يېشىۋەرگە كىرگۈزۈڭ."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play دىكى Android ئەپنى سىناشقا ياردەم بېرىڭ: Google ھېساباتىڭىز بىلەن سىناق گۇرۇپپىسىغا قاتنىشىپ، ئاندىن ئورنىتىڭ.",
+        "join": "1. گۇرۇپپىغا قاتنىشىش",
+        "install": "2. Play دىن ئورنىتىش",
+        "close": "يېپىش"
       }
     },
     "kaa": {
@@ -7663,6 +7963,12 @@
             "Ay, bole. Sayfanıń astında basılǵan silteme shu jumbaġalardy cheshimleriyle ashadi. Her jaldı arkasındaǵı usuli menen addım addım cheshim ushın berilgen raqamlardy shesheşke yazıń."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play'de Android qosımshasın sınawǵa járdem beriń: Google esabıńız menen sınaw toparına qosılıp, soń ornatıń.",
+        "join": "1. Toparǵa qosılıw",
+        "install": "2. Play'den ornatıw",
+        "close": "Jabıw"
       }
     },
     "crh": {
@@ -7804,6 +8110,12 @@
             "Evet. Sayfanıñ astında basılğan bağlantı shu bilmecelerdi çezimlerile aça. Her hamlenin arkasındaki usulnen addım addım çezim üçün verilgen raqamlarny çözücüne yaz."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play'de Android uygulamasını sınamaqta yardım etiñ: Google hesabıñız ile sınav grupasına qatılıp, sonra yükleñ.",
+        "join": "1. Gruppaǵa qatıl",
+        "install": "2. Play'den yükle",
+        "close": "Kapat"
       }
     },
     "sah": {
@@ -7945,6 +8257,12 @@
             "Ээ. Сирэйинин анныгар сигирэмэ сигирэме сыһыа оонньууны быһаарыылаалар биһиһэ ас. Хас хальдыынан арра хандыы аҕалаҳа биирдэ-биирдэ быһаарыы өйүүрүнэ бэйээ сыыппара туһуоруога бар."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play-ҕа Android уопсайын тест гыныыга көмөлөһүҥ: Google аккаунтуҥунан тест бөлөҕүгэр киирэн, онтон туруоруҥ.",
+        "join": "1. Бөлөххө киир",
+        "install": "2. Play-тан туруор",
+        "close": "Жабын"
       }
     },
     "kum": {
@@ -8086,6 +8404,12 @@
             "Я, бола. Басманын астындаги басыллыкъ ишаре бир шу табышмаларны чечимлериле ачыр. Гьар ишнин артындаги усулу булан адым адым чечим учун верилген рагъамларны чечювджюге язын."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Google Play'де Android қосымтасын тест этмеге ярдам этиңиз: Google есабыңыз менен тест тобуна қошулуп, соңра орнатыңыз.",
+        "join": "1. Топқа қошулуў",
+        "install": "2. Play'дан орнатыў",
+        "close": "Жабыў"
       }
     },
     "azb": {
@@ -8227,6 +8551,12 @@
             "بلی. صحیفه‌نین آلتینا چاپ شودو لینک آیئن بولماجالارینی حل‌لری ایله آچار. هر حرکتین آرخاسیندا بیلیندن قدم‌قدم حل اوچون ورولمو رقملری حل کننده‌ده یازین."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "گوگل پلی‌ده اندروید اپینین تستینده کؤمک ائدین: گوگل حسابینیزلا تست قروپونا قوشولون، سونرا قوراشدیرین.",
+        "join": "1. قروپا قوشول",
+        "install": "2. پلی‌دن قوراشدیر",
+        "close": "باغلا"
       }
     },
     "et": {
@@ -8368,6 +8698,12 @@
             "Jah. Lehe all trükitud link avab samad mõistatused nende lahendusega. Samm-sammult lahenduse jaoks iga sammu tehnikaga sisesta antud numbrid lahendajasse."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "Aita testida Android-rakendust Google Play's: liitu testrühmaga oma Google'i kontoga ja seejärel installi see.",
+        "join": "1. Liitu rühmaga",
+        "install": "2. Installi Play'st",
+        "close": "Sulge"
       }
     },
     "qxq": {
@@ -8509,6 +8845,12 @@
             "بله. شئت‌تین پایین‌داکی چاپ شده لینک همان بولماجان‌لاری حل‌‌لری‌یله باز میکنه. هر حرکت‌تین پشت‌ه تکنیک‌یله مرحله‌به‌مرحله حل برای ورو‌نده شده رقم‌لاری حل‌کننده‌یه یازیں."
           ]
         ]
+      },
+      "androidTest": {
+        "text": "گوگل پلی‌ده اندروید اپینین تستینده کؤمک ائدین: گوگل حسابینیزلا تست قروپونا قوشولون، سونرا یوکلهین.",
+        "join": "1. قروپا قوشولون",
+        "install": "2. پلی‌دن یوکلهین",
+        "close": "باغلا"
       }
     }
   }
