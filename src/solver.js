@@ -250,8 +250,12 @@ function advance() {
     li.appendChild(document.createElement('br'));
     li.appendChild(document.createTextNode(line));
   }
+  const html = boardHtml(givens, valuesBefore, candsBefore, elim, place);
+  li.onclick = e => {
+    if (e.target.tagName !== 'A') $('figure').innerHTML = html;
+  };
   $('steps').appendChild(li);
-  $('figure').innerHTML = boardHtml(givens, valuesBefore, candsBefore, elim, place);
+  $('figure').innerHTML = html;
   if (engine.complete()) finish();
   return true;
 }
@@ -304,8 +308,28 @@ function bind() {
 function init() {
   buildGrid();
   bind();
-  const param = new URLSearchParams(location.search).get('p');
-  if (param && parsePuzzle(param)) message('');
+  const params = new URLSearchParams(location.search);
+  const param = params.get('p');
+  if (param && parsePuzzle(param)) {
+    message('');
+    const targetCell = params.get('hint') !== null ? parseInt(params.get('hint'), 10) : -1;
+    const targetTech = params.get('tech') !== null ? parseInt(params.get('tech'), 10) : -1;
+    const targetDigit = params.get('d') !== null ? parseInt(params.get('d'), 10) : 0;
+    if (targetCell >= 0 || targetTech >= 0) {
+      if (!start()) return;
+      let steps = 0;
+      while (!finished && steps < MAX_STEPS) {
+        advance();
+        steps++;
+        const lastCell = engine.stepCell;
+        const lastDigit = engine.stepDigit;
+        if (targetCell >= 0 && lastCell === targetCell && (!targetDigit || lastDigit === targetDigit)) break;
+      }
+      $('figure').scrollIntoView({ block: 'nearest' });
+    } else {
+      nextStep();
+    }
+  }
 }
 
 init();
