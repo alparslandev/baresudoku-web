@@ -6,12 +6,14 @@ const $ = id => document.getElementById(id);
 const L = JSON.parse($('i18n').textContent);
 const strings = L.s, T = L.solver, GUIDE = L.guide;
 const LANG = document.documentElement.lang;
+const EXPLAINER = L.explain ? createExplainer(L.explain, LANG) : null;
 const EXAMPLE = '000074900800001320000002060000030076460000032170020000050700000016800005009250000';
 const SLUGS = { 1: 'locked-candidates', 2: 'naked-pairs', 3: 'x-wing', 4: 'y-wing', 5: 'swordfish', 6: 'xyz-wing', 7: 'skyscraper', 8: 'two-string-kite', 9: 'w-wing', 10: 'unique-rectangle', 13: 'jellyfish', 14: 'finned-x-wing', 15: 'finned-swordfish', 17: 'empty-rectangle', 19: 'wxyz-wing', 22: 'unique-rectangle-type-4', 25: 'hidden-rectangle', 26: 'bug-plus-1', 27: 'x-chain', 28: 'xy-chain', 30: 'aic', 33: 'als-xz' };
 const MAX_STEPS = 400;
 const engine = new Sudoku();
 const inputs = [];
 let givens = null, stepCount = 0, finished = false;
+const removedAt = new Uint16Array(729);
 const ratingFormat = numberFormat(LANG);
 
 function numberFormat(lang) {
@@ -144,16 +146,18 @@ function start() {
   if (n === 0) { message(T.noSolution, true); return false; }
   if (n > 1) { message(T.manySolutions, true); return false; }
   givens = values;
+  removedAt.fill(0);
   engine.load(values);
   enterResult();
   message('');
   return true;
 }
 
-function boardHtml(given, values, cands, elim, place) {
+function boardHtml(given, values, cands, elim, place, marks) {
   const elimSet = new Set(elim.map(([c, d]) => c * 10 + d));
   const elimCells = new Set(elim.map(([c]) => c));
   const changed = place ? new Set([place[0]]) : elimCells;
+  const unit = marks ? marks.unit : new Set(), key = marks ? marks.key : new Set();
   let out = '<table class="board"><thead><tr><td></td>';
   for (let k = 0; k < 9; k++) out += '<th scope="col">c' + (k + 1) + '</th>';
   out += '</tr></thead><tbody>';
@@ -163,6 +167,8 @@ function boardHtml(given, values, cands, elim, place) {
       const c = r * 9 + k;
       const classes = [];
       if (changed.has(c)) classes.push(place ? 'p' : 'e');
+      else if (key.has(c)) classes.push('k');
+      else if (unit.has(c)) classes.push('u');
       if (k % 3 === 0) classes.push('bl');
       if (k === 8) classes.push('br');
       if (r % 3 === 0) classes.push('bt');
@@ -225,7 +231,7 @@ function advance() {
     $('solve').disabled = true;
     return false;
   }
-  const elim = [];
+  let elim = [];
   let place = null;
   for (let c = 0; c < 81; c++) {
     if (!valuesBefore[c] && engine.lv[c]) place = [c, engine.lv[c]];
@@ -234,11 +240,14 @@ function advance() {
       for (const d of digitsOf(gone)) elim.push([c, d]);
     }
   }
+  if (place) elim = [];
   stepCount++;
+  const explained = EXPLAINER && place ? EXPLAINER.explain({ t, unit: engine.stepUnit, cell: place[0], d: place[1], values: valuesBefore, cands: candsBefore, elim, removedAt }) : null;
+  for (const [c, d] of elim) if (!removedAt[c * 9 + d - 1]) removedAt[c * 9 + d - 1] = stepCount;
   const rating = ratingFormat.format(engine.stepRating / 10);
   const li = document.createElement('li');
   const strong = document.createElement('strong');
-  strong.textContent = techLabel(t) + ' (' + rating + ')';
+  strong.textContent = techLabel(t) + ' (' + fill(T.rating, { r: rating }) + ')';
   const slug = guideSlug(t);
   if (slug && GUIDE[slug]) {
     const a = document.createElement('a');
@@ -246,11 +255,21 @@ function advance() {
     a.appendChild(strong);
     li.appendChild(a);
   } else li.appendChild(strong);
-  for (const line of describe(t, elim, place)) {
-    li.appendChild(document.createElement('br'));
-    li.appendChild(document.createTextNode(line));
+  if (explained) {
+    const ul = document.createElement('ul');
+    for (const line of explained.lines) {
+      const item = document.createElement('li');
+      item.textContent = line;
+      ul.appendChild(item);
+    }
+    li.appendChild(ul);
+  } else {
+    for (const line of describe(t, elim, place)) {
+      li.appendChild(document.createElement('br'));
+      li.appendChild(document.createTextNode(line));
+    }
   }
-  const html = boardHtml(givens, valuesBefore, candsBefore, elim, place);
+  const html = boardHtml(givens, valuesBefore, candsBefore, elim, place, explained && explained.marks);
   li.onclick = e => {
     if (e.target.tagName !== 'A') $('figure').innerHTML = html;
   };

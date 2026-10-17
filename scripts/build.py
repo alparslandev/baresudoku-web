@@ -191,13 +191,13 @@ def tool_jsonld(code, url, tool, lastmod):
     return json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
 
 
-def solver_page(template, css, table, code, entry, guide_entry, languages, solver_codes, lastmod, play_label):
+def solver_page(template, css, table, code, entry, guide_entry, explain, languages, solver_codes, lastmod, play_label):
     solver = entry["solver"]
     labels = guide_entry["labels"]
     alternates = ['<link rel="alternate" hreflang="%s" href="%s">' % (c, solver_url(c)) for c in solver_codes]
     alternates.append('<link rel="alternate" hreflang="x-default" href="%s">' % solver_url("en"))
     guide_links = {slug: guide.tech_path(code, slug) for slug in guide_entry["tech"]}
-    local = {"name": languages[code][0], "s": table[code], "solver": {k: v for k, v in solver.items() if k != "faq"}, "guide": guide_links, "play": i18n.path(code)}
+    local = {"name": languages[code][0], "s": table[code], "solver": {k: v for k, v in solver.items() if k != "faq"}, "guide": guide_links, "play": i18n.path(code), "explain": explain}
     faq = "".join("<details><summary>%s</summary><p>%s</p></details>" % (esc(q), esc(a)) for q, a in solver["faq"])
     crumbs = '<a href="%s">%s</a><span>›</span><span aria-current="page">%s</span>' % (i18n.path(code), NAME, esc(solver["h1"]))
     values = {
@@ -618,6 +618,7 @@ def main():
     keys, languages = i18n.load()
     site = i18n.load_site(languages)
     guides = i18n.load_guide(languages)
+    explains = i18n.load_explain(languages)
     examples = guide.load_examples()
     lastmod = lastmod_date()
     expires = (datetime.date.today() + datetime.timedelta(days=365)).isoformat() + "T00:00:00.000Z"
@@ -650,8 +651,8 @@ def main():
         write(dist, os.path.join(daily_path(code).strip("/"), "index.html"), page(template, css, table, code, site[code], languages, version, size, lastmod, web, None, daily_codes, solver_codes, print_codes, "daily", table[code][play_index]))
     solver_template = read("src", "solver.html")
     for code in solver_codes:
-        write(dist, os.path.join(solver_path(code).strip("/"), "index.html"), solver_page(solver_template, css, table, code, site[code], guides[code], languages, solver_codes, lastmod, table[code][play_index]))
-    write(dist, "solver.js", "%s\n%s\n" % (read("src", "engine.js").strip(), read("src", "solver.js").strip()))
+        write(dist, os.path.join(solver_path(code).strip("/"), "index.html"), solver_page(solver_template, css, table, code, site[code], guides[code], explains.get(code), languages, solver_codes, lastmod, table[code][play_index]))
+    write(dist, "solver.js", "%s\n%s\n%s\n" % (read("src", "engine.js").strip(), read("src", "explain.js").strip(), read("src", "solver.js").strip()))
     print_template = read("src", "print.html")
     for code in print_codes:
         write(dist, os.path.join(print_path(code).strip("/"), "index.html"), print_page(print_template, css, table, code, site[code], guides[code], languages, print_codes, solver_codes, lastmod, table[code][play_index]))

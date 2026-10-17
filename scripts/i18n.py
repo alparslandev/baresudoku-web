@@ -146,6 +146,33 @@ def load_site(languages):
     return site
 
 
+def explain_names(text):
+    return {name[2].lower() + name[3:] if re.match(r"in[A-Z]", name) else name for name in placeholders(text)}
+
+
+def explain_shape(value):
+    if isinstance(value, list):
+        return [explain_names(v) for v in value]
+    return explain_names(value)
+
+
+def load_explain(languages):
+    with open(os.path.join(ROOT, "i18n", "explain.json"), encoding="utf-8") as f:
+        texts = json.load(f)["languages"]
+    base = texts["en"]
+    for code, entry in texts.items():
+        if code not in languages:
+            raise SystemExit("explain.json: %s strings.json'da yok" % code)
+        for key, value in entry.items():
+            if key not in base:
+                raise SystemExit("explain.json %s: bilinmeyen anahtar %s" % (code, key))
+            if explain_shape(value) != explain_shape(base[key]):
+                raise SystemExit("explain.json %s: %s yer tutuculari ya da uzunlugu en ile ayni olmali" % (code, key))
+            if any(ch in str(value) for ch in DASHES):
+                raise SystemExit("explain.json %s: %s icinde tire var" % (code, key))
+    return {code: dict(base, **entry) for code, entry in texts.items()}
+
+
 GUIDE_KEYS = ["learnHeading", "learnText", "howToLink", "techniquesLink", "labels", "howTo", "index", "tech"]
 GUIDE_LABELS = ["howTo", "techniques", "play", "prev", "next", "all", "example", "steps", "when", "spot", "mistakes", "inGame", "level", "hint", "legend", "notation", "row", "column", "box", "elimItem", "regions", "firstMove", "breadcrumb"]
 LABEL_PLACEHOLDERS = {"level": {"level"}, "hint": {"text"}, "row": {"n"}, "column": {"n"}, "box": {"n"}, "elimItem": {"d", "cell"}, "firstMove": {"cell", "d"}, "practiceIntro": {"technique"}}

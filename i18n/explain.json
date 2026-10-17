@@ -1,0 +1,44 @@
+{
+ "languages": {
+  "en": {
+   "row": "row {n}",
+   "col": "column {n}",
+   "boxes": ["the top-left box", "the top-middle box", "the top-right box", "the middle-left box", "the center box", "the middle-right box", "the bottom-left box", "the bottom-middle box", "the bottom-right box"],
+   "inRow": "in row {n}",
+   "inCol": "in column {n}",
+   "inBoxes": ["in the top-left box", "in the top-middle box", "in the top-right box", "in the middle-left box", "in the center box", "in the middle-right box", "in the bottom-left box", "in the bottom-middle box", "in the bottom-right box"],
+   "hiddenIntro": "{unit} has no {d} yet, so one of its empty cells must be {d}. Let's check them one by one:",
+   "blockedRow": "{cell}: no, its row already has a {d} ({by}).",
+   "blockedCol": "{cell}: no, its column already has a {d} ({by}).",
+   "blockedBox": "{cell}: no, its box already has a {d} ({by}).",
+   "blockedStep": "{cell}: no, {d} was ruled out here in step {n}.",
+   "hiddenOnly": "Only {cell} is left, so {d} goes there.",
+   "nakedIntro": "Which digits can go in {cell}? Let's check 1 to 9:",
+   "seenRow": "Its row already has {digits}, so those are out.",
+   "seenCol": "Its column has {digits}, so those are out too.",
+   "seenBox": "Its box has {digits}, so those are out too.",
+   "seenStep": "Ruled out here in step {n}: {digits}.",
+   "nakedOnly": "Only {d} is left, so {cell} must be {d}."
+  },
+  "tr": {
+   "row": "{n}. satır",
+   "col": "{n}. sütun",
+   "boxes": ["sol üst kutu", "üst orta kutu", "sağ üst kutu", "sol orta kutu", "orta kutu", "sağ orta kutu", "sol alt kutu", "alt orta kutu", "sağ alt kutu"],
+   "inRow": "{n}. satırda",
+   "inCol": "{n}. sütunda",
+   "inBoxes": ["sol üst kutuda", "üst orta kutuda", "sağ üst kutuda", "sol orta kutuda", "orta kutuda", "sağ orta kutuda", "sol alt kutuda", "alt orta kutuda", "sağ alt kutuda"],
+   "hiddenIntro": "{inUnit} henüz {d} yok, boş karelerinden biri {d} olmak zorunda. Tek tek bakalım:",
+   "blockedRow": "{cell}: olamaz, aynı satırda zaten {d} var ({by}).",
+   "blockedCol": "{cell}: olamaz, aynı sütunda zaten {d} var ({by}).",
+   "blockedBox": "{cell}: olamaz, aynı kutuda zaten {d} var ({by}).",
+   "blockedStep": "{cell}: olamaz, {d} adayı {n}. adımda buradan silindi.",
+   "hiddenOnly": "Geriye yalnız {cell} kalıyor, {d} oraya yazılır.",
+   "nakedIntro": "{cell} karesine hangi rakam gelebilir? 1'den 9'a bakalım:",
+   "seenRow": "Aynı satırda {digits} var, bunlar olamaz.",
+   "seenCol": "Aynı sütunda {digits} var, bunlar da olamaz.",
+   "seenBox": "Aynı kutuda {digits} var, bunlar da olamaz.",
+   "seenStep": "{n}. adımda buradan silinenler: {digits}.",
+   "nakedOnly": "Geriye yalnız {d} kalıyor, {cell} karesine {d} yazılır."
+  }
+ }
+}
