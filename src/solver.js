@@ -127,6 +127,7 @@ function leaveResult() {
   $('steps').textContent = '';
   $('summary').textContent = '';
   $('figure').textContent = '';
+  $('detail').textContent = '';
 }
 
 function conflicting(values) {
@@ -275,11 +276,16 @@ function advance() {
     }
   }
   const html = boardHtml(givens, valuesBefore, candsBefore, elim, place, explained && explained.marks);
+  const show = () => {
+    $('figure').innerHTML = html;
+    $('detail').textContent = '';
+    $('detail').appendChild(li.cloneNode(true));
+  };
   li.onclick = e => {
-    if (e.target.tagName !== 'A') $('figure').innerHTML = html;
+    if (e.target.tagName !== 'A') show();
   };
   $('steps').appendChild(li);
-  $('figure').innerHTML = html;
+  show();
   if (engine.complete()) finish();
   return true;
 }
@@ -298,6 +304,7 @@ function finish() {
   $('solve').disabled = true;
   const solved = Array.from(engine.lv);
   $('figure').innerHTML = boardHtml(givens, solved, new Array(81).fill(0), [], null);
+  $('detail').textContent = '';
   const { level, r } = levelOf();
   const name = strings[level < 4 ? level : S_MASTER];
   $('summary').textContent = T.done + ': ' + name + ', ' + fill(T.rating, { r: ratingFormat.format(r / 10) }) + ', ' + fill(T.steps, { n: stepCount });

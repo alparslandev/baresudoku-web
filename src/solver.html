@@ -42,18 +42,19 @@
 <nav class="crumbs" aria-label="{{CRUMBS_LABEL}}">{{CRUMBS}}</nav>
 <article>
 <h1>{{H1}}</h1>
-<p>{{INTRO}}</p>
 <div id="entry">
 <div id="grid" class="sgrid" role="grid" aria-label="Sudoku"></div>
 <input id="paste" type="text" placeholder="{{PASTE}}" autocomplete="off" spellcheck="false" aria-label="{{PASTE}}">
 </div>
 <div id="result" hidden>
 <figure id="figure"></figure>
+<div id="detail"></div>
 <p id="summary"></p>
 </div>
 <p class="actions"><button type="button" id="next">{{NEXT}}</button><button type="button" id="solve">{{SOLVE}}</button><button type="button" id="play">{{PLAY_PUZZLE}}</button><button type="button" id="example">{{EXAMPLE}}</button><button type="button" id="clear">{{CLEAR}}</button><button type="button" id="edit" hidden>{{EDIT}}</button></p>
 <p id="msg" aria-live="polite"></p>
 <ol id="steps"></ol>
+<p>{{INTRO}}</p>
 {{FAQ}}
 <p class="pager"><a href="{{PLAY_PATH}}">{{PLAY}}</a><a href="{{TECH_PATH}}">{{TECHNIQUES}}</a></p>
 </article>
