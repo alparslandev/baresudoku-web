@@ -11,6 +11,7 @@ const EXAMPLE = '000074900800001320000002060000030076460000032170020000050700000
 const SLUGS = { 1: 'locked-candidates', 2: 'naked-pairs', 3: 'x-wing', 4: 'y-wing', 5: 'swordfish', 6: 'xyz-wing', 7: 'skyscraper', 8: 'two-string-kite', 9: 'w-wing', 10: 'unique-rectangle', 13: 'jellyfish', 14: 'finned-x-wing', 15: 'finned-swordfish', 17: 'empty-rectangle', 19: 'wxyz-wing', 22: 'unique-rectangle-type-4', 25: 'hidden-rectangle', 26: 'bug-plus-1', 27: 'x-chain', 28: 'xy-chain', 30: 'aic', 33: 'als-xz' };
 const MAX_STEPS = 400;
 const engine = new Sudoku();
+engine.tracing = true;
 const inputs = [];
 let givens = null, stepCount = 0, finished = false;
 const removedAt = new Uint16Array(729);
@@ -242,7 +243,7 @@ function advance() {
   }
   if (place) elim = [];
   stepCount++;
-  const explained = EXPLAINER && place ? EXPLAINER.explain({ t, unit: engine.stepUnit, cell: place[0], d: place[1], values: valuesBefore, cands: candsBefore, elim, removedAt }) : null;
+  const explained = EXPLAINER ? EXPLAINER.explain({ t, engine, unit: engine.stepUnit, cell: place ? place[0] : -1, d: place ? place[1] : 0, values: valuesBefore, cands: candsBefore, elim, removedAt, rating: engine.stepRating }) : null;
   for (const [c, d] of elim) if (!removedAt[c * 9 + d - 1]) removedAt[c * 9 + d - 1] = stepCount;
   const rating = ratingFormat.format(engine.stepRating / 10);
   const li = document.createElement('li');
@@ -256,13 +257,17 @@ function advance() {
     li.appendChild(a);
   } else li.appendChild(strong);
   if (explained) {
-    const ul = document.createElement('ul');
+    let ul = null;
     for (const line of explained.lines) {
+      if (!ul || !line) {
+        ul = document.createElement('ul');
+        li.appendChild(ul);
+      }
+      if (!line) continue;
       const item = document.createElement('li');
       item.textContent = line;
       ul.appendChild(item);
     }
-    li.appendChild(ul);
   } else {
     for (const line of describe(t, elim, place)) {
       li.appendChild(document.createElement('br'));

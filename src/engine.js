@@ -57,6 +57,10 @@ const positionIn = (c, u) => u < 9 ? COL[c] : u < 18 ? ROW[c] : (ROW[c] % 3) * 3
 const inUnit = (c, u) => u < 9 ? ROW[c] === u : u < 18 ? COL[c] === u - 9 : BOX[c] === u - 18;
 const chainBonus = links => links > 4 ? Math.min(10, (links - 4) >> 1) : 0;
 const MAX_NEST = 8;
+const FIG_MAX = 64;
+const FIG_CELLS = 2048;
+const FIG_ELIMS = 1024;
+const FIG_POINTING = 1, FIG_CLAIMING = 2, FIG_NAKED = 3, FIG_HIDDEN = 4, FIG_FISH = 5, FIG_CELLS_ONLY = 6, FIG_RECTANGLE = 7, FIG_SUBSET = 8, FIG_CROSS = 9, FIG_PATH = 10, FIG_QUAD = 11, FIG_CHAIN = 12, FIG_ALS = 13, FIG_LINKS = 14, FIG_STEM = 15, FIG_LINE = 16, FIG_BOX = 17;
 function candidates(values, cell) {
   let used = 0;
   const peers = PEERS[cell];
@@ -140,6 +144,35 @@ class Sudoku {
     this.union = new Uint16Array(81);
     this.sv = new Uint8Array(81 * (MAX_NEST + 1));
     this.sc = new Uint16Array(81 * (MAX_NEST + 1));
+    this.tracing = false;
+    this.traceLc = new Uint16Array(81);
+    this.figCount = 0;
+    this.figKind = new Uint8Array(FIG_MAX);
+    this.figDigits = new Uint16Array(FIG_MAX);
+    this.figA = new Int32Array(FIG_MAX);
+    this.figB = new Int32Array(FIG_MAX);
+    this.figCellEnd = new Int32Array(FIG_MAX);
+    this.figElimEnd = new Int32Array(FIG_MAX);
+    this.figCellCount = 0;
+    this.figCells = new Int32Array(FIG_CELLS);
+    this.figElimCount = 0;
+    this.figElimCell = new Uint8Array(FIG_ELIMS);
+    this.figElimMask = new Uint16Array(FIG_ELIMS);
+    this.chainLength = 0;
+    this.chainPath = new Int32Array(STATES);
+    this.alsParent = new Int32Array(MAX_ALS * 9);
+    this.alsPathLength = 0;
+    this.alsPath = new Int32Array(MAX_ALS * 9);
+    this.conflictState = -1;
+    this.conflictCell = -1;
+    this.conflictUnit = -1;
+    this.conflictDigits = 0;
+    this.logging = false;
+    this.logLevel = 0;
+    this.logCount = 0;
+    this.logCell = new Uint8Array(4096);
+    this.logDigit = new Uint8Array(4096);
+    this.logWhy = new Int8Array(4096);
     this.rating = 0;
     this.solution = null;
   }
@@ -331,8 +364,8 @@ class Sudoku {
             cols |= 1 << COL[c];
           }
         }
-        if (rows && POP[rows] === 1) changed = this.clearLineOutsideBox(UNITS[low(rows)], box, b) || changed;
-        if (cols && POP[cols] === 1) changed = this.clearLineOutsideBox(UNITS[9 + low(cols)], box, b) || changed;
+        if (rows && POP[rows] === 1 && this.clearLineOutsideBox(UNITS[low(rows)], box, b)) changed = this.unitFigure(FIG_POINTING, b, 18 + box, low(rows));
+        if (cols && POP[cols] === 1 && this.clearLineOutsideBox(UNITS[9 + low(cols)], box, b)) changed = this.unitFigure(FIG_POINTING, b, 18 + box, 9 + low(cols));
       }
       for (let line = 0; line < 18; line++) {
         let boxes = 0;
@@ -341,14 +374,16 @@ class Sudoku {
         if (boxes && POP[boxes] === 1) {
           const box = low(boxes);
           const bc = UNITS[18 + box];
+          let claimed = false;
           for (let k = 0; k < 9; k++) {
             const c = bc[k];
             const inLine = line < 9 ? ROW[c] === line : COL[c] === line - 9;
             if (!inLine && (lc[c] & b)) {
               lc[c] &= ~b;
-              changed = this.rated(28);
+              claimed = true;
             }
           }
+          if (claimed) changed = this.rated(28) && this.unitFigure(FIG_CLAIMING, b, line, 18 + box);
         }
       }
     }
@@ -379,11 +414,12 @@ class Sudoku {
           const mb = lc[cells[b]];
           if (!mb || POP[mb] > 3) continue;
           const m2 = ma | mb;
-          if (POP[m2] === 2) changed = this.dropOutside(cells, m2, (1 << a) | (1 << b)) || changed;
-          else if (POP[m2] === 3) {
+          if (POP[m2] === 2) {
+            if (this.dropOutside(cells, m2, (1 << a) | (1 << b))) changed = this.membersFigure(FIG_NAKED, m2, u, (1 << a) | (1 << b));
+          } else if (POP[m2] === 3) {
             for (let c = b + 1; c < 9; c++) {
               const mc = lc[cells[c]];
-              if (mc && (mc | m2) === m2 && this.dropOutside(cells, m2, (1 << a) | (1 << b) | (1 << c))) changed = this.rated(36);
+              if (mc && (mc | m2) === m2 && this.dropOutside(cells, m2, (1 << a) | (1 << b) | (1 << c))) changed = this.rated(36) && this.membersFigure(FIG_NAKED, m2, u, (1 << a) | (1 << b) | (1 << c));
             }
           }
         }
@@ -402,11 +438,11 @@ class Sudoku {
           if (!p2 || POP[p2] > 3) continue;
           const u2 = p1 | p2;
           if (POP[u2] === 2) {
-            if (this.keepInside(cells, u2, bit(d1) | bit(d2))) changed = this.rated(34);
+            if (this.keepInside(cells, u2, bit(d1) | bit(d2))) changed = this.rated(34) && this.membersFigure(FIG_HIDDEN, bit(d1) | bit(d2), u, u2);
           } else if (POP[u2] === 3) {
             for (let d3 = d2 + 1; d3 <= 9; d3++) {
               const p3 = positions[d3];
-              if (p3 && (p3 | u2) === u2 && this.keepInside(cells, u2, bit(d1) | bit(d2) | bit(d3))) changed = this.rated(40);
+              if (p3 && (p3 | u2) === u2 && this.keepInside(cells, u2, bit(d1) | bit(d2) | bit(d3))) changed = this.rated(40) && this.membersFigure(FIG_HIDDEN, bit(d1) | bit(d2) | bit(d3), u, u2);
             }
           }
         }
@@ -441,13 +477,13 @@ class Sudoku {
             if (!m2 || POP[m2] > size) continue;
             const u2 = m1 | m2;
             if (size === 2) {
-              if (POP[u2] === 2 && this.fishDrop(b, t, u2, (1 << l1) | (1 << l2))) return true;
+              if (POP[u2] === 2 && this.fishDrop(b, t, u2, (1 << l1) | (1 << l2))) return this.fishFigure(b, t, (1 << l1) | (1 << l2), u2);
             } else if (POP[u2] <= 3) {
               for (let l3 = l2 + 1; l3 < 9; l3++) {
                 const m3 = masks[l3];
                 if (!m3 || POP[m3] > 3) continue;
                 const u3 = u2 | m3;
-                if (POP[u3] === 3 && this.fishDrop(b, t, u3, (1 << l1) | (1 << l2) | (1 << l3))) return true;
+                if (POP[u3] === 3 && this.fishDrop(b, t, u3, (1 << l1) | (1 << l2) | (1 << l3))) return this.fishFigure(b, t, (1 << l1) | (1 << l2) | (1 << l3), u3);
               }
             }
           }
@@ -473,7 +509,7 @@ class Sudoku {
           if ((am & pm) === (bm & pm)) continue;
           const z = am & bm & ~pm;
           if (POP[z] !== 1) continue;
-          if (this.clearSeeing(z, peers[a], peers[b], -1)) return true;
+          if (this.clearSeeing(z, peers[a], peers[b], -1)) return this.cellsFigure(FIG_CELLS_ONLY, z, p, peers[a], peers[b], -1, 0, 0);
         }
       }
     }
@@ -505,7 +541,7 @@ class Sudoku {
           if (POP[bm] !== 2 || (bm & pm) !== bm || bm === am) continue;
           const z = am & bm;
           if (POP[z] !== 1) continue;
-          if (this.clearSeeing(z, peers[a], peers[b], p)) return true;
+          if (this.clearSeeing(z, peers[a], peers[b], p)) return this.cellsFigure(FIG_CELLS_ONLY, z, p, peers[a], peers[b], -1, 0, 0);
         }
       }
     }
@@ -526,7 +562,7 @@ class Sudoku {
             if (POP[m2] !== 2 || POP[m1 & m2] !== 1) continue;
             const top1 = UNITS[t * 9 + l1][low(m1 & ~m2)];
             const top2 = UNITS[t * 9 + l2][low(m2 & ~m1)];
-            if (this.clearSeeing(b, top1, top2, -1)) return true;
+            if (this.clearSeeing(b, top1, top2, -1)) return this.cellsFigure(FIG_CELLS_ONLY, b, top1, top2, UNITS[t * 9 + l1][low(m1 & m2)], UNITS[t * 9 + l2][low(m1 & m2)], t * 9 + l1, t * 9 + l2);
           }
         }
       }
@@ -551,7 +587,7 @@ class Sudoku {
             for (let j = 0; j < 2; j++) {
               const boxMate = j === 0 ? c0 : c1, colEnd = j === 0 ? c1 : c0;
               if (BOX[inBox] !== BOX[boxMate]) continue;
-              if (this.clearSeeing(b, rowEnd, colEnd, -1)) return true;
+              if (this.clearSeeing(b, rowEnd, colEnd, -1)) return this.cellsFigure(FIG_CELLS_ONLY, b, rowEnd, inBox, boxMate, colEnd, r, 9 + c);
             }
           }
         }
@@ -574,7 +610,7 @@ class Sudoku {
             if (POP[um] !== 2) continue;
             const e1 = UNITS[u][low(um)], e2 = UNITS[u][low(um & (um - 1))];
             if (!(sees(e1, p) && sees(e2, q)) && !(sees(e1, q) && sees(e2, p))) continue;
-            if (this.clearSeeing(m & ~b, p, q, -1)) return true;
+            if (this.clearSeeing(m & ~b, p, q, -1)) return sees(e1, p) ? this.cellsFigure(FIG_CELLS_ONLY, m, p, q, e1, e2, b, u) : this.cellsFigure(FIG_CELLS_ONLY, m, p, q, e2, e1, b, u);
           }
         }
       }
@@ -594,7 +630,7 @@ class Sudoku {
       if (POP[m] !== 2 || lc[corners[(k + 2) & 3]] !== m || lc[corners[(k + 3) & 3]] !== m) continue;
       if ((lc[target] & m) !== m || lc[target] === m) continue;
       lc[target] &= ~m;
-      return true;
+      return this.rectangleFigure(m, target, 0);
     }
     return false;
   }
@@ -602,6 +638,141 @@ class Sudoku {
   rated(r) {
     if (r > this.stepRating) this.stepRating = r;
     return true;
+  }
+
+  traceStart() {
+    this.figCount = 0;
+    this.figCellCount = 0;
+    this.figElimCount = 0;
+    this.traceLc.set(this.lc);
+  }
+
+  figCell(c) {
+    if (this.tracing && this.figCellCount < FIG_CELLS) this.figCells[this.figCellCount++] = c;
+  }
+
+  figure(kind, digits, a, b) {
+    if (!this.tracing) return true;
+    if (this.figCount === FIG_MAX) {
+      this.figCellCount = this.figCellEnd[FIG_MAX - 1];
+      return true;
+    }
+    const f = this.figCount++;
+    this.figKind[f] = kind;
+    this.figDigits[f] = digits;
+    this.figA[f] = a;
+    this.figB[f] = b;
+    this.figCellEnd[f] = this.figCellCount;
+    for (let c = 0; c < 81; c++) {
+      const gone = this.traceLc[c] & ~this.lc[c];
+      if (gone && this.figElimCount < FIG_ELIMS) {
+        this.figElimCell[this.figElimCount] = c;
+        this.figElimMask[this.figElimCount] = gone;
+        this.figElimCount++;
+      }
+      this.traceLc[c] = this.lc[c];
+    }
+    this.figElimEnd[f] = this.figElimCount;
+    return true;
+  }
+
+  unitFigure(kind, digits, a, b) {
+    for (let k = 0; k < 9; k++) if (this.traceLc[UNITS[a][k]] & digits) this.figCell(UNITS[a][k]);
+    return this.figure(kind, digits, a, b);
+  }
+
+  membersFigure(kind, digits, u, members) {
+    for (let k = 0; k < 9; k++) if (members & (1 << k)) this.figCell(UNITS[u][k]);
+    return this.figure(kind, digits, u, members);
+  }
+
+  fishFigure(b, t, base, cover) {
+    for (let l = 0; l < 9; l++) {
+      if (!(base & (1 << l))) continue;
+      for (let k = 0; k < 9; k++) if (this.traceLc[UNITS[t * 9 + l][k]] & b) this.figCell(UNITS[t * 9 + l][k]);
+    }
+    return this.figure(FIG_FISH, b, t, base | (cover << 9));
+  }
+
+  cellsFigure(kind, digits, c1, c2, c3, c4, a, b) {
+    if (c1 >= 0) this.figCell(c1);
+    if (c2 >= 0) this.figCell(c2);
+    if (c3 >= 0) this.figCell(c3);
+    if (c4 >= 0) this.figCell(c4);
+    return this.figure(kind, digits, a, b);
+  }
+
+  rectangleFigure(m, a, b) {
+    for (let i = 0; i < 4; i++) this.figCell(this.corners[i]);
+    return this.figure(FIG_RECTANGLE, m, a, b);
+  }
+
+  pathFigure(p, q, m) {
+    if (!this.tracing) return true;
+    const dist = this.dist81, path = this.cellList;
+    let n = 0;
+    for (let x = q; ; ) {
+      path[n++] = x;
+      if (x === p) break;
+      const peers = PEERS[x];
+      let k = 0;
+      while (k < 20 && (this.traceLc[peers[k]] !== m || dist[peers[k]] !== dist[x] - 1)) k++;
+      if (k === 20) break;
+      x = peers[k];
+    }
+    for (let i = n - 1; i >= 0; i--) this.figCell(path[i]);
+    return this.figure(FIG_PATH, m, 0, 0);
+  }
+
+  keepChain(end) {
+    if (!this.tracing) return;
+    let n = 0;
+    for (let st = end; st >= 0; st = this.parent[st]) this.chainPath[n++] = st;
+    this.chainLength = n;
+  }
+
+  chainFigure(loop) {
+    for (let i = this.chainLength - 1; i >= 0; i--) this.figCell(this.chainPath[i]);
+    return this.figure(FIG_CHAIN, 0, loop, 0);
+  }
+
+  alsFigure(i, role, extra) {
+    for (let w = 0; w < 3; w++) for (let m = this.alsCells[i * 3 + w]; m; m &= m - 1) this.figCell(w * 27 + low(m));
+    return this.figure(FIG_ALS, this.alsDigits[i], role, extra);
+  }
+
+  keepAlsPath(end) {
+    if (!this.tracing) return;
+    let n = 0, st = end;
+    for (; st >= 0; st = this.alsParent[st]) this.alsPath[n++] = st;
+    this.alsPath[n++] = st;
+    this.alsPathLength = n;
+  }
+
+  alsChainFigure() {
+    if (!this.tracing) return true;
+    const path = this.alsPath, n = this.alsPathLength;
+    this.alsFigure(-1 - path[n - 1], 0, 0);
+    for (let i = n - 2; i >= 0; i--) this.alsFigure((path[i] / 9) | 0, n - 1 - i, 1 << (path[i] % 9));
+    return true;
+  }
+
+  log(c, d, why) {
+    if (this.logCount < 4096) {
+      this.logCell[this.logCount] = c;
+      this.logDigit[this.logCount] = d;
+      this.logWhy[this.logCount] = why;
+      this.logCount++;
+    }
+  }
+
+  logConflict(level, c, u, digits) {
+    if (this.logging && level === this.logLevel) {
+      this.conflictCell = c;
+      this.conflictUnit = c < 0 ? u : -1;
+      this.conflictDigits = digits;
+    }
+    return false;
   }
 
   drop(cell, mask) {
@@ -638,7 +809,7 @@ class Sudoku {
             for (let d = c + 1; d < 9; d++) {
               const md = lc[cells[d]], m4 = m3 | md;
               if (!md || POP[m4] !== 4) continue;
-              if (this.dropOutside(cells, m4, (1 << a) | (1 << b) | (1 << c) | (1 << d))) return true;
+              if (this.dropOutside(cells, m4, (1 << a) | (1 << b) | (1 << c) | (1 << d))) return this.membersFigure(FIG_NAKED, m4, u, (1 << a) | (1 << b) | (1 << c) | (1 << d));
             }
           }
         }
@@ -664,7 +835,7 @@ class Sudoku {
             for (let d4 = d3 + 1; d4 <= 9; d4++) {
               const p4 = positions[d4], u4 = u3 | p4;
               if (!p4 || POP[u4] !== 4) continue;
-              if (this.keepInside(cells, u4, bit(d1) | bit(d2) | bit(d3) | bit(d4))) return true;
+              if (this.keepInside(cells, u4, bit(d1) | bit(d2) | bit(d3) | bit(d4))) return this.membersFigure(FIG_HIDDEN, bit(d1) | bit(d2) | bit(d3) | bit(d4), u, u4);
             }
           }
         }
@@ -701,7 +872,7 @@ class Sudoku {
         for (let base = 0; base < 512; base++) {
           if (POP[base] !== 4) continue;
           const cover = this.baseUnion(base);
-          if (POP[cover] === 4 && this.fishDrop(b, t, cover, base)) return true;
+          if (POP[cover] === 4 && this.fishDrop(b, t, cover, base)) return this.fishFigure(b, t, base, cover);
         }
       }
     }
@@ -724,7 +895,7 @@ class Sudoku {
             const inside = all & block;
             for (let sub = inside; ; sub = (sub - 1) & inside) {
               const cover = outside | sub;
-              if (POP[cover] === n && this.finnedDrop(b, t, base, cover, sashimi)) return true;
+              if (POP[cover] === n && this.finnedDrop(b, t, base, cover, sashimi)) return this.fishFigure(b, t, base, cover);
               if (!sub) break;
             }
           }
@@ -784,14 +955,14 @@ class Sudoku {
               const m = this.unitMask(UNITS[9 + line], b);
               if (POP[m] !== 2 || !(m & (1 << row))) continue;
               const far = low(m & ~(1 << row));
-              if (((far / 3) | 0) !== band && this.drop(far * 9 + col, b)) return true;
+              if (((far / 3) | 0) !== band && this.drop(far * 9 + col, b)) return this.cellsFigure(FIG_CROSS, b, row * 9 + line, far * 9 + line, far * 9 + col, -1, 18 + box, row * 9 + col);
             }
             for (let line = 0; line < 9; line++) {
               if (((line / 3) | 0) === band) continue;
               const m = this.unitMask(UNITS[line], b);
               if (POP[m] !== 2 || !(m & (1 << col))) continue;
               const far = low(m & ~(1 << col));
-              if (((far / 3) | 0) !== stack && this.drop(row * 9 + far, b)) return true;
+              if (((far / 3) | 0) !== stack && this.drop(row * 9 + far, b)) return this.cellsFigure(FIG_CROSS, b, line * 9 + col, line * 9 + far, row * 9 + far, -1, 18 + box, row * 9 + col);
             }
           }
         }
@@ -824,7 +995,7 @@ class Sudoku {
         if (dist[q] < 3 || !(dist[q] & 1)) continue;
         let changed = false;
         for (let c = 0; c < 81; c++) if (c !== p && c !== q && SEE[c * 81 + p] && SEE[c * 81 + q] && this.drop(c, m)) changed = true;
-        if (changed) return true;
+        if (changed) return this.pathFigure(p, q, m);
       }
     }
     return false;
@@ -899,7 +1070,7 @@ class Sudoku {
       for (let i = 0; i < 4; i++) if ((lc[quad[i]] & z) && !SEE[t * 81 + quad[i]]) all = false;
       if (all && this.drop(t, z)) changed = true;
     }
-    return changed;
+    return changed && this.cellsFigure(FIG_QUAD, z, quad[0], quad[1], quad[2], quad[3], union, 0);
   }
 
   rectangles(kind) {
@@ -970,7 +1141,7 @@ class Sudoku {
     }
     if ((floors | roofs) !== 15 || !extra || POP[floors] === 3) return false;
     const adjacent = POP[floors] === 2 && floors !== 5 && floors !== 10;
-    return adjacent !== diagonal && this.dropSeeingCorners(extra, roofs);
+    return adjacent !== diagonal && this.dropSeeingCorners(extra, roofs) && this.rectangleFigure(m, extra, roofs);
   }
 
   urType3() {
@@ -982,14 +1153,14 @@ class Sudoku {
       if ((lc[r1] & m) !== m || (lc[r2] & m) !== m || lc[r1] === m || lc[r2] === m) continue;
       const extra = (lc[r1] | lc[r2]) & ~m;
       const line = ROW[r1] === ROW[r2] ? ROW[r1] : 9 + COL[r1];
-      if (this.urSubset(UNITS[line], r1, r2, extra)) return true;
-      if (BOX[r1] === BOX[r2] && this.urSubset(UNITS[18 + BOX[r1]], r1, r2, extra)) return true;
+      if (this.urSubset(line, r1, r2, extra)) return this.rectangleFigure(m, extra, (1 << ((k + 2) & 3)) | (1 << ((k + 3) & 3)));
+      if (BOX[r1] === BOX[r2] && this.urSubset(18 + BOX[r1], r1, r2, extra)) return this.rectangleFigure(m, extra, (1 << ((k + 2) & 3)) | (1 << ((k + 3) & 3)));
     }
     return false;
   }
 
-  urSubset(cells, r1, r2, extra) {
-    const lc = this.lc, others = this.others;
+  urSubset(u, r1, r2, extra) {
+    const lc = this.lc, others = this.others, cells = UNITS[u];
     let n = 0;
     for (let k = 0; k < 9; k++) {
       const c = cells[k];
@@ -1003,7 +1174,10 @@ class Sudoku {
       if (POP[m] !== size + 1) continue;
       let changed = false;
       for (let i = 0; i < n; i++) if (!(s & (1 << i)) && this.drop(others[i], m)) changed = true;
-      if (changed) return true;
+      if (changed) {
+        for (let i = 0; i < n; i++) if (s & (1 << i)) this.figCell(others[i]);
+        return this.figure(FIG_SUBSET, m, u, 0);
+      }
     }
     return false;
   }
@@ -1023,13 +1197,14 @@ class Sudoku {
       if (POP[m] !== 2 || lc[corners[(k + 1) & 3]] !== m) continue;
       const r1 = corners[(k + 2) & 3], r2 = corners[(k + 3) & 3];
       if ((lc[r1] & m) !== m || (lc[r2] & m) !== m || (lc[r1] === m && lc[r2] === m)) continue;
-      const line = ROW[r1] === ROW[r2] ? UNITS[ROW[r1]] : UNITS[9 + COL[r1]];
-      const box = UNITS[18 + BOX[r1]];
+      const line = ROW[r1] === ROW[r2] ? ROW[r1] : 9 + COL[r1];
+      const box = 18 + BOX[r1];
       for (let rest = m; rest; rest &= rest - 1) {
         const x = rest & -rest, y = m & ~x;
-        if (!this.onlyIn(line, x, r1, r2) && !(BOX[r1] === BOX[r2] && this.onlyIn(box, x, r1, r2))) continue;
+        const where = this.onlyIn(UNITS[line], x, r1, r2) ? line : BOX[r1] === BOX[r2] && this.onlyIn(UNITS[box], x, r1, r2) ? box : -1;
+        if (where < 0) continue;
         const a = this.drop(r1, y), b = this.drop(r2, y);
-        if (a || b) return true;
+        if (a || b) return this.rectangleFigure(m, x, where);
       }
     }
     return false;
@@ -1048,7 +1223,7 @@ class Sudoku {
         const cols = this.onlyIn(UNITS[9 + COL[corners[0]]], x, corners[0], corners[3]) && this.onlyIn(UNITS[9 + COL[corners[1]]], x, corners[1], corners[2]);
         if (!rows && !cols) continue;
         const a = this.drop(g1, x), b = this.drop(g2, x);
-        if (a || b) return true;
+        if (a || b) return this.rectangleFigure(m, x, rows ? 0 : 1);
       }
     }
     return false;
@@ -1066,7 +1241,7 @@ class Sudoku {
         const x = rest & -rest, y = m & ~x;
         if (!this.onlyIn(UNITS[ROW[d]], x, d, ROW[d] * 9 + COL[a])) continue;
         if (!this.onlyIn(UNITS[9 + COL[d]], x, d, ROW[a] * 9 + COL[d])) continue;
-        if (this.drop(d, y)) return true;
+        if (this.drop(d, y)) return this.rectangleFigure(m, x, k);
       }
     }
     return false;
@@ -1096,7 +1271,7 @@ class Sudoku {
       }
       if (ok) {
         lc[tri] = x;
-        return true;
+        return this.cellsFigure(FIG_CELLS_ONLY, x, tri, -1, -1, -1, 0, 0);
       }
     }
     return false;
@@ -1336,6 +1511,7 @@ class Sudoku {
         if (!(ch & 1)) continue;
         if (loop ? this.loopTargets(s, ch) : this.targets(s, ch >> 1, false) && this.targets(s, ch >> 1, true)) {
           this.elimBest.set(this.elimTry);
+          this.keepChain(ch);
           return d;
         }
       }
@@ -1360,7 +1536,7 @@ class Sudoku {
     if (best === none) return false;
     for (let c = 0; c < 81; c++) this.lc[c] &= ~this.elimBest[c];
     this.stepRating = TECH_BASE[id] + chainBonus(best);
-    return true;
+    return this.chainFigure(loop);
   }
 
   sueDeCoq() {
@@ -1423,7 +1599,13 @@ class Sudoku {
       const c = UNITS[18 + box][k];
       if (keep[c] !== 1 && keep[c] !== 3 && this.drop(c, boxDigits)) changed = true;
     }
-    return changed;
+    if (!changed) return false;
+    for (let j = 0; j < ni; j++) if (cs & (1 << j)) this.figCell(this.inter[j]);
+    for (let j = 0; j < nl; j++) if (a & (1 << j)) this.figCell(this.lineRest[j]);
+    this.figure(FIG_LINE, lineDigits, line, POP[cs]);
+    for (let j = 0; j < ni; j++) if (cs & (1 << j)) this.figCell(this.inter[j]);
+    for (let j = 0; j < nb; j++) if (d & (1 << j)) this.figCell(this.boxRest[j]);
+    return this.figure(FIG_BOX, boxDigits, 18 + box, POP[cs]);
   }
 
   collectAls() {
@@ -1542,7 +1724,7 @@ class Sudoku {
           for (let rest = this.alsDigits[i] & ~rcc; rest; rest &= rest - 1) if (this.dropSeen(i, i, low(rest))) changed = true;
           for (let rest = this.alsDigits[j] & ~rcc; rest; rest &= rest - 1) if (this.dropSeen(j, j, low(rest))) changed = true;
         }
-        if (changed) return true;
+        if (changed) return this.alsFigure(i, 0, 0) && this.alsFigure(j, 1, 0) && this.figure(FIG_LINKS, rcc, 0, 0);
       }
     }
     return false;
@@ -1566,7 +1748,7 @@ class Sudoku {
               const y = ys & -ys;
               let changed = false;
               for (let zs = common & ~x & ~y; zs; zs &= zs - 1) if (this.dropSeen(a, b, low(zs))) changed = true;
-              if (changed) return true;
+              if (changed) return this.alsFigure(c, 0, 0) && this.alsFigure(a, 1, 0) && this.alsFigure(b, 2, 0) && this.figure(FIG_LINKS, x, y, 0);
             }
           }
         }
@@ -1594,7 +1776,7 @@ class Sudoku {
       this.petalStart[k] = n;
       for (let z = 0; z < 9; z++) {
         if (sm & (1 << z)) continue;
-        if (this.blossom(0, k, z, this.digitCells[z * 3], this.digitCells[z * 3 + 1], this.digitCells[z * 3 + 2], 0, 0, 0)) return true;
+        if (this.blossom(0, k, z, this.digitCells[z * 3], this.digitCells[z * 3 + 1], this.digitCells[z * 3 + 2], 0, 0, 0)) return this.cellsFigure(FIG_STEM, 1 << z, stem, -1, -1, -1, 0, 0);
       }
     }
     return false;
@@ -1616,7 +1798,7 @@ class Sudoku {
       const at = (i * 9 + z) * 3;
       const t0 = s0 & this.alsSeen[at], t1 = s1 & this.alsSeen[at + 1], t2 = s2 & this.alsSeen[at + 2];
       if (!(t0 | t1 | t2)) continue;
-      if (this.blossom(k + 1, count, z, t0, t1, t2, u0 | c0, u1 | c1, u2 | c2)) return true;
+      if (this.blossom(k + 1, count, z, t0, t1, t2, u0 | c0, u1 | c1, u2 | c2)) return this.alsFigure(i, k, 0);
     }
     return false;
   }
@@ -1634,7 +1816,7 @@ class Sudoku {
     if (best === none) return false;
     for (let c = 0; c < 81; c++) this.lc[c] &= ~this.elimBest[c];
     this.stepRating = TECH_BASE[36] + chainBonus(2 * best - 1);
-    return true;
+    return this.alsChainFigure();
   }
 
   alsChainFrom(a, limit) {
@@ -1655,6 +1837,7 @@ class Sudoku {
           mark[st] = stamp;
           first[st] = 0;
           depth[st] = 2;
+          this.alsParent[st] = -1 - a;
           queue[tail++] = st;
         }
         first[st] |= 1 << x;
@@ -1666,6 +1849,7 @@ class Sudoku {
       if (k >= limit) break;
       if (b !== a && this.alsChainTargets(a, b, x, first[st])) {
         this.elimBest.set(this.elimTry);
+        this.keepAlsPath(st);
         return k;
       }
       if (k + 1 >= limit) continue;
@@ -1678,6 +1862,7 @@ class Sudoku {
             mark[next] = stamp;
             first[next] = 0;
             depth[next] = k + 1;
+            this.alsParent[next] = st;
             queue[tail++] = next;
           }
           if (depth[next] === k + 1) first[next] |= first[st];
@@ -1713,6 +1898,10 @@ class Sudoku {
     const stamp = this.markValue;
     const origin = node * 2 + 1;
     mark[origin] = stamp;
+    this.parent[origin] = -1;
+    this.conflictState = -1;
+    this.conflictCell = -1;
+    this.conflictUnit = -1;
     let head = 0, tail = 0;
     queue[tail++] = origin;
     while (head < tail) {
@@ -1720,8 +1909,13 @@ class Sudoku {
       for (let k = start[st]; k < start[st + 1]; k++) {
         const ch = to[k];
         if (mark[ch] === stamp) continue;
-        if (mark[ch ^ 1] === stamp) return false;
+        if (mark[ch ^ 1] === stamp) {
+          this.parent[ch] = st;
+          this.conflictState = ch;
+          return false;
+        }
         mark[ch] = stamp;
+        this.parent[ch] = st;
         queue[tail++] = ch;
       }
     }
@@ -1732,7 +1926,12 @@ class Sudoku {
       if (st & 1) on[c] |= b;
       else off[c] |= b;
     }
-    for (let c = 0; c < 81; c++) if (lc[c] && !(lc[c] & ~off[c])) return false;
+    for (let c = 0; c < 81; c++) {
+      if (lc[c] && !(lc[c] & ~off[c])) {
+        this.conflictCell = c;
+        return false;
+      }
+    }
     for (let u = 0; u < 27; u++) {
       let have = 0, left = 0;
       for (let k = 0; k < 9; k++) {
@@ -1740,7 +1939,11 @@ class Sudoku {
         have |= lc[c];
         left |= lc[c] & ~off[c];
       }
-      if (have & ~left) return false;
+      if (have & ~left) {
+        this.conflictUnit = u;
+        this.conflictDigits = have & ~left;
+        return false;
+      }
     }
     return true;
   }
@@ -1819,7 +2022,8 @@ class Sudoku {
     return false;
   }
 
-  assign(at, c, d) {
+  assign(at, c, d, why) {
+    if (this.logging && at === 81 * this.logLevel) this.log(c, d, why);
     const sc = this.sc, keep = ~bit(d), peers = PEERS[c];
     this.sv[at + c] = d;
     sc[at + c] = 0;
@@ -1833,9 +2037,9 @@ class Sudoku {
       for (let c = 0; c < 81; c++) {
         if (sv[at + c]) continue;
         const m = sc[at + c];
-        if (!m) return false;
+        if (!m) return this.logConflict(level, c, 0, 0);
         if (POP[m] === 1) {
-          this.assign(at, c, digit(m));
+          this.assign(at, c, digit(m), -1);
           progress = true;
         }
       }
@@ -1846,7 +2050,7 @@ class Sudoku {
           const c = cells[k];
           if (sv[at + c]) {
             const b = bit(sv[at + c]);
-            if (placed & b) return false;
+            if (placed & b) return this.logConflict(level, -2, u, b);
             placed |= b;
             continue;
           }
@@ -1854,13 +2058,13 @@ class Sudoku {
           twice |= once & m;
           once |= m;
         }
-        if ((once | placed) !== ALL) return false;
+        if ((once | placed) !== ALL) return this.logConflict(level, -1, u, ALL & ~(once | placed));
         for (let single = once & ~twice & ~placed; single; single &= single - 1) {
           const b = single & -single;
           for (let k = 0; k < 9; k++) {
             const c = cells[k];
             if (sv[at + c] || !(sc[at + c] & b)) continue;
-            this.assign(at, c, digit(b));
+            this.assign(at, c, digit(b), u);
             progress = true;
             break;
           }
@@ -1880,7 +2084,7 @@ class Sudoku {
       sc.copyWithin(at, from * 81, from * 81 + 81);
     }
     if (!(sc[at + cell] & bit(d))) return false;
-    this.assign(at, cell, d);
+    this.assign(at, cell, d, -2);
     return this.settleNested(level);
   }
 
@@ -1895,6 +2099,7 @@ class Sudoku {
         for (let rest = sc[at + q]; rest; rest &= rest - 1) {
           const b = rest & -rest;
           if (!(sc[at + q] & b) || this.branch(level - 1, level, q, low(b) + 1)) continue;
+          if (this.logging && at === 81 * this.logLevel) this.log(q, low(b) + 1, -3);
           sc[at + q] &= ~b;
           changed = true;
           if (!this.settle(level)) return false;
@@ -2019,6 +2224,7 @@ class Sudoku {
   }
 
   step() {
+    if (this.tracing) this.traceStart();
     for (let k = 0; k < this.techLimit; k++) {
       const id = TECH_ORDER[k];
       if (this.techOff[id]) continue;
