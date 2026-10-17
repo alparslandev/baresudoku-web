@@ -429,7 +429,6 @@ class Sudoku {
 
   fish(size) {
     const masks = this.lineMasks;
-    let changed = false;
     for (let d = 1; d <= 9; d++) {
       const b = bit(d);
       for (let t = 0; t < 2; t++) {
@@ -442,20 +441,20 @@ class Sudoku {
             if (!m2 || POP[m2] > size) continue;
             const u2 = m1 | m2;
             if (size === 2) {
-              if (POP[u2] === 2) changed = this.fishDrop(b, t, u2, (1 << l1) | (1 << l2)) || changed;
+              if (POP[u2] === 2 && this.fishDrop(b, t, u2, (1 << l1) | (1 << l2))) return true;
             } else if (POP[u2] <= 3) {
               for (let l3 = l2 + 1; l3 < 9; l3++) {
                 const m3 = masks[l3];
                 if (!m3 || POP[m3] > 3) continue;
                 const u3 = u2 | m3;
-                if (POP[u3] === 3) changed = this.fishDrop(b, t, u3, (1 << l1) | (1 << l2) | (1 << l3)) || changed;
+                if (POP[u3] === 3 && this.fishDrop(b, t, u3, (1 << l1) | (1 << l2) | (1 << l3))) return true;
               }
             }
           }
         }
       }
     }
-    return changed;
+    return false;
   }
 
 
@@ -947,25 +946,31 @@ class Sudoku {
     return changed;
   }
 
-  urExtra(diagonal) {
+  pairInAllCorners() {
     const lc = this.lc, corners = this.corners;
     for (let k = 0; k < 4; k++) {
       const m = lc[corners[k]];
-      if (POP[m] !== 2) continue;
-      let floors = 0, roofs = 0, extra = 0;
-      for (let i = 0; i < 4; i++) {
-        const v = lc[corners[i]];
-        if (v === m) floors |= 1 << i;
-        else if ((v & m) === m && POP[v] === 3 && (!extra || (v & ~m) === extra)) {
-          extra = v & ~m;
-          roofs |= 1 << i;
-        }
-      }
-      if ((floors | roofs) !== 15 || !extra || POP[floors] === 3) continue;
-      const adjacent = POP[floors] === 2 && floors !== 5 && floors !== 10;
-      if (adjacent !== diagonal && this.dropSeeingCorners(extra, roofs)) return true;
+      if (POP[m] === 2 && (lc[corners[0]] & m) === m && (lc[corners[1]] & m) === m && (lc[corners[2]] & m) === m && (lc[corners[3]] & m) === m) return m;
     }
-    return false;
+    return 0;
+  }
+
+  urExtra(diagonal) {
+    const lc = this.lc, corners = this.corners;
+    const m = this.pairInAllCorners();
+    if (!m) return false;
+    let floors = 0, roofs = 0, extra = 0;
+    for (let i = 0; i < 4; i++) {
+      const v = lc[corners[i]];
+      if (v === m) floors |= 1 << i;
+      else if (POP[v] === 3 && (!extra || (v & ~m) === extra)) {
+        extra = v & ~m;
+        roofs |= 1 << i;
+      }
+    }
+    if ((floors | roofs) !== 15 || !extra || POP[floors] === 3) return false;
+    const adjacent = POP[floors] === 2 && floors !== 5 && floors !== 10;
+    return adjacent !== diagonal && this.dropSeeingCorners(extra, roofs);
   }
 
   urType3() {
@@ -1051,11 +1056,11 @@ class Sudoku {
 
   hiddenRectangle() {
     const lc = this.lc, corners = this.corners;
+    const m = this.pairInAllCorners();
+    if (!m) return false;
     for (let k = 0; k < 4; k++) {
       const a = corners[k];
-      const m = lc[a];
-      if (POP[m] !== 2) continue;
-      if ((lc[corners[0]] & m) !== m || (lc[corners[1]] & m) !== m || (lc[corners[2]] & m) !== m || (lc[corners[3]] & m) !== m) continue;
+      if (lc[a] !== m) continue;
       const d = corners[(k + 2) & 3];
       for (let rest = m; rest; rest &= rest - 1) {
         const x = rest & -rest, y = m & ~x;
