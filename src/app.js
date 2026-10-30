@@ -9,7 +9,7 @@ const S_STATS = S_MASTER + 5, S_PLAYED = S_MASTER + 6, S_BEST = S_MASTER + 7, S_
 const S_EXPLAIN = S_MASTER + 10, S_SHARE_PUZZLE = S_MASTER + 11;
 const S_TIMER = S_MASTER + 12, S_SHORTCUTS = S_MASTER + 13, S_ENTER = S_MASTER + 14, S_MOVE = S_MASTER + 15, S_MENU = S_MASTER + 16;
 const S_ARCHIVE = S_MASTER + 17, S_SOLVERS = S_MASTER + 18, S_FASTER = S_MASTER + 19, S_WEEKLY = S_MASTER + 20;
-const S_COLOR = S_MASTER + 21, S_CORNER = S_MASTER + 22;
+const S_COLOR = S_MASTER + 21, S_CORNER = S_MASTER + 22, S_SHARED = S_MASTER + 23;
 const SHORTCUTS = [['1-9', S_ENTER], ['\u2190 \u2191 \u2192 \u2193', S_MOVE], ['Backspace, 0', S_UNDO + 1], ['N', S_UNDO + 2], ['F', S_UNDO + 3], ['U, Ctrl+Z', S_UNDO], ['H', S_UNDO + 4], ['C', S_COLOR], ['Esc', S_MENU], ['?', S_SHORTCUTS]];
 const KEY = 'baresudoku';
 const $ = id => document.getElementById(id);
@@ -39,6 +39,7 @@ let weeklyPuzzle = null;
 let compare = null;
 let showTimer = fetchStored(TIMER_KEY) !== '0';
 let colorMode = false;
+let pendingShared = null;
 const LANGS = Array.from($('lang').options, o => o.value);
 let strings = L.s, menuOpen = false, generating = false, timer = 0, downCell = -1;
 let meta = { t: 0, d: false };
@@ -227,6 +228,9 @@ function renderLabels() {
   weekly.hidden = !DAILY || !!WEEK || !weeklyAvailable();
   $('keys-btn').textContent = strings[S_SHORTCUTS];
   $('keys-btn').hidden = matchMedia('(pointer: coarse)').matches;
+  $('shared-text').textContent = strings[S_SHARED];
+  $('shared-play').textContent = strings[S_PLAY];
+  $('shared-back').textContent = strings[S_CANCEL];
   fitToolLabels(true);
 }
 
@@ -462,6 +466,7 @@ function render() {
   $('stats').hidden = dialog !== 'stats';
   $('keys-help').hidden = dialog !== 'keys';
   $('archive').hidden = dialog !== 'archive';
+  $('shared').hidden = dialog !== 'shared';
   if (overlay) {
     const solved = game.active && game.solved;
     $('panel-title').textContent = solved ? strings[S_SOLVED] : WEEK ? strings[S_WEEKLY] : DAILY ? strings[S_DAILY] : strings[S_TITLE];
@@ -658,18 +663,54 @@ function openDialog(name) {
   dialog = name;
   if (name === 'stats') renderStats();
   else if (name === 'keys') renderKeys();
+  else if (name === 'shared') renderShared();
   else {
     archiveMonth = (dailyDate || localDate()).slice(0, 7);
     renderArchive();
   }
   render();
-  $(name === 'stats' ? 'stats-back' : name === 'keys' ? 'keys-back' : 'archive-back').focus();
+  $(name === 'stats' ? 'stats-back' : name === 'keys' ? 'keys-back' : name === 'shared' ? 'shared-play' : 'archive-back').focus();
 }
 
 function closeDialog() {
+  if (dialog === 'shared') {
+    declineShared();
+    return;
+  }
   dialog = '';
   render();
   focusPanel();
+}
+
+function renderShared() {
+  const name = levelName(pendingShared.level);
+  $('shared-title').textContent = pendingShared.rating > 0 ? name + ' ' + ratingFormat.format(pendingShared.rating / 10) : name;
+}
+
+function dropSharedQuery() {
+  try { history.replaceState(null, '', location.pathname); } catch (e) {}
+}
+
+function resumeAfterShared() {
+  pendingShared = null;
+  dialog = '';
+  menuOpen = false;
+  dropSharedQuery();
+  game.resume(now());
+  render();
+  startTimer();
+  focusCell();
+}
+
+function acceptShared() {
+  if (!pendingShared) return;
+  startShared(pendingShared);
+  resumeAfterShared();
+}
+
+function declineShared() {
+  if (!pendingShared) return;
+  resumeAfterShared();
 }
 
 function logResult(seconds) {
@@ -992,6 +1033,8 @@ function bind() {
   $('archive-btn').addEventListener('click', () => openDialog('archive'));
   $('keys-btn').addEventListener('click', () => openDialog('keys'));
   $('keys-back').addEventListener('click', closeDialog);
+  $('shared-play').addEventListener('click', acceptShared);
+  $('shared-back').addEventListener('click', declineShared);
   $('archive-back').addEventListener('click', closeDialog);
   $('month-prev').addEventListener('click', () => shiftMonth(-1));
   $('month-next').addEventListener('click', () => shiftMonth(1));
@@ -1121,16 +1164,18 @@ function init() {
   }
   game.load(saved);
   const shared = DAILY ? null : sharedPuzzle();
-  if (shared) {
+  if (shared && game.active && !game.solved && game.history.length) pendingShared = shared;
+  else if (shared) {
     startShared(shared);
-    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+    dropSharedQuery();
   }
   if (game.active) game.rating = engine.rate(game.given);
   meta = saved && saved.a ? { t: +saved.a.t || now(), d: !!saved.a.d } : { t: now(), d: game.solved };
-  menuOpen = !game.active;
-  if (game.active && !game.solved && !document.hidden && document.hasFocus()) game.resume(now());
+  menuOpen = !game.active || !!pendingShared;
+  if (game.active && !game.solved && !pendingShared && !document.hidden && document.hasFocus()) game.resume(now());
   render();
   startTimer();
+  if (pendingShared) openDialog('shared');
   if (DAILY && game.active && game.solved) fetchCompare(0);
   if (WEEK) loadWeekly().then(puzzle => {
     if (!puzzle) location.replace(DAILY_PATH);

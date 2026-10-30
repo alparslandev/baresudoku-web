@@ -91,7 +91,7 @@ kbd{font:inherit;font-size:.85rem;background:var(--card);border-radius:6px;paddi
 #stats th{font-weight:400;color:var(--muted);font-size:.75rem;text-align:end;padding:0 0 6px}
 #stats th:first-child,#stats td:first-child{text-align:start}
 #stats td{padding:6px 0;border-top:1px solid var(--line);text-align:end}
-#stats p{margin:0;text-align:center;color:var(--muted)}
+#stats p,.sheet p{margin:0;text-align:center;color:var(--muted)}
 #stats button{height:44px;font-size:1rem}
 #about{max-width:560px;margin:0 auto;padding:32px 16px 48px;line-height:1.5;user-select:text;-webkit-user-select:text}
 #about h1{font-size:1.5rem;line-height:1.25;margin:0 0 12px}
