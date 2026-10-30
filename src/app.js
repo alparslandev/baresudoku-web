@@ -227,6 +227,27 @@ function renderLabels() {
   weekly.hidden = !DAILY || !!WEEK || !weeklyAvailable();
   $('keys-btn').textContent = strings[S_SHORTCUTS];
   $('keys-btn').hidden = matchMedia('(pointer: coarse)').matches;
+  fitToolLabels(true);
+}
+
+let fittedToolWidth = 0;
+
+function fitToolLabels(force) {
+  const width = toolButtons[0].clientWidth;
+  if (!width || (!force && width === fittedToolWidth)) return;
+  fittedToolWidth = width;
+  toolButtons.forEach(b => {
+    const label = b.querySelector('span');
+    label.style.fontSize = '';
+    label.style.overflowWrap = 'normal';
+    let size = parseFloat(getComputedStyle(label).fontSize);
+    const overflows = () => label.scrollWidth > label.clientWidth || b.scrollHeight > b.clientHeight;
+    while (size > 9 && overflows()) {
+      size -= 0.5;
+      label.style.fontSize = size + 'px';
+    }
+    if (overflows()) label.style.overflowWrap = 'anywhere';
+  });
 }
 
 function buildBoard() {
@@ -1034,6 +1055,7 @@ function bind() {
   window.addEventListener('focus', resumeIfAllowed);
   for (const type of ['pointerdown', 'pointermove', 'keydown', 'wheel']) document.addEventListener(type, activity, { passive: true });
   window.addEventListener('pagehide', save);
+  window.addEventListener('resize', () => fitToolLabels(false));
 }
 
 function registerWorker() {
