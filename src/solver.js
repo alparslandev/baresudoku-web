@@ -56,10 +56,17 @@ function buildGrid() {
     input.value = d;
     if (d) focusInput(+input.dataset.i + 1);
   });
+  grid.addEventListener('focusin', e => { if (e.target.select) e.target.select(); });
   grid.addEventListener('keydown', e => {
     const i = +e.target.dataset.i;
     const k = e.key;
     let target = -1;
+    if (k >= '1' && k <= '9' && k.length === 1) {
+      e.preventDefault();
+      e.target.value = k;
+      e.target.dispatchEvent(new Event('input', { bubbles: true }));
+      return;
+    }
     if (k === 'ArrowLeft') target = i - 1;
     else if (k === 'ArrowRight') target = i + 1;
     else if (k === 'ArrowUp') target = i - 9;
