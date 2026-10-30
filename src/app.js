@@ -395,19 +395,21 @@ function render() {
       msg.textContent = hintMessage();
     } else {
       msg.textContent = '';
-      msg.append(hintMessage());
+      const line = document.createElement('span');
+      line.append(hintMessage());
       if (SOLVER_PATH) {
         const a = document.createElement('a');
         a.href = SOLVER_PATH + '?p=' + game.value.join('');
         a.target = '_blank';
         a.rel = 'noopener';
         a.textContent = strings[S_EXPLAIN];
-        msg.appendChild(a);
+        line.appendChild(a);
       }
-      msg.appendChild(document.createElement('br'));
+      line.appendChild(document.createElement('br'));
       const small = document.createElement('small');
       small.textContent = strings[S_AGAIN];
-      msg.appendChild(small);
+      line.appendChild(small);
+      msg.appendChild(line);
     }
   } else msg.textContent = '';
   const playable = game.active && !game.solved && !generating;

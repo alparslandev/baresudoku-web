@@ -13,7 +13,7 @@ button{font:inherit;color:inherit;background:var(--card);border:0;border-radius:
 button:disabled{color:var(--muted);cursor:default}
 #menu-btn{width:40px;height:40px;background:none;display:flex;align-items:center;justify-content:center}
 #menu-btn svg{width:26px;height:26px;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;fill:none}
-#board{--board:min(100vw - 32px,100dvh - 340px,528px);--cell:calc(var(--board)/9);width:var(--board);height:var(--board);display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(9,1fr);border:3px solid var(--thick);border-radius:4px;align-self:center;direction:ltr;background:var(--bg);touch-action:none}
+#board{--board:min(100vw - 32px,100dvh - 358px,528px);--cell:calc(var(--board)/9);width:var(--board);height:var(--board);display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(9,1fr);border:3px solid var(--thick);border-radius:4px;align-self:center;direction:ltr;background:var(--bg);touch-action:none}
 .c{position:relative;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:calc(var(--cell)*.58);cursor:pointer;overflow:hidden}
 .row{display:contents}
 .c:focus{outline:0}.c:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
@@ -30,7 +30,7 @@ button:disabled{color:var(--muted);cursor:default}
 .n span{display:flex;align-items:center;justify-content:center}
 .n span.same{color:var(--accent);font-weight:700}
 .n span.cn{color:var(--corner);font-weight:700}
-#msg{min-height:2.7em;text-align:center;color:var(--accent);font-size:.95rem;display:flex;flex-direction:column;justify-content:center}
+#msg{min-height:3.9em;text-align:center;color:var(--accent);font-size:.95rem;display:flex;flex-direction:column;justify-content:center}
 #msg.bad{color:var(--wrong)}
 #msg small{color:var(--muted)}
 #msg a{color:inherit;text-decoration:underline;margin-inline-start:8px}
@@ -194,7 +194,7 @@ body{background:#fff;color:#000}
 #board{grid-row:1/6;--board:min(100dvh - 16px,100vw - 360px);align-self:center}
 #keys{grid-template-columns:repeat(3,1fr)}
 #keys button{height:48px}
-#msg{min-height:2.2em;font-size:.9rem}
+#msg{font-size:.9rem}
 #tools button{height:56px}
 #foot{margin-top:0;padding-top:4px}
 #beta{display:none}
