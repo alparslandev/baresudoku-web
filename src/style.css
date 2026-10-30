@@ -23,9 +23,13 @@ button:disabled{color:var(--muted);cursor:default}
 .c.unit{background:var(--unit)}.c.same{background:var(--same)}
 .c.k1{background:var(--k1)}.c.k2{background:var(--k2)}.c.k3{background:var(--k3)}.c.k4{background:var(--k4)}.c.k5{background:var(--k5)}.c.k6{background:var(--k6)}
 .c.sel{background:var(--sel)}
+.c.sel .v{color:var(--placed)}
+.c.sel .n{color:var(--fg)}
+.c.sel .n span.same{color:var(--placed)}
 .v{color:var(--accent)}
 .c.given .v{color:var(--fg);font-weight:700}
 .c.wrong .v{color:var(--wrong)}
+.c.sel.wrong .v{color:var(--elim)}
 .n{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);font-size:calc(var(--cell)*.27);color:var(--note)}
 .n span{display:flex;align-items:center;justify-content:center}
 .n span.same{color:var(--accent);font-weight:700}
